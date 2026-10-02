@@ -1,2 +1,0 @@
-# vhg-veteran-resident-guide
-
