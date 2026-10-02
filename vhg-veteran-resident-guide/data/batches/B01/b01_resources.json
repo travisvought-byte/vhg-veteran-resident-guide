@@ -1,0 +1,1352 @@
+{
+  "batch_id": "OH-SDR-S1-B01",
+  "prepared_on": "2026-10-02",
+  "input_version": "0.2-working-seed",
+  "input_seed_sha256": "2f48972e853ed97cb0ee120339a3b685bb576d5a9c68c6ebcd564f144c2253f5",
+  "integration_status": "candidate_batch_not_merged",
+  "research_only": true,
+  "resources": [
+    {
+      "resource_id": "morrow-dd-intake",
+      "name": "Morrow DD eligibility and service coordination",
+      "record_type": "navigation_service",
+      "organization_id": null,
+      "official_url": "https://www.morrowdd.com/",
+      "geography": {
+        "state": "Ohio",
+        "service_area": [
+          "Morrow"
+        ]
+      },
+      "age_life_stage": [
+        "under_3",
+        "age_3_plus"
+      ],
+      "needs_supported": [
+        "developmental_disability_intake",
+        "service_coordination"
+      ],
+      "public_contact": {
+        "phone": "419-947-1159",
+        "email": "board@morrowdd.com",
+        "service_coordination_phone": "419-947-1159 ext. 326"
+      },
+      "service_description": null,
+      "eligibility_summary": "County residency and Board eligibility; SSA requests begin at age 3.",
+      "eligibility_decision_owner": "Morrow County Board of Developmental Disabilities",
+      "application_or_referral_route": "Call the main office and request eligibility intake; use Help Me Grow for under-3 early intervention.",
+      "next_step": "Ask what eligibility records are needed and how to request an SSA.",
+      "payment_or_funding_summary": null,
+      "constraints": [],
+      "sources": [
+        {
+          "url": "https://www.morrowdd.com/",
+          "fields_supported": [
+            "name",
+            "geography",
+            "public_contact",
+            "application_or_referral_route"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn1view0"
+        },
+        {
+          "url": "https://www.morrowdd.com/service-and-support-administration/",
+          "fields_supported": [
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "next_step"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": 2026,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn3view0"
+        },
+        {
+          "url": "https://www.morrowdd.com/department-directory/",
+          "fields_supported": [
+            "public_contact"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn5view4"
+        }
+      ],
+      "reviewed_on": "2026-10-02",
+      "review_method": "official_source_reviewed",
+      "verification_status": "official_source_reviewed",
+      "unresolved_questions": [
+        "Dedicated intake coordinator/contact and full age-specific intake documentation were not established. Main-office routing is proposed guidance."
+      ],
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "accepting_referrals": null,
+      "waitlist_status": null,
+      "appointment_availability": null,
+      "payer_acceptance": null,
+      "remaining_funds": null,
+      "batch_action": "add",
+      "seed_record_id": null,
+      "preserved_seed_fields": null,
+      "review_scope": "Published entry route only; no contact, submission, eligibility determination or service connection tested."
+    },
+    {
+      "resource_id": "delaware-dd-intake",
+      "name": "Delaware DD intake and service coordination",
+      "record_type": "navigation_service",
+      "organization_id": null,
+      "official_url": "https://www.dcbdd.org/eligibility/",
+      "geography": {
+        "state": "Ohio",
+        "service_area": [
+          "Delaware"
+        ]
+      },
+      "age_life_stage": [
+        "under_3",
+        "age_3_plus"
+      ],
+      "needs_supported": [
+        "developmental_disability_intake",
+        "service_coordination"
+      ],
+      "public_contact": {
+        "phone": "740-201-3600",
+        "email": null
+      },
+      "service_description": null,
+      "eligibility_summary": "County residency and age-specific DD eligibility assessment.",
+      "eligibility_decision_owner": "Delaware County Board of Developmental Disabilities",
+      "application_or_referral_route": "Age 3+: use Apply for Services on the eligibility page; under 3: Help Me Grow.",
+      "next_step": "Submit intake request. Ask about diagnosis/functional assessment and support coordination.",
+      "payment_or_funding_summary": null,
+      "constraints": [
+        "Published SSA assignment applies to eligible people age 3+ with ongoing Medicaid waiver needs. Ask what coordination is available outside that description."
+      ],
+      "sources": [
+        {
+          "url": "https://www.dcbdd.org/eligibility/",
+          "fields_supported": [
+            "geography",
+            "age_life_stage",
+            "eligibility_summary",
+            "application_or_referral_route"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn7view6"
+        },
+        {
+          "url": "https://www.dcbdd.org/contact-us/",
+          "fields_supported": [
+            "public_contact"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn1view1"
+        },
+        {
+          "url": "https://www.dcbdd.org/support-administration/",
+          "fields_supported": [
+            "next_step",
+            "eligibility_decision_owner"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn3view2"
+        }
+      ],
+      "reviewed_on": "2026-10-02",
+      "review_method": "official_source_reviewed",
+      "verification_status": "official_source_reviewed",
+      "unresolved_questions": [],
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "accepting_referrals": null,
+      "waitlist_status": null,
+      "appointment_availability": null,
+      "payer_acceptance": null,
+      "remaining_funds": null,
+      "batch_action": "update",
+      "seed_record_id": "delaware-dd-intake",
+      "preserved_seed_fields": {
+        "id": "delaware-dd-intake",
+        "name": "Delaware DD intake",
+        "url": "https://www.dcbdd.org/contact-us/",
+        "county": "Delaware",
+        "phone": "740-201-3600",
+        "offers": "Entry point to developmental disability services.",
+        "eligibility": "Eligibility assessment required.",
+        "action": "Ask for Intake & Eligibility.",
+        "limits": "Board services are not available to every disability diagnosis.",
+        "review": "Official program page reviewed; no phone contact, eligibility decision or availability confirmation",
+        "relationship": "external_resource_not_confirmed_partner",
+        "reviewed_on": "2026-09-30"
+      },
+      "review_scope": "Published entry route only; no contact, submission, eligibility determination or service connection tested."
+    },
+    {
+      "resource_id": "knox-dd-intake",
+      "name": "Knox DD intake and service coordination",
+      "record_type": "navigation_service",
+      "organization_id": null,
+      "official_url": "https://www.knoxdd.com/eligibility",
+      "geography": {
+        "state": "Ohio",
+        "service_area": [
+          "Knox"
+        ]
+      },
+      "age_life_stage": [
+        "under_3",
+        "age_3_plus"
+      ],
+      "needs_supported": [
+        "developmental_disability_intake",
+        "service_coordination"
+      ],
+      "public_contact": {
+        "phone": "740-397-4656",
+        "email": "cpayne@knoxdd.com",
+        "early_intervention_phone": "614-656-3322"
+      },
+      "service_description": null,
+      "eligibility_summary": "Age 3+ application requires qualifying intellectual/developmental diagnosis documentation; Board decides eligibility.",
+      "eligibility_decision_owner": "Knox County Board of Developmental Disabilities",
+      "application_or_referral_route": "Use secure request form or intake email for age 3+; under 3 uses early-intervention referral.",
+      "next_step": "Return the application packet and diagnosis records; ask how SSA planning begins.",
+      "payment_or_funding_summary": null,
+      "constraints": [
+        "The individual, parent or legal guardian uses the application form; others use the referral form."
+      ],
+      "sources": [
+        {
+          "url": "https://www.knoxdd.com/eligibility",
+          "fields_supported": [
+            "age_life_stage",
+            "eligibility_summary",
+            "application_or_referral_route",
+            "public_contact"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn2view0"
+        },
+        {
+          "url": "https://www.knoxdd.com/contact",
+          "fields_supported": [
+            "geography",
+            "public_contact"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn7view5"
+        },
+        {
+          "url": "https://www.knoxdd.com/service-support-administration",
+          "fields_supported": [
+            "next_step",
+            "eligibility_decision_owner"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn2view1"
+        }
+      ],
+      "reviewed_on": "2026-10-02",
+      "review_method": "official_source_reviewed",
+      "verification_status": "official_source_reviewed",
+      "unresolved_questions": [],
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "accepting_referrals": null,
+      "waitlist_status": null,
+      "appointment_availability": null,
+      "payer_acceptance": null,
+      "remaining_funds": null,
+      "batch_action": "update",
+      "seed_record_id": "knox-dd-intake",
+      "preserved_seed_fields": {
+        "id": "knox-dd-intake",
+        "name": "Knox DD intake and service coordination",
+        "url": "https://www.knoxdd.com/eligibility",
+        "county": "Knox",
+        "phone": "740-397-4656",
+        "offers": "Intake and eligibility; linked SSAs help with respite, in-home supports, school coordination and benefits.",
+        "eligibility": "Age 3+ applicants need qualifying diagnosis documentation; birth–2 follows the early-intervention route.",
+        "action": "Use secure intake form or cpayne@knoxdd.com; office phone sourced from https://www.knoxdd.com/contact.",
+        "limits": "SSA scope sourced from https://www.knoxdd.com/service-support-administration; no local family funding cap confirmed.",
+        "review": "Official program page reviewed; no phone contact, eligibility decision or availability confirmation",
+        "relationship": "external_resource_not_confirmed_partner",
+        "reviewed_on": "2026-09-30"
+      },
+      "review_scope": "Published entry route only; no contact, submission, eligibility determination or service connection tested."
+    },
+    {
+      "resource_id": "marion-dd-intake",
+      "name": "Marion DD enrollment and service coordination",
+      "record_type": "navigation_service",
+      "organization_id": null,
+      "official_url": "https://www.marioncountydd.org/getting-started/",
+      "geography": {
+        "state": "Ohio",
+        "service_area": [
+          "Marion"
+        ]
+      },
+      "age_life_stage": [
+        "children",
+        "adults"
+      ],
+      "needs_supported": [
+        "developmental_disability_intake",
+        "service_coordination"
+      ],
+      "public_contact": {
+        "phone": "740-375-6185",
+        "email": "tbutcher@marioncountydd.org"
+      },
+      "service_description": null,
+      "eligibility_summary": "Intake reviews written information and an interview.",
+      "eligibility_decision_owner": "Marion County Board of Developmental Disabilities intake coordinator",
+      "application_or_referral_route": "Call or email enrollment contact.",
+      "next_step": "Prepare formal diagnosis, birth certificate, Social Security card and Medicaid card if applicable; intake determines eligibility, then assigns an SSA.",
+      "payment_or_funding_summary": null,
+      "constraints": [
+        "Use the statewide Help Me Grow entry for under-3 referrals; do not assume the age-3+ intake is the EI route."
+      ],
+      "sources": [
+        {
+          "url": "https://www.marioncountydd.org/getting-started/",
+          "fields_supported": [
+            "geography",
+            "public_contact",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn2view2"
+        }
+      ],
+      "reviewed_on": "2026-10-02",
+      "review_method": "official_source_reviewed",
+      "verification_status": "official_source_reviewed",
+      "unresolved_questions": [],
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "accepting_referrals": null,
+      "waitlist_status": null,
+      "appointment_availability": null,
+      "payer_acceptance": null,
+      "remaining_funds": null,
+      "batch_action": "update",
+      "seed_record_id": "marion-dd-intake",
+      "preserved_seed_fields": {
+        "id": "marion-dd-intake",
+        "name": "Marion DD enrollment",
+        "url": "https://www.marioncountydd.org/getting-started/",
+        "county": "Marion",
+        "phone": "740-375-6185",
+        "offers": "Eligibility intake, assigned SSA and person-centered support planning.",
+        "eligibility": "Eligibility determined through documentation and interview.",
+        "action": "Call enrollment contact; page lists diagnosis, birth certificate, Social Security card and Medicaid card if applicable.",
+        "limits": "No local family funding cap confirmed.",
+        "review": "Official program page reviewed; no phone contact, eligibility decision or availability confirmation",
+        "relationship": "external_resource_not_confirmed_partner",
+        "reviewed_on": "2026-09-30"
+      },
+      "review_scope": "Published entry route only; no contact, submission, eligibility determination or service connection tested."
+    },
+    {
+      "resource_id": "district5-adrn",
+      "name": "District 5 Aging & Disability Resource Network",
+      "record_type": "navigation_service",
+      "organization_id": null,
+      "official_url": "https://www.aaa5ohio.org/resources/aging-and-disability-resource-network/",
+      "geography": {
+        "state": "Ohio",
+        "service_area": [
+          "Ashland",
+          "Crawford",
+          "Huron",
+          "Knox",
+          "Marion",
+          "Morrow",
+          "Richland",
+          "Seneca",
+          "Wyandot"
+        ]
+      },
+      "age_life_stage": [
+        "older_adults",
+        "younger_disabled_adults",
+        "caregivers"
+      ],
+      "needs_supported": [
+        "long_term_support_navigation",
+        "help_at_home",
+        "care_assessment"
+      ],
+      "public_contact": {
+        "phone": "800-860-5799",
+        "alternate_phone": "419-524-4144",
+        "email": null
+      },
+      "service_description": null,
+      "eligibility_summary": "Navigation covers older or disabled adults and caregivers; individual programs have separate criteria.",
+      "eligibility_decision_owner": "Relevant program assessor; Medicaid financial eligibility through designated eligibility agency; clinical/waiver decisions by administering agency or designee.",
+      "application_or_referral_route": "Call the agency or use its published ADRN referral form.",
+      "next_step": "Describe daily support needs and ask for the appropriate assessment and payment route.",
+      "payment_or_funding_summary": null,
+      "constraints": [
+        "District 5 is not the designated AAA for Delaware."
+      ],
+      "sources": [
+        {
+          "url": "https://www.aaa5ohio.org/about/our-agency/",
+          "fields_supported": [
+            "geography",
+            "age_life_stage",
+            "public_contact"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn3view10"
+        },
+        {
+          "url": "https://www.aaa5ohio.org/resources/aging-and-disability-resource-network/",
+          "fields_supported": [
+            "application_or_referral_route",
+            "needs_supported"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn2view3"
+        },
+        {
+          "url": "https://www.aaa5ohio.org/services/under-60/",
+          "fields_supported": [
+            "next_step",
+            "eligibility_decision_owner"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn6view5"
+        },
+        {
+          "url": "https://www.aaa5ohio.org/services/for-older-adults/",
+          "fields_supported": [
+            "needs_supported"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn10view1"
+        }
+      ],
+      "reviewed_on": "2026-10-02",
+      "review_method": "official_source_reviewed",
+      "verification_status": "official_source_reviewed",
+      "unresolved_questions": [
+        "Assessment assignment and program-specific availability require individual confirmation."
+      ],
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "accepting_referrals": null,
+      "waitlist_status": null,
+      "appointment_availability": null,
+      "payer_acceptance": null,
+      "remaining_funds": null,
+      "batch_action": "update",
+      "seed_record_id": "district5-adrn",
+      "preserved_seed_fields": {
+        "id": "district5-adrn",
+        "name": "District 5 Aging & Disability Resource Network",
+        "url": "https://www.aaa5ohio.org/resources/aging-and-disability-resource-network/",
+        "county": "Knox; Marion; Morrow; six other District 5 counties",
+        "phone": "800-860-5799",
+        "offers": "Existing partner network designed to streamline long-term care access for older and disabled adults and caregivers.",
+        "eligibility": "Ask agency which programs fit age, needs and location.",
+        "action": "Call agency or use published ADRN referral form.",
+        "limits": "Existing network is evidence of overlap; VHG partnership has not been established.",
+        "review": "Official program page reviewed; no phone contact, eligibility decision or availability confirmation",
+        "relationship": "external_resource_not_confirmed_partner",
+        "reviewed_on": "2026-09-30"
+      },
+      "review_scope": "Published entry route only; no contact, submission, eligibility determination or service connection tested."
+    },
+    {
+      "resource_id": "coaaa-navigation",
+      "name": "Central Ohio Area Agency on Aging navigation",
+      "record_type": "navigation_service",
+      "organization_id": null,
+      "official_url": "https://www.coaaa.org/connect/request-help-form/",
+      "geography": {
+        "state": "Ohio",
+        "service_area": [
+          "Delaware",
+          "Fairfield",
+          "Fayette",
+          "Franklin",
+          "Licking",
+          "Madison",
+          "Pickaway",
+          "Union"
+        ]
+      },
+      "age_life_stage": [
+        "older_adults",
+        "disabled_adults",
+        "caregivers"
+      ],
+      "needs_supported": [
+        "long_term_support_navigation",
+        "help_at_home",
+        "care_assessment"
+      ],
+      "public_contact": {
+        "phone": "800-589-7277",
+        "email": null
+      },
+      "service_description": null,
+      "eligibility_summary": "Consultation has no age/income requirement; funded programs apply their own criteria.",
+      "eligibility_decision_owner": "Program assessor; Medicaid eligibility agency and waiver/plan administrator where applicable.",
+      "application_or_referral_route": "Call or complete the Request Help form.",
+      "next_step": "Ask for a consultation or assessment and a program matched to age, daily needs and coverage.",
+      "payment_or_funding_summary": null,
+      "constraints": [
+        "Agency service area is different from each program service area. No universal payer acceptance is established."
+      ],
+      "sources": [
+        {
+          "url": "https://www.coaaa.org/about/our-agency/",
+          "fields_supported": [
+            "geography",
+            "age_life_stage"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn3view7"
+        },
+        {
+          "url": "https://www.coaaa.org/connect/contact-us/",
+          "fields_supported": [
+            "public_contact"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn3view8"
+        },
+        {
+          "url": "https://www.coaaa.org/connect/request-help-form/",
+          "fields_supported": [
+            "application_or_referral_route"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "official_search_extract_reviewed",
+          "retrieval_ref": "turn1search2"
+        },
+        {
+          "url": "https://www.coaaa.org/services/staying-at-home/",
+          "fields_supported": [
+            "eligibility_summary",
+            "next_step",
+            "eligibility_decision_owner",
+            "payment_or_funding_summary"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn10view0"
+        }
+      ],
+      "reviewed_on": "2026-10-02",
+      "review_method": "official_source_reviewed",
+      "verification_status": "official_source_reviewed",
+      "unresolved_questions": [],
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "accepting_referrals": null,
+      "waitlist_status": null,
+      "appointment_availability": null,
+      "payer_acceptance": null,
+      "remaining_funds": null,
+      "batch_action": "add",
+      "seed_record_id": null,
+      "preserved_seed_fields": null,
+      "review_scope": "Published entry route only; no contact, submission, eligibility determination or service connection tested."
+    },
+    {
+      "resource_id": "morrow-vso",
+      "name": "Morrow County Veterans Service Office",
+      "record_type": "navigation_service",
+      "organization_id": null,
+      "official_url": "https://morrowcountyveterans.com/",
+      "geography": {
+        "state": "Ohio",
+        "service_area": [
+          "Morrow"
+        ]
+      },
+      "age_life_stage": [
+        "veterans",
+        "eligible_dependents"
+      ],
+      "needs_supported": [
+        "benefits_navigation",
+        "home_accessibility_navigation"
+      ],
+      "public_contact": {
+        "phone": "419-946-1914",
+        "email": "vets@morrowcountyohio.gov",
+        "address": "143 S. Main Street, Mount Gilead, OH 43338"
+      },
+      "service_description": "Local benefits navigation; not the VA decision maker or a confirmed adaptation contractor.",
+      "eligibility_summary": "Eligibility depends on the benefit; ask about service history and county residency.",
+      "eligibility_decision_owner": "VA determines federal benefit eligibility; county Veterans Service Commission determines its local assistance.",
+      "application_or_referral_route": "Contact the county office for benefits assistance.",
+      "next_step": "Ask for help identifying a HISA or SAH/SHA application route and any local alternatives.",
+      "payment_or_funding_summary": null,
+      "constraints": [],
+      "sources": [
+        {
+          "url": "https://morrowcountyveterans.com/",
+          "fields_supported": [
+            "name",
+            "geography",
+            "public_contact",
+            "application_or_referral_route"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn3view4"
+        }
+      ],
+      "reviewed_on": "2026-10-02",
+      "review_method": "official_source_reviewed",
+      "verification_status": "official_source_reviewed",
+      "unresolved_questions": [],
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "accepting_referrals": null,
+      "waitlist_status": null,
+      "appointment_availability": null,
+      "payer_acceptance": null,
+      "remaining_funds": null,
+      "batch_action": "add",
+      "seed_record_id": null,
+      "preserved_seed_fields": null,
+      "review_scope": "Published entry route only; no contact, submission, eligibility determination or service connection tested."
+    },
+    {
+      "resource_id": "knox-vso",
+      "name": "Knox County Veterans Services Office",
+      "record_type": "navigation_service",
+      "organization_id": null,
+      "official_url": "https://kcvso.com/contact-us/",
+      "geography": {
+        "state": "Ohio",
+        "service_area": [
+          "Knox"
+        ]
+      },
+      "age_life_stage": [
+        "veterans",
+        "eligible_dependents"
+      ],
+      "needs_supported": [
+        "benefits_navigation",
+        "home_accessibility_navigation"
+      ],
+      "public_contact": {
+        "phone": "740-393-6742",
+        "email": null,
+        "address": "105 East Chestnut Street, Mount Vernon, OH 43050"
+      },
+      "service_description": "Local benefits navigation; not the VA decision maker or a confirmed adaptation contractor.",
+      "eligibility_summary": "Eligibility depends on the benefit; ask about service history and county residency.",
+      "eligibility_decision_owner": "VA determines federal benefit eligibility; county Veterans Service Commission determines its local assistance.",
+      "application_or_referral_route": "Contact the county office for benefits assistance.",
+      "next_step": "Ask for help identifying a HISA or SAH/SHA application route and any local alternatives.",
+      "payment_or_funding_summary": null,
+      "constraints": [],
+      "sources": [
+        {
+          "url": "https://co.knox.oh.us/county-home/county-offices/",
+          "fields_supported": [
+            "name",
+            "geography",
+            "public_contact"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn4view5"
+        },
+        {
+          "url": "https://kcvso.com/contact-us/",
+          "fields_supported": [
+            "application_or_referral_route"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn3view5"
+        },
+        {
+          "url": "https://kcvso.com/",
+          "fields_supported": [
+            "service_description"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn4view4"
+        }
+      ],
+      "reviewed_on": "2026-10-02",
+      "review_method": "official_source_reviewed",
+      "verification_status": "official_source_reviewed",
+      "unresolved_questions": [],
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "accepting_referrals": null,
+      "waitlist_status": null,
+      "appointment_availability": null,
+      "payer_acceptance": null,
+      "remaining_funds": null,
+      "batch_action": "add",
+      "seed_record_id": null,
+      "preserved_seed_fields": null,
+      "review_scope": "Published entry route only; no contact, submission, eligibility determination or service connection tested."
+    },
+    {
+      "resource_id": "marion-vso",
+      "name": "Marion County Veterans Service Commission",
+      "record_type": "navigation_service",
+      "organization_id": null,
+      "official_url": "http://www.marionveteranservice.com/",
+      "geography": {
+        "state": "Ohio",
+        "service_area": [
+          "Marion"
+        ]
+      },
+      "age_life_stage": [
+        "veterans",
+        "eligible_dependents"
+      ],
+      "needs_supported": [
+        "benefits_navigation",
+        "home_accessibility_navigation"
+      ],
+      "public_contact": {
+        "phone": "740-387-0100",
+        "email": null,
+        "address": "220 E. Fairground St., Suite 101, Marion, OH 43302"
+      },
+      "service_description": "Local benefits navigation; not the VA decision maker or a confirmed adaptation contractor.",
+      "eligibility_summary": "Eligibility depends on the benefit; ask about service history and county residency.",
+      "eligibility_decision_owner": "VA determines federal benefit eligibility; county Veterans Service Commission determines its local assistance.",
+      "application_or_referral_route": "Contact the county office for benefits assistance.",
+      "next_step": "Ask for help identifying a HISA or SAH/SHA application route and any local alternatives.",
+      "payment_or_funding_summary": null,
+      "constraints": [
+        "Office website fetch failed; phone supported by an official state-guide indexed extract rather than a successful full-PDF fetch."
+      ],
+      "sources": [
+        {
+          "url": "https://dam.assets.ohio.gov/image/upload/dvs.ohio.gov/benefits/benefitsguide-0613edit.pdf",
+          "fields_supported": [
+            "public_contact.phone"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "official_search_extract_reviewed",
+          "retrieval_ref": "turn9search26"
+        },
+        {
+          "url": "https://www.va.gov/central-ohio-health-care/programs/va-emergency-resources/community-emergency-resources/marion-county-community-resources/",
+          "fields_supported": [
+            "name",
+            "geography",
+            "public_contact.address",
+            "official_url"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": 2026,
+          "published_date": "2026-01-08",
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn4view6"
+        }
+      ],
+      "reviewed_on": "2026-10-02",
+      "review_method": "official_source_reviewed",
+      "verification_status": "official_source_reviewed",
+      "unresolved_questions": [
+        "Confirm phone/address currency and local application process before a stronger verification label."
+      ],
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "accepting_referrals": null,
+      "waitlist_status": null,
+      "appointment_availability": null,
+      "payer_acceptance": null,
+      "remaining_funds": null,
+      "batch_action": "add",
+      "seed_record_id": null,
+      "preserved_seed_fields": null,
+      "review_scope": "Published entry route only; no contact, submission, eligibility determination or service connection tested."
+    },
+    {
+      "resource_id": "delaware-vso",
+      "name": "Delaware County Veterans Services",
+      "record_type": "navigation_service",
+      "organization_id": null,
+      "official_url": "https://veteransservice.co.delaware.oh.us/contact-us/",
+      "geography": {
+        "state": "Ohio",
+        "service_area": [
+          "Delaware"
+        ]
+      },
+      "age_life_stage": [
+        "veterans",
+        "eligible_dependents"
+      ],
+      "needs_supported": [
+        "benefits_navigation",
+        "home_accessibility_navigation"
+      ],
+      "public_contact": {
+        "phone": "740-833-2010",
+        "email": null,
+        "address": "91 North Sandusky St., Delaware, OH 43015"
+      },
+      "service_description": "Local benefits navigation; not the VA decision maker or a confirmed adaptation contractor.",
+      "eligibility_summary": "Eligibility depends on the benefit; ask about service history and county residency.",
+      "eligibility_decision_owner": "VA determines federal benefit eligibility; county Veterans Service Commission determines its local assistance.",
+      "application_or_referral_route": "Contact the county office for benefits assistance.",
+      "next_step": "Ask for help identifying a HISA or SAH/SHA application route and any local alternatives.",
+      "payment_or_funding_summary": null,
+      "constraints": [],
+      "sources": [
+        {
+          "url": "https://veteransservice.co.delaware.oh.us/contact-us/",
+          "fields_supported": [
+            "name",
+            "geography",
+            "public_contact",
+            "application_or_referral_route"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn3view6"
+        }
+      ],
+      "reviewed_on": "2026-10-02",
+      "review_method": "official_source_reviewed",
+      "verification_status": "official_source_reviewed",
+      "unresolved_questions": [],
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "accepting_referrals": null,
+      "waitlist_status": null,
+      "appointment_availability": null,
+      "payer_acceptance": null,
+      "remaining_funds": null,
+      "batch_action": "add",
+      "seed_record_id": null,
+      "preserved_seed_fields": null,
+      "review_scope": "Published entry route only; no contact, submission, eligibility determination or service connection tested."
+    },
+    {
+      "resource_id": "va-hisa",
+      "name": "VA Home Improvements and Structural Alterations (HISA)",
+      "record_type": "program",
+      "organization_id": null,
+      "official_url": "https://www.prosthetics.va.gov/psas/HISA2.asp",
+      "geography": {
+        "state": "Ohio",
+        "service_area": [
+          "Statewide via responsible VA facility"
+        ]
+      },
+      "age_life_stage": [
+        "veterans",
+        "service_members"
+      ],
+      "needs_supported": [
+        "medically_necessary_home_accessibility"
+      ],
+      "public_contact": {
+        "phone": null,
+        "email": null,
+        "locator_url": "https://www.va.gov/find-locations/?facilityType=health"
+      },
+      "service_description": null,
+      "eligibility_summary": "VA medical justification and benefit rules apply; service connection is not a universal requirement.",
+      "eligibility_decision_owner": "Responsible VA Prosthetic and Sensory Aids Service with VA clinical approval.",
+      "application_or_referral_route": "Use VA facility locator to reach local Prosthetics; county VSO can help navigate.",
+      "next_step": "Request medical review and the application checklist.",
+      "payment_or_funding_summary": null,
+      "constraints": [
+        "Medical prescription/approval, Form 10-0103, itemized estimate and photo; renters need notarized owner consent."
+      ],
+      "sources": [
+        {
+          "url": "https://www.prosthetics.va.gov/psas/HISA2.asp",
+          "fields_supported": [
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "constraints"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": 2025,
+          "published_date": "2025-02-12",
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn7view2"
+        }
+      ],
+      "reviewed_on": "2026-10-02",
+      "review_method": "official_source_reviewed",
+      "verification_status": "official_source_reviewed",
+      "unresolved_questions": [
+        "Responsible facility/Prosthetics contact for each individual and remaining lifetime entitlement are unknown."
+      ],
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "accepting_referrals": null,
+      "waitlist_status": null,
+      "appointment_availability": null,
+      "payer_acceptance": null,
+      "remaining_funds": null,
+      "batch_action": "update",
+      "seed_record_id": "va-hisa",
+      "preserved_seed_fields": {
+        "id": "va-hisa",
+        "name": "VA HISA home accessibility benefit",
+        "url": "https://www.prosthetics.va.gov/psas/HISA2.asp",
+        "county": "Federal / local VA",
+        "phone": "Use local VA Prosthetic & Sensory Aids Service",
+        "offers": "Medically necessary primary-home alterations; lifetime benefit categories of $6,800 and $2,000.",
+        "eligibility": "VA determines eligibility and remaining lifetime benefit; category depends on service connection and other criteria.",
+        "action": "Contact local VA Prosthetics; application includes VA-approved prescription, Form 10-0103, itemized estimate and photo; renters also need notarized owner consent.",
+        "limits": "Excludes routine repairs, new construction and listed portable equipment; not organizational development funding.",
+        "review": "Official program page reviewed; no phone contact, eligibility decision or availability confirmation",
+        "relationship": "external_resource_not_confirmed_partner",
+        "reviewed_on": "2026-09-30"
+      },
+      "review_scope": "Published entry route only; no contact, submission, eligibility determination or service connection tested."
+    },
+    {
+      "resource_id": "va-adapted-housing",
+      "name": "VA adapted housing entry route: SAH and SHA",
+      "record_type": "program_navigation_bundle",
+      "organization_id": null,
+      "official_url": "https://www.va.gov/housing-assistance/disability-housing-grants/",
+      "geography": {
+        "state": "Ohio",
+        "service_area": [
+          "Statewide / federal"
+        ]
+      },
+      "age_life_stage": [
+        "veterans",
+        "service_members"
+      ],
+      "needs_supported": [
+        "home_accessibility_funding"
+      ],
+      "public_contact": {
+        "phone": null,
+        "email": null,
+        "application_url": "https://www.va.gov/housing-assistance/disability-housing-grants/how-to-apply/"
+      },
+      "service_description": null,
+      "eligibility_summary": "Certain qualifying service-connected disabilities; ownership rules differ between SAH and SHA.",
+      "eligibility_decision_owner": "VA Veterans Benefits Administration.",
+      "application_or_referral_route": "Apply online, by mail using VA Form 26-4555, or through a VA regional office.",
+      "next_step": "Read the eligibility list; prepare Social Security number and VA file/claim number if available.",
+      "payment_or_funding_summary": null,
+      "constraints": [
+        "Navigation bundle, not a single program: Claude should split SAH/SHA program entities in schema v0.3."
+      ],
+      "sources": [
+        {
+          "url": "https://www.va.gov/housing-assistance/disability-housing-grants/",
+          "fields_supported": [
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "constraints"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": 2026,
+          "published_date": "2025-11-18",
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn7view4"
+        },
+        {
+          "url": "https://www.va.gov/housing-assistance/disability-housing-grants/how-to-apply/",
+          "fields_supported": [
+            "application_or_referral_route",
+            "next_step"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": 2025,
+          "published_date": "2025-09-24",
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn8view1"
+        }
+      ],
+      "reviewed_on": "2026-10-02",
+      "review_method": "official_source_reviewed",
+      "verification_status": "official_source_reviewed",
+      "unresolved_questions": [
+        "Page publishes FY2026 amounts; FY2027 limits not confirmed. Amounts intentionally null."
+      ],
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "accepting_referrals": null,
+      "waitlist_status": null,
+      "appointment_availability": null,
+      "payer_acceptance": null,
+      "remaining_funds": null,
+      "batch_action": "add",
+      "seed_record_id": null,
+      "preserved_seed_fields": null,
+      "review_scope": "Published entry route only; no contact, submission, eligibility determination or service connection tested."
+    },
+    {
+      "resource_id": "help-me-grow",
+      "name": "Help Me Grow: Ohio Early Intervention referral",
+      "record_type": "program_entry_route",
+      "organization_id": null,
+      "official_url": "https://ochids.childrenandyouth.ohio.gov/public/refer",
+      "geography": {
+        "state": "Ohio",
+        "service_area": [
+          "All Ohio counties"
+        ]
+      },
+      "age_life_stage": [
+        "under_3"
+      ],
+      "needs_supported": [
+        "developmental_concerns",
+        "early_intervention"
+      ],
+      "public_contact": {
+        "phone": "800-755-4769",
+        "email": "hmgreferrals@helpmegrow.org"
+      },
+      "service_description": null,
+      "eligibility_summary": "Under-3 developmental delay/disability concerns; EI team determines eligibility.",
+      "eligibility_decision_owner": "Local Ohio Early Intervention eligibility team coordinated through the service coordinator.",
+      "application_or_referral_route": "Call or submit official Help Me Grow referral, selecting Early Intervention.",
+      "next_step": "Local EI program contacts the family and assigns a coordinator for consent and eligibility work.",
+      "payment_or_funding_summary": "Coordinator meetings, eligibility assessment, child/family assessment and IFSP development have no family cost; ask about any further service costs.",
+      "constraints": [
+        "Help Me Grow includes other programs; a broad referral form age range does not extend EI beyond under 3."
+      ],
+      "sources": [
+        {
+          "url": "https://ochids.childrenandyouth.ohio.gov/public/refer",
+          "fields_supported": [
+            "public_contact.email",
+            "application_or_referral_route",
+            "age_life_stage"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn11view2"
+        },
+        {
+          "url": "https://ohioearlyintervention.org/",
+          "fields_supported": [
+            "public_contact.phone",
+            "geography"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn8view2"
+        },
+        {
+          "url": "https://ohioearlyintervention.org/what-can-i-expect-in-ei",
+          "fields_supported": [
+            "eligibility_decision_owner",
+            "next_step",
+            "payment_or_funding_summary"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn11view1"
+        }
+      ],
+      "reviewed_on": "2026-10-02",
+      "review_method": "official_source_reviewed",
+      "verification_status": "official_source_reviewed",
+      "unresolved_questions": [],
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "accepting_referrals": null,
+      "waitlist_status": null,
+      "appointment_availability": null,
+      "payer_acceptance": null,
+      "remaining_funds": null,
+      "batch_action": "update",
+      "seed_record_id": "help-me-grow",
+      "preserved_seed_fields": {
+        "id": "help-me-grow",
+        "name": "Help Me Grow",
+        "url": "https://www.helpmegrow.org/",
+        "population": "Pregnant individuals and families with young children",
+        "offers": "Referrals, early intervention routes and resource directories across all 88 counties",
+        "action": "Link referral and county directories; keep life-stage eligibility clear",
+        "review": "Page opened; application/referral not submitted",
+        "relationship": "external_resource_not_confirmed_partner",
+        "reviewed_on": "2026-09-30"
+      },
+      "review_scope": "Published entry route only; no contact, submission, eligibility determination or service connection tested."
+    },
+    {
+      "resource_id": "special-education",
+      "name": "Ohio special education evaluation and transition guidance",
+      "record_type": "guidance_hub",
+      "organization_id": null,
+      "official_url": "https://education.ohio.gov/Topics/Special-Education/Families-of-Students-with-Disabilities",
+      "geography": {
+        "state": "Ohio",
+        "service_area": [
+          "All Ohio counties"
+        ]
+      },
+      "age_life_stage": [
+        "preschool_3_5",
+        "school_age",
+        "transition_age"
+      ],
+      "needs_supported": [
+        "school_evaluation",
+        "transition_planning",
+        "family_navigation"
+      ],
+      "public_contact": {
+        "phone": "614-466-2650",
+        "email": "Exceptionalchildren@education.ohio.gov",
+        "preschool_email": "preschoolspecialeducation@childrenandyouth.ohio.gov"
+      },
+      "service_description": null,
+      "eligibility_summary": "School evaluation determines special education eligibility; DD-board eligibility is separate.",
+      "eligibility_decision_owner": "Educational agency evaluation team including parent; separate DD and vocational decisions belong to their agencies.",
+      "application_or_referral_route": "Contact responsible school special education director; for preschool use the district where the parent resides.",
+      "next_step": "Request an evaluation or discuss transition goals; use state roadmaps and parent-support links.",
+      "payment_or_funding_summary": null,
+      "constraints": [
+        "Transition planning starts at 14 or younger if appropriate; school-age and transition routes overlap. Local district contacts have not been inventoried."
+      ],
+      "sources": [
+        {
+          "url": "https://education.ohio.gov/Topics/Special-Education/Families-of-Students-with-Disabilities",
+          "fields_supported": [
+            "public_contact",
+            "geography",
+            "application_or_referral_route"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn6view4"
+        },
+        {
+          "url": "https://education.ohio.gov/getattachment/Topics/Special-Education/Families-of-Students-with-Disabilities/Sections/Section-1/EvaluationRoadmap92025-5-1.pdf",
+          "fields_supported": [
+            "age_life_stage",
+            "application_or_referral_route",
+            "eligibility_decision_owner",
+            "next_step"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": 2025,
+          "published_date": "2025-09",
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn8view4"
+        },
+        {
+          "url": "https://education.ohio.gov/Topics/Special-Education/Federal-and-State-Requirements/Secondary-Transition-and-Workforce-Development",
+          "fields_supported": [
+            "age_life_stage",
+            "needs_supported"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": 2026,
+          "published_date": "2026-08-25",
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn10view6"
+        }
+      ],
+      "reviewed_on": "2026-10-02",
+      "review_method": "official_source_reviewed",
+      "verification_status": "official_source_reviewed",
+      "unresolved_questions": [],
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "accepting_referrals": null,
+      "waitlist_status": null,
+      "appointment_availability": null,
+      "payer_acceptance": null,
+      "remaining_funds": null,
+      "batch_action": "update",
+      "seed_record_id": "special-education",
+      "preserved_seed_fields": {
+        "id": "special-education",
+        "name": "Ohio Families of Students with Disabilities",
+        "url": "https://education.ohio.gov/Topics/Special-Education/Families-of-Students-with-Disabilities",
+        "population": "Parents and caregivers of students with disabilities",
+        "offers": "Special education resources and evaluation guidance",
+        "action": "Link official guidance; validate district-specific next contact",
+        "review": "Official page opened; not individualized legal advice",
+        "relationship": "external_resource_not_confirmed_partner",
+        "reviewed_on": "2026-09-30"
+      },
+      "review_scope": "Published entry route only; no contact, submission, eligibility determination or service connection tested."
+    },
+    {
+      "resource_id": "ohio-ltss",
+      "name": "Ohio Benefits Long-Term Services and Supports",
+      "record_type": "navigation_service",
+      "organization_id": null,
+      "official_url": "https://www.ohiohelps.org/Home/SearchProvider",
+      "geography": {
+        "state": "Ohio",
+        "service_area": [
+          "All Ohio counties"
+        ]
+      },
+      "age_life_stage": [
+        "all_ages"
+      ],
+      "needs_supported": [
+        "long_term_support_navigation",
+        "benefits_application_help"
+      ],
+      "public_contact": {
+        "phone": "844-644-6582",
+        "email": null
+      },
+      "service_description": null,
+      "eligibility_summary": "Navigation is a starting point; specific Medicaid/waiver criteria apply.",
+      "eligibility_decision_owner": "Relevant program; JFS/designated agency handles Medicaid financial eligibility, ODM or designee handles Ohio Home Care Waiver assessment.",
+      "application_or_referral_route": "Call LTSS help line; ask about appropriate county/waiver entry. Ohio Home Care requests use ODM 02399 through county JFS.",
+      "next_step": "Ask for screening and application instructions for the appropriate program.",
+      "payment_or_funding_summary": null,
+      "constraints": [
+        "Ohio Home Care Waiver entry is birth–59 and includes Medicaid, assessment, nursing-facility level of care and other requirements. A diagnosis or application alone does not establish enrollment."
+      ],
+      "sources": [
+        {
+          "url": "https://www.ohiohelps.org/Home/SearchProvider",
+          "fields_supported": [
+            "public_contact",
+            "application_or_referral_route",
+            "needs_supported"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn6view7"
+        },
+        {
+          "url": "https://dam.assets.ohio.gov/image/upload/medicaid.ohio.gov/Families,%20Individuals/Programs/Waivers/HCBSWaivers/ProgramInformation/Ohio_Home_Care.pdf",
+          "fields_supported": [
+            "next_step",
+            "eligibility_decision_owner",
+            "application_or_referral_route"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": 2025,
+          "published_date": "2025-09",
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn5view2"
+        },
+        {
+          "url": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-46-02",
+          "fields_supported": [
+            "eligibility_summary",
+            "constraints"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": 2025,
+          "published_date": "2025-09-22",
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn8view3"
+        }
+      ],
+      "reviewed_on": "2026-10-02",
+      "review_method": "official_source_reviewed",
+      "verification_status": "official_source_reviewed",
+      "unresolved_questions": [],
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "accepting_referrals": null,
+      "waitlist_status": null,
+      "appointment_availability": null,
+      "payer_acceptance": null,
+      "remaining_funds": null,
+      "batch_action": "update",
+      "seed_record_id": "ohio-ltss",
+      "preserved_seed_fields": {
+        "id": "ohio-ltss",
+        "name": "Ohio Benefits Long-Term Services and Supports",
+        "url": "https://www.ohiohelps.org/Home/SearchProvider",
+        "population": "People seeking long-term supports",
+        "offers": "Service and location search; assistance by telephone",
+        "action": "Link search and help line; validate local results before gathering duplicate listings",
+        "review": "Page opened; local searches and phone assistance not tested",
+        "relationship": "external_resource_not_confirmed_partner",
+        "reviewed_on": "2026-09-30"
+      },
+      "review_scope": "Published entry route only; no contact, submission, eligibility determination or service connection tested."
+    }
+  ]
+}

@@ -1,0 +1,344 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "oh-sdr/schema/v0.3",
+  "title": "Ohio Senior & Disability Resource Directory dataset, schema v0.3 (draft)",
+  "$comment": "Draft 2026-10-02. Implements decisions D-005 (claim-level verification) and D-006 (office/role public contacts). Organizations, programs, locations, facilities, pathways, sources and relationships are separate entities joined by stable IDs. Nothing here asserts that a listed organization is a VHG partner.",
+  "type": "object",
+  "required": ["dataset", "organizations", "programs", "pathways", "sources", "relationships", "facilities", "funding_leads", "decisions"],
+  "additionalProperties": false,
+  "properties": {
+    "dataset": {
+      "type": "object",
+      "required": ["version", "prepared_on", "publication_status", "scope", "derived_from"],
+      "properties": {
+        "version": { "type": "string" },
+        "prepared_on": { "$ref": "#/$defs/date" },
+        "publication_status": { "enum": ["internal_working", "limited_release", "public"] },
+        "scope": {
+          "type": "object",
+          "required": ["state", "pilot_counties"],
+          "properties": {
+            "state": { "const": "Ohio" },
+            "pilot_counties": { "type": "array", "items": { "$ref": "#/$defs/county" } },
+            "intended_population": { "type": "string" }
+          }
+        },
+        "derived_from": {
+          "type": "array",
+          "description": "Input files and batches merged into this version, with hashes where available.",
+          "items": {
+            "type": "object",
+            "required": ["name"],
+            "properties": { "name": { "type": "string" }, "version": { "type": "string" }, "sha256": { "type": "string" }, "batch_id": { "type": "string" } }
+          }
+        }
+      }
+    },
+    "organizations": { "type": "array", "items": { "$ref": "#/$defs/organization" } },
+    "programs": { "type": "array", "items": { "$ref": "#/$defs/program" } },
+    "locations": { "type": "array", "items": { "$ref": "#/$defs/location" } },
+    "facilities": { "type": "array", "items": { "$ref": "#/$defs/facility" } },
+    "pathways": { "type": "array", "items": { "$ref": "#/$defs/pathway" } },
+    "sources": { "type": "array", "items": { "$ref": "#/$defs/source" } },
+    "relationships": { "type": "array", "items": { "$ref": "#/$defs/relationship" } },
+    "funding_leads": { "type": "array", "items": { "$ref": "#/$defs/funding_lead" } },
+    "decisions": { "type": "array", "items": { "$ref": "#/$defs/decision" } }
+  },
+
+  "$defs": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "date": { "type": "string", "format": "date" },
+    "county": { "type": "string" },
+    "unknown_text": { "type": ["string", "null"], "description": "Null means unknown; never fill with a guess." },
+
+    "verification_status": {
+      "enum": ["imported_unverified", "official_search_extract_only", "official_source_reviewed", "agency_confirmed", "needs_recheck", "withdrawn_or_closed_confirmed"],
+      "$comment": "Ordered weakest to strongest for the first four. official_search_extract_only is new in v0.3 (D-005)."
+    },
+
+    "verification": {
+      "type": "object",
+      "description": "Check dimensions tracked separately. record_status is derived: it may not exceed the weakest dimension that backs any published field.",
+      "required": ["record_status", "identity", "contact"],
+      "properties": {
+        "record_status": { "$ref": "#/$defs/verification_status" },
+        "identity": { "$ref": "#/$defs/verification_status" },
+        "contact": { "$ref": "#/$defs/verification_status" },
+        "eligibility": { "$ref": "#/$defs/verification_status" },
+        "payer": { "$ref": "#/$defs/verification_status" },
+        "availability": { "$ref": "#/$defs/verification_status" },
+        "last_reviewed_on": { "$ref": "#/$defs/date" },
+        "next_review_due": { "$ref": "#/$defs/date" }
+      }
+    },
+
+    "public_contact": {
+      "type": "object",
+      "description": "D-006: office or role contacts only. Named-individual contacts go in internal_contact and are never exported.",
+      "properties": {
+        "phone": { "type": ["string", "null"] },
+        "phone_label": { "type": ["string", "null"], "description": "e.g. 'main office', 'service coordination ext. 326'" },
+        "email": { "type": ["string", "null"] },
+        "contact_type": { "enum": ["office", "role", "statewide_line", "web_form_or_locator", null] },
+        "web_route": { "type": ["string", "null"], "format": "uri", "description": "Referral form, locator or application page." }
+      }
+    },
+
+    "internal_contact": {
+      "type": ["object", "null"],
+      "description": "Not exported to any public build.",
+      "properties": { "name": { "type": ["string", "null"] }, "email": { "type": ["string", "null"] }, "note": { "type": ["string", "null"] } }
+    },
+
+    "provenance": {
+      "type": "object",
+      "properties": {
+        "seed_record_id": { "type": ["string", "null"] },
+        "batch_ids": { "type": "array", "items": { "type": "string" } },
+        "historical_fields": { "type": ["object", "null"], "description": "Earlier field values kept for history. Not current, not re-dated." }
+      }
+    },
+
+    "organization": {
+      "type": "object",
+      "required": ["organization_id", "name", "org_type", "official_url", "verification", "relationship_to_vhg"],
+      "properties": {
+        "organization_id": { "$ref": "#/$defs/id" },
+        "name": { "type": "string" },
+        "org_type": { "enum": ["county_board_dd", "area_agency_on_aging", "county_veterans_service", "state_agency", "federal_agency", "nonprofit", "provider", "school_or_educational_agency", "other"] },
+        "official_url": { "type": ["string", "null"], "format": "uri" },
+        "service_area": { "type": "array", "items": { "$ref": "#/$defs/county" } },
+        "public_contact": { "$ref": "#/$defs/public_contact" },
+        "internal_contact": { "$ref": "#/$defs/internal_contact" },
+        "verification": { "$ref": "#/$defs/verification" },
+        "relationship_to_vhg": { "enum": ["external_resource_not_confirmed_partner", "confirmed_partner_written"] },
+        "provenance": { "$ref": "#/$defs/provenance" }
+      }
+    },
+
+    "program": {
+      "type": "object",
+      "description": "A service, benefit, navigation route or guide. Replaces v0.2 existing_resources and B01 resource records. One organization may run many programs with different rules.",
+      "required": ["program_id", "name", "program_type", "organization_id", "needs_supported", "age_life_stage", "service_area", "eligibility_summary", "eligibility_decision_owner", "application_or_referral_route", "next_step", "verification", "relationship_to_vhg"],
+      "properties": {
+        "program_id": { "$ref": "#/$defs/id" },
+        "name": { "type": "string" },
+        "program_type": { "enum": ["navigation_service", "eligibility_intake", "benefit_or_grant", "direct_service", "guidance_hub", "existing_directory", "lookup_instruction", "navigation_bundle"] },
+        "organization_id": { "type": ["string", "null"], "description": "Null only for existing_directory or lookup_instruction entries without a single operator." },
+        "parent_program_id": { "type": ["string", "null"], "description": "Umbrella relationship, e.g. Help Me Grow umbrella -> EI referral; SAH/SHA bundle -> SAH and SHA." },
+        "official_url": { "type": ["string", "null"], "format": "uri" },
+        "service_area": { "type": "array", "items": { "type": "string" }, "description": "Counties, or 'statewide' / 'federal'. Proximity is not coverage." },
+        "remote_service": { "type": ["boolean", "null"] },
+        "age_life_stage": { "type": "array", "items": { "enum": ["prenatal", "under_3", "age_3_5", "school_age", "transition_age", "adult_18_59", "older_adult_60_plus", "caregiver", "veteran", "veteran_dependent", "all_ages"] } },
+        "needs_supported": { "type": "array", "items": { "enum": ["help_at_home", "child_development_autism", "caregiver_respite", "equipment_home_accessibility", "benefits_and_funding", "care_facilities", "transportation", "veteran_services", "dd_intake_service_coordination", "education_special_education", "employment_transition", "general_navigation"] } },
+        "description": { "$ref": "#/$defs/unknown_text" },
+        "eligibility_summary": { "$ref": "#/$defs/unknown_text" },
+        "eligibility_decision_owner": { "$ref": "#/$defs/unknown_text" },
+        "application_or_referral_route": { "$ref": "#/$defs/unknown_text" },
+        "what_to_ask": { "type": "array", "items": { "type": "string" } },
+        "next_step": { "$ref": "#/$defs/unknown_text" },
+        "required_documents": { "type": "array", "items": { "type": "string" }, "description": "Only where officially published." },
+        "payment_or_funding_summary": { "$ref": "#/$defs/unknown_text" },
+        "amounts": {
+          "type": "array",
+          "description": "Every amount or deadline tied to a source and an effective period. Never carried forward into a new fiscal year without recheck.",
+          "items": {
+            "type": "object",
+            "required": ["label", "value", "effective_period", "source_id"],
+            "properties": { "label": { "type": "string" }, "value": { "type": ["number", "string"] }, "effective_period": { "type": "string" }, "source_id": { "type": "string" } }
+          }
+        },
+        "constraints": { "type": "array", "items": { "type": "string" } },
+        "public_contact": { "$ref": "#/$defs/public_contact" },
+        "internal_contact": { "$ref": "#/$defs/internal_contact" },
+        "availability_not_established": {
+          "type": "object",
+          "description": "These stay null unless confirmed by the organization. Never inferred from web pages.",
+          "properties": {
+            "accepting_referrals": { "type": "null" },
+            "waitlist_status": { "type": "null" },
+            "appointment_availability": { "type": "null" },
+            "remaining_funds": { "type": "null" },
+            "payer_acceptance": { "type": "null" }
+          }
+        },
+        "verification": { "$ref": "#/$defs/verification" },
+        "unresolved_questions": { "type": "array", "items": { "type": "string" } },
+        "relationship_to_vhg": { "enum": ["external_resource_not_confirmed_partner", "confirmed_partner_written"] },
+        "provenance": { "$ref": "#/$defs/provenance" }
+      }
+    },
+
+    "location": {
+      "type": "object",
+      "required": ["location_id", "organization_id", "address", "county", "verification"],
+      "properties": {
+        "location_id": { "$ref": "#/$defs/id" },
+        "organization_id": { "type": "string" },
+        "address": { "type": "string" },
+        "city": { "type": ["string", "null"] },
+        "zip": { "type": ["string", "null"] },
+        "county": { "$ref": "#/$defs/county" },
+        "public_walk_in": { "type": ["boolean", "null"] },
+        "verification": { "$ref": "#/$defs/verification" }
+      }
+    },
+
+    "facility": {
+      "type": "object",
+      "description": "Kept separate from programs. Certification, licensing, payer participation and availability are distinct facts.",
+      "required": ["facility_id", "cms_ccn", "name", "county", "facility_class", "verification", "conflicts"],
+      "properties": {
+        "facility_id": { "$ref": "#/$defs/id" },
+        "cms_ccn": { "type": ["string", "null"], "pattern": "^[0-9A-Z]{6}$" },
+        "name": { "type": "string" },
+        "former_or_alternate_names": { "type": "array", "items": { "type": "string" } },
+        "address": { "type": ["string", "null"] },
+        "city": { "type": ["string", "null"] },
+        "zip": { "type": ["string", "null"] },
+        "county": { "$ref": "#/$defs/county" },
+        "facility_class": { "enum": ["candidate_unclassified", "skilled_nursing_facility", "nursing_facility", "assisted_living", "residential_care", "icf_iid", "other"] },
+        "medicare_certified": { "type": ["boolean", "null"] },
+        "medicaid_certified": { "type": ["boolean", "null"] },
+        "licensed_beds": { "type": ["integer", "null"] },
+        "operating_status": { "enum": ["unknown", "operating_per_current_official_record", "closed_confirmed"] },
+        "public_contact": { "$ref": "#/$defs/public_contact" },
+        "availability_not_established": { "$ref": "#/$defs/program/properties/availability_not_established" },
+        "verification": { "$ref": "#/$defs/verification" },
+        "conflicts": {
+          "type": "array",
+          "description": "Unresolved disagreements between sources, preserved verbatim with which sources disagree.",
+          "items": { "type": "object", "required": ["field", "note"], "properties": { "field": { "type": "string" }, "note": { "type": "string" }, "source_files": { "type": "array", "items": { "type": "string" } } } }
+        },
+        "provenance": { "$ref": "#/$defs/provenance" }
+      }
+    },
+
+    "pathway": {
+      "type": "object",
+      "required": ["pathway_id", "need", "serves", "starting_program_ids", "steps", "fallback_program_ids", "evidence_source_ids", "outcome_status", "overlap"],
+      "properties": {
+        "pathway_id": { "type": "string" },
+        "need": { "type": "string" },
+        "serves": { "type": "string" },
+        "counties": { "type": "array", "items": { "$ref": "#/$defs/county" } },
+        "relevant_conditions": { "type": "array", "items": { "type": "string" } },
+        "starting_program_ids": { "type": "array", "items": { "type": "string" }, "description": "May vary by county; use first_contact_by_county where it does." },
+        "first_contact_by_county": { "type": "object", "additionalProperties": { "type": "string" } },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["step", "action", "program_ids", "what_to_ask", "expected_next_step", "fallback_program_ids", "connection_status"],
+            "properties": {
+              "step": { "type": "integer" },
+              "branch": { "type": ["object", "null"], "description": "Age range, population or overlay condition. Overlays may apply alongside another branch." },
+              "action": { "type": "string" },
+              "program_ids": { "type": "array", "items": { "type": "string" } },
+              "what_to_ask": { "type": "string" },
+              "expected_next_step": { "type": "string" },
+              "required_documents": { "type": "array", "items": { "type": "string" } },
+              "eligibility_decision_owner": { "type": ["string", "null"] },
+              "fallback_program_ids": { "type": "array", "items": { "type": "string" }, "description": "Must not equal program_ids alone (no self-fallback)." },
+              "fallback_instruction": { "type": ["string", "null"] },
+              "connection_status": { "enum": ["proposed_navigation_connection", "documented_referral_route"] },
+              "evidence_source_ids": { "type": "array", "items": { "type": "string" } }
+            }
+          }
+        },
+        "fallback_program_ids": { "type": "array", "items": { "type": "string" } },
+        "evidence_source_ids": { "type": "array", "items": { "type": "string" } },
+        "outcome_status": { "enum": ["not_user_tested_no_completed_referral", "user_tested", "referral_outcome_documented"] },
+        "overlap": {
+          "type": "object",
+          "required": ["classification", "reason", "status"],
+          "properties": {
+            "best_existing_navigators": { "type": "array", "items": { "type": "string" } },
+            "classification": { "enum": ["covered_link_only", "navigation_gap_add_guidance", "data_gap_collect_verified_record", "service_unavailable"] },
+            "reason": { "type": "string" },
+            "status": { "enum": ["hypothesis", "tested_supported", "tested_not_supported"], "$comment": "D-008: hypothesis until Stage 4." }
+          }
+        },
+        "verification": { "$ref": "#/$defs/verification" },
+        "unresolved_questions": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+
+    "source": {
+      "type": "object",
+      "description": "One reviewed source. claims lists exactly which entity fields it supports (D-005).",
+      "required": ["source_id", "url", "access_method", "date_reviewed", "claims"],
+      "properties": {
+        "source_id": { "$ref": "#/$defs/id" },
+        "url": { "type": "string", "format": "uri" },
+        "publisher": { "type": ["string", "null"] },
+        "access_method": { "enum": ["page_text_reviewed", "pdf_text_reviewed", "official_search_extract_reviewed", "imported_from_workbook", "agency_confirmed_written", "agency_confirmed_phone"] },
+        "date_reviewed": { "$ref": "#/$defs/date" },
+        "published_date": { "type": ["string", "null"] },
+        "published_effective_period": { "type": ["string", "null"] },
+        "fetch_failed": { "type": "boolean", "default": false, "description": "A failed fetch is not evidence of closure." },
+        "claims": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["entity_id", "fields"],
+            "properties": { "entity_id": { "type": "string" }, "fields": { "type": "array", "items": { "type": "string" } } }
+          }
+        }
+      }
+    },
+
+    "relationship": {
+      "type": "object",
+      "required": ["from_id", "to_id", "type"],
+      "properties": {
+        "from_id": { "type": "string" },
+        "to_id": { "type": "string" },
+        "type": { "enum": ["provides_program", "part_of", "located_at", "serves_area", "applies_through", "assesses_eligibility", "funds_approved_service", "refers_to", "proposed_navigation_connection"] },
+        "evidence_source_ids": { "type": "array", "items": { "type": "string" } },
+        "note": { "type": ["string", "null"] }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "type": { "const": "refers_to" } } },
+          "then": { "required": ["evidence_source_ids"], "properties": { "evidence_source_ids": { "minItems": 1 } } }
+        }
+      ]
+    },
+
+    "funding_lead": {
+      "type": "object",
+      "description": "Funding for the project itself. Never mixed with individual benefits listed in programs.",
+      "required": ["funding_lead_id", "name", "url", "status", "reviewed_on"],
+      "properties": {
+        "funding_lead_id": { "$ref": "#/$defs/id" },
+        "name": { "type": "string" },
+        "url": { "type": "string", "format": "uri" },
+        "geography": { "$ref": "#/$defs/unknown_text" },
+        "applicant_eligibility": { "$ref": "#/$defs/unknown_text" },
+        "published_amount": { "$ref": "#/$defs/unknown_text" },
+        "reimbursement_or_advance": { "enum": ["reimbursement", "advance", "unknown"] },
+        "match_required": { "type": ["boolean", "null"] },
+        "excluded_costs": { "type": "array", "items": { "type": "string" } },
+        "compensation_eligible": { "enum": ["unknown", "confirmed_in_writing_yes", "confirmed_in_writing_no"] },
+        "fit": { "$ref": "#/$defs/unknown_text" },
+        "status": { "type": "string" },
+        "reviewed_on": { "$ref": "#/$defs/date" }
+      }
+    },
+
+    "decision": {
+      "type": "object",
+      "required": ["decision_id", "date", "decision", "reason", "owner", "status"],
+      "properties": {
+        "decision_id": { "type": "string", "pattern": "^D-[0-9]{3}$" },
+        "date": { "$ref": "#/$defs/date" },
+        "decision": { "type": "string" },
+        "reason": { "type": "string" },
+        "affected_ids": { "type": "array", "items": { "type": "string" } },
+        "owner": { "enum": ["Claude", "Travis", "Codex"] },
+        "status": { "enum": ["open", "decided", "superseded"] }
+      }
+    }
+  }
+}

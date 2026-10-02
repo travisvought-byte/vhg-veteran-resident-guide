@@ -1,0 +1,1733 @@
+{
+  "batch_id": "OH-SDR-S1-B01",
+  "prepared_on": "2026-10-02",
+  "input_version": "0.2-working-seed",
+  "input_seed_sha256": "2f48972e853ed97cb0ee120339a3b685bb576d5a9c68c6ebcd564f144c2253f5",
+  "integration_status": "candidate_batch_not_merged",
+  "research_only": true,
+  "pathways": [
+    {
+      "pathway_id": "P1",
+      "need": "Parent seeking autism/developmental support",
+      "county_life_stage": {
+        "counties": [
+          "Morrow",
+          "Knox",
+          "Marion",
+          "Delaware"
+        ],
+        "life_stages": [
+          "under_3",
+          "preschool",
+          "school_age",
+          "transition_age"
+        ]
+      },
+      "relevant_conditions": "Needs and eligibility assessments guide routing; diagnosis alone does not determine access.",
+      "starting_resource_id": null,
+      "first_contact_by_county": {
+        "DD": {
+          "Morrow": "morrow-dd-intake",
+          "Knox": "knox-dd-intake",
+          "Marion": "marion-dd-intake",
+          "Delaware": "delaware-dd-intake"
+        },
+        "aging_disability": {
+          "Morrow": "district5-adrn",
+          "Knox": "district5-adrn",
+          "Marion": "district5-adrn",
+          "Delaware": "coaaa-navigation"
+        },
+        "veterans": {
+          "Morrow": "morrow-vso",
+          "Knox": "knox-vso",
+          "Marion": "marion-vso",
+          "Delaware": "delaware-vso"
+        }
+      },
+      "what_to_ask": "See branch-specific questions in ordered_steps.",
+      "prerequisite_documents": [],
+      "ordered_steps": [
+        {
+          "step": 1,
+          "branch": null,
+          "action": "Choose age and need; use the branch below.",
+          "resource_ids": [
+            "help-me-grow",
+            "special-education"
+          ],
+          "what_to_ask": "Which system fits this age and concern?",
+          "expected_next_step": "Choose EI or school route; DD intake can run alongside school support.",
+          "fallback_resource_ids": [
+            "ohio-ltss"
+          ],
+          "prerequisite_documents": [],
+          "eligibility_decision_owner": null,
+          "connection_status": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://ochids.childrenandyouth.ohio.gov/public/refer",
+            "https://ohioearlyintervention.org/",
+            "https://ohioearlyintervention.org/what-can-i-expect-in-ei",
+            "https://education.ohio.gov/Topics/Special-Education/Families-of-Students-with-Disabilities",
+            "https://education.ohio.gov/getattachment/Topics/Special-Education/Families-of-Students-with-Disabilities/Sections/Section-1/EvaluationRoadmap92025-5-1.pdf",
+            "https://education.ohio.gov/Topics/Special-Education/Federal-and-State-Requirements/Secondary-Transition-and-Workforce-Development"
+          ]
+        },
+        {
+          "step": 2,
+          "branch": {
+            "age_min": 0,
+            "age_max_exclusive": 3
+          },
+          "action": "Under 3: contact Help Me Grow EI.",
+          "resource_ids": [
+            "help-me-grow"
+          ],
+          "what_to_ask": "Please refer my child for EI eligibility and explain the process.",
+          "expected_next_step": "Coordinator contact, consent, eligibility/assessment and IFSP if eligible. Ask about transition before age 3.",
+          "fallback_resource_ids": [
+            "help-me-grow"
+          ],
+          "prerequisite_documents": [
+            "Child/caregiver details requested by referral form"
+          ],
+          "eligibility_decision_owner": "Local EI eligibility team",
+          "connection_status": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://ochids.childrenandyouth.ohio.gov/public/refer",
+            "https://ohioearlyintervention.org/",
+            "https://ohioearlyintervention.org/what-can-i-expect-in-ei"
+          ],
+          "fallback_instruction": "If the online referral cannot be used, call the published statewide referral number; ask the county DD main office to help locate EI if needed."
+        },
+        {
+          "step": 3,
+          "branch": {
+            "age_min": 3,
+            "age_max_exclusive": 6
+          },
+          "action": "Age 3–5 preschool: contact parent-residence district special education director; DD Board separately.",
+          "resource_ids": [
+            "special-education",
+            "morrow-dd-intake",
+            "knox-dd-intake",
+            "marion-dd-intake",
+            "delaware-dd-intake"
+          ],
+          "what_to_ask": "How do I request preschool evaluation and separately DD eligibility?",
+          "expected_next_step": "Separate educational and county eligibility processes.",
+          "fallback_resource_ids": [
+            "special-education"
+          ],
+          "prerequisite_documents": [],
+          "eligibility_decision_owner": "School team / county DD separately",
+          "connection_status": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://education.ohio.gov/Topics/Special-Education/Families-of-Students-with-Disabilities",
+            "https://education.ohio.gov/getattachment/Topics/Special-Education/Families-of-Students-with-Disabilities/Sections/Section-1/EvaluationRoadmap92025-5-1.pdf",
+            "https://education.ohio.gov/Topics/Special-Education/Federal-and-State-Requirements/Secondary-Transition-and-Workforce-Development",
+            "https://www.morrowdd.com/",
+            "https://www.morrowdd.com/service-and-support-administration/",
+            "https://www.morrowdd.com/department-directory/",
+            "https://www.knoxdd.com/eligibility",
+            "https://www.knoxdd.com/contact",
+            "https://www.knoxdd.com/service-support-administration",
+            "https://www.marioncountydd.org/getting-started/",
+            "https://www.dcbdd.org/eligibility/",
+            "https://www.dcbdd.org/contact-us/",
+            "https://www.dcbdd.org/support-administration/"
+          ]
+        },
+        {
+          "step": 4,
+          "branch": {
+            "label": "school_age; transition overlay may also apply",
+            "age_min": 6
+          },
+          "action": "School age: contact educational agency special education director and county DD intake as needed.",
+          "resource_ids": [
+            "special-education",
+            "morrow-dd-intake",
+            "knox-dd-intake",
+            "marion-dd-intake",
+            "delaware-dd-intake"
+          ],
+          "what_to_ask": "I want an evaluation; what consent and records are needed?",
+          "expected_next_step": "Evaluation team determines school eligibility; eligible DD applicants discuss coordination.",
+          "fallback_resource_ids": [
+            "special-education"
+          ],
+          "prerequisite_documents": [],
+          "eligibility_decision_owner": "School evaluation team / county DD separately",
+          "connection_status": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://education.ohio.gov/Topics/Special-Education/Families-of-Students-with-Disabilities",
+            "https://education.ohio.gov/getattachment/Topics/Special-Education/Families-of-Students-with-Disabilities/Sections/Section-1/EvaluationRoadmap92025-5-1.pdf",
+            "https://education.ohio.gov/Topics/Special-Education/Federal-and-State-Requirements/Secondary-Transition-and-Workforce-Development",
+            "https://www.morrowdd.com/",
+            "https://www.morrowdd.com/service-and-support-administration/",
+            "https://www.morrowdd.com/department-directory/",
+            "https://www.knoxdd.com/eligibility",
+            "https://www.knoxdd.com/contact",
+            "https://www.knoxdd.com/service-support-administration",
+            "https://www.marioncountydd.org/getting-started/",
+            "https://www.dcbdd.org/eligibility/",
+            "https://www.dcbdd.org/contact-us/",
+            "https://www.dcbdd.org/support-administration/"
+          ]
+        },
+        {
+          "step": 5,
+          "branch": {
+            "age_min": 14,
+            "younger_if_appropriate": true,
+            "overlay": true
+          },
+          "action": "Transition overlay: ask IEP team and county DD coordinator about adult goals and employment supports.",
+          "resource_ids": [
+            "special-education",
+            "morrow-dd-intake",
+            "knox-dd-intake",
+            "marion-dd-intake",
+            "delaware-dd-intake"
+          ],
+          "what_to_ask": "What is our transition plan and who handles adult-service and vocational eligibility?",
+          "expected_next_step": "Planning starts at age 14 or earlier if appropriate; use official OOD/transition links in state guidance.",
+          "fallback_resource_ids": [
+            "special-education",
+            "ohio-ltss"
+          ],
+          "prerequisite_documents": [],
+          "eligibility_decision_owner": "IEP team; county DD; vocational agency for its own services",
+          "connection_status": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://education.ohio.gov/Topics/Special-Education/Families-of-Students-with-Disabilities",
+            "https://education.ohio.gov/getattachment/Topics/Special-Education/Families-of-Students-with-Disabilities/Sections/Section-1/EvaluationRoadmap92025-5-1.pdf",
+            "https://education.ohio.gov/Topics/Special-Education/Federal-and-State-Requirements/Secondary-Transition-and-Workforce-Development",
+            "https://www.morrowdd.com/",
+            "https://www.morrowdd.com/service-and-support-administration/",
+            "https://www.morrowdd.com/department-directory/",
+            "https://www.knoxdd.com/eligibility",
+            "https://www.knoxdd.com/contact",
+            "https://www.knoxdd.com/service-support-administration",
+            "https://www.marioncountydd.org/getting-started/",
+            "https://www.dcbdd.org/eligibility/",
+            "https://www.dcbdd.org/contact-us/",
+            "https://www.dcbdd.org/support-administration/"
+          ]
+        },
+        {
+          "step": 6,
+          "branch": null,
+          "action": "If EI/DD/school route cannot meet need, request reasons and alternatives.",
+          "resource_ids": [
+            "special-education",
+            "ohio-ltss"
+          ],
+          "what_to_ask": "Which parent navigator or other system can help, and how do I challenge an eligibility decision?",
+          "expected_next_step": "Use published parent-support/dispute resources or LTSS navigation; no eligibility promise.",
+          "fallback_resource_ids": [
+            "special-education",
+            "ohio-ltss"
+          ],
+          "prerequisite_documents": [],
+          "eligibility_decision_owner": null,
+          "connection_status": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://education.ohio.gov/Topics/Special-Education/Families-of-Students-with-Disabilities",
+            "https://education.ohio.gov/getattachment/Topics/Special-Education/Families-of-Students-with-Disabilities/Sections/Section-1/EvaluationRoadmap92025-5-1.pdf",
+            "https://education.ohio.gov/Topics/Special-Education/Federal-and-State-Requirements/Secondary-Transition-and-Workforce-Development",
+            "https://www.ohiohelps.org/Home/SearchProvider",
+            "https://dam.assets.ohio.gov/image/upload/medicaid.ohio.gov/Families,%20Individuals/Programs/Waivers/HCBSWaivers/ProgramInformation/Ohio_Home_Care.pdf",
+            "https://codes.ohio.gov/ohio-administrative-code/rule-5160-46-02"
+          ]
+        }
+      ],
+      "next_resource_ids": [
+        "help-me-grow",
+        "special-education",
+        "morrow-dd-intake",
+        "knox-dd-intake",
+        "marion-dd-intake",
+        "delaware-dd-intake",
+        "ohio-ltss"
+      ],
+      "fallback_resource_ids": [
+        "ohio-ltss"
+      ],
+      "eligibility_owner": "EI team; educational agency team; county DD, separately",
+      "evidence": [
+        {
+          "url": "https://ochids.childrenandyouth.ohio.gov/public/refer",
+          "fields_supported": [
+            "public_contact.email",
+            "application_or_referral_route",
+            "age_life_stage"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn11view2"
+        },
+        {
+          "url": "https://ohioearlyintervention.org/",
+          "fields_supported": [
+            "public_contact.phone",
+            "geography"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn8view2"
+        },
+        {
+          "url": "https://ohioearlyintervention.org/what-can-i-expect-in-ei",
+          "fields_supported": [
+            "eligibility_decision_owner",
+            "next_step",
+            "payment_or_funding_summary"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn11view1"
+        },
+        {
+          "url": "https://education.ohio.gov/Topics/Special-Education/Families-of-Students-with-Disabilities",
+          "fields_supported": [
+            "public_contact",
+            "geography",
+            "application_or_referral_route"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn6view4"
+        },
+        {
+          "url": "https://education.ohio.gov/getattachment/Topics/Special-Education/Families-of-Students-with-Disabilities/Sections/Section-1/EvaluationRoadmap92025-5-1.pdf",
+          "fields_supported": [
+            "age_life_stage",
+            "application_or_referral_route",
+            "eligibility_decision_owner",
+            "next_step"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": 2025,
+          "published_date": "2025-09",
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn8view4"
+        },
+        {
+          "url": "https://education.ohio.gov/Topics/Special-Education/Federal-and-State-Requirements/Secondary-Transition-and-Workforce-Development",
+          "fields_supported": [
+            "age_life_stage",
+            "needs_supported"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": 2026,
+          "published_date": "2026-08-25",
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn10view6"
+        },
+        {
+          "url": "https://www.morrowdd.com/",
+          "fields_supported": [
+            "name",
+            "geography",
+            "public_contact",
+            "application_or_referral_route"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn1view0"
+        },
+        {
+          "url": "https://www.morrowdd.com/service-and-support-administration/",
+          "fields_supported": [
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "next_step"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": 2026,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn3view0"
+        },
+        {
+          "url": "https://www.morrowdd.com/department-directory/",
+          "fields_supported": [
+            "public_contact"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn5view4"
+        },
+        {
+          "url": "https://www.knoxdd.com/eligibility",
+          "fields_supported": [
+            "age_life_stage",
+            "eligibility_summary",
+            "application_or_referral_route",
+            "public_contact"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn2view0"
+        },
+        {
+          "url": "https://www.knoxdd.com/contact",
+          "fields_supported": [
+            "geography",
+            "public_contact"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn7view5"
+        },
+        {
+          "url": "https://www.knoxdd.com/service-support-administration",
+          "fields_supported": [
+            "next_step",
+            "eligibility_decision_owner"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn2view1"
+        },
+        {
+          "url": "https://www.marioncountydd.org/getting-started/",
+          "fields_supported": [
+            "geography",
+            "public_contact",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn2view2"
+        },
+        {
+          "url": "https://www.dcbdd.org/eligibility/",
+          "fields_supported": [
+            "geography",
+            "age_life_stage",
+            "eligibility_summary",
+            "application_or_referral_route"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn7view6"
+        },
+        {
+          "url": "https://www.dcbdd.org/contact-us/",
+          "fields_supported": [
+            "public_contact"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn1view1"
+        },
+        {
+          "url": "https://www.dcbdd.org/support-administration/",
+          "fields_supported": [
+            "next_step",
+            "eligibility_decision_owner"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn3view2"
+        },
+        {
+          "url": "https://www.ohiohelps.org/Home/SearchProvider",
+          "fields_supported": [
+            "public_contact",
+            "application_or_referral_route",
+            "needs_supported"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn6view7"
+        },
+        {
+          "url": "https://dam.assets.ohio.gov/image/upload/medicaid.ohio.gov/Families,%20Individuals/Programs/Waivers/HCBSWaivers/ProgramInformation/Ohio_Home_Care.pdf",
+          "fields_supported": [
+            "next_step",
+            "eligibility_decision_owner",
+            "application_or_referral_route"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": 2025,
+          "published_date": "2025-09",
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn5view2"
+        },
+        {
+          "url": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-46-02",
+          "fields_supported": [
+            "eligibility_summary",
+            "constraints"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": 2025,
+          "published_date": "2025-09-22",
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn8view3"
+        }
+      ],
+      "unresolved_questions": [
+        "Responsible school district/direct special education contacts vary by residence/enrollment and are not inventoried.",
+        "EI program-specific payment details and service availability need individual confirmation."
+      ],
+      "best_existing_navigators": [
+        "Ohio Early Intervention referral/coordinator for under 3",
+        "Ohio DEW evaluation and secondary transition roadmaps for age 3+",
+        "County DD intake for community supports"
+      ],
+      "overlap_classification": "navigation_gap_add_guidance",
+      "overlap_reason": "Existing systems supply assessment and guidance; proposed addition is a county-specific age branch showing parallel school and DD routes.",
+      "overlap_validation": "Proposed presentation value; not demonstrated by user or navigator testing.",
+      "reviewed_on": "2026-10-02",
+      "review_method": "official_source_reviewed",
+      "verification_status": "official_source_reviewed",
+      "relationships": [
+        {
+          "from": "P1",
+          "to": "help-me-grow",
+          "type": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://ochids.childrenandyouth.ohio.gov/public/refer",
+            "https://ohioearlyintervention.org/",
+            "https://ohioearlyintervention.org/what-can-i-expect-in-ei"
+          ]
+        },
+        {
+          "from": "P1",
+          "to": "special-education",
+          "type": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://education.ohio.gov/Topics/Special-Education/Families-of-Students-with-Disabilities",
+            "https://education.ohio.gov/getattachment/Topics/Special-Education/Families-of-Students-with-Disabilities/Sections/Section-1/EvaluationRoadmap92025-5-1.pdf",
+            "https://education.ohio.gov/Topics/Special-Education/Federal-and-State-Requirements/Secondary-Transition-and-Workforce-Development"
+          ]
+        },
+        {
+          "from": "P1",
+          "to": "morrow-dd-intake",
+          "type": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://www.morrowdd.com/",
+            "https://www.morrowdd.com/service-and-support-administration/",
+            "https://www.morrowdd.com/department-directory/"
+          ]
+        },
+        {
+          "from": "P1",
+          "to": "knox-dd-intake",
+          "type": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://www.knoxdd.com/eligibility",
+            "https://www.knoxdd.com/contact",
+            "https://www.knoxdd.com/service-support-administration"
+          ]
+        },
+        {
+          "from": "P1",
+          "to": "marion-dd-intake",
+          "type": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://www.marioncountydd.org/getting-started/"
+          ]
+        },
+        {
+          "from": "P1",
+          "to": "delaware-dd-intake",
+          "type": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://www.dcbdd.org/eligibility/",
+            "https://www.dcbdd.org/contact-us/",
+            "https://www.dcbdd.org/support-administration/"
+          ]
+        },
+        {
+          "from": "P1",
+          "to": "ohio-ltss",
+          "type": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://www.ohiohelps.org/Home/SearchProvider",
+            "https://dam.assets.ohio.gov/image/upload/medicaid.ohio.gov/Families,%20Individuals/Programs/Waivers/HCBSWaivers/ProgramInformation/Ohio_Home_Care.pdf",
+            "https://codes.ohio.gov/ohio-administrative-code/rule-5160-46-02"
+          ]
+        }
+      ],
+      "outcome_status": "not_user_tested_no_completed_referral",
+      "starting_resource_by_branch": {
+        "under_3": "help-me-grow",
+        "preschool_3_5": "special-education",
+        "school_age": "special-education",
+        "transition_overlay": "special-education",
+        "DD_community_support_by_county": {
+          "Morrow": "morrow-dd-intake",
+          "Knox": "knox-dd-intake",
+          "Marion": "marion-dd-intake",
+          "Delaware": "delaware-dd-intake"
+        }
+      }
+    },
+    {
+      "pathway_id": "P2",
+      "need": "Older or disabled adult needs help at home",
+      "county_life_stage": {
+        "counties": [
+          "Morrow",
+          "Knox",
+          "Marion",
+          "Delaware"
+        ],
+        "life_stages": [
+          "older_adult",
+          "younger_disabled_adult",
+          "caregiver"
+        ]
+      },
+      "relevant_conditions": "Needs and eligibility assessments guide routing; diagnosis alone does not determine access.",
+      "starting_resource_id": null,
+      "first_contact_by_county": {
+        "DD": {
+          "Morrow": "morrow-dd-intake",
+          "Knox": "knox-dd-intake",
+          "Marion": "marion-dd-intake",
+          "Delaware": "delaware-dd-intake"
+        },
+        "aging_disability": {
+          "Morrow": "district5-adrn",
+          "Knox": "district5-adrn",
+          "Marion": "district5-adrn",
+          "Delaware": "coaaa-navigation"
+        },
+        "veterans": {
+          "Morrow": "morrow-vso",
+          "Knox": "knox-vso",
+          "Marion": "marion-vso",
+          "Delaware": "delaware-vso"
+        }
+      },
+      "what_to_ask": "See branch-specific questions in ordered_steps.",
+      "prerequisite_documents": [],
+      "ordered_steps": [
+        {
+          "step": 1,
+          "branch": null,
+          "action": "Start with the county AAA/ADRN for navigation; identify age, daily tasks and existing coverage.",
+          "resource_ids": [
+            "district5-adrn",
+            "coaaa-navigation"
+          ],
+          "what_to_ask": "I need help with daily tasks at home; which assessment/payment route fits?",
+          "expected_next_step": "Navigator identifies possible program and assessment.",
+          "fallback_resource_ids": [
+            "ohio-ltss"
+          ],
+          "prerequisite_documents": [],
+          "eligibility_decision_owner": null,
+          "connection_status": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://www.aaa5ohio.org/about/our-agency/",
+            "https://www.aaa5ohio.org/resources/aging-and-disability-resource-network/",
+            "https://www.aaa5ohio.org/services/under-60/",
+            "https://www.aaa5ohio.org/services/for-older-adults/",
+            "https://www.coaaa.org/about/our-agency/",
+            "https://www.coaaa.org/connect/contact-us/",
+            "https://www.coaaa.org/connect/request-help-form/",
+            "https://www.coaaa.org/services/staying-at-home/"
+          ]
+        },
+        {
+          "step": 2,
+          "branch": {
+            "label": "older_adult",
+            "passport_age_min": 60
+          },
+          "action": "Older-adult route: ask regional agency about PASSPORT assessment and non-waiver alternatives.",
+          "resource_ids": [
+            "district5-adrn",
+            "coaaa-navigation"
+          ],
+          "what_to_ask": "Can you screen for home support and explain eligibility and alternatives?",
+          "expected_next_step": "Clinical/functional assessment and separate financial review where required.",
+          "fallback_resource_ids": [
+            "ohio-ltss"
+          ],
+          "prerequisite_documents": [],
+          "eligibility_decision_owner": "AAA/program assessor; Medicaid financial eligibility agency",
+          "connection_status": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://www.aaa5ohio.org/about/our-agency/",
+            "https://www.aaa5ohio.org/resources/aging-and-disability-resource-network/",
+            "https://www.aaa5ohio.org/services/under-60/",
+            "https://www.aaa5ohio.org/services/for-older-adults/",
+            "https://www.coaaa.org/about/our-agency/",
+            "https://www.coaaa.org/connect/contact-us/",
+            "https://www.coaaa.org/connect/request-help-form/",
+            "https://www.coaaa.org/services/staying-at-home/"
+          ]
+        },
+        {
+          "step": 3,
+          "branch": {
+            "label": "younger_adult_with_disability",
+            "ohio_home_care_entry_age_max": 59
+          },
+          "action": "Younger disabled-adult route: for developmental disability, contact county DD; otherwise ask LTSS about Ohio Home Care or another appropriate program.",
+          "resource_ids": [
+            "ohio-ltss",
+            "morrow-dd-intake",
+            "knox-dd-intake",
+            "marion-dd-intake",
+            "delaware-dd-intake"
+          ],
+          "what_to_ask": "Which program covers my needs and how do I request assessment?",
+          "expected_next_step": "DD eligibility/SSA path or Medicaid application, waiver request and assigned assessment.",
+          "fallback_resource_ids": [
+            "district5-adrn",
+            "coaaa-navigation"
+          ],
+          "prerequisite_documents": [],
+          "eligibility_decision_owner": "County DD for DD; JFS/ODM or designee for Ohio Home Care",
+          "connection_status": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://www.ohiohelps.org/Home/SearchProvider",
+            "https://dam.assets.ohio.gov/image/upload/medicaid.ohio.gov/Families,%20Individuals/Programs/Waivers/HCBSWaivers/ProgramInformation/Ohio_Home_Care.pdf",
+            "https://codes.ohio.gov/ohio-administrative-code/rule-5160-46-02",
+            "https://www.morrowdd.com/",
+            "https://www.morrowdd.com/service-and-support-administration/",
+            "https://www.morrowdd.com/department-directory/",
+            "https://www.knoxdd.com/eligibility",
+            "https://www.knoxdd.com/contact",
+            "https://www.knoxdd.com/service-support-administration",
+            "https://www.marioncountydd.org/getting-started/",
+            "https://www.dcbdd.org/eligibility/",
+            "https://www.dcbdd.org/contact-us/",
+            "https://www.dcbdd.org/support-administration/"
+          ]
+        },
+        {
+          "step": 4,
+          "branch": {
+            "label": "coverage_overlay",
+            "overlay": true
+          },
+          "action": "If applicant has Medicare and Medicaid, ask current plan/navigator who manages long-term support.",
+          "resource_ids": [
+            "coaaa-navigation",
+            "ohio-ltss"
+          ],
+          "what_to_ask": "Do my coverage and location require a plan-specific waiver route?",
+          "expected_next_step": "Get correct plan/assessment entry without assuming every dual-eligible person uses the same waiver.",
+          "fallback_resource_ids": [
+            "ohio-ltss"
+          ],
+          "prerequisite_documents": [],
+          "eligibility_decision_owner": "Applicable plan/program administrator",
+          "connection_status": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://www.coaaa.org/about/our-agency/",
+            "https://www.coaaa.org/connect/contact-us/",
+            "https://www.coaaa.org/connect/request-help-form/",
+            "https://www.coaaa.org/services/staying-at-home/",
+            "https://www.ohiohelps.org/Home/SearchProvider",
+            "https://dam.assets.ohio.gov/image/upload/medicaid.ohio.gov/Families,%20Individuals/Programs/Waivers/HCBSWaivers/ProgramInformation/Ohio_Home_Care.pdf",
+            "https://codes.ohio.gov/ohio-administrative-code/rule-5160-46-02"
+          ]
+        },
+        {
+          "step": 5,
+          "branch": null,
+          "action": "If ineligible or service cannot be arranged, ask navigator for non-waiver/community options.",
+          "resource_ids": [
+            "ohio-ltss",
+            "district5-adrn",
+            "coaaa-navigation"
+          ],
+          "what_to_ask": "What alternatives serve my area and can you help identify a next contact?",
+          "expected_next_step": "Alternative program screening; provider availability and cost remain to be confirmed.",
+          "fallback_resource_ids": [
+            "ohio-ltss"
+          ],
+          "prerequisite_documents": [],
+          "eligibility_decision_owner": null,
+          "connection_status": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://www.ohiohelps.org/Home/SearchProvider",
+            "https://dam.assets.ohio.gov/image/upload/medicaid.ohio.gov/Families,%20Individuals/Programs/Waivers/HCBSWaivers/ProgramInformation/Ohio_Home_Care.pdf",
+            "https://codes.ohio.gov/ohio-administrative-code/rule-5160-46-02",
+            "https://www.aaa5ohio.org/about/our-agency/",
+            "https://www.aaa5ohio.org/resources/aging-and-disability-resource-network/",
+            "https://www.aaa5ohio.org/services/under-60/",
+            "https://www.aaa5ohio.org/services/for-older-adults/",
+            "https://www.coaaa.org/about/our-agency/",
+            "https://www.coaaa.org/connect/contact-us/",
+            "https://www.coaaa.org/connect/request-help-form/",
+            "https://www.coaaa.org/services/staying-at-home/"
+          ]
+        }
+      ],
+      "next_resource_ids": [
+        "district5-adrn",
+        "coaaa-navigation",
+        "ohio-ltss",
+        "morrow-dd-intake",
+        "knox-dd-intake",
+        "marion-dd-intake",
+        "delaware-dd-intake"
+      ],
+      "fallback_resource_ids": [
+        "ohio-ltss"
+      ],
+      "eligibility_owner": "Program assessor; county DD; Medicaid eligibility agency and waiver administrator as applicable",
+      "evidence": [
+        {
+          "url": "https://www.aaa5ohio.org/about/our-agency/",
+          "fields_supported": [
+            "geography",
+            "age_life_stage",
+            "public_contact"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn3view10"
+        },
+        {
+          "url": "https://www.aaa5ohio.org/resources/aging-and-disability-resource-network/",
+          "fields_supported": [
+            "application_or_referral_route",
+            "needs_supported"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn2view3"
+        },
+        {
+          "url": "https://www.aaa5ohio.org/services/under-60/",
+          "fields_supported": [
+            "next_step",
+            "eligibility_decision_owner"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn6view5"
+        },
+        {
+          "url": "https://www.aaa5ohio.org/services/for-older-adults/",
+          "fields_supported": [
+            "needs_supported"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn10view1"
+        },
+        {
+          "url": "https://www.coaaa.org/about/our-agency/",
+          "fields_supported": [
+            "geography",
+            "age_life_stage"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn3view7"
+        },
+        {
+          "url": "https://www.coaaa.org/connect/contact-us/",
+          "fields_supported": [
+            "public_contact"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn3view8"
+        },
+        {
+          "url": "https://www.coaaa.org/connect/request-help-form/",
+          "fields_supported": [
+            "application_or_referral_route"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "official_search_extract_reviewed",
+          "retrieval_ref": "turn1search2"
+        },
+        {
+          "url": "https://www.coaaa.org/services/staying-at-home/",
+          "fields_supported": [
+            "eligibility_summary",
+            "next_step",
+            "eligibility_decision_owner",
+            "payment_or_funding_summary"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn10view0"
+        },
+        {
+          "url": "https://www.ohiohelps.org/Home/SearchProvider",
+          "fields_supported": [
+            "public_contact",
+            "application_or_referral_route",
+            "needs_supported"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn6view7"
+        },
+        {
+          "url": "https://dam.assets.ohio.gov/image/upload/medicaid.ohio.gov/Families,%20Individuals/Programs/Waivers/HCBSWaivers/ProgramInformation/Ohio_Home_Care.pdf",
+          "fields_supported": [
+            "next_step",
+            "eligibility_decision_owner",
+            "application_or_referral_route"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": 2025,
+          "published_date": "2025-09",
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn5view2"
+        },
+        {
+          "url": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-46-02",
+          "fields_supported": [
+            "eligibility_summary",
+            "constraints"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": 2025,
+          "published_date": "2025-09-22",
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn8view3"
+        },
+        {
+          "url": "https://www.morrowdd.com/",
+          "fields_supported": [
+            "name",
+            "geography",
+            "public_contact",
+            "application_or_referral_route"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn1view0"
+        },
+        {
+          "url": "https://www.morrowdd.com/service-and-support-administration/",
+          "fields_supported": [
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "next_step"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": 2026,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn3view0"
+        },
+        {
+          "url": "https://www.morrowdd.com/department-directory/",
+          "fields_supported": [
+            "public_contact"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn5view4"
+        },
+        {
+          "url": "https://www.knoxdd.com/eligibility",
+          "fields_supported": [
+            "age_life_stage",
+            "eligibility_summary",
+            "application_or_referral_route",
+            "public_contact"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn2view0"
+        },
+        {
+          "url": "https://www.knoxdd.com/contact",
+          "fields_supported": [
+            "geography",
+            "public_contact"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn7view5"
+        },
+        {
+          "url": "https://www.knoxdd.com/service-support-administration",
+          "fields_supported": [
+            "next_step",
+            "eligibility_decision_owner"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn2view1"
+        },
+        {
+          "url": "https://www.marioncountydd.org/getting-started/",
+          "fields_supported": [
+            "geography",
+            "public_contact",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn2view2"
+        },
+        {
+          "url": "https://www.dcbdd.org/eligibility/",
+          "fields_supported": [
+            "geography",
+            "age_life_stage",
+            "eligibility_summary",
+            "application_or_referral_route"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn7view6"
+        },
+        {
+          "url": "https://www.dcbdd.org/contact-us/",
+          "fields_supported": [
+            "public_contact"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn1view1"
+        },
+        {
+          "url": "https://www.dcbdd.org/support-administration/",
+          "fields_supported": [
+            "next_step",
+            "eligibility_decision_owner"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn3view2"
+        }
+      ],
+      "unresolved_questions": [
+        "Actual assessment assignment, program enrollment, plan route, costs and availability require applicant-specific confirmation.",
+        "No home-care agencies or vendor availability researched."
+      ],
+      "best_existing_navigators": [
+        "District 5 ADRN: Morrow/Knox/Marion",
+        "COAAA consultation: Delaware",
+        "Ohio Benefits LTSS statewide fallback"
+      ],
+      "overlap_classification": "navigation_gap_add_guidance",
+      "overlap_reason": "Live navigators already cover this need; proposed addition explains age, developmental-disability and coverage branches with the correct county entry.",
+      "overlap_validation": "Proposed presentation value; not demonstrated by user or navigator testing.",
+      "reviewed_on": "2026-10-02",
+      "review_method": "official_source_reviewed",
+      "verification_status": "official_source_reviewed",
+      "relationships": [
+        {
+          "from": "P2",
+          "to": "district5-adrn",
+          "type": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://www.aaa5ohio.org/about/our-agency/",
+            "https://www.aaa5ohio.org/resources/aging-and-disability-resource-network/",
+            "https://www.aaa5ohio.org/services/under-60/",
+            "https://www.aaa5ohio.org/services/for-older-adults/"
+          ]
+        },
+        {
+          "from": "P2",
+          "to": "coaaa-navigation",
+          "type": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://www.coaaa.org/about/our-agency/",
+            "https://www.coaaa.org/connect/contact-us/",
+            "https://www.coaaa.org/connect/request-help-form/",
+            "https://www.coaaa.org/services/staying-at-home/"
+          ]
+        },
+        {
+          "from": "P2",
+          "to": "ohio-ltss",
+          "type": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://www.ohiohelps.org/Home/SearchProvider",
+            "https://dam.assets.ohio.gov/image/upload/medicaid.ohio.gov/Families,%20Individuals/Programs/Waivers/HCBSWaivers/ProgramInformation/Ohio_Home_Care.pdf",
+            "https://codes.ohio.gov/ohio-administrative-code/rule-5160-46-02"
+          ]
+        },
+        {
+          "from": "P2",
+          "to": "morrow-dd-intake",
+          "type": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://www.morrowdd.com/",
+            "https://www.morrowdd.com/service-and-support-administration/",
+            "https://www.morrowdd.com/department-directory/"
+          ]
+        },
+        {
+          "from": "P2",
+          "to": "knox-dd-intake",
+          "type": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://www.knoxdd.com/eligibility",
+            "https://www.knoxdd.com/contact",
+            "https://www.knoxdd.com/service-support-administration"
+          ]
+        },
+        {
+          "from": "P2",
+          "to": "marion-dd-intake",
+          "type": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://www.marioncountydd.org/getting-started/"
+          ]
+        },
+        {
+          "from": "P2",
+          "to": "delaware-dd-intake",
+          "type": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://www.dcbdd.org/eligibility/",
+            "https://www.dcbdd.org/contact-us/",
+            "https://www.dcbdd.org/support-administration/"
+          ]
+        }
+      ],
+      "outcome_status": "not_user_tested_no_completed_referral",
+      "starting_resource_by_county": {
+        "Morrow": "district5-adrn",
+        "Knox": "district5-adrn",
+        "Marion": "district5-adrn",
+        "Delaware": "coaaa-navigation"
+      }
+    },
+    {
+      "pathway_id": "P3",
+      "need": "Veteran seeking home accessibility assistance",
+      "county_life_stage": {
+        "counties": [
+          "Morrow",
+          "Knox",
+          "Marion",
+          "Delaware"
+        ],
+        "life_stages": [
+          "veterans",
+          "service_members"
+        ]
+      },
+      "relevant_conditions": "Needs and eligibility assessments guide routing; diagnosis alone does not determine access.",
+      "starting_resource_id": null,
+      "first_contact_by_county": {
+        "DD": {
+          "Morrow": "morrow-dd-intake",
+          "Knox": "knox-dd-intake",
+          "Marion": "marion-dd-intake",
+          "Delaware": "delaware-dd-intake"
+        },
+        "aging_disability": {
+          "Morrow": "district5-adrn",
+          "Knox": "district5-adrn",
+          "Marion": "district5-adrn",
+          "Delaware": "coaaa-navigation"
+        },
+        "veterans": {
+          "Morrow": "morrow-vso",
+          "Knox": "knox-vso",
+          "Marion": "marion-vso",
+          "Delaware": "delaware-vso"
+        }
+      },
+      "what_to_ask": "See branch-specific questions in ordered_steps.",
+      "prerequisite_documents": [
+        "HISA checklist in va-hisa constraints; VA Form 10-0103 and medical approval.",
+        "SAH/SHA: VA Form 26-4555; Social Security number and VA file/claim number if available."
+      ],
+      "ordered_steps": [
+        {
+          "step": 1,
+          "branch": null,
+          "action": "Choose county assistance or direct VA entry.",
+          "resource_ids": [
+            "morrow-vso",
+            "knox-vso",
+            "marion-vso",
+            "delaware-vso"
+          ],
+          "what_to_ask": "Can you help identify a benefit for my medically needed home alteration?",
+          "expected_next_step": "County office helps navigate; VA determines federal eligibility.",
+          "fallback_resource_ids": [
+            "va-hisa",
+            "va-adapted-housing"
+          ],
+          "prerequisite_documents": [],
+          "eligibility_decision_owner": null,
+          "connection_status": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://morrowcountyveterans.com/",
+            "https://co.knox.oh.us/county-home/county-offices/",
+            "https://kcvso.com/contact-us/",
+            "https://kcvso.com/",
+            "https://dam.assets.ohio.gov/image/upload/dvs.ohio.gov/benefits/benefitsguide-0613edit.pdf",
+            "https://www.va.gov/central-ohio-health-care/programs/va-emergency-resources/community-emergency-resources/marion-county-community-resources/",
+            "https://veteransservice.co.delaware.oh.us/contact-us/"
+          ]
+        },
+        {
+          "step": 2,
+          "branch": {
+            "label": "medically_necessary_alteration"
+          },
+          "action": "Direct HISA route: reach responsible VA Prosthetics using the official locator.",
+          "resource_ids": [
+            "va-hisa"
+          ],
+          "what_to_ask": "Can you review medical necessity and give me the application checklist?",
+          "expected_next_step": "Clinical justification and Prosthetics review.",
+          "fallback_resource_ids": [
+            "va-adapted-housing",
+            "morrow-vso",
+            "knox-vso",
+            "marion-vso",
+            "delaware-vso"
+          ],
+          "prerequisite_documents": [],
+          "eligibility_decision_owner": "VA Prosthetic and Sensory Aids Service",
+          "connection_status": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://www.prosthetics.va.gov/psas/HISA2.asp"
+          ]
+        },
+        {
+          "step": 3,
+          "branch": {
+            "label": "qualifying_service_connected_disability"
+          },
+          "action": "Direct SAH/SHA route: review qualifying service-connected disability and ownership rules; apply.",
+          "resource_ids": [
+            "va-adapted-housing"
+          ],
+          "what_to_ask": "Does my condition/home meet SAH or SHA criteria and what evidence is needed?",
+          "expected_next_step": "Online/form 26-4555 claim; VA issues decision.",
+          "fallback_resource_ids": [
+            "va-hisa",
+            "morrow-vso",
+            "knox-vso",
+            "marion-vso",
+            "delaware-vso"
+          ],
+          "prerequisite_documents": [],
+          "eligibility_decision_owner": "VA Veterans Benefits Administration",
+          "connection_status": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://www.va.gov/housing-assistance/disability-housing-grants/",
+            "https://www.va.gov/housing-assistance/disability-housing-grants/how-to-apply/"
+          ]
+        },
+        {
+          "step": 4,
+          "branch": {
+            "label": "not_eligible_or_no_available_route"
+          },
+          "action": "If a VA housing route is unavailable, ask county office and regional navigator for other accessibility options.",
+          "resource_ids": [
+            "morrow-vso",
+            "knox-vso",
+            "marion-vso",
+            "delaware-vso",
+            "district5-adrn",
+            "coaaa-navigation",
+            "ohio-ltss"
+          ],
+          "what_to_ask": "What local/non-VA programs might fit and who assesses eligibility?",
+          "expected_next_step": "Alternative screening; an award, installer or completed modification is not established.",
+          "fallback_resource_ids": [
+            "ohio-ltss"
+          ],
+          "prerequisite_documents": [],
+          "eligibility_decision_owner": "Relevant alternative program",
+          "connection_status": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://morrowcountyveterans.com/",
+            "https://co.knox.oh.us/county-home/county-offices/",
+            "https://kcvso.com/contact-us/",
+            "https://kcvso.com/",
+            "https://dam.assets.ohio.gov/image/upload/dvs.ohio.gov/benefits/benefitsguide-0613edit.pdf",
+            "https://www.va.gov/central-ohio-health-care/programs/va-emergency-resources/community-emergency-resources/marion-county-community-resources/",
+            "https://veteransservice.co.delaware.oh.us/contact-us/",
+            "https://www.aaa5ohio.org/about/our-agency/",
+            "https://www.aaa5ohio.org/resources/aging-and-disability-resource-network/",
+            "https://www.aaa5ohio.org/services/under-60/",
+            "https://www.aaa5ohio.org/services/for-older-adults/",
+            "https://www.coaaa.org/about/our-agency/",
+            "https://www.coaaa.org/connect/contact-us/",
+            "https://www.coaaa.org/connect/request-help-form/",
+            "https://www.coaaa.org/services/staying-at-home/",
+            "https://www.ohiohelps.org/Home/SearchProvider",
+            "https://dam.assets.ohio.gov/image/upload/medicaid.ohio.gov/Families,%20Individuals/Programs/Waivers/HCBSWaivers/ProgramInformation/Ohio_Home_Care.pdf",
+            "https://codes.ohio.gov/ohio-administrative-code/rule-5160-46-02"
+          ]
+        }
+      ],
+      "next_resource_ids": [
+        "morrow-vso",
+        "knox-vso",
+        "marion-vso",
+        "delaware-vso",
+        "va-hisa",
+        "va-adapted-housing",
+        "district5-adrn",
+        "coaaa-navigation",
+        "ohio-ltss"
+      ],
+      "fallback_resource_ids": [
+        "ohio-ltss"
+      ],
+      "eligibility_owner": "VA PSAS/VHA for HISA; VBA for SAH/SHA; county commission for local aid",
+      "evidence": [
+        {
+          "url": "https://morrowcountyveterans.com/",
+          "fields_supported": [
+            "name",
+            "geography",
+            "public_contact",
+            "application_or_referral_route"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn3view4"
+        },
+        {
+          "url": "https://co.knox.oh.us/county-home/county-offices/",
+          "fields_supported": [
+            "name",
+            "geography",
+            "public_contact"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn4view5"
+        },
+        {
+          "url": "https://kcvso.com/contact-us/",
+          "fields_supported": [
+            "application_or_referral_route"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn3view5"
+        },
+        {
+          "url": "https://kcvso.com/",
+          "fields_supported": [
+            "service_description"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn4view4"
+        },
+        {
+          "url": "https://dam.assets.ohio.gov/image/upload/dvs.ohio.gov/benefits/benefitsguide-0613edit.pdf",
+          "fields_supported": [
+            "public_contact.phone"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "official_search_extract_reviewed",
+          "retrieval_ref": "turn9search26"
+        },
+        {
+          "url": "https://www.va.gov/central-ohio-health-care/programs/va-emergency-resources/community-emergency-resources/marion-county-community-resources/",
+          "fields_supported": [
+            "name",
+            "geography",
+            "public_contact.address",
+            "official_url"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": 2026,
+          "published_date": "2026-01-08",
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn4view6"
+        },
+        {
+          "url": "https://veteransservice.co.delaware.oh.us/contact-us/",
+          "fields_supported": [
+            "name",
+            "geography",
+            "public_contact",
+            "application_or_referral_route"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn3view6"
+        },
+        {
+          "url": "https://www.prosthetics.va.gov/psas/HISA2.asp",
+          "fields_supported": [
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "constraints"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": 2025,
+          "published_date": "2025-02-12",
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn7view2"
+        },
+        {
+          "url": "https://www.va.gov/housing-assistance/disability-housing-grants/",
+          "fields_supported": [
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "constraints"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": 2026,
+          "published_date": "2025-11-18",
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn7view4"
+        },
+        {
+          "url": "https://www.va.gov/housing-assistance/disability-housing-grants/how-to-apply/",
+          "fields_supported": [
+            "application_or_referral_route",
+            "next_step"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": 2025,
+          "published_date": "2025-09-24",
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn8view1"
+        },
+        {
+          "url": "https://www.aaa5ohio.org/about/our-agency/",
+          "fields_supported": [
+            "geography",
+            "age_life_stage",
+            "public_contact"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn3view10"
+        },
+        {
+          "url": "https://www.aaa5ohio.org/resources/aging-and-disability-resource-network/",
+          "fields_supported": [
+            "application_or_referral_route",
+            "needs_supported"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn2view3"
+        },
+        {
+          "url": "https://www.aaa5ohio.org/services/under-60/",
+          "fields_supported": [
+            "next_step",
+            "eligibility_decision_owner"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn6view5"
+        },
+        {
+          "url": "https://www.aaa5ohio.org/services/for-older-adults/",
+          "fields_supported": [
+            "needs_supported"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn10view1"
+        },
+        {
+          "url": "https://www.coaaa.org/about/our-agency/",
+          "fields_supported": [
+            "geography",
+            "age_life_stage"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn3view7"
+        },
+        {
+          "url": "https://www.coaaa.org/connect/contact-us/",
+          "fields_supported": [
+            "public_contact"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn3view8"
+        },
+        {
+          "url": "https://www.coaaa.org/connect/request-help-form/",
+          "fields_supported": [
+            "application_or_referral_route"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "official_search_extract_reviewed",
+          "retrieval_ref": "turn1search2"
+        },
+        {
+          "url": "https://www.coaaa.org/services/staying-at-home/",
+          "fields_supported": [
+            "eligibility_summary",
+            "next_step",
+            "eligibility_decision_owner",
+            "payment_or_funding_summary"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn10view0"
+        },
+        {
+          "url": "https://www.ohiohelps.org/Home/SearchProvider",
+          "fields_supported": [
+            "public_contact",
+            "application_or_referral_route",
+            "needs_supported"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": null,
+          "published_date": null,
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn6view7"
+        },
+        {
+          "url": "https://dam.assets.ohio.gov/image/upload/medicaid.ohio.gov/Families,%20Individuals/Programs/Waivers/HCBSWaivers/ProgramInformation/Ohio_Home_Care.pdf",
+          "fields_supported": [
+            "next_step",
+            "eligibility_decision_owner",
+            "application_or_referral_route"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": 2025,
+          "published_date": "2025-09",
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn5view2"
+        },
+        {
+          "url": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-46-02",
+          "fields_supported": [
+            "eligibility_summary",
+            "constraints"
+          ],
+          "date_reviewed": "2026-10-02",
+          "published_effective_year": 2025,
+          "published_date": "2025-09-22",
+          "access_method": "page_text_reviewed",
+          "retrieval_ref": "turn8view3"
+        }
+      ],
+      "unresolved_questions": [
+        "Responsible VA facility/Prosthetics unit must be located for each individual; county residence alone does not prove catchment.",
+        "FY2027 SAH/SHA amounts not verified.",
+        "No nonprofit grants or adaptation vendors researched."
+      ],
+      "best_existing_navigators": [
+        "County VSO benefits navigator",
+        "VA HISA local Prosthetics",
+        "VA adapted-housing application guidance"
+      ],
+      "overlap_classification": "navigation_gap_add_guidance",
+      "overlap_reason": "Existing county navigators and VA pages supply benefit routes; proposed addition distinguishes clinical HISA from service-connected SAH/SHA and shows non-VA fallback.",
+      "overlap_validation": "Proposed presentation value; not demonstrated by user or navigator testing.",
+      "reviewed_on": "2026-10-02",
+      "review_method": "official_source_reviewed",
+      "verification_status": "official_source_reviewed",
+      "relationships": [
+        {
+          "from": "P3",
+          "to": "morrow-vso",
+          "type": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://morrowcountyveterans.com/"
+          ]
+        },
+        {
+          "from": "P3",
+          "to": "knox-vso",
+          "type": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://co.knox.oh.us/county-home/county-offices/",
+            "https://kcvso.com/contact-us/",
+            "https://kcvso.com/"
+          ]
+        },
+        {
+          "from": "P3",
+          "to": "marion-vso",
+          "type": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://dam.assets.ohio.gov/image/upload/dvs.ohio.gov/benefits/benefitsguide-0613edit.pdf",
+            "https://www.va.gov/central-ohio-health-care/programs/va-emergency-resources/community-emergency-resources/marion-county-community-resources/"
+          ]
+        },
+        {
+          "from": "P3",
+          "to": "delaware-vso",
+          "type": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://veteransservice.co.delaware.oh.us/contact-us/"
+          ]
+        },
+        {
+          "from": "P3",
+          "to": "va-hisa",
+          "type": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://www.prosthetics.va.gov/psas/HISA2.asp"
+          ]
+        },
+        {
+          "from": "P3",
+          "to": "va-adapted-housing",
+          "type": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://www.va.gov/housing-assistance/disability-housing-grants/",
+            "https://www.va.gov/housing-assistance/disability-housing-grants/how-to-apply/"
+          ]
+        },
+        {
+          "from": "P3",
+          "to": "district5-adrn",
+          "type": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://www.aaa5ohio.org/about/our-agency/",
+            "https://www.aaa5ohio.org/resources/aging-and-disability-resource-network/",
+            "https://www.aaa5ohio.org/services/under-60/",
+            "https://www.aaa5ohio.org/services/for-older-adults/"
+          ]
+        },
+        {
+          "from": "P3",
+          "to": "coaaa-navigation",
+          "type": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://www.coaaa.org/about/our-agency/",
+            "https://www.coaaa.org/connect/contact-us/",
+            "https://www.coaaa.org/connect/request-help-form/",
+            "https://www.coaaa.org/services/staying-at-home/"
+          ]
+        },
+        {
+          "from": "P3",
+          "to": "ohio-ltss",
+          "type": "proposed_navigation_connection",
+          "evidence_urls": [
+            "https://www.ohiohelps.org/Home/SearchProvider",
+            "https://dam.assets.ohio.gov/image/upload/medicaid.ohio.gov/Families,%20Individuals/Programs/Waivers/HCBSWaivers/ProgramInformation/Ohio_Home_Care.pdf",
+            "https://codes.ohio.gov/ohio-administrative-code/rule-5160-46-02"
+          ]
+        }
+      ],
+      "outcome_status": "not_user_tested_no_completed_referral",
+      "starting_resource_by_county": {
+        "Morrow": "morrow-vso",
+        "Knox": "knox-vso",
+        "Marion": "marion-vso",
+        "Delaware": "delaware-vso"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1055 @@
+{
+  "project": "Ohio Senior & Disability Resource Directory",
+  "version": "0.2-working-seed",
+  "prepared_on": "2026-09-30",
+  "publication_status": "Internal working seed; not a verified public directory",
+  "scope": {
+    "state": "Ohio",
+    "starting_counties": [
+      "Morrow",
+      "Delaware",
+      "Knox",
+      "Marion"
+    ],
+    "intended_population": "People with disabilities across the lifespan, older adults, families and caregivers; veteran-specific navigation as an additional view"
+  },
+  "method": {
+    "facility_merge_key": "CMS CCN",
+    "source_facility_rows": 24,
+    "later_source_rows": 16,
+    "distinct_facility_candidates": 25,
+    "rule": "Preserve the union and provenance. A record missing from the later source is not assumed closed. Do not publish source relationship ratings, sponsor strategies, private contacts, or resident data.",
+    "bed_count_rule": "Conflicting and historical bed counts omitted pending official reconciliation.",
+    "need_conclusion": "Existing directories and navigators already serve much of the proposed need. Incremental value of a new combined directory remains a hypothesis to validate.",
+    "build_rule": "Link established resources first; add locally verified records and cross-system referral guidance only where a demonstrated gap remains."
+  },
+  "facilities": [
+    {
+      "id": "facility-cms-366028",
+      "name": "Woodside Village Care Center",
+      "county": "Morrow",
+      "state": "OH",
+      "city": "Mount Gilead",
+      "address": "841 W Marion Rd",
+      "zip": "43338",
+      "phone": "419-947-2015",
+      "cms_ccn": "366028",
+      "resource_type": "nursing_facility_candidate",
+      "record_status": "imported_needs_current_verification",
+      "last_verified": null,
+      "coverage": null,
+      "accepting_referrals": null,
+      "beds": null,
+      "source_files": [
+        "VHG_Four_County_Nursing_Home_Outreach_v2.xlsx",
+        "VHG_Morrow_Knox_Marion_Facility_Network.xlsx"
+      ],
+      "source_url": "https://www.medicare.gov/care-compare/details/nursing-home/366028/view-all",
+      "source_url_status": "CMS identifier-based lookup link; not individually rechecked in this task",
+      "verification_issues": []
+    },
+    {
+      "id": "facility-cms-366194",
+      "name": "Bennington Glen Nursing & Rehabilitation Center",
+      "county": "Morrow",
+      "state": "OH",
+      "city": "Marengo",
+      "address": "825 State Route 61",
+      "zip": "43334",
+      "phone": "419-253-0144",
+      "cms_ccn": "366194",
+      "resource_type": "nursing_facility_candidate",
+      "record_status": "imported_needs_current_verification",
+      "last_verified": null,
+      "coverage": null,
+      "accepting_referrals": null,
+      "beds": null,
+      "source_files": [
+        "VHG_Four_County_Nursing_Home_Outreach_v2.xlsx",
+        "VHG_Morrow_Knox_Marion_Facility_Network.xlsx"
+      ],
+      "source_url": "https://www.medicare.gov/care-compare/details/nursing-home/366194/view-all",
+      "source_url_status": "CMS identifier-based lookup link; not individually rechecked in this task",
+      "verification_issues": []
+    },
+    {
+      "id": "facility-cms-365835",
+      "name": "Morrow Manor Nursing Center",
+      "county": "Morrow",
+      "state": "OH",
+      "city": "Chesterville",
+      "address": "St Rt 314 North",
+      "zip": "43317",
+      "phone": null,
+      "cms_ccn": "365835",
+      "resource_type": "nursing_facility_candidate",
+      "record_status": "imported_needs_current_verification",
+      "last_verified": null,
+      "coverage": null,
+      "accepting_referrals": null,
+      "beds": null,
+      "source_files": [
+        "VHG_Morrow_Knox_Marion_Facility_Network.xlsx"
+      ],
+      "source_url": "https://www.medicare.gov/care-compare/details/nursing-home/365835/view-all",
+      "source_url_status": "CMS identifier-based lookup link; not individually rechecked in this task",
+      "verification_issues": [
+        "Added from later three-county source; street address needs current confirmation."
+      ]
+    },
+    {
+      "id": "facility-cms-366246",
+      "name": "Cherith Care Center at Willow Brook",
+      "county": "Delaware",
+      "state": "OH",
+      "city": "Delaware",
+      "address": "100 Willow Brook Way S",
+      "zip": "43015",
+      "phone": "740-369-0048",
+      "cms_ccn": "366246",
+      "resource_type": "nursing_facility_candidate",
+      "record_status": "imported_needs_current_verification",
+      "last_verified": null,
+      "coverage": null,
+      "accepting_referrals": null,
+      "beds": null,
+      "source_files": [
+        "VHG_Four_County_Nursing_Home_Outreach_v2.xlsx"
+      ],
+      "source_url": "https://www.medicare.gov/care-compare/details/nursing-home/366246/view-all",
+      "source_url_status": "CMS identifier-based lookup link; not individually rechecked in this task",
+      "verification_issues": []
+    },
+    {
+      "id": "facility-cms-365408",
+      "name": "Arbors at Delaware",
+      "county": "Delaware",
+      "state": "OH",
+      "city": "Delaware",
+      "address": "2270 Warrensburg Road",
+      "zip": "43015",
+      "phone": "740-369-9614",
+      "cms_ccn": "365408",
+      "resource_type": "nursing_facility_candidate",
+      "record_status": "imported_needs_current_verification",
+      "last_verified": null,
+      "coverage": null,
+      "accepting_referrals": null,
+      "beds": null,
+      "source_files": [
+        "VHG_Four_County_Nursing_Home_Outreach_v2.xlsx"
+      ],
+      "source_url": "https://www.medicare.gov/care-compare/details/nursing-home/365408/view-all",
+      "source_url_status": "CMS identifier-based lookup link; not individually rechecked in this task",
+      "verification_issues": []
+    },
+    {
+      "id": "facility-cms-366310",
+      "name": "Ohio Living Sarah Moore",
+      "county": "Delaware",
+      "state": "OH",
+      "city": "Delaware",
+      "address": "26 North Union Street",
+      "zip": "43015",
+      "phone": "740-362-9641",
+      "cms_ccn": "366310",
+      "resource_type": "nursing_facility_candidate",
+      "record_status": "imported_needs_current_verification",
+      "last_verified": null,
+      "coverage": null,
+      "accepting_referrals": null,
+      "beds": null,
+      "source_files": [
+        "VHG_Four_County_Nursing_Home_Outreach_v2.xlsx"
+      ],
+      "source_url": "https://www.medicare.gov/care-compare/details/nursing-home/366310/view-all",
+      "source_url_status": "CMS identifier-based lookup link; not individually rechecked in this task",
+      "verification_issues": []
+    },
+    {
+      "id": "facility-cms-365676",
+      "name": "Delaware Court Health Care Center",
+      "county": "Delaware",
+      "state": "OH",
+      "city": "Delaware",
+      "address": "4 New Market Dr",
+      "zip": "43015",
+      "phone": "740-369-6400",
+      "cms_ccn": "365676",
+      "resource_type": "nursing_facility_candidate",
+      "record_status": "imported_needs_current_verification",
+      "last_verified": null,
+      "coverage": null,
+      "accepting_referrals": null,
+      "beds": null,
+      "source_files": [
+        "VHG_Four_County_Nursing_Home_Outreach_v2.xlsx"
+      ],
+      "source_url": "https://www.medicare.gov/care-compare/details/nursing-home/365676/view-all",
+      "source_url_status": "CMS identifier-based lookup link; not individually rechecked in this task",
+      "verification_issues": []
+    },
+    {
+      "id": "facility-cms-366026",
+      "name": "Country Club Rehabilitation Campus - Delaware",
+      "county": "Delaware",
+      "state": "OH",
+      "city": "Delaware",
+      "address": "478 S Sandusky St",
+      "zip": "43015",
+      "phone": "740-369-8741",
+      "cms_ccn": "366026",
+      "resource_type": "nursing_facility_candidate",
+      "record_status": "imported_needs_current_verification",
+      "last_verified": null,
+      "coverage": null,
+      "accepting_referrals": null,
+      "beds": null,
+      "source_files": [
+        "VHG_Four_County_Nursing_Home_Outreach_v2.xlsx"
+      ],
+      "source_url": "https://www.medicare.gov/care-compare/details/nursing-home/366026/view-all",
+      "source_url_status": "CMS identifier-based lookup link; not individually rechecked in this task",
+      "verification_issues": []
+    },
+    {
+      "id": "facility-cms-366472",
+      "name": "Capri Gardens",
+      "county": "Delaware",
+      "state": "OH",
+      "city": "Lewis Center",
+      "address": "6975 Graphics Way",
+      "zip": "43035",
+      "phone": "740-657-2200",
+      "cms_ccn": "366472",
+      "resource_type": "nursing_facility_candidate",
+      "record_status": "imported_needs_current_verification",
+      "last_verified": null,
+      "coverage": null,
+      "accepting_referrals": null,
+      "beds": null,
+      "source_files": [
+        "VHG_Four_County_Nursing_Home_Outreach_v2.xlsx"
+      ],
+      "source_url": "https://www.medicare.gov/care-compare/details/nursing-home/366472/view-all",
+      "source_url_status": "CMS identifier-based lookup link; not individually rechecked in this task",
+      "verification_issues": [
+        "Older source flags county boundary/assignment for confirmation."
+      ]
+    },
+    {
+      "id": "facility-cms-366494",
+      "name": "The Landings of Westerville Health and Rehab",
+      "county": "Delaware",
+      "state": "OH",
+      "city": "Westerville",
+      "address": "350 County Line Road West",
+      "zip": "43082",
+      "phone": "740-616-7131",
+      "cms_ccn": "366494",
+      "resource_type": "nursing_facility_candidate",
+      "record_status": "imported_needs_current_verification",
+      "last_verified": null,
+      "coverage": null,
+      "accepting_referrals": null,
+      "beds": null,
+      "source_files": [
+        "VHG_Four_County_Nursing_Home_Outreach_v2.xlsx"
+      ],
+      "source_url": "https://www.medicare.gov/care-compare/details/nursing-home/366494/view-all",
+      "source_url_status": "CMS identifier-based lookup link; not individually rechecked in this task",
+      "verification_issues": [
+        "Older source flags county boundary/assignment for confirmation."
+      ]
+    },
+    {
+      "id": "facility-cms-365815",
+      "name": "Country Club Retirement Center",
+      "county": "Knox",
+      "state": "OH",
+      "city": "Mount Vernon",
+      "address": "1350 Yauger Road",
+      "zip": "43050",
+      "phone": null,
+      "cms_ccn": "365815",
+      "resource_type": "nursing_facility_candidate",
+      "record_status": "imported_needs_current_verification",
+      "last_verified": null,
+      "coverage": null,
+      "accepting_referrals": null,
+      "beds": null,
+      "source_files": [
+        "VHG_Four_County_Nursing_Home_Outreach_v2.xlsx",
+        "VHG_Morrow_Knox_Marion_Facility_Network.xlsx"
+      ],
+      "source_url": "https://www.medicare.gov/care-compare/details/nursing-home/365815/view-all",
+      "source_url_status": "CMS identifier-based lookup link; not individually rechecked in this task",
+      "verification_issues": []
+    },
+    {
+      "id": "facility-cms-366412",
+      "name": "ALS Mount Vernon Inc",
+      "county": "Knox",
+      "state": "OH",
+      "city": "Mount Vernon",
+      "address": "1135 Gambier Road",
+      "zip": "43050",
+      "phone": "740-392-1599",
+      "cms_ccn": "366412",
+      "resource_type": "nursing_facility_candidate",
+      "record_status": "imported_needs_current_verification",
+      "last_verified": null,
+      "coverage": null,
+      "accepting_referrals": null,
+      "beds": null,
+      "source_files": [
+        "VHG_Four_County_Nursing_Home_Outreach_v2.xlsx",
+        "VHG_Morrow_Knox_Marion_Facility_Network.xlsx"
+      ],
+      "source_url": "https://www.medicare.gov/care-compare/details/nursing-home/366412/view-all",
+      "source_url_status": "CMS identifier-based lookup link; not individually rechecked in this task",
+      "verification_issues": [
+        "Older name: Mount Vernon Health and Rehabilitation Center. Later source name: ALS Mount Vernon Inc; verify current public-facing name."
+      ]
+    },
+    {
+      "id": "facility-cms-366299",
+      "name": "Centerburg Pointe",
+      "county": "Knox",
+      "state": "OH",
+      "city": "Centerburg",
+      "address": "4531 Columbus Road",
+      "zip": "43011",
+      "phone": "740-625-5401",
+      "cms_ccn": "366299",
+      "resource_type": "nursing_facility_candidate",
+      "record_status": "imported_needs_current_verification",
+      "last_verified": null,
+      "coverage": null,
+      "accepting_referrals": null,
+      "beds": null,
+      "source_files": [
+        "VHG_Four_County_Nursing_Home_Outreach_v2.xlsx",
+        "VHG_Morrow_Knox_Marion_Facility_Network.xlsx"
+      ],
+      "source_url": "https://www.medicare.gov/care-compare/details/nursing-home/366299/view-all",
+      "source_url_status": "CMS identifier-based lookup link; not individually rechecked in this task",
+      "verification_issues": [
+        "Bed counts differ between supplied workbooks; omitted until authoritative reconciliation."
+      ]
+    },
+    {
+      "id": "facility-cms-366076",
+      "name": "Ohio Eastern Star Health Care Center",
+      "county": "Knox",
+      "state": "OH",
+      "city": "Mount Vernon",
+      "address": "1451 Gambier Road",
+      "zip": "43050",
+      "phone": "740-397-1706",
+      "cms_ccn": "366076",
+      "resource_type": "nursing_facility_candidate",
+      "record_status": "imported_needs_current_verification",
+      "last_verified": null,
+      "coverage": null,
+      "accepting_referrals": null,
+      "beds": null,
+      "source_files": [
+        "VHG_Four_County_Nursing_Home_Outreach_v2.xlsx",
+        "VHG_Morrow_Knox_Marion_Facility_Network.xlsx"
+      ],
+      "source_url": "https://www.medicare.gov/care-compare/details/nursing-home/366076/view-all",
+      "source_url_status": "CMS identifier-based lookup link; not individually rechecked in this task",
+      "verification_issues": []
+    },
+    {
+      "id": "facility-cms-365525",
+      "name": "Centerburg Respiratory & Specialty Rehab Center",
+      "county": "Knox",
+      "state": "OH",
+      "city": "Centerburg",
+      "address": "212 Fairview Avenue",
+      "zip": "43011",
+      "phone": null,
+      "cms_ccn": "365525",
+      "resource_type": "nursing_facility_candidate",
+      "record_status": "imported_needs_current_verification",
+      "last_verified": null,
+      "coverage": null,
+      "accepting_referrals": null,
+      "beds": null,
+      "source_files": [
+        "VHG_Four_County_Nursing_Home_Outreach_v2.xlsx"
+      ],
+      "source_url": "https://www.medicare.gov/care-compare/details/nursing-home/365525/view-all",
+      "source_url_status": "CMS identifier-based lookup link; not individually rechecked in this task",
+      "verification_issues": [
+        "Present only in older four-county list; absent from later three-county list. Current operating status unresolved; absence is not proof of closure."
+      ]
+    },
+    {
+      "id": "facility-cms-366014",
+      "name": "Whispering Hills Rehabilitation and Nursing Center",
+      "county": "Knox",
+      "state": "OH",
+      "city": "Mount Vernon",
+      "address": "416 Wooster Road",
+      "zip": "43050",
+      "phone": null,
+      "cms_ccn": "366014",
+      "resource_type": "nursing_facility_candidate",
+      "record_status": "imported_needs_current_verification",
+      "last_verified": null,
+      "coverage": null,
+      "accepting_referrals": null,
+      "beds": null,
+      "source_files": [
+        "VHG_Four_County_Nursing_Home_Outreach_v2.xlsx",
+        "VHG_Morrow_Knox_Marion_Facility_Network.xlsx"
+      ],
+      "source_url": "https://www.medicare.gov/care-compare/details/nursing-home/366014/view-all",
+      "source_url_status": "CMS identifier-based lookup link; not individually rechecked in this task",
+      "verification_issues": []
+    },
+    {
+      "id": "facility-cms-365404",
+      "name": "The Laurels of Mt Vernon",
+      "county": "Knox",
+      "state": "OH",
+      "city": "Mount Vernon",
+      "address": "13 Avalon Road",
+      "zip": "43050",
+      "phone": "740-397-3200",
+      "cms_ccn": "365404",
+      "resource_type": "nursing_facility_candidate",
+      "record_status": "imported_needs_current_verification",
+      "last_verified": null,
+      "coverage": null,
+      "accepting_referrals": null,
+      "beds": null,
+      "source_files": [
+        "VHG_Four_County_Nursing_Home_Outreach_v2.xlsx",
+        "VHG_Morrow_Knox_Marion_Facility_Network.xlsx"
+      ],
+      "source_url": "https://www.medicare.gov/care-compare/details/nursing-home/365404/view-all",
+      "source_url_status": "CMS identifier-based lookup link; not individually rechecked in this task",
+      "verification_issues": [
+        "Bed counts differ between supplied workbooks; omitted until authoritative reconciliation."
+      ]
+    },
+    {
+      "id": "facility-cms-365269",
+      "name": "Country Court",
+      "county": "Knox",
+      "state": "OH",
+      "city": "Mount Vernon",
+      "address": "1076 Coshocton Ave",
+      "zip": "43050",
+      "phone": "740-397-4125",
+      "cms_ccn": "365269",
+      "resource_type": "nursing_facility_candidate",
+      "record_status": "imported_needs_current_verification",
+      "last_verified": null,
+      "coverage": null,
+      "accepting_referrals": null,
+      "beds": null,
+      "source_files": [
+        "VHG_Four_County_Nursing_Home_Outreach_v2.xlsx",
+        "VHG_Morrow_Knox_Marion_Facility_Network.xlsx"
+      ],
+      "source_url": "https://www.medicare.gov/care-compare/details/nursing-home/365269/view-all",
+      "source_url_status": "CMS identifier-based lookup link; not individually rechecked in this task",
+      "verification_issues": [
+        "Bed counts differ between supplied workbooks; omitted until authoritative reconciliation."
+      ]
+    },
+    {
+      "id": "facility-cms-366304",
+      "name": "Marion Valley Post Acute",
+      "county": "Marion",
+      "state": "OH",
+      "city": "Marion",
+      "address": "400 Barks Road West",
+      "zip": "43302",
+      "phone": "740-387-1225",
+      "cms_ccn": "366304",
+      "resource_type": "nursing_facility_candidate",
+      "record_status": "imported_needs_current_verification",
+      "last_verified": null,
+      "coverage": null,
+      "accepting_referrals": null,
+      "beds": null,
+      "source_files": [
+        "VHG_Four_County_Nursing_Home_Outreach_v2.xlsx",
+        "VHG_Morrow_Knox_Marion_Facility_Network.xlsx"
+      ],
+      "source_url": "https://www.medicare.gov/care-compare/details/nursing-home/366304/view-all",
+      "source_url_status": "CMS identifier-based lookup link; not individually rechecked in this task",
+      "verification_issues": [
+        "Bed counts differ between supplied workbooks; omitted until authoritative reconciliation."
+      ]
+    },
+    {
+      "id": "facility-cms-365329",
+      "name": "Marion Nursing & Rehab",
+      "county": "Marion",
+      "state": "OH",
+      "city": "Marion",
+      "address": "175 Community Drive",
+      "zip": "43302",
+      "phone": "740-387-7537",
+      "cms_ccn": "365329",
+      "resource_type": "nursing_facility_candidate",
+      "record_status": "imported_needs_current_verification",
+      "last_verified": null,
+      "coverage": null,
+      "accepting_referrals": null,
+      "beds": null,
+      "source_files": [
+        "VHG_Four_County_Nursing_Home_Outreach_v2.xlsx",
+        "VHG_Morrow_Knox_Marion_Facility_Network.xlsx"
+      ],
+      "source_url": "https://www.medicare.gov/care-compare/details/nursing-home/365329/view-all",
+      "source_url_status": "CMS identifier-based lookup link; not individually rechecked in this task",
+      "verification_issues": []
+    },
+    {
+      "id": "facility-cms-366340",
+      "name": "Harding Pointe",
+      "county": "Marion",
+      "state": "OH",
+      "city": "Marion",
+      "address": "340 Oak Street",
+      "zip": "43302",
+      "phone": null,
+      "cms_ccn": "366340",
+      "resource_type": "nursing_facility_candidate",
+      "record_status": "imported_needs_current_verification",
+      "last_verified": null,
+      "coverage": null,
+      "accepting_referrals": null,
+      "beds": null,
+      "source_files": [
+        "VHG_Four_County_Nursing_Home_Outreach_v2.xlsx",
+        "VHG_Morrow_Knox_Marion_Facility_Network.xlsx"
+      ],
+      "source_url": "https://www.medicare.gov/care-compare/details/nursing-home/366340/view-all",
+      "source_url_status": "CMS identifier-based lookup link; not individually rechecked in this task",
+      "verification_issues": []
+    },
+    {
+      "id": "facility-cms-365618",
+      "name": "Presidential Post Acute",
+      "county": "Marion",
+      "state": "OH",
+      "city": "Marion",
+      "address": "524 James Way",
+      "zip": "43302",
+      "phone": "740-389-6306",
+      "cms_ccn": "365618",
+      "resource_type": "nursing_facility_candidate",
+      "record_status": "imported_needs_current_verification",
+      "last_verified": null,
+      "coverage": null,
+      "accepting_referrals": null,
+      "beds": null,
+      "source_files": [
+        "VHG_Four_County_Nursing_Home_Outreach_v2.xlsx",
+        "VHG_Morrow_Knox_Marion_Facility_Network.xlsx"
+      ],
+      "source_url": "https://www.medicare.gov/care-compare/details/nursing-home/365618/view-all",
+      "source_url_status": "CMS identifier-based lookup link; not individually rechecked in this task",
+      "verification_issues": []
+    },
+    {
+      "id": "facility-cms-365323",
+      "name": "Marion Pointe",
+      "county": "Marion",
+      "state": "OH",
+      "city": "Marion",
+      "address": "409 Bellefontaine Avenue",
+      "zip": "43302",
+      "phone": null,
+      "cms_ccn": "365323",
+      "resource_type": "nursing_facility_candidate",
+      "record_status": "imported_needs_current_verification",
+      "last_verified": null,
+      "coverage": null,
+      "accepting_referrals": null,
+      "beds": null,
+      "source_files": [
+        "VHG_Four_County_Nursing_Home_Outreach_v2.xlsx",
+        "VHG_Morrow_Knox_Marion_Facility_Network.xlsx"
+      ],
+      "source_url": "https://www.medicare.gov/care-compare/details/nursing-home/365323/view-all",
+      "source_url_status": "CMS identifier-based lookup link; not individually rechecked in this task",
+      "verification_issues": [
+        "Street spelling differs between source files; verify official address."
+      ]
+    },
+    {
+      "id": "facility-cms-365181",
+      "name": "Marion Manor Nursing Home",
+      "county": "Marion",
+      "state": "OH",
+      "city": "Marion",
+      "address": "195 Executive Dr",
+      "zip": "43302",
+      "phone": null,
+      "cms_ccn": "365181",
+      "resource_type": "nursing_facility_candidate",
+      "record_status": "imported_needs_current_verification",
+      "last_verified": null,
+      "coverage": null,
+      "accepting_referrals": null,
+      "beds": null,
+      "source_files": [
+        "VHG_Four_County_Nursing_Home_Outreach_v2.xlsx"
+      ],
+      "source_url": "https://www.medicare.gov/care-compare/details/nursing-home/365181/view-all",
+      "source_url_status": "CMS identifier-based lookup link; not individually rechecked in this task",
+      "verification_issues": [
+        "Present only in older four-county list; absent from later three-county list. Current operating status unresolved; absence is not proof of closure."
+      ]
+    },
+    {
+      "id": "facility-cms-725004",
+      "name": "The Meadows of Marion Health and Rehabilitation",
+      "county": "Marion",
+      "state": "OH",
+      "city": "Marion",
+      "address": "155 Marion Cardington Road West",
+      "zip": "43302",
+      "phone": "740-914-5900",
+      "cms_ccn": "725004",
+      "resource_type": "nursing_facility_candidate",
+      "record_status": "imported_needs_current_verification",
+      "last_verified": null,
+      "coverage": null,
+      "accepting_referrals": null,
+      "beds": null,
+      "source_files": [
+        "VHG_Four_County_Nursing_Home_Outreach_v2.xlsx",
+        "VHG_Morrow_Knox_Marion_Facility_Network.xlsx"
+      ],
+      "source_url": "https://www.medicare.gov/care-compare/details/nursing-home/725004/view-all",
+      "source_url_status": "CMS identifier-based lookup link; not individually rechecked in this task",
+      "verification_issues": []
+    }
+  ],
+  "existing_resources": [
+    {
+      "id": "ohio-aging-compass",
+      "name": "Ohio Aging Compass",
+      "url": "https://compass.aging.ohio.gov/",
+      "population": "Older adults and caregivers",
+      "offers": "Aging resources and routes to long-term care comparison tools",
+      "action": "Link existing hub; cross-link local facility records",
+      "review": "Search/index review; individual result coverage not tested",
+      "relationship": "external_resource_not_confirmed_partner",
+      "reviewed_on": "2026-09-30"
+    },
+    {
+      "id": "ohio-ltss",
+      "name": "Ohio Benefits Long-Term Services and Supports",
+      "url": "https://www.ohiohelps.org/Home/SearchProvider",
+      "population": "People seeking long-term supports",
+      "offers": "Service and location search; assistance by telephone",
+      "action": "Link search and help line; validate local results before gathering duplicate listings",
+      "review": "Page opened; local searches and phone assistance not tested",
+      "relationship": "external_resource_not_confirmed_partner",
+      "reviewed_on": "2026-09-30"
+    },
+    {
+      "id": "ocali-family",
+      "name": "OCALI Family Resource Hub",
+      "url": "https://ocali.org/Family-Resource-Hub",
+      "population": "Families of people with disabilities",
+      "offers": "Family education, tools, guides, and navigation to OCALI resources",
+      "action": "Use for basic overviews; add short local next-step guidance where needed",
+      "review": "Page opened; core topic journeys not exhaustively tested",
+      "relationship": "external_resource_not_confirmed_partner",
+      "reviewed_on": "2026-09-30"
+    },
+    {
+      "id": "ocali-gallery",
+      "name": "OCALI Family and Community Resource Gallery",
+      "url": "https://ocali.org/fc_resource_gallery",
+      "population": "Autism/disability families",
+      "offers": "Autism introductions, parent resources and system support information",
+      "action": "Link specialist guides rather than rewriting them",
+      "review": "Page opened; individual guides not all reviewed",
+      "relationship": "external_resource_not_confirmed_partner",
+      "reviewed_on": "2026-09-30"
+    },
+    {
+      "id": "help-me-grow",
+      "name": "Help Me Grow",
+      "url": "https://www.helpmegrow.org/",
+      "population": "Pregnant individuals and families with young children",
+      "offers": "Referrals, early intervention routes and resource directories across all 88 counties",
+      "action": "Link referral and county directories; keep life-stage eligibility clear",
+      "review": "Page opened; application/referral not submitted",
+      "relationship": "external_resource_not_confirmed_partner",
+      "reviewed_on": "2026-09-30"
+    },
+    {
+      "id": "milestones-lifeworks",
+      "name": "Milestones Provider Directory at Lifeworks",
+      "url": "https://lifeworksautism.org/Resources",
+      "population": "Autistic people, families and professionals",
+      "offers": "Categories include therapy, respite, finances, residential support and transition to adulthood",
+      "action": "Link existing specialist directory; test local availability before adding provider lists",
+      "review": "Current directory landing page opened; individual listings not verified",
+      "relationship": "external_resource_not_confirmed_partner",
+      "reviewed_on": "2026-09-30"
+    },
+    {
+      "id": "county-dd",
+      "name": "Ohio Association of County Boards of DD — Family Resources",
+      "url": "https://www.oacbdd.org/familyresources",
+      "population": "People with developmental disabilities and families",
+      "offers": "County board directory map and family resources",
+      "action": "Link county navigator; collect direct four-county contacts after verification",
+      "review": "Search-index review; direct page fetch failed",
+      "relationship": "external_resource_not_confirmed_partner",
+      "reviewed_on": "2026-09-30"
+    },
+    {
+      "id": "special-education",
+      "name": "Ohio Families of Students with Disabilities",
+      "url": "https://education.ohio.gov/Topics/Special-Education/Families-of-Students-with-Disabilities",
+      "population": "Parents and caregivers of students with disabilities",
+      "offers": "Special education resources and evaluation guidance",
+      "action": "Link official guidance; validate district-specific next contact",
+      "review": "Official page opened; not individualized legal advice",
+      "relationship": "external_resource_not_confirmed_partner",
+      "reviewed_on": "2026-09-30"
+    },
+    {
+      "id": "cvso-map",
+      "name": "Ohio county veterans service office directory route",
+      "url": "https://osavsc.org/",
+      "population": "Veterans and families",
+      "offers": "Route to searchable county veterans service offices",
+      "action": "Link current directory, then verify direct contacts in four counties",
+      "review": "Search-index review; county contact rows not yet collected",
+      "relationship": "external_resource_not_confirmed_partner",
+      "reviewed_on": "2026-09-30"
+    },
+    {
+      "id": "findhelp",
+      "name": "findhelp",
+      "url": "https://www.findhelp.org/",
+      "population": "People seeking community assistance",
+      "offers": "Local social service searches and eligibility filters",
+      "action": "Use for broader social needs; validate current local matches",
+      "review": "Provider search/help documentation reviewed; local results not tested",
+      "relationship": "external_resource_not_confirmed_partner",
+      "reviewed_on": "2026-09-30"
+    },
+    {
+      "id": "morrow-dd-fdr",
+      "name": "Morrow Family Directed Resources",
+      "url": "https://www.morrowdd.com/family-directed-resources-fdr/",
+      "county": "Morrow",
+      "phone": "419-947-1159 ext. 302",
+      "offers": "Limited local funding for respite, adaptive equipment, minor home modifications and other disability-related needs.",
+      "eligibility": "Board eligibility required; excludes people receiving other Board or state financial support, including listed waivers.",
+      "action": "Ask for an eligibility assessment and FDR packet; after allocation request through the office or SSA.",
+      "limits": "Allocation and remaining funds must be confirmed.",
+      "review": "Official program page reviewed; no phone contact, eligibility decision or availability confirmation",
+      "relationship": "external_resource_not_confirmed_partner",
+      "reviewed_on": "2026-09-30"
+    },
+    {
+      "id": "delaware-dd-intake",
+      "name": "Delaware DD intake",
+      "url": "https://www.dcbdd.org/contact-us/",
+      "county": "Delaware",
+      "phone": "740-201-3600",
+      "offers": "Entry point to developmental disability services.",
+      "eligibility": "Eligibility assessment required.",
+      "action": "Ask for Intake & Eligibility.",
+      "limits": "Board services are not available to every disability diagnosis.",
+      "review": "Official program page reviewed; no phone contact, eligibility decision or availability confirmation",
+      "relationship": "external_resource_not_confirmed_partner",
+      "reviewed_on": "2026-09-30"
+    },
+    {
+      "id": "delaware-dd-fss",
+      "name": "Delaware Family Support Services",
+      "url": "https://www.dcbdd.org/family-support-services/",
+      "county": "Delaware",
+      "phone": "740-201-5888",
+      "offers": "Up to $1,000 for 2026 until approved funds are exhausted; specified equipment, therapies, camps, home modifications and assistive technology.",
+      "eligibility": "Board-eligible individuals age 3+ who are not enrolled in any Ohio Medicaid-administered waiver; category-specific documentation applies.",
+      "action": "Contact Information & Referral; obtain Board referral, then MEORC authorization before services. MEORC pays providers directly after services.",
+      "limits": "Remaining balance and request eligibility are not confirmed; this is family assistance, not directory development funding.",
+      "review": "Official program page reviewed; no phone contact, eligibility decision or availability confirmation",
+      "relationship": "external_resource_not_confirmed_partner",
+      "reviewed_on": "2026-09-30"
+    },
+    {
+      "id": "knox-dd-intake",
+      "name": "Knox DD intake and service coordination",
+      "url": "https://www.knoxdd.com/eligibility",
+      "county": "Knox",
+      "phone": "740-397-4656",
+      "offers": "Intake and eligibility; linked SSAs help with respite, in-home supports, school coordination and benefits.",
+      "eligibility": "Age 3+ applicants need qualifying diagnosis documentation; birth–2 follows the early-intervention route.",
+      "action": "Use secure intake form or cpayne@knoxdd.com; office phone sourced from https://www.knoxdd.com/contact.",
+      "limits": "SSA scope sourced from https://www.knoxdd.com/service-support-administration; no local family funding cap confirmed.",
+      "review": "Official program page reviewed; no phone contact, eligibility decision or availability confirmation",
+      "relationship": "external_resource_not_confirmed_partner",
+      "reviewed_on": "2026-09-30"
+    },
+    {
+      "id": "marion-dd-intake",
+      "name": "Marion DD enrollment",
+      "url": "https://www.marioncountydd.org/getting-started/",
+      "county": "Marion",
+      "phone": "740-375-6185",
+      "offers": "Eligibility intake, assigned SSA and person-centered support planning.",
+      "eligibility": "Eligibility determined through documentation and interview.",
+      "action": "Call enrollment contact; page lists diagnosis, birth certificate, Social Security card and Medicaid card if applicable.",
+      "limits": "No local family funding cap confirmed.",
+      "review": "Official program page reviewed; no phone contact, eligibility decision or availability confirmation",
+      "relationship": "external_resource_not_confirmed_partner",
+      "reviewed_on": "2026-09-30"
+    },
+    {
+      "id": "sourcepoint-home-care",
+      "name": "SourcePoint in-home care",
+      "url": "https://mysourcepoint.org/care/",
+      "county": "Delaware",
+      "phone": "740-363-6677",
+      "offers": "Care consultation, personal care, homemaker help, meals, medical transportation and respite.",
+      "eligibility": "Delaware County residents age 55+; need-based eligibility with sliding fees.",
+      "action": "Call or use the information/referral form for care assessment.",
+      "limits": "Fees vary; actual service availability requires assessment.",
+      "review": "Official program page reviewed; no phone contact, eligibility decision or availability confirmation",
+      "relationship": "external_resource_not_confirmed_partner",
+      "reviewed_on": "2026-09-30"
+    },
+    {
+      "id": "district5-adrn",
+      "name": "District 5 Aging & Disability Resource Network",
+      "url": "https://www.aaa5ohio.org/resources/aging-and-disability-resource-network/",
+      "county": "Knox; Marion; Morrow; six other District 5 counties",
+      "phone": "800-860-5799",
+      "offers": "Existing partner network designed to streamline long-term care access for older and disabled adults and caregivers.",
+      "eligibility": "Ask agency which programs fit age, needs and location.",
+      "action": "Call agency or use published ADRN referral form.",
+      "limits": "Existing network is evidence of overlap; VHG partnership has not been established.",
+      "review": "Official program page reviewed; no phone contact, eligibility decision or availability confirmation",
+      "relationship": "external_resource_not_confirmed_partner",
+      "reviewed_on": "2026-09-30"
+    },
+    {
+      "id": "district5-vdc",
+      "name": "District 5 Veteran-Directed Care",
+      "url": "https://www.aaa5ohio.org/services/veteran-directed-care-vdc/",
+      "county": "District 5; confirm VA service area",
+      "phone": "800-860-5799",
+      "offers": "Eligible veterans direct a home-care budget; family caregivers may be paid within approved care arrangements.",
+      "eligibility": "Published criteria include complex chronic needs, nursing-home risk, personal-care need, barriers to traditional aides and active VA primary care.",
+      "action": "Ask District 5 and VA care team about a VDC assessment and local availability.",
+      "limits": "Budget, eligibility and caregiver payment require approval; not unrestricted cash or a VHG project grant.",
+      "review": "Official program page reviewed; no phone contact, eligibility decision or availability confirmation",
+      "relationship": "external_resource_not_confirmed_partner",
+      "reviewed_on": "2026-09-30"
+    },
+    {
+      "id": "ohio-p2p",
+      "name": "Ohio Parent to Parent",
+      "url": "https://www.ohiof2f.org/ohiop2p/",
+      "county": "Statewide",
+      "phone": "513-803-5557",
+      "offers": "Matches families of people of any age with disability or special health needs to trained volunteer family mentors.",
+      "eligibility": "Families seeking peer support across the lifespan.",
+      "action": "Call or use linked interest form to request a match.",
+      "limits": "Peer support; separate from clinical treatment and paid in-home care.",
+      "review": "Official program page reviewed; no phone contact, eligibility decision or availability confirmation",
+      "relationship": "external_resource_not_confirmed_partner",
+      "reviewed_on": "2026-09-30"
+    },
+    {
+      "id": "at-ohio-library",
+      "name": "AT Ohio Device Lending Library",
+      "url": "https://atohio.org/about-library",
+      "county": "Statewide",
+      "phone": "800-784-3425",
+      "offers": "Free 30-day trials of assistive devices before purchase.",
+      "eligibility": "Device-specific restrictions: speech-app iPads require professional borrowers; C Pens and OrCams also have specialist restrictions.",
+      "action": "Browse devices, submit signed request/agreement and await approval.",
+      "limits": "Loan availability is not guaranteed; AAC family requests reviewed individually.",
+      "review": "Official program page reviewed; no phone contact, eligibility decision or availability confirmation",
+      "relationship": "external_resource_not_confirmed_partner",
+      "reviewed_on": "2026-09-30"
+    },
+    {
+      "id": "va-hisa",
+      "name": "VA HISA home accessibility benefit",
+      "url": "https://www.prosthetics.va.gov/psas/HISA2.asp",
+      "county": "Federal / local VA",
+      "phone": "Use local VA Prosthetic & Sensory Aids Service",
+      "offers": "Medically necessary primary-home alterations; lifetime benefit categories of $6,800 and $2,000.",
+      "eligibility": "VA determines eligibility and remaining lifetime benefit; category depends on service connection and other criteria.",
+      "action": "Contact local VA Prosthetics; application includes VA-approved prescription, Form 10-0103, itemized estimate and photo; renters also need notarized owner consent.",
+      "limits": "Excludes routine repairs, new construction and listed portable equipment; not organizational development funding.",
+      "review": "Official program page reviewed; no phone contact, eligibility decision or availability confirmation",
+      "relationship": "external_resource_not_confirmed_partner",
+      "reviewed_on": "2026-09-30"
+    },
+    {
+      "id": "marion-jfs-guide",
+      "name": "Marion JFS community resource guide",
+      "url": "https://mcjfs.com/community-resources/",
+      "county": "Marion",
+      "phone": null,
+      "offers": "Existing guide covering food, housing, transportation and other community resources; page labels guide revision January 2026.",
+      "eligibility": "Varies by listed program.",
+      "action": "Refer to existing guide, then verify the selected provider contact.",
+      "limits": "Guide link and revision label checked; individual guide entries not audited.",
+      "review": "Official program page reviewed; no phone contact, eligibility decision or availability confirmation",
+      "relationship": "external_resource_not_confirmed_partner",
+      "reviewed_on": "2026-09-30"
+    }
+  ],
+  "scenario_tests": [
+    {
+      "id": "autism-new-diagnosis",
+      "need": "Parent wants a basic overview and next steps after an autism diagnosis",
+      "existing_routes": [
+        "ocali-family",
+        "ocali-gallery",
+        "county-dd",
+        "milestones-lifeworks"
+      ],
+      "potential_addition": "Short county-specific contact path; distinguish education, therapies, county DD eligibility and parent support.",
+      "validation_question": "Can the parent identify the right next office and what to ask without extra searching?"
+    },
+    {
+      "id": "young-child-development",
+      "need": "Parent is concerned about a young child's development",
+      "existing_routes": [
+        "help-me-grow",
+        "ocali-family"
+      ],
+      "potential_addition": "Visible referral entry point with age/life-stage signposting; route older children to the appropriate school/county path.",
+      "validation_question": "Can the family reach the correct referral page and understand what happens next?"
+    },
+    {
+      "id": "school-support",
+      "need": "Parent needs evaluation or school support",
+      "existing_routes": [
+        "special-education",
+        "ocali-family"
+      ],
+      "potential_addition": "County/school district contact and linked evaluation roadmap; family advocacy contacts after verification.",
+      "validation_question": "Can the family identify who receives its request and how to follow up?"
+    },
+    {
+      "id": "home-care",
+      "need": "Senior or disabled adult needs help at home",
+      "existing_routes": [
+        "ohio-ltss",
+        "ohio-aging-compass",
+        "findhelp"
+      ],
+      "potential_addition": "Distinguish skilled health care from personal assistance; verify service area, intake contact, payment participation and availability.",
+      "validation_question": "Can the person find a serving provider and a coverage/eligibility contact?"
+    },
+    {
+      "id": "respite",
+      "need": "Caregiver needs relief",
+      "existing_routes": [
+        "ohio-ltss",
+        "milestones-lifeworks",
+        "county-dd"
+      ],
+      "potential_addition": "Verified local respite options and routes to funding/application support.",
+      "validation_question": "Can the caregiver get an actionable next contact rather than an organization name?"
+    },
+    {
+      "id": "veteran-accessibility",
+      "need": "Disabled veteran needs a ramp or mobility help",
+      "existing_routes": [
+        "cvso-map",
+        "ohio-ltss",
+        "findhelp"
+      ],
+      "potential_addition": "Link county benefits assistance to relevant funding, assessment and installation/repair contacts; review VHG home adaptation materials before reuse.",
+      "validation_question": "Does the pathway connect funding assistance and delivery, including an alternative when the first option cannot help?"
+    },
+    {
+      "id": "facility-transition",
+      "need": "Nursing home staff or family seeks support for a resident or transition home",
+      "existing_routes": [
+        "ohio-aging-compass",
+        "ohio-ltss",
+        "cvso-map"
+      ],
+      "potential_addition": "Facility social services contact, community support navigator and a plain-language referral checklist.",
+      "validation_question": "Can the staff member hand off the need to a specific responsible service?"
+    }
+  ],
+  "gap_validation": {
+    "sample": "Proposed: 5 families/caregivers plus 2 facility staff; no interviews performed",
+    "method": "Use representative tasks in existing tools, then the proposed pathways; record whether people reach an appropriate contact, time taken, dead ends, eligibility confusion and missing alternatives.",
+    "outcomes": [
+      "covered_link_only",
+      "navigation_gap_add_guidance",
+      "data_gap_collect_verified_record",
+      "service_unavailable_do_not_claim_directory_solves_it"
+    ],
+    "publication_gate": "Verify current facility identity/status, public contacts, county/service area, and intended use before publishing."
+  },
+  "project_funding_leads": [
+    {
+      "id": "dcbdd-accessibility-grant",
+      "name": "DCBDD Accessibility and Inclusion Grant",
+      "url": "https://www.dcbdd.org/resources/accessibility-and-inclusion-grant/",
+      "published_amount": "Generally up to $5,000",
+      "status": "Published application; remaining funding not confirmed",
+      "eligibility": "Organizations located in Delaware County; project impact in Delaware County",
+      "constraints": "Reimbursement only; match equal to 50% of requested grant unless Board approves otherwise; administrative and fundraising costs excluded.",
+      "contact": "740-201-5866",
+      "fit": "Potential accessible education or inclusion project lead. Website construction and developer compensation eligibility are not confirmed; poor fit for immediate unrestricted salary funding.",
+      "reviewed_on": "2026-09-30"
+    },
+    {
+      "id": "dcbdd-advocacy-grant",
+      "name": "DCBDD Advocacy Grant",
+      "url": "https://www.dcbdd.org/resources/advocacy-grant/",
+      "published_amount": "Up to $2,500 per applicant per calendar year",
+      "status": "Applications accepted throughout year according to page; remaining funding not confirmed",
+      "eligibility": "Individuals, families and organizations undertaking DD advocacy, training or inclusion outreach; VHG eligibility unconfirmed",
+      "constraints": "Administrative costs, fundraising and food/alcohol excluded.",
+      "contact": "740-201-5866",
+      "fit": "Possible navigation education or outreach pilot; coding costs and compensation require written funder determination.",
+      "reviewed_on": "2026-09-30"
+    },
+    {
+      "id": "district5-isolation-grant",
+      "name": "District 5 Social Isolation and Loneliness Grant",
+      "url": "https://www.aaa5ohio.org/events/social-isolation-grant-opportunity-/",
+      "published_amount": "Up to $10,000; no required match",
+      "status": "2026 applications CLOSED",
+      "eligibility": "Projects engaging Richland County seniors age 60+ in group settings",
+      "constraints": "Geography outside four-county pilot; directory alone does not establish group engagement.",
+      "contact": "567-247-6455",
+      "fit": "Monitor future rounds only; not an active funding opportunity for current pilot.",
+      "reviewed_on": "2026-09-30"
+    }
+  ],
+  "research_updates": [
+    {
+      "reviewed_on": "2026-09-30",
+      "added_resources": 12,
+      "added_project_funding_leads": 3,
+      "finding": "Existing ADRN and care coordination overlap; additional navigation value requires user testing. No confirmed directory-builder salary grant found in this pass."
+    }
+  ]
+}
