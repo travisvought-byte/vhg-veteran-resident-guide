@@ -87,3 +87,9 @@ The following records rely on the interface fallback description and should rece
 - Obtain the current KDVA homelessness-prevention application; the reviewed page still links FY 2026 material. Confirm rent/utility funding separately from home repairs.
 - Canonical source hashes refer to normalized full retrieved official page text. Direct government HTML downloads returned access errors; do not relabel evidence as raw HTML or telephone confirmation.
 - Research individual post contacts, repair partners and local funding. Perform browser, mobile, accessibility and visual print review, including larger handouts for counties with multiple KDVA contacts.
+
+## October 8 credibility review
+
+Direct full-source retrieval was attempted again for all ten distinct excerpt-only source URLs (six Ohio/shared, two PA and two NY). Several pages returned access errors; Medicare Care Compare and Ohio Aging Compass returned no readable content. Carbon's PDF was available as a four-page document but readable supporting text was not obtained in this review. No evidence status or review date was upgraded from these attempts.
+
+All editions now show calculated pending/excerpt counts beside the state selector. Incomplete-verification notices remain visible on resource cards and printed resource lists. The state coverage description distinguishes county referral coverage from a complete local service inventory. Resolve the source queue against full readable official sources or agency confirmation before upgrading labels.

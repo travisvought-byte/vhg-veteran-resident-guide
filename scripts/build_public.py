@@ -63,7 +63,7 @@ def outputs():
     ky_share = ky_share.replace('href="share.html">Kentucky', 'href="share.html">Ohio')
     ky_share = ky_share.replace('local veterans office, aging agency and long-term-care ombudsman contacts', 'KDVA regional veterans representatives, matched aging contacts, district ombudsmen and Hart-Supported Living coordinators')
     ky_share = ky_share.replace('county veterans offices', 'KDVA regional veterans representatives')
-    return {
+    result = {
         'index.html': html,
         'data/public/ohio-regional-referrals.json': json.dumps(regional, indent=2, ensure_ascii=False) + '\n',
         'pa.html': make_pa(html, pa_resources, pa_counties),
@@ -80,6 +80,26 @@ def outputs():
         'data/public/kentucky-resources.json': json.dumps(ky_resources, indent=2, ensure_ascii=False) + '\n',
         'share-ky.html': ky_share,
     }
+
+
+    editions = [
+        ('index.html', 'Ohio', resources, counties, 'Statewide referral backbone; local program research is strongest in Morrow, Knox, Marion and Delaware.'),
+        ('pa.html', 'Pennsylvania', pa_resources, pa_counties, 'Initial referral edition. County veterans and aging routes are mapped; four counties have dedicated local ombudsman contacts, with statewide routing elsewhere.'),
+        ('ny.html', 'New York', ny_resources, ny_counties, 'Initial referral edition. County, city and state veterans routes and local aging contacts are mapped; ombudsman routing is statewide.'),
+        ('mi.html', 'Michigan', mi_resources, mi_counties, 'Initial referral edition. County or regional veterans and aging routes are mapped; Ionia uses statewide veterans routing and Wayne has two aging service areas. Ombudsman routing is statewide.'),
+        ('ky.html', 'Kentucky', ky_resources, ky_counties, 'Initial referral edition. Regional veterans representatives, aging, district ombudsmen and supported-living routes are mapped; veterans contacts are regional rather than separate county offices.'),
+    ]
+    for page, state, records, contacts, scope in editions:
+        pending = sum(r.get('verification', {}).get('record_status') != 'official_source_reviewed' for r in records)
+        excerpts = sum(r.get('verification', {}).get('record_status') == 'official_search_extract_only' for r in records)
+        notice = ('<section id="edition-coverage" class="edition-coverage notice" aria-label="Coverage and verification">'
+                  f'<strong>{state}: coverage and verification</strong><p>{scope}</p>'
+                  f'<p>Referral routes cover {len(contacts)} counties. This is not a complete local service inventory. '
+                  f'{pending} resource records need further verification, including {excerpts} supported only by search excerpts. '
+                  'Source status appears on each resource card. Published contacts are not telephone-confirmed; confirm intake and availability with the agency.</p></section>')
+        result[page] = re.sub(r'<section id="edition-coverage".*?</section>', '', result[page], flags=re.S)
+        result[page] = result[page].replace('</nav><section id="county-start"', '</nav>' + notice + '<section id="county-start"', 1)
+    return result
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
