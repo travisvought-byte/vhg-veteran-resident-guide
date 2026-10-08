@@ -110,3 +110,5 @@ site/                   Static directory site (later)
 Regional referral update: all 88 county selections now include matched aging-agency and long-term-care ombudsman contacts, with directory sources and review dates. The printable handoff includes these contacts. See [coverage and sources](docs/STATEWIDE.md).
 
 Accessibility update: a dedicated ramps/home modification pathway includes HISA application steps, VA and Ohio funding routes, county referral contacts, and a printable project tracker. Open the [accessibility guide](https://travisvought-byte.github.io/vhg-veteran-resident-guide/?view=accessibility).
+
+New sections: [Seniors and disability support](https://travisvought-byte.github.io/vhg-veteran-resident-guide/?view=seniors) highlights non-VA assistance by need. [Community connections](https://travisvought-byte.github.io/vhg-veteran-resident-guide/?view=community) provides official post locators while verified county listings are developed.

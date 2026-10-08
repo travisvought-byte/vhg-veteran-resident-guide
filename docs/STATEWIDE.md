@@ -8,7 +8,7 @@ Updated October 8, 2026.
 - 87 county contacts were extracted from the Ohio AMVETS 2025–2026 Guidebook, physical PDF pages 67–70 (printed pages 7–10). The publication omits Lawrence County; its contact was added from the county government's departments page.
 - Morrow and Knox contact sources are their office websites. Lawrence uses its county government website. The remaining entries are labeled as directory-published contacts, not direct agency confirmations.
 - Statewide/federal programs appear for every county. Additional local program coverage is strongest in Morrow, Knox, Marion and Delaware and is not an exhaustive inventory elsewhere.
-- There are 97 resource records in the reusable projection. Four original county office records are represented by the separate 88-office directory instead of duplicated among the 93 program/resource cards.
+- There are 106 resource records in the reusable projection. Four original county office records are represented by the separate 88-office directory instead of duplicated among the 102 program/resource cards.
 
 ## Data and sources
 
@@ -92,3 +92,19 @@ Functional verification: all 88 county mappings and synchronized data; accessibi
 Accessibility usability pass: matched first-call contacts now precede the routing questions. An existing waiver case manager is prioritized when selected; new construction points veterans toward adapted housing rather than HISA. Three next steps remain visible; alternative routes and the paper tracker are expandable and expand for printing. County contact cards are hidden in this view to avoid duplication, and choosing the pathway scrolls to its heading.
 
 VHG support section: optional donation and sponsorship invitations appear after the resource directory. The donation link uses VHG’s published donation page; sponsorship opens a draft email to the published organizational address. No message is sent automatically. No prices, guaranteed outcomes, unverified impact totals or payment fields were added. Resource access remains free, and the appeal is omitted from printed referral sheets.
+
+## Seniors, disabilities and community connections — October 8, 2026
+
+Dedicated senior route contains only resources without a military-service requirement. County selection shows the matched aging agency. Topics cover daily living, accessibility, vision, hearing/speech, memory/dementia, costs and rights. Search, reset and shared topic links stay within this non-VA resource set. Existing records retain their original evidence statuses. New records add OSHIIP, OOD Independent Living Older Blind, Alzheimer’s Association support, Ohio Relay, independent living center lookup and PASSPORT screening. Age limits and program-specific requirements are stated; DD waiver services are not a generic route for every acquired disability. Independent living centers do not universally serve all Ohio counties.
+
+New source routes:
+
+- https://www.cms.gov/about-cms/contact/directory/ohio-senior-health-insurance-information-program-oshiip/1562171
+- https://dam.assets.ohio.gov/image/upload/ood.ohio.gov/Literature/Agency%20Outreach/OOD_Fact_Sheet_Independent_Living_Older_Blind_Program.pdf
+- https://codes.ohio.gov/ohio-administrative-code/chapter-3304-5
+- https://www.alz.org/help-support/i-have-alz/programs-support
+- https://ohiorelay.com/relay-services/voice/
+- https://ohiosilc.org/independent-living/centers-for-independent-living/
+- https://codes.ohio.gov/ohio-administrative-code/rule-5160-31-03
+
+Community connections starts with official American Legion, AMVETS and VFW post locators. It does not yet claim individual county-post coverage. `data/public/community-posts.json` reserves a separate, source-reviewed county directory. See `docs/COMMUNITY-NETWORK.md` for the listing fields and research sequence. No emails, calls or other outreach were sent.
