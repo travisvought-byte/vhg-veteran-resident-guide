@@ -4,6 +4,7 @@ import argparse
 import json
 import re
 from pathlib import Path
+from pa_edition import make_pa, pennsylvania_resources
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -18,7 +19,21 @@ def outputs():
         if n != 1:
             raise ValueError('Missing embedded ' + name)
     regional = sorted((r for r in resources if r.get('regional_role')), key=lambda r: r['program_id'])
-    return {'index.html': html, 'data/public/ohio-regional-referrals.json': json.dumps(regional, indent=2, ensure_ascii=False) + '\n'}
+    pa_resources = pennsylvania_resources(ROOT, resources)
+    pa_counties = json.loads((ROOT / 'data/public/pennsylvania-county-veterans-offices.json').read_text())
+    share = (ROOT / 'share.html').read_text()
+    pa_share = share.replace('Ohio', 'Pennsylvania').replace('88', '67').replace('href="index.html"', 'href="pa.html"')
+    pa_share = pa_share.replace('https://travisvought-byte.github.io/vhg-veteran-resident-guide/', 'https://travisvought-byte.github.io/vhg-veteran-resident-guide/pa.html')
+    pa_share = pa_share.replace('assets/guide-qr.svg', 'assets/guide-qr-pa.svg')
+    pa_share = pa_share.replace('href="share.html">Pennsylvania', 'href="share.html">Ohio')
+    pa_share = pa_share.replace('local veterans office, aging agency and long-term-care ombudsman contacts', 'county veterans office contacts and statewide aging, disability and ombudsman referral routes')
+    return {
+        'index.html': html,
+        'data/public/ohio-regional-referrals.json': json.dumps(regional, indent=2, ensure_ascii=False) + '\n',
+        'pa.html': make_pa(html, pa_resources, pa_counties),
+        'data/public/pennsylvania-resources.json': json.dumps(pa_resources, indent=2, ensure_ascii=False) + '\n',
+        'share-pa.html': pa_share,
+    }
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
@@ -27,7 +42,7 @@ if __name__ == '__main__':
     drift = []
     for name, text in outputs().items():
         path = ROOT / name
-        if path.read_text() != text:
+        if not path.is_file() or path.read_text() != text:
             drift.append(name)
             if not args.check:
                 path.write_text(text)

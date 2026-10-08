@@ -19,6 +19,6 @@ Review the source and distinguish full source review, indexed excerpt, directory
 
 ## Publishing a data change
 
-Edit `prototype-data.json` for programs or `data/public/ohio-county-veterans-offices.json` for county contacts. Run `python3 scripts/build_public.py`, then all README checks. This generates both embedded data and the regional JSON from the canonical files; do not hand-edit those projections. Update the public edition date only for a substantive publication update, while keeping individual record dates honest.
+For Ohio, edit `prototype-data.json` for programs or `data/public/ohio-county-veterans-offices.json` for county contacts. For Pennsylvania, edit `data/public/pa-programs.json` and `data/public/pennsylvania-county-veterans-offices.json`; the combined PA dataset and pages are generated. Shared federal records remain in `prototype-data.json`, with PA inclusion controlled by `data/public/federal-resource-ids.json`. Run `python3 scripts/build_public.py`, then all README checks. This generates both embedded data and the regional JSON from the canonical files; do not hand-edit those projections. Update the public edition date only for a substantive publication update, while keeping individual record dates honest.
 
 Review the affected route in a browser and inspect printing when print content changes. Publish and verify the live result. Update `docs/VERIFICATION-QUEUE.md` when evidence statuses change; the queue is a dated snapshot, not an automatic status service.
