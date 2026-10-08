@@ -26,7 +26,7 @@ def outputs():
     pa_share = pa_share.replace('https://travisvought-byte.github.io/vhg-veteran-resident-guide/', 'https://travisvought-byte.github.io/vhg-veteran-resident-guide/pa.html')
     pa_share = pa_share.replace('assets/guide-qr.svg', 'assets/guide-qr-pa.svg')
     pa_share = pa_share.replace('href="share.html">Pennsylvania', 'href="share.html">Ohio')
-    pa_share = pa_share.replace('local veterans office, aging agency and long-term-care ombudsman contacts', 'county veterans office contacts and statewide aging, disability and ombudsman referral routes')
+    pa_share = pa_share.replace('local veterans office, aging agency and long-term-care ombudsman contacts', 'county veterans office contacts, matched local aging referrals and local or statewide ombudsman routes')
     return {
         'index.html': html,
         'data/public/ohio-regional-referrals.json': json.dumps(regional, indent=2, ensure_ascii=False) + '\n',

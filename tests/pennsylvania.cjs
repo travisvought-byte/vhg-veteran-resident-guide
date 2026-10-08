@@ -14,7 +14,13 @@ for(const county of expected){
  assert(t.nodes['county-panel'].innerHTML.includes(county+' County'));
  assert(t.nodes['county-panel'].innerHTML.includes(counties.find(c=>c.county===county).phone));
  assert(t.nodes['county-panel'].innerHTML.includes('PA Link statewide routing'));
- assert(t.nodes['county-panel'].innerHTML.includes('717-783-8975'));
+ const aging=data.filter(x=>x.regional_role==='aging_agency'&&x.service_area.includes(county));
+ assert.equal(aging.length,1,county+' aging referral');
+ assert(t.nodes['county-panel'].innerHTML.includes(aging[0].public_contact.phone));
+ const omb=data.find(x=>x.regional_role==='ombudsman'&&x.service_area.includes(county));
+ assert(t.nodes['county-panel'].innerHTML.includes(omb?omb.public_contact.phone:'717-783-8975'));
+ assert(t.nodes['county-panel'].innerHTML.includes(omb?'Local care concerns':'Statewide ombudsman routing'));
+ assert(t.nodes.results.innerHTML.includes('resource-'+aging[0].program_id));
  assert(t.nodes.results.innerHTML.includes('resource-pa-link'));
  assert(!t.nodes.results.innerHTML.includes('resource-ohio-'));
 }
@@ -45,4 +51,24 @@ const ohio=setup('?county=Delaware&view=seniors');ohio.nodes['edition-state'].va
 const html=fs.readFileSync(path.join(root,'pa.html'),'utf8');assert(html.includes('<option value="OH">Ohio</option>'));assert(!/ohio\.gov|PASSPORT|OSHIIP|HOME Choice|AMVETS directory/.test(html));
 assert(data.find(x=>x.program_id==='pa-patf').constraints.some(x=>x.includes('Repayment')));
 assert(data.find(x=>x.program_id==='pa-phfa-access').constraints.some(x=>x.includes('not a general grant')));
+const regional=JSON.parse(fs.readFileSync(path.join(root,'data/public/pa-regional-referrals.json')));
+assert.deepEqual(JSON.parse(JSON.stringify(data.filter(x=>x.regional_role))),regional);
+assert.equal(regional.filter(x=>x.regional_role==='aging_agency').length,54);
+assert.equal(regional.filter(x=>x.regional_role==='ombudsman').length,4);
+for(const county of expected){
+ const aging=regional.find(x=>x.regional_role==='aging_agency'&&x.service_area.includes(county));
+ const senior=setup('?county='+county+'&view=seniors&topic=daily','pa.html');
+ assert(senior.nodes['seniors-contact'].innerHTML.includes(aging.public_contact.phone),county);
+ assert(senior.nodes.results.innerHTML.includes('resource-'+aging.program_id),county);
+ const access=setup('?county='+county+'&view=accessibility','pa.html');
+ assert(access.nodes['access-first'].innerHTML.includes(aging.public_contact.phone),county);
+ access.nodes['print-handoff'].onclick();assert(access.print().printed&&access.print().printMode);
+ assert(access.nodes['county-panel'].innerHTML.includes(aging.public_contact.phone));
+}
+const erie=setup('?county=Erie&view=rights','pa.html');
+assert(erie.nodes['county-panel'].innerHTML.includes('tel:8144594581;ext=593'));
+assert(erie.nodes.results.innerHTML.includes('resource-pa-local-ombudsman-erie'));
+assert(!erie.nodes.results.innerHTML.includes('resource-pa-local-ombudsman-allegheny'));
+const carbon=setup('?county=Carbon','pa.html');assert(carbon.nodes['county-panel'].innerHTML.includes('Search excerpt only'));
+console.log('PASS: PA local aging contacts in all 67 county handoffs, senior and accessibility views; four local ombudsman routes; county isolation, evidence labels and printable handoffs.');
 console.log('PASS: all 67 PA county contacts, state isolation and switching, truthful statewide routing, vacancies, phone extensions, seniors, accessibility branches, shared links and PA funding limits.');

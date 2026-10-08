@@ -53,3 +53,10 @@ The following records rely on the interface fallback description and should rece
 - `help-me-grow`
 - `special-education`
 - `va-adapted-housing`
+
+## Pennsylvania local referral follow-up
+
+- Carbon: review the full agency brochure or current county contact page; source is currently an official search excerpt.
+- Lehigh: confirm the current intake route against a newer county publication. The retained referral map is dated August 2024 and currently has search-excerpt evidence.
+- Local ombudsman contacts are verified for Allegheny, Erie, Northampton and Venango. The other 63 counties retain state ombudsman routing; do not substitute a general aging phone without a dedicated program source.
+- Every county has a published local aging referral phone. Confirm intake, hours, waiting lists, costs and accessibility directly before relying on availability.

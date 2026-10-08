@@ -26,7 +26,7 @@ Statewide referral coverage is not an exhaustive statewide inventory of local se
 
 ## Pennsylvania expansion
 
-The state selector opens a separate Pennsylvania edition in this repository. It contains all 67 county veterans contacts from PA DMVA’s September 2026 directory, 17 PA-specific program/referral records and 28 shared federal/national records. Aging and ombudsman contacts use statewide routing and official lookup links; individual local agency mappings are still being researched. See [Pennsylvania coverage and sources](docs/PENNSYLVANIA.md). Ohio remains the default, preserving its published links and QR code.
+The state selector opens a separate Pennsylvania edition in this repository. It contains all 67 county veterans contacts from PA DMVA’s September 2026 directory, 17 PA-specific program/referral records, 28 shared federal/national records and 58 local referral records, for 103 resources. Every PA county now has a local aging referral phone; four counties have separately sourced local ombudsman routes, with statewide routing elsewhere. Of the 58 local records, 56 have full official source review and two are labeled search excerpt only. See [Pennsylvania coverage and sources](docs/PENNSYLVANIA.md). Ohio remains the default, preserving its published links and QR code.
 
 ## Operating boundaries
 
@@ -43,7 +43,7 @@ python3 scripts/validate_public.py
 node tests/pennsylvania.cjs
 ```
 
-PA canonical programs live in `data/public/pa-programs.json`, with separate county contacts and an explicit shared-resource whitelist. The build updates Ohio embedded data and its regional projection, then generates `pa.html`, the combined PA resource JSON and `share-pa.html`. The page stays self-contained, with no runtime data service. GitHub Actions runs these checks for pushes and pull requests. Checks cover county mappings, routes, sharing behavior and data synchronization; they do not establish WCAG compliance, remote link availability or print pagination. Browser and print review remain necessary.
+PA canonical programs live in `data/public/pa-programs.json`, with local aging/ombudsman records in `data/public/pa-regional-referrals.json`, separate county veterans contacts and an explicit shared-resource whitelist. The build updates Ohio embedded data and its regional projection, then generates `pa.html`, the combined PA resource JSON and `share-pa.html`. The page stays self-contained, with no runtime data service. GitHub Actions runs these checks for pushes and pull requests. Checks cover county mappings, routes, sharing behavior and data synchronization; they do not establish WCAG compliance, remote link availability or print pagination. Browser and print review remain necessary.
 
 Older integration scripts and research candidates are historical research tools, not the public build. Do not publish their output over the current public data without review.
 
