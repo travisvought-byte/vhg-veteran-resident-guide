@@ -108,3 +108,7 @@ New source routes:
 - https://codes.ohio.gov/ohio-administrative-code/rule-5160-31-03
 
 Community connections starts with official American Legion, AMVETS and VFW post locators. It does not yet claim individual county-post coverage. `data/public/community-posts.json` reserves a separate, source-reviewed county directory. See `docs/COMMUNITY-NETWORK.md` for the listing fields and research sequence. No emails, calls or other outreach were sent.
+
+## Maintenance and sharing pass — October 8, 2026
+
+The canonical public JSON now drives embedded page data through `scripts/build_public.py`; its `--check` mode detects drift, and GitHub Actions runs synchronization and functional checks. Use this build instead of editing projections separately. See `docs/MAINTENANCE.md` and `docs/VERIFICATION-QUEUE.md` for review priorities and unresolved evidence. The site now offers email corrections as well as GitHub issues, and `share.html` provides a printable QR flyer, newsletter text and audience-specific links. Social preview metadata uses a VHG image. No source status was upgraded without evidence, no outreach was sent and no analytics service was activated.
