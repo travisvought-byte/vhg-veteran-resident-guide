@@ -60,8 +60,8 @@
   },
   {
     "program_id": "coaaa-navigation",
-    "name": "COAAA information and assistance",
-    "official_url": "https://www.coaaa.org/connect/request-help-form/",
+    "name": "Central Ohio Area Agency on Aging — aging support",
+    "official_url": "https://www.ohioaging.org/aws/O4A/asset_manager/get_file/943016?ver=0#page=1",
     "service_area": [
       "Delaware",
       "Fairfield",
@@ -76,37 +76,44 @@
       "general_navigation",
       "help_at_home"
     ],
-    "description": "Aging and disability guidance for the listed central Ohio counties.",
-    "next_step": "Call for an assessment of possible support options and the correct application route.",
+    "description": "A regional starting point for meals, transportation, caregiver support and help at home. Ask which services fit the resident’s situation.",
+    "next_step": "Call with the county, living arrangement and help needed. Ask about assessment, eligibility, costs and the next referral.",
     "constraints": [
-      "Agency service area is different from each program service area. No universal payer acceptance is established."
+      "County coverage identifies the referral agency; individual programs have separate eligibility, funding and availability rules."
     ],
     "verification": {
       "record_status": "official_source_reviewed",
       "identity": "official_source_reviewed",
       "contact": "official_source_reviewed",
-      "eligibility": "official_source_reviewed",
-      "last_reviewed_on": "2026-10-02"
+      "last_reviewed_on": "2026-10-08"
     },
     "public_contact": {
       "phone": "800-589-7277",
-      "phone_label": "main office",
-      "email": null,
-      "contact_type": "office",
-      "web_route": "https://www.coaaa.org/connect/request-help-form/"
+      "phone_label": "Directory-published referral line; ask for information and assistance"
     },
-    "organization": "Central Ohio Area Agency on Aging"
+    "organization": "Central Ohio Area Agency on Aging",
+    "regional_role": "aging_agency",
+    "region_id": "6",
+    "source_evidence": [
+      {
+        "url": "https://www.ohioaging.org/aws/O4A/asset_manager/get_file/943016?ver=0",
+        "title": "Ohio Association of Area Agencies on Aging directory (February 2026)",
+        "page": 1,
+        "reviewed_on": "2026-10-08",
+        "scope": "County coverage and published referral phone; not a telephone confirmation"
+      }
+    ]
   },
   {
     "program_id": "county-dd",
-    "name": "Ohio Association of County Boards of DD \u2014 Family Resources",
+    "name": "Ohio Association of County Boards of DD — Family Resources",
     "official_url": "https://www.oacbdd.org/familyresources",
     "service_area": [],
     "needs_supported": [
       "dd_intake_service_coordination"
     ],
     "description": "County board directory map and family resources",
-    "next_step": "Use the county board directory to find the board serving the resident\u2019s county. Ask about eligibility and available supports.",
+    "next_step": "Use the county board directory to find the board serving the resident’s county. Ask about eligibility and available supports.",
     "constraints": [],
     "verification": {
       "record_status": "imported_unverified",
@@ -271,32 +278,48 @@
   },
   {
     "program_id": "delaware-regional-ombudsman",
-    "name": "Delaware regional Long-Term Care Ombudsman",
-    "official_url": "https://www.coaaa.org/resources/emergency-and-crisis/adult-protective-services-consumer-protection/",
+    "name": "Region 6 Long-Term Care Ombudsman",
+    "official_url": "https://dam.assets.ohio.gov/image/upload/aging.ohio.gov/Regional_Ombudsman_Contact_Map.pdf#page=2",
     "service_area": [
-      "Delaware"
+      "Delaware",
+      "Fairfield",
+      "Fayette",
+      "Franklin",
+      "Licking",
+      "Madison",
+      "Pickaway",
+      "Union"
     ],
     "needs_supported": [
       "general_navigation"
     ],
-    "description": "Ask for resident-directed help with a long-term-care concern.",
-    "next_step": "Ask for resident-directed help with a long-term-care concern.",
-    "constraints": null,
+    "description": "Resident-directed advocacy for concerns about long-term care, rights, safety or quality of care.",
+    "next_step": "Call and ask for the ombudsman serving the resident’s county. Explain the concern and what the resident wants to happen. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman is an advocacy route. Ask how consent, confidentiality and follow-up work for the resident."
+    ],
     "verification": {
       "record_status": "official_source_reviewed",
       "identity": "official_source_reviewed",
       "contact": "official_source_reviewed",
-      "eligibility": "official_source_reviewed",
-      "last_reviewed_on": "2026-10-02"
+      "last_reviewed_on": "2026-10-08"
     },
     "public_contact": {
       "phone": "800-536-5891",
-      "phone_label": "regional ombudsman",
-      "email": null,
-      "contact_type": "office",
-      "web_route": "https://www.coaaa.org/resources/emergency-and-crisis/adult-protective-services-consumer-protection/"
+      "phone_label": "Directory-published referral line; ask for the ombudsman"
     },
-    "organization": "Easterseals Central and Southeast Ohio"
+    "organization": "Easterseals Central and Southeast Ohio",
+    "regional_role": "ombudsman",
+    "region_id": "6",
+    "source_evidence": [
+      {
+        "url": "https://dam.assets.ohio.gov/image/upload/aging.ohio.gov/Regional_Ombudsman_Contact_Map.pdf",
+        "title": "Ohio Department of Aging Regional Ombudsman Contact Map",
+        "page": 2,
+        "reviewed_on": "2026-10-08",
+        "scope": "County coverage and published referral phone; not a telephone confirmation"
+      }
+    ]
   },
   {
     "program_id": "delaware-vso",
@@ -362,8 +385,8 @@
   },
   {
     "program_id": "district5-adrn",
-    "name": "District 5 Aging and Disability Resource Network",
-    "official_url": "https://www.aaa5ohio.org/resources/aging-and-disability-resource-network/",
+    "name": "Ohio District 5 Area Agency on Aging — aging support",
+    "official_url": "https://www.ohioaging.org/aws/O4A/asset_manager/get_file/943016?ver=0#page=1",
     "service_area": [
       "Ashland",
       "Crawford",
@@ -379,57 +402,79 @@
       "general_navigation",
       "help_at_home"
     ],
-    "description": "Local guidance on aging, disability and long-term support options in the counties listed.",
-    "next_step": "Call and describe the resident\u2019s needs, county and living arrangement.",
+    "description": "A regional starting point for meals, transportation, caregiver support and help at home. Ask which services fit the resident’s situation.",
+    "next_step": "Call with the county, living arrangement and help needed. Ask about assessment, eligibility, costs and the next referral.",
     "constraints": [
-      "District 5 is not the designated AAA for Delaware."
+      "County coverage identifies the referral agency; individual programs have separate eligibility, funding and availability rules."
     ],
     "verification": {
       "record_status": "official_source_reviewed",
       "identity": "official_source_reviewed",
       "contact": "official_source_reviewed",
-      "eligibility": "official_source_reviewed",
-      "last_reviewed_on": "2026-10-02"
+      "last_reviewed_on": "2026-10-08"
     },
     "public_contact": {
       "phone": "800-860-5799",
-      "phone_label": "ADRN / main office",
-      "email": null,
-      "contact_type": "office",
-      "web_route": "https://www.aaa5ohio.org/resources/aging-and-disability-resource-network/"
+      "phone_label": "Directory-published referral line; ask for information and assistance"
     },
-    "organization": "Ohio District 5 Area Agency on Aging"
+    "organization": "Ohio District 5 Area Agency on Aging",
+    "regional_role": "aging_agency",
+    "region_id": "5",
+    "source_evidence": [
+      {
+        "url": "https://www.ohioaging.org/aws/O4A/asset_manager/get_file/943016?ver=0",
+        "title": "Ohio Association of Area Agencies on Aging directory (February 2026)",
+        "page": 1,
+        "reviewed_on": "2026-10-08",
+        "scope": "County coverage and published referral phone; not a telephone confirmation"
+      }
+    ]
   },
   {
     "program_id": "district5-ombudsman",
-    "name": "District 5 Long-Term Care Ombudsman",
-    "official_url": "https://www.aaa5ohio.org/services/long-term-care-ombudsman/",
+    "name": "Region 5 Long-Term Care Ombudsman",
+    "official_url": "https://dam.assets.ohio.gov/image/upload/aging.ohio.gov/Regional_Ombudsman_Contact_Map.pdf#page=2",
     "service_area": [
-      "Morrow",
+      "Ashland",
+      "Crawford",
+      "Huron",
       "Knox",
-      "Marion"
+      "Marion",
+      "Morrow",
+      "Richland",
+      "Seneca",
+      "Wyandot"
     ],
     "needs_supported": [
       "general_navigation"
     ],
-    "description": "Ask about rights or a concern with nursing-home, assisted-living or home care.",
-    "next_step": "Ask about rights or a concern with nursing-home, assisted-living or home care.",
-    "constraints": null,
+    "description": "Resident-directed advocacy for concerns about long-term care, rights, safety or quality of care.",
+    "next_step": "Call and ask for the ombudsman serving the resident’s county. Explain the concern and what the resident wants to happen. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman is an advocacy route. Ask how consent, confidentiality and follow-up work for the resident."
+    ],
     "verification": {
       "record_status": "official_source_reviewed",
       "identity": "official_source_reviewed",
       "contact": "official_source_reviewed",
-      "eligibility": "official_source_reviewed",
-      "last_reviewed_on": "2026-10-02"
+      "last_reviewed_on": "2026-10-08"
     },
     "public_contact": {
       "phone": "800-860-5799",
-      "phone_label": "District 5; request ombudsman",
-      "email": null,
-      "contact_type": "office",
-      "web_route": "https://www.aaa5ohio.org/services/long-term-care-ombudsman/"
+      "phone_label": "Directory-published referral line; ask for the ombudsman"
     },
-    "organization": "Ohio District 5 Area Agency on Aging"
+    "organization": "Ohio District 5 Area Agency on Aging",
+    "regional_role": "ombudsman",
+    "region_id": "5",
+    "source_evidence": [
+      {
+        "url": "https://dam.assets.ohio.gov/image/upload/aging.ohio.gov/Regional_Ombudsman_Contact_Map.pdf",
+        "title": "Ohio Department of Aging Regional Ombudsman Contact Map",
+        "page": 2,
+        "reviewed_on": "2026-10-08",
+        "scope": "County coverage and published referral phone; not a telephone confirmation"
+      }
+    ]
   },
   {
     "program_id": "district5-vdc",
@@ -1076,7 +1121,7 @@
   },
   {
     "program_id": "ohio-dvs-fallback",
-    "name": "Ohio Department of Veterans Services \u2014 statewide fallback",
+    "name": "Ohio Department of Veterans Services — statewide fallback",
     "official_url": "https://dvs.ohio.gov/",
     "service_area": [
       "statewide"
@@ -1117,7 +1162,7 @@
     "description": "A starting point for finding long-term services and supports in Ohio.",
     "next_step": "Ask for screening and application instructions for the appropriate program.",
     "constraints": [
-      "Ohio Home Care Waiver entry is birth\u201359 and includes Medicaid, assessment, nursing-facility level of care and other requirements. A diagnosis or application alone does not establish enrollment."
+      "Ohio Home Care Waiver entry is birth–59 and includes Medicaid, assessment, nursing-facility level of care and other requirements. A diagnosis or application alone does not establish enrollment."
     ],
     "verification": {
       "record_status": "official_source_reviewed",
@@ -1206,7 +1251,7 @@
       "general_navigation"
     ],
     "description": "An advocate for people receiving nursing home, assisted living or home care who need help with rights or care concerns.",
-    "next_step": "Call the statewide office and ask for the ombudsman serving the resident\u2019s area.",
+    "next_step": "Call the statewide office and ask for the ombudsman serving the resident’s area.",
     "constraints": null,
     "verification": {
       "record_status": "official_source_reviewed",
@@ -1324,7 +1369,7 @@
       "veteran_services",
       "benefits_and_funding"
     ],
-    "description": "A potential survivor benefit when a service member died in the line of duty or a veteran\u2019s death meets VA\u2019s service-related or other qualifying rules.",
+    "description": "A potential survivor benefit when a service member died in the line of duty or a veteran’s death meets VA’s service-related or other qualifying rules.",
     "next_step": "Ask an accredited representative whether DIC should be explored and what evidence is needed.",
     "constraints": null,
     "verification": {
@@ -1415,7 +1460,7 @@
       "benefits_and_funding"
     ],
     "description": "VA resources and support for people caring for veterans.",
-    "next_step": "Ask the veteran\u2019s VA care team which caregiver supports fit the situation.",
+    "next_step": "Ask the veteran’s VA care team which caregiver supports fit the situation.",
     "constraints": null,
     "verification": {
       "record_status": "official_source_reviewed",
@@ -1567,8 +1612,8 @@
       "veteran_services",
       "benefits_and_funding"
     ],
-    "description": "VA pension payments can be affected by Medicaid-covered nursing home care. The rules depend on the beneficiary\u2019s circumstances.",
-    "next_step": "Ask an accredited representative and the care facility\u2019s benefits staff to review VA pension and Medicaid together before changing benefits.",
+    "description": "VA pension payments can be affected by Medicaid-covered nursing home care. The rules depend on the beneficiary’s circumstances.",
+    "next_step": "Ask an accredited representative and the care facility’s benefits staff to review VA pension and Medicaid together before changing benefits.",
     "constraints": null,
     "verification": {
       "record_status": "official_source_reviewed",
@@ -1688,7 +1733,7 @@
       "benefits_and_funding"
     ],
     "description": "A VA pathway for care in participating community nursing homes, subject to eligibility and available services.",
-    "next_step": "Ask the resident\u2019s VA care team or social worker about community nursing home options.",
+    "next_step": "Ask the resident’s VA care team or social worker about community nursing home options.",
     "constraints": null,
     "verification": {
       "record_status": "official_source_reviewed",
@@ -2061,7 +2106,7 @@
       "benefits_and_funding"
     ],
     "description": "Find and appoint an accredited representative for a benefits claim or decision review. Accredited VSO claims assistance is free.",
-    "next_step": "Use VA\u2019s representative search, then ask the representative if they are available. Attorneys and claims agents may charge fees.",
+    "next_step": "Use VA’s representative search, then ask the representative if they are available. Attorneys and claims agents may charge fees.",
     "constraints": null,
     "verification": {
       "record_status": "official_source_reviewed",
@@ -2084,7 +2129,7 @@
       "care_facilities"
     ],
     "description": "Search for VA locations near the resident and identify where to ask about care or benefits.",
-    "next_step": "Use the official locator with the resident\u2019s city or ZIP code and select the kind of facility needed.",
+    "next_step": "Use the official locator with the resident’s city or ZIP code and select the kind of facility needed.",
     "constraints": null,
     "verification": {
       "record_status": "official_source_reviewed",
@@ -2117,5 +2162,897 @@
       "phone": "877-424-3838"
     },
     "organization": "U.S. Department of Veterans Affairs"
+  },
+  {
+    "program_id": "ohio-region-1-aging-agency",
+    "name": "Council on Aging of Southwestern Ohio — aging support",
+    "organization": "Council on Aging of Southwestern Ohio",
+    "service_area": [
+      "Butler",
+      "Clermont",
+      "Clinton",
+      "Hamilton",
+      "Warren"
+    ],
+    "regional_role": "aging_agency",
+    "region_id": "1",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "A regional starting point for meals, transportation, caregiver support and help at home. Ask which services fit the resident’s situation.",
+    "next_step": "Call with the county, living arrangement and help needed. Ask about assessment, eligibility, costs and the next referral.",
+    "constraints": [
+      "County coverage identifies the referral agency; individual programs have separate eligibility, funding and availability rules."
+    ],
+    "official_url": "https://www.ohioaging.org/aws/O4A/asset_manager/get_file/943016?ver=0#page=1",
+    "public_contact": {
+      "phone": "800-252-0155",
+      "phone_label": "Directory-published referral line; ask for information and assistance"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ohioaging.org/aws/O4A/asset_manager/get_file/943016?ver=0",
+        "title": "Ohio Association of Area Agencies on Aging directory (February 2026)",
+        "page": 1,
+        "reviewed_on": "2026-10-08",
+        "scope": "County coverage and published referral phone; not a telephone confirmation"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-region-1-ombudsman",
+    "name": "Region 1 Long-Term Care Ombudsman",
+    "organization": "Pro Seniors",
+    "service_area": [
+      "Butler",
+      "Clermont",
+      "Clinton",
+      "Hamilton",
+      "Warren"
+    ],
+    "regional_role": "ombudsman",
+    "region_id": "1",
+    "needs_supported": [
+      "general_navigation"
+    ],
+    "description": "Resident-directed advocacy for concerns about long-term care, rights, safety or quality of care.",
+    "next_step": "Call and ask for the ombudsman serving the resident’s county. Explain the concern and what the resident wants to happen. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman is an advocacy route. Ask how consent, confidentiality and follow-up work for the resident."
+    ],
+    "official_url": "https://dam.assets.ohio.gov/image/upload/aging.ohio.gov/Regional_Ombudsman_Contact_Map.pdf#page=2",
+    "public_contact": {
+      "phone": "800-488-6070",
+      "phone_label": "Directory-published referral line; ask for the ombudsman"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dam.assets.ohio.gov/image/upload/aging.ohio.gov/Regional_Ombudsman_Contact_Map.pdf",
+        "title": "Ohio Department of Aging Regional Ombudsman Contact Map",
+        "page": 2,
+        "reviewed_on": "2026-10-08",
+        "scope": "County coverage and published referral phone; not a telephone confirmation"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-region-2-aging-agency",
+    "name": "Area Agency on Aging, PSA 2 — aging support",
+    "organization": "Area Agency on Aging, PSA 2",
+    "service_area": [
+      "Champaign",
+      "Clark",
+      "Darke",
+      "Greene",
+      "Logan",
+      "Miami",
+      "Montgomery",
+      "Preble",
+      "Shelby"
+    ],
+    "regional_role": "aging_agency",
+    "region_id": "2",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "A regional starting point for meals, transportation, caregiver support and help at home. Ask which services fit the resident’s situation.",
+    "next_step": "Call with the county, living arrangement and help needed. Ask about assessment, eligibility, costs and the next referral.",
+    "constraints": [
+      "County coverage identifies the referral agency; individual programs have separate eligibility, funding and availability rules."
+    ],
+    "official_url": "https://www.ohioaging.org/aws/O4A/asset_manager/get_file/943016?ver=0#page=1",
+    "public_contact": {
+      "phone": "800-258-7277",
+      "phone_label": "Directory-published referral line; ask for information and assistance"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ohioaging.org/aws/O4A/asset_manager/get_file/943016?ver=0",
+        "title": "Ohio Association of Area Agencies on Aging directory (February 2026)",
+        "page": 1,
+        "reviewed_on": "2026-10-08",
+        "scope": "County coverage and published referral phone; not a telephone confirmation"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-region-2-ombudsman",
+    "name": "Region 2 Long-Term Care Ombudsman",
+    "organization": "Joint Office of Citizens Complaints",
+    "service_area": [
+      "Champaign",
+      "Clark",
+      "Darke",
+      "Greene",
+      "Logan",
+      "Miami",
+      "Montgomery",
+      "Preble",
+      "Shelby"
+    ],
+    "regional_role": "ombudsman",
+    "region_id": "2",
+    "needs_supported": [
+      "general_navigation"
+    ],
+    "description": "Resident-directed advocacy for concerns about long-term care, rights, safety or quality of care.",
+    "next_step": "Call and ask for the ombudsman serving the resident’s county. Explain the concern and what the resident wants to happen. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman is an advocacy route. Ask how consent, confidentiality and follow-up work for the resident."
+    ],
+    "official_url": "https://dam.assets.ohio.gov/image/upload/aging.ohio.gov/Regional_Ombudsman_Contact_Map.pdf#page=2",
+    "public_contact": {
+      "phone": "800-395-8267",
+      "phone_label": "Directory-published referral line; ask for the ombudsman"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dam.assets.ohio.gov/image/upload/aging.ohio.gov/Regional_Ombudsman_Contact_Map.pdf",
+        "title": "Ohio Department of Aging Regional Ombudsman Contact Map",
+        "page": 2,
+        "reviewed_on": "2026-10-08",
+        "scope": "County coverage and published referral phone; not a telephone confirmation"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-region-3-aging-agency",
+    "name": "Area Agency on Aging 3 — aging support",
+    "organization": "Area Agency on Aging 3",
+    "service_area": [
+      "Allen",
+      "Auglaize",
+      "Hancock",
+      "Hardin",
+      "Mercer",
+      "Putnam",
+      "Van Wert"
+    ],
+    "regional_role": "aging_agency",
+    "region_id": "3",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "A regional starting point for meals, transportation, caregiver support and help at home. Ask which services fit the resident’s situation.",
+    "next_step": "Call with the county, living arrangement and help needed. Ask about assessment, eligibility, costs and the next referral.",
+    "constraints": [
+      "County coverage identifies the referral agency; individual programs have separate eligibility, funding and availability rules."
+    ],
+    "official_url": "https://www.ohioaging.org/aws/O4A/asset_manager/get_file/943016?ver=0#page=1",
+    "public_contact": {
+      "phone": "800-653-7723",
+      "phone_label": "Directory-published referral line; ask for information and assistance"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ohioaging.org/aws/O4A/asset_manager/get_file/943016?ver=0",
+        "title": "Ohio Association of Area Agencies on Aging directory (February 2026)",
+        "page": 1,
+        "reviewed_on": "2026-10-08",
+        "scope": "County coverage and published referral phone; not a telephone confirmation"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-region-3-ombudsman",
+    "name": "Region 3 Long-Term Care Ombudsman",
+    "organization": "Advocates for Basic Legal Equality",
+    "service_area": [
+      "Allen",
+      "Auglaize",
+      "Hancock",
+      "Hardin",
+      "Mercer",
+      "Putnam",
+      "Van Wert"
+    ],
+    "regional_role": "ombudsman",
+    "region_id": "3",
+    "needs_supported": [
+      "general_navigation"
+    ],
+    "description": "Resident-directed advocacy for concerns about long-term care, rights, safety or quality of care.",
+    "next_step": "Call and ask for the ombudsman serving the resident’s county. Explain the concern and what the resident wants to happen. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman is an advocacy route. Ask how consent, confidentiality and follow-up work for the resident."
+    ],
+    "official_url": "https://dam.assets.ohio.gov/image/upload/aging.ohio.gov/Regional_Ombudsman_Contact_Map.pdf#page=2",
+    "public_contact": {
+      "phone": "800-542-1874",
+      "phone_label": "Directory-published referral line; ask for the ombudsman"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dam.assets.ohio.gov/image/upload/aging.ohio.gov/Regional_Ombudsman_Contact_Map.pdf",
+        "title": "Ohio Department of Aging Regional Ombudsman Contact Map",
+        "page": 2,
+        "reviewed_on": "2026-10-08",
+        "scope": "County coverage and published referral phone; not a telephone confirmation"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-region-4-aging-agency",
+    "name": "Area Office on Aging of Northwestern Ohio — aging support",
+    "organization": "Area Office on Aging of Northwestern Ohio",
+    "service_area": [
+      "Defiance",
+      "Erie",
+      "Fulton",
+      "Henry",
+      "Lucas",
+      "Ottawa",
+      "Paulding",
+      "Sandusky",
+      "Williams",
+      "Wood"
+    ],
+    "regional_role": "aging_agency",
+    "region_id": "4",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "A regional starting point for meals, transportation, caregiver support and help at home. Ask which services fit the resident’s situation.",
+    "next_step": "Call with the county, living arrangement and help needed. Ask about assessment, eligibility, costs and the next referral.",
+    "constraints": [
+      "County coverage identifies the referral agency; individual programs have separate eligibility, funding and availability rules."
+    ],
+    "official_url": "https://www.ohioaging.org/aws/O4A/asset_manager/get_file/943016?ver=0#page=1",
+    "public_contact": {
+      "phone": "800-472-7277",
+      "phone_label": "Directory-published referral line; ask for information and assistance"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ohioaging.org/aws/O4A/asset_manager/get_file/943016?ver=0",
+        "title": "Ohio Association of Area Agencies on Aging directory (February 2026)",
+        "page": 1,
+        "reviewed_on": "2026-10-08",
+        "scope": "County coverage and published referral phone; not a telephone confirmation"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-region-4-ombudsman",
+    "name": "Region 4 Long-Term Care Ombudsman",
+    "organization": "Advocates for Basic Legal Equality",
+    "service_area": [
+      "Defiance",
+      "Erie",
+      "Fulton",
+      "Henry",
+      "Lucas",
+      "Ottawa",
+      "Paulding",
+      "Sandusky",
+      "Williams",
+      "Wood"
+    ],
+    "regional_role": "ombudsman",
+    "region_id": "4",
+    "needs_supported": [
+      "general_navigation"
+    ],
+    "description": "Resident-directed advocacy for concerns about long-term care, rights, safety or quality of care.",
+    "next_step": "Call and ask for the ombudsman serving the resident’s county. Explain the concern and what the resident wants to happen. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman is an advocacy route. Ask how consent, confidentiality and follow-up work for the resident."
+    ],
+    "official_url": "https://dam.assets.ohio.gov/image/upload/aging.ohio.gov/Regional_Ombudsman_Contact_Map.pdf#page=2",
+    "public_contact": {
+      "phone": "800-542-1874",
+      "phone_label": "Directory-published referral line; ask for the ombudsman"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dam.assets.ohio.gov/image/upload/aging.ohio.gov/Regional_Ombudsman_Contact_Map.pdf",
+        "title": "Ohio Department of Aging Regional Ombudsman Contact Map",
+        "page": 2,
+        "reviewed_on": "2026-10-08",
+        "scope": "County coverage and published referral phone; not a telephone confirmation"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-region-7-aging-agency",
+    "name": "Area Agency on Aging District 7 — aging support",
+    "organization": "Area Agency on Aging District 7",
+    "service_area": [
+      "Adams",
+      "Brown",
+      "Gallia",
+      "Highland",
+      "Jackson",
+      "Lawrence",
+      "Pike",
+      "Ross",
+      "Scioto",
+      "Vinton"
+    ],
+    "regional_role": "aging_agency",
+    "region_id": "7",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "A regional starting point for meals, transportation, caregiver support and help at home. Ask which services fit the resident’s situation.",
+    "next_step": "Call with the county, living arrangement and help needed. Ask about assessment, eligibility, costs and the next referral.",
+    "constraints": [
+      "County coverage identifies the referral agency; individual programs have separate eligibility, funding and availability rules."
+    ],
+    "official_url": "https://www.ohioaging.org/aws/O4A/asset_manager/get_file/943016?ver=0#page=1",
+    "public_contact": {
+      "phone": "800-582-7277",
+      "phone_label": "Directory-published referral line; ask for information and assistance"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ohioaging.org/aws/O4A/asset_manager/get_file/943016?ver=0",
+        "title": "Ohio Association of Area Agencies on Aging directory (February 2026)",
+        "page": 1,
+        "reviewed_on": "2026-10-08",
+        "scope": "County coverage and published referral phone; not a telephone confirmation"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-region-7-ombudsman",
+    "name": "Region 7 Long-Term Care Ombudsman",
+    "organization": "Area Agency on Aging District 7",
+    "service_area": [
+      "Adams",
+      "Brown",
+      "Gallia",
+      "Highland",
+      "Jackson",
+      "Lawrence",
+      "Pike",
+      "Ross",
+      "Scioto",
+      "Vinton"
+    ],
+    "regional_role": "ombudsman",
+    "region_id": "7",
+    "needs_supported": [
+      "general_navigation"
+    ],
+    "description": "Resident-directed advocacy for concerns about long-term care, rights, safety or quality of care.",
+    "next_step": "Call and ask for the ombudsman serving the resident’s county. Explain the concern and what the resident wants to happen. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman is an advocacy route. Ask how consent, confidentiality and follow-up work for the resident."
+    ],
+    "official_url": "https://dam.assets.ohio.gov/image/upload/aging.ohio.gov/Regional_Ombudsman_Contact_Map.pdf#page=2",
+    "public_contact": {
+      "phone": "800-582-7277",
+      "phone_label": "Directory-published referral line; ask for the ombudsman"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dam.assets.ohio.gov/image/upload/aging.ohio.gov/Regional_Ombudsman_Contact_Map.pdf",
+        "title": "Ohio Department of Aging Regional Ombudsman Contact Map",
+        "page": 2,
+        "reviewed_on": "2026-10-08",
+        "scope": "County coverage and published referral phone; not a telephone confirmation"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-region-8-aging-agency",
+    "name": "Buckeye Hills Regional Council — aging support",
+    "organization": "Buckeye Hills Regional Council",
+    "service_area": [
+      "Athens",
+      "Hocking",
+      "Meigs",
+      "Monroe",
+      "Morgan",
+      "Noble",
+      "Perry",
+      "Washington"
+    ],
+    "regional_role": "aging_agency",
+    "region_id": "8",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "A regional starting point for meals, transportation, caregiver support and help at home. Ask which services fit the resident’s situation.",
+    "next_step": "Call with the county, living arrangement and help needed. Ask about assessment, eligibility, costs and the next referral.",
+    "constraints": [
+      "County coverage identifies the referral agency; individual programs have separate eligibility, funding and availability rules."
+    ],
+    "official_url": "https://www.ohioaging.org/aws/O4A/asset_manager/get_file/943016?ver=0#page=1",
+    "public_contact": {
+      "phone": "800-331-2644",
+      "phone_label": "Directory-published referral line; ask for information and assistance"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ohioaging.org/aws/O4A/asset_manager/get_file/943016?ver=0",
+        "title": "Ohio Association of Area Agencies on Aging directory (February 2026)",
+        "page": 1,
+        "reviewed_on": "2026-10-08",
+        "scope": "County coverage and published referral phone; not a telephone confirmation"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-region-8-ombudsman",
+    "name": "Region 8 Long-Term Care Ombudsman",
+    "organization": "Easterseals Central and Southeast Ohio",
+    "service_area": [
+      "Athens",
+      "Hocking",
+      "Meigs",
+      "Monroe",
+      "Morgan",
+      "Noble",
+      "Perry",
+      "Washington"
+    ],
+    "regional_role": "ombudsman",
+    "region_id": "8",
+    "needs_supported": [
+      "general_navigation"
+    ],
+    "description": "Resident-directed advocacy for concerns about long-term care, rights, safety or quality of care.",
+    "next_step": "Call and ask for the ombudsman serving the resident’s county. Explain the concern and what the resident wants to happen. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman is an advocacy route. Ask how consent, confidentiality and follow-up work for the resident."
+    ],
+    "official_url": "https://dam.assets.ohio.gov/image/upload/aging.ohio.gov/Regional_Ombudsman_Contact_Map.pdf#page=2",
+    "public_contact": {
+      "phone": "888-502-6601",
+      "phone_label": "Directory-published referral line; ask for the ombudsman"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dam.assets.ohio.gov/image/upload/aging.ohio.gov/Regional_Ombudsman_Contact_Map.pdf",
+        "title": "Ohio Department of Aging Regional Ombudsman Contact Map",
+        "page": 2,
+        "reviewed_on": "2026-10-08",
+        "scope": "County coverage and published referral phone; not a telephone confirmation"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-region-9-aging-agency",
+    "name": "Area Agency on Aging Region 9 — aging support",
+    "organization": "Area Agency on Aging Region 9",
+    "service_area": [
+      "Belmont",
+      "Carroll",
+      "Coshocton",
+      "Guernsey",
+      "Harrison",
+      "Holmes",
+      "Jefferson",
+      "Muskingum",
+      "Tuscarawas"
+    ],
+    "regional_role": "aging_agency",
+    "region_id": "9",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "A regional starting point for meals, transportation, caregiver support and help at home. Ask which services fit the resident’s situation.",
+    "next_step": "Call with the county, living arrangement and help needed. Ask about assessment, eligibility, costs and the next referral.",
+    "constraints": [
+      "County coverage identifies the referral agency; individual programs have separate eligibility, funding and availability rules."
+    ],
+    "official_url": "https://www.ohioaging.org/aws/O4A/asset_manager/get_file/943016?ver=0#page=1",
+    "public_contact": {
+      "phone": "800-945-4250",
+      "phone_label": "Directory-published referral line; ask for information and assistance"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ohioaging.org/aws/O4A/asset_manager/get_file/943016?ver=0",
+        "title": "Ohio Association of Area Agencies on Aging directory (February 2026)",
+        "page": 1,
+        "reviewed_on": "2026-10-08",
+        "scope": "County coverage and published referral phone; not a telephone confirmation"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-region-9-ombudsman",
+    "name": "Region 9 Long-Term Care Ombudsman",
+    "organization": "Direction Home Akron-Canton",
+    "service_area": [
+      "Belmont",
+      "Carroll",
+      "Coshocton",
+      "Guernsey",
+      "Harrison",
+      "Holmes",
+      "Jefferson",
+      "Muskingum",
+      "Tuscarawas"
+    ],
+    "regional_role": "ombudsman",
+    "region_id": "9",
+    "needs_supported": [
+      "general_navigation"
+    ],
+    "description": "Resident-directed advocacy for concerns about long-term care, rights, safety or quality of care.",
+    "next_step": "Call and ask for the ombudsman serving the resident’s county. Explain the concern and what the resident wants to happen. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman is an advocacy route. Ask how consent, confidentiality and follow-up work for the resident."
+    ],
+    "official_url": "https://dam.assets.ohio.gov/image/upload/aging.ohio.gov/Regional_Ombudsman_Contact_Map.pdf#page=2",
+    "public_contact": {
+      "phone": "800-967-0615",
+      "phone_label": "Directory-published referral line; ask for the ombudsman"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dam.assets.ohio.gov/image/upload/aging.ohio.gov/Regional_Ombudsman_Contact_Map.pdf",
+        "title": "Ohio Department of Aging Regional Ombudsman Contact Map",
+        "page": 2,
+        "reviewed_on": "2026-10-08",
+        "scope": "County coverage and published referral phone; not a telephone confirmation"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-region-10a-aging-agency",
+    "name": "Western Reserve Area Agency on Aging — aging support",
+    "organization": "Western Reserve Area Agency on Aging",
+    "service_area": [
+      "Cuyahoga",
+      "Geauga",
+      "Lake",
+      "Lorain",
+      "Medina"
+    ],
+    "regional_role": "aging_agency",
+    "region_id": "10A",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "A regional starting point for meals, transportation, caregiver support and help at home. Ask which services fit the resident’s situation.",
+    "next_step": "Call with the county, living arrangement and help needed. Ask about assessment, eligibility, costs and the next referral.",
+    "constraints": [
+      "County coverage identifies the referral agency; individual programs have separate eligibility, funding and availability rules."
+    ],
+    "official_url": "https://www.ohioaging.org/aws/O4A/asset_manager/get_file/943016?ver=0#page=1",
+    "public_contact": {
+      "phone": "800-626-7277",
+      "phone_label": "Directory-published referral line; ask for information and assistance"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ohioaging.org/aws/O4A/asset_manager/get_file/943016?ver=0",
+        "title": "Ohio Association of Area Agencies on Aging directory (February 2026)",
+        "page": 1,
+        "reviewed_on": "2026-10-08",
+        "scope": "County coverage and published referral phone; not a telephone confirmation"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-region-10a-ombudsman",
+    "name": "Region 10A Long-Term Care Ombudsman",
+    "organization": "Long-Term Care Ombudsman of Cleveland",
+    "service_area": [
+      "Cuyahoga",
+      "Geauga",
+      "Lake",
+      "Lorain",
+      "Medina"
+    ],
+    "regional_role": "ombudsman",
+    "region_id": "10A",
+    "needs_supported": [
+      "general_navigation"
+    ],
+    "description": "Resident-directed advocacy for concerns about long-term care, rights, safety or quality of care.",
+    "next_step": "Call and ask for the ombudsman serving the resident’s county. Explain the concern and what the resident wants to happen. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman is an advocacy route. Ask how consent, confidentiality and follow-up work for the resident."
+    ],
+    "official_url": "https://dam.assets.ohio.gov/image/upload/aging.ohio.gov/Regional_Ombudsman_Contact_Map.pdf#page=2",
+    "public_contact": {
+      "phone": "800-365-3112",
+      "phone_label": "Directory-published referral line; ask for the ombudsman"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dam.assets.ohio.gov/image/upload/aging.ohio.gov/Regional_Ombudsman_Contact_Map.pdf",
+        "title": "Ohio Department of Aging Regional Ombudsman Contact Map",
+        "page": 2,
+        "reviewed_on": "2026-10-08",
+        "scope": "County coverage and published referral phone; not a telephone confirmation"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-region-10b-aging-agency",
+    "name": "Direction Home Akron-Canton — aging support",
+    "organization": "Direction Home Akron-Canton",
+    "service_area": [
+      "Portage",
+      "Stark",
+      "Summit",
+      "Wayne"
+    ],
+    "regional_role": "aging_agency",
+    "region_id": "10B",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "A regional starting point for meals, transportation, caregiver support and help at home. Ask which services fit the resident’s situation.",
+    "next_step": "Call with the county, living arrangement and help needed. Ask about assessment, eligibility, costs and the next referral.",
+    "constraints": [
+      "County coverage identifies the referral agency; individual programs have separate eligibility, funding and availability rules."
+    ],
+    "official_url": "https://www.ohioaging.org/aws/O4A/asset_manager/get_file/943016?ver=0#page=1",
+    "public_contact": {
+      "phone": "800-421-7277",
+      "phone_label": "Directory-published referral line; ask for information and assistance"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ohioaging.org/aws/O4A/asset_manager/get_file/943016?ver=0",
+        "title": "Ohio Association of Area Agencies on Aging directory (February 2026)",
+        "page": 1,
+        "reviewed_on": "2026-10-08",
+        "scope": "County coverage and published referral phone; not a telephone confirmation"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-region-10b-ombudsman",
+    "name": "Region 10B Long-Term Care Ombudsman",
+    "organization": "Direction Home Akron-Canton",
+    "service_area": [
+      "Portage",
+      "Stark",
+      "Summit",
+      "Wayne"
+    ],
+    "regional_role": "ombudsman",
+    "region_id": "10B",
+    "needs_supported": [
+      "general_navigation"
+    ],
+    "description": "Resident-directed advocacy for concerns about long-term care, rights, safety or quality of care.",
+    "next_step": "Call and ask for the ombudsman serving the resident’s county. Explain the concern and what the resident wants to happen. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman is an advocacy route. Ask how consent, confidentiality and follow-up work for the resident."
+    ],
+    "official_url": "https://dam.assets.ohio.gov/image/upload/aging.ohio.gov/Regional_Ombudsman_Contact_Map.pdf#page=2",
+    "public_contact": {
+      "phone": "800-421-7277",
+      "phone_label": "Directory-published referral line; ask for the ombudsman"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dam.assets.ohio.gov/image/upload/aging.ohio.gov/Regional_Ombudsman_Contact_Map.pdf",
+        "title": "Ohio Department of Aging Regional Ombudsman Contact Map",
+        "page": 2,
+        "reviewed_on": "2026-10-08",
+        "scope": "County coverage and published referral phone; not a telephone confirmation"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-region-11-aging-agency",
+    "name": "Direction Home of Eastern Ohio — aging support",
+    "organization": "Direction Home of Eastern Ohio",
+    "service_area": [
+      "Ashtabula",
+      "Columbiana",
+      "Mahoning",
+      "Trumbull"
+    ],
+    "regional_role": "aging_agency",
+    "region_id": "11",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "A regional starting point for meals, transportation, caregiver support and help at home. Ask which services fit the resident’s situation.",
+    "next_step": "Call with the county, living arrangement and help needed. Ask about assessment, eligibility, costs and the next referral.",
+    "constraints": [
+      "County coverage identifies the referral agency; individual programs have separate eligibility, funding and availability rules."
+    ],
+    "official_url": "https://www.ohioaging.org/aws/O4A/asset_manager/get_file/943016?ver=0#page=1",
+    "public_contact": {
+      "phone": "800-686-7367",
+      "phone_label": "Directory-published referral line; ask for information and assistance"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ohioaging.org/aws/O4A/asset_manager/get_file/943016?ver=0",
+        "title": "Ohio Association of Area Agencies on Aging directory (February 2026)",
+        "page": 1,
+        "reviewed_on": "2026-10-08",
+        "scope": "County coverage and published referral phone; not a telephone confirmation"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-region-11-ombudsman",
+    "name": "Region 11 Long-Term Care Ombudsman",
+    "organization": "Direction Home of Eastern Ohio",
+    "service_area": [
+      "Ashtabula",
+      "Columbiana",
+      "Mahoning",
+      "Trumbull"
+    ],
+    "regional_role": "ombudsman",
+    "region_id": "11",
+    "needs_supported": [
+      "general_navigation"
+    ],
+    "description": "Resident-directed advocacy for concerns about long-term care, rights, safety or quality of care.",
+    "next_step": "Call and ask for the ombudsman serving the resident’s county. Explain the concern and what the resident wants to happen. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman is an advocacy route. Ask how consent, confidentiality and follow-up work for the resident."
+    ],
+    "official_url": "https://dam.assets.ohio.gov/image/upload/aging.ohio.gov/Regional_Ombudsman_Contact_Map.pdf#page=2",
+    "public_contact": {
+      "phone": "800-589-5826",
+      "phone_label": "Directory-published referral line; ask for the ombudsman"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dam.assets.ohio.gov/image/upload/aging.ohio.gov/Regional_Ombudsman_Contact_Map.pdf",
+        "title": "Ohio Department of Aging Regional Ombudsman Contact Map",
+        "page": 2,
+        "reviewed_on": "2026-10-08",
+        "scope": "County coverage and published referral phone; not a telephone confirmation"
+      }
+    ]
   }
 ]

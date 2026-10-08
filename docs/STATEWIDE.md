@@ -8,7 +8,7 @@ Updated October 8, 2026.
 - 87 county contacts were extracted from the Ohio AMVETS 2025–2026 Guidebook, physical PDF pages 67–70 (printed pages 7–10). The publication omits Lawrence County; its contact was added from the county government's departments page.
 - Morrow and Knox contact sources are their office websites. Lawrence uses its county government website. The remaining entries are labeled as directory-published contacts, not direct agency confirmations.
 - Statewide/federal programs appear for every county. Additional local program coverage is strongest in Morrow, Knox, Marion and Delaware and is not an exhaustive inventory elsewhere.
-- There are 72 resource records in the reusable projection. Four original county office records are represented by the separate 88-office directory instead of duplicated among the 68 program/resource cards.
+- There are 92 resource records in the reusable projection. Four original county office records are represented by the separate 88-office directory instead of duplicated among the 88 program/resource cards.
 
 ## Data and sources
 
@@ -37,11 +37,11 @@ Several Ohio Department of Veterans Services directory/guide URLs returned error
 
 ## Interface
 
-- Select a county at the top for its office phone, source and intake questions.
+- Select a county at the top for its veterans office, aging agency and ombudsman phones and sources.
 - Choose a common need, search or filter by resource type. Source review status is an optional filter.
 - County choices retain statewide/federal routes; programs with unknown coverage do not silently become statewide.
 - Share links use validated `county`, `view`, `q`, `type` and `status` query parameters. No browser storage or resident forms are used.
-- County handoff printing requires a selected county and includes its office contact plus the staff guide. Full-view printing is separate.
+- County handoff printing requires a selected county and includes all three county referral contacts plus the staff guide. Full-view printing is separate.
 - Corrections link to repository issues. Only public resource corrections belong there; resident information must not be submitted.
 
 ## Verification and upkeep
@@ -51,3 +51,16 @@ Checked all 88 names against the complete Ohio county set, checked unique entrie
 Still needed: direct confirmation of individual office hours/intake arrangements, expansion of local programs beyond the pilot, and assignment of a maintenance owner and backup. No office outreach or scheduled automation was performed.
 
 When updating a phone, retain provenance and the review date; update the county JSON and embedded `COUNTIES` in index.html together. Program edits should keep prototype-data.json and embedded `DATA` together. Working `data/integrated` research is not silently rewritten by this presentation update.
+
+## Regional referral research — October 8, 2026
+
+`data/public/ohio-regional-referrals.json` holds 12 aging agency regions and 12 ombudsman regions. Both sets independently partition all 88 counties, including Paulding in region 4. These 24 records are included in the program projection and embedded site data. Four existing regional records were refreshed, including expansion of the former Delaware-only ombudsman record to the full region 6.
+
+Sources reviewed in full:
+
+- Ohio Association of Area Agencies on Aging, February 2026 directory, page 1: https://www.ohioaging.org/aws/O4A/asset_manager/get_file/943016?ver=0
+- Ohio Department of Aging Regional Ombudsman Contact Map, page 2: https://dam.assets.ohio.gov/image/upload/aging.ohio.gov/Regional_Ombudsman_Contact_Map.pdf
+
+Phones are directory-published, not telephone-confirmed. The map does not state its publication date; the review date records when its contents were checked. Agency addresses, hours and staff were not added. Source links point to the exact directory pages because several provider deep links have moved or failed. Region 9 uses the map’s regional ombudsman number (800-967-0615), while Direction Home’s website also provides the agency-wide line (800-421-7277). Region 11’s ombudsman number is distinct from its aging intake number. An annual-report text extraction associated phones with the wrong rows, so it was rejected in favor of visual inspection of the original contact map.
+
+Selecting a county shows all three contacts. Aging agencies appear among useful starting points and home/community support; ombudsmen appear in care concerns/rights. A referral area does not establish eligibility for every program operated by the agency.

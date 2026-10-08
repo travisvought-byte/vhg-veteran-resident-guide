@@ -106,3 +106,5 @@ print/                  Handoff sheets and staff guide (later)
 site/                   Static directory site (later)
 ```
 
+
+Regional referral update: all 88 county selections now include matched aging-agency and long-term-care ombudsman contacts, with directory sources and review dates. The printable handoff includes these contacts. See [coverage and sources](docs/STATEWIDE.md).
