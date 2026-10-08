@@ -1936,23 +1936,23 @@
   {
     "program_id": "va-hisa",
     "name": "VA Home Improvements and Structural Alterations (HISA)",
-    "official_url": "https://www.prosthetics.va.gov/psas/HISA2.asp",
+    "official_url": "https://www.rehab.va.gov/PROSTHETICS/psas/HISA2.asp",
     "service_area": [
       "statewide"
     ],
     "needs_supported": [
       "equipment_home_accessibility"
     ],
-    "description": "A VA pathway for medically necessary home improvements and structural alterations.",
-    "next_step": "Ask the VA clinical or prosthetics team for medical review and the application checklist.",
+    "description": "Medically necessary changes to a veteran’s primary home, including permanent ramps, accessible bathrooms and widened access. Some non-service-connected needs can qualify.",
+    "next_step": "Ask your VA care team for a clinical review and contact your VA medical facility’s Prosthetic and Sensory Aids Service. Confirm your remaining lifetime benefit and obtain the HISA application checklist.",
     "constraints": [
-      "Medical prescription/approval, Form 10-0103, itemized estimate and photo; renters need notarized owner consent."
+      "HISA excludes portable ramps, stair glides, new construction and routine home repairs. VA determines eligibility, medical necessity and the available benefit. Prepare VA Form 10-0103, a VA-written or approved prescription, owner authorization (notarized for renters), an itemized estimate and a before photograph."
     ],
     "verification": {
       "record_status": "official_source_reviewed",
       "identity": "official_source_reviewed",
       "contact": "official_source_reviewed",
-      "last_reviewed_on": "2026-10-02"
+      "last_reviewed_on": "2026-10-08"
     },
     "public_contact": {
       "phone": null,
@@ -1974,15 +1974,13 @@
       "equipment_home_accessibility"
     ],
     "description": "A housing grant route for veterans with qualifying service-connected disabilities.",
-    "next_step": "Review the current VA eligibility rules with an accredited representative.",
+    "next_step": "Review the qualifying disability and ownership rules with VA or an accredited representative. Apply online through VA or use VA Form 26-4555; ask VA about project planning and approval before construction.",
     "constraints": [
-      "Amounts intentionally null until current-year VA limits are rechecked."
+      "These grants require specific qualifying service-connected disabilities; a disability rating alone does not establish eligibility. Confirm the current fiscal-year maximum and any benefit already used with VA."
     ],
     "verification": {
       "record_status": "official_source_reviewed",
-      "identity": "official_source_reviewed",
-      "contact": "imported_unverified",
-      "last_reviewed_on": "2026-10-02"
+      "last_reviewed_on": "2026-10-08"
     },
     "public_contact": {
       "phone": null,
@@ -2004,15 +2002,13 @@
       "equipment_home_accessibility"
     ],
     "description": "A housing adaptation grant route with specific service-connected disability requirements.",
-    "next_step": "Review the current VA eligibility rules with an accredited representative.",
+    "next_step": "Review the qualifying disability and ownership rules with VA or an accredited representative. Apply online through VA or use VA Form 26-4555; ask VA about project planning and approval before construction.",
     "constraints": [
-      "Amounts intentionally null until current-year VA limits are rechecked."
+      "These grants require specific qualifying service-connected disabilities; a disability rating alone does not establish eligibility. Confirm the current fiscal-year maximum and any benefit already used with VA."
     ],
     "verification": {
       "record_status": "official_source_reviewed",
-      "identity": "official_source_reviewed",
-      "contact": "imported_unverified",
-      "last_reviewed_on": "2026-10-02"
+      "last_reviewed_on": "2026-10-08"
     },
     "public_contact": {
       "phone": null,
@@ -3054,5 +3050,130 @@
         "scope": "County coverage and published referral phone; not a telephone confirmation"
       }
     ]
+  },
+  {
+    "program_id": "va-tra",
+    "name": "VA Temporary Residence Adaptation (TRA)",
+    "official_url": "https://www.va.gov/housing-assistance/disability-housing-grants/",
+    "service_area": [
+      "statewide"
+    ],
+    "needs_supported": [
+      "equipment_home_accessibility",
+      "general_navigation"
+    ],
+    "description": "Changes to a family member’s home where a qualifying veteran or service member is living temporarily.",
+    "next_step": "Ask VA about TRA if you qualify for SAH or SHA and are temporarily living in a family member’s home.",
+    "constraints": [
+      "TRA requires SAH or SHA eligibility; it is not a general temporary-housing or renter grant."
+    ],
+    "organization": "U.S. Department of Veterans Affairs",
+    "public_contact": {
+      "phone": null
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    }
+  },
+  {
+    "program_id": "ohio-waiver-home-modifications",
+    "name": "Ohio waiver home modifications",
+    "official_url": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
+    "service_area": [
+      "statewide"
+    ],
+    "needs_supported": [
+      "equipment_home_accessibility",
+      "general_navigation"
+    ],
+    "description": "Approved home modifications can include ramps, grab bars, doorway widening and bathroom changes under qualifying home and community-based programs.",
+    "next_step": "If enrolled, ask your waiver case manager to assess the modification and authorize it in your service plan. Otherwise ask your county aging agency or Ohio Medicaid for screening.",
+    "constraints": [
+      "Medicaid coverage alone does not establish access to this service. Applicable program enrollment, assessed need, service-plan authorization, owner consent and provider requirements apply."
+    ],
+    "organization": "Ohio Department of Medicaid / Ohio Department of Aging",
+    "public_contact": {
+      "phone": null
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    }
+  },
+  {
+    "program_id": "ohio-dd-home-adaptations",
+    "name": "Developmental disability waiver home adaptations",
+    "official_url": "https://codes.ohio.gov/ohio-administrative-code/rule-5123-9-23",
+    "service_area": [
+      "statewide"
+    ],
+    "needs_supported": [
+      "equipment_home_accessibility",
+      "general_navigation"
+    ],
+    "description": "Environmental accessibility adaptations may support eligible people enrolled in Ohio Individual Options or Level One waivers.",
+    "next_step": "Ask your county board of developmental disabilities service and support administrator about assessment and authorization in the individual service plan.",
+    "constraints": [
+      "DD eligibility alone does not establish waiver enrollment or funding. Adaptations must meet waiver rules; new home construction and residential-facility modifications are excluded."
+    ],
+    "organization": "Ohio Department of Developmental Disabilities",
+    "public_contact": {
+      "phone": null
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    }
+  },
+  {
+    "program_id": "usda-ohio-home-repair",
+    "name": "USDA rural home repair loans and grants",
+    "official_url": "https://www.rd.usda.gov/programs-services/single-family-housing-programs/single-family-housing-repair-loans-grants-26",
+    "service_area": [
+      "statewide"
+    ],
+    "needs_supported": [
+      "equipment_home_accessibility",
+      "general_navigation"
+    ],
+    "description": "Section 504 assistance for qualifying very-low-income rural homeowners; grants help qualifying older homeowners remove health and safety hazards.",
+    "next_step": "Use USDA’s Ohio program page to check the property and income requirements and contact a home loan specialist about an accessibility project.",
+    "constraints": [
+      "Grants require age 62 or older and additional eligibility conditions. Loans and grants have different rules. This is not a statewide entitlement or a general renter program."
+    ],
+    "organization": "USDA Rural Development",
+    "public_contact": {
+      "phone": null
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    }
+  },
+  {
+    "program_id": "ohio-home-choice",
+    "name": "Ohio HOME Choice: returning to the community",
+    "official_url": "https://homechoice.medicaid.ohio.gov/",
+    "service_area": [
+      "statewide"
+    ],
+    "needs_supported": [
+      "equipment_home_accessibility",
+      "general_navigation"
+    ],
+    "description": "Transition coordination for eligible Ohioans moving from a long-term-care facility to a community setting.",
+    "next_step": "Ask the facility discharge planner and HOME Choice staff to coordinate housing, supports and accessibility needs before the move.",
+    "constraints": [
+      "Medicaid and other eligibility requirements apply. HOME Choice is a transition route, not an automatic ramp grant."
+    ],
+    "organization": "Ohio Department of Medicaid",
+    "public_contact": {
+      "phone": null
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    }
   }
 ]
