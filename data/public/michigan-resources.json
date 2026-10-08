@@ -1,0 +1,1931 @@
+[
+  {
+    "program_id": "cms-care-compare",
+    "name": "Medicare Care Compare",
+    "official_url": "https://www.medicare.gov/care-compare/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "care_facilities"
+    ],
+    "description": "Compare published Medicare provider and quality information.",
+    "next_step": "Compare published Medicare provider and quality information.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "identity": "official_search_extract_only",
+      "contact": "official_search_extract_only",
+      "eligibility": "official_search_extract_only",
+      "last_reviewed_on": "2026-10-02"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.medicare.gov/care-compare/"
+    },
+    "organization": "Centers for Medicare & Medicaid Services",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-aid-attendance-housebound",
+    "name": "Pension additions: Aid and Attendance or Housebound",
+    "official_url": "https://www.va.gov/pension/aid-attendance-housebound/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "Extra monthly payments added to VA pension for qualifying veterans or survivors who need daily help or are housebound.",
+    "next_step": "Ask an accredited representative about pension eligibility and Aid and Attendance. For a nursing home resident, ask about VA Form 21-0779; medical evidence is also required.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/pension/aid-attendance-housebound/"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-dic",
+    "name": "Dependency and Indemnity Compensation",
+    "official_url": "https://www.va.gov/family-and-caregiver-benefits/survivor-compensation/dependency-indemnity-compensation/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "A potential survivor benefit when a service member died in the line of duty or a veteran’s death meets VA’s service-related or other qualifying rules.",
+    "next_step": "Ask an accredited representative whether DIC should be explored and what evidence is needed.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/family-and-caregiver-benefits/survivor-compensation/dependency-indemnity-compensation/"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-disability-increase",
+    "name": "Increased VA disability compensation",
+    "official_url": "https://www.va.gov/disability/how-to-file-claim/evidence-needed/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "A review route for an existing service-connected disability that has worsened.",
+    "next_step": "Ask an accredited representative what evidence may support a request for an increased rating.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-02"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/disability/how-to-file-claim/evidence-needed/"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-family-caregiver",
+    "name": "VA Program of Comprehensive Assistance for Family Caregivers",
+    "official_url": "https://www.va.gov/CAREGIVER/PCAFC.asp",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "A VA caregiver assistance program with specific veteran and caregiver eligibility requirements.",
+    "next_step": "Ask the VA caregiver support team about eligibility and the application process.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-02"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/CAREGIVER/PCAFC.asp"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-general-caregiver",
+    "name": "VA Program of General Caregiver Support Services",
+    "official_url": "https://www.va.gov/the-program-of-general-caregiver-support-services/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "VA resources and support for people caring for veterans.",
+    "next_step": "Ask the veteran’s VA care team which caregiver supports fit the situation.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-02"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/the-program-of-general-caregiver-support-services/"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-hospice",
+    "name": "VA hospice care",
+    "official_url": "https://www.va.gov/geriatrics/pages/Hospice_Care.asp",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "VA hospice care focuses on comfort and support near the end of life.",
+    "next_step": "Ask the treating clinician or VA social worker about hospice assessment and coordination.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/geriatrics/pages/Hospice_Care.asp"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-palliative",
+    "name": "VA palliative care",
+    "official_url": "https://www.va.gov/geriatrics/pages/Palliative_Care.asp",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "Palliative care addresses symptoms, comfort and care goals for serious illness.",
+    "next_step": "Ask the treating clinician about palliative care options.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/geriatrics/pages/Palliative_Care.asp"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-pension-medicaid-rule",
+    "name": "VA pension during Medicaid-covered nursing home care",
+    "official_url": "https://www.ecfr.gov/current/title-38/section-3.551",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "VA pension payments can be affected by Medicaid-covered nursing home care. The rules depend on the beneficiary’s circumstances.",
+    "next_step": "Ask an accredited representative and the care facility’s benefits staff to review VA pension and Medicaid together before changing benefits.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-02"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.ecfr.gov/current/title-38/section-3.551"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-survivors-pension",
+    "name": "Survivors Pension",
+    "official_url": "https://www.va.gov/family-and-caregiver-benefits/survivor-compensation/survivors-pension/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "A potential monthly benefit for qualifying surviving spouses and dependent children of wartime veterans, subject to income, net worth and other requirements.",
+    "next_step": "Ask an accredited representative to screen for Survivors Pension and explain the evidence needed.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/family-and-caregiver-benefits/survivor-compensation/survivors-pension/"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-va-burial",
+    "name": "VA burial allowance and memorial routes",
+    "official_url": "https://www.va.gov/burials-memorials/veterans-burial-allowance/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "Ask the county office or VA burial program about the correct application.",
+    "next_step": "Ask the county office or VA burial program about the correct application.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-02"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/burials-memorials/veterans-burial-allowance/"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-va-clc",
+    "name": "VA Community Living Centers",
+    "official_url": "https://www.va.gov/GERIATRICS/pages/VA_Community_Living_Centers.asp",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "VA-operated Community Living Centers provide nursing home level care for eligible veterans.",
+    "next_step": "Ask the VA care team or social worker about eligibility, assessment and local availability.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/GERIATRICS/pages/VA_Community_Living_Centers.asp"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-va-cnh",
+    "name": "VA Community Nursing Home program",
+    "official_url": "https://www.va.gov/GERIATRICS/pages/Community_Nursing_Homes.asp",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "A VA pathway for care in participating community nursing homes, subject to eligibility and available services.",
+    "next_step": "Ask the resident’s VA care team or social worker about community nursing home options.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/GERIATRICS/pages/Community_Nursing_Homes.asp"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-va-health-enrollment",
+    "name": "VA health care enrollment",
+    "official_url": "https://www.va.gov/health-care/how-to-apply/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "Apply for VA health care or get help understanding the enrollment process.",
+    "next_step": "Call VA enrollment or ask your county veterans office about the application and supporting information.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": "877-222-8387",
+      "phone_label": "VA health care enrollment line",
+      "email": null,
+      "contact_type": "office",
+      "web_route": "https://www.va.gov/health-care/how-to-apply/"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-va-pension",
+    "name": "Veterans Pension",
+    "official_url": "https://www.va.gov/pension/eligibility/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "Monthly pension for qualifying wartime veterans who meet age or disability, income, net worth and service requirements.",
+    "next_step": "Ask an accredited representative to screen for pension and explain how care expenses may affect the application.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/pension/eligibility/"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-whv",
+    "name": "We Honor Veterans public resources",
+    "official_url": "https://www.wehonorveterans.org/about/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "Use public veteran-care resources and ask the clinical team about coordinated care.",
+    "next_step": "Use public veteran-care resources and ask the clinical team about coordinated care.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-02"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.wehonorveterans.org/about/"
+    },
+    "organization": "National Alliance for Care at Home",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-hisa",
+    "name": "VA Home Improvements and Structural Alterations (HISA)",
+    "official_url": "https://www.rehab.va.gov/PROSTHETICS/psas/HISA2.asp",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "equipment_home_accessibility"
+    ],
+    "description": "Medically necessary changes to a veteran’s primary home, including permanent ramps, accessible bathrooms and widened access. Some non-service-connected needs can qualify.",
+    "next_step": "Ask your VA care team for a clinical review and contact your VA medical facility’s Prosthetic and Sensory Aids Service. Confirm your remaining lifetime benefit and obtain the HISA application checklist.",
+    "constraints": [
+      "HISA excludes portable ramps, stair glides, new construction and routine home repairs. VA determines eligibility, medical necessity and the available benefit. Prepare VA Form 10-0103, a VA-written or approved prescription, owner authorization (notarized for renters), an itemized estimate and a before photograph."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/find-locations/?facilityType=health"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-sah",
+    "name": "VA Specially Adapted Housing (SAH) grant",
+    "official_url": "https://www.va.gov/housing-assistance/disability-housing-grants/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "equipment_home_accessibility"
+    ],
+    "description": "A housing grant route for veterans with qualifying service-connected disabilities.",
+    "next_step": "Review the qualifying disability and ownership rules with VA or an accredited representative. Apply online through VA or use VA Form 26-4555; ask VA about project planning and approval before construction.",
+    "constraints": [
+      "These grants require specific qualifying service-connected disabilities; a disability rating alone does not establish eligibility. Confirm the current fiscal-year maximum and any benefit already used with VA."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": null,
+      "web_route": null
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-sha",
+    "name": "VA Special Housing Adaptation (SHA) grant",
+    "official_url": "https://www.va.gov/housing-assistance/disability-housing-grants/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "equipment_home_accessibility"
+    ],
+    "description": "A housing adaptation grant route with specific service-connected disability requirements.",
+    "next_step": "Review the qualifying disability and ownership rules with VA or an accredited representative. Apply online through VA or use VA Form 26-4555; ask VA about project planning and approval before construction.",
+    "constraints": [
+      "These grants require specific qualifying service-connected disabilities; a disability rating alone does not establish eligibility. Confirm the current fiscal-year maximum and any benefit already used with VA."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": null,
+      "web_route": null
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "nara-discharge-records",
+    "name": "Get a missing DD214 or service record",
+    "official_url": "https://www.archives.gov/veterans/military-service-records",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "general_navigation"
+    ],
+    "description": "Request military records that may help document service for a benefits application.",
+    "next_step": "Use the National Archives request instructions or ask the county veterans office for help. Who may request records and any fee depend on the record and request.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": "314-801-0800"
+    },
+    "organization": "National Archives and Records Administration",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-accredited-help",
+    "name": "Find accredited help with a VA claim",
+    "official_url": "https://www.va.gov/get-help-from-accredited-representative/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "Find and appoint an accredited representative for a benefits claim or decision review. Accredited VSO claims assistance is free.",
+    "next_step": "Use VA’s representative search, then ask the representative if they are available. Attorneys and claims agents may charge fees.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-location-finder",
+    "name": "Find a VA medical facility or benefits office",
+    "official_url": "https://www.va.gov/find-locations/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "Search for VA locations near the resident and identify where to ask about care or benefits.",
+    "next_step": "Use the official locator with the resident’s city or ZIP code and select the kind of facility needed.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-housing-help",
+    "name": "Veteran housing and homelessness help",
+    "official_url": "https://department.va.gov/homeless/what-is-permanent-housing/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "general_navigation"
+    ],
+    "description": "A 24-hour VA contact for veterans who are homeless or at risk of losing housing.",
+    "next_step": "Call the national line to ask about local VA and community housing resources.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": "877-424-3838"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-tra",
+    "name": "VA Temporary Residence Adaptation (TRA)",
+    "official_url": "https://www.va.gov/housing-assistance/disability-housing-grants/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "equipment_home_accessibility",
+      "general_navigation"
+    ],
+    "description": "Changes to a family member’s home where a qualifying veteran or service member is living temporarily.",
+    "next_step": "Ask VA about TRA if you qualify for SAH or SHA and are temporarily living in a family member’s home.",
+    "constraints": [
+      "TRA requires SAH or SHA eligibility; it is not a general temporary-housing or renter grant."
+    ],
+    "organization": "U.S. Department of Veterans Affairs",
+    "public_contact": {
+      "phone": null
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "state": "shared"
+  },
+  {
+    "program_id": "alz-dementia-support",
+    "name": "Memory loss and dementia: 24/7 support",
+    "official_url": "https://www.alz.org/help-support/i-have-alz/programs-support",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "general_navigation"
+    ],
+    "description": "Free, confidential dementia information, caregiver support and referrals to local community resources.",
+    "next_step": "Call the Alzheimer’s Association helpline for care planning, local support groups and caregiver guidance. Seek medical evaluation for new memory concerns.",
+    "constraints": [
+      "The helpline provides support and referrals; it does not replace clinical assessment or emergency services."
+    ],
+    "organization": "Alzheimer’s Association",
+    "public_contact": {
+      "phone": "800-272-3900"
+    },
+    "senior_topic": "memory",
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "state": "shared"
+  },
+  {
+    "program_id": "american-legion-post-locator",
+    "name": "American Legion: find a local post",
+    "official_url": "https://mylegion.org/PersonifyEbusiness/Find-a-Post",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "general_navigation"
+    ],
+    "description": "Official post lookup for community connections and identifying public contacts to share the guide with.",
+    "next_step": "Search the official directory for your town or ZIP code. Confirm the post’s public phone or email and ask who handles community partnerships.",
+    "constraints": [
+      "A local post is not automatically an accredited claims office or a funding provider. Confirm its services, membership or visitor rules, accessibility and current contact details."
+    ],
+    "organization": "The American Legion",
+    "public_contact": {
+      "phone": null
+    },
+    "resource_role": "community_locator",
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "state": "shared"
+  },
+  {
+    "program_id": "amvets-post-locator",
+    "name": "AMVETS: find a local post",
+    "official_url": "https://www.amvets.org/find-a-post",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "general_navigation"
+    ],
+    "description": "Official post lookup for community connections and identifying public contacts to share the guide with.",
+    "next_step": "Search the official directory for your town or ZIP code. Confirm the post’s public phone or email and ask who handles community partnerships.",
+    "constraints": [
+      "A local post is not automatically an accredited claims office or a funding provider. Confirm its services, membership or visitor rules, accessibility and current contact details."
+    ],
+    "organization": "AMVETS",
+    "public_contact": {
+      "phone": null
+    },
+    "resource_role": "community_locator",
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "state": "shared"
+  },
+  {
+    "program_id": "vfw-post-locator",
+    "name": "VFW: find a local post",
+    "official_url": "https://vfw.org/find-a-post",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "general_navigation"
+    ],
+    "description": "Official post lookup for community connections and identifying public contacts to share the guide with.",
+    "next_step": "Search the official directory for your town or ZIP code. Confirm the post’s public phone or email and ask who handles community partnerships.",
+    "constraints": [
+      "A local post is not automatically an accredited claims office or a funding provider. Confirm its services, membership or visitor rules, accessibility and current contact details."
+    ],
+    "organization": "Veterans of Foreign Wars",
+    "public_contact": {
+      "phone": null
+    },
+    "resource_role": "community_locator",
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "state": "shared"
+  },
+  {
+    "program_id": "mi-claims",
+    "name": "Michigan veterans: benefits and accredited claims referrals",
+    "official_url": "https://www.michigan.gov/mvaa",
+    "organization": "Michigan Veterans Affairs Agency",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "MI",
+    "needs_supported": [
+      "general_navigation",
+      "benefits_and_funding"
+    ],
+    "description": "MVAA connects veterans and families to benefits counselors and community support.",
+    "next_step": "Give your county and ask for an accredited representative, benefits review and help obtaining discharge documents.",
+    "constraints": [],
+    "public_contact": {
+      "phone": "800-642-4838"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "page_sha256": "82a6368d72d919346173c4967412ab17abab79d6728f00d96bedf72087189bab",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.michigan.gov/mvaa"
+    }
+  },
+  {
+    "program_id": "mi-options",
+    "name": "MI Options: care and disability counseling",
+    "official_url": "https://www.michigan.gov/mdhhs/adult-child-serv/adults-and-seniors/acls/long-term-services-and-supports",
+    "organization": "Michigan Department of Health and Human Services",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "MI",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility",
+      "benefits_and_funding"
+    ],
+    "description": "Statewide counseling helps adults explore long-term care, community supports and aging at home.",
+    "next_step": "Call for a local counselor; describe the daily-living need and ask for a practical referral plan.",
+    "constraints": [],
+    "public_contact": {
+      "phone": "800-803-7174"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "page_sha256": "9ed3036a74b6b835b99c2b5467f534f5e54a24f5316841730f0378cf5480abc7",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.michigan.gov/mdhhs/adult-child-serv/adults-and-seniors/acls/long-term-services-and-supports"
+    }
+  },
+  {
+    "program_id": "mi-aging",
+    "name": "Michigan aging services: local assessment",
+    "official_url": "https://www.michigan.gov/mdhhs/adult-child-serv/adults-and-seniors/acls/aging-services/aging-services",
+    "organization": "Michigan Department of Health and Human Services",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "MI",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Regional aging agencies coordinate meals, caregiving, transportation and home support.",
+    "next_step": "Choose your county for its agency contacts. In Wayne County, use the agency serving the resident’s city.",
+    "constraints": [
+      "Local assessment, program eligibility, cost sharing and availability vary."
+    ],
+    "public_contact": {
+      "phone": null
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "page_sha256": "2867e68175585d5cfb3a49fc103b885894779e448340d51dd1666bba02d1c618",
+      "direct_agency_confirmation": false
+    }
+  },
+  {
+    "program_id": "mi-choice",
+    "name": "MI Choice Medicaid waiver",
+    "official_url": "https://www.michigan.gov/mdhhs/assistance-programs/healthcare/seniors/michoicewaiver/mi-choice-waiver-program-Use",
+    "organization": "Michigan Department of Health and Human Services",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "MI",
+    "needs_supported": [
+      "help_at_home",
+      "equipment_home_accessibility",
+      "benefits_and_funding"
+    ],
+    "description": "Approved home and community services can include care, respite, equipment and environmental accessibility adaptations.",
+    "next_step": "Use the official waiver-agency list to request screening. Enrolled participants should contact their supports coordinator before arranging work.",
+    "constraints": [
+      "Income, assets, nursing-facility level of care and other program criteria apply. Assessment and service-plan authorization are required; a referral does not guarantee enrollment."
+    ],
+    "public_contact": {
+      "phone": null
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "page_sha256": "907741107d177d74befdfef8ce6df51a5905dbd1a7bd4f58ce94b7b411ba3276",
+      "direct_agency_confirmation": false
+    }
+  },
+  {
+    "program_id": "mi-homehelp",
+    "name": "Home Help: personal assistance at home",
+    "official_url": "https://www.michigan.gov/mdhhs/adult-child-serv/adults-and-seniors/independent",
+    "organization": "Michigan Department of Health and Human Services",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "MI",
+    "needs_supported": [
+      "help_at_home",
+      "benefits_and_funding"
+    ],
+    "description": "Medicaid-supported assistance with approved daily activities following an Adult Services assessment.",
+    "next_step": "Contact the Adult Services unit at your county MDHHS office for a Home Help referral and medical-needs paperwork.",
+    "constraints": [
+      "Medicaid Fee for Service eligibility and physical help with at least one activity of daily living are required. Home Help excludes home repairs, supervision and transportation."
+    ],
+    "public_contact": {
+      "phone": null
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "page_sha256": "c639195428ccd11fec66c3cc40ed3a1ae1ac92d92b9703914557d2dc61809cb4",
+      "direct_agency_confirmation": false
+    }
+  },
+  {
+    "program_id": "mi-ship",
+    "name": "Michigan SHIP: free Medicare counseling",
+    "official_url": "https://www.michigan.gov/mdhhs/adult-child-serv/adults-and-seniors/acls/state-health-insurance-assistance-program",
+    "organization": "Michigan Department of Health and Human Services",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "MI",
+    "needs_supported": [
+      "benefits_and_funding",
+      "general_navigation"
+    ],
+    "description": "Unbiased counselors explain Medicare coverage, enrollment and potential savings programs.",
+    "next_step": "Call MI Options and ask for a local certified Medicare counselor.",
+    "constraints": [],
+    "public_contact": {
+      "phone": "800-803-7174"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "page_sha256": "c6778047dc4b95ea3bff99a9ef557aa9eb9ce4f8077cf2bb9ffdebc5e8ba90e3",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.michigan.gov/mdhhs/adult-child-serv/adults-and-seniors/acls/state-health-insurance-assistance-program"
+    }
+  },
+  {
+    "program_id": "mi-ombudsman",
+    "name": "Michigan long-term-care ombudsman",
+    "official_url": "https://www.michigan.gov/mdhhs/doing-business/providers/integrated/accordion/beneficiary-enrollee-resources/resource-contact-information-for",
+    "organization": "Michigan Department of Health and Human Services",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "MI",
+    "needs_supported": [
+      "resident_rights",
+      "care_facilities"
+    ],
+    "description": "Resident advocacy addresses care and quality-of-life concerns in licensed long-term-care facilities.",
+    "next_step": "Give the facility county and ask to connect with the local ombudsman. For immediate danger, call 911.",
+    "constraints": [],
+    "public_contact": {
+      "phone": "866-485-9393"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "page_sha256": "18f0bc6c28986abd46f12b2e0c518e07c426250f73f24321bf9b5f1339c00ef3",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.michigan.gov/mdhhs/doing-business/providers/integrated/accordion/beneficiary-enrollee-resources/resource-contact-information-for"
+    }
+  },
+  {
+    "program_id": "mi-at",
+    "name": "Michigan Assistive Technology Program: trials and loans",
+    "official_url": "https://www.michigan.gov/mdhhs/keep-mi-healthy/mentalhealth/developmentaldisability/michigan-at-help-hub/try-at",
+    "organization": "Michigan Disability Rights Coalition / MATP",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "MI",
+    "needs_supported": [
+      "equipment_home_accessibility",
+      "general_navigation"
+    ],
+    "description": "Free demonstrations and temporary device loans help people explore assistive technology.",
+    "next_step": "Describe the barrier, ask about a demonstration and check device availability and loan terms.",
+    "constraints": [
+      "MATP does not provide clinical assessments. A device loan is not a permanent equipment grant or a promise of ramp installation."
+    ],
+    "public_contact": {
+      "phone": "800-578-0280"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "page_sha256": "e1156b7544f94700566cb509c92d254bd6ef3c369f2d7a56e18ccf5f07100d71",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.michigan.gov/mdhhs/keep-mi-healthy/mentalhealth/developmentaldisability/michigan-at-help-hub/try-at"
+    }
+  },
+  {
+    "program_id": "mi-rights",
+    "name": "Disability Rights Michigan",
+    "official_url": "https://www.drmich.org/faq/",
+    "organization": "Disability Rights Michigan",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "MI",
+    "needs_supported": [
+      "resident_rights",
+      "equipment_home_accessibility",
+      "general_navigation"
+    ],
+    "description": "Protection and advocacy offers disability rights information, referrals and selected direct advocacy.",
+    "next_step": "Explain the disability-related issue and ask about intake and the next step.",
+    "constraints": [
+      "Direct representation depends on current priorities and capacity."
+    ],
+    "public_contact": {
+      "phone": "800-288-5923"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "page_sha256": "f2ab2303051a6ccfea6303a949b536447513c92bb86dcf9dea4d2d9c5fae626e",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.drmich.org/faq/"
+    }
+  },
+  {
+    "program_id": "mi-blind",
+    "name": "Blind and low-vision independent living: age 55+",
+    "official_url": "https://www.michigan.gov/leo/bureaus-agencies/bureau-of-services-for-blind-persons/independent-living-services-for-seniors",
+    "organization": "Michigan Bureau of Services for Blind Persons",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "MI",
+    "needs_supported": [
+      "equipment_home_accessibility",
+      "help_at_home",
+      "general_navigation"
+    ],
+    "description": "Independent living instruction and adapted aids help qualifying residents with vision loss.",
+    "next_step": "Ask about a services referral and the rehabilitation professional serving your county.",
+    "constraints": [
+      "Age 55+ and qualifying vision loss apply. Equipment support is subject to program budgets; this is not cash assistance or transportation."
+    ],
+    "public_contact": {
+      "phone": "800-292-4200"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "page_sha256": "7a5eb495a000192425448753f8625b84b4759ef9602c7dfd116781cabd333680",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.michigan.gov/leo/bureaus-agencies/bureau-of-services-for-blind-persons/independent-living-services-for-seniors"
+    }
+  },
+  {
+    "program_id": "mi-relay",
+    "name": "Michigan Relay: accessible telephone calls",
+    "official_url": "https://www.michigan.gov/en/mpsc/consumer/telecommunications/michigan-relay",
+    "organization": "Michigan Public Service Commission / Hamilton Relay",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "MI",
+    "needs_supported": [
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "Relay connects hearing callers and people who are Deaf, hard of hearing or have speech disabilities.",
+    "next_step": "Dial 711 and ask the relay operator to help connect your call.",
+    "constraints": [
+      "Relay does not supply hearing aids or establish equipment funding."
+    ],
+    "public_contact": {
+      "phone": "711"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "page_sha256": "99c7a3e657e799b0d396a00a0072a24ae9a20d493ce8c1cdbc59398be5fd22af",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.michigan.gov/en/mpsc/consumer/telecommunications/michigan-relay"
+    }
+  },
+  {
+    "program_id": "mi-caregiver",
+    "name": "Creating Confident Caregivers",
+    "official_url": "https://www.michigan.gov/mdhhs/adult-child-serv/adults-and-seniors/acls/special-programs/creating-confident-caregivers",
+    "organization": "Michigan Department of Health and Human Services",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "MI",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation"
+    ],
+    "description": "Classes support family caregivers of people living with dementia at home.",
+    "next_step": "Use the state page to find a participating partner and ask about upcoming classes and registration.",
+    "constraints": [
+      "Eligibility and space limits apply. Participating class partners do not represent the full aging-agency coverage map."
+    ],
+    "public_contact": {
+      "phone": null
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "page_sha256": "4ecc5aca2b3954256d14f9690102f6d39d73afa3f4bb12c7c30ffb4db06e68f6",
+      "direct_agency_confirmation": false
+    }
+  },
+  {
+    "program_id": "mi-emergency",
+    "name": "Michigan veteran emergency assistance",
+    "official_url": "https://www.michigan.gov/mvaa/quality-of-life/emergency-assistance/emergency-asst",
+    "organization": "Michigan Veterans Affairs Agency",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "MI",
+    "needs_supported": [
+      "benefits_and_funding",
+      "general_navigation"
+    ],
+    "description": "MVAA routes temporary financial needs to possible emergency resources, including county relief and the Veterans Trust Fund.",
+    "next_step": "Describe the expense and urgency. Ask the county committee or MVAA about a complete application and required documents.",
+    "constraints": [
+      "Trust Fund eligibility includes Michigan residence, discharge and qualifying service requirements. A resource-assistance form is not a Trust Fund application; funds and approval are not guaranteed."
+    ],
+    "public_contact": {
+      "phone": "800-642-4838"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "page_sha256": "9c4fd6dc8584032090a4af7fa78e81e39eb8bd23ad4f18cfcec7f0a7bb29305c",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.michigan.gov/mvaa/quality-of-life/emergency-assistance/emergency-asst"
+    }
+  },
+  {
+    "program_id": "mi-pace",
+    "name": "Michigan PACE: coordinated community care",
+    "official_url": "https://www.michigan.gov/mdhhs/assistance-programs/healthcare/seniors/program-of-all-inclusive-care-for-the-elderly-pace",
+    "organization": "Michigan Department of Health and Human Services",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "MI",
+    "needs_supported": [
+      "help_at_home",
+      "care_facilities",
+      "general_navigation"
+    ],
+    "description": "Participating PACE organizations coordinate medical and social support for eligible adults.",
+    "next_step": "Check the official provider list for coverage of your ZIP code, then ask that provider for an assessment.",
+    "constraints": [
+      "Age 55+, nursing-facility level of care, an approved service area and safe community living at enrollment are required. PACE and MI Choice cannot be enrolled concurrently."
+    ],
+    "public_contact": {
+      "phone": null
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "page_sha256": "0f82fe5c72f02f08fd2fe5b0e363af5ea62bdfdea6ff2afb8e0f5f9c22a60e82",
+      "direct_agency_confirmation": false
+    }
+  },
+  {
+    "program_id": "mi-aging-1a",
+    "name": "Detroit Area Agency on Aging — aging and community support",
+    "official_url": "https://www.detroitseniorsolution.org/",
+    "organization": "Detroit Area Agency on Aging",
+    "service_area": [
+      "Wayne"
+    ],
+    "state": "MI",
+    "regional_role": "aging_agency",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Regional information and referrals for meals, transport, caregiver support and independent living.",
+    "next_step": "Describe the need and ask for assessment and a local referral. Service area: Detroit, Hamtramck, Highland Park, Harper Woods, Grosse Pointe, Grosse Pointe Farms, Grosse Pointe Park, Grosse Pointe Shores and Grosse Pointe Woods.",
+    "constraints": [
+      "Program eligibility and availability vary. Confirm which office serves the residence."
+    ],
+    "public_contact": {
+      "phone": "313-446-4444",
+      "web_route": "https://www.detroitseniorsolution.org/"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "page_sha256": "bf6b39021ae102255c148650fc9e40afaf8dca076321991f87a85819bb171c27",
+      "phone_source_url": "https://www.detroitseniorsolution.org/",
+      "coverage_source_url": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Adult-and-Childrens-Services/Adults-and-Seniors/BPHASA/AAAs_Counties-Served_Phone-Numbers.pdf?hash=BB954F66F011910DAD158209ABAEE29B&rev=82e44c5b933747a9b8fcc00edb69600e",
+      "coverage_source_sha256": "c70ce0b61f87c5a442b913c558a2a41f15bf7a2807f645cfff5088eebe65fff5",
+      "coverage_source_revised_on": "2024-10-30",
+      "direct_agency_confirmation": false
+    },
+    "service_scope": "Detroit, Hamtramck, Highland Park, Harper Woods, Grosse Pointe, Grosse Pointe Farms, Grosse Pointe Park, Grosse Pointe Shores and Grosse Pointe Woods."
+  },
+  {
+    "program_id": "mi-aging-1b",
+    "name": "AgeWays Nonprofit Senior Services — aging and community support",
+    "official_url": "https://www.ageways.org/about/contact-us/",
+    "organization": "AgeWays Nonprofit Senior Services",
+    "service_area": [
+      "Livingston",
+      "Macomb",
+      "Monroe",
+      "Oakland",
+      "St. Clair",
+      "Washtenaw"
+    ],
+    "state": "MI",
+    "regional_role": "aging_agency",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Regional information and referrals for meals, transport, caregiver support and independent living.",
+    "next_step": "Describe the need and ask for assessment and a local referral.",
+    "constraints": [
+      "Program eligibility and availability vary. Confirm which office serves the residence."
+    ],
+    "public_contact": {
+      "phone": "800-852-7795",
+      "web_route": "https://www.ageways.org/about/contact-us/"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "page_sha256": "ba89d06f3a12ab00b50e3d98d9963d6c7cc78d0acd1d9580762f028a8ce8169f",
+      "phone_source_url": "https://www.ageways.org/about/contact-us/",
+      "coverage_source_url": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Adult-and-Childrens-Services/Adults-and-Seniors/BPHASA/AAAs_Counties-Served_Phone-Numbers.pdf?hash=BB954F66F011910DAD158209ABAEE29B&rev=82e44c5b933747a9b8fcc00edb69600e",
+      "coverage_source_sha256": "c70ce0b61f87c5a442b913c558a2a41f15bf7a2807f645cfff5088eebe65fff5",
+      "coverage_source_revised_on": "2024-10-30",
+      "direct_agency_confirmation": false
+    }
+  },
+  {
+    "program_id": "mi-aging-1c",
+    "name": "The Senior Alliance — aging and community support",
+    "official_url": "https://thesenioralliance.org/",
+    "organization": "The Senior Alliance",
+    "service_area": [
+      "Wayne"
+    ],
+    "state": "MI",
+    "regional_role": "aging_agency",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Regional information and referrals for meals, transport, caregiver support and independent living.",
+    "next_step": "Describe the need and ask for assessment and a local referral. Service area: Wayne County cities and communities outside the nine cities listed for Detroit Area Agency on Aging (Region 1A).",
+    "constraints": [
+      "Program eligibility and availability vary. Confirm which office serves the residence."
+    ],
+    "public_contact": {
+      "phone": "734-722-2830",
+      "web_route": "https://thesenioralliance.org/"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "page_sha256": "edec5ddc7f53e7fd0d41f513c685830d952962126e34a5a27f5c200df0312a19",
+      "phone_source_url": "https://thesenioralliance.org/",
+      "coverage_source_url": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Adult-and-Childrens-Services/Adults-and-Seniors/BPHASA/AAAs_Counties-Served_Phone-Numbers.pdf?hash=BB954F66F011910DAD158209ABAEE29B&rev=82e44c5b933747a9b8fcc00edb69600e",
+      "coverage_source_sha256": "c70ce0b61f87c5a442b913c558a2a41f15bf7a2807f645cfff5088eebe65fff5",
+      "coverage_source_revised_on": "2024-10-30",
+      "direct_agency_confirmation": false
+    },
+    "service_scope": "Wayne County cities and communities outside the nine cities listed for Detroit Area Agency on Aging (Region 1A)."
+  },
+  {
+    "program_id": "mi-aging-2",
+    "name": "WellWise Services Area Agency on Aging — aging and community support",
+    "official_url": "https://wellwiseservices.org/",
+    "organization": "WellWise Services Area Agency on Aging",
+    "service_area": [
+      "Hillsdale",
+      "Jackson",
+      "Lenawee"
+    ],
+    "state": "MI",
+    "regional_role": "aging_agency",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Regional information and referrals for meals, transport, caregiver support and independent living.",
+    "next_step": "Describe the need and ask for assessment and a local referral.",
+    "constraints": [
+      "Program eligibility and availability vary. Confirm which office serves the residence."
+    ],
+    "public_contact": {
+      "phone": "517-592-1974",
+      "web_route": "https://wellwiseservices.org/"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "page_sha256": "5f7f679bff292a91d2a0d57f612d1519c5e5285ac15b138e457a9d626e314908",
+      "phone_source_url": "https://wellwiseservices.org/",
+      "coverage_source_url": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Adult-and-Childrens-Services/Adults-and-Seniors/BPHASA/AAAs_Counties-Served_Phone-Numbers.pdf?hash=BB954F66F011910DAD158209ABAEE29B&rev=82e44c5b933747a9b8fcc00edb69600e",
+      "coverage_source_sha256": "c70ce0b61f87c5a442b913c558a2a41f15bf7a2807f645cfff5088eebe65fff5",
+      "coverage_source_revised_on": "2024-10-30",
+      "direct_agency_confirmation": false
+    }
+  },
+  {
+    "program_id": "mi-aging-3a",
+    "name": "Kalamazoo County Area Agency on Aging — aging and community support",
+    "official_url": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Adult-and-Childrens-Services/Adults-and-Seniors/BPHASA/AAAs_Counties-Served_Phone-Numbers.pdf?hash=BB954F66F011910DAD158209ABAEE29B&rev=82e44c5b933747a9b8fcc00edb69600e",
+    "organization": "Kalamazoo County Area Agency on Aging",
+    "service_area": [
+      "Kalamazoo"
+    ],
+    "state": "MI",
+    "regional_role": "aging_agency",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Regional information and referrals for meals, transport, caregiver support and independent living.",
+    "next_step": "Describe the need and ask for assessment and a local referral.",
+    "constraints": [
+      "Program eligibility and availability vary. Confirm which office serves the residence."
+    ],
+    "public_contact": {
+      "phone": "269-373-5173",
+      "web_route": "https://www.kalcounty.com/aaa/"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "page_sha256": "c70ce0b61f87c5a442b913c558a2a41f15bf7a2807f645cfff5088eebe65fff5",
+      "phone_source_url": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Adult-and-Childrens-Services/Adults-and-Seniors/BPHASA/AAAs_Counties-Served_Phone-Numbers.pdf?hash=BB954F66F011910DAD158209ABAEE29B&rev=82e44c5b933747a9b8fcc00edb69600e",
+      "coverage_source_url": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Adult-and-Childrens-Services/Adults-and-Seniors/BPHASA/AAAs_Counties-Served_Phone-Numbers.pdf?hash=BB954F66F011910DAD158209ABAEE29B&rev=82e44c5b933747a9b8fcc00edb69600e",
+      "coverage_source_sha256": "c70ce0b61f87c5a442b913c558a2a41f15bf7a2807f645cfff5088eebe65fff5",
+      "coverage_source_revised_on": "2024-10-30",
+      "direct_agency_confirmation": false
+    }
+  },
+  {
+    "program_id": "mi-aging-3b",
+    "name": "CareWell Services Southwest — aging and community support",
+    "official_url": "https://carewellservices.org/",
+    "organization": "CareWell Services Southwest",
+    "service_area": [
+      "Barry",
+      "Calhoun"
+    ],
+    "state": "MI",
+    "regional_role": "aging_agency",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Regional information and referrals for meals, transport, caregiver support and independent living.",
+    "next_step": "Describe the need and ask for assessment and a local referral.",
+    "constraints": [
+      "Program eligibility and availability vary. Confirm which office serves the residence."
+    ],
+    "public_contact": {
+      "phone": "269-966-2450",
+      "web_route": "https://carewellservices.org/"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "page_sha256": "2ad6383d89c80c3c5cb7dc90eb048050c66fb01a22df94b93b63723551a7db7b",
+      "phone_source_url": "https://carewellservices.org/",
+      "coverage_source_url": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Adult-and-Childrens-Services/Adults-and-Seniors/BPHASA/AAAs_Counties-Served_Phone-Numbers.pdf?hash=BB954F66F011910DAD158209ABAEE29B&rev=82e44c5b933747a9b8fcc00edb69600e",
+      "coverage_source_sha256": "c70ce0b61f87c5a442b913c558a2a41f15bf7a2807f645cfff5088eebe65fff5",
+      "coverage_source_revised_on": "2024-10-30",
+      "direct_agency_confirmation": false
+    }
+  },
+  {
+    "program_id": "mi-aging-3c",
+    "name": "Branch-St. Joseph Area Agency on Aging — aging and community support",
+    "official_url": "https://bhsj.org/AAA/",
+    "organization": "Branch-St. Joseph Area Agency on Aging",
+    "service_area": [
+      "Branch",
+      "St. Joseph"
+    ],
+    "state": "MI",
+    "regional_role": "aging_agency",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Regional information and referrals for meals, transport, caregiver support and independent living.",
+    "next_step": "Describe the need and ask for assessment and a local referral.",
+    "constraints": [
+      "Program eligibility and availability vary. Confirm which office serves the residence."
+    ],
+    "public_contact": {
+      "phone": "517-278-2538",
+      "web_route": "https://bhsj.org/AAA/"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "page_sha256": "4e62238699ffca4bb1615b272995f0066047535616098e12857ab2ad25fb70ee",
+      "phone_source_url": "https://bhsj.org/AAA/",
+      "coverage_source_url": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Adult-and-Childrens-Services/Adults-and-Seniors/BPHASA/AAAs_Counties-Served_Phone-Numbers.pdf?hash=BB954F66F011910DAD158209ABAEE29B&rev=82e44c5b933747a9b8fcc00edb69600e",
+      "coverage_source_sha256": "c70ce0b61f87c5a442b913c558a2a41f15bf7a2807f645cfff5088eebe65fff5",
+      "coverage_source_revised_on": "2024-10-30",
+      "direct_agency_confirmation": false
+    }
+  },
+  {
+    "program_id": "mi-aging-4",
+    "name": "Region IV Area Agency on Aging — aging and community support",
+    "official_url": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Adult-and-Childrens-Services/Adults-and-Seniors/BPHASA/AAAs_Counties-Served_Phone-Numbers.pdf?hash=BB954F66F011910DAD158209ABAEE29B&rev=82e44c5b933747a9b8fcc00edb69600e",
+    "organization": "Region IV Area Agency on Aging",
+    "service_area": [
+      "Berrien",
+      "Cass",
+      "Van Buren"
+    ],
+    "state": "MI",
+    "regional_role": "aging_agency",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Regional information and referrals for meals, transport, caregiver support and independent living.",
+    "next_step": "Describe the need and ask for assessment and a local referral.",
+    "constraints": [
+      "Program eligibility and availability vary. Confirm which office serves the residence."
+    ],
+    "public_contact": {
+      "phone": "800-654-2810",
+      "web_route": "https://areaagencyonaging.org/information-assistance/"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "page_sha256": "c70ce0b61f87c5a442b913c558a2a41f15bf7a2807f645cfff5088eebe65fff5",
+      "phone_source_url": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Adult-and-Childrens-Services/Adults-and-Seniors/BPHASA/AAAs_Counties-Served_Phone-Numbers.pdf?hash=BB954F66F011910DAD158209ABAEE29B&rev=82e44c5b933747a9b8fcc00edb69600e",
+      "coverage_source_url": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Adult-and-Childrens-Services/Adults-and-Seniors/BPHASA/AAAs_Counties-Served_Phone-Numbers.pdf?hash=BB954F66F011910DAD158209ABAEE29B&rev=82e44c5b933747a9b8fcc00edb69600e",
+      "coverage_source_sha256": "c70ce0b61f87c5a442b913c558a2a41f15bf7a2807f645cfff5088eebe65fff5",
+      "coverage_source_revised_on": "2024-10-30",
+      "direct_agency_confirmation": false
+    }
+  },
+  {
+    "program_id": "mi-aging-5",
+    "name": "Valley Area Agency on Aging — aging and community support",
+    "official_url": "https://www.valleyareaaging.org/",
+    "organization": "Valley Area Agency on Aging",
+    "service_area": [
+      "Genesee",
+      "Lapeer",
+      "Shiawassee"
+    ],
+    "state": "MI",
+    "regional_role": "aging_agency",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Regional information and referrals for meals, transport, caregiver support and independent living.",
+    "next_step": "Describe the need and ask for assessment and a local referral.",
+    "constraints": [
+      "Program eligibility and availability vary. Confirm which office serves the residence."
+    ],
+    "public_contact": {
+      "phone": "810-239-7671",
+      "web_route": "https://www.valleyareaaging.org/"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "page_sha256": "027d019a7966f511b0f0335971f16cc0c3838bc0a3648e8b0fd1281d4b408131",
+      "phone_source_url": "https://www.valleyareaaging.org/",
+      "coverage_source_url": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Adult-and-Childrens-Services/Adults-and-Seniors/BPHASA/AAAs_Counties-Served_Phone-Numbers.pdf?hash=BB954F66F011910DAD158209ABAEE29B&rev=82e44c5b933747a9b8fcc00edb69600e",
+      "coverage_source_sha256": "c70ce0b61f87c5a442b913c558a2a41f15bf7a2807f645cfff5088eebe65fff5",
+      "coverage_source_revised_on": "2024-10-30",
+      "direct_agency_confirmation": false
+    }
+  },
+  {
+    "program_id": "mi-aging-6",
+    "name": "Tri-County Office on Aging — aging and community support",
+    "official_url": "https://www.tcoa.org/",
+    "organization": "Tri-County Office on Aging",
+    "service_area": [
+      "Clinton",
+      "Eaton",
+      "Ingham"
+    ],
+    "state": "MI",
+    "regional_role": "aging_agency",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Regional information and referrals for meals, transport, caregiver support and independent living.",
+    "next_step": "Describe the need and ask for assessment and a local referral.",
+    "constraints": [
+      "Program eligibility and availability vary. Confirm which office serves the residence."
+    ],
+    "public_contact": {
+      "phone": "517-887-1440",
+      "web_route": "https://www.tcoa.org/"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "page_sha256": "ff7623d4b16ea9ca55773946efdbaa03a9495d22fee213bbd6a9db7badbff760",
+      "phone_source_url": "https://www.tcoa.org/",
+      "coverage_source_url": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Adult-and-Childrens-Services/Adults-and-Seniors/BPHASA/AAAs_Counties-Served_Phone-Numbers.pdf?hash=BB954F66F011910DAD158209ABAEE29B&rev=82e44c5b933747a9b8fcc00edb69600e",
+      "coverage_source_sha256": "c70ce0b61f87c5a442b913c558a2a41f15bf7a2807f645cfff5088eebe65fff5",
+      "coverage_source_revised_on": "2024-10-30",
+      "direct_agency_confirmation": false
+    }
+  },
+  {
+    "program_id": "mi-aging-7",
+    "name": "Region VII Area Agency on Aging — aging and community support",
+    "official_url": "https://region7aaa.org/",
+    "organization": "Region VII Area Agency on Aging",
+    "service_area": [
+      "Bay",
+      "Clare",
+      "Gladwin",
+      "Gratiot",
+      "Huron",
+      "Isabella",
+      "Midland",
+      "Saginaw",
+      "Sanilac",
+      "Tuscola"
+    ],
+    "state": "MI",
+    "regional_role": "aging_agency",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Regional information and referrals for meals, transport, caregiver support and independent living.",
+    "next_step": "Describe the need and ask for assessment and a local referral.",
+    "constraints": [
+      "Program eligibility and availability vary. Confirm which office serves the residence."
+    ],
+    "public_contact": {
+      "phone": "800-858-1637",
+      "web_route": "https://region7aaa.org/"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "page_sha256": "f9ee9e19fc897b6c8a80825edf8ea98d63b3a5e710c36fd6eb6d47f4d990993c",
+      "phone_source_url": "https://region7aaa.org/",
+      "coverage_source_url": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Adult-and-Childrens-Services/Adults-and-Seniors/BPHASA/AAAs_Counties-Served_Phone-Numbers.pdf?hash=BB954F66F011910DAD158209ABAEE29B&rev=82e44c5b933747a9b8fcc00edb69600e",
+      "coverage_source_sha256": "c70ce0b61f87c5a442b913c558a2a41f15bf7a2807f645cfff5088eebe65fff5",
+      "coverage_source_revised_on": "2024-10-30",
+      "direct_agency_confirmation": false
+    }
+  },
+  {
+    "program_id": "mi-aging-8",
+    "name": "Area Agency on Aging of Western Michigan — aging and community support",
+    "official_url": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Adult-and-Childrens-Services/Adults-and-Seniors/BPHASA/AAAs_Counties-Served_Phone-Numbers.pdf?hash=BB954F66F011910DAD158209ABAEE29B&rev=82e44c5b933747a9b8fcc00edb69600e",
+    "organization": "Area Agency on Aging of Western Michigan",
+    "service_area": [
+      "Allegan",
+      "Ionia",
+      "Kent",
+      "Lake",
+      "Mason",
+      "Mecosta",
+      "Montcalm",
+      "Newaygo",
+      "Osceola"
+    ],
+    "state": "MI",
+    "regional_role": "aging_agency",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Regional information and referrals for meals, transport, caregiver support and independent living.",
+    "next_step": "Describe the need and ask for assessment and a local referral.",
+    "constraints": [
+      "Program eligibility and availability vary. Confirm which office serves the residence."
+    ],
+    "public_contact": {
+      "phone": "616-456-5664",
+      "web_route": "https://www.aaawm.org/"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "page_sha256": "c70ce0b61f87c5a442b913c558a2a41f15bf7a2807f645cfff5088eebe65fff5",
+      "phone_source_url": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Adult-and-Childrens-Services/Adults-and-Seniors/BPHASA/AAAs_Counties-Served_Phone-Numbers.pdf?hash=BB954F66F011910DAD158209ABAEE29B&rev=82e44c5b933747a9b8fcc00edb69600e",
+      "coverage_source_url": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Adult-and-Childrens-Services/Adults-and-Seniors/BPHASA/AAAs_Counties-Served_Phone-Numbers.pdf?hash=BB954F66F011910DAD158209ABAEE29B&rev=82e44c5b933747a9b8fcc00edb69600e",
+      "coverage_source_sha256": "c70ce0b61f87c5a442b913c558a2a41f15bf7a2807f645cfff5088eebe65fff5",
+      "coverage_source_revised_on": "2024-10-30",
+      "direct_agency_confirmation": false
+    }
+  },
+  {
+    "program_id": "mi-aging-9",
+    "name": "NEMCSA Region 9 Area Agency on Aging — aging and community support",
+    "official_url": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Adult-and-Childrens-Services/Adults-and-Seniors/BPHASA/AAAs_Counties-Served_Phone-Numbers.pdf?hash=BB954F66F011910DAD158209ABAEE29B&rev=82e44c5b933747a9b8fcc00edb69600e",
+    "organization": "NEMCSA Region 9 Area Agency on Aging",
+    "service_area": [
+      "Alcona",
+      "Alpena",
+      "Arenac",
+      "Cheboygan",
+      "Crawford",
+      "Iosco",
+      "Montmorency",
+      "Ogemaw",
+      "Oscoda",
+      "Otsego",
+      "Presque Isle",
+      "Roscommon"
+    ],
+    "state": "MI",
+    "regional_role": "aging_agency",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Regional information and referrals for meals, transport, caregiver support and independent living.",
+    "next_step": "Describe the need and ask for assessment and a local referral.",
+    "constraints": [
+      "Program eligibility and availability vary. Confirm which office serves the residence."
+    ],
+    "public_contact": {
+      "phone": "989-356-3474",
+      "web_route": "https://www.nemcsa.org/"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "page_sha256": "c70ce0b61f87c5a442b913c558a2a41f15bf7a2807f645cfff5088eebe65fff5",
+      "phone_source_url": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Adult-and-Childrens-Services/Adults-and-Seniors/BPHASA/AAAs_Counties-Served_Phone-Numbers.pdf?hash=BB954F66F011910DAD158209ABAEE29B&rev=82e44c5b933747a9b8fcc00edb69600e",
+      "coverage_source_url": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Adult-and-Childrens-Services/Adults-and-Seniors/BPHASA/AAAs_Counties-Served_Phone-Numbers.pdf?hash=BB954F66F011910DAD158209ABAEE29B&rev=82e44c5b933747a9b8fcc00edb69600e",
+      "coverage_source_sha256": "c70ce0b61f87c5a442b913c558a2a41f15bf7a2807f645cfff5088eebe65fff5",
+      "coverage_source_revised_on": "2024-10-30",
+      "direct_agency_confirmation": false
+    }
+  },
+  {
+    "program_id": "mi-aging-10",
+    "name": "Area Agency on Aging of Northwest Michigan — aging and community support",
+    "official_url": "https://aaanm.org/",
+    "organization": "Area Agency on Aging of Northwest Michigan",
+    "service_area": [
+      "Antrim",
+      "Benzie",
+      "Charlevoix",
+      "Emmet",
+      "Grand Traverse",
+      "Kalkaska",
+      "Leelanau",
+      "Manistee",
+      "Missaukee",
+      "Wexford"
+    ],
+    "state": "MI",
+    "regional_role": "aging_agency",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Regional information and referrals for meals, transport, caregiver support and independent living.",
+    "next_step": "Describe the need and ask for assessment and a local referral.",
+    "constraints": [
+      "Program eligibility and availability vary. Confirm which office serves the residence."
+    ],
+    "public_contact": {
+      "phone": "231-947-8920",
+      "web_route": "https://aaanm.org/"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "page_sha256": "30bcf5769f047e8667dcbe058f89ef6ffc9e90f578f01c42b42fb3a3a848762f",
+      "phone_source_url": "https://aaanm.org/",
+      "coverage_source_url": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Adult-and-Childrens-Services/Adults-and-Seniors/BPHASA/AAAs_Counties-Served_Phone-Numbers.pdf?hash=BB954F66F011910DAD158209ABAEE29B&rev=82e44c5b933747a9b8fcc00edb69600e",
+      "coverage_source_sha256": "c70ce0b61f87c5a442b913c558a2a41f15bf7a2807f645cfff5088eebe65fff5",
+      "coverage_source_revised_on": "2024-10-30",
+      "direct_agency_confirmation": false
+    }
+  },
+  {
+    "program_id": "mi-aging-11",
+    "name": "UPCAP: Upper Peninsula Area Agency on Aging — aging and community support",
+    "official_url": "https://upcap.org/",
+    "organization": "UPCAP: Upper Peninsula Area Agency on Aging",
+    "service_area": [
+      "Alger",
+      "Baraga",
+      "Chippewa",
+      "Delta",
+      "Dickinson",
+      "Gogebic",
+      "Houghton",
+      "Iron",
+      "Keweenaw",
+      "Luce",
+      "Mackinac",
+      "Marquette",
+      "Menominee",
+      "Ontonagon",
+      "Schoolcraft"
+    ],
+    "state": "MI",
+    "regional_role": "aging_agency",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Regional information and referrals for meals, transport, caregiver support and independent living.",
+    "next_step": "Describe the need and ask for assessment and a local referral.",
+    "constraints": [
+      "Program eligibility and availability vary. Confirm which office serves the residence."
+    ],
+    "public_contact": {
+      "phone": "800-338-7227",
+      "web_route": "https://upcap.org/"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "page_sha256": "e0d02bd7baec9db5cc9a28a346e09edc0330ee32dfef5dece43eee293b7aabaa",
+      "phone_source_url": "https://upcap.org/",
+      "coverage_source_url": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Adult-and-Childrens-Services/Adults-and-Seniors/BPHASA/AAAs_Counties-Served_Phone-Numbers.pdf?hash=BB954F66F011910DAD158209ABAEE29B&rev=82e44c5b933747a9b8fcc00edb69600e",
+      "coverage_source_sha256": "c70ce0b61f87c5a442b913c558a2a41f15bf7a2807f645cfff5088eebe65fff5",
+      "coverage_source_revised_on": "2024-10-30",
+      "direct_agency_confirmation": false
+    }
+  },
+  {
+    "program_id": "mi-aging-14",
+    "name": "Senior Resources of West Michigan — aging and community support",
+    "official_url": "https://seniorresourceswmi.org/",
+    "organization": "Senior Resources of West Michigan",
+    "service_area": [
+      "Muskegon",
+      "Oceana",
+      "Ottawa"
+    ],
+    "state": "MI",
+    "regional_role": "aging_agency",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Regional information and referrals for meals, transport, caregiver support and independent living.",
+    "next_step": "Describe the need and ask for assessment and a local referral.",
+    "constraints": [
+      "Program eligibility and availability vary. Confirm which office serves the residence."
+    ],
+    "public_contact": {
+      "phone": "800-442-0054",
+      "web_route": "https://seniorresourceswmi.org/"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "page_sha256": "e1a501b50ce475a6bab21153bad86db7bc7fd8d87dc926ee4d03cbe9f0a5a861",
+      "phone_source_url": "https://seniorresourceswmi.org/",
+      "coverage_source_url": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Adult-and-Childrens-Services/Adults-and-Seniors/BPHASA/AAAs_Counties-Served_Phone-Numbers.pdf?hash=BB954F66F011910DAD158209ABAEE29B&rev=82e44c5b933747a9b8fcc00edb69600e",
+      "coverage_source_sha256": "c70ce0b61f87c5a442b913c558a2a41f15bf7a2807f645cfff5088eebe65fff5",
+      "coverage_source_revised_on": "2024-10-30",
+      "direct_agency_confirmation": false
+    }
+  }
+]

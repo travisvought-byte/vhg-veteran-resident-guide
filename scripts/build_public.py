@@ -6,6 +6,7 @@ import re
 from pathlib import Path
 from pa_edition import make_pa, pennsylvania_resources
 from ny_edition import make_ny, new_york_resources
+from mi_edition import make_mi, michigan_resources
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = 'https://travisvought-byte.github.io/vhg-veteran-resident-guide/'
@@ -16,7 +17,9 @@ def outputs():
     html = (ROOT / 'index.html').read_text()
     if '<option value="NY">New York</option>' not in html:
         html = html.replace('<option value="PA">Pennsylvania</option>', '<option value="PA">Pennsylvania</option><option value="NY">New York</option>')
-    html = re.sub(r'^function editionURL\(state\).*$', "function editionURL(state){const pages={OH:'index.html',PA:'pa.html',NY:'ny.html'};const u=new URL(pages[state]||pages.OH,location.href);if(route!=='priority')u.searchParams.set('view',route);return u}", html, flags=re.M)
+    if '<option value="MI">Michigan</option>' not in html:
+        html = html.replace('<option value="NY">New York</option>', '<option value="NY">New York</option><option value="MI">Michigan</option>')
+    html = re.sub(r'^function editionURL\(state\).*$', "function editionURL(state){const pages={OH:'index.html',PA:'pa.html',NY:'ny.html',MI:'mi.html'};const u=new URL(pages[state]||pages.OH,location.href);if(route!=='priority')u.searchParams.set('view',route);return u}", html, flags=re.M)
     for name, value in [('DATA', resources), ('COUNTIES', counties)]:
         # Escape HTML parser boundaries inside strings while retaining valid JSON.
         payload = json.dumps(value, ensure_ascii=True).replace('<', '\\u003c')
@@ -28,9 +31,13 @@ def outputs():
     pa_counties = json.loads((ROOT / 'data/public/pennsylvania-county-veterans-offices.json').read_text())
     ny_resources = new_york_resources(ROOT, resources)
     ny_counties = json.loads((ROOT / 'data/public/new-york-county-veterans-offices.json').read_text())
+    mi_resources = michigan_resources(ROOT, resources)
+    mi_counties = json.loads((ROOT / 'data/public/michigan-county-veterans-offices.json').read_text())
     share = (ROOT / 'share.html').read_text()
     if 'href="share-ny.html"' not in share:
         share = share.replace('<a href="share-pa.html">Pennsylvania</a>', '<a href="share-pa.html">Pennsylvania</a> · <a href="share-ny.html">New York</a>')
+    if 'href="share-mi.html"' not in share:
+        share = share.replace('<a href="share-ny.html">New York</a>', '<a href="share-ny.html">New York</a> · <a href="share-mi.html">Michigan</a>')
     pa_share = share.replace('Ohio', 'Pennsylvania').replace('88', '67').replace('href="index.html"', 'href="pa.html"')
     pa_share = pa_share.replace('https://travisvought-byte.github.io/vhg-veteran-resident-guide/', 'https://travisvought-byte.github.io/vhg-veteran-resident-guide/pa.html')
     pa_share = pa_share.replace('assets/guide-qr.svg', 'assets/guide-qr-pa.svg')
@@ -40,6 +47,10 @@ def outputs():
     ny_share = ny_share.replace(BASE_URL, BASE_URL + 'ny.html').replace('assets/guide-qr.svg', 'assets/guide-qr-ny.svg')
     ny_share = ny_share.replace('href="share.html">New York', 'href="share.html">Ohio')
     ny_share = ny_share.replace('local veterans office, aging agency and long-term-care ombudsman contacts', 'county and city veterans referrals, matched local aging contacts and statewide ombudsman routing')
+    mi_share = share.replace('Ohio', 'Michigan').replace('88', '83').replace('href="index.html"', 'href="mi.html"')
+    mi_share = mi_share.replace(BASE_URL, BASE_URL + 'mi.html').replace('assets/guide-qr.svg', 'assets/guide-qr-mi.svg')
+    mi_share = mi_share.replace('href="share.html">Michigan', 'href="share.html">Ohio')
+    mi_share = mi_share.replace('local veterans office, aging agency and long-term-care ombudsman contacts', 'county and statewide veterans referrals, regional aging contacts with Wayne County city boundaries, and statewide ombudsman routing')
     return {
         'index.html': html,
         'data/public/ohio-regional-referrals.json': json.dumps(regional, indent=2, ensure_ascii=False) + '\n',
@@ -50,6 +61,9 @@ def outputs():
         'ny.html': make_ny(html, ny_resources, ny_counties),
         'data/public/new-york-resources.json': json.dumps(ny_resources, indent=2, ensure_ascii=False) + '\n',
         'share-ny.html': ny_share,
+        'mi.html': make_mi(html, mi_resources, mi_counties),
+        'data/public/michigan-resources.json': json.dumps(mi_resources, indent=2, ensure_ascii=False) + '\n',
+        'share-mi.html': mi_share,
     }
 
 if __name__ == '__main__':

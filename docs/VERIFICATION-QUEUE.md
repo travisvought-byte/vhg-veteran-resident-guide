@@ -2,7 +2,7 @@
 
 Snapshot: October 8, 2026. Source statuses are preserved; matching published phones are not direct confirmation. Refresh this file when evidence changes.
 
-Ohio canonical records: 14 imported_unverified, 3 needs_recheck, 6 official_search_extract_only, 83 official_source_reviewed. Pennsylvania and New York follow-ups are listed separately below.
+Ohio canonical records: 14 imported_unverified, 3 needs_recheck, 6 official_search_extract_only, 83 official_source_reviewed. Pennsylvania, New York and Michigan follow-ups are listed separately below.
 
 ## First follow-ups
 
@@ -69,3 +69,12 @@ The following records rely on the interface fallback description and should rece
 - Review current local HCR administrators and county funding availability before adding resident intake contacts for Access to Home, Heroes and RESTORE.
 - Review tribal aging-program referral scope separately from general county aging routes; both tribal listings remain accessible through the official directory.
 - Perform browser, mobile and visual print review. Automated checks exercise print actions and handoff content, not pagination.
+
+## Michigan follow-up
+
+- Confirm current veterans intake and accreditation with local offices. Association profiles may list individual work numbers; source review is not telephone confirmation. Preserve Berrien and Missaukee extensions and the documented shared Leelanau/Grand Traverse and Ingham/Clinton arrangements.
+- Obtain a current direct Ionia county office intake source. The guide presently uses MVAA's statewide referral from the July 30, 2026 office announcement, not an older county flyer or an inferred phone.
+- Re-review newer aging boundary publications when available. Coverage uses the official MDHHS directory revised October 30, 2024, still linked from the state site. Twelve phones use full agency pages; four use the full official PDF (Kalamazoo, Region IV, Western Michigan and NEMCSA).
+- Preserve Wayne's two city scopes; do not reduce the county to one aging agency. Aging regions and MI Choice waiver providers are separate maps.
+- Map dedicated local ombudsman contacts, individual posts, repair partners and available funding. Keep the statewide ombudsman route until dedicated local intake is sourced.
+- Perform browser, mobile, accessibility and visual print review across all editions. Automated print actions do not establish pagination or WCAG compliance.
