@@ -102,7 +102,3 @@ print/                  Handoff sheets and staff guide (later)
 site/                   Static directory site (later)
 ```
 
-## 9. Repository visibility
-
-Keep the repository **private** until Decision D-012 is made. The schema allows internal staff contacts that must never be published; a public repository would expose them.
-
