@@ -2,7 +2,7 @@
 
 Snapshot: October 8, 2026. Source statuses are preserved; matching published phones are not direct confirmation. Refresh this file when evidence changes.
 
-Current records: 14 imported_unverified, 3 needs_recheck, 6 official_search_extract_only, 83 official_source_reviewed.
+Ohio canonical records: 14 imported_unverified, 3 needs_recheck, 6 official_search_extract_only, 83 official_source_reviewed. Pennsylvania and New York follow-ups are listed separately below.
 
 ## First follow-ups
 
@@ -60,3 +60,12 @@ The following records rely on the interface fallback description and should rece
 - Lehigh: confirm the current intake route against a newer county publication. The retained referral map is dated August 2024 and currently has search-excerpt evidence.
 - Local ombudsman contacts are verified for Allegheny, Erie, Northampton and Venango. The other 63 counties retain state ombudsman routing; do not substitute a general aging phone without a dedicated program source.
 - Every county has a published local aging referral phone. Confirm intake, hours, waiting lists, costs and accessibility directly before relying on availability.
+
+## New York follow-up
+
+- Re-review full NHTD applicant guidance and the Independent Living Centers directory; both currently retain official search-excerpt evidence.
+- Preserve Chemung and Chenango conflict resolutions. County-owned office contacts control over the differing state-directory phone values; no telephone confirmation was performed.
+- Map dedicated local ombudsman contacts. The initial edition uses the state referral line; do not substitute general aging phones as ombudsman intake.
+- Review current local HCR administrators and county funding availability before adding resident intake contacts for Access to Home, Heroes and RESTORE.
+- Review tribal aging-program referral scope separately from general county aging routes; both tribal listings remain accessible through the official directory.
+- Perform browser, mobile and visual print review. Automated checks exercise print actions and handoff content, not pagination.

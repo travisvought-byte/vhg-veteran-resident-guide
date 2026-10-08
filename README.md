@@ -1,4 +1,4 @@
-# Veteran Resident Resource Guide: Ohio and Pennsylvania
+# Veteran Resident Resource Guide: Ohio, Pennsylvania and New York
 
 A free Veteran Home Guardians (VHG) guide for veterans, surviving spouses, seniors, people with disabilities, families and care teams. It helps people find their first contact and prepare a useful referral.
 
@@ -7,6 +7,10 @@ A free Veteran Home Guardians (VHG) guide for veterans, surviving spouses, senio
 **Pennsylvania guide:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/pa.html
 
 **Pennsylvania sharing kit:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/share-pa.html
+
+**New York guide:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/ny.html
+
+**New York sharing kit:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/share-ny.html
 
 **Ohio sharing kit:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/share.html
 
@@ -28,6 +32,10 @@ Statewide referral coverage is not an exhaustive statewide inventory of local se
 
 The state selector opens a separate Pennsylvania edition in this repository. It contains all 67 county veterans contacts from PA DMVA’s September 2026 directory, 17 PA-specific program/referral records, 28 shared federal/national records and 58 local referral records, for 103 resources. Every PA county now has a local aging referral phone; four counties have separately sourced local ombudsman routes, with statewide routing elsewhere. Of the 58 local records, 56 have full official source review and two are labeled search excerpt only. See [Pennsylvania coverage and sources](docs/PENNSYLVANIA.md). Ohio remains the default, preserving its published links and QR code.
 
+## New York expansion
+
+New York has veterans referral contacts and exactly one matched aging office for all 62 counties, including NYC's five boroughs. NYC veterans intake is citywide, Essex uses a state benefits office, and the shared Warren/Hamilton aging office is mapped to both counties. The edition contains 102 resources: 28 shared federal/national records, 17 New York programs and 57 local aging offices. Ombudsman support uses statewide routing. Borough aliases work in county links and office search. Chemung and Chenango phones use county-owned sources to resolve conflicting state directory entries. See [New York coverage and sources](docs/NEW-YORK.md).
+
 ## Operating boundaries
 
 The guide routes people to agencies; it does not decide eligibility, prepare claims or promise funding. Claims assistance belongs with accredited representatives. No resident records or application information are collected. Keep personal information out of GitHub issues. Listing an organization does not imply a partnership or endorsement.
@@ -40,10 +48,12 @@ Ohio canonical public program data lives in `prototype-data.json`; canonical cou
 python3 scripts/build_public.py
 python3 scripts/build_public.py --check
 python3 scripts/validate_public.py
-node tests/pennsylvania.cjs
+node tests/new-york.cjs
 ```
 
 PA canonical programs live in `data/public/pa-programs.json`, with local aging/ombudsman records in `data/public/pa-regional-referrals.json`, separate county veterans contacts and an explicit shared-resource whitelist. The build updates Ohio embedded data and its regional projection, then generates `pa.html`, the combined PA resource JSON and `share-pa.html`. The page stays self-contained, with no runtime data service. GitHub Actions runs these checks for pushes and pull requests. Checks cover county mappings, routes, sharing behavior and data synchronization; they do not establish WCAG compliance, remote link availability or print pagination. Browser and print review remain necessary.
+
+New York canonical records live in `data/public/ny-programs.json`, `data/public/ny-regional-referrals.json` and `data/public/new-york-county-veterans-offices.json`. The same build generates `ny.html`, `data/public/new-york-resources.json` and `share-ny.html`. `tests/new-york.cjs` runs the Ohio and Pennsylvania regressions plus New York checks. Ohio remains the default edition, with existing URLs and QR codes preserved.
 
 Older integration scripts and research candidates are historical research tools, not the public build. Do not publish their output over the current public data without review.
 
@@ -56,12 +66,12 @@ See the [maintenance process](docs/MAINTENANCE.md), [verification queue](docs/VE
 | Path | Purpose |
 |---|---|
 | `index.html` | Public guide, interface and generated embedded data |
-| `share.html`, `share-pa.html` | State-specific QR flyers and newsletter introductions |
-| `pa.html` | Generated Pennsylvania edition |
+| `share.html`, `share-pa.html`, `share-ny.html` | State-specific QR flyers and newsletter introductions |
+| `pa.html`, `ny.html` | Generated Pennsylvania and New York editions |
 | `assets/` | VHG logo, QR code and social preview image |
 | `prototype-data.json` | Canonical current public resource records |
 | `data/public/` | County contacts, generated regional projection and future post directory |
-| `scripts/build_public.py`, `scripts/pa_edition.py` | Public data synchronization and PA edition generation |
-| `scripts/validate_public.py`, `tests/accessibility.cjs` | Data, asset and functional checks |
+| `scripts/build_public.py`, `scripts/pa_edition.py`, `scripts/ny_edition.py` | Public data synchronization and state edition generation |
+| `scripts/validate_public.py`, `tests/*.cjs` | Data, asset and functional checks |
 | `docs/` | Scope, maintenance, evidence and research priorities |
 | `research/`, `data/integrated/`, `data/seed/`, `data/batches/` | Historical working material; not the live source of truth |

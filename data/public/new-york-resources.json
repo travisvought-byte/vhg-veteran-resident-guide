@@ -1,0 +1,3265 @@
+[
+  {
+    "program_id": "cms-care-compare",
+    "name": "Medicare Care Compare",
+    "official_url": "https://www.medicare.gov/care-compare/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "care_facilities"
+    ],
+    "description": "Compare published Medicare provider and quality information.",
+    "next_step": "Compare published Medicare provider and quality information.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "identity": "official_search_extract_only",
+      "contact": "official_search_extract_only",
+      "eligibility": "official_search_extract_only",
+      "last_reviewed_on": "2026-10-02"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.medicare.gov/care-compare/"
+    },
+    "organization": "Centers for Medicare & Medicaid Services",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-aid-attendance-housebound",
+    "name": "Pension additions: Aid and Attendance or Housebound",
+    "official_url": "https://www.va.gov/pension/aid-attendance-housebound/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "Extra monthly payments added to VA pension for qualifying veterans or survivors who need daily help or are housebound.",
+    "next_step": "Ask an accredited representative about pension eligibility and Aid and Attendance. For a nursing home resident, ask about VA Form 21-0779; medical evidence is also required.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/pension/aid-attendance-housebound/"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-dic",
+    "name": "Dependency and Indemnity Compensation",
+    "official_url": "https://www.va.gov/family-and-caregiver-benefits/survivor-compensation/dependency-indemnity-compensation/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "A potential survivor benefit when a service member died in the line of duty or a veteran’s death meets VA’s service-related or other qualifying rules.",
+    "next_step": "Ask an accredited representative whether DIC should be explored and what evidence is needed.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/family-and-caregiver-benefits/survivor-compensation/dependency-indemnity-compensation/"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-disability-increase",
+    "name": "Increased VA disability compensation",
+    "official_url": "https://www.va.gov/disability/how-to-file-claim/evidence-needed/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "A review route for an existing service-connected disability that has worsened.",
+    "next_step": "Ask an accredited representative what evidence may support a request for an increased rating.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-02"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/disability/how-to-file-claim/evidence-needed/"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-family-caregiver",
+    "name": "VA Program of Comprehensive Assistance for Family Caregivers",
+    "official_url": "https://www.va.gov/CAREGIVER/PCAFC.asp",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "A VA caregiver assistance program with specific veteran and caregiver eligibility requirements.",
+    "next_step": "Ask the VA caregiver support team about eligibility and the application process.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-02"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/CAREGIVER/PCAFC.asp"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-general-caregiver",
+    "name": "VA Program of General Caregiver Support Services",
+    "official_url": "https://www.va.gov/the-program-of-general-caregiver-support-services/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "VA resources and support for people caring for veterans.",
+    "next_step": "Ask the veteran’s VA care team which caregiver supports fit the situation.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-02"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/the-program-of-general-caregiver-support-services/"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-hospice",
+    "name": "VA hospice care",
+    "official_url": "https://www.va.gov/geriatrics/pages/Hospice_Care.asp",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "VA hospice care focuses on comfort and support near the end of life.",
+    "next_step": "Ask the treating clinician or VA social worker about hospice assessment and coordination.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/geriatrics/pages/Hospice_Care.asp"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-palliative",
+    "name": "VA palliative care",
+    "official_url": "https://www.va.gov/geriatrics/pages/Palliative_Care.asp",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "Palliative care addresses symptoms, comfort and care goals for serious illness.",
+    "next_step": "Ask the treating clinician about palliative care options.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/geriatrics/pages/Palliative_Care.asp"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-pension-medicaid-rule",
+    "name": "VA pension during Medicaid-covered nursing home care",
+    "official_url": "https://www.ecfr.gov/current/title-38/section-3.551",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "VA pension payments can be affected by Medicaid-covered nursing home care. The rules depend on the beneficiary’s circumstances.",
+    "next_step": "Ask an accredited representative and the care facility’s benefits staff to review VA pension and Medicaid together before changing benefits.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-02"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.ecfr.gov/current/title-38/section-3.551"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-survivors-pension",
+    "name": "Survivors Pension",
+    "official_url": "https://www.va.gov/family-and-caregiver-benefits/survivor-compensation/survivors-pension/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "A potential monthly benefit for qualifying surviving spouses and dependent children of wartime veterans, subject to income, net worth and other requirements.",
+    "next_step": "Ask an accredited representative to screen for Survivors Pension and explain the evidence needed.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/family-and-caregiver-benefits/survivor-compensation/survivors-pension/"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-va-burial",
+    "name": "VA burial allowance and memorial routes",
+    "official_url": "https://www.va.gov/burials-memorials/veterans-burial-allowance/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "Ask the county office or VA burial program about the correct application.",
+    "next_step": "Ask the county office or VA burial program about the correct application.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-02"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/burials-memorials/veterans-burial-allowance/"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-va-clc",
+    "name": "VA Community Living Centers",
+    "official_url": "https://www.va.gov/GERIATRICS/pages/VA_Community_Living_Centers.asp",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "VA-operated Community Living Centers provide nursing home level care for eligible veterans.",
+    "next_step": "Ask the VA care team or social worker about eligibility, assessment and local availability.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/GERIATRICS/pages/VA_Community_Living_Centers.asp"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-va-cnh",
+    "name": "VA Community Nursing Home program",
+    "official_url": "https://www.va.gov/GERIATRICS/pages/Community_Nursing_Homes.asp",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "A VA pathway for care in participating community nursing homes, subject to eligibility and available services.",
+    "next_step": "Ask the resident’s VA care team or social worker about community nursing home options.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/GERIATRICS/pages/Community_Nursing_Homes.asp"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-va-health-enrollment",
+    "name": "VA health care enrollment",
+    "official_url": "https://www.va.gov/health-care/how-to-apply/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "Apply for VA health care or get help understanding the enrollment process.",
+    "next_step": "Call VA enrollment or ask your county veterans office about the application and supporting information.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": "877-222-8387",
+      "phone_label": "VA health care enrollment line",
+      "email": null,
+      "contact_type": "office",
+      "web_route": "https://www.va.gov/health-care/how-to-apply/"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-va-pension",
+    "name": "Veterans Pension",
+    "official_url": "https://www.va.gov/pension/eligibility/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "Monthly pension for qualifying wartime veterans who meet age or disability, income, net worth and service requirements.",
+    "next_step": "Ask an accredited representative to screen for pension and explain how care expenses may affect the application.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/pension/eligibility/"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-whv",
+    "name": "We Honor Veterans public resources",
+    "official_url": "https://www.wehonorveterans.org/about/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "Use public veteran-care resources and ask the clinical team about coordinated care.",
+    "next_step": "Use public veteran-care resources and ask the clinical team about coordinated care.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-02"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.wehonorveterans.org/about/"
+    },
+    "organization": "National Alliance for Care at Home",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-hisa",
+    "name": "VA Home Improvements and Structural Alterations (HISA)",
+    "official_url": "https://www.rehab.va.gov/PROSTHETICS/psas/HISA2.asp",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "equipment_home_accessibility"
+    ],
+    "description": "Medically necessary changes to a veteran’s primary home, including permanent ramps, accessible bathrooms and widened access. Some non-service-connected needs can qualify.",
+    "next_step": "Ask your VA care team for a clinical review and contact your VA medical facility’s Prosthetic and Sensory Aids Service. Confirm your remaining lifetime benefit and obtain the HISA application checklist.",
+    "constraints": [
+      "HISA excludes portable ramps, stair glides, new construction and routine home repairs. VA determines eligibility, medical necessity and the available benefit. Prepare VA Form 10-0103, a VA-written or approved prescription, owner authorization (notarized for renters), an itemized estimate and a before photograph."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/find-locations/?facilityType=health"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-sah",
+    "name": "VA Specially Adapted Housing (SAH) grant",
+    "official_url": "https://www.va.gov/housing-assistance/disability-housing-grants/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "equipment_home_accessibility"
+    ],
+    "description": "A housing grant route for veterans with qualifying service-connected disabilities.",
+    "next_step": "Review the qualifying disability and ownership rules with VA or an accredited representative. Apply online through VA or use VA Form 26-4555; ask VA about project planning and approval before construction.",
+    "constraints": [
+      "These grants require specific qualifying service-connected disabilities; a disability rating alone does not establish eligibility. Confirm the current fiscal-year maximum and any benefit already used with VA."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": null,
+      "web_route": null
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-sha",
+    "name": "VA Special Housing Adaptation (SHA) grant",
+    "official_url": "https://www.va.gov/housing-assistance/disability-housing-grants/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "equipment_home_accessibility"
+    ],
+    "description": "A housing adaptation grant route with specific service-connected disability requirements.",
+    "next_step": "Review the qualifying disability and ownership rules with VA or an accredited representative. Apply online through VA or use VA Form 26-4555; ask VA about project planning and approval before construction.",
+    "constraints": [
+      "These grants require specific qualifying service-connected disabilities; a disability rating alone does not establish eligibility. Confirm the current fiscal-year maximum and any benefit already used with VA."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": null,
+      "web_route": null
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "nara-discharge-records",
+    "name": "Get a missing DD214 or service record",
+    "official_url": "https://www.archives.gov/veterans/military-service-records",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "general_navigation"
+    ],
+    "description": "Request military records that may help document service for a benefits application.",
+    "next_step": "Use the National Archives request instructions or ask the county veterans office for help. Who may request records and any fee depend on the record and request.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": "314-801-0800"
+    },
+    "organization": "National Archives and Records Administration",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-accredited-help",
+    "name": "Find accredited help with a VA claim",
+    "official_url": "https://www.va.gov/get-help-from-accredited-representative/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "Find and appoint an accredited representative for a benefits claim or decision review. Accredited VSO claims assistance is free.",
+    "next_step": "Use VA’s representative search, then ask the representative if they are available. Attorneys and claims agents may charge fees.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-location-finder",
+    "name": "Find a VA medical facility or benefits office",
+    "official_url": "https://www.va.gov/find-locations/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "Search for VA locations near the resident and identify where to ask about care or benefits.",
+    "next_step": "Use the official locator with the resident’s city or ZIP code and select the kind of facility needed.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-housing-help",
+    "name": "Veteran housing and homelessness help",
+    "official_url": "https://department.va.gov/homeless/what-is-permanent-housing/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "general_navigation"
+    ],
+    "description": "A 24-hour VA contact for veterans who are homeless or at risk of losing housing.",
+    "next_step": "Call the national line to ask about local VA and community housing resources.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": "877-424-3838"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-tra",
+    "name": "VA Temporary Residence Adaptation (TRA)",
+    "official_url": "https://www.va.gov/housing-assistance/disability-housing-grants/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "equipment_home_accessibility",
+      "general_navigation"
+    ],
+    "description": "Changes to a family member’s home where a qualifying veteran or service member is living temporarily.",
+    "next_step": "Ask VA about TRA if you qualify for SAH or SHA and are temporarily living in a family member’s home.",
+    "constraints": [
+      "TRA requires SAH or SHA eligibility; it is not a general temporary-housing or renter grant."
+    ],
+    "organization": "U.S. Department of Veterans Affairs",
+    "public_contact": {
+      "phone": null
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "state": "shared"
+  },
+  {
+    "program_id": "alz-dementia-support",
+    "name": "Memory loss and dementia: 24/7 support",
+    "official_url": "https://www.alz.org/help-support/i-have-alz/programs-support",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "general_navigation"
+    ],
+    "description": "Free, confidential dementia information, caregiver support and referrals to local community resources.",
+    "next_step": "Call the Alzheimer’s Association helpline for care planning, local support groups and caregiver guidance. Seek medical evaluation for new memory concerns.",
+    "constraints": [
+      "The helpline provides support and referrals; it does not replace clinical assessment or emergency services."
+    ],
+    "organization": "Alzheimer’s Association",
+    "public_contact": {
+      "phone": "800-272-3900"
+    },
+    "senior_topic": "memory",
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "state": "shared"
+  },
+  {
+    "program_id": "american-legion-post-locator",
+    "name": "American Legion: find a local post",
+    "official_url": "https://mylegion.org/PersonifyEbusiness/Find-a-Post",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "general_navigation"
+    ],
+    "description": "Official post lookup for community connections and identifying public contacts to share the guide with.",
+    "next_step": "Search the official directory for your town or ZIP code. Confirm the post’s public phone or email and ask who handles community partnerships.",
+    "constraints": [
+      "A local post is not automatically an accredited claims office or a funding provider. Confirm its services, membership or visitor rules, accessibility and current contact details."
+    ],
+    "organization": "The American Legion",
+    "public_contact": {
+      "phone": null
+    },
+    "resource_role": "community_locator",
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "state": "shared"
+  },
+  {
+    "program_id": "amvets-post-locator",
+    "name": "AMVETS: find a local post",
+    "official_url": "https://www.amvets.org/find-a-post",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "general_navigation"
+    ],
+    "description": "Official post lookup for community connections and identifying public contacts to share the guide with.",
+    "next_step": "Search the official directory for your town or ZIP code. Confirm the post’s public phone or email and ask who handles community partnerships.",
+    "constraints": [
+      "A local post is not automatically an accredited claims office or a funding provider. Confirm its services, membership or visitor rules, accessibility and current contact details."
+    ],
+    "organization": "AMVETS",
+    "public_contact": {
+      "phone": null
+    },
+    "resource_role": "community_locator",
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "state": "shared"
+  },
+  {
+    "program_id": "vfw-post-locator",
+    "name": "VFW: find a local post",
+    "official_url": "https://vfw.org/find-a-post",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "general_navigation"
+    ],
+    "description": "Official post lookup for community connections and identifying public contacts to share the guide with.",
+    "next_step": "Search the official directory for your town or ZIP code. Confirm the post’s public phone or email and ask who handles community partnerships.",
+    "constraints": [
+      "A local post is not automatically an accredited claims office or a funding provider. Confirm its services, membership or visitor rules, accessibility and current contact details."
+    ],
+    "organization": "Veterans of Foreign Wars",
+    "public_contact": {
+      "phone": null
+    },
+    "resource_role": "community_locator",
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "state": "shared"
+  },
+  {
+    "program_id": "ny-connects",
+    "name": "NY Connects: aging and disability first call",
+    "official_url": "https://aging.ny.gov/programs/caring-loved-one",
+    "organization": "New York State Office for the Aging",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Free, impartial long-term support information for people of all ages and disabilities.",
+    "next_step": "Give your county and describe the daily-living need. Ask which local agency should assess it.",
+    "constraints": [],
+    "public_contact": {
+      "phone": "800-342-9871"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false
+    }
+  },
+  {
+    "program_id": "ny-aging-directory",
+    "name": "Find your local New York aging office",
+    "official_url": "https://aging.ny.gov/local-offices",
+    "organization": "New York State Office for the Aging",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Official local aging office directory, including shared offices and tribal programs.",
+    "next_step": "Use the office serving your county; ask about meals, transport, home support and caregiver help.",
+    "constraints": [
+      "NYC has one aging office for all five boroughs. Tribal aging contacts are available through the source directory."
+    ],
+    "public_contact": {
+      "phone": null
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false
+    }
+  },
+  {
+    "program_id": "ny-eisep",
+    "name": "EISEP: assessment and support at home",
+    "official_url": "https://aging.ny.gov/expanded-home-services-elderly-eisep",
+    "organization": "New York State Office for the Aging",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "help_at_home",
+      "benefits_and_funding"
+    ],
+    "description": "Nonmedical home support, case management and caregiver respite for eligible older adults.",
+    "next_step": "Ask the local aging office for an EISEP assessment and information about available services and cost sharing.",
+    "constraints": [
+      "Age 60+, assessed daily-living needs and ability to remain safely at home apply. The same services must not be available to the applicant under Medicaid."
+    ],
+    "public_contact": {
+      "phone": "800-342-9871"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false
+    }
+  },
+  {
+    "program_id": "ny-hiicap",
+    "name": "Medicare counseling: HIICAP",
+    "official_url": "https://aging.ny.gov/health-insurance-information-counseling-and-assistance-programs",
+    "organization": "New York State Office for the Aging",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation"
+    ],
+    "description": "Free, objective Medicare and related health insurance counseling.",
+    "next_step": "Ask about coverage, plan questions, EPIC, Medicare Savings Programs and prescription cost assistance.",
+    "constraints": [
+      "For people with Medicare or approaching eligibility and their representatives. Counseling does not guarantee coverage or enrollment."
+    ],
+    "public_contact": {
+      "phone": "800-701-0501"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false
+    }
+  },
+  {
+    "program_id": "ny-caregiver",
+    "name": "Caregiver support and respite referrals",
+    "official_url": "https://aging.ny.gov/programs/caring-loved-one",
+    "organization": "New York State Office for the Aging",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "help_at_home"
+    ],
+    "description": "Find local support for family and unpaid caregivers.",
+    "next_step": "Ask your aging office or NY Connects about respite, training and caregiver resources.",
+    "constraints": [
+      "Eligibility, local availability and program costs vary."
+    ],
+    "public_contact": {
+      "phone": "800-342-9871"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false
+    }
+  },
+  {
+    "program_id": "ny-ombudsman",
+    "name": "Long-term-care ombudsman: resident rights",
+    "official_url": "https://aging.ny.gov/system/files/documents/2023/03/april21-ltcop-brochure_-english.pdf",
+    "organization": "NYS Long Term Care Ombudsman Program",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation"
+    ],
+    "description": "Advocacy for residents of nursing homes, assisted living and adult care facilities.",
+    "next_step": "Give the facility county and ask for the ombudsman serving the resident. Explain the concern and the resident’s wishes.",
+    "constraints": [
+      "For immediate danger, call 911. This edition uses statewide ombudsman routing; local program contacts are not yet mapped."
+    ],
+    "public_contact": {
+      "phone": "855-582-6769"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "publication_label": "April 2021",
+      "phone_source_url": "https://aging.ny.gov/system/files/documents/2023/03/april21-ltcop-brochure_-english.pdf",
+      "corroborating_source_url": "https://www.health.ny.gov/facilities/adult_care/advocacy_services/",
+      "corroborating_review_method": "official_search_excerpt"
+    }
+  },
+  {
+    "program_id": "ny-claims",
+    "name": "New York veterans benefits advising",
+    "official_url": "https://veterans.ny.gov/claims-assistance",
+    "organization": "NYS Department of Veterans’ Services",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "Free advising for veterans and eligible family members on benefits, claims and appeals.",
+    "next_step": "Request a benefits screening; ask for a phone or video appointment if travel is difficult.",
+    "constraints": [
+      "Each benefit has separate eligibility requirements. Send private records directly to the advisor."
+    ],
+    "public_contact": {
+      "phone": "888-838-7697"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false
+    }
+  },
+  {
+    "program_id": "ny-blind-annuity",
+    "name": "Blind Annuity for qualifying veterans and survivors",
+    "official_url": "https://www.ny.gov/services/apply-blind-annuity-0",
+    "organization": "NYS Department of Veterans’ Services",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "Monthly state payments for qualifying legally blind wartime veterans and eligible unremarried surviving spouses.",
+    "next_step": "Ask a veterans benefits advisor to review service, blindness and residency documentation.",
+    "constraints": [
+      "New York residence and domicile, qualifying service and legal blindness rules apply. Blindness need not be service connected. Ask for the current payment rate."
+    ],
+    "public_contact": {
+      "phone": "888-838-7697"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false
+    }
+  },
+  {
+    "program_id": "ny-access-home",
+    "name": "Access to Home: disability accessibility modifications",
+    "official_url": "https://hcr.ny.gov/access-home",
+    "organization": "NYS Homes and Community Renewal",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "equipment_home_accessibility",
+      "benefits_and_funding"
+    ],
+    "description": "Accessibility modifications to a qualifying primary residence through funded local partners.",
+    "next_step": "Find a funded Local Program Administrator; ask whether it serves your county and accepts resident applications.",
+    "constraints": [
+      "Residents cannot apply directly to HCR. Documented disability, income limits and primary residence conditions apply. Local funding and owner obligations must be checked before work."
+    ],
+    "public_contact": {
+      "phone": null
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false
+    }
+  },
+  {
+    "program_id": "ny-access-heroes",
+    "name": "Access to Home for Heroes: veteran accessibility",
+    "official_url": "https://hcr.ny.gov/access-home-heroes",
+    "organization": "NYS Homes and Community Renewal",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "equipment_home_accessibility",
+      "veteran_services"
+    ],
+    "description": "Accessibility changes and certain emergency repairs for qualifying veterans with disabilities.",
+    "next_step": "Ask a funded local administrator about intake, veteran status, disability documentation and prior approval.",
+    "constraints": [
+      "Qualifying veteran status, substantial physical limitation, income at or below 120% of area median income and primary residence rules apply. Residents apply through local administrators."
+    ],
+    "public_contact": {
+      "phone": null
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false
+    }
+  },
+  {
+    "program_id": "ny-restore",
+    "name": "RESTORE: emergency home repairs for older homeowners",
+    "official_url": "https://hcr.ny.gov/restore-program",
+    "organization": "NYS Homes and Community Renewal",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "equipment_home_accessibility",
+      "benefits_and_funding"
+    ],
+    "description": "Local partner assistance for qualifying emergency repairs affecting home safety.",
+    "next_step": "Ask a funded local administrator whether your repair meets the emergency criteria and whether funds are available.",
+    "constraints": [
+      "Age 60+, ownership and occupancy as a primary residence, and household income at or below 100% of area median income apply. Residents cannot apply directly to HCR."
+    ],
+    "public_contact": {
+      "phone": null
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false
+    }
+  },
+  {
+    "program_id": "ny-traid",
+    "name": "TRAID: assistive technology loans and demonstrations",
+    "official_url": "https://www.justicecenter.ny.gov/traid-program",
+    "organization": "NYS Justice Center",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "equipment_home_accessibility"
+    ],
+    "description": "Regional device loans and hands-on training for New Yorkers with disabilities.",
+    "next_step": "Find the regional TRAID center overseeing your county; ask about suitable devices, loans and demonstrations.",
+    "constraints": [
+      "Device or ramp inventory, installation and loan terms require confirmation. A trial is not a grant for permanent equipment."
+    ],
+    "public_contact": {
+      "phone": "800-624-4143"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.justicecenter.ny.gov/archive-traid-contact"
+    }
+  },
+  {
+    "program_id": "ny-vision",
+    "name": "Vision loss: Commission for the Blind referral",
+    "official_url": "https://portal.311.nyc.gov/article/?kanumber=KA-02582",
+    "organization": "NYS Commission for the Blind",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation"
+    ],
+    "description": "Statewide referral for assistance for people who are legally blind.",
+    "next_step": "Ask for your district office and an assessment of vision-related daily-living support.",
+    "constraints": [
+      "Legal blindness and program-specific criteria apply. Ask about the appropriate program rather than assuming a vision diagnosis qualifies."
+    ],
+    "public_contact": {
+      "phone": "866-871-3000"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false
+    }
+  },
+  {
+    "program_id": "ny-relay",
+    "name": "Hearing and speech: New York Relay",
+    "official_url": "https://nyrelay.com/relay-services/voice/",
+    "organization": "New York Relay",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation"
+    ],
+    "description": "Telephone communication assistance involving people who are deaf, hard of hearing, deafblind or have a speech disability.",
+    "next_step": "Dial 711 in New York or use the service instructions for the communication method you need.",
+    "constraints": [
+      "Relay facilitates calls; it does not pay for hearing aids or replace clinical assessment."
+    ],
+    "public_contact": {
+      "phone": "800-421-1220"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false
+    }
+  },
+  {
+    "program_id": "ny-disability-rights",
+    "name": "Disability Rights New York intake",
+    "official_url": "https://www.drny.org/page/contact-us-4.html",
+    "organization": "Disability Rights New York",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation"
+    ],
+    "description": "Disability rights advocacy and legal assistance subject to intake and program priorities.",
+    "next_step": "Describe the disability-related rights or access concern to the intake office.",
+    "constraints": [
+      "Public visits are by appointment. Representation is not guaranteed."
+    ],
+    "public_contact": {
+      "phone": "800-993-8982"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false
+    }
+  },
+  {
+    "program_id": "ny-nhtd",
+    "name": "Nursing Home Transition and Diversion waiver screening",
+    "official_url": "https://www.health.ny.gov/facilities/long_term_care/nhtd/participant/index.htm",
+    "organization": "NYS Department of Health",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Referral to a Regional Resource Development Center for community-living waiver screening.",
+    "next_step": "Contact the RRDC for the county where the person plans to live. A facility discharge planner can help make the referral.",
+    "constraints": [
+      "Community-based Medicaid eligibility and nursing-home level of care apply. Applicants are age 65+ or age 18–64 with a verified physical disability. Services require RRDC approval; referral does not guarantee enrollment or a ramp."
+    ],
+    "public_contact": {
+      "phone": null
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false
+    }
+  },
+  {
+    "program_id": "ny-independent-living",
+    "name": "Find a New York Independent Living Center",
+    "official_url": "https://www.acces.nysed.gov/vr/independent-living-centers",
+    "organization": "NYS Education Department ACCES-VR",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation"
+    ],
+    "description": "Official directory of disability independent living centers.",
+    "next_step": "Find a nearby center and confirm county coverage, peer support and advocacy services.",
+    "constraints": [
+      "Local coverage and service availability must be confirmed. This edition has not mapped every center."
+    ],
+    "public_contact": {
+      "phone": null
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false
+    }
+  },
+  {
+    "program_id": "ny-aging-albany-county-department-aging",
+    "name": "Albany County Department for Aging referral",
+    "official_url": "https://aging.ny.gov/location/albany-county-department-aging",
+    "organization": "Albany County Department for Aging",
+    "service_area": [
+      "Albany"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "518-447-7198"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/albany-county-department-aging",
+      "page_sha256": "aeb34e934a9118b3a952f97b0c7ce614951aff5a6806f13b21a065afb2acb7f2",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-allegany-county-office-aging",
+    "name": "Allegany County Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/allegany-county-office-aging",
+    "organization": "Allegany County Office for the Aging",
+    "service_area": [
+      "Allegany"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "585-268-9390"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/allegany-county-office-aging",
+      "page_sha256": "70976f583dc20e95cb801c20944ddefe293b5e607d8307e65fb68c639d250b7b",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-broome-county-office-aging",
+    "name": "Broome County Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/broome-county-office-aging",
+    "organization": "Broome County Office for the Aging",
+    "service_area": [
+      "Broome"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "607-778-2411"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/broome-county-office-aging",
+      "page_sha256": "8e3b39e3bc0076d1a3434fc264f2d23d190a718e4698111a048841f41fdcda01",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-cattaraugus-county-department-aging",
+    "name": "Cattaraugus County Department of Aging referral",
+    "official_url": "https://aging.ny.gov/location/cattaraugus-county-department-aging",
+    "organization": "Cattaraugus County Department of Aging",
+    "service_area": [
+      "Cattaraugus"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "716-373-8032"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/cattaraugus-county-department-aging",
+      "page_sha256": "41bb47cb4aba6f45dc42319887d7246085ab70b81ddfaf2398a896dedff7dc0c",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-cayuga-county-office-aging",
+    "name": "Cayuga County Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/cayuga-county-office-aging",
+    "organization": "Cayuga County Office for the Aging",
+    "service_area": [
+      "Cayuga"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "315-253-1226"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/cayuga-county-office-aging",
+      "page_sha256": "f79ec3e0d5685286183efee060b29feac5a47963012538325404b1684cb4d4ea",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-chautauqua-county-office-aging",
+    "name": "Chautauqua County Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/chautauqua-county-office-aging",
+    "organization": "Chautauqua County Office for the Aging",
+    "service_area": [
+      "Chautauqua"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "716-753-4471"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/chautauqua-county-office-aging",
+      "page_sha256": "5491c49e9373ecc05c81bd5e935be1aaf85c054290ca846d1fe5748a2ba9b518",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-chemung-county-department-aging-long-term-care",
+    "name": "Chemung County Department of Aging & Long Term Care referral",
+    "official_url": "https://aging.ny.gov/location/chemung-county-department-aging-long-term-care",
+    "organization": "Chemung County Department of Aging & Long Term Care",
+    "service_area": [
+      "Chemung"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "607-737-5520"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/chemung-county-department-aging-long-term-care",
+      "page_sha256": "5a40cc1b3acc7617fd9b4ed045cc4fb6ff073e13b889fb01f9c153c46987bda4",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-chenango-county-area-agency-aging",
+    "name": "Chenango County Area Agency on Aging referral",
+    "official_url": "https://aging.ny.gov/location/chenango-county-area-agency-aging",
+    "organization": "Chenango County Area Agency on Aging",
+    "service_area": [
+      "Chenango"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "607-337-1770"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/chenango-county-area-agency-aging",
+      "page_sha256": "47de128ca189b53052cc58f603a0b9b8c038d13da648879d175cc2d63d719b4a",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-clinton-county-office-aging",
+    "name": "Clinton County Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/clinton-county-office-aging",
+    "organization": "Clinton County Office for the Aging",
+    "service_area": [
+      "Clinton"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "518-565-4620"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/clinton-county-office-aging",
+      "page_sha256": "fa28c154188dca7c13e170e338b6e8de6ac6fd43b1775827dab6a1d42d6ee98c",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-columbia-county-office-aging",
+    "name": "Columbia County Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/columbia-county-office-aging",
+    "organization": "Columbia County Office for the Aging",
+    "service_area": [
+      "Columbia"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "518-828-4258"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/columbia-county-office-aging",
+      "page_sha256": "807b827f78be7c04680de00d92d0a140735b6b4dbb9e2a975a873355cd966f8c",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-cortland-county-area-agency-aging",
+    "name": "Cortland County Area Agency on Aging referral",
+    "official_url": "https://aging.ny.gov/location/cortland-county-area-agency-aging",
+    "organization": "Cortland County Area Agency on Aging",
+    "service_area": [
+      "Cortland"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "607-753-5060"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/cortland-county-area-agency-aging",
+      "page_sha256": "65dfe32346a3adb20053a359eee9076d1e626647855fda6e273e7c40f3b96aa6",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-delaware-county-office-aging",
+    "name": "Delaware County Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/delaware-county-office-aging",
+    "organization": "Delaware County Office for the Aging",
+    "service_area": [
+      "Delaware"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "607-832-5750"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/delaware-county-office-aging",
+      "page_sha256": "020d12d881016eca71440b3382a389f00bb62a6dff5fdcc32db48e9d2710e044",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-dutchess-county-office-aging",
+    "name": "Dutchess County Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/dutchess-county-office-aging",
+    "organization": "Dutchess County Office for the Aging",
+    "service_area": [
+      "Dutchess"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "845-486-2555"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/dutchess-county-office-aging",
+      "page_sha256": "c71d6565880222665bc8e391db686a13a6a1559ac8cfee1356ad6ef25eb252e1",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-erie-county-dept-senior-services",
+    "name": "Erie County Dept. of Senior Services referral",
+    "official_url": "https://aging.ny.gov/location/erie-county-dept-senior-services",
+    "organization": "Erie County Dept. of Senior Services",
+    "service_area": [
+      "Erie"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "716-858-8526"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/erie-county-dept-senior-services",
+      "page_sha256": "ad1552022e8a3634053ed666c64f28acb100877269dbaf652a59d861bed67033",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-essex-county-office-aging",
+    "name": "Essex County Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/essex-county-office-aging",
+    "organization": "Essex County Office for the Aging",
+    "service_area": [
+      "Essex"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "518-873-3695"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/essex-county-office-aging",
+      "page_sha256": "35212065bbeff87af8d6297e78df32b3dfd662fbf7ce3cfad2753a2124b8602a",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-franklin-county-office-aging",
+    "name": "Franklin County Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/franklin-county-office-aging",
+    "organization": "Franklin County Office for the Aging",
+    "service_area": [
+      "Franklin"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "518-481-1526"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/franklin-county-office-aging",
+      "page_sha256": "662181e1a10471e845f3859cd2030c480569ad71b0b2fda93e71f88ea0d9bda0",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-fulton-county-office-aging-and-youth",
+    "name": "Fulton County Office for Aging and Youth referral",
+    "official_url": "https://aging.ny.gov/location/fulton-county-office-aging-and-youth",
+    "organization": "Fulton County Office for Aging and Youth",
+    "service_area": [
+      "Fulton"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "518-736-5650"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/fulton-county-office-aging-and-youth",
+      "page_sha256": "ab132aa00660fdb51b66953b38f4d91a411a70a3e7d3354c83617f7e37cf665f",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-genesee-county-office-aging",
+    "name": "Genesee County Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/genesee-county-office-aging",
+    "organization": "Genesee County Office for the Aging",
+    "service_area": [
+      "Genesee"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "585-343-1611"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/genesee-county-office-aging",
+      "page_sha256": "7bc3d28c9d784300e17e7a4eca6f23a758b9d502729c51b8de5005c01c79ec84",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-greene-county-department-aging",
+    "name": "Greene County Department for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/greene-county-department-aging",
+    "organization": "Greene County Department for the Aging",
+    "service_area": [
+      "Greene"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "518-719-3555"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/greene-county-department-aging",
+      "page_sha256": "eb72525d9d0c5274fd73d299a8f59ea20fb2a2def933b2effe2f467750383aed",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-herkimer-county-office-aging",
+    "name": "Herkimer County Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/herkimer-county-office-aging",
+    "organization": "Herkimer County Office for the Aging",
+    "service_area": [
+      "Herkimer"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "315-867-1121"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/herkimer-county-office-aging",
+      "page_sha256": "0861ad7da68d4beea818eb1411b3ccb05389b89aef3af5bdf145113fa7e2625b",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-jefferson-county-office-aging",
+    "name": "Jefferson County Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/jefferson-county-office-aging",
+    "organization": "Jefferson County Office for the Aging",
+    "service_area": [
+      "Jefferson"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "315-785-3191"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/jefferson-county-office-aging",
+      "page_sha256": "7fa1fcb5fbd81524fa22f2ca41485c46fb09500c164a45bc473954c483129d52",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-lewis-county-office-aging",
+    "name": "Lewis County Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/lewis-county-office-aging",
+    "organization": "Lewis County Office for the Aging",
+    "service_area": [
+      "Lewis"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "315-376-5313"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/lewis-county-office-aging",
+      "page_sha256": "faf9be16e40bc24a0d274a1aa28c3157161a049b2132240d8fe86bcb93bc260a",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-livingston-county-office-aging",
+    "name": "Livingston County Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/livingston-county-office-aging",
+    "organization": "Livingston County Office for the Aging",
+    "service_area": [
+      "Livingston"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "585-243-7520"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/livingston-county-office-aging",
+      "page_sha256": "7a03512876d53ee4b50ebb7cc9192d0e6341a6eee6b037869e991cb2e47cfa91",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-madison-county-office-aging",
+    "name": "Madison County Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/madison-county-office-aging",
+    "organization": "Madison County Office for the Aging",
+    "service_area": [
+      "Madison"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "315-697-5700"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/madison-county-office-aging",
+      "page_sha256": "26b15e09dc9015b8f3703c0f48c679d389a1fe28a9b39f88e7f1074c43e38ad2",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-monroe-county-office-aging",
+    "name": "Monroe County Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/monroe-county-office-aging",
+    "organization": "Monroe County Office for the Aging",
+    "service_area": [
+      "Monroe"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "585-753-6280"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/monroe-county-office-aging",
+      "page_sha256": "a65deb030e0290afa93f3ccdf9e41929f39242ea42290a1c8c322d911e61f7fc",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-montgomery-county-office-aging-inc",
+    "name": "Montgomery County Office for the Aging, Inc. referral",
+    "official_url": "https://aging.ny.gov/location/montgomery-county-office-aging-inc",
+    "organization": "Montgomery County Office for the Aging, Inc.",
+    "service_area": [
+      "Montgomery"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "518-843-2300 ext. 229"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/montgomery-county-office-aging-inc",
+      "page_sha256": "795037368aa664b7ecb341990964796a4616fd5443dba7b90de3bdafcc148953",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-nassau-county-department-human-services-office-aging",
+    "name": "Nassau County Department of Human Services Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/nassau-county-department-human-services-office-aging",
+    "organization": "Nassau County Department of Human Services Office for the Aging",
+    "service_area": [
+      "Nassau"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "516-227-8900"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/nassau-county-department-human-services-office-aging",
+      "page_sha256": "0726aafa56b80f5a94962bad4ea9316ed750928f90013f67107b54da6463b06b",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-new-york-city-department-aging",
+    "name": "New York City Department for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/new-york-city-department-aging",
+    "organization": "New York City Department for the Aging",
+    "service_area": [
+      "Bronx",
+      "Kings",
+      "New York",
+      "Queens",
+      "Richmond"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability.",
+      "This office serves multiple counties; there is no separate contact record for each county.",
+      "The state directory lists 311 within NYC and 212-244-6469 outside the five boroughs. Ask for NYC Aging. The full number is shown here for callers helping from elsewhere."
+    ],
+    "public_contact": {
+      "phone": "212-244-6469",
+      "local_short_code": "311"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/new-york-city-department-aging",
+      "page_sha256": "f61c735ee4fb5216ae085989ddf71cce2262da543c714ac446948288a7cb41c3",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-niagara-county-office-aging",
+    "name": "Niagara County Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/niagara-county-office-aging",
+    "organization": "Niagara County Office for the Aging",
+    "service_area": [
+      "Niagara"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "716-438-4020"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/niagara-county-office-aging",
+      "page_sha256": "3e590d029ed52856d9494b819105d2cb35d807c7ee5fed5260ba9b9188facf38",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-oneida-county-office-agingcontinuing-care",
+    "name": "Oneida County Office for the Aging/Continuing Care referral",
+    "official_url": "https://aging.ny.gov/location/oneida-county-office-agingcontinuing-care",
+    "organization": "Oneida County Office for the Aging/Continuing Care",
+    "service_area": [
+      "Oneida"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "315-798-5456"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/oneida-county-office-agingcontinuing-care",
+      "page_sha256": "0ff0488966211b53a178d196cda7cbbb04ca4dca15168a66b8a62afe1aca763c",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-onondaga-department-adult-long-term-care-services",
+    "name": "Onondaga Department of Adult & Long Term Care Services referral",
+    "official_url": "https://aging.ny.gov/location/onondaga-department-adult-long-term-care-services",
+    "organization": "Onondaga Department of Adult & Long Term Care Services",
+    "service_area": [
+      "Onondaga"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "315-435-2362"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/onondaga-department-adult-long-term-care-services",
+      "page_sha256": "d52cfd05fd265c28a40fa2ab32e23d4b8e3e435a29acb9a7b615393e2747c0c5",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-ontario-county-office-aging",
+    "name": "Ontario County Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/ontario-county-office-aging",
+    "organization": "Ontario County Office for the Aging",
+    "service_area": [
+      "Ontario"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "585-396-4040"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/ontario-county-office-aging",
+      "page_sha256": "92c59f7ef8a8347f6c2868cd3254043314766b2886ec55a123b41ea4b2a3fd52",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-orange-county-office-aging",
+    "name": "Orange County Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/orange-county-office-aging",
+    "organization": "Orange County Office for the Aging",
+    "service_area": [
+      "Orange"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "845-615-3700"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/orange-county-office-aging",
+      "page_sha256": "a4ffbe93922098d5f2f7e2031076df49d5c1feea0f258034d5ef0a15754c33f8",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-orleans-county-office-aging",
+    "name": "Orleans County Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/orleans-county-office-aging",
+    "organization": "Orleans County Office for the Aging",
+    "service_area": [
+      "Orleans"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "585-589-3191"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/orleans-county-office-aging",
+      "page_sha256": "3ca3145de1a6fa215901693e0bcd8a058c581ea81108e212069cc44dfb816e82",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-oswego-county-office-aging",
+    "name": "Oswego County Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/oswego-county-office-aging",
+    "organization": "Oswego County Office for the Aging",
+    "service_area": [
+      "Oswego"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "315-349-3484"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/oswego-county-office-aging",
+      "page_sha256": "b06fc01b9e499948c576fcd509271e374c950be982d693e858de24912085b744",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-otsego-county-office-aging",
+    "name": "Otsego County Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/otsego-county-office-aging",
+    "organization": "Otsego County Office for the Aging",
+    "service_area": [
+      "Otsego"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "607-547-4232"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/otsego-county-office-aging",
+      "page_sha256": "8590eac4f72aae52368c8d23aaf277221a3ceecd967601b67d24bfc4e782c542",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-putnam-county-office-senior-resources",
+    "name": "Putnam County Office for Senior Resources referral",
+    "official_url": "https://aging.ny.gov/location/putnam-county-office-senior-resources",
+    "organization": "Putnam County Office for Senior Resources",
+    "service_area": [
+      "Putnam"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "845-808-1700 ext. 47105"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/putnam-county-office-senior-resources",
+      "page_sha256": "8ff10a84b08bbb44e698603e42b39563301a1b0ccb16337ca061752e20291fcd",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-rensselaer-county-unified-family-services",
+    "name": "Rensselaer County Unified Family Services referral",
+    "official_url": "https://aging.ny.gov/location/rensselaer-county-unified-family-services",
+    "organization": "Rensselaer County Unified Family Services",
+    "service_area": [
+      "Rensselaer"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "518-270-2730"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/rensselaer-county-unified-family-services",
+      "page_sha256": "f4cb8abcf72d4cd721966d114c16b23d4a9ad47963cdca0d65d366bd09df1130",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-rockland-county-office-aging",
+    "name": "Rockland County Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/rockland-county-office-aging",
+    "organization": "Rockland County Office for the Aging",
+    "service_area": [
+      "Rockland"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "845-364-2110"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/rockland-county-office-aging",
+      "page_sha256": "a675b744cdfa8e7646a694ea951c91bddaae6432834fe8689e31558237d1c5a9",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-saratoga-county-office-aging",
+    "name": "Saratoga County Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/saratoga-county-office-aging",
+    "organization": "Saratoga County Office for the Aging",
+    "service_area": [
+      "Saratoga"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "518-884-4100"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/saratoga-county-office-aging",
+      "page_sha256": "358e415cd83ec584ec4c7a24e62dfddbfd1dcc879327a3c4dc83243459a6de49",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-schenectady-county-department-senior-long-term-care-services",
+    "name": "Schenectady County Department of Senior & Long Term Care Services referral",
+    "official_url": "https://aging.ny.gov/location/schenectady-county-department-senior-long-term-care-services",
+    "organization": "Schenectady County Department of Senior & Long Term Care Services",
+    "service_area": [
+      "Schenectady"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "518-382-8481 ext. 1"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/schenectady-county-department-senior-long-term-care-services",
+      "page_sha256": "67e8664f3d36a8abdd326fd692e503e7d613e846c792f4af7ab7c7ba20cd3f57",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-schoharie-county-office-aging",
+    "name": "Schoharie County Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/schoharie-county-office-aging",
+    "organization": "Schoharie County Office for the Aging",
+    "service_area": [
+      "Schoharie"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "518-295-2001"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/schoharie-county-office-aging",
+      "page_sha256": "69d2724c21b73503ed66999467ee4ec07a246533c3420f30fba2d2782723cf6b",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-schuyler-county-office-aging",
+    "name": "Schuyler County Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/schuyler-county-office-aging",
+    "organization": "Schuyler County Office for the Aging",
+    "service_area": [
+      "Schuyler"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "607-535-7108"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/schuyler-county-office-aging",
+      "page_sha256": "c38ee9d13727a2e193b225233d0eebfc9ba509eee5a79b414179895e072bd57c",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-seneca-county-office-aging",
+    "name": "Seneca County Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/seneca-county-office-aging",
+    "organization": "Seneca County Office for the Aging",
+    "service_area": [
+      "Seneca"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "315-539-1765"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/seneca-county-office-aging",
+      "page_sha256": "6df466c037e52b7f0c1c549fbf9aa426bdf05b6c2f1b49b67e5cb28d72cd7e33",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-st-lawrence-county-office-aging",
+    "name": "St. Lawrence County Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/st-lawrence-county-office-aging",
+    "organization": "St. Lawrence County Office for the Aging",
+    "service_area": [
+      "St. Lawrence"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "315-386-4730"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/st-lawrence-county-office-aging",
+      "page_sha256": "cdeedcf778e0d3509036b718836c752f91489a07e2de44a3165970fb616ff39f",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-steuben-county-office-aging",
+    "name": "Steuben County Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/steuben-county-office-aging",
+    "organization": "Steuben County Office for the Aging",
+    "service_area": [
+      "Steuben"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "607-664-2298"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/steuben-county-office-aging",
+      "page_sha256": "e8e9870a205f33dc766585fb5591a86ab383a89bd42af705c63223a61e4bae90",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-suffolk-county-office-aging",
+    "name": "Suffolk County Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/suffolk-county-office-aging",
+    "organization": "Suffolk County Office for the Aging",
+    "service_area": [
+      "Suffolk"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "631-853-8200"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/suffolk-county-office-aging",
+      "page_sha256": "97e4decde7450cabe9d6d1dff9ebc0c405fbedfe8e43d20d1e58ec923434ed0a",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-sullivan-county-office-aging",
+    "name": "Sullivan County Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/sullivan-county-office-aging",
+    "organization": "Sullivan County Office for the Aging",
+    "service_area": [
+      "Sullivan"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "845-807-0241"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/sullivan-county-office-aging",
+      "page_sha256": "30e590ae13a37fa870b1a45e4a4f549334b9bce3a23e2c34590a4bad53ddd24f",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-tioga-opportunities-inc",
+    "name": "Tioga Opportunities, Inc. referral",
+    "official_url": "https://aging.ny.gov/location/tioga-opportunities-inc",
+    "organization": "Tioga Opportunities, Inc.",
+    "service_area": [
+      "Tioga"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "607-687-4120"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/tioga-opportunities-inc",
+      "page_sha256": "86f4371fa1f690042e0772704d1f6ec46bff46366486cfa4a27db37358179f30",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-tompkins-county-office-aging",
+    "name": "Tompkins County Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/tompkins-county-office-aging",
+    "organization": "Tompkins County Office for the Aging",
+    "service_area": [
+      "Tompkins"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "607-274-5482"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/tompkins-county-office-aging",
+      "page_sha256": "ad09e2aa057165dcf158ab231b7bfd14e8e94f8ce8b41099e8b7e0dfe0236e43",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-ulster-county-office-aging",
+    "name": "Ulster County Office for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/ulster-county-office-aging",
+    "organization": "Ulster County Office for the Aging",
+    "service_area": [
+      "Ulster"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "845-340-3456"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/ulster-county-office-aging",
+      "page_sha256": "76cde043229f2d6691905147cd465b6193a8d5a9ca5d3e7a321e67213534b1b9",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-warrenhamilton-counties-offices-aging",
+    "name": "Warren/Hamilton Counties Offices for the Aging referral",
+    "official_url": "https://aging.ny.gov/location/warrenhamilton-counties-offices-aging",
+    "organization": "Warren/Hamilton Counties Offices for the Aging",
+    "service_area": [
+      "Hamilton",
+      "Warren"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability.",
+      "This office serves multiple counties; there is no separate contact record for each county."
+    ],
+    "public_contact": {
+      "phone": "518-761-6347"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/warrenhamilton-counties-offices-aging",
+      "page_sha256": "fe65226057573d2da314d8c7f2dddfa16ba28f85af8d5f5539cbf8a05a71fb8e",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-washington-county-office-aging-disability-resource-center",
+    "name": "Washington County Office for the Aging & Disability Resource Center referral",
+    "official_url": "https://aging.ny.gov/location/washington-county-office-aging-disability-resource-center",
+    "organization": "Washington County Office for the Aging & Disability Resource Center",
+    "service_area": [
+      "Washington"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "518-746-2420"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/washington-county-office-aging-disability-resource-center",
+      "page_sha256": "9912706744828fa233c5357c8971bddd212306c494bd4d3b1b5f142c25ba7c5b",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-wayne-county-department-aging-youth",
+    "name": "Wayne County Department of Aging & Youth referral",
+    "official_url": "https://aging.ny.gov/location/wayne-county-department-aging-youth",
+    "organization": "Wayne County Department of Aging & Youth",
+    "service_area": [
+      "Wayne"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "315-946-5624"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/wayne-county-department-aging-youth",
+      "page_sha256": "3462eaedb2645537033c89674bbe8093abdb5bc2282c873958e6ed677c0d4bc2",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-westchester-county-dept-senior-programs-services",
+    "name": "Westchester County Dept. of Senior Programs & Services referral",
+    "official_url": "https://aging.ny.gov/location/westchester-county-dept-senior-programs-services",
+    "organization": "Westchester County Dept. of Senior Programs & Services",
+    "service_area": [
+      "Westchester"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "914-813-6400"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/westchester-county-dept-senior-programs-services",
+      "page_sha256": "00ed004b6df78a9106c42a95cbc4f1e41167daac396edb2dab667c525c631d16",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-wyoming-county-office-aging",
+    "name": "Wyoming County Office for Aging referral",
+    "official_url": "https://aging.ny.gov/location/wyoming-county-office-aging",
+    "organization": "Wyoming County Office for Aging",
+    "service_area": [
+      "Wyoming"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "585-786-8833"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/wyoming-county-office-aging",
+      "page_sha256": "95bc843b503cfec8675d6bc59d403f548a9cccf48be03b9aed05468441945096",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "ny-aging-yates-county-area-agency-aging",
+    "name": "Yates County Area Agency on Aging referral",
+    "official_url": "https://aging.ny.gov/location/yates-county-area-agency-aging",
+    "organization": "Yates County Area Agency on Aging",
+    "service_area": [
+      "Yates"
+    ],
+    "state": "NY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local referral for meals, transportation, caregiving and support at home.",
+    "next_step": "Give the resident’s county and describe the help needed. Ask for an assessment and the right local program.",
+    "constraints": [
+      "Many aging programs focus on age 60+. NY Connects routes people of all ages and disabilities. Confirm intake, eligibility, costs and availability."
+    ],
+    "public_contact": {
+      "phone": "315-279-4321"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "evidence": {
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.ny.gov/location/yates-county-area-agency-aging",
+      "page_sha256": "8c9d796a69c1932a4fbd6333d6e73df498768e44bfe355781852e83fff707bbf",
+      "county_mapping_source": "https://aging.ny.gov/local-offices"
+    },
+    "regional_role": "aging_agency"
+  }
+]

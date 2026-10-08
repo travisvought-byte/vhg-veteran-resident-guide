@@ -8,8 +8,10 @@ from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 regional = json.loads((ROOT / 'data/public/pa-regional-referrals.json').read_text())
+ny_regional = json.loads((ROOT / 'data/public/ny-regional-referrals.json').read_text())
 resources = (json.loads((ROOT / 'prototype-data.json').read_text())
-             + json.loads((ROOT / 'data/public/pa-programs.json').read_text()) + regional)
+             + json.loads((ROOT / 'data/public/pa-programs.json').read_text()) + regional
+             + json.loads((ROOT / 'data/public/ny-programs.json').read_text()) + ny_regional)
 for r in resources:
     for field in ['program_id', 'name', 'official_url', 'next_step']:
         assert r.get(field), (r.get('program_id'), field)
@@ -26,15 +28,18 @@ class Links(HTMLParser):
                 continue
             assert (ROOT / url.path).is_file(), ('Missing local file', value)
 
-for name in ['index.html', 'pa.html', 'share.html', 'share-pa.html']:
+for name in ['index.html', 'pa.html', 'ny.html', 'share.html', 'share-pa.html', 'share-ny.html']:
     Links().feed((ROOT / name).read_text())
-for name, state in [('ohio-county-veterans-offices.json', 'OH'), ('pennsylvania-county-veterans-offices.json', 'PA')]:
+county_sets = {}
+for name, state in [('ohio-county-veterans-offices.json', 'OH'), ('pennsylvania-county-veterans-offices.json', 'PA'), ('new-york-county-veterans-offices.json', 'NY')]:
     counties = json.loads((ROOT / 'data/public' / name).read_text())
     for county in counties:
         assert urlsplit(county['source_url']).scheme == 'https', county['county']
         assert date.fromisoformat(county['reviewed_on']) <= date.today(), county['county']
         assert county.get('state', state) == state, county['county']
-pa_counties = {c['county'] for c in counties}
+    county_sets[state] = {c['county'] for c in counties}
+    assert len(county_sets[state]) == {'OH':88, 'PA':67, 'NY':62}[state], state
+pa_counties = county_sets['PA']
 for county in pa_counties:
     assert sum(r['regional_role'] == 'aging_agency' and county in r['service_area']
                for r in regional) == 1, ('PA aging coverage', county)
@@ -45,4 +50,11 @@ for r in regional:
     assert r['public_contact']['phone'], r['program_id']
     assert r['evidence']['phone_source_url'] == r['official_url'], r['program_id']
     assert r['evidence']['direct_agency_confirmation'] is False, r['program_id']
-print('PASS: both states’ resource essentials, county source dates, HTTPS sources and local sharing assets.')
+for county in county_sets['NY']:
+    assert sum(county in r['service_area'] for r in ny_regional if r['regional_role'] == 'aging_agency') == 1, ('NY aging coverage', county)
+for r in ny_regional:
+    assert r['state'] == 'NY' and set(r['service_area']) <= county_sets['NY'], r['program_id']
+    assert r['public_contact']['phone'] and r['evidence']['page_sha256'], r['program_id']
+    assert r['evidence']['phone_source_url'] == r['official_url'], r['program_id']
+    assert r['evidence']['direct_agency_confirmation'] is False, r['program_id']
+print('PASS: all three states’ referral essentials, county coverage, source dates, HTTPS sources and local sharing assets.')
