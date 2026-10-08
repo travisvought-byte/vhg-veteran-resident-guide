@@ -36,3 +36,22 @@ for(const page of ['index.html','pa.html','ny.html','mi.html','ky.html']){
 }
 for(const page of ['share.html','share-pa.html','share-ny.html','share-mi.html','share-ky.html'])assert(fs.readFileSync(path.join(root,page),'utf8').includes('use “Report a problem” on that listing'),page);
 console.log('PASS: prefilled correction links on every listing and county panel in all five editions, state and county context, privacy reminder, print hiding and sharing-kit invitation.');
+// Evidence limitations must be visible outside collapsed source details in every edition.
+const vm=require('vm');
+for(const [state,[page]] of Object.entries(editions)){
+  const html=fs.readFileSync(path.join(root,page),'utf8');
+  const t=setup('?view=all',page),data=vm.runInContext('DATA',t.ctx),counties=vm.runInContext('COUNTIES',t.ctx);
+  const pending=data.filter(r=>r.verification.record_status!=='official_source_reviewed').length;
+  const excerpts=data.filter(r=>r.verification.record_status==='official_search_extract_only').length;
+  assert.equal((html.match(/id="edition-coverage"/g)||[]).length,1,state+' single coverage summary');
+  assert(html.includes(`Referral routes cover ${counties.length} counties`),state+' accurate county count');
+  assert(html.includes(`${pending} resource records need further verification, including ${excerpts}`),state+' accurate evidence totals');
+  for(const r of data.filter(r=>r.verification.record_status!=='official_source_reviewed')){
+    const card=t.nodes.results.innerHTML.split(`id="resource-${r.program_id}"`)[1]?.split('</article>')[0];
+    if(!card)continue; // Four duplicate Ohio office records are intentionally hidden.
+    assert(card.split('<details class="source-details">')[0].includes('Full verification is incomplete'),state+' visible warning '+r.program_id);
+    assert(!card.includes('recommended-label">Useful starting point'),state+' no unqualified recommendation '+r.program_id);
+  }
+  assert(html.includes('.source-status{display:block!important}'),state+' print warning retained');
+}
+console.log('PASS: visible verification warnings, accurate state coverage/evidence totals, qualified recommendations and print notices across all editions.');
