@@ -24,6 +24,8 @@ The existing listings also disagree with each other. Two of the four pilot count
 
 This project links to existing resources rather than rebuilding them.
 
+**Scope clarification — October 6, 2026:** This is a resource guide for veterans, surviving spouses, families and care-facility staff. Care facilities are an audience and a separate VHG outreach list, not an inventory in the guide. The 25 historical facility candidates stay in the seed for outreach only. Facility/provider listings are not required for guide completion; relevant support-program entry points remain resources.
+
 ## 2. Audiences
 
 | Audience | What they need |
@@ -103,3 +105,4 @@ site/                   Static directory site (later)
 ## 9. Repository visibility
 
 Keep the repository **private** until Decision D-012 is made. The schema allows internal staff contacts that must never be published; a public repository would expose them.
+

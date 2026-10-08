@@ -1,0 +1,2783 @@
+{
+  "dataset": {
+    "version": "0.3-r-05-research-return",
+    "prepared_on": "2026-10-02",
+    "publication_status": "internal_working",
+    "scope": {
+      "state": "Ohio",
+      "pilot_counties": [
+        "Morrow",
+        "Knox",
+        "Marion",
+        "Delaware"
+      ],
+      "intended_population": "Veterans, surviving spouses, caregivers, and people of any age with disabilities; each program has its own scope."
+    },
+    "derived_from": [
+      {
+        "name": "data/schema/schema_v0.3.json",
+        "sha256": "32c8eb01086daf2a8acd587e1b2442fa4725d453472ccb9dbeaf6294be1ca214"
+      },
+      {
+        "name": "research/tasks/R-05-general-resource-link-layer.md",
+        "sha256": "7693c7602656ee4a3ddbabd060886ba3372c1fd07f813785546a3bc53a48893f"
+      },
+      {
+        "name": "data/batches/B01/b01_resources.json",
+        "batch_id": "OH-SDR-S1-B01",
+        "sha256": "e9dbca19d24d4dc1a3249098545738721da5aaeb1031ba3dd14d025c944602e9"
+      }
+    ]
+  },
+  "organizations": [
+    {
+      "organization_id": "r05-district5",
+      "name": "Ohio District 5 Area Agency on Aging",
+      "org_type": "area_agency_on_aging",
+      "official_url": "https://www.aaa5ohio.org/",
+      "service_area": [
+        "Morrow",
+        "Knox",
+        "Marion"
+      ],
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner"
+    },
+    {
+      "organization_id": "r05-coaaa",
+      "name": "Central Ohio Area Agency on Aging",
+      "org_type": "area_agency_on_aging",
+      "official_url": "https://www.coaaa.org/",
+      "service_area": [
+        "Delaware"
+      ],
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner"
+    },
+    {
+      "organization_id": "r05-helpline",
+      "name": "HelpLine",
+      "org_type": "nonprofit",
+      "official_url": "https://helplinedelmor.org/",
+      "service_area": [
+        "Morrow",
+        "Delaware"
+      ],
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner"
+    },
+    {
+      "organization_id": "r05-pathways",
+      "name": "Pathways of Central Ohio",
+      "org_type": "nonprofit",
+      "official_url": "https://pathwaysofcentralohio.com/",
+      "service_area": [
+        "Knox",
+        "Marion"
+      ],
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner"
+    },
+    {
+      "organization_id": "r05-morrow-dd",
+      "name": "Morrow County Board of Developmental Disabilities",
+      "org_type": "county_board_dd",
+      "official_url": "https://www.morrowdd.com/",
+      "service_area": [
+        "Morrow"
+      ],
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner"
+    },
+    {
+      "organization_id": "r05-knox-dd",
+      "name": "Knox County Board of Developmental Disabilities",
+      "org_type": "county_board_dd",
+      "official_url": "https://www.knoxdd.com/",
+      "service_area": [
+        "Knox"
+      ],
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner"
+    },
+    {
+      "organization_id": "r05-marion-dd",
+      "name": "Marion County Board of Developmental Disabilities",
+      "org_type": "county_board_dd",
+      "official_url": "https://www.marioncountydd.org/",
+      "service_area": [
+        "Marion"
+      ],
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner"
+    },
+    {
+      "organization_id": "r05-delaware-dd",
+      "name": "Delaware County Board of Developmental Disabilities",
+      "org_type": "county_board_dd",
+      "official_url": "https://www.dcbdd.org/",
+      "service_area": [
+        "Delaware"
+      ],
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner"
+    },
+    {
+      "organization_id": "r05-morrow-jfs",
+      "name": "Morrow County Job and Family Services",
+      "org_type": "other",
+      "official_url": "https://jfs.morrowcountyohio.gov/",
+      "service_area": [
+        "Morrow"
+      ],
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner"
+    },
+    {
+      "organization_id": "r05-knox-jfs",
+      "name": "Knox County Job and Family Services",
+      "org_type": "other",
+      "official_url": "https://co.knox.oh.us/jfs/",
+      "service_area": [
+        "Knox"
+      ],
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner"
+    },
+    {
+      "organization_id": "r05-marion-jfs",
+      "name": "Marion County Job and Family Services",
+      "org_type": "other",
+      "official_url": "https://mcjfs.com/",
+      "service_area": [
+        "Marion"
+      ],
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner"
+    },
+    {
+      "organization_id": "r05-delaware-jfs",
+      "name": "Delaware County Job and Family Services",
+      "org_type": "other",
+      "official_url": "https://jfs.co.delaware.oh.us/",
+      "service_area": [
+        "Delaware"
+      ],
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_search_extract_only",
+        "identity": "official_search_extract_only",
+        "contact": "official_search_extract_only",
+        "eligibility": "official_search_extract_only",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner"
+    },
+    {
+      "organization_id": "r05-easterseals",
+      "name": "Easterseals Central and Southeast Ohio",
+      "org_type": "nonprofit",
+      "official_url": "https://www.coaaa.org/resources/emergency-and-crisis/adult-protective-services-consumer-protection/",
+      "service_area": [
+        "Delaware"
+      ],
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner"
+    },
+    {
+      "organization_id": "r05-aging",
+      "name": "Ohio Department of Aging",
+      "org_type": "state_agency",
+      "official_url": "https://aging.ohio.gov/",
+      "service_area": [
+        "statewide"
+      ],
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner"
+    },
+    {
+      "organization_id": "r05-cms",
+      "name": "Centers for Medicare & Medicaid Services",
+      "org_type": "federal_agency",
+      "official_url": "https://www.medicare.gov/",
+      "service_area": [
+        "federal"
+      ],
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_search_extract_only",
+        "identity": "official_search_extract_only",
+        "contact": "official_search_extract_only",
+        "eligibility": "official_search_extract_only",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner"
+    },
+    {
+      "organization_id": "r05-ood",
+      "name": "Opportunities for Ohioans with Disabilities",
+      "org_type": "state_agency",
+      "official_url": "https://ood.ohio.gov/",
+      "service_area": [
+        "statewide"
+      ],
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_search_extract_only",
+        "identity": "official_search_extract_only",
+        "contact": "official_search_extract_only",
+        "eligibility": "official_search_extract_only",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner"
+    },
+    {
+      "organization_id": "r05-dro",
+      "name": "Disability Rights Ohio",
+      "org_type": "nonprofit",
+      "official_url": "https://www.disabilityrightsohio.org/",
+      "service_area": [
+        "statewide"
+      ],
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner"
+    }
+  ],
+  "programs": [
+    {
+      "program_id": "district5-adrn",
+      "name": "District 5 Aging and Disability Resource Network",
+      "program_type": "navigation_service",
+      "organization_id": "r05-district5",
+      "official_url": "https://www.aaa5ohio.org/resources/aging-and-disability-resource-network/",
+      "service_area": [
+        "Morrow",
+        "Knox",
+        "Marion"
+      ],
+      "age_life_stage": [
+        "adult_18_59",
+        "older_adult_60_plus",
+        "caregiver"
+      ],
+      "needs_supported": [
+        "general_navigation"
+      ],
+      "description": "Call for help finding long-term services and supports.",
+      "eligibility_summary": "Navigation for older adults, adults with disabilities and caregivers; individual services have separate rules.",
+      "eligibility_decision_owner": "Receiving program determines service eligibility.",
+      "application_or_referral_route": "Call ADRN; describe county, age and support need.",
+      "next_step": "Call for help finding long-term services and supports.",
+      "public_contact": {
+        "phone": "800-860-5799",
+        "phone_label": "ADRN / main office",
+        "email": null,
+        "contact_type": "office",
+        "web_route": "https://www.aaa5ohio.org/resources/aging-and-disability-resource-network/"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": "district5-adrn",
+        "batch_ids": [
+          "OH-SDR-S1-B01",
+          "R-05"
+        ],
+        "historical_fields": {
+          "b01_public_contact": {
+            "phone": "800-860-5799",
+            "alternate_phone": "419-524-4144",
+            "email": null
+          },
+          "historical_as_recorded_in": "data/batches/B01/b01_resources.json"
+        }
+      }
+    },
+    {
+      "program_id": "coaaa-navigation",
+      "name": "COAAA information and assistance",
+      "program_type": "navigation_service",
+      "organization_id": "r05-coaaa",
+      "official_url": "https://www.coaaa.org/connect/request-help-form/",
+      "service_area": [
+        "Delaware"
+      ],
+      "age_life_stage": [
+        "adult_18_59",
+        "older_adult_60_plus",
+        "caregiver"
+      ],
+      "needs_supported": [
+        "general_navigation"
+      ],
+      "description": "Ask for aging or disability support options in Delaware County.",
+      "eligibility_summary": "General navigation; program-specific assessment is separate.",
+      "eligibility_decision_owner": "Receiving program determines service eligibility.",
+      "application_or_referral_route": "Call COAAA or use its official request-help page.",
+      "next_step": "Ask for aging or disability support options in Delaware County.",
+      "public_contact": {
+        "phone": "800-589-7277",
+        "phone_label": "main office",
+        "email": null,
+        "contact_type": "office",
+        "web_route": "https://www.coaaa.org/connect/request-help-form/"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": "coaaa-navigation",
+        "batch_ids": [
+          "OH-SDR-S1-B01",
+          "R-05"
+        ],
+        "historical_fields": {
+          "b01_public_contact": {
+            "phone": "800-589-7277",
+            "email": null
+          },
+          "historical_as_recorded_in": "data/batches/B01/b01_resources.json"
+        }
+      }
+    },
+    {
+      "program_id": "helpline-211",
+      "name": "HelpLine 211",
+      "program_type": "navigation_service",
+      "organization_id": "r05-helpline",
+      "official_url": "https://helplinedelmor.org/211-2/",
+      "service_area": [
+        "Morrow",
+        "Delaware"
+      ],
+      "age_life_stage": [
+        "all_ages"
+      ],
+      "needs_supported": [
+        "general_navigation"
+      ],
+      "description": "Ask for local health and human-service resources.",
+      "eligibility_summary": null,
+      "eligibility_decision_owner": "Individual resource providers decide their own eligibility.",
+      "application_or_referral_route": "Dial 211 and give the county or ZIP code.",
+      "next_step": "Ask for local health and human-service resources.",
+      "public_contact": {
+        "phone": "211",
+        "phone_label": "community resource referral",
+        "email": null,
+        "contact_type": "office",
+        "web_route": "https://helplinedelmor.org/211-2/"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-05"
+        ],
+        "historical_fields": null
+      }
+    },
+    {
+      "program_id": "pathways-211",
+      "name": "Pathways 211",
+      "program_type": "navigation_service",
+      "organization_id": "r05-pathways",
+      "official_url": "https://pathwaysofcentralohio.com/211-crisis-hotline-information-center/",
+      "service_area": [
+        "Knox",
+        "Marion"
+      ],
+      "age_life_stage": [
+        "all_ages"
+      ],
+      "needs_supported": [
+        "general_navigation"
+      ],
+      "description": "Ask for local health and human-service resources.",
+      "eligibility_summary": null,
+      "eligibility_decision_owner": "Individual resource providers decide their own eligibility.",
+      "application_or_referral_route": "Dial 211 and give the county or ZIP code.",
+      "next_step": "Ask for local health and human-service resources.",
+      "public_contact": {
+        "phone": "211",
+        "phone_label": "community resource referral",
+        "email": null,
+        "contact_type": "office",
+        "web_route": "https://pathwaysofcentralohio.com/211-crisis-hotline-information-center/"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-05"
+        ],
+        "historical_fields": null
+      }
+    },
+    {
+      "program_id": "morrow-dd-intake",
+      "name": "Morrow DD intake and service coordination",
+      "program_type": "eligibility_intake",
+      "organization_id": "r05-morrow-dd",
+      "official_url": "https://www.morrowdd.com/service-and-support-administration/",
+      "service_area": [
+        "Morrow"
+      ],
+      "age_life_stage": [
+        "under_3",
+        "age_3_5",
+        "school_age",
+        "transition_age",
+        "adult_18_59",
+        "older_adult_60_plus"
+      ],
+      "needs_supported": [
+        "dd_intake_service_coordination",
+        "child_development_autism"
+      ],
+      "description": "Ask how to start an age-appropriate developmental-disability eligibility review.",
+      "eligibility_summary": "County residency and age/developmental-disability requirements are reviewed by the appropriate board or early-intervention team.",
+      "eligibility_decision_owner": "Morrow county board for board services; early-intervention team for under-3 services.",
+      "application_or_referral_route": "Ask for an SSA eligibility request for age 3 or older; ask about the separate early-intervention route for a younger child.",
+      "next_step": "Ask how to start an age-appropriate developmental-disability eligibility review.",
+      "public_contact": {
+        "phone": "419-947-1159",
+        "phone_label": "main office; ask for SSA / eligibility",
+        "email": null,
+        "contact_type": "office",
+        "web_route": "https://www.morrowdd.com/service-and-support-administration/"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": "morrow-dd-intake",
+        "batch_ids": [
+          "OH-SDR-S1-B01",
+          "R-05"
+        ],
+        "historical_fields": {
+          "b01_public_contact": {
+            "phone": "419-947-1159",
+            "email": "board@morrowdd.com",
+            "service_coordination_phone": "419-947-1159 ext. 326"
+          },
+          "historical_as_recorded_in": "data/batches/B01/b01_resources.json"
+        }
+      }
+    },
+    {
+      "program_id": "knox-dd-intake",
+      "name": "Knox DD intake and service coordination",
+      "program_type": "eligibility_intake",
+      "organization_id": "r05-knox-dd",
+      "official_url": "https://www.knoxdd.com/eligibility",
+      "service_area": [
+        "Knox"
+      ],
+      "age_life_stage": [
+        "under_3",
+        "age_3_5",
+        "school_age",
+        "transition_age",
+        "adult_18_59",
+        "older_adult_60_plus"
+      ],
+      "needs_supported": [
+        "dd_intake_service_coordination",
+        "child_development_autism"
+      ],
+      "description": "Ask how to start an age-appropriate developmental-disability eligibility review.",
+      "eligibility_summary": "County residency and age/developmental-disability requirements are reviewed by the appropriate board or early-intervention team.",
+      "eligibility_decision_owner": "Knox county board for board services; early-intervention team for under-3 services.",
+      "application_or_referral_route": "Age 3+: use the board eligibility page/referral form. Under 3: eligibility page names 614-656-3322 or state referral; EI page lists 740-397-4607 for age 3 or older.",
+      "next_step": "Ask how to start an age-appropriate developmental-disability eligibility review.",
+      "public_contact": {
+        "phone": "740-397-4656",
+        "phone_label": "main office; ask for eligibility",
+        "email": null,
+        "contact_type": "office",
+        "web_route": "https://www.knoxdd.com/eligibility"
+      },
+      "internal_contact": {
+        "name": null,
+        "email": "cpayne@knoxdd.com",
+        "note": "Historical B01 named email, not re-confirmed for current use; do not export."
+      },
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": "knox-dd-intake",
+        "batch_ids": [
+          "OH-SDR-S1-B01",
+          "R-05"
+        ],
+        "historical_fields": {
+          "b01_public_contact": {
+            "phone": "740-397-4656",
+            "email": null,
+            "early_intervention_phone": "614-656-3322"
+          },
+          "historical_as_recorded_in": "data/batches/B01/b01_resources.json"
+        }
+      }
+    },
+    {
+      "program_id": "marion-dd-intake",
+      "name": "Marion DD intake and service coordination",
+      "program_type": "eligibility_intake",
+      "organization_id": "r05-marion-dd",
+      "official_url": "https://www.marioncountydd.org/getting-started/",
+      "service_area": [
+        "Marion"
+      ],
+      "age_life_stage": [
+        "under_3",
+        "age_3_5",
+        "school_age",
+        "transition_age",
+        "adult_18_59",
+        "older_adult_60_plus"
+      ],
+      "needs_supported": [
+        "dd_intake_service_coordination",
+        "child_development_autism"
+      ],
+      "description": "Ask how to start an age-appropriate developmental-disability eligibility review.",
+      "eligibility_summary": "County residency and age/developmental-disability requirements are reviewed by the appropriate board or early-intervention team.",
+      "eligibility_decision_owner": "Marion county board for board services; early-intervention team for under-3 services.",
+      "application_or_referral_route": "Call for intake and an eligibility interview; service coordination follows board determination.",
+      "next_step": "Ask how to start an age-appropriate developmental-disability eligibility review.",
+      "public_contact": {
+        "phone": "740-387-1035",
+        "phone_label": "main office; ask for intake coordinator",
+        "email": null,
+        "contact_type": "office",
+        "web_route": "https://www.marioncountydd.org/getting-started/"
+      },
+      "internal_contact": {
+        "name": null,
+        "email": "tbutcher@marioncountydd.org",
+        "note": "Historical B01 named email, not re-confirmed for current use; do not export."
+      },
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": "marion-dd-intake",
+        "batch_ids": [
+          "OH-SDR-S1-B01",
+          "R-05"
+        ],
+        "historical_fields": {
+          "b01_public_contact": {
+            "phone": "740-375-6185",
+            "email": null
+          },
+          "historical_as_recorded_in": "data/batches/B01/b01_resources.json"
+        }
+      }
+    },
+    {
+      "program_id": "delaware-dd-intake",
+      "name": "Delaware DD intake and service coordination",
+      "program_type": "eligibility_intake",
+      "organization_id": "r05-delaware-dd",
+      "official_url": "https://www.dcbdd.org/eligibility/",
+      "service_area": [
+        "Delaware"
+      ],
+      "age_life_stage": [
+        "under_3",
+        "age_3_5",
+        "school_age",
+        "transition_age",
+        "adult_18_59",
+        "older_adult_60_plus"
+      ],
+      "needs_supported": [
+        "dd_intake_service_coordination",
+        "child_development_autism"
+      ],
+      "description": "Ask how to start an age-appropriate developmental-disability eligibility review.",
+      "eligibility_summary": "County residency and age/developmental-disability requirements are reviewed by the appropriate board or early-intervention team.",
+      "eligibility_decision_owner": "Delaware county board for board services; early-intervention team for under-3 services.",
+      "application_or_referral_route": "Age 3+: call intake. Under 3: page names Help Me Grow at 800-755-4769 or the state referral form.",
+      "next_step": "Ask how to start an age-appropriate developmental-disability eligibility review.",
+      "public_contact": {
+        "phone": "740-201-3601",
+        "phone_label": "Intake and Eligibility Department",
+        "email": null,
+        "contact_type": "office",
+        "web_route": "https://www.dcbdd.org/eligibility/"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": "delaware-dd-intake",
+        "batch_ids": [
+          "OH-SDR-S1-B01",
+          "R-05"
+        ],
+        "historical_fields": {
+          "b01_public_contact": {
+            "phone": "740-201-3600",
+            "email": null
+          },
+          "historical_as_recorded_in": "data/batches/B01/b01_resources.json"
+        }
+      }
+    },
+    {
+      "program_id": "morrow-jfs-medicaid",
+      "name": "Morrow Medicaid application assistance",
+      "program_type": "eligibility_intake",
+      "organization_id": "r05-morrow-jfs",
+      "official_url": "https://jfs.morrowcountyohio.gov/",
+      "service_area": [
+        "Morrow"
+      ],
+      "age_life_stage": [
+        "all_ages"
+      ],
+      "needs_supported": [
+        "benefits_and_funding"
+      ],
+      "description": "Ask how to apply for Medicaid and who handles the required assessment.",
+      "eligibility_summary": "Ohio Medicaid rules and assessment apply; no eligibility outcome established.",
+      "eligibility_decision_owner": "Ohio Medicaid / county JFS for application processing; other assessments may be required.",
+      "application_or_referral_route": "Ask county JFS about Medicaid applications; use the official Ohio Benefits portal linked by county offices.",
+      "next_step": "Ask how to apply for Medicaid and who handles the required assessment.",
+      "public_contact": {
+        "phone": "419-947-9111",
+        "phone_label": "JFS main office",
+        "email": null,
+        "contact_type": "office",
+        "web_route": "https://jfs.morrowcountyohio.gov/"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-05"
+        ],
+        "historical_fields": null
+      }
+    },
+    {
+      "program_id": "morrow-aps",
+      "name": "Morrow Adult Protective Services",
+      "program_type": "direct_service",
+      "organization_id": "r05-morrow-jfs",
+      "official_url": "https://jfs.morrowcountyohio.gov/family___children_services/adult_protective_services.php",
+      "service_area": [
+        "Morrow"
+      ],
+      "age_life_stage": [
+        "older_adult_60_plus"
+      ],
+      "needs_supported": [
+        "general_navigation"
+      ],
+      "description": "Report suspected abuse, neglect or exploitation of an older adult in the community.",
+      "eligibility_summary": "Published APS route concerns vulnerable adults age 60 or older; agency screens jurisdiction and reports.",
+      "eligibility_decision_owner": "County APS / statutory investigative authority.",
+      "application_or_referral_route": "Call county APS or ask JFS for APS; statewide reporting fallback is 855-644-6277.",
+      "next_step": "Report suspected abuse, neglect or exploitation of an older adult in the community.",
+      "public_contact": {
+        "phone": "419-947-9111",
+        "phone_label": "JFS; ask for APS",
+        "email": null,
+        "contact_type": "office",
+        "web_route": "https://jfs.morrowcountyohio.gov/family___children_services/adult_protective_services.php"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-05"
+        ],
+        "historical_fields": null
+      }
+    },
+    {
+      "program_id": "knox-jfs-medicaid",
+      "name": "Knox Medicaid application assistance",
+      "program_type": "eligibility_intake",
+      "organization_id": "r05-knox-jfs",
+      "official_url": "https://co.knox.oh.us/jfs/",
+      "service_area": [
+        "Knox"
+      ],
+      "age_life_stage": [
+        "all_ages"
+      ],
+      "needs_supported": [
+        "benefits_and_funding"
+      ],
+      "description": "Ask how to apply for Medicaid and who handles the required assessment.",
+      "eligibility_summary": "Ohio Medicaid rules and assessment apply; no eligibility outcome established.",
+      "eligibility_decision_owner": "Ohio Medicaid / county JFS for application processing; other assessments may be required.",
+      "application_or_referral_route": "Ask county JFS about Medicaid applications; use the official Ohio Benefits portal linked by county offices.",
+      "next_step": "Ask how to apply for Medicaid and who handles the required assessment.",
+      "public_contact": {
+        "phone": "740-397-7177",
+        "phone_label": "JFS main office",
+        "email": null,
+        "contact_type": "office",
+        "web_route": "https://co.knox.oh.us/jfs/"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-05"
+        ],
+        "historical_fields": null
+      }
+    },
+    {
+      "program_id": "knox-aps",
+      "name": "Knox Adult Protective Services",
+      "program_type": "direct_service",
+      "organization_id": "r05-knox-jfs",
+      "official_url": "https://co.knox.oh.us/jfs/children-and-family-services/",
+      "service_area": [
+        "Knox"
+      ],
+      "age_life_stage": [
+        "older_adult_60_plus"
+      ],
+      "needs_supported": [
+        "general_navigation"
+      ],
+      "description": "Report suspected abuse, neglect or exploitation of an older adult in the community.",
+      "eligibility_summary": "Published APS route concerns vulnerable adults age 60 or older; agency screens jurisdiction and reports.",
+      "eligibility_decision_owner": "County APS / statutory investigative authority.",
+      "application_or_referral_route": "Call county APS or ask JFS for APS; statewide reporting fallback is 855-644-6277.",
+      "next_step": "Report suspected abuse, neglect or exploitation of an older adult in the community.",
+      "public_contact": {
+        "phone": "740-397-7177",
+        "phone_label": "JFS; ask for APS",
+        "email": null,
+        "contact_type": "office",
+        "web_route": "https://co.knox.oh.us/jfs/children-and-family-services/"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-05"
+        ],
+        "historical_fields": null
+      }
+    },
+    {
+      "program_id": "marion-jfs-medicaid",
+      "name": "Marion Medicaid application assistance",
+      "program_type": "eligibility_intake",
+      "organization_id": "r05-marion-jfs",
+      "official_url": "https://mcjfs.com/",
+      "service_area": [
+        "Marion"
+      ],
+      "age_life_stage": [
+        "all_ages"
+      ],
+      "needs_supported": [
+        "benefits_and_funding"
+      ],
+      "description": "Ask how to apply for Medicaid and who handles the required assessment.",
+      "eligibility_summary": "Ohio Medicaid rules and assessment apply; no eligibility outcome established.",
+      "eligibility_decision_owner": "Ohio Medicaid / county JFS for application processing; other assessments may be required.",
+      "application_or_referral_route": "Ask county JFS about Medicaid applications; use the official Ohio Benefits portal linked by county offices.",
+      "next_step": "Ask how to apply for Medicaid and who handles the required assessment.",
+      "public_contact": {
+        "phone": "740-387-8560",
+        "phone_label": "JFS main office",
+        "email": null,
+        "contact_type": "office",
+        "web_route": "https://mcjfs.com/"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-05"
+        ],
+        "historical_fields": null
+      }
+    },
+    {
+      "program_id": "marion-aps",
+      "name": "Marion Adult Protective Services",
+      "program_type": "direct_service",
+      "organization_id": "r05-marion-jfs",
+      "official_url": "https://mcjfs.com/benefits/adult-protective-services/",
+      "service_area": [
+        "Marion"
+      ],
+      "age_life_stage": [
+        "older_adult_60_plus"
+      ],
+      "needs_supported": [
+        "general_navigation"
+      ],
+      "description": "Report suspected abuse, neglect or exploitation of an older adult in the community.",
+      "eligibility_summary": "Published APS route concerns vulnerable adults age 60 or older; agency screens jurisdiction and reports.",
+      "eligibility_decision_owner": "County APS / statutory investigative authority.",
+      "application_or_referral_route": "Call county APS or ask JFS for APS; statewide reporting fallback is 855-644-6277.",
+      "next_step": "Report suspected abuse, neglect or exploitation of an older adult in the community.",
+      "public_contact": {
+        "phone": "740-223-1919",
+        "phone_label": "APS direct line",
+        "email": null,
+        "contact_type": "office",
+        "web_route": "https://mcjfs.com/benefits/adult-protective-services/"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-05"
+        ],
+        "historical_fields": null
+      }
+    },
+    {
+      "program_id": "delaware-jfs-medicaid",
+      "name": "Delaware Medicaid application assistance",
+      "program_type": "eligibility_intake",
+      "organization_id": "r05-delaware-jfs",
+      "official_url": "https://jfs.co.delaware.oh.us/",
+      "service_area": [
+        "Delaware"
+      ],
+      "age_life_stage": [
+        "all_ages"
+      ],
+      "needs_supported": [
+        "benefits_and_funding"
+      ],
+      "description": "Ask how to apply for Medicaid and who handles the required assessment.",
+      "eligibility_summary": "Ohio Medicaid rules and assessment apply; no eligibility outcome established.",
+      "eligibility_decision_owner": "Ohio Medicaid / county JFS for application processing; other assessments may be required.",
+      "application_or_referral_route": "Ask county JFS about Medicaid applications; use the official Ohio Benefits portal linked by county offices.",
+      "next_step": "Ask how to apply for Medicaid and who handles the required assessment.",
+      "public_contact": {
+        "phone": "740-833-2300",
+        "phone_label": "JFS main office",
+        "email": null,
+        "contact_type": "office",
+        "web_route": "https://jfs.co.delaware.oh.us/"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_search_extract_only",
+        "identity": "official_search_extract_only",
+        "contact": "official_search_extract_only",
+        "eligibility": "official_search_extract_only",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-05"
+        ],
+        "historical_fields": null
+      }
+    },
+    {
+      "program_id": "delaware-aps",
+      "name": "Delaware Adult Protective Services",
+      "program_type": "direct_service",
+      "organization_id": "r05-delaware-jfs",
+      "official_url": "https://jfs.co.delaware.oh.us/adult/",
+      "service_area": [
+        "Delaware"
+      ],
+      "age_life_stage": [
+        "older_adult_60_plus"
+      ],
+      "needs_supported": [
+        "general_navigation"
+      ],
+      "description": "Report suspected abuse, neglect or exploitation of an older adult in the community.",
+      "eligibility_summary": "Published APS route concerns vulnerable adults age 60 or older; agency screens jurisdiction and reports.",
+      "eligibility_decision_owner": "County APS / statutory investigative authority.",
+      "application_or_referral_route": "Call county APS or ask JFS for APS; statewide reporting fallback is 855-644-6277.",
+      "next_step": "Report suspected abuse, neglect or exploitation of an older adult in the community.",
+      "public_contact": {
+        "phone": "740-833-2300",
+        "phone_label": "JFS; ask for APS",
+        "email": null,
+        "contact_type": "office",
+        "web_route": "https://jfs.co.delaware.oh.us/adult/"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_search_extract_only",
+        "identity": "official_search_extract_only",
+        "contact": "official_search_extract_only",
+        "eligibility": "official_search_extract_only",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-05"
+        ],
+        "historical_fields": null
+      }
+    },
+    {
+      "program_id": "district5-ombudsman",
+      "name": "District 5 Long-Term Care Ombudsman",
+      "program_type": "navigation_service",
+      "organization_id": "r05-district5",
+      "official_url": "https://www.aaa5ohio.org/services/long-term-care-ombudsman/",
+      "service_area": [
+        "Morrow",
+        "Knox",
+        "Marion"
+      ],
+      "age_life_stage": [
+        "all_ages"
+      ],
+      "needs_supported": [
+        "general_navigation"
+      ],
+      "description": "Ask about rights or a concern with nursing-home, assisted-living or home care.",
+      "eligibility_summary": "For long-term-care consumers and their representatives; consent governs advocacy.",
+      "eligibility_decision_owner": "Ombudsman program determines advocacy route.",
+      "application_or_referral_route": "Call District 5 and ask for the ombudsman.",
+      "next_step": "Ask about rights or a concern with nursing-home, assisted-living or home care.",
+      "public_contact": {
+        "phone": "800-860-5799",
+        "phone_label": "District 5; request ombudsman",
+        "email": null,
+        "contact_type": "office",
+        "web_route": "https://www.aaa5ohio.org/services/long-term-care-ombudsman/"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-05"
+        ],
+        "historical_fields": null
+      }
+    },
+    {
+      "program_id": "delaware-regional-ombudsman",
+      "name": "Delaware regional Long-Term Care Ombudsman",
+      "program_type": "navigation_service",
+      "organization_id": "r05-easterseals",
+      "official_url": "https://www.coaaa.org/resources/emergency-and-crisis/adult-protective-services-consumer-protection/",
+      "service_area": [
+        "Delaware"
+      ],
+      "age_life_stage": [
+        "all_ages"
+      ],
+      "needs_supported": [
+        "general_navigation"
+      ],
+      "description": "Ask for resident-directed help with a long-term-care concern.",
+      "eligibility_summary": "Long-term-care rights and complaints; program reviews the request.",
+      "eligibility_decision_owner": "Regional ombudsman program.",
+      "application_or_referral_route": "Call the regional program identified by COAAA.",
+      "next_step": "Ask for resident-directed help with a long-term-care concern.",
+      "public_contact": {
+        "phone": "800-536-5891",
+        "phone_label": "regional ombudsman",
+        "email": null,
+        "contact_type": "office",
+        "web_route": "https://www.coaaa.org/resources/emergency-and-crisis/adult-protective-services-consumer-protection/"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-05"
+        ],
+        "historical_fields": null
+      }
+    },
+    {
+      "program_id": "ohio-state-ombudsman",
+      "name": "Ohio State Long-Term Care Ombudsman",
+      "program_type": "navigation_service",
+      "organization_id": "r05-aging",
+      "official_url": "https://dam.assets.ohio.gov/image/upload/v1742216742/aging.ohio.gov/Ombudsman/Ombudsman_Brochure_-_State.pdf",
+      "service_area": [
+        "statewide"
+      ],
+      "age_life_stage": [
+        "all_ages"
+      ],
+      "needs_supported": [
+        "general_navigation"
+      ],
+      "description": "Ask for an advocate for long-term-care rights or complaints.",
+      "eligibility_summary": "For long-term-care consumers; advocacy follows resident consent or applicable representative authority.",
+      "eligibility_decision_owner": "State / regional ombudsman program.",
+      "application_or_referral_route": "Call the state office for help reaching the correct regional advocate.",
+      "next_step": "Ask for an advocate for long-term-care rights or complaints.",
+      "public_contact": {
+        "phone": "800-282-1206",
+        "phone_label": "state ombudsman",
+        "email": "OhioOmbudsman@age.ohio.gov",
+        "contact_type": "office",
+        "web_route": "https://dam.assets.ohio.gov/image/upload/v1742216742/aging.ohio.gov/Ombudsman/Ombudsman_Brochure_-_State.pdf"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-05"
+        ],
+        "historical_fields": null
+      }
+    },
+    {
+      "program_id": "ohio-quality-navigator",
+      "name": "Ohio Long-Term Care Consumer Guide / Quality Navigator",
+      "program_type": "existing_directory",
+      "organization_id": "r05-aging",
+      "official_url": "https://aging.ohio.gov/Navigator",
+      "service_area": [
+        "statewide"
+      ],
+      "age_life_stage": [
+        "all_ages"
+      ],
+      "needs_supported": [
+        "care_facilities"
+      ],
+      "description": "Compare published nursing-home and residential-care information.",
+      "eligibility_summary": null,
+      "eligibility_decision_owner": null,
+      "application_or_referral_route": "Use the official Navigator; state ombudsman brochure also points to compass.aging.ohio.gov. Tool could not render the dashboard.",
+      "next_step": "Compare published nursing-home and residential-care information.",
+      "public_contact": {
+        "phone": null,
+        "phone_label": null,
+        "email": null,
+        "contact_type": "web_form_or_locator",
+        "web_route": "https://aging.ohio.gov/Navigator"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-05"
+        ],
+        "historical_fields": null
+      },
+      "constraints": [
+        "Interactive dashboard was not usable in this research tool; do not infer closure or current beds."
+      ]
+    },
+    {
+      "program_id": "cms-care-compare",
+      "name": "Medicare Care Compare",
+      "program_type": "existing_directory",
+      "organization_id": "r05-cms",
+      "official_url": "https://www.medicare.gov/care-compare/",
+      "service_area": [
+        "federal"
+      ],
+      "age_life_stage": [
+        "all_ages"
+      ],
+      "needs_supported": [
+        "care_facilities"
+      ],
+      "description": "Compare published Medicare provider and quality information.",
+      "eligibility_summary": null,
+      "eligibility_decision_owner": null,
+      "application_or_referral_route": "Use Care Compare to search by location/provider; the CMS nursing-home guide names the route.",
+      "next_step": "Compare published Medicare provider and quality information.",
+      "public_contact": {
+        "phone": null,
+        "phone_label": null,
+        "email": null,
+        "contact_type": "web_form_or_locator",
+        "web_route": "https://www.medicare.gov/care-compare/"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_search_extract_only",
+        "identity": "official_search_extract_only",
+        "contact": "official_search_extract_only",
+        "eligibility": "official_search_extract_only",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-05"
+        ],
+        "historical_fields": null
+      }
+    },
+    {
+      "program_id": "ood-vocational-rehabilitation",
+      "name": "OOD vocational rehabilitation entry",
+      "program_type": "eligibility_intake",
+      "organization_id": "r05-ood",
+      "official_url": "https://ood.ohio.gov/",
+      "service_area": [
+        "statewide"
+      ],
+      "age_life_stage": [
+        "transition_age",
+        "adult_18_59",
+        "older_adult_60_plus"
+      ],
+      "needs_supported": [
+        "employment_transition"
+      ],
+      "description": "Ask OOD how to apply for vocational rehabilitation.",
+      "eligibility_summary": "For people with disabilities seeking employment support; full criteria not confirmed in this review.",
+      "eligibility_decision_owner": "Opportunities for Ohioans with Disabilities.",
+      "application_or_referral_route": "Official OOD homepage excerpt directs applicants to OOD Works; application portal could not be tested.",
+      "next_step": "Ask OOD how to apply for vocational rehabilitation.",
+      "public_contact": {
+        "phone": null,
+        "phone_label": null,
+        "email": null,
+        "contact_type": "web_form_or_locator",
+        "web_route": "https://ood.ohio.gov/"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_search_extract_only",
+        "identity": "official_search_extract_only",
+        "contact": "official_search_extract_only",
+        "eligibility": "official_search_extract_only",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-05"
+        ],
+        "historical_fields": null
+      }
+    },
+    {
+      "program_id": "disability-rights-ohio",
+      "name": "Disability Rights Ohio intake",
+      "program_type": "navigation_service",
+      "organization_id": "r05-dro",
+      "official_url": "https://www.disabilityrightsohio.org/intake-procedure",
+      "service_area": [
+        "statewide"
+      ],
+      "age_life_stage": [
+        "all_ages"
+      ],
+      "needs_supported": [
+        "general_navigation"
+      ],
+      "description": "Ask about disability rights, discrimination, abuse or access to services.",
+      "eligibility_summary": "Intake considers the disability-rights issue and organizational priorities; representation is not guaranteed.",
+      "eligibility_decision_owner": "Disability Rights Ohio intake / legal team.",
+      "application_or_referral_route": "Call 800-282-9181, option 2, or the official intake route.",
+      "next_step": "Ask about disability rights, discrimination, abuse or access to services.",
+      "public_contact": {
+        "phone": "800-282-9181",
+        "phone_label": "intake, option 2",
+        "email": null,
+        "contact_type": "office",
+        "web_route": "https://www.disabilityrightsohio.org/intake-procedure"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-05"
+        ],
+        "historical_fields": null
+      },
+      "constraints": [
+        "Published intake hours differ across DRO pages. Hours omitted pending clarification."
+      ]
+    }
+  ],
+  "pathways": [],
+  "sources": [
+    {
+      "source_id": "r05-district5",
+      "url": "https://www.aaa5ohio.org/resources/aging-and-disability-resource-network/",
+      "publisher": "Ohio District 5 Area Agency on Aging",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "district5-adrn",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r05-district5-area",
+      "url": "https://www.aaa5ohio.org/about/our-agency/",
+      "publisher": "Ohio District 5 Area Agency on Aging",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r05-district5",
+          "fields": [
+            "name",
+            "org_type",
+            "official_url",
+            "service_area"
+          ]
+        },
+        {
+          "entity_id": "district5-adrn",
+          "fields": [
+            "service_area"
+          ]
+        },
+        {
+          "entity_id": "district5-ombudsman",
+          "fields": [
+            "service_area"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r05-coaaa",
+      "url": "https://www.coaaa.org/connect/request-help-form/",
+      "publisher": "Central Ohio Area Agency on Aging",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r05-coaaa",
+          "fields": [
+            "name",
+            "org_type",
+            "official_url",
+            "service_area"
+          ]
+        },
+        {
+          "entity_id": "coaaa-navigation",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r05-helpline",
+      "url": "https://helplinedelmor.org/211-2/",
+      "publisher": "HelpLine",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r05-helpline",
+          "fields": [
+            "name",
+            "org_type",
+            "official_url",
+            "service_area"
+          ]
+        },
+        {
+          "entity_id": "helpline-211",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r05-pathways",
+      "url": "https://pathwaysofcentralohio.com/211-crisis-hotline-information-center/",
+      "publisher": "Pathways of Central Ohio",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r05-pathways",
+          "fields": [
+            "name",
+            "org_type",
+            "official_url",
+            "service_area"
+          ]
+        },
+        {
+          "entity_id": "pathways-211",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r05-morrow-dd",
+      "url": "https://www.morrowdd.com/service-and-support-administration/",
+      "publisher": "Morrow County Board of Developmental Disabilities",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": "2026-01-14",
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r05-morrow-dd",
+          "fields": [
+            "name",
+            "org_type",
+            "official_url",
+            "service_area"
+          ]
+        },
+        {
+          "entity_id": "morrow-dd-intake",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r05-knox-dd",
+      "url": "https://www.knoxdd.com/eligibility",
+      "publisher": "Knox County Board of Developmental Disabilities",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r05-knox-dd",
+          "fields": [
+            "name",
+            "org_type",
+            "official_url",
+            "service_area"
+          ]
+        },
+        {
+          "entity_id": "knox-dd-intake",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r05-knox-dd-office",
+      "url": "https://www.knoxdd.com/contact",
+      "publisher": "Knox County Board of Developmental Disabilities",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "knox-dd-intake",
+          "fields": [
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r05-knox-ei",
+      "url": "https://www.knoxdd.com/early-intervention",
+      "publisher": "Knox County Board of Developmental Disabilities",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "knox-dd-intake",
+          "fields": [
+            "application_or_referral_route"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r05-marion-dd",
+      "url": "https://www.marioncountydd.org/getting-started/",
+      "publisher": "Marion County Board of Developmental Disabilities",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r05-marion-dd",
+          "fields": [
+            "name",
+            "org_type",
+            "official_url",
+            "service_area"
+          ]
+        },
+        {
+          "entity_id": "marion-dd-intake",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r05-delaware-dd",
+      "url": "https://www.dcbdd.org/eligibility/",
+      "publisher": "Delaware County Board of Developmental Disabilities",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r05-delaware-dd",
+          "fields": [
+            "name",
+            "org_type",
+            "official_url",
+            "service_area"
+          ]
+        },
+        {
+          "entity_id": "delaware-dd-intake",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r05-morrow-jfs",
+      "url": "https://jfs.morrowcountyohio.gov/medical/apply_for_medicaid_only.php",
+      "publisher": "Morrow County Job and Family Services",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r05-morrow-jfs",
+          "fields": [
+            "name",
+            "org_type",
+            "official_url",
+            "service_area"
+          ]
+        },
+        {
+          "entity_id": "morrow-jfs-medicaid",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r05-morrow-aps",
+      "url": "https://jfs.morrowcountyohio.gov/family___children_services/adult_protective_services.php",
+      "publisher": "Morrow County Job and Family Services",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "morrow-aps",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r05-knox-jfs",
+      "url": "https://co.knox.oh.us/jfs/public-assistance/",
+      "publisher": "Knox County",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r05-knox-jfs",
+          "fields": [
+            "name",
+            "org_type",
+            "official_url",
+            "service_area"
+          ]
+        },
+        {
+          "entity_id": "knox-jfs-medicaid",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r05-knox-aps",
+      "url": "https://co.knox.oh.us/jfs/children-and-family-services/",
+      "publisher": "Knox County",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "knox-aps",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r05-marion-jfs",
+      "url": "https://mcjfs.com/benefits/medicaid/",
+      "publisher": "Marion County Job and Family Services",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r05-marion-jfs",
+          "fields": [
+            "name",
+            "org_type",
+            "official_url",
+            "service_area"
+          ]
+        },
+        {
+          "entity_id": "marion-jfs-medicaid",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r05-marion-aps",
+      "url": "https://mcjfs.com/benefits/adult-protective-services/",
+      "publisher": "Marion County Job and Family Services",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "marion-aps",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r05-delaware-jfs",
+      "url": "https://jfs.co.delaware.oh.us/contact-us/",
+      "publisher": "Delaware County Job and Family Services",
+      "access_method": "official_search_extract_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": true,
+      "claims": [
+        {
+          "entity_id": "r05-delaware-jfs",
+          "fields": [
+            "name",
+            "org_type",
+            "official_url",
+            "service_area"
+          ]
+        },
+        {
+          "entity_id": "delaware-jfs-medicaid",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r05-delaware-aps",
+      "url": "https://jfs.co.delaware.oh.us/adult/",
+      "publisher": "Delaware County Job and Family Services",
+      "access_method": "official_search_extract_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": true,
+      "claims": [
+        {
+          "entity_id": "delaware-aps",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r05-coaaa-consumer",
+      "url": "https://www.coaaa.org/resources/emergency-and-crisis/adult-protective-services-consumer-protection/",
+      "publisher": "Central Ohio Area Agency on Aging",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "morrow-aps",
+          "fields": [
+            "application_or_referral_route"
+          ]
+        },
+        {
+          "entity_id": "knox-aps",
+          "fields": [
+            "application_or_referral_route"
+          ]
+        },
+        {
+          "entity_id": "marion-aps",
+          "fields": [
+            "application_or_referral_route"
+          ]
+        },
+        {
+          "entity_id": "delaware-aps",
+          "fields": [
+            "application_or_referral_route"
+          ]
+        },
+        {
+          "entity_id": "delaware-aps",
+          "fields": [
+            "public_contact",
+            "service_area"
+          ]
+        },
+        {
+          "entity_id": "r05-easterseals",
+          "fields": [
+            "name",
+            "org_type",
+            "official_url",
+            "service_area"
+          ]
+        },
+        {
+          "entity_id": "delaware-regional-ombudsman",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r05-district5-ombudsman",
+      "url": "https://www.aaa5ohio.org/services/long-term-care-ombudsman/",
+      "publisher": "Ohio District 5 Area Agency on Aging",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "district5-ombudsman",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r05-state-ombudsman",
+      "url": "https://dam.assets.ohio.gov/image/upload/v1742216742/aging.ohio.gov/Ombudsman/Ombudsman_Brochure_-_State.pdf",
+      "publisher": "Ohio Department of Aging",
+      "access_method": "pdf_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r05-aging",
+          "fields": [
+            "name",
+            "org_type",
+            "official_url",
+            "service_area"
+          ]
+        },
+        {
+          "entity_id": "ohio-state-ombudsman",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        },
+        {
+          "entity_id": "ohio-quality-navigator",
+          "fields": [
+            "application_or_referral_route"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r05-quality-navigator-law",
+      "url": "https://codes.ohio.gov/ohio-administrative-code/rule-173-45-01",
+      "publisher": "Ohio Legislature",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": "Effective November 13, 2025",
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "ohio-quality-navigator",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r05-cms-guide",
+      "url": "https://www.medicare.gov/publications/02174-your-guide-to-choosing-a-nursing-home",
+      "publisher": "Centers for Medicare & Medicaid Services",
+      "access_method": "official_search_extract_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": true,
+      "claims": [
+        {
+          "entity_id": "r05-cms",
+          "fields": [
+            "name",
+            "org_type",
+            "official_url",
+            "service_area"
+          ]
+        },
+        {
+          "entity_id": "cms-care-compare",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r05-ood",
+      "url": "https://ood.ohio.gov/",
+      "publisher": "Opportunities for Ohioans with Disabilities",
+      "access_method": "official_search_extract_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": true,
+      "claims": [
+        {
+          "entity_id": "r05-ood",
+          "fields": [
+            "name",
+            "org_type",
+            "official_url",
+            "service_area"
+          ]
+        },
+        {
+          "entity_id": "ood-vocational-rehabilitation",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r05-dro",
+      "url": "https://www.disabilityrightsohio.org/intake-procedure",
+      "publisher": "Disability Rights Ohio",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r05-dro",
+          "fields": [
+            "name",
+            "org_type",
+            "official_url",
+            "service_area"
+          ]
+        },
+        {
+          "entity_id": "disability-rights-ohio",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r05-dro-contact",
+      "url": "https://www.disabilityrightsohio.org/contact",
+      "publisher": "Disability Rights Ohio",
+      "access_method": "official_search_extract_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "disability-rights-ohio",
+          "fields": [
+            "constraints"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r05-navigator-state-bulletin",
+      "url": "https://content.govdelivery.com/accounts/OHDCY/bulletins/3902897",
+      "publisher": "Ohio Department of Children and Youth",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": "2024-03-15",
+      "published_effective_period": "Historical launch bulletin; current dashboard operation not tested",
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "ohio-quality-navigator",
+          "fields": [
+            "official_url",
+            "application_or_referral_route"
+          ]
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "from_id": "r05-district5",
+      "to_id": "district5-adrn",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r05-district5"
+      ]
+    },
+    {
+      "from_id": "r05-coaaa",
+      "to_id": "coaaa-navigation",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r05-coaaa"
+      ]
+    },
+    {
+      "from_id": "r05-helpline",
+      "to_id": "helpline-211",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r05-helpline"
+      ]
+    },
+    {
+      "from_id": "r05-pathways",
+      "to_id": "pathways-211",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r05-pathways"
+      ]
+    },
+    {
+      "from_id": "r05-morrow-dd",
+      "to_id": "morrow-dd-intake",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r05-morrow-dd"
+      ]
+    },
+    {
+      "from_id": "r05-knox-dd",
+      "to_id": "knox-dd-intake",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r05-knox-dd"
+      ]
+    },
+    {
+      "from_id": "r05-marion-dd",
+      "to_id": "marion-dd-intake",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r05-marion-dd"
+      ]
+    },
+    {
+      "from_id": "r05-delaware-dd",
+      "to_id": "delaware-dd-intake",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r05-delaware-dd"
+      ]
+    },
+    {
+      "from_id": "r05-morrow-jfs",
+      "to_id": "morrow-jfs-medicaid",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r05-morrow-jfs"
+      ]
+    },
+    {
+      "from_id": "r05-morrow-jfs",
+      "to_id": "morrow-aps",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r05-morrow-aps"
+      ]
+    },
+    {
+      "from_id": "r05-knox-jfs",
+      "to_id": "knox-jfs-medicaid",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r05-knox-jfs"
+      ]
+    },
+    {
+      "from_id": "r05-knox-jfs",
+      "to_id": "knox-aps",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r05-knox-aps"
+      ]
+    },
+    {
+      "from_id": "r05-marion-jfs",
+      "to_id": "marion-jfs-medicaid",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r05-marion-jfs"
+      ]
+    },
+    {
+      "from_id": "r05-marion-jfs",
+      "to_id": "marion-aps",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r05-marion-aps"
+      ]
+    },
+    {
+      "from_id": "r05-delaware-jfs",
+      "to_id": "delaware-jfs-medicaid",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r05-delaware-jfs"
+      ]
+    },
+    {
+      "from_id": "r05-delaware-jfs",
+      "to_id": "delaware-aps",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r05-delaware-aps"
+      ]
+    },
+    {
+      "from_id": "r05-district5",
+      "to_id": "district5-ombudsman",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r05-district5-ombudsman"
+      ]
+    },
+    {
+      "from_id": "r05-easterseals",
+      "to_id": "delaware-regional-ombudsman",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r05-coaaa-consumer"
+      ]
+    },
+    {
+      "from_id": "r05-aging",
+      "to_id": "ohio-state-ombudsman",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r05-state-ombudsman"
+      ]
+    },
+    {
+      "from_id": "r05-aging",
+      "to_id": "ohio-quality-navigator",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r05-quality-navigator-law"
+      ]
+    },
+    {
+      "from_id": "r05-cms",
+      "to_id": "cms-care-compare",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r05-cms-guide"
+      ]
+    },
+    {
+      "from_id": "r05-ood",
+      "to_id": "ood-vocational-rehabilitation",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r05-ood"
+      ]
+    },
+    {
+      "from_id": "r05-dro",
+      "to_id": "disability-rights-ohio",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r05-dro"
+      ]
+    }
+  ],
+  "facilities": [],
+  "funding_leads": [],
+  "decisions": []
+}

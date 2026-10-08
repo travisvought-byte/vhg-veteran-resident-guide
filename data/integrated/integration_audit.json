@@ -1,0 +1,574 @@
+{
+  "input_hashes": [
+    {
+      "name": "data/seed/Ohio_Senior_Disability_Directory_Starter.json",
+      "batch_id": "seed",
+      "sha256": "2f48972e853ed97cb0ee120339a3b685bb576d5a9c68c6ebcd564f144c2253f5"
+    },
+    {
+      "name": "data/batches/B01/b01_resources.json",
+      "batch_id": "B01",
+      "sha256": "e9dbca19d24d4dc1a3249098545738721da5aaeb1031ba3dd14d025c944602e9"
+    },
+    {
+      "name": "research/returns/R-01/records.json",
+      "batch_id": "R-01",
+      "sha256": "86252d7d6a6b03b926b75a357b0a1c281dbb0d205a1f45a70faf82cd0f541eb5"
+    },
+    {
+      "name": "research/returns/R-02/records.json",
+      "batch_id": "R-02",
+      "sha256": "30becc02a908cbc5eface0faea7874aff65a76d6d21ba72b0f0772d188ff7318"
+    },
+    {
+      "name": "research/returns/R-05/records.json",
+      "batch_id": "R-05",
+      "sha256": "6151502e7e16ae7535f0393029bdb7378d09785e2358b8acd83c0feea9ecf3a6"
+    }
+  ],
+  "conflicts": [
+    {
+      "entity_id": "morrow-vso",
+      "field": "public_contact.email",
+      "selected": null,
+      "previous": "vets@morrowcountyohio.gov",
+      "packet": "R-01"
+    },
+    {
+      "entity_id": "knox-vso",
+      "field": "official_url",
+      "selected": "https://kcvso.com/",
+      "previous": "https://kcvso.com/contact-us/",
+      "packet": "R-01"
+    },
+    {
+      "entity_id": "marion-vso",
+      "field": "official_url",
+      "selected": "https://www.marionveteranservice.com/",
+      "previous": "http://www.marionveteranservice.com/",
+      "packet": "R-01"
+    },
+    {
+      "entity_id": "delaware-vso",
+      "field": "official_url",
+      "selected": "https://veteransservice.co.delaware.oh.us/",
+      "previous": "https://veteransservice.co.delaware.oh.us/contact-us/",
+      "packet": "R-01"
+    },
+    {
+      "entity_id": "org-ohio-dvs",
+      "field": "name",
+      "selected": "Ohio Department of Veterans Services",
+      "previous": "Ohio Department of Veterans Services — statewide fallback",
+      "packet": "R-02"
+    },
+    {
+      "entity_id": "org-aaa5",
+      "field": "name",
+      "selected": "Ohio District 5 Area Agency on Aging",
+      "previous": "Area Agency on Aging District 5",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "district5-adrn",
+      "field": "name",
+      "selected": "District 5 Aging and Disability Resource Network",
+      "previous": "District 5 Aging & Disability Resource Network",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "district5-adrn",
+      "field": "eligibility_summary",
+      "selected": "Navigation for older adults, adults with disabilities and caregivers; individual services have separate rules.",
+      "previous": "Navigation covers older or disabled adults and caregivers; individual programs have separate criteria.",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "district5-adrn",
+      "field": "eligibility_decision_owner",
+      "selected": "Receiving program determines service eligibility.",
+      "previous": "Relevant program assessor; Medicaid financial eligibility through designated eligibility agency; clinical/waiver decisions by administering agency or designee.",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "district5-adrn",
+      "field": "application_or_referral_route",
+      "selected": "Call ADRN; describe county, age and support need.",
+      "previous": "Call the agency or use its published ADRN referral form.",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "district5-adrn",
+      "field": "next_step",
+      "selected": "Call for help finding long-term services and supports.",
+      "previous": "Describe daily support needs and ask for the appropriate assessment and payment route.",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "district5-adrn",
+      "field": "public_contact.phone_label",
+      "selected": "ADRN / main office",
+      "previous": "main office",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "coaaa-navigation",
+      "field": "name",
+      "selected": "COAAA information and assistance",
+      "previous": "Central Ohio Area Agency on Aging navigation",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "coaaa-navigation",
+      "field": "eligibility_summary",
+      "selected": "General navigation; program-specific assessment is separate.",
+      "previous": "Consultation has no age/income requirement; funded programs apply their own criteria.",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "coaaa-navigation",
+      "field": "eligibility_decision_owner",
+      "selected": "Receiving program determines service eligibility.",
+      "previous": "Program assessor; Medicaid eligibility agency and waiver/plan administrator where applicable.",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "coaaa-navigation",
+      "field": "application_or_referral_route",
+      "selected": "Call COAAA or use its official request-help page.",
+      "previous": "Call or complete the Request Help form.",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "coaaa-navigation",
+      "field": "next_step",
+      "selected": "Ask for aging or disability support options in Delaware County.",
+      "previous": "Ask for a consultation or assessment and a program matched to age, daily needs and coverage.",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "morrow-dd-intake",
+      "field": "name",
+      "selected": "Morrow DD intake and service coordination",
+      "previous": "Morrow DD eligibility and service coordination",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "morrow-dd-intake",
+      "field": "program_type",
+      "selected": "eligibility_intake",
+      "previous": "navigation_service",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "morrow-dd-intake",
+      "field": "official_url",
+      "selected": "https://www.morrowdd.com/service-and-support-administration/",
+      "previous": "https://www.morrowdd.com/",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "morrow-dd-intake",
+      "field": "eligibility_summary",
+      "selected": "County residency and age/developmental-disability requirements are reviewed by the appropriate board or early-intervention team.",
+      "previous": "County residency and Board eligibility; SSA requests begin at age 3.",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "morrow-dd-intake",
+      "field": "eligibility_decision_owner",
+      "selected": "Morrow county board for board services; early-intervention team for under-3 services.",
+      "previous": "Morrow County Board of Developmental Disabilities",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "morrow-dd-intake",
+      "field": "application_or_referral_route",
+      "selected": "Ask for an SSA eligibility request for age 3 or older; ask about the separate early-intervention route for a younger child.",
+      "previous": "Call the main office and request eligibility intake; use Help Me Grow for under-3 early intervention.",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "morrow-dd-intake",
+      "field": "next_step",
+      "selected": "Ask how to start an age-appropriate developmental-disability eligibility review.",
+      "previous": "Ask what eligibility records are needed and how to request an SSA.",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "morrow-dd-intake",
+      "field": "public_contact.phone_label",
+      "selected": "main office; ask for SSA / eligibility",
+      "previous": "main office",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "knox-dd-intake",
+      "field": "program_type",
+      "selected": "eligibility_intake",
+      "previous": "navigation_service",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "knox-dd-intake",
+      "field": "eligibility_summary",
+      "selected": "County residency and age/developmental-disability requirements are reviewed by the appropriate board or early-intervention team.",
+      "previous": "Age 3+ application requires qualifying intellectual/developmental diagnosis documentation; Board decides eligibility.",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "knox-dd-intake",
+      "field": "eligibility_decision_owner",
+      "selected": "Knox county board for board services; early-intervention team for under-3 services.",
+      "previous": "Knox County Board of Developmental Disabilities",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "knox-dd-intake",
+      "field": "application_or_referral_route",
+      "selected": "Age 3+: use the board eligibility page/referral form. Under 3: eligibility page names 614-656-3322 or state referral; EI page lists 740-397-4607 for age 3 or older.",
+      "previous": "Use secure request form or intake email for age 3+; under 3 uses early-intervention referral.",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "knox-dd-intake",
+      "field": "next_step",
+      "selected": "Ask how to start an age-appropriate developmental-disability eligibility review.",
+      "previous": "Return the application packet and diagnosis records; ask how SSA planning begins.",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "knox-dd-intake",
+      "field": "public_contact.phone_label",
+      "selected": "main office; ask for eligibility",
+      "previous": "main office",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "marion-dd-intake",
+      "field": "name",
+      "selected": "Marion DD intake and service coordination",
+      "previous": "Marion DD enrollment and service coordination",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "marion-dd-intake",
+      "field": "program_type",
+      "selected": "eligibility_intake",
+      "previous": "navigation_service",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "marion-dd-intake",
+      "field": "eligibility_summary",
+      "selected": "County residency and age/developmental-disability requirements are reviewed by the appropriate board or early-intervention team.",
+      "previous": "Intake reviews written information and an interview.",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "marion-dd-intake",
+      "field": "eligibility_decision_owner",
+      "selected": "Marion county board for board services; early-intervention team for under-3 services.",
+      "previous": "Marion County Board of Developmental Disabilities intake coordinator",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "marion-dd-intake",
+      "field": "application_or_referral_route",
+      "selected": "Call for intake and an eligibility interview; service coordination follows board determination.",
+      "previous": "Call or email enrollment contact.",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "marion-dd-intake",
+      "field": "next_step",
+      "selected": "Ask how to start an age-appropriate developmental-disability eligibility review.",
+      "previous": "Prepare formal diagnosis, birth certificate, Social Security card and Medicaid card if applicable; intake determines eligibility, then assigns an SSA.",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "marion-dd-intake",
+      "field": "public_contact.phone",
+      "selected": "740-387-1035",
+      "previous": "740-375-6185",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "marion-dd-intake",
+      "field": "public_contact.phone_label",
+      "selected": "main office; ask for intake coordinator",
+      "previous": "main office",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "delaware-dd-intake",
+      "field": "program_type",
+      "selected": "eligibility_intake",
+      "previous": "navigation_service",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "delaware-dd-intake",
+      "field": "eligibility_summary",
+      "selected": "County residency and age/developmental-disability requirements are reviewed by the appropriate board or early-intervention team.",
+      "previous": "County residency and age-specific DD eligibility assessment.",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "delaware-dd-intake",
+      "field": "eligibility_decision_owner",
+      "selected": "Delaware county board for board services; early-intervention team for under-3 services.",
+      "previous": "Delaware County Board of Developmental Disabilities",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "delaware-dd-intake",
+      "field": "application_or_referral_route",
+      "selected": "Age 3+: call intake. Under 3: page names Help Me Grow at 800-755-4769 or the state referral form.",
+      "previous": "Age 3+: use Apply for Services on the eligibility page; under 3: Help Me Grow.",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "delaware-dd-intake",
+      "field": "next_step",
+      "selected": "Ask how to start an age-appropriate developmental-disability eligibility review.",
+      "previous": "Submit intake request. Ask about diagnosis/functional assessment and support coordination.",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "delaware-dd-intake",
+      "field": "public_contact.phone",
+      "selected": "740-201-3601",
+      "previous": "740-201-3600",
+      "packet": "R-05"
+    },
+    {
+      "entity_id": "delaware-dd-intake",
+      "field": "public_contact.phone_label",
+      "selected": "Intake and Eligibility Department",
+      "previous": "main office",
+      "packet": "R-05"
+    }
+  ],
+  "repairs": [
+    {
+      "entity_id": "help-me-grow",
+      "field": "organization_id",
+      "selected": "org-ohio-dcy",
+      "reason": "Help Me Grow operates under DCY; statewide intake is delivered through contractors.",
+      "source_ids": [
+        "repair-help-me-grow-operator"
+      ]
+    },
+    {
+      "entity_id": "special-education",
+      "field": "organization_id",
+      "selected": "org-ohio-dew",
+      "reason": "Publisher of this state guidance hub; local educational agencies decide and deliver services.",
+      "source_ids": [
+        "repair-special-education-operator"
+      ]
+    },
+    {
+      "entity_id": "ohio-ltss",
+      "field": "organization_id",
+      "selected": "org-ohio-medicaid",
+      "reason": "OhioHelps is operated under contract with ODM; receiving programs retain eligibility authority.",
+      "source_ids": [
+        "repair-ohio-ltss-operator"
+      ]
+    },
+    {
+      "source_id": "morrow-dd-intake-s1",
+      "entity_id": "morrow-dd-intake",
+      "old_field": "geography",
+      "field": "service_area",
+      "reason": "B01 geography.service_area converted to v0.3 service_area."
+    },
+    {
+      "source_id": "delaware-dd-intake-s1",
+      "entity_id": "delaware-dd-intake",
+      "old_field": "geography",
+      "field": "service_area",
+      "reason": "B01 geography.service_area converted to v0.3 service_area."
+    },
+    {
+      "source_id": "knox-dd-intake-s2",
+      "entity_id": "knox-dd-intake",
+      "old_field": "geography",
+      "field": "service_area",
+      "reason": "B01 geography.service_area converted to v0.3 service_area."
+    },
+    {
+      "source_id": "marion-dd-intake-s1",
+      "entity_id": "marion-dd-intake",
+      "old_field": "geography",
+      "field": "service_area",
+      "reason": "B01 geography.service_area converted to v0.3 service_area."
+    },
+    {
+      "source_id": "district5-adrn-s1",
+      "entity_id": "district5-adrn",
+      "old_field": "geography",
+      "field": "service_area",
+      "reason": "B01 geography.service_area converted to v0.3 service_area."
+    },
+    {
+      "source_id": "coaaa-navigation-s1",
+      "entity_id": "coaaa-navigation",
+      "old_field": "geography",
+      "field": "service_area",
+      "reason": "B01 geography.service_area converted to v0.3 service_area."
+    },
+    {
+      "source_id": "morrow-vso-s1",
+      "entity_id": "morrow-vso",
+      "old_field": "geography",
+      "field": "service_area",
+      "reason": "B01 geography.service_area converted to v0.3 service_area."
+    },
+    {
+      "source_id": "knox-vso-s1",
+      "entity_id": "knox-vso",
+      "old_field": "geography",
+      "field": "service_area",
+      "reason": "B01 geography.service_area converted to v0.3 service_area."
+    },
+    {
+      "source_id": "knox-vso-s3",
+      "entity_id": "knox-vso",
+      "old_field": "service_description",
+      "field": "description",
+      "reason": "B01 service_description converted to description."
+    },
+    {
+      "source_id": "marion-vso-s2",
+      "entity_id": "marion-vso",
+      "old_field": "geography",
+      "field": "service_area",
+      "reason": "B01 geography.service_area converted to v0.3 service_area."
+    },
+    {
+      "source_id": "marion-vso-s2",
+      "entity_id": "marion-vso",
+      "old_field": "public_contact.address",
+      "status": "historical_only",
+      "reason": "Old address was replaced by sourced office_details; do not claim support for the replacement value."
+    },
+    {
+      "source_id": "delaware-vso-s1",
+      "entity_id": "delaware-vso",
+      "old_field": "geography",
+      "field": "service_area",
+      "reason": "B01 geography.service_area converted to v0.3 service_area."
+    },
+    {
+      "source_id": "help-me-grow-s2",
+      "entity_id": "help-me-grow",
+      "old_field": "geography",
+      "field": "service_area",
+      "reason": "B01 geography.service_area converted to v0.3 service_area."
+    },
+    {
+      "source_id": "special-education-s1",
+      "entity_id": "special-education",
+      "old_field": "geography",
+      "field": "service_area",
+      "reason": "B01 geography.service_area converted to v0.3 service_area."
+    },
+    {
+      "entity_id": "morrow-dd-intake",
+      "field": "next_step",
+      "status": "source_specific_wording_review_pending",
+      "reason": "Current R-05 guidance retained; B01 alternatives remain in full conflict audit. Application checklists are not prerequisites to initial contact."
+    },
+    {
+      "entity_id": "knox-dd-intake",
+      "field": "next_step",
+      "status": "source_specific_wording_review_pending",
+      "reason": "Current R-05 guidance retained; B01 alternatives remain in full conflict audit. Application checklists are not prerequisites to initial contact."
+    },
+    {
+      "entity_id": "marion-dd-intake",
+      "field": "next_step",
+      "status": "source_specific_wording_review_pending",
+      "reason": "Current R-05 guidance retained; B01 alternatives remain in full conflict audit. Application checklists are not prerequisites to initial contact."
+    },
+    {
+      "entity_id": "delaware-dd-intake",
+      "field": "next_step",
+      "status": "source_specific_wording_review_pending",
+      "reason": "Current R-05 guidance retained; B01 alternatives remain in full conflict audit. Application checklists are not prerequisites to initial contact."
+    },
+    {
+      "entity_id": "district5-adrn",
+      "field": "next_step",
+      "status": "source_specific_wording_review_pending",
+      "reason": "Current R-05 guidance retained; B01 alternatives remain in full conflict audit. Application checklists are not prerequisites to initial contact."
+    },
+    {
+      "entity_id": "coaaa-navigation",
+      "field": "next_step",
+      "status": "source_specific_wording_review_pending",
+      "reason": "Current R-05 guidance retained; B01 alternatives remain in full conflict audit. Application checklists are not prerequisites to initial contact."
+    }
+  ],
+  "validation": [
+    [
+      "pending",
+      "at-ohio-library: no operator organization (allowed only for existing_directory / lookup_instruction)"
+    ],
+    [
+      "pending",
+      "county-dd: no operator organization (allowed only for existing_directory / lookup_instruction)"
+    ],
+    [
+      "pending",
+      "cvso-map: no operator organization (allowed only for existing_directory / lookup_instruction)"
+    ],
+    [
+      "pending",
+      "delaware-dd-fss: no operator organization (allowed only for existing_directory / lookup_instruction)"
+    ],
+    [
+      "pending",
+      "district5-vdc: no operator organization (allowed only for existing_directory / lookup_instruction)"
+    ],
+    [
+      "pending",
+      "findhelp: no operator organization (allowed only for existing_directory / lookup_instruction)"
+    ],
+    [
+      "pending",
+      "marion-jfs-guide: no operator organization (allowed only for existing_directory / lookup_instruction)"
+    ],
+    [
+      "pending",
+      "milestones-lifeworks: no operator organization (allowed only for existing_directory / lookup_instruction)"
+    ],
+    [
+      "pending",
+      "morrow-dd-fdr: no operator organization (allowed only for existing_directory / lookup_instruction)"
+    ],
+    [
+      "pending",
+      "ocali-family: no operator organization (allowed only for existing_directory / lookup_instruction)"
+    ],
+    [
+      "pending",
+      "ocali-gallery: no operator organization (allowed only for existing_directory / lookup_instruction)"
+    ],
+    [
+      "pending",
+      "ohio-aging-compass: no operator organization (allowed only for existing_directory / lookup_instruction)"
+    ],
+    [
+      "pending",
+      "ohio-p2p: no operator organization (allowed only for existing_directory / lookup_instruction)"
+    ],
+    [
+      "pending",
+      "sourcepoint-home-care: no operator organization (allowed only for existing_directory / lookup_instruction)"
+    ]
+  ]
+}

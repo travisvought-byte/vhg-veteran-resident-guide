@@ -1,0 +1,1857 @@
+{
+  "dataset": {
+    "version": "0.3-r-02-research-return",
+    "prepared_on": "2026-10-02",
+    "publication_status": "internal_working",
+    "scope": {
+      "state": "Ohio",
+      "pilot_counties": [
+        "Morrow",
+        "Knox",
+        "Marion",
+        "Delaware"
+      ],
+      "intended_population": "Veterans, surviving spouses, caregivers, and people of any age with disabilities; each program has its own scope."
+    },
+    "derived_from": [
+      {
+        "name": "data/schema/schema_v0.3.json",
+        "sha256": "32c8eb01086daf2a8acd587e1b2442fa4725d453472ccb9dbeaf6294be1ca214"
+      },
+      {
+        "name": "research/tasks/R-02-veteran-benefits-in-long-term-care.md",
+        "sha256": "53f76291bb824ea19bfab19f21c229b3056e192b1cd46fcf1eefc0902d915933"
+      }
+    ]
+  },
+  "organizations": [
+    {
+      "organization_id": "r02-va",
+      "name": "U.S. Department of Veterans Affairs",
+      "org_type": "federal_agency",
+      "official_url": "https://www.va.gov/",
+      "service_area": [
+        "federal"
+      ],
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner"
+    },
+    {
+      "organization_id": "r02-ohio-dvs",
+      "name": "Ohio Department of Veterans Services",
+      "org_type": "state_agency",
+      "official_url": "https://dvs.ohio.gov/",
+      "service_area": [
+        "statewide"
+      ],
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner"
+    },
+    {
+      "organization_id": "r02-county-vsc",
+      "name": "Ohio county veterans service commissions",
+      "org_type": "county_veterans_service",
+      "official_url": "https://codes.ohio.gov/ohio-revised-code/section-5901.25",
+      "service_area": [
+        "Morrow",
+        "Knox",
+        "Marion",
+        "Delaware"
+      ],
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner"
+    },
+    {
+      "organization_id": "r02-alliance",
+      "name": "National Alliance for Care at Home",
+      "org_type": "nonprofit",
+      "official_url": "https://www.wehonorveterans.org/about/",
+      "service_area": [
+        "federal"
+      ],
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner"
+    }
+  ],
+  "programs": [
+    {
+      "program_id": "r02-va-health-enrollment",
+      "name": "VA health care enrollment",
+      "program_type": "eligibility_intake",
+      "organization_id": "r02-va",
+      "official_url": "https://www.va.gov/health-care/how-to-apply/",
+      "service_area": [
+        "federal"
+      ],
+      "age_life_stage": [
+        "veteran"
+      ],
+      "needs_supported": [
+        "veteran_services",
+        "benefits_and_funding"
+      ],
+      "description": "Ask VA enrollment staff about applying for health care.",
+      "eligibility_summary": "Service and VA enrollment requirements apply; age alone does not establish eligibility.",
+      "eligibility_decision_owner": "U.S. Department of Veterans Affairs",
+      "application_or_referral_route": "VA Form 10-10EZ: online, by phone, by mail, at a VA facility, or through an accredited representative.",
+      "next_step": "Ask VA enrollment staff about applying for health care.",
+      "public_contact": {
+        "phone": "877-222-8387",
+        "phone_label": "VA health care enrollment line",
+        "email": null,
+        "contact_type": "office",
+        "web_route": "https://www.va.gov/health-care/how-to-apply/"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-02"
+        ],
+        "historical_fields": null
+      }
+    },
+    {
+      "program_id": "r02-va-pension",
+      "name": "Veterans Pension",
+      "program_type": "benefit_or_grant",
+      "organization_id": "r02-va",
+      "official_url": "https://www.va.gov/pension/eligibility/",
+      "service_area": [
+        "federal"
+      ],
+      "age_life_stage": [
+        "veteran"
+      ],
+      "needs_supported": [
+        "veteran_services",
+        "benefits_and_funding"
+      ],
+      "description": "Ask an accredited county officer whether pension should be explored.",
+      "eligibility_summary": "Wartime service, discharge, financial and age/disability rules require VA review.",
+      "eligibility_decision_owner": "U.S. Department of Veterans Affairs",
+      "application_or_referral_route": "VA Form 21P-527EZ; online or paper route on official form page.",
+      "next_step": "Ask an accredited county officer whether pension should be explored.",
+      "public_contact": {
+        "phone": null,
+        "phone_label": null,
+        "email": null,
+        "contact_type": "web_form_or_locator",
+        "web_route": "https://www.va.gov/pension/eligibility/"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-02"
+        ],
+        "historical_fields": null
+      }
+    },
+    {
+      "program_id": "r02-aid-attendance-housebound",
+      "name": "Pension additions: Aid and Attendance or Housebound",
+      "program_type": "benefit_or_grant",
+      "organization_id": "r02-va",
+      "official_url": "https://www.va.gov/pension/aid-attendance-housebound/",
+      "service_area": [
+        "federal"
+      ],
+      "age_life_stage": [
+        "veteran",
+        "veteran_dependent"
+      ],
+      "needs_supported": [
+        "veteran_services",
+        "benefits_and_funding"
+      ],
+      "description": "Ask the county office what assessment or facility certification is needed.",
+      "eligibility_summary": "Pension eligibility and additional care/housebound criteria apply; both additions cannot be paid together.",
+      "eligibility_decision_owner": "U.S. Department of Veterans Affairs",
+      "application_or_referral_route": "Official page names Forms 21-2680 and, for nursing home information, 21-0779; accredited officer and medical/facility professionals handle their respective work.",
+      "next_step": "Ask the county office what assessment or facility certification is needed.",
+      "public_contact": {
+        "phone": null,
+        "phone_label": null,
+        "email": null,
+        "contact_type": "web_form_or_locator",
+        "web_route": "https://www.va.gov/pension/aid-attendance-housebound/"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-02"
+        ],
+        "historical_fields": null
+      }
+    },
+    {
+      "program_id": "r02-survivors-pension",
+      "name": "Survivors Pension",
+      "program_type": "benefit_or_grant",
+      "organization_id": "r02-va",
+      "official_url": "https://www.va.gov/family-and-caregiver-benefits/survivor-compensation/survivors-pension/",
+      "service_area": [
+        "federal"
+      ],
+      "age_life_stage": [
+        "veteran_dependent"
+      ],
+      "needs_supported": [
+        "veteran_services",
+        "benefits_and_funding"
+      ],
+      "description": "Ask the county office about Survivors Pension.",
+      "eligibility_summary": "Surviving-spouse or dependent-child, service and financial requirements apply.",
+      "eligibility_decision_owner": "U.S. Department of Veterans Affairs",
+      "application_or_referral_route": "VA Form 21P-534EZ; online, mail, regional office or accredited representative.",
+      "next_step": "Ask the county office about Survivors Pension.",
+      "public_contact": {
+        "phone": null,
+        "phone_label": null,
+        "email": null,
+        "contact_type": "web_form_or_locator",
+        "web_route": "https://www.va.gov/family-and-caregiver-benefits/survivor-compensation/survivors-pension/"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-02"
+        ],
+        "historical_fields": null
+      }
+    },
+    {
+      "program_id": "r02-dic",
+      "name": "Dependency and Indemnity Compensation",
+      "program_type": "benefit_or_grant",
+      "organization_id": "r02-va",
+      "official_url": "https://www.va.gov/family-and-caregiver-benefits/survivor-compensation/dependency-indemnity-compensation/",
+      "service_area": [
+        "federal"
+      ],
+      "age_life_stage": [
+        "veteran_dependent"
+      ],
+      "needs_supported": [
+        "veteran_services",
+        "benefits_and_funding"
+      ],
+      "description": "Ask the county office to identify the correct survivor-benefit route.",
+      "eligibility_summary": "Service-related death or other statutory DIC criteria differ from pension.",
+      "eligibility_decision_owner": "U.S. Department of Veterans Affairs",
+      "application_or_referral_route": "For a veteran death, surviving spouse/child route is VA Form 21P-534EZ; active-duty death and dependent-parent routes differ.",
+      "next_step": "Ask the county office to identify the correct survivor-benefit route.",
+      "public_contact": {
+        "phone": null,
+        "phone_label": null,
+        "email": null,
+        "contact_type": "web_form_or_locator",
+        "web_route": "https://www.va.gov/family-and-caregiver-benefits/survivor-compensation/dependency-indemnity-compensation/"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-02"
+        ],
+        "historical_fields": null
+      }
+    },
+    {
+      "program_id": "r02-disability-increase",
+      "name": "Increased VA disability compensation",
+      "program_type": "benefit_or_grant",
+      "organization_id": "r02-va",
+      "official_url": "https://www.va.gov/disability/how-to-file-claim/evidence-needed/",
+      "service_area": [
+        "federal"
+      ],
+      "age_life_stage": [
+        "veteran"
+      ],
+      "needs_supported": [
+        "veteran_services",
+        "benefits_and_funding"
+      ],
+      "description": "Ask the county office about review of a worsened service-connected condition.",
+      "eligibility_summary": "An already service-connected condition that has worsened is a reason to ask; VA evaluates evidence and rating.",
+      "eligibility_decision_owner": "U.S. Department of Veterans Affairs",
+      "application_or_referral_route": "VA Form 21-526EZ online or paper, with an accredited representative.",
+      "next_step": "Ask the county office about review of a worsened service-connected condition.",
+      "public_contact": {
+        "phone": null,
+        "phone_label": null,
+        "email": null,
+        "contact_type": "web_form_or_locator",
+        "web_route": "https://www.va.gov/disability/how-to-file-claim/evidence-needed/"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-02"
+        ],
+        "historical_fields": null
+      }
+    },
+    {
+      "program_id": "r02-va-clc",
+      "name": "VA Community Living Centers",
+      "program_type": "direct_service",
+      "organization_id": "r02-va",
+      "official_url": "https://www.va.gov/GERIATRICS/pages/VA_Community_Living_Centers.asp",
+      "service_area": [
+        "federal"
+      ],
+      "age_life_stage": [
+        "veteran"
+      ],
+      "needs_supported": [
+        "veteran_services",
+        "benefits_and_funding"
+      ],
+      "description": "Ask a VA social worker about the extended-care assessment.",
+      "eligibility_summary": "VA enrollment, clinical need and other VA rules apply; care availability is a separate assessment.",
+      "eligibility_decision_owner": "U.S. Department of Veterans Affairs",
+      "application_or_referral_route": "VA care team or social worker; Form 10-10EC supports financial/copay assessment.",
+      "next_step": "Ask a VA social worker about the extended-care assessment.",
+      "public_contact": {
+        "phone": null,
+        "phone_label": null,
+        "email": null,
+        "contact_type": "web_form_or_locator",
+        "web_route": "https://www.va.gov/GERIATRICS/pages/VA_Community_Living_Centers.asp"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-02"
+        ],
+        "historical_fields": null
+      }
+    },
+    {
+      "program_id": "r02-va-cnh",
+      "name": "VA Community Nursing Home program",
+      "program_type": "direct_service",
+      "organization_id": "r02-va",
+      "official_url": "https://www.va.gov/GERIATRICS/pages/Community_Nursing_Homes.asp",
+      "service_area": [
+        "federal"
+      ],
+      "age_life_stage": [
+        "veteran"
+      ],
+      "needs_supported": [
+        "veteran_services",
+        "benefits_and_funding"
+      ],
+      "description": "Ask a VA social worker about authorized community nursing care.",
+      "eligibility_summary": "VA-contracted community care has VA clinical and authorization requirements. A facility listing establishes no VA contract.",
+      "eligibility_decision_owner": "U.S. Department of Veterans Affairs",
+      "application_or_referral_route": "VA care team/social worker determines route and possible placement; Form 10-10EC supports financial/copay assessment.",
+      "next_step": "Ask a VA social worker about authorized community nursing care.",
+      "public_contact": {
+        "phone": null,
+        "phone_label": null,
+        "email": null,
+        "contact_type": "web_form_or_locator",
+        "web_route": "https://www.va.gov/GERIATRICS/pages/Community_Nursing_Homes.asp"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-02"
+        ],
+        "historical_fields": null
+      }
+    },
+    {
+      "program_id": "r02-ohio-veterans-homes",
+      "name": "Ohio Veterans Homes: Sandusky and Georgetown",
+      "program_type": "eligibility_intake",
+      "organization_id": "r02-ohio-dvs",
+      "official_url": "https://dam.assets.ohio.gov/image/upload/dvs.ohio.gov/ovh/ovh-admission-application.pdf",
+      "service_area": [
+        "statewide"
+      ],
+      "age_life_stage": [
+        "veteran"
+      ],
+      "needs_supported": [
+        "veteran_services",
+        "benefits_and_funding"
+      ],
+      "description": "Ask Ohio Veterans Homes admissions about the current application and care assessment.",
+      "eligibility_summary": "Ohio residency, service/discharge, disability and clinical admission rules are reviewed by the homes.",
+      "eligibility_decision_owner": "Ohio Veterans Homes admissions / Ohio Department of Veterans Services",
+      "application_or_referral_route": "Use the Ohio Veterans Homes admission application and admissions-team review.",
+      "next_step": "Ask Ohio Veterans Homes admissions about the current application and care assessment.",
+      "public_contact": {
+        "phone": null,
+        "phone_label": null,
+        "email": null,
+        "contact_type": "web_form_or_locator",
+        "web_route": "https://dam.assets.ohio.gov/image/upload/dvs.ohio.gov/ovh/ovh-admission-application.pdf"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-02"
+        ],
+        "historical_fields": null
+      }
+    },
+    {
+      "program_id": "r02-pension-medicaid-rule",
+      "name": "VA pension during Medicaid-covered nursing home care",
+      "program_type": "guidance_hub",
+      "organization_id": "r02-va",
+      "official_url": "https://www.ecfr.gov/current/title-38/section-3.551",
+      "service_area": [
+        "federal"
+      ],
+      "age_life_stage": [
+        "veteran",
+        "veteran_dependent"
+      ],
+      "needs_supported": [
+        "veteran_services",
+        "benefits_and_funding"
+      ],
+      "description": "Ask about the pension/Medicaid interaction before changing any benefit.",
+      "eligibility_summary": "Paragraph (i) applies to a veteran without spouse or child, a surviving spouse without child, and a surviving child.",
+      "eligibility_decision_owner": "U.S. Department of Veterans Affairs",
+      "application_or_referral_route": "County accredited officer plus Medicaid caseworker; VA applies pension reduction rules.",
+      "next_step": "Ask about the pension/Medicaid interaction before changing any benefit.",
+      "public_contact": {
+        "phone": null,
+        "phone_label": null,
+        "email": null,
+        "contact_type": "web_form_or_locator",
+        "web_route": "https://www.ecfr.gov/current/title-38/section-3.551"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-02"
+        ],
+        "historical_fields": null
+      },
+      "amounts": [
+        {
+          "label": "Paragraph (i) maximum pension, subject to its scope and timing",
+          "value": "$90 per month",
+          "effective_period": "Effective November 5, 1990; statutory subsection expiration currently printed as November 30, 2031. Recheck before use and for amendments.",
+          "source_id": "r02-medicaid-regulation"
+        }
+      ]
+    },
+    {
+      "program_id": "r02-va-burial",
+      "name": "VA burial allowance and memorial routes",
+      "program_type": "benefit_or_grant",
+      "organization_id": "r02-va",
+      "official_url": "https://www.va.gov/burials-memorials/veterans-burial-allowance/",
+      "service_area": [
+        "federal"
+      ],
+      "age_life_stage": [
+        "veteran",
+        "veteran_dependent"
+      ],
+      "needs_supported": [
+        "veteran_services",
+        "benefits_and_funding"
+      ],
+      "description": "Ask the county office or VA burial program about the correct application.",
+      "eligibility_summary": "VA separately reviews allowance and memorial eligibility; a benefit is not a promise to cover all costs.",
+      "eligibility_decision_owner": "U.S. Department of Veterans Affairs",
+      "application_or_referral_route": "Burial allowance: VA Form 21P-530EZ, online or accredited representative; memorial applications use the VA burial hub.",
+      "next_step": "Ask the county office or VA burial program about the correct application.",
+      "public_contact": {
+        "phone": null,
+        "phone_label": null,
+        "email": null,
+        "contact_type": "web_form_or_locator",
+        "web_route": "https://www.va.gov/burials-memorials/veterans-burial-allowance/"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-02"
+        ],
+        "historical_fields": null
+      }
+    },
+    {
+      "program_id": "r02-ohio-county-burial",
+      "name": "Ohio county assistance for eligible indigent burials",
+      "program_type": "benefit_or_grant",
+      "organization_id": "r02-county-vsc",
+      "official_url": "https://codes.ohio.gov/ohio-revised-code/section-5901.25",
+      "service_area": [
+        "Morrow",
+        "Knox",
+        "Marion",
+        "Delaware"
+      ],
+      "age_life_stage": [
+        "veteran",
+        "veteran_dependent"
+      ],
+      "needs_supported": [
+        "veteran_services",
+        "benefits_and_funding"
+      ],
+      "description": "Contact the county office about burial-assistance review.",
+      "eligibility_summary": "County commission investigates need and applicable statutory veteran/family requirements.",
+      "eligibility_decision_owner": "County Veterans Service Commission",
+      "application_or_referral_route": "Ask the County Veterans Service Commission about ORC 5901.25 and 5901.27 before arrangements.",
+      "next_step": "Contact the county office about burial-assistance review.",
+      "public_contact": {
+        "phone": null,
+        "phone_label": null,
+        "email": null,
+        "contact_type": "web_form_or_locator",
+        "web_route": "https://codes.ohio.gov/ohio-revised-code/section-5901.25"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-02"
+        ],
+        "historical_fields": null
+      }
+    },
+    {
+      "program_id": "r02-general-caregiver",
+      "name": "VA Program of General Caregiver Support Services",
+      "program_type": "navigation_service",
+      "organization_id": "r02-va",
+      "official_url": "https://www.va.gov/the-program-of-general-caregiver-support-services/",
+      "service_area": [
+        "federal"
+      ],
+      "age_life_stage": [
+        "caregiver",
+        "veteran"
+      ],
+      "needs_supported": [
+        "veteran_services",
+        "benefits_and_funding"
+      ],
+      "description": "Ask the VA Caregiver Support Team about general caregiver support.",
+      "eligibility_summary": "Caregiver of a VA-enrolled veteran needing personal-care support; local team reviews the route.",
+      "eligibility_decision_owner": "U.S. Department of Veterans Affairs",
+      "application_or_referral_route": "Local VA Caregiver Support Team / health care team intake.",
+      "next_step": "Ask the VA Caregiver Support Team about general caregiver support.",
+      "public_contact": {
+        "phone": null,
+        "phone_label": null,
+        "email": null,
+        "contact_type": "web_form_or_locator",
+        "web_route": "https://www.va.gov/the-program-of-general-caregiver-support-services/"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-02"
+        ],
+        "historical_fields": null
+      }
+    },
+    {
+      "program_id": "r02-family-caregiver",
+      "name": "VA Program of Comprehensive Assistance for Family Caregivers",
+      "program_type": "benefit_or_grant",
+      "organization_id": "r02-va",
+      "official_url": "https://www.va.gov/CAREGIVER/PCAFC.asp",
+      "service_area": [
+        "federal"
+      ],
+      "age_life_stage": [
+        "caregiver",
+        "veteran"
+      ],
+      "needs_supported": [
+        "veteran_services",
+        "benefits_and_funding"
+      ],
+      "description": "Ask the VA Caregiver Support Team whether PCAFC assessment is appropriate.",
+      "eligibility_summary": "Separate veteran, clinical and caregiver requirements; home care and duration criteria matter. Facility residence or family relationship alone establishes no stipend.",
+      "eligibility_decision_owner": "U.S. Department of Veterans Affairs",
+      "application_or_referral_route": "Joint veteran/caregiver application on VA Form 10-10CG and VA evaluation.",
+      "next_step": "Ask the VA Caregiver Support Team whether PCAFC assessment is appropriate.",
+      "public_contact": {
+        "phone": null,
+        "phone_label": null,
+        "email": null,
+        "contact_type": "web_form_or_locator",
+        "web_route": "https://www.va.gov/CAREGIVER/PCAFC.asp"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-02"
+        ],
+        "historical_fields": null
+      }
+    },
+    {
+      "program_id": "r02-hospice",
+      "name": "VA hospice care",
+      "program_type": "direct_service",
+      "organization_id": "r02-va",
+      "official_url": "https://www.va.gov/geriatrics/pages/Hospice_Care.asp",
+      "service_area": [
+        "federal"
+      ],
+      "age_life_stage": [
+        "veteran"
+      ],
+      "needs_supported": [
+        "veteran_services",
+        "benefits_and_funding"
+      ],
+      "description": "Ask the VA care team about hospice and coordination with community care.",
+      "eligibility_summary": "Clinical need and VA care requirements are assessed by the care team.",
+      "eligibility_decision_owner": "U.S. Department of Veterans Affairs",
+      "application_or_referral_route": "VA clinician / social worker evaluates and coordinates care.",
+      "next_step": "Ask the VA care team about hospice and coordination with community care.",
+      "public_contact": {
+        "phone": null,
+        "phone_label": null,
+        "email": null,
+        "contact_type": "web_form_or_locator",
+        "web_route": "https://www.va.gov/geriatrics/pages/Hospice_Care.asp"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-02"
+        ],
+        "historical_fields": null
+      }
+    },
+    {
+      "program_id": "r02-palliative",
+      "name": "VA palliative care",
+      "program_type": "direct_service",
+      "organization_id": "r02-va",
+      "official_url": "https://www.va.gov/geriatrics/pages/Palliative_Care.asp",
+      "service_area": [
+        "federal"
+      ],
+      "age_life_stage": [
+        "veteran"
+      ],
+      "needs_supported": [
+        "veteran_services",
+        "benefits_and_funding"
+      ],
+      "description": "Ask the VA care team about palliative care.",
+      "eligibility_summary": "Serious-illness symptom and goal-of-care needs require clinical assessment.",
+      "eligibility_decision_owner": "U.S. Department of Veterans Affairs",
+      "application_or_referral_route": "VA clinician / social worker evaluates the palliative-care route.",
+      "next_step": "Ask the VA care team about palliative care.",
+      "public_contact": {
+        "phone": null,
+        "phone_label": null,
+        "email": null,
+        "contact_type": "web_form_or_locator",
+        "web_route": "https://www.va.gov/geriatrics/pages/Palliative_Care.asp"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-02"
+        ],
+        "historical_fields": null
+      }
+    },
+    {
+      "program_id": "r02-whv",
+      "name": "We Honor Veterans public resources",
+      "program_type": "guidance_hub",
+      "organization_id": "r02-alliance",
+      "official_url": "https://www.wehonorveterans.org/about/",
+      "service_area": [
+        "federal"
+      ],
+      "age_life_stage": [
+        "veteran",
+        "caregiver"
+      ],
+      "needs_supported": [
+        "veteran_services",
+        "benefits_and_funding"
+      ],
+      "description": "Use public veteran-care resources and ask the clinical team about coordinated care.",
+      "eligibility_summary": "Recognition/training program; current page states Alliance membership required for participation as of March 2026. Public educational resources remain linked.",
+      "eligibility_decision_owner": "National Alliance for Care at Home for recognition participation; VA/clinical team for care",
+      "application_or_referral_route": "Official We Honor Veterans resource pages; care authorization remains with VA/clinical providers.",
+      "next_step": "Use public veteran-care resources and ask the clinical team about coordinated care.",
+      "public_contact": {
+        "phone": null,
+        "phone_label": null,
+        "email": null,
+        "contact_type": "web_form_or_locator",
+        "web_route": "https://www.wehonorveterans.org/about/"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_source_reviewed",
+        "identity": "official_source_reviewed",
+        "contact": "official_source_reviewed",
+        "eligibility": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-02"
+        ],
+        "historical_fields": null
+      }
+    }
+  ],
+  "pathways": [],
+  "sources": [
+    {
+      "source_id": "r02-health",
+      "url": "https://www.va.gov/health-care/how-to-apply/",
+      "publisher": "U.S. Department of Veterans Affairs",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": "2024-07-11",
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r02-va",
+          "fields": [
+            "name",
+            "org_type",
+            "official_url",
+            "service_area"
+          ]
+        },
+        {
+          "entity_id": "r02-va-health-enrollment",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r02-pension-eligibility",
+      "url": "https://www.va.gov/pension/eligibility/",
+      "publisher": "U.S. Department of Veterans Affairs",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r02-va-pension",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r02-pension-form",
+      "url": "https://www.va.gov/forms/21p-527ez/",
+      "publisher": "U.S. Department of Veterans Affairs",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": "2026-04-28",
+      "published_effective_period": "Form revision December 2025",
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r02-va-pension",
+          "fields": [
+            "application_or_referral_route"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r02-aid-housebound",
+      "url": "https://www.va.gov/pension/aid-attendance-housebound/",
+      "publisher": "U.S. Department of Veterans Affairs",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": "2026-05-08",
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r02-aid-attendance-housebound",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r02-survivor-pension",
+      "url": "https://www.va.gov/family-and-caregiver-benefits/survivor-compensation/survivors-pension/",
+      "publisher": "U.S. Department of Veterans Affairs",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": "2026-09-23",
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r02-survivors-pension",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r02-dic",
+      "url": "https://www.va.gov/family-and-caregiver-benefits/survivor-compensation/dependency-indemnity-compensation/",
+      "publisher": "U.S. Department of Veterans Affairs",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": "2026-09-25",
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r02-dic",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r02-increase",
+      "url": "https://www.va.gov/disability/how-to-file-claim/evidence-needed/",
+      "publisher": "U.S. Department of Veterans Affairs",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r02-disability-increase",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r02-increase-form",
+      "url": "https://www.va.gov/forms/21-526ez/",
+      "publisher": "U.S. Department of Veterans Affairs",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": "2026-04-28",
+      "published_effective_period": "Form revision January 2026",
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r02-disability-increase",
+          "fields": [
+            "application_or_referral_route"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r02-clc",
+      "url": "https://www.va.gov/GERIATRICS/pages/VA_Community_Living_Centers.asp",
+      "publisher": "U.S. Department of Veterans Affairs",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r02-va-clc",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r02-cnh",
+      "url": "https://www.va.gov/GERIATRICS/pages/Community_Nursing_Homes.asp",
+      "publisher": "U.S. Department of Veterans Affairs",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": "2025-05-30",
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r02-va-cnh",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r02-extended-care-form",
+      "url": "https://www.va.gov/forms/10-10ec/",
+      "publisher": "U.S. Department of Veterans Affairs",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": "2025-12-18",
+      "published_effective_period": "Form revision July 2017",
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r02-va-clc",
+          "fields": [
+            "application_or_referral_route"
+          ]
+        },
+        {
+          "entity_id": "r02-va-cnh",
+          "fields": [
+            "application_or_referral_route"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r02-ohio-homes",
+      "url": "https://dam.assets.ohio.gov/image/upload/dvs.ohio.gov/ovh/ovh-admission-application.pdf",
+      "publisher": "Ohio Department of Veterans Services",
+      "access_method": "pdf_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": "OVH/UPDATED 2026 printed on application",
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r02-ohio-dvs",
+          "fields": [
+            "name",
+            "org_type",
+            "official_url",
+            "service_area"
+          ]
+        },
+        {
+          "entity_id": "r02-ohio-veterans-homes",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r02-medicaid-explainer",
+      "url": "https://www.va.gov/resources/90-va-pension-rate-if-youre-in-a-medicaid-covered-nursing-facility/",
+      "publisher": "U.S. Department of Veterans Affairs",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": "2026-09-22",
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r02-pension-medicaid-rule",
+          "fields": [
+            "next_step"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r02-medicaid-regulation",
+      "url": "https://www.ecfr.gov/current/title-38/section-3.551",
+      "publisher": "National Archives / eCFR",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": "Title 38 displayed current through September 30, 2026; paragraph (i) effective November 5, 1990, until statutory termination",
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r02-pension-medicaid-rule",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        },
+        {
+          "entity_id": "r02-pension-medicaid-rule",
+          "fields": [
+            "amounts"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r02-medicaid-statute",
+      "url": "https://www.govinfo.gov/link/uscode/38/5503",
+      "publisher": "U.S. Government Publishing Office",
+      "access_method": "pdf_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": "38 USC 5503(d)(7) text: subsection expires November 30, 2031; amendment history identifies Public Law 117-333, January 5, 2023",
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r02-pension-medicaid-rule",
+          "fields": [
+            "amounts.0.effective_period"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r02-burial",
+      "url": "https://www.va.gov/burials-memorials/veterans-burial-allowance/",
+      "publisher": "U.S. Department of Veterans Affairs",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": "2026-10-01",
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r02-va-burial",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r02-memorial",
+      "url": "https://www.va.gov/burials-memorials/",
+      "publisher": "U.S. Department of Veterans Affairs",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r02-va-burial",
+          "fields": [
+            "application_or_referral_route"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r02-ohio-burial",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-5901.25",
+      "publisher": "Ohio Legislature",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": "Effective August 5, 1998",
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r02-county-vsc",
+          "fields": [
+            "name",
+            "org_type",
+            "official_url",
+            "service_area"
+          ]
+        },
+        {
+          "entity_id": "r02-ohio-county-burial",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r02-ohio-burial-need",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-5901.27",
+      "publisher": "Ohio Legislature",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": "Effective August 5, 1998",
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r02-ohio-county-burial",
+          "fields": [
+            "eligibility_summary",
+            "eligibility_decision_owner"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r02-general-caregiver",
+      "url": "https://www.va.gov/the-program-of-general-caregiver-support-services/",
+      "publisher": "U.S. Department of Veterans Affairs",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": "2025-08-29",
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r02-general-caregiver",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r02-family-caregiver",
+      "url": "https://www.va.gov/CAREGIVER/PCAFC.asp",
+      "publisher": "U.S. Department of Veterans Affairs",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r02-family-caregiver",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r02-hospice",
+      "url": "https://www.va.gov/geriatrics/pages/Hospice_Care.asp",
+      "publisher": "U.S. Department of Veterans Affairs",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r02-hospice",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r02-palliative",
+      "url": "https://www.va.gov/geriatrics/pages/Palliative_Care.asp",
+      "publisher": "U.S. Department of Veterans Affairs",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r02-palliative",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r02-va-whv-link",
+      "url": "https://www.va.gov/GERIATRICS/pages/other_resources.asp",
+      "publisher": "U.S. Department of Veterans Affairs",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r02-whv",
+          "fields": [
+            "name",
+            "official_url",
+            "description"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "r02-whv-current",
+      "url": "https://www.wehonorveterans.org/about/",
+      "publisher": "National Alliance for Care at Home",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": "Page states membership change as of March 2026",
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "r02-alliance",
+          "fields": [
+            "name",
+            "org_type",
+            "official_url",
+            "service_area"
+          ]
+        },
+        {
+          "entity_id": "r02-whv",
+          "fields": [
+            "name",
+            "program_type",
+            "organization_id",
+            "official_url",
+            "service_area",
+            "age_life_stage",
+            "needs_supported",
+            "description",
+            "eligibility_summary",
+            "eligibility_decision_owner",
+            "application_or_referral_route",
+            "next_step",
+            "public_contact"
+          ]
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "from_id": "r02-va",
+      "to_id": "r02-va-health-enrollment",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r02-health"
+      ]
+    },
+    {
+      "from_id": "r02-va",
+      "to_id": "r02-va-pension",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r02-pension-eligibility"
+      ]
+    },
+    {
+      "from_id": "r02-va",
+      "to_id": "r02-aid-attendance-housebound",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r02-aid-housebound"
+      ]
+    },
+    {
+      "from_id": "r02-va",
+      "to_id": "r02-survivors-pension",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r02-survivor-pension"
+      ]
+    },
+    {
+      "from_id": "r02-va",
+      "to_id": "r02-dic",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r02-dic"
+      ]
+    },
+    {
+      "from_id": "r02-va",
+      "to_id": "r02-disability-increase",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r02-increase"
+      ]
+    },
+    {
+      "from_id": "r02-va",
+      "to_id": "r02-va-clc",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r02-clc"
+      ]
+    },
+    {
+      "from_id": "r02-va",
+      "to_id": "r02-va-cnh",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r02-cnh"
+      ]
+    },
+    {
+      "from_id": "r02-ohio-dvs",
+      "to_id": "r02-ohio-veterans-homes",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r02-ohio-homes"
+      ]
+    },
+    {
+      "from_id": "r02-va",
+      "to_id": "r02-pension-medicaid-rule",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r02-medicaid-regulation"
+      ]
+    },
+    {
+      "from_id": "r02-va",
+      "to_id": "r02-va-burial",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r02-burial"
+      ]
+    },
+    {
+      "from_id": "r02-county-vsc",
+      "to_id": "r02-ohio-county-burial",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r02-ohio-burial"
+      ]
+    },
+    {
+      "from_id": "r02-va",
+      "to_id": "r02-general-caregiver",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r02-general-caregiver"
+      ]
+    },
+    {
+      "from_id": "r02-va",
+      "to_id": "r02-family-caregiver",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r02-family-caregiver"
+      ]
+    },
+    {
+      "from_id": "r02-va",
+      "to_id": "r02-hospice",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r02-hospice"
+      ]
+    },
+    {
+      "from_id": "r02-va",
+      "to_id": "r02-palliative",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r02-palliative"
+      ]
+    },
+    {
+      "from_id": "r02-alliance",
+      "to_id": "r02-whv",
+      "type": "provides_program",
+      "evidence_source_ids": [
+        "r02-whv-current"
+      ]
+    }
+  ],
+  "facilities": [],
+  "funding_leads": [],
+  "decisions": []
+}

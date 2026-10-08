@@ -1,0 +1,1822 @@
+{
+  "dataset": {
+    "version": "0.3-R-01-candidate",
+    "prepared_on": "2026-10-02",
+    "publication_status": "internal_working",
+    "scope": {
+      "state": "Ohio",
+      "pilot_counties": [
+        "Morrow",
+        "Knox",
+        "Marion",
+        "Delaware"
+      ],
+      "intended_population": "Veterans, surviving spouses and families in long-term care; office routing research only"
+    },
+    "derived_from": [
+      {
+        "name": "data/batches/B01/b01_resources.json",
+        "batch_id": "OH-SDR-S1-B01",
+        "sha256": "e9dbca19d24d4dc1a3249098545738721da5aaeb1031ba3dd14d025c944602e9"
+      }
+    ]
+  },
+  "organizations": [
+    {
+      "organization_id": "org-morrow-vso",
+      "name": "Morrow County Veterans Service Office",
+      "org_type": "county_veterans_service",
+      "official_url": "https://morrowcountyveterans.com/",
+      "service_area": [
+        "Morrow"
+      ],
+      "public_contact": {
+        "phone": "419-946-1914",
+        "phone_label": "main office",
+        "email": null,
+        "contact_type": "office",
+        "web_route": "https://morrowcountyveterans.com/"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "needs_recheck",
+        "identity": "official_source_reviewed",
+        "contact": "needs_recheck",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "provenance": {
+        "seed_record_id": "morrow-vso",
+        "batch_ids": [
+          "OH-SDR-S1-B01",
+          "R-01"
+        ]
+      }
+    },
+    {
+      "organization_id": "org-knox-vso",
+      "name": "Knox County Veterans Services Office",
+      "org_type": "county_veterans_service",
+      "official_url": "https://kcvso.com/",
+      "service_area": [
+        "Knox"
+      ],
+      "public_contact": {
+        "phone": "740-393-6742",
+        "phone_label": "main office",
+        "email": null,
+        "contact_type": "office",
+        "web_route": "https://kcvso.com/contact-us/"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "needs_recheck",
+        "identity": "official_source_reviewed",
+        "contact": "needs_recheck",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "provenance": {
+        "seed_record_id": "knox-vso",
+        "batch_ids": [
+          "OH-SDR-S1-B01",
+          "R-01"
+        ]
+      }
+    },
+    {
+      "organization_id": "org-marion-vso",
+      "name": "Marion County Veterans Service Commission",
+      "org_type": "county_veterans_service",
+      "official_url": "https://www.marionveteranservice.com/",
+      "service_area": [
+        "Marion"
+      ],
+      "public_contact": {
+        "phone": "740-387-0100",
+        "phone_label": "main office",
+        "email": null,
+        "contact_type": "office",
+        "web_route": null
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "needs_recheck",
+        "identity": "official_source_reviewed",
+        "contact": "needs_recheck",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "provenance": {
+        "seed_record_id": "marion-vso",
+        "batch_ids": [
+          "OH-SDR-S1-B01",
+          "R-01"
+        ]
+      }
+    },
+    {
+      "organization_id": "org-delaware-vso",
+      "name": "Delaware County Veterans Services",
+      "org_type": "county_veterans_service",
+      "official_url": "https://veteransservice.co.delaware.oh.us/",
+      "service_area": [
+        "Delaware"
+      ],
+      "public_contact": {
+        "phone": "740-833-2010",
+        "phone_label": "main office",
+        "email": null,
+        "contact_type": "office",
+        "web_route": "https://veteransservice.co.delaware.oh.us/contact-us/"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "needs_recheck",
+        "identity": "official_search_extract_only",
+        "contact": "needs_recheck",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "provenance": {
+        "seed_record_id": "delaware-vso",
+        "batch_ids": [
+          "OH-SDR-S1-B01",
+          "R-01"
+        ]
+      }
+    },
+    {
+      "organization_id": "org-ohio-dvs",
+      "name": "Ohio Department of Veterans Services — statewide fallback",
+      "org_type": "state_agency",
+      "official_url": "https://dvs.ohio.gov/",
+      "service_area": [],
+      "public_contact": {
+        "phone": "614-644-0898",
+        "phone_label": "main office",
+        "email": "contactus@dvs.ohio.gov",
+        "contact_type": "statewide_line",
+        "web_route": "https://dam.assets.ohio.gov/image/upload/dvs.ohio.gov/cvso-resources/cvso-listing.pdf"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_search_extract_only",
+        "identity": "official_search_extract_only",
+        "contact": "official_search_extract_only",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-01"
+        ]
+      }
+    }
+  ],
+  "programs": [
+    {
+      "program_id": "morrow-vso",
+      "name": "Morrow County Veterans Service Office",
+      "program_type": "navigation_service",
+      "organization_id": "org-morrow-vso",
+      "official_url": "https://morrowcountyveterans.com/",
+      "needs_supported": [
+        "veteran_services",
+        "general_navigation"
+      ],
+      "age_life_stage": [
+        "veteran",
+        "veteran_dependent"
+      ],
+      "service_area": [
+        "Morrow"
+      ],
+      "eligibility_summary": null,
+      "eligibility_decision_owner": null,
+      "application_or_referral_route": null,
+      "next_step": null,
+      "remote_service": null,
+      "public_contact": {
+        "phone": "419-946-1914",
+        "phone_label": "main office",
+        "email": null,
+        "contact_type": "office",
+        "web_route": "https://morrowcountyveterans.com/"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "needs_recheck",
+        "identity": "official_source_reviewed",
+        "contact": "needs_recheck",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": "morrow-vso",
+        "batch_ids": [
+          "OH-SDR-S1-B01",
+          "R-01"
+        ]
+      },
+      "office_details": {
+        "selected_street_address": {
+          "value": "143 S. Main Street, Mount Gilead, OH 43338",
+          "source_ids": [
+            "morrow-home",
+            "morrow-benefits",
+            "dvs-directory",
+            "va-morrow"
+          ],
+          "note": "Published sources agree; not phone-confirmed."
+        },
+        "different_mailing_address": null,
+        "hours": null,
+        "general_walk_in_or_appointment": null,
+        "home_visit": null,
+        "hospital_visit": null,
+        "facility_visit": null,
+        "preferred_facility_referral_method": null,
+        "entry_review_permission": null,
+        "required_documents_published": null,
+        "published_services": {
+          "value": [
+            "VA benefits advocacy",
+            "Emergency financial assistance",
+            "Transportation to VA appointments"
+          ],
+          "source_ids": [
+            "morrow-home"
+          ],
+          "note": null
+        },
+        "surviving_spouse_guidance": {
+          "value": "County financial-assistance page includes surviving spouses among potential applicants. It is not a complete federal survivor-benefit guide.",
+          "source_ids": [
+            "morrow-benefits"
+          ],
+          "note": null
+        },
+        "nearest_va_facility": null,
+        "address_candidates": [
+          {
+            "value": "143 S. Main Street, Mount Gilead, OH 43338",
+            "source_ids": [
+              "morrow-home",
+              "morrow-benefits",
+              "dvs-directory",
+              "va-morrow"
+            ],
+            "note": null
+          }
+        ],
+        "email_candidates": {
+          "value": [
+            {
+              "email": "vets@morrowcountyohio.gov",
+              "source_ids": [
+                "morrow-home"
+              ]
+            },
+            {
+              "email": "vets@morrowcountyveterans.com",
+              "source_ids": [
+                "morrow-benefits"
+              ]
+            }
+          ],
+          "source_ids": [
+            "morrow-home",
+            "morrow-benefits"
+          ],
+          "note": "Office pages disagree; public_contact.email remains null pending confirmation."
+        },
+        "published_va_destinations": {
+          "value": [
+            "Marion VA CBOC",
+            "Columbus VA facility (Chalmers P. Wylie)"
+          ],
+          "source_ids": [
+            "morrow-benefits"
+          ],
+          "note": "Published transport destinations; no nearest-facility or catchment claim."
+        }
+      },
+      "proposed_navigation_guidance": {
+        "first_action": "Call the main office for the appropriate veteran or surviving-spouse intake route; confirm current contact details.",
+        "what_to_ask": [
+          "How should a facility resident or surviving spouse contact your office?",
+          "Can you serve someone who cannot travel?",
+          "Which documents should the resident discuss directly with your officer?"
+        ],
+        "fallback": "Use the Ohio DVS directory or main line if the county office cannot be reached.",
+        "label": "Project proposal; not an office-approved referral protocol."
+      },
+      "unresolved_questions": [
+        "Phone confirmation, current hours, nontravel options, preferred referral method and permission to review listing."
+      ]
+    },
+    {
+      "program_id": "knox-vso",
+      "name": "Knox County Veterans Services Office",
+      "program_type": "navigation_service",
+      "organization_id": "org-knox-vso",
+      "official_url": "https://kcvso.com/",
+      "needs_supported": [
+        "veteran_services",
+        "general_navigation"
+      ],
+      "age_life_stage": [
+        "veteran",
+        "veteran_dependent"
+      ],
+      "service_area": [
+        "Knox"
+      ],
+      "eligibility_summary": null,
+      "eligibility_decision_owner": null,
+      "application_or_referral_route": null,
+      "next_step": null,
+      "remote_service": null,
+      "public_contact": {
+        "phone": "740-393-6742",
+        "phone_label": "main office",
+        "email": null,
+        "contact_type": "office",
+        "web_route": "https://kcvso.com/contact-us/"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "needs_recheck",
+        "identity": "official_source_reviewed",
+        "contact": "needs_recheck",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": "knox-vso",
+        "batch_ids": [
+          "OH-SDR-S1-B01",
+          "R-01"
+        ]
+      },
+      "office_details": {
+        "selected_street_address": null,
+        "different_mailing_address": null,
+        "hours": {
+          "value": "Monday–Friday 8 a.m.–4 p.m.",
+          "source_ids": [
+            "knox-faq"
+          ],
+          "note": "Published hours, not appointment availability."
+        },
+        "general_walk_in_or_appointment": {
+          "value": "FAQ describes coming into the office for health-enrollment help; financial assistance requires an appointment. General facility-referral scheduling is not established.",
+          "source_ids": [
+            "knox-faq",
+            "knox-services"
+          ],
+          "note": null
+        },
+        "home_visit": null,
+        "hospital_visit": null,
+        "facility_visit": null,
+        "preferred_facility_referral_method": null,
+        "entry_review_permission": null,
+        "required_documents_published": {
+          "value": [
+            {
+              "purpose": "County temporary financial assistance",
+              "items": [
+                "DD-214/report of separation",
+                "Family wages for past 30 days",
+                "Receipts for bills paid in past 30 days",
+                "Current/past-due bills",
+                "Children’s birth certificates where applicable",
+                "Current bank statement",
+                "Proof of assistance from other agencies"
+              ],
+              "source_ids": [
+                "knox-services"
+              ]
+            },
+            {
+              "purpose": "Pension or survivor-pension appointment",
+              "items": [
+                "DD-214",
+                "Death certificate for widow/widower",
+                "Marriage/prior-marriage records where applicable",
+                "Household income/assets and medical-expense information"
+              ],
+              "source_ids": [
+                "knox-pension-list"
+              ]
+            },
+            {
+              "purpose": "VA healthcare application",
+              "items": [
+                "DD-214",
+                "Insurance information/cards",
+                "Household income and medical-expense information"
+              ],
+              "source_ids": [
+                "knox-health-list"
+              ]
+            },
+            {
+              "purpose": "Service-connected claim",
+              "items": [
+                "DD-214",
+                "Relevant marriage/dependent records",
+                "Relevant medical/service records"
+              ],
+              "source_ids": [
+                "knox-claim-list"
+              ]
+            }
+          ],
+          "source_ids": [
+            "knox-services",
+            "knox-pension-list",
+            "knox-health-list",
+            "knox-claim-list"
+          ],
+          "note": "Selective summaries, not a universal admission checklist. Documents go directly through the office-approved process, never through this project."
+        },
+        "published_services": {
+          "value": [
+            "VA benefit assistance",
+            "Temporary financial assistance",
+            "VA medical transportation",
+            "Service-record/DD-214 assistance",
+            "Death benefits/headstones and surviving-spouse assistance"
+          ],
+          "source_ids": [
+            "knox-services"
+          ],
+          "note": null
+        },
+        "surviving_spouse_guidance": {
+          "value": "Office publishes widow pension, death-benefit and DIC topics, and help for widows/widowers and dependents. Ask an accredited officer about the individual case.",
+          "source_ids": [
+            "knox-services"
+          ],
+          "note": null
+        },
+        "nearest_va_facility": null,
+        "address_candidates": [
+          {
+            "value": "105 East Chestnut Street, Mount Vernon, OH 43050",
+            "source_ids": [
+              "knox-county",
+              "dvs-directory",
+              "knox-newsletter"
+            ],
+            "note": null
+          },
+          {
+            "value": "411 Pittsburgh Avenue, Mount Vernon, OH 43050",
+            "source_ids": [
+              "va-knox"
+            ],
+            "note": null
+          }
+        ],
+        "office_email_historical": {
+          "value": "vso@kcvso.com",
+          "source_ids": [
+            "knox-newsletter"
+          ],
+          "note": "December 2025 newsletter extract only; current public email remains null until rechecked."
+        },
+        "transport_nontravel_note": {
+          "value": "Services page describes possible residence pickup for medical transport, including physician documentation and inability to reach pickup points. Conditions are unclear; ask the office. This does not establish officer home or facility visits.",
+          "source_ids": [
+            "knox-services"
+          ],
+          "note": null
+        }
+      },
+      "proposed_navigation_guidance": {
+        "first_action": "Call the main office for the appropriate veteran or surviving-spouse intake route; confirm current contact details.",
+        "what_to_ask": [
+          "How should a facility resident or surviving spouse contact your office?",
+          "Can you serve someone who cannot travel?",
+          "Which documents should the resident discuss directly with your officer?"
+        ],
+        "fallback": "Use the Ohio DVS directory or main line if the county office cannot be reached.",
+        "label": "Project proposal; not an office-approved referral protocol."
+      },
+      "unresolved_questions": [
+        "Phone confirmation, current hours, nontravel options, preferred referral method and permission to review listing."
+      ]
+    },
+    {
+      "program_id": "marion-vso",
+      "name": "Marion County Veterans Service Commission",
+      "program_type": "navigation_service",
+      "organization_id": "org-marion-vso",
+      "official_url": "https://www.marionveteranservice.com/",
+      "needs_supported": [
+        "veteran_services",
+        "general_navigation"
+      ],
+      "age_life_stage": [
+        "veteran",
+        "veteran_dependent"
+      ],
+      "service_area": [
+        "Marion"
+      ],
+      "eligibility_summary": null,
+      "eligibility_decision_owner": null,
+      "application_or_referral_route": null,
+      "next_step": null,
+      "remote_service": null,
+      "public_contact": {
+        "phone": "740-387-0100",
+        "phone_label": "main office",
+        "email": null,
+        "contact_type": "office",
+        "web_route": null
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "needs_recheck",
+        "identity": "official_source_reviewed",
+        "contact": "needs_recheck",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": "marion-vso",
+        "batch_ids": [
+          "OH-SDR-S1-B01",
+          "R-01"
+        ]
+      },
+      "office_details": {
+        "selected_street_address": {
+          "value": "220 E. Fairground Street, Suite 101, Marion, OH 43302",
+          "source_ids": [
+            "dvs-directory",
+            "va-marion"
+          ],
+          "note": "DVS labels building Veterans Memorial Coliseum; not phone-confirmed."
+        },
+        "different_mailing_address": null,
+        "hours": null,
+        "general_walk_in_or_appointment": null,
+        "home_visit": null,
+        "hospital_visit": null,
+        "facility_visit": null,
+        "preferred_facility_referral_method": null,
+        "entry_review_permission": null,
+        "required_documents_published": null,
+        "published_services": null,
+        "surviving_spouse_guidance": null,
+        "nearest_va_facility": null,
+        "address_candidates": [
+          {
+            "value": "220 E. Fairground Street, Suite 101, Marion, OH 43302",
+            "source_ids": [
+              "dvs-directory",
+              "va-marion"
+            ],
+            "note": null
+          }
+        ],
+        "published_va_candidates": {
+          "value": [
+            {
+              "name": "Marion VA Clinic",
+              "address": "1148 Lake Boulevard, Marion, OH 43302-6419",
+              "phone": null,
+              "source_ids": [
+                "va-marion-clinic",
+                "va-locations"
+              ]
+            },
+            {
+              "name": "Marion VA CBOC as listed on county resource page",
+              "address": "1203 Delaware Avenue, Suite 2, Marion, OH 43302-6419",
+              "phone": "740-223-8809",
+              "source_ids": [
+                "va-marion"
+              ]
+            }
+          ],
+          "source_ids": [
+            "va-marion-clinic",
+            "va-locations",
+            "va-marion"
+          ],
+          "note": "Two official addresses disagree; do not print clinic directions without confirmation. Facility-page main phone was blank in retrieved text."
+        }
+      },
+      "proposed_navigation_guidance": {
+        "first_action": "Call the main office for the appropriate veteran or surviving-spouse intake route; confirm current contact details.",
+        "what_to_ask": [
+          "How should a facility resident or surviving spouse contact your office?",
+          "Can you serve someone who cannot travel?",
+          "Which documents should the resident discuss directly with your officer?"
+        ],
+        "fallback": "Use the Ohio DVS directory or main line if the county office cannot be reached.",
+        "label": "Project proposal; not an office-approved referral protocol."
+      },
+      "unresolved_questions": [
+        "Phone confirmation, current hours, nontravel options, preferred referral method and permission to review listing."
+      ],
+      "research_observations": {
+        "website_fetch_failed": true,
+        "note": "Direct office website fetch failed during review; not evidence of closure."
+      }
+    },
+    {
+      "program_id": "delaware-vso",
+      "name": "Delaware County Veterans Services",
+      "program_type": "navigation_service",
+      "organization_id": "org-delaware-vso",
+      "official_url": "https://veteransservice.co.delaware.oh.us/",
+      "needs_supported": [
+        "veteran_services",
+        "general_navigation"
+      ],
+      "age_life_stage": [
+        "veteran",
+        "veteran_dependent"
+      ],
+      "service_area": [
+        "Delaware"
+      ],
+      "eligibility_summary": null,
+      "eligibility_decision_owner": null,
+      "application_or_referral_route": null,
+      "next_step": null,
+      "remote_service": null,
+      "public_contact": {
+        "phone": "740-833-2010",
+        "phone_label": "main office",
+        "email": null,
+        "contact_type": "office",
+        "web_route": "https://veteransservice.co.delaware.oh.us/contact-us/"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "needs_recheck",
+        "identity": "official_search_extract_only",
+        "contact": "needs_recheck",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": "delaware-vso",
+        "batch_ids": [
+          "OH-SDR-S1-B01",
+          "R-01"
+        ]
+      },
+      "office_details": {
+        "selected_street_address": null,
+        "different_mailing_address": null,
+        "hours": {
+          "value": "Monday–Friday: by phone 7 a.m.–5 p.m.; in person 8 a.m.–4:30 p.m.",
+          "source_ids": [
+            "delaware-home-extract"
+          ],
+          "note": "Official search extract only; direct homepage fetch failed. Off-hours appointments mentioned but availability unconfirmed."
+        },
+        "general_walk_in_or_appointment": {
+          "value": "Homepage asks people to schedule appointments for services other than questions.",
+          "source_ids": [
+            "delaware-home-extract"
+          ],
+          "note": "Official search extract only."
+        },
+        "home_visit": null,
+        "hospital_visit": null,
+        "facility_visit": null,
+        "preferred_facility_referral_method": null,
+        "entry_review_permission": null,
+        "required_documents_published": {
+          "value": [
+            {
+              "purpose": "County financial assistance",
+              "items": [
+                "Initial-visit ID",
+                "DD-214",
+                "Proof of county residency",
+                "Proof of income",
+                "60 days of bank statements",
+                "Expense information",
+                "Marriage/divorce records where applicable",
+                "Veteran death certificate for surviving spouse",
+                "Dependent records where applicable"
+              ],
+              "source_ids": [
+                "delaware-financial-extract"
+              ]
+            }
+          ],
+          "source_ids": [
+            "delaware-financial-extract"
+          ],
+          "note": "Program-specific official search extract; do not require these to make an initial routing phone call."
+        },
+        "published_services": {
+          "value": [
+            "Benefits/application assistance topics",
+            "Financial assistance",
+            "Transportation"
+          ],
+          "source_ids": [
+            "delaware-services-extract",
+            "delaware-financial-extract",
+            "delaware-transport-extract"
+          ],
+          "note": "Official indexed extracts; not direct-page review for these fields."
+        },
+        "surviving_spouse_guidance": {
+          "value": "Financial assistance page addresses spouse of a deceased veteran and lists veteran death certificate for surviving spouse. Complete federal survivor intake not established.",
+          "source_ids": [
+            "delaware-financial-extract"
+          ],
+          "note": null
+        },
+        "nearest_va_facility": null,
+        "address_candidates": [
+          {
+            "value": "Historic Courthouse, ground floor, 91 North Sandusky Street, Delaware, OH 43015",
+            "source_ids": [
+              "delaware-contact",
+              "delaware-home-extract",
+              "dvs-directory"
+            ],
+            "note": null
+          },
+          {
+            "value": "149 N. Sandusky Street, Delaware, OH 43015",
+            "source_ids": [
+              "va-delaware"
+            ],
+            "note": null
+          }
+        ],
+        "published_va_candidates": {
+          "value": [
+            {
+              "name": "Delaware VA Clinic",
+              "address": "870 Sunbury Road, Suite 202, Delaware, OH 43015-7208",
+              "transfer_of_care_phone": "614-257-5604",
+              "main_phone": null,
+              "source_ids": [
+                "va-delaware-clinic"
+              ]
+            }
+          ],
+          "source_ids": [
+            "va-delaware-clinic"
+          ],
+          "note": "Published clinic in county; not confirmed nearest for every county resident. Transfer-of-care number is not labeled general main line."
+        }
+      },
+      "proposed_navigation_guidance": {
+        "first_action": "Call the main office for the appropriate veteran or surviving-spouse intake route; confirm current contact details.",
+        "what_to_ask": [
+          "How should a facility resident or surviving spouse contact your office?",
+          "Can you serve someone who cannot travel?",
+          "Which documents should the resident discuss directly with your officer?"
+        ],
+        "fallback": "Use the Ohio DVS directory or main line if the county office cannot be reached.",
+        "label": "Project proposal; not an office-approved referral protocol."
+      },
+      "unresolved_questions": [
+        "Phone confirmation, current hours, nontravel options, preferred referral method and permission to review listing."
+      ]
+    },
+    {
+      "program_id": "ohio-dvs-fallback",
+      "name": "Ohio Department of Veterans Services — statewide fallback",
+      "program_type": "existing_directory",
+      "organization_id": "org-ohio-dvs",
+      "official_url": "https://dvs.ohio.gov/",
+      "needs_supported": [
+        "veteran_services",
+        "general_navigation"
+      ],
+      "age_life_stage": [
+        "veteran",
+        "veteran_dependent"
+      ],
+      "service_area": [
+        "statewide"
+      ],
+      "eligibility_summary": null,
+      "eligibility_decision_owner": null,
+      "application_or_referral_route": null,
+      "next_step": null,
+      "remote_service": null,
+      "public_contact": {
+        "phone": "614-644-0898",
+        "phone_label": "main office",
+        "email": "contactus@dvs.ohio.gov",
+        "contact_type": "statewide_line",
+        "web_route": "https://dam.assets.ohio.gov/image/upload/dvs.ohio.gov/cvso-resources/cvso-listing.pdf"
+      },
+      "internal_contact": null,
+      "verification": {
+        "record_status": "official_search_extract_only",
+        "identity": "official_search_extract_only",
+        "contact": "official_search_extract_only",
+        "last_reviewed_on": "2026-10-02"
+      },
+      "relationship_to_vhg": "external_resource_not_confirmed_partner",
+      "availability_not_established": {
+        "accepting_referrals": null,
+        "waitlist_status": null,
+        "appointment_availability": null,
+        "remaining_funds": null,
+        "payer_acceptance": null
+      },
+      "provenance": {
+        "seed_record_id": null,
+        "batch_ids": [
+          "R-01"
+        ]
+      },
+      "office_details": {
+        "selected_street_address": null,
+        "different_mailing_address": null,
+        "hours": null,
+        "general_walk_in_or_appointment": null,
+        "home_visit": null,
+        "hospital_visit": null,
+        "facility_visit": null,
+        "preferred_facility_referral_method": null,
+        "entry_review_permission": null,
+        "required_documents_published": null,
+        "published_services": null,
+        "surviving_spouse_guidance": null,
+        "nearest_va_facility": null,
+        "address_candidates": [],
+        "directory_url": {
+          "value": "https://dam.assets.ohio.gov/image/upload/dvs.ohio.gov/cvso-resources/cvso-listing.pdf",
+          "source_ids": [
+            "dvs-directory"
+          ],
+          "note": "Readable official statewide PDF directory; no visible publication/effective date."
+        },
+        "interactive_directory_candidate": {
+          "value": "https://dvs.ohio.gov/resources-for-veterans/find-your-cvso",
+          "source_ids": [
+            "ohio-treasurer-directory-link"
+          ],
+          "note": "Official Treasurer page links here; fetch returned 404. Do not present it as a working locator."
+        }
+      },
+      "proposed_navigation_guidance": {
+        "first_action": "Call the main office for the appropriate veteran or surviving-spouse intake route; confirm current contact details.",
+        "what_to_ask": [
+          "How should a facility resident or surviving spouse contact your office?",
+          "Can you serve someone who cannot travel?",
+          "Which documents should the resident discuss directly with your officer?"
+        ],
+        "fallback": "Use the Ohio DVS directory or main line if the county office cannot be reached.",
+        "label": "Project proposal; not an office-approved referral protocol."
+      },
+      "unresolved_questions": [
+        "Phone confirmation, current hours, nontravel options, preferred referral method and permission to review listing."
+      ]
+    }
+  ],
+  "locations": [],
+  "pathways": [],
+  "sources": [
+    {
+      "source_id": "dvs-directory",
+      "url": "https://dam.assets.ohio.gov/image/upload/dvs.ohio.gov/cvso-resources/cvso-listing.pdf",
+      "publisher": "Ohio Department of Veterans Services",
+      "access_method": "pdf_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "morrow-vso",
+          "fields": [
+            "public_contact.phone"
+          ]
+        },
+        {
+          "entity_id": "org-morrow-vso",
+          "fields": [
+            "public_contact.phone"
+          ]
+        },
+        {
+          "entity_id": "knox-vso",
+          "fields": [
+            "public_contact.phone"
+          ]
+        },
+        {
+          "entity_id": "org-knox-vso",
+          "fields": [
+            "public_contact.phone"
+          ]
+        },
+        {
+          "entity_id": "marion-vso",
+          "fields": [
+            "public_contact.phone"
+          ]
+        },
+        {
+          "entity_id": "org-marion-vso",
+          "fields": [
+            "public_contact.phone"
+          ]
+        },
+        {
+          "entity_id": "delaware-vso",
+          "fields": [
+            "public_contact.phone"
+          ]
+        },
+        {
+          "entity_id": "org-delaware-vso",
+          "fields": [
+            "public_contact.phone"
+          ]
+        },
+        {
+          "entity_id": "ohio-dvs-fallback",
+          "fields": [
+            "public_contact.web_route"
+          ]
+        },
+        {
+          "entity_id": "org-ohio-dvs",
+          "fields": [
+            "public_contact.web_route"
+          ]
+        },
+        {
+          "entity_id": "morrow-vso",
+          "fields": [
+            "office_details.address_candidates.0"
+          ]
+        },
+        {
+          "entity_id": "morrow-vso",
+          "fields": [
+            "office_details.selected_street_address"
+          ]
+        },
+        {
+          "entity_id": "knox-vso",
+          "fields": [
+            "office_details.address_candidates.0"
+          ]
+        },
+        {
+          "entity_id": "marion-vso",
+          "fields": [
+            "office_details.address_candidates.0"
+          ]
+        },
+        {
+          "entity_id": "marion-vso",
+          "fields": [
+            "office_details.selected_street_address"
+          ]
+        },
+        {
+          "entity_id": "delaware-vso",
+          "fields": [
+            "office_details.address_candidates.0"
+          ]
+        },
+        {
+          "entity_id": "ohio-dvs-fallback",
+          "fields": [
+            "office_details.directory_url"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "morrow-home",
+      "url": "https://morrowcountyveterans.com/",
+      "publisher": "Morrow County Veterans Services",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "morrow-vso",
+          "fields": [
+            "name",
+            "official_url"
+          ]
+        },
+        {
+          "entity_id": "morrow-vso",
+          "fields": [
+            "public_contact.phone"
+          ]
+        },
+        {
+          "entity_id": "org-morrow-vso",
+          "fields": [
+            "name",
+            "official_url"
+          ]
+        },
+        {
+          "entity_id": "org-morrow-vso",
+          "fields": [
+            "public_contact.phone"
+          ]
+        },
+        {
+          "entity_id": "morrow-vso",
+          "fields": [
+            "public_contact.web_route"
+          ]
+        },
+        {
+          "entity_id": "org-morrow-vso",
+          "fields": [
+            "public_contact.web_route"
+          ]
+        },
+        {
+          "entity_id": "morrow-vso",
+          "fields": [
+            "office_details.address_candidates.0"
+          ]
+        },
+        {
+          "entity_id": "morrow-vso",
+          "fields": [
+            "office_details.selected_street_address"
+          ]
+        },
+        {
+          "entity_id": "morrow-vso",
+          "fields": [
+            "office_details.published_services"
+          ]
+        },
+        {
+          "entity_id": "morrow-vso",
+          "fields": [
+            "office_details.email_candidates"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "morrow-benefits",
+      "url": "https://morrowcountyveterans.com/index.php/county-benefits/",
+      "publisher": "Morrow County Veterans Services",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "morrow-vso",
+          "fields": [
+            "public_contact.phone"
+          ]
+        },
+        {
+          "entity_id": "org-morrow-vso",
+          "fields": [
+            "public_contact.phone"
+          ]
+        },
+        {
+          "entity_id": "morrow-vso",
+          "fields": [
+            "office_details.address_candidates.0"
+          ]
+        },
+        {
+          "entity_id": "morrow-vso",
+          "fields": [
+            "office_details.selected_street_address"
+          ]
+        },
+        {
+          "entity_id": "morrow-vso",
+          "fields": [
+            "office_details.surviving_spouse_guidance"
+          ]
+        },
+        {
+          "entity_id": "morrow-vso",
+          "fields": [
+            "office_details.email_candidates"
+          ]
+        },
+        {
+          "entity_id": "morrow-vso",
+          "fields": [
+            "office_details.published_va_destinations"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "knox-county",
+      "url": "https://co.knox.oh.us/county-home/county-offices/",
+      "publisher": "Knox County government",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "knox-vso",
+          "fields": [
+            "public_contact.phone"
+          ]
+        },
+        {
+          "entity_id": "org-knox-vso",
+          "fields": [
+            "public_contact.phone"
+          ]
+        },
+        {
+          "entity_id": "knox-vso",
+          "fields": [
+            "office_details.address_candidates.0"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "knox-faq",
+      "url": "https://kcvso.com/faq/",
+      "publisher": "Knox County Veterans Services",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "knox-vso",
+          "fields": [
+            "name",
+            "official_url"
+          ]
+        },
+        {
+          "entity_id": "knox-vso",
+          "fields": [
+            "public_contact.phone"
+          ]
+        },
+        {
+          "entity_id": "org-knox-vso",
+          "fields": [
+            "name",
+            "official_url"
+          ]
+        },
+        {
+          "entity_id": "org-knox-vso",
+          "fields": [
+            "public_contact.phone"
+          ]
+        },
+        {
+          "entity_id": "knox-vso",
+          "fields": [
+            "office_details.hours"
+          ]
+        },
+        {
+          "entity_id": "knox-vso",
+          "fields": [
+            "office_details.general_walk_in_or_appointment"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "knox-contact",
+      "url": "https://kcvso.com/contact-us/",
+      "publisher": "Knox County Veterans Services",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "knox-vso",
+          "fields": [
+            "public_contact.web_route"
+          ]
+        },
+        {
+          "entity_id": "org-knox-vso",
+          "fields": [
+            "public_contact.web_route"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "knox-services",
+      "url": "https://kcvso.com/services/",
+      "publisher": "Knox County Veterans Services",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "knox-vso",
+          "fields": [
+            "name",
+            "official_url"
+          ]
+        },
+        {
+          "entity_id": "org-knox-vso",
+          "fields": [
+            "name",
+            "official_url"
+          ]
+        },
+        {
+          "entity_id": "knox-vso",
+          "fields": [
+            "office_details.general_walk_in_or_appointment"
+          ]
+        },
+        {
+          "entity_id": "knox-vso",
+          "fields": [
+            "office_details.published_services"
+          ]
+        },
+        {
+          "entity_id": "knox-vso",
+          "fields": [
+            "office_details.surviving_spouse_guidance"
+          ]
+        },
+        {
+          "entity_id": "knox-vso",
+          "fields": [
+            "office_details.required_documents_published"
+          ]
+        },
+        {
+          "entity_id": "knox-vso",
+          "fields": [
+            "office_details.transport_nontravel_note"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "knox-benefits",
+      "url": "https://kcvso.com/veteran-benefits/",
+      "publisher": "Knox County Veterans Services",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": []
+    },
+    {
+      "source_id": "knox-pension-list",
+      "url": "https://kcvso.com/wp-content/uploads/2023/05/Checklist-for-Non-Service-Connected-Pension-Information-Needed-For-Pension.pdf",
+      "publisher": "Knox County Veterans Services",
+      "access_method": "pdf_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "knox-vso",
+          "fields": [
+            "office_details.required_documents_published"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "knox-health-list",
+      "url": "https://kcvso.com/wp-content/uploads/2023/05/Checklist-for-VA-Healthcare-Application-Information-needed-for-applying-for-VA-Healthcare.pdf",
+      "publisher": "Knox County Veterans Services",
+      "access_method": "pdf_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "knox-vso",
+          "fields": [
+            "office_details.required_documents_published"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "knox-claim-list",
+      "url": "https://kcvso.com/wp-content/uploads/2023/05/Checklist-for-Service-Connected-Disability-Claim-SC-Claim-Checklist.pdf",
+      "publisher": "Knox County Veterans Services",
+      "access_method": "pdf_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "knox-vso",
+          "fields": [
+            "office_details.required_documents_published"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "knox-newsletter",
+      "url": "https://kcvso.com/wp-content/uploads/2025/12/December-2025-Newsletter.pdf",
+      "publisher": "Knox County Veterans Services",
+      "access_method": "official_search_extract_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": "December 2025",
+      "fetch_failed": true,
+      "claims": [
+        {
+          "entity_id": "knox-vso",
+          "fields": [
+            "public_contact.phone"
+          ]
+        },
+        {
+          "entity_id": "org-knox-vso",
+          "fields": [
+            "public_contact.phone"
+          ]
+        },
+        {
+          "entity_id": "knox-vso",
+          "fields": [
+            "office_details.address_candidates.0"
+          ]
+        },
+        {
+          "entity_id": "knox-vso",
+          "fields": [
+            "office_details.office_email_historical"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "delaware-contact",
+      "url": "https://veteransservice.co.delaware.oh.us/contact-us/",
+      "publisher": "Delaware County Veterans Services",
+      "access_method": "official_search_extract_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": true,
+      "claims": [
+        {
+          "entity_id": "delaware-vso",
+          "fields": [
+            "name",
+            "official_url"
+          ]
+        },
+        {
+          "entity_id": "delaware-vso",
+          "fields": [
+            "public_contact.phone"
+          ]
+        },
+        {
+          "entity_id": "org-delaware-vso",
+          "fields": [
+            "name",
+            "official_url"
+          ]
+        },
+        {
+          "entity_id": "org-delaware-vso",
+          "fields": [
+            "public_contact.phone"
+          ]
+        },
+        {
+          "entity_id": "delaware-vso",
+          "fields": [
+            "public_contact.web_route"
+          ]
+        },
+        {
+          "entity_id": "org-delaware-vso",
+          "fields": [
+            "public_contact.web_route"
+          ]
+        },
+        {
+          "entity_id": "delaware-vso",
+          "fields": [
+            "office_details.address_candidates.0"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "delaware-home-extract",
+      "url": "https://veteransservice.co.delaware.oh.us/",
+      "publisher": "Delaware County Veterans Services",
+      "access_method": "official_search_extract_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": true,
+      "claims": [
+        {
+          "entity_id": "delaware-vso",
+          "fields": [
+            "public_contact.phone"
+          ]
+        },
+        {
+          "entity_id": "org-delaware-vso",
+          "fields": [
+            "public_contact.phone"
+          ]
+        },
+        {
+          "entity_id": "delaware-vso",
+          "fields": [
+            "office_details.address_candidates.0"
+          ]
+        },
+        {
+          "entity_id": "delaware-vso",
+          "fields": [
+            "office_details.hours"
+          ]
+        },
+        {
+          "entity_id": "delaware-vso",
+          "fields": [
+            "office_details.general_walk_in_or_appointment"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "delaware-financial-extract",
+      "url": "https://veteransservice.co.delaware.oh.us/financial/",
+      "publisher": "Delaware County Veterans Services",
+      "access_method": "official_search_extract_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": true,
+      "claims": [
+        {
+          "entity_id": "delaware-vso",
+          "fields": [
+            "office_details.published_services"
+          ]
+        },
+        {
+          "entity_id": "delaware-vso",
+          "fields": [
+            "office_details.required_documents_published"
+          ]
+        },
+        {
+          "entity_id": "delaware-vso",
+          "fields": [
+            "office_details.surviving_spouse_guidance"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "delaware-transport-extract",
+      "url": "https://veteransservice.co.delaware.oh.us/transportation/",
+      "publisher": "Delaware County Veterans Services",
+      "access_method": "official_search_extract_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": true,
+      "claims": [
+        {
+          "entity_id": "delaware-vso",
+          "fields": [
+            "office_details.published_services"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "delaware-services-extract",
+      "url": "https://veteransservice.co.delaware.oh.us/services%20and%20benefits/",
+      "publisher": "Delaware County Veterans Services",
+      "access_method": "official_search_extract_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": true,
+      "claims": [
+        {
+          "entity_id": "delaware-vso",
+          "fields": [
+            "office_details.published_services"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "va-morrow",
+      "url": "https://www.va.gov/central-ohio-health-care/programs/va-emergency-resources/community-emergency-resources/morrow-county-community-resources/",
+      "publisher": "VA Central Ohio Health Care",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": "2026-09-03",
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "morrow-vso",
+          "fields": [
+            "office_details.address_candidates.0"
+          ]
+        },
+        {
+          "entity_id": "morrow-vso",
+          "fields": [
+            "office_details.selected_street_address"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "va-knox",
+      "url": "https://www.va.gov/central-ohio-health-care/programs/va-emergency-resources/community-emergency-resources/knox-county-community-resources/",
+      "publisher": "VA Central Ohio Health Care",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": "2026-01-08",
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "knox-vso",
+          "fields": [
+            "office_details.address_candidates.1"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "va-marion",
+      "url": "https://www.va.gov/central-ohio-health-care/programs/va-emergency-resources/community-emergency-resources/marion-county-community-resources/",
+      "publisher": "VA Central Ohio Health Care",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": "2026-01-08",
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "marion-vso",
+          "fields": [
+            "name",
+            "official_url"
+          ]
+        },
+        {
+          "entity_id": "org-marion-vso",
+          "fields": [
+            "name",
+            "official_url"
+          ]
+        },
+        {
+          "entity_id": "marion-vso",
+          "fields": [
+            "office_details.address_candidates.0"
+          ]
+        },
+        {
+          "entity_id": "marion-vso",
+          "fields": [
+            "office_details.selected_street_address"
+          ]
+        },
+        {
+          "entity_id": "marion-vso",
+          "fields": [
+            "office_details.published_va_candidates"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "va-delaware",
+      "url": "https://www.va.gov/central-ohio-health-care/programs/va-emergency-resources/community-emergency-resources/delaware-county-community-resources/",
+      "publisher": "VA Central Ohio Health Care",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": "2026-06-15",
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "delaware-vso",
+          "fields": [
+            "office_details.address_candidates.1"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "va-marion-clinic",
+      "url": "https://www.va.gov/central-ohio-health-care/locations/marion-va-clinic/",
+      "publisher": "VA Central Ohio Health Care",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": "2026-09-03",
+      "published_effective_period": "Page last updated September 3, 2026; not an address effective date.",
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "marion-vso",
+          "fields": [
+            "office_details.published_va_candidates"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "va-delaware-clinic",
+      "url": "https://www.va.gov/central-ohio-health-care/locations/delaware-va-clinic/",
+      "publisher": "VA Central Ohio Health Care",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "delaware-vso",
+          "fields": [
+            "office_details.published_va_candidates"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "va-locations",
+      "url": "https://www.va.gov/central-ohio-health-care/locations/",
+      "publisher": "VA Central Ohio Health Care",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "marion-vso",
+          "fields": [
+            "office_details.published_va_candidates"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "dvs-main-extract",
+      "url": "https://dvs.ohio.gov/hall-of-fame/honorees/hall-of-fame-honorees-1990s/john-e-binnion",
+      "publisher": "Ohio Department of Veterans Services",
+      "access_method": "official_search_extract_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": true,
+      "claims": [
+        {
+          "entity_id": "ohio-dvs-fallback",
+          "fields": [
+            "name",
+            "official_url"
+          ]
+        },
+        {
+          "entity_id": "ohio-dvs-fallback",
+          "fields": [
+            "public_contact.phone"
+          ]
+        },
+        {
+          "entity_id": "org-ohio-dvs",
+          "fields": [
+            "name",
+            "official_url"
+          ]
+        },
+        {
+          "entity_id": "org-ohio-dvs",
+          "fields": [
+            "public_contact.phone"
+          ]
+        },
+        {
+          "entity_id": "ohio-dvs-fallback",
+          "fields": [
+            "public_contact.email"
+          ]
+        },
+        {
+          "entity_id": "org-ohio-dvs",
+          "fields": [
+            "public_contact.email"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "ohio-treasurer-directory-link",
+      "url": "https://tos.ohio.gov/veterans-resources/",
+      "publisher": "Ohio Treasurer",
+      "access_method": "page_text_reviewed",
+      "date_reviewed": "2026-10-02",
+      "published_date": null,
+      "published_effective_period": null,
+      "fetch_failed": false,
+      "claims": [
+        {
+          "entity_id": "ohio-dvs-fallback",
+          "fields": [
+            "office_details.interactive_directory_candidate"
+          ]
+        }
+      ]
+    }
+  ],
+  "relationships": [],
+  "facilities": [],
+  "funding_leads": [],
+  "decisions": []
+}
