@@ -2,9 +2,13 @@
 
 A Veteran Home Guardians (VHG) resource that helps long-term care facility staff, residents and families identify veteran and surviving-spouse residents and connect each one to the right County Veterans Service Office, with verified routes to general aging and disability help.
 
-**Status:** Internal working draft. Nothing in this repository is a published directory. No record is agency-confirmed unless its verification field says so.
+**Status:** Public statewide resource guide. County veterans office contacts cover all 88 Ohio counties. Most county phones are source-published entries from the Ohio AMVETS 2025–2026 Guidebook; individual offices have not all been directly confirmed. The older research files remain working material.
 
-**Pilot area:** Morrow, Knox, Marion and Delaware counties, Ohio.
+**Coverage:** All 88 Ohio counties for county veterans office contacts and statewide/federal referral routes. Local program research remains strongest in the original Morrow, Knox, Marion and Delaware pilot.
+
+**Live guide:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/
+
+See [statewide coverage and sources](docs/STATEWIDE.md) for scope, provenance and maintenance details.
 
 **Project owner:** Travis Vought, Founder & Chair, Veteran Home Guardians.
 
