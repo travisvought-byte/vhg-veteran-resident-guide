@@ -52,6 +52,10 @@ Michigan has veterans referral routes and aging contacts for all 83 counties. It
 
 Kentucky has KDVA regional benefits representatives, aging contacts, district ombudsmen and Hart-Supported Living coordinators for all 120 counties. The service maps are kept separate, with multiple veterans representatives and the Fort Campbell assignment preserved. The edition contains 81 resources: 28 shared federal/national records, 17 Kentucky programs, 15 aging contacts, 15 district ombudsmen and six supported-living coordinators. It includes HCB waiver screening, Homecare, Medicare counseling, vision/hearing support and temporary RampUp! KY loans. See [Kentucky coverage and evidence](docs/KENTUCKY.md).
 
+## Corrections from users
+
+Every listing and county panel has a “Report a problem” link. It opens an email to travis@vethomeguard.org with the state, record ID and county already filled in, plus a reminder not to include resident details. Corrections go to email rather than public GitHub issues so nothing a user writes is published. The sharing kits invite facility staff and partners to use it.
+
 ## Operating boundaries
 
 The guide routes people to agencies; it does not decide eligibility, prepare claims or promise funding. Claims assistance belongs with accredited representatives. No resident records or application information are collected. Keep personal information out of GitHub issues. Listing an organization does not imply a partnership or endorsement.
@@ -64,7 +68,7 @@ Ohio canonical public program data lives in `prototype-data.json`; canonical cou
 python3 scripts/build_public.py
 python3 scripts/build_public.py --check
 python3 scripts/validate_public.py
-node tests/kentucky.cjs
+node tests/feedback.cjs
 ```
 
 PA canonical programs live in `data/public/pa-programs.json`, with local aging/ombudsman records in `data/public/pa-regional-referrals.json`, separate county veterans contacts and an explicit shared-resource whitelist. The build updates Ohio embedded data and its regional projection, then generates `pa.html`, the combined PA resource JSON and `share-pa.html`. The page stays self-contained, with no runtime data service. GitHub Actions runs these checks for pushes and pull requests. Checks cover county mappings, routes, sharing behavior and data synchronization; they do not establish WCAG compliance, remote link availability or print pagination. Browser and print review remain necessary.
@@ -73,7 +77,7 @@ New York canonical records live in `data/public/ny-programs.json`, `data/public/
 
 Michigan canonical records live in `data/public/mi-programs.json`, `data/public/mi-regional-referrals.json` and `data/public/michigan-county-veterans-offices.json`. The build generates `mi.html`, `data/public/michigan-resources.json` and `share-mi.html`. `tests/michigan.cjs` runs all four editions' checks.
 
-Kentucky canonical records live in `data/public/ky-programs.json`, `data/public/ky-regional-referrals.json` and `data/public/kentucky-county-veterans-offices.json`. The build generates `ky.html`, `data/public/kentucky-resources.json` and `share-ky.html`. `tests/kentucky.cjs` runs all five editions' checks.
+Kentucky canonical records live in `data/public/ky-programs.json`, `data/public/ky-regional-referrals.json` and `data/public/kentucky-county-veterans-offices.json`. The build generates `ky.html`, `data/public/kentucky-resources.json` and `share-ky.html`. `tests/kentucky.cjs` runs all five editions' checks, and `tests/feedback.cjs` runs those plus the correction-link checks.
 
 Older integration scripts and research candidates are historical research tools, not the public build. Do not publish their output over the current public data without review.
 

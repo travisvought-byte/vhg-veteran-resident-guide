@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v6
       - name: Check public data synchronization
         run: python3 scripts/build_public.py --check
-      - name: Check all states, county mappings and referral behavior
-        run: node tests/kentucky.cjs
+      - name: Check all states, county mappings, referral behavior and feedback links
+        run: node tests/feedback.cjs
       - name: Check public data and sharing files
         run: python3 scripts/validate_public.py
