@@ -1,4 +1,4 @@
-# Veteran Resident Resource Guide: Ohio, Pennsylvania, New York and Michigan
+# Veteran Resident Resource Guide: Ohio, Pennsylvania, New York, Michigan and Kentucky
 
 A free Veteran Home Guardians (VHG) guide for veterans, surviving spouses, seniors, people with disabilities, families and care teams. It helps people find their first contact and prepare a useful referral.
 
@@ -15,6 +15,10 @@ A free Veteran Home Guardians (VHG) guide for veterans, surviving spouses, senio
 **Michigan guide:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/mi.html
 
 **Michigan sharing kit:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/share-mi.html
+
+**Kentucky guide:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/ky.html
+
+**Kentucky sharing kit:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/share-ky.html
 
 **Ohio sharing kit:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/share.html
 
@@ -44,6 +48,10 @@ New York has veterans referral contacts and exactly one matched aging office for
 
 Michigan has veterans referral routes and aging contacts for all 83 counties. It includes 82 county or regional veterans contacts plus a labeled MVAA statewide referral for Ionia's new office. Of the 83 routes, 77 use the county counselors' association directory and six use official agency pages. Sixteen aging agencies cover the state; Wayne County shows both regional agencies with their city boundaries. The edition contains 58 resources: 28 shared federal/national records, 14 Michigan programs and 16 aging contacts. MI Options handles care and Medicare counseling; the ombudsman route is statewide. See [Michigan coverage and evidence](docs/MICHIGAN.md).
 
+## Kentucky expansion
+
+Kentucky has KDVA regional benefits representatives, aging contacts, district ombudsmen and Hart-Supported Living coordinators for all 120 counties. The service maps are kept separate, with multiple veterans representatives and the Fort Campbell assignment preserved. The edition contains 81 resources: 28 shared federal/national records, 17 Kentucky programs, 15 aging contacts, 15 district ombudsmen and six supported-living coordinators. It includes HCB waiver screening, Homecare, Medicare counseling, vision/hearing support and temporary RampUp! KY loans. See [Kentucky coverage and evidence](docs/KENTUCKY.md).
+
 ## Operating boundaries
 
 The guide routes people to agencies; it does not decide eligibility, prepare claims or promise funding. Claims assistance belongs with accredited representatives. No resident records or application information are collected. Keep personal information out of GitHub issues. Listing an organization does not imply a partnership or endorsement.
@@ -56,7 +64,7 @@ Ohio canonical public program data lives in `prototype-data.json`; canonical cou
 python3 scripts/build_public.py
 python3 scripts/build_public.py --check
 python3 scripts/validate_public.py
-node tests/michigan.cjs
+node tests/kentucky.cjs
 ```
 
 PA canonical programs live in `data/public/pa-programs.json`, with local aging/ombudsman records in `data/public/pa-regional-referrals.json`, separate county veterans contacts and an explicit shared-resource whitelist. The build updates Ohio embedded data and its regional projection, then generates `pa.html`, the combined PA resource JSON and `share-pa.html`. The page stays self-contained, with no runtime data service. GitHub Actions runs these checks for pushes and pull requests. Checks cover county mappings, routes, sharing behavior and data synchronization; they do not establish WCAG compliance, remote link availability or print pagination. Browser and print review remain necessary.
@@ -64,6 +72,8 @@ PA canonical programs live in `data/public/pa-programs.json`, with local aging/o
 New York canonical records live in `data/public/ny-programs.json`, `data/public/ny-regional-referrals.json` and `data/public/new-york-county-veterans-offices.json`. The same build generates `ny.html`, `data/public/new-york-resources.json` and `share-ny.html`. `tests/new-york.cjs` runs the Ohio and Pennsylvania regressions plus New York checks. Ohio remains the default edition, with existing URLs and QR codes preserved.
 
 Michigan canonical records live in `data/public/mi-programs.json`, `data/public/mi-regional-referrals.json` and `data/public/michigan-county-veterans-offices.json`. The build generates `mi.html`, `data/public/michigan-resources.json` and `share-mi.html`. `tests/michigan.cjs` runs all four editions' checks.
+
+Kentucky canonical records live in `data/public/ky-programs.json`, `data/public/ky-regional-referrals.json` and `data/public/kentucky-county-veterans-offices.json`. The build generates `ky.html`, `data/public/kentucky-resources.json` and `share-ky.html`. `tests/kentucky.cjs` runs all five editions' checks.
 
 Older integration scripts and research candidates are historical research tools, not the public build. Do not publish their output over the current public data without review.
 
@@ -76,12 +86,12 @@ See the [maintenance process](docs/MAINTENANCE.md), [verification queue](docs/VE
 | Path | Purpose |
 |---|---|
 | `index.html` | Public guide, interface and generated embedded data |
-| `share.html`, `share-pa.html`, `share-ny.html`, `share-mi.html` | State-specific QR flyers and newsletter introductions |
-| `pa.html`, `ny.html`, `mi.html` | Generated Pennsylvania, New York and Michigan editions |
+| `share.html`, `share-pa.html`, `share-ny.html`, `share-mi.html`, `share-ky.html` | State-specific QR flyers and newsletter introductions |
+| `pa.html`, `ny.html`, `mi.html`, `ky.html` | Generated Pennsylvania, New York, Michigan and Kentucky editions |
 | `assets/` | VHG logo, QR code and social preview image |
 | `prototype-data.json` | Canonical current public resource records |
 | `data/public/` | County contacts, generated regional projection and future post directory |
-| `scripts/build_public.py`, `scripts/pa_edition.py`, `scripts/ny_edition.py`, `scripts/mi_edition.py` | Public data synchronization and state edition generation |
+| `scripts/build_public.py`, `scripts/pa_edition.py`, `scripts/ny_edition.py`, `scripts/mi_edition.py`, `scripts/ky_edition.py` | Public data synchronization and state edition generation |
 | `scripts/validate_public.py`, `tests/*.cjs` | Data, asset and functional checks |
 | `docs/` | Scope, maintenance, evidence and research priorities |
 | `research/`, `data/integrated/`, `data/seed/`, `data/batches/` | Historical working material; not the live source of truth |

@@ -7,6 +7,7 @@ from pathlib import Path
 from pa_edition import make_pa, pennsylvania_resources
 from ny_edition import make_ny, new_york_resources
 from mi_edition import make_mi, michigan_resources
+from ky_edition import make_ky, kentucky_resources
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = 'https://travisvought-byte.github.io/vhg-veteran-resident-guide/'
@@ -19,7 +20,9 @@ def outputs():
         html = html.replace('<option value="PA">Pennsylvania</option>', '<option value="PA">Pennsylvania</option><option value="NY">New York</option>')
     if '<option value="MI">Michigan</option>' not in html:
         html = html.replace('<option value="NY">New York</option>', '<option value="NY">New York</option><option value="MI">Michigan</option>')
-    html = re.sub(r'^function editionURL\(state\).*$', "function editionURL(state){const pages={OH:'index.html',PA:'pa.html',NY:'ny.html',MI:'mi.html'};const u=new URL(pages[state]||pages.OH,location.href);if(route!=='priority')u.searchParams.set('view',route);return u}", html, flags=re.M)
+    if '<option value="KY">Kentucky</option>' not in html:
+        html = html.replace('<option value="MI">Michigan</option>', '<option value="MI">Michigan</option><option value="KY">Kentucky</option>')
+    html = re.sub(r'^function editionURL\(state\).*$', "function editionURL(state){const pages={OH:'index.html',PA:'pa.html',NY:'ny.html',MI:'mi.html',KY:'ky.html'};const u=new URL(pages[state]||pages.OH,location.href);if(route!=='priority')u.searchParams.set('view',route);return u}", html, flags=re.M)
     for name, value in [('DATA', resources), ('COUNTIES', counties)]:
         # Escape HTML parser boundaries inside strings while retaining valid JSON.
         payload = json.dumps(value, ensure_ascii=True).replace('<', '\\u003c')
@@ -33,11 +36,15 @@ def outputs():
     ny_counties = json.loads((ROOT / 'data/public/new-york-county-veterans-offices.json').read_text())
     mi_resources = michigan_resources(ROOT, resources)
     mi_counties = json.loads((ROOT / 'data/public/michigan-county-veterans-offices.json').read_text())
+    ky_resources = kentucky_resources(ROOT, resources)
+    ky_counties = json.loads((ROOT / 'data/public/kentucky-county-veterans-offices.json').read_text())
     share = (ROOT / 'share.html').read_text()
     if 'href="share-ny.html"' not in share:
         share = share.replace('<a href="share-pa.html">Pennsylvania</a>', '<a href="share-pa.html">Pennsylvania</a> · <a href="share-ny.html">New York</a>')
     if 'href="share-mi.html"' not in share:
         share = share.replace('<a href="share-ny.html">New York</a>', '<a href="share-ny.html">New York</a> · <a href="share-mi.html">Michigan</a>')
+    if 'href="share-ky.html"' not in share:
+        share = share.replace('<a href="share-mi.html">Michigan</a>', '<a href="share-mi.html">Michigan</a> · <a href="share-ky.html">Kentucky</a>')
     pa_share = share.replace('Ohio', 'Pennsylvania').replace('88', '67').replace('href="index.html"', 'href="pa.html"')
     pa_share = pa_share.replace('https://travisvought-byte.github.io/vhg-veteran-resident-guide/', 'https://travisvought-byte.github.io/vhg-veteran-resident-guide/pa.html')
     pa_share = pa_share.replace('assets/guide-qr.svg', 'assets/guide-qr-pa.svg')
@@ -51,6 +58,11 @@ def outputs():
     mi_share = mi_share.replace(BASE_URL, BASE_URL + 'mi.html').replace('assets/guide-qr.svg', 'assets/guide-qr-mi.svg')
     mi_share = mi_share.replace('href="share.html">Michigan', 'href="share.html">Ohio')
     mi_share = mi_share.replace('local veterans office, aging agency and long-term-care ombudsman contacts', 'county and statewide veterans referrals, regional aging contacts with Wayne County city boundaries, and statewide ombudsman routing')
+    ky_share = share.replace('Ohio', 'Kentucky').replace('88', '120').replace('href="index.html"', 'href="ky.html"')
+    ky_share = ky_share.replace(BASE_URL, BASE_URL + 'ky.html').replace('assets/guide-qr.svg', 'assets/guide-qr-ky.svg')
+    ky_share = ky_share.replace('href="share.html">Kentucky', 'href="share.html">Ohio')
+    ky_share = ky_share.replace('local veterans office, aging agency and long-term-care ombudsman contacts', 'KDVA regional veterans representatives, matched aging contacts, district ombudsmen and Hart-Supported Living coordinators')
+    ky_share = ky_share.replace('county veterans offices', 'KDVA regional veterans representatives')
     return {
         'index.html': html,
         'data/public/ohio-regional-referrals.json': json.dumps(regional, indent=2, ensure_ascii=False) + '\n',
@@ -64,6 +76,9 @@ def outputs():
         'mi.html': make_mi(html, mi_resources, mi_counties),
         'data/public/michigan-resources.json': json.dumps(mi_resources, indent=2, ensure_ascii=False) + '\n',
         'share-mi.html': mi_share,
+        'ky.html': make_ky(html, ky_resources, ky_counties),
+        'data/public/kentucky-resources.json': json.dumps(ky_resources, indent=2, ensure_ascii=False) + '\n',
+        'share-ky.html': ky_share,
     }
 
 if __name__ == '__main__':

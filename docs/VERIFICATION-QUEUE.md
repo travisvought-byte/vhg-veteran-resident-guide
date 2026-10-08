@@ -2,7 +2,7 @@
 
 Snapshot: October 8, 2026. Source statuses are preserved; matching published phones are not direct confirmation. Refresh this file when evidence changes.
 
-Ohio canonical records: 14 imported_unverified, 3 needs_recheck, 6 official_search_extract_only, 83 official_source_reviewed. Pennsylvania, New York and Michigan follow-ups are listed separately below.
+Ohio canonical records: 14 imported_unverified, 3 needs_recheck, 6 official_search_extract_only, 83 official_source_reviewed. Pennsylvania, New York, Michigan and Kentucky follow-ups are listed separately below.
 
 ## First follow-ups
 
@@ -78,3 +78,12 @@ The following records rely on the interface fallback description and should rece
 - Preserve Wayne's two city scopes; do not reduce the county to one aging agency. Aging regions and MI Choice waiver providers are separate maps.
 - Map dedicated local ombudsman contacts, individual posts, repair partners and available funding. Keep the statewide ombudsman route until dedicated local intake is sourced.
 - Perform browser, mobile, accessibility and visual print review across all editions. Automated print actions do not establish pagination or WCAG compliance.
+
+## Kentucky follow-up
+
+- Confirm current KDVA representative assignments, accreditation, intake and appointments. Preserve multiple published contacts and Christian County's Fort Campbell scope; these are regional referrals rather than county-office listings.
+- Confirm aging, ombudsman and supported-living intake and hours. Their county maps are independent. Preserve dedicated ombudsman extensions and SHIP's menu option 2 as different dialing instructions.
+- Re-review the HCB waiting list, Homecare availability, Hart application cycle and funding, KATS fees and RampUp! KY inventory before making availability claims. Temporary ramp loans do not establish permanent construction or installation support.
+- Obtain the current KDVA homelessness-prevention application; the reviewed page still links FY 2026 material. Confirm rent/utility funding separately from home repairs.
+- Canonical source hashes refer to normalized full retrieved official page text. Direct government HTML downloads returned access errors; do not relabel evidence as raw HTML or telephone confirmation.
+- Research individual post contacts, repair partners and local funding. Perform browser, mobile, accessibility and visual print review, including larger handouts for counties with multiple KDVA contacts.
