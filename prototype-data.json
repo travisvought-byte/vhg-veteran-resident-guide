@@ -811,51 +811,69 @@
     "description": "Existing guide covering food, housing, transportation and other community resources; page labels guide revision January 2026.",
     "next_step": "Refer to existing guide, then verify the selected provider contact.",
     "constraints": [
-      "Guide link and revision label checked; individual guide entries not audited."
+      "County page labels the guide January 27, 2026. Individual provider contacts, schedules and availability still need confirmation."
     ],
     "verification": {
-      "record_status": "imported_unverified",
-      "identity": "imported_unverified",
-      "contact": "imported_unverified",
-      "last_reviewed_on": "2026-09-30"
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-09"
     },
     "public_contact": {
       "phone": null,
       "phone_label": null,
       "email": null,
-      "contact_type": null,
-      "web_route": null
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://mcjfs.com/community-resources/"
     },
-    "organization": ""
+    "organization": "Marion County Job and Family Services",
+    "source_evidence": [
+      {
+        "url": "https://mcjfs.com/community-resources/",
+        "title": "Marion JFS community resource guide",
+        "reviewed_on": "2026-10-09",
+        "scope": "Official landing page, January 27, 2026 guide revision and linked food/meal calendars; individual directory contacts not audited"
+      }
+    ]
   },
   {
     "program_id": "marion-jfs-medicaid",
     "name": "Marion Medicaid application assistance",
-    "official_url": "https://mcjfs.com/",
+    "official_url": "https://mcjfs.com/benefits/medicaid/nursing-home-in-home-care/",
     "service_area": [
       "Marion"
     ],
     "needs_supported": [
       "benefits_and_funding"
     ],
-    "description": "Ask how to apply for Medicaid and who handles the required assessment.",
-    "next_step": "Ask how to apply for Medicaid and who handles the required assessment.",
-    "constraints": null,
+    "description": "Application help for Medicaid nursing-home and home-care coverage.",
+    "next_step": "Call JFS about an application, eligibility interview and required financial documents. Ask how to designate an authorized representative if someone is helping.",
+    "constraints": [
+      "Financial and care requirements apply. An application does not establish eligibility or approve services."
+    ],
     "verification": {
       "record_status": "official_source_reviewed",
       "identity": "official_source_reviewed",
       "contact": "official_source_reviewed",
       "eligibility": "official_source_reviewed",
-      "last_reviewed_on": "2026-10-02"
+      "last_reviewed_on": "2026-10-09"
     },
     "public_contact": {
       "phone": "740-387-8560",
       "phone_label": "JFS main office",
       "email": null,
       "contact_type": "office",
-      "web_route": "https://mcjfs.com/"
+      "web_route": "https://mcjfs.com/benefits/medicaid/nursing-home-in-home-care/"
     },
-    "organization": "Marion County Job and Family Services"
+    "organization": "Marion County Job and Family Services",
+    "source_evidence": [
+      {
+        "url": "https://mcjfs.com/benefits/medicaid/nursing-home-in-home-care/",
+        "title": "Marion Medicaid application assistance",
+        "reviewed_on": "2026-10-09",
+        "scope": "Official nursing-home/home-care application route, interview, documentation and authorized representative guidance; public main-office phone"
+      }
+    ]
   },
   {
     "program_id": "marion-vso",
@@ -894,27 +912,39 @@
     "program_id": "milestones-lifeworks",
     "name": "Milestones Provider Directory at Lifeworks",
     "official_url": "https://lifeworksautism.org/Resources",
-    "service_area": [],
+    "service_area": [
+      "statewide"
+    ],
     "needs_supported": [
       "dd_intake_service_coordination"
     ],
     "description": "Categories include therapy, respite, finances, residential support and transition to adulthood",
-    "next_step": "Search the specialist directory, then ask the provider about local availability.",
-    "constraints": [],
+    "next_step": "Browse autism-related providers and ask the selected provider about service area and intake.",
+    "constraints": [
+      "Reference directory, not a provider endorsement or complete inventory. Confirm each provider’s service area, eligibility and intake."
+    ],
     "verification": {
-      "record_status": "imported_unverified",
-      "identity": "imported_unverified",
-      "contact": "imported_unverified",
-      "last_reviewed_on": "2026-09-30"
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-09"
     },
     "public_contact": {
       "phone": null,
       "phone_label": null,
       "email": null,
-      "contact_type": null,
-      "web_route": null
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://lifeworksautism.org/Resources"
     },
-    "organization": ""
+    "organization": "Lifeworks Autism Services",
+    "source_evidence": [
+      {
+        "url": "https://lifeworksautism.org/Resources",
+        "title": "Milestones Provider Directory at Lifeworks",
+        "reviewed_on": "2026-10-09",
+        "scope": "Official directory identity, continued curation, resource categories and stated non-endorsement limits"
+      }
+    ]
   },
   {
     "program_id": "morrow-aps",
@@ -1115,27 +1145,39 @@
     "program_id": "ocali-gallery",
     "name": "OCALI Family and Community Resource Gallery",
     "official_url": "https://ocali.org/fc_resource_gallery",
-    "service_area": [],
+    "service_area": [
+      "statewide"
+    ],
     "needs_supported": [
       "dd_intake_service_coordination"
     ],
     "description": "Autism introductions, parent resources and system support information",
     "next_step": "Use the specialist guides to learn about autism and available support systems.",
-    "constraints": [],
+    "constraints": [
+      "Educational guides and workshops, not direct funding or care. The Ohio Parent Guide to Autism is marked under review."
+    ],
     "verification": {
-      "record_status": "imported_unverified",
-      "identity": "imported_unverified",
-      "contact": "imported_unverified",
-      "last_reviewed_on": "2026-09-30"
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-09"
     },
     "public_contact": {
       "phone": null,
       "phone_label": null,
       "email": null,
-      "contact_type": null,
-      "web_route": null
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://ocali.org/fc_resource_gallery"
     },
-    "organization": ""
+    "organization": "OCALI",
+    "source_evidence": [
+      {
+        "url": "https://ocali.org/fc_resource_gallery",
+        "title": "OCALI Family and Community Resource Gallery",
+        "reviewed_on": "2026-10-09",
+        "scope": "Official gallery, educational guides, family workshops and notice that the Parent Guide to Autism is under review"
+      }
+    ]
   },
   {
     "program_id": "ohio-aging-compass",
@@ -5447,6 +5489,41 @@
         "title": "SourcePoint caregiver eligibility and referrals",
         "reviewed_on": "2026-10-09",
         "scope": "County eligibility, free support and published phone; not telephone confirmation"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-marion-medical-transport",
+    "name": "Marion JFS: Medicaid medical transportation",
+    "organization": "Marion County Job and Family Services",
+    "official_url": "https://mcjfs.com/benefits/medicaid/medical-transport/",
+    "service_area": [
+      "Marion"
+    ],
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation"
+    ],
+    "description": "Non-emergency travel assistance for Medicaid-covered appointments, including transit passes, mileage support or contracted rides.",
+    "next_step": "Call 740-387-8560, choose option 3, and ask about eligibility and ride arrangements.",
+    "constraints": [
+      "County requests must be submitted 10 days before travel. Assistance depends on circumstances; Medicaid managed-care plans also offer transportation. Not emergency transport."
+    ],
+    "public_contact": {
+      "phone": "740-387-8560",
+      "phone_label": "Choose option 3 for medical transportation"
+    },
+    "resource_role": "home_support",
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-09"
+    },
+    "source_evidence": [
+      {
+        "url": "https://mcjfs.com/benefits/medicaid/medical-transport/",
+        "title": "Marion JFS Non-Emergency Medical Transportation",
+        "reviewed_on": "2026-10-09",
+        "scope": "Medicaid appointment scope, assistance types, 10-day advance request and option 3; no telephone confirmation"
       }
     ]
   }
