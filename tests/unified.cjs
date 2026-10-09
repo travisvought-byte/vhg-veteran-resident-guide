@@ -16,7 +16,7 @@ for(const [state,n] of Object.entries(expected)){
  t.change('helper-person','other');t.change('helper-need','benefits');t.click('helper-resources');assert(!t.d.getElementById('seniors-guide').hidden);assert.equal(t.d.getElementById('senior-topic').value,'costs');
  t.change('helper-need','daily');t.click('helper-print');assert(t.d.body.classList.contains('print-helper'));t.dom.window.dispatchEvent(new t.dom.window.Event('afterprint'));assert(!t.d.body.classList.contains('print-helper'));
  t.change('county','');t.click('helper-print');assert(t.d.getElementById('helper-status').textContent.includes('Choose'));
- t.d.querySelector('[data-route="all"]').click();assert(t.d.getElementById('helper-guide').hidden);assert.equal(t.d.querySelectorAll('#results article').length,{OH:147,PA:108,NY:107,MI:63,KY:86}[state]);
+ t.d.querySelector('[data-route="all"]').click();assert(t.d.getElementById('helper-guide').hidden);assert.equal(t.d.querySelectorAll('#results article').length,{OH:148,PA:108,NY:107,MI:63,KY:86}[state]);
 }
 t.change('edition-state','OH');t.change('county','Morrow');t.d.getElementById('search').value='Medicaid';t.change('edition-state','PA');assert.equal(t.d.getElementById('county').value,'');assert.equal(t.d.getElementById('search').value,'');
 const ny=setup('?state=NY&county=Manhattan&view=rights');assert.equal(ny.d.getElementById('edition-state').value,'NY');assert.equal(ny.d.getElementById('county').value,'New York');assert(ny.d.getElementById('count').textContent.includes('Care concerns'));
@@ -46,3 +46,9 @@ console.log('PASS: all 12 Ohio independent-living centers, expanded counties, li
 const sandusky=setup('?state=OH&county=Sandusky&view=local');assert(sandusky.d.getElementById('resource-ohio-glcap-meals'));assert(sandusky.d.getElementById('resource-ohio-glcap-trips'));
 const respiteFranklin=setup('?state=OH&county=Franklin&view=seniors&topic=daily');assert(respiteFranklin.d.getElementById('resource-ohio-coaaa-caregiver'));assert(!respiteFranklin.d.getElementById('resource-ohio-region9-caregiver'));
 console.log('PASS: Ohio meals, accessible transport and regional caregiver daily-support routing.');
+
+const sourcepoint = setup('?state=OH&county=Delaware&view=seniors&topic=daily');
+assert(sourcepoint.d.getElementById('resource-ohio-sourcepoint-caregiver'));
+const outsideSourcepoint = setup('?state=OH&county=Morrow&view=seniors&topic=daily');
+assert(!outsideSourcepoint.d.getElementById('resource-ohio-sourcepoint-caregiver'));
+console.log('PASS: SourcePoint caregiver support appears in Delaware daily support and stays outside other counties.');
