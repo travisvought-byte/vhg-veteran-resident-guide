@@ -3279,7 +3279,7 @@
   {
     "program_id": "ohio-independent-living",
     "name": "Disability independence: find a Center for Independent Living",
-    "official_url": "https://ohiosilc.org/independent-living/centers-for-independent-living/",
+    "official_url": "https://ohiosilc.org/independent-living/centers-for-independent-living-2/",
     "service_area": [
       "statewide"
     ],
@@ -3298,8 +3298,16 @@
     "senior_topic": "daily",
     "verification": {
       "record_status": "official_source_reviewed",
-      "last_reviewed_on": "2026-10-08"
-    }
+      "last_reviewed_on": "2026-10-09"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ohiosilc.org/independent-living/centers-for-independent-living-2/",
+        "title": "Ohio SILC current center finder",
+        "scope": "Current county-search directory and coverage limits",
+        "reviewed_on": "2026-10-09"
+      }
+    ]
   },
   {
     "program_id": "ohio-passport-screening",
@@ -4120,6 +4128,482 @@
         "title": "Ohio SILC center directory",
         "reviewed_on": "2026-10-09",
         "scope": "County coverage and published referral phone; not telephone-confirmed"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-glcap-ssvf",
+    "name": "Great Lakes CAP: veteran housing support",
+    "organization": "Great Lakes Community Action Partnership",
+    "official_url": "https://www.glcap.org/programs/housing-assistance/veteran-support/",
+    "service_area": [
+      "Erie",
+      "Hancock",
+      "Huron",
+      "Lorain",
+      "Lucas",
+      "Ottawa",
+      "Sandusky",
+      "Seneca",
+      "Wood",
+      "Wyandot"
+    ],
+    "public_contact": {
+      "phone": "800-775-9767",
+      "phone_label": "Published referral phone; confirm program intake"
+    },
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "veteran_services",
+      "general_navigation"
+    ],
+    "description": "Housing assistance for veterans facing homelessness, with help assessing rent, deposits, utilities and moving needs.",
+    "next_step": "Call and request SSVF screening. Give your county, housing situation and household income.",
+    "constraints": [
+      "Veteran, housing-status and income requirements apply. The provider publishes a 50% county median-income guideline; ask intake to confirm current rules and funding."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-09"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.glcap.org/programs/housing-assistance/veteran-support/",
+        "title": "GLCAP veteran support",
+        "scope": "Ten-county SSVF map, services, published income guideline and phone",
+        "reviewed_on": "2026-10-09"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-talbert-ssvf",
+    "name": "Talbert House: veteran housing support",
+    "organization": "Talbert House",
+    "official_url": "https://www.talberthouse.org/services/housing/housing-services/",
+    "service_area": [
+      "Hamilton"
+    ],
+    "public_contact": {
+      "phone": "513-381-7233",
+      "phone_label": "Published referral phone; confirm program intake"
+    },
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "veteran_services",
+      "general_navigation"
+    ],
+    "description": "SSVF case management and temporary financial assistance for eligible veteran households facing housing loss.",
+    "next_step": "Call Central Access Point and ask for a Talbert House SSVF referral. The provider also lists a veteran resources line: 513-281-8387.",
+    "constraints": [
+      "Veteran-household, income, discharge and housing-status screening applies. Assistance is not guaranteed.",
+      "This map confirms Hamilton only. The provider describes nine surrounding counties across three states without naming them; call to confirm referrals elsewhere."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-09"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.talberthouse.org/services/housing/housing-services/",
+        "title": "Talbert House housing services",
+        "scope": "Hamilton SSVF, screening, CAP intake and separate veteran resources line",
+        "reviewed_on": "2026-10-09"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-cil-ability",
+    "name": "The Ability Center",
+    "organization": "The Ability Center",
+    "official_url": "https://abilitycenter.org/navigators/",
+    "service_area": [
+      "Allen",
+      "Defiance",
+      "Fulton",
+      "Hancock",
+      "Henry",
+      "Lucas",
+      "Ottawa",
+      "Paulding",
+      "Putnam",
+      "Sandusky",
+      "Seneca",
+      "Williams",
+      "Wood"
+    ],
+    "public_contact": {
+      "phone": "419-885-5733",
+      "phone_label": "Published referral phone; confirm program intake"
+    },
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Ask a Navigator about disability resources, donated equipment and home accessibility.",
+    "next_step": "Call with your county and goals. Ask about available services, intake and support for returning to community living.",
+    "constraints": [
+      "Community support organization, not a residential care facility. Confirm which services are available for your county and situation.",
+      "The thirteen-county map is for referrals. Equipment and home modifications have separate assessment, availability and funding limits; some satellite services are limited."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-09"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ohiosilc.org/cils_search/the-ability-center-of-greater-toledo/",
+        "title": "Ohio SILC: Ability Center",
+        "scope": "Current thirteen-county referral coverage and phone",
+        "reviewed_on": "2026-10-09"
+      },
+      {
+        "url": "https://abilitycenter.org/navigators/",
+        "title": "Ability Center Navigators",
+        "scope": "Navigation, equipment and home access services",
+        "reviewed_on": "2026-10-09"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-cil-acil",
+    "name": "Access Center for Independent Living",
+    "organization": "Access Center for Independent Living",
+    "official_url": "https://www.ohiosilc.org/wp-content/uploads/2024/10/Ohio-State-Plan-For-Independent-Living-2025-2027-Approved-by-ACL-.pdf",
+    "service_area": [
+      "Champaign",
+      "Clark",
+      "Darke",
+      "Greene",
+      "Logan",
+      "Miami",
+      "Montgomery",
+      "Preble",
+      "Shelby"
+    ],
+    "public_contact": {
+      "phone": "937-341-5202",
+      "phone_label": "Published referral phone; confirm program intake"
+    },
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "A regional disability support contact for community living goals and referrals.",
+    "next_step": "Call with your county and goals. Ask about available services, intake and support for returning to community living.",
+    "constraints": [
+      "Community support organization, not a residential care facility. Confirm which services are available for your county and situation.",
+      "The 2025–2027 state plan lists limited services in Champaign, Darke, Logan, Miami and Shelby; other mapped counties have full services."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-09"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ohiosilc.org/wp-content/uploads/2024/10/Ohio-State-Plan-For-Independent-Living-2025-2027-Approved-by-ACL-.pdf",
+        "title": "Ohio independent living plan 2025–2027",
+        "scope": "Nine-county coverage, limited/full services and phone; pages 32 and 40",
+        "reviewed_on": "2026-10-09"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-cil-north-central",
+    "name": "Independent Living Center of North Central Ohio",
+    "organization": "Independent Living Center of North Central Ohio",
+    "official_url": "https://www.ohiosilc.org/wp-content/uploads/2024/10/Ohio-State-Plan-For-Independent-Living-2025-2027-Approved-by-ACL-.pdf",
+    "service_area": [
+      "Ashland",
+      "Crawford",
+      "Huron",
+      "Knox",
+      "Marion",
+      "Morrow",
+      "Richland"
+    ],
+    "public_contact": {
+      "phone": "419-526-6770",
+      "phone_label": "Published referral phone; confirm program intake"
+    },
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "A local disability support contact for daily living goals and community referrals.",
+    "next_step": "Call with your county and goals. Ask about available services, intake and support for returning to community living.",
+    "constraints": [
+      "Community support organization, not a residential care facility. Confirm which services are available for your county and situation.",
+      "The 2025–2027 state plan lists Marion as limited services. Confirm the available scope when calling."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-09"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ohiosilc.org/wp-content/uploads/2024/10/Ohio-State-Plan-For-Independent-Living-2025-2027-Approved-by-ACL-.pdf",
+        "title": "Ohio independent living plan 2025–2027",
+        "scope": "Seven-county coverage, Marion limited services and phone; pages 32–33 and 40",
+        "reviewed_on": "2026-10-09"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-cil-alliance",
+    "name": "Independence Alliance",
+    "organization": "Independence Alliance",
+    "official_url": "https://independencealliance.org/",
+    "service_area": [
+      "Adams",
+      "Brown",
+      "Butler",
+      "Clermont",
+      "Hamilton",
+      "Highland",
+      "Warren"
+    ],
+    "public_contact": {
+      "phone": "513-241-2600",
+      "phone_label": "Published referral phone; confirm program intake"
+    },
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Connect with disability-led community support, advocacy and independent living referrals.",
+    "next_step": "Call with your county and goals. Ask about available services, intake and support for returning to community living.",
+    "constraints": [
+      "Community support organization, not a residential care facility. Confirm which services are available for your county and situation."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-09"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ohiosilc.org/wp-content/uploads/2024/10/DD-Council-SILC-Broc_101124.pdf",
+        "title": "Ohio independent living brochure",
+        "scope": "Seven Ohio counties and Cincinnati referral phone; page 6",
+        "reviewed_on": "2026-10-09"
+      },
+      {
+        "url": "https://independencealliance.org/",
+        "title": "Independence Alliance",
+        "scope": "Current name and Cincinnati phone",
+        "reviewed_on": "2026-10-09"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-cil-mobile",
+    "name": "MOBILE: Mid-Ohio Board for an Independent Living Environment",
+    "organization": "MOBILE: Mid-Ohio Board for an Independent Living Environment",
+    "official_url": "https://www.mobileonline.org/",
+    "service_area": [
+      "Franklin"
+    ],
+    "public_contact": {
+      "phone": "614-443-5936",
+      "phone_label": "Published referral phone; confirm program intake"
+    },
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Ask about assistive equipment loans, disability advocacy and individual support.",
+    "next_step": "Call with your county and goals. Ask about available services, intake and support for returning to community living.",
+    "constraints": [
+      "Community support organization, not a residential care facility. Confirm which services are available for your county and situation."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-09"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ohiosilc.org/wp-content/uploads/2024/10/DD-Council-SILC-Broc_101124.pdf",
+        "title": "Ohio independent living brochure",
+        "scope": "Franklin coverage; page 6",
+        "reviewed_on": "2026-10-09"
+      },
+      {
+        "url": "https://www.mobileonline.org/",
+        "title": "MOBILE services and contact",
+        "scope": "Provider services and current phone; overrides a differing plan phone",
+        "reviewed_on": "2026-10-09"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-cil-sil",
+    "name": "Services for Independent Living",
+    "organization": "Services for Independent Living",
+    "official_url": "https://sil-oh.org/",
+    "service_area": [
+      "Cuyahoga",
+      "Geauga",
+      "Lake"
+    ],
+    "public_contact": {
+      "phone": "216-731-1529",
+      "phone_label": "Published referral phone; confirm program intake"
+    },
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Support with independent living skills, benefits, peer connections and community transitions.",
+    "next_step": "Call with your county and goals. Ask about available services, intake and support for returning to community living.",
+    "constraints": [
+      "Community support organization, not a residential care facility. Confirm which services are available for your county and situation."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-09"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ohiosilc.org/wp-content/uploads/2024/10/DD-Council-SILC-Broc_101124.pdf",
+        "title": "Ohio independent living brochure",
+        "scope": "Three-county coverage; page 7",
+        "reviewed_on": "2026-10-09"
+      },
+      {
+        "url": "https://sil-oh.org/",
+        "title": "SIL services and contact",
+        "scope": "Services and published phone",
+        "reviewed_on": "2026-10-09"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-cil-sea",
+    "name": "Society for Equal Access",
+    "organization": "Society for Equal Access",
+    "official_url": "https://www.ohiosilc.org/wp-content/uploads/2024/10/DD-Council-SILC-Broc_101124.pdf",
+    "service_area": [
+      "Belmont",
+      "Carroll",
+      "Coshocton",
+      "Guernsey",
+      "Harrison",
+      "Holmes",
+      "Jefferson",
+      "Tuscarawas"
+    ],
+    "public_contact": {
+      "phone": "330-343-9292",
+      "phone_label": "Published referral phone; confirm program intake"
+    },
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "A regional disability support contact for community living needs and referrals.",
+    "next_step": "Call with your county and goals. Ask about available services, intake and support for returning to community living.",
+    "constraints": [
+      "Community support organization, not a residential care facility. Confirm which services are available for your county and situation."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-09"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ohiosilc.org/wp-content/uploads/2024/10/DD-Council-SILC-Broc_101124.pdf",
+        "title": "Ohio independent living brochure",
+        "scope": "Eight-county coverage and referral phone; page 7",
+        "reviewed_on": "2026-10-09"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-cil-western-reserve",
+    "name": "Western Reserve Independent Living Center",
+    "organization": "Western Reserve Independent Living Center",
+    "official_url": "https://www.ohiosilc.org/wp-content/uploads/2024/10/DD-Council-SILC-Broc_101124.pdf",
+    "service_area": [
+      "Ashtabula",
+      "Columbiana",
+      "Mahoning",
+      "Trumbull"
+    ],
+    "public_contact": {
+      "phone": "330-372-3325",
+      "phone_label": "Published referral phone; confirm program intake"
+    },
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "A regional disability support contact for independent living goals and referrals.",
+    "next_step": "Call with your county and goals. Ask about available services, intake and support for returning to community living.",
+    "constraints": [
+      "Community support organization, not a residential care facility. Confirm which services are available for your county and situation."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-09"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ohiosilc.org/wp-content/uploads/2024/10/DD-Council-SILC-Broc_101124.pdf",
+        "title": "Ohio independent living brochure",
+        "scope": "Four-county coverage and referral phone; page 7",
+        "reviewed_on": "2026-10-09"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-adult-day-directory",
+    "name": "Find an Ohio adult day center",
+    "organization": "Adult Day Ohio",
+    "official_url": "https://adultdayohio.org/findacenter/",
+    "service_area": [
+      "statewide"
+    ],
+    "public_contact": {
+      "phone": null,
+      "phone_label": "Published referral phone; confirm program intake"
+    },
+    "resource_role": "caregiver_support",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Search a county directory for adult day services and caregiver relief options.",
+    "next_step": "Open the directory, choose a county and contact the center about care needs, hours, transportation and accepted payment.",
+    "constraints": [
+      "This is a statewide search tool, not statewide service availability. Some counties have no listed center; ask your Area Agency on Aging for alternatives.",
+      "Centers differ in care capabilities, admission, costs and payment options. A listing does not establish suitability for a resident."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-09"
+    },
+    "source_evidence": [
+      {
+        "url": "https://adultdayohio.org/findacenter/",
+        "title": "Adult Day Ohio center directory",
+        "scope": "County search, center contacts and explicit coverage gaps",
+        "reviewed_on": "2026-10-09"
       }
     ]
   }
