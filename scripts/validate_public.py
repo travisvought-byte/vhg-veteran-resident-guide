@@ -30,7 +30,7 @@ class Links(HTMLParser):
             url = urlsplit(value)
             if url.scheme or url.netloc or not url.path:
                 continue
-            assert (ROOT / url.path).is_file(), ('Missing local file', value)
+            assert (ROOT / url.path).is_file() or (ROOT / url.path).is_dir(), ('Missing local file', value)
 
 for name in ['index.html', 'bingo.html', 'pa.html', 'ny.html', 'share.html', 'share-pa.html', 'share-ny.html', 'mi.html', 'share-mi.html', 'ky.html', 'share-ky.html']:
     Links().feed((ROOT / name).read_text())

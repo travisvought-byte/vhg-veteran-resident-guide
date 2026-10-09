@@ -24,11 +24,17 @@ A free Veteran Home Guardians (VHG) guide for veterans, surviving spouses, senio
 
 **Publisher and project owner:** Travis Vought, Founder & Chair, Veteran Home Guardians. Contact: travis@vethomeguard.org.
 
+## One guide, any supported state
+
+The main guide uses one interface. Changing the state updates county contacts, resources, senior support and accessibility guidance in place. Existing state URLs redirect to the main guide and preserve county and view links. State data and source-grounded routing remain separate.
+
+“I’m helping someone” provides a short caregiver/facility flow: choose a state and county, identify whether the person is a veteran, surviving spouse or another senior/person with a disability, then choose the need. It shows a first contact, questions to ask, matching resources and a printable handoff with paper follow-up fields. No personal records are collected or stored.
+
 ## Coverage and verification
 
-All five state editions are published referral backbones, not complete inventories of local services. Ohio local research is strongest in the four pilot counties; Pennsylvania, New York, Michigan and Kentucky are initial referral editions. The state picker switches between separate datasets rather than suggesting identical depth of coverage.
+All five state editions are published referral backbones, not complete inventories of local services. Ohio local research is strongest in the four pilot counties; Pennsylvania, New York, Michigan and Kentucky are initial referral editions. The state picker updates the shared interface from separate datasets; depth of local coverage varies.
 
-Each edition displays its county coverage and automatically calculated verification totals near the state picker. Every resource card shows its source status without requiring an expansion. Search-excerpt, imported and recheck records carry a visible verification notice, including in printed resource lists. A published source review does not mean an agency confirmed its current intake or availability.
+The guide displays county coverage and calculated verification totals in an expandable section near the state picker. Every resource card shows its source status without requiring an expansion. Search-excerpt, imported and recheck records carry a visible verification notice, including in printed resource lists. A published source review does not mean an agency confirmed its current intake or availability.
 
 ## Ohio scope
 
@@ -79,17 +85,24 @@ Ohio canonical public program data lives in `prototype-data.json`; canonical cou
 ```sh
 python3 scripts/build_public.py
 python3 scripts/build_public.py --check
+python3 scripts/build_public.py --test-fixtures
 python3 scripts/validate_public.py
 node tests/feedback.cjs
+npm ci
+npm test
+npx playwright install chromium
+npm run test:browser
 ```
 
-PA canonical programs live in `data/public/pa-programs.json`, with local aging/ombudsman records in `data/public/pa-regional-referrals.json`, separate county veterans contacts and an explicit shared-resource whitelist. The build updates Ohio embedded data and its regional projection, then generates `pa.html`, the combined PA resource JSON and `share-pa.html`. The page stays self-contained, with no runtime data service. GitHub Actions runs these checks for pushes and pull requests. Checks cover county mappings, routes, sharing behavior and data synchronization; they do not establish WCAG compliance, remote link availability or print pagination. Browser and print review remain necessary.
+The public shell is generated from `templates/guide.html` and `templates/helper.html`. Shared behavior lives in `assets/guide-runtime.js`; `scripts/unified_guide.py` bundles the data and state routing adapters into `assets/guide.js`. Do not edit generated public pages or the bundle directly. Build-generated `tests/fixtures/` retain the existing state-adapter regressions and are not committed.
 
-New York canonical records live in `data/public/ny-programs.json`, `data/public/ny-regional-referrals.json` and `data/public/new-york-county-veterans-offices.json`. The same build generates `ny.html`, `data/public/new-york-resources.json` and `share-ny.html`. `tests/new-york.cjs` runs the Ohio and Pennsylvania regressions plus New York checks. Ohio remains the default edition, with existing URLs and QR codes preserved.
+PA canonical programs live in `data/public/pa-programs.json`, with local aging/ombudsman records in `data/public/pa-regional-referrals.json`, separate county veterans contacts and an explicit shared-resource whitelist. The build updates Ohio regional projections and the combined state resource JSON, then generates the shared interface, bundled state adapters and state-specific sharing kits. Legacy state pages are redirects; no runtime data service is required. GitHub Actions runs these checks for pushes and pull requests. Checks cover county mappings, routes, sharing behavior and data synchronization; they do not establish WCAG compliance, remote link availability or print pagination. Browser and print review remain necessary.
 
-Michigan canonical records live in `data/public/mi-programs.json`, `data/public/mi-regional-referrals.json` and `data/public/michigan-county-veterans-offices.json`. The build generates `mi.html`, `data/public/michigan-resources.json` and `share-mi.html`. `tests/michigan.cjs` runs all four editions' checks.
+New York canonical records live in `data/public/ny-programs.json`, `data/public/ny-regional-referrals.json` and `data/public/new-york-county-veterans-offices.json`. The same build generates the New York adapter, `data/public/new-york-resources.json` and `share-ny.html`. `tests/new-york.cjs` runs the Ohio and Pennsylvania regressions plus New York checks. Ohio remains the default edition, with existing URLs and QR codes preserved.
 
-Kentucky canonical records live in `data/public/ky-programs.json`, `data/public/ky-regional-referrals.json` and `data/public/kentucky-county-veterans-offices.json`. The build generates `ky.html`, `data/public/kentucky-resources.json` and `share-ky.html`. `tests/kentucky.cjs` runs all five editions' checks, and `tests/feedback.cjs` runs those plus the correction-link checks.
+Michigan canonical records live in `data/public/mi-programs.json`, `data/public/mi-regional-referrals.json` and `data/public/michigan-county-veterans-offices.json`. The build generates the Michigan adapter, `data/public/michigan-resources.json` and `share-mi.html`. `tests/michigan.cjs` runs all four editions' checks.
+
+Kentucky canonical records live in `data/public/ky-programs.json`, `data/public/ky-regional-referrals.json` and `data/public/kentucky-county-veterans-offices.json`. The build generates the Kentucky adapter, `data/public/kentucky-resources.json` and `share-ky.html`. `tests/kentucky.cjs` runs all five editions' checks, and `tests/feedback.cjs` runs those plus the correction-link checks.
 
 Older integration scripts and research candidates are historical research tools, not the public build. Do not publish their output over the current public data without review.
 
@@ -101,11 +114,12 @@ See the [maintenance process](docs/MAINTENANCE.md), [verification queue](docs/VE
 
 | Path | Purpose |
 |---|---|
-| `index.html` | Public guide, interface and generated embedded data |
+| `index.html`, `assets/guide.js` | Shared public interface and generated state data/routing bundle |
 | `bingo.html`, `data/public/ohio-bingo.json`, `docs/BINGO.md` | Ohio bingo page, canonical venue records and source/expansion notes |
 | `share.html`, `share-pa.html`, `share-ny.html`, `share-mi.html`, `share-ky.html` | State-specific QR flyers and newsletter introductions |
-| `pa.html`, `ny.html`, `mi.html`, `ky.html` | Generated Pennsylvania, New York, Michigan and Kentucky editions |
+| `pa.html`, `ny.html`, `mi.html`, `ky.html` | Compatibility redirects into the shared guide |
 | `assets/` | VHG logo, QR code and social preview image |
+| `templates/`, `assets/guide-runtime.js`, `scripts/unified_guide.py` | Shared UI source and build
 | `prototype-data.json` | Canonical current public resource records |
 | `data/public/` | County contacts, generated regional projection and future post directory |
 | `scripts/build_public.py`, `scripts/pa_edition.py`, `scripts/ny_edition.py`, `scripts/mi_edition.py`, `scripts/ky_edition.py` | Public data synchronization and state edition generation |
