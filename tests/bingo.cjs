@@ -1,19 +1,19 @@
 require('./legacy-fixtures.cjs');
 const assert=require('assert'),fs=require('fs'),vm=require('vm'),path=require('path');const root=path.resolve(__dirname,'..');
 const html=fs.readFileSync(path.join(root,'bingo.html'),'utf8'),canonical=JSON.parse(fs.readFileSync(path.join(root,'data/public/ohio-bingo.json'),'utf8'));
-const authorized=JSON.parse(fs.readFileSync(path.join(root,'data/public/ohio-bingo-authorized.json'),'utf8'));const known=new Set(canonical.filter(r=>r.license_number).map(r=>r.license_number));const combined=canonical.concat(authorized.filter(r=>!known.has(r.license_number)));
+const authorized=JSON.parse(fs.readFileSync(path.join(root,'data/public/ohio-bingo-authorized.json'),'utf8'));const centers=JSON.parse(fs.readFileSync(path.join(root,'data/public/ohio-community-centers.json'),'utf8'));const base=canonical.map(r=>{const c=centers.find(c=>c.id===r.id);return c?{...r,...c,sources:Array.from(new Map(r.sources.concat(c.sources).map(s=>[s.url+'|'+s.scope,s])).values())}:r}).concat(centers.filter(c=>!canonical.some(r=>r.id===c.id)));const known=new Set(canonical.filter(r=>r.license_number).map(r=>r.license_number));const combined=base.concat(authorized.filter(r=>!known.has(r.license_number)));
 const nodes=Object.fromEntries(['bingo-county','bingo-kind','bingo-search','bingo-reset','bingo-print','count','listings','bingo-submit','submit-venue','submit-county','submit-info','submit-source','submit-contact','bingo-nearby','bingo-zip','bingo-radius','nearby-status'].map(id=>[id,{value:'',innerHTML:'',textContent:'',options:[],addEventListener(){}}]));nodes['bingo-county'].options=[{value:''},...JSON.parse(fs.readFileSync(path.join(root,'data/public/ohio-county-veterans-offices.json'),'utf8')).map(c=>({value:c.county}))];
 const context=vm.createContext({URL,URLSearchParams,document:{getElementById:id=>nodes[id]},location:{href:'https://example.org/bingo.html',search:''},history:{replaceState(){}},window:{print(){}}});vm.runInContext(html.match(/<script>([\s\S]*?)<\/script>/)[1],context);
 assert.deepEqual(JSON.parse(vm.runInContext('JSON.stringify(BINGO)',context)),combined);
 assert.equal(vm.runInContext("filteredBingo('Morrow','charitable','').length",context),3);assert.equal(vm.runInContext("filteredBingo('Knox','senior','').length",context),1);assert.equal(vm.runInContext("filteredBingo('Morrow','senior','').length",context),0);assert.equal(vm.runInContext("filteredBingo('','','cardington').length",context),1);
 assert.equal(new Set(canonical.map(r=>r.id)).size,canonical.length);assert.equal(canonical.filter(r=>r.firsthand_confirmation).length,2);
 for(const r of canonical){assert.equal(r.state,'OH');assert.equal(!!r.license_number,r.category==='charitable');assert.equal(r.accessibility,null);assert(r.sources.length);for(const s of r.sources)assert(new URL(s.url).protocol==='https:');const card=nodes.listings.innerHTML.split(`id="${r.id}"`)[1]?.split('</article>')[0];assert(!card.includes('Not yet verified'));assert(card.includes('Add or update details'));}
-assert(canonical.find(r=>r.id==='cardington-legion-97').schedule==='Saturday, 6 p.m.');assert(canonical.find(r=>r.id==='marion-senior-bingo').schedule===null);assert(html.includes('717 state-listed traditional bingo entries'));assert.equal(authorized.length,717);assert.equal(combined.length,720);assert.equal(vm.runInContext("filteredBingo('','licensed','').length",context),717);assert.equal(new Set(combined.map(r=>r.id)).size,720);assert(authorized.every(r=>r.license_type==='Type I'));assert.equal(authorized.filter(r=>r.schedule).length,4);
+assert(canonical.find(r=>r.id==='cardington-legion-97').schedule==='Saturday, 6 p.m.');assert(canonical.find(r=>r.id==='marion-senior-bingo').schedule===null);assert(html.includes('717 state-listed bingo entries'));assert.equal(authorized.length,717);assert.equal(combined.length,722);assert.equal(vm.runInContext("filteredBingo('','licensed','').length",context),717);assert.equal(new Set(combined.map(r=>r.id)).size,722);assert(authorized.every(r=>r.license_type==='Type I'));assert.equal(authorized.filter(r=>r.schedule).length,4);
 assert(fs.readFileSync(path.join(root,'index.html'),'utf8').includes('id="ohio-bingo-link"'));for(const page of ['pa.html','ny.html','mi.html','ky.html'])assert(!fs.readFileSync(path.join(root,page),'utf8').includes('id="ohio-bingo-link"'));
 console.log('PASS: bingo county/type/search boundaries, canonical data, per-field limits, firsthand scope, corrections and Ohio-only integration.');
 
 const email=new URL(vm.runInContext("submissionEmail('Hall & Friends','Morrow','Tuesday 7 p.m.\\n$10','https://example.org/?a=1&b=2','Visitor')",context));
-assert.equal(email.pathname,'travis@vethomeguard.org');assert.equal(email.searchParams.get('subject'),'Bingo details: Hall & Friends');assert(email.searchParams.get('body').includes('Tuesday 7 p.m.\n$10'));assert(email.searchParams.get('body').includes('https://example.org/?a=1&b=2'));
+assert.equal(email.pathname,'travis@vethomeguard.org');assert.equal(email.searchParams.get('subject'),'Community activity details: Hall & Friends');assert(email.searchParams.get('body').includes('Tuesday 7 p.m.\n$10'));assert(email.searchParams.get('body').includes('https://example.org/?a=1&b=2'));
 nodes.listings.onclick({target:{closest:()=>({dataset:{submit:'cardington-legion-97'}})}});
 assert.equal(nodes['submit-venue'].value,'Jenkins-Vaughan American Legion Post 97');assert.equal(nodes['submit-county'].value,'Morrow');
 nodes['submit-info'].value='Saturday 6 p.m.';let prevented=false;nodes['bingo-submit'].onsubmit({preventDefault(){prevented=true}});assert(prevented);assert(context.location.href.startsWith('mailto:travis@vethomeguard.org?'));
@@ -27,6 +27,17 @@ assert(!vm.runInContext("nearbyBingo(BINGO,'43334',25).some(r=>r.id==='oh-licens
 assert(vm.runInContext("nearbyBingo(BINGO,'00000',50)===null",context));
 const close=JSON.parse(vm.runInContext("JSON.stringify(nearbyBingo(BINGO,'43334',50))",context));assert(close.length>3);assert(close.every((r,i)=>r.distanceMiles<=50&&(!i||close[i-1].distanceMiles<=r.distanceMiles)));
 nodes['bingo-zip'].value='43334';nodes['bingo-radius'].value='25';nodes['bingo-nearby'].onsubmit({preventDefault(){}});assert(nodes.count.textContent.includes('within 25 miles of 43334'));assert(nodes.listings.innerHTML.includes('miles away'));
-nodes['bingo-zip'].value='00000';nodes['bingo-nearby'].onsubmit({preventDefault(){}});assert(nodes['nearby-status'].textContent.includes('valid five-digit'));assert(nodes.count.textContent.includes('720'));
+nodes['bingo-zip'].value='00000';nodes['bingo-nearby'].onsubmit({preventDefault(){}});assert(nodes['nearby-status'].textContent.includes('valid five-digit'));assert(nodes.count.textContent.includes('722'));
 nodes['bingo-reset'].onclick();assert.equal(nodes['bingo-zip'].value,'');assert.equal(nodes['bingo-radius'].value,'50');
 console.log('PASS: ZIP distance math, nearest sorting, radius inclusion, invalid ZIP and reset.');
+
+assert.equal(vm.runInContext("filteredBingo('','centers','').length",context),5);
+assert.equal(vm.runInContext("filteredBingo('','bingo','').length",context),720);
+assert.equal(vm.runInContext("filteredBingo('','exercise','').length",context),4);
+assert.equal(vm.runInContext("filteredBingo('','meals','').length",context),3);
+assert.equal(vm.runInContext("filteredBingo('','crafts','').length",context),3);
+assert.equal(vm.runInContext("filteredBingo('','','euchre').length",context),1);
+assert(vm.runInContext("nearbyBingo(filteredBingo('','centers',''),'43334',25).some(r=>r.id==='centerburg-senior-services')",context));
+assert(vm.runInContext("nearbyBingo(filteredBingo('','meals',''),'43334',25).some(r=>r.id==='seniors-on-center')",context));
+assert(centers.every(c=>c.is_center&&c.activities.length&&c.sources.length));
+console.log('PASS: five senior centers, non-bingo categories, no duplicate centers and ZIP integration.');
