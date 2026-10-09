@@ -7,8 +7,8 @@ const counties=vm.runInContext('COUNTIES',t.ctx),data=vm.runInContext('DATA',t.c
 const expected='Alcona,Alger,Allegan,Alpena,Antrim,Arenac,Baraga,Barry,Bay,Benzie,Berrien,Branch,Calhoun,Cass,Charlevoix,Cheboygan,Chippewa,Clare,Clinton,Crawford,Delta,Dickinson,Eaton,Emmet,Genesee,Gladwin,Gogebic,Grand Traverse,Gratiot,Hillsdale,Houghton,Huron,Ingham,Ionia,Iosco,Iron,Isabella,Jackson,Kalamazoo,Kalkaska,Kent,Keweenaw,Lake,Lapeer,Leelanau,Lenawee,Livingston,Luce,Mackinac,Macomb,Manistee,Marquette,Mason,Mecosta,Menominee,Midland,Missaukee,Monroe,Montcalm,Montmorency,Muskegon,Newaygo,Oakland,Oceana,Ogemaw,Ontonagon,Osceola,Oscoda,Otsego,Ottawa,Presque Isle,Roscommon,Saginaw,Sanilac,Schoolcraft,Shiawassee,St. Clair,St. Joseph,Tuscola,Van Buren,Washtenaw,Wayne,Wexford'.split(',');
 assert.deepEqual(Array.from(counties,c=>c.county),expected);
 assert.equal(t.nodes['edition-state'].value,'MI');
-assert.equal(data.length,58);
-assert.equal(new Set(data.map(x=>x.program_id)).size,58);
+assert.equal(data.length,63);
+assert.equal(new Set(data.map(x=>x.program_id)).size,63);
 assert.deepEqual(JSON.parse(JSON.stringify(counties)),JSON.parse(fs.readFileSync(path.join(root,'data/public/michigan-county-veterans-offices.json'))));
 assert.deepEqual(JSON.parse(JSON.stringify(data)),JSON.parse(fs.readFileSync(path.join(root,'data/public/michigan-resources.json'))));
 assert.equal(counties.filter(c=>c.office_type==='state').length,1);

@@ -658,7 +658,7 @@
   {
     "program_id": "va-housing-help",
     "name": "Veteran housing and homelessness help",
-    "official_url": "https://department.va.gov/homeless/what-is-permanent-housing/",
+    "official_url": "https://department.va.gov/homeless/nationalcallcenter/",
     "service_area": [
       "National"
     ],
@@ -667,7 +667,7 @@
       "general_navigation"
     ],
     "description": "A 24-hour VA contact for veterans who are homeless or at risk of losing housing.",
-    "next_step": "Call the national line to ask about local VA and community housing resources.",
+    "next_step": "Call 877-424-3838, available 24/7, if homeless or at risk of losing housing. Family, care teams and supporters may also call. Ask for local VA and community housing support.",
     "constraints": null,
     "verification": {
       "record_status": "official_source_reviewed",
@@ -807,6 +807,132 @@
       "record_status": "official_source_reviewed",
       "last_reviewed_on": "2026-10-08"
     },
+    "state": "shared"
+  },
+  {
+    "program_id": "crisis-988",
+    "name": "Suicide and emotional crisis support: 988",
+    "official_url": "https://988lifeline.org?oai_link_source=model_response_hotline",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "general_navigation"
+    ],
+    "description": "Crisis counseling and referrals for people in suicidal crisis or emotional distress, including veterans and concerned supporters.",
+    "next_step": "Call or text 988 for crisis support. Veterans-specific support is available through the call service. For immediate danger, call 911 or go to the nearest emergency department.",
+    "constraints": [
+      "Crisis support is separate from benefits eligibility and scheduled mental health treatment."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": "988"
+    },
+    "organization": "988 Suicide & Crisis Lifeline",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-mental-health",
+    "name": "Veterans: mental health care and suicide prevention",
+    "official_url": "https://www.va.gov/health-care/health-needs-conditions/mental-health/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "general_navigation"
+    ],
+    "description": "VA mental health care, suicide-prevention guidance, counseling and routes to VA medical centers and Vet Centers. Some services are available without VA enrollment.",
+    "next_step": "Use the VA page to connect with care. Existing patients can ask their primary care provider; others can contact a VA medical center or Vet Center. For urgent emotional distress, use 988 instead of waiting for an appointment.",
+    "constraints": [
+      "Confirm which services fit the person’s eligibility and needs. Scheduled care is not a substitute for immediate crisis help."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {},
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-ssvf",
+    "name": "Housing stability: Supportive Services for Veteran Families (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "general_navigation"
+    ],
+    "description": "Housing stability services through community organizations for low-income veteran families experiencing homelessness or imminent housing loss.",
+    "next_step": "Use the SSVF Providers link on the VA page to find an awarded organization. Ask about county coverage, prevention or rapid rehousing, eligibility and current assistance.",
+    "constraints": [
+      "Provider service areas, funding and eligibility vary. An award or referral does not guarantee financial assistance."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {},
+    "organization": "VA-funded community SSVF providers",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-hud-vash",
+    "name": "HUD-VASH: housing vouchers and VA support",
+    "official_url": "https://department.va.gov/homeless/hud-vash/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "general_navigation"
+    ],
+    "description": "Housing voucher assistance paired with VA case management for veterans experiencing homelessness who need ongoing support.",
+    "next_step": "Call VA homelessness routing at 877-424-3838 and ask whether HUD-VASH screening is appropriate. Ask about local assessment, vouchers and housing availability.",
+    "constraints": [
+      "Screening, program criteria, voucher availability and qualifying housing requirements apply; immediate housing is not guaranteed."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": "877-424-3838"
+    },
+    "organization": "U.S. Department of Veterans Affairs / HUD",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-crrc",
+    "name": "VA Community Resource and Referral Centers",
+    "official_url": "https://department.va.gov/homeless/hchv/community-resource-and-referral-centers/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "general_navigation"
+    ],
+    "description": "Find walk-in community resource centers connecting homeless and at-risk veterans with VA and non-VA services.",
+    "next_step": "Use the official center directory and confirm the nearest location, hours and intake. If no nearby center is listed, call VA homelessness routing at 877-424-3838.",
+    "constraints": [
+      "Centers are not present in every county. Confirm local access and resources; a listing does not guarantee a shelter bed."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": "877-424-3838"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
     "state": "shared"
   },
   {

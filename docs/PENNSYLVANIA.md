@@ -5,7 +5,7 @@ Published-source review: October 8, 2026. Same repository and publisher as Ohio;
 ## Coverage and evidence
 
 - All 67 Pennsylvania counties have a veterans office phone from PA DMVA's September 9, 2026 directory. Source publication date, review date and PDF page are retained for every contact.
-- 103 resource records: 28 curated shared federal/national records, 17 Pennsylvania-specific programs and 58 local referral contacts. Shared records retain their original source dates and evidence statuses.
+- 108 resource records: 33 curated shared federal/national records, 17 Pennsylvania-specific programs and 58 local referral contacts. Shared records retain their original source dates and evidence statuses.
 - Aging referrals cover all 67 counties, with exactly one matched local contact for each county. There are 54 contact records across the 52-agency network: the Huntingdon-Bedford-Fulton agency has three county office records. Separately sourced local ombudsman routes cover Allegheny, Erie, Northampton and Venango; the remaining counties use statewide routing.
 - Local grants, posts, temporary ramps and contractors are not exhaustively inventoried. TechOWL reuse is a verified program route, not a promise of ramp inventory or installation.
 - County phones are published contacts, not direct agency confirmations. Lycoming and Montgomery director vacancies and Wyoming's published Friday-only schedule are called out where applicable. Confirm current intake and hours before travel.

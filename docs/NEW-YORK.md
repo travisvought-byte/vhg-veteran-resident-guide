@@ -6,7 +6,7 @@ Published-source review: October 8, 2026. This is a referral guide from Veteran 
 
 - 62 county selections with veterans referral contacts. County offices serve most selections. NYC uses citywide Department of Veterans' Services intake for Bronx, Kings/Brooklyn, New York/Manhattan, Queens and Richmond/Staten Island. Essex uses the NYS DVS Elizabethtown benefits office. Clinton uses the county veterans agency.
 - 57 local aging office records, with exactly one geographic referral for each county. NYC has one aging office for all five boroughs. Warren and Hamilton share one office. The official directory also includes tribal aging programs; these remain accessible through the directory rather than being presented as the general county contact.
-- 102 resources: 28 shared federal/national records, 17 New York programs and 57 aging offices. Source statuses and review dates remain visible. Shared records retain their previous evidence rather than receiving a new verification date.
+- 107 resources: 33 shared federal/national records, 17 New York programs and 57 aging offices. Source statuses and review dates remain visible. Shared records retain their previous evidence rather than receiving a new verification date.
 - Senior support, disability needs, caregiver referrals, Medicare counseling, resident rights, home accessibility and transition screening.
 - Statewide ombudsman routing. Dedicated local ombudsman contacts, local post contacts and contractors are not yet mapped.
 - Printable county handoffs, accessibility planning tools, a state-specific sharing kit and QR code.

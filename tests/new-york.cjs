@@ -7,7 +7,7 @@ const counties=vm.runInContext('COUNTIES',t.ctx),data=vm.runInContext('DATA',t.c
 const expected='Albany,Allegany,Bronx,Broome,Cattaraugus,Cayuga,Chautauqua,Chemung,Chenango,Clinton,Columbia,Cortland,Delaware,Dutchess,Erie,Essex,Franklin,Fulton,Genesee,Greene,Hamilton,Herkimer,Jefferson,Kings,Lewis,Livingston,Madison,Monroe,Montgomery,Nassau,New York,Niagara,Oneida,Onondaga,Ontario,Orange,Orleans,Oswego,Otsego,Putnam,Queens,Rensselaer,Richmond,Rockland,Saratoga,Schenectady,Schoharie,Schuyler,Seneca,St. Lawrence,Steuben,Suffolk,Sullivan,Tioga,Tompkins,Ulster,Warren,Washington,Wayne,Westchester,Wyoming,Yates'.split(',');
 assert.deepEqual(Array.from(counties,c=>c.county),expected);
 assert.equal(t.nodes['edition-state'].value,'NY');
-assert.equal(data.length,102);
+assert.equal(data.length,107);
 assert.equal(new Set(data.map(x=>x.program_id)).size,data.length);
 assert.deepEqual(JSON.parse(JSON.stringify(counties)),JSON.parse(fs.readFileSync(path.join(root,'data/public/new-york-county-veterans-offices.json'))));
 assert.deepEqual(JSON.parse(JSON.stringify(data)),JSON.parse(fs.readFileSync(path.join(root,'data/public/new-york-resources.json'))));
