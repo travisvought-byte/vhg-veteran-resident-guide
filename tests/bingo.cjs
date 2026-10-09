@@ -2,8 +2,9 @@ require('./legacy-fixtures.cjs');
 const assert=require('assert'),fs=require('fs'),vm=require('vm'),path=require('path');const root=path.resolve(__dirname,'..');
 const html=fs.readFileSync(path.join(root,'bingo.html'),'utf8'),canonical=JSON.parse(fs.readFileSync(path.join(root,'data/public/ohio-bingo.json'),'utf8'));
 const authorized=JSON.parse(fs.readFileSync(path.join(root,'data/public/ohio-bingo-authorized.json'),'utf8'));const centers=JSON.parse(fs.readFileSync(path.join(root,'data/public/ohio-community-centers.json'),'utf8'));const base=canonical.map(r=>{const c=centers.find(c=>c.id===r.id);return c?{...r,...c,sources:Array.from(new Map(r.sources.concat(c.sources).map(s=>[s.url+'|'+s.scope,s])).values())}:r}).concat(centers.filter(c=>!canonical.some(r=>r.id===c.id)));const known=new Set(canonical.filter(r=>r.license_number).map(r=>r.license_number));const combined=base.concat(authorized.filter(r=>!known.has(r.license_number)));
-const nodes=Object.fromEntries(['bingo-county','bingo-kind','bingo-search','bingo-reset','bingo-print','count','listings','bingo-submit','submit-venue','submit-county','submit-info','submit-source','submit-contact','bingo-nearby','bingo-zip','bingo-radius','nearby-status'].map(id=>[id,{value:'',innerHTML:'',textContent:'',options:[],addEventListener(){}}]));nodes['bingo-county'].options=[{value:''},...JSON.parse(fs.readFileSync(path.join(root,'data/public/ohio-county-veterans-offices.json'),'utf8')).map(c=>({value:c.county}))];
-const context=vm.createContext({URL,URLSearchParams,document:{getElementById:id=>nodes[id]},location:{href:'https://example.org/bingo.html',search:''},history:{replaceState(){}},window:{print(){}}});vm.runInContext(html.match(/<script>([\s\S]*?)<\/script>/)[1],context);
+const nodes=Object.fromEntries(['bingo-county','bingo-kind','bingo-day','bingo-search','bingo-reset','bingo-print','count','listings','bingo-submit','submit-venue','submit-county','submit-info','submit-source','submit-contact','bingo-nearby','bingo-zip','bingo-radius','nearby-status'].map(id=>[id,{value:'',innerHTML:'',textContent:'',options:[],addEventListener(){}}]));nodes['bingo-county'].options=[{value:''},...JSON.parse(fs.readFileSync(path.join(root,'data/public/ohio-county-veterans-offices.json'),'utf8')).map(c=>({value:c.county}))];
+class GuideDate extends Date {constructor(...args){super(...(args.length?args:['2026-10-09T12:00:00Z']))}}
+const context=vm.createContext({Date:GuideDate,URL,URLSearchParams,document:{getElementById:id=>nodes[id]},location:{href:'https://example.org/bingo.html',search:''},history:{replaceState(){}},window:{print(){}}});vm.runInContext(html.match(/<script>([\s\S]*?)<\/script>/)[1],context);
 assert.deepEqual(JSON.parse(vm.runInContext('JSON.stringify(BINGO)',context)),combined);
 assert.equal(vm.runInContext("filteredBingo('Morrow','charitable','').length",context),3);assert.equal(vm.runInContext("filteredBingo('Knox','senior','').length",context),1);assert.equal(vm.runInContext("filteredBingo('Morrow','senior','').length",context),0);assert.equal(vm.runInContext("filteredBingo('','','cardington').length",context),1);
 assert.equal(new Set(canonical.map(r=>r.id)).size,canonical.length);assert.equal(canonical.filter(r=>r.firsthand_confirmation).length,2);
@@ -67,3 +68,30 @@ assert(vm.runInContext("filteredBingo('Union','scheduled','').some(r=>r.id==='wi
 assert.equal(centers.find(c=>c.id==='lcap-heritage-hall').activities[0],'Social lunch: Monday–Friday, 11:30 a.m.');
 assert(vm.runInContext("nearbyBingo(filteredBingo('Union','centers',''),'43334',50).some(r=>r.id==='richwood-civic-center')",context));
 assert(!vm.runInContext("filteredBingo('Morrow','centers','').some(r=>r.id==='lcap-heritage-hall')",context));
+
+// Date filters must use published sessions, never license authorization days.
+for(const r of combined.filter(r=>r.schedule))assert(!!r.session_days!==!!r.session_dates,r.id);
+assert(!vm.runInContext("filteredBingo('Morrow','','','2','2026-10-09').some(r=>!r.schedule)",context));
+assert.equal(vm.runInContext("nextBingoDate(BINGO.find(r=>r.id==='northmor-music-bingo'),'2','2026-10-09')",context),'2026-10-20');
+assert.equal(vm.runInContext("nextBingoDate(BINGO.find(r=>r.id==='northmor-music-bingo'),'today','2026-10-13')",context),null);
+assert.equal(vm.runInContext("activeSchedule(BINGO.find(r=>r.id==='northmor-music-bingo'),'2026-10-21')",context),false);
+assert.equal(vm.runInContext("nextBingoDate(BINGO.find(r=>r.license_number==='0155-48'),'3','2026-10-09')",context),'2026-11-04');
+assert.equal(vm.runInContext("nextBingoDate(BINGO.find(r=>r.license_number==='0155-48'),'today','2026-12-02')",context),'2026-12-02');
+assert.equal(vm.runInContext("activeSchedule(BINGO.find(r=>r.license_number==='0155-48'),'2026-12-03')",context),false);
+assert.equal(vm.runInContext("nextBingoDate(BINGO.find(r=>r.license_number==='0179-29'),'today','2026-10-31')",context),null);
+assert.equal(vm.runInContext("nextBingoDate(BINGO.find(r=>r.license_number==='0179-29'),'6','2026-10-24')",context),'2026-10-24');
+assert.equal(vm.runInContext("nextBingoDate(BINGO.find(r=>r.license_number==='0179-29'),'6','2026-10-25')",context),null);
+assert.equal(vm.runInContext("nextBingoDate(BINGO.find(r=>r.id==='cardington-legion-97'),'tomorrow','2026-10-09')",context),'2026-10-10');
+assert.equal(vm.runInContext("nextBingoDate(BINGO.find(r=>r.id==='cardington-legion-97'),'tomorrow','2026-12-31')",context),null);
+assert.equal(vm.runInContext("addDays('2026-12-31',1)",context),'2027-01-01');
+assert.equal(vm.runInContext("activeSchedule(BINGO.find(r=>r.id==='sourcepoint-bingo'),'2027-01-03')",context),false);
+assert.equal(vm.runInContext("activePrice(BINGO.find(r=>r.license_number==='0024-33'),'2026-11-01')",context),null);
+assert(vm.runInContext("activePrice(BINGO.find(r=>r.license_number==='0024-33'),'2026-10-31')",context));
+nodes['bingo-day'].value='2';vm.runInContext('render()',context);assert(nodes.listings.innerHTML.includes('Tuesday, Oct 20, 2026'));assert(!nodes.listings.innerHTML.includes('id="cardington-legion-97"'));
+nodes['bingo-reset'].onclick();assert.equal(nodes['bingo-day'].value,'');assert(nodes.count.textContent.includes('732'));
+vm.runInContext("todayISO=()=> '2026-11-25'",context);nodes['bingo-day'].value='today';vm.runInContext('render()',context);
+let sourceCard=nodes.listings.innerHTML.split('id="sourcepoint-bingo"')[1]?.split('</article>')[0];assert(sourceCard.includes('Earlier holiday session'));assert(!sourceCard.includes('2:30-4:30'));
+nodes['bingo-reset'].onclick();const northCard=nodes.listings.innerHTML.split('id="northmor-music-bingo"')[1].split('</article>')[0];assert(northCard.includes('Ask the venue for upcoming bingo dates.'));assert(!northCard.includes('Next advertised October session'));assert(!northCard.includes('<strong>When:</strong>'));
+const groveCard=nodes.listings.innerHTML.split('id="oh-license-0024-33-232-8"')[1].split('</article>')[0];assert(!groveCard.includes('<strong>Price:</strong>'));assert(!groveCard.includes('Price offer through'));
+assert.equal(vm.runInContext("filteredBingo('','licensed','','','2027-01-03').length",context),717);
+console.log('PASS: published weekdays, date-only sessions, closures, holiday times, month/year rollover, expiry and venue retention.');

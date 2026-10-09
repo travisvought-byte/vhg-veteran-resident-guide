@@ -66,7 +66,7 @@ Kentucky has KDVA regional benefits representatives, aging contacts, district om
 
 ## Bingo and urgent support
 
-The [Ohio bingo section](https://travisvought-byte.github.io/vhg-veteran-resident-guide/bingo.html) starts with six researched venues in Morrow, Knox, Delaware and Marion. Charitable sessions and senior-center activities have separate filters. Cardington and Marengo activity are firsthand-confirmed by Travis; schedules, prices, licenses and accessibility retain their own limits. No statewide bingo inventory is claimed. See [bingo evidence and expansion](docs/BINGO.md).
+The [Ohio Bingo & Senior Centers section](https://travisvought-byte.github.io/vhg-veteran-resident-guide/bingo.html) includes all 717 state-listed Type I entries and 15 researched senior centers. Search by ZIP/distance, activity, or published bingo day (Today, Tomorrow, or a weekday). Specific dates, closures and expired offers are handled separately from license authorization days. Thirty-eight entries currently have published session times. See [bingo evidence and expansion](docs/BINGO.md).
 
 All five editions have a prominent urgent-help section, crisis and mental-health resources, and expanded homelessness pathways: the VA national call center, SSVF community providers, HUD-VASH and VA Community Resource and Referral Centers. Local shelter beds, individual provider intake and availability are not comprehensively mapped.
 
