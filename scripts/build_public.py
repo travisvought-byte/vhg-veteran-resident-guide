@@ -98,11 +98,10 @@ def outputs():
     for page, state, records, contacts, scope in editions:
         pending = sum(r.get('verification', {}).get('record_status') != 'official_source_reviewed' for r in records)
         excerpts = sum(r.get('verification', {}).get('record_status') == 'official_search_extract_only' for r in records)
-        notice = ('<section id="edition-coverage" class="edition-coverage notice" aria-label="Coverage and verification">'
-                  f'<strong>{state}: coverage and verification</strong><p>{scope}</p>'
-                  f'<p>Referral routes cover {len(contacts)} counties. This is not a complete local service inventory. '
-                  f'{pending} resource records need further verification, including {excerpts} supported only by search excerpts. '
-                  'Source status appears on each resource card. Published contacts are not telephone-confirmed; confirm intake and availability with the agency.</p></section>')
+        notice = ('<section id="edition-coverage" class="edition-coverage" aria-label="Coverage">'
+                  f'<strong>{state}: coverage</strong><p>{scope}</p>'
+                  f'<p>Referral routes cover {len(contacts)} counties. Each listing links to its official source. '
+                  'Spot a wrong number or a closed program? Use “Report a problem” on any listing so it can be fixed.</p></section>')
         result[page] = re.sub(r'<section id="urgent-help".*?</section>', '', result[page], flags=re.S)
         urgent = '<section id="urgent-help" class="notice" aria-labelledby="urgent-title"><h2 id="urgent-title">Need help now?</h2><p><strong>Suicide or emotional crisis:</strong> Call <a href="tel:988?oai_link_source=model_response_hotline">988</a> or <a href="sms:988?oai_link_source=model_response_hotline">text 988</a>. Veterans-specific support is available through the call service. <a href="https://988lifeline.org/chat/?oai_link_source=model_response_hotline" target="_blank" rel="noopener noreferrer">Online crisis chat</a>. For immediate danger, call 911 or go to the nearest emergency department.</p><p><strong>Homeless or facing housing loss:</strong> Call <a href="tel:8774243838">877-424-3838</a> for free, confidential VA housing referrals, 24/7. Family members and supporters may call too.</p><p><a href="?view=crisis">Mental health and suicide-prevention resources</a> · <a href="?view=housing">Housing and homelessness resources</a></p></section>'
         result[page] = result[page].replace('<section id="county-start"', urgent + '<section id="county-start"', 1)

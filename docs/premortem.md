@@ -4,7 +4,7 @@ Assume it is a year from now and the project failed. These are the most likely r
 
 | # | Failure | Why it would happen | Countermeasure | Where it is handled |
 |---|---|---|---|---|
-| 1 | **Wrong contact sends a veteran to a dead end** | County office addresses already disagree across official sources; offices move and staff change | Phone-confirm all four county offices before release; show last-checked date on every listing; quarterly recheck | R-01, Stage 3, maintenance |
+| 1 | **Wrong contact sends a veteran to a dead end** | County office addresses already disagree across official sources; offices move and staff change | Official sources only; source and review date on every listing; “Report a problem” on every card; fix reported errors promptly; quarterly source recheck | R-01, Stage 3, maintenance |
 | 2 | **VHG or facility staff drift into claims assistance** | Well-meaning staff fill out forms or advise on eligibility; accreditation rules restrict who may help prepare VA claims | Written boundary statement; guide says "route to county office" at every decision point; attorney review before release | R-03, Stage 2 |
 | 3 | **Resident information ends up somewhere it should not** | Staff email VHG about specific residents; Guardians keep notes; a tracker gets committed to the repository | No resident data anywhere in the project; handoff goes resident/family or facility directly to the county office; repository private | Boundaries §5, D-011 |
 | 4 | **Facilities never use it** | Social workers believe they already know the resources; another handout goes in a drawer | Build the staff guide around the admission routine; test with two facility staff before printing; keep it to one page | Stage 4 |

@@ -69,6 +69,6 @@ const erie=setup('?county=Erie&view=rights','pa.html');
 assert(erie.nodes['county-panel'].innerHTML.includes('tel:8144594581;ext=593'));
 assert(erie.nodes.results.innerHTML.includes('resource-pa-local-ombudsman-erie'));
 assert(!erie.nodes.results.innerHTML.includes('resource-pa-local-ombudsman-allegheny'));
-const carbon=setup('?county=Carbon','pa.html');assert(carbon.nodes['county-panel'].innerHTML.includes('Search excerpt only'));
+const carbon=setup('?county=Carbon','pa.html');assert(carbon.nodes['county-panel'].innerHTML.includes('Source · '));
 console.log('PASS: PA local aging contacts in all 67 county handoffs, senior and accessibility views; four local ombudsman routes; county isolation, evidence labels and printable handoffs.');
 console.log('PASS: all 67 PA county contacts, state isolation and switching, truthful statewide routing, vacancies, phone extensions, seniors, accessibility branches, shared links and PA funding limits.');

@@ -14,7 +14,7 @@
 | D-010 | 2026-10-02 | ChatGPT/Codex performs research tasks; Claude issues packets and integrates; Travis relays. | Role split from the original handoff plan. | Travis | Decided |
 | D-011 | 2026-10-02 | No resident information is collected, stored or committed anywhere in the project. | Privacy and trust with facilities. | Claude | Decided |
 | D-012 | 2026-10-02 | Current work stays private; future public release remains a later decision. | Travis's current instruction, recorded in WORKING_MODE.md and the ownership workbook. No GitHub repository created or published. | Travis | Superseded by D-020 |
-| D-013 | — | Who makes the four county office confirmation contacts, and when. | First outreach; organizational action. | Travis | Open |
+| D-013 | — | Who makes the four county office confirmation contacts, and when. | First outreach; organizational action. | Travis | Closed by D-022 |
 | D-014 | 2026-10-08 | Travis Vought is the published project owner and correction contact; a backup maintainer is still needed. | Current README and public correction links. | Travis | Owner settled; backup open |
 | D-015 | 2026-10-08 | Veteran Resident Resource Guide; repository `travisvought-byte/vhg-veteran-resident-guide`. | Current published repository and guide. | Travis | Decided |
 | D-016 | 2026-10-02 | Work in ChatGPT and Google Drive; hold publication until a later explicit instruction. | Historical working instruction. GitHub publication was subsequently authorized; see D-020. | Travis | Superseded by D-020 |
@@ -26,4 +26,6 @@
 | D-020 | 2026-10-08 | Public GitHub guide and five state editions are authorized. GitHub canonical public data and build scripts govern the live site. | Owner requested creation, publication and state expansion; current repository and live site confirm implementation. | Travis | Decided |
 | D-021 | 2026-10-08 | Describe state coverage as referral routes, show incomplete verification prominently, and preserve evidence statuses until full source review succeeds. | Owner requested review and updates following credibility feedback. | Travis / Codex | Applied |
 
-Current open decisions: D-013 (who will make telephone confirmation contacts and when) and the backup-maintainer part of D-014. Historical integration wording and mobility proposals (D-018/D-019) remain research matters, not a hold on the published guide. No maintenance automation or agency outreach is implied by this review.
+| D-022 | 2026-10-09 | No telephone confirmation step. Listings use published official sources; user reports via “Report a problem” drive corrections. Unverified-status warnings removed from the public pages; internal evidence statuses retained in the data. Coverage held at five states until more help is available. Closes D-013. | Owner decision: get the resource to people now; government sources are relied on as published. | Travis | Decided |
+
+Current open decision: the backup-maintainer part of D-014. Historical integration wording and mobility proposals (D-018/D-019) remain research matters, not a hold on the published guide. No maintenance automation or agency outreach is implied by this review.

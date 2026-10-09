@@ -41,20 +41,17 @@ const vm=require('vm');
 for(const [state,[page]] of Object.entries(editions)){
   const html=fs.readFileSync(path.join(root,page),'utf8');
   const t=setup('?view=all',page),data=vm.runInContext('DATA',t.ctx),counties=vm.runInContext('COUNTIES',t.ctx);
-  const pending=data.filter(r=>r.verification.record_status!=='official_source_reviewed').length;
-  const excerpts=data.filter(r=>r.verification.record_status==='official_search_extract_only').length;
   assert.equal((html.match(/id="edition-coverage"/g)||[]).length,1,state+' single coverage summary');
   assert(html.includes(`Referral routes cover ${counties.length} counties`),state+' accurate county count');
-  assert(html.includes(`${pending} resource records need further verification, including ${excerpts}`),state+' accurate evidence totals');
-  for(const r of data.filter(r=>r.verification.record_status!=='official_source_reviewed')){
+  assert(html.includes('Report a problem'),state+' coverage summary points to corrections');
+  for(const r of data){
     const card=t.nodes.results.innerHTML.split(`id="resource-${r.program_id}"`)[1]?.split('</article>')[0];
     if(!card)continue; // Four duplicate Ohio office records are intentionally hidden.
-    assert(card.split('<details class="source-details">')[0].includes('Full verification is incomplete'),state+' visible warning '+r.program_id);
-    assert(!card.includes('recommended-label">Useful starting point'),state+' no unqualified recommendation '+r.program_id);
+    assert(!/Full verification is incomplete|needs verification|confirm with provider/i.test(card),state+' no unverified warning '+r.program_id);
+    assert(card.includes('<details class="source-details">')&&card.includes('Report a problem'),state+' source link and correction link '+r.program_id);
   }
-  assert(html.includes('.source-status{display:block!important}'),state+' print warning retained');
 }
-console.log('PASS: visible verification warnings, accurate state coverage/evidence totals, qualified recommendations and print notices across all editions.');
+console.log('PASS: plain coverage summaries, source details and correction links on every card, no unverified warnings across all editions.');
 for(const [state,[page]] of Object.entries(editions)){
  const html=fs.readFileSync(path.join(root,page),'utf8'),crisis=setup('?view=crisis',page),housing=setup('?view=housing',page);
  assert.equal((html.match(/id="urgent-help"/g)||[]).length,1,state+' single visible urgent panel');

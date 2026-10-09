@@ -4,10 +4,10 @@ Established October 8, 2026. Publisher and correction contact: Travis Vought, Ve
 
 ## Review priorities
 
-1. Handle reports of wrong numbers, closed programs and misleading application instructions first. If a route is unreliable, label or remove the affected advice while investigating.
+1. User reports drive corrections. Handle reports of wrong numbers, closed programs and misleading application instructions first; fix or remove the affected listing. Published official sources are used as listed; no telephone confirmation is required before publishing.
 2. Recheck ramp and home modification application instructions monthly and whenever a program announces a change. Check annual funding limits at the fiscal-year boundary before adding amounts.
-3. Review county, aging agency and ombudsman contacts quarterly, beginning with the four pilot counties. Ask about current intake and assistance for people who cannot travel; a working website alone does not confirm this.
-4. Recheck other program records at least every six months. Clear the lower-evidence queue before expanding low-priority listings.
+3. Review county, aging agency and ombudsman contacts quarterly, beginning with the four pilot counties, by checking each contact against its current official source.
+4. Recheck other program records at least every six months.
 
 These intervals are the intended maintenance standard. Record completed checks, not scheduled checks, as review dates.
 
