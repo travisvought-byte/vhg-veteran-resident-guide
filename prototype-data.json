@@ -3673,25 +3673,31 @@
     "organization": "The Salvation Army Central Ohio Area Services",
     "official_url": "https://www.salvationarmyusa.org/usa-eastern-territory/southwest-ohio-northeast-kentucky/central-ohio-area-services/homelessness/",
     "service_area": [
+      "Ashland",
+      "Crawford",
       "Delaware",
+      "Hardin",
+      "Logan",
       "Madison",
       "Marion",
       "Morrow",
-      "Union"
+      "Richland",
+      "Union",
+      "Wayne"
     ],
     "needs_supported": [
       "veteran_services",
       "general_navigation"
     ],
     "description": "Housing case management and referral for veterans facing homelessness or housing loss. VA identifies this provider’s SSVF route for these five counties.",
-    "next_step": "Call the housing program at 614-358-2611 ext. 161. Give your county and housing situation; request veteran SSVF screening and confirm the appropriate intake team.",
+    "next_step": "Call the VA-listed SSVF intake line with your county and housing situation. Ask about screening, required documents and current assistance.",
     "constraints": [
-      "Veteran household, income and housing-risk screening apply. Rental or utility assistance depends on program rules and available funds; this is not a confirmed shelter placement.",
-      "The provider lists a broader 11-county housing footprint. This veteran-specific entry uses only the five SSVF counties explicitly identified by VA."
+      "Veteran-household, income and housing-status screening applies. Ask about current discharge requirements, funding and availability. A referral is not an approval or housing reservation.",
+      "County and intake evidence uses the FY26 list still linked from VA on the review date; confirm current service availability when calling."
     ],
     "public_contact": {
-      "phone": "614-358-2611 ext. 161",
-      "phone_label": "Published housing program contact; request SSVF intake"
+      "phone": "614-437-2130",
+      "phone_label": "VA-listed SSVF intake"
     },
     "resource_role": "housing_provider",
     "verification": {
@@ -3710,6 +3716,15 @@
         "title": "VA Morrow County homeless resources",
         "reviewed_on": "2026-10-09",
         "scope": "Explicit SSVF referral for Delaware, Madison, Marion, Morrow and Union"
+      },
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-10-09",
+        "scope": "Ohio county coverage and SSVF intake; Contacts worksheet row 87",
+        "sheet": "Contacts",
+        "row": 87,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
       }
     ]
   },
@@ -3720,6 +3735,7 @@
     "official_url": "https://www.lcchousing.org/need-help",
     "service_area": [
       "Coshocton",
+      "Holmes",
       "Knox",
       "Licking"
     ],
@@ -3754,6 +3770,15 @@
         "title": "VA Knox County homeless resources",
         "reviewed_on": "2026-10-09",
         "scope": "SSVF referral for Coshocton, Knox and Licking; VA uses an older provider name"
+      },
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-10-09",
+        "scope": "Ohio county coverage and SSVF intake; Contacts worksheet row 81",
+        "sheet": "Contacts",
+        "row": 81,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
       }
     ]
   },
@@ -3810,30 +3835,30 @@
     "organization": "Lutheran Social Services / Faith Mission of Fairfield County",
     "official_url": "https://lssnetworkofhope.org/faithmissionfc/supportive-services-for-veterans-families-program/",
     "service_area": [
+      "Adams",
+      "Brown",
       "Fairfield",
-      "Franklin",
+      "Fayette",
+      "Highland",
       "Hocking",
       "Perry",
-      "Ross",
-      "Fayette",
       "Pickaway",
-      "Highland",
-      "Adams",
-      "Brown"
+      "Ross"
     ],
     "needs_supported": [
       "veteran_services",
       "general_navigation"
     ],
     "description": "SSVF helps veteran families who are homeless or facing homelessness work toward stable housing, with case management, benefits connections and possible temporary financial assistance.",
-    "next_step": "Use the official SSVF referral form to begin prescreening. Review its consent requirements; submit personal records directly to LSS and ask which documents are needed.",
+    "next_step": "Call SSVF intake or use the official referral form. Give your county and housing situation and request eligibility screening.",
     "constraints": [
       "Very-low-income veteran-family and housing-status screening apply. A referral starts prescreening; it does not guarantee financial assistance or housing.",
-      "The ten-county area applies to SSVF. Fairfield County shelter and transitional housing are separate programs; the shelter phone is not presented here as SSVF intake."
+      "The ten-county area applies to SSVF. Fairfield County shelter and transitional housing are separate programs; the shelter phone is not presented here as SSVF intake.",
+      "The provider page includes Franklin, but VA lists a separate Franklin grant and intake. This card maps the nine-county regional grant; use the Franklin Faith Mission card for Franklin."
     ],
     "public_contact": {
-      "phone": null,
-      "phone_label": "Official SSVF referral form"
+      "phone": "740-277-2334",
+      "phone_label": "VA-listed SSVF intake for the Fairfield-based regional program"
     },
     "resource_role": "housing_provider",
     "verification": {
@@ -3852,6 +3877,15 @@
         "title": "LSS SSVF referral",
         "reviewed_on": "2026-10-09",
         "scope": "Program purpose, services and official prescreening route"
+      },
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-10-09",
+        "scope": "Nine counties and dedicated intake; Franklin has a separate Faith Mission grant; Contacts worksheet row 116",
+        "sheet": "Contacts",
+        "row": 116,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
       }
     ]
   },
@@ -3878,7 +3912,8 @@
     "description": "Housing crisis support for low-income veterans and families, including prevention, rapid rehousing and case management.",
     "next_step": "Call the 24/7 SSVF hotline. Give your county and housing situation and ask about screening and documents.",
     "constraints": [
-      "Veteran-household, income, discharge and housing-status requirements apply. Funding and assistance are not guaranteed."
+      "Veteran-household, income, discharge and housing-status requirements apply. Funding and assistance are not guaranteed.",
+      "The provider publishes nine Ohio counties; this VA grant entry names six. Geauga, Medina and Ashtabula referrals rely on the provider page; confirm the current county intake route."
     ],
     "public_contact": {
       "phone": "855-234-7310",
@@ -3895,6 +3930,15 @@
         "title": "Axess SSVF",
         "reviewed_on": "2026-10-09",
         "scope": "Nine-county Ohio coverage, eligibility, services and 24/7 hotline"
+      },
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-10-09",
+        "scope": "Six counties under this listed grant; provider page separately publishes nine-county program coverage; Contacts worksheet row 82",
+        "sheet": "Contacts",
+        "row": 82,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
       }
     ]
   },
@@ -3916,8 +3960,7 @@
     ],
     "needs_supported": [
       "help_at_home",
-      "general_navigation",
-      "equipment_home_accessibility"
+      "general_navigation"
     ],
     "description": "Help caregivers arrange a break through in-home respite or adult day services, with assessment and counseling.",
     "next_step": "Call and request Family Caregiver Support screening. Describe the person’s age, county, living arrangement and help needed.",
@@ -4181,11 +4224,14 @@
     "organization": "Talbert House",
     "official_url": "https://www.talberthouse.org/services/housing/housing-services/",
     "service_area": [
-      "Hamilton"
+      "Butler",
+      "Clermont",
+      "Hamilton",
+      "Warren"
     ],
     "public_contact": {
-      "phone": "513-381-7233",
-      "phone_label": "Published referral phone; confirm program intake"
+      "phone": "513-993-7230",
+      "phone_label": "VA-listed SSVF intake"
     },
     "resource_role": "housing_provider",
     "needs_supported": [
@@ -4193,10 +4239,10 @@
       "general_navigation"
     ],
     "description": "SSVF case management and temporary financial assistance for eligible veteran households facing housing loss.",
-    "next_step": "Call Central Access Point and ask for a Talbert House SSVF referral. The provider also lists a veteran resources line: 513-281-8387.",
+    "next_step": "Call SSVF intake with your county and housing situation. Hamilton County residents may also request a referral through Central Access Point at 513-381-7233.",
     "constraints": [
-      "Veteran-household, income, discharge and housing-status screening applies. Assistance is not guaranteed.",
-      "This map confirms Hamilton only. The provider describes nine surrounding counties across three states without naming them; call to confirm referrals elsewhere."
+      "Veteran-household, income and housing-status screening applies. Ask about current discharge requirements, funding and availability. A referral is not an approval or housing reservation.",
+      "County and intake evidence uses the FY26 list still linked from VA on the review date; confirm current service availability when calling."
     ],
     "verification": {
       "record_status": "official_source_reviewed",
@@ -4208,6 +4254,15 @@
         "title": "Talbert House housing services",
         "scope": "Hamilton SSVF, screening, CAP intake and separate veteran resources line",
         "reviewed_on": "2026-10-09"
+      },
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-10-09",
+        "scope": "Ohio county coverage and SSVF intake; Contacts worksheet row 158",
+        "sheet": "Contacts",
+        "row": 158,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
       }
     ]
   },
@@ -4584,9 +4639,8 @@
     },
     "resource_role": "caregiver_support",
     "needs_supported": [
-      "general_navigation",
       "help_at_home",
-      "equipment_home_accessibility"
+      "general_navigation"
     ],
     "description": "Search a county directory for adult day services and caregiver relief options.",
     "next_step": "Open the directory, choose a county and contact the center about care needs, hours, transportation and accepted payment.",
@@ -4604,6 +4658,674 @@
         "title": "Adult Day Ohio center directory",
         "scope": "County search, center contacts and explicit coverage gaps",
         "reviewed_on": "2026-10-09"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-wmcap-ssvf",
+    "name": "Washington–Morgan Community Action: veteran housing",
+    "organization": "Washington–Morgan Community Action",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "service_area": [
+      "Athens",
+      "Belmont",
+      "Gallia",
+      "Guernsey",
+      "Jackson",
+      "Lawrence",
+      "Meigs",
+      "Monroe",
+      "Morgan",
+      "Muskingum",
+      "Noble",
+      "Pike",
+      "Scioto",
+      "Vinton",
+      "Washington"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "general_navigation"
+    ],
+    "description": "SSVF housing-stability support for eligible veterans and families experiencing or facing homelessness.",
+    "next_step": "Call with your county and housing situation. Ask for SSVF screening, needed documents and the next intake step.",
+    "constraints": [
+      "Veteran-household, income and housing-status screening applies. Ask about current discharge requirements, funding and availability. A referral is not an approval or housing reservation.",
+      "County and intake evidence uses the FY26 list still linked from VA on the review date; confirm current service availability when calling."
+    ],
+    "public_contact": {
+      "phone": "740-373-3745",
+      "phone_label": "Published program contact; confirm intake"
+    },
+    "resource_role": "housing_provider",
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-09"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-10-09",
+        "scope": "Mapped county coverage and published intake contact; Contacts worksheet row 84",
+        "sheet": "Contacts",
+        "row": 84,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-maumee-ssvf",
+    "name": "Maumee Valley Guidance Center: veteran housing",
+    "organization": "Maumee Valley Guidance Center",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "service_area": [
+      "Defiance",
+      "Fulton",
+      "Henry",
+      "Paulding",
+      "Williams"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "general_navigation"
+    ],
+    "description": "SSVF housing-stability support for eligible veterans and families experiencing or facing homelessness.",
+    "next_step": "Call with your county and housing situation. Ask for SSVF screening, needed documents and the next intake step.",
+    "constraints": [
+      "Veteran-household, income and housing-status screening applies. Ask about current discharge requirements, funding and availability. A referral is not an approval or housing reservation.",
+      "County and intake evidence uses the FY26 list still linked from VA on the review date; confirm current service availability when calling."
+    ],
+    "public_contact": {
+      "phone": "419-782-8856",
+      "phone_label": "Published program contact; confirm intake"
+    },
+    "resource_role": "housing_provider",
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-09"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-10-09",
+        "scope": "Mapped county coverage and published intake contact; Contacts worksheet row 39",
+        "sheet": "Contacts",
+        "row": 39,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-columbiana-ssvf",
+    "name": "Columbiana Community Action: veteran housing",
+    "organization": "Community Action Agency of Columbiana County",
+    "official_url": "https://caaofcc.org/communityservices/homeless-prevention/",
+    "service_area": [
+      "Carroll",
+      "Columbiana",
+      "Harrison",
+      "Jefferson",
+      "Tuscarawas",
+      "Mahoning"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "general_navigation"
+    ],
+    "description": "SSVF housing-stability support for eligible veterans and families experiencing or facing homelessness.",
+    "next_step": "Call with your county and housing situation. Ask for SSVF screening, needed documents and the next intake step.",
+    "constraints": [
+      "Veteran-household, income and housing-status screening applies. Ask about current discharge requirements, funding and availability. A referral is not an approval or housing reservation.",
+      "County and intake evidence uses the FY26 list still linked from VA on the review date; confirm current service availability when calling.",
+      "Mahoning is published on the provider page but absent from this VA grant row; confirm its current intake route."
+    ],
+    "public_contact": {
+      "phone": "330-424-4013",
+      "phone_label": "Published program contact; confirm intake"
+    },
+    "resource_role": "housing_provider",
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-09"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-10-09",
+        "scope": "Mapped county coverage and published intake contact; Contacts worksheet row 83",
+        "sheet": "Contacts",
+        "row": 83,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      },
+      {
+        "url": "https://caaofcc.org/communityservices/homeless-prevention/",
+        "title": "CAACC homeless prevention",
+        "reviewed_on": "2026-10-09",
+        "scope": "Provider services, phone and six-county SSVF coverage"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-frontline-ssvf",
+    "name": "FrontLine Service: veteran housing",
+    "organization": "FrontLine Service",
+    "official_url": "https://www.frontlineservice.org/ending-homelessness",
+    "service_area": [
+      "Cuyahoga",
+      "Lake",
+      "Ashtabula"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "general_navigation"
+    ],
+    "description": "SSVF housing-stability support for eligible veterans and families experiencing or facing homelessness.",
+    "next_step": "Call with your county and housing situation. Ask for SSVF screening, needed documents and the next intake step.",
+    "constraints": [
+      "Veteran-household, income and housing-status screening applies. Ask about current discharge requirements, funding and availability. A referral is not an approval or housing reservation.",
+      "County and intake evidence uses the FY26 list still linked from VA on the review date; confirm current service availability when calling.",
+      "This contact covers Cuyahoga, Lake and Ashtabula. The grant’s northwest Ohio counties have a separate GLCAP intake route."
+    ],
+    "public_contact": {
+      "phone": "216-674-6700",
+      "phone_label": "Published program contact; confirm intake"
+    },
+    "resource_role": "housing_provider",
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-09"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-10-09",
+        "scope": "Mapped county coverage and published intake contact; Contacts worksheet row 23",
+        "sheet": "Contacts",
+        "row": 23,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      },
+      {
+        "url": "https://www.frontlineservice.org/ending-homelessness",
+        "title": "FrontLine homelessness services",
+        "reviewed_on": "2026-10-09",
+        "scope": "Provider housing and veteran referral information"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-css-ssvf",
+    "name": "Community Support Services: Summit veteran housing",
+    "organization": "Community Support Services",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "service_area": [
+      "Summit"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "general_navigation"
+    ],
+    "description": "SSVF housing-stability support for eligible veterans and families experiencing or facing homelessness.",
+    "next_step": "Call with your county and housing situation. Ask for SSVF screening, needed documents and the next intake step.",
+    "constraints": [
+      "Veteran-household, income and housing-status screening applies. Ask about current discharge requirements, funding and availability. A referral is not an approval or housing reservation.",
+      "County and intake evidence uses the FY26 list still linked from VA on the review date; confirm current service availability when calling.",
+      "The VA list also identifies Summit coordinated entry at 330-615-0577."
+    ],
+    "public_contact": {
+      "phone": "330-762-4663",
+      "phone_label": "Published program contact; confirm intake"
+    },
+    "resource_role": "housing_provider",
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-09"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-10-09",
+        "scope": "Mapped county coverage and published intake contact; Contacts worksheet row 86",
+        "sheet": "Contacts",
+        "row": 86,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-faithmission-franklin-ssvf",
+    "name": "Faith Mission: Franklin veteran housing",
+    "organization": "Faith Mission",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "service_area": [
+      "Franklin"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "general_navigation"
+    ],
+    "description": "SSVF housing-stability support for eligible veterans and families experiencing or facing homelessness.",
+    "next_step": "Call with your county and housing situation. Ask for SSVF screening, needed documents and the next intake step.",
+    "constraints": [
+      "Veteran-household, income and housing-status screening applies. Ask about current discharge requirements, funding and availability. A referral is not an approval or housing reservation.",
+      "County and intake evidence uses the FY26 list still linked from VA on the review date; confirm current service availability when calling."
+    ],
+    "public_contact": {
+      "phone": "614-224-6617",
+      "phone_label": "Published program contact; confirm intake"
+    },
+    "resource_role": "housing_provider",
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-09"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-10-09",
+        "scope": "Mapped county coverage and published intake contact; Contacts worksheet row 85",
+        "sheet": "Contacts",
+        "row": 85,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-voa-cleveland-ssvf",
+    "name": "VOA: Cuyahoga veteran housing",
+    "organization": "Volunteers of America Ohio & Indiana",
+    "official_url": "https://www.voaohin.org/services/supportive-services-for-veteran-families/",
+    "service_area": [
+      "Cuyahoga"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "general_navigation"
+    ],
+    "description": "SSVF housing-stability support for eligible veterans and families experiencing or facing homelessness.",
+    "next_step": "Call with your county and housing situation. Ask for SSVF screening, needed documents and the next intake step.",
+    "constraints": [
+      "Veteran-household, income and housing-status screening applies. Ask about current discharge requirements, funding and availability. A referral is not an approval or housing reservation.",
+      "County and intake evidence uses the FY26 list still linked from VA on the review date; confirm current service availability when calling."
+    ],
+    "public_contact": {
+      "phone": "216-541-9000 ext. 1305",
+      "phone_label": "Published program contact; confirm intake"
+    },
+    "resource_role": "housing_provider",
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-09"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-10-09",
+        "scope": "Mapped county coverage and published intake contact; Contacts worksheet row 149",
+        "sheet": "Contacts",
+        "row": 149,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      },
+      {
+        "url": "https://www.voaohin.org/services/supportive-services-for-veteran-families/",
+        "title": "VOA SSVF services",
+        "reviewed_on": "2026-10-09",
+        "scope": "Provider-published services and screening; county-specific intake uses the VA workbook"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-voa-columbus-ssvf",
+    "name": "VOA: Franklin veteran housing",
+    "organization": "Volunteers of America Ohio & Indiana",
+    "official_url": "https://www.voaohin.org/services/supportive-services-for-veteran-families/",
+    "service_area": [
+      "Franklin"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "general_navigation"
+    ],
+    "description": "SSVF housing-stability support for eligible veterans and families experiencing or facing homelessness.",
+    "next_step": "Call with your county and housing situation. Ask for SSVF screening, needed documents and the next intake step.",
+    "constraints": [
+      "Veteran-household, income and housing-status screening applies. Ask about current discharge requirements, funding and availability. A referral is not an approval or housing reservation.",
+      "County and intake evidence uses the FY26 list still linked from VA on the review date; confirm current service availability when calling."
+    ],
+    "public_contact": {
+      "phone": "614-546-8119",
+      "phone_label": "Published program contact; confirm intake"
+    },
+    "resource_role": "housing_provider",
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-09"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-10-09",
+        "scope": "Mapped county coverage and published intake contact; Contacts worksheet row 149",
+        "sheet": "Contacts",
+        "row": 149,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      },
+      {
+        "url": "https://www.voaohin.org/services/supportive-services-for-veteran-families/",
+        "title": "VOA SSVF services",
+        "reviewed_on": "2026-10-09",
+        "scope": "Provider-published services and screening; county-specific intake uses the VA workbook"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-voa-dayton-ssvf",
+    "name": "VOA: Montgomery veteran housing",
+    "organization": "Volunteers of America Ohio & Indiana",
+    "official_url": "https://www.voaohin.org/services/supportive-services-for-veteran-families/",
+    "service_area": [
+      "Montgomery"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "general_navigation"
+    ],
+    "description": "SSVF housing-stability support for eligible veterans and families experiencing or facing homelessness.",
+    "next_step": "Call with your county and housing situation. Ask for SSVF screening, needed documents and the next intake step.",
+    "constraints": [
+      "Veteran-household, income and housing-status screening applies. Ask about current discharge requirements, funding and availability. A referral is not an approval or housing reservation.",
+      "County and intake evidence uses the FY26 list still linked from VA on the review date; confirm current service availability when calling."
+    ],
+    "public_contact": {
+      "phone": "937-253-7042 ext. 1468",
+      "phone_label": "Published program contact; confirm intake"
+    },
+    "resource_role": "housing_provider",
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-09"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-10-09",
+        "scope": "Mapped county coverage and published intake contact; Contacts worksheet row 149",
+        "sheet": "Contacts",
+        "row": 149,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      },
+      {
+        "url": "https://www.voaohin.org/services/supportive-services-for-veteran-families/",
+        "title": "VOA SSVF services",
+        "reviewed_on": "2026-10-09",
+        "scope": "Provider-published services and screening; county-specific intake uses the VA workbook"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-coaaa-caregiver",
+    "name": "Central Ohio Area Agency on Aging: caregiver support",
+    "organization": "Central Ohio Area Agency on Aging",
+    "official_url": "https://www.coaaa.org/services/caregiver-advice-services/",
+    "service_area": [
+      "Delaware",
+      "Fairfield",
+      "Fayette",
+      "Franklin",
+      "Licking",
+      "Madison",
+      "Pickaway",
+      "Union"
+    ],
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation"
+    ],
+    "description": "Caregiver advice, education and help finding respite, with referrals to county respite partners.",
+    "next_step": "Call and ask for caregiver support or respite screening. Give the care recipient’s county, age, living arrangement and care needs.",
+    "constraints": [
+      "Advice is free. Respite and supplemental services have separate eligibility and capacity limits; the agency routes requests to its county partners."
+    ],
+    "public_contact": {
+      "phone": "800-589-7277",
+      "phone_label": "Published program contact; confirm intake"
+    },
+    "resource_role": "caregiver_support",
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-09"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.coaaa.org/services/caregiver-advice-services/",
+        "title": "Agency caregiver support",
+        "reviewed_on": "2026-10-09",
+        "scope": "Program services and published contact"
+      },
+      {
+        "url": "https://www.ohioaging.org/aws/O4A/asset_manager/get_file/943016?ver=0",
+        "title": "Ohio Association of Area Agencies on Aging directory (February 2026)",
+        "page": 1,
+        "reviewed_on": "2026-10-08",
+        "scope": "County coverage and published referral phone; not a telephone confirmation"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-western-caregiver",
+    "name": "Western Reserve Area Agency on Aging: caregiver support",
+    "organization": "Western Reserve Area Agency on Aging",
+    "official_url": "https://areaagingsolutions.org/programs-services/family-caregiver-support/",
+    "service_area": [
+      "Cuyahoga",
+      "Geauga",
+      "Lake",
+      "Lorain",
+      "Medina"
+    ],
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation"
+    ],
+    "description": "Caregiver coordination, respite planning and connections to counseling and support.",
+    "next_step": "Call and ask for caregiver support or respite screening. Give the care recipient’s county, age, living arrangement and care needs.",
+    "constraints": [
+      "Screening includes adult informal caregivers of people age 60+ or people of any age with Alzheimer’s and related disorders. Certain older relative caregivers also qualify; ask the team to assess your situation.",
+      "Information, assistance and planning are free. Ask which respite options are currently available."
+    ],
+    "public_contact": {
+      "phone": "216-586-3441",
+      "phone_label": "Published program contact; confirm intake"
+    },
+    "resource_role": "caregiver_support",
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-09"
+    },
+    "source_evidence": [
+      {
+        "url": "https://areaagingsolutions.org/programs-services/family-caregiver-support/",
+        "title": "Agency caregiver support",
+        "reviewed_on": "2026-10-09",
+        "scope": "Program services and published contact"
+      },
+      {
+        "url": "https://www.ohioaging.org/aws/O4A/asset_manager/get_file/943016?ver=0",
+        "title": "Ohio Association of Area Agencies on Aging directory (February 2026)",
+        "page": 1,
+        "reviewed_on": "2026-10-08",
+        "scope": "County coverage and published referral phone; not a telephone confirmation"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-region9-caregiver",
+    "name": "Area Agency on Aging Region 9: caregiver support",
+    "organization": "Area Agency on Aging Region 9",
+    "official_url": "https://aaa9.org/programs/caregiver-respite/",
+    "service_area": [
+      "Belmont",
+      "Carroll",
+      "Coshocton",
+      "Guernsey",
+      "Harrison",
+      "Holmes",
+      "Jefferson",
+      "Muskingum",
+      "Tuscarawas"
+    ],
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation"
+    ],
+    "description": "Short-term relief options and support for unpaid caregivers in southeast Ohio.",
+    "next_step": "Call and ask for caregiver support or respite screening. Give the care recipient’s county, age, living arrangement and care needs.",
+    "constraints": [
+      "Call for a needs assessment and current respite options. Coverage is a referral area, not a guarantee of a funded service."
+    ],
+    "public_contact": {
+      "phone": "800-945-4250",
+      "phone_label": "Published program contact; confirm intake"
+    },
+    "resource_role": "caregiver_support",
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-09"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aaa9.org/programs/caregiver-respite/",
+        "title": "Agency caregiver support",
+        "reviewed_on": "2026-10-09",
+        "scope": "Program services and published contact"
+      },
+      {
+        "url": "https://www.ohioaging.org/aws/O4A/asset_manager/get_file/943016?ver=0",
+        "title": "Ohio Association of Area Agencies on Aging directory (February 2026)",
+        "page": 1,
+        "reviewed_on": "2026-10-08",
+        "scope": "County coverage and published referral phone; not a telephone confirmation"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-glcap-meals",
+    "name": "Sandusky County: Meals on Wheels",
+    "organization": "Great Lakes Community Action Partnership",
+    "official_url": "https://www.glcap.org/programs/senior-services/meals-on-wheels/",
+    "service_area": [
+      "Sandusky"
+    ],
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation"
+    ],
+    "description": "Weekday home-delivered lunches for eligible Sandusky County residents age 60 and older.",
+    "next_step": "Call for Meals on Wheels information and a home assessment. Ask about dietary needs, delivery start and scheduling.",
+    "constraints": [
+      "Home assessment determines eligibility. A donation is suggested but not required.",
+      "The published information line is 419-333-5082; the page separately lists 419-334-8383 as a contact and 419-332-4032 for delivery changes."
+    ],
+    "public_contact": {
+      "phone": "419-333-5082",
+      "phone_label": "Published program contact; confirm intake"
+    },
+    "resource_role": "home_support",
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-09"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.glcap.org/programs/senior-services/meals-on-wheels/",
+        "title": "GLCAP Meals on Wheels",
+        "reviewed_on": "2026-10-09",
+        "scope": "Sandusky coverage, age, assessment, donation policy and separate phone functions"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-glcap-trips",
+    "name": "Sandusky County: TRIPS accessible transportation",
+    "organization": "Great Lakes Community Action Partnership",
+    "official_url": "https://www.glcap.org/programs/transportation/public-transportation/",
+    "service_area": [
+      "Sandusky"
+    ],
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation"
+    ],
+    "description": "Low-cost public rides for shopping, appointments and other trips, with wheelchair-accessible vehicles when available.",
+    "next_step": "Call dispatch at least 24 hours ahead. Give pickup, destination, return time and wheelchair or companion needs.",
+    "constraints": [
+      "Pickup must begin in Sandusky County. Confirm destination, fare, schedule and accessible-vehicle availability.",
+      "This is curb-to-curb public transportation; ask whether it meets the rider’s assistance needs."
+    ],
+    "public_contact": {
+      "phone": "419-332-8091",
+      "phone_label": "Published program contact; confirm intake"
+    },
+    "resource_role": "home_support",
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-09"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.glcap.org/programs/transportation/public-transportation/",
+        "title": "GLCAP TRIPS public transportation",
+        "reviewed_on": "2026-10-09",
+        "scope": "County pickup boundary, dispatch, scheduling and access limits"
+      }
+    ]
+  },
+  {
+    "program_id": "ohio-fairfield-seniorhub",
+    "name": "Fairfield County: The Senior Hub",
+    "organization": "The Senior Hub – Meals on Wheels of Fairfield County",
+    "official_url": "https://www.theseniorhubfc.org/",
+    "service_area": [
+      "Fairfield"
+    ],
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation"
+    ],
+    "description": "Local nutrition and senior support, plus county referrals for caregiver respite.",
+    "next_step": "Call with your needs and ask about meal screening, support services or caregiver respite.",
+    "constraints": [
+      "Individual services have separate age, needs and availability rules. Ask about fees or contributions and current intake."
+    ],
+    "public_contact": {
+      "phone": "740-681-5050",
+      "phone_label": "Published program contact; confirm intake"
+    },
+    "resource_role": "home_support",
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-09"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.theseniorhubfc.org/",
+        "title": "The Senior Hub",
+        "reviewed_on": "2026-10-09",
+        "scope": "Fairfield services and published phone"
+      },
+      {
+        "url": "https://www.coaaa.org/services/caregiver-advice-services/",
+        "title": "COAAA caregiver county partners",
+        "reviewed_on": "2026-10-09",
+        "scope": "Fairfield respite partner and phone"
       }
     ]
   }

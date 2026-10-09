@@ -39,7 +39,7 @@ The guide displays county coverage and calculated verification totals in an expa
 ## Ohio scope
 
 - Veterans office contacts for all 88 Ohio counties, plus matched aging agency and long-term-care ombudsman contacts.
-- 136 resource records, displayed as 132 cards after removing four duplicate legacy county office cards.
+- 151 resource records, displayed as 147 cards after removing four duplicate legacy county office cards.
 - Veterans benefits, surviving-spouse support, care, housing and resident rights routes.
 - Ramps and home accessibility: HISA, adapted housing, Ohio waiver routes, rural repair and discharge coordination, with an application checklist and paper follow-up tracker.
 - A dedicated seniors and disability section without a military-service requirement.

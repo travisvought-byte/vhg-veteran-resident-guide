@@ -1,35 +1,36 @@
 # Ohio veteran housing provider coverage
 
-Reviewed October 9, 2026 (UTC). The provider layer maps seven SSVF referrals across 49 distinct Ohio counties. The other 39 counties retain national VA housing referrals and county veterans offices; they do not yet have a verified local provider in this layer.
+Reviewed October 9, 2026. Sixteen provider/contact records map local veteran housing referrals for 86 counties. Putnam and Van Wert retain national VA housing referrals and their county veterans offices; provider-level coverage remains unverified there.
 
-| Provider | Ohio counties mapped | Intake route |
+| Provider/contact | Ohio counties mapped | Intake phone |
 |---|---|---|
-| Salvation Army Central Ohio Area Services | Delaware, Madison, Marion, Morrow, Union | Housing program: 614-358-2611 ext. 161; request SSVF screening |
-| Licking County Coalition for Housing | Coshocton, Knox, Licking | Main office: 740-345-1970; request SSVF intake |
-| St. Vincent de Paul Society, Dayton | Allen, Auglaize, Champaign, Clark, Clinton, Darke, Greene, Mercer, Miami, Montgomery, Preble, Shelby | SSVF intake: 888-751-1238 |
-| LSS Faith Mission of Fairfield County | Adams, Brown, Fairfield, Fayette, Franklin, Highland, Hocking, Perry, Pickaway, Ross | Official SSVF referral form; begins prescreening |
-
-| Axess Family Services | Ashtabula, Geauga, Lorain, Mahoning, Medina, Portage, Stark, Summit, Trumbull | 24/7 SSVF hotline: 855-234-7310 |
-| Great Lakes CAP | Erie, Hancock, Huron, Lorain, Lucas, Ottawa, Sandusky, Seneca, Wood, Wyandot | 800-775-9767; request SSVF |
-| Talbert House | Hamilton only confirmed in this map | Central Access Point: 513-381-7233 |
+| Salvation Army: veteran housing support in five Central Ohio counties | Ashland, Crawford, Delaware, Hardin, Logan, Madison, Marion, Morrow, Richland, Union, Wayne | 614-437-2130 |
+| Licking County Coalition for Housing: veteran housing support | Coshocton, Holmes, Knox, Licking | 740-345-1970 |
+| St. Vincent de Paul Dayton: veteran housing support | Allen, Auglaize, Champaign, Clark, Clinton, Darke, Greene, Mercer, Miami, Montgomery, Preble, Shelby | 888-751-1238 |
+| LSS Faith Mission: veteran housing stability support | Adams, Brown, Fairfield, Fayette, Highland, Hocking, Perry, Pickaway, Ross | 740-277-2334 |
+| Axess Family Services: veteran housing support | Geauga, Lorain, Portage, Mahoning, Medina, Stark, Summit, Trumbull, Ashtabula | 855-234-7310 |
+| Great Lakes CAP: veteran housing support | Erie, Hancock, Huron, Lorain, Lucas, Ottawa, Sandusky, Seneca, Wood, Wyandot | 800-775-9767 |
+| Talbert House: veteran housing support | Butler, Clermont, Hamilton, Warren | 513-993-7230 |
+| Washington–Morgan Community Action: veteran housing | Athens, Belmont, Gallia, Guernsey, Jackson, Lawrence, Meigs, Monroe, Morgan, Muskingum, Noble, Pike, Scioto, Vinton, Washington | 740-373-3745 |
+| Maumee Valley Guidance Center: veteran housing | Defiance, Fulton, Henry, Paulding, Williams | 419-782-8856 |
+| Columbiana Community Action: veteran housing | Carroll, Columbiana, Harrison, Jefferson, Tuscarawas, Mahoning | 330-424-4013 |
+| FrontLine Service: veteran housing | Cuyahoga, Lake, Ashtabula | 216-674-6700 |
+| Community Support Services: Summit veteran housing | Summit | 330-762-4663 |
+| Faith Mission: Franklin veteran housing | Franklin | 614-224-6617 |
+| VOA: Cuyahoga veteran housing | Cuyahoga | 216-541-9000 ext. 1305 |
+| VOA: Franklin veteran housing | Franklin | 614-546-8119 |
+| VOA: Montgomery veteran housing | Montgomery | 937-253-7042 ext. 1468 |
 
 ## Evidence and boundaries
 
-- Salvation Army: [provider housing page](https://www.salvationarmyusa.org/usa-eastern-territory/southwest-ohio-northeast-kentucky/central-ohio-area-services/homelessness/) publishes services and a housing contact. [VA Morrow County referral](https://www.va.gov/central-ohio-health-care/programs/va-emergency-resources/homeless-resources/morrow-county-homeless-resources/) explicitly identifies the five mapped SSVF counties. The provider’s broader 11-county housing footprint is not assumed to apply to SSVF.
-- LCCH: [provider services and phone](https://www.lcchousing.org/need-help) and [VA Knox County referral](https://www.va.gov/central-ohio-health-care/programs/va-emergency-resources/homeless-resources/knox-county-homeless-resource/). VA uses the older “Coalition for the Homeless” name; the provider uses “Coalition for Housing.” The three-county map applies to SSVF, not every LCCH program.
-- Dayton: [provider veteran services page](https://stvincentdayton.org/help/veterans-support/) identifies 12 Ohio counties, eligibility and the dedicated intake phone. Its four Indiana counties are outside this Ohio dataset. Ask intake to confirm current income rules rather than treating a published threshold as universal SSVF policy.
-- LSS: [full services page](https://lssnetworkofhope.org/faithmissionfc/services/) lists ten SSVF counties, including Franklin. An indexed excerpt omitted Franklin; the full page governs this record. The [official referral form](https://lssnetworkofhope.org/faithmissionfc/supportive-services-for-veterans-families-program/) starts prescreening. The Fairfield shelter phone is not labeled as SSVF intake.
+The [VA provider page](https://department.va.gov/homeless/supportive-services-for-veteran-families/) currently links the [FY26 provider intake workbook](https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx). It was reviewed directly, not through an indexed excerpt. Each applicable record cites its Contacts worksheet row and source SHA-256. The compact `data/public/ohio-ssvf-intake-evidence.json` projection retains all 13 Ohio grant rows, organizations, county boundaries and intake phone columns, without named staff email addresses. The workbook’s fiscal year is preserved; review does not mean confirmation of a FY27 opening.
 
-These are referrals, not telephone-confirmed openings, shelter reservations or approved grants. Income, veteran-household, housing-status and funding rules apply. Residents should send personal documents directly to the provider through its intake process; the guide collects none.
+The workbook establishes 84 Ohio counties. Provider-published Axess coverage adds Geauga and Medina, bringing the combined map to 86. The provider’s nine-county page exceeds its six-county grant row, so the card explains the difference. CAACC’s provider page additionally names Mahoning, also qualified on its card. These are referrals to ask about, not guaranteed grants, shelter reservations or approved housing.
 
-## Remaining expansion
+Salvation Army coverage now uses the explicit eleven-county SSVF grant entry rather than inference from a broader housing footprint. LCCH adds Holmes. Talbert House’s Ohio grant counties are Butler, Clermont, Hamilton and Warren; Indiana and Kentucky counties remain outside this dataset. LSS regional coverage uses its nine-county grant, while Franklin receives a separate Faith Mission contact. VOA records are separated by county to show the correct Cleveland, Columbus and Dayton intake phones and extensions. FrontLine’s contact covers Cuyahoga, Lake and Ashtabula; its shared grant’s northwest counties route separately to GLCAP.
 
-Verify local SSVF providers for the remaining 39 counties, starting with northeast Ohio and northwest Ohio. VOA Ohio & Indiana and Talbert House are research candidates; office locations or an unnamed surrounding-county claim are insufficient to infer a complete county map. Add emergency shelter and transitional-housing records separately, with their own geographic, admission and accessibility limits. Food banks and Community Action Agencies follow this housing layer.
+Published phones may differ between provider main offices, older VA county pages and grant intake. Records identify which phone is used, and retain evidence rather than claiming telephone confirmation. Confirm intake, eligibility and available assistance directly with the program.
 
-## Northeast Ohio addition
+## Next gaps
 
-Axess Family Services publishes SSVF coverage for Ashtabula, Geauga, Lorain, Mahoning, Medina, Portage, Stark, Summit and Trumbull. Its 24/7 hotline is 855-234-7310. The provider page supplies current coverage, services and eligibility; this replaces reliance on older Family & Community Services directory entries.
-
-## Further expansion
-
-[GLCAP veteran support](https://www.glcap.org/programs/housing-assistance/veteran-support/) publishes ten counties and an intake phone; Lorain overlaps Axess, so this adds nine distinct counties. [Talbert House housing](https://www.talberthouse.org/services/housing/housing-services/) confirms Hamilton and CAP referrals. Its unnamed nine surrounding counties span three states and are not inferred from general agency coverage. These additions bring mapped coverage to 49 counties.
+Verify local housing intake for Putnam and Van Wert, confirm current fiscal-year capacity, and add emergency shelter and transitional housing separately with their admission and accessibility limits.
