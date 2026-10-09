@@ -43,3 +43,9 @@ For statewide discovery, link to the Ohio Association of Senior Centers locator 
 October 9: added Lexington Senior Civic Center (The Depot) using the Village of Lexington page, https://lexingtonohio.us/senior-center. Publish the consistent Tuesday/Thursday 1 p.m. bingo start and public 11 a.m.–1 p.m. lunch window. The same page has conflicting bingo finish times and center hours; those are not presented as settled. Twelve center locations are now included.
 
 Crawford’s provider activities page confirms age 55+, optional annual activities membership ($30 individual/$55 married couple), extension 235 and monthly Senior Tidings newsletter. Off-site Galion/Crestline sessions depend on funding and participation; do not imply a permanent weekly schedule.
+
+## Surrounding counties: Union and Licking
+
+October 9: added Windsor & Community Seniors in Marysville, Richwood Civic Center and LCAP Heritage Hall in Newark. Fifteen centers are included. Provider pages support Marysville’s Tuesday 1:30 p.m. bingo, cornhole/crochet times, membership dues and lunch reservation contact. Union County Human Services supports Richwood community-meal reservations; provider pages support its activities and Geri-Fit program. LCAP’s social-lunch page supports Heritage Hall’s weekday 11:30 a.m. lunch and previous-weekday 4 p.m. reservation deadline. Do not assign LCAP’s countywide club times to Heritage Hall without a location-specific calendar.
+
+Ashland Post 88 remains a research candidate: Explore Ashland contains conflicting timezone/start information across event pages. No definite bingo session time was added from those pages.
