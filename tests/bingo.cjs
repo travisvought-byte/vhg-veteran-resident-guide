@@ -8,7 +8,7 @@ assert.deepEqual(JSON.parse(vm.runInContext('JSON.stringify(BINGO)',context)),co
 assert.equal(vm.runInContext("filteredBingo('Morrow','charitable','').length",context),3);assert.equal(vm.runInContext("filteredBingo('Knox','senior','').length",context),1);assert.equal(vm.runInContext("filteredBingo('Morrow','senior','').length",context),0);assert.equal(vm.runInContext("filteredBingo('','','cardington').length",context),1);
 assert.equal(new Set(canonical.map(r=>r.id)).size,canonical.length);assert.equal(canonical.filter(r=>r.firsthand_confirmation).length,2);
 for(const r of canonical){assert.equal(r.state,'OH');assert.equal(!!r.license_number,r.category==='charitable');assert.equal(r.accessibility,null);assert(r.sources.length);for(const s of r.sources)assert(new URL(s.url).protocol==='https:');const card=nodes.listings.innerHTML.split(`id="${r.id}"`)[1]?.split('</article>')[0];assert(!card.includes('Not yet verified'));assert(card.includes('Add or update details'));}
-assert(canonical.find(r=>r.id==='cardington-legion-97').schedule==='Saturday, 6 p.m.');assert(canonical.find(r=>r.id==='marion-senior-bingo').schedule===null);assert(html.includes('717 state-listed bingo entries'));assert.equal(authorized.length,717);assert.equal(combined.length,722);assert.equal(vm.runInContext("filteredBingo('','licensed','').length",context),717);assert.equal(new Set(combined.map(r=>r.id)).size,722);assert(authorized.every(r=>r.license_type==='Type I'));assert.equal(authorized.filter(r=>r.schedule).length,4);
+assert(canonical.find(r=>r.id==='cardington-legion-97').schedule==='Saturday, 6 p.m.');assert(canonical.find(r=>r.id==='marion-senior-bingo').schedule===null);assert(html.includes('717 state-listed bingo entries'));assert.equal(authorized.length,717);assert.equal(combined.length,728);assert.equal(vm.runInContext("filteredBingo('','licensed','').length",context),717);assert.equal(new Set(combined.map(r=>r.id)).size,728);assert(authorized.every(r=>r.license_type==='Type I'));assert.equal(authorized.filter(r=>r.schedule).length,4);
 assert(fs.readFileSync(path.join(root,'index.html'),'utf8').includes('id="ohio-bingo-link"'));for(const page of ['pa.html','ny.html','mi.html','ky.html'])assert(!fs.readFileSync(path.join(root,page),'utf8').includes('id="ohio-bingo-link"'));
 console.log('PASS: bingo county/type/search boundaries, canonical data, per-field limits, firsthand scope, corrections and Ohio-only integration.');
 
@@ -27,17 +27,24 @@ assert(!vm.runInContext("nearbyBingo(BINGO,'43334',25).some(r=>r.id==='oh-licens
 assert(vm.runInContext("nearbyBingo(BINGO,'00000',50)===null",context));
 const close=JSON.parse(vm.runInContext("JSON.stringify(nearbyBingo(BINGO,'43334',50))",context));assert(close.length>3);assert(close.every((r,i)=>r.distanceMiles<=50&&(!i||close[i-1].distanceMiles<=r.distanceMiles)));
 nodes['bingo-zip'].value='43334';nodes['bingo-radius'].value='25';nodes['bingo-nearby'].onsubmit({preventDefault(){}});assert(nodes.count.textContent.includes('within 25 miles of 43334'));assert(nodes.listings.innerHTML.includes('miles away'));
-nodes['bingo-zip'].value='00000';nodes['bingo-nearby'].onsubmit({preventDefault(){}});assert(nodes['nearby-status'].textContent.includes('valid five-digit'));assert(nodes.count.textContent.includes('722'));
+nodes['bingo-zip'].value='00000';nodes['bingo-nearby'].onsubmit({preventDefault(){}});assert(nodes['nearby-status'].textContent.includes('valid five-digit'));assert(nodes.count.textContent.includes('728'));
 nodes['bingo-reset'].onclick();assert.equal(nodes['bingo-zip'].value,'');assert.equal(nodes['bingo-radius'].value,'50');
 console.log('PASS: ZIP distance math, nearest sorting, radius inclusion, invalid ZIP and reset.');
 
-assert.equal(vm.runInContext("filteredBingo('','centers','').length",context),5);
-assert.equal(vm.runInContext("filteredBingo('','bingo','').length",context),720);
+assert.equal(vm.runInContext("filteredBingo('','centers','').length",context),11);
+assert.equal(vm.runInContext("filteredBingo('','bingo','').length",context),721);
 assert.equal(vm.runInContext("filteredBingo('','exercise','').length",context),4);
-assert.equal(vm.runInContext("filteredBingo('','meals','').length",context),3);
-assert.equal(vm.runInContext("filteredBingo('','crafts','').length",context),3);
+assert.equal(vm.runInContext("filteredBingo('','meals','').length",context),6);
+assert.equal(vm.runInContext("filteredBingo('','crafts','').length",context),4);
 assert.equal(vm.runInContext("filteredBingo('','','euchre').length",context),1);
 assert(vm.runInContext("nearbyBingo(filteredBingo('','centers',''),'43334',25).some(r=>r.id==='centerburg-senior-services')",context));
 assert(vm.runInContext("nearbyBingo(filteredBingo('','meals',''),'43334',25).some(r=>r.id==='seniors-on-center')",context));
 assert(centers.every(c=>c.is_center&&c.activities.length&&c.sources.length));
-console.log('PASS: five senior centers, non-bingo categories, no duplicate centers and ZIP integration.');
+console.log('PASS: eleven senior centers, non-bingo categories, no duplicate centers and ZIP integration.');
+assert(nodes.listings.innerHTML.includes('Senior Centers (11)'));
+assert(nodes.listings.innerHTML.includes('Bingo (717)'));
+nodes['bingo-kind'].value='bingo';vm.runInContext('render()',context);
+assert(nodes.listings.innerHTML.includes('Bingo (721)'));
+assert(!nodes.listings.innerHTML.includes('Senior Centers ('));
+nodes['bingo-kind'].value='';vm.runInContext('render()',context);
+console.log('PASS: distinct groups, no duplicate all-view cards and center bingo included in Bingo filter.');
