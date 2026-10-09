@@ -19,6 +19,8 @@ def outputs():
     html = (ROOT / 'index.html').read_text()
     html = re.sub(r'<p id="ohio-bingo-link">.*?</p>', '', html)
     html = re.sub(r'<section id="urgent-help".*?</section>', '', html, flags=re.S)
+    html = re.sub(r'^routes.aid=.*\n', '', html, flags=re.M)
+    html = re.sub(r'<p id="ohio-aid-link">.*?</p>', '', html)
     html = re.sub(r'^routes.crisis=.*\n', '', html, flags=re.M)
     if '<option value="NY">New York</option>' not in html:
         html = html.replace('<option value="PA">Pennsylvania</option>', '<option value="PA">Pennsylvania</option><option value="NY">New York</option>')
@@ -109,6 +111,9 @@ def outputs():
         result[page] = result[page].replace("const STATE=", extras + "\nconst STATE=", 1)
         result[page] = re.sub(r'<section id="edition-coverage".*?</section>', '', result[page], flags=re.S)
         result[page] = result[page].replace('</nav>', '</nav>' + notice, 1)
+    aid = "routes.aid=DATA.filter(x=>x.resource_role==='aid_organization').map(x=>x.program_id);routeNames.aid='Ohio veteran and aid organizations';routes.benefits.push('ohio-legion-claims');routes.rights.push('ohio-legal-aid');routes.housing.push('ohio-legal-aid','ohio-utility-assistance');routes.care.push('ohio-dav-transport');routes.local.push('ohio-utility-assistance');"
+    result['index.html'] = result['index.html'].replace('const STATE=', aid + '\nconst STATE=', 1)
+    result['index.html'] = result['index.html'].replace('<section id="county-start"', '<p id="ohio-aid-link"><a href="?view=aid"><strong>Ohio veteran and aid organizations</strong></a> · Claims help, legal aid, utility assistance and medical transportation. For emergency financial assistance, choose your county below and ask its veterans office about eligibility and current programs.</p><section id="county-start"', 1)
     result['bingo.html'] = make_bingo(ROOT)
     result['index.html'] = result['index.html'].replace('<h3>For posts and community groups</h3>', '<p id="ohio-bingo-link"><a href="bingo.html"><strong>Explore Ohio bingo and community activities</strong></a> - charitable sessions and senior-center activities, with sources and details to confirm before attending.</p><h3>For posts and community groups</h3>', 1)
     return result

@@ -112,3 +112,5 @@ See the [maintenance process](docs/MAINTENANCE.md), [verification queue](docs/VE
 | `scripts/validate_public.py`, `tests/*.cjs` | Data, asset and functional checks |
 | `docs/` | Scope, maintenance, evidence and research priorities |
 | `research/`, `data/integrated/`, `data/seed/`, `data/batches/` | Historical working material; not the live source of truth |
+
+Ohio includes four additional source-reviewed aid routes: county-based civil legal aid, American Legion Department Service Officers, utility assistance and DAV medical transportation. The Ohio aid view links these routes and directs emergency financial assistance questions to the selected county veterans office. Statewide routing does not guarantee local services, eligibility or funding.

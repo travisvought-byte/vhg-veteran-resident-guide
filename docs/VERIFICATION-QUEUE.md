@@ -1,8 +1,8 @@
 # Verification queue
 
-Snapshot: October 8, 2026. Source statuses are preserved; matching published phones are not direct confirmation. Refresh this file when evidence changes.
+Snapshot: October 9, 2026. Source statuses are preserved; matching published phones are not direct confirmation. Refresh this file when evidence changes.
 
-Ohio canonical records: 14 imported_unverified, 3 needs_recheck, 6 official_search_extract_only, 88 official_source_reviewed. Pennsylvania, New York, Michigan and Kentucky follow-ups are listed separately below.
+Ohio canonical records: 14 imported_unverified, 3 needs_recheck, 6 official_search_extract_only, 92 official_source_reviewed. Pennsylvania, New York, Michigan and Kentucky follow-ups are listed separately below.
 
 ## First follow-ups
 
