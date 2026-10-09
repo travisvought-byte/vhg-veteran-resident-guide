@@ -24,11 +24,11 @@ A free Veteran Home Guardians (VHG) guide for veterans, surviving spouses, senio
 
 **Publisher and project owner:** Travis Vought, Founder & Chair, Veteran Home Guardians. Contact: travis@vethomeguard.org.
 
-## Coverage and verification
+## Coverage and corrections
 
 All five state editions are published referral backbones, not complete inventories of local services. Ohio local research is strongest in the four pilot counties; Pennsylvania, New York, Michigan and Kentucky are initial referral editions. The state picker switches between separate datasets rather than suggesting identical depth of coverage.
 
-Each edition displays its county coverage and automatically calculated verification totals near the state picker. Every resource card shows its source status without requiring an expansion. Search-excerpt, imported and recheck records carry a visible verification notice, including in printed resource lists. A published source review does not mean an agency confirmed its current intake or availability.
+Every listing comes from a published official source, linked on its card with the date it was reviewed. The guide does not wait on telephone confirmation. Users who find a wrong number or closed program report it with the “Report a problem” link, and the listing is corrected. Internal evidence statuses stay in the data for maintenance but are not shown as warnings.
 
 ## Ohio scope
 
