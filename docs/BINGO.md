@@ -1,6 +1,6 @@
 # Ohio bingo: coverage, evidence and statewide expansion
 
-Reviewed October 8, 2026. Canonical venue records: `data/public/ohio-bingo.json`. Generated page: `bingo.html`, rebuilt by `scripts/build_public.py` through `scripts/bingo_edition.py`. The Ohio community section links to it; other states do not inherit Ohio venues. Bingo records remain separate from benefits resources and their counts.
+Updated October 9, 2026. Canonical venue records: `data/public/ohio-bingo.json`. Generated page: `bingo.html`, rebuilt by `scripts/build_public.py` through `scripts/bingo_edition.py`. The Ohio community section links to it; other states do not inherit Ohio venues. Bingo records remain separate from benefits resources and their counts.
 
 ## Six initial venues
 
@@ -10,13 +10,11 @@ Travis confirmed Cardington and Marengo bingo activity from firsthand attendance
 
 Official organizer sources establish the other activities. Northmor's earlier full school page listed Tuesday 7 p.m.; the later page renders without this text. The venue still confirms Tuesday bingo, but the start time remains a recheck. SourcePoint's full Fall 2026 flyer was reviewed in the earlier research; later retrieval failed. Preserve its stated quarter and holiday inconsistency, and recheck before January 2, 2027. All six venues have unverified accessibility. Marion offers bingo but no current session time was established.
 
-## Statewide source and blocker
+## Statewide source
 
 Source: https://charitable.ohioago.gov/Charitable-Bingo/View-Authorized-Bingo-Locations
 
-Indexed retrieval showed a 2026 report with 545 pages, printed October 2, 2026. Direct download returned a Request Rejected HTML page, not a PDF. The alternate official report URL also failed. Search excerpts show portions of the report but do not establish a complete import. No license numbers, state counts or license verification labels were populated from these partial views.
-
-An independently acquired readable official report is needed to complete statewide extraction. Retain source URL, printed date, retrieval date, file hash and page number on each imported row. Reject HTML/error pages; verify extracted columns visually before importing. Deduplicate by organization license, venue address and bingo type; organizations and physical venues are not interchangeable counts. Preserve multiple operators at shared locations.
+The user supplied the readable official 545-page report printed October 2, 2026. It is extracted with source hash, page and row provenance. All location and type entries reconcile; the Type I subset is public. Three existing charitable listings now include matching license information. See BINGO-REPORT-PARSING.md for validation and preserved source errors.
 
 Type definitions: https://codes.ohio.gov/ohio-administrative-code/rule-109:1-4-08
 
@@ -28,7 +26,7 @@ Authorized days are licensing fields, not a confirmed current event calendar. Ad
 
 ## Next work
 
-1. Acquire the readable report and validate extraction before publishing statewide counts.
+1. Add organizer details to state-listed locations as they become available.
 2. Confirm Cardington session time, public contact, costs and attendance rules.
 3. Resolve Marengo's conflicting door times and SourcePoint's holiday date inconsistency.
 4. Confirm Northmor's current start time and Marion's session schedule.
@@ -39,3 +37,7 @@ No agency or venue outreach was sent in this update. Inclusion is independent of
 ## Validation limits
 
 Functional checks cover county/category/search boundaries, generated-data synchronization, unknown accessibility and license labels, firsthand scope, correction links and isolation from other state editions. Browser rendering and print pagination could not be reviewed in this environment: Chromium was absent and its download failed. The new page uses responsive single/two-column cards and keeps sources visible in print; visual QA remains a follow-up.
+
+## Statewide Type I coverage
+
+Added all 717 Type I entries from the October 2, 2026 official report. Three match existing researched venues and are shown once, giving 720 displayed records including three senior-center activities. State-listed days are labeled separately from organizer schedules; blank prices remain unknown. Listings remain separate from benefits/support resource counts. See BINGO-REPORT-PARSING.md for extraction checks and source limitations.
