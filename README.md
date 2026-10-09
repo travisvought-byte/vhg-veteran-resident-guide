@@ -33,7 +33,7 @@ Each edition displays its county coverage and automatically calculated verificat
 ## Ohio scope
 
 - Veterans office contacts for all 88 Ohio counties, plus matched aging agency and long-term-care ombudsman contacts.
-- 115 resource records, displayed as 111 cards after removing four duplicate legacy county office cards.
+- 119 resource records, displayed as 115 cards after removing four duplicate legacy county office cards.
 - Veterans benefits, surviving-spouse support, care, housing and resident rights routes.
 - Ramps and home accessibility: HISA, adapted housing, Ohio waiver routes, rural repair and discharge coordination, with an application checklist and paper follow-up tracker.
 - A dedicated seniors and disability section without a military-service requirement.
@@ -114,3 +114,5 @@ See the [maintenance process](docs/MAINTENANCE.md), [verification queue](docs/VE
 | `research/`, `data/integrated/`, `data/seed/`, `data/batches/` | Historical working material; not the live source of truth |
 
 Ohio includes four additional source-reviewed aid routes: county-based civil legal aid, American Legion Department Service Officers, utility assistance and DAV medical transportation. The Ohio aid view links these routes and directs emergency financial assistance questions to the selected county veterans office. Statewide routing does not guarantee local services, eligibility or funding.
+
+Ohio housing referrals now include four county-scoped SSVF providers covering 30 distinct counties, including all four pilot counties. Provider and VA evidence links appear in each listing’s source details. See [Ohio housing coverage](docs/OHIO-HOUSING.md) for mapped counties and remaining gaps.
