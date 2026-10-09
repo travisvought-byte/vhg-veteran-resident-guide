@@ -16,7 +16,7 @@ for(const [state,n] of Object.entries(expected)){
  t.change('helper-person','other');t.change('helper-need','benefits');t.click('helper-resources');assert(!t.d.getElementById('seniors-guide').hidden);assert.equal(t.d.getElementById('senior-topic').value,'costs');
  t.change('helper-need','daily');t.click('helper-print');assert(t.d.body.classList.contains('print-helper'));t.dom.window.dispatchEvent(new t.dom.window.Event('afterprint'));assert(!t.d.body.classList.contains('print-helper'));
  t.change('county','');t.click('helper-print');assert(t.d.getElementById('helper-status').textContent.includes('Choose'));
- t.d.querySelector('[data-route="all"]').click();assert(t.d.getElementById('helper-guide').hidden);assert.equal(t.d.querySelectorAll('#results article').length,{OH:149,PA:108,NY:107,MI:63,KY:86}[state]);
+ t.d.querySelector('[data-route="all"]').click();assert(t.d.getElementById('helper-guide').hidden);assert.equal(t.d.querySelectorAll('#results article').length,{OH:154,PA:108,NY:107,MI:63,KY:86}[state]);
 }
 t.change('edition-state','OH');t.change('county','Morrow');t.d.getElementById('search').value='Medicaid';t.change('edition-state','PA');assert.equal(t.d.getElementById('county').value,'');assert.equal(t.d.getElementById('search').value,'');
 const ny=setup('?state=NY&county=Manhattan&view=rights');assert.equal(ny.d.getElementById('edition-state').value,'NY');assert.equal(ny.d.getElementById('county').value,'New York');assert(ny.d.getElementById('count').textContent.includes('Care concerns'));
@@ -59,3 +59,11 @@ assert(marionTransport.d.getElementById('resource-ohio-marion-medical-transport'
 const otherTransport = setup('?state=OH&county=Delaware&view=seniors&topic=daily');
 assert(!otherTransport.d.getElementById('resource-ohio-marion-medical-transport'));
 console.log('PASS: Marion transport county boundary and advance-request information.');
+
+for (const [county, ids] of Object.entries({Morrow:['ohio-senior-seniors-on-center'],Knox:['ohio-senior-station-break','ohio-senior-centerburg'],Marion:['ohio-senior-marion'],Delaware:['ohio-senior-sourcepoint']})) {
+ const centersView=setup('?state=OH&county='+county+'&view=community');
+ for (const id of ids) assert(centersView.d.getElementById('resource-'+id));
+ const outsideView=setup('?state=OH&county=Adams&view=community');
+ for (const id of ids) assert(!outsideView.d.getElementById('resource-'+id));
+}
+console.log('PASS: five pilot senior centers appear in their county community views and stay outside other counties.');
