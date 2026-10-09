@@ -16,7 +16,7 @@ for(const [state,n] of Object.entries(expected)){
  t.change('helper-person','other');t.change('helper-need','benefits');t.click('helper-resources');assert(!t.d.getElementById('seniors-guide').hidden);assert.equal(t.d.getElementById('senior-topic').value,'costs');
  t.change('helper-need','daily');t.click('helper-print');assert(t.d.body.classList.contains('print-helper'));t.dom.window.dispatchEvent(new t.dom.window.Event('afterprint'));assert(!t.d.body.classList.contains('print-helper'));
  t.change('county','');t.click('helper-print');assert(t.d.getElementById('helper-status').textContent.includes('Choose'));
- t.d.querySelector('[data-route="all"]').click();assert(t.d.getElementById('helper-guide').hidden);assert.equal(t.d.querySelectorAll('#results article').length,{OH:132,PA:108,NY:107,MI:63,KY:86}[state]);
+ t.d.querySelector('[data-route="all"]').click();assert(t.d.getElementById('helper-guide').hidden);assert.equal(t.d.querySelectorAll('#results article').length,{OH:147,PA:108,NY:107,MI:63,KY:86}[state]);
 }
 t.change('edition-state','OH');t.change('county','Morrow');t.d.getElementById('search').value='Medicaid';t.change('edition-state','PA');assert.equal(t.d.getElementById('county').value,'');assert.equal(t.d.getElementById('search').value,'');
 const ny=setup('?state=NY&county=Manhattan&view=rights');assert.equal(ny.d.getElementById('edition-state').value,'NY');assert.equal(ny.d.getElementById('county').value,'New York');assert(ny.d.getElementById('count').textContent.includes('Care concerns'));
@@ -26,7 +26,7 @@ const mi=setup('?state=MI&county=Wayne');assert(mi.d.getElementById('county-pane
 console.log('PASS: unified DOM, all 420 county panels, every caregiver identity/need combination in five states, state isolation, surviving-spouse access routing, printing, canonical links and NYC aliases.');
 
 const ohioData=JSON.parse(fs.readFileSync(root+'/prototype-data.json','utf8'));
-for(const r of ohioData.filter(x=>['caregiver_support','independent_living'].includes(x.resource_role))){
+for(const r of ohioData.filter(x=>['caregiver_support','independent_living','home_support'].includes(x.resource_role))){
  for(const county of ['Morrow','Franklin','Summit','Cuyahoga','Washington','Adams']){
   const v=setup('?state=OH&county='+county+'&view=local');assert.equal(!!v.d.getElementById('resource-'+r.program_id),(r.service_area.includes(county)||r.service_area.includes('statewide')),r.program_id+' '+county);v.dom.window.close();
  }
@@ -42,3 +42,7 @@ assert(centers.find(x=>x.program_id==='ohio-cil-north-central').service_area.inc
 assert.equal(centers.find(x=>x.program_id==='ohio-cil-mobile').public_contact.phone,'614-443-5936');
 const respite=ohioData.find(x=>x.program_id==='ohio-adult-day-directory');assert(respite.constraints.join(' ').includes('not statewide service availability'));
 console.log('PASS: all 12 Ohio independent-living centers, expanded counties, limited-service notices and adult-day directory boundaries.');
+
+const sandusky=setup('?state=OH&county=Sandusky&view=local');assert(sandusky.d.getElementById('resource-ohio-glcap-meals'));assert(sandusky.d.getElementById('resource-ohio-glcap-trips'));
+const respiteFranklin=setup('?state=OH&county=Franklin&view=seniors&topic=daily');assert(respiteFranklin.d.getElementById('resource-ohio-coaaa-caregiver'));assert(!respiteFranklin.d.getElementById('resource-ohio-region9-caregiver'));
+console.log('PASS: Ohio meals, accessible transport and regional caregiver daily-support routing.');
