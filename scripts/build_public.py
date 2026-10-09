@@ -117,7 +117,7 @@ def outputs():
     result['index.html'] = result['index.html'].replace('const STATE=', aid + '\nconst STATE=', 1)
     result['index.html'] = result['index.html'].replace('<section id="county-start"', f'<p id="ohio-aid-link"><a href="?view=aid"><strong>Ohio veteran and aid organizations</strong></a> · Housing providers, claims help, legal aid, utility assistance and medical transportation. Local veteran housing providers are mapped for {housing_count} of {len(counties)} counties; other counties retain VA referral routes. For emergency financial assistance, choose your county below and ask its veterans office about eligibility and current programs.</p><section id="county-start"', 1)
     result['bingo.html'] = make_bingo(ROOT)
-    result['index.html'] = result['index.html'].replace('<h3>For posts and community groups</h3>', '<p id="ohio-bingo-link"><a href="bingo.html"><strong>Explore Ohio bingo and community activities</strong></a> - charitable sessions and senior-center activities, with sources and details to confirm before attending.</p><h3>For posts and community groups</h3>', 1)
+    result['index.html'] = result['index.html'].replace('<h3>For posts and community groups</h3>', '<p id="ohio-bingo-link"><a href="bingo.html"><strong>Find Ohio activities and senior centers</strong></a> - find nearby senior centers, exercise, crafts, games, meals and bingo by ZIP code.</p><h3>For posts and community groups</h3>', 1)
     # Keep state adapter regression fixtures private to tests; the public site has one view.
     for page in ['index.html','pa.html','ny.html','mi.html','ky.html']:
         result['tests/fixtures/'+page] = result[page]

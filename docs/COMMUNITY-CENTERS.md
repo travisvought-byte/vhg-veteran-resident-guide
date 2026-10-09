@@ -25,3 +25,7 @@ Keep center services separate from bingo-session records and charitable-license 
 District 5's senior-center directory also identifies Ashland, Crawford, Huron, Seneca and Wyandot centers: https://www.aaa5ohio.org/resources/senior-centers/ . Provider websites should establish services and eligibility before these are published.
 
 The Ohio Attorney General's authorized bingo locations endpoint returned a rejected request during this review: https://charitable.ohioago.gov/Charitable-Bingo/Forms/Organizations-Authorized-to-Conduct-Bingo . No statewide license list was extracted or license status upgraded. Acquire a readable official list, then confirm organizer schedules separately. Existing six bingo venues remain in data/public/ohio-bingo.json.
+
+## Nearby activity finder
+
+Five researched centers are now browsable in the separate ZIP-based activity finder, alongside bingo: Seniors on Center, Centerburg Senior Services, Station Break, SourcePoint and Marion Senior Center. Existing three senior-bingo venues are enriched in place; two centers are new locations, giving 722 displayed places. Filters cover senior centers, exercise, crafts, social games, meals/cafés and organized trips. Program offerings, opening hours, participation rules and sources are kept distinct from bingo schedules. Centerburg uses its current new location at 182 W Houck Street. Its older wellness page references 2022; we use current homepage program categories instead of asserting that old timetable is current.
