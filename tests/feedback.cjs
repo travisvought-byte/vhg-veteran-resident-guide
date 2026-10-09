@@ -55,3 +55,13 @@ for(const [state,[page]] of Object.entries(editions)){
   assert(html.includes('.source-status{display:block!important}'),state+' print warning retained');
 }
 console.log('PASS: visible verification warnings, accurate state coverage/evidence totals, qualified recommendations and print notices across all editions.');
+for(const [state,[page]] of Object.entries(editions)){
+ const html=fs.readFileSync(path.join(root,page),'utf8'),crisis=setup('?view=crisis',page),housing=setup('?view=housing',page);
+ assert.equal((html.match(/id="urgent-help"/g)||[]).length,1,state+' single visible urgent panel');
+ assert.equal(crisis.count(),3,state+' crisis route');
+ for(const id of ['crisis-988','va-mental-health'])assert(crisis.nodes.results.innerHTML.includes('resource-'+id),state+' '+id);
+ for(const id of ['va-housing-help','va-ssvf','va-hud-vash','va-crrc'])assert(housing.nodes.results.innerHTML.includes('resource-'+id),state+' housing '+id);
+ assert(html.includes('tel:988?oai_link_source=model_response_hotline'),state+' verified crisis contact');
+}
+require('./bingo.cjs');
+console.log('PASS: urgent panel, crisis support and expanded homelessness routes in every state.');

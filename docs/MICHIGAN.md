@@ -7,7 +7,7 @@ Published-source review: October 8, 2026. The Michigan edition is `mi.html`, wit
 - Veterans referral routes for all 83 counties: 77 use the Michigan Association of County Veteran Counselors (MACVC) public directory and six use official county, provider or state pages.
 - 82 county or regional veterans contacts. Ionia uses the MVAA statewide referral number, clearly labeled as a referral to the new county office rather than a direct county phone.
 - 16 regional aging agencies cover all 83 counties. Each county has one match except Wayne, which has two agencies with explicit city boundaries.
-- 58 resource records: 28 shared federal/national records, 14 Michigan programs and 16 aging agencies.
+- 58 resource records: 33 shared federal/national records, 14 Michigan programs and 16 aging agencies.
 - County handoffs, senior and disability topics, accessibility planning, private audience share links and a Michigan QR sharing kit.
 - Dedicated local ombudsman numbers, individual post contacts, repair providers and local funding availability remain research work. Ombudsman help uses the verified statewide routing number.
 

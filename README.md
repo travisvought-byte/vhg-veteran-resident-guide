@@ -33,7 +33,7 @@ Each edition displays its county coverage and automatically calculated verificat
 ## Ohio scope
 
 - Veterans office contacts for all 88 Ohio counties, plus matched aging agency and long-term-care ombudsman contacts.
-- 106 resource records, displayed as 102 cards after removing four duplicate legacy county office cards.
+- 111 resource records, displayed as 107 cards after removing four duplicate legacy county office cards.
 - Veterans benefits, surviving-spouse support, care, housing and resident rights routes.
 - Ramps and home accessibility: HISA, adapted housing, Ohio waiver routes, rural repair and discharge coordination, with an application checklist and paper follow-up tracker.
 - A dedicated seniors and disability section without a military-service requirement.
@@ -44,19 +44,25 @@ Statewide referral coverage is not an exhaustive statewide inventory of local se
 
 ## Pennsylvania expansion
 
-The state selector opens a separate Pennsylvania edition in this repository. It contains all 67 county veterans contacts from PA DMVA’s September 2026 directory, 17 PA-specific program/referral records, 28 shared federal/national records and 58 local referral records, for 103 resources. Every PA county now has a local aging referral phone; four counties have separately sourced local ombudsman routes, with statewide routing elsewhere. Of the 58 local records, 56 have full official source review and two are labeled search excerpt only. See [Pennsylvania coverage and sources](docs/PENNSYLVANIA.md). Ohio remains the default, preserving its published links and QR code.
+The state selector opens a separate Pennsylvania edition in this repository. It contains all 67 county veterans contacts from PA DMVA’s September 2026 directory, 17 PA-specific program/referral records, 33 shared federal/national records and 58 local referral records, for 108 resources. Every PA county now has a local aging referral phone; four counties have separately sourced local ombudsman routes, with statewide routing elsewhere. Of the 58 local records, 56 have full official source review and two are labeled search excerpt only. See [Pennsylvania coverage and sources](docs/PENNSYLVANIA.md). Ohio remains the default, preserving its published links and QR code.
 
 ## New York expansion
 
-New York has veterans referral contacts and exactly one matched aging office for all 62 counties, including NYC's five boroughs. NYC veterans intake is citywide, Essex uses a state benefits office, and the shared Warren/Hamilton aging office is mapped to both counties. The edition contains 102 resources: 28 shared federal/national records, 17 New York programs and 57 local aging offices. Ombudsman support uses statewide routing. Borough aliases work in county links and office search. Chemung and Chenango phones use county-owned sources to resolve conflicting state directory entries. See [New York coverage and sources](docs/NEW-YORK.md).
+New York has veterans referral contacts and exactly one matched aging office for all 62 counties, including NYC's five boroughs. NYC veterans intake is citywide, Essex uses a state benefits office, and the shared Warren/Hamilton aging office is mapped to both counties. The edition contains 107 resources: 33 shared federal/national records, 17 New York programs and 57 local aging offices. Ombudsman support uses statewide routing. Borough aliases work in county links and office search. Chemung and Chenango phones use county-owned sources to resolve conflicting state directory entries. See [New York coverage and sources](docs/NEW-YORK.md).
 
 ## Michigan expansion
 
-Michigan has veterans referral routes and aging contacts for all 83 counties. It includes 82 county or regional veterans contacts plus a labeled MVAA statewide referral for Ionia's new office. Of the 83 routes, 77 use the county counselors' association directory and six use official agency pages. Sixteen aging agencies cover the state; Wayne County shows both regional agencies with their city boundaries. The edition contains 58 resources: 28 shared federal/national records, 14 Michigan programs and 16 aging contacts. MI Options handles care and Medicare counseling; the ombudsman route is statewide. See [Michigan coverage and evidence](docs/MICHIGAN.md).
+Michigan has veterans referral routes and aging contacts for all 83 counties. It includes 82 county or regional veterans contacts plus a labeled MVAA statewide referral for Ionia's new office. Of the 83 routes, 77 use the county counselors' association directory and six use official agency pages. Sixteen aging agencies cover the state; Wayne County shows both regional agencies with their city boundaries. The edition contains 63 resources: 33 shared federal/national records, 14 Michigan programs and 16 aging contacts. MI Options handles care and Medicare counseling; the ombudsman route is statewide. See [Michigan coverage and evidence](docs/MICHIGAN.md).
 
 ## Kentucky expansion
 
-Kentucky has KDVA regional benefits representatives, aging contacts, district ombudsmen and Hart-Supported Living coordinators for all 120 counties. The service maps are kept separate, with multiple veterans representatives and the Fort Campbell assignment preserved. The edition contains 81 resources: 28 shared federal/national records, 17 Kentucky programs, 15 aging contacts, 15 district ombudsmen and six supported-living coordinators. It includes HCB waiver screening, Homecare, Medicare counseling, vision/hearing support and temporary RampUp! KY loans. See [Kentucky coverage and evidence](docs/KENTUCKY.md).
+Kentucky has KDVA regional benefits representatives, aging contacts, district ombudsmen and Hart-Supported Living coordinators for all 120 counties. The service maps are kept separate, with multiple veterans representatives and the Fort Campbell assignment preserved. The edition contains 86 resources: 33 shared federal/national records, 17 Kentucky programs, 15 aging contacts, 15 district ombudsmen and six supported-living coordinators. It includes HCB waiver screening, Homecare, Medicare counseling, vision/hearing support and temporary RampUp! KY loans. See [Kentucky coverage and evidence](docs/KENTUCKY.md).
+
+## Bingo and urgent support
+
+The [Ohio bingo section](https://travisvought-byte.github.io/vhg-veteran-resident-guide/bingo.html) starts with six researched venues in Morrow, Knox, Delaware and Marion. Charitable sessions and senior-center activities have separate filters. Cardington and Marengo activity are firsthand-confirmed by Travis; schedules, prices, licenses and accessibility retain their own limits. No statewide bingo inventory is claimed. See [bingo evidence and expansion](docs/BINGO.md).
+
+All five editions have a prominent urgent-help section, crisis and mental-health resources, and expanded homelessness pathways: the VA national call center, SSVF community providers, HUD-VASH and VA Community Resource and Referral Centers. Local shelter beds, individual provider intake and availability are not comprehensively mapped.
 
 ## Corrections from users
 
@@ -96,6 +102,7 @@ See the [maintenance process](docs/MAINTENANCE.md), [verification queue](docs/VE
 | Path | Purpose |
 |---|---|
 | `index.html` | Public guide, interface and generated embedded data |
+| `bingo.html`, `data/public/ohio-bingo.json`, `docs/BINGO.md` | Ohio bingo page, canonical venue records and source/expansion notes |
 | `share.html`, `share-pa.html`, `share-ny.html`, `share-mi.html`, `share-ky.html` | State-specific QR flyers and newsletter introductions |
 | `pa.html`, `ny.html`, `mi.html`, `ky.html` | Generated Pennsylvania, New York, Michigan and Kentucky editions |
 | `assets/` | VHG logo, QR code and social preview image |

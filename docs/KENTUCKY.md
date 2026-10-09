@@ -9,7 +9,7 @@ Published-source review: October 8, 2026. The Kentucky edition is `ky.html`; its
 - 15 regional aging and disability contacts cover every county exactly once.
 - 15 district long-term-care ombudsman contacts cover every county exactly once. These use a dedicated ombudsman directory rather than assuming general aging intake handles advocacy.
 - Six Hart-Supported Living coordinator regions cover every county exactly once, independently of veterans and aging districts.
-- 81 resources: 28 shared federal/national records, 17 Kentucky programs and 36 regional records.
+- 86 resources: 33 shared federal/national records, 17 Kentucky programs and 36 regional records.
 - County handoffs, nonmilitary senior and disability routes, accessibility planning, private audience share links and a Kentucky QR sharing kit.
 
 ## Sources and evidence

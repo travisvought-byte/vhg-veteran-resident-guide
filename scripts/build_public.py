@@ -8,6 +8,7 @@ from pa_edition import make_pa, pennsylvania_resources
 from ny_edition import make_ny, new_york_resources
 from mi_edition import make_mi, michigan_resources
 from ky_edition import make_ky, kentucky_resources
+from bingo_edition import make_bingo
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = 'https://travisvought-byte.github.io/vhg-veteran-resident-guide/'
@@ -16,6 +17,9 @@ def outputs():
     resources = json.loads((ROOT / 'prototype-data.json').read_text())
     counties = json.loads((ROOT / 'data/public/ohio-county-veterans-offices.json').read_text())
     html = (ROOT / 'index.html').read_text()
+    html = re.sub(r'<p id="ohio-bingo-link">.*?</p>', '', html)
+    html = re.sub(r'<section id="urgent-help".*?</section>', '', html, flags=re.S)
+    html = re.sub(r'^routes.crisis=.*\n', '', html, flags=re.M)
     if '<option value="NY">New York</option>' not in html:
         html = html.replace('<option value="PA">Pennsylvania</option>', '<option value="PA">Pennsylvania</option><option value="NY">New York</option>')
     if '<option value="MI">Michigan</option>' not in html:
@@ -97,8 +101,16 @@ def outputs():
                   f'<p>Referral routes cover {len(contacts)} counties. This is not a complete local service inventory. '
                   f'{pending} resource records need further verification, including {excerpts} supported only by search excerpts. '
                   'Source status appears on each resource card. Published contacts are not telephone-confirmed; confirm intake and availability with the agency.</p></section>')
+        result[page] = re.sub(r'<section id="urgent-help".*?</section>', '', result[page], flags=re.S)
+        urgent = '<section id="urgent-help" class="notice" aria-labelledby="urgent-title"><h2 id="urgent-title">Need help now?</h2><p><strong>Suicide or emotional crisis:</strong> Call <a href="tel:988?oai_link_source=model_response_hotline">988</a> or <a href="sms:988?oai_link_source=model_response_hotline">text 988</a>. Veterans-specific support is available through the call service. <a href="https://988lifeline.org/chat/?oai_link_source=model_response_hotline" target="_blank" rel="noopener noreferrer">Online crisis chat</a>. For immediate danger, call 911 or go to the nearest emergency department.</p><p><strong>Homeless or facing housing loss:</strong> Call <a href="tel:8774243838">877-424-3838</a> for free, confidential VA housing referrals, 24/7. Family members and supporters may call too.</p><p><a href="?view=crisis">Mental health and suicide-prevention resources</a> · <a href="?view=housing">Housing and homelessness resources</a></p></section>'
+        result[page] = result[page].replace('<section id="county-start"', urgent + '<section id="county-start"', 1)
+        extras = "routes.crisis=['crisis-988','va-mental-health','va-location-finder'];routes.housing.push(...['va-ssvf','va-hud-vash','va-crrc'].filter(id=>!routes.housing.includes(id)));routeNames.crisis='Mental health and suicide prevention';"
+        result[page] = re.sub(r'^routes.crisis=.*\n', '', result[page], flags=re.M)
+        result[page] = result[page].replace("const STATE=", extras + "\nconst STATE=", 1)
         result[page] = re.sub(r'<section id="edition-coverage".*?</section>', '', result[page], flags=re.S)
-        result[page] = result[page].replace('</nav><section id="county-start"', '</nav>' + notice + '<section id="county-start"', 1)
+        result[page] = result[page].replace('</nav>', '</nav>' + notice, 1)
+    result['bingo.html'] = make_bingo(ROOT)
+    result['index.html'] = result['index.html'].replace('<h3>For posts and community groups</h3>', '<p id="ohio-bingo-link"><a href="bingo.html"><strong>Explore Ohio bingo and community activities</strong></a> - charitable sessions and senior-center activities, with sources and details to confirm before attending.</p><h3>For posts and community groups</h3>', 1)
     return result
 
 if __name__ == '__main__':

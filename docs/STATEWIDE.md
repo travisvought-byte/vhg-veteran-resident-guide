@@ -8,7 +8,7 @@ Updated October 8, 2026.
 - 87 county contacts were extracted from the Ohio AMVETS 2025–2026 Guidebook, physical PDF pages 67–70 (printed pages 7–10). The publication omits Lawrence County; its contact was added from the county government's departments page.
 - Morrow and Knox contact sources are their office websites. Lawrence uses its county government website. The remaining entries are labeled as directory-published contacts, not direct agency confirmations.
 - Statewide/federal programs appear for every county. Additional local program coverage is strongest in Morrow, Knox, Marion and Delaware and is not an exhaustive inventory elsewhere.
-- There are 106 resource records in the reusable projection. Four original county office records are represented by the separate 88-office directory instead of duplicated among the 102 program/resource cards.
+- There are 111 resource records in the reusable projection. Four original county office records are represented by the separate 88-office directory instead of duplicated among the 107 program/resource cards.
 
 ## Data and sources
 

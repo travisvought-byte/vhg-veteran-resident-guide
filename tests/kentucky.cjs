@@ -7,7 +7,7 @@ const counties=vm.runInContext('COUNTIES',t.ctx),data=vm.runInContext('DATA',t.c
 const expected='Adair,Allen,Anderson,Ballard,Barren,Bath,Bell,Boone,Bourbon,Boyd,Boyle,Bracken,Breathitt,Breckinridge,Bullitt,Butler,Caldwell,Calloway,Campbell,Carlisle,Carroll,Carter,Casey,Christian,Clark,Clay,Clinton,Crittenden,Cumberland,Daviess,Edmonson,Elliott,Estill,Fayette,Fleming,Floyd,Franklin,Fulton,Gallatin,Garrard,Grant,Graves,Grayson,Green,Greenup,Hancock,Hardin,Harlan,Harrison,Hart,Henderson,Henry,Hickman,Hopkins,Jackson,Jefferson,Jessamine,Johnson,Kenton,Knott,Knox,LaRue,Laurel,Lawrence,Lee,Leslie,Letcher,Lewis,Lincoln,Livingston,Logan,Lyon,McCracken,McCreary,McLean,Madison,Magoffin,Marion,Marshall,Martin,Mason,Meade,Menifee,Mercer,Metcalfe,Monroe,Montgomery,Morgan,Muhlenberg,Nelson,Nicholas,Ohio,Oldham,Owen,Owsley,Pendleton,Perry,Pike,Powell,Pulaski,Robertson,Rockcastle,Rowan,Russell,Scott,Shelby,Simpson,Spencer,Taylor,Todd,Trigg,Trimble,Union,Warren,Washington,Wayne,Webster,Whitley,Wolfe,Woodford'.split(',');
 assert.deepEqual(Array.from(counties,c=>c.county),expected.slice().sort());
 assert.equal(t.nodes['edition-state'].value,'KY');
-assert.equal(data.length,81);assert.equal(new Set(data.map(x=>x.program_id)).size,81);
+assert.equal(data.length,86);assert.equal(new Set(data.map(x=>x.program_id)).size,86);
 assert.deepEqual(JSON.parse(JSON.stringify(counties)),JSON.parse(fs.readFileSync(path.join(root,'data/public/kentucky-county-veterans-offices.json'))));
 assert.deepEqual(JSON.parse(JSON.stringify(data)),JSON.parse(fs.readFileSync(path.join(root,'data/public/kentucky-resources.json'))));
 assert(counties.every(c=>c.office_type==='regional'));
