@@ -32,8 +32,8 @@ const {chromium}=require(process.env.GUIDE_PLAYWRIGHT|| (process.env.CODEX_PRIMA
  await page.evaluate(()=>{window.print=()=>{window.__printed=true}});await page.click('#helper-print');assert(await page.evaluate(()=>window.__printed&&document.body.classList.contains('print-helper')));
  await page.emulateMedia({media:'print'});assert(await page.locator('#helper-guide').isVisible());assert(!(await page.locator('#directory').isVisible()));assert(await page.locator('.helper-paper').isVisible());
  await page.emulateMedia({media:'screen'});await page.evaluate(()=>window.dispatchEvent(new Event('afterprint')));
- await page.locator('#helper-guide').scrollIntoViewIfNeeded();await page.screenshot({path:'/workspace/scratch/2328d4754371/helper-mobile.png'});
- await page.setViewportSize({width:1280,height:900});await page.screenshot({path:'/workspace/scratch/2328d4754371/helper-desktop.png',fullPage:false});
+ await page.locator('#helper-guide').scrollIntoViewIfNeeded();await page.screenshot({path:path.join(require('os').tmpdir(),'vhg-helper-mobile.png')});
+ await page.setViewportSize({width:1280,height:900});await page.screenshot({path:path.join(require('os').tmpdir(),'vhg-helper-desktop.png'),fullPage:false});
  if(server){await page.goto(base+'ky.html?county=Christian&view=rights');await page.waitForFunction(()=>document.querySelector('#count')?.textContent.length>0);assert.equal(await page.locator('#edition-state').inputValue(),'KY');assert.equal(await page.locator('#county').inputValue(),'Christian')}
  assert.deepEqual(errors,[]);await browser.close();if(server)server.close();console.log('PASS: one public view, all 420 county panels, five-state switching, caregiver routes, deep links, legacy redirect, mobile width and print handoff.');
 })().catch(e=>{console.error(e);process.exit(1)});
