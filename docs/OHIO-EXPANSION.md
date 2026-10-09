@@ -28,3 +28,7 @@ New caregiver routes cover COAAA’s eight counties, Western Reserve’s five co
 ## October 9: research and caregiver follow-through
 
 Added SourcePoint family caregiver support for Delaware County, bringing Ohio to 152 records / 148 displayed cards. Full-source review resolved seven imported records, with explicit age, waiver, approved-budget and device-request limits. Ohio Aging Compass was retained with official indexed evidence rather than a full-source claim. Corrected the adapted-housing card’s missing description and removed an internal research instruction from its public constraints. Provider-specific housing coverage for Putnam and Van Wert remains unresolved; no SSVF provider was inferred from unrelated state or county search results.
+
+## October 9: Marion transportation and directory verification
+
+Added Marion JFS medical transportation: county Medicaid appointment assistance, 10-day advance requests and phone option 3. Ohio now has 153 resource records / 149 cards. Clarified the existing Marion Medicaid care application route and authorized-representative option. Three imported directory records now have full official-source review; provider-level availability remains unconfirmed.

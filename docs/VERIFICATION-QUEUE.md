@@ -2,7 +2,7 @@
 
 Snapshot: October 9, 2026. Source statuses are preserved; matching published phones are not direct confirmation. Refresh this file when evidence changes.
 
-Ohio canonical records: 6 imported_unverified, 3 needs_recheck, 7 official_search_extract_only, 136 official_source_reviewed. Pennsylvania, New York, Michigan and Kentucky follow-ups are listed separately below.
+Ohio canonical records: 3 imported_unverified, 3 needs_recheck, 7 official_search_extract_only, 140 official_source_reviewed. Pennsylvania, New York, Michigan and Kentucky follow-ups are listed separately below.
 
 ## First follow-ups
 
@@ -14,9 +14,6 @@ Ohio canonical records: 6 imported_unverified, 3 needs_recheck, 7 official_searc
 
 | Record | Status | Last review | Public source |
 |---|---|---|---|
-| Marion JFS community resource guide (`marion-jfs-guide`) | imported_unverified | 2026-09-30 | [Source](https://mcjfs.com/community-resources/) |
-| Milestones Provider Directory at Lifeworks (`milestones-lifeworks`) | imported_unverified | 2026-09-30 | [Source](https://lifeworksautism.org/Resources) |
-| OCALI Family and Community Resource Gallery (`ocali-gallery`) | imported_unverified | 2026-09-30 | [Source](https://ocali.org/fc_resource_gallery) |
 | Ohio Association of County Boards of DD — Family Resources (`county-dd`) | imported_unverified | 2026-09-30 | [Source](https://www.oacbdd.org/familyresources) |
 | Ohio county veterans service office directory route (`cvso-map`) | imported_unverified | 2026-09-30 | [Source](https://osavsc.org/) |
 | findhelp (`findhelp`) | imported_unverified | 2026-09-30 | [Source](https://www.findhelp.org/) |
@@ -94,3 +91,7 @@ All editions now show calculated pending/excerpt counts beside the state selecto
 ## Ohio housing expansion
 
 Sixteen provider/contact records now map local referrals for 86 counties using reviewed provider pages and the VA-linked FY26 intake workbook. Putnam and Van Wert remain provider-level gaps. The workbook names Salvation Army’s eleven SSVF counties and supports expanded LCCH and Talbert House maps. Different grant and provider footprints are qualified rather than silently treated as identical. Confirm current fiscal-year availability and intake directly. See [Ohio housing coverage](OHIO-HOUSING.md).
+
+## October 9: Marion and specialist directories
+
+Full official-source review confirms the Marion JFS guide landing page and its January 2026 revision label, the Lifeworks-hosted Milestones directory and OCALI resource gallery. Reviewing a directory does not verify every provider inside it. OCALI marks its Parent Guide to Autism under review; that limit is retained. Added Marion Medicaid medical transportation and clarified its advance request and phone-menu route. Updated the existing Marion care-Medicaid referral, avoiding a duplicate card. OACBDD family resources and member-directory pages returned 403 during research; the record remains unverified, with no inference that the service is ineffective.
