@@ -352,7 +352,8 @@
     "official_url": "https://crawfordcountyaging.com/",
     "program_url": "https://crawfordcountyaging.com/activities-2/",
     "activities": [
-      "Bingo, painting, crafts and social events; see the monthly calendar"
+      "Bingo, painting, crafts and social events; see the monthly calendar",
+      "Ask for this month’s off-site activities in Galion or Crestline"
     ],
     "activity_tags": [
       "crafts",
@@ -361,13 +362,15 @@
     "opening_hours": "",
     "participation": "Activities for adults age 55+. Optional membership offers discounts.",
     "schedule": null,
-    "cost": null,
+    "cost": "Optional annual activities membership: $30 individual or $55 married couple; activity fees vary.",
     "admission": "Activities for adults age 55+. Optional membership offers discounts.",
     "accessibility": null,
     "license_number": null,
     "license_type": null,
     "license_status": null,
-    "notes": [],
+    "notes": [
+      "Off-site sessions depend on funding and participation; the monthly newsletter lists sessions that are running."
+    ],
     "sources": [
       {
         "url": "https://www.aaa5ohio.org/resources/senior-centers/",
@@ -386,7 +389,8 @@
       }
     ],
     "reviewed_on": "2026-10-09",
-    "offers_bingo": true
+    "offers_bingo": true,
+    "getting_started": "Call 419-562-3050 ext. 235 for the monthly Senior Tidings newsletter, activity registration or membership. Activities are open to adults age 55+."
   },
   {
     "id": "huron-norwalk-center",
@@ -575,5 +579,47 @@
     ],
     "reviewed_on": "2026-10-09",
     "offers_bingo": false
+  },
+  {
+    "id": "lexington-senior-civic-center",
+    "name": "Lexington Senior Civic Center — The Depot",
+    "county": "Richland",
+    "state": "OH",
+    "category": "center",
+    "is_center": true,
+    "offers_bingo": true,
+    "address": "67 East Main Street, Lexington, OH 44904",
+    "phone": "419-884-1676",
+    "official_url": "https://lexingtonohio.us/senior-center",
+    "program_url": "https://lexingtonohio.us/senior-center",
+    "activities": [
+      "Public lunch: Tuesday and Thursday, 11 a.m.–1 p.m.",
+      "Billiards, library and organized trips"
+    ],
+    "activity_tags": [
+      "meals",
+      "games",
+      "trips"
+    ],
+    "participation": "Senior activities for adults age 55+; public lunches welcome all ages. Free membership.",
+    "getting_started": "Call 419-884-1676 for the current menu or activity details. Bingo starts at 1 p.m. after lunch on Tuesdays and Thursdays.",
+    "schedule": "Tuesday and Thursday, 1 p.m.",
+    "cost": "Bingo: 1¢ per card. Lunch: $9 per meal. Membership: free.",
+    "admission": "Senior activities age 55+; public lunches open to all ages.",
+    "accessibility": null,
+    "license_number": null,
+    "license_type": null,
+    "license_status": null,
+    "notes": [
+      "Municipal page lists different bingo finish times and center hours; consistent bingo start is 1 p.m."
+    ],
+    "sources": [
+      {
+        "url": "https://lexingtonohio.us/senior-center",
+        "scope": "Village: location, programs, bingo start, prices and participation",
+        "reviewed_on": "2026-10-09"
+      }
+    ],
+    "reviewed_on": "2026-10-09"
   }
 ]
