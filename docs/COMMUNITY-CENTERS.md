@@ -37,3 +37,9 @@ The finder now separates Bingo and Senior Centers into sections and offers both 
 Eleven center locations are now included. Six additions cover Ashland, Crawford, Huron (Norwalk and Willard), Seneca (Tiffin), and Wyandot. Discovery source: Ohio District 5 Area Agency on Aging’s regional senior-center directory, https://www.aaa5ohio.org/resources/senior-centers/. Provider sites confirm location/contact and program details; published hours do not imply bingo session times.
 
 For statewide discovery, link to the Ohio Association of Senior Centers locator at https://ohioasc.org/. This is a discovery tool, not proof that our eleven locations constitute statewide coverage. Continue through regional AAA directories and provider calendars. Preserve provider contact information when regional listings disagree. The generic CareOhio center list contains mismatched names/cities and is unsuitable for automatic imports.
+
+## Lexington and Crawford practical details
+
+October 9: added Lexington Senior Civic Center (The Depot) using the Village of Lexington page, https://lexingtonohio.us/senior-center. Publish the consistent Tuesday/Thursday 1 p.m. bingo start and public 11 a.m.–1 p.m. lunch window. The same page has conflicting bingo finish times and center hours; those are not presented as settled. Twelve center locations are now included.
+
+Crawford’s provider activities page confirms age 55+, optional annual activities membership ($30 individual/$55 married couple), extension 235 and monthly Senior Tidings newsletter. Off-site Galion/Crestline sessions depend on funding and participation; do not imply a permanent weekly schedule.
