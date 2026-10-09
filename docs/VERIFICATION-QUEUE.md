@@ -2,7 +2,7 @@
 
 Snapshot: October 9, 2026. Source statuses are preserved; matching published phones are not direct confirmation. Refresh this file when evidence changes.
 
-Ohio canonical records: 14 imported_unverified, 3 needs_recheck, 6 official_search_extract_only, 92 official_source_reviewed. Pennsylvania, New York, Michigan and Kentucky follow-ups are listed separately below.
+Ohio canonical records: 14 imported_unverified, 3 needs_recheck, 6 official_search_extract_only, 96 official_source_reviewed. Pennsylvania, New York, Michigan and Kentucky follow-ups are listed separately below.
 
 ## First follow-ups
 
@@ -93,3 +93,7 @@ The following records rely on the interface fallback description and should rece
 Direct full-source retrieval was attempted again for all ten distinct excerpt-only source URLs (six Ohio/shared, two PA and two NY). Several pages returned access errors; Medicare Care Compare and Ohio Aging Compass returned no readable content. Carbon's PDF was available as a four-page document but readable supporting text was not obtained in this review. No evidence status or review date was upgraded from these attempts.
 
 All editions now show calculated pending/excerpt counts beside the state selector. Incomplete-verification notices remain visible on resource cards and printed resource lists. The state coverage description distinguishes county referral coverage from a complete local service inventory. Resolve the source queue against full readable official sources or agency confirmation before upgrading labels.
+
+## Ohio housing expansion
+
+Four SSVF providers now have mapped coverage across 30 counties. Remaining 58 counties need provider-level verification. Salvation Army’s broader 11-county housing footprint is not assumed to be SSVF coverage beyond the five VA-confirmed counties. See [Ohio housing coverage](OHIO-HOUSING.md).
