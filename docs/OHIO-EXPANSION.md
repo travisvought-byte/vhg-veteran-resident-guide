@@ -32,3 +32,7 @@ Added SourcePoint family caregiver support for Delaware County, bringing Ohio to
 ## October 9: Marion transportation and directory verification
 
 Added Marion JFS medical transportation: county Medicaid appointment assistance, 10-day advance requests and phone option 3. Ohio now has 153 resource records / 149 cards. Clarified the existing Marion Medicaid care application route and authorized-representative option. Three imported directory records now have full official-source review; provider-level availability remains unconfirmed.
+
+## October 9: pilot senior centers
+
+Added five source-reviewed centers across Morrow, Knox, Marion and Delaware, preserving membership, meal, ride and service-unavailability limits. Ohio now has 158 records / 154 cards. The community section includes centers alongside post locators. Further regional centers and statewide bingo-license extraction are queued in COMMUNITY-CENTERS.md.

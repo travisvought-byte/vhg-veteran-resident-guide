@@ -1,0 +1,27 @@
+# Ohio community centers: initial source collection
+
+Reviewed October 9, 2026. Five center records in prototype-data.json cover the four pilot counties. They appear in community, local and senior daily-support routes; no military service is required. This is a starting set, not a complete county or statewide inventory.
+
+| County | Center | Phone | Source |
+|---|---|---|---|
+| Morrow | Seniors on Center | 419-946-4191 | https://seniorsoncenter.org/services |
+| Knox | The Station Break | 740-397-2417 | https://stationbreak.org/services |
+| Knox | Centerburg Senior Services | 740-625-5056 | https://centerburgseniorservices.com/ |
+| Marion | Marion Senior Center | 740-387-6100 | https://www.marionohio.us/217/Activities-Programs |
+| Delaware | SourcePoint Enrichment Center | 740-363-6677 | https://mysourcepoint.org/enrichment/ |
+
+Keep center services separate from bingo-session records and charitable-license evidence. Published phone/address review does not confirm current intake, accessibility, group admission or transport capacity.
+
+## Important findings
+
+- Seniors on Center says homemaker help is unavailable due to staffing. Do not offer it as an available service. Out-of-county medical rides require 48-hour notice.
+- Station Break uses a separate reservation/ride number, 740-397-3841. Rides are Knox-only age 60+; out-of-town requests need 72-hour notice.
+- Centerburg lists a new center at 182 W Houck St. Its meal/support footprint is Centerburg Village plus Hilliar, Liberty and Milford townships, not all Knox County.
+- Marion membership is age 50+ and $30 annually. The center lists bingo but the current session schedule still needs confirmation.
+- SourcePoint regular membership is Delaware age 55+ with a free ComPASS; some programs carry charges. Fall 2026 programs require registration. The bingo flyer still has a holiday weekday/date conflict that must not be silently corrected.
+
+## Expansion sources
+
+District 5's senior-center directory also identifies Ashland, Crawford, Huron, Seneca and Wyandot centers: https://www.aaa5ohio.org/resources/senior-centers/ . Provider websites should establish services and eligibility before these are published.
+
+The Ohio Attorney General's authorized bingo locations endpoint returned a rejected request during this review: https://charitable.ohioago.gov/Charitable-Bingo/Forms/Organizations-Authorized-to-Conduct-Bingo . No statewide license list was extracted or license status upgraded. Acquire a readable official list, then confirm organizer schedules separately. Existing six bingo venues remain in data/public/ohio-bingo.json.
