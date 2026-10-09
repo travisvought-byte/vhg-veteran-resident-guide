@@ -67,7 +67,7 @@ for(const [state,[page]] of Object.entries(editions)){
 require('./bingo.cjs');
 console.log('PASS: urgent panel, crisis support and expanded homelessness routes in every state.');
 
-const aid=setup('?view=aid');assert.equal(aid.count(),8);for(const id of ['ohio-legal-aid','ohio-legion-claims','ohio-utility-assistance','ohio-dav-transport'])assert(aid.nodes.results.innerHTML.includes('resource-'+id));
+const aid=setup('?view=aid');assert.equal(aid.count(),9);for(const id of ['ohio-legal-aid','ohio-legion-claims','ohio-utility-assistance','ohio-dav-transport'])assert(aid.nodes.results.innerHTML.includes('resource-'+id));
 for(const page of ['pa.html','ny.html','mi.html','ky.html']){const h=fs.readFileSync(path.join(root,page),'utf8');assert(!h.includes('ohio-aid-link'));assert(!h.includes('ohio-legion-claims'));}
 assert(aid.nodes.results.innerHTML.includes('not authorized to file claims'));assert(aid.nodes.results.innerHTML.includes('do not cover every community'));
 console.log('PASS: Ohio aid route, claims authority and transport limits, and isolation from other state editions.');

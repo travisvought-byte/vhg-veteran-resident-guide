@@ -96,4 +96,4 @@ All editions now show calculated pending/excerpt counts beside the state selecto
 
 ## Ohio housing expansion
 
-Four SSVF providers now have mapped coverage across 30 counties. Remaining 58 counties need provider-level verification. Salvation Army’s broader 11-county housing footprint is not assumed to be SSVF coverage beyond the five VA-confirmed counties. See [Ohio housing coverage](OHIO-HOUSING.md).
+Five SSVF providers now have mapped coverage across 39 counties. Remaining 49 counties need provider-level verification. Salvation Army’s broader 11-county housing footprint is not assumed to be SSVF coverage beyond the five VA-confirmed counties. See [Ohio housing coverage](OHIO-HOUSING.md).

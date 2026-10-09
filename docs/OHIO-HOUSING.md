@@ -1,6 +1,6 @@
 # Ohio veteran housing provider coverage
 
-Reviewed October 9, 2026 (UTC). This first provider expansion maps four SSVF referrals across 30 distinct Ohio counties. The other 58 counties retain national VA housing referrals and county veterans offices; they do not yet have a verified local provider in this layer.
+Reviewed October 9, 2026 (UTC). This first provider expansion maps five SSVF referrals across 39 distinct Ohio counties. The other 49 counties retain national VA housing referrals and county veterans offices; they do not yet have a verified local provider in this layer.
 
 | Provider | Ohio counties mapped | Intake route |
 |---|---|---|
@@ -20,4 +20,8 @@ These are referrals, not telephone-confirmed openings, shelter reservations or a
 
 ## Remaining expansion
 
-Verify local SSVF providers for the remaining 58 counties, starting with northeast Ohio and northwest Ohio. VOA Ohio & Indiana and Talbert House are research candidates; office locations or an unnamed surrounding-county claim are insufficient to infer a complete county map. Add emergency shelter and transitional-housing records separately, with their own geographic, admission and accessibility limits. Food banks and Community Action Agencies follow this housing layer.
+Verify local SSVF providers for the remaining 49 counties, starting with northeast Ohio and northwest Ohio. VOA Ohio & Indiana and Talbert House are research candidates; office locations or an unnamed surrounding-county claim are insufficient to infer a complete county map. Add emergency shelter and transitional-housing records separately, with their own geographic, admission and accessibility limits. Food banks and Community Action Agencies follow this housing layer.
+
+## Northeast Ohio addition
+
+Axess Family Services publishes SSVF coverage for Ashtabula, Geauga, Lorain, Mahoning, Medina, Portage, Stark, Summit and Trumbull. Its 24/7 hotline is 855-234-7310. The provider page supplies current coverage, services and eligibility; this replaces reliance on older Family & Community Services directory entries.
