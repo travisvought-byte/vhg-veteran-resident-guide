@@ -4,10 +4,10 @@ const assert=require('assert'),fs=require('fs'),path=require('path'),vm=require(
 const root=path.resolve(__dirname,'..');
 const data=JSON.parse(fs.readFileSync(path.join(root,'prototype-data.json')));
 const providers=data.filter(x=>x.resource_role==='housing_provider');
-assert.equal(providers.length,4);
-const mapped=new Set(providers.flatMap(x=>x.service_area));assert.equal(mapped.size,30);
+assert.equal(providers.length,5);
+const mapped=new Set(providers.flatMap(x=>x.service_area));assert.equal(mapped.size,39);
 const counties=JSON.parse(fs.readFileSync(path.join(root,'data/public/ohio-county-veterans-offices.json')));
-assert.equal(counties.filter(c=>!mapped.has(c.county)).length,58);
+assert.equal(counties.filter(c=>!mapped.has(c.county)).length,49);
 for(const c of counties){
  const t=setup('?view=housing&county='+encodeURIComponent(c.county));
  for(const p of providers)assert.equal(t.nodes.results.innerHTML.includes('resource-'+p.program_id),p.service_area.includes(c.county),p.program_id+' '+c.county);
@@ -20,4 +20,6 @@ const dayton=providers.find(x=>x.program_id==='ohio-st-vincent-ssvf');assert.equ
 const knox=setup('?view=housing&county=Knox');assert(knox.nodes.results.innerHTML.includes('VA Knox County homeless resources'));assert(knox.nodes.results.innerHTML.includes('lcchousing.org/need-help'));
 const mr=setup('?view=housing&county=Morrow');assert(mr.nodes.results.innerHTML.includes('tel:6143582611;ext=161'));
 for(const page of ['pa.html','ny.html','mi.html','ky.html']){const t=setup('?view=housing',page),rs=vm.runInContext('DATA',t.ctx);assert(!rs.some(x=>x.resource_role==='housing_provider'));for(const p of providers)assert(!t.nodes.results.innerHTML.includes(p.program_id));}
-console.log('PASS: all 88 Ohio county housing views, 30 mapped counties, 58 honest coverage gaps, primary evidence links, intake limits and state isolation.');
+console.log('PASS: all 88 Ohio county housing views, 39 mapped counties, 49 honest coverage gaps, primary evidence links, intake limits and state isolation.');
+
+const axess=providers.find(x=>x.program_id==='ohio-axess-ssvf');assert.equal(axess.public_contact.phone,'855-234-7310');assert.equal(axess.service_area.length,9);assert(axess.service_area.includes('Ashtabula'));assert(!axess.service_area.includes('Cuyahoga'));
