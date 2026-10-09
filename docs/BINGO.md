@@ -53,3 +53,7 @@ October 9: Ohio Bingo Bugle supplies updated Cardington/Northmor times and recur
 ZIP and radius are the primary search controls, with nearest-first results and distance on each card. Supported radii: 10, 25, 50, 100 and 200 miles, or any distance. County remains optional. ZIP/radius filters persist in shareable URLs and reset together. Distance uses ZIP centroids and the haversine formula; it is approximate straight-line mileage, not driving distance. Locations without a usable ZIP remain in the statewide list and are omitted from distance results.
 
 ZIP lookup data is bundled in the page, so searches require no geocoding API or browser location permission. Coordinate source, hash, upstream commit and attribution are recorded in data/public/us-zip-centroids-source.json. Refresh with scripts/build_bingo_zip_data.py using upstream all_us_zipcodes.csv. Data attribution: GeoNames via Midwire free_zipcode_data, CC BY 3.0.
+
+## October 9 nearby schedule update
+
+Added organizer-published sessions for Delaware VFW Reed-Miller Post 3297 (Sunday 2 p.m., doors noon, public attendance) and Crawford Humane Society (Wednesday 6:30 p.m., doors 4 p.m., $29/$41 packets). The Crawford dedicated bingo page and October state report agree on PAWS Center; homepage mentions Wynford, retained as a location discrepancy in source details. State-authorized days remain separate and unchanged. Delaware Eagles gains a contact for Wednesday session questions; no start time was inferred. Twelve total listings now have session times.
