@@ -47,3 +47,9 @@ Added all 717 Type I entries from the October 2, 2026 official report. Three mat
 Visitors can submit venue, county, schedule/prices, public source URL (including Facebook) and optional reply contact through a form. Each card prefills venue/county. Submission opens an email draft to travis@vethomeguard.org; it does not send automatically or require a server.
 
 October 9: Ohio Bingo Bugle supplies updated Cardington/Northmor times and recurring schedules for Mansfield Firefighters, Tyger Boosters, Wyandot County Humane Society and WCAP. Early-bird times remain identified separately. Repeated unknown-field cautions are removed; sources and license information are collapsed, with one schedule-change note above the list. A session-time filter finds enriched cards.
+
+## ZIP distance browsing
+
+ZIP and radius are the primary search controls, with nearest-first results and distance on each card. Supported radii: 10, 25, 50, 100 and 200 miles, or any distance. County remains optional. ZIP/radius filters persist in shareable URLs and reset together. Distance uses ZIP centroids and the haversine formula; it is approximate straight-line mileage, not driving distance. Locations without a usable ZIP remain in the statewide list and are omitted from distance results.
+
+ZIP lookup data is bundled in the page, so searches require no geocoding API or browser location permission. Coordinate source, hash, upstream commit and attribution are recorded in data/public/us-zip-centroids-source.json. Refresh with scripts/build_bingo_zip_data.py using upstream all_us_zipcodes.csv. Data attribution: GeoNames via Midwire free_zipcode_data, CC BY 3.0.

@@ -2,7 +2,7 @@ require('./legacy-fixtures.cjs');
 const assert=require('assert'),fs=require('fs'),vm=require('vm'),path=require('path');const root=path.resolve(__dirname,'..');
 const html=fs.readFileSync(path.join(root,'bingo.html'),'utf8'),canonical=JSON.parse(fs.readFileSync(path.join(root,'data/public/ohio-bingo.json'),'utf8'));
 const authorized=JSON.parse(fs.readFileSync(path.join(root,'data/public/ohio-bingo-authorized.json'),'utf8'));const known=new Set(canonical.filter(r=>r.license_number).map(r=>r.license_number));const combined=canonical.concat(authorized.filter(r=>!known.has(r.license_number)));
-const nodes=Object.fromEntries(['bingo-county','bingo-kind','bingo-search','bingo-reset','bingo-print','count','listings','bingo-submit','submit-venue','submit-county','submit-info','submit-source','submit-contact'].map(id=>[id,{value:'',innerHTML:'',textContent:'',options:[],addEventListener(){}}]));nodes['bingo-county'].options=[{value:''},...JSON.parse(fs.readFileSync(path.join(root,'data/public/ohio-county-veterans-offices.json'),'utf8')).map(c=>({value:c.county}))];
+const nodes=Object.fromEntries(['bingo-county','bingo-kind','bingo-search','bingo-reset','bingo-print','count','listings','bingo-submit','submit-venue','submit-county','submit-info','submit-source','submit-contact','bingo-nearby','bingo-zip','bingo-radius','nearby-status'].map(id=>[id,{value:'',innerHTML:'',textContent:'',options:[],addEventListener(){}}]));nodes['bingo-county'].options=[{value:''},...JSON.parse(fs.readFileSync(path.join(root,'data/public/ohio-county-veterans-offices.json'),'utf8')).map(c=>({value:c.county}))];
 const context=vm.createContext({URL,URLSearchParams,document:{getElementById:id=>nodes[id]},location:{href:'https://example.org/bingo.html',search:''},history:{replaceState(){}},window:{print(){}}});vm.runInContext(html.match(/<script>([\s\S]*?)<\/script>/)[1],context);
 assert.deepEqual(JSON.parse(vm.runInContext('JSON.stringify(BINGO)',context)),combined);
 assert.equal(vm.runInContext("filteredBingo('Morrow','charitable','').length",context),3);assert.equal(vm.runInContext("filteredBingo('Knox','senior','').length",context),1);assert.equal(vm.runInContext("filteredBingo('Morrow','senior','').length",context),0);assert.equal(vm.runInContext("filteredBingo('','','cardington').length",context),1);
@@ -19,3 +19,14 @@ assert.equal(nodes['submit-venue'].value,'Jenkins-Vaughan American Legion Post 9
 nodes['submit-info'].value='Saturday 6 p.m.';let prevented=false;nodes['bingo-submit'].onsubmit({preventDefault(){prevented=true}});assert(prevented);assert(context.location.href.startsWith('mailto:travis@vethomeguard.org?'));
 assert.equal(vm.runInContext("filteredBingo('','scheduled','').length",context),9);
 console.log('PASS: submission prefill, email draft recipient/encoding and schedule filter.');
+
+const zero=vm.runInContext('milesBetween([40,-83],[40,-83])',context);assert.equal(zero,0);
+const equator=vm.runInContext('milesBetween([0,0],[0,1])',context);assert(Math.abs(equator-69.09)<0.1);
+assert(vm.runInContext("nearbyBingo(BINGO,'43334',25).some(r=>r.id==='marengo-legion-710')",context));
+assert(!vm.runInContext("nearbyBingo(BINGO,'43334',25).some(r=>r.id==='oh-license-0100-49-543-5')",context));
+assert(vm.runInContext("nearbyBingo(BINGO,'00000',50)===null",context));
+const close=JSON.parse(vm.runInContext("JSON.stringify(nearbyBingo(BINGO,'43334',50))",context));assert(close.length>3);assert(close.every((r,i)=>r.distanceMiles<=50&&(!i||close[i-1].distanceMiles<=r.distanceMiles)));
+nodes['bingo-zip'].value='43334';nodes['bingo-radius'].value='25';nodes['bingo-nearby'].onsubmit({preventDefault(){}});assert(nodes.count.textContent.includes('within 25 miles of 43334'));assert(nodes.listings.innerHTML.includes('miles away'));
+nodes['bingo-zip'].value='00000';nodes['bingo-nearby'].onsubmit({preventDefault(){}});assert(nodes['nearby-status'].textContent.includes('valid five-digit'));assert(nodes.count.textContent.includes('720'));
+nodes['bingo-reset'].onclick();assert.equal(nodes['bingo-zip'].value,'');assert.equal(nodes['bingo-radius'].value,'50');
+console.log('PASS: ZIP distance math, nearest sorting, radius inclusion, invalid ZIP and reset.');
