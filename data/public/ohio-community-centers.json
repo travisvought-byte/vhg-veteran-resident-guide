@@ -61,7 +61,15 @@
     "participation": "Delaware County residents age 55+. Free ComPASS; some classes have fees.",
     "program_url": "https://mysourcepoint.org/enrichment/",
     "offers_bingo": true,
-    "getting_started": "Get a free ComPASS, then register for bingo or classes through the program website. Ask about guest passes if you live outside Delaware County."
+    "getting_started": "Get a free ComPASS, then register for bingo or classes through the program website. Ask about guest passes if you live outside Delaware County.",
+    "session_days": [
+      3,
+      5
+    ],
+    "schedule_valid_until": "2027-01-02",
+    "session_exceptions": {
+      "2026-11-25": "Earlier holiday session; ask staff for the start time."
+    }
   },
   {
     "id": "station-break-bingo",
@@ -122,7 +130,10 @@
     "program_url": "https://stationbreak.org/",
     "offers_bingo": true,
     "getting_started": "Call 740-397-3841 about joining activities, meal arrangements or transportation.",
-    "transportation": "Transportation to medical appointments and shopping; call the center to arrange service."
+    "transportation": "Transportation to medical appointments and shopping; call the center to arrange service.",
+    "session_days": [
+      5
+    ]
   },
   {
     "id": "marion-senior-bingo",
@@ -620,7 +631,11 @@
         "reviewed_on": "2026-10-09"
       }
     ],
-    "reviewed_on": "2026-10-09"
+    "reviewed_on": "2026-10-09",
+    "session_days": [
+      2,
+      4
+    ]
   },
   {
     "id": "windsor-community-seniors",
@@ -667,7 +682,10 @@
         "reviewed_on": "2026-10-09"
       }
     ],
-    "reviewed_on": "2026-10-09"
+    "reviewed_on": "2026-10-09",
+    "session_days": [
+      2
+    ]
   },
   {
     "id": "richwood-civic-center",

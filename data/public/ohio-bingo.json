@@ -38,7 +38,10 @@
     },
     "authorized_days": "Thursday, Friday, Saturday",
     "weeks_of_play": 52,
-    "source_page": 303
+    "source_page": 303,
+    "session_days": [
+      4
+    ]
   },
   {
     "id": "cardington-legion-97",
@@ -88,7 +91,10 @@
     "authorized_days": "12/03/2026, Saturday",
     "weeks_of_play": 52,
     "source_page": 262,
-    "getting_started": "Doors open at 4 p.m. Snack bar available; no outside food. No checks or ATM; debit cards accepted with a fee."
+    "getting_started": "Doors open at 4 p.m. Snack bar available; no outside food. No checks or ATM; debit cards accepted with a fee.",
+    "session_days": [
+      6
+    ]
   },
   {
     "id": "northmor-music-bingo",
@@ -145,7 +151,11 @@
     "weeks_of_play": 30,
     "source_page": 342,
     "schedule_valid_until": "2026-10-31",
-    "getting_started": "Next advertised October session: Tuesday, October 20, 7 p.m.; doors open 5 p.m."
+    "getting_started": "Next advertised October session: Tuesday, October 20, 7 p.m.; doors open 5 p.m.",
+    "session_dates": [
+      "2026-10-06",
+      "2026-10-20"
+    ]
   },
   {
     "id": "sourcepoint-bingo",
@@ -179,7 +189,15 @@
     "license_type": null,
     "license_status": "Not independently checked against current license",
     "reviewed_on": "2026-10-08",
-    "firsthand_confirmation": null
+    "firsthand_confirmation": null,
+    "session_days": [
+      3,
+      5
+    ],
+    "schedule_valid_until": "2027-01-02",
+    "session_exceptions": {
+      "2026-11-25": "Earlier holiday session; ask staff for the start time."
+    }
   },
   {
     "id": "station-break-bingo",
@@ -213,7 +231,10 @@
     "license_type": null,
     "license_status": "Not independently checked against current license",
     "reviewed_on": "2026-10-08",
-    "firsthand_confirmation": null
+    "firsthand_confirmation": null,
+    "session_days": [
+      5
+    ]
   },
   {
     "id": "marion-senior-bingo",
