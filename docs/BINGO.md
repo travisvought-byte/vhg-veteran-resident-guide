@@ -41,3 +41,9 @@ Functional checks cover county/category/search boundaries, generated-data synchr
 ## Statewide Type I coverage
 
 Added all 717 Type I entries from the October 2, 2026 official report. Three match existing researched venues and are shown once, giving 720 displayed records including three senior-center activities. State-listed days are labeled separately from organizer schedules; blank prices remain unknown. Listings remain separate from benefits/support resource counts. See BINGO-REPORT-PARSING.md for extraction checks and source limitations.
+
+## Visitor details and schedule enrichment
+
+Visitors can submit venue, county, schedule/prices, public source URL (including Facebook) and optional reply contact through a form. Each card prefills venue/county. Submission opens an email draft to travis@vethomeguard.org; it does not send automatically or require a server.
+
+October 9: Ohio Bingo Bugle supplies updated Cardington/Northmor times and recurring schedules for Mansfield Firefighters, Tyger Boosters, Wyandot County Humane Society and WCAP. Early-bird times remain identified separately. Repeated unknown-field cautions are removed; sources and license information are collapsed, with one schedule-change note above the list. A session-time filter finds enriched cards.
