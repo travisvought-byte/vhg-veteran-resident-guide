@@ -57,3 +57,13 @@ ZIP lookup data is bundled in the page, so searches require no geocoding API or 
 ## October 9 nearby schedule update
 
 Added organizer-published sessions for Delaware VFW Reed-Miller Post 3297 (Sunday 2 p.m., doors noon, public attendance) and Crawford Humane Society (Wednesday 6:30 p.m., doors 4 p.m., $29/$41 packets). The Crawford dedicated bingo page and October state report agree on PAWS Center; homepage mentions Wynford, retained as a location discrepancy in source details. State-authorized days remain separate and unchanged. Delaware Eagles gains a contact for Wednesday session questions; no start time was inferred. Twelve total listings now have session times.
+
+## Full Bingo Bugle pull: October 2026
+
+Retrieved the complete public web game directory and 28-page October 2026 issue on October 9. Visually reviewed raster advertisements, not just PDF text. Source snapshot: `data/source/ohio-bingo-bugle-2026-10-09.json`; includes retrieval hashes, per-row matching outcomes, issue metadata and conflicts. No publisher PDF or page images are republished.
+
+All 34 web rows are accounted for: 28 matched rows, one shared Valley Street hall listing explicitly naming three operators, three identity/location review rows, and two instant-ticket-hour rows. The printed directory additionally lists Fisher Catholic. The finder now has 38 entries with times (including three separate Valley Street authorizations), not 38 distinct halls.
+
+Important corrections: Northmor’s October ad limits play to October 6 and 20; Vermilion’s ad gives November 4 and December 2 after October 7; Children’s Toy Fund closes October 31. Published date limits appear on cards. October-only Grove City prices carry an end date. Preserve state-authorized days separately. Massillon Knights, St. Clement and Tri-County remain in the source review queue due to license/address conflicts; do not publish a fuzzy match.
+
+Monthly routine: download the public directory and full issue; run `python3 scripts/extract_bingo_bugle.py DIRECTORY.html --output CANDIDATES.json --reviewed-on YYYY-MM-DD`. The extractor handles malformed TH/TD rows but deliberately does not apply fuzzy matches. Check issue month, review ads visually, match licenses/addresses, compare existing provider information, record exceptions/offer expiry, and rerun validation before publication. Extracting a new issue does not automatically prove an old schedule has continued.

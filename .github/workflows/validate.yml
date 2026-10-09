@@ -16,7 +16,9 @@ jobs:
       - name: Check all states, county mappings, referral behavior and feedback links
         run: node tests/feedback.cjs
       - name: Check bingo report extraction regressions
-        run: python3 tests/bingo_report.py
+        run: |
+          python3 tests/bingo_report.py
+          python3 tests/bingo_bugle.py
       - name: Check public data and sharing files
         run: python3 scripts/validate_public.py
       - uses: actions/setup-node@v4
