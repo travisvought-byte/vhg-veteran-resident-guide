@@ -9,6 +9,7 @@ from ny_edition import make_ny, new_york_resources
 from mi_edition import make_mi, michigan_resources
 from ky_edition import make_ky, kentucky_resources
 from bingo_edition import make_bingo
+from unified_guide import unified_outputs
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = 'https://travisvought-byte.github.io/vhg-veteran-resident-guide/'
@@ -16,7 +17,7 @@ BASE_URL = 'https://travisvought-byte.github.io/vhg-veteran-resident-guide/'
 def outputs():
     resources = json.loads((ROOT / 'prototype-data.json').read_text())
     counties = json.loads((ROOT / 'data/public/ohio-county-veterans-offices.json').read_text())
-    html = (ROOT / 'index.html').read_text()
+    html = (ROOT / 'templates/guide.html').read_text()
     html = re.sub(r'<p id="ohio-bingo-link">.*?</p>', '', html)
     html = re.sub(r'<section id="urgent-help".*?</section>', '', html, flags=re.S)
     html = re.sub(r'^routes.aid=.*\n', '', html, flags=re.M)
@@ -117,18 +118,26 @@ def outputs():
     result['index.html'] = result['index.html'].replace('<section id="county-start"', f'<p id="ohio-aid-link"><a href="?view=aid"><strong>Ohio veteran and aid organizations</strong></a> · Housing providers, claims help, legal aid, utility assistance and medical transportation. Local veteran housing providers are mapped for {housing_count} of {len(counties)} counties; other counties retain VA referral routes. For emergency financial assistance, choose your county below and ask its veterans office about eligibility and current programs.</p><section id="county-start"', 1)
     result['bingo.html'] = make_bingo(ROOT)
     result['index.html'] = result['index.html'].replace('<h3>For posts and community groups</h3>', '<p id="ohio-bingo-link"><a href="bingo.html"><strong>Explore Ohio bingo and community activities</strong></a> - charitable sessions and senior-center activities, with sources and details to confirm before attending.</p><h3>For posts and community groups</h3>', 1)
+    # Keep state adapter regression fixtures private to tests; the public site has one view.
+    for page in ['index.html','pa.html','ny.html','mi.html','ky.html']:
+        result['tests/fixtures/'+page] = result[page]
+    result.update(unified_outputs(ROOT, result))
     return result
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--check', action='store_true')
+    parser.add_argument('--test-fixtures', action='store_true')
     args = parser.parse_args()
     drift = []
     for name, text in outputs().items():
+        if name.startswith('tests/fixtures/') and not args.test_fixtures:
+            continue
         path = ROOT / name
         if not path.is_file() or path.read_text() != text:
             drift.append(name)
             if not args.check:
+                path.parent.mkdir(parents=True, exist_ok=True)
                 path.write_text(text)
     if args.check and drift:
         parser.exit(1, 'Out of sync: ' + ', '.join(drift) + '. Run python3 scripts/build_public.py\n')

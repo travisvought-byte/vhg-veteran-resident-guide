@@ -1,3 +1,4 @@
+require('./legacy-fixtures.cjs');
 require('./michigan.cjs');
 const {setup}=require('./accessibility.cjs');
 const assert=require('assert'),fs=require('fs'),vm=require('vm'),path=require('path');

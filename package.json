@@ -1,0 +1,12 @@
+{
+  "name": "vhg-veteran-resident-guide",
+  "private": true,
+  "scripts": {
+    "test": "node tests/unified.cjs",
+    "test:browser": "node tests/unified-browser.cjs"
+  },
+  "devDependencies": {
+    "jsdom": "30.1.2",
+    "playwright": "1.51.1"
+  }
+}

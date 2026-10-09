@@ -1,3 +1,4 @@
+require('./legacy-fixtures.cjs');
 const assert=require('assert'),fs=require('fs'),vm=require('vm'),path=require('path');const root=path.resolve(__dirname,'..');
 const html=fs.readFileSync(path.join(root,'bingo.html'),'utf8'),canonical=JSON.parse(fs.readFileSync(path.join(root,'data/public/ohio-bingo.json'),'utf8'));
 const nodes=Object.fromEntries(['bingo-county','bingo-kind','bingo-search','bingo-reset','bingo-print','count','listings'].map(id=>[id,{value:'',innerHTML:'',textContent:'',options:[],addEventListener(){}}]));nodes['bingo-county'].options=[{value:''},...JSON.parse(fs.readFileSync(path.join(root,'data/public/ohio-county-veterans-offices.json'),'utf8')).map(c=>({value:c.county}))];

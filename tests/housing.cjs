@@ -1,3 +1,4 @@
+require('./legacy-fixtures.cjs');
 const {setup}=require('./accessibility.cjs');
 const assert=require('assert'),fs=require('fs'),path=require('path'),vm=require('vm');
 const root=path.resolve(__dirname,'..');

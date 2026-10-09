@@ -1,3 +1,4 @@
+require('./legacy-fixtures.cjs');
 // Feedback links: every listing and county panel offers a prefilled correction email,
 // in every edition, without leaking state-specific wording or resident information.
 require('./kentucky.cjs');
