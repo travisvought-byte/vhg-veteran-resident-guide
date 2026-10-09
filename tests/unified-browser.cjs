@@ -35,5 +35,17 @@ const {chromium}=require(process.env.GUIDE_PLAYWRIGHT|| (process.env.CODEX_PRIMA
  await page.locator('#helper-guide').scrollIntoViewIfNeeded();await page.screenshot({path:path.join(require('os').tmpdir(),'vhg-helper-mobile.png')});
  await page.setViewportSize({width:1280,height:900});await page.screenshot({path:path.join(require('os').tmpdir(),'vhg-helper-desktop.png'),fullPage:false});
  if(server){await page.goto(base+'ky.html?county=Christian&view=rights');await page.waitForFunction(()=>document.querySelector('#count')?.textContent.length>0);assert.equal(await page.locator('#edition-state').inputValue(),'KY');assert.equal(await page.locator('#county').inputValue(),'Christian')}
+ // Bingo ZIP search, shared links, mobile layout and submission prefill.
+ await page.goto(base+'bingo.html?zip=43334&radius=25');
+ await page.waitForFunction(()=>document.querySelector('#count').textContent.includes('closest first'));
+ assert.equal(await page.locator('#bingo-zip').inputValue(),'43334');
+ assert((await page.locator('#count').textContent()).includes('within 25 miles of 43334'));
+ const distances=await page.locator('#listings article .badge').allTextContents();assert(distances.some(t=>t.includes('miles away')));
+ await page.selectOption('#bingo-radius','10');assert.equal(new URL(page.url()).searchParams.get('radius'),'10');
+ await page.setViewportSize({width:390,height:844});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+ await page.locator('#marengo-legion-710 [data-submit]').click();assert.equal(await page.locator('#submit-venue').inputValue(),'American Legion Post 710');
+ await page.click('#bingo-reset');assert.equal(await page.locator('#bingo-zip').inputValue(),'');assert.equal(await page.locator('#listings article').count(),720);
+ await page.fill('#bingo-zip','00000');await page.locator('#bingo-nearby button').click();assert((await page.locator('#nearby-status').textContent()).includes('valid five-digit'));
+ await page.emulateMedia({media:'print'});assert(!(await page.locator('#bingo-zip').isVisible()));assert(!(await page.locator('#bingo-submit').isVisible()));await page.emulateMedia({media:'screen'});
  assert.deepEqual(errors,[]);await browser.close();if(server)server.close();console.log('PASS: one public view, all 420 county panels, five-state switching, caregiver routes, deep links, legacy redirect, mobile width and print handoff.');
 })().catch(e=>{console.error(e);process.exit(1)});
