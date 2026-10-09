@@ -2,7 +2,7 @@
 
 Snapshot: October 9, 2026. Source statuses are preserved; matching published phones are not direct confirmation. Refresh this file when evidence changes.
 
-Ohio canonical records: 14 imported_unverified, 3 needs_recheck, 6 official_search_extract_only, 96 official_source_reviewed. Pennsylvania, New York, Michigan and Kentucky follow-ups are listed separately below.
+Ohio canonical records: 6 imported_unverified, 3 needs_recheck, 7 official_search_extract_only, 136 official_source_reviewed. Pennsylvania, New York, Michigan and Kentucky follow-ups are listed separately below.
 
 ## First follow-ups
 
@@ -14,19 +14,11 @@ Ohio canonical records: 14 imported_unverified, 3 needs_recheck, 6 official_sear
 
 | Record | Status | Last review | Public source |
 |---|---|---|---|
-| AT Ohio Device Lending Library (`at-ohio-library`) | imported_unverified | 2026-09-30 | [Source](https://atohio.org/about-library) |
-| Delaware Family Support Services (`delaware-dd-fss`) | imported_unverified | 2026-09-30 | [Source](https://www.dcbdd.org/family-support-services/) |
-| District 5 Veteran-Directed Care (`district5-vdc`) | imported_unverified | 2026-09-30 | [Source](https://www.aaa5ohio.org/services/veteran-directed-care-vdc/) |
 | Marion JFS community resource guide (`marion-jfs-guide`) | imported_unverified | 2026-09-30 | [Source](https://mcjfs.com/community-resources/) |
 | Milestones Provider Directory at Lifeworks (`milestones-lifeworks`) | imported_unverified | 2026-09-30 | [Source](https://lifeworksautism.org/Resources) |
-| Morrow Family Directed Resources (`morrow-dd-fdr`) | imported_unverified | 2026-09-30 | [Source](https://www.morrowdd.com/family-directed-resources-fdr/) |
-| OCALI Family Resource Hub (`ocali-family`) | imported_unverified | 2026-09-30 | [Source](https://ocali.org/Family-Resource-Hub) |
 | OCALI Family and Community Resource Gallery (`ocali-gallery`) | imported_unverified | 2026-09-30 | [Source](https://ocali.org/fc_resource_gallery) |
-| Ohio Aging Compass (`ohio-aging-compass`) | imported_unverified | 2026-09-30 | [Source](https://compass.aging.ohio.gov/) |
 | Ohio Association of County Boards of DD — Family Resources (`county-dd`) | imported_unverified | 2026-09-30 | [Source](https://www.oacbdd.org/familyresources) |
-| Ohio Parent to Parent (`ohio-p2p`) | imported_unverified | 2026-09-30 | [Source](https://www.ohiof2f.org/ohiop2p/) |
 | Ohio county veterans service office directory route (`cvso-map`) | imported_unverified | 2026-09-30 | [Source](https://osavsc.org/) |
-| SourcePoint in-home care (`sourcepoint-home-care`) | imported_unverified | 2026-09-30 | [Source](https://mysourcepoint.org/care/) |
 | findhelp (`findhelp`) | imported_unverified | 2026-09-30 | [Source](https://www.findhelp.org/) |
 | Delaware County Veterans Services (`delaware-vso`) | needs_recheck | 2026-10-02 | [Source](https://veteransservice.co.delaware.oh.us/) |
 | Knox County Veterans Services Office (`knox-vso`) | needs_recheck | 2026-10-02 | [Source](https://kcvso.com/) |
@@ -37,6 +29,11 @@ Ohio canonical records: 14 imported_unverified, 3 needs_recheck, 6 official_sear
 | Medicare Care Compare (`cms-care-compare`) | official_search_extract_only | 2026-10-02 | [Source](https://www.medicare.gov/care-compare/) |
 | OOD vocational rehabilitation entry (`ood-vocational-rehabilitation`) | official_search_extract_only | 2026-10-02 | [Source](https://ood.ohio.gov/) |
 | Ohio Department of Veterans Services — statewide fallback (`ohio-dvs-fallback`) | official_search_extract_only | 2026-10-02 | [Source](https://dvs.ohio.gov/) |
+| Ohio Aging Compass (`ohio-aging-compass`) | official_search_extract_only | 2026-10-09 | [Source](https://aging.ohio.gov/care-and-living/ohio-aging-compass/ohio-aging-compass-home) |
+
+## October 9 online research
+
+Seven previously imported records now have full official-source review: AT Ohio library, District 5 Veteran-Directed Care, SourcePoint in-home care, Delaware FSS, Morrow FDR, Ohio Parent to Parent and OCALI Family Resource Hub. Eligibility and request limits were corrected where needed. Ohio Aging Compass has official indexed evidence, but its interactive content could not be fully retrieved; it remains excerpt-only. These resources were retained rather than treated as ineffective because of their earlier evidence status. No phone calls or agency intake confirmations were performed.
 
 ## October 8 published-contact cross-check
 
