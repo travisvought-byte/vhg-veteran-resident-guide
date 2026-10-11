@@ -1,0 +1,97 @@
+import {STATES,createPlan,planToEmail,isUrgent} from "./engine.mjs";
+
+const $=id=>document.getElementById(id);
+const fileNames={
+  OH:["../prototype-data.json","../data/public/ohio-county-veterans-offices.json"],
+  PA:["../data/public/pennsylvania-resources.json","../data/public/pennsylvania-county-veterans-offices.json"],
+  NY:["../data/public/new-york-resources.json","../data/public/new-york-county-veterans-offices.json"],
+  MI:["../data/public/michigan-resources.json","../data/public/michigan-county-veterans-offices.json"],
+  KY:["../data/public/kentucky-resources.json","../data/public/kentucky-county-veterans-offices.json"]
+};
+const cache=new Map();let plan=null,requestVersion=0;
+async function load(state){
+  if(!fileNames[state])throw new Error("Unsupported state.");
+  if(cache.has(state))return cache.get(state);
+  const result=await Promise.all(fileNames[state].map(async file=>{
+    const response=await fetch(file,{cache:"no-store"});
+    if(!response.ok)throw new Error("Could not load the resource guide's public data.");
+    return response.json();
+  }));
+  if(!Array.isArray(result[0])||!Array.isArray(result[1]))throw new Error("Guide data has an unexpected format.");
+  cache.set(state,result);return result;
+}
+function textNode(name,value){const el=document.createElement(name);el.textContent=String(value||"");return el}
+function para(where,value){where.append(textNode("p",value))}
+function safeLink(where,title,url){
+  if(!url)return;
+  try{const u=new URL(url,location.href);if(!["https:","http:"].includes(u.protocol))return;
+    const a=textNode("a",title);a.href=u.href;a.target="_blank";a.rel="noopener noreferrer";where.append(a);
+  }catch{}
+}
+function phoneLink(where,phone){
+  if(!phone)return;
+  const a=textNode("a",phone);a.href="tel:"+phone.replace(/[^0-9+]/g,"");where.append(a);
+}
+async function refreshCounties(){
+ const state=$("state").value,version=++requestVersion,county=$("county");
+ county.replaceChildren(new Option("Loading counties…",""));county.disabled=true;
+ $("feedback").textContent="Loading "+STATES[state]+" county contacts.";
+ $("results").hidden=true;$("draft-container").hidden=true;$("crisis").hidden=true;
+ try{
+   const [,counties]=await load(state);if(version!==requestVersion)return;
+   county.replaceChildren(new Option("Statewide resources only",""));
+   for(const row of counties){if(!row.county)continue;county.append(new Option(row.county+" County",row.county))}
+   county.disabled=false;$("feedback").textContent="Ready. Enter a general description of the need.";
+ }catch(e){if(version!==requestVersion)return;$("feedback").textContent=e.message;county.replaceChildren(new Option("Unavailable",""))}
+}
+function showOffice(office){
+ const node=$("office");node.replaceChildren();
+ if(!office)return;
+ const section=textNode("article","");section.className="resource";section.append(textNode("h3",office.name));
+ if(office.phone){section.append(textNode("span","Published telephone: "));phoneLink(section,office.phone)}
+ if(office.url){para(section,"The source below is a published office listing; confirm the current intake process.");safeLink(section,"County contact source",office.url)}
+ section.append(textNode("p",office.sourceStatus));node.append(section);
+}
+function showResources(items){
+ const where=$("resources");where.replaceChildren();
+ if(!items.length){para(where,"No sufficiently source-reviewed matching program was found. This does not mean no assistance exists. Try the county veterans office or the main guide.");return}
+ items.forEach((item,i)=>{
+   const article=textNode("article","");article.className="resource";
+   article.append(textNode("h3",(i+1)+". "+item.name));
+   if(item.organization)para(article,item.organization);
+   if(item.description)para(article,item.description);
+   para(article,"Next step: "+item.nextStep);
+   if(item.phone){article.append(textNode("span","Phone: "));phoneLink(article,item.phone);article.append(textNode("span","  "))}
+   safeLink(article,"Official source / program website",item.url);
+   para(article,"Source reviewed "+(item.reviewedOn||"date unavailable")+"; current intake not confirmed.");
+   if(item.constraints?.length)para(article,"Check: "+item.constraints.join(" "));
+   where.append(article);
+ });
+}
+$("state").addEventListener("change",refreshCounties);
+$("intake").addEventListener("submit",async e=>{
+ e.preventDefault();const version=++requestVersion,state=$("state").value;
+ $("feedback").textContent="Matching against the published guide…";
+ $("results").hidden=true;$("draft-container").hidden=true;
+ $("crisis").hidden=!isUrgent($("message").value);
+ try{
+  const [resources,counties]=await load(state);if(version!==requestVersion)return;
+  plan=createPlan({state,county:$("county").value,person:$("person").value,message:$("message").value,resources,counties});
+  $("crisis").hidden=!plan.urgent;
+  $("summary").textContent="Published starting points for "+[plan.county&&plan.county+" County",plan.stateName].filter(Boolean).join(", ")+". Matching is automated; current availability has not been verified.";
+  showOffice(plan.office);showResources(plan.recommendations);
+  $("results").hidden=false;$("feedback").textContent="Found "+plan.recommendations.length+" possible programs; review them below.";
+  $("results").scrollIntoView({behavior:"smooth",block:"start"});
+ }catch(error){$("feedback").textContent=error.message;}
+});
+$("draft").addEventListener("click",()=>{
+ if(!plan)return;
+ $("email-draft").textContent=planToEmail(plan);
+ $("draft-container").hidden=false;$("copy-status").textContent="";
+ $("draft-container").scrollIntoView({behavior:"smooth",block:"start"});
+});
+$("copy").addEventListener("click",async()=>{
+ try{await navigator.clipboard.writeText($("email-draft").textContent);$("copy-status").textContent="Draft copied."}
+ catch{$("copy-status").textContent="Select and copy the draft above."}
+});
+refreshCounties();
