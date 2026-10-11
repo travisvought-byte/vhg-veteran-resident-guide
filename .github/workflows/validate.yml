@@ -19,6 +19,8 @@ jobs:
         run: |
           python3 tests/bingo_report.py
           python3 tests/bingo_bugle.py
+      - name: Test five-state assistance matching and email drafts
+        run: node tests/assistant.mjs
       - name: Check public data and sharing files
         run: python3 scripts/validate_public.py
       - uses: actions/setup-node@v4
