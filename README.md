@@ -26,6 +26,8 @@ A free public guide created and maintained by Travis Vought, and shared by Veter
 
 **Charitable distribution and public resource corrections:** Veteran Home Guardians, via travis@vethomeguard.org. VHG's use of the guide is distinct from Travis's independently commissioned development and research work. See [Project stewardship and public-service use](PROJECT_STEWARDSHIP.md).
 
+**Separately commissioned work:** Travis Vought also offers [independent research, custom directories, and implementation services](https://travisvought-byte.github.io/ohio-cannabis-directory/work-with-travis.html). These are not VHG donations, sponsorships, or services provided by the nonprofit; this guide remains free for public use.
+
 ## One guide, any supported state
 
 The main guide uses one interface. Changing the state updates county contacts, resources, senior support and accessibility guidance in place. Existing state URLs redirect to the main guide and preserve county and view links. State data and source-grounded routing remain separate.
