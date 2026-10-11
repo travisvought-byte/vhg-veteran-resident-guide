@@ -108,7 +108,7 @@ export function planToEmail(plan){
   const lines=["Subject: VHG resource guidance for "+location,"",
     "Thanks for reaching out to Veteran Home Guardians. Here are some possible starting points for assistance in "+location+".",
     ""];
-  if(plan.urgent)lines.push("URGENT: If anyone is in immediate danger, call 911. For suicidal thoughts or emotional crisis, call or text 988 and press 1 for the Veterans Crisis Line.","");
+  if(plan.urgent)lines.push("URGENT: If anyone is in immediate danger, call 911. For suicidal thoughts or emotional crisis, call 988 and press 1 for the Veterans Crisis Line, or text 838255.","");
   if(plan.office)lines.push("County veterans office: "+plan.office.name+" — "+(plan.office.phone||"confirm contact")+(plan.office.url?" ("+plan.office.url+")":""),"");
   if(!plan.recommendations.length)lines.push("We could not find a sufficiently source-reviewed program for this request in the current guide. Start with your county veterans office (if listed) and check the guide for broader resources.","");
   for(const [i,x] of plan.recommendations.entries()){
