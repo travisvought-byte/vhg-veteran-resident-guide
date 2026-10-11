@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Assistance Pilot | Veteran Home Guardians</title>
+<meta name="robots" content="noindex,nofollow">
+<style>
+:root{--ink:#193547;--green:#335947;--gold:#af812a;--paper:#f6f4ee;--muted:#49616d}
+*{box-sizing:border-box}body{font:17px/1.55 system-ui,-apple-system,sans-serif;color:#233641;background:var(--paper);margin:0}
+header{background:var(--ink);color:white;padding:22px max(20px,calc((100vw - 950px)/2))}header a{color:#dce9ef}h1{font:700 clamp(26px,4vw,38px)/1.16 Georgia,serif;margin:12px 0}h2{font:700 25px Georgia,serif;color:var(--ink)}h3{margin:.2em 0;color:var(--ink)}
+main{max-width:970px;margin:auto;padding:25px 20px 80px}p{margin:.5em 0 1em}a{color:#165d78;overflow-wrap:anywhere}
+.card{background:white;border:1px solid #d8dedb;border-radius:12px;padding:22px;margin:18px 0}
+.notice{border-left:5px solid #b58b36;background:#fff6de;padding:15px;margin:14px 0}
+.urgent{background:#fff0ed;border-color:#b54134}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:15px}.fields label{font-weight:650;font-size:15px}
+label{display:block;font-weight:650;margin-bottom:6px}input,select,textarea{width:100%;font:inherit;background:#fff;color:#213642;border:1px solid #9eaeb5;border-radius:8px;padding:12px}textarea{min-height:140px;resize:vertical}
+button{border:0;border-radius:8px;background:var(--green);color:white;padding:13px 18px;font:650 16px system-ui;cursor:pointer;margin-right:8px;margin-top:8px}button.secondary{background:var(--ink)}button:disabled{opacity:.6;cursor:wait}:focus-visible{outline:3px solid #c49b40;outline-offset:3px}
+.meta{color:var(--muted);font-size:14px}.resource{padding:16px 0;border-top:1px solid #dfe6e2}.resource:first-child{border-top:0}
+.resource p{margin:5px 0}#feedback{min-height:20px}#results[hidden],#draft-container[hidden],#crisis[hidden]{display:none}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;font:14px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;background:#f3f5f3;border:1px solid #d6ddd9;border-radius:8px;padding:18px;max-height:600px;overflow:auto}
+@media(max-width:700px){.fields{grid-template-columns:1fr}.card{padding:16px}}
+</style>
+</head>
+<body>
+<header>
+<a href="../">← Veteran Resource Guide</a>
+<h1>Find a starting point for assistance</h1>
+<p>Veteran Home Guardians · Working pilot, not an emergency service</p>
+</header>
+<main>
+<div class="notice"><strong>Pilot status:</strong> This is an early resource-matching tool, not yet an AI chatbot. It reads published guide records and prepares a response you can copy. It does not send email, save personal details or decide eligibility. A human should review recommendations before relying on them.</div>
+<div class="card">
+<h2>Tell us what kind of help is needed</h2>
+<p>Do not include names, addresses, Social Security numbers, medical histories, claim numbers, or other private information. Location and a general description are enough.</p>
+<form id="intake">
+<div class="fields">
+<div><label for="state">State</label><select id="state" required><option value="OH">Ohio</option><option value="PA">Pennsylvania</option><option value="NY">New York</option><option value="MI">Michigan</option><option value="KY">Kentucky</option></select></div>
+<div><label for="county">County</label><select id="county"><option value="">Statewide resources only</option></select></div>
+<div><label for="person">Who needs help?</label><select id="person"><option value="veteran">Veteran</option><option value="survivor">Surviving spouse</option><option value="caregiver">Caregiver or family member</option><option value="other">Other senior / person with a disability</option><option value="unknown">Not sure</option></select></div>
+</div>
+<p><label for="message">Describe the situation (without identifying details)</label><textarea id="message" maxlength="2000" required placeholder="Example: A disabled veteran in Muskingum County needs a wheelchair ramp and help finding housing assistance. Where should we start?"></textarea></p>
+<button type="submit" id="find">Find possible resources</button>
+<p id="feedback" class="meta" role="status" aria-live="polite"></p>
+</form>
+</div>
+<section id="crisis" class="card urgent" hidden><h2>Urgent support</h2><p>For immediate danger, call <a href="tel:911">911</a>. For suicidal thoughts or emotional crisis, call <a href="tel:988">988</a> and press 1 for the Veterans Crisis Line, or text <a href="sms:838255">838255</a>. Do not wait for an email reply.</p></section>
+<section id="results" hidden aria-live="polite">
+<div class="card">
+<h2>Possible next steps</h2>
+<p id="summary" class="meta"></p>
+<div id="office"></div><div id="resources"></div>
+<p class="notice"><strong>Please verify directly:</strong> Public source review does not mean a program has confirmed that it is accepting applicants or that you qualify. This tool cannot file VA claims, provide legal advice or guarantee assistance.</p>
+<button id="draft" class="secondary" type="button">Prepare email draft</button>
+</div></section>
+<section id="draft-container" class="card" hidden><h2>Reviewable email draft</h2><p class="meta">Nothing has been sent. Review and copy the draft to your normal email application.</p><pre id="email-draft"></pre><button id="copy" type="button">Copy draft</button><p id="copy-status" role="status" class="meta"></p></section>
+<p class="meta">Data: <a href="../">VHG Resident Resource Guide</a>. Corrections: <a href="mailto:travis@vethomeguard.org">travis@vethomeguard.org</a>. <a href="https://www.veteranscrisisline.net/">Veterans Crisis Line</a>.</p>
+</main>
+<script type="module" src="./app.mjs"></script>
+</body></html>
