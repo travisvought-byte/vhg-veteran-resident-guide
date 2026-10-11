@@ -1,6 +1,6 @@
 # Veteran Resident Resource Guide: Ohio, Pennsylvania, New York, Michigan and Kentucky
 
-A free Veteran Home Guardians (VHG) guide for veterans, surviving spouses, seniors, people with disabilities, families and care teams. It helps people find their first contact and prepare a useful referral.
+A free public guide created and maintained by Travis Vought, and shared by Veteran Home Guardians (VHG) for veterans, surviving spouses, seniors, people with disabilities, families and care teams. It helps people find their first contact and prepare a useful referral.
 
 **Live guide:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/
 
@@ -22,7 +22,9 @@ A free Veteran Home Guardians (VHG) guide for veterans, surviving spouses, senio
 
 **Ohio sharing kit:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/share.html
 
-**Publisher and project owner:** Travis Vought, Founder & Chair, Veteran Home Guardians. Contact: travis@vethomeguard.org.
+**Creator, publisher, and project maintainer:** Travis Vought, Founder & Chair, Veteran Home Guardians.
+
+**Charitable distribution and public resource corrections:** Veteran Home Guardians, via travis@vethomeguard.org. VHG's use of the guide is distinct from Travis's independently commissioned development and research work. See [Project stewardship and public-service use](PROJECT_STEWARDSHIP.md).
 
 ## One guide, any supported state
 
