@@ -22,11 +22,7 @@ A free public guide created and maintained by Travis Vought, and shared by Veter
 
 **Ohio sharing kit:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/share.html
 
-**Creator, publisher, and project maintainer:** Travis Vought, Founder & Chair, Veteran Home Guardians.
-
-**Charitable distribution and public resource corrections:** Veteran Home Guardians, via travis@vethomeguard.org. VHG's use of the guide is distinct from Travis's independently commissioned development and research work. See [Project stewardship and public-service use](PROJECT_STEWARDSHIP.md).
-
-**Separately commissioned work:** Travis Vought also offers [independent research, custom directories, and implementation services](https://travisvought-byte.github.io/ohio-cannabis-directory/work-with-travis.html). These are not VHG donations, sponsorships, or services provided by the nonprofit; this guide remains free for public use.
+**Created and maintained by:** [Travis Vought](https://travisvought-byte.github.io/ohio-cannabis-directory/work-with-travis.html). **Shared by:** Veteran Home Guardians (VHG). Resource corrections: travis@vethomeguard.org. [Project stewardship](PROJECT_STEWARDSHIP.md).
 
 ## One guide, any supported state
 
