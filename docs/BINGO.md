@@ -104,3 +104,9 @@ St. Martin's current homepage publishes Wednesday bingo, resolving the earlier d
 Eight existing listings gained game schedules: Harrison Legion 199, Logan Elm boosters in Circleville, Hamilton Elks 93, Junior Achievement in Girard, Union County Humane Society in Marysville, Ovarian Cancer Alliance in Hilliard, Middletown Knights 1610, and Ontario boosters at Fairhaven Hall. North Lawrence VFD gained organizer package prices and attendance details. The directory now has 68 schedule-bearing entries and 732 total records. Evidence and deferred leads are recorded in `research/bingo-session-review-2026-10-12-pass4.json`.
 
 Selected-date events expire after their last published date. Middletown's second/fourth-Wednesday description is not extrapolated beyond October 14 and 28; Fairhaven uses the four explicit November dates. Conflicting Delta recurrence and older Bellevue information remain unconfirmed. The next research checkpoint is 100 schedule-bearing listings, prioritizing underserved counties and full organizer calendars.
+
+## October 12 fifth research pass
+
+Three existing listings gained schedules: Lebanon Legion 186's October 18 calendar session, Ravenna VFW1055's first/third Thursday game, and Mantua St. Joseph's Council 3766 December 19 announcement (times/prices still TBD). Total: 71 schedule-bearing records, 732 venues. Three other listings gained organizer visitor/contact evidence, including Children's Toy Fund ramp and ground-level entrance descriptions. See `research/bingo-session-review-2026-10-12-pass5.json` for six updates and deferred leads.
+
+`session_monthly` stores weekday plus ordinal weeks (1–5) separately from weekly `session_days` and explicit `session_dates`. Filters compute only matching monthly dates and honor closures and expiry; tests cover month rollover and fifth-week gaps. The badge now says published schedule rather than claiming that every announced event has a start time.
