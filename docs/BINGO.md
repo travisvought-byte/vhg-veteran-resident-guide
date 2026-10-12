@@ -80,3 +80,13 @@ Dated schedules with no upcoming dates, and schedules after `schedule_valid_unti
 Added shortcuts for published session times, today, tomorrow and senior centers. Cards show the next published date even without a day filter. Statewide bingo cards put upcoming published dates first; ZIP results retain distance ordering. Ohio's Eastern timezone controls Today/Tomorrow. Fixed future one-off sessions leaking into exact-date filters.
 
 Added VHG branding, the existing donation page and a sponsorship inquiry link, plus an operator invitation to provide public session details. GoatCounter uses the existing travisvought endpoint for page views; no custom search, ZIP, submission or contact events are sent. Receipt in the dashboard has not been confirmed. Venue review dates and source records are unchanged.
+
+## October 11 game research — two passes
+
+Added published schedules to 16 existing state-listed entries and expanded ACO to include Thursday. The combined page now has 54 entries with schedule details, up from 38; total venue/entry count remains 732. All new additions came from full organizer pages matched to the state-listed organization and location. See `research/bingo-session-review-2026-10-11.json` for per-record changes, source URLs and deferred leads.
+
+Pass 1: Willoughby South Boosters, Three Pits and a Lady (Circleville), Tiffin Moose, Saint Isidore at Sacred Heart of Mary (Louisville), St. Elizabeth Ann Seton (Milford), St. Mary School (Marietta), Saint Ambrose (Brunswick), Delphos Knights Council 1362 and Brightside (Salem). Pass 2: Massillon Knights Foundation, St. Teresa of Avila (Cincinnati), Lisbon Lions, Little Flower (Toledo), Bazetta Cortland Optimist, St. Lawrence (Cincinnati), St. Clement (Navarre) and ACO (Parma).
+
+Saint Ambrose uses only its five published upcoming regular Friday dates. Brightside uses its five dated October–December events, including separate start times and prices for October 29 and December 3; generic fourth-Thursday wording is not treated as a recurrence. Massillon's 6:30 p.m. organizer time conflicts with Bugle's 7 p.m., and ACO's Tuesday early-bird time differs by 15 minutes; each discrepancy is disclosed. License authorization days were not converted into sessions.
+
+Deferred: Hocking's address mismatch, St. Martin's explicitly expired 2025 recurrence, Fairborn's search-only organizer evidence, and an Arizona venue returned by search. No outreach was sent.
