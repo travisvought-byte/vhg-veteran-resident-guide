@@ -98,3 +98,9 @@ Six more existing listings now have organizer-published schedules: Holy Trinity 
 Added Saint Ambrose's October 24 Neon Bingo: doors 5:15 p.m., game 7:15 p.m., at Hilkert Hall. It remains a one-off dated exception. Canton St. Joan of Arc gains an organizer link and parish phone/package confirmation. Belpre's October 30 Monster Mash start is 7 p.m.; no package price is inferred from its reservation credit. Belpre's Friday schedule applies only to its VFD organizer, not every charity licensed at the address.
 
 St. Martin's current homepage publishes Wednesday bingo, resolving the earlier deferred 2025 event page. Sylvania lists Wednesday/Thursday/Sunday, but only the Wednesday section supplies times; unknown days are labeled for a phone check. Greentown's 6 p.m. is labeled early birds. Genoa's monthly pattern remains deferred because the full newspaper PDF could not be retrieved. Search results from four other states were excluded.
+
+## October 12 fourth research pass
+
+Eight existing listings gained game schedules: Harrison Legion 199, Logan Elm boosters in Circleville, Hamilton Elks 93, Junior Achievement in Girard, Union County Humane Society in Marysville, Ovarian Cancer Alliance in Hilliard, Middletown Knights 1610, and Ontario boosters at Fairhaven Hall. North Lawrence VFD gained organizer package prices and attendance details. The directory now has 68 schedule-bearing entries and 732 total records. Evidence and deferred leads are recorded in `research/bingo-session-review-2026-10-12-pass4.json`.
+
+Selected-date events expire after their last published date. Middletown's second/fourth-Wednesday description is not extrapolated beyond October 14 and 28; Fairhaven uses the four explicit November dates. Conflicting Delta recurrence and older Bellevue information remain unconfirmed. The next research checkpoint is 100 schedule-bearing listings, prioritizing underserved counties and full organizer calendars.

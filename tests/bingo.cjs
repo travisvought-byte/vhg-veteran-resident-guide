@@ -9,7 +9,7 @@ assert.deepEqual(JSON.parse(vm.runInContext('JSON.stringify(BINGO)',context)),co
 assert.equal(vm.runInContext("filteredBingo('Morrow','charitable','').length",context),3);assert.equal(vm.runInContext("filteredBingo('Knox','senior','').length",context),1);assert.equal(vm.runInContext("filteredBingo('Morrow','senior','').length",context),0);assert.equal(vm.runInContext("filteredBingo('','','cardington').length",context),1);
 assert.equal(new Set(canonical.map(r=>r.id)).size,canonical.length);assert.equal(canonical.filter(r=>r.firsthand_confirmation).length,2);
 for(const r of canonical){assert.equal(r.state,'OH');assert.equal(!!r.license_number,r.category==='charitable');assert.equal(r.accessibility,null);assert(r.sources.length);for(const s of r.sources)assert(new URL(s.url).protocol==='https:');const card=nodes.listings.innerHTML.split(`id="${r.id}"`)[1]?.split('</article>')[0];assert(!card.includes('Not yet verified'));assert(card.includes('Add or update details'));}
-assert(canonical.find(r=>r.id==='cardington-legion-97').schedule==='Saturday: doors open 4 p.m.; bingo starts 6 p.m.');assert(canonical.find(r=>r.id==='marion-senior-bingo').schedule===null);assert(html.includes('717 state-listed bingo entries'));assert.equal(authorized.length,717);assert.equal(combined.length,732);assert.equal(vm.runInContext("filteredBingo('','licensed','').length",context),717);assert.equal(new Set(combined.map(r=>r.id)).size,732);assert(authorized.every(r=>r.license_type==='Type I'));assert.equal(authorized.filter(r=>r.schedule).length,53);
+assert(canonical.find(r=>r.id==='cardington-legion-97').schedule==='Saturday: doors open 4 p.m.; bingo starts 6 p.m.');assert(canonical.find(r=>r.id==='marion-senior-bingo').schedule===null);assert(html.includes('717 state-listed bingo entries'));assert.equal(authorized.length,717);assert.equal(combined.length,732);assert.equal(vm.runInContext("filteredBingo('','licensed','').length",context),717);assert.equal(new Set(combined.map(r=>r.id)).size,732);assert(authorized.every(r=>r.license_type==='Type I'));assert.equal(authorized.filter(r=>r.schedule).length,61);
 assert(fs.readFileSync(path.join(root,'index.html'),'utf8').includes('id="ohio-bingo-link"'));for(const page of ['pa.html','ny.html','mi.html','ky.html'])assert(!fs.readFileSync(path.join(root,page),'utf8').includes('id="ohio-bingo-link"'));
 console.log('PASS: bingo county/type/search boundaries, canonical data, per-field limits, firsthand scope, corrections and Ohio-only integration.');
 
@@ -18,7 +18,7 @@ assert.equal(email.pathname,'travis@vethomeguard.org');assert.equal(email.search
 nodes.listings.onclick({target:{closest:()=>({dataset:{submit:'cardington-legion-97'}})}});
 assert.equal(nodes['submit-venue'].value,'Jenkins-Vaughan American Legion Post 97');assert.equal(nodes['submit-county'].value,'Morrow');
 nodes['submit-info'].value='Saturday 6 p.m.';let prevented=false;nodes['bingo-submit'].onsubmit({preventDefault(){prevented=true}});assert(prevented);assert(context.location.href.startsWith('mailto:travis@vethomeguard.org?'));
-assert.equal(vm.runInContext("filteredBingo('','scheduled','').length",context),60);
+assert.equal(vm.runInContext("filteredBingo('','scheduled','').length",context),68);
 console.log('PASS: submission prefill, email draft recipient/encoding and schedule filter.');
 
 const zero=vm.runInContext('milesBetween([40,-83],[40,-83])',context);assert.equal(zero,0);
@@ -123,3 +123,12 @@ assert(!authorized.find(r=>r.license_number==='1018-34').schedule);
 vm.runInContext("todayISO=()=> '2026-10-24'",context);nodes['bingo-day'].value='today';vm.runInContext('render()',context);
 const neonCard=nodes.listings.innerHTML.split('id="oh-license-0476-45-432-4"')[1].split('</article>')[0];assert(neonCard.includes('7:15 p.m.'));assert(!neonCard.includes('<strong>When:</strong> Published regular Friday'));
 console.log('PASS: one-off Neon date/time, Piqua weekdays and Belpre operator isolation.');
+
+const pass4=JSON.parse(fs.readFileSync(path.join(root,'research/bingo-session-review-2026-10-12-pass4.json'),'utf8'));
+assert.equal(pass4.updates.length,9);assert.equal(pass4.updates.filter(r=>!r.before.schedule).length,8);
+assert(pass4.updates.every(r=>authorized.some(a=>a.id===r.id&&a.sources.some(s=>s.url===r.source_url))));
+assert.equal(vm.runInContext("nextBingoDate(BINGO.find(r=>r.license_number==='0168-37'),'today','2026-10-21')",context),null);
+assert.equal(vm.runInContext("nextBingoDate(BINGO.find(r=>r.license_number==='0168-37'),'today','2026-10-28')",context),'2026-10-28');
+assert.equal(vm.runInContext("nextBingoDate(BINGO.find(r=>r.license_number==='0051-47'),'today','2026-11-01')",context),null);
+assert.equal(vm.runInContext("nextBingoDate(BINGO.find(r=>r.license_number==='0073-41'),'today','2026-11-16')",context),null);
+console.log('PASS: pass-four source audit and selected-date isolation.');
