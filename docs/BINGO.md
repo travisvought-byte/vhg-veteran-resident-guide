@@ -79,7 +79,7 @@ Dated schedules with no upcoming dates, and schedules after `schedule_valid_unti
 
 Added shortcuts for published session times, today, tomorrow and senior centers. Cards show the next published date even without a day filter. Statewide bingo cards put upcoming published dates first; ZIP results retain distance ordering. Ohio's Eastern timezone controls Today/Tomorrow. Fixed future one-off sessions leaking into exact-date filters.
 
-Added VHG branding, the existing donation page and a sponsorship inquiry link, plus an operator invitation to provide public session details. GoatCounter uses the existing travisvought endpoint for page views; no custom search, ZIP, submission or contact events are sent. Receipt in the dashboard has not been confirmed. Venue review dates and source records are unchanged.
+Added VHG branding, the existing donation page and a sponsorship inquiry link, plus an operator invitation to provide public session details. GoatCounter now uses the dedicated `vhg-guide` endpoint for page views, shared with the VHG guide. Bingo appears under `/vhg-veteran-resident-guide/bingo.html`. URL queries and fragments are excluded, including search and ZIP filters; no submission or contact events are sent. Dashboard totals require signed-in verification. Venue review dates and source records are unchanged.
 
 ## October 11 game research — two passes
 

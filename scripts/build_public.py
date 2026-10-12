@@ -122,6 +122,12 @@ def outputs():
     for page in ['index.html','pa.html','ny.html','mi.html','ky.html']:
         result['tests/fixtures/'+page] = result[page]
     result.update(unified_outputs(ROOT, result))
+    # Track public landing/sharing pages once; state redirects count at destination.
+    for page in ['index.html', 'bingo.html', 'share.html', 'share-pa.html',
+                 'share-ny.html', 'share-mi.html', 'share-ky.html']:
+        result[page] = re.sub(r'<script[^>]*data-goatcounter=[^>]*></script>', '', result[page])
+        result[page] = result[page].replace('<script defer src="assets/analytics.js"></script>', '')
+        result[page] = result[page].replace('</body>', '<script defer src="assets/analytics.js"></script></body>')
     return result
 
 if __name__ == '__main__':
