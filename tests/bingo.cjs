@@ -95,3 +95,10 @@ nodes['bingo-reset'].onclick();const northCard=nodes.listings.innerHTML.split('i
 const groveCard=nodes.listings.innerHTML.split('id="oh-license-0024-33-232-8"')[1].split('</article>')[0];assert(!groveCard.includes('<strong>Price:</strong>'));assert(!groveCard.includes('Price offer through'));
 assert.equal(vm.runInContext("filteredBingo('','licensed','','','2027-01-03').length",context),717);
 console.log('PASS: published weekdays, date-only sessions, closures, holiday times, month/year rollover, expiry and venue retention.');
+// One-off future dates must not leak into exact-date filters.
+assert.equal(vm.runInContext("nextBingoDate({schedule:'October 20',session_dates:['2026-10-20']},'today','2026-10-11')",context),null);
+assert.equal(vm.runInContext("nextBingoDate({schedule:'October 20',session_dates:['2026-10-20']},'tomorrow','2026-10-11')",context),null);
+assert.equal(vm.runInContext("nextBingoDate({schedule:'October 20',session_dates:['2026-10-20']},'today','2026-10-20')",context),'2026-10-20');
+// Ohio dates are stable for visitors browsing from other time zones.
+assert.equal(vm.runInNewContext(html.match(/function todayISO\(\)\{[^\n]+/)[0]+';todayISO()', {Date:class extends Date {constructor(){super('2026-10-12T00:30:00Z')}},Intl}),'2026-10-11');
+console.log('PASS: exact-date events and Ohio timezone boundary.');
