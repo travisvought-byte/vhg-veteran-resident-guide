@@ -90,3 +90,11 @@ Pass 1: Willoughby South Boosters, Three Pits and a Lady (Circleville), Tiffin M
 Saint Ambrose uses only its five published upcoming regular Friday dates. Brightside uses its five dated October–December events, including separate start times and prices for October 29 and December 3; generic fourth-Thursday wording is not treated as a recurrence. Massillon's 6:30 p.m. organizer time conflicts with Bugle's 7 p.m., and ACO's Tuesday early-bird time differs by 15 minutes; each discrepancy is disclosed. License authorization days were not converted into sessions.
 
 Deferred: Hocking's address mismatch, St. Martin's explicitly expired 2025 recurrence, Fairborn's search-only organizer evidence, and an Arizona venue returned by search. No outreach was sent.
+
+## October 11 game research — third pass
+
+Six more existing listings now have organizer-published schedules: Holy Trinity Lutheran (Parma), St. Boniface (Piqua), Sylvania Bingo/Alano Step One, Belpre VFD, Greentown Athletic Club and St. Martin of Tours (Cheviot/Cincinnati). The directory now holds 60 schedule-bearing entries; 732 total records remain. Eight records were updated in this batch, with primary-source evidence in `research/bingo-session-review-2026-10-11-pass3.json`.
+
+Added Saint Ambrose's October 24 Neon Bingo: doors 5:15 p.m., game 7:15 p.m., at Hilkert Hall. It remains a one-off dated exception. Canton St. Joan of Arc gains an organizer link and parish phone/package confirmation. Belpre's October 30 Monster Mash start is 7 p.m.; no package price is inferred from its reservation credit. Belpre's Friday schedule applies only to its VFD organizer, not every charity licensed at the address.
+
+St. Martin's current homepage publishes Wednesday bingo, resolving the earlier deferred 2025 event page. Sylvania lists Wednesday/Thursday/Sunday, but only the Wednesday section supplies times; unknown days are labeled for a phone check. Greentown's 6 p.m. is labeled early birds. Genoa's monthly pattern remains deferred because the full newspaper PDF could not be retrieved. Search results from four other states were excluded.
