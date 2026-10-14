@@ -110,3 +110,11 @@ Selected-date events expire after their last published date. Middletown's second
 Three existing listings gained schedules: Lebanon Legion 186's October 18 calendar session, Ravenna VFW1055's first/third Thursday game, and Mantua St. Joseph's Council 3766 December 19 announcement (times/prices still TBD). Total: 71 schedule-bearing records, 732 venues. Three other listings gained organizer visitor/contact evidence, including Children's Toy Fund ramp and ground-level entrance descriptions. See `research/bingo-session-review-2026-10-12-pass5.json` for six updates and deferred leads.
 
 `session_monthly` stores weekday plus ordinal weeks (1–5) separately from weekly `session_days` and explicit `session_dates`. Filters compute only matching monthly dates and honor closures and expiry; tests cover month rollover and fifth-week gaps. The badge now says published schedule rather than claiming that every announced event has a start time.
+
+## October 14: five-listing research batch
+
+Research batches now cover exactly five selected venues, including inconclusive results. Promotion focuses on advertised games supported by full-source review and a matched Ohio venue. Batch 1 reviewed Portsmouth’s 17th Street Bingo, Celina American Legion 210, Van Wert Council on Aging, Georgetown Legion 180 and West Alexandria Firemen. See `research/bingo-session-review-2026-10-14-batch1.json`.
+
+Two games were added: Portsmouth’s organizer-published Wednesday/Thursday sessions at the 17th Street address, and Celina Lake Festival’s November 8 Designer Purse Bingo as reported in WCSM’s dated chamber announcement. The latter date matches the existing state authorization; its source attribution and ticket-contact scope are explicit. Only these two receive advertised game titles. Celina’s one-off date and ticket offer expire after November 8.
+
+Van Wert and West Alexandria gained public inquiry routes. Van Wert’s 2025 public-event dates, separate senior penny/nickel activities, Georgetown’s undated directory times and West Alexandria’s old winter lead are not promoted as upcoming licensed games. No outreach or paid advertising was sent. Counts remain 732 venues and 717 Type I entries; 73 records now contain published schedules.
