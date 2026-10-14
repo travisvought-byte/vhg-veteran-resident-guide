@@ -118,3 +118,11 @@ Research batches now cover exactly five selected venues, including inconclusive 
 Two games were added: Portsmouth’s organizer-published Wednesday/Thursday sessions at the 17th Street address, and Celina Lake Festival’s November 8 Designer Purse Bingo as reported in WCSM’s dated chamber announcement. The latter date matches the existing state authorization; its source attribution and ticket-contact scope are explicit. Only these two receive advertised game titles. Celina’s one-off date and ticket offer expire after November 8.
 
 Van Wert and West Alexandria gained public inquiry routes. Van Wert’s 2025 public-event dates, separate senior penny/nickel activities, Georgetown’s undated directory times and West Alexandria’s old winter lead are not promoted as upcoming licensed games. No outreach or paid advertising was sent. Counts remain 732 venues and 717 Type I entries; 73 records now contain published schedules.
+
+## October 14: second five-listing batch
+
+Batch 2 reviewed Genoa Legion 324, Newark Catholic’s Green Wave Drive venue, Pierce’s Crew Foundation at the Hancock Hotel, Kno-Ho-Co’s Coshocton venue and St. John’s Wednesday bingo at the Delphos Knights hall. The full five-outcome audit is `research/bingo-session-review-2026-10-14-batch2.json`.
+
+Two advertised games were added. Pierce’s Crew’s organizer and ticket pages match the November 6 state-listed date and Hancock Hotel address; doors/dinner are distinguished from an unpublished exact first-call time. The Delphos venue homepage with current October 2026 notices and dedicated bingo page advertise Wednesday bingo at the state-listed Knights hall, with early bird at 6:45 p.m. and regular games at 7 p.m. The campus festival authorization does not inherit this schedule. Published step-free entry is a venue statement, not an independent access assessment.
+
+Newark Catholic and Kno-Ho-Co gained scoped inquiry contacts; no current licensed-game schedule was inferred from volunteer signups or old senior activities. Genoa’s older notice remains deferred. Records now contain 75 published schedules; venue and Type I totals remain 732 and 717. One-off event titles and ticket prices expire after their published event.
