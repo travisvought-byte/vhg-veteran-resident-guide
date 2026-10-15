@@ -16,12 +16,13 @@ function setState(state,initial=false){
  // Keep state-specific instructions available without making the first screen an explanation of the data model.
  const pending=DATA.filter(x=>x.verification.record_status!=='official_source_reviewed').length;
  $('coverage-detail').innerHTML='<p>'+esc(config.name)+': referral routes for '+COUNTIES.length+' counties. Local service coverage is still growing.</p><p>'+pending+' resource records need further source checks. Check the status on each listing and confirm availability with the agency.</p>';
+ if(state==='UT')$('coverage-detail').innerHTML+='<p>Veterans contacts serve four regions, rather than separate county offices. Aging agencies and ombudsmen use different county maps. Published sources reviewed October 14, 2026; not telephone-confirmed. Local provider, post and activity coverage is still being researched.</p>';
  document.querySelector('label[for="county"]').textContent='County in '+config.name;
  $('aid-open').hidden=state!=='OH';document.querySelector('.office-directory summary').textContent='Browse '+config.name+' county contacts';
  $('office-search').placeholder='Search '+config.name+' counties';
  document.title=config.name+' | Veteran Resident Resource Guide';
  document.querySelectorAll('a[href^="share"]').forEach(a=>a.href=state==='OH'?'share.html':'share-'+state.toLowerCase()+'.html');
- const files={OH:['ohio-county-veterans-offices.json','../../prototype-data.json'],PA:['pennsylvania-county-veterans-offices.json','pennsylvania-resources.json'],NY:['new-york-county-veterans-offices.json','new-york-resources.json'],MI:['michigan-county-veterans-offices.json','michigan-resources.json'],KY:['kentucky-county-veterans-offices.json','kentucky-resources.json']};
+ const files={OH:['ohio-county-veterans-offices.json','../../prototype-data.json'],PA:['pennsylvania-county-veterans-offices.json','pennsylvania-resources.json'],NY:['new-york-county-veterans-offices.json','new-york-resources.json'],MI:['michigan-county-veterans-offices.json','michigan-resources.json'],KY:['kentucky-county-veterans-offices.json','kentucky-resources.json'],UT:['utah-county-veterans-offices.json','utah-resources.json']};
  document.querySelectorAll('.footer-links a').forEach(a=>{if(a.textContent==='County contact data')a.href='data/public/'+files[state][0];if(a.textContent==='Resource data')a.href='data/public/'+files[state][1]});
  document.querySelectorAll('#urgent-help a[href^="?view="]').forEach(a=>{const u=new URL(a.href,location.href);u.searchParams.set('state',state);a.href=u.href});
  bindStateControls();

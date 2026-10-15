@@ -10,8 +10,8 @@ def section(html, ident):
     raise ValueError(ident)
 
 def unified_outputs(root, editions):
-    names={'OH':'Ohio','PA':'Pennsylvania','NY':'New York','MI':'Michigan','KY':'Kentucky'}
-    pages={'OH':'index.html','PA':'pa.html','NY':'ny.html','MI':'mi.html','KY':'ky.html'}
+    names={'OH':'Ohio','PA':'Pennsylvania','NY':'New York','MI':'Michigan','KY':'Kentucky','UT':'Utah'}
+    pages={'OH':'index.html','PA':'pa.html','NY':'ny.html','MI':'mi.html','KY':'ky.html','UT':'ut.html'}
     base=editions['index.html']
     script=re.search(r'<script>(.*?)</script>',base,re.S).group(1)
     configs=[]
@@ -44,7 +44,7 @@ def unified_outputs(root, editions):
     common=common[:common.index('const params=new URLSearchParams')]
     helpers=(root/'assets/guide-runtime.js').read_text()
     unified=base[:base.index('<script>')]
-    unified=re.sub(r'<meta name="description"[^>]*>', '<meta name="description" content="Find veteran, senior and disability support in Ohio, Pennsylvania, New York, Michigan and Kentucky. County contacts and caregiver handoffs.">', unified)
+    unified=re.sub(r'<meta name="description"[^>]*>', '<meta name="description" content="Find veteran, senior and disability support in Ohio, Pennsylvania, New York, Michigan, Kentucky and Utah. County contacts and caregiver handoffs.">', unified)
     unified=re.sub(r'<title>.*?</title>','<title>Veteran Resident Resource Guide | Veteran Home Guardians</title>',unified)
     unified=unified.replace('Ohio Veteran Resident<br>Resource Guide','Veteran Resident<br>Resource Guide').replace('Veteran Home Guardians · All 88 Ohio counties','Veteran Home Guardians')
     unified=unified.replace('Useful contacts for veterans, surviving spouses, families and care-facility staff. Start with a county, then choose the help you need.','Find support for yourself or someone you care for.')
@@ -54,7 +54,7 @@ def unified_outputs(root, editions):
     unified=unified.replace('Statewide edition · Updated October 8, 2026','Updated October 9, 2026')
     unified=unified.replace('<div class="quick-links" aria-label="Common needs">','<div class="quick-links" aria-label="Common needs"><button data-route="aid" id="aid-open" hidden><strong>Veteran and aid organizations</strong><span>Local housing, legal aid, utilities and transport</span></button>')
     unified=unified.replace('assets/share-preview.png','assets/vhg-logo.png')
-    for key,value in {'og:title':'Support for veterans, seniors and families | VHG','twitter:title':'Support for veterans, seniors and families | VHG','og:description':'Find your next contact for benefits, care, housing and support in five states. Free to use.','twitter:description':'Find your next contact for benefits, care, housing and support in five states. Free to use.','og:image:width':'715','og:image:height':'715','og:image:alt':'Veteran Home Guardians logo'}.items():
+    for key,value in {'og:title':'Support for veterans, seniors and families | VHG','twitter:title':'Support for veterans, seniors and families | VHG','og:description':'Find your next contact for benefits, care, housing and support in six states. Free to use.','twitter:description':'Find your next contact for benefits, care, housing and support in six states. Free to use.','og:image:width':'715','og:image:height':'715','og:image:alt':'Veteran Home Guardians logo'}.items():
         unified=re.sub(r'(<meta (?:property|name)="'+re.escape(key)+r'" content=")[^"]*(">)',lambda m:m[1]+value+m[2],unified)
     unified=unified.replace('<a class="jump" href="#staff-guide">Staff handoff guide</a>','<a class="jump" href="#helper-guide" id="helper-header">I’m helping someone</a>')
     unified=unified.replace('<p>Use the edition for the state where help is needed.</p>','').replace('aria-label="State edition"','aria-label="Location"')

@@ -15,7 +15,9 @@ resources = (json.loads((ROOT / 'prototype-data.json').read_text())
              + json.loads((ROOT / 'data/public/pa-programs.json').read_text()) + regional
              + json.loads((ROOT / 'data/public/ny-programs.json').read_text()) + ny_regional
              + json.loads((ROOT / 'data/public/mi-programs.json').read_text()) + mi_regional
-             + json.loads((ROOT / 'data/public/ky-programs.json').read_text()) + ky_regional)
+             + json.loads((ROOT / 'data/public/ky-programs.json').read_text()) + ky_regional
+             + json.loads((ROOT / 'data/public/ut-programs.json').read_text())
+             + json.loads((ROOT / 'data/public/ut-regional-referrals.json').read_text()))
 for r in resources:
     for field in ['program_id', 'name', 'official_url', 'next_step']:
         assert r.get(field), (r.get('program_id'), field)
@@ -32,17 +34,17 @@ class Links(HTMLParser):
                 continue
             assert (ROOT / url.path).is_file() or (ROOT / url.path).is_dir(), ('Missing local file', value)
 
-for name in ['index.html', 'bingo.html', 'pa.html', 'ny.html', 'share.html', 'share-pa.html', 'share-ny.html', 'mi.html', 'share-mi.html', 'ky.html', 'share-ky.html']:
+for name in ['index.html', 'bingo.html', 'pa.html', 'ny.html', 'share.html', 'share-pa.html', 'share-ny.html', 'mi.html', 'share-mi.html', 'ky.html', 'share-ky.html', 'ut.html', 'share-ut.html']:
     Links().feed((ROOT / name).read_text())
 county_sets = {}
-for name, state in [('ohio-county-veterans-offices.json', 'OH'), ('pennsylvania-county-veterans-offices.json', 'PA'), ('new-york-county-veterans-offices.json', 'NY'), ('michigan-county-veterans-offices.json', 'MI'), ('kentucky-county-veterans-offices.json', 'KY')]:
+for name, state in [('ohio-county-veterans-offices.json', 'OH'), ('pennsylvania-county-veterans-offices.json', 'PA'), ('new-york-county-veterans-offices.json', 'NY'), ('michigan-county-veterans-offices.json', 'MI'), ('kentucky-county-veterans-offices.json', 'KY'), ('utah-county-veterans-offices.json', 'UT')]:
     counties = json.loads((ROOT / 'data/public' / name).read_text())
     for county in counties:
         assert urlsplit(county['source_url']).scheme == 'https', county['county']
         assert date.fromisoformat(county['reviewed_on']) <= date.today(), county['county']
         assert county.get('state', state) == state, county['county']
     county_sets[state] = {c['county'] for c in counties}
-    assert len(county_sets[state]) == len(counties) == {'OH':88, 'PA':67, 'NY':62, 'MI':83, 'KY':120}[state], state
+    assert len(county_sets[state]) == len(counties) == {'OH':88, 'PA':67, 'NY':62, 'MI':83, 'KY':120, 'UT':29}[state], state
 pa_counties = county_sets['PA']
 for county in pa_counties:
     assert sum(r['regional_role'] == 'aging_agency' and county in r['service_area']
@@ -93,4 +95,16 @@ for r in json.loads((ROOT / 'data/public/kentucky-county-veterans-offices.json')
         assert rep['name'] and rep['phone'] and 1 <= rep['region'] <= 20, r['county']
         if rep.get('service_scope'):
             assert r['county'] == 'Christian' and rep['service_scope'] == 'Fort Campbell'
-print('PASS: all five states’ referral essentials, county coverage, source dates, HTTPS sources and local sharing assets.')
+print('PASS: all six states’ referral essentials, county coverage, source dates, HTTPS sources and local sharing assets.')
+
+# Utah uses independent maps: a county must have exactly one aging and one ombudsman route.
+ut_regional = json.loads((ROOT / 'data/public/ut-regional-referrals.json').read_text())
+assert len(ut_regional) == 23
+for county in county_sets['UT']:
+    for role in ['aging_agency', 'ombudsman']:
+        assert sum(r['regional_role'] == role and county in r['service_area'] for r in ut_regional) == 1, ('UT', county, role)
+for r in ut_regional:
+    assert set(r['service_area']) <= county_sets['UT']
+    assert r['public_contact']['phone'] and r['evidence']['phone_source_url'] == r['official_url']
+    assert r['evidence']['direct_agency_confirmation'] is False
+print('PASS: Utah independent aging and ombudsman maps cover exactly 29 counties.')

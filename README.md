@@ -1,4 +1,4 @@
-# Veteran Resident Resource Guide: Ohio, Pennsylvania, New York, Michigan and Kentucky
+# Veteran Resident Resource Guide: Ohio, Pennsylvania, New York, Michigan, Kentucky and Utah
 
 A free public guide created and maintained by Travis Vought, and shared by Veteran Home Guardians (VHG) for veterans, surviving spouses, seniors, people with disabilities, families and care teams. It helps people find their first contact and prepare a useful referral.
 
@@ -32,7 +32,7 @@ The main guide uses one interface. Changing the state updates county contacts, r
 
 ## Coverage and verification
 
-All five state editions are published referral backbones, not complete inventories of local services. Ohio local research is strongest in the four pilot counties; Pennsylvania, New York, Michigan and Kentucky are initial referral editions. The state picker updates the shared interface from separate datasets; depth of local coverage varies.
+All six state editions are published referral backbones, not complete inventories of local services. Ohio local research is strongest in the four pilot counties; Pennsylvania, New York, Michigan, Kentucky and Utah are initial referral editions. The state picker updates the shared interface from separate datasets; depth of local coverage varies.
 
 The guide displays county coverage and calculated verification totals in an expandable section near the state picker. Every resource card shows its source status without requiring an expansion. Search-excerpt, imported and recheck records carry a visible verification notice, including in printed resource lists. A published source review does not mean an agency confirmed its current intake or availability.
 
@@ -64,11 +64,17 @@ Michigan has veterans referral routes and aging contacts for all 83 counties. It
 
 Kentucky has KDVA regional benefits representatives, aging contacts, district ombudsmen and Hart-Supported Living coordinators for all 120 counties. The service maps are kept separate, with multiple veterans representatives and the Fort Campbell assignment preserved. The edition contains 86 resources: 33 shared federal/national records, 17 Kentucky programs, 15 aging contacts, 15 district ombudsmen and six supported-living coordinators. It includes HCB waiver screening, Homecare, Medicare counseling, vision/hearing support and temporary RampUp! KY loans. See [Kentucky coverage and evidence](docs/KENTUCKY.md).
 
+## Utah expansion
+
+Utah is the sixth state: all 29 counties have regional veterans referrals, matched aging agencies and long-term-care ombudsmen. Its 66 resources include 33 shared federal/national records, 10 Utah programs, 12 aging contacts and 11 ombudsman regions. Veterans, aging and ombudsman county boundaries are maintained separately, including Uintah County’s separate aging route. Published sources were reviewed October 14, 2026; contacts are not telephone-confirmed. Local providers and activity listings remain incomplete. [Open Utah](https://travisvought-byte.github.io/vhg-veteran-resident-guide/?state=UT), [sharing kit](https://travisvought-byte.github.io/vhg-veteran-resident-guide/share-ut.html), and [coverage and evidence](docs/UTAH.md).
+
+Canonical Utah data lives in `data/public/ut-programs.json`, `data/public/ut-regional-referrals.json` and `data/public/utah-county-veterans-offices.json`. The standard build generates the combined data, shared adapter, redirect and sharing kit. Unified DOM and browser checks include all six states and all 449 counties.
+
 ## Bingo and urgent support
 
 The [Ohio Bingo & Senior Centers section](https://travisvought-byte.github.io/vhg-veteran-resident-guide/bingo.html) includes all 717 state-listed Type I entries and 15 researched senior centers. Search by ZIP/distance, activity, or published bingo day (Today, Tomorrow, or a weekday). Specific dates, closures and expired offers are handled separately from license authorization days. Seventy-five entries now have published schedule details after seven October research passes. See [bingo evidence and expansion](docs/BINGO.md).
 
-All five editions have a prominent urgent-help section, crisis and mental-health resources, and expanded homelessness pathways: the VA national call center, SSVF community providers, HUD-VASH and VA Community Resource and Referral Centers. Local shelter beds, individual provider intake and availability are not comprehensively mapped.
+All six editions have a prominent urgent-help section, crisis and mental-health resources, and expanded homelessness pathways: the VA national call center, SSVF community providers, HUD-VASH and VA Community Resource and Referral Centers. Local shelter beds, individual provider intake and availability are not comprehensively mapped.
 
 ## Corrections from users
 
