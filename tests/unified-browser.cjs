@@ -7,7 +7,7 @@ const {chromium}=require(process.env.GUIDE_PLAYWRIGHT|| (process.env.CODEX_PRIMA
  if(!process.env.GUIDE_TEST_URL){server=http.createServer((req,res)=>{let file=decodeURIComponent(new URL(req.url,'http://localhost').pathname);if(file.endsWith('/'))file+='index.html';const target=path.join(__dirname,'..',file);try{res.setHeader('Content-Type',file.endsWith('.js')?'text/javascript':file.endsWith('.css')?'text/css':file.endsWith('.html')?'text/html':'application/octet-stream');res.end(fs.readFileSync(target))}catch{res.statusCode=404;res.end()}});await new Promise(r=>server.listen(0,'127.0.0.1',r))}
  const base=process.env.GUIDE_TEST_URL||'http://127.0.0.1:'+server.address().port+'/';
  await page.goto(base);await page.waitForFunction(()=>document.querySelector('#count').textContent.length>0);
- const expected={OH:88,PA:67,NY:62,MI:83,KY:120};
+ const expected={OH:88,PA:67,NY:62,MI:83,KY:120,UT:29};
  for(const [state,n] of Object.entries(expected)){
   await page.selectOption('#edition-state',state);
   assert.equal(await page.locator('#county option').count(),n+1);
@@ -27,7 +27,8 @@ const {chromium}=require(process.env.GUIDE_PLAYWRIGHT|| (process.env.CODEX_PRIMA
  // A state change clears stale county/search values without navigation or listener accumulation.
  await page.selectOption('#edition-state','OH');await page.selectOption('#county','Morrow');await page.fill('#search','Medicaid');await page.selectOption('#edition-state','PA');assert.equal(await page.locator('#county').inputValue(),'');assert.equal(await page.locator('#search').inputValue(),'');
  await page.goto(base+'?state=NY&county=Bronx&view=rights');assert.equal(await page.locator('#edition-state').inputValue(),'NY');assert.equal(await page.locator('#county').inputValue(),'Bronx');
- // Mobile layout and printable caregiver handoff.
+ // Utah deep link, mobile layout and printable caregiver handoff.
+ await page.goto(base+'?state=UT&county=Uintah&view=seniors');await page.waitForFunction(()=>document.querySelector('#edition-state').value==='UT');assert.equal(await page.locator('#county').inputValue(),'Uintah');
  await page.setViewportSize({width:390,height:844});await page.click('#helper-open');await page.selectOption('#helper-person','unknown');await page.selectOption('#helper-need','daily');assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
  await page.evaluate(()=>{window.print=()=>{window.__printed=true}});await page.click('#helper-print');assert(await page.evaluate(()=>window.__printed&&document.body.classList.contains('print-helper')));
  await page.emulateMedia({media:'print'});assert(await page.locator('#helper-guide').isVisible());assert(!(await page.locator('#directory').isVisible()));assert(await page.locator('.helper-paper').isVisible());
@@ -55,5 +56,5 @@ const {chromium}=require(process.env.GUIDE_PLAYWRIGHT|| (process.env.CODEX_PRIMA
  await page.fill('#bingo-search','Wednesday Bingo');assert.equal(await page.locator('#oh-license-0237-45-442-9').count(),1);assert((await page.locator('#oh-license-0237-45-442-9').textContent()).includes('regular bingo 7 p.m.'));await page.click('#bingo-reset');
  await page.fill('#bingo-zip','00000');await page.locator('#bingo-nearby button').click();assert((await page.locator('#nearby-status').textContent()).includes('valid five-digit'));
  await page.emulateMedia({media:'print'});assert(!(await page.locator('#bingo-zip').isVisible()));assert(!(await page.locator('#bingo-day').isVisible()));assert(!(await page.locator('#bingo-submit').isVisible()));await page.emulateMedia({media:'screen'});
- assert.deepEqual(errors,[]);await browser.close();if(server)server.close();console.log('PASS: one public view, all 420 county panels, five-state switching, caregiver routes, deep links, legacy redirect, mobile width and print handoff.');
+ assert.deepEqual(errors,[]);await browser.close();if(server)server.close();console.log('PASS: one public view, all 449 county panels, six-state switching, caregiver routes, deep links, legacy redirect, mobile width and print handoff.');
 })().catch(e=>{console.error(e);process.exit(1)});

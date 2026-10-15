@@ -1,10 +1,10 @@
 const assert=require('node:assert/strict'),fs=require('fs'),path=require('path');
 const {JSDOM}=require(process.env.GUIDE_JSDOM||'jsdom');
 const root=path.resolve(__dirname,'..');
-function setup(query=''){const dom=new JSDOM(fs.readFileSync(root+'/index.html','utf8'),{url:'https://example.org/'+query,runScripts:'outside-only',pretendToBeVisual:true});dom.window.HTMLElement.prototype.scrollIntoView=function(){};let prints=0;dom.window.print=()=>prints++;dom.window.eval(fs.readFileSync(root+'/assets/guide.js','utf8'));const d=dom.window.document;return {dom,d,prints:()=>prints,change(id,value){const n=d.getElementById(id);n.value=value;n.dispatchEvent(new dom.window.Event('change'))},click:id=>d.getElementById(id).click()}}
-const t=setup();const expected={OH:88,PA:67,NY:62,MI:83,KY:120};
+function setup(query=''){const dom=new JSDOM(fs.readFileSync(root+'/index.html','utf8'),{url:'https://example.org/'+query,runScripts:'outside-only',pretendToBeVisual:true});dom.window.HTMLElement.prototype.scrollIntoView=function(){};let prints=0;dom.window.print=()=>prints++;dom.window.eval(fs.readFileSync(root+'/assets/guide.js','utf8')+'\nwindow.__testGetRoutes=()=>routes;');const d=dom.window.document;return {dom,d,prints:()=>prints,change(id,value){const n=d.getElementById(id);n.value=value;n.dispatchEvent(new dom.window.Event('change'))},click:id=>d.getElementById(id).click()}}
+const t=setup();const expected={OH:88,PA:67,NY:62,MI:83,KY:120,UT:29};
 for(const [state,n] of Object.entries(expected)){
- t.change('edition-state',state);assert.equal(t.d.querySelectorAll('#county option').length,n+1);assert.equal(new URL(t.dom.window.location.href).searchParams.get('state'),state);assert.equal(t.dom.window.location.pathname,'/');assert(!t.d.querySelector('header h1').textContent.includes('Ohio'));assert(t.d.querySelector('.office-directory summary').textContent.includes({OH:'Ohio',PA:'Pennsylvania',NY:'New York',MI:'Michigan',KY:'Kentucky'}[state]));
+ t.change('edition-state',state);assert.equal(t.d.querySelectorAll('#county option').length,n+1);assert.equal(new URL(t.dom.window.location.href).searchParams.get('state'),state);assert.equal(t.dom.window.location.pathname,'/');assert(!t.d.querySelector('header h1').textContent.includes('Ohio'));assert(t.d.querySelector('.office-directory summary').textContent.includes({OH:'Ohio',PA:'Pennsylvania',NY:'New York',MI:'Michigan',KY:'Kentucky',UT:'Utah'}[state]));
  const counties=Array.from(t.d.querySelectorAll('#county option')).slice(1).map(x=>x.value);
  for(const c of counties){t.change('county',c);assert(t.d.getElementById('county-panel').textContent.includes(c+' County'));assert(t.d.querySelectorAll('#results article').length>0)}
  t.click('helper-open');assert(!t.d.getElementById('helper-guide').hidden);
@@ -16,14 +16,14 @@ for(const [state,n] of Object.entries(expected)){
  t.change('helper-person','other');t.change('helper-need','benefits');t.click('helper-resources');assert(!t.d.getElementById('seniors-guide').hidden);assert.equal(t.d.getElementById('senior-topic').value,'costs');
  t.change('helper-need','daily');t.click('helper-print');assert(t.d.body.classList.contains('print-helper'));t.dom.window.dispatchEvent(new t.dom.window.Event('afterprint'));assert(!t.d.body.classList.contains('print-helper'));
  t.change('county','');t.click('helper-print');assert(t.d.getElementById('helper-status').textContent.includes('Choose'));
- t.d.querySelector('[data-route="all"]').click();assert(t.d.getElementById('helper-guide').hidden);assert.equal(t.d.querySelectorAll('#results article').length,{OH:154,PA:108,NY:107,MI:63,KY:86}[state]);
+ t.d.querySelector('[data-route="all"]').click();assert(t.d.getElementById('helper-guide').hidden);assert.equal(t.d.querySelectorAll('#results article').length,{OH:154,PA:108,NY:107,MI:63,KY:86,UT:66}[state]);
 }
 t.change('edition-state','OH');t.change('county','Morrow');t.d.getElementById('search').value='Medicaid';t.change('edition-state','PA');assert.equal(t.d.getElementById('county').value,'');assert.equal(t.d.getElementById('search').value,'');
 const ny=setup('?state=NY&county=Manhattan&view=rights');assert.equal(ny.d.getElementById('edition-state').value,'NY');assert.equal(ny.d.getElementById('county').value,'New York');assert(ny.d.getElementById('count').textContent.includes('Care concerns'));
 const invalid=setup('?state=INVALID&county=INVALID');assert.equal(invalid.d.getElementById('edition-state').value,'OH');assert.equal(invalid.d.getElementById('county').value,'');
 const ky=setup('?state=KY&county=Christian');assert(ky.d.getElementById('county-panel').textContent.includes('Fort Campbell'));
 const mi=setup('?state=MI&county=Wayne');assert(mi.d.getElementById('county-panel').textContent.includes('Detroit'));
-console.log('PASS: unified DOM, all 420 county panels, every caregiver identity/need combination in five states, state isolation, surviving-spouse access routing, printing, canonical links and NYC aliases.');
+console.log('PASS: unified DOM, all 449 county panels, every caregiver identity/need combination in six states, state isolation, surviving-spouse access routing, printing, canonical links and NYC aliases.');
 
 const ohioData=JSON.parse(fs.readFileSync(root+'/prototype-data.json','utf8'));
 for(const r of ohioData.filter(x=>['caregiver_support','independent_living','home_support'].includes(x.resource_role))){
@@ -67,3 +67,44 @@ for (const [county, ids] of Object.entries({Morrow:['ohio-senior-seniors-on-cent
  for (const id of ids) assert(!outsideView.d.getElementById('resource-'+id));
 }
 console.log('PASS: five pilot senior centers appear in their county community views and stay outside other counties.');
+
+// Utah's service regions differ by need; preserve boundary cases and non-veteran routes.
+const ut=setup('?state=UT&county=Summit');
+const utData=JSON.parse(fs.readFileSync(root+'/data/public/utah-resources.json','utf8'));
+const utCounties=JSON.parse(fs.readFileSync(root+'/data/public/utah-county-veterans-offices.json','utf8'));
+for(const [county,region,aging,ombudsman] of [
+ ['Summit','Salt Lake Metro','mountainland','mountainland'],
+ ['Uintah','Central Utah','uintah-county','uintah-basin'],
+ ['Daggett','Central Utah','uintah-basin','uintah-basin'],
+ ['Morgan','Northern Utah','weber','weber'],
+ ['Millard','Central Utah','r6','r6'],
+ ['San Juan','Southern Utah','san-juan','san-juan']
+]){
+ ut.change('county',county);
+ assert(ut.d.getElementById('county-panel').textContent.includes(region));
+ assert(ut.d.getElementById('county-panel').textContent.includes('not a separate county office'));
+ for(const id of ['ut-aging-'+aging,'ut-ombudsman-'+ombudsman]){
+  const r=utData.find(x=>x.program_id===id);assert(r.service_area.includes(county));
+  assert(ut.d.getElementById('county-panel').textContent.includes(r.public_contact.phone));
+ }
+}
+for(const c of utCounties){
+ for(const role of ['aging_agency','ombudsman'])assert.equal(utData.filter(x=>x.regional_role===role&&x.service_area.includes(c.county)).length,1);
+}
+for(const ids of Object.values(ut.dom.window.__testGetRoutes()))for(const id of ids)assert(utData.some(x=>x.program_id===id),id);
+ut.d.querySelector('[data-route="seniors"]').click();ut.change('senior-topic','daily');
+assert(!ut.d.querySelector('#results').textContent.includes('Utah veterans: accredited'));
+assert(ut.d.getElementById('resource-ut-caregiver'));
+ut.d.querySelector('[data-route="accessibility"]').click();ut.change('access-veteran','no');ut.change('access-home','facility');
+assert(ut.d.getElementById('access-routing').textContent.includes('New Choices'));
+assert(!ut.d.getElementById('access-routing').textContent.includes('Veteran housing adaptations'));
+assert(!/MI Options|PASSPORT|HOME Choice|Hart-Supported|Ohio support/.test(ut.d.getElementById('accessibility-guide').textContent));
+ut.d.querySelector('[data-route="all"]').click();ut.change('county','');
+assert.equal(ut.d.getElementById('resource-ut-new-choices').querySelector('a[href^="tel:"]').getAttribute('href'),'tel:8006629651');
+assert(ut.d.getElementById('resource-ut-new-choices').textContent.includes('menu option 6'));
+assert(ut.d.querySelector('.footer-links a[href="data/public/utah-resources.json"]'));
+assert(ut.d.querySelector('.footer-links a[href="data/public/utah-county-veterans-offices.json"]'));
+assert(ut.d.querySelector('a[href="share-ut.html"]'));
+for(const r of utData.filter(x=>x.state==='UT'))assert.equal(r.evidence.direct_agency_confirmation,false);
+ut.dom.window.close();
+console.log('PASS: Utah service-region boundary cases, separate Uintah aging route, non-veteran support, New Choices menu handling and Utah sharing/data links.');
