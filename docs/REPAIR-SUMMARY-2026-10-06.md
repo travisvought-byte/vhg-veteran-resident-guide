@@ -1,6 +1,6 @@
 # Veteran Resource Guide — working repair, October 6, 2026
 
-> Historical working note from October 6, 2026. Superseded by decision D-022, which removed the verification-warning language described below. Kept for the record.
+> Historical working note from October 6, 2026. Consult docs/decisions.md and the current build sources for current policy and implementation; later changes may supersede individual items below.
 
 Purpose: resources for veterans, surviving spouses, families and care-facility staff. Individual care facilities stay in the separate outreach seed. No facility inventory is needed to finish this guide.
 
