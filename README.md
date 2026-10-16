@@ -20,6 +20,10 @@ A free public guide created and maintained by Travis Vought, and shared by Veter
 
 **Kentucky sharing kit:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/share-ky.html
 
+**Utah guide:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/ut.html
+
+**Utah sharing kit:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/share-ut.html
+
 **Ohio sharing kit:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/share.html
 
 **Created and maintained by:** [Travis Vought](https://travisvought-byte.github.io/ohio-cannabis-directory/work-with-travis.html). **Shared by:** Veteran Home Guardians (VHG). Resource corrections: travis@vethomeguard.org. [Project stewardship](PROJECT_STEWARDSHIP.md).
@@ -122,8 +126,8 @@ See the [maintenance process](docs/MAINTENANCE.md), [verification queue](docs/VE
 |---|---|
 | `index.html`, `assets/guide.js` | Shared public interface and generated state data/routing bundle |
 | `bingo.html`, `data/public/ohio-bingo.json`, `docs/BINGO.md` | Ohio bingo page, canonical venue records and source/expansion notes |
-| `share.html`, `share-pa.html`, `share-ny.html`, `share-mi.html`, `share-ky.html` | State-specific QR flyers and newsletter introductions |
-| `pa.html`, `ny.html`, `mi.html`, `ky.html` | Compatibility redirects into the shared guide |
+| `share.html`, `share-pa.html`, `share-ny.html`, `share-mi.html`, `share-ky.html`, `share-ut.html` | State-specific QR flyers and newsletter introductions |
+| `pa.html`, `ny.html`, `mi.html`, `ky.html`, `ut.html` | Compatibility redirects into the shared guide |
 | `assets/` | VHG logo, QR code and social preview image |
 | `templates/`, `assets/guide-runtime.js`, `scripts/unified_guide.py` | Shared UI source and build
 | `prototype-data.json` | Canonical current public resource records |
@@ -136,3 +140,7 @@ See the [maintenance process](docs/MAINTENANCE.md), [verification queue](docs/VE
 Ohio includes four additional source-reviewed aid routes: county-based civil legal aid, American Legion Department Service Officers, utility assistance and DAV medical transportation. The Ohio aid view links these routes and directs emergency financial assistance questions to the selected county veterans office. Statewide routing does not guarantee local services, eligibility or funding.
 
 Ohio housing referrals now include four county-scoped SSVF providers covering 30 distinct counties, including all four pilot counties. Provider and VA evidence links appear in each listing’s source details. See [Ohio housing coverage](docs/OHIO-HOUSING.md) for mapped counties and remaining gaps.
+
+## License
+
+Resource data in `prototype-data.json`, `data/public/`, CSV files and published pages is licensed CC BY 4.0; code is licensed MIT. See [LICENSE](LICENSE).
