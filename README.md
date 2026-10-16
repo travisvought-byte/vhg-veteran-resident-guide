@@ -143,4 +143,4 @@ Ohio housing referrals now include four county-scoped SSVF providers covering 30
 
 ## License
 
-Data in `data/public/` and the CSV files is licensed CC BY 4.0; code is licensed MIT. See [LICENSE](LICENSE).
+Resource data in `prototype-data.json`, `data/public/`, CSV files and published pages is licensed CC BY 4.0; code is licensed MIT. See [LICENSE](LICENSE).
