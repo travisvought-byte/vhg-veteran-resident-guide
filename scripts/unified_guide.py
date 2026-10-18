@@ -70,6 +70,13 @@ def unified_outputs(root, editions):
     unified=unified.replace('<p id="county-intro">County veterans offices can help you explore benefits and the right referral route. If the resident recently moved into a facility, ask which county should handle the referral.</p>','<p id="county-intro">Choose a county to find local contacts.</p>')
     unified=unified.replace('</head>','<link rel="stylesheet" href="assets/unified.css"></head>')
     unified=re.sub(r'<section id="urgent-help".*?</section>', '<section id="urgent-help" class="notice" aria-labelledby="urgent-title"><h2 id="urgent-title">Need help now?</h2><p>Crisis: <a href="tel:988">988</a> (veterans: press 1). Immediate danger: <a href="tel:911">911</a>.<br>Veteran housing help: <a href="tel:8774243838">877-424-3838</a> · 24/7.</p><p><a href="?view=crisis">Mental health support</a> · <a href="?view=housing">Housing resources</a></p></section>', unified, flags=re.S)
+    # Help comes first: move the retail fundraiser notice below the county picker and shorten it.
+    campaign=re.search(r'<aside class="november-campaign".*?</aside>',unified,re.S)
+    if campaign:
+        unified=unified.replace(campaign.group(),'',1)
+        short='<aside class="november-campaign" aria-label="November retail fundraiser"><strong>Retailers:</strong> run a November roundup for veterans — <strong>Marine Corps birthday (Nov. 10)</strong> and Veterans Day (Nov. 11). <a href="november-campaign.html">Campaign details →</a></aside>'
+        county=section(unified,'county-start')
+        unified=unified.replace(county,county+short,1)
     unified+='\n<script src="assets/guide.js"></script></body></html>\n'
     result={'index.html':unified,'assets/guide.js':common+'\nconst EDITIONS={'+','.join(configs)+'};\n'+helpers}
     for state,page in pages.items():
