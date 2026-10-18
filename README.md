@@ -28,6 +28,10 @@ A free public guide created and maintained by Travis Vought, and shared by Veter
 
 **Created and maintained by:** [Travis Vought](https://travisvought-byte.github.io/ohio-cannabis-directory/work-with-travis.html). **Shared by:** Veteran Home Guardians (VHG). Resource corrections: travis@vethomeguard.org. [Project stewardship](PROJECT_STEWARDSHIP.md).
 
+## November 2026 retail fundraiser
+
+Invite retailers to run a voluntary roundup, top-up or donation campaign for Veteran Home Guardians during November, celebrating the **Marine Corps birthday (November 10)** and **Veterans Day (November 11)**. [Campaign options and contact](https://travisvought-byte.github.io/vhg-veteran-resident-guide/november-campaign.html). Coordinate with **travis@vethomeguard.org** before launching.
+
 ## One guide, any supported state
 
 The main guide uses one interface. Changing the state updates county contacts, resources, senior support and accessibility guidance in place. Existing state URLs redirect to the main guide and preserve county and view links. State data and source-grounded routing remain separate.
