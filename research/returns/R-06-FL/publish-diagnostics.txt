@@ -1,0 +1,29 @@
+# Florida publication diagnostics
+validator exit: 0
+feedback exit: 1
+## validate_public
+PASS: all six states’ referral essentials, county coverage, source dates, HTTPS sources and local sharing assets.
+PASS: Utah independent aging and ombudsman maps cover exactly 29 counties.
+## feedback
+node:fs:483
+    return binding.readFileUtf8(path, stringToFlags(options.flag));
+                   ^
+
+Error: ENOENT: no such file or directory, open '/home/runner/work/vhg-veteran-resident-guide/vhg-veteran-resident-guide/tests/fixtures/index.html'
+    at Object.readFileSync (node:fs:483:20)
+    at fs.readFileSync (/home/runner/work/vhg-veteran-resident-guide/vhg-veteran-resident-guide/tests/legacy-fixtures.cjs:4:299)
+    at Object.<anonymous> (/home/runner/work/vhg-veteran-resident-guide/vhg-veteran-resident-guide/tests/accessibility.cjs:2:135)
+    at Module._compile (node:internal/modules/cjs/loader:1929:14)
+    at Object..js (node:internal/modules/cjs/loader:2060:10)
+    at Module.load (node:internal/modules/cjs/loader:1651:32)
+    at Module._load (node:internal/modules/cjs/loader:1443:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+    at Module.require (node:internal/modules/cjs/loader:1674:12)
+    at require (node:internal/modules/helpers:157:16) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/home/runner/work/vhg-veteran-resident-guide/vhg-veteran-resident-guide/tests/fixtures/index.html'
+}
+
+Node.js v24.21.0
