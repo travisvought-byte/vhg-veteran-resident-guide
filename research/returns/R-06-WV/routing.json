@@ -1,0 +1,116 @@
+{
+  "priority": [
+    "wv-claims",
+    "wv-adrc",
+    "wv-aging-directory",
+    "wv-ship",
+    "wv-waiver",
+    "wv-ombudsman",
+    "wv-at",
+    "r02-aid-attendance-housebound",
+    "r02-va-pension",
+    "r02-survivors-pension"
+  ],
+  "routes": {
+    "benefits": [
+      "wv-claims",
+      "wv-ship",
+      "wv-waiver",
+      "r02-va-pension",
+      "r02-aid-attendance-housebound",
+      "va-accredited-help"
+    ],
+    "survivors": [
+      "wv-claims",
+      "r02-survivors-pension",
+      "r02-dic",
+      "r02-va-burial",
+      "va-accredited-help"
+    ],
+    "care": [
+      "wv-waiver",
+      "wv-caregiver",
+      "wv-homes",
+      "r02-va-health-enrollment",
+      "va-location-finder",
+      "r02-va-cnh",
+      "r02-va-clc"
+    ],
+    "rights": [
+      "wv-ombudsman",
+      "wv-rights",
+      "wv-adrc"
+    ],
+    "local": [
+      "wv-adrc",
+      "wv-aging-directory",
+      "wv-caregiver",
+      "wv-waiver",
+      "wv-at",
+      "wv-211"
+    ],
+    "housing": [
+      "wv-211",
+      "va-housing-help",
+      "va-location-finder",
+      "va-accredited-help"
+    ],
+    "accessibility": [
+      "va-hisa",
+      "va-sah",
+      "va-sha",
+      "va-tra",
+      "wv-at",
+      "wv-waiver",
+      "wv-adrc"
+    ]
+  },
+  "seniorTopics": {
+    "daily": [
+      "wv-adrc",
+      "wv-aging-directory",
+      "wv-caregiver",
+      "wv-waiver"
+    ],
+    "accessibility": [
+      "wv-at",
+      "wv-waiver",
+      "wv-adrc"
+    ],
+    "vision": [
+      "wv-blind",
+      "wv-at",
+      "wv-adrc"
+    ],
+    "hearing": [
+      "wv-relay",
+      "wv-at",
+      "wv-adrc"
+    ],
+    "memory": [
+      "alz-dementia-support",
+      "wv-caregiver",
+      "wv-adrc"
+    ],
+    "costs": [
+      "wv-ship",
+      "wv-waiver",
+      "wv-adrc"
+    ],
+    "rights": [
+      "wv-ombudsman",
+      "wv-rights",
+      "wv-adrc"
+    ]
+  },
+  "statewide_navigation": {
+    "name": "West Virginia Aging and Disability Resource Center",
+    "phone": "866-981-2372",
+    "source_url": "https://grants.wv.gov/resources/constituent/Pages/Seniors.aspx"
+  },
+  "home_modification": {
+    "url": "https://bms.wv.gov/media/41402/download?inline=",
+    "label": "ADW Chapter 501, sections 501.22 and 501.22.1 — effective June 1, 2026",
+    "guidance": "Ask the case manager to document the adaptation in the person-centered service plan and submit the application, vendor estimate or invoice, and supporting documents to the Operating Agency for approval. Ask about accepted vendors before arranging work. The manual labels formal prior authorization No while separately requiring Operating Agency approval."
+  }
+}
