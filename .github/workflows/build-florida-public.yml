@@ -29,7 +29,24 @@ jobs:
           git add index.html assets/ data/public/ share*.html fl.html *.html
           git diff --cached --quiet || (git commit -m "publish(FL): build generated public edition, QR and sharing kit" && git push origin HEAD:publish/florida-referral-20261019)
 
-      - name: Validate public output
+      - name: Record validation diagnostics
+        shell: bash
         run: |
-          python3 scripts/validate_public.py
-          node tests/feedback.cjs
+          set +e
+          python3 scripts/validate_public.py > /tmp/validate-public.txt 2>&1
+          A=$?
+          node tests/feedback.cjs > /tmp/feedback.txt 2>&1
+          B=$?
+          {
+            echo "# Florida publication diagnostics"
+            echo "validator exit: $A"
+            echo "feedback exit: $B"
+            echo "## validate_public"
+            cat /tmp/validate-public.txt
+            echo "## feedback"
+            cat /tmp/feedback.txt
+          } > research/returns/R-06-FL/publish-diagnostics.txt
+          cat research/returns/R-06-FL/publish-diagnostics.txt
+          git add research/returns/R-06-FL/publish-diagnostics.txt
+          git diff --cached --quiet || (git commit -m "ci(FL): record integration validation diagnostics" && git push origin HEAD:publish/florida-referral-20261019)
+          if [ "$A" -ne 0 ] || [ "$B" -ne 0 ]; then exit 1; fi
