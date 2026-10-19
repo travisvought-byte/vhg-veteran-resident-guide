@@ -44,7 +44,7 @@ Invite retailers to run a voluntary roundup, top-up or donation campaign for Vet
 
 The main guide uses one interface. Changing the state updates county contacts, resources, senior support and accessibility guidance in place. Existing state URLs redirect to the main guide and preserve county and view links. State data and source-grounded routing remain separate.
 
-“I’m helping someone” provides a short caregiver/facility flow: choose a state and county, identify whether the person is a veteran, surviving spouse or another senior/person with a disability, then choose the need. It shows a first contact, questions to ask, matching resources and a printable handoff with paper follow-up fields. No personal records are collected or stored.
+“I’m helping someone” provides a short caregiver/facility flow: choose a state and county, identify whether the person is a veteran, surviving spouse or another senior/person with a disability, then choose the need. It shows a first contact, questions to ask, matching resources and a printable handoff with paper follow-up fields. A Copy referral handoff button creates a plain-text summary of public contacts and follow-up questions for a private email or care-team note. No personal records are collected or stored.
 
 ## Coverage and verification
 

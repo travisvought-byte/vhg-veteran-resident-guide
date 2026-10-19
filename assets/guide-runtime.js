@@ -82,6 +82,45 @@ function renderHelper(){
  if(need==='accessibility'&&person==='survivor')contacts=DATA.filter(x=>x.regional_role==='aging_agency'&&county&&x.service_area.includes(county)).map(x=>'<article><h3>'+esc(x.organization)+'</h3><p>'+phoneLink(x.public_contact.phone)+'</p></article>').join('')||'<p>Choose a county for the local aging contact.</p>';
  $('helper-next').innerHTML='<h3>'+esc(EDITIONS[STATE].name)+(county?' · '+esc(county)+' County':'')+'</h3><p><strong>'+esc(text[need])+'</strong></p><div class="contact-grid">'+contacts+'</div><div class="call-script"><strong>What to ask</strong><p>“I’m helping someone who wants support with '+esc($('helper-need').selectedOptions[0].textContent.toLowerCase())+'. What is the intake process, what documents are needed, and can you help if they cannot travel?”</p></div><p>Agree on who will follow up and when. Confirm eligibility and availability directly.</p>';
 }
+// Copy only on-screen public referrals, selected categories, and follow-up questions.
+function helperHandoffText(){
+ const county=$('county').value;
+ if(!county)return '';
+ const tidy=s=>(s||'').replace(/\s+/g,' ').trim();
+ const el=$('helper-next');
+ const heading=tidy(el.querySelector('h3')?.textContent);
+ const step=tidy(el.querySelector('p strong')?.textContent);
+ const person=tidy($('helper-person').selectedOptions[0]?.textContent);
+ const need=tidy($('helper-need').selectedOptions[0]?.textContent);
+ const contacts=[...el.querySelectorAll('.contact-grid article')].map(article=>{
+  const title=tidy(article.querySelector('h2,h3')?.textContent)||'Referral contact';
+  const details=[...article.querySelectorAll('p')].map(p=>tidy(p.textContent)).filter(Boolean);
+  const source=[...article.querySelectorAll('a[href^="https://"]')].find(a=>a.getAttribute('href'));
+  return [title,...details,source?'Source: '+source.getAttribute('href'):null].filter(Boolean).join('\n');
+ });
+ const questions=tidy(el.querySelector('.call-script p')?.textContent);
+ const url=new URL(location.href);
+ url.search='';url.hash='';
+ url.searchParams.set('state',STATE);
+ url.searchParams.set('county',county);
+ url.searchParams.set('help','1');
+ return [
+  'Veteran Home Guardians — Referral handoff',
+  'Location: '+heading,
+  'Helping: '+person,
+  'Need: '+need,
+  'First step: '+step,
+  '',
+  'Published starting contacts:',
+  contacts.length?contacts.join('\n\n'):'No matching local contact displayed. Ask the relevant statewide agency for current routing.',
+  '',
+  'What to ask: '+questions,
+  'Follow-up: Contact made / date: ________  Documents needed: ________  Who follows up / when: ________',
+  'Confirm current intake, eligibility and availability with the agency.',
+  'Guide: '+url.href,
+  'This handoff contains public referral information only. Keep resident details in your usual private records.'
+ ].join('\n');
+}
 function openHelper(){helperActive=true;helperShowingResults=false;render();$('helper-title').focus({preventScroll:true});$('helper-guide').scrollIntoView({behavior:'smooth'})}
 const params=new URLSearchParams(location.search);
 let initialState=Object.hasOwn(EDITION_FILES,params.get('state'))?params.get('state'):'OH';
@@ -102,9 +141,20 @@ $('reset').onclick=()=>{$('senior-topic').value='';['search','need','status'].fo
 $('share').onclick=async()=>{try{await navigator.clipboard.writeText(shareURL().href);$('share-status').textContent='Link copied.'}catch{$('share-status').textContent='Copy the page address to share this view.'}};
 $('print-results').onclick=()=>{clearPrintMode();window.print()};
 $('helper-open').onclick=openHelper;$('helper-header').onclick=e=>{e.preventDefault();openHelper()};
-['helper-person','helper-need'].forEach(id=>$(id).addEventListener('change',()=>{helperShowingResults=false;render()}));
+['helper-person','helper-need'].forEach(id=>$(id).addEventListener('change',()=>{helperShowingResults=false;$('helper-status').textContent='';render()}));
 $('helper-close').onclick=()=>{helperActive=false;helperShowingResults=false;route='priority';render();$('directory').scrollIntoView({behavior:'smooth'})};
 $('helper-resources').onclick=()=>{helperShowingResults=true;route=helperRoute;['search','need','status'].forEach(id=>$(id).value='');if(route==='accessibility'){$('access-veteran').value=$('helper-person').value==='veteran'?'yes':$('helper-person').value==='unknown'?'unknown':'no';$('access-home').value='facility'}if(route==='seniors')$('senior-topic').value=$('helper-need').value==='benefits'?'costs':$('helper-need').value==='daily'?'daily':'';render();const target=route==='accessibility'?'accessibility-guide':route==='seniors'?'seniors-guide':'results';$(target).scrollIntoView({behavior:'smooth'})};
+$('helper-copy').onclick=async()=>{
+ if(!$('county').value){$('helper-status').textContent='Choose a county first.';$('county').focus();return}
+ const summary=helperHandoffText();
+ try{
+  if(!navigator.clipboard?.writeText)throw new Error('Clipboard not available');
+  await navigator.clipboard.writeText(summary);
+  $('helper-status').textContent='Referral handoff copied. Paste it into your message or care-team note.';
+ }catch{
+  $('helper-status').textContent='Copy is unavailable in this browser. Use Print this handoff instead.';
+ }
+};
 $('helper-print').onclick=()=>{if(!$('county').value){$('helper-status').textContent='Choose a county first.';$('county').focus();return}$('helper-status').textContent='';clearPrintMode();document.body.classList.add('print-helper');window.print()};
 window.addEventListener('afterprint',()=>{clearPrintMode();accessPrintStates.forEach(({el,open})=>el.open=open);accessPrintStates=[]});
 render();renderOfficeList();
