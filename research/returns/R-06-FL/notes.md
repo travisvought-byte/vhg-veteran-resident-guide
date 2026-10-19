@@ -65,4 +65,7 @@ Actual current office intake, staffing, appointments, eligibility, funding, equi
 
 ## Self-check output
 
-Exact Python check_state_return.py run pending integrator verification; do not treat preflight shape checks as final acceptance.
+```text
+Florida (FL): 67 counties, 13 programs, 26 regional referrals
+0 errors, 0 warnings
+```
