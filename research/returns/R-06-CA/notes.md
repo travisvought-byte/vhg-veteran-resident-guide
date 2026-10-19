@@ -60,4 +60,7 @@ Current office staffing, exact local ombudsman direct lines, direct county veter
 
 ## Self-check output
 
-Python checker has not yet run. Do not publish based on the initial preflight checks alone.
+```text
+California (CA): 58 counties, 13 programs, 91 regional referrals
+0 errors, 0 warnings
+```
