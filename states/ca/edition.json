@@ -1,0 +1,206 @@
+{
+  "ops": [
+    {
+      "op": "clear_data"
+    },
+    {
+      "op": "replace",
+      "old": "Ohio",
+      "new": "California"
+    },
+    {
+      "op": "replace",
+      "old": "All 88",
+      "new": "All 58"
+    },
+    {
+      "op": "replace",
+      "old": "all 88",
+      "new": "all 58"
+    },
+    {
+      "op": "replace",
+      "old": "<option value=\"OH\">California</option>",
+      "new": "<option value=\"OH\">Ohio</option>"
+    },
+    {
+      "op": "replace",
+      "old": "const STATE='OH';",
+      "new": "const STATE='CA';"
+    },
+    {
+      "op": "replace",
+      "old": "county veterans office",
+      "new": "veterans contact"
+    },
+    {
+      "op": "replace",
+      "old": "county office",
+      "new": "veterans contact"
+    },
+    {
+      "op": "replace",
+      "old": "Statewide edition · Updated October 8, 2026",
+      "new": "California edition · Updated October 19, 2026"
+    },
+    {
+      "op": "replace",
+      "old": "Most phones come from California AMVETS’ 2025–2026 directory.",
+      "new": "Veterans office contacts come from the published California Association of County Veterans Service Officers directory. Alpine and Sierra use CalVet statewide referral, and joint offices are labeled. Confirm appointments before traveling."
+    },
+    {
+      "op": "replace",
+      "old": "California’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
+      "new": "California Medi-Cal HCBA and MSSP services have separate requirements for environmental accessibility adaptations. Ask the waiver agency or care manager about eligibility, service planning, approved providers, and written authorization before beginning any work."
+    },
+    {
+      "op": "replace",
+      "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
+      "new": "https://www.dhcs.ca.gov/services/medi-cal-resources/multipurpose-senior-services-program-msspmedi-calwaiver/"
+    },
+    {
+      "op": "replace",
+      "old": "California home modification authorization and provider rules",
+      "new": "Medi-Cal MSSP HCBS home accessibility adaptations"
+    },
+    {
+      "op": "replace",
+      "old": "href=\"share.html\"",
+      "new": "href=\"share-ca.html\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"prototype-data.json\"",
+      "new": "href=\"data/public/california-resources.json\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
+      "new": "href=\"data/public/california-county-veterans-offices.json\""
+    },
+    {
+      "op": "line",
+      "prefix": "const national=",
+      "new": "const national=a=>['statewide','national','federal'].includes(a.toLowerCase());"
+    },
+    {
+      "op": "declare",
+      "name": "priority",
+      "value": [
+        "ca-claims",
+        "ca-adrc",
+        "ca-aging-directory",
+        "ca-ship",
+        "ca-waiver",
+        "ca-ombudsman",
+        "ca-at",
+        "r02-aid-attendance-housebound",
+        "r02-va-pension"
+      ]
+    },
+    {
+      "op": "declare",
+      "name": "routes",
+      "value": {
+        "benefits": [
+          "ca-claims",
+          "ca-ship",
+          "ca-waiver",
+          "r02-va-pension",
+          "va-accredited-help"
+        ],
+        "survivors": [
+          "ca-claims",
+          "r02-survivors-pension",
+          "r02-dic",
+          "r02-va-burial"
+        ],
+        "care": [
+          "ca-waiver",
+          "ca-homes",
+          "ca-caregiver",
+          "r02-va-health-enrollment",
+          "r02-va-cnh"
+        ],
+        "rights": [
+          "ca-ombudsman",
+          "ca-rights",
+          "ca-adrc"
+        ],
+        "local": [
+          "ca-aging-directory",
+          "ca-adrc",
+          "ca-caregiver",
+          "ca-waiver",
+          "ca-211"
+        ],
+        "housing": [
+          "ca-211",
+          "va-housing-help",
+          "va-ssvf"
+        ],
+        "accessibility": [
+          "va-hisa",
+          "va-sah",
+          "va-sha",
+          "ca-at",
+          "ca-waiver",
+          "ca-adrc"
+        ]
+      }
+    },
+    {
+      "op": "declare",
+      "name": "seniorTopics",
+      "value": {
+        "daily": [
+          "ca-adrc",
+          "ca-aging-directory",
+          "ca-caregiver"
+        ],
+        "accessibility": [
+          "ca-at",
+          "ca-waiver"
+        ],
+        "vision": [
+          "ca-blind",
+          "ca-at"
+        ],
+        "hearing": [
+          "ca-relay",
+          "ca-at"
+        ],
+        "memory": [
+          "alz-dementia-support",
+          "ca-caregiver",
+          "ca-adrc"
+        ],
+        "costs": [
+          "ca-ship",
+          "ca-waiver",
+          "ca-adrc"
+        ],
+        "rights": [
+          "ca-ombudsman",
+          "ca-rights"
+        ]
+      }
+    },
+    {
+      "op": "line",
+      "prefix": "routes.accessibility=",
+      "new": "routes.accessibility=[...routes.accessibility,...DATA.filter(x=>x.regional_role==='aging_agency').map(x=>x.program_id)];"
+    },
+    {
+      "op": "line",
+      "prefix": "routes.seniors=",
+      "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
+    },
+    {
+      "op": "adapter"
+    },
+    {
+      "op": "embed_data"
+    }
+  ]
+}
