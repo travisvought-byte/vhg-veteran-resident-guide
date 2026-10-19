@@ -1,6 +1,6 @@
 # Research instructions (applies to every task)
 
-You are performing research for the Veteran Resident Resource Guide, a Veteran Home Guardians project in Morrow, Knox, Marion and Delaware counties, Ohio. Read `README.md` (charter) and the task packet before starting. You have no access to Claude's conversation; everything you need is in this repository or attached.
+You are performing research for the Veteran Resident Resource Guide, a Veteran Home Guardians project that began in Morrow, Knox, Marion and Delaware counties, Ohio, and now publishes referral editions state by state. Read `README.md` (charter) and the task packet before starting. State expansion work uses the repeating packet `research/tasks/R-06-state-referral-editions.md`. You have no access to Claude's conversation; everything you need is in this repository or attached.
 
 ## Rules
 
