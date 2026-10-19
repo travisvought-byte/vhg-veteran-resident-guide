@@ -21,6 +21,7 @@ def count_words(n):
 def unified_outputs(root, editions, states):
     names={s['code']:s['name'] for s in states}
     pages={s['code']:s['page'] for s in states}
+    statewide={s['code']:[n.lower() for n in s.get('statewide_area_names',[])] for s in states}
     base=editions['index.html']
     script=re.search(r'<script>(.*?)</script>',base,re.S).group(1)
     configs=[]
@@ -35,7 +36,7 @@ def unified_outputs(root, editions, states):
             m=re.search(r'^function '+name+r'\(.*$',js,re.M)
             if m:functions.append(re.sub(r'function (\w+)\(',lambda match: match[1]+':function(',m.group()).replace(' function', ',function').replace('} countyContactsHTML:', '},countyContactsHTML:'))
         markup={k:section(html,k) for k in ['seniors-guide','community-guide','accessibility-guide','staff-guide']}
-        configs.append(json.dumps(state)+':{name:'+json.dumps(names[state])+',data:'+data+',counties:'+counties+',markup:'+json.dumps(markup)+',configure:function(){'+init+'return {priority,routes,seniorTopics,routeNames};},'+','.join(functions)+'}')
+        configs.append(json.dumps(state)+':{name:'+json.dumps(names[state])+',statewideNames:'+json.dumps(statewide[state])+',data:'+data+',counties:'+counties+',markup:'+json.dumps(markup)+',configure:function(){'+init+'return {priority,routes,seniorTopics,routeNames};},'+','.join(functions)+'}')
     # Common rendering and event handling, with only genuinely state-specific routing in adapters.
     common=script[script.index('const $='):]
     begin=common.index('const priority=');end=common.index('const tel=')
@@ -44,7 +45,9 @@ def unified_outputs(root, editions, states):
     common=common[:begin]+common[end:]
     for name in override_names:
         common=re.sub(r'^function '+name+r'\(.*$', 'function '+name+'(...args){return EDITIONS[STATE].'+name+'(...args)}',common,flags=re.M)
-    common=re.sub(r'^const national=.*$',"const national=a=>['statewide','national','federal',EDITIONS[STATE].name.toLowerCase()].includes(a.toLowerCase());",common,flags=re.M)
+    # Only labels a state actually uses for statewide records count as statewide. A state
+    # name alone is not enough: New York, Ohio and Utah are also county names.
+    common=re.sub(r'^const national=.*$',"const national=a=>['statewide','national','federal',...EDITIONS[STATE].statewideNames].includes(a.toLowerCase());",common,flags=re.M)
     common=common.replace("'All Ohio counties'","'All '+EDITIONS[STATE].name+' counties'")
     # Use a single canonical URL for every state and preserve public filters only.
     common=common.replace("u.search='';u.hash='';","u.pathname=u.pathname.replace(/[^/]*$/, '');u.search='';u.hash='';u.searchParams.set('state',STATE);")
