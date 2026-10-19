@@ -1,4 +1,4 @@
-# Veteran Resident Resource Guide: Ohio, Pennsylvania, New York, Michigan, Kentucky and Utah
+# Veteran Resident Resource Guide: Ohio, Pennsylvania, New York, Michigan, Kentucky, Utah and Indiana
 
 A free public guide created and maintained by Travis Vought, and shared by Veteran Home Guardians (VHG) for veterans, surviving spouses, seniors, people with disabilities, families and care teams. It helps people find their first contact and prepare a useful referral.
 
@@ -23,6 +23,10 @@ A free public guide created and maintained by Travis Vought, and shared by Veter
 **Utah guide:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/ut.html
 
 **Utah sharing kit:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/share-ut.html
+
+**Indiana guide:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/?state=IN
+
+**Indiana sharing kit:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/share-in.html
 
 **Ohio sharing kit:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/share.html
 

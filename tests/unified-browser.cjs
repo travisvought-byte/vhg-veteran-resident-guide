@@ -7,7 +7,7 @@ const {chromium}=require(process.env.GUIDE_PLAYWRIGHT|| (process.env.CODEX_PRIMA
  if(!process.env.GUIDE_TEST_URL){server=http.createServer((req,res)=>{let file=decodeURIComponent(new URL(req.url,'http://localhost').pathname);if(file.endsWith('/'))file+='index.html';const target=path.join(__dirname,'..',file);try{res.setHeader('Content-Type',file.endsWith('.js')?'text/javascript':file.endsWith('.css')?'text/css':file.endsWith('.html')?'text/html':'application/octet-stream');res.end(fs.readFileSync(target))}catch{res.statusCode=404;res.end()}});await new Promise(r=>server.listen(0,'127.0.0.1',r))}
  const base=process.env.GUIDE_TEST_URL||'http://127.0.0.1:'+server.address().port+'/';
  await page.goto(base);await page.waitForFunction(s=>document.documentElement.dataset.edition===s,'OH');await page.waitForFunction(()=>document.querySelector('#count').textContent.length>0);
- const expected={OH:88,PA:67,NY:62,MI:83,KY:120,UT:29};
+ const expected={OH:88,PA:67,NY:62,MI:83,KY:120,UT:29,IN:92};
  for(const [state,n] of Object.entries(expected)){
   await page.selectOption('#edition-state',state);await page.waitForFunction(s=>document.documentElement.dataset.edition===s,state);
   assert.equal(await page.locator('#county option').count(),n+1);
@@ -35,6 +35,14 @@ const {chromium}=require(process.env.GUIDE_PLAYWRIGHT|| (process.env.CODEX_PRIMA
  await page.emulateMedia({media:'screen'});await page.evaluate(()=>window.dispatchEvent(new Event('afterprint')));
  await page.locator('#helper-guide').scrollIntoViewIfNeeded();await page.screenshot({path:path.join(require('os').tmpdir(),'vhg-helper-mobile.png')});
  await page.setViewportSize({width:1280,height:900});await page.screenshot({path:path.join(require('os').tmpdir(),'vhg-helper-desktop.png'),fullPage:false});
+ // Indiana preserves local directory conflicts in county and printable helper views.
+ await page.goto(base+'?state=IN&county=Marion&view=rights');await page.waitForFunction(()=>document.documentElement.dataset.edition==='IN');
+ assert((await page.locator('#county-panel').textContent()).includes('NW uses 463-237-9348'));
+ await page.setViewportSize({width:390,height:844});await page.click('#helper-open');await page.selectOption('#helper-need','rights');assert((await page.locator('#helper-next').textContent()).includes('800-622-4484'));
+ assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+ await page.evaluate(()=>{window.print=()=>{window.__printed=true}});await page.click('#helper-print');assert(await page.evaluate(()=>window.__printed&&document.body.classList.contains('print-helper')));await page.emulateMedia({media:'print'});assert(await page.locator('.helper-paper').isVisible());await page.emulateMedia({media:'screen'});await page.evaluate(()=>window.dispatchEvent(new Event('afterprint')));
+ await page.locator('#helper-guide').scrollIntoViewIfNeeded();await page.screenshot({path:path.join(require('os').tmpdir(),'vhg-indiana-mobile.png'),fullPage:false});
+ await page.setViewportSize({width:1280,height:900});await page.screenshot({path:path.join(require('os').tmpdir(),'vhg-indiana-desktop.png'),fullPage:false});
  if(server){await page.goto(base+'ky.html?county=Christian&view=rights');await page.waitForFunction(()=>document.querySelector('#count')?.textContent.length>0);assert.equal(await page.locator('#edition-state').inputValue(),'KY');assert.equal(await page.locator('#county').inputValue(),'Christian')}
  // Bingo ZIP search, shared links, mobile layout and submission prefill.
  await page.clock.install({time:new Date('2026-10-09T12:00:00Z')});
@@ -56,5 +64,5 @@ const {chromium}=require(process.env.GUIDE_PLAYWRIGHT|| (process.env.CODEX_PRIMA
  await page.fill('#bingo-search','Wednesday Bingo');assert.equal(await page.locator('#oh-license-0237-45-442-9').count(),1);assert((await page.locator('#oh-license-0237-45-442-9').textContent()).includes('regular bingo 7 p.m.'));await page.click('#bingo-reset');
  await page.fill('#bingo-zip','00000');await page.locator('#bingo-nearby button').click();assert((await page.locator('#nearby-status').textContent()).includes('valid five-digit'));
  await page.emulateMedia({media:'print'});assert(!(await page.locator('#bingo-zip').isVisible()));assert(!(await page.locator('#bingo-day').isVisible()));assert(!(await page.locator('#bingo-submit').isVisible()));await page.emulateMedia({media:'screen'});
- assert.deepEqual(errors,[]);await browser.close();if(server)server.close();console.log('PASS: one public view, all 449 county panels, six-state switching, caregiver routes, deep links, legacy redirect, mobile width and print handoff.');
+ assert.deepEqual(errors,[]);await browser.close();if(server)server.close();console.log('PASS: one public view, all 541 county panels, seven-state switching, caregiver routes, deep links, legacy redirect, mobile width and print handoff.');
 })().catch(e=>{console.error(e);process.exit(1)});

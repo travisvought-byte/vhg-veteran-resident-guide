@@ -1,0 +1,202 @@
+{
+  "ops": [
+    {
+      "op": "clear_data"
+    },
+    {
+      "op": "replace",
+      "old": "Ohio",
+      "new": "Indiana"
+    },
+    {
+      "op": "replace",
+      "old": "All 88",
+      "new": "All 92"
+    },
+    {
+      "op": "replace",
+      "old": "all 88",
+      "new": "all 92"
+    },
+    {
+      "op": "replace",
+      "old": "<option value=\"OH\">Indiana</option>",
+      "new": "<option value=\"OH\">Ohio</option>"
+    },
+    {
+      "op": "replace",
+      "old": "const STATE='OH';",
+      "new": "const STATE='IN';"
+    },
+    {
+      "op": "replace",
+      "old": "Statewide edition · Updated October 8, 2026",
+      "new": "Indiana edition · Updated October 19, 2026"
+    },
+    {
+      "op": "replace",
+      "old": "Most phones come from Indiana AMVETS’ 2025–2026 directory.",
+      "new": "County veterans contacts come from Indiana DVA’s official county directory. Union’s only published number is a role cell phone."
+    },
+    {
+      "op": "replace",
+      "old": "Indiana’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
+      "new": "For PathWays members, ask the health plan’s service coordinator/case manager about assessment, documentation in the service plan, certified providers and waiver-program approval before any work starts. The manual requires prior waiver approval. Ask the appropriate case manager about separate rules for Health and Wellness or other disability waivers; do not apply PathWays rules automatically."
+    },
+    {
+      "op": "replace",
+      "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
+      "new": "https://www.in.gov/medicaid/providers/files/modules/ompp-hcbs-waiver.pdf"
+    },
+    {
+      "op": "replace",
+      "old": "Indiana home modification authorization and provider rules",
+      "new": "Indiana PathWays for Aging waiver manual — Home Modifications, printed pages 68–72"
+    },
+    {
+      "op": "replace",
+      "old": "href=\"share.html\"",
+      "new": "href=\"share-in.html\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"prototype-data.json\"",
+      "new": "href=\"data/public/indiana-resources.json\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
+      "new": "href=\"data/public/indiana-county-veterans-offices.json\""
+    },
+    {
+      "op": "line",
+      "prefix": "const national=",
+      "new": "const national=a=>['statewide','national','federal'].includes(a.toLowerCase());"
+    },
+    {
+      "op": "declare",
+      "name": "priority",
+      "value": [
+        "in-claims",
+        "in-adrc",
+        "in-ship",
+        "in-waiver",
+        "in-ombudsman",
+        "in-at",
+        "r02-aid-attendance-housebound",
+        "r02-va-pension",
+        "r02-survivors-pension"
+      ]
+    },
+    {
+      "op": "declare",
+      "name": "routes",
+      "value": {
+        "benefits": [
+          "in-claims",
+          "in-ship",
+          "in-waiver",
+          "r02-va-pension",
+          "r02-aid-attendance-housebound",
+          "va-accredited-help"
+        ],
+        "survivors": [
+          "in-claims",
+          "r02-survivors-pension",
+          "r02-dic",
+          "r02-va-burial",
+          "va-accredited-help"
+        ],
+        "care": [
+          "in-waiver",
+          "in-homes",
+          "in-caregiver",
+          "r02-va-health-enrollment",
+          "va-location-finder",
+          "r02-va-cnh",
+          "r02-va-clc"
+        ],
+        "rights": [
+          "in-ombudsman",
+          "in-rights"
+        ],
+        "local": [
+          "in-adrc",
+          "in-aging-directory",
+          "in-caregiver",
+          "in-waiver",
+          "in-at",
+          "in-211"
+        ],
+        "housing": [
+          "in-211",
+          "va-housing-help",
+          "va-location-finder"
+        ],
+        "accessibility": [
+          "va-hisa",
+          "va-sah",
+          "va-sha",
+          "va-tra",
+          "in-at",
+          "in-waiver",
+          "in-adrc"
+        ]
+      }
+    },
+    {
+      "op": "declare",
+      "name": "seniorTopics",
+      "value": {
+        "daily": [
+          "in-adrc",
+          "in-caregiver",
+          "in-waiver"
+        ],
+        "accessibility": [
+          "in-at",
+          "in-waiver",
+          "in-adrc"
+        ],
+        "vision": [
+          "in-blind",
+          "in-at"
+        ],
+        "hearing": [
+          "in-relay",
+          "in-at"
+        ],
+        "memory": [
+          "alz-dementia-support",
+          "in-caregiver",
+          "in-adrc"
+        ],
+        "costs": [
+          "in-ship",
+          "in-waiver",
+          "in-adrc"
+        ],
+        "rights": [
+          "in-ombudsman",
+          "in-rights"
+        ]
+      }
+    },
+    {
+      "op": "line",
+      "prefix": "routes.accessibility=",
+      "new": "routes.accessibility=[...routes.accessibility,...DATA.filter(x=>x.regional_role==='aging_agency').map(x=>x.program_id)];"
+    },
+    {
+      "op": "line",
+      "prefix": "routes.seniors=",
+      "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
+    },
+    {
+      "op": "adapter"
+    },
+    {
+      "op": "embed_data"
+    }
+  ]
+}
