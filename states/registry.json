@@ -1,186 +1,212 @@
 [
- {
-  "code": "OH",
-  "name": "Ohio",
-  "base": true,
-  "page": "index.html",
-  "share_page": "share.html",
-  "qr": "assets/guide-qr.svg",
-  "counties": 88,
-  "offices": "data/public/ohio-county-veterans-offices.json",
-  "resources": "prototype-data.json",
-  "statewide_area_names": [],
-  "coverage_scope": "Statewide referral backbone; local program research is strongest in Morrow, Knox, Marion and Delaware."
- },
- {
-  "code": "PA",
-  "name": "Pennsylvania",
-  "page": "pa.html",
-  "share_page": "share-pa.html",
-  "qr": "assets/guide-qr-pa.svg",
-  "counties": 67,
-  "programs": "data/public/pa-programs.json",
-  "referrals": "data/public/pa-regional-referrals.json",
-  "offices": "data/public/pennsylvania-county-veterans-offices.json",
-  "resources": "data/public/pennsylvania-resources.json",
-  "statewide_area_names": [
-   "Pennsylvania"
-  ],
-  "coverage_scope": "Initial referral edition. County veterans and aging routes are mapped; four counties have dedicated local ombudsman contacts, with statewide routing elsewhere.",
-  "share_description": "county veterans office contacts, matched local aging referrals and local or statewide ombudsman routes",
-  "share_replacements": []
- },
- {
-  "code": "NY",
-  "name": "New York",
-  "page": "ny.html",
-  "share_page": "share-ny.html",
-  "qr": "assets/guide-qr-ny.svg",
-  "counties": 62,
-  "programs": "data/public/ny-programs.json",
-  "referrals": "data/public/ny-regional-referrals.json",
-  "offices": "data/public/new-york-county-veterans-offices.json",
-  "resources": "data/public/new-york-resources.json",
-  "statewide_area_names": [],
-  "coverage_scope": "Initial referral edition. County, city and state veterans routes and local aging contacts are mapped; ombudsman routing is statewide.",
-  "share_description": "county and city veterans referrals, matched local aging contacts and statewide ombudsman routing",
-  "share_replacements": []
- },
- {
-  "code": "MI",
-  "name": "Michigan",
-  "page": "mi.html",
-  "share_page": "share-mi.html",
-  "qr": "assets/guide-qr-mi.svg",
-  "counties": 83,
-  "programs": "data/public/mi-programs.json",
-  "referrals": "data/public/mi-regional-referrals.json",
-  "offices": "data/public/michigan-county-veterans-offices.json",
-  "resources": "data/public/michigan-resources.json",
-  "statewide_area_names": [],
-  "coverage_scope": "Initial referral edition. County or regional veterans and aging routes are mapped; Ionia uses statewide veterans routing and Wayne has two aging service areas. Ombudsman routing is statewide.",
-  "share_description": "county and statewide veterans referrals, regional aging contacts with Wayne County city boundaries, and statewide ombudsman routing",
-  "share_replacements": []
- },
- {
-  "code": "KY",
-  "name": "Kentucky",
-  "page": "ky.html",
-  "share_page": "share-ky.html",
-  "qr": "assets/guide-qr-ky.svg",
-  "counties": 120,
-  "programs": "data/public/ky-programs.json",
-  "referrals": "data/public/ky-regional-referrals.json",
-  "offices": "data/public/kentucky-county-veterans-offices.json",
-  "resources": "data/public/kentucky-resources.json",
-  "statewide_area_names": [],
-  "coverage_scope": "Initial referral edition. Regional veterans representatives, aging, district ombudsmen and supported-living routes are mapped; veterans contacts are regional rather than separate county offices.",
-  "share_description": "KDVA regional veterans representatives, matched aging contacts, district ombudsmen and Hart-Supported Living coordinators",
-  "share_replacements": [
-   [
-    "county veterans offices",
-    "KDVA regional veterans representatives"
-   ]
-  ]
- },
- {
-  "code": "UT",
-  "name": "Utah",
-  "page": "ut.html",
-  "share_page": "share-ut.html",
-  "qr": "assets/guide-qr-ut.svg",
-  "counties": 29,
-  "programs": "data/public/ut-programs.json",
-  "referrals": "data/public/ut-regional-referrals.json",
-  "offices": "data/public/utah-county-veterans-offices.json",
-  "resources": "data/public/utah-resources.json",
-  "statewide_area_names": [],
-  "coverage_scope": "Initial referral edition. Four veterans regions, 12 aging agencies and 11 ombudsman regions cover all 29 counties. County maps are separate; regional veterans numbers are not separate county offices.",
-  "share_description": "regional veterans referrals, county-matched aging agencies and long-term-care ombudsmen",
-  "share_replacements": [
-   [
-    "county veterans offices",
-    "regional veterans contacts"
-   ],
-   [
-    "Updated October 8, 2026",
-    "Updated October 14, 2026"
-   ]
-  ],
-  "coverage_note": "Veterans contacts serve four regions, rather than separate county offices. Aging agencies and ombudsmen use different county maps. Published sources reviewed October 14, 2026; not telephone-confirmed. Local provider, post and activity coverage is still being researched."
- },
- {
-  "code": "IN",
-  "name": "Indiana",
-  "page": "in.html",
-  "share_page": "share-in.html",
-  "qr": "assets/guide-qr-in.svg",
-  "counties": 92,
-  "programs": "data/public/in-programs.json",
-  "referrals": "data/public/in-regional-referrals.json",
-  "offices": "data/public/indiana-county-veterans-offices.json",
-  "resources": "data/public/indiana-resources.json",
-  "statewide_area_names": [],
-  "coverage_scope": "Initial referral edition. Veterans contacts for all 92 counties, 15 aging agencies serving 16 areas and local or statewide long-term-care ombudsman routes. Published directory conflicts and Marion’s subcounty assignments are shown.",
-  "coverage_note": "Official sources reviewed October 19, 2026. Union’s only published veterans contact is a role cell phone. For conflicting ombudsman listings, use statewide routing first; Marion has subcounty assignments. Published contacts are not telephone-confirmed. Local providers, equipment stock and available funding are not fully inventoried.",
-  "share_description": "county veterans contacts, county-matched aging agencies and long-term-care ombudsman referrals",
-  "share_replacements": [
-   [
-    "Updated October 8, 2026",
-    "Updated October 19, 2026"
-   ]
-  ]
- },
- {
-  "code": "WV",
-  "name": "West Virginia",
-  "page": "wv.html",
-  "share_page": "share-wv.html",
-  "qr": "assets/guide-qr-wv.svg",
-  "counties": 55,
-  "programs": "data/public/wv-programs.json",
-  "referrals": "data/public/wv-regional-referrals.json",
-  "offices": "data/public/west-virginia-county-veterans-offices.json",
-  "resources": "data/public/west-virginia-resources.json",
-  "statewide_area_names": [],
-  "coverage_scope": "Initial referral edition. All 55 counties have veterans, aging and statewide long-term-care ombudsman routes. Thirteen veterans field offices cover 53 counties; Cabell and Wayne use statewide referrals. Four aging agencies cover every county.",
-  "coverage_note": "Official published sources reviewed October 19, 2026. Eight ombudsman records rely on official search extracts and need further verification; start with statewide routing. Regional lists omit Doddridge and split Kanawha without a boundary. Fayette and Monroe have overlapping veterans assignments. Contacts are not telephone-confirmed; local providers and current openings are not fully inventoried.",
-  "share_description": "state veterans referrals, county-matched aging agencies and statewide long-term-care ombudsman routing",
-  "share_replacements": [
-   [
-    "county veterans offices",
-    "state veterans contacts"
-   ],
-   [
-    "Updated October 8, 2026",
-    "Updated October 19, 2026"
-   ]
-  ]
- },
- {
-  "code": "TX",
-  "name": "Texas",
-  "page": "tx.html",
-  "share_page": "share-tx.html",
-  "qr": "assets/guide-qr-tx.svg",
-  "counties": 254,
-  "programs": "data/public/tx-programs.json",
-  "referrals": "data/public/tx-regional-referrals.json",
-  "offices": "data/public/texas-county-veterans-offices.json",
-  "resources": "data/public/texas-resources.json",
-  "statewide_area_names": [],
-  "coverage_scope": "Initial referral edition. All 254 counties have veterans, aging and long-term-care ombudsman routes. Twenty-eight aging agencies and 28 ombudsman regions use separate county maps; 11 counties use statewide veterans referrals.",
-  "coverage_note": "Official publications reviewed October 19, 2026. Veterans phones come from 128 county-government publications, 115 TexVet state-university directory entries and 11 statewide fallbacks. Directory conflicts, role numbers and uncertain number types remain labeled; contacts are not telephone-confirmed. LaSalle aging coverage uses an official regional supplement. Local providers, equipment stock, funding and openings are not fully inventoried.",
-  "share_description": "county or regional veterans contacts, county-matched aging agencies and long-term-care ombudsman referrals",
-  "share_replacements": [
-   [
-    "county veterans offices",
-    "county or regional veterans contacts"
-   ],
-   [
-    "Updated October 8, 2026",
-    "Updated October 19, 2026"
-   ]
-  ]
- }
+  {
+    "code": "OH",
+    "name": "Ohio",
+    "base": true,
+    "page": "index.html",
+    "share_page": "share.html",
+    "qr": "assets/guide-qr.svg",
+    "counties": 88,
+    "offices": "data/public/ohio-county-veterans-offices.json",
+    "resources": "prototype-data.json",
+    "statewide_area_names": [],
+    "coverage_scope": "Statewide referral backbone; local program research is strongest in Morrow, Knox, Marion and Delaware."
+  },
+  {
+    "code": "PA",
+    "name": "Pennsylvania",
+    "page": "pa.html",
+    "share_page": "share-pa.html",
+    "qr": "assets/guide-qr-pa.svg",
+    "counties": 67,
+    "programs": "data/public/pa-programs.json",
+    "referrals": "data/public/pa-regional-referrals.json",
+    "offices": "data/public/pennsylvania-county-veterans-offices.json",
+    "resources": "data/public/pennsylvania-resources.json",
+    "statewide_area_names": [
+      "Pennsylvania"
+    ],
+    "coverage_scope": "Initial referral edition. County veterans and aging routes are mapped; four counties have dedicated local ombudsman contacts, with statewide routing elsewhere.",
+    "share_description": "county veterans office contacts, matched local aging referrals and local or statewide ombudsman routes",
+    "share_replacements": []
+  },
+  {
+    "code": "NY",
+    "name": "New York",
+    "page": "ny.html",
+    "share_page": "share-ny.html",
+    "qr": "assets/guide-qr-ny.svg",
+    "counties": 62,
+    "programs": "data/public/ny-programs.json",
+    "referrals": "data/public/ny-regional-referrals.json",
+    "offices": "data/public/new-york-county-veterans-offices.json",
+    "resources": "data/public/new-york-resources.json",
+    "statewide_area_names": [],
+    "coverage_scope": "Initial referral edition. County, city and state veterans routes and local aging contacts are mapped; ombudsman routing is statewide.",
+    "share_description": "county and city veterans referrals, matched local aging contacts and statewide ombudsman routing",
+    "share_replacements": []
+  },
+  {
+    "code": "MI",
+    "name": "Michigan",
+    "page": "mi.html",
+    "share_page": "share-mi.html",
+    "qr": "assets/guide-qr-mi.svg",
+    "counties": 83,
+    "programs": "data/public/mi-programs.json",
+    "referrals": "data/public/mi-regional-referrals.json",
+    "offices": "data/public/michigan-county-veterans-offices.json",
+    "resources": "data/public/michigan-resources.json",
+    "statewide_area_names": [],
+    "coverage_scope": "Initial referral edition. County or regional veterans and aging routes are mapped; Ionia uses statewide veterans routing and Wayne has two aging service areas. Ombudsman routing is statewide.",
+    "share_description": "county and statewide veterans referrals, regional aging contacts with Wayne County city boundaries, and statewide ombudsman routing",
+    "share_replacements": []
+  },
+  {
+    "code": "KY",
+    "name": "Kentucky",
+    "page": "ky.html",
+    "share_page": "share-ky.html",
+    "qr": "assets/guide-qr-ky.svg",
+    "counties": 120,
+    "programs": "data/public/ky-programs.json",
+    "referrals": "data/public/ky-regional-referrals.json",
+    "offices": "data/public/kentucky-county-veterans-offices.json",
+    "resources": "data/public/kentucky-resources.json",
+    "statewide_area_names": [],
+    "coverage_scope": "Initial referral edition. Regional veterans representatives, aging, district ombudsmen and supported-living routes are mapped; veterans contacts are regional rather than separate county offices.",
+    "share_description": "KDVA regional veterans representatives, matched aging contacts, district ombudsmen and Hart-Supported Living coordinators",
+    "share_replacements": [
+      [
+        "county veterans offices",
+        "KDVA regional veterans representatives"
+      ]
+    ]
+  },
+  {
+    "code": "UT",
+    "name": "Utah",
+    "page": "ut.html",
+    "share_page": "share-ut.html",
+    "qr": "assets/guide-qr-ut.svg",
+    "counties": 29,
+    "programs": "data/public/ut-programs.json",
+    "referrals": "data/public/ut-regional-referrals.json",
+    "offices": "data/public/utah-county-veterans-offices.json",
+    "resources": "data/public/utah-resources.json",
+    "statewide_area_names": [],
+    "coverage_scope": "Initial referral edition. Four veterans regions, 12 aging agencies and 11 ombudsman regions cover all 29 counties. County maps are separate; regional veterans numbers are not separate county offices.",
+    "share_description": "regional veterans referrals, county-matched aging agencies and long-term-care ombudsmen",
+    "share_replacements": [
+      [
+        "county veterans offices",
+        "regional veterans contacts"
+      ],
+      [
+        "Updated October 8, 2026",
+        "Updated October 14, 2026"
+      ]
+    ],
+    "coverage_note": "Veterans contacts serve four regions, rather than separate county offices. Aging agencies and ombudsmen use different county maps. Published sources reviewed October 14, 2026; not telephone-confirmed. Local provider, post and activity coverage is still being researched."
+  },
+  {
+    "code": "IN",
+    "name": "Indiana",
+    "page": "in.html",
+    "share_page": "share-in.html",
+    "qr": "assets/guide-qr-in.svg",
+    "counties": 92,
+    "programs": "data/public/in-programs.json",
+    "referrals": "data/public/in-regional-referrals.json",
+    "offices": "data/public/indiana-county-veterans-offices.json",
+    "resources": "data/public/indiana-resources.json",
+    "statewide_area_names": [],
+    "coverage_scope": "Initial referral edition. Veterans contacts for all 92 counties, 15 aging agencies serving 16 areas and local or statewide long-term-care ombudsman routes. Published directory conflicts and Marion’s subcounty assignments are shown.",
+    "coverage_note": "Official sources reviewed October 19, 2026. Union’s only published veterans contact is a role cell phone. For conflicting ombudsman listings, use statewide routing first; Marion has subcounty assignments. Published contacts are not telephone-confirmed. Local providers, equipment stock and available funding are not fully inventoried.",
+    "share_description": "county veterans contacts, county-matched aging agencies and long-term-care ombudsman referrals",
+    "share_replacements": [
+      [
+        "Updated October 8, 2026",
+        "Updated October 19, 2026"
+      ]
+    ]
+  },
+  {
+    "code": "WV",
+    "name": "West Virginia",
+    "page": "wv.html",
+    "share_page": "share-wv.html",
+    "qr": "assets/guide-qr-wv.svg",
+    "counties": 55,
+    "programs": "data/public/wv-programs.json",
+    "referrals": "data/public/wv-regional-referrals.json",
+    "offices": "data/public/west-virginia-county-veterans-offices.json",
+    "resources": "data/public/west-virginia-resources.json",
+    "statewide_area_names": [],
+    "coverage_scope": "Initial referral edition. All 55 counties have veterans, aging and statewide long-term-care ombudsman routes. Thirteen veterans field offices cover 53 counties; Cabell and Wayne use statewide referrals. Four aging agencies cover every county.",
+    "coverage_note": "Official published sources reviewed October 19, 2026. Eight ombudsman records rely on official search extracts and need further verification; start with statewide routing. Regional lists omit Doddridge and split Kanawha without a boundary. Fayette and Monroe have overlapping veterans assignments. Contacts are not telephone-confirmed; local providers and current openings are not fully inventoried.",
+    "share_description": "state veterans referrals, county-matched aging agencies and statewide long-term-care ombudsman routing",
+    "share_replacements": [
+      [
+        "county veterans offices",
+        "state veterans contacts"
+      ],
+      [
+        "Updated October 8, 2026",
+        "Updated October 19, 2026"
+      ]
+    ]
+  },
+  {
+    "code": "TX",
+    "name": "Texas",
+    "page": "tx.html",
+    "share_page": "share-tx.html",
+    "qr": "assets/guide-qr-tx.svg",
+    "counties": 254,
+    "programs": "data/public/tx-programs.json",
+    "referrals": "data/public/tx-regional-referrals.json",
+    "offices": "data/public/texas-county-veterans-offices.json",
+    "resources": "data/public/texas-resources.json",
+    "statewide_area_names": [],
+    "coverage_scope": "Initial referral edition. All 254 counties have veterans, aging and long-term-care ombudsman routes. Twenty-eight aging agencies and 28 ombudsman regions use separate county maps; 11 counties use statewide veterans referrals.",
+    "coverage_note": "Official publications reviewed October 19, 2026. Veterans phones come from 128 county-government publications, 115 TexVet state-university directory entries and 11 statewide fallbacks. Directory conflicts, role numbers and uncertain number types remain labeled; contacts are not telephone-confirmed. LaSalle aging coverage uses an official regional supplement. Local providers, equipment stock, funding and openings are not fully inventoried.",
+    "share_description": "county or regional veterans contacts, county-matched aging agencies and long-term-care ombudsman referrals",
+    "share_replacements": [
+      [
+        "county veterans offices",
+        "county or regional veterans contacts"
+      ],
+      [
+        "Updated October 8, 2026",
+        "Updated October 19, 2026"
+      ]
+    ]
+  },
+  {
+    "code": "FL",
+    "name": "Florida",
+    "page": "fl.html",
+    "share_page": "share-fl.html",
+    "qr": "assets/guide-qr-fl.svg",
+    "counties": 67,
+    "programs": "data/public/fl-programs.json",
+    "referrals": "data/public/fl-regional-referrals.json",
+    "offices": "data/public/florida-county-veterans-offices.json",
+    "resources": "data/public/florida-resources.json",
+    "statewide_area_names": [],
+    "coverage_scope": "Initial referral edition. All 67 counties have veterans service contacts, county-matched aging helplines and local long-term-care ombudsman routes. Miami-Dade has separate north and south ombudsman districts.",
+    "coverage_note": "Florida's March 2026 veterans directory and Elder Affairs service-area publications were reviewed October 19, 2026. Eleven Area Agencies on Aging have one additional Palm Beach-specific helpline entry; 14 ombudsman districts are listed, with North/South Miami-Dade separated by Flagler Street. Contacts are not telephone-confirmed; local providers and funding are not exhaustively mapped.",
+    "share_description": "county veterans service contacts, matched local aging agency helplines and local long-term-care ombudsman districts",
+    "share_replacements": [
+      [
+        "county veterans offices",
+        "county veterans service contacts"
+      ],
+      [
+        "Updated October 8, 2026",
+        "Updated October 19, 2026"
+      ]
+    ]
+  }
 ]
