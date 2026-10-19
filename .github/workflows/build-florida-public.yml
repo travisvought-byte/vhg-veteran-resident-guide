@@ -20,6 +20,7 @@ jobs:
         run: |
           python -m pip install qrcode
           python3 scripts/build_public.py
+          python3 scripts/build_public.py --test-fixtures
           python3 scripts/make_qr.py
           python3 scripts/build_public.py --check
       - name: Commit generated files
