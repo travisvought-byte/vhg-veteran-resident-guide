@@ -1,0 +1,27 @@
+# West Virginia coverage and evidence
+
+West Virginia is the eighth referral edition. Official published sources reviewed October 19, 2026 provide routes for all 55 counties, 13 statewide programs and 11 regional referrals. The five-file research return, source inventory, conflicts and exact checker output are in `research/returns/R-06-WV/`. Research approval and publication were authorized by the owner. No agency was contacted.
+
+## County maps and unresolved assignments
+
+The [Legislature’s county list](https://code.wvlegislature.gov/1-1-1/) supplies all 55 county names. Ohio County remains county-limited. There are no independent-city entries or counties named West Virginia.
+
+The [state veterans office directory](https://veterans.wv.gov/benefits-office-locations) provides 13 state field offices with usable assignments covering 53 counties. Cabell and Wayne use the department’s statewide 304-558-3661 phone: the current Huntington claims office page does not assign counties. These are labeled state referrals, not county offices. Fayette has Beckley and Charleston assignments; Monroe has Lewisburg and Princeton. Both published contacts and source links appear in county and caregiver handoffs. Putnam uses the fully reviewed Charleston assignment. The legacy Teays Valley number remains in research notes because its current page does not publish a local phone or county assignment.
+
+The [final 2025–2029 State Plan on Aging](https://apps.sos.wv.gov/adlaw/csr/readfile.aspx?DocId=58225&Format=PDF), filed June 23, 2025 and effective October 1, 2025, lists all four aging regions in Attachment D (printed pages 71–72 / PDF pages 76–77): Northwestern 16 counties, Metro 11, Upper Potomac 15 and Appalachian 13. Every county has exactly one aging agency. The Appalachian agency’s plan-listed website returned unrelated content; the edition links to the official state plan instead. A failed fetch is not evidence of closure.
+
+The [Legal Aid WV ombudsman publication](https://legalaidwv.org/our-programs/long-term-care/) was available only as indexed official text. All eight ombudsman records (seven regional and one statewide) retain `official_search_extract_only` status, source method, review date and visible warnings. This approval does not upgrade their evidence status. Public county, senior and caregiver views start with the published statewide ombudsman route, 800-834-0598. Regional details remain available in county panels, with instructions to confirm current assignments. Doddridge is absent from the regional lists. Kanawha is listed as part under both Huntington and Charleston without a boundary. General legal-office service territories are not substituted for ombudsman territories.
+
+## State programs and accessibility
+
+The 13 required programs cover accredited veterans claims help, veterans nursing care, ADRC navigation, the aging directory, SHIP, Medicaid ADW screening, the ombudsman, family caregiver support, WVATS, Disability Rights, VISIONS, Relay and 211. Source-specific metadata remains in public data; no personal staff names or internal contact fields are added.
+
+The [current ADW manual](https://bms.wv.gov/media/41402/download?inline=), effective June 1, 2026, distinguishes formal prior authorization (listed as No for environmental accessibility adaptations) from the required Operating Agency approval. Under sections 501.22–501.22.1, the case manager documents the need in the person-centered service plan and submits the application, vendor estimate or invoice and supporting documents to the Operating Agency. The accessibility flow explains this approval step and links the [official forms](https://adwprogram.wv.gov/policy-forms). Other waivers have their own rules; Medicaid enrollment alone does not establish coverage. No funding amount or availability is promised.
+
+SHIP uses 877-987-4463, supported by CMS and the WVSU page’s explicit WV BOSS Medicare Call Center label. Another CMS entry lists the Bureau’s general 877-987-3646 number; that difference is preserved. Statewide ADRC navigation is 866-981-2372. The final plan says three regional ADRCs while the operator lists four offices; the edition makes no regional ADRC map from that discrepancy. VISIONS lists age 55 or older, not working and permanent visual impairment; other inquiries should go to DRS. WVATS device trials and reuse do not promise permanent ramp construction. The Clarksburg veterans nursing facility is distinguished from the Barboursville residential home; current operation of the Charles Calvin Rogers facility was not established and is not advertised.
+
+## Validation and maintenance
+
+Canonical files are `data/public/west-virginia-county-veterans-offices.json`, `wv-programs.json` and `wv-regional-referrals.json`. Configuration is in `states/wv/` and `states/registry.json`; the shared runtime gives caregiver rights inquiries the same statewide-first route. Public text omits research-process instructions while preserving visible evidence status, source metadata and substantive limitations. The original research packet is unchanged.
+
+Run all checks in `docs/ADDING-A-STATE.md`. Registry tests cover all 55 county panels and state isolation. `tests/west-virginia.cjs` checks statewide fallbacks, the Kanawha split, Doddridge omission, veterans alternatives, evidence warnings, Ohio County isolation, waiver approval wording, senior topics and printed caregiver handoffs. Browser checks cover on-demand loading, mobile layouts and state deep links. QR and sharing pages point to the West Virginia edition.

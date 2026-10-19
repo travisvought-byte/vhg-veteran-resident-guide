@@ -1,0 +1,219 @@
+{
+  "ops": [
+    {
+      "op": "clear_data"
+    },
+    {
+      "op": "replace",
+      "old": "Ohio",
+      "new": "West Virginia"
+    },
+    {
+      "op": "replace",
+      "old": "All 88",
+      "new": "All 55"
+    },
+    {
+      "op": "replace",
+      "old": "all 88",
+      "new": "all 55"
+    },
+    {
+      "op": "replace",
+      "old": "<option value=\"OH\">West Virginia</option>",
+      "new": "<option value=\"OH\">Ohio</option>"
+    },
+    {
+      "op": "replace",
+      "old": "const STATE='OH';",
+      "new": "const STATE='WV';"
+    },
+    {
+      "op": "replace",
+      "old": "county veterans office",
+      "new": "state veterans contact"
+    },
+    {
+      "op": "replace",
+      "old": "county office",
+      "new": "state veterans contact"
+    },
+    {
+      "op": "replace",
+      "old": "Statewide edition · Updated October 8, 2026",
+      "new": "West Virginia edition · Updated October 19, 2026"
+    },
+    {
+      "op": "replace",
+      "old": "Most phones come from West Virginia AMVETS’ 2025–2026 directory.",
+      "new": "Veterans contacts are state field offices with published county assignments. Cabell and Wayne use the statewide department line; Fayette and Monroe have overlapping published assignments."
+    },
+    {
+      "op": "replace",
+      "old": "West Virginia’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
+      "new": "Ask the case manager to document the adaptation in the person-centered service plan and submit the application, vendor estimate or invoice, and supporting documents to the Operating Agency for approval. Ask about accepted vendors before arranging work. The manual labels formal prior authorization No while separately requiring Operating Agency approval."
+    },
+    {
+      "op": "replace",
+      "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
+      "new": "https://bms.wv.gov/media/41402/download?inline="
+    },
+    {
+      "op": "replace",
+      "old": "West Virginia home modification authorization and provider rules",
+      "new": "ADW Chapter 501, sections 501.22 and 501.22.1 — effective June 1, 2026"
+    },
+    {
+      "op": "replace",
+      "old": "href=\"share.html\"",
+      "new": "href=\"share-wv.html\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"prototype-data.json\"",
+      "new": "href=\"data/public/west-virginia-resources.json\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
+      "new": "href=\"data/public/west-virginia-county-veterans-offices.json\""
+    },
+    {
+      "op": "line",
+      "prefix": "const national=",
+      "new": "const national=a=>['statewide','national','federal'].includes(a.toLowerCase());"
+    },
+    {
+      "op": "declare",
+      "name": "priority",
+      "value": [
+        "wv-claims",
+        "wv-adrc",
+        "wv-aging-directory",
+        "wv-ship",
+        "wv-waiver",
+        "wv-ombudsman",
+        "wv-at",
+        "r02-aid-attendance-housebound",
+        "r02-va-pension",
+        "r02-survivors-pension"
+      ]
+    },
+    {
+      "op": "declare",
+      "name": "routes",
+      "value": {
+        "benefits": [
+          "wv-claims",
+          "wv-ship",
+          "wv-waiver",
+          "r02-va-pension",
+          "r02-aid-attendance-housebound",
+          "va-accredited-help"
+        ],
+        "survivors": [
+          "wv-claims",
+          "r02-survivors-pension",
+          "r02-dic",
+          "r02-va-burial",
+          "va-accredited-help"
+        ],
+        "care": [
+          "wv-waiver",
+          "wv-caregiver",
+          "wv-homes",
+          "r02-va-health-enrollment",
+          "va-location-finder",
+          "r02-va-cnh",
+          "r02-va-clc"
+        ],
+        "rights": [
+          "wv-ombudsman",
+          "wv-rights",
+          "wv-adrc"
+        ],
+        "local": [
+          "wv-adrc",
+          "wv-aging-directory",
+          "wv-caregiver",
+          "wv-waiver",
+          "wv-at",
+          "wv-211"
+        ],
+        "housing": [
+          "wv-211",
+          "va-housing-help",
+          "va-location-finder",
+          "va-accredited-help"
+        ],
+        "accessibility": [
+          "va-hisa",
+          "va-sah",
+          "va-sha",
+          "va-tra",
+          "wv-at",
+          "wv-waiver",
+          "wv-adrc"
+        ]
+      }
+    },
+    {
+      "op": "declare",
+      "name": "seniorTopics",
+      "value": {
+        "daily": [
+          "wv-adrc",
+          "wv-aging-directory",
+          "wv-caregiver",
+          "wv-waiver"
+        ],
+        "accessibility": [
+          "wv-at",
+          "wv-waiver",
+          "wv-adrc"
+        ],
+        "vision": [
+          "wv-blind",
+          "wv-at",
+          "wv-adrc"
+        ],
+        "hearing": [
+          "wv-relay",
+          "wv-at",
+          "wv-adrc"
+        ],
+        "memory": [
+          "alz-dementia-support",
+          "wv-caregiver",
+          "wv-adrc"
+        ],
+        "costs": [
+          "wv-ship",
+          "wv-waiver",
+          "wv-adrc"
+        ],
+        "rights": [
+          "wv-ombudsman",
+          "wv-rights",
+          "wv-adrc"
+        ]
+      }
+    },
+    {
+      "op": "line",
+      "prefix": "routes.accessibility=",
+      "new": "routes.accessibility=[...routes.accessibility,...DATA.filter(x=>x.regional_role==='aging_agency').map(x=>x.program_id)];"
+    },
+    {
+      "op": "line",
+      "prefix": "routes.seniors=",
+      "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
+    },
+    {
+      "op": "adapter"
+    },
+    {
+      "op": "embed_data"
+    }
+  ]
+}

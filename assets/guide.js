@@ -34,7 +34,7 @@ $('results').innerHTML=rows.map(x=>{const c=x.public_contact||{},v=x.verificatio
 renderCounty();renderAccessibility();renderSeniorGuide();renderHelper();if(county&&!$('county-panel').hidden&&COUNTIES.some(c=>c.county===county))$('county-panel').innerHTML+=countyReportLink(county);document.querySelectorAll('[data-route]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.route===route)));$('share-status').textContent='';history.replaceState(null,'',shareURL())}
 
 const EDITIONS=window.VHG_EDITIONS=window.VHG_EDITIONS||{};
-const EDITION_FILES={"OH": "assets/editions/oh.js?v=709ee24be7", "PA": "assets/editions/pa.js?v=c32769a243", "NY": "assets/editions/ny.js?v=313bc0862e", "MI": "assets/editions/mi.js?v=1ac2862276", "KY": "assets/editions/ky.js?v=732b30c095", "UT": "assets/editions/ut.js?v=e6f6af1593", "IN": "assets/editions/in.js?v=d4daff6dcf"};
+const EDITION_FILES={"OH": "assets/editions/oh.js?v=709ee24be7", "PA": "assets/editions/pa.js?v=c32769a243", "NY": "assets/editions/ny.js?v=313bc0862e", "MI": "assets/editions/mi.js?v=1ac2862276", "KY": "assets/editions/ky.js?v=732b30c095", "UT": "assets/editions/ut.js?v=e6f6af1593", "IN": "assets/editions/in.js?v=d4daff6dcf", "WV": "assets/editions/wv.js?v=c4e1a5fbdd"};
 let helperActive=false,helperShowingResults=false,helperRoute='benefits';
 function agingContactsHTML(...args){return EDITIONS[STATE].agingContactsHTML(...args)}
 function countyContactsHTML(...args){return EDITIONS[STATE].countyContactsHTML(...args)}
@@ -89,10 +89,11 @@ let accessPrintStates=[];
 function helperContacts(county,need,person){
  const c=COUNTIES.find(c=>c.county===county),aging=DATA.filter(x=>x.regional_role==='aging_agency'&&x.service_area.includes(county));
  const omb=DATA.filter(x=>x.regional_role==='ombudsman'&&x.service_area.includes(county));
- const card=x=>'<article><h3>'+esc(x.name)+'</h3>'+(x.public_contact?.phone?'<p>'+phoneLink(x.public_contact.phone)+'</p>':'')+'<p>'+esc(x.next_step)+'</p>'+(STATE==='IN'&&x.regional_role?'<p class="small">'+esc((x.constraints||[]).join(' '))+'</p>':'')+'<a href="'+esc(safeURL(x.official_url))+'" target="_blank" rel="noopener">Contact information</a><p class="meta">'+esc(labels[x.verification.record_status])+' · '+esc(x.verification.last_reviewed_on)+'</p></article>';
+ const card=x=>'<article><h3>'+esc(x.name)+'</h3>'+(x.public_contact?.phone?'<p>'+phoneLink(x.public_contact.phone)+'</p>':'')+'<p>'+esc(x.next_step)+'</p>'+(['IN','WV'].includes(STATE)&&x.regional_role?'<p class="small">'+esc((x.constraints||[]).join(' '))+'</p>':'')+'<a href="'+esc(safeURL(x.official_url))+'" target="_blank" rel="noopener">Contact information</a><p class="meta">'+esc(labels[x.verification.record_status])+' · '+esc(x.verification.last_reviewed_on)+'</p></article>';
  if(need==='crisis')return '<article><h3>Immediate support</h3><p>Call '+phoneLink('988')+'. Veterans: press 1. For immediate danger, call '+phoneLink('911')+'.</p></article>';
  if(need==='housing'&&person!=='other')return card(DATA.find(x=>x.program_id==='va-housing-help'));
  if(need==='rights'){
+  if(STATE==='WV')return card(DATA.find(x=>x.program_id==='wv-ombudsman'))+'<p>Give the facility name and county and ask for the current regional advocate. Doddridge is missing from the published regional list; Kanawha is split without a published boundary.</p>';
   if(STATE==='IN'&&['Randolph','Boone','Marion','Bartholomew','Brown','Decatur','Jackson','Jennings','Monroe','Owen','Clark','Floyd','Harrison','Scott'].includes(county))return card(DATA.find(x=>x.program_id==='in-ombudsman'))+'<p>Give the facility’s exact location. The local directory has conflicting entries or subcounty assignments; ask the state office to identify the correct ombudsman.</p>';
   const contacts=omb.length?omb:DATA.filter(x=>routes.rights.includes(x.program_id)&&/ombudsman/i.test(x.name)&&matchesCounty(x,county));
   return contacts.slice(0,2).map(card).join('');

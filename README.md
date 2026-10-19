@@ -1,4 +1,4 @@
-# Veteran Resident Resource Guide: Ohio, Pennsylvania, New York, Michigan, Kentucky, Utah and Indiana
+# Veteran Resident Resource Guide: Ohio, Pennsylvania, New York, Michigan, Kentucky, Utah, Indiana and West Virginia
 
 A free public guide created and maintained by Travis Vought, and shared by Veteran Home Guardians (VHG) for veterans, surviving spouses, seniors, people with disabilities, families and care teams. It helps people find their first contact and prepare a useful referral.
 
@@ -28,6 +28,10 @@ A free public guide created and maintained by Travis Vought, and shared by Veter
 
 **Indiana sharing kit:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/share-in.html
 
+**West Virginia guide:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/?state=WV
+
+**West Virginia sharing kit:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/share-wv.html
+
 **Ohio sharing kit:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/share.html
 
 **Created and maintained by:** [Travis Vought](https://travisvought-byte.github.io/ohio-cannabis-directory/work-with-travis.html). **Shared by:** Veteran Home Guardians (VHG). Resource corrections: travis@vethomeguard.org. [Project stewardship](PROJECT_STEWARDSHIP.md).
@@ -44,7 +48,7 @@ The main guide uses one interface. Changing the state updates county contacts, r
 
 ## Coverage and verification
 
-All six state editions are published referral backbones, not complete inventories of local services. Ohio local research is strongest in the four pilot counties; Pennsylvania, New York, Michigan, Kentucky and Utah are initial referral editions. The state picker updates the shared interface from separate datasets; depth of local coverage varies.
+All eight state editions are published referral backbones, not complete inventories of local services. Ohio local research is strongest in the four pilot counties; Pennsylvania, New York, Michigan, Kentucky, Utah, Indiana and West Virginia are initial referral editions. The state picker updates the shared interface from separate datasets; depth of local coverage varies.
 
 The guide displays county coverage and calculated verification totals in an expandable section near the state picker. Every resource card shows its source status without requiring an expansion. Search-excerpt, imported and recheck records carry a visible verification notice, including in printed resource lists. A published source review does not mean an agency confirmed its current intake or availability.
 
@@ -80,13 +84,13 @@ Kentucky has KDVA regional benefits representatives, aging contacts, district om
 
 Utah is the sixth state: all 29 counties have regional veterans referrals, matched aging agencies and long-term-care ombudsmen. Its 66 resources include 33 shared federal/national records, 10 Utah programs, 12 aging contacts and 11 ombudsman regions. Veterans, aging and ombudsman county boundaries are maintained separately, including Uintah County’s separate aging route. Published sources were reviewed October 14, 2026; contacts are not telephone-confirmed. Local providers and activity listings remain incomplete. [Open Utah](https://travisvought-byte.github.io/vhg-veteran-resident-guide/?state=UT), [sharing kit](https://travisvought-byte.github.io/vhg-veteran-resident-guide/share-ut.html), and [coverage and evidence](docs/UTAH.md).
 
-Canonical Utah data lives in `data/public/ut-programs.json`, `data/public/ut-regional-referrals.json` and `data/public/utah-county-veterans-offices.json`. The standard build generates the combined data, shared adapter, redirect and sharing kit. Unified DOM and browser checks include all six states and all 449 counties.
+Canonical Utah data lives in `data/public/ut-programs.json`, `data/public/ut-regional-referrals.json` and `data/public/utah-county-veterans-offices.json`. The standard build generates the combined data, shared adapter, redirect and sharing kit. Unified DOM and browser checks include all eight states and all 596 counties.
 
 ## Bingo and urgent support
 
 The [Ohio Bingo & Senior Centers section](https://travisvought-byte.github.io/vhg-veteran-resident-guide/bingo.html) includes all 717 state-listed Type I entries and 15 researched senior centers. Search by ZIP/distance, activity, or published bingo day (Today, Tomorrow, or a weekday). Specific dates, closures and expired offers are handled separately from license authorization days. Seventy-five entries now have published schedule details after seven October research passes. See [bingo evidence and expansion](docs/BINGO.md).
 
-All six editions have a prominent urgent-help section, crisis and mental-health resources, and expanded homelessness pathways: the VA national call center, SSVF community providers, HUD-VASH and VA Community Resource and Referral Centers. Local shelter beds, individual provider intake and availability are not comprehensively mapped.
+All eight editions have a prominent urgent-help section, crisis and mental-health resources, and expanded homelessness pathways: the VA national call center, SSVF community providers, HUD-VASH and VA Community Resource and Referral Centers. Local shelter beds, individual provider intake and availability are not comprehensively mapped.
 
 ## Corrections from users
 
@@ -124,6 +128,10 @@ Kentucky canonical records live in `data/public/ky-programs.json`, `data/public/
 
 Older integration scripts and research candidates are historical research tools, not the public build. Do not publish their output over the current public data without review.
 
+## West Virginia scope
+
+West Virginia adds all 55 counties, 13 state programs, four aging agencies and seven published regional ombudsman lists. Cabell and Wayne use statewide veterans referrals; Fayette and Monroe retain both published field-office assignments. All county and caregiver rights views start with statewide ombudsman routing because eight ombudsman records remain supported only by official search extracts. Doddridge is absent from regional lists and Kanawha has an unspecified split. [Coverage, sources and limitations](docs/WEST-VIRGINIA.md).
+
 ## Maintenance and next research
 
 See the [maintenance process](docs/MAINTENANCE.md), [verification queue](docs/VERIFICATION-QUEUE.md) and [distribution plan](docs/DISSEMINATION.md). Source review is not telephone confirmation. No outreach was sent as part of this update.
@@ -134,8 +142,8 @@ See the [maintenance process](docs/MAINTENANCE.md), [verification queue](docs/VE
 |---|---|
 | `index.html`, `assets/guide.js`, `assets/editions/` | Shared public interface, shared bundle and generated per-state data/routing files |
 | `bingo.html`, `data/public/ohio-bingo.json`, `docs/BINGO.md` | Ohio bingo page, canonical venue records and source/expansion notes |
-| `share.html`, `share-pa.html`, `share-ny.html`, `share-mi.html`, `share-ky.html`, `share-ut.html` | State-specific QR flyers and newsletter introductions |
-| `pa.html`, `ny.html`, `mi.html`, `ky.html`, `ut.html` | Compatibility redirects into the shared guide |
+| `share.html`, `share-pa.html`, `share-ny.html`, `share-mi.html`, `share-ky.html`, `share-ut.html`, `share-in.html`, `share-wv.html` | State-specific QR flyers and newsletter introductions |
+| `pa.html`, `ny.html`, `mi.html`, `ky.html`, `ut.html`, `in.html`, `wv.html` | Compatibility redirects into the shared guide |
 | `assets/` | VHG logo, QR code and social preview image |
 | `templates/`, `assets/guide-runtime.js`, `scripts/unified_guide.py` | Shared UI source and build
 | `prototype-data.json` | Canonical current public resource records |
