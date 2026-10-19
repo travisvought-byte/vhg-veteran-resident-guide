@@ -3,7 +3,13 @@ function agingContactsHTML(...args){return EDITIONS[STATE].agingContactsHTML(...
 function countyContactsHTML(...args){return EDITIONS[STATE].countyContactsHTML(...args)}
 function veteransContactsHTML(c){return EDITIONS[STATE].veteransContactsHTML(c)}
 function setState(state,initial=false){
- if(!Object.hasOwn(EDITIONS,state))state='OH';
+ if(!Object.hasOwn(EDITION_FILES,state))state='OH';
+ if(!Object.hasOwn(EDITIONS,state)){
+  const previous=STATE,name=$('edition-state').querySelector('option[value="'+state+'"]')?.textContent||state;
+  $('edition-state').value=state;$('edition-status').textContent='Loading '+name+'…';
+  loadEdition(state).then(()=>{$('edition-status').textContent='';setState(state,initial)},()=>{$('edition-state').value=previous;$('edition-status').textContent=name+' could not load. Check your connection and try again.'});
+  return;
+ }
  STATE=state;const config=EDITIONS[state];DATA=config.data;COUNTIES=config.counties;
  ({priority,routes,seniorTopics,routeNames}=config.configure());
  if(!Object.hasOwn(routeNames,route))route='priority';
@@ -16,17 +22,24 @@ function setState(state,initial=false){
  // Keep state-specific instructions available without making the first screen an explanation of the data model.
  const pending=DATA.filter(x=>x.verification.record_status!=='official_source_reviewed').length;
  $('coverage-detail').innerHTML='<p>'+esc(config.name)+': referral routes for '+COUNTIES.length+' counties. Local service coverage is still growing.</p><p>'+pending+' resource records need further source checks. Check the status on each listing and confirm availability with the agency.</p>';
- if(state==='UT')$('coverage-detail').innerHTML+='<p>Veterans contacts serve four regions, rather than separate county offices. Aging agencies and ombudsmen use different county maps. Published sources reviewed October 14, 2026; not telephone-confirmed. Local provider, post and activity coverage is still being researched.</p>';
+ if(config.coverageNote)$('coverage-detail').innerHTML+='<p>'+esc(config.coverageNote)+'</p>';
  document.querySelector('label[for="county"]').textContent='County in '+config.name;
  $('aid-open').hidden=state!=='OH';document.querySelector('.office-directory summary').textContent='Browse '+config.name+' county contacts';
  $('office-search').placeholder='Search '+config.name+' counties';
  document.title=config.name+' | Veteran Resident Resource Guide';
- document.querySelectorAll('a[href^="share"]').forEach(a=>a.href=state==='OH'?'share.html':'share-'+state.toLowerCase()+'.html');
- const files={OH:['ohio-county-veterans-offices.json','../../prototype-data.json'],PA:['pennsylvania-county-veterans-offices.json','pennsylvania-resources.json'],NY:['new-york-county-veterans-offices.json','new-york-resources.json'],MI:['michigan-county-veterans-offices.json','michigan-resources.json'],KY:['kentucky-county-veterans-offices.json','kentucky-resources.json'],UT:['utah-county-veterans-offices.json','utah-resources.json']};
- document.querySelectorAll('.footer-links a').forEach(a=>{if(a.textContent==='County contact data')a.href='data/public/'+files[state][0];if(a.textContent==='Resource data')a.href='data/public/'+files[state][1]});
+ document.querySelectorAll('a[href^="share"]').forEach(a=>a.href=config.sharePage);
+ document.querySelectorAll('.footer-links a').forEach(a=>{if(a.textContent==='County contact data')a.href=config.files.offices;if(a.textContent==='Resource data')a.href=config.files.resources});
  document.querySelectorAll('#urgent-help a[href^="?view="]').forEach(a=>{const u=new URL(a.href,location.href);u.searchParams.set('state',state);a.href=u.href});
  bindStateControls();
+ document.documentElement.dataset.edition=state;
  if(!initial){render();renderOfficeList()}
+}
+// Each state's records live in their own file so a phone downloads only the state in use.
+const editionLoads={};
+function loadEdition(state){
+ if(Object.hasOwn(EDITIONS,state))return Promise.resolve();
+ if(!editionLoads[state])editionLoads[state]=new Promise((resolve,reject)=>{const s=document.createElement('script');s.src=EDITION_FILES[state];s.onload=()=>Object.hasOwn(EDITIONS,state)?resolve():reject(new Error('Edition did not register'));s.onerror=reject;document.head.append(s)}).catch(e=>{delete editionLoads[state];throw e});
+ return editionLoads[state];
 }
 function bindStateControls(){
  $('senior-topic').addEventListener('change',render);
@@ -69,8 +82,10 @@ function renderHelper(){
 }
 function openHelper(){helperActive=true;helperShowingResults=false;render();$('helper-title').focus({preventScroll:true});$('helper-guide').scrollIntoView({behavior:'smooth'})}
 const params=new URLSearchParams(location.search);
-let initialState=params.get('state')||'OH';
-route=params.get('view')||'priority';setState(initialState,true);
+let initialState=Object.hasOwn(EDITION_FILES,params.get('state'))?params.get('state'):'OH';
+route=params.get('view')||'priority';
+function startGuide(){
+setState(initialState,true);
 const requestedCounty=params.get('county');const matched=COUNTIES.find(c=>c.county===requestedCounty||(c.county_aliases||[]).includes(requestedCounty));if(matched)$('county').value=matched.county;
 if(!Object.hasOwn(routeNames,route))route='priority';
 $('search').value=params.get('q')||'';if(Object.hasOwn(types,params.get('type')))$('need').value=params.get('type');if(Object.hasOwn(labels,params.get('status')))$('status').value=params.get('status');if(route==='seniors'&&Object.hasOwn(seniorTopics,params.get('topic')))$('senior-topic').value=params.get('topic');
@@ -91,3 +106,6 @@ $('helper-resources').onclick=()=>{helperShowingResults=true;route=helperRoute;[
 $('helper-print').onclick=()=>{if(!$('county').value){$('helper-status').textContent='Choose a county first.';$('county').focus();return}$('helper-status').textContent='';clearPrintMode();document.body.classList.add('print-helper');window.print()};
 window.addEventListener('afterprint',()=>{clearPrintMode();accessPrintStates.forEach(({el,open})=>el.open=open);accessPrintStates=[]});
 render();renderOfficeList();
+}
+if(Object.hasOwn(EDITIONS,initialState))startGuide();
+else loadEdition(initialState).catch(()=>{initialState='OH'}).then(startGuide);

@@ -1,5 +1,5 @@
 """Build one public interface from the existing source-grounded state adapters."""
-import json,re
+import hashlib,json,re
 
 def section(html, ident):
     start=re.search(r'<section\b[^>]*\bid="'+ident+r'"[^>]*>',html).start()
@@ -22,6 +22,7 @@ def unified_outputs(root, editions, states):
     names={s['code']:s['name'] for s in states}
     pages={s['code']:s['page'] for s in states}
     statewide={s['code']:[n.lower() for n in s.get('statewide_area_names',[])] for s in states}
+    meta={s['code']:{'sharePage':s['share_page'],'files':{'offices':s['offices'],'resources':s['resources']},'coverageNote':s.get('coverage_note')} for s in states}
     base=editions['index.html']
     script=re.search(r'<script>(.*?)</script>',base,re.S).group(1)
     configs=[]
@@ -36,7 +37,7 @@ def unified_outputs(root, editions, states):
             m=re.search(r'^function '+name+r'\(.*$',js,re.M)
             if m:functions.append(re.sub(r'function (\w+)\(',lambda match: match[1]+':function(',m.group()).replace(' function', ',function').replace('} countyContactsHTML:', '},countyContactsHTML:'))
         markup={k:section(html,k) for k in ['seniors-guide','community-guide','accessibility-guide','staff-guide']}
-        configs.append(json.dumps(state)+':{name:'+json.dumps(names[state])+',statewideNames:'+json.dumps(statewide[state])+',data:'+data+',counties:'+counties+',markup:'+json.dumps(markup)+',configure:function(){'+init+'return {priority,routes,seniorTopics,routeNames};},'+','.join(functions)+'}')
+        configs.append((state,'{name:'+json.dumps(names[state])+',statewideNames:'+json.dumps(statewide[state])+',sharePage:'+json.dumps(meta[state]['sharePage'])+',files:'+json.dumps(meta[state]['files'])+',coverageNote:'+json.dumps(meta[state]['coverageNote'])+',data:'+data+',counties:'+counties+',markup:'+json.dumps(markup)+',configure:function(){'+init+'return {priority,routes,seniorTopics,routeNames};},'+','.join(functions)+'}'))
     # Common rendering and event handling, with only genuinely state-specific routing in adapters.
     common=script[script.index('const $='):]
     begin=common.index('const priority=');end=common.index('const tel=')
@@ -89,8 +90,22 @@ def unified_outputs(root, editions, states):
         short='<aside class="november-campaign" aria-label="November retail fundraiser"><strong>Retailers:</strong> run a November roundup for veterans — <strong>Marine Corps birthday (Nov. 10)</strong> and Veterans Day (Nov. 11). <a href="november-campaign.html">Campaign details →</a></aside>'
         county=section(unified,'county-start')
         unified=unified.replace(county,county+short,1)
-    unified+='\n<script src="assets/guide.js"></script></body></html>\n'
-    result={'index.html':unified,'assets/guide.js':common+'\nconst EDITIONS={'+','.join(configs)+'};\n'+helpers}
+    # One small shared bundle plus one file per state; the base state is preloaded.
+    def versioned(path, text):
+        return path+'?v='+hashlib.sha256(text.encode()).hexdigest()[:10]
+    result={}
+    files={}
+    for state,config in configs:
+        path='assets/editions/'+state.lower()+'.js'
+        text='(window.VHG_EDITIONS=window.VHG_EDITIONS||{})['+json.dumps(state)+']='+config+';\n'
+        result[path]=text
+        files[state]=versioned(path,text)
+    guide=common+'\nconst EDITIONS=window.VHG_EDITIONS=window.VHG_EDITIONS||{};\nconst EDITION_FILES='+json.dumps(files)+';\n'+helpers
+    result['assets/guide.js']=guide
+    base=states[0]['code']
+    unified=unified.replace('</select></nav>','</select><p id="edition-status" class="small" role="status" aria-live="polite"></p></nav>',1)
+    unified+='\n<script src="'+files[base]+'"></script><script src="'+versioned('assets/guide.js',guide)+'"></script></body></html>\n'
+    result['index.html']=unified
     for state,page in pages.items():
         if page=='index.html':continue
         result[page]='<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+names[state]+' Veteran Resource Guide</title><link rel="canonical" href="https://travisvought-byte.github.io/vhg-veteran-resident-guide/?state='+state+'"><p><a href="./?state='+state+'">Open the '+names[state]+' guide</a></p><script>const u=new URL("./",location.href);u.search=location.search;u.searchParams.set("state","'+state+'");u.hash=location.hash;location.replace(u.href);</script></html>\n'

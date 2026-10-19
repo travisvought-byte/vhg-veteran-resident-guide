@@ -108,7 +108,7 @@ npx playwright install chromium
 npm run test:browser
 ```
 
-The public shell is generated from `templates/guide.html` and `templates/helper.html`. Shared behavior lives in `assets/guide-runtime.js`; `scripts/unified_guide.py` bundles the data and state routing adapters into `assets/guide.js`. Do not edit generated public pages or the bundle directly. Build-generated `tests/fixtures/` retain the existing state-adapter regressions and are not committed.
+The public shell is generated from `templates/guide.html` and `templates/helper.html`. Shared behavior lives in `assets/guide-runtime.js`. Every state is listed once in `states/registry.json`; each added state's wording and routing live in `states/<code>/edition.json` and `states/<code>/adapter.js`, applied by `scripts/state_registry.py`. `scripts/unified_guide.py` writes the small shared bundle `assets/guide.js` and one file per state in `assets/editions/`, which visitors download only when they choose that state. To add a state, follow [Adding a state](docs/ADDING-A-STATE.md). Do not edit generated public pages or the bundle directly. Build-generated `tests/fixtures/` retain the existing state-adapter regressions and are not committed.
 
 PA canonical programs live in `data/public/pa-programs.json`, with local aging/ombudsman records in `data/public/pa-regional-referrals.json`, separate county veterans contacts and an explicit shared-resource whitelist. The build updates Ohio regional projections and the combined state resource JSON, then generates the shared interface, bundled state adapters and state-specific sharing kits. Legacy state pages are redirects; no runtime data service is required. GitHub Actions runs these checks for pushes and pull requests. Checks cover county mappings, routes, sharing behavior and data synchronization; they do not establish WCAG compliance, remote link availability or print pagination. Browser and print review remain necessary.
 
@@ -128,7 +128,7 @@ See the [maintenance process](docs/MAINTENANCE.md), [verification queue](docs/VE
 
 | Path | Purpose |
 |---|---|
-| `index.html`, `assets/guide.js` | Shared public interface and generated state data/routing bundle |
+| `index.html`, `assets/guide.js`, `assets/editions/` | Shared public interface, shared bundle and generated per-state data/routing files |
 | `bingo.html`, `data/public/ohio-bingo.json`, `docs/BINGO.md` | Ohio bingo page, canonical venue records and source/expansion notes |
 | `share.html`, `share-pa.html`, `share-ny.html`, `share-mi.html`, `share-ky.html`, `share-ut.html` | State-specific QR flyers and newsletter introductions |
 | `pa.html`, `ny.html`, `mi.html`, `ky.html`, `ut.html` | Compatibility redirects into the shared guide |
@@ -136,7 +136,8 @@ See the [maintenance process](docs/MAINTENANCE.md), [verification queue](docs/VE
 | `templates/`, `assets/guide-runtime.js`, `scripts/unified_guide.py` | Shared UI source and build
 | `prototype-data.json` | Canonical current public resource records |
 | `data/public/` | County contacts, generated regional projection and future post directory |
-| `scripts/build_public.py`, `scripts/pa_edition.py`, `scripts/ny_edition.py`, `scripts/mi_edition.py`, `scripts/ky_edition.py` | Public data synchronization and state edition generation |
+| `states/registry.json`, `states/<code>/` | State registry, per-state edition operations and display functions |
+| `scripts/build_public.py`, `scripts/state_registry.py`, `scripts/make_qr.py` | Public data synchronization, state edition generation and sharing QR codes |
 | `scripts/validate_public.py`, `tests/*.cjs` | Data, asset and functional checks |
 | `docs/` | Scope, maintenance, evidence and research priorities |
 | `research/`, `data/integrated/`, `data/seed/`, `data/batches/` | Historical working material; not the live source of truth |

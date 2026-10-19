@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "test": "node tests/unified.cjs && node tests/states.cjs",
-    "test:browser": "node tests/unified-browser.cjs"
+    "test:browser": "node tests/unified-browser.cjs && node tests/editions-browser.cjs"
   },
   "devDependencies": {
     "jsdom": "30.1.2",
