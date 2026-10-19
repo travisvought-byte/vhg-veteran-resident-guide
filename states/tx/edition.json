@@ -1,0 +1,218 @@
+{
+  "ops": [
+    {
+      "op": "clear_data"
+    },
+    {
+      "op": "replace",
+      "old": "Ohio",
+      "new": "Texas"
+    },
+    {
+      "op": "replace",
+      "old": "All 88",
+      "new": "All 254"
+    },
+    {
+      "op": "replace",
+      "old": "all 88",
+      "new": "all 254"
+    },
+    {
+      "op": "replace",
+      "old": "<option value=\"OH\">Texas</option>",
+      "new": "<option value=\"OH\">Ohio</option>"
+    },
+    {
+      "op": "replace",
+      "old": "const STATE='OH';",
+      "new": "const STATE='TX';"
+    },
+    {
+      "op": "replace",
+      "old": "county veterans office",
+      "new": "veterans contact"
+    },
+    {
+      "op": "replace",
+      "old": "county office",
+      "new": "veterans contact"
+    },
+    {
+      "op": "replace",
+      "old": "Statewide edition · Updated October 8, 2026",
+      "new": "Texas edition · Updated October 19, 2026"
+    },
+    {
+      "op": "replace",
+      "old": "Most phones come from Texas AMVETS’ 2025–2026 directory.",
+      "new": "Veterans phones use county-government publications where established, otherwise the TexVet state-university directory or a labeled statewide TVC referral. Confirm intake and contact details before travel."
+    },
+    {
+      "op": "replace",
+      "old": "Texas’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
+      "new": "Existing STAR+PLUS HCBS members should ask their MCO service coordinator to document the need and authorize the modification in the individual service plan. Ask the MCO about its bidding, vendor, inspection and approval procedures before work begins. Obtain written permission first if the resident is not the home owner. Other waivers have their own rules."
+    },
+    {
+      "op": "replace",
+      "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
+      "new": "https://fhb.hhs.texas.gov/handbooks/starplus-handbook/6600-minor-home-modifications"
+    },
+    {
+      "op": "replace",
+      "old": "Texas home modification authorization and provider rules",
+      "new": "STAR+PLUS Handbook sections 6600–6650 — Minor Home Modifications"
+    },
+    {
+      "op": "replace",
+      "old": "href=\"share.html\"",
+      "new": "href=\"share-tx.html\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"prototype-data.json\"",
+      "new": "href=\"data/public/texas-resources.json\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
+      "new": "href=\"data/public/texas-county-veterans-offices.json\""
+    },
+    {
+      "op": "line",
+      "prefix": "const national=",
+      "new": "const national=a=>['statewide','national','federal'].includes(a.toLowerCase());"
+    },
+    {
+      "op": "declare",
+      "name": "priority",
+      "value": [
+        "tx-claims",
+        "tx-adrc",
+        "tx-aging-directory",
+        "tx-ship",
+        "tx-waiver",
+        "tx-ombudsman",
+        "tx-at",
+        "r02-aid-attendance-housebound",
+        "r02-va-pension",
+        "r02-survivors-pension"
+      ]
+    },
+    {
+      "op": "declare",
+      "name": "routes",
+      "value": {
+        "benefits": [
+          "tx-claims",
+          "tx-ship",
+          "tx-waiver",
+          "r02-va-pension",
+          "r02-aid-attendance-housebound",
+          "va-accredited-help"
+        ],
+        "survivors": [
+          "tx-claims",
+          "r02-survivors-pension",
+          "r02-dic",
+          "r02-va-burial",
+          "va-accredited-help"
+        ],
+        "care": [
+          "tx-waiver",
+          "tx-homes",
+          "tx-caregiver",
+          "r02-va-health-enrollment",
+          "va-location-finder",
+          "r02-va-cnh",
+          "r02-va-clc"
+        ],
+        "rights": [
+          "tx-ombudsman",
+          "tx-rights",
+          "tx-adrc"
+        ],
+        "local": [
+          "tx-adrc",
+          "tx-aging-directory",
+          "tx-caregiver",
+          "tx-waiver",
+          "tx-at",
+          "tx-211"
+        ],
+        "housing": [
+          "tx-211",
+          "va-housing-help",
+          "va-location-finder",
+          "va-accredited-help"
+        ],
+        "accessibility": [
+          "va-hisa",
+          "va-sah",
+          "va-sha",
+          "va-tra",
+          "tx-at",
+          "tx-waiver",
+          "tx-adrc"
+        ]
+      }
+    },
+    {
+      "op": "declare",
+      "name": "seniorTopics",
+      "value": {
+        "daily": [
+          "tx-adrc",
+          "tx-aging-directory",
+          "tx-caregiver",
+          "tx-waiver"
+        ],
+        "accessibility": [
+          "tx-at",
+          "tx-waiver",
+          "tx-adrc"
+        ],
+        "vision": [
+          "tx-blind",
+          "tx-at",
+          "tx-adrc"
+        ],
+        "hearing": [
+          "tx-relay",
+          "tx-at",
+          "tx-adrc"
+        ],
+        "memory": [
+          "alz-dementia-support",
+          "tx-caregiver",
+          "tx-adrc"
+        ],
+        "costs": [
+          "tx-ship",
+          "tx-waiver",
+          "tx-adrc"
+        ],
+        "rights": [
+          "tx-ombudsman",
+          "tx-rights"
+        ]
+      }
+    },
+    {
+      "op": "line",
+      "prefix": "routes.accessibility=",
+      "new": "routes.accessibility=[...routes.accessibility,...DATA.filter(x=>x.regional_role==='aging_agency').map(x=>x.program_id)];"
+    },
+    {
+      "op": "line",
+      "prefix": "routes.seniors=",
+      "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
+    },
+    {
+      "op": "adapter"
+    },
+    {
+      "op": "embed_data"
+    }
+  ]
+}
