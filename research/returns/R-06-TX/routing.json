@@ -1,0 +1,115 @@
+{
+  "priority": [
+    "tx-claims",
+    "tx-adrc",
+    "tx-aging-directory",
+    "tx-ship",
+    "tx-waiver",
+    "tx-ombudsman",
+    "tx-at",
+    "r02-aid-attendance-housebound",
+    "r02-va-pension",
+    "r02-survivors-pension"
+  ],
+  "routes": {
+    "benefits": [
+      "tx-claims",
+      "tx-ship",
+      "tx-waiver",
+      "r02-va-pension",
+      "r02-aid-attendance-housebound",
+      "va-accredited-help"
+    ],
+    "survivors": [
+      "tx-claims",
+      "r02-survivors-pension",
+      "r02-dic",
+      "r02-va-burial",
+      "va-accredited-help"
+    ],
+    "care": [
+      "tx-waiver",
+      "tx-homes",
+      "tx-caregiver",
+      "r02-va-health-enrollment",
+      "va-location-finder",
+      "r02-va-cnh",
+      "r02-va-clc"
+    ],
+    "rights": [
+      "tx-ombudsman",
+      "tx-rights",
+      "tx-adrc"
+    ],
+    "local": [
+      "tx-adrc",
+      "tx-aging-directory",
+      "tx-caregiver",
+      "tx-waiver",
+      "tx-at",
+      "tx-211"
+    ],
+    "housing": [
+      "tx-211",
+      "va-housing-help",
+      "va-location-finder",
+      "va-accredited-help"
+    ],
+    "accessibility": [
+      "va-hisa",
+      "va-sah",
+      "va-sha",
+      "va-tra",
+      "tx-at",
+      "tx-waiver",
+      "tx-adrc"
+    ]
+  },
+  "seniorTopics": {
+    "daily": [
+      "tx-adrc",
+      "tx-aging-directory",
+      "tx-caregiver",
+      "tx-waiver"
+    ],
+    "accessibility": [
+      "tx-at",
+      "tx-waiver",
+      "tx-adrc"
+    ],
+    "vision": [
+      "tx-blind",
+      "tx-at",
+      "tx-adrc"
+    ],
+    "hearing": [
+      "tx-relay",
+      "tx-at",
+      "tx-adrc"
+    ],
+    "memory": [
+      "alz-dementia-support",
+      "tx-caregiver",
+      "tx-adrc"
+    ],
+    "costs": [
+      "tx-ship",
+      "tx-waiver",
+      "tx-adrc"
+    ],
+    "rights": [
+      "tx-ombudsman",
+      "tx-rights"
+    ]
+  },
+  "statewide_navigation": {
+    "name": "Texas Aging and Disability Resource Centers",
+    "phone": "855-937-2372",
+    "source_url": "https://resources.hhs.texas.gov/directories"
+  },
+  "home_modification": {
+    "url": "https://fhb.hhs.texas.gov/handbooks/starplus-handbook/6600-minor-home-modifications",
+    "label": "STAR+PLUS Handbook sections 6600–6650 — Minor Home Modifications",
+    "guidance": "Existing STAR+PLUS HCBS members should ask their MCO service coordinator to document the need and authorize the modification in the individual service plan. Ask the MCO about its bidding, vendor, inspection and approval procedures before work begins. Obtain written permission first if the resident is not the home owner. Other waivers have their own rules."
+  }
+}
