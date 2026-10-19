@@ -1,0 +1,25 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const {JSDOM}=require(process.env.GUIDE_JSDOM||'jsdom');
+const root=path.resolve(__dirname,'..'),read=f=>fs.readFileSync(path.join(root,f),'utf8');
+const dom=new JSDOM(read('index.html'),{url:'https://example.org/?state=TX',runScripts:'outside-only',pretendToBeVisual:true});
+dom.window.HTMLElement.prototype.scrollIntoView=function(){};let prints=0;dom.window.print=()=>prints++;
+dom.window.eval(fs.readdirSync(path.join(root,'assets/editions')).filter(f=>f.endsWith('.js')).map(f=>read('assets/editions/'+f)).join('\n')+'\n'+read('assets/guide.js'));
+const d=dom.window.document,change=(id,v)=>{const n=d.getElementById(id);n.value=v;n.dispatchEvent(new dom.window.Event('change'))},text=id=>d.getElementById(id).textContent,route=r=>d.querySelector('[data-route="'+r+'"]').click();
+assert.equal(d.querySelectorAll('#county option').length,255);
+const offices=JSON.parse(read('data/public/texas-county-veterans-offices.json')),refs=JSON.parse(read('data/public/tx-regional-referrals.json'));
+assert.equal(offices.filter(c=>c.office_type==='state').length,11);
+for(const c of offices){for(const role of ['aging_agency','ombudsman'])assert.equal(refs.filter(x=>x.regional_role===role&&x.service_area.includes(c.county)).length,1,c.county+' '+role)}
+change('county','Borden');assert(text('county-panel').includes('Statewide referral fallback'));assert(text('county-panel').includes('800-252-8387'));
+change('county','Angelina');for(const p of ['936-639-3833','936-639-3383','936-671-4335','Published source differences'])assert(text('county-panel').includes(p));
+change('county','Coryell');assert(text('county-panel').includes('ext. 319'));assert(text('county-panel').includes('ext. 320'));
+change('county','Liberty');assert(text('county-panel').includes('option 4'));assert(text('county-panel').includes('281-593-8402'));
+change('county','Dallas');assert(text('county-panel').includes('214-823-5700'));assert(text('county-panel').includes('option 4'));d.getElementById('helper-open').click();change('helper-need','rights');assert(text('helper-next').includes('214-823-5700'));assert(text('helper-next').includes('option 4'));d.getElementById('helper-print').click();assert.equal(prints,1);d.getElementById('helper-close').click();
+change('county','LaSalle');assert(text('county-panel').includes('Middle Rio Grande'));assert(!text('county-panel').includes('Concho Valley'));
+change('county','Edwards');assert(text('county-panel').includes('Concho Valley'));assert(!text('county-panel').includes('Middle Rio Grande'));
+change('county','Anderson');assert(text('county-panel').includes('State-university directory listing'));assert(text('county-panel').includes('number type'));
+route('seniors');change('senior-topic','vision');assert(text('senior-guidance').includes('55 or older'));assert(text('senior-guidance').includes('844-633-3642'));assert(text('seniors-contact').includes('800-252-9240'));
+route('accessibility');change('access-waiver','waiver');assert(text('access-first').includes('MCO service coordinator'));assert(text('access-first').includes('855-937-2372'));assert(text('access-routing').includes('Written permission'));assert(!text('access-routing').includes('Operating Agency'));assert(d.querySelector('#access-routing a[href="https://fhb.hhs.texas.gov/handbooks/starplus-handbook/6600-minor-home-modifications"]'));change('access-home','rent');assert(text('access-routing').includes('written permission'));change('access-home','new');change('access-veteran','yes');change('access-waiver','unknown');assert(text('access-first').includes('HISA excludes new construction'));
+for(const f of ['assets/editions/tx.js','data/public/texas-county-veterans-offices.json','data/public/tx-programs.json','data/public/tx-regional-referrals.json'])assert(!read(f).includes('internal_contact'));
+assert.equal(offices.reduce((n,c)=>n+(c.published_source_differences||[]).length,0),50);
+assert.equal(JSON.parse(read('data/public/tx-programs.json')).length,13);
+console.log('PASS: TX 254-county maps, 11 fallbacks, 50 source differences, alternatives, extensions/menu options, LaSalle/Edwards boundaries, directory labels, private-field exclusion, senior/accessibility guidance and printed handoff.');

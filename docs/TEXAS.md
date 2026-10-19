@@ -1,0 +1,29 @@
+# Texas coverage and evidence
+
+Texas is the ninth referral edition. Official published sources reviewed October 19, 2026 support all 254 counties, 13 state programs, 28 aging agencies and 28 long-term-care ombudsman regions. The unchanged five-file return and full source inventory are in `research/returns/R-06-TX/`. The owner authorized publication. No agency was contacted.
+
+## County and regional routes
+
+The Texas Comptroller county list supplies the county names. LaSalle is normalized to that spelling; HHS uses La Salle. Every county has exactly one aging and one ombudsman assignment. These maps are independent of veterans assignments.
+
+Veterans contacts use 128 county-government publications, 115 [TexVet](https://texvet.org/cvso) state-university directory entries and 11 statewide TVC fallbacks. TexVet is a Texas A&M Health Science Center program referred to by the Governor’s disability office. Its entries are labeled published-directory contacts: the number type and a current county-government phone were not independently established. Published role phones are distinguished from main office lines; staff names and internal candidate contacts are removed from public data and bundles.
+
+Borden, Bosque, Coleman, Cottle, Falls, Foard, Jones, Lamb, Motley, Real and Upton use [TVC’s statewide claims line](https://tvc.texas.gov/claims/), 800-252-8387. Shared or cross-county contacts remain labeled, including Baylor/Clay, Concho/Tom Green, McMullen/Atascosa, Hood/Somervell and San Augustine/Shelby. No nearest-office assignment is inferred.
+
+Fifty published phone or status discrepancies remain in expandable county details. The 2025 TVC directory’s NO VCSO entries are not treated as proof of closure. Current county publications are used where established, otherwise uncertainty leads to statewide routing. Angelina’s county page lists both 936-639-3833 and appointment number 936-639-3383; both remain with a confirmation instruction. El Paso distinguishes department and appointment numbers. Coryell retains extensions 319 and 320 and the other published number. Liberty retains option 4 and its Cleveland alternate. The research notes also document incorrect county links, external Arkansas content and differing county counts in older sources; these are not adopted as Texas assignments.
+
+The [HHS AAA directory](https://resources.hhs.texas.gov/directories/aaa) supports the aging map. Its Middle Rio Grande entry omits LaSalle; the [official regional council profile](https://txregionalcouncil.org/agencies-on-aging/area-agency-on-aging-of-the-middle-rio-grande-development-council/) explicitly includes it. Edwards remains with Concho Valley under current state aging and ombudsman lists, rather than an older general regional territory.
+
+The full [state ombudsman directory](https://ltco.texas.gov/about-us/find-ombudsman) supplies all 28 regions and phones. Current full-page values take precedence over older indexed text; differences remain in the research notes. Menu options and extensions appear in county and caregiver handoffs. South Plains uses its local 806-642-0450 number; its discrepant alternate toll-free number is not promoted as statewide routing. The statewide ombudsman is 800-252-2412. Aging agency numbers are not substituted for ombudsman numbers.
+
+## Programs and accessibility
+
+Programs cover accredited claims assistance, state veterans homes, ADRC, aging, HICAP Medicare counseling, Medicaid navigation, ombudsman advocacy, caregiver support, TTAP, Disability Rights Texas, older blind independent living, Relay Texas and 211. Admissions, benefits, representation, equipment stock and funding require program review.
+
+Existing STAR+PLUS HCBS members contact their health plan/MCO service coordinator. New applicants ask ADRC at 855-937-2372 about screening and interest lists. Under the [STAR+PLUS minor home modifications handbook](https://fhb.hhs.texas.gov/handbooks/starplus-handbook/6600-minor-home-modifications), the coordinator documents the need and authorizes modifications in the individual service plan. The MCO handles its bidding, vendor and inspection processes; written owner permission is needed first if the resident is not the owner. Medicaid enrollment alone does not establish coverage. Other waivers have their own rules. No amount, opening or construction completion is promised.
+
+TTAP offers device demonstrations, loans and reuse information; a device referral does not promise permanent ramp installation. OIB’s 844-633-3642 and published age 55 or older/significant visual impairment criteria are supported by the fully reviewed official Hockley County resource guide and corroborating indexed TWC brochure. Direct TWC access was blocked; it is not represented as a full review of the direct TWC page. HICAP uses the fully reviewed CMS directory; caregiver information has full DSHS support. Relay operator information is supported by the operator’s full page and TTAP’s identification of state oversight. TDHCA’s official directory supports 211 routing where the operator page was unavailable. A blocked page is not evidence of closure. Source-specific methods remain in public JSON.
+
+## Validation and maintenance
+
+Canonical files are `data/public/texas-county-veterans-offices.json`, `tx-programs.json` and `tx-regional-referrals.json`. Configuration is in `states/tx/`; registry-driven checks cover all 254 county panels and cross-state isolation. `tests/texas.cjs` covers boundaries, fallbacks, alternatives, menu options, source differences, privacy, senior topics, authorization guidance and caregiver printing. Run the complete checks in `docs/ADDING-A-STATE.md`. Sharing and QR links select Texas in the common guide. Contacts are published referrals, not telephone-confirmed services; local providers, current openings and available funding are not fully inventoried.

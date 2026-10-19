@@ -2,7 +2,7 @@
   "name": "vhg-veteran-resident-guide",
   "private": true,
   "scripts": {
-    "test": "node tests/unified.cjs && node tests/states.cjs && node tests/indiana.cjs && node tests/west-virginia.cjs",
+    "test": "node tests/unified.cjs && node tests/states.cjs && node tests/indiana.cjs && node tests/west-virginia.cjs && node tests/texas.cjs",
     "test:browser": "node tests/unified-browser.cjs && node tests/editions-browser.cjs"
   },
   "devDependencies": {

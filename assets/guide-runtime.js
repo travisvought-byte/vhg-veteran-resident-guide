@@ -52,7 +52,7 @@ let accessPrintStates=[];
 function helperContacts(county,need,person){
  const c=COUNTIES.find(c=>c.county===county),aging=DATA.filter(x=>x.regional_role==='aging_agency'&&x.service_area.includes(county));
  const omb=DATA.filter(x=>x.regional_role==='ombudsman'&&x.service_area.includes(county));
- const card=x=>'<article><h3>'+esc(x.name)+'</h3>'+(x.public_contact?.phone?'<p>'+phoneLink(x.public_contact.phone)+'</p>':'')+'<p>'+esc(x.next_step)+'</p>'+(['IN','WV'].includes(STATE)&&x.regional_role?'<p class="small">'+esc((x.constraints||[]).join(' '))+'</p>':'')+'<a href="'+esc(safeURL(x.official_url))+'" target="_blank" rel="noopener">Contact information</a><p class="meta">'+esc(labels[x.verification.record_status])+' · '+esc(x.verification.last_reviewed_on)+'</p></article>';
+ const card=x=>'<article><h3>'+esc(x.name)+'</h3>'+(x.public_contact?.phone?'<p>'+phoneLink(x.public_contact.phone)+'</p>':'')+'<p>'+esc(x.next_step)+'</p>'+(['IN','WV','TX'].includes(STATE)&&x.regional_role?'<p class="small">'+esc((x.constraints||[]).join(' '))+'</p>':'')+'<a href="'+esc(safeURL(x.official_url))+'" target="_blank" rel="noopener">Contact information</a><p class="meta">'+esc(labels[x.verification.record_status])+' · '+esc(x.verification.last_reviewed_on)+'</p></article>';
  if(need==='crisis')return '<article><h3>Immediate support</h3><p>Call '+phoneLink('988')+'. Veterans: press 1. For immediate danger, call '+phoneLink('911')+'.</p></article>';
  if(need==='housing'&&person!=='other')return card(DATA.find(x=>x.program_id==='va-housing-help'));
  if(need==='rights'){
