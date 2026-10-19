@@ -208,5 +208,31 @@
         "Updated October 19, 2026"
       ]
     ]
+  },
+  {
+    "code": "CA",
+    "name": "California",
+    "page": "ca.html",
+    "share_page": "share-ca.html",
+    "qr": "assets/guide-qr-ca.svg",
+    "counties": 58,
+    "programs": "data/public/ca-programs.json",
+    "referrals": "data/public/ca-regional-referrals.json",
+    "offices": "data/public/california-county-veterans-offices.json",
+    "resources": "data/public/california-resources.json",
+    "statewide_area_names": [],
+    "coverage_scope": "Initial referral edition. All 58 counties have published veterans contacts or a clearly labeled statewide fallback, county-matched aging information lines and local long-term-care ombudsman jurisdiction maps with statewide hotline routing.",
+    "coverage_note": "California county veterans offices come from CACVSO's published association directory; Alpine lacks a directory listing and Sierra's listed phone is blank, so both use a CalVet statewide fallback. California has 33 Area Agencies on Aging with 59 county/city contact entries, including separate Los Angeles County and City. The 34 ombudsman jurisdiction records deliberately give the statewide hotline, NOT a verified local phone. Published sources reviewed October 19, 2026; intake and service availability are not phone-confirmed.",
+    "share_description": "county veterans referrals, county-specific Area Agency on Aging lines and long-term-care ombudsman routing",
+    "share_replacements": [
+      [
+        "county veterans offices",
+        "county veterans contacts and statewide fallback routes"
+      ],
+      [
+        "Updated October 8, 2026",
+        "Updated October 19, 2026"
+      ]
+    ]
   }
 ]
