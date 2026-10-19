@@ -6,10 +6,10 @@ const {chromium}=require(process.env.GUIDE_PLAYWRIGHT|| (process.env.CODEX_PRIMA
  const fs=require('fs'),http=require('http');let server;
  if(!process.env.GUIDE_TEST_URL){server=http.createServer((req,res)=>{let file=decodeURIComponent(new URL(req.url,'http://localhost').pathname);if(file.endsWith('/'))file+='index.html';const target=path.join(__dirname,'..',file);try{res.setHeader('Content-Type',file.endsWith('.js')?'text/javascript':file.endsWith('.css')?'text/css':file.endsWith('.html')?'text/html':'application/octet-stream');res.end(fs.readFileSync(target))}catch{res.statusCode=404;res.end()}});await new Promise(r=>server.listen(0,'127.0.0.1',r))}
  const base=process.env.GUIDE_TEST_URL||'http://127.0.0.1:'+server.address().port+'/';
- await page.goto(base);await page.waitForFunction(()=>document.querySelector('#count').textContent.length>0);
+ await page.goto(base);await page.waitForFunction(s=>document.documentElement.dataset.edition===s,'OH');await page.waitForFunction(()=>document.querySelector('#count').textContent.length>0);
  const expected={OH:88,PA:67,NY:62,MI:83,KY:120,UT:29};
  for(const [state,n] of Object.entries(expected)){
-  await page.selectOption('#edition-state',state);
+  await page.selectOption('#edition-state',state);await page.waitForFunction(s=>document.documentElement.dataset.edition===s,state);
   assert.equal(await page.locator('#county option').count(),n+1);
   assert(new URL(page.url()).searchParams.get('state')===state);
   assert(new URL(page.url()).pathname.endsWith('index.html')||new URL(page.url()).pathname.endsWith('/'));
@@ -25,10 +25,10 @@ const {chromium}=require(process.env.GUIDE_PLAYWRIGHT|| (process.env.CODEX_PRIMA
  }
  assert.deepEqual(errors,[]);
  // A state change clears stale county/search values without navigation or listener accumulation.
- await page.selectOption('#edition-state','OH');await page.selectOption('#county','Morrow');await page.fill('#search','Medicaid');await page.selectOption('#edition-state','PA');assert.equal(await page.locator('#county').inputValue(),'');assert.equal(await page.locator('#search').inputValue(),'');
- await page.goto(base+'?state=NY&county=Bronx&view=rights');assert.equal(await page.locator('#edition-state').inputValue(),'NY');assert.equal(await page.locator('#county').inputValue(),'Bronx');
+ await page.selectOption('#edition-state','OH');await page.waitForFunction(s=>document.documentElement.dataset.edition===s,'OH');await page.selectOption('#county','Morrow');await page.fill('#search','Medicaid');await page.selectOption('#edition-state','PA');await page.waitForFunction(s=>document.documentElement.dataset.edition===s,'PA');assert.equal(await page.locator('#county').inputValue(),'');assert.equal(await page.locator('#search').inputValue(),'');
+ await page.goto(base+'?state=NY&county=Bronx&view=rights');await page.waitForFunction(s=>document.documentElement.dataset.edition===s,'NY');assert.equal(await page.locator('#edition-state').inputValue(),'NY');assert.equal(await page.locator('#county').inputValue(),'Bronx');
  // Utah deep link, mobile layout and printable caregiver handoff.
- await page.goto(base+'?state=UT&county=Uintah&view=seniors');await page.waitForFunction(()=>document.querySelector('#edition-state').value==='UT');assert.equal(await page.locator('#county').inputValue(),'Uintah');
+ await page.goto(base+'?state=UT&county=Uintah&view=seniors');await page.waitForFunction(s=>document.documentElement.dataset.edition===s,'UT');await page.waitForFunction(()=>document.querySelector('#edition-state').value==='UT');assert.equal(await page.locator('#county').inputValue(),'Uintah');
  await page.setViewportSize({width:390,height:844});await page.click('#helper-open');await page.selectOption('#helper-person','unknown');await page.selectOption('#helper-need','daily');assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
  await page.evaluate(()=>{window.print=()=>{window.__printed=true}});await page.click('#helper-print');assert(await page.evaluate(()=>window.__printed&&document.body.classList.contains('print-helper')));
  await page.emulateMedia({media:'print'});assert(await page.locator('#helper-guide').isVisible());assert(!(await page.locator('#directory').isVisible()));assert(await page.locator('.helper-paper').isVisible());

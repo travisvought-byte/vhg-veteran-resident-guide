@@ -34,4 +34,4 @@ This is a referral backbone, not a complete local inventory. Individual posts, s
 
 ## Maintenance
 
-Canonical records: `data/public/ut-programs.json`, `data/public/ut-regional-referrals.json`, `data/public/utah-county-veterans-offices.json`. UI routing source: `scripts/ut_edition.py` and `assets/utah-adapter.js`. Run the standard public build and validation. The build generates `utah-resources.json`, the shared bundle, `ut.html` redirect and `share-ut.html`; the QR asset points to `?state=UT`.
+Canonical records: `data/public/ut-programs.json`, `data/public/ut-regional-referrals.json`, `data/public/utah-county-veterans-offices.json`. UI routing source: `states/ut/edition.json` and `states/ut/adapter.js`. Run the standard public build and validation. The build generates `utah-resources.json`, the shared bundle, `ut.html` redirect and `share-ut.html`; the QR asset points to `?state=UT`.

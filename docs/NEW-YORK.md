@@ -48,7 +48,7 @@ Edit these source files, then run `python3 scripts/build_public.py`:
 - `data/public/ny-programs.json`
 - `data/public/ny-regional-referrals.json`
 
-`scripts/ny_edition.py` generates the New York edition from the shared interface and a curated federal whitelist. It overrides state routes and referral guidance instead of relabeling Ohio or Pennsylvania programs. New York programs use an explicit `statewide` service area: the county named New York must refer only to Manhattan, never the whole state.
+`states/ny/edition.json` and `states/ny/adapter.js` generate the New York edition from the shared interface and a curated federal whitelist. It overrides state routes and referral guidance instead of relabeling Ohio or Pennsylvania programs. New York programs use an explicit `statewide` service area: the county named New York must refer only to Manhattan, never the whole state.
 
 Generated outputs are `ny.html`, `data/public/new-york-resources.json` and `share-ny.html`. The state selector and sharing-kit navigation connect all three editions. State switching preserves the selected view and clears county filters. Borough alias links normalize to canonical county names. Private accessibility choices are not included in shared URLs.
 

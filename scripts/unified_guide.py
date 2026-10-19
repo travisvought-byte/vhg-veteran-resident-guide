@@ -1,5 +1,5 @@
 """Build one public interface from the existing source-grounded state adapters."""
-import json,re
+import hashlib,json,re
 
 def section(html, ident):
     start=re.search(r'<section\b[^>]*\bid="'+ident+r'"[^>]*>',html).start()
@@ -9,9 +9,20 @@ def section(html, ident):
         if depth==0:return html[start:start+m.end()]
     raise ValueError(ident)
 
-def unified_outputs(root, editions):
-    names={'OH':'Ohio','PA':'Pennsylvania','NY':'New York','MI':'Michigan','KY':'Kentucky','UT':'Utah'}
-    pages={'OH':'index.html','PA':'pa.html','NY':'ny.html','MI':'mi.html','KY':'ky.html','UT':'ut.html'}
+def state_list(states):
+    """Name every state while the list is short; summarize once it would crowd a preview."""
+    names=[s['name'] for s in states]
+    if len(names)>8:return str(len(names))+' states'
+    return ', '.join(names[:-1])+' and '+names[-1] if len(names)>1 else names[0]
+
+def count_words(n):
+    return ['zero','one','two','three','four','five','six','seven','eight','nine','ten'][n] if n<=10 else str(n)
+
+def unified_outputs(root, editions, states):
+    names={s['code']:s['name'] for s in states}
+    pages={s['code']:s['page'] for s in states}
+    statewide={s['code']:[n.lower() for n in s.get('statewide_area_names',[])] for s in states}
+    meta={s['code']:{'sharePage':s['share_page'],'files':{'offices':s['offices'],'resources':s['resources']},'coverageNote':s.get('coverage_note')} for s in states}
     base=editions['index.html']
     script=re.search(r'<script>(.*?)</script>',base,re.S).group(1)
     configs=[]
@@ -26,7 +37,7 @@ def unified_outputs(root, editions):
             m=re.search(r'^function '+name+r'\(.*$',js,re.M)
             if m:functions.append(re.sub(r'function (\w+)\(',lambda match: match[1]+':function(',m.group()).replace(' function', ',function').replace('} countyContactsHTML:', '},countyContactsHTML:'))
         markup={k:section(html,k) for k in ['seniors-guide','community-guide','accessibility-guide','staff-guide']}
-        configs.append(json.dumps(state)+':{name:'+json.dumps(names[state])+',data:'+data+',counties:'+counties+',markup:'+json.dumps(markup)+',configure:function(){'+init+'return {priority,routes,seniorTopics,routeNames};},'+','.join(functions)+'}')
+        configs.append((state,'{name:'+json.dumps(names[state])+',statewideNames:'+json.dumps(statewide[state])+',sharePage:'+json.dumps(meta[state]['sharePage'])+',files:'+json.dumps(meta[state]['files'])+',coverageNote:'+json.dumps(meta[state]['coverageNote'])+',data:'+data+',counties:'+counties+',markup:'+json.dumps(markup)+',configure:function(){'+init+'return {priority,routes,seniorTopics,routeNames};},'+','.join(functions)+'}'))
     # Common rendering and event handling, with only genuinely state-specific routing in adapters.
     common=script[script.index('const $='):]
     begin=common.index('const priority=');end=common.index('const tel=')
@@ -35,7 +46,9 @@ def unified_outputs(root, editions):
     common=common[:begin]+common[end:]
     for name in override_names:
         common=re.sub(r'^function '+name+r'\(.*$', 'function '+name+'(...args){return EDITIONS[STATE].'+name+'(...args)}',common,flags=re.M)
-    common=re.sub(r'^const national=.*$',"const national=a=>['statewide','national','federal',EDITIONS[STATE].name.toLowerCase()].includes(a.toLowerCase());",common,flags=re.M)
+    # Only labels a state actually uses for statewide records count as statewide. A state
+    # name alone is not enough: New York, Ohio and Utah are also county names.
+    common=re.sub(r'^const national=.*$',"const national=a=>['statewide','national','federal',...EDITIONS[STATE].statewideNames].includes(a.toLowerCase());",common,flags=re.M)
     common=common.replace("'All Ohio counties'","'All '+EDITIONS[STATE].name+' counties'")
     # Use a single canonical URL for every state and preserve public filters only.
     common=common.replace("u.search='';u.hash='';","u.pathname=u.pathname.replace(/[^/]*$/, '');u.search='';u.hash='';u.searchParams.set('state',STATE);")
@@ -44,7 +57,7 @@ def unified_outputs(root, editions):
     common=common[:common.index('const params=new URLSearchParams')]
     helpers=(root/'assets/guide-runtime.js').read_text()
     unified=base[:base.index('<script>')]
-    unified=re.sub(r'<meta name="description"[^>]*>', '<meta name="description" content="Find veteran, senior and disability support in Ohio, Pennsylvania, New York, Michigan, Kentucky and Utah. County contacts and caregiver handoffs.">', unified)
+    unified=re.sub(r'<meta name="description"[^>]*>', lambda _: '<meta name="description" content="Find veteran, senior and disability support in '+state_list(states)+'. County contacts and caregiver handoffs.">', unified)
     unified=re.sub(r'<title>.*?</title>','<title>Veteran Resident Resource Guide | Veteran Home Guardians</title>',unified)
     unified=unified.replace('Ohio Veteran Resident<br>Resource Guide','Veteran Resident<br>Resource Guide').replace('Veteran Home Guardians · All 88 Ohio counties','Veteran Home Guardians')
     unified=unified.replace('Useful contacts for veterans, surviving spouses, families and care-facility staff. Start with a county, then choose the help you need.','Find support for yourself or someone you care for.')
@@ -54,7 +67,7 @@ def unified_outputs(root, editions):
     unified=unified.replace('Statewide edition · Updated October 8, 2026','Updated October 9, 2026')
     unified=unified.replace('<div class="quick-links" aria-label="Common needs">','<div class="quick-links" aria-label="Common needs"><button data-route="aid" id="aid-open" hidden><strong>Veteran and aid organizations</strong><span>Local housing, legal aid, utilities and transport</span></button>')
     unified=unified.replace('assets/share-preview.png','assets/vhg-logo.png')
-    for key,value in {'og:title':'Support for veterans, seniors and families | VHG','twitter:title':'Support for veterans, seniors and families | VHG','og:description':'Find your next contact for benefits, care, housing and support in six states. Free to use.','twitter:description':'Find your next contact for benefits, care, housing and support in six states. Free to use.','og:image:width':'715','og:image:height':'715','og:image:alt':'Veteran Home Guardians logo'}.items():
+    for key,value in {'og:title':'Support for veterans, seniors and families | VHG','twitter:title':'Support for veterans, seniors and families | VHG','og:description':'Find your next contact for benefits, care, housing and support in '+count_words(len(states))+' states. Free to use.','twitter:description':'Find your next contact for benefits, care, housing and support in '+count_words(len(states))+' states. Free to use.','og:image:width':'715','og:image:height':'715','og:image:alt':'Veteran Home Guardians logo'}.items():
         unified=re.sub(r'(<meta (?:property|name)="'+re.escape(key)+r'" content=")[^"]*(">)',lambda m:m[1]+value+m[2],unified)
     unified=unified.replace('<a class="jump" href="#staff-guide">Staff handoff guide</a>','<a class="jump" href="#helper-guide" id="helper-header">I’m helping someone</a>')
     unified=unified.replace('<p>Use the edition for the state where help is needed.</p>','').replace('aria-label="State edition"','aria-label="Location"')
@@ -77,9 +90,23 @@ def unified_outputs(root, editions):
         short='<aside class="november-campaign" aria-label="November retail fundraiser"><strong>Retailers:</strong> run a November roundup for veterans — <strong>Marine Corps birthday (Nov. 10)</strong> and Veterans Day (Nov. 11). <a href="november-campaign.html">Campaign details →</a></aside>'
         county=section(unified,'county-start')
         unified=unified.replace(county,county+short,1)
-    unified+='\n<script src="assets/guide.js"></script></body></html>\n'
-    result={'index.html':unified,'assets/guide.js':common+'\nconst EDITIONS={'+','.join(configs)+'};\n'+helpers}
+    # One small shared bundle plus one file per state; the base state is preloaded.
+    def versioned(path, text):
+        return path+'?v='+hashlib.sha256(text.encode()).hexdigest()[:10]
+    result={}
+    files={}
+    for state,config in configs:
+        path='assets/editions/'+state.lower()+'.js'
+        text='(window.VHG_EDITIONS=window.VHG_EDITIONS||{})['+json.dumps(state)+']='+config+';\n'
+        result[path]=text
+        files[state]=versioned(path,text)
+    guide=common+'\nconst EDITIONS=window.VHG_EDITIONS=window.VHG_EDITIONS||{};\nconst EDITION_FILES='+json.dumps(files)+';\n'+helpers
+    result['assets/guide.js']=guide
+    base=states[0]['code']
+    unified=unified.replace('</select></nav>','</select><p id="edition-status" class="small" role="status" aria-live="polite"></p></nav>',1)
+    unified+='\n<script src="'+files[base]+'"></script><script src="'+versioned('assets/guide.js',guide)+'"></script></body></html>\n'
+    result['index.html']=unified
     for state,page in pages.items():
-        if state=='OH':continue
+        if page=='index.html':continue
         result[page]='<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+names[state]+' Veteran Resource Guide</title><link rel="canonical" href="https://travisvought-byte.github.io/vhg-veteran-resident-guide/?state='+state+'"><p><a href="./?state='+state+'">Open the '+names[state]+' guide</a></p><script>const u=new URL("./",location.href);u.search=location.search;u.searchParams.set("state","'+state+'");u.hash=location.hash;location.replace(u.href);</script></html>\n'
     return result

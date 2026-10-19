@@ -14,7 +14,7 @@ Published-source review: October 8, 2026. Same repository and publisher as Ohio;
 
 Edit `data/public/pa-programs.json` for PA programs, `data/public/pa-regional-referrals.json` for aging/ombudsman contacts and `data/public/pennsylvania-county-veterans-offices.json` for veterans office contacts. Shared resources remain in `prototype-data.json`; `data/public/federal-resource-ids.json` is an explicit whitelist. Never carry Ohio-specific program records into PA by relabeling their service area.
 
-Run `python3 scripts/build_public.py`. It uses `scripts/pa_edition.py` to generate `pa.html`, `data/public/pennsylvania-resources.json` and `share-pa.html` from the shared interface, curated shared records and PA sources. Do not hand-edit generated files. Ohio's existing links, data and QR code remain valid.
+Run `python3 scripts/build_public.py`. It applies `states/pa/edition.json` and `states/pa/adapter.js` to generate `pa.html`, `data/public/pennsylvania-resources.json` and `share-pa.html` from the shared interface, curated shared records and PA sources. Do not hand-edit generated files. Ohio's existing links, data and QR code remain valid.
 
 ## Priority routes and limits
 

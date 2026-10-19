@@ -4,16 +4,12 @@ import argparse
 import json
 import re
 from pathlib import Path
-from pa_edition import make_pa, pennsylvania_resources
-from ny_edition import make_ny, new_york_resources
-from mi_edition import make_mi, michigan_resources
-from ky_edition import make_ky, kentucky_resources
-from ut_edition import make_ut, utah_resources
+from state_registry import (load_registry, load_counties, state_resources, make_edition,
+                            make_share, add_share_links, add_state_options, BASE_URL)
 from bingo_edition import make_bingo
 from unified_guide import unified_outputs
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE_URL = 'https://travisvought-byte.github.io/vhg-veteran-resident-guide/'
 
 def outputs():
     resources = json.loads((ROOT / 'prototype-data.json').read_text())
@@ -24,15 +20,8 @@ def outputs():
     html = re.sub(r'^routes.aid=.*\n', '', html, flags=re.M)
     html = re.sub(r'<p id="ohio-aid-link">.*?</p>', '', html)
     html = re.sub(r'^routes.crisis=.*\n', '', html, flags=re.M)
-    if '<option value="NY">New York</option>' not in html:
-        html = html.replace('<option value="PA">Pennsylvania</option>', '<option value="PA">Pennsylvania</option><option value="NY">New York</option>')
-    if '<option value="MI">Michigan</option>' not in html:
-        html = html.replace('<option value="NY">New York</option>', '<option value="NY">New York</option><option value="MI">Michigan</option>')
-    if '<option value="KY">Kentucky</option>' not in html:
-        html = html.replace('<option value="MI">Michigan</option>', '<option value="MI">Michigan</option><option value="KY">Kentucky</option>')
-    if '<option value="UT">Utah</option>' not in html:
-        html = html.replace('<option value="KY">Kentucky</option>', '<option value="KY">Kentucky</option><option value="UT">Utah</option>')
-    html = re.sub(r'^function editionURL\(state\).*$', "function editionURL(state){const pages={OH:'index.html',PA:'pa.html',NY:'ny.html',MI:'mi.html',KY:'ky.html',UT:'ut.html'};const u=new URL(pages[state]||pages.OH,location.href);if(route!=='priority')u.searchParams.set('view',route);return u}", html, flags=re.M)
+    states = load_registry(ROOT)
+    html = add_state_options(html, states)
     for name, value in [('DATA', resources), ('COUNTIES', counties)]:
         # Escape HTML parser boundaries inside strings while retaining valid JSON.
         payload = json.dumps(value, ensure_ascii=True).replace('<', '\\u003c')
@@ -40,79 +29,26 @@ def outputs():
         if n != 1:
             raise ValueError('Missing embedded ' + name)
     regional = sorted((r for r in resources if r.get('regional_role')), key=lambda r: r['program_id'])
-    pa_resources = pennsylvania_resources(ROOT, resources)
-    pa_counties = json.loads((ROOT / 'data/public/pennsylvania-county-veterans-offices.json').read_text())
-    ny_resources = new_york_resources(ROOT, resources)
-    ny_counties = json.loads((ROOT / 'data/public/new-york-county-veterans-offices.json').read_text())
-    mi_resources = michigan_resources(ROOT, resources)
-    mi_counties = json.loads((ROOT / 'data/public/michigan-county-veterans-offices.json').read_text())
-    ky_resources = kentucky_resources(ROOT, resources)
-    ky_counties = json.loads((ROOT / 'data/public/kentucky-county-veterans-offices.json').read_text())
-    ut_resources = utah_resources(ROOT, resources)
-    ut_counties = json.loads((ROOT / 'data/public/utah-county-veterans-offices.json').read_text())
-    share = (ROOT / 'share.html').read_text()
-    if 'href="share-ut.html"' not in share:
-        share = share.replace('<a href="share-ky.html">Kentucky</a>', '<a href="share-ky.html">Kentucky</a> · <a href="share-ut.html">Utah</a>')
-    if 'href="share-ny.html"' not in share:
-        share = share.replace('<a href="share-pa.html">Pennsylvania</a>', '<a href="share-pa.html">Pennsylvania</a> · <a href="share-ny.html">New York</a>')
-    if 'href="share-mi.html"' not in share:
-        share = share.replace('<a href="share-ny.html">New York</a>', '<a href="share-ny.html">New York</a> · <a href="share-mi.html">Michigan</a>')
-    if 'href="share-ky.html"' not in share:
-        share = share.replace('<a href="share-mi.html">Michigan</a>', '<a href="share-mi.html">Michigan</a> · <a href="share-ky.html">Kentucky</a>')
-    pa_share = share.replace('Ohio', 'Pennsylvania').replace('88', '67').replace('href="index.html"', 'href="pa.html"')
-    pa_share = pa_share.replace('https://travisvought-byte.github.io/vhg-veteran-resident-guide/', 'https://travisvought-byte.github.io/vhg-veteran-resident-guide/pa.html')
-    pa_share = pa_share.replace('assets/guide-qr.svg', 'assets/guide-qr-pa.svg')
-    pa_share = pa_share.replace('href="share.html">Pennsylvania', 'href="share.html">Ohio')
-    pa_share = pa_share.replace('local veterans office, aging agency and long-term-care ombudsman contacts', 'county veterans office contacts, matched local aging referrals and local or statewide ombudsman routes')
-    ny_share = share.replace('Ohio', 'New York').replace('88', '62').replace('href="index.html"', 'href="ny.html"')
-    ny_share = ny_share.replace(BASE_URL, BASE_URL + 'ny.html').replace('assets/guide-qr.svg', 'assets/guide-qr-ny.svg')
-    ny_share = ny_share.replace('href="share.html">New York', 'href="share.html">Ohio')
-    ny_share = ny_share.replace('local veterans office, aging agency and long-term-care ombudsman contacts', 'county and city veterans referrals, matched local aging contacts and statewide ombudsman routing')
-    mi_share = share.replace('Ohio', 'Michigan').replace('88', '83').replace('href="index.html"', 'href="mi.html"')
-    mi_share = mi_share.replace(BASE_URL, BASE_URL + 'mi.html').replace('assets/guide-qr.svg', 'assets/guide-qr-mi.svg')
-    mi_share = mi_share.replace('href="share.html">Michigan', 'href="share.html">Ohio')
-    mi_share = mi_share.replace('local veterans office, aging agency and long-term-care ombudsman contacts', 'county and statewide veterans referrals, regional aging contacts with Wayne County city boundaries, and statewide ombudsman routing')
-    ky_share = share.replace('Ohio', 'Kentucky').replace('88', '120').replace('href="index.html"', 'href="ky.html"')
-    ky_share = ky_share.replace(BASE_URL, BASE_URL + 'ky.html').replace('assets/guide-qr.svg', 'assets/guide-qr-ky.svg')
-    ky_share = ky_share.replace('href="share.html">Kentucky', 'href="share.html">Ohio')
-    ky_share = ky_share.replace('local veterans office, aging agency and long-term-care ombudsman contacts', 'KDVA regional veterans representatives, matched aging contacts, district ombudsmen and Hart-Supported Living coordinators')
-    ky_share = ky_share.replace('county veterans offices', 'KDVA regional veterans representatives')
-    ut_share = share.replace('Ohio', 'Utah').replace('88', '29').replace('href="index.html"', 'href="ut.html"')
-    ut_share = ut_share.replace(BASE_URL, BASE_URL + 'ut.html').replace('assets/guide-qr.svg', 'assets/guide-qr-ut.svg')
-    ut_share = ut_share.replace('href="share.html">Utah', 'href="share.html">Ohio')
-    ut_share = ut_share.replace('local veterans office, aging agency and long-term-care ombudsman contacts', 'regional veterans referrals, county-matched aging agencies and long-term-care ombudsmen')
-    ut_share = ut_share.replace('county veterans offices', 'regional veterans contacts').replace('Updated October 8, 2026', 'Updated October 14, 2026')
+    share = add_share_links((ROOT / 'share.html').read_text(), states)
     result = {
-        'ut.html': make_ut(html, ut_resources, ut_counties),
-        'data/public/utah-resources.json': json.dumps(ut_resources, indent=2, ensure_ascii=False) + '\n',
-        'share-ut.html': ut_share,
         'index.html': html,
         'data/public/ohio-regional-referrals.json': json.dumps(regional, indent=2, ensure_ascii=False) + '\n',
-        'pa.html': make_pa(html, pa_resources, pa_counties),
-        'data/public/pennsylvania-resources.json': json.dumps(pa_resources, indent=2, ensure_ascii=False) + '\n',
-        'share-pa.html': pa_share,
         'share.html': share,
-        'ny.html': make_ny(html, ny_resources, ny_counties),
-        'data/public/new-york-resources.json': json.dumps(ny_resources, indent=2, ensure_ascii=False) + '\n',
-        'share-ny.html': ny_share,
-        'mi.html': make_mi(html, mi_resources, mi_counties),
-        'data/public/michigan-resources.json': json.dumps(mi_resources, indent=2, ensure_ascii=False) + '\n',
-        'share-mi.html': mi_share,
-        'ky.html': make_ky(html, ky_resources, ky_counties),
-        'data/public/kentucky-resources.json': json.dumps(ky_resources, indent=2, ensure_ascii=False) + '\n',
-        'share-ky.html': ky_share,
     }
+    editions = [(states[0], resources, counties)]
+    for state in states[1:]:
+        records = state_resources(ROOT, resources, state)
+        contacts = load_counties(ROOT, state)
+        if len(contacts) != state['counties']:
+            raise ValueError(f"{state['code']}: registry expects {state['counties']} counties, data has {len(contacts)}")
+        result[state['page']] = make_edition(html, state, records, contacts)
+        result[state['resources']] = json.dumps(records, indent=2, ensure_ascii=False) + '\n'
+        result[state['share_page']] = make_share(share, state)
+        editions.append((state, records, contacts))
 
 
-    editions = [
-        ('ut.html', 'Utah', ut_resources, ut_counties, 'Initial referral edition. Four veterans regions, 12 aging agencies and 11 ombudsman regions cover all 29 counties. County maps are separate; regional veterans numbers are not separate county offices.'),
-        ('index.html', 'Ohio', resources, counties, 'Statewide referral backbone; local program research is strongest in Morrow, Knox, Marion and Delaware.'),
-        ('pa.html', 'Pennsylvania', pa_resources, pa_counties, 'Initial referral edition. County veterans and aging routes are mapped; four counties have dedicated local ombudsman contacts, with statewide routing elsewhere.'),
-        ('ny.html', 'New York', ny_resources, ny_counties, 'Initial referral edition. County, city and state veterans routes and local aging contacts are mapped; ombudsman routing is statewide.'),
-        ('mi.html', 'Michigan', mi_resources, mi_counties, 'Initial referral edition. County or regional veterans and aging routes are mapped; Ionia uses statewide veterans routing and Wayne has two aging service areas. Ombudsman routing is statewide.'),
-        ('ky.html', 'Kentucky', ky_resources, ky_counties, 'Initial referral edition. Regional veterans representatives, aging, district ombudsmen and supported-living routes are mapped; veterans contacts are regional rather than separate county offices.'),
-    ]
-    for page, state, records, contacts, scope in editions:
+    for state_entry, records, contacts in editions:
+        page, state, scope = state_entry['page'], state_entry['name'], state_entry['coverage_scope']
         pending = sum(r.get('verification', {}).get('record_status') != 'official_source_reviewed' for r in records)
         excerpts = sum(r.get('verification', {}).get('record_status') == 'official_search_extract_only' for r in records)
         notice = ('<section id="edition-coverage" class="edition-coverage notice" aria-label="Coverage and verification">'
@@ -135,12 +71,11 @@ def outputs():
     result['bingo.html'] = make_bingo(ROOT)
     result['index.html'] = result['index.html'].replace('<h3>For posts and community groups</h3>', '<p id="ohio-bingo-link"><a href="bingo.html"><strong>Find Ohio bingo and senior centers</strong></a> - find nearby senior centers, exercise, crafts, games, meals and bingo by ZIP code.</p><h3>For posts and community groups</h3>', 1)
     # Keep state adapter regression fixtures private to tests; the public site has one view.
-    for page in ['index.html','pa.html','ny.html','mi.html','ky.html','ut.html']:
+    for page in [s['page'] for s in states]:
         result['tests/fixtures/'+page] = result[page]
-    result.update(unified_outputs(ROOT, result))
+    result.update(unified_outputs(ROOT, result, states))
     # Track public landing/sharing pages once; state redirects count at destination.
-    for page in ['index.html', 'bingo.html', 'share.html', 'share-pa.html',
-                 'share-ny.html', 'share-mi.html', 'share-ky.html', 'share-ut.html']:
+    for page in ['index.html', 'bingo.html'] + [s['share_page'] for s in states]:
         result[page] = re.sub(r'<script[^>]*data-goatcounter=[^>]*></script>', '', result[page])
         result[page] = result[page].replace('<script defer src="assets/analytics.js"></script>', '')
         result[page] = result[page].replace('</body>', '<script defer src="assets/analytics.js"></script></body>')

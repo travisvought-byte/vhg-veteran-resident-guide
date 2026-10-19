@@ -1,0 +1,296 @@
+{
+ "ops": [
+  {
+   "op": "clear_data"
+  },
+  {
+   "op": "replace",
+   "old": "Ohio",
+   "new": "New York"
+  },
+  {
+   "op": "replace",
+   "old": "All 88",
+   "new": "All 62"
+  },
+  {
+   "op": "replace",
+   "old": "all 88",
+   "new": "all 62"
+  },
+  {
+   "op": "replace",
+   "old": "<option value=\"OH\">New York</option>",
+   "new": "<option value=\"OH\">Ohio</option>"
+  },
+  {
+   "op": "replace",
+   "old": "Choose an New York county",
+   "new": "Choose a New York county"
+  },
+  {
+   "op": "replace",
+   "old": "'ohio'",
+   "new": "'new york'"
+  },
+  {
+   "op": "replace",
+   "old": "const STATE='OH';",
+   "new": "const STATE='NY';"
+  },
+  {
+   "op": "line",
+   "prefix": "const national=",
+   "new": "const national=a=>['statewide','national','federal'].includes(a.toLowerCase());"
+  },
+  {
+   "op": "replace",
+   "old": "href=\"https://travisvought-byte.github.io/vhg-veteran-resident-guide/\"",
+   "new": "href=\"https://travisvought-byte.github.io/vhg-veteran-resident-guide/ny.html\""
+  },
+  {
+   "op": "replace",
+   "old": "property=\"og:url\" content=\"https://travisvought-byte.github.io/vhg-veteran-resident-guide/\"",
+   "new": "property=\"og:url\" content=\"https://travisvought-byte.github.io/vhg-veteran-resident-guide/ny.html\""
+  },
+  {
+   "op": "replace",
+   "old": "assets/share-preview.png",
+   "new": "assets/vhg-logo.png"
+  },
+  {
+   "op": "replace",
+   "old": "content=\"1200\"",
+   "new": "content=\"715\""
+  },
+  {
+   "op": "replace",
+   "old": "content=\"630\"",
+   "new": "content=\"715\""
+  },
+  {
+   "op": "replace",
+   "old": "href=\"share.html\"",
+   "new": "href=\"share-ny.html\""
+  },
+  {
+   "op": "replace",
+   "old": "href=\"prototype-data.json\"",
+   "new": "href=\"data/public/new-york-resources.json\""
+  },
+  {
+   "op": "replace",
+   "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
+   "new": "href=\"data/public/new-york-county-veterans-offices.json\""
+  },
+  {
+   "op": "replace",
+   "old": "county veterans offices",
+   "new": "county and city veterans contacts"
+  },
+  {
+   "op": "replace",
+   "old": "county veterans office",
+   "new": "veterans referral contact"
+  },
+  {
+   "op": "replace",
+   "old": "veterans referral contact contacts",
+   "new": "veterans referral contacts"
+  },
+  {
+   "op": "replace",
+   "old": "Browse contacts for all 62 county and city veterans contacts",
+   "new": "Browse veterans referral contacts for all 62 counties"
+  },
+  {
+   "op": "replace",
+   "old": "Choose a New York county</label>",
+   "new": "Choose a New York county or NYC borough</label>"
+  },
+  {
+   "op": "replace",
+   "old": "Most phones come from New York AMVETS’ 2025–2026 directory.",
+   "new": "Phones come from official state, county and city pages. NYC uses citywide intake; Essex uses a state benefits office."
+  },
+  {
+   "op": "replace",
+   "old": "Statewide edition · Updated",
+   "new": "New York edition · Updated"
+  },
+  {
+   "op": "replace",
+   "old": "New York’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
+   "new": "Ask your New York service coordinator or local funding administrator about assessment, written approval, owner consent and accepted providers."
+  },
+  {
+   "op": "replace",
+   "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
+   "new": "https://hcr.ny.gov/access-home"
+  },
+  {
+   "op": "replace",
+   "old": "New York home modification authorization and provider rules",
+   "new": "New York Access to Home program requirements"
+  },
+  {
+   "op": "regex",
+   "pattern": "<div class=\"coverage notice\">.*?</div>",
+   "new": "<div class=\"coverage notice\"><strong>New York coverage:</strong> Veterans referral contacts and matched local aging offices for all 62 counties, including NYC’s five boroughs. NYC veterans intake is citywide, and Essex uses a state benefits office. Ombudsman help uses statewide routing. Published sources are reviewed, not telephone-confirmed. Local posts, repair providers and funding availability are still being researched.</div>",
+   "count": 1
+  },
+  {
+   "op": "declare",
+   "name": "priority",
+   "value": [
+    "ny-claims",
+    "ny-connects",
+    "ny-aging-directory",
+    "ny-eisep",
+    "ny-ombudsman",
+    "ny-hiicap",
+    "r02-aid-attendance-housebound",
+    "r02-va-pension",
+    "r02-survivors-pension",
+    "r02-dic",
+    "r02-va-health-enrollment",
+    "ny-nhtd",
+    "ny-traid",
+    "va-accredited-help"
+   ]
+  },
+  {
+   "op": "declare",
+   "name": "routes",
+   "value": {
+    "benefits": [
+     "r02-aid-attendance-housebound",
+     "r02-va-pension",
+     "r02-disability-increase",
+     "r02-pension-medicaid-rule",
+     "r02-survivors-pension",
+     "r02-dic",
+     "ny-claims",
+     "ny-hiicap",
+     "ny-blind-annuity",
+     "va-accredited-help"
+    ],
+    "survivors": [
+     "r02-survivors-pension",
+     "r02-dic",
+     "r02-aid-attendance-housebound",
+     "r02-va-burial",
+     "ny-claims",
+     "ny-blind-annuity",
+     "va-accredited-help",
+     "nara-discharge-records"
+    ],
+    "care": [
+     "r02-va-health-enrollment",
+     "va-location-finder",
+     "r02-va-cnh",
+     "r02-va-clc",
+     "r02-general-caregiver",
+     "r02-family-caregiver",
+     "r02-hospice",
+     "r02-palliative",
+     "ny-caregiver",
+     "ny-nhtd"
+    ],
+    "rights": [
+     "ny-ombudsman",
+     "ny-disability-rights",
+     "ny-connects"
+    ],
+    "local": [
+     "ny-connects",
+     "ny-aging-directory",
+     "ny-eisep",
+     "ny-caregiver",
+     "ny-nhtd",
+     "ny-traid",
+     "ny-independent-living"
+    ],
+    "housing": [
+     "va-housing-help",
+     "nara-discharge-records",
+     "va-location-finder",
+     "va-accredited-help",
+     "ny-access-home",
+     "ny-access-heroes",
+     "ny-restore"
+    ]
+   }
+  },
+  {
+   "op": "declare",
+   "name": "seniorTopics",
+   "value": {
+    "daily": [
+     "ny-connects",
+     "ny-aging-directory",
+     "ny-eisep",
+     "ny-caregiver",
+     "ny-nhtd",
+     "ny-independent-living"
+    ],
+    "accessibility": [
+     "ny-access-home",
+     "ny-restore",
+     "ny-traid",
+     "ny-nhtd",
+     "ny-independent-living"
+    ],
+    "vision": [
+     "ny-vision",
+     "ny-traid"
+    ],
+    "hearing": [
+     "ny-relay",
+     "ny-traid"
+    ],
+    "memory": [
+     "alz-dementia-support",
+     "ny-caregiver",
+     "ny-eisep"
+    ],
+    "costs": [
+     "ny-hiicap",
+     "ny-eisep",
+     "ny-connects"
+    ],
+    "rights": [
+     "ny-disability-rights",
+     "ny-ombudsman",
+     "ny-connects"
+    ]
+   }
+  },
+  {
+   "op": "line",
+   "prefix": "routes.accessibility=",
+   "new": "routes.accessibility=['va-hisa','va-sah','va-sha','va-tra','ny-access-home','ny-access-heroes','ny-restore','ny-traid','ny-nhtd','ny-independent-living','va-location-finder','ny-connects',...DATA.filter(x=>x.regional_role==='aging_agency').map(x=>x.program_id)];"
+  },
+  {
+   "op": "line",
+   "prefix": "routes.seniors=",
+   "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
+  },
+  {
+   "op": "adapter"
+  },
+  {
+   "op": "replace",
+   "old": "o.textContent=c.county+' County'",
+   "new": "o.textContent=c.county+' County'+(c.county_aliases?' ('+c.county_aliases.join(', ')+')':'')"
+  },
+  {
+   "op": "replace",
+   "old": "if(COUNTIES.some(c=>c.county===params.get('county')))",
+   "new": "const countyAlias=COUNTIES.find(c=>(c.county_aliases||[]).some(a=>a.toLowerCase()===(params.get('county')||'').toLowerCase()));if(countyAlias)params.set('county',countyAlias.county);if(COUNTIES.some(c=>c.county===params.get('county')))"
+  },
+  {
+   "op": "embed_data"
+  }
+ ]
+}
