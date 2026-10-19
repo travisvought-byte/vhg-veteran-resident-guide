@@ -1,0 +1,211 @@
+{
+ "ops": [
+  {
+   "op": "clear_data"
+  },
+  {
+   "op": "replace",
+   "old": "Ohio",
+   "new": "Utah"
+  },
+  {
+   "op": "replace",
+   "old": "All 88",
+   "new": "All 29"
+  },
+  {
+   "op": "replace",
+   "old": "all 88",
+   "new": "all 29"
+  },
+  {
+   "op": "replace",
+   "old": "<option value=\"OH\">Utah</option>",
+   "new": "<option value=\"OH\">Ohio</option>"
+  },
+  {
+   "op": "replace",
+   "old": "const STATE='OH';",
+   "new": "const STATE='UT';"
+  },
+  {
+   "op": "replace",
+   "old": "county veterans office",
+   "new": "regional veterans contact"
+  },
+  {
+   "op": "replace",
+   "old": "county office",
+   "new": "regional veterans contact"
+  },
+  {
+   "op": "replace",
+   "old": "Statewide edition · Updated October 8, 2026",
+   "new": "Utah edition · Updated October 14, 2026"
+  },
+  {
+   "op": "replace",
+   "old": "Utah’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
+   "new": "Ask the Utah waiver administrator about assessment, written service-plan authorization and accepted providers."
+  },
+  {
+   "op": "replace",
+   "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
+   "new": "https://medicaid.utah.gov/medicaid-long-term-care-and-waiver-programs/"
+  },
+  {
+   "op": "replace",
+   "old": "Utah home modification authorization and provider rules",
+   "new": "Utah Medicaid waiver screening and program contacts"
+  },
+  {
+   "op": "replace",
+   "old": "href=\"share.html\"",
+   "new": "href=\"share-ut.html\""
+  },
+  {
+   "op": "replace",
+   "old": "href=\"prototype-data.json\"",
+   "new": "href=\"data/public/utah-resources.json\""
+  },
+  {
+   "op": "replace",
+   "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
+   "new": "href=\"data/public/utah-county-veterans-offices.json\""
+  },
+  {
+   "op": "declare",
+   "name": "priority",
+   "value": [
+    "ut-claims",
+    "ut-aging",
+    "ut-ship",
+    "ut-waiver",
+    "ut-ombudsman",
+    "ut-at",
+    "r02-aid-attendance-housebound",
+    "r02-va-pension",
+    "r02-survivors-pension"
+   ]
+  },
+  {
+   "op": "declare",
+   "name": "routes",
+   "value": {
+    "benefits": [
+     "ut-claims",
+     "ut-ship",
+     "ut-waiver",
+     "r02-va-pension",
+     "r02-aid-attendance-housebound",
+     "r02-disability-increase",
+     "r02-pension-medicaid-rule",
+     "r02-survivors-pension",
+     "r02-dic",
+     "va-accredited-help"
+    ],
+    "survivors": [
+     "ut-claims",
+     "r02-survivors-pension",
+     "r02-dic",
+     "r02-aid-attendance-housebound",
+     "r02-va-burial",
+     "va-accredited-help",
+     "nara-discharge-records"
+    ],
+    "care": [
+     "ut-waiver",
+     "ut-new-choices",
+     "ut-caregiver",
+     "ut-alternatives",
+     "r02-va-health-enrollment",
+     "va-location-finder",
+     "r02-va-cnh",
+     "r02-va-clc",
+     "r02-general-caregiver",
+     "r02-family-caregiver",
+     "r02-hospice",
+     "r02-palliative"
+    ],
+    "rights": [
+     "ut-ombudsman",
+     "ut-aging"
+    ],
+    "local": [
+     "ut-aging",
+     "ut-caregiver",
+     "ut-alternatives",
+     "ut-waiver",
+     "ut-new-choices",
+     "ut-at",
+     "ut-211"
+    ],
+    "housing": [
+     "ut-211",
+     "va-housing-help",
+     "va-location-finder",
+     "va-accredited-help",
+     "nara-discharge-records"
+    ]
+   }
+  },
+  {
+   "op": "declare",
+   "name": "seniorTopics",
+   "value": {
+    "daily": [
+     "ut-aging",
+     "ut-caregiver",
+     "ut-alternatives",
+     "ut-waiver",
+     "ut-new-choices"
+    ],
+    "accessibility": [
+     "ut-at",
+     "ut-waiver",
+     "ut-new-choices",
+     "ut-aging"
+    ],
+    "vision": [
+     "ut-at",
+     "ut-aging"
+    ],
+    "hearing": [
+     "ut-at",
+     "ut-aging"
+    ],
+    "memory": [
+     "alz-dementia-support",
+     "ut-caregiver",
+     "ut-aging"
+    ],
+    "costs": [
+     "ut-ship",
+     "ut-waiver",
+     "ut-alternatives",
+     "ut-aging"
+    ],
+    "rights": [
+     "ut-ombudsman",
+     "ut-aging"
+    ]
+   }
+  },
+  {
+   "op": "line",
+   "prefix": "routes.accessibility=",
+   "new": "routes.accessibility=['va-hisa','va-sah','va-sha','va-tra','ut-at','ut-waiver','ut-new-choices','ut-aging','va-location-finder',...DATA.filter(x=>x.regional_role==='aging_agency').map(x=>x.program_id)];"
+  },
+  {
+   "op": "line",
+   "prefix": "routes.seniors=",
+   "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
+  },
+  {
+   "op": "adapter"
+  },
+  {
+   "op": "embed_data"
+  }
+ ]
+}

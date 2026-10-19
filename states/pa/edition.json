@@ -1,0 +1,159 @@
+{
+ "ops": [
+  {
+   "op": "clear_data"
+  },
+  {
+   "op": "replace",
+   "old": "Ohio",
+   "new": "Pennsylvania"
+  },
+  {
+   "op": "replace",
+   "old": "All 88",
+   "new": "All 67"
+  },
+  {
+   "op": "replace",
+   "old": "all 88",
+   "new": "all 67"
+  },
+  {
+   "op": "replace",
+   "old": "<option value=\"OH\">Pennsylvania</option>",
+   "new": "<option value=\"OH\">Ohio</option>"
+  },
+  {
+   "op": "replace",
+   "old": "Choose an Pennsylvania county",
+   "new": "Choose a Pennsylvania county"
+  },
+  {
+   "op": "replace",
+   "old": "'ohio'",
+   "new": "'pennsylvania'"
+  },
+  {
+   "op": "replace",
+   "old": "const STATE='OH';",
+   "new": "const STATE='PA';"
+  },
+  {
+   "op": "replace",
+   "old": "href=\"https://travisvought-byte.github.io/vhg-veteran-resident-guide/\"",
+   "new": "href=\"https://travisvought-byte.github.io/vhg-veteran-resident-guide/pa.html\""
+  },
+  {
+   "op": "replace",
+   "old": "property=\"og:url\" content=\"https://travisvought-byte.github.io/vhg-veteran-resident-guide/\"",
+   "new": "property=\"og:url\" content=\"https://travisvought-byte.github.io/vhg-veteran-resident-guide/pa.html\""
+  },
+  {
+   "op": "replace",
+   "old": "assets/share-preview.png",
+   "new": "assets/vhg-logo.png"
+  },
+  {
+   "op": "replace",
+   "old": "content=\"1200\"",
+   "new": "content=\"715\""
+  },
+  {
+   "op": "replace",
+   "old": "content=\"630\"",
+   "new": "content=\"715\""
+  },
+  {
+   "op": "replace",
+   "old": "href=\"share.html\"",
+   "new": "href=\"share-pa.html\""
+  },
+  {
+   "op": "replace",
+   "old": "href=\"prototype-data.json\"",
+   "new": "href=\"data/public/pennsylvania-resources.json\""
+  },
+  {
+   "op": "replace",
+   "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
+   "new": "href=\"data/public/pennsylvania-county-veterans-offices.json\""
+  },
+  {
+   "op": "replace",
+   "old": "Phone published in the 2025–2026 AMVETS directory",
+   "new": "Phone published in the September 2026 PA DMVA directory"
+  },
+  {
+   "op": "replace",
+   "old": "AMVETS directory source",
+   "new": "PA DMVA directory source"
+  },
+  {
+   "op": "regex",
+   "pattern": "<div class=\"coverage notice\">.*?</div>",
+   "new": "<div class=\"coverage notice\"><strong>Pennsylvania coverage:</strong> Veterans office contacts for all 67 counties, plus statewide programs and federal referrals. Local aging referral contacts cover all 67 counties. Four counties have separately sourced local ombudsman contacts; other counties use statewide ombudsman routing. Source labels distinguish page review from search excerpts. Published contacts are not telephone-confirmed. Local grants, posts and contractors are still being researched.</div>",
+   "count": 1
+  },
+  {
+   "op": "replace",
+   "old": "Most phones come from Pennsylvania AMVETS’ 2025–2026 directory.",
+   "new": "Phones come from PA DMVA’s September 9, 2026 county directory."
+  },
+  {
+   "op": "replace",
+   "old": "Statewide edition · Updated",
+   "new": "Pennsylvania edition · Updated"
+  },
+  {
+   "op": "replace",
+   "old": "Pennsylvania’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
+   "new": "Ask your Pennsylvania service coordinator or funding agency about proposal, owner-consent and provider requirements; VA and other funders have their own processes."
+  },
+  {
+   "op": "replace",
+   "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
+   "new": "https://www.pa.gov/agencies/dhs/resources/home-community-based-services-hcbs"
+  },
+  {
+   "op": "replace",
+   "old": "Pennsylvania home modification authorization and provider rules",
+   "new": "Pennsylvania home and community-based services"
+  },
+  {
+   "op": "line",
+   "prefix": "const priority=",
+   "new": "const priority=['pa-link','pa-aging-directory','pa-options','pa-chc','pa-ombudsman','r02-aid-attendance-housebound','r02-va-pension','r02-survivors-pension','r02-dic','r02-va-health-enrollment','pa-medi','pa-nht','pa-techowl-reuse','va-accredited-help'];"
+  },
+  {
+   "op": "line",
+   "prefix": "const routes=",
+   "new": "const routes={benefits:['r02-aid-attendance-housebound','r02-va-pension','r02-disability-increase','r02-pension-medicaid-rule','r02-survivors-pension','r02-dic','pa-chc','pa-hcbs','pa-medi','va-accredited-help'],survivors:['r02-survivors-pension','r02-dic','r02-aid-attendance-housebound','r02-va-burial','va-accredited-help','nara-discharge-records'],care:['r02-va-health-enrollment','va-location-finder','r02-va-cnh','r02-va-clc','r02-general-caregiver','r02-family-caregiver','r02-hospice','r02-palliative','pa-caregiver-support','pa-nht'],rights:['pa-ombudsman','pa-disability-rights','pa-link'],local:['pa-link','pa-aging-directory','pa-options','pa-caregiver-support','pa-chc','pa-hcbs','pa-nht','pa-techowl-reuse','pa-techowl-library','pa-patf'],housing:['va-housing-help','nara-discharge-records','va-location-finder','va-accredited-help','pa-phfa-access','usda-pa-home-repair']};"
+  },
+  {
+   "op": "line",
+   "prefix": "routes.accessibility=",
+   "new": "routes.accessibility=['va-hisa','va-sah','va-sha','va-tra','pa-chc','pa-hcbs','pa-options','pa-caregiver-support','pa-techowl-reuse','pa-techowl-library','pa-patf','pa-phfa-access','usda-pa-home-repair','pa-nht','va-location-finder','pa-link'];"
+  },
+  {
+   "op": "line",
+   "prefix": "const seniorTopics=",
+   "new": "const seniorTopics={daily:['pa-link','pa-aging-directory','pa-options','pa-caregiver-support','pa-chc','pa-nht'],accessibility:['pa-options','pa-chc','pa-hcbs','pa-techowl-reuse','pa-techowl-library','pa-patf','pa-phfa-access','usda-pa-home-repair'],vision:['pa-bbvs','pa-techowl-library'],hearing:['pa-odhh','pa-techowl-library'],memory:['alz-dementia-support','pa-caregiver-support','pa-options'],costs:['pa-medi','pa-chc','pa-options','pa-patf'],rights:['pa-disability-rights','pa-ombudsman','pa-link']};"
+  },
+  {
+   "op": "line",
+   "prefix": "routes.seniors=",
+   "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
+  },
+  {
+   "op": "replace",
+   "old": "<p class=\"meta\">${c.contact_status",
+   "new": "${c.note?'<p class=\"notice\">'+esc(c.note)+'</p>':''}<p class=\"meta\">${c.contact_status"
+  },
+  {
+   "op": "adapter"
+  },
+  {
+   "op": "embed_data"
+  }
+ ]
+}

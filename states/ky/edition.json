@@ -1,0 +1,278 @@
+{
+ "ops": [
+  {
+   "op": "clear_data"
+  },
+  {
+   "op": "replace",
+   "old": "Ohio",
+   "new": "Kentucky"
+  },
+  {
+   "op": "replace",
+   "old": "All 88",
+   "new": "All 120"
+  },
+  {
+   "op": "replace",
+   "old": "all 88",
+   "new": "all 120"
+  },
+  {
+   "op": "replace",
+   "old": "<option value=\"OH\">Kentucky</option>",
+   "new": "<option value=\"OH\">Ohio</option>"
+  },
+  {
+   "op": "replace",
+   "old": "Choose an Kentucky county",
+   "new": "Choose a Kentucky county"
+  },
+  {
+   "op": "replace",
+   "old": "const STATE='OH';",
+   "new": "const STATE='KY';"
+  },
+  {
+   "op": "line",
+   "prefix": "const national=",
+   "new": "const national=a=>['statewide','national','federal'].includes(a.toLowerCase());"
+  },
+  {
+   "op": "replace",
+   "old": "href=\"https://travisvought-byte.github.io/vhg-veteran-resident-guide/\"",
+   "new": "href=\"https://travisvought-byte.github.io/vhg-veteran-resident-guide/ky.html\""
+  },
+  {
+   "op": "replace",
+   "old": "property=\"og:url\" content=\"https://travisvought-byte.github.io/vhg-veteran-resident-guide/\"",
+   "new": "property=\"og:url\" content=\"https://travisvought-byte.github.io/vhg-veteran-resident-guide/ky.html\""
+  },
+  {
+   "op": "replace",
+   "old": "assets/share-preview.png",
+   "new": "assets/vhg-logo.png"
+  },
+  {
+   "op": "replace",
+   "old": "content=\"1200\"",
+   "new": "content=\"715\""
+  },
+  {
+   "op": "replace",
+   "old": "content=\"630\"",
+   "new": "content=\"715\""
+  },
+  {
+   "op": "replace",
+   "old": "href=\"share.html\"",
+   "new": "href=\"share-ky.html\""
+  },
+  {
+   "op": "replace",
+   "old": "href=\"prototype-data.json\"",
+   "new": "href=\"data/public/kentucky-resources.json\""
+  },
+  {
+   "op": "replace",
+   "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
+   "new": "href=\"data/public/kentucky-county-veterans-offices.json\""
+  },
+  {
+   "op": "replace",
+   "old": "county veterans offices",
+   "new": "regional veterans referrals"
+  },
+  {
+   "op": "replace",
+   "old": "county veterans office",
+   "new": "regional veterans referral"
+  },
+  {
+   "op": "replace",
+   "old": "Find a county office",
+   "new": "Find a county’s KDVA contacts"
+  },
+  {
+   "op": "replace",
+   "old": "Browse contacts for all 120 regional veterans referrals",
+   "new": "Browse regional veterans contacts for all 120 counties"
+  },
+  {
+   "op": "replace",
+   "old": "Most phones come from Kentucky AMVETS’ 2025–2026 directory.",
+   "new": "Veterans contacts come from KDVA’s county-to-regional-representative directory. Multiple listed representatives and Fort Campbell scope are preserved."
+  },
+  {
+   "op": "replace",
+   "old": "Statewide edition · Updated",
+   "new": "Kentucky edition · Updated"
+  },
+  {
+   "op": "replace",
+   "old": "Kentucky’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
+   "new": "Ask your Kentucky waiver case manager or funding administrator about assessment, written approval, owner consent and accepted providers."
+  },
+  {
+   "op": "replace",
+   "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
+   "new": "https://www.chfs.ky.gov/agencies/dms/dca/pages/hcb-waiver.aspx"
+  },
+  {
+   "op": "replace",
+   "old": "Kentucky home modification authorization and provider rules",
+   "new": "Kentucky HCB waiver services and application requirements"
+  },
+  {
+   "op": "regex",
+   "pattern": "<div class=\"coverage notice\">.*?</div>",
+   "new": "<div class=\"coverage notice\"><strong>Kentucky coverage:</strong> KDVA regional veterans representatives, matched aging contacts, district ombudsmen and Hart-Supported Living coordinators for all 120 counties. These services use separate county maps. Multiple KDVA contacts and the Fort Campbell assignment are labeled. Published sources are reviewed, not telephone-confirmed. Local posts, repair providers and funding availability are still being researched.</div>",
+   "count": 1
+  },
+  {
+   "op": "declare",
+   "name": "priority",
+   "value": [
+    "ky-claims",
+    "ky-adrc",
+    "ky-homecare",
+    "ky-hcb",
+    "ky-ship",
+    "ky-ombudsman",
+    "ky-at",
+    "ky-rampup",
+    "ky-hart",
+    "r02-aid-attendance-housebound",
+    "r02-va-pension",
+    "r02-survivors-pension",
+    "r02-va-health-enrollment",
+    "va-accredited-help"
+   ]
+  },
+  {
+   "op": "declare",
+   "name": "routes",
+   "value": {
+    "benefits": [
+     "r02-aid-attendance-housebound",
+     "r02-va-pension",
+     "r02-disability-increase",
+     "r02-pension-medicaid-rule",
+     "r02-survivors-pension",
+     "r02-dic",
+     "ky-claims",
+     "ky-ship",
+     "ky-homeless",
+     "va-accredited-help"
+    ],
+    "survivors": [
+     "r02-survivors-pension",
+     "r02-dic",
+     "r02-aid-attendance-housebound",
+     "r02-va-burial",
+     "ky-claims",
+     "va-accredited-help",
+     "nara-discharge-records"
+    ],
+    "care": [
+     "r02-va-health-enrollment",
+     "va-location-finder",
+     "r02-va-cnh",
+     "r02-va-clc",
+     "r02-general-caregiver",
+     "r02-family-caregiver",
+     "r02-hospice",
+     "r02-palliative",
+     "ky-homes",
+     "ky-hcb",
+     "ky-homecare",
+     "ky-caregiver"
+    ],
+    "rights": [
+     "ky-ombudsman",
+     "ky-rights",
+     "ky-adrc"
+    ],
+    "local": [
+     "ky-adrc",
+     "ky-homecare",
+     "ky-hcb",
+     "ky-caregiver",
+     "ky-at",
+     "ky-hart",
+     "ky-rampup"
+    ],
+    "housing": [
+     "va-housing-help",
+     "nara-discharge-records",
+     "va-location-finder",
+     "va-accredited-help",
+     "ky-homeless",
+     "ky-adrc"
+    ]
+   }
+  },
+  {
+   "op": "declare",
+   "name": "seniorTopics",
+   "value": {
+    "daily": [
+     "ky-adrc",
+     "ky-homecare",
+     "ky-hcb",
+     "ky-caregiver"
+    ],
+    "accessibility": [
+     "ky-adrc",
+     "ky-hcb",
+     "ky-hart",
+     "ky-at",
+     "ky-rampup",
+     "ky-at-finance",
+     "ky-rights"
+    ],
+    "vision": [
+     "ky-blind",
+     "ky-at"
+    ],
+    "hearing": [
+     "ky-relay",
+     "ky-hearing",
+     "ky-at"
+    ],
+    "memory": [
+     "alz-dementia-support",
+     "ky-caregiver",
+     "ky-adrc"
+    ],
+    "costs": [
+     "ky-ship",
+     "ky-adrc",
+     "ky-hcb",
+     "ky-homecare"
+    ],
+    "rights": [
+     "ky-rights",
+     "ky-ombudsman",
+     "ky-adrc"
+    ]
+   }
+  },
+  {
+   "op": "line",
+   "prefix": "routes.accessibility=",
+   "new": "routes.accessibility=['va-hisa','va-sah','va-sha','va-tra','ky-hcb','ky-hart','ky-at','ky-at-finance','ky-rampup','ky-adrc','ky-homecare','ky-rights','va-location-finder',...DATA.filter(x=>['aging_agency','supported_living'].includes(x.regional_role)).map(x=>x.program_id)];"
+  },
+  {
+   "op": "line",
+   "prefix": "routes.seniors=",
+   "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
+  },
+  {
+   "op": "adapter"
+  },
+  {
+   "op": "embed_data"
+  }
+ ]
+}
