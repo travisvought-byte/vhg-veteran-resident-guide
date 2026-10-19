@@ -31,6 +31,6 @@ jobs:
       - name: Check unified caregiver flow
         run: npm test
       - name: Install test browser
-        run: npx playwright install --with-deps chromium || npx playwright install chromium
+        run: npx playwright install --with-deps chromium
       - name: Check browser, mobile and print behavior
         run: npm run test:browser
