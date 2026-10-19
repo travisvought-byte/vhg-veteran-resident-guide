@@ -34,7 +34,7 @@ Reviewed 2026-10-19. Public published sources only; no calls, email or form subm
 - Los Angeles County and Los Angeles City have separate aging service lines (626-414-6439 versus 213-482-7252) and published PSA service areas; the resident's location decides.
 - CACVSO publishes 55 county-office listings, including combined Inyo-Mono and Yuba-Sutter providers. Alpine has no separate association office listing. Sierra is listed but the phone field is blank. Both currently route to the published CalVet statewide phone (800-952-5626) pending county-owned confirmation.
 - The association's published Inyo-Mono number is 760-873-7850; the San Benito listing uses a Monterey office phone, 831-647-7613. The Yuba-Sutter office lists 530-749-6710 for both counties. No separate county number was invented.
-- Local long-term-care ombudsman provider county boundaries are listed in 32 PSA groups in this return. **Every regional record uses the clearly labeled STATEWIDE 800-231-4024 ombudsman hotline, NOT a claimed local office number**. Direct local office phone verification remains a follow-up.
+- Local long-term-care ombudsman provider county boundaries are listed in 34 local provider jurisdictions in this return. San Luis Obispo and Santa Barbara are separate ombudsman providers even though the aging PSA spans both; Napa and Solano also have separate ombudsman providers. **Every regional record uses the clearly labeled STATEWIDE 800-231-4024 ombudsman hotline, NOT a claimed local office number**. Direct local office phone verification remains a follow-up.
 - Some association county listings show outdated physical locations, misspellings, vacancies or staff details. This return uses published primary phones only, does not publish private addresses or named representative cell numbers, and does not claim direct confirmation.
 - California MSSP home accessibility adaptation services and HCBA waiver services have distinct eligibility, administrators and service areas. A referral does not establish home modification approval; written plan authorization is required before work.
 
@@ -61,6 +61,6 @@ Current office staffing, exact local ombudsman direct lines, direct county veter
 ## Self-check output
 
 ```text
-California (CA): 58 counties, 13 programs, 91 regional referrals
+California (CA): 58 counties, 13 programs, 93 regional referrals
 0 errors, 0 warnings
 ```
