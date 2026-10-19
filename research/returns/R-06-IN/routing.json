@@ -1,0 +1,109 @@
+{
+  "priority": [
+    "in-claims",
+    "in-adrc",
+    "in-ship",
+    "in-waiver",
+    "in-ombudsman",
+    "in-at",
+    "r02-aid-attendance-housebound",
+    "r02-va-pension",
+    "r02-survivors-pension"
+  ],
+  "routes": {
+    "benefits": [
+      "in-claims",
+      "in-ship",
+      "in-waiver",
+      "r02-va-pension",
+      "r02-aid-attendance-housebound",
+      "va-accredited-help"
+    ],
+    "survivors": [
+      "in-claims",
+      "r02-survivors-pension",
+      "r02-dic",
+      "r02-va-burial",
+      "va-accredited-help"
+    ],
+    "care": [
+      "in-waiver",
+      "in-homes",
+      "in-caregiver",
+      "r02-va-health-enrollment",
+      "va-location-finder",
+      "r02-va-cnh",
+      "r02-va-clc"
+    ],
+    "rights": [
+      "in-ombudsman",
+      "in-rights"
+    ],
+    "local": [
+      "in-adrc",
+      "in-aging-directory",
+      "in-caregiver",
+      "in-waiver",
+      "in-at",
+      "in-211"
+    ],
+    "housing": [
+      "in-211",
+      "va-housing-help",
+      "va-location-finder"
+    ],
+    "accessibility": [
+      "va-hisa",
+      "va-sah",
+      "va-sha",
+      "va-tra",
+      "in-at",
+      "in-waiver",
+      "in-adrc"
+    ]
+  },
+  "seniorTopics": {
+    "daily": [
+      "in-adrc",
+      "in-caregiver",
+      "in-waiver"
+    ],
+    "accessibility": [
+      "in-at",
+      "in-waiver",
+      "in-adrc"
+    ],
+    "vision": [
+      "in-blind",
+      "in-at"
+    ],
+    "hearing": [
+      "in-relay",
+      "in-at"
+    ],
+    "memory": [
+      "alz-dementia-support",
+      "in-caregiver",
+      "in-adrc"
+    ],
+    "costs": [
+      "in-ship",
+      "in-waiver",
+      "in-adrc"
+    ],
+    "rights": [
+      "in-ombudsman",
+      "in-rights"
+    ]
+  },
+  "statewide_navigation": {
+    "name": "INconnect Alliance — local aging and disability resource routing",
+    "phone": "800-713-9023",
+    "source_url": "https://www.in.gov/fssa/ddars/bba/area-agencies-on-aging/"
+  },
+  "home_modification": {
+    "url": "https://www.in.gov/medicaid/providers/files/modules/ompp-hcbs-waiver.pdf",
+    "label": "Indiana PathWays for Aging waiver manual — Home Modifications, printed pages 68–72",
+    "guidance": "For PathWays members, ask the health plan’s service coordinator/case manager about assessment, documentation in the service plan, certified providers and waiver-program approval before any work starts. The manual requires prior waiver approval. Ask the appropriate case manager about separate rules for Health and Wellness or other disability waivers; do not apply PathWays rules automatically."
+  }
+}
