@@ -30,7 +30,7 @@ Reviewed 2026-10-19. Research only; no phone calls, emails, forms or agency conf
 
 ## County boundaries and published conflicts
 
-- Florida's 67 county veterans referrals, 11 aging planning areas and 14 ombudsman district listings represent separate service geographies.
+- Florida's 67 county veterans referrals, 11 aging planning areas and 14 ombudsman district listings represent separate service geographies. Palm Beach's own helpline number (561-214-8600) differs from the regional Treasure Coast Elder Helpline (866-684-5885), so the data preserves an additional county-specific contact entry rather than publishing the wrong number to Palm Beach.
 - Miami-Dade has separate North and South Dade ombudsman districts; both list county Miami-Dade, but the resident's location relative to Flagler Street selects the appropriate district. Monroe routes to South Dade / Florida Keys.
 - Florida ombudsman directory writes “Oceola” and a competing district listing includes Osceola under East Central; normalized to Osceola and routed under South Central on the dedicated district-office page. Verify any jurisdiction uncertainty before reliance.
 - The two official elderaffairs district pages conflict on Northwest ombudsman phone: 850-921-4869 on the dedicated ombudsman site versus 850-595-0469 on the department page. This return uses the dedicated ombudsman program page; ask the state office to confirm if needed.
@@ -51,6 +51,13 @@ Initial referral edition: all 67 counties have a published veterans contact, a c
 ## Draft sharing description
 
 Find Florida county veterans contacts, local aging resources and long-term-care ombudsman routing for all 67 counties.
+
+## Additional reviewed source clarifications
+
+- FAAST publishes 844-353-2278 on its own contact page: https://faast.org/contact/.
+- Florida Telecommunications Relay, Inc. confirms dialing 711: https://ftri.org/.
+- Division of Blind Services confirms 800-342-1828: https://dbs.fldoe.org/information/contact.html.
+- Florida Department of Elder Affairs confirms SHINE via 800-963-5337 and the ombudsman hotline 888-831-0404: https://elderaffairs.org/contact-us/.
 
 ## Could not confirm
 
