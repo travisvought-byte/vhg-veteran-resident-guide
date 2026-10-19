@@ -1,0 +1,36 @@
+name: Build and test Wave 1 handoff
+on:
+  push:
+    branches:
+      - feature/wave1-copy-referral-handoff
+permissions:
+  contents: write
+jobs:
+  wave1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: feature/wave1-copy-referral-handoff
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - name: Build unified guide and its test fixtures
+        run: |
+          python3 scripts/build_public.py
+          python3 scripts/build_public.py --test-fixtures
+          python3 scripts/build_public.py --check
+          python3 scripts/validate_public.py
+      - name: Unit and integration tests
+        run: |
+          npm ci
+          npm test
+          node tests/feedback.cjs
+      - name: Commit regenerated public guide
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html assets/guide.js
+          git diff --cached --quiet || (git commit -m "build(wave1): regenerate public guide with copy handoff" && git push origin HEAD:feature/wave1-copy-referral-handoff)
