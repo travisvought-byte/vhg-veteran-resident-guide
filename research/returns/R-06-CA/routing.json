@@ -1,0 +1,103 @@
+{
+  "priority": [
+    "ca-claims",
+    "ca-adrc",
+    "ca-aging-directory",
+    "ca-ship",
+    "ca-waiver",
+    "ca-ombudsman",
+    "ca-at",
+    "r02-aid-attendance-housebound",
+    "r02-va-pension"
+  ],
+  "routes": {
+    "benefits": [
+      "ca-claims",
+      "ca-ship",
+      "ca-waiver",
+      "r02-va-pension",
+      "va-accredited-help"
+    ],
+    "survivors": [
+      "ca-claims",
+      "r02-survivors-pension",
+      "r02-dic",
+      "r02-va-burial"
+    ],
+    "care": [
+      "ca-waiver",
+      "ca-homes",
+      "ca-caregiver",
+      "r02-va-health-enrollment",
+      "r02-va-cnh"
+    ],
+    "rights": [
+      "ca-ombudsman",
+      "ca-rights",
+      "ca-adrc"
+    ],
+    "local": [
+      "ca-aging-directory",
+      "ca-adrc",
+      "ca-caregiver",
+      "ca-waiver",
+      "ca-211"
+    ],
+    "housing": [
+      "ca-211",
+      "va-housing-help",
+      "va-ssvf"
+    ],
+    "accessibility": [
+      "va-hisa",
+      "va-sah",
+      "va-sha",
+      "ca-at",
+      "ca-waiver",
+      "ca-adrc"
+    ]
+  },
+  "seniorTopics": {
+    "daily": [
+      "ca-adrc",
+      "ca-aging-directory",
+      "ca-caregiver"
+    ],
+    "accessibility": [
+      "ca-at",
+      "ca-waiver"
+    ],
+    "vision": [
+      "ca-blind",
+      "ca-at"
+    ],
+    "hearing": [
+      "ca-relay",
+      "ca-at"
+    ],
+    "memory": [
+      "alz-dementia-support",
+      "ca-caregiver",
+      "ca-adrc"
+    ],
+    "costs": [
+      "ca-ship",
+      "ca-waiver",
+      "ca-adrc"
+    ],
+    "rights": [
+      "ca-ombudsman",
+      "ca-rights"
+    ]
+  },
+  "statewide_navigation": {
+    "name": "California Aging and Adult Information Line",
+    "phone": "800-510-2020",
+    "source_url": "https://aging.ca.gov/Contact_Us/"
+  },
+  "home_modification": {
+    "url": "https://www.dhcs.ca.gov/services/medi-cal-resources/multipurpose-senior-services-program-msspmedi-calwaiver/",
+    "label": "MSSP HCBS waiver: Environmental Accessibility Adaptations",
+    "guidance": "Ask an MSSP site or HCBA waiver agency whether the person meets program criteria and whether home accessibility adaptations can be included in an approved service plan. Do not arrange work until eligibility, covered scope and written authorization are confirmed."
+  }
+}
