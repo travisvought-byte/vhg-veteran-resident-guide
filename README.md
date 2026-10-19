@@ -1,4 +1,4 @@
-# Veteran Resident Resource Guide: Ohio, Pennsylvania, New York, Michigan, Kentucky, Utah, Indiana, West Virginia, Texas and Florida
+# Veteran Resident Resource Guide: Ohio, Pennsylvania, New York, Michigan, Kentucky, Utah, Indiana, West Virginia, Texas, Florida and California
 
 A free public guide created and maintained by Travis Vought, and shared by Veteran Home Guardians (VHG) for veterans, surviving spouses, seniors, people with disabilities, families and care teams. It helps people find their first contact and prepare a useful referral.
 
@@ -48,7 +48,7 @@ The main guide uses one interface. Changing the state updates county contacts, r
 
 ## Coverage and verification
 
-All ten state editions are published referral backbones, not complete inventories of local services. Ohio local research is strongest in the four pilot counties; Pennsylvania, New York, Michigan, Kentucky, Utah, Indiana, West Virginia, Texas and Florida are initial referral editions. The state picker updates the shared interface from separate datasets; depth of local coverage varies.
+All eleven state editions are published referral backbones, not complete inventories of local services. Ohio local research is strongest in the four pilot counties; Pennsylvania, New York, Michigan, Kentucky, Utah, Indiana, West Virginia, Texas and Florida are initial referral editions. The state picker updates the shared interface from separate datasets; depth of local coverage varies.
 
 The guide displays county coverage and calculated verification totals in an expandable section near the state picker. Every resource card shows its source status without requiring an expansion. Search-excerpt, imported and recheck records carry a visible verification notice, including in printed resource lists. A published source review does not mean an agency confirmed its current intake or availability.
 
@@ -84,13 +84,13 @@ Kentucky has KDVA regional benefits representatives, aging contacts, district om
 
 Utah is the sixth state: all 29 counties have regional veterans referrals, matched aging agencies and long-term-care ombudsmen. Its 66 resources include 33 shared federal/national records, 10 Utah programs, 12 aging contacts and 11 ombudsman regions. Veterans, aging and ombudsman county boundaries are maintained separately, including Uintah County’s separate aging route. Published sources were reviewed October 14, 2026; contacts are not telephone-confirmed. Local providers and activity listings remain incomplete. [Open Utah](https://travisvought-byte.github.io/vhg-veteran-resident-guide/?state=UT), [sharing kit](https://travisvought-byte.github.io/vhg-veteran-resident-guide/share-ut.html), and [coverage and evidence](docs/UTAH.md).
 
-Canonical Utah data lives in `data/public/ut-programs.json`, `data/public/ut-regional-referrals.json` and `data/public/utah-county-veterans-offices.json`. The standard build generates the combined data, shared adapter, redirect and sharing kit. Unified DOM and browser checks include all ten states and all 917 counties.
+Canonical Utah data lives in `data/public/ut-programs.json`, `data/public/ut-regional-referrals.json` and `data/public/utah-county-veterans-offices.json`. The standard build generates the combined data, shared adapter, redirect and sharing kit. Unified DOM and browser checks include all eleven states and all 975 counties.
 
 ## Bingo and urgent support
 
 The [Ohio Bingo & Senior Centers section](https://travisvought-byte.github.io/vhg-veteran-resident-guide/bingo.html) includes all 717 state-listed Type I entries and 15 researched senior centers. Search by ZIP/distance, activity, or published bingo day (Today, Tomorrow, or a weekday). Specific dates, closures and expired offers are handled separately from license authorization days. Seventy-five entries now have published schedule details after seven October research passes. See [bingo evidence and expansion](docs/BINGO.md).
 
-All ten editions have a prominent urgent-help section, crisis and mental-health resources, and expanded homelessness pathways: the VA national call center, SSVF community providers, HUD-VASH and VA Community Resource and Referral Centers. Local shelter beds, individual provider intake and availability are not comprehensively mapped.
+All eleven editions have a prominent urgent-help section, crisis and mental-health resources, and expanded homelessness pathways: the VA national call center, SSVF community providers, HUD-VASH and VA Community Resource and Referral Centers. Local shelter beds, individual provider intake and availability are not comprehensively mapped.
 
 ## Corrections from users
 
@@ -173,6 +173,10 @@ Texas adds all 254 counties, 13 state programs, 28 aging agencies and 28 ombudsm
 ## License
 
 Resource data in `prototype-data.json`, `data/public/`, CSV files and published pages is licensed CC BY 4.0; code is licensed MIT. See [LICENSE](LICENSE).
+
+## California scope
+
+California is the eleventh state edition, with all 58 counties mapped to published veterans service office contacts or an explicitly labeled CalVet statewide fallback for Alpine and Sierra. Fifty-nine county and Los Angeles City aging helplines cover the state's 33 Area Agencies on Aging. Thirty-four local ombudsman jurisdictions use clearly labeled statewide hotline routing while direct local phones await verification. Thirteen state programs cover benefits, veteran care, aging, disability, Medicare counseling and accessibility. [California guide](https://travisvought-byte.github.io/vhg-veteran-resident-guide/?state=CA), [sharing kit](https://travisvought-byte.github.io/vhg-veteran-resident-guide/share-ca.html), and [coverage and evidence](docs/CALIFORNIA.md).
 
 ## Florida scope
 
