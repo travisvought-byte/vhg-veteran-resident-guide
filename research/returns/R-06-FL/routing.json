@@ -1,0 +1,102 @@
+{
+  "priority": [
+    "fl-claims",
+    "fl-adrc",
+    "fl-aging-directory",
+    "fl-ship",
+    "fl-waiver",
+    "fl-ombudsman",
+    "fl-at",
+    "r02-aid-attendance-housebound"
+  ],
+  "routes": {
+    "benefits": [
+      "fl-claims",
+      "fl-ship",
+      "fl-waiver",
+      "r02-va-pension",
+      "va-accredited-help"
+    ],
+    "survivors": [
+      "fl-claims",
+      "r02-survivors-pension",
+      "r02-dic",
+      "r02-va-burial"
+    ],
+    "care": [
+      "fl-waiver",
+      "fl-homes",
+      "fl-caregiver",
+      "r02-va-health-enrollment",
+      "r02-va-cnh"
+    ],
+    "rights": [
+      "fl-ombudsman",
+      "fl-rights",
+      "fl-adrc"
+    ],
+    "local": [
+      "fl-aging-directory",
+      "fl-adrc",
+      "fl-caregiver",
+      "fl-waiver",
+      "fl-211"
+    ],
+    "housing": [
+      "fl-211",
+      "va-housing-help",
+      "va-ssvf"
+    ],
+    "accessibility": [
+      "va-hisa",
+      "va-sah",
+      "fl-at",
+      "fl-waiver",
+      "fl-adrc"
+    ]
+  },
+  "seniorTopics": {
+    "daily": [
+      "fl-adrc",
+      "fl-aging-directory",
+      "fl-caregiver"
+    ],
+    "accessibility": [
+      "fl-at",
+      "fl-waiver",
+      "fl-adrc"
+    ],
+    "vision": [
+      "fl-blind",
+      "fl-at"
+    ],
+    "hearing": [
+      "fl-relay",
+      "fl-at"
+    ],
+    "memory": [
+      "alz-dementia-support",
+      "fl-caregiver",
+      "fl-adrc"
+    ],
+    "costs": [
+      "fl-ship",
+      "fl-waiver",
+      "fl-adrc"
+    ],
+    "rights": [
+      "fl-ombudsman",
+      "fl-rights"
+    ]
+  },
+  "statewide_navigation": {
+    "name": "Florida Elder Helpline",
+    "phone": "800-963-5337",
+    "source_url": "https://elderaffairs.org/about-us/elder-helpline-1-800-963-5337/"
+  },
+  "home_modification": {
+    "url": "https://ahca.myflorida.com/medicaid/statewide-medicaid-managed-care/long-term-care-program/find-out-about-long-term-care-services.html",
+    "label": "Florida SMMC LTC — Home Accessibility Adaptation",
+    "guidance": "Ask the local ADRC for screening if not enrolled. If enrolled, ask the LTC plan case manager to assess accessibility adaptations, document the care-plan need and confirm written approval and provider rules before work starts; major structural repairs are not covered by this service."
+  }
+}
