@@ -1,0 +1,205 @@
+{
+  "ops": [
+    {
+      "op": "clear_data"
+    },
+    {
+      "op": "replace",
+      "old": "Ohio",
+      "new": "Florida"
+    },
+    {
+      "op": "replace",
+      "old": "All 88",
+      "new": "All 67"
+    },
+    {
+      "op": "replace",
+      "old": "all 88",
+      "new": "all 67"
+    },
+    {
+      "op": "replace",
+      "old": "<option value=\"OH\">Florida</option>",
+      "new": "<option value=\"OH\">Ohio</option>"
+    },
+    {
+      "op": "replace",
+      "old": "const STATE='OH';",
+      "new": "const STATE='FL';"
+    },
+    {
+      "op": "replace",
+      "old": "county veterans office",
+      "new": "veterans contact"
+    },
+    {
+      "op": "replace",
+      "old": "county office",
+      "new": "veterans contact"
+    },
+    {
+      "op": "replace",
+      "old": "Statewide edition · Updated October 8, 2026",
+      "new": "Florida edition · Updated October 19, 2026"
+    },
+    {
+      "op": "replace",
+      "old": "Most phones come from Florida AMVETS’ 2025–2026 directory.",
+      "new": "Veterans phones come from the March 2026 Florida Department of Veterans Affairs county directory, with the Collier phone corrected against its county website. Call before traveling."
+    },
+    {
+      "op": "replace",
+      "old": "Florida’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
+      "new": "Florida Medicaid SMMC Long-Term Care includes plan-based Home Accessibility Adaptation; ask the case manager to assess the need and confirm care-plan approval, providers and costs before work begins. General home repairs are excluded."
+    },
+    {
+      "op": "replace",
+      "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
+      "new": "https://ahca.myflorida.com/medicaid/statewide-medicaid-managed-care/long-term-care-program/find-out-about-long-term-care-services.html"
+    },
+    {
+      "op": "replace",
+      "old": "Florida home modification authorization and provider rules",
+      "new": "Florida SMMC Long-Term Care — Home Accessibility Adaptation"
+    },
+    {
+      "op": "replace",
+      "old": "href=\"share.html\"",
+      "new": "href=\"share-fl.html\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"prototype-data.json\"",
+      "new": "href=\"data/public/florida-resources.json\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
+      "new": "href=\"data/public/florida-county-veterans-offices.json\""
+    },
+    {
+      "op": "line",
+      "prefix": "const national=",
+      "new": "const national=a=>['statewide','national','federal'].includes(a.toLowerCase());"
+    },
+    {
+      "op": "declare",
+      "name": "priority",
+      "value": [
+        "fl-claims",
+        "fl-adrc",
+        "fl-aging-directory",
+        "fl-ship",
+        "fl-waiver",
+        "fl-ombudsman",
+        "fl-at",
+        "r02-aid-attendance-housebound"
+      ]
+    },
+    {
+      "op": "declare",
+      "name": "routes",
+      "value": {
+        "benefits": [
+          "fl-claims",
+          "fl-ship",
+          "fl-waiver",
+          "r02-va-pension",
+          "va-accredited-help"
+        ],
+        "survivors": [
+          "fl-claims",
+          "r02-survivors-pension",
+          "r02-dic",
+          "r02-va-burial"
+        ],
+        "care": [
+          "fl-waiver",
+          "fl-homes",
+          "fl-caregiver",
+          "r02-va-health-enrollment",
+          "r02-va-cnh"
+        ],
+        "rights": [
+          "fl-ombudsman",
+          "fl-rights",
+          "fl-adrc"
+        ],
+        "local": [
+          "fl-aging-directory",
+          "fl-adrc",
+          "fl-caregiver",
+          "fl-waiver",
+          "fl-211"
+        ],
+        "housing": [
+          "fl-211",
+          "va-housing-help",
+          "va-ssvf"
+        ],
+        "accessibility": [
+          "va-hisa",
+          "va-sah",
+          "fl-at",
+          "fl-waiver",
+          "fl-adrc"
+        ]
+      }
+    },
+    {
+      "op": "declare",
+      "name": "seniorTopics",
+      "value": {
+        "daily": [
+          "fl-adrc",
+          "fl-aging-directory",
+          "fl-caregiver"
+        ],
+        "accessibility": [
+          "fl-at",
+          "fl-waiver",
+          "fl-adrc"
+        ],
+        "vision": [
+          "fl-blind",
+          "fl-at"
+        ],
+        "hearing": [
+          "fl-relay",
+          "fl-at"
+        ],
+        "memory": [
+          "alz-dementia-support",
+          "fl-caregiver",
+          "fl-adrc"
+        ],
+        "costs": [
+          "fl-ship",
+          "fl-waiver",
+          "fl-adrc"
+        ],
+        "rights": [
+          "fl-ombudsman",
+          "fl-rights"
+        ]
+      }
+    },
+    {
+      "op": "line",
+      "prefix": "routes.accessibility=",
+      "new": "routes.accessibility=[...routes.accessibility,...DATA.filter(x=>x.regional_role==='aging_agency').map(x=>x.program_id)];"
+    },
+    {
+      "op": "line",
+      "prefix": "routes.seniors=",
+      "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
+    },
+    {
+      "op": "adapter"
+    },
+    {
+      "op": "embed_data"
+    }
+  ]
+}
