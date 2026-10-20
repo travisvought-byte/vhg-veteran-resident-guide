@@ -114,7 +114,7 @@ export const BENEFITS_HOUSING_CHECKLISTS = Object.freeze({
             "condition": "Only if mailing"
           },
           {
-            "text": "Watch for a VA decision or evidence request; VA says requested information may need a response within 30 days.",
+            "text": "Watch for a VA decision or evidence request; Respond by the deadline VA specifies in any evidence request.",
             "responsible": "Claimant"
           }
         ]
