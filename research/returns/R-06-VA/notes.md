@@ -90,7 +90,7 @@ Updated the proposed Fairfax phone in three primary locality records (Fairfax co
 
 The address header says Suite 201 while the highlighted move notice says Suite 202. Addresses remain out of scope and neither suite is added to the county records. The observed phone also matches an older published Fort Belvoir number in the prior research; that coincidence does not establish whether the current Fairfax page or the old cache is erroneous. The owner-observed number is the proposed primary, the old number is preserved, and the statewide DVS fallback remains available.
 
-**Spot-check status:** Fairfax service area matches; Fairfax phone differs and is recorded. Quantico was subsequently owner-checked below; Tazewell remains pending. No broader validation is inferred from this one sample.
+**Spot-check status:** Fairfax service area matches; Fairfax phone differs and is recorded. Quantico was subsequently owner-checked below; Tazewell subsequently matched; see the completed three-office review below. No broader validation is inferred from this one sample.
 
 ## Owner spot-check 2 of 3 — Quantico
 
@@ -98,7 +98,21 @@ On 2026-10-20 the owner supplied a partial official Quantico page screenshot. It
 
 The visible base address supports that the office is on a military installation; the screenshot does not show the credential/access rules, so those are not owner-verified. The image contains an old September 11 closure notice; it is not treated as a current closure. Source review remains partial screenshot plus official search text rather than full-page or telephone confirmation.
 
-The other image in this upload repeats the Fairfax page. It is not a third distinct spot-check. **Two of the three selected offices have now been owner-checked; Tazewell is still pending.**
+The other image in this upload repeats the Fairfax page. It is not a third distinct spot-check. **Two of the three selected offices have now been owner-checked; Tazewell subsequently matched; all three selected offices have now been checked.**
+
+## Owner spot-check 3 of 3 — Tazewell / sample complete
+
+On 2026-10-20 the owner supplied an official-page screenshot explicitly titled Tazewell Office. It matches **276-988-3761** and all four listed counties: Buchanan, Dickenson, Russell and Tazewell. Recorded the evidence on three primary routes and the Dickenson alternative. No phone or assignment change was needed.
+
+The owner-requested three-office sample is complete:
+
+| Office | Phone result | Service-area result | Action |
+|---|---|---|---|
+| Fairfax | Current screenshot differs from older indexed text | Matches | Updated proposed primary phone to 703-805-0177; retained 703-359-1210 as a source conflict |
+| Quantico | Matches 571-697-5915 ext. 75915 | Matches all listed counties and Fredericksburg City | Recorded match |
+| Tazewell | Matches 276-988-3761 | Matches all four counties | Recorded match |
+
+This completes the owner-selected spot-check review for the research packet. The earlier blanket requirement for full automated access to every legacy office page was an assistant-imposed standard; it is not an owner requirement and is not retained as an automatic research acceptance blocker. The packet is ready for integration review with its evidence labels, source conflicts and statewide fallbacks preserved. The sample does not establish full-page review or current telephone availability for every office. Publishing a state still requires its separate integration and functional checks.
 
 ## County boundaries and normalization
 
@@ -124,7 +138,7 @@ Nonexclusive reviewed DVS service areas overlap in **21 localities**: Caroline, 
 
 ## Owner / integration decisions
 
-1. Complete full rendered DVS source review before publishing this edition; preserve excerpt labels until then. This packet can pass the structural checker while still needing evidence review.
+1. The owner-selected three-office spot-check is complete. Preserve excerpt labels on unsampled source fields, partial-screenshot provenance on sampled fields, the Fairfax phone conflict and statewide fallback routes during integration. Full automated access to every legacy page is not an owner-imposed acceptance requirement.
 2. Retain statewide fallback for Alexandria City and Falls Church City until an explicit suitable benefits-office assignment is reviewed. DVS main line is 804-786-0286; no local office or partnership is invented.
 3. Preserve the Central Virginia ombudsman state-office instruction and clearly distinguish it from a verified local direct line.
 4. Carry all 21 overlapping-office alternatives, the two fallback labels, independent-city types and military access caveats into any integration.
