@@ -11,8 +11,8 @@ This folder contains the first functional component of a future **email and web-
 - `accessibility-checklists.mjs` adds specific, source-reviewed HISA, SAH, SHA and Ohio waiver home-modification preparation checklists. Each item identifies who must act, with official submission routes and follow-up instructions. Browser checkmarks are transient only, and are never sent, persisted, or treated as proof of eligibility. Copyable drafts include the document-preparation reminders, without completion status.
 - `program-guidance.mjs` is a source-linked, 12-program pilot of **explicit beneficiary audiences, eligibility screening notes and practical official application or intake steps**. Curated audiences override the conservative, existing fallback classifier. Listings without a curated entry keep their original program-specific next-step wording; no universal form or eligibility promise is inferred.
 - `draft-email.mjs` turns JSON intake into a **draft** email on standard output. No email is sent or stored.
-- `tests/assistant.mjs` exercises safety messaging, published contact data, twelve-state source status filters and beneficiary-aware routing and draft output.
-- This prototype supports **all twelve published state editions** (OH, PA, NY, MI, KY, UT, IN, WV, TX, FL, CA and VA), using the same data paths as the current public guide. A CI test checks the registry mapping. It does **not** represent fully researched county-level service coverage.
+- `tests/assistant.mjs` exercises safety messaging, published contact data, thirteen-state source status filters and beneficiary-aware routing and draft output.
+- This prototype supports **all thirteen published state editions** (OH, PA, NY, MI, KY, UT, IN, WV, TX, FL, CA, VA and NC), using the same data paths as the current public guide. A CI test checks the registry mapping. It does **not** represent fully researched county-level service coverage.
 
 ## Test it
 

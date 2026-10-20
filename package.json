@@ -2,8 +2,8 @@
   "name": "vhg-veteran-resident-guide",
   "private": true,
   "scripts": {
-    "test": "node tests/unified.cjs && node tests/states.cjs && node tests/indiana.cjs && node tests/west-virginia.cjs && node tests/texas.cjs && node tests/handoff-copy.cjs && node tests/virginia.cjs",
-    "test:browser": "node tests/unified-browser.cjs && node tests/editions-browser.cjs && node tests/virginia-browser.cjs"
+    "test": "node tests/unified.cjs && node tests/states.cjs && node tests/indiana.cjs && node tests/west-virginia.cjs && node tests/texas.cjs && node tests/handoff-copy.cjs && node tests/virginia.cjs && node tests/north-carolina.cjs",
+    "test:browser": "node tests/unified-browser.cjs && node tests/editions-browser.cjs && node tests/virginia-browser.cjs && node tests/north-carolina-browser.cjs"
   },
   "devDependencies": {
     "jsdom": "30.1.2",

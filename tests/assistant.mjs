@@ -41,7 +41,7 @@ assert.equal(example.recommendations[0].id,"good");
 const crisis=createPlan({state:"OH",message:"I feel suicidal and I need help",resources:fake});
 assert(crisis.urgent);
 assert(planToEmail(crisis).includes("988"));
-console.log("Assistance navigator: 12-state registry and audience-sensitive referral tests passed.");
+console.log("Assistance navigator: 13-state registry and audience-sensitive referral tests passed.");
 
 const mk=(id,name,tags)=>({program_id:id,name,official_url:"https://example.org/"+id,
   service_area:["Ohio"],needs_supported:tags,description:name,next_step:"Contact intake",

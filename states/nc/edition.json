@@ -1,0 +1,214 @@
+{
+  "ops": [
+    {
+      "op": "clear_data"
+    },
+    {
+      "op": "replace",
+      "old": "Ohio",
+      "new": "North Carolina"
+    },
+    {
+      "op": "replace",
+      "old": "All 88",
+      "new": "All 100"
+    },
+    {
+      "op": "replace",
+      "old": "all 88",
+      "new": "all 100"
+    },
+    {
+      "op": "replace",
+      "old": "<option value=\"OH\">North Carolina</option>",
+      "new": "<option value=\"OH\">Ohio</option>"
+    },
+    {
+      "op": "replace",
+      "old": "const STATE='OH';",
+      "new": "const STATE='NC';"
+    },
+    {
+      "op": "replace",
+      "old": "county veterans office",
+      "new": "veterans contact"
+    },
+    {
+      "op": "replace",
+      "old": "county office",
+      "new": "veterans contact"
+    },
+    {
+      "op": "replace",
+      "old": "Statewide edition · Updated October 8, 2026",
+      "new": "North Carolina edition · Updated October 20, 2026"
+    },
+    {
+      "op": "replace",
+      "old": "Most phones come from North Carolina AMVETS’ 2025–2026 directory.",
+      "new": "County veterans phones come from the official 2024–2025 state directory, with current county-page corrections. Clearly labeled regional contacts use the current state county map and office phone table. Confirm intake before traveling."
+    },
+    {
+      "op": "replace",
+      "old": "North Carolina’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
+      "new": "Ask your CAP/DA case manager for assessment, a documented service-plan need, any required written recommendations and quotes, program authorization and an accepted provider before work starts. New construction and nonportable modifications in rented residences are excluded by the reviewed policy. Independent Living new purchased services are paused; ask about waiting lists and alternatives."
+    },
+    {
+      "op": "replace",
+      "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
+      "new": "https://medicaid.ncdhhs.gov/3k-2-community-alternatives-program-disabled-adults-capda/download?attachment"
+    },
+    {
+      "op": "replace",
+      "old": "North Carolina home modification authorization and provider rules",
+      "new": "North Carolina CAP/DA policy 3K-2 — equipment and home modifications"
+    },
+    {
+      "op": "replace",
+      "old": "href=\"share.html\"",
+      "new": "href=\"share-nc.html\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"prototype-data.json\"",
+      "new": "href=\"data/public/north-carolina-resources.json\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
+      "new": "href=\"data/public/north-carolina-county-veterans-offices.json\""
+    },
+    {
+      "op": "line",
+      "prefix": "const national=",
+      "new": "const national=a=>['statewide','national','federal'].includes(a.toLowerCase());"
+    },
+    {
+      "op": "declare",
+      "name": "priority",
+      "value": [
+        "nc-claims",
+        "nc-adrc",
+        "nc-aging-directory",
+        "nc-ship",
+        "nc-waiver",
+        "nc-ombudsman",
+        "nc-at",
+        "r02-aid-attendance-housebound",
+        "r02-va-pension",
+        "r02-survivors-pension"
+      ]
+    },
+    {
+      "op": "declare",
+      "name": "routes",
+      "value": {
+        "benefits": [
+          "nc-claims",
+          "nc-ship",
+          "nc-waiver",
+          "r02-va-pension",
+          "r02-aid-attendance-housebound",
+          "va-accredited-help"
+        ],
+        "survivors": [
+          "nc-claims",
+          "r02-survivors-pension",
+          "r02-dic",
+          "r02-va-burial",
+          "va-accredited-help"
+        ],
+        "care": [
+          "nc-waiver",
+          "nc-homes",
+          "nc-caregiver",
+          "r02-va-health-enrollment",
+          "r02-va-cnh",
+          "r02-va-clc"
+        ],
+        "rights": [
+          "nc-ombudsman",
+          "nc-rights",
+          "nc-aging-directory"
+        ],
+        "local": [
+          "nc-aging-directory",
+          "nc-adrc",
+          "nc-caregiver",
+          "nc-waiver",
+          "nc-211"
+        ],
+        "housing": [
+          "nc-211",
+          "va-housing-help",
+          "va-ssvf"
+        ],
+        "accessibility": [
+          "va-hisa",
+          "va-sah",
+          "va-sha",
+          "va-tra",
+          "nc-at",
+          "nc-waiver",
+          "nc-independent-living",
+          "nc-aging-directory"
+        ]
+      }
+    },
+    {
+      "op": "declare",
+      "name": "seniorTopics",
+      "value": {
+        "daily": [
+          "nc-adrc",
+          "nc-aging-directory",
+          "nc-caregiver",
+          "nc-waiver"
+        ],
+        "accessibility": [
+          "nc-at",
+          "nc-waiver",
+          "nc-independent-living"
+        ],
+        "vision": [
+          "nc-blind",
+          "nc-at"
+        ],
+        "hearing": [
+          "nc-relay",
+          "nc-at"
+        ],
+        "memory": [
+          "alz-dementia-support",
+          "nc-caregiver",
+          "nc-adrc"
+        ],
+        "costs": [
+          "nc-ship",
+          "nc-waiver",
+          "nc-aging-directory"
+        ],
+        "rights": [
+          "nc-ombudsman",
+          "nc-rights"
+        ]
+      }
+    },
+    {
+      "op": "line",
+      "prefix": "routes.accessibility=",
+      "new": "routes.accessibility=[...routes.accessibility,...DATA.filter(x=>x.regional_role==='aging_agency').map(x=>x.program_id)];"
+    },
+    {
+      "op": "line",
+      "prefix": "routes.seniors=",
+      "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
+    },
+    {
+      "op": "adapter"
+    },
+    {
+      "op": "embed_data"
+    }
+  ]
+}
