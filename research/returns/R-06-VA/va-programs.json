@@ -1,9 +1,9 @@
 [
   {
     "program_id": "va-claims",
-    "name": "Virginia DVS benefits and claims assistance",
+    "name": "Virginia DVS free accredited claims assistance",
     "organization": "Virginia Department of Veterans Services",
-    "official_url": "https://www.dvs.virginia.gov/benefits-services",
+    "official_url": "https://vvs.dvs.virginia.gov/Services/DisabilityClaims-Services",
     "state": "VA",
     "service_area": [
       "statewide"
@@ -12,23 +12,28 @@
       "veteran_services",
       "benefits_and_funding"
     ],
-    "description": "Free help from state veterans service representatives with veterans benefits and claims.",
-    "next_step": "Ask DVS for an accredited benefits representative serving your county or independent city. Ask what records to bring and how to arrange an appointment.",
+    "description": "Free state help with disability claims, pension benefits, appeals and survivor-related benefits.",
+    "next_step": "Use the official Disability Claims, Pensions & Appeals page to choose the relevant service. Request an appointment with a DVS representative through Book a Disability Claims Appointment, or call 844-838-7838 for office routing if the form does not load. Ask what records to bring and whether remote assistance is available.",
     "constraints": [
-      "DVS describes its services as free. This record is supported by official search text because direct page access returned HTTP 403.",
-      "A referral does not establish eligibility or authorize anyone else to prepare a VA claim."
+      "The published phone is the statewide DVS routing number, not a guaranteed direct line to a claims specialist.",
+      "The online appointment form remained at Loading services during this review. Use the phone fallback if you encounter the same problem; this observation does not establish that the form is unavailable to everyone.",
+      "A referral does not establish benefit eligibility. Work with an appropriately accredited representative on claims and appeals."
     ],
     "public_contact": {
       "phone": "844-838-7838"
     },
     "verification": {
-      "record_status": "official_search_extract_only",
+      "record_status": "official_source_reviewed",
       "last_reviewed_on": "2026-10-20"
     },
     "evidence": {
-      "review_method": "official_search_excerpt",
+      "review_method": "full_official_page",
       "direct_agency_confirmation": false,
-      "phone_source_url": "https://www.dvs.virginia.gov/benefits-services"
+      "phone_source_url": "https://vvs.dvs.virginia.gov/Services/DisabilityClaims-Services",
+      "program_source_url": "https://vvs.dvs.virginia.gov/Services/DisabilityClaims-Services",
+      "accreditation_and_cost_source_url": "https://vvs.dvs.virginia.gov/Services/DisabilityClaims-Services/ClaimsBasics",
+      "appointment_url": "https://vvs.dvs.virginia.gov/Forms/BenefitsForm",
+      "selection": "Read full rendered official DVS program and Claims Basics pages. The statewide phone is published in the DVS footer. Inspected the appointment form without entering data or submitting it."
     }
   },
   {
@@ -45,19 +50,26 @@
       "veteran_services"
     ],
     "description": "State veterans homes offer skilled nursing, rehabilitation and memory-care services.",
-    "next_step": "Use the official care-center page to select a center and obtain its application. Ask the admissions team about clinical assessment, military-service and residency requirements, payment and current intake.",
+    "next_step": "Open the official care-center page and choose Roanoke, Virginia Beach, Richmond or Fauquier. Use that center’s Eligibility Application link or Request Assistance from DVS for Care Center. If a form or download does not open, call 844-838-7838 and ask for the selected center’s admissions contact.",
     "constraints": [
-      "Admission depends on the center’s review of service, residency, clinical needs and payment. Do not assume a bed or funding is available.",
-      "Official page text was available only through search; direct retrieval returned a client-rendered shell without the program content. Full rendered-page review is pending."
+      "The phone is statewide DVS referral routing; ask for the selected care center’s admissions team. It is not a direct admissions line.",
+      "Ask the admissions team to review military service, residency, clinical care needs and payment. The official page has additional service-duration and Guard/Reserve criteria. Do not assume eligibility, a bed or funding.",
+      "Application links are published on the full official page. Downloads hosted on the legacy DVS domain could not be checked because that domain returns access-denied errors. Use the assistance-request or phone fallback if a link fails."
     ],
-    "public_contact": {},
+    "public_contact": {
+      "phone": "844-838-7838"
+    },
     "verification": {
-      "record_status": "official_search_extract_only",
+      "record_status": "official_source_reviewed",
       "last_reviewed_on": "2026-10-20"
     },
     "evidence": {
-      "review_method": "official_search_excerpt",
-      "direct_agency_confirmation": false
+      "review_method": "full_official_page",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://vvs.dvs.virginia.gov/Services/CareCenters-Services",
+      "application_navigation_url": "https://vvs.dvs.virginia.gov/Services/CareCenters-Services",
+      "assistance_request_url": "https://vvs.dvs.virginia.gov/Forms/CareCentersForm",
+      "selection": "Read the complete rendered official care-center page, including all four center sections, admissions criteria, application links and statewide DVS footer contact. No application submitted."
     }
   },
   {
@@ -291,21 +303,24 @@
       "general_navigation"
     ],
     "description": "Disability rights advocacy and information from Virginia’s protection and advocacy organization.",
-    "next_step": "Use Get Help or call the intake number. Describe the disability-rights issue, any deadline and the kind of assistance sought; ask whether the issue fits current services.",
+    "next_step": "Read the current goals and issue exclusions on Get Help, then choose either the online request form or phone intake at 800-552-3962. Describe the disability-rights problem and any deadline. Do not submit a form and call about the same issue, and do not send service requests to the general information email address.",
     "constraints": [
-      "A request does not guarantee legal representation. Direct page access failed; official program search text supports intake details and DARS identifies dLCV as a disability-rights partner."
+      "Assistance must fit the organization’s current goals and focus areas; requesting help does not create an attorney-client relationship or guarantee representation.",
+      "The intake page excludes direct financial aid, initial Social Security applications, criminal representation and several other matters; review the full exclusion list before applying.",
+      "Intake is free. Use one request method. You remain responsible for your deadlines."
     ],
     "public_contact": {
       "phone": "800-552-3962"
     },
     "verification": {
-      "record_status": "official_search_extract_only",
+      "record_status": "official_source_reviewed",
       "last_reviewed_on": "2026-10-20"
     },
     "evidence": {
-      "review_method": "official_search_excerpt",
+      "review_method": "full_official_page_text",
       "direct_agency_confirmation": false,
-      "phone_source_url": "https://www.dlcv.org/get-help"
+      "phone_source_url": "https://www.dlcv.org/get-help",
+      "selection": "Reviewed the full official Get Help page through web retrieval: intake methods, main phone, no-email instruction, scope/exclusions, no-duplicate-request instruction and representation disclaimer. Direct local HTTP retrieval still failed, but full official page text was available through web retrieval."
     }
   },
   {
