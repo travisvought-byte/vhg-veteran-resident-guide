@@ -30,7 +30,7 @@ const {chromium}=require("playwright");
   assert((await page.locator("#resources").textContent()).includes("Official application or intake:"));
   assert((await page.locator("#resources").textContent()).includes("How to start"));
   assert(await page.locator("#resources a[href^='https://']").count()>0);
-  await page.fill("#message","HISA home improvements structural alterations ramp accessibility");
+  await page.fill("#message","HISA home improvements structural alterations ramp accessibility SecretInputMarker7849");
   await page.click("#find");await page.locator("#results").waitFor({state:"visible"});
   const hisaCard=page.locator('#resources article[data-program-id="va-hisa"]');
   assert(await hisaCard.count()===1,"Expected HISA among relevant results");
@@ -42,6 +42,53 @@ const {chromium}=require("playwright");
   await hisaCard.getByRole("button",{name:"Clear checkmarks"}).click();
   assert((await hisaStatus.textContent()).startsWith("0 of "));
   assert((await hisaCard.textContent()).includes("Submit the HISA application package"));
+  // The print button must build an isolated, non-persistent, one-page document.
+  await page.evaluate(()=>{window.print=()=>{document.body.dataset.printInvoked="true"}});
+  await hisaCard.getByRole("button",{name:"Print one-page handoff"}).click();
+  assert.equal(await page.locator("body").getAttribute("data-print-invoked"),"true");
+  assert.equal(await page.locator("#print-handoff .handoff-sheet").count(),1);
+  assert((await page.locator("#print-handoff").textContent()).includes("Form 10-0103"));
+  assert(!(await page.locator("#print-handoff").textContent()).includes("SecretInputMarker7849"));
+  const printPageCount=async()=>{
+    const pdf=await page.pdf({format:"Letter",preferCSSPageSize:true,printBackground:true});
+    return (pdf.toString("latin1").match(/\\/Type\\s*\\/Page\\b/g)||[]).length;
+  };
+  assert.equal(await printPageCount(),1,"HISA must print to one letter page");
+  // Rebuild all four program handoffs from actual published records.
+  for(const [program,who,query] of [
+    ["va-hisa","veteran","wheelchair ramp"],
+    ["va-sah","veteran","special adapted housing ramp"],
+    ["va-sha","veteran","special housing adaptation ramp"],
+    ["ohio-waiver-home-modifications","other","wheelchair ramp home modification"]
+  ]){
+    const details=await page.evaluate(async ({program,who,query})=>{
+      const [{createPlan},{buildHandoff}]=await Promise.all([
+        import("/assistant/engine.mjs"),import("/assistant/handoff.mjs")
+      ]);
+      const resources=await (await fetch("/prototype-data.json")).json();
+      const plan=createPlan({state:"OH",county:"Morrow",person:who,message:query,
+        resources:resources.filter(r=>r.program_id===program),
+        counties:await(await fetch("/data/public/ohio-county-veterans-offices.json")).json()
+      });
+      if(plan.recommendations.length!==1)return {hasResource:false};
+      const sheet=buildHandoff(document,plan,plan.recommendations[0]);
+      document.getElementById("print-handoff").replaceChildren(sheet);
+      return {
+        hasResource:true,
+        steps:sheet.querySelectorAll(".handoff-task").length,
+        name:sheet.querySelector("h1").textContent,
+        urls:sheet.querySelectorAll("a[href^='https://']").length,
+        containsTypedMessage:sheet.textContent.includes(query),
+        state:sheet.textContent.includes("Morrow County")
+      };
+    },{program,who,query});
+    assert(details.hasResource,program+" should match the sample query");
+    assert(details.steps>=6,program+" should have substantive checklist");
+    assert(details.urls>=2,program+" should link to official applications and sources");
+    assert(details.state,program+" location should be in handoff");
+    assert(!details.containsTypedMessage,program+" must omit typed request text");
+    assert.equal(await printPageCount(),1,program+" must print to one US Letter page");
+  }
   await page.click("#draft");await page.locator("#draft-container").waitFor({state:"visible"});
   assert((await page.locator("#email-draft").textContent()).includes("Muskingum County"));
   await page.selectOption("#person","other");

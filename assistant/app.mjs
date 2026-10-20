@@ -2,6 +2,7 @@ import {STATES,createPlan,planToEmail,isUrgent} from "./engine.mjs";
 
 const $=id=>document.getElementById(id);
 import {STATE_FILES as fileNames} from "./state-files.mjs";
+import {buildHandoff} from "./handoff.mjs";
 const cache=new Map();let plan=null,requestVersion=0;
 async function load(state){
   if(!fileNames[state])throw new Error("Unsupported state.");
@@ -28,6 +29,7 @@ function phoneLink(where,phone){
 }
 async function refreshCounties(){
  const state=$("state").value,version=++requestVersion,county=$("county");
+ $("print-handoff").replaceChildren();
  county.replaceChildren(new Option("Loading counties…",""));county.disabled=true;
  $("feedback").textContent="Loading "+STATES[state]+" county contacts.";
  $("results").hidden=true;$("draft-container").hidden=true;$("crisis").hidden=true;
@@ -100,7 +102,18 @@ function showResources(items,fallback){
      article.append(ol);
    }
    if(item.guidanceSource){const row=textNode("p","Application guidance source: ");safeLink(row,"Official instructions",item.guidanceSource);article.append(row)}
-   if(item.preparationChecklist)showChecklist(article,item.preparationChecklist);
+   if(item.preparationChecklist){
+     showChecklist(article,item.preparationChecklist);
+     const printButton=textNode("button","Print one-page handoff");
+     printButton.type="button";printButton.className="secondary print-handoff-button";
+     printButton.addEventListener("click",()=>{
+       if(!plan||!plan.recommendations.some(x=>x.id===item.id))return;
+       const area=$("print-handoff");
+       area.replaceChildren(buildHandoff(document,plan,item));
+       window.print();
+     });
+     article.append(printButton);
+   }
    if(item.phone){article.append(textNode("span","Phone: "));phoneLink(article,item.phone);article.append(textNode("span","  "))}
    safeLink(article,"Official source / program website",item.url);
    para(article,"Source reviewed "+(item.reviewedOn||"date unavailable")+"; current intake not confirmed.");
@@ -111,6 +124,7 @@ function showResources(items,fallback){
 $("state").addEventListener("change",refreshCounties);
 $("intake").addEventListener("submit",async e=>{
  e.preventDefault();const version=++requestVersion,state=$("state").value;
+ $("print-handoff").replaceChildren();
  $("feedback").textContent="Matching against the published guide…";
  $("results").hidden=true;$("draft-container").hidden=true;
  $("crisis").hidden=!isUrgent($("message").value);

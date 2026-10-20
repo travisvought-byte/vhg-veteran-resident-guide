@@ -19,6 +19,40 @@ button{border:0;border-radius:8px;background:var(--green);color:white;padding:13
 .resource p{margin:5px 0}.preparation{background:#f3f6f3;border:1px solid #c6d4ca;border-radius:8px;padding:14px;margin:16px 0}.preparation summary{font-weight:700;cursor:pointer}.preparation h4{color:var(--ink);margin:16px 0 6px}.checklist-items{padding-left:22px;list-style:none}.checklist-items li{margin:10px 0;border-bottom:1px solid #d8e1db;padding-bottom:8px}.checklist-items label{display:flex;gap:10px;align-items:flex-start;font-weight:500}.checklist-items label span{flex:1}.checklist-items input{width:20px;height:20px;flex:0 0 20px;margin:4px 0 0}.checklist-items p{margin-left:30px;color:var(--muted);font-size:14px}.preparation button{margin:8px 0}#feedback{min-height:20px}#results[hidden],#draft-container[hidden],#crisis[hidden]{display:none}
 pre{white-space:pre-wrap;overflow-wrap:anywhere;font:14px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;background:#f3f5f3;border:1px solid #d6ddd9;border-radius:8px;padding:18px;max-height:600px;overflow:auto}
 @media(max-width:700px){.fields{grid-template-columns:1fr}.card{padding:16px}}
+.print-handoff{display:none}
+@media print{
+  @page{size:letter portrait;margin:0.4in}
+  html,body{margin:0!important;padding:0!important;background:#fff!important;color:#111!important}
+  body>header,body>main{display:none!important}
+  .print-handoff{display:block!important;position:static!important;max-width:none!important;margin:0!important;padding:0!important}
+  .handoff-sheet{font:10px/1.28 Arial,Helvetica,sans-serif!important;color:#111!important;overflow:visible!important}
+  .handoff-brand{font-size:10px;font-weight:bold;letter-spacing:1px;padding:0 0 3px;border-bottom:2px solid #333}
+  .handoff-sheet h1{font:700 20px/1.12 Georgia,serif!important;color:#111!important;margin:6px 0 4px}
+  .handoff-meta{font-size:10px;margin:1px 0 5px}
+  .handoff-destination{font-size:11px;font-weight:bold;margin:2px 0}
+  .handoff-eligibility,.handoff-office{font-size:9px;margin:2px 0}
+  .handoff-workflow{columns:2;column-gap:17px;column-rule:1px solid #ccc;margin:8px 0}
+  .handoff-group{break-inside:avoid;page-break-inside:avoid;margin:0 0 9px}
+  .handoff-sheet h2{font:bold 11px/1.15 Arial,sans-serif!important;color:#111!important;margin:0 0 4px}
+  .handoff-group h2{background:#ecefec;padding:4px 5px;border-left:3px solid #444}
+  .handoff-group ul{margin:0;padding:0;list-style:none}
+  .handoff-group li{display:flex;gap:4px;margin:0 0 5px;break-inside:avoid;page-break-inside:avoid}
+  .handoff-square{font-size:13px;line-height:1;flex:0 0 11px}
+  .handoff-task{flex:1;min-width:0}
+  .handoff-task small{display:block;font-size:8.5px;color:#444;margin:1px 0}
+  .handoff-bottom{display:grid;grid-template-columns:1fr 1fr;gap:14px;border-top:1px solid #777;padding-top:7px}
+  .handoff-bottom section{min-width:0}
+  .handoff-bottom h2{margin:4px 0 3px}
+  .handoff-bottom p{margin:2px 0 5px}
+  .handoff-link a,.handoff-sources a{font-weight:bold;color:#111;text-decoration:underline}
+  .handoff-url{display:block;font-size:8px;overflow-wrap:anywhere;word-break:break-word}
+  .handoff-questions p{margin:0 0 5px}
+  .handoff-notes{padding-top:4px}
+  .handoff-sources{border-top:1px solid #bbb;margin-top:7px;padding-top:4px;font-size:8px;line-height:1.25}
+  .handoff-sources a{margin:0 4px}
+  .handoff-source-url{display:inline;margin-right:7px;overflow-wrap:anywhere;word-break:break-word}
+  .handoff-disclaimer{border-top:1px solid #ddd;padding-top:5px;margin:5px 0 0;font-size:8px}
+}
 </style>
 </head>
 <body>
@@ -55,5 +89,6 @@ pre{white-space:pre-wrap;overflow-wrap:anywhere;font:14px/1.5 ui-monospace,SFMon
 <section id="draft-container" class="card" hidden><h2>Reviewable email draft</h2><p class="meta">Nothing has been sent. Review and copy the draft to your normal email application.</p><pre id="email-draft"></pre><button id="copy" type="button">Copy draft</button><p id="copy-status" role="status" class="meta"></p></section>
 <p class="meta">Data: <a href="../">VHG Resident Resource Guide</a>. Corrections: <a href="mailto:travis@vethomeguard.org">travis@vethomeguard.org</a>. <a href="https://www.veteranscrisisline.net/">Veterans Crisis Line</a>.</p>
 </main>
+<div id="print-handoff" class="print-handoff" aria-label="Printable referral handoff"></div>
 <script type="module" src="./app.mjs"></script>
 </body></html>

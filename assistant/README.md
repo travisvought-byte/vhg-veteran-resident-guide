@@ -6,6 +6,7 @@ This folder contains the first functional component of a future **email and web-
 
 - `assistant/index.html` is a browser-based, accessible intake and resource-matching preview. The user chooses a supported state/county, describes a general need, sees matching resource cards, and can copy a draft email response.
 - `engine.mjs` contains deterministic, testable matching and email composition logic; it reads the published resource records rather than inventing programs.
+- `handoff.mjs` builds a dedicated US Letter print layout for each of the four accessibility checklists, including a recipient, locally published veteran office contact when appropriate, every preparatory step, submission route, official source URLs and three follow-up questions. Each matching resource has a **Print one-page handoff** button; the on-screen guide and private intake narrative are excluded from print. Chromium PDF page-count checks guard against accidental two-page handoffs. No checkmark history or personal details are saved.
 - `accessibility-checklists.mjs` adds specific, source-reviewed HISA, SAH, SHA and Ohio waiver home-modification preparation checklists. Each item identifies who must act, with official submission routes and follow-up instructions. Browser checkmarks are transient only, and are never sent, persisted, or treated as proof of eligibility. Copyable drafts include the document-preparation reminders, without completion status.
 - `program-guidance.mjs` is a source-linked, 12-program pilot of **explicit beneficiary audiences, eligibility screening notes and practical official application or intake steps**. Curated audiences override the conservative, existing fallback classifier. Listings without a curated entry keep their original program-specific next-step wording; no universal form or eligibility promise is inferred.
 - `draft-email.mjs` turns JSON intake into a **draft** email on standard output. No email is sent or stored.
@@ -44,6 +45,10 @@ Use **help@vethomeguard.org** as a real, monitored VHG address. The domain owner
 5. **Triage:** For urgent danger, direct the person to 911; for suicidal thoughts or crisis, 988 then press 1 or text 838255. An email assistant is not a crisis monitoring service, so automated acknowledgments must never imply 24/7 human intervention. Uncertain high-stakes decisions require human review.
 6. **Draft first:** Queue responses for authorized VHG review. Do not send automatically until live reliability tests, mailbox ownership, privacy notices, sender authentication, abuse controls, accessibility and escalation coverage are confirmed. Send only through an authorized outbound service with DKIM/SPF/DMARC and bounce handling.
 7. **Measure:** Track aggregated categories, response times, source corrections and verified outcomes without retaining unnecessary personal histories. Offer a concise correction route, deletion contact and human assistance route.
+
+## Printable handoff checks
+
+To print, search for a relevant accessibility program and use **Print one-page handoff** on its program card; the browser print dialog can save it as a PDF. The sheet contains no typed request narrative, checkmark status, names, medical records or benefits identifiers. It is not submitted to an agency or persisted on VHG servers. Print formatting targets US Letter. Run `node tests/assistant-browser.cjs` for a Chromium PDF regression test covering HISA, SAH, SHA and Ohio waiver modifications.
 
 ## Accessibility checklist caveats
 
