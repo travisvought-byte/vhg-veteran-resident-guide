@@ -90,7 +90,15 @@ Updated the proposed Fairfax phone in three primary locality records (Fairfax co
 
 The address header says Suite 201 while the highlighted move notice says Suite 202. Addresses remain out of scope and neither suite is added to the county records. The observed phone also matches an older published Fort Belvoir number in the prior research; that coincidence does not establish whether the current Fairfax page or the old cache is erroneous. The owner-observed number is the proposed primary, the old number is preserved, and the statewide DVS fallback remains available.
 
-**Spot-check status:** Fairfax service area matches; Fairfax phone differs and is recorded. Tazewell and Quantico have not yet been owner-checked. No broader validation is inferred from this one sample.
+**Spot-check status:** Fairfax service area matches; Fairfax phone differs and is recorded. Quantico was subsequently owner-checked below; Tazewell remains pending. No broader validation is inferred from this one sample.
+
+## Owner spot-check 2 of 3 — Quantico
+
+On 2026-10-20 the owner supplied a partial official Quantico page screenshot. It matches **571-697-5915 ext. 75915** and the complete recorded service area: Caroline, Culpeper, King George, Prince William, Spotsylvania, Stafford and Westmoreland counties, plus Fredericksburg City. Recorded the matching evidence on the two selected Quantico county routes (Culpeper and Stafford) and six alternative-office entries. No phone or county assignment changed.
+
+The visible base address supports that the office is on a military installation; the screenshot does not show the credential/access rules, so those are not owner-verified. The image contains an old September 11 closure notice; it is not treated as a current closure. Source review remains partial screenshot plus official search text rather than full-page or telephone confirmation.
+
+The other image in this upload repeats the Fairfax page. It is not a third distinct spot-check. **Two of the three selected offices have now been owner-checked; Tazewell is still pending.**
 
 ## County boundaries and normalization
 
