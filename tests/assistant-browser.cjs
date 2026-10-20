@@ -63,7 +63,13 @@ const {chromium}=require("playwright");
     ["va-hisa","veteran","wheelchair ramp"],
     ["va-sah","veteran","special adapted housing ramp"],
     ["va-sha","veteran","special housing adaptation ramp"],
-    ["ohio-waiver-home-modifications","other","wheelchair ramp home modification"]
+    ["ohio-waiver-home-modifications","other","wheelchair ramp home modification"],
+    ["r02-va-pension","veteran","veterans pension benefits"],
+    ["r02-survivors-pension","survivor","survivors pension benefits"],
+    ["r02-dic","survivor","DIC survivor benefits compensation"],
+    ["r02-aid-attendance-housebound","veteran","aid and attendance housebound pension"],
+    ["va-housing-help","veteran","homeless housing help"],
+    ["va-ssvf","veteran","homelessness housing SSVF"]
   ]){
     const details=await page.evaluate(async ({program,who,query})=>{
       const [{createPlan},{buildHandoff}]=await Promise.all([

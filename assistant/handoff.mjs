@@ -4,7 +4,13 @@ const DESTINATIONS=Object.freeze({
   "va-hisa":"VA care team / Prosthetic and Sensory Aids Service",
   "va-sah":"VA regional office or accredited veterans service officer",
   "va-sha":"VA regional office or accredited veterans service officer",
-  "ohio-waiver-home-modifications":"Waiver case manager / authorizing agency"
+  "ohio-waiver-home-modifications":"Waiver case manager / authorizing agency",
+  "r02-va-pension":"VA-accredited representative / VA Pension Intake Center",
+  "r02-survivors-pension":"VA-accredited representative / VA Pension Intake Center",
+  "r02-dic":"VA-accredited representative / VA survivor benefits office",
+  "r02-aid-attendance-housebound":"VA-accredited representative / VA Pension Intake Center",
+  "va-housing-help":"VA homeless call center / local housing coordinator",
+  "va-ssvf":"SSVF provider serving the household county"
 });
 const make=(document,tag,value,className)=>{
   const node=document.createElement(tag);

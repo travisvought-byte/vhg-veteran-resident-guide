@@ -147,3 +147,30 @@ const checklistOther=createPlan({state:"OH",person:"other",message:"wheelchair r
 assert.equal(checklistOther.recommendations.length,0);
 assert.equal(uncuratedPlan.recommendations[0].preparationChecklist,null);
 console.log("Four accessible and source-linked preparation checklists passed.");
+
+import {BENEFITS_HOUSING_CHECKLISTS,getBenefitsHousingChecklist} from "../assistant/benefits-housing-checklists.mjs";
+assert.deepEqual(Object.keys(BENEFITS_HOUSING_CHECKLISTS).sort(),["r02-va-pension","r02-survivors-pension","r02-dic","r02-aid-attendance-housebound","va-housing-help","va-ssvf"].sort());
+for(const [id,checklist] of Object.entries(BENEFITS_HOUSING_CHECKLISTS)){
+ assert.equal(checklist.reviewedOn,"2026-10-19",id);
+ assert(checklist.sections.length>=3,id);
+ assert(checklist.sections.every(s=>s.items.length>=2&&s.items.every(i=>i.text.length>=32&&i.responsible)),id);
+ assert(/^https:\/\//.test(checklist.submit.url),id);
+ assert(checklist.sources.every(s=>/^https:\/\//.test(s)),id);
+ assert(PROGRAM_GUIDANCE[id],id+" needs a reviewed guidance route");
+}
+assert.equal(getBenefitsHousingChecklist("nonexistent"),null);
+const pensionPlan=createPlan({state:"OH",person:"veteran",message:"veterans pension benefits",resources:ohioPrograms.filter(r=>r.program_id==="r02-va-pension")});
+assert.equal(pensionPlan.recommendations[0].preparationChecklist.title,BENEFITS_HOUSING_CHECKLISTS["r02-va-pension"].title);
+assert(planToEmail(pensionPlan).includes("Form 21P-527EZ"));
+const survivorPlan=createPlan({state:"OH",person:"survivor",message:"Survivors Pension",resources:ohioPrograms.filter(r=>r.program_id==="r02-survivors-pension")});
+assert(planToEmail(survivorPlan).includes("Form 21P-534EZ"));
+assert.equal(createPlan({state:"OH",person:"veteran",message:"Survivors Pension",resources:ohioPrograms.filter(r=>r.program_id==="r02-survivors-pension")}).recommendations.length,0);
+assert.equal(createPlan({state:"OH",person:"other",message:"Veterans Pension",resources:ohioPrograms.filter(r=>r.program_id==="r02-va-pension")}).recommendations.length,0);
+const aaPlan=createPlan({state:"OH",person:"survivor",message:"aid and attendance housebound pension",resources:ohioPrograms.filter(r=>r.program_id==="r02-aid-attendance-housebound")});
+assert(aaPlan.recommendations[0].preparationChecklist.sections.some(s=>s.items.some(i=>i.text.includes("21-0779"))));
+const housingPlan=createPlan({state:"OH",person:"veteran",message:"homeless housing help",resources:ohioPrograms.filter(r=>r.program_id==="va-housing-help")});
+assert(housingPlan.recommendations[0].preparationChecklist.submit.text.includes("877-424-3838"));
+assert.equal(createPlan({state:"OH",person:"other",message:"housing help",resources:ohioPrograms.filter(r=>r.program_id==="va-housing-help")}).recommendations.length,0);
+const ssvfPlan=createPlan({state:"OH",person:"veteran",message:"homelessness housing SSVF",resources:ohioPrograms.filter(r=>r.program_id==="va-ssvf")});
+assert(ssvfPlan.recommendations[0].preparationChecklist.submit.text.includes("no single national SSVF applicant form"));
+console.log("Six reviewed pension, survivor and housing handoff rules passed.");

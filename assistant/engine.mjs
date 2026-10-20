@@ -3,6 +3,7 @@
 import {STATES} from "./state-files.mjs";
 import {getProgramGuidance} from "./program-guidance.mjs";
 import {getAccessibilityChecklist} from "./accessibility-checklists.mjs";
+import {getBenefitsHousingChecklist} from "./benefits-housing-checklists.mjs";
 export {STATES};
 const TOPICS = Object.freeze({
   housing:{
@@ -136,7 +137,7 @@ export function createPlan({state="OH",county="",message="",person="unknown",res
       eligibilityNote:getProgramGuidance(x.program_id)?.audienceLabel||null,
       application:getProgramGuidance(x.program_id)?.application||null,
       actionSteps:getProgramGuidance(x.program_id)?.steps||[],
-      preparationChecklist:getAccessibilityChecklist(x.program_id)||null,
+      preparationChecklist:getAccessibilityChecklist(x.program_id)||getBenefitsHousingChecklist(x.program_id)||null,
       guidanceSource:getProgramGuidance(x.program_id)?.source||null,
       description:x.description||"",nextStep:x.next_step||"Contact the organization to ask about available services.",
       phone:x.public_contact?.phone||"",email:x.public_contact?.email||"",
