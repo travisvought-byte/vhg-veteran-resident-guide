@@ -51,7 +51,7 @@ const {chromium}=require("playwright");
   assert(!(await page.locator("#print-handoff").textContent()).includes("SecretInputMarker7849"));
   const printPageCount=async()=>{
     const pdf=await page.pdf({format:"Letter",preferCSSPageSize:true,printBackground:true});
-    return (pdf.toString("latin1").match(/\\/Type\\s*\\/Page\\b/g)||[]).length;
+    return (pdf.toString("latin1").match(/\/Type\s*\/Page\b/g)||[]).length;
   };
   assert.equal(await printPageCount(),1,"HISA must print to one letter page");
   // Rebuild all four program handoffs from actual published records.
