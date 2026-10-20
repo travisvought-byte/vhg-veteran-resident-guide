@@ -4,6 +4,8 @@ A free public guide created and maintained by Travis Vought, and shared by Veter
 
 **Live guide:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/
 
+**Guided assistance beta:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/assistant/ — an optional, browser-only, source-linked navigator for 11 states with referral drafts, accessibility preparation checklists and printable handoffs. It does not submit benefit applications, send messages, save cases or decide eligibility.
+
 **Pennsylvania guide:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/pa.html
 
 **Pennsylvania sharing kit:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/share-pa.html
