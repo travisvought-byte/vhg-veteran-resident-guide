@@ -30,7 +30,11 @@ jobs:
         run: npm ci
       - name: Check unified caregiver flow
         run: npm test
+      - name: Check 11-state assistance navigator and role-sensitive routing
+        run: node tests/assistant.mjs
       - name: Install test browser
         run: npx playwright install --with-deps chromium
       - name: Check browser, mobile and print behavior
         run: npm run test:browser
+      - name: Check assistance navigator browser interactions
+        run: node tests/assistant-browser.cjs
