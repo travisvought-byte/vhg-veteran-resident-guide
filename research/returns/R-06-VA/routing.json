@@ -1,0 +1,104 @@
+{
+  "priority": [
+    "va-claims",
+    "va-adrc",
+    "va-aging-directory",
+    "va-ship",
+    "va-waiver",
+    "va-ombudsman",
+    "va-at",
+    "r02-aid-attendance-housebound",
+    "r02-va-pension",
+    "r02-survivors-pension"
+  ],
+  "routes": {
+    "benefits": [
+      "va-claims",
+      "va-ship",
+      "va-waiver",
+      "r02-va-pension",
+      "va-accredited-help"
+    ],
+    "survivors": [
+      "va-claims",
+      "r02-survivors-pension",
+      "r02-dic",
+      "r02-va-burial"
+    ],
+    "care": [
+      "va-waiver",
+      "va-homes",
+      "va-caregiver",
+      "r02-va-health-enrollment",
+      "r02-va-cnh"
+    ],
+    "rights": [
+      "va-ombudsman",
+      "va-rights",
+      "va-adrc"
+    ],
+    "local": [
+      "va-aging-directory",
+      "va-adrc",
+      "va-caregiver",
+      "va-waiver",
+      "va-211"
+    ],
+    "housing": [
+      "va-211",
+      "va-housing-help",
+      "va-ssvf"
+    ],
+    "accessibility": [
+      "va-hisa",
+      "va-sah",
+      "va-at",
+      "va-waiver",
+      "va-adrc"
+    ]
+  },
+  "seniorTopics": {
+    "daily": [
+      "va-adrc",
+      "va-aging-directory",
+      "va-caregiver"
+    ],
+    "accessibility": [
+      "va-at",
+      "va-waiver",
+      "va-adrc"
+    ],
+    "vision": [
+      "va-blind",
+      "va-at"
+    ],
+    "hearing": [
+      "va-relay",
+      "va-at"
+    ],
+    "memory": [
+      "alz-dementia-support",
+      "va-caregiver",
+      "va-adrc"
+    ],
+    "costs": [
+      "va-ship",
+      "va-waiver",
+      "va-adrc"
+    ],
+    "rights": [
+      "va-ombudsman",
+      "va-rights"
+    ]
+  },
+  "statewide_navigation": {
+    "name": "Virginia Easy Access / No Wrong Door",
+    "phone": "888-992-0959",
+    "source_url": "https://easyaccess.virginia.gov/"
+  },
+  "home_modification": {
+    "url": "https://www.dmas.virginia.gov/for-members/benefits-and-services/waivers/ccc-plus-waiver/",
+    "label": "CCC Plus waiver: member guide for environmental modifications and assistive technology",
+    "guidance": "Request LTSS screening through local social services or the hospital discharge planner. For an approved waiver member in managed care, ask the MCO care coordinator about assessment, written authorization and enrolled providers. Fee-for-service members should follow the linked DMAS member guide. Do not start work or buy equipment before written authorization."
+  }
+}
