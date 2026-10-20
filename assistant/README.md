@@ -6,6 +6,7 @@ This folder contains the first functional component of a future **email and web-
 
 - `assistant/index.html` is a browser-based, accessible intake and resource-matching preview. The user chooses a supported state/county, describes a general need, sees matching resource cards, and can copy a draft email response.
 - `engine.mjs` contains deterministic, testable matching and email composition logic; it reads the published resource records rather than inventing programs.
+- `accessibility-checklists.mjs` adds specific, source-reviewed HISA, SAH, SHA and Ohio waiver home-modification preparation checklists. Each item identifies who must act, with official submission routes and follow-up instructions. Browser checkmarks are transient only, and are never sent, persisted, or treated as proof of eligibility. Copyable drafts include the document-preparation reminders, without completion status.
 - `program-guidance.mjs` is a source-linked, 12-program pilot of **explicit beneficiary audiences, eligibility screening notes and practical official application or intake steps**. Curated audiences override the conservative, existing fallback classifier. Listings without a curated entry keep their original program-specific next-step wording; no universal form or eligibility promise is inferred.
 - `draft-email.mjs` turns JSON intake into a **draft** email on standard output. No email is sent or stored.
 - `tests/assistant.mjs` exercises safety messaging, published contact data, eleven-state source status filters and beneficiary-aware routing and draft output.
@@ -43,6 +44,13 @@ Use **help@vethomeguard.org** as a real, monitored VHG address. The domain owner
 5. **Triage:** For urgent danger, direct the person to 911; for suicidal thoughts or crisis, 988 then press 1 or text 838255. An email assistant is not a crisis monitoring service, so automated acknowledgments must never imply 24/7 human intervention. Uncertain high-stakes decisions require human review.
 6. **Draft first:** Queue responses for authorized VHG review. Do not send automatically until live reliability tests, mailbox ownership, privacy notices, sender authentication, abuse controls, accessibility and escalation coverage are confirmed. Send only through an authorized outbound service with DKIM/SPF/DMARC and bounce handling.
 7. **Measure:** Track aggregated categories, response times, source corrections and verified outcomes without retaining unnecessary personal histories. Offer a concise correction route, deletion contact and human assistance route.
+
+## Accessibility checklist caveats
+
+- HISA involves a VA physician's prescription, completed VA Form 10-0103, a written itemized project estimate and a color before photo; renters additionally need notarized owner permission. The clinical team may provide specific requirements, and VA may inspect the site.
+- SAH/SHA initially use VA Form 26-4555 or the online route. Do not imply a contractor bid is required to submit the initial application.
+- Ohio waiver modifications must be authorized by the service plan and appropriate agency. Provider proposals, permits, inspections and owner consent are part of the provider/agency process, not a general grant application.
+- No applicant name, address, SSN, diagnosis, benefit ID, saved application or completion status is requested by this navigator. The checkboxes intentionally reset on reload or a new request.
 
 ## Quality / release gates
 

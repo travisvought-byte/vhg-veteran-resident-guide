@@ -2,6 +2,7 @@
 // No requests, personal data storage, AI model calls or outgoing email happen here.
 import {STATES} from "./state-files.mjs";
 import {getProgramGuidance} from "./program-guidance.mjs";
+import {getAccessibilityChecklist} from "./accessibility-checklists.mjs";
 export {STATES};
 const TOPICS = Object.freeze({
   housing:{
@@ -135,6 +136,7 @@ export function createPlan({state="OH",county="",message="",person="unknown",res
       eligibilityNote:getProgramGuidance(x.program_id)?.audienceLabel||null,
       application:getProgramGuidance(x.program_id)?.application||null,
       actionSteps:getProgramGuidance(x.program_id)?.steps||[],
+      preparationChecklist:getAccessibilityChecklist(x.program_id)||null,
       guidanceSource:getProgramGuidance(x.program_id)?.source||null,
       description:x.description||"",nextStep:x.next_step||"Contact the organization to ask about available services.",
       phone:x.public_contact?.phone||"",email:x.public_contact?.email||"",
@@ -162,6 +164,15 @@ export function planToEmail(plan){
       ...(x.eligibilityNote?["Who this may serve: "+x.eligibilityNote]:[]),
       ...(x.application?["Official application or intake: "+x.application.label+" ("+x.application.url+")"]:[]),
       ...((x.actionSteps||[]).map((step,j)=>"Action "+(j+1)+": "+step)),
+      ...(x.preparationChecklist?[
+        "Preparation checklist (review privately; progress is not collected by VHG):",
+        ...x.preparationChecklist.sections.flatMap(section=>[
+          section.title+":",
+          ...section.items.map((item,j)=>"  • "+item.text+" [Responsible: "+item.responsible+"]"+(item.condition?" ["+item.condition+"]":""))
+        ]),
+        "Submit through: "+x.preparationChecklist.submit.text,
+        "Follow up: "+x.preparationChecklist.followUp
+      ]:[]),
       "Contact: "+[x.phone,x.url].filter(Boolean).join(" | "),
       ...(x.guidanceSource?["Application guidance source: "+x.guidanceSource]:[]),
       "Source reviewed: "+(x.reviewedOn||"date not recorded")+"; current intake not confirmed.","");

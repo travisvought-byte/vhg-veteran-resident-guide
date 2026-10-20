@@ -119,3 +119,31 @@ assert.equal(getProgramGuidance("good"),null);
 assert.equal(uncuratedPlan.recommendations[0].application,null);
 assert.deepEqual(uncuratedPlan.recommendations[0].actionSteps,[]);
 console.log("Curated VA/state application steps and beneficiary filters passed.");
+
+// Practical preparation checklists must track official-source tasks and only display on curated programs.
+import {ACCESSIBILITY_CHECKLISTS,getAccessibilityChecklist} from "../assistant/accessibility-checklists.mjs";
+assert.deepEqual(Object.keys(ACCESSIBILITY_CHECKLISTS).sort(),["va-hisa","va-sah","va-sha","ohio-waiver-home-modifications"].sort());
+for(const [id,checklist] of Object.entries(ACCESSIBILITY_CHECKLISTS)){
+  assert.equal(checklist.reviewedOn,"2026-10-19");
+  assert(checklist.sections.length>=3,id);
+  assert(checklist.sections.every(section=>section.items.length>0&&section.items.every(item=>item.text.length>35&&item.responsible.length>2)),id);
+  assert(/^https:\/\//.test(checklist.submit.url),id);
+  assert(checklist.followUp.length>30,id);
+  assert(checklist.sources.every(url=>/^https:\/\//.test(url)),id);
+  assert(PROGRAM_GUIDANCE[id],id+" must have separately reviewed application guidance");
+}
+assert(getAccessibilityChecklist("does-not-exist")===null);
+assert(ACCESSIBILITY_CHECKLISTS["va-hisa"].sections.some(section=>section.items.some(item=>/itemized contractor estimate/.test(item.text))));
+assert(ACCESSIBILITY_CHECKLISTS["va-hisa"].sections.some(section=>section.items.some(item=>/notarized/.test(item.text)&&item.condition==="Only if renting")));
+assert(!JSON.stringify(ACCESSIBILITY_CHECKLISTS["va-sah"]).includes("contractor bid"));
+assert(ACCESSIBILITY_CHECKLISTS["ohio-waiver-home-modifications"].sections.some(section=>section.items.some(item=>/property owner provides written consent/.test(item.text))));
+assert(ACCESSIBILITY_CHECKLISTS["ohio-waiver-home-modifications"].submit.text.includes("no universal public application form"));
+const checklistHisaPlan=createPlan({state:"OH",person:"veteran",message:"wheelchair ramp",resources:ohioPrograms.filter(x=>x.program_id==="va-hisa")});
+assert.equal(checklistHisaPlan.recommendations[0].preparationChecklist.title,ACCESSIBILITY_CHECKLISTS["va-hisa"].title);
+assert(planToEmail(checklistHisaPlan).includes("Preparation checklist"));
+assert(planToEmail(checklistHisaPlan).includes("Responsib"));
+assert(planToEmail(checklistHisaPlan).includes("After submission"));
+const checklistOther=createPlan({state:"OH",person:"other",message:"wheelchair ramp",resources:ohioPrograms.filter(x=>x.program_id==="va-hisa")});
+assert.equal(checklistOther.recommendations.length,0);
+assert.equal(uncuratedPlan.recommendations[0].preparationChecklist,null);
+console.log("Four accessible and source-linked preparation checklists passed.");

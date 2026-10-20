@@ -216,9 +216,9 @@ export const ACCESSIBILITY_CHECKLISTS = Object.freeze({
             "responsible": "Provider"
           },
           {
-            "text": "If the home is owned by someone else, obtain written property-owner consent before work.",
+            "text": "Ensure the property owner provides written consent before work, including acknowledgement that the waiver will not restore the property to its previous condition.",
             "responsible": "Provider and property owner",
-            "condition": "If the applicant is not the owner"
+            "condition": "Required property-owner consent"
           },
           {
             "text": "Have the waiver administrator or designee review proposals and authorize the lowest-cost option meeting the assessed need. Do not treat a contractor quote as automatic approval.",

@@ -46,11 +46,44 @@ function showOffice(office){
  if(office.url){para(section,"The source below is a published office listing; confirm the current intake process.");safeLink(section,"County contact source",office.url)}
  section.append(textNode("p",office.sourceStatus));node.append(section);
 }
+function showChecklist(article,checklist){
+ const details=document.createElement("details");details.className="preparation";
+ const total=checklist.sections.reduce((n,section)=>n+section.items.length,0);
+ const summary=textNode("summary","Preparation checklist — "+total+" steps");
+ details.append(summary);
+ para(details,"Reviewed "+checklist.reviewedOn+". Use this as a preparation reminder, not an eligibility decision or a submitted application.");
+ para(details,"Checkmarks exist only on this page and reset when you change the request or reload. Do not enter private details here.");
+ const status=textNode("p","0 of "+total+" steps marked ready");
+ status.className="meta checklist-status";status.setAttribute("role","status");
+ details.append(status);
+ for(const section of checklist.sections){
+   details.append(textNode("h4",section.title));
+   const ul=document.createElement("ul");ul.className="checklist-items";
+   for(const item of section.items){
+     const li=document.createElement("li"),label=document.createElement("label");
+     const checkbox=document.createElement("input");checkbox.type="checkbox";checkbox.className="prep-checkbox";
+     label.append(checkbox,textNode("span",item.text));
+     li.append(label,textNode("p","Responsibility: "+item.responsible+(item.condition?" • "+item.condition:"")));
+     ul.append(li);
+   }
+   details.append(ul);
+ }
+ const update=()=>{const n=details.querySelectorAll(".prep-checkbox:checked").length;status.textContent=n+" of "+total+" steps marked ready";};
+ details.addEventListener("change",update);
+ const reset=textNode("button","Clear checkmarks");reset.type="button";reset.className="secondary";
+ reset.addEventListener("click",()=>{details.querySelectorAll(".prep-checkbox").forEach(c=>c.checked=false);update();});
+ details.append(reset);
+ para(details,"Submission: "+checklist.submit.text);
+ const sub=textNode("p","Official submission instructions: ");safeLink(sub,checklist.submit.label,checklist.submit.url);details.append(sub);
+ para(details,"After submission: "+checklist.followUp);
+ for(const source of checklist.sources){const el=textNode("p","Source: ");safeLink(el,"Official instructions",source);details.append(el);}
+ article.append(details);
+}
 function showResources(items,fallback){
  const where=$("resources");where.replaceChildren();
  if(!items.length){para(where,"No sufficiently source-reviewed matching program was found. This does not mean no assistance exists. "+fallback+" ");return}
  items.forEach((item,i)=>{
-   const article=textNode("article","");article.className="resource";
+   const article=textNode("article","");article.className="resource";article.dataset.programId=item.id;
    article.append(textNode("h3",(i+1)+". "+item.name));
    if(item.organization)para(article,item.organization);
    if(item.description)para(article,item.description);
@@ -67,6 +100,7 @@ function showResources(items,fallback){
      article.append(ol);
    }
    if(item.guidanceSource){const row=textNode("p","Application guidance source: ");safeLink(row,"Official instructions",item.guidanceSource);article.append(row)}
+   if(item.preparationChecklist)showChecklist(article,item.preparationChecklist);
    if(item.phone){article.append(textNode("span","Phone: "));phoneLink(article,item.phone);article.append(textNode("span","  "))}
    safeLink(article,"Official source / program website",item.url);
    para(article,"Source reviewed "+(item.reviewedOn||"date unavailable")+"; current intake not confirmed.");
