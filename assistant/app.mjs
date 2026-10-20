@@ -7,7 +7,7 @@ async function load(state){
   if(!fileNames[state])throw new Error("Unsupported state.");
   if(cache.has(state))return cache.get(state);
   const result=await Promise.all(fileNames[state].map(async file=>{
-    const response=await fetch(file,{cache:"no-store"});
+    const response=await fetch(new URL("../"+file, import.meta.url),{cache:"no-store"});
     if(!response.ok)throw new Error("Could not load the resource guide's public data.");
     return response.json();
   }));
