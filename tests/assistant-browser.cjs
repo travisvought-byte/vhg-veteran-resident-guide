@@ -16,6 +16,10 @@ const {chromium}=require("playwright");
  const browser=await chromium.launch({headless:true});
  try{
   const page=await browser.newPage();const errors=[];page.on("pageerror",e=>errors.push(e.message));
+  const homePage=fs.readFileSync(path.join(root,"index.html"),"utf8");
+  const sourceTemplate=fs.readFileSync(path.join(root,"templates/guide.html"),"utf8");
+  assert(homePage.includes('<a class="jump" href="assistant/">Guided assistance (beta)</a>'));
+  assert(sourceTemplate.includes('<a class="jump" href="assistant/">Guided assistance (beta)</a>'));
   await page.goto("http://127.0.0.1:"+server.address().port+"/assistant/");
   await page.waitForFunction(()=>document.querySelector("#feedback").textContent.includes("Ready"));
   assert.equal(await page.locator("#state").inputValue(),"OH");
