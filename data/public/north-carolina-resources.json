@@ -1,0 +1,2781 @@
+[
+  {
+    "program_id": "cms-care-compare",
+    "name": "Medicare Care Compare",
+    "official_url": "https://www.medicare.gov/care-compare/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "care_facilities"
+    ],
+    "description": "Compare published Medicare provider and quality information.",
+    "next_step": "Compare published Medicare provider and quality information.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "identity": "official_search_extract_only",
+      "contact": "official_search_extract_only",
+      "eligibility": "official_search_extract_only",
+      "last_reviewed_on": "2026-10-02"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.medicare.gov/care-compare/"
+    },
+    "organization": "Centers for Medicare & Medicaid Services",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-aid-attendance-housebound",
+    "name": "Pension additions: Aid and Attendance or Housebound",
+    "official_url": "https://www.va.gov/pension/aid-attendance-housebound/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "Extra monthly payments added to VA pension for qualifying veterans or survivors who need daily help or are housebound.",
+    "next_step": "Ask an accredited representative about pension eligibility and Aid and Attendance. For a nursing home resident, ask about VA Form 21-0779; medical evidence is also required.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/pension/aid-attendance-housebound/"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-dic",
+    "name": "Dependency and Indemnity Compensation",
+    "official_url": "https://www.va.gov/family-and-caregiver-benefits/survivor-compensation/dependency-indemnity-compensation/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "A potential survivor benefit when a service member died in the line of duty or a veteran’s death meets VA’s service-related or other qualifying rules.",
+    "next_step": "Ask an accredited representative whether DIC should be explored and what evidence is needed.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/family-and-caregiver-benefits/survivor-compensation/dependency-indemnity-compensation/"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-disability-increase",
+    "name": "Increased VA disability compensation",
+    "official_url": "https://www.va.gov/disability/how-to-file-claim/evidence-needed/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "A review route for an existing service-connected disability that has worsened.",
+    "next_step": "Ask an accredited representative what evidence may support a request for an increased rating.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-02"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/disability/how-to-file-claim/evidence-needed/"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-family-caregiver",
+    "name": "VA Program of Comprehensive Assistance for Family Caregivers",
+    "official_url": "https://www.va.gov/CAREGIVER/PCAFC.asp",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "A VA caregiver assistance program with specific veteran and caregiver eligibility requirements.",
+    "next_step": "Ask the VA caregiver support team about eligibility and the application process.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-02"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/CAREGIVER/PCAFC.asp"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-general-caregiver",
+    "name": "VA Program of General Caregiver Support Services",
+    "official_url": "https://www.va.gov/the-program-of-general-caregiver-support-services/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "VA resources and support for people caring for veterans.",
+    "next_step": "Ask the veteran’s VA care team which caregiver supports fit the situation.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-02"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/the-program-of-general-caregiver-support-services/"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-hospice",
+    "name": "VA hospice care",
+    "official_url": "https://www.va.gov/geriatrics/pages/Hospice_Care.asp",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "VA hospice care focuses on comfort and support near the end of life.",
+    "next_step": "Ask the treating clinician or VA social worker about hospice assessment and coordination.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/geriatrics/pages/Hospice_Care.asp"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-palliative",
+    "name": "VA palliative care",
+    "official_url": "https://www.va.gov/geriatrics/pages/Palliative_Care.asp",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "Palliative care addresses symptoms, comfort and care goals for serious illness.",
+    "next_step": "Ask the treating clinician about palliative care options.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/geriatrics/pages/Palliative_Care.asp"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-pension-medicaid-rule",
+    "name": "VA pension during Medicaid-covered nursing home care",
+    "official_url": "https://www.ecfr.gov/current/title-38/section-3.551",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "VA pension payments can be affected by Medicaid-covered nursing home care. The rules depend on the beneficiary’s circumstances.",
+    "next_step": "Ask an accredited representative and the care facility’s benefits staff to review VA pension and Medicaid together before changing benefits.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-02"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.ecfr.gov/current/title-38/section-3.551"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-survivors-pension",
+    "name": "Survivors Pension",
+    "official_url": "https://www.va.gov/family-and-caregiver-benefits/survivor-compensation/survivors-pension/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "A potential monthly benefit for qualifying surviving spouses and dependent children of wartime veterans, subject to income, net worth and other requirements.",
+    "next_step": "Ask an accredited representative to screen for Survivors Pension and explain the evidence needed.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/family-and-caregiver-benefits/survivor-compensation/survivors-pension/"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-va-burial",
+    "name": "VA burial allowance and memorial routes",
+    "official_url": "https://www.va.gov/burials-memorials/veterans-burial-allowance/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "Ask the county office or VA burial program about the correct application.",
+    "next_step": "Ask the county office or VA burial program about the correct application.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-02"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/burials-memorials/veterans-burial-allowance/"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-va-clc",
+    "name": "VA Community Living Centers",
+    "official_url": "https://www.va.gov/GERIATRICS/pages/VA_Community_Living_Centers.asp",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "VA-operated Community Living Centers provide nursing home level care for eligible veterans.",
+    "next_step": "Ask the VA care team or social worker about eligibility, assessment and local availability.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/GERIATRICS/pages/VA_Community_Living_Centers.asp"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-va-cnh",
+    "name": "VA Community Nursing Home program",
+    "official_url": "https://www.va.gov/GERIATRICS/pages/Community_Nursing_Homes.asp",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "A VA pathway for care in participating community nursing homes, subject to eligibility and available services.",
+    "next_step": "Ask the resident’s VA care team or social worker about community nursing home options.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/GERIATRICS/pages/Community_Nursing_Homes.asp"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-va-health-enrollment",
+    "name": "VA health care enrollment",
+    "official_url": "https://www.va.gov/health-care/how-to-apply/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "Apply for VA health care or get help understanding the enrollment process.",
+    "next_step": "Call VA enrollment or ask your county veterans office about the application and supporting information.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": "877-222-8387",
+      "phone_label": "VA health care enrollment line",
+      "email": null,
+      "contact_type": "office",
+      "web_route": "https://www.va.gov/health-care/how-to-apply/"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-va-pension",
+    "name": "Veterans Pension",
+    "official_url": "https://www.va.gov/pension/eligibility/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "Monthly pension for qualifying wartime veterans who meet age or disability, income, net worth and service requirements.",
+    "next_step": "Ask an accredited representative to screen for pension and explain how care expenses may affect the application.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/pension/eligibility/"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-whv",
+    "name": "We Honor Veterans public resources",
+    "official_url": "https://www.wehonorveterans.org/about/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "Use public veteran-care resources and ask the clinical team about coordinated care.",
+    "next_step": "Use public veteran-care resources and ask the clinical team about coordinated care.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-02"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.wehonorveterans.org/about/"
+    },
+    "organization": "National Alliance for Care at Home",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-hisa",
+    "name": "VA Home Improvements and Structural Alterations (HISA)",
+    "official_url": "https://www.rehab.va.gov/PROSTHETICS/psas/HISA2.asp",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "equipment_home_accessibility"
+    ],
+    "description": "Medically necessary changes to a veteran’s primary home, including permanent ramps, accessible bathrooms and widened access. Some non-service-connected needs can qualify.",
+    "next_step": "Ask your VA care team for a clinical review and contact your VA medical facility’s Prosthetic and Sensory Aids Service. Confirm your remaining lifetime benefit and obtain the HISA application checklist.",
+    "constraints": [
+      "HISA excludes portable ramps, stair glides, new construction and routine home repairs. VA determines eligibility, medical necessity and the available benefit. Prepare VA Form 10-0103, a VA-written or approved prescription, owner authorization (notarized for renters), an itemized estimate and a before photograph."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/find-locations/?facilityType=health"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-sah",
+    "name": "VA Specially Adapted Housing (SAH) grant",
+    "official_url": "https://www.va.gov/housing-assistance/disability-housing-grants/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "equipment_home_accessibility"
+    ],
+    "description": "A housing grant route for veterans with qualifying service-connected disabilities.",
+    "next_step": "Review the qualifying disability and ownership rules with VA or an accredited representative. Apply online through VA or use VA Form 26-4555; ask VA about project planning and approval before construction.",
+    "constraints": [
+      "These grants require specific qualifying service-connected disabilities; a disability rating alone does not establish eligibility. Confirm the current fiscal-year maximum and any benefit already used with VA."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": null,
+      "web_route": null
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-sha",
+    "name": "VA Special Housing Adaptation (SHA) grant",
+    "official_url": "https://www.va.gov/housing-assistance/disability-housing-grants/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "equipment_home_accessibility"
+    ],
+    "description": "A housing adaptation grant route with specific service-connected disability requirements.",
+    "next_step": "Review the qualifying disability and ownership rules with VA or an accredited representative. Apply online through VA or use VA Form 26-4555; ask VA about project planning and approval before construction.",
+    "constraints": [
+      "These grants require specific qualifying service-connected disabilities; a disability rating alone does not establish eligibility. Confirm the current fiscal-year maximum and any benefit already used with VA."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": null,
+      "web_route": null
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "nara-discharge-records",
+    "name": "Get a missing DD214 or service record",
+    "official_url": "https://www.archives.gov/veterans/military-service-records",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "general_navigation"
+    ],
+    "description": "Request military records that may help document service for a benefits application.",
+    "next_step": "Use the National Archives request instructions or ask the county veterans office for help. Who may request records and any fee depend on the record and request.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": "314-801-0800"
+    },
+    "organization": "National Archives and Records Administration",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-accredited-help",
+    "name": "Find accredited help with a VA claim",
+    "official_url": "https://www.va.gov/get-help-from-accredited-representative/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "Find and appoint an accredited representative for a benefits claim or decision review. Accredited VSO claims assistance is free.",
+    "next_step": "Use VA’s representative search, then ask the representative if they are available. Attorneys and claims agents may charge fees.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-location-finder",
+    "name": "Find a VA medical facility or benefits office",
+    "official_url": "https://www.va.gov/find-locations/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "Search for VA locations near the resident and identify where to ask about care or benefits.",
+    "next_step": "Use the official locator with the resident’s city or ZIP code and select the kind of facility needed.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-housing-help",
+    "name": "Veteran housing and homelessness help",
+    "official_url": "https://department.va.gov/homeless/nationalcallcenter/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "general_navigation"
+    ],
+    "description": "A 24-hour VA contact for veterans who are homeless or at risk of losing housing.",
+    "next_step": "Call 877-424-3838, available 24/7, if homeless or at risk of losing housing. Family, care teams and supporters may also call. Ask for local VA and community housing support.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": "877-424-3838"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-tra",
+    "name": "VA Temporary Residence Adaptation (TRA)",
+    "official_url": "https://www.va.gov/housing-assistance/disability-housing-grants/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "equipment_home_accessibility",
+      "general_navigation"
+    ],
+    "description": "Changes to a family member’s home where a qualifying veteran or service member is living temporarily.",
+    "next_step": "Ask VA about TRA if you qualify for SAH or SHA and are temporarily living in a family member’s home.",
+    "constraints": [
+      "TRA requires SAH or SHA eligibility; it is not a general temporary-housing or renter grant."
+    ],
+    "organization": "U.S. Department of Veterans Affairs",
+    "public_contact": {
+      "phone": null
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "state": "shared"
+  },
+  {
+    "program_id": "alz-dementia-support",
+    "name": "Memory loss and dementia: 24/7 support",
+    "official_url": "https://www.alz.org/help-support/i-have-alz/programs-support",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "general_navigation"
+    ],
+    "description": "Free, confidential dementia information, caregiver support and referrals to local community resources.",
+    "next_step": "Call the Alzheimer’s Association helpline for care planning, local support groups and caregiver guidance. Seek medical evaluation for new memory concerns.",
+    "constraints": [
+      "The helpline provides support and referrals; it does not replace clinical assessment or emergency services."
+    ],
+    "organization": "Alzheimer’s Association",
+    "public_contact": {
+      "phone": "800-272-3900"
+    },
+    "senior_topic": "memory",
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "state": "shared"
+  },
+  {
+    "program_id": "american-legion-post-locator",
+    "name": "American Legion: find a local post",
+    "official_url": "https://mylegion.org/PersonifyEbusiness/Find-a-Post",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "general_navigation"
+    ],
+    "description": "Official post lookup for community connections and identifying public contacts to share the guide with.",
+    "next_step": "Search the official directory for your town or ZIP code. Confirm the post’s public phone or email and ask who handles community partnerships.",
+    "constraints": [
+      "A local post is not automatically an accredited claims office or a funding provider. Confirm its services, membership or visitor rules, accessibility and current contact details."
+    ],
+    "organization": "The American Legion",
+    "public_contact": {
+      "phone": null
+    },
+    "resource_role": "community_locator",
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "state": "shared"
+  },
+  {
+    "program_id": "amvets-post-locator",
+    "name": "AMVETS: find a local post",
+    "official_url": "https://www.amvets.org/find-a-post",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "general_navigation"
+    ],
+    "description": "Official post lookup for community connections and identifying public contacts to share the guide with.",
+    "next_step": "Search the official directory for your town or ZIP code. Confirm the post’s public phone or email and ask who handles community partnerships.",
+    "constraints": [
+      "A local post is not automatically an accredited claims office or a funding provider. Confirm its services, membership or visitor rules, accessibility and current contact details."
+    ],
+    "organization": "AMVETS",
+    "public_contact": {
+      "phone": null
+    },
+    "resource_role": "community_locator",
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "state": "shared"
+  },
+  {
+    "program_id": "vfw-post-locator",
+    "name": "VFW: find a local post",
+    "official_url": "https://vfw.org/find-a-post",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "general_navigation"
+    ],
+    "description": "Official post lookup for community connections and identifying public contacts to share the guide with.",
+    "next_step": "Search the official directory for your town or ZIP code. Confirm the post’s public phone or email and ask who handles community partnerships.",
+    "constraints": [
+      "A local post is not automatically an accredited claims office or a funding provider. Confirm its services, membership or visitor rules, accessibility and current contact details."
+    ],
+    "organization": "Veterans of Foreign Wars",
+    "public_contact": {
+      "phone": null
+    },
+    "resource_role": "community_locator",
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "state": "shared"
+  },
+  {
+    "program_id": "crisis-988",
+    "name": "Suicide and emotional crisis support: 988",
+    "official_url": "https://988lifeline.org?oai_link_source=model_response_hotline",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "general_navigation"
+    ],
+    "description": "Crisis counseling and referrals for people in suicidal crisis or emotional distress, including veterans and concerned supporters.",
+    "next_step": "Call or text 988 for crisis support. Veterans-specific support is available through the call service. For immediate danger, call 911 or go to the nearest emergency department.",
+    "constraints": [
+      "Crisis support is separate from benefits eligibility and scheduled mental health treatment."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": "988"
+    },
+    "organization": "988 Suicide & Crisis Lifeline",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-mental-health",
+    "name": "Veterans: mental health care and suicide prevention",
+    "official_url": "https://www.va.gov/health-care/health-needs-conditions/mental-health/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "general_navigation"
+    ],
+    "description": "VA mental health care, suicide-prevention guidance, counseling and routes to VA medical centers and Vet Centers. Some services are available without VA enrollment.",
+    "next_step": "Use the VA page to connect with care. Existing patients can ask their primary care provider; others can contact a VA medical center or Vet Center. For urgent emotional distress, use 988 instead of waiting for an appointment.",
+    "constraints": [
+      "Confirm which services fit the person’s eligibility and needs. Scheduled care is not a substitute for immediate crisis help."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {},
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-ssvf",
+    "name": "Housing stability: Supportive Services for Veteran Families (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "general_navigation"
+    ],
+    "description": "Housing stability services through community organizations for low-income veteran families experiencing homelessness or imminent housing loss.",
+    "next_step": "Use the SSVF Providers link on the VA page to find an awarded organization. Ask about county coverage, prevention or rapid rehousing, eligibility and current assistance.",
+    "constraints": [
+      "Provider service areas, funding and eligibility vary. An award or referral does not guarantee financial assistance."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {},
+    "organization": "VA-funded community SSVF providers",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-hud-vash",
+    "name": "HUD-VASH: housing vouchers and VA support",
+    "official_url": "https://department.va.gov/homeless/hud-vash/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "general_navigation"
+    ],
+    "description": "Housing voucher assistance paired with VA case management for veterans experiencing homelessness who need ongoing support.",
+    "next_step": "Call VA homelessness routing at 877-424-3838 and ask whether HUD-VASH screening is appropriate. Ask about local assessment, vouchers and housing availability.",
+    "constraints": [
+      "Screening, program criteria, voucher availability and qualifying housing requirements apply; immediate housing is not guaranteed."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": "877-424-3838"
+    },
+    "organization": "U.S. Department of Veterans Affairs / HUD",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-crrc",
+    "name": "VA Community Resource and Referral Centers",
+    "official_url": "https://department.va.gov/homeless/hchv/community-resource-and-referral-centers/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "general_navigation"
+    ],
+    "description": "Find walk-in community resource centers connecting homeless and at-risk veterans with VA and non-VA services.",
+    "next_step": "Use the official center directory and confirm the nearest location, hours and intake. If no nearby center is listed, call VA homelessness routing at 877-424-3838.",
+    "constraints": [
+      "Centers are not present in every county. Confirm local access and resources; a listing does not guarantee a shelter bed."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": "877-424-3838"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "nc-claims",
+    "name": "North Carolina free accredited veterans claims assistance",
+    "organization": "North Carolina Department of Military and Veterans Affairs",
+    "official_url": "https://www.milvets.nc.gov/benefits-services/benefits-claims",
+    "state": "NC",
+    "service_area": [
+      "statewide"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "State and county service officers help veterans and qualifying survivors with benefits claims.",
+    "next_step": "Choose your county veterans contact or the assigned state service center. Ask for an accredited representative, an appointment and the records needed for your claim. Use the statewide number for routing.",
+    "constraints": [
+      "State services are free; a referral does not establish benefit eligibility.",
+      "The statewide number is a department routing line, not a direct claims appointment line."
+    ],
+    "public_contact": {
+      "phone": "844-624-8387"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "program_source_url": "https://www.milvets.nc.gov/benefits-services/benefits-claims",
+      "phone_source_url": "https://www.milvets.nc.gov/divisions/veterans-affairs/veterans-service-centers",
+      "accreditation_source_url": "https://www.milvets.nc.gov/divisions/veterans-affairs/veterans-service-centers"
+    }
+  },
+  {
+    "program_id": "nc-homes",
+    "name": "North Carolina state veterans homes",
+    "organization": "North Carolina Department of Military and Veterans Affairs",
+    "official_url": "https://www.milvets.nc.gov/divisions/north-carolina-state-veterans-homes",
+    "state": "NC",
+    "service_area": [
+      "statewide"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "Published state veterans home information and admissions contacts.",
+    "next_step": "Open the state homes directory and choose the home. Ask its admissions team about eligibility, assessment, payer arrangements and current intake.",
+    "constraints": [
+      "The statewide department phone is a routing fallback, not an admissions line.",
+      "The Fayetteville State Veterans Home page states the facility is closed for replacement; do not use it as an available placement.",
+      "Confirm current operating status and admission availability for the particular home."
+    ],
+    "public_contact": {
+      "phone": "844-624-8387"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "program_source_url": "https://www.milvets.nc.gov/divisions/north-carolina-state-veterans-homes",
+      "phone_source_url": "https://www.milvets.nc.gov/divisions/veterans-affairs/veterans-service-centers",
+      "closure_source_url": "https://www.milvets.nc.gov/divisions/north-carolina-state-veterans-homes/fayetteville-state-veterans-home"
+    }
+  },
+  {
+    "program_id": "nc-adrc",
+    "name": "North Carolina aging information and options counseling",
+    "organization": "NCDHHS Division of Aging",
+    "official_url": "https://www.ncdhhs.gov/divisions/aging/information-and-options-counseling",
+    "state": "NC",
+    "service_area": [
+      "statewide"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Local information and options counseling helps older adults choose community and long-term support.",
+    "next_step": "Use your county-matched aging agency or the linked Information and Assistance Provider Directory. Explain the person’s needs and ask which local provider offers options counseling.",
+    "constraints": [
+      "The published service is for people age 60 or older and those acting on their behalf.",
+      "No dedicated statewide options-counseling phone is published on the reviewed page; the county aging contact is the starting route.",
+      "For all-age disability assistance, use NCATP, Independent Living information or NC 211 as appropriate."
+    ],
+    "public_contact": {
+      "phone": null
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "program_source_url": "https://www.ncdhhs.gov/divisions/aging/information-and-options-counseling"
+    }
+  },
+  {
+    "program_id": "nc-aging-directory",
+    "name": "North Carolina Area Agencies on Aging directory",
+    "organization": "NCDHHS Division of Aging",
+    "official_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+    "state": "NC",
+    "service_area": [
+      "statewide"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "Official county map identifies 16 regional aging agencies.",
+    "next_step": "Choose your county in the map or this guide to call the matched agency. If you cannot identify the region, ask the NCDHHS Customer Service Center for aging-service routing.",
+    "constraints": [
+      "800-662-7030 is the NCDHHS Customer Service Center, not a dedicated aging or eligibility line."
+    ],
+    "public_contact": {
+      "phone": "800-662-7030"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "program_source_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+      "phone_source_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/area-agencies-aging"
+    }
+  },
+  {
+    "program_id": "nc-ship",
+    "name": "North Carolina SHIIP Medicare counseling",
+    "organization": "North Carolina Department of Insurance",
+    "official_url": "https://www.ncdoi.gov/consumers/medicare-and-seniors-health-insurance-information-program-shiip",
+    "state": "NC",
+    "service_area": [
+      "statewide"
+    ],
+    "needs_supported": [
+      "benefits_and_funding",
+      "general_navigation"
+    ],
+    "description": "Free, unbiased counseling on Medicare coverage, prescription plans and related insurance questions.",
+    "next_step": "Call SHIIP and request a local counselor. Ask about your coverage question and any help with Medicare costs.",
+    "constraints": [
+      "Counseling does not itself enroll someone in a plan or establish eligibility for financial assistance."
+    ],
+    "public_contact": {
+      "phone": "855-408-1212"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "program_source_url": "https://www.ncdoi.gov/consumers/medicare-and-seniors-health-insurance-information-program-shiip",
+      "phone_source_url": "https://www.ncdoi.gov/consumers/medicare-and-seniors-health-insurance-information-program-shiip"
+    }
+  },
+  {
+    "program_id": "nc-waiver",
+    "name": "North Carolina CAP/DA Medicaid home and community services",
+    "organization": "NC Medicaid",
+    "official_url": "https://medicaid.ncdhhs.gov/beneficiaries/long-term-services-and-supports/community-alternatives-program-disabled-adults",
+    "state": "NC",
+    "service_area": [
+      "statewide"
+    ],
+    "needs_supported": [
+      "help_at_home",
+      "equipment_home_accessibility",
+      "benefits_and_funding"
+    ],
+    "description": "CAP/DA supports qualifying disabled adults who need an institutional level of care to remain in or return to the community.",
+    "next_step": "Open the CAP/DA page and its NC LIFTSS link to find a case management entity serving the applicant’s county. Ask for a referral and assessment. NC LIFTSS can help route questions at 833-522-5429. Ask about project exclusions: CAP/DA does not cover modifications during new construction or nonportable modifications to a rented residence.",
+    "constraints": [
+      "Adults must meet disability, care-need and long-term-care Medicaid rules and be enrolled in NC Medicaid Direct; Medicaid enrollment alone does not establish CAP/DA eligibility.",
+      "Ask the case manager about the needs assessment, service plan, required documentation, authorization and accepted providers before ordering equipment or arranging work.",
+      "Policy 3K-2 excludes modification during new construction and nonportable modifications in rented residences. A referral does not guarantee a waiver slot, approval or funding."
+    ],
+    "public_contact": {
+      "phone": "833-522-5429"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "program_source_url": "https://medicaid.ncdhhs.gov/beneficiaries/long-term-services-and-supports/community-alternatives-program-disabled-adults",
+      "phone_source_url": "https://medicaid.ncdhhs.gov/providers/programs-and-services/long-term-care/community-alternatives-program-disabled-adults-capda",
+      "home_modification_source_url": "https://medicaid.ncdhhs.gov/3k-2-community-alternatives-program-disabled-adults-capda/download?attachment",
+      "policy_amended_on": "2025-09-01"
+    }
+  },
+  {
+    "program_id": "nc-ombudsman",
+    "name": "North Carolina statewide long-term-care ombudsman",
+    "organization": "NCDHHS Division of Aging",
+    "official_url": "https://www.ncdhhs.gov/divisions/aging/long-term-care-ombudsman",
+    "state": "NC",
+    "service_area": [
+      "statewide"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "care_facilities"
+    ],
+    "description": "State and 16 regional offices help residents address rights and care concerns in long-term-care facilities.",
+    "next_step": "Use the county-matched regional contact first. Give the facility location and resident’s wishes; if the region is unclear, ask the state office for ombudsman routing.",
+    "constraints": [
+      "The state number is the office line published in the regional directory; ask for the long-term-care ombudsman program.",
+      "Not an emergency response line or a guarantee of a particular outcome."
+    ],
+    "public_contact": {
+      "phone": "919-855-3400"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "program_source_url": "https://www.ncdhhs.gov/divisions/aging/long-term-care-ombudsman",
+      "phone_source_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open"
+    }
+  },
+  {
+    "program_id": "nc-caregiver",
+    "name": "North Carolina Family Caregiver Support Program",
+    "organization": "NCDHHS Division of Aging",
+    "official_url": "https://www.ncdhhs.gov/divisions/aging/family-caregiver-support-program",
+    "state": "NC",
+    "service_area": [
+      "statewide"
+    ],
+    "needs_supported": [
+      "caregiver_support",
+      "help_at_home"
+    ],
+    "description": "Local caregiver support can include information, training, counseling, short-term respite and limited supplemental services.",
+    "next_step": "Call your county aging agency and ask for the Family Caregiver Support Program. Describe the care recipient’s age and needs and ask about respite and caregiver training.",
+    "constraints": [
+      "This program does not pay family members to provide continuous care.",
+      "Age, caregiver relationship and program rules apply; services vary locally.",
+      "No dedicated statewide public intake phone appears on the reviewed program page."
+    ],
+    "public_contact": {
+      "phone": null
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "program_source_url": "https://www.ncdhhs.gov/divisions/aging/family-caregiver-support-program"
+    }
+  },
+  {
+    "program_id": "nc-at",
+    "name": "North Carolina Assistive Technology Program",
+    "organization": "NCDHHS Employment and Independence for People with Disabilities",
+    "official_url": "https://www.ncdhhs.gov/divisions/employment-and-independence-people-disabilities/north-carolina-assistive-technology-program",
+    "state": "NC",
+    "service_area": [
+      "statewide"
+    ],
+    "needs_supported": [
+      "equipment_home_accessibility",
+      "general_navigation"
+    ],
+    "description": "Device demonstrations, short-term loans and reuse help people explore assistive technology.",
+    "next_step": "Call NCATP or open its Staff and Centers link. Describe the task or barrier and ask for an appropriate center, a demonstration, a device loan or reuse options.",
+    "constraints": [
+      "Ask about stock, assessment needs, fees and suitability.",
+      "Device assistance does not promise construction funding or permanent installation."
+    ],
+    "public_contact": {
+      "phone": "919-855-3564"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "program_source_url": "https://www.ncdhhs.gov/divisions/employment-and-independence-people-disabilities/north-carolina-assistive-technology-program",
+      "phone_source_url": "https://www.ncdhhs.gov/divisions/employment-and-independence-people-disabilities/north-carolina-assistive-technology-program"
+    }
+  },
+  {
+    "program_id": "nc-rights",
+    "name": "Disability Rights North Carolina",
+    "organization": "Disability Rights North Carolina",
+    "official_url": "https://disabilityrightsnc.org/get-help/",
+    "state": "NC",
+    "service_area": [
+      "statewide"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "description": "North Carolina’s designated protection and advocacy organization provides disability-rights resources and intake.",
+    "next_step": "Review the resources and Apply for Legal Help instructions or call to ask how to request assistance with a disability-related rights concern.",
+    "constraints": [
+      "The toll-free number is published for calls within North Carolina.",
+      "Intake does not guarantee legal representation or a particular result."
+    ],
+    "public_contact": {
+      "phone": "877-235-4210"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "program_source_url": "https://disabilityrightsnc.org/get-help/",
+      "phone_source_url": "https://disabilityrightsnc.org/get-help/"
+    }
+  },
+  {
+    "program_id": "nc-blind",
+    "name": "North Carolina Services for the Blind",
+    "organization": "NCDHHS Division of Services for the Blind",
+    "official_url": "https://www.ncdhhs.gov/divisions/services-blind",
+    "state": "NC",
+    "service_area": [
+      "statewide"
+    ],
+    "needs_supported": [
+      "equipment_home_accessibility",
+      "help_at_home"
+    ],
+    "description": "Vision rehabilitation, independent living services and medical eye-care information.",
+    "next_step": "Ask the division for the district office or social worker serving your county and describe the daily tasks affected by vision loss.",
+    "constraints": [
+      "Ask which program applies and about assessment, eligibility and current availability."
+    ],
+    "public_contact": {
+      "phone": "866-222-1546"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "program_source_url": "https://www.ncdhhs.gov/divisions/services-blind",
+      "phone_source_url": "https://www.ncdhhs.gov/divisions/services-blind"
+    }
+  },
+  {
+    "program_id": "nc-relay",
+    "name": "North Carolina deaf and hard-of-hearing services",
+    "organization": "NCDHHS Division of Services for the Deaf and Hard of Hearing",
+    "official_url": "https://www.ncdhhs.gov/divisions/services-deaf-and-hard-hearing-dsdhh",
+    "state": "NC",
+    "service_area": [
+      "statewide"
+    ],
+    "needs_supported": [
+      "equipment_home_accessibility",
+      "general_navigation"
+    ],
+    "description": "Regional communication-access services and information on assistive and telecommunications resources.",
+    "next_step": "Call the published voice number or use the Regional Centers link. Ask about communication technology, accommodations and services appropriate for hearing or combined hearing and vision loss.",
+    "constraints": [
+      "800-851-6099 is a voice information line, not a relay operator.",
+      "The page also publishes TTY 919-715-0933 and videophone 919-890-0859; use the communication route that fits your needs."
+    ],
+    "public_contact": {
+      "phone": "800-851-6099"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "program_source_url": "https://www.ncdhhs.gov/divisions/services-deaf-and-hard-hearing-dsdhh",
+      "phone_source_url": "https://www.ncdhhs.gov/divisions/services-deaf-and-hard-hearing-dsdhh"
+    }
+  },
+  {
+    "program_id": "nc-211",
+    "name": "NC 211 community resource navigation",
+    "organization": "United Way of North Carolina",
+    "official_url": "https://nc211.org/contact/",
+    "state": "NC",
+    "service_area": [
+      "statewide"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "housing",
+      "benefits_and_funding"
+    ],
+    "description": "Information and referrals for local health and human services.",
+    "next_step": "Dial 211 or 888-892-1162 and give your county and immediate practical need. Ask for local housing, food, utility or other service intake contacts.",
+    "constraints": [
+      "A referral does not establish eligibility or confirm openings, housing placement or available funds."
+    ],
+    "public_contact": {
+      "phone": "888-892-1162"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "program_source_url": "https://nc211.org/contact/",
+      "phone_source_url": "https://nc211.org/contact/"
+    }
+  },
+  {
+    "program_id": "nc-independent-living",
+    "name": "North Carolina Independent Living information and intake — purchase pause",
+    "organization": "NCDHHS Employment and Independence for People with Disabilities",
+    "official_url": "https://www.ncdhhs.gov/divisions/employment-and-independence-people-disabilities/independent-living-people-disabilities",
+    "state": "NC",
+    "service_area": [
+      "statewide"
+    ],
+    "needs_supported": [
+      "equipment_home_accessibility",
+      "help_at_home"
+    ],
+    "description": "Independent Living can assess goals and connect people with supports; new purchased services are currently paused.",
+    "next_step": "Ask the IL office serving your area about eligibility assessment, the waiting list and alternative funding or services. Existing clients should ask which services are already authorized in their plan.",
+    "constraints": [
+      "As reviewed October 20, 2026, all four priority categories are closed and new or additional purchased IL services have been paused since August 1, 2026.",
+      "Applications may still be processed; eligible new applicants are assigned a priority category and waiting list.",
+      "Home modifications are a listed IL service, but this entry is not an offer of currently available ramp or bathroom funding."
+    ],
+    "public_contact": {
+      "phone": "800-689-9090"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "program_source_url": "https://www.ncdhhs.gov/divisions/employment-and-independence-people-disabilities/independent-living-people-disabilities",
+      "services_source_url": "https://www.ncdhhs.gov/divisions/employment-and-independence-people-disabilities/independent-living-people-disabilities/independent-living-services",
+      "availability_source_url": "https://www.ncdhhs.gov/divisions/employment-and-independence-people-disabilities/notice-priority-service-order",
+      "pause_effective_on": "2026-08-01",
+      "phone_source_url": "https://www.ncdhhs.gov/divisions/employment-and-independence-people-disabilities/independent-living-people-disabilities"
+    }
+  },
+  {
+    "program_id": "nc-aging-region-a",
+    "name": "Southwestern Commission Area Agency on Aging",
+    "organization": "Southwestern Commission",
+    "official_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+    "state": "NC",
+    "service_area": [
+      "Cherokee",
+      "Clay",
+      "Graham",
+      "Haywood",
+      "Jackson",
+      "Macon",
+      "Swain"
+    ],
+    "regional_role": "aging_agency",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "caregiver_support"
+    ],
+    "description": "Regional aging information and referrals for the listed counties.",
+    "next_step": "Give your county; ask about meals, transportation, caregiver support, local senior centers and assessment for help at home.",
+    "constraints": [
+      "Published agency or program routing phone; confirm current intake, eligibility and availability.",
+      "County service boundaries are published by NCDHHS; military service is not required.",
+      "The state aging directory also mentions the Eastern Band of Cherokee Indians. County matching does not determine tribal service eligibility or jurisdiction."
+    ],
+    "public_contact": {
+      "phone": "828-586-1962"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+      "county_mapping_source": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+      "selection": "Read all 100 entries in the official embedded county map.",
+      "source_format": "html_embedded_map",
+      "source_document_modified_on": null
+    }
+  },
+  {
+    "program_id": "nc-ombudsman-region-a",
+    "name": "Southwestern Commission Long-Term Care Ombudsman",
+    "organization": "Southwestern Commission",
+    "official_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+    "state": "NC",
+    "service_area": [
+      "Cherokee",
+      "Clay",
+      "Graham",
+      "Haywood",
+      "Jackson",
+      "Macon",
+      "Swain"
+    ],
+    "regional_role": "ombudsman",
+    "needs_supported": [
+      "resident_rights",
+      "care_facilities"
+    ],
+    "description": "Regional advocacy for residents of nursing homes and adult care homes in the listed counties.",
+    "next_step": "Give the facility name and county. Ask for the regional long-term-care ombudsman and describe the resident’s concern and wishes.",
+    "constraints": [
+      "This is the regional program’s published office route; ask to be connected to the advocate assigned to the facility.",
+      "Ombudsmen address resident rights and care concerns; they do not provide emergency response or guarantee a case outcome."
+    ],
+    "public_contact": {
+      "phone": "828-586-1962 ext. 223"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+      "county_mapping_source": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+      "selection": "Read the complete state-linked regional office directory as DOCX text, including phone column and county assignments.",
+      "source_format": "docx",
+      "source_document_modified_on": "2026-05-07"
+    }
+  },
+  {
+    "program_id": "nc-aging-region-b",
+    "name": "Land-of-Sky Regional Council Area Agency on Aging",
+    "organization": "Land-of-Sky Regional Council",
+    "official_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+    "state": "NC",
+    "service_area": [
+      "Buncombe",
+      "Henderson",
+      "Madison",
+      "Transylvania"
+    ],
+    "regional_role": "aging_agency",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "caregiver_support"
+    ],
+    "description": "Regional aging information and referrals for the listed counties.",
+    "next_step": "Give your county; ask about meals, transportation, caregiver support, local senior centers and assessment for help at home.",
+    "constraints": [
+      "Published agency or program routing phone; confirm current intake, eligibility and availability.",
+      "County service boundaries are published by NCDHHS; military service is not required."
+    ],
+    "public_contact": {
+      "phone": "828-251-6622"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+      "county_mapping_source": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+      "selection": "Read all 100 entries in the official embedded county map.",
+      "source_format": "html_embedded_map",
+      "source_document_modified_on": null
+    }
+  },
+  {
+    "program_id": "nc-ombudsman-region-b",
+    "name": "Land-of-Sky Regional Council Long-Term Care Ombudsman",
+    "organization": "Land-of-Sky Regional Council",
+    "official_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+    "state": "NC",
+    "service_area": [
+      "Buncombe",
+      "Henderson",
+      "Madison",
+      "Transylvania"
+    ],
+    "regional_role": "ombudsman",
+    "needs_supported": [
+      "resident_rights",
+      "care_facilities"
+    ],
+    "description": "Regional advocacy for residents of nursing homes and adult care homes in the listed counties.",
+    "next_step": "Give the facility name and county. Ask for the regional long-term-care ombudsman and describe the resident’s concern and wishes.",
+    "constraints": [
+      "This is the regional program’s published office route; ask to be connected to the advocate assigned to the facility.",
+      "Ombudsmen address resident rights and care concerns; they do not provide emergency response or guarantee a case outcome."
+    ],
+    "public_contact": {
+      "phone": "800-727-0557"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+      "county_mapping_source": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+      "selection": "Read the complete state-linked regional office directory as DOCX text, including phone column and county assignments.",
+      "source_format": "docx",
+      "source_document_modified_on": "2026-05-07"
+    }
+  },
+  {
+    "program_id": "nc-aging-region-c",
+    "name": "Foothills Regional Commission Area Agency on Aging",
+    "organization": "Foothills Regional Commission",
+    "official_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+    "state": "NC",
+    "service_area": [
+      "Cleveland",
+      "McDowell",
+      "Polk",
+      "Rutherford"
+    ],
+    "regional_role": "aging_agency",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "caregiver_support"
+    ],
+    "description": "Regional aging information and referrals for the listed counties.",
+    "next_step": "Give your county; ask about meals, transportation, caregiver support, local senior centers and assessment for help at home.",
+    "constraints": [
+      "Published agency or program routing phone; confirm current intake, eligibility and availability.",
+      "County service boundaries are published by NCDHHS; military service is not required.",
+      "The older aging map uses a former council name: Isothermal Planning & Development Commission. The current name is used here; county boundaries are unchanged in the reviewed sources."
+    ],
+    "public_contact": {
+      "phone": "828-287-2281"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+      "county_mapping_source": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+      "selection": "Read all 100 entries in the official embedded county map.",
+      "source_format": "html_embedded_map",
+      "source_document_modified_on": null,
+      "organization_name_source_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open"
+    }
+  },
+  {
+    "program_id": "nc-ombudsman-region-c",
+    "name": "Foothills Regional Commission Long-Term Care Ombudsman",
+    "organization": "Foothills Regional Commission",
+    "official_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+    "state": "NC",
+    "service_area": [
+      "Cleveland",
+      "McDowell",
+      "Polk",
+      "Rutherford"
+    ],
+    "regional_role": "ombudsman",
+    "needs_supported": [
+      "resident_rights",
+      "care_facilities"
+    ],
+    "description": "Regional advocacy for residents of nursing homes and adult care homes in the listed counties.",
+    "next_step": "Give the facility name and county. Ask for the regional long-term-care ombudsman and describe the resident’s concern and wishes.",
+    "constraints": [
+      "This is the regional program’s published office route; ask to be connected to the advocate assigned to the facility.",
+      "Ombudsmen address resident rights and care concerns; they do not provide emergency response or guarantee a case outcome."
+    ],
+    "public_contact": {
+      "phone": "800-331-9891"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+      "county_mapping_source": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+      "selection": "Read the complete state-linked regional office directory as DOCX text, including phone column and county assignments.",
+      "source_format": "docx",
+      "source_document_modified_on": "2026-05-07"
+    }
+  },
+  {
+    "program_id": "nc-aging-region-d",
+    "name": "High Country Council of Governments Area Agency on Aging",
+    "organization": "High Country Council of Governments",
+    "official_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+    "state": "NC",
+    "service_area": [
+      "Alleghany",
+      "Ashe",
+      "Avery",
+      "Mitchell",
+      "Watauga",
+      "Wilkes",
+      "Yancey"
+    ],
+    "regional_role": "aging_agency",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "caregiver_support"
+    ],
+    "description": "Regional aging information and referrals for the listed counties.",
+    "next_step": "Give your county; ask about meals, transportation, caregiver support, local senior centers and assessment for help at home.",
+    "constraints": [
+      "Published agency or program routing phone; confirm current intake, eligibility and availability.",
+      "County service boundaries are published by NCDHHS; military service is not required."
+    ],
+    "public_contact": {
+      "phone": "828-265-5434"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+      "county_mapping_source": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+      "selection": "Read all 100 entries in the official embedded county map.",
+      "source_format": "html_embedded_map",
+      "source_document_modified_on": null
+    }
+  },
+  {
+    "program_id": "nc-ombudsman-region-d",
+    "name": "High Country Council of Governments Long-Term Care Ombudsman",
+    "organization": "High Country Council of Governments",
+    "official_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+    "state": "NC",
+    "service_area": [
+      "Alleghany",
+      "Ashe",
+      "Avery",
+      "Mitchell",
+      "Watauga",
+      "Wilkes",
+      "Yancey"
+    ],
+    "regional_role": "ombudsman",
+    "needs_supported": [
+      "resident_rights",
+      "care_facilities"
+    ],
+    "description": "Regional advocacy for residents of nursing homes and adult care homes in the listed counties.",
+    "next_step": "Give the facility name and county. Ask for the regional long-term-care ombudsman and describe the resident’s concern and wishes.",
+    "constraints": [
+      "This is the regional program’s published office route; ask to be connected to the advocate assigned to the facility.",
+      "Ombudsmen address resident rights and care concerns; they do not provide emergency response or guarantee a case outcome."
+    ],
+    "public_contact": {
+      "phone": "828-265-5434 ext. 126"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+      "county_mapping_source": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+      "selection": "Read the complete state-linked regional office directory as DOCX text, including phone column and county assignments.",
+      "source_format": "docx",
+      "source_document_modified_on": "2026-05-07"
+    }
+  },
+  {
+    "program_id": "nc-aging-region-e",
+    "name": "Western Piedmont Council of Governments Area Agency on Aging",
+    "organization": "Western Piedmont Council of Governments",
+    "official_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+    "state": "NC",
+    "service_area": [
+      "Alexander",
+      "Burke",
+      "Caldwell",
+      "Catawba"
+    ],
+    "regional_role": "aging_agency",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "caregiver_support"
+    ],
+    "description": "Regional aging information and referrals for the listed counties.",
+    "next_step": "Give your county; ask about meals, transportation, caregiver support, local senior centers and assessment for help at home.",
+    "constraints": [
+      "Published agency or program routing phone; confirm current intake, eligibility and availability.",
+      "County service boundaries are published by NCDHHS; military service is not required."
+    ],
+    "public_contact": {
+      "phone": "828-322-9191"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+      "county_mapping_source": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+      "selection": "Read all 100 entries in the official embedded county map.",
+      "source_format": "html_embedded_map",
+      "source_document_modified_on": null
+    }
+  },
+  {
+    "program_id": "nc-ombudsman-region-e",
+    "name": "Western Piedmont Council of Governments Long-Term Care Ombudsman",
+    "organization": "Western Piedmont Council of Governments",
+    "official_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+    "state": "NC",
+    "service_area": [
+      "Alexander",
+      "Burke",
+      "Caldwell",
+      "Catawba"
+    ],
+    "regional_role": "ombudsman",
+    "needs_supported": [
+      "resident_rights",
+      "care_facilities"
+    ],
+    "description": "Regional advocacy for residents of nursing homes and adult care homes in the listed counties.",
+    "next_step": "Give the facility name and county. Ask for the regional long-term-care ombudsman and describe the resident’s concern and wishes.",
+    "constraints": [
+      "This is the regional program’s published office route; ask to be connected to the advocate assigned to the facility.",
+      "Ombudsmen address resident rights and care concerns; they do not provide emergency response or guarantee a case outcome."
+    ],
+    "public_contact": {
+      "phone": "828-485-4213"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+      "county_mapping_source": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+      "selection": "Read the complete state-linked regional office directory as DOCX text, including phone column and county assignments.",
+      "source_format": "docx",
+      "source_document_modified_on": "2026-05-07"
+    }
+  },
+  {
+    "program_id": "nc-aging-region-f",
+    "name": "Centralina Regional Council Area Agency on Aging",
+    "organization": "Centralina Regional Council",
+    "official_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+    "state": "NC",
+    "service_area": [
+      "Anson",
+      "Cabarrus",
+      "Gaston",
+      "Iredell",
+      "Lincoln",
+      "Mecklenburg",
+      "Rowan",
+      "Stanly",
+      "Union"
+    ],
+    "regional_role": "aging_agency",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "caregiver_support"
+    ],
+    "description": "Regional aging information and referrals for the listed counties.",
+    "next_step": "Give your county; ask about meals, transportation, caregiver support, local senior centers and assessment for help at home.",
+    "constraints": [
+      "Published agency or program routing phone; confirm current intake, eligibility and availability.",
+      "County service boundaries are published by NCDHHS; military service is not required."
+    ],
+    "public_contact": {
+      "phone": "704-372-2416"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+      "county_mapping_source": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+      "selection": "Read all 100 entries in the official embedded county map.",
+      "source_format": "html_embedded_map",
+      "source_document_modified_on": null
+    }
+  },
+  {
+    "program_id": "nc-ombudsman-region-f",
+    "name": "Centralina Regional Council Long-Term Care Ombudsman",
+    "organization": "Centralina Regional Council",
+    "official_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+    "state": "NC",
+    "service_area": [
+      "Anson",
+      "Cabarrus",
+      "Gaston",
+      "Iredell",
+      "Lincoln",
+      "Mecklenburg",
+      "Rowan",
+      "Stanly",
+      "Union"
+    ],
+    "regional_role": "ombudsman",
+    "needs_supported": [
+      "resident_rights",
+      "care_facilities"
+    ],
+    "description": "Regional advocacy for residents of nursing homes and adult care homes in the listed counties.",
+    "next_step": "Give the facility name and county. Ask for the regional long-term-care ombudsman and describe the resident’s concern and wishes.",
+    "constraints": [
+      "This is the regional program’s published office route; ask to be connected to the advocate assigned to the facility.",
+      "Ombudsmen address resident rights and care concerns; they do not provide emergency response or guarantee a case outcome."
+    ],
+    "public_contact": {
+      "phone": "800-508-5777"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+      "county_mapping_source": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+      "selection": "Read the complete state-linked regional office directory as DOCX text, including phone column and county assignments.",
+      "source_format": "docx",
+      "source_document_modified_on": "2026-05-07"
+    }
+  },
+  {
+    "program_id": "nc-aging-region-g",
+    "name": "Piedmont Triad Regional Council Area Agency on Aging",
+    "organization": "Piedmont Triad Regional Council",
+    "official_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+    "state": "NC",
+    "service_area": [
+      "Alamance",
+      "Caswell",
+      "Davidson",
+      "Davie",
+      "Forsyth",
+      "Guilford",
+      "Montgomery",
+      "Randolph",
+      "Rockingham",
+      "Stokes",
+      "Surry",
+      "Yadkin"
+    ],
+    "regional_role": "aging_agency",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "caregiver_support"
+    ],
+    "description": "Regional aging information and referrals for the listed counties.",
+    "next_step": "Give your county; ask about meals, transportation, caregiver support, local senior centers and assessment for help at home.",
+    "constraints": [
+      "Published agency or program routing phone; confirm current intake, eligibility and availability.",
+      "County service boundaries are published by NCDHHS; military service is not required."
+    ],
+    "public_contact": {
+      "phone": "336-904-0300"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+      "county_mapping_source": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+      "selection": "Read all 100 entries in the official embedded county map.",
+      "source_format": "html_embedded_map",
+      "source_document_modified_on": null
+    }
+  },
+  {
+    "program_id": "nc-ombudsman-region-g",
+    "name": "Piedmont Triad Regional Council Long-Term Care Ombudsman",
+    "organization": "Piedmont Triad Regional Council",
+    "official_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+    "state": "NC",
+    "service_area": [
+      "Alamance",
+      "Caswell",
+      "Davidson",
+      "Davie",
+      "Forsyth",
+      "Guilford",
+      "Montgomery",
+      "Randolph",
+      "Rockingham",
+      "Stokes",
+      "Surry",
+      "Yadkin"
+    ],
+    "regional_role": "ombudsman",
+    "needs_supported": [
+      "resident_rights",
+      "care_facilities"
+    ],
+    "description": "Regional advocacy for residents of nursing homes and adult care homes in the listed counties.",
+    "next_step": "Give the facility name and county. Ask for the regional long-term-care ombudsman and describe the resident’s concern and wishes.",
+    "constraints": [
+      "This is the regional program’s published office route; ask to be connected to the advocate assigned to the facility.",
+      "Ombudsmen address resident rights and care concerns; they do not provide emergency response or guarantee a case outcome."
+    ],
+    "public_contact": {
+      "phone": "336-904-0300"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+      "county_mapping_source": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+      "selection": "Read the complete state-linked regional office directory as DOCX text, including phone column and county assignments.",
+      "source_format": "docx",
+      "source_document_modified_on": "2026-05-07"
+    }
+  },
+  {
+    "program_id": "nc-aging-region-j",
+    "name": "Central Pines Regional Council Area Agency on Aging",
+    "organization": "Central Pines Regional Council",
+    "official_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+    "state": "NC",
+    "service_area": [
+      "Chatham",
+      "Durham",
+      "Johnston",
+      "Lee",
+      "Moore",
+      "Orange",
+      "Wake"
+    ],
+    "regional_role": "aging_agency",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "caregiver_support"
+    ],
+    "description": "Regional aging information and referrals for the listed counties.",
+    "next_step": "Give your county; ask about meals, transportation, caregiver support, local senior centers and assessment for help at home.",
+    "constraints": [
+      "Published agency or program routing phone; confirm current intake, eligibility and availability.",
+      "County service boundaries are published by NCDHHS; military service is not required.",
+      "The older aging map uses a former council name: Triangle J Council of Governments. The current name is used here; county boundaries are unchanged in the reviewed sources."
+    ],
+    "public_contact": {
+      "phone": "919-558-2711"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+      "county_mapping_source": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+      "selection": "Read all 100 entries in the official embedded county map.",
+      "source_format": "html_embedded_map",
+      "source_document_modified_on": null,
+      "organization_name_source_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open"
+    }
+  },
+  {
+    "program_id": "nc-ombudsman-region-j",
+    "name": "Central Pines Regional Council Long-Term Care Ombudsman",
+    "organization": "Central Pines Regional Council",
+    "official_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+    "state": "NC",
+    "service_area": [
+      "Chatham",
+      "Durham",
+      "Johnston",
+      "Lee",
+      "Moore",
+      "Orange",
+      "Wake"
+    ],
+    "regional_role": "ombudsman",
+    "needs_supported": [
+      "resident_rights",
+      "care_facilities"
+    ],
+    "description": "Regional advocacy for residents of nursing homes and adult care homes in the listed counties.",
+    "next_step": "Give the facility name and county. Ask for the regional long-term-care ombudsman and describe the resident’s concern and wishes.",
+    "constraints": [
+      "This is the regional program’s published office route; ask to be connected to the advocate assigned to the facility.",
+      "Ombudsmen address resident rights and care concerns; they do not provide emergency response or guarantee a case outcome."
+    ],
+    "public_contact": {
+      "phone": "800-310-9777"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+      "county_mapping_source": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+      "selection": "Read the complete state-linked regional office directory as DOCX text, including phone column and county assignments.",
+      "source_format": "docx",
+      "source_document_modified_on": "2026-05-07"
+    }
+  },
+  {
+    "program_id": "nc-aging-region-k",
+    "name": "Kerr-Tar Regional Council of Governments Area Agency on Aging",
+    "organization": "Kerr-Tar Regional Council of Governments",
+    "official_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+    "state": "NC",
+    "service_area": [
+      "Franklin",
+      "Granville",
+      "Person",
+      "Vance",
+      "Warren"
+    ],
+    "regional_role": "aging_agency",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "caregiver_support"
+    ],
+    "description": "Regional aging information and referrals for the listed counties.",
+    "next_step": "Give your county; ask about meals, transportation, caregiver support, local senior centers and assessment for help at home.",
+    "constraints": [
+      "Published agency or program routing phone; confirm current intake, eligibility and availability.",
+      "County service boundaries are published by NCDHHS; military service is not required."
+    ],
+    "public_contact": {
+      "phone": "252-436-2040"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+      "county_mapping_source": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+      "selection": "Read all 100 entries in the official embedded county map.",
+      "source_format": "html_embedded_map",
+      "source_document_modified_on": null
+    }
+  },
+  {
+    "program_id": "nc-ombudsman-region-k",
+    "name": "Kerr-Tar Regional Council of Governments Long-Term Care Ombudsman",
+    "organization": "Kerr-Tar Regional Council of Governments",
+    "official_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+    "state": "NC",
+    "service_area": [
+      "Franklin",
+      "Granville",
+      "Person",
+      "Vance",
+      "Warren"
+    ],
+    "regional_role": "ombudsman",
+    "needs_supported": [
+      "resident_rights",
+      "care_facilities"
+    ],
+    "description": "Regional advocacy for residents of nursing homes and adult care homes in the listed counties.",
+    "next_step": "Give the facility name and county. Ask for the regional long-term-care ombudsman and describe the resident’s concern and wishes.",
+    "constraints": [
+      "This is the regional program’s published office route; ask to be connected to the advocate assigned to the facility.",
+      "Ombudsmen address resident rights and care concerns; they do not provide emergency response or guarantee a case outcome."
+    ],
+    "public_contact": {
+      "phone": "866-506-6223"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+      "county_mapping_source": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+      "selection": "Read the complete state-linked regional office directory as DOCX text, including phone column and county assignments.",
+      "source_format": "docx",
+      "source_document_modified_on": "2026-05-07"
+    }
+  },
+  {
+    "program_id": "nc-aging-region-l",
+    "name": "Upper Coastal Plain Council of Governments Area Agency on Aging",
+    "organization": "Upper Coastal Plain Council of Governments",
+    "official_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+    "state": "NC",
+    "service_area": [
+      "Edgecombe",
+      "Halifax",
+      "Nash",
+      "Northampton",
+      "Wilson"
+    ],
+    "regional_role": "aging_agency",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "caregiver_support"
+    ],
+    "description": "Regional aging information and referrals for the listed counties.",
+    "next_step": "Give your county; ask about meals, transportation, caregiver support, local senior centers and assessment for help at home.",
+    "constraints": [
+      "Published agency or program routing phone; confirm current intake, eligibility and availability.",
+      "County service boundaries are published by NCDHHS; military service is not required."
+    ],
+    "public_contact": {
+      "phone": "252-234-5952"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+      "county_mapping_source": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+      "selection": "Read all 100 entries in the official embedded county map.",
+      "source_format": "html_embedded_map",
+      "source_document_modified_on": null
+    }
+  },
+  {
+    "program_id": "nc-ombudsman-region-l",
+    "name": "Upper Coastal Plain Council of Governments Long-Term Care Ombudsman",
+    "organization": "Upper Coastal Plain Council of Governments",
+    "official_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+    "state": "NC",
+    "service_area": [
+      "Edgecombe",
+      "Halifax",
+      "Nash",
+      "Northampton",
+      "Wilson"
+    ],
+    "regional_role": "ombudsman",
+    "needs_supported": [
+      "resident_rights",
+      "care_facilities"
+    ],
+    "description": "Regional advocacy for residents of nursing homes and adult care homes in the listed counties.",
+    "next_step": "Give the facility name and county. Ask for the regional long-term-care ombudsman and describe the resident’s concern and wishes.",
+    "constraints": [
+      "This is the regional program’s published office route; ask to be connected to the advocate assigned to the facility.",
+      "Ombudsmen address resident rights and care concerns; they do not provide emergency response or guarantee a case outcome."
+    ],
+    "public_contact": {
+      "phone": "252-234-5963"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+      "county_mapping_source": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+      "selection": "Read the complete state-linked regional office directory as DOCX text, including phone column and county assignments.",
+      "source_format": "docx",
+      "source_document_modified_on": "2026-05-07"
+    }
+  },
+  {
+    "program_id": "nc-aging-region-m",
+    "name": "Mid-Carolina Council of Governments Area Agency on Aging",
+    "organization": "Mid-Carolina Council of Governments",
+    "official_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+    "state": "NC",
+    "service_area": [
+      "Cumberland",
+      "Harnett",
+      "Sampson"
+    ],
+    "regional_role": "aging_agency",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "caregiver_support"
+    ],
+    "description": "Regional aging information and referrals for the listed counties.",
+    "next_step": "Give your county; ask about meals, transportation, caregiver support, local senior centers and assessment for help at home.",
+    "constraints": [
+      "Published agency or program routing phone; confirm current intake, eligibility and availability.",
+      "County service boundaries are published by NCDHHS; military service is not required."
+    ],
+    "public_contact": {
+      "phone": "910-323-4191"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+      "county_mapping_source": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+      "selection": "Read all 100 entries in the official embedded county map.",
+      "source_format": "html_embedded_map",
+      "source_document_modified_on": null
+    }
+  },
+  {
+    "program_id": "nc-ombudsman-region-m",
+    "name": "Mid-Carolina Council of Governments Long-Term Care Ombudsman",
+    "organization": "Mid-Carolina Council of Governments",
+    "official_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+    "state": "NC",
+    "service_area": [
+      "Cumberland",
+      "Harnett",
+      "Sampson"
+    ],
+    "regional_role": "ombudsman",
+    "needs_supported": [
+      "resident_rights",
+      "care_facilities"
+    ],
+    "description": "Regional advocacy for residents of nursing homes and adult care homes in the listed counties.",
+    "next_step": "Give the facility name and county. Ask for the regional long-term-care ombudsman and describe the resident’s concern and wishes.",
+    "constraints": [
+      "This is the regional program’s published office route; ask to be connected to the advocate assigned to the facility.",
+      "Ombudsmen address resident rights and care concerns; they do not provide emergency response or guarantee a case outcome."
+    ],
+    "public_contact": {
+      "phone": "910-323-4191 ext. 25"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+      "county_mapping_source": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+      "selection": "Read the complete state-linked regional office directory as DOCX text, including phone column and county assignments.",
+      "source_format": "docx",
+      "source_document_modified_on": "2026-05-07"
+    }
+  },
+  {
+    "program_id": "nc-aging-region-n",
+    "name": "Lumber River Council of Governments Area Agency on Aging",
+    "organization": "Lumber River Council of Governments",
+    "official_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+    "state": "NC",
+    "service_area": [
+      "Bladen",
+      "Hoke",
+      "Richmond",
+      "Robeson",
+      "Scotland"
+    ],
+    "regional_role": "aging_agency",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "caregiver_support"
+    ],
+    "description": "Regional aging information and referrals for the listed counties.",
+    "next_step": "Give your county; ask about meals, transportation, caregiver support, local senior centers and assessment for help at home.",
+    "constraints": [
+      "Published agency or program routing phone; confirm current intake, eligibility and availability.",
+      "County service boundaries are published by NCDHHS; military service is not required."
+    ],
+    "public_contact": {
+      "phone": "910-618-5533"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+      "county_mapping_source": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+      "selection": "Read all 100 entries in the official embedded county map.",
+      "source_format": "html_embedded_map",
+      "source_document_modified_on": null
+    }
+  },
+  {
+    "program_id": "nc-ombudsman-region-n",
+    "name": "Lumber River Council of Governments Long-Term Care Ombudsman",
+    "organization": "Lumber River Council of Governments",
+    "official_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+    "state": "NC",
+    "service_area": [
+      "Bladen",
+      "Hoke",
+      "Richmond",
+      "Robeson",
+      "Scotland"
+    ],
+    "regional_role": "ombudsman",
+    "needs_supported": [
+      "resident_rights",
+      "care_facilities"
+    ],
+    "description": "Regional advocacy for residents of nursing homes and adult care homes in the listed counties.",
+    "next_step": "Give the facility name and county. Ask for the regional long-term-care ombudsman and describe the resident’s concern and wishes.",
+    "constraints": [
+      "This is the regional program’s published office route; ask to be connected to the advocate assigned to the facility.",
+      "Ombudsmen address resident rights and care concerns; they do not provide emergency response or guarantee a case outcome."
+    ],
+    "public_contact": {
+      "phone": "910-775-9761"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+      "county_mapping_source": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+      "selection": "Read the complete state-linked regional office directory as DOCX text, including phone column and county assignments.",
+      "source_format": "docx",
+      "source_document_modified_on": "2026-05-07"
+    }
+  },
+  {
+    "program_id": "nc-aging-region-o",
+    "name": "Cape Fear Council of Governments Area Agency on Aging",
+    "organization": "Cape Fear Council of Governments",
+    "official_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+    "state": "NC",
+    "service_area": [
+      "Brunswick",
+      "Columbus",
+      "New Hanover",
+      "Pender"
+    ],
+    "regional_role": "aging_agency",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "caregiver_support"
+    ],
+    "description": "Regional aging information and referrals for the listed counties.",
+    "next_step": "Give your county; ask about meals, transportation, caregiver support, local senior centers and assessment for help at home.",
+    "constraints": [
+      "Published agency or program routing phone; confirm current intake, eligibility and availability.",
+      "County service boundaries are published by NCDHHS; military service is not required."
+    ],
+    "public_contact": {
+      "phone": "910-395-4553"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+      "county_mapping_source": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+      "selection": "Read all 100 entries in the official embedded county map.",
+      "source_format": "html_embedded_map",
+      "source_document_modified_on": null
+    }
+  },
+  {
+    "program_id": "nc-ombudsman-region-o",
+    "name": "Cape Fear Council of Governments Long-Term Care Ombudsman",
+    "organization": "Cape Fear Council of Governments",
+    "official_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+    "state": "NC",
+    "service_area": [
+      "Brunswick",
+      "Columbus",
+      "New Hanover",
+      "Pender"
+    ],
+    "regional_role": "ombudsman",
+    "needs_supported": [
+      "resident_rights",
+      "care_facilities"
+    ],
+    "description": "Regional advocacy for residents of nursing homes and adult care homes in the listed counties.",
+    "next_step": "Give the facility name and county. Ask for the regional long-term-care ombudsman and describe the resident’s concern and wishes.",
+    "constraints": [
+      "This is the regional program’s published office route; ask to be connected to the advocate assigned to the facility.",
+      "Ombudsmen address resident rights and care concerns; they do not provide emergency response or guarantee a case outcome."
+    ],
+    "public_contact": {
+      "phone": "800-218-6575"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+      "county_mapping_source": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+      "selection": "Read the complete state-linked regional office directory as DOCX text, including phone column and county assignments.",
+      "source_format": "docx",
+      "source_document_modified_on": "2026-05-07"
+    }
+  },
+  {
+    "program_id": "nc-aging-region-p",
+    "name": "Eastern Carolina Council Area Agency on Aging",
+    "organization": "Eastern Carolina Council",
+    "official_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+    "state": "NC",
+    "service_area": [
+      "Carteret",
+      "Craven",
+      "Duplin",
+      "Greene",
+      "Jones",
+      "Lenoir",
+      "Onslow",
+      "Pamlico",
+      "Wayne"
+    ],
+    "regional_role": "aging_agency",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "caregiver_support"
+    ],
+    "description": "Regional aging information and referrals for the listed counties.",
+    "next_step": "Give your county; ask about meals, transportation, caregiver support, local senior centers and assessment for help at home.",
+    "constraints": [
+      "Published agency or program routing phone; confirm current intake, eligibility and availability.",
+      "County service boundaries are published by NCDHHS; military service is not required."
+    ],
+    "public_contact": {
+      "phone": "252-638-3185"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+      "county_mapping_source": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+      "selection": "Read all 100 entries in the official embedded county map.",
+      "source_format": "html_embedded_map",
+      "source_document_modified_on": null
+    }
+  },
+  {
+    "program_id": "nc-ombudsman-region-p",
+    "name": "Eastern Carolina Council Long-Term Care Ombudsman",
+    "organization": "Eastern Carolina Council",
+    "official_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+    "state": "NC",
+    "service_area": [
+      "Carteret",
+      "Craven",
+      "Duplin",
+      "Greene",
+      "Jones",
+      "Lenoir",
+      "Onslow",
+      "Pamlico",
+      "Wayne"
+    ],
+    "regional_role": "ombudsman",
+    "needs_supported": [
+      "resident_rights",
+      "care_facilities"
+    ],
+    "description": "Regional advocacy for residents of nursing homes and adult care homes in the listed counties.",
+    "next_step": "Give the facility name and county. Ask for the regional long-term-care ombudsman and describe the resident’s concern and wishes.",
+    "constraints": [
+      "This is the regional program’s published office route; ask to be connected to the advocate assigned to the facility.",
+      "Ombudsmen address resident rights and care concerns; they do not provide emergency response or guarantee a case outcome."
+    ],
+    "public_contact": {
+      "phone": "252-638-3185 ext. 3007"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+      "county_mapping_source": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+      "selection": "Read the complete state-linked regional office directory as DOCX text, including phone column and county assignments.",
+      "source_format": "docx",
+      "source_document_modified_on": "2026-05-07"
+    }
+  },
+  {
+    "program_id": "nc-aging-region-q",
+    "name": "Mid-East Commission Area Agency on Aging",
+    "organization": "Mid-East Commission",
+    "official_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+    "state": "NC",
+    "service_area": [
+      "Beaufort",
+      "Bertie",
+      "Hertford",
+      "Martin",
+      "Pitt"
+    ],
+    "regional_role": "aging_agency",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "caregiver_support"
+    ],
+    "description": "Regional aging information and referrals for the listed counties.",
+    "next_step": "Give your county; ask about meals, transportation, caregiver support, local senior centers and assessment for help at home.",
+    "constraints": [
+      "Published agency or program routing phone; confirm current intake, eligibility and availability.",
+      "County service boundaries are published by NCDHHS; military service is not required."
+    ],
+    "public_contact": {
+      "phone": "252-946-8043"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+      "county_mapping_source": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+      "selection": "Read all 100 entries in the official embedded county map.",
+      "source_format": "html_embedded_map",
+      "source_document_modified_on": null
+    }
+  },
+  {
+    "program_id": "nc-ombudsman-region-q",
+    "name": "Mid-East Commission Long-Term Care Ombudsman",
+    "organization": "Mid-East Commission",
+    "official_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+    "state": "NC",
+    "service_area": [
+      "Beaufort",
+      "Bertie",
+      "Hertford",
+      "Martin",
+      "Pitt"
+    ],
+    "regional_role": "ombudsman",
+    "needs_supported": [
+      "resident_rights",
+      "care_facilities"
+    ],
+    "description": "Regional advocacy for residents of nursing homes and adult care homes in the listed counties.",
+    "next_step": "Give the facility name and county. Ask for the regional long-term-care ombudsman and describe the resident’s concern and wishes.",
+    "constraints": [
+      "This is the regional program’s published office route; ask to be connected to the advocate assigned to the facility.",
+      "Ombudsmen address resident rights and care concerns; they do not provide emergency response or guarantee a case outcome."
+    ],
+    "public_contact": {
+      "phone": "252-974-1838"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+      "county_mapping_source": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+      "selection": "Read the complete state-linked regional office directory as DOCX text, including phone column and county assignments.",
+      "source_format": "docx",
+      "source_document_modified_on": "2026-05-07"
+    }
+  },
+  {
+    "program_id": "nc-aging-region-r",
+    "name": "Albemarle Commission Area Agency on Aging",
+    "organization": "Albemarle Commission",
+    "official_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+    "state": "NC",
+    "service_area": [
+      "Camden",
+      "Chowan",
+      "Currituck",
+      "Dare",
+      "Gates",
+      "Hyde",
+      "Pasquotank",
+      "Perquimans",
+      "Tyrrell",
+      "Washington"
+    ],
+    "regional_role": "aging_agency",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "caregiver_support"
+    ],
+    "description": "Regional aging information and referrals for the listed counties.",
+    "next_step": "Give your county; ask about meals, transportation, caregiver support, local senior centers and assessment for help at home.",
+    "constraints": [
+      "Published agency or program routing phone; confirm current intake, eligibility and availability.",
+      "County service boundaries are published by NCDHHS; military service is not required."
+    ],
+    "public_contact": {
+      "phone": "252-426-5753"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+      "county_mapping_source": "https://www.ncdhhs.gov/divisions/aging/adult-day-services/daas-area-agencies-aging",
+      "selection": "Read all 100 entries in the official embedded county map.",
+      "source_format": "html_embedded_map",
+      "source_document_modified_on": null
+    }
+  },
+  {
+    "program_id": "nc-ombudsman-region-r",
+    "name": "Albemarle Commission Long-Term Care Ombudsman",
+    "organization": "Albemarle Commission",
+    "official_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+    "state": "NC",
+    "service_area": [
+      "Camden",
+      "Chowan",
+      "Currituck",
+      "Dare",
+      "Gates",
+      "Hyde",
+      "Pasquotank",
+      "Perquimans",
+      "Tyrrell",
+      "Washington"
+    ],
+    "regional_role": "ombudsman",
+    "needs_supported": [
+      "resident_rights",
+      "care_facilities"
+    ],
+    "description": "Regional advocacy for residents of nursing homes and adult care homes in the listed counties.",
+    "next_step": "Give the facility name and county. Ask for the regional long-term-care ombudsman and describe the resident’s concern and wishes.",
+    "constraints": [
+      "This is the regional program’s published office route; ask to be connected to the advocate assigned to the facility.",
+      "Ombudsmen address resident rights and care concerns; they do not provide emergency response or guarantee a case outcome."
+    ],
+    "public_contact": {
+      "phone": "252-404-7086"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-20"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+      "county_mapping_source": "https://www.ncdhhs.gov/ombudsman-listed-area-agency-aging-8/open",
+      "selection": "Read the complete state-linked regional office directory as DOCX text, including phone column and county assignments.",
+      "source_format": "docx",
+      "source_document_modified_on": "2026-05-07"
+    }
+  }
+]

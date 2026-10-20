@@ -1,0 +1,111 @@
+{
+  "priority": [
+    "nc-claims",
+    "nc-adrc",
+    "nc-aging-directory",
+    "nc-ship",
+    "nc-waiver",
+    "nc-ombudsman",
+    "nc-at",
+    "r02-aid-attendance-housebound",
+    "r02-va-pension",
+    "r02-survivors-pension"
+  ],
+  "routes": {
+    "benefits": [
+      "nc-claims",
+      "nc-ship",
+      "nc-waiver",
+      "r02-va-pension",
+      "r02-aid-attendance-housebound",
+      "va-accredited-help"
+    ],
+    "survivors": [
+      "nc-claims",
+      "r02-survivors-pension",
+      "r02-dic",
+      "r02-va-burial",
+      "va-accredited-help"
+    ],
+    "care": [
+      "nc-waiver",
+      "nc-homes",
+      "nc-caregiver",
+      "r02-va-health-enrollment",
+      "r02-va-cnh",
+      "r02-va-clc"
+    ],
+    "rights": [
+      "nc-ombudsman",
+      "nc-rights",
+      "nc-aging-directory"
+    ],
+    "local": [
+      "nc-aging-directory",
+      "nc-adrc",
+      "nc-caregiver",
+      "nc-waiver",
+      "nc-211"
+    ],
+    "housing": [
+      "nc-211",
+      "va-housing-help",
+      "va-ssvf"
+    ],
+    "accessibility": [
+      "va-hisa",
+      "va-sah",
+      "va-sha",
+      "va-tra",
+      "nc-at",
+      "nc-waiver",
+      "nc-independent-living",
+      "nc-aging-directory"
+    ]
+  },
+  "seniorTopics": {
+    "daily": [
+      "nc-adrc",
+      "nc-aging-directory",
+      "nc-caregiver",
+      "nc-waiver"
+    ],
+    "accessibility": [
+      "nc-at",
+      "nc-waiver",
+      "nc-independent-living"
+    ],
+    "vision": [
+      "nc-blind",
+      "nc-at"
+    ],
+    "hearing": [
+      "nc-relay",
+      "nc-at"
+    ],
+    "memory": [
+      "alz-dementia-support",
+      "nc-caregiver",
+      "nc-adrc"
+    ],
+    "costs": [
+      "nc-ship",
+      "nc-waiver",
+      "nc-aging-directory"
+    ],
+    "rights": [
+      "nc-ombudsman",
+      "nc-rights"
+    ]
+  },
+  "statewide_navigation": {
+    "name": "NC 211 community resource navigation",
+    "phone": "888-892-1162",
+    "source_url": "https://nc211.org/contact/"
+  },
+  "home_modification": {
+    "url": "https://medicaid.ncdhhs.gov/3k-2-community-alternatives-program-disabled-adults-capda/download?attachment",
+    "label": "North Carolina CAP/DA policy 3K-2 — equipment and home modifications",
+    "guidance": "Ask your CAP/DA case manager for assessment, a documented service-plan need, any required written recommendations and quotes, program authorization and an accepted provider before work starts. New construction and nonportable modifications in rented residences are excluded by the reviewed policy. Independent Living new purchased services are paused; ask about waiting lists and alternatives."
+  }
+}

@@ -57,7 +57,7 @@ function intendedAudience(item){
   if(curated)return curated.audience;
   if(UNIVERSAL_RESOURCES.has(id))return "any";
   if(SURVIVOR_ONLY.has(id))return "survivor";
-  if(item.state==="VA"&&id==="va-claims")return "veteran_or_survivor";
+  if((item.state==="VA"&&id==="va-claims")||(item.state==="NC"&&id==="nc-claims"))return "veteran_or_survivor";
   if(VETERAN_OR_SURVIVOR.has(id))return "veteran_or_survivor";
   const title=String(item.name||"");
   const org=String(item.organization||"");
