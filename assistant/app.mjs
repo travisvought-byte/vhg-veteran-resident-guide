@@ -55,6 +55,18 @@ function showResources(items,fallback){
    if(item.organization)para(article,item.organization);
    if(item.description)para(article,item.description);
    para(article,"Next step: "+item.nextStep);
+   if(item.eligibilityNote)para(article,"Who this may serve: "+item.eligibilityNote);
+   if(item.application){
+     const row=textNode("p","Official application or intake: ");
+     safeLink(row,item.application.label,item.application.url);article.append(row);
+   }
+   if(item.actionSteps?.length){
+     article.append(textNode("h4","How to start"));
+     const ol=document.createElement("ol");
+     for(const step of item.actionSteps){ol.append(textNode("li",step))}
+     article.append(ol);
+   }
+   if(item.guidanceSource){const row=textNode("p","Application guidance source: ");safeLink(row,"Official instructions",item.guidanceSource);article.append(row)}
    if(item.phone){article.append(textNode("span","Phone: "));phoneLink(article,item.phone);article.append(textNode("span","  "))}
    safeLink(article,"Official source / program website",item.url);
    para(article,"Source reviewed "+(item.reviewedOn||"date unavailable")+"; current intake not confirmed.");

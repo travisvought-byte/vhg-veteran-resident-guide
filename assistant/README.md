@@ -5,7 +5,8 @@ This folder contains the first functional component of a future **email and web-
 ## What works now
 
 - `assistant/index.html` is a browser-based, accessible intake and resource-matching preview. The user chooses a supported state/county, describes a general need, sees matching resource cards, and can copy a draft email response.
-- `engine.mjs` contains the same deterministic, testable matching and email composition logic; it reads the published resource records rather than inventing programs.
+- `engine.mjs` contains deterministic, testable matching and email composition logic; it reads the published resource records rather than inventing programs.
+- `program-guidance.mjs` is a source-linked, 12-program pilot of **explicit beneficiary audiences, eligibility screening notes and practical official application or intake steps**. Curated audiences override the conservative, existing fallback classifier. Listings without a curated entry keep their original program-specific next-step wording; no universal form or eligibility promise is inferred.
 - `draft-email.mjs` turns JSON intake into a **draft** email on standard output. No email is sent or stored.
 - `tests/assistant.mjs` exercises safety messaging, published contact data, eleven-state source status filters and beneficiary-aware routing and draft output.
 - This prototype supports **all eleven published state editions** (OH, PA, NY, MI, KY, UT, IN, WV, TX, FL and CA), using the same data paths as the current public guide. A CI test checks the registry mapping. It does **not** represent fully researched county-level service coverage.
@@ -29,7 +30,7 @@ A browser is necessary: ES modules and JSON fetches won't work reliably with a `
 - No third-party model calls; the pilot uses rules/terms to match program records, **not an LLM**. It is intentionally labeled as a pilot.
 - No user profiles, case histories, email lists, sensitive-data collection or cloud storage.
 
-The live public guide is unaffected by this pilot until release approval. The form explicitly asks who needs assistance so that veteran-only resources are not recommended to nonveterans. A caregiver identifies the person receiving care. Unknown roles receive general resources until eligibility context is clarified. Never add names, medical details, VA claim numbers, Social Security numbers, private emails or case histories to the public GitHub repository, PR discussion, logs or test fixtures.
+The live public guide is unaffected by this pilot until release approval. Curated guidance links directly to the VA or relevant state pages for HISA (Form 10-0103), SAH/SHA (Form 26-4555), veteran and survivor pensions, DIC, Aid and Attendance, housing intake, Ohio waiver modifications, PA Link and California ADRC. Each example is only an intake route, not a decision or a claim that forms apply to everyone. The form explicitly asks who needs assistance so that veteran-only resources are not recommended to nonveterans. A caregiver identifies the person receiving care. Unknown roles receive general resources until eligibility context is clarified. Never add names, medical details, VA claim numbers, Social Security numbers, private emails or case histories to the public GitHub repository, PR discussion, logs or test fixtures.
 
 ## Proposed email / AI deployment (next stage)
 

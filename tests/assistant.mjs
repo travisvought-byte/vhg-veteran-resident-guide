@@ -84,3 +84,38 @@ const noMatch=createPlan({state:"OH",county:"Morrow",person:"other",message:"whe
 assert.equal(noMatch.recommendations.length,0);
 assert(/aging and disability/.test(planToEmail(noMatch)));
 assert(!/Start with your county veterans office/.test(planToEmail(noMatch)));
+
+// Curated first-wave application routes: verify links, eligible audiences and no invented forms.
+import {PROGRAM_GUIDANCE,getProgramGuidance} from "../assistant/program-guidance.mjs";
+assert.equal(Object.keys(PROGRAM_GUIDANCE).length,12);
+for(const [id,guidance] of Object.entries(PROGRAM_GUIDANCE)){
+  assert(["veteran","survivor","veteran_or_survivor","any"].includes(guidance.audience),id);
+  assert(guidance.audienceLabel.length>20,id);
+  assert(/^https:\/\//.test(guidance.application.url),id);
+  assert(/^https:\/\//.test(guidance.source),id);
+  assert(guidance.steps.length>=2,id);
+  assert(guidance.steps.every(step=>step.length>25),id);
+}
+const ohioPrograms=read(stateFiles.OH[0]);
+const ohioCounties=read(stateFiles.OH[1]);
+const seniorPlan=createPlan({state:"OH",county:"Morrow",person:"other",message:"wheelchair ramp home modification",resources:ohioPrograms,counties:ohioCounties});
+assert(!seniorPlan.office);
+assert(seniorPlan.recommendations.some(r=>r.id==="ohio-waiver-home-modifications"));
+assert(seniorPlan.recommendations.every(r=>r.id!=="va-hisa"&&r.id!=="va-sah"&&r.id!=="va-sha"));
+const hisaOnly=createPlan({state:"OH",person:"veteran",message:"wheelchair ramp at home",resources:ohioPrograms.filter(r=>r.program_id==="va-hisa")});
+assert.equal(hisaOnly.recommendations[0].application.url,"https://www.va.gov/forms/10-0103/");
+assert(hisaOnly.recommendations[0].actionSteps.some(s=>s.includes("Prosthetic")));
+assert(planToEmail(hisaOnly).includes("Form 10-0103"));
+const survivorPension=createPlan({state:"OH",person:"survivor",message:"Survivors Pension and benefits",resources:ohioPrograms.filter(r=>r.program_id==="r02-survivors-pension")});
+assert.equal(survivorPension.recommendations[0].application.label.includes("21P-534EZ"),true);
+const wrongAudience=createPlan({state:"OH",person:"other",message:"survivors pension",resources:ohioPrograms.filter(r=>r.program_id==="r02-survivors-pension")});
+assert.equal(wrongAudience.recommendations.length,0);
+const paPrograms=read(stateFiles.PA[0]);
+const paGeneral=createPlan({state:"PA",person:"other",message:"home accessibility for an older adult",resources:paPrograms.filter(r=>r.program_id==="pa-link")});
+assert.equal(paGeneral.recommendations[0].id,"pa-link");
+assert(paGeneral.recommendations[0].actionSteps.length>=2);
+const uncuratedPlan=createPlan({state:"OH",person:"veteran",message:"wheelchair ramp",resources:fake.filter(x=>x.program_id==="good")});
+assert.equal(getProgramGuidance("good"),null);
+assert.equal(uncuratedPlan.recommendations[0].application,null);
+assert.deepEqual(uncuratedPlan.recommendations[0].actionSteps,[]);
+console.log("Curated VA/state application steps and beneficiary filters passed.");

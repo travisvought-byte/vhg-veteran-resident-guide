@@ -7,7 +7,7 @@ export const PROGRAM_GUIDANCE = Object.freeze({
     "audienceLabel": "Veteran receiving VA medical care; medical necessity and benefit limits require VA review",
     "application": {
       "label": "VA Form 10-0103 — HISA application",
-      "url": "https://www.va.gov/vaforms/medical/pdf/10-0103-fill.pdf"
+      "url": "https://www.va.gov/forms/10-0103/"
     },
     "steps": [
       "Ask the VA care team to assess and document the needed accessibility modification.",

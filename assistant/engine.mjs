@@ -1,6 +1,7 @@
 // VHG Assistance Pilot. Pure, deterministic matching against the existing public guide.
 // No requests, personal data storage, AI model calls or outgoing email happen here.
 import {STATES} from "./state-files.mjs";
+import {getProgramGuidance} from "./program-guidance.mjs";
 export {STATES};
 const TOPICS = Object.freeze({
   housing:{
@@ -50,6 +51,8 @@ const VETERAN_OR_SURVIVOR=new Set(["r02-aid-attendance-housebound","r02-va-buria
 const UNIVERSAL_RESOURCES=new Set(["crisis-988"]);
 function intendedAudience(item){
   const id=String(item.program_id||"").toLowerCase();
+  const curated=getProgramGuidance(id);
+  if(curated)return curated.audience;
   if(UNIVERSAL_RESOURCES.has(id))return "any";
   if(SURVIVOR_ONLY.has(id))return "survivor";
   if(VETERAN_OR_SURVIVOR.has(id))return "veteran_or_survivor";
@@ -129,6 +132,10 @@ export function createPlan({state="OH",county="",message="",person="unknown",res
     urgent,office,
     recommendations:picks.map(x=>({
       id:x.program_id||"",name:x.name,organization:x.organization||"",
+      eligibilityNote:getProgramGuidance(x.program_id)?.audienceLabel||null,
+      application:getProgramGuidance(x.program_id)?.application||null,
+      actionSteps:getProgramGuidance(x.program_id)?.steps||[],
+      guidanceSource:getProgramGuidance(x.program_id)?.source||null,
       description:x.description||"",nextStep:x.next_step||"Contact the organization to ask about available services.",
       phone:x.public_contact?.phone||"",email:x.public_contact?.email||"",
       url:x.official_url,reviewedOn:x.verification?.last_reviewed_on||null,
@@ -151,7 +158,12 @@ export function planToEmail(plan){
   if(!plan.recommendations.length)lines.push("We could not find a sufficiently source-reviewed program for this request in the current guide. "+plan.fallback,"");
   for(const [i,x] of plan.recommendations.entries()){
     lines.push((i+1)+". "+x.name+(x.organization?" — "+x.organization:""),x.description,
-      "Next step: "+x.nextStep,"Contact: "+[x.phone,x.url].filter(Boolean).join(" | "),
+      "Next step: "+x.nextStep,
+      ...(x.eligibilityNote?["Who this may serve: "+x.eligibilityNote]:[]),
+      ...(x.application?["Official application or intake: "+x.application.label+" ("+x.application.url+")"]:[]),
+      ...((x.actionSteps||[]).map((step,j)=>"Action "+(j+1)+": "+step)),
+      "Contact: "+[x.phone,x.url].filter(Boolean).join(" | "),
+      ...(x.guidanceSource?["Application guidance source: "+x.guidanceSource]:[]),
       "Source reviewed: "+(x.reviewedOn||"date not recorded")+"; current intake not confirmed.","");
   }
   lines.push("Please confirm eligibility, service availability and current contact information directly. Avoid emailing Social Security numbers, diagnoses, benefits IDs or financial documents. If this is an emergency, do not wait for an email reply.","",
