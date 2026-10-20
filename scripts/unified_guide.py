@@ -49,7 +49,7 @@ def unified_outputs(root, editions, states):
     # Only labels a state actually uses for statewide records count as statewide. A state
     # name alone is not enough: New York, Ohio and Utah are also county names.
     common=re.sub(r'^const national=.*$',"const national=a=>['statewide','national','federal',...EDITIONS[STATE].statewideNames].includes(a.toLowerCase());",common,flags=re.M)
-    common=common.replace("'All Ohio counties'","'All '+EDITIONS[STATE].name+' counties'")
+    common=common.replace("'All Ohio counties'","'All '+EDITIONS[STATE].name+(STATE==='VA'?' counties and independent cities':' counties')")
     # Use a single canonical URL for every state and preserve public filters only.
     common=common.replace("u.search='';u.hash='';","u.pathname=u.pathname.replace(/[^/]*$/, '');u.search='';u.hash='';u.searchParams.set('state',STATE);")
     common=common.replace("renderCounty();renderAccessibility();renderSeniorGuide();","renderCounty();renderAccessibility();renderSeniorGuide();renderHelper();")

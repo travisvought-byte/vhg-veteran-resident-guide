@@ -13,19 +13,19 @@ function setState(state,initial=false){
  STATE=state;const config=EDITIONS[state];DATA=config.data;COUNTIES=config.counties;
  ({priority,routes,seniorTopics,routeNames}=config.configure());
  if(!Object.hasOwn(routeNames,route))route='priority';
- $('edition-state').value=state;$('county').innerHTML='<option value="">Choose a county…</option>';$('county').value='';
- COUNTIES.forEach(c=>{const o=document.createElement('option');o.value=c.county;o.textContent=c.county+' County';$('county').append(o)});
+ $('edition-state').value=state;$('county').innerHTML='<option value="">Choose a county or city…</option>';$('county').value='';
+ COUNTIES.forEach(c=>{const o=document.createElement('option');o.value=c.county;o.textContent=localityLabel(c);$('county').append(o)});
  $('need').innerHTML='<option value="">All resource types</option>';
  [...new Set(DATA.flatMap(x=>x.needs_supported||[]))].sort().forEach(n=>{const o=document.createElement('option');o.value=n;o.textContent=types[n]||n.replaceAll('_',' ');$('need').append(o)});
  ['search','need','status','office-search'].forEach(id=>$(id).value='');
  for(const [id,markup] of Object.entries(config.markup)){const wrapper=document.createElement('div');wrapper.innerHTML=markup;const replacement=wrapper.firstElementChild;$(id).replaceWith(replacement)}
  // Keep state-specific instructions available without making the first screen an explanation of the data model.
  const pending=DATA.filter(x=>x.verification.record_status!=='official_source_reviewed').length;
- $('coverage-detail').innerHTML='<p>'+esc(config.name)+': referral routes for '+COUNTIES.length+' counties. Local service coverage is still growing.</p><p>'+pending+' resource records need further source checks. Check the status on each listing and confirm availability with the agency.</p>';
+ $('coverage-detail').innerHTML='<p>'+esc(config.name)+': referral routes for '+COUNTIES.length+(state==='VA'?' counties and independent cities.':' counties.')+' Local service coverage is still growing.</p><p>'+pending+' resource records need further source checks. Check the status on each listing and confirm availability with the agency.</p>';
  if(config.coverageNote)$('coverage-detail').innerHTML+='<p>'+esc(config.coverageNote)+'</p>';
- document.querySelector('label[for="county"]').textContent='County in '+config.name;
- $('aid-open').hidden=state!=='OH';document.querySelector('.office-directory summary').textContent='Browse '+config.name+' county contacts';
- $('office-search').placeholder='Search '+config.name+' counties';
+ document.querySelector('label[for="county"]').textContent=(state==='VA'?'County or independent city in ':'County in ')+config.name;
+ $('aid-open').hidden=state!=='OH';document.querySelector('.office-directory summary').textContent='Browse '+config.name+(state==='VA'?' county and city contacts':' county contacts');
+ $('office-search').placeholder='Search '+config.name+(state==='VA'?' counties or independent cities':' counties');
  document.title=config.name+' | Veteran Resident Resource Guide';
  document.querySelectorAll('a[href^="share"]').forEach(a=>a.href=config.sharePage);
  document.querySelectorAll('.footer-links a').forEach(a=>{if(a.textContent==='County contact data')a.href=config.files.offices;if(a.textContent==='Resource data')a.href=config.files.resources});
@@ -52,7 +52,7 @@ let accessPrintStates=[];
 function helperContacts(county,need,person){
  const c=COUNTIES.find(c=>c.county===county),aging=DATA.filter(x=>x.regional_role==='aging_agency'&&x.service_area.includes(county));
  const omb=DATA.filter(x=>x.regional_role==='ombudsman'&&x.service_area.includes(county));
- const card=x=>'<article><h3>'+esc(x.name)+'</h3>'+(x.public_contact?.phone?'<p>'+phoneLink(x.public_contact.phone)+'</p>':'')+'<p>'+esc(x.next_step)+'</p>'+(['IN','WV','TX'].includes(STATE)&&x.regional_role?'<p class="small">'+esc((x.constraints||[]).join(' '))+'</p>':'')+'<a href="'+esc(safeURL(x.official_url))+'" target="_blank" rel="noopener">Contact information</a><p class="meta">'+esc(labels[x.verification.record_status])+' · '+esc(x.verification.last_reviewed_on)+'</p></article>';
+ const card=x=>'<article><h3>'+esc(x.name)+'</h3>'+(x.public_contact?.phone?'<p>'+phoneLink(x.public_contact.phone)+'</p>':'')+'<p>'+esc(x.next_step)+'</p>'+(['IN','WV','TX','VA'].includes(STATE)&&x.regional_role?'<p class="small">'+esc((x.constraints||[]).join(' '))+'</p>':'')+'<a href="'+esc(safeURL(x.official_url))+'" target="_blank" rel="noopener">Contact information</a><p class="meta">'+esc(labels[x.verification.record_status])+' · '+esc(x.verification.last_reviewed_on)+'</p></article>';
  if(need==='crisis')return '<article><h3>Immediate support</h3><p>Call '+phoneLink('988')+'. Veterans: press 1. For immediate danger, call '+phoneLink('911')+'.</p></article>';
  if(need==='housing'&&person!=='other')return card(DATA.find(x=>x.program_id==='va-housing-help'));
  if(need==='rights'){
@@ -77,10 +77,10 @@ function renderHelper(){
  const text={benefits:'Ask for a benefits and care-cost screening.',daily:'Ask for an assessment and caregiver support.',housing:'Ask about housing assistance and the next intake step.',accessibility:'Ask the discharge planner or case manager to coordinate the assessment, home access and timing before discharge.',rights:'Ask the ombudsman about the resident’s concern and preferences.',crisis:'Connect with urgent support now.'};
  let contacts=helperContacts(county,need,person);
  if(!county&&need!=='crisis'&&!(need==='housing'&&person!=='other'))contacts='<p><a href="#county-start">Choose a county above</a> to see the first local contact.</p>';
- if(person==='other'&&need==='housing')contacts='<article><h3>Local housing assistance</h3><p>Call '+phoneLink('211')+' and ask about housing support in '+esc(county?county+' County, '+EDITIONS[STATE].name:EDITIONS[STATE].name)+'.</p></article>';
+ if(person==='other'&&need==='housing')contacts='<article><h3>Local housing assistance</h3><p>Call '+phoneLink('211')+' and ask about housing support in '+esc(county?localityLabel(county)+', '+EDITIONS[STATE].name:EDITIONS[STATE].name)+'.</p></article>';
  if(need==='accessibility'&&person==='survivor')text.accessibility='Ask the discharge planner and local aging agency to coordinate home access. A spouse’s military service alone does not establish eligibility for veteran-only housing adaptations.';
  if(need==='accessibility'&&person==='survivor')contacts=DATA.filter(x=>x.regional_role==='aging_agency'&&county&&x.service_area.includes(county)).map(x=>'<article><h3>'+esc(x.organization)+'</h3><p>'+phoneLink(x.public_contact.phone)+'</p></article>').join('')||'<p>Choose a county for the local aging contact.</p>';
- $('helper-next').innerHTML='<h3>'+esc(EDITIONS[STATE].name)+(county?' · '+esc(county)+' County':'')+'</h3><p><strong>'+esc(text[need])+'</strong></p><div class="contact-grid">'+contacts+'</div><div class="call-script"><strong>What to ask</strong><p>“I’m helping someone who wants support with '+esc($('helper-need').selectedOptions[0].textContent.toLowerCase())+'. What is the intake process, what documents are needed, and can you help if they cannot travel?”</p></div><p>Agree on who will follow up and when. Confirm eligibility and availability directly.</p>';
+ $('helper-next').innerHTML='<h3>'+esc(EDITIONS[STATE].name)+(county?' · '+esc(localityLabel(county)):'')+'</h3><p><strong>'+esc(text[need])+'</strong></p><div class="contact-grid">'+contacts+'</div><div class="call-script"><strong>What to ask</strong><p>“I’m helping someone who wants support with '+esc($('helper-need').selectedOptions[0].textContent.toLowerCase())+'. What is the intake process, what documents are needed, and can you help if they cannot travel?”</p></div><p>Agree on who will follow up and when. Confirm eligibility and availability directly.</p>';
 }
 // Copy only on-screen public referrals, selected categories, and follow-up questions.
 function helperHandoffText(){

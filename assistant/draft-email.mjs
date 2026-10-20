@@ -10,7 +10,7 @@ stdin.setEncoding("utf8");
 for await(const part of stdin){body+=part;if(body.length>10000){stderr.write("Input too large.\n");process.exit(1)}}
 try{
   const request=JSON.parse(body),state=String(request.state||"").toUpperCase();
-  if(!paths[state])throw Error("Unsupported or missing state. Use one of the 11 published state codes.");
+  if(!paths[state])throw Error("Unsupported or missing state. Use one of the 12 published state codes.");
   const [resPath,countyPath]=paths[state];
   const load=path=>JSON.parse(readFileSync(new URL("../"+path,import.meta.url),"utf8"));
   const plan=createPlan({...request,state,resources:load(resPath),counties:load(countyPath)});

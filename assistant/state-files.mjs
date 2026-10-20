@@ -10,7 +10,8 @@ export const STATES=Object.freeze({
   "WV": "West Virginia",
   "TX": "Texas",
   "FL": "Florida",
-  "CA": "California"
+  "CA": "California",
+  "VA": "Virginia"
 });
 export const STATE_FILES=Object.freeze({
   "OH": [
@@ -56,5 +57,10 @@ export const STATE_FILES=Object.freeze({
   "CA": [
     "data/public/california-resources.json",
     "data/public/california-county-veterans-offices.json"
+  ],
+  "VA": [
+    "data/public/virginia-resources.json",
+    "data/public/virginia-county-veterans-offices.json"
   ]
 });
+export const localityLabel=row=>row?(row.county_type==="independent_city"?row.county:row.county+" County"):"";

@@ -5,7 +5,7 @@ import {createPlan,identifyTopics,isUrgent,planToEmail} from "../assistant/engin
 const read=file=>JSON.parse(readFileSync(new URL("../"+file,import.meta.url),"utf8"));
 import {STATE_FILES as stateFiles, STATES} from "../assistant/state-files.mjs";
 const registry=read("states/registry.json");
-assert.equal(Object.keys(STATES).length,11);
+assert.equal(Object.keys(STATES).length,registry.length);
 assert.deepEqual(Object.keys(stateFiles).sort(),registry.map(x=>x.code).sort());
 for(const entry of registry){assert.deepEqual(stateFiles[entry.code],[entry.resources,entry.offices]);}
 assert(identifyTopics("We need housing and a wheelchair ramp").includes("accessibility"));
@@ -41,7 +41,7 @@ assert.equal(example.recommendations[0].id,"good");
 const crisis=createPlan({state:"OH",message:"I feel suicidal and I need help",resources:fake});
 assert(crisis.urgent);
 assert(planToEmail(crisis).includes("988"));
-console.log("Assistance navigator: 11-state registry and audience-sensitive referral tests passed.");
+console.log("Assistance navigator: 12-state registry and audience-sensitive referral tests passed.");
 
 const mk=(id,name,tags)=>({program_id:id,name,official_url:"https://example.org/"+id,
   service_area:["Ohio"],needs_supported:tags,description:name,next_step:"Contact intake",

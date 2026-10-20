@@ -11,12 +11,12 @@ The **application-assistance MVP** adds concrete, source-linked preparation, app
 | Gate | Acceptance test | Status |
 | --- | --- | --- |
 | Public availability | Website reachable, linked from main guide, page deployment green | **Met** on main |
-| State and county navigation | Published editions, review-status filters, office contact, beneficiary-specific matching | **Met with coverage caveats**: 11 states; local detail varies |
+| State and county navigation | Published editions, review-status filters, office contact, beneficiary-specific matching | **Met with coverage caveats**: 12 states; local detail varies |
 | Official application routes | A supported program identifies the right official starting point | **Met for 12 curated programs** |
 | Step-by-step preparation | Paperwork, submitting authority, responsible person and follow-up provided | **10 program routes after this wave**; breadth remains limited |
 | Printer-ready referral | One US Letter page with direct source links, no typed story, and no private form values | **Automated checks for 10 after this wave**; physical printing not yet tested |
 | Privacy | No storage or transmission of entered cases and checkmarks by the static navigator | **Met for current browser-only architecture** |
-| Technical quality | Source synchronization, role boundaries, 11 state tests, mobile and browser printing | **Automated CI**; verify each release |
+| Technical quality | Source synchronization, role boundaries, 12 state tests, mobile and browser printing | **Automated CI**; verify each release |
 | Real-world usability | A veteran, survivor, nonveteran and facility worker can complete representative scenarios without coaching | **Not yet independently tested** |
 | Content maintenance | Owner and source-recheck cadence, corrections log and response expectations | **Partially met** |
 | Human follow-up | Clear options for questions, incorrect matches, unavailable programs and urgent housing intake | **Partially met**; no staffed VHG case-management channel or service guarantee |

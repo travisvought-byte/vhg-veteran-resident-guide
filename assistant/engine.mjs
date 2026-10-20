@@ -1,6 +1,6 @@
 // VHG Assistance Pilot. Pure, deterministic matching against the existing public guide.
 // No requests, personal data storage, AI model calls or outgoing email happen here.
-import {STATES} from "./state-files.mjs";
+import {STATES,localityLabel} from "./state-files.mjs";
 import {getProgramGuidance} from "./program-guidance.mjs";
 import {getAccessibilityChecklist} from "./accessibility-checklists.mjs";
 import {getBenefitsHousingChecklist} from "./benefits-housing-checklists.mjs";
@@ -57,6 +57,7 @@ function intendedAudience(item){
   if(curated)return curated.audience;
   if(UNIVERSAL_RESOURCES.has(id))return "any";
   if(SURVIVOR_ONLY.has(id))return "survivor";
+  if(item.state==="VA"&&id==="va-claims")return "veteran_or_survivor";
   if(VETERAN_OR_SURVIVOR.has(id))return "veteran_or_survivor";
   const title=String(item.name||"");
   const org=String(item.organization||"");
@@ -64,7 +65,7 @@ function intendedAudience(item){
   const url=String(item.official_url||"");
   // Conservative heuristic until the published data has explicit audience fields.
   // Veteran-only services can have generic tags such as home accessibility.
-  if(id.startsWith("va-")||id.startsWith("r02-va-")||id.startsWith("r02-veteran")||
+  if((id.startsWith("va-")&&item.state!=="VA")||id.startsWith("r02-va-")||id.startsWith("r02-veteran")||
      tags.includes("veteran_services")|| /\b(?:va|veterans?)\b/i.test(title+" "+org)||
      /^https?:\/\/(?:[^/]+\.)?va\.gov\//i.test(url))return "veteran";
   return "any";
@@ -125,12 +126,12 @@ export function createPlan({state="OH",county="",message="",person="unknown",res
   for(const c of candidates){const key=c.resource.program_id||c.resource.name;if(used.has(key))continue;used.add(key);picks.push(c.resource);if(picks.length>=5)break}
   const office=(role==="veteran"||role==="survivor")&&selectedCounty&&countyItem?{
     name:code==="OH"?selectedCounty+" County Veterans Service Office":
-      location+" veterans referral contact for "+selectedCounty+" County",
+      location+" veterans referral contact for "+localityLabel(countyItem),
     phone:clean(countyItem.phone),url:isAllowedURL(countyItem.website)?countyItem.website:isAllowedURL(countyItem.source_url)?countyItem.source_url:null,
-    sourceStatus:"Published directory contact; verify directly",reviewedOn:countyItem.reviewed_on||null
+    note:countyItem.note||"",sourceStatus:countyItem.evidence?.owner_spot_check?"Official-page screenshot spot-check; current intake not confirmed":countyItem.evidence?.review_method==="official_search_excerpt"?"Official search text; full-page review pending":"Published directory contact; verify directly",reviewedOn:countyItem.reviewed_on||null
   }:null;
   return {
-    state:code,stateName:location,county:selectedCounty,person:clean(person),beneficiary:role,topics,
+    state:code,stateName:location,county:selectedCounty,countyLabel:localityLabel(countyItem),person:clean(person),beneficiary:role,topics,
     urgent,office,
     recommendations:picks.map(x=>({
       id:x.program_id||"",name:x.name,organization:x.organization||"",
@@ -152,12 +153,13 @@ export function createPlan({state="OH",county="",message="",person="unknown",res
   };
 }
 export function planToEmail(plan){
-  const location=[plan.county&&plan.county+" County",plan.stateName].filter(Boolean).join(", ");
+  const location=[plan.county&&(plan.countyLabel||plan.county+" County"),plan.stateName].filter(Boolean).join(", ");
   const lines=["Subject: VHG resource guidance for "+location,"",
     "Thanks for reaching out to Veteran Home Guardians. Here are some possible starting points for assistance in "+location+".",
     ""];
   if(plan.urgent)lines.push("URGENT: If anyone is in immediate danger, call 911. For suicidal thoughts or emotional crisis, call 988 and press 1 for the Veterans Crisis Line, or text 838255.","");
-  if(plan.office)lines.push("County veterans office: "+plan.office.name+" — "+(plan.office.phone||"confirm contact")+(plan.office.url?" ("+plan.office.url+")":""),"");
+  if(plan.office)lines.push("Veterans referral contact: "+plan.office.name+" — "+(plan.office.phone||"confirm contact")+(plan.office.url?" ("+plan.office.url+")":""),"");
+  if(plan.office?.note)lines.push(plan.office.note,plan.office.sourceStatus,"");
   if(!plan.recommendations.length)lines.push("We could not find a sufficiently source-reviewed program for this request in the current guide. "+plan.fallback,"");
   for(const [i,x] of plan.recommendations.entries()){
     lines.push((i+1)+". "+x.name+(x.organization?" — "+x.organization:""),x.description,

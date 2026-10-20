@@ -59,13 +59,13 @@ const d=dom.window.document,change=(id,value)=>{const n=d.getElementById(id);n.v
 for(const s of registry){
  change('edition-state',s.code);
  assert.equal(d.getElementById('edition-state').value,s.code,s.code+' selectable');
- const counties=JSON.parse(read(s.offices)).map(c=>c.county),records=JSON.parse(read(s.resources));
+ const countyRows=JSON.parse(read(s.offices)),counties=countyRows.map(c=>c.county),records=JSON.parse(read(s.resources));
  const own=new Set([...(s.statewide_area_names||[]).map(n=>n.toLowerCase()),...statewideLabels]);
  const limited=records.filter(r=>r.state!=='shared'&&(r.service_area||[]).length&&!(r.service_area||[]).some(a=>own.has(a.toLowerCase())));
  d.querySelector('[data-route="all"]').click();
  for(const county of counties){
   change('county',county);
-  assert(d.getElementById('county-panel').textContent.includes(county+' County'),s.code+' '+county+' county panel');
+  assert(d.getElementById('county-panel').textContent.includes(countyRows.find(c=>c.county===county).county_type==='independent_city'?county:county+' County'),s.code+' '+county+' county panel');
   const shown=new Set([...d.querySelectorAll('#results article[id^="resource-"]')].map(a=>a.id.slice(9)));
   for(const r of limited)if(!r.service_area.includes(county))assert(!shown.has(r.program_id),s.code+' '+county+': '+r.program_id+' is limited to '+r.service_area.slice(0,4).join(', ')+' but appears here');
  }

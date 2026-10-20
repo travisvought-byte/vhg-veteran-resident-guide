@@ -41,7 +41,7 @@ export function buildHandoff(document,plan,resource){
   sheet.dataset.programId=resource.id;
   sheet.append(make(document,"div","VETERAN HOME GUARDIANS  •  A Voice for All Veterans","handoff-brand"));
   sheet.append(make(document,"h1",checklist.title));
-  const location=[plan.county&&plan.county+" County",plan.stateName].filter(Boolean).join(", ")||"Location not selected";
+  const location=[plan.county&&(plan.countyLabel||plan.county+" County"),plan.stateName].filter(Boolean).join(", ")||"Location not selected";
   sheet.append(make(document,"p","RESOURCE HANDOFF  |  "+location+"  |  Source review: "+checklist.reviewedOn,"handoff-meta"));
   sheet.append(make(document,"p","For: "+DESTINATIONS[resource.id],"handoff-destination"));
   if(resource.eligibilityNote)sheet.append(make(document,"p","Possible audience: "+resource.eligibilityNote,"handoff-eligibility"));

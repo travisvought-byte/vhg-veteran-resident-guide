@@ -1,0 +1,207 @@
+{
+  "ops": [
+    {
+      "op": "clear_data"
+    },
+    {
+      "op": "replace",
+      "old": "Ohio",
+      "new": "Virginia"
+    },
+    {
+      "op": "replace",
+      "old": "All 88",
+      "new": "All 133"
+    },
+    {
+      "op": "replace",
+      "old": "all 88",
+      "new": "all 133"
+    },
+    {
+      "op": "replace",
+      "old": "<option value=\"OH\">Virginia</option>",
+      "new": "<option value=\"OH\">Ohio</option>"
+    },
+    {
+      "op": "replace",
+      "old": "const STATE='OH';",
+      "new": "const STATE='VA';"
+    },
+    {
+      "op": "replace",
+      "old": "county veterans office",
+      "new": "veterans contact"
+    },
+    {
+      "op": "replace",
+      "old": "county office",
+      "new": "veterans contact"
+    },
+    {
+      "op": "replace",
+      "old": "Statewide edition \u00b7 Updated October 8, 2026",
+      "new": "Virginia edition \u00b7 Updated October 20, 2026"
+    },
+    {
+      "op": "replace",
+      "old": "Most phones come from Virginia AMVETS\u2019 2025\u20132026 directory.",
+      "new": "Regional DVS veterans contacts are drawn from official published sources. Three offices were owner spot-checked; Fairfax\u2019s phone was corrected. Independent cities are listed separately. Call before traveling."
+    },
+    {
+      "op": "replace",
+      "old": "Virginia\u2019s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
+      "new": "Request LTSS screening through local social services or the hospital discharge planner. For an approved waiver member in managed care, ask the MCO care coordinator about assessment, written authorization and enrolled providers. Fee-for-service members should follow the linked DMAS member guide. Do not start work or buy equipment before written authorization."
+    },
+    {
+      "op": "replace",
+      "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
+      "new": "https://www.dmas.virginia.gov/for-members/benefits-and-services/waivers/ccc-plus-waiver/"
+    },
+    {
+      "op": "replace",
+      "old": "Virginia home modification authorization and provider rules",
+      "new": "Virginia CCC Plus waiver home accessibility guidance"
+    },
+    {
+      "op": "replace",
+      "old": "href=\"share.html\"",
+      "new": "href=\"share-va.html\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"prototype-data.json\"",
+      "new": "href=\"data/public/virginia-resources.json\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
+      "new": "href=\"data/public/virginia-county-veterans-offices.json\""
+    },
+    {
+      "op": "line",
+      "prefix": "const national=",
+      "new": "const national=a=>['statewide','national','federal'].includes(a.toLowerCase());"
+    },
+    {
+      "op": "declare",
+      "name": "priority",
+      "value": [
+        "va-claims",
+        "va-adrc",
+        "va-aging-directory",
+        "va-ship",
+        "va-waiver",
+        "va-ombudsman",
+        "va-at",
+        "r02-aid-attendance-housebound",
+        "r02-va-pension",
+        "r02-survivors-pension"
+      ]
+    },
+    {
+      "op": "declare",
+      "name": "routes",
+      "value": {
+        "benefits": [
+          "va-claims",
+          "va-ship",
+          "va-waiver",
+          "r02-va-pension",
+          "va-accredited-help"
+        ],
+        "survivors": [
+          "va-claims",
+          "r02-survivors-pension",
+          "r02-dic",
+          "r02-va-burial"
+        ],
+        "care": [
+          "va-waiver",
+          "va-homes",
+          "va-caregiver",
+          "r02-va-health-enrollment",
+          "r02-va-cnh"
+        ],
+        "rights": [
+          "va-ombudsman",
+          "va-rights",
+          "va-adrc"
+        ],
+        "local": [
+          "va-aging-directory",
+          "va-adrc",
+          "va-caregiver",
+          "va-waiver",
+          "va-211"
+        ],
+        "housing": [
+          "va-211",
+          "va-housing-help",
+          "va-ssvf"
+        ],
+        "accessibility": [
+          "va-hisa",
+          "va-sah",
+          "va-at",
+          "va-waiver",
+          "va-adrc"
+        ]
+      }
+    },
+    {
+      "op": "declare",
+      "name": "seniorTopics",
+      "value": {
+        "daily": [
+          "va-adrc",
+          "va-aging-directory",
+          "va-caregiver"
+        ],
+        "accessibility": [
+          "va-at",
+          "va-waiver",
+          "va-adrc"
+        ],
+        "vision": [
+          "va-blind",
+          "va-at"
+        ],
+        "hearing": [
+          "va-relay",
+          "va-at"
+        ],
+        "memory": [
+          "alz-dementia-support",
+          "va-caregiver",
+          "va-adrc"
+        ],
+        "costs": [
+          "va-ship",
+          "va-waiver",
+          "va-adrc"
+        ],
+        "rights": [
+          "va-ombudsman",
+          "va-rights"
+        ]
+      }
+    },
+    {
+      "op": "line",
+      "prefix": "routes.accessibility=",
+      "new": "routes.accessibility=[...routes.accessibility,...DATA.filter(x=>x.regional_role==='aging_agency').map(x=>x.program_id)];"
+    },
+    {
+      "op": "line",
+      "prefix": "routes.seniors=",
+      "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
+    },
+    {
+      "op": "adapter"
+    },
+    {
+      "op": "embed_data"
+    }
+  ]
+}
