@@ -171,7 +171,7 @@ export function planToEmail(plan){
           ...section.items.map((item,j)=>"  • "+item.text+" [Responsible: "+item.responsible+"]"+(item.condition?" ["+item.condition+"]":""))
         ]),
         "Submit through: "+x.preparationChecklist.submit.text,
-        "Follow up: "+x.preparationChecklist.followUp
+        "After submission: "+x.preparationChecklist.followUp
       ]:[]),
       "Contact: "+[x.phone,x.url].filter(Boolean).join(" | "),
       ...(x.guidanceSource?["Application guidance source: "+x.guidanceSource]:[]),
