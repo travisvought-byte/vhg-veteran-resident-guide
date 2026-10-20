@@ -918,49 +918,101 @@
     "state": "VA",
     "county": "Fairfax",
     "county_type": "county",
-    "phone": "703-359-1210",
+    "phone": "703-805-0177",
     "organization": "Virginia Department of Veterans Services — Fairfax",
     "office_type": "regional",
     "source_url": "https://www.dvs.virginia.gov/Home/Components/FacilityDirectory/FacilityDirectory/44/",
     "source_title": "Virginia DVS Fairfax Office — published phone and service area",
     "reviewed_on": "2026-10-20",
     "contact_status": "official_website",
-    "note": "Regional DVS benefits office serving this locality; not a separate county or city office. Call before traveling.",
+    "note": "Regional DVS benefits office serving this locality; not a separate county or city office. Call before traveling. Phone differs from older official search text (703-359-1210); the owner-observed page shows 703-805-0177. If routing fails, ask statewide DVS at 844-838-7838 for the current Fairfax contact.",
     "evidence": {
       "review_method": "official_search_excerpt",
       "direct_agency_confirmation": false,
       "county_list_source": "https://www.virginia.gov/local-government/",
-      "selection": "Phone and explicit locality assignment reviewed in official-source search text. Direct DVS page fetch returned HTTP 403; full-page review is pending.",
+      "selection": "Phone and explicit locality assignment reviewed in official-source search text. Direct DVS page fetch returned HTTP 403; full-page review is pending. Owner supplied a partial official-page screenshot showing 703-805-0177 and the same service area; proposed phone updated from older search text, with the discrepancy retained. Full page remains inaccessible to automated review.",
       "full_page_access_attempt": {
         "attempted_on": "2026-10-20",
         "http_status": 403,
         "outcome": "Access denied; source status remains official search excerpt."
+      },
+      "owner_spot_check": {
+        "reviewed_on": "2026-10-20",
+        "review_method": "official_page_screenshot",
+        "source_url": "https://www.dvs.virginia.gov/Home/Components/FacilityDirectory/FacilityDirectory/44/30",
+        "source_description": "Owner-supplied Fairfax official-page spot-check screenshot. Visible domain is dvs.virginia.gov; screenshot shows the Fairfax address, phone and service-area section, not the full page or full URL.",
+        "fields_supported": [
+          "phone",
+          "service_area"
+        ],
+        "phone_observed": "703-805-0177",
+        "direct_agency_confirmation": false
       }
-    }
+    },
+    "source_conflicts": [
+      {
+        "field": "phone",
+        "observed_value": "703-805-0177",
+        "observed_source_url": "https://www.dvs.virginia.gov/Home/Components/FacilityDirectory/FacilityDirectory/44/30",
+        "observed_on": "2026-10-20",
+        "observed_method": "official_page_screenshot",
+        "previous_value": "703-359-1210",
+        "previous_source_url": "https://www.dvs.virginia.gov/Home/Components/FacilityDirectory/FacilityDirectory/44/",
+        "previous_review_method": "official_search_excerpt",
+        "previous_reviewed_on": "2026-10-20",
+        "resolution": "Use the owner-observed official-page phone as the proposed primary; retain the older published value as a source conflict. Neither phone was call-confirmed."
+      }
+    ]
   },
   {
     "state": "VA",
     "county": "Fairfax City",
     "county_type": "independent_city",
-    "phone": "703-359-1210",
+    "phone": "703-805-0177",
     "organization": "Virginia Department of Veterans Services — Fairfax",
     "office_type": "regional",
     "source_url": "https://www.dvs.virginia.gov/Home/Components/FacilityDirectory/FacilityDirectory/44/",
     "source_title": "Virginia DVS Fairfax Office — published phone and service area",
     "reviewed_on": "2026-10-20",
     "contact_status": "official_website",
-    "note": "Regional DVS benefits office serving this locality; not a separate county or city office. Call before traveling.",
+    "note": "Regional DVS benefits office serving this locality; not a separate county or city office. Call before traveling. Phone differs from older official search text (703-359-1210); the owner-observed page shows 703-805-0177. If routing fails, ask statewide DVS at 844-838-7838 for the current Fairfax contact.",
     "evidence": {
       "review_method": "official_search_excerpt",
       "direct_agency_confirmation": false,
       "county_list_source": "https://www.virginia.gov/local-government/",
-      "selection": "Phone and explicit locality assignment reviewed in official-source search text. Direct DVS page fetch returned HTTP 403; full-page review is pending.",
+      "selection": "Phone and explicit locality assignment reviewed in official-source search text. Direct DVS page fetch returned HTTP 403; full-page review is pending. Owner supplied a partial official-page screenshot showing 703-805-0177 and the same service area; proposed phone updated from older search text, with the discrepancy retained. Full page remains inaccessible to automated review.",
       "full_page_access_attempt": {
         "attempted_on": "2026-10-20",
         "http_status": 403,
         "outcome": "Access denied; source status remains official search excerpt."
+      },
+      "owner_spot_check": {
+        "reviewed_on": "2026-10-20",
+        "review_method": "official_page_screenshot",
+        "source_url": "https://www.dvs.virginia.gov/Home/Components/FacilityDirectory/FacilityDirectory/44/30",
+        "source_description": "Owner-supplied Fairfax official-page spot-check screenshot. Visible domain is dvs.virginia.gov; screenshot shows the Fairfax address, phone and service-area section, not the full page or full URL.",
+        "fields_supported": [
+          "phone",
+          "service_area"
+        ],
+        "phone_observed": "703-805-0177",
+        "direct_agency_confirmation": false
       }
-    }
+    },
+    "source_conflicts": [
+      {
+        "field": "phone",
+        "observed_value": "703-805-0177",
+        "observed_source_url": "https://www.dvs.virginia.gov/Home/Components/FacilityDirectory/FacilityDirectory/44/30",
+        "observed_on": "2026-10-20",
+        "observed_method": "official_page_screenshot",
+        "previous_value": "703-359-1210",
+        "previous_source_url": "https://www.dvs.virginia.gov/Home/Components/FacilityDirectory/FacilityDirectory/44/",
+        "previous_review_method": "official_search_excerpt",
+        "previous_reviewed_on": "2026-10-20",
+        "resolution": "Use the owner-observed official-page phone as the proposed primary; retain the older published value as a source conflict. Neither phone was call-confirmed."
+      }
+    ]
   },
   {
     "state": "VA",
@@ -1745,25 +1797,51 @@
     "state": "VA",
     "county": "Loudoun",
     "county_type": "county",
-    "phone": "703-359-1210",
+    "phone": "703-805-0177",
     "organization": "Virginia Department of Veterans Services — Fairfax",
     "office_type": "regional",
     "source_url": "https://www.dvs.virginia.gov/Home/Components/FacilityDirectory/FacilityDirectory/44/",
     "source_title": "Virginia DVS Fairfax Office — published phone and service area",
     "reviewed_on": "2026-10-20",
     "contact_status": "official_website",
-    "note": "Regional DVS benefits office serving this locality; not a separate county or city office. Call before traveling.",
+    "note": "Regional DVS benefits office serving this locality; not a separate county or city office. Call before traveling. Phone differs from older official search text (703-359-1210); the owner-observed page shows 703-805-0177. If routing fails, ask statewide DVS at 844-838-7838 for the current Fairfax contact.",
     "evidence": {
       "review_method": "official_search_excerpt",
       "direct_agency_confirmation": false,
       "county_list_source": "https://www.virginia.gov/local-government/",
-      "selection": "Phone and explicit locality assignment reviewed in official-source search text. Direct DVS page fetch returned HTTP 403; full-page review is pending.",
+      "selection": "Phone and explicit locality assignment reviewed in official-source search text. Direct DVS page fetch returned HTTP 403; full-page review is pending. Owner supplied a partial official-page screenshot showing 703-805-0177 and the same service area; proposed phone updated from older search text, with the discrepancy retained. Full page remains inaccessible to automated review.",
       "full_page_access_attempt": {
         "attempted_on": "2026-10-20",
         "http_status": 403,
         "outcome": "Access denied; source status remains official search excerpt."
+      },
+      "owner_spot_check": {
+        "reviewed_on": "2026-10-20",
+        "review_method": "official_page_screenshot",
+        "source_url": "https://www.dvs.virginia.gov/Home/Components/FacilityDirectory/FacilityDirectory/44/30",
+        "source_description": "Owner-supplied Fairfax official-page spot-check screenshot. Visible domain is dvs.virginia.gov; screenshot shows the Fairfax address, phone and service-area section, not the full page or full URL.",
+        "fields_supported": [
+          "phone",
+          "service_area"
+        ],
+        "phone_observed": "703-805-0177",
+        "direct_agency_confirmation": false
       }
-    }
+    },
+    "source_conflicts": [
+      {
+        "field": "phone",
+        "observed_value": "703-805-0177",
+        "observed_source_url": "https://www.dvs.virginia.gov/Home/Components/FacilityDirectory/FacilityDirectory/44/30",
+        "observed_on": "2026-10-20",
+        "observed_method": "official_page_screenshot",
+        "previous_value": "703-359-1210",
+        "previous_source_url": "https://www.dvs.virginia.gov/Home/Components/FacilityDirectory/FacilityDirectory/44/",
+        "previous_review_method": "official_search_excerpt",
+        "previous_reviewed_on": "2026-10-20",
+        "resolution": "Use the owner-observed official-page phone as the proposed primary; retain the older published value as a source conflict. Neither phone was call-confirmed."
+      }
+    ]
   },
   {
     "state": "VA",
@@ -1887,9 +1965,35 @@
     "alternate_offices": [
       {
         "organization": "Virginia DVS — Fairfax",
-        "phone": "703-359-1210",
+        "phone": "703-805-0177",
         "source_url": "https://www.dvs.virginia.gov/Home/Components/FacilityDirectory/FacilityDirectory/44/",
-        "review_method": "official_search_excerpt"
+        "review_method": "official_search_excerpt",
+        "owner_spot_check": {
+          "reviewed_on": "2026-10-20",
+          "review_method": "official_page_screenshot",
+          "source_url": "https://www.dvs.virginia.gov/Home/Components/FacilityDirectory/FacilityDirectory/44/30",
+          "source_description": "Owner-supplied Fairfax official-page spot-check screenshot. Visible domain is dvs.virginia.gov; screenshot shows the Fairfax address, phone and service-area section, not the full page or full URL.",
+          "fields_supported": [
+            "phone",
+            "service_area"
+          ],
+          "phone_observed": "703-805-0177",
+          "direct_agency_confirmation": false
+        },
+        "source_conflicts": [
+          {
+            "field": "phone",
+            "observed_value": "703-805-0177",
+            "observed_source_url": "https://www.dvs.virginia.gov/Home/Components/FacilityDirectory/FacilityDirectory/44/30",
+            "observed_on": "2026-10-20",
+            "observed_method": "official_page_screenshot",
+            "previous_value": "703-359-1210",
+            "previous_source_url": "https://www.dvs.virginia.gov/Home/Components/FacilityDirectory/FacilityDirectory/44/",
+            "previous_review_method": "official_search_excerpt",
+            "previous_reviewed_on": "2026-10-20",
+            "resolution": "Use the owner-observed official-page phone as the proposed primary; retain the older published value as a source conflict. Neither phone was call-confirmed."
+          }
+        ]
       }
     ]
   },
@@ -2511,9 +2615,35 @@
     "alternate_offices": [
       {
         "organization": "Virginia DVS — Fairfax",
-        "phone": "703-359-1210",
+        "phone": "703-805-0177",
         "source_url": "https://www.dvs.virginia.gov/Home/Components/FacilityDirectory/FacilityDirectory/44/",
-        "review_method": "official_search_excerpt"
+        "review_method": "official_search_excerpt",
+        "owner_spot_check": {
+          "reviewed_on": "2026-10-20",
+          "review_method": "official_page_screenshot",
+          "source_url": "https://www.dvs.virginia.gov/Home/Components/FacilityDirectory/FacilityDirectory/44/30",
+          "source_description": "Owner-supplied Fairfax official-page spot-check screenshot. Visible domain is dvs.virginia.gov; screenshot shows the Fairfax address, phone and service-area section, not the full page or full URL.",
+          "fields_supported": [
+            "phone",
+            "service_area"
+          ],
+          "phone_observed": "703-805-0177",
+          "direct_agency_confirmation": false
+        },
+        "source_conflicts": [
+          {
+            "field": "phone",
+            "observed_value": "703-805-0177",
+            "observed_source_url": "https://www.dvs.virginia.gov/Home/Components/FacilityDirectory/FacilityDirectory/44/30",
+            "observed_on": "2026-10-20",
+            "observed_method": "official_page_screenshot",
+            "previous_value": "703-359-1210",
+            "previous_source_url": "https://www.dvs.virginia.gov/Home/Components/FacilityDirectory/FacilityDirectory/44/",
+            "previous_review_method": "official_search_excerpt",
+            "previous_reviewed_on": "2026-10-20",
+            "resolution": "Use the owner-observed official-page phone as the proposed primary; retain the older published value as a source conflict. Neither phone was call-confirmed."
+          }
+        ]
       },
       {
         "organization": "Virginia DVS — Quantico",

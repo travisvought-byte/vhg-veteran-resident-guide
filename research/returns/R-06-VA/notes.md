@@ -82,6 +82,16 @@ Additional full official sources reviewed 2026-10-20:
 | https://vvs.dvs.virginia.gov/Services/DisabilityClaims-Services/ClaimsBasics | Claims specialist appointment, free services, accreditation and source documents | `page_text_reviewed` (rendered and web retrieval) | Not shown |
 | https://vvs.dvs.virginia.gov/Forms/BenefitsForm | Official appointment pathway; loading-state observation only, no availability claim | `page_text_reviewed` (rendered, form not submitted) | Not shown |
 
+## Owner spot-check 1 of 3 — Fairfax
+
+On 2026-10-20 the owner supplied a screenshot of the official Fairfax page. It shows **703-805-0177**, which differs from **703-359-1210** in the earlier official search text. The visible service area matches Fairfax, Loudoun (spelled “Loudon”), Prince William, Fairfax City and Manassas City; Fort Belvoir and the Pentagon are also mentioned.
+
+Updated the proposed Fairfax phone in three primary locality records (Fairfax county, Fairfax City and Loudoun) and two alternative-office entries (Manassas City and Prince William). Each retains both numbers, their evidence types and review date as a source conflict. The screenshot is partial official-page evidence, not a full-page review, a call confirmation or validation of other office records. The screenshot’s domain and page content identify Fairfax; the complete URL is not visible. The associated source link is the Fairfax link supplied for this spot-check.
+
+The address header says Suite 201 while the highlighted move notice says Suite 202. Addresses remain out of scope and neither suite is added to the county records. The observed phone also matches an older published Fort Belvoir number in the prior research; that coincidence does not establish whether the current Fairfax page or the old cache is erroneous. The owner-observed number is the proposed primary, the old number is preserved, and the statewide DVS fallback remains available.
+
+**Spot-check status:** Fairfax service area matches; Fairfax phone differs and is recorded. Tazewell and Quantico have not yet been owner-checked. No broader validation is inferred from this one sample.
+
 ## County boundaries and normalization
 
 - Independent cities retain the ` City` suffix and `county_type: independent_city`. Fairfax/Fairfax City, Franklin/Franklin City, Richmond/Richmond City and Roanoke/Roanoke City stay separate. Charles City and James City are counties; Virginia Beach City is an independent city. No Virginia county shares the state name.
