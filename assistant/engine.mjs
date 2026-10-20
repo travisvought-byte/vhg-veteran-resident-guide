@@ -37,6 +37,41 @@ const TOPICS = Object.freeze({
     tags:["benefits_and_funding"],phrases:["emergency","financial","payment","utility","grant","assistance"]
   }
 });
+// The form identifies the person receiving assistance, not just the person filling it in.
+// Ambiguous caregiver/unknown roles intentionally do not unlock veteran-only programs.
+export function beneficiaryRole(person){
+  const value=clean(person).toLowerCase();
+  if(value==="veteran"||value==="caregiver_veteran")return "veteran";
+  if(value==="survivor"||value==="caregiver_survivor")return "survivor";
+  if(value==="other"||value==="caregiver_other")return "other";
+  return "unknown";
+}
+const SURVIVOR_ONLY=new Set(["r02-dic","r02-survivors-pension"]);
+const VETERAN_OR_SURVIVOR=new Set(["r02-aid-attendance-housebound","r02-va-burial","r02-ohio-county-burial"]);
+const UNIVERSAL_RESOURCES=new Set(["crisis-988"]);
+function intendedAudience(item){
+  const id=String(item.program_id||"").toLowerCase();
+  if(UNIVERSAL_RESOURCES.has(id))return "any";
+  if(SURVIVOR_ONLY.has(id))return "survivor";
+  if(VETERAN_OR_SURVIVOR.has(id))return "veteran_or_survivor";
+  const title=String(item.name||"");
+  const org=String(item.organization||"");
+  const tags=item.needs_supported||[];
+  const url=String(item.official_url||"");
+  // Conservative heuristic until the published data has explicit audience fields.
+  // Veteran-only services can have generic tags such as home accessibility.
+  if(id.startsWith("va-")||id.startsWith("r02-va-")||id.startsWith("r02-veteran")||
+     tags.includes("veteran_services")|| /\b(?:va|veterans?)\b/i.test(title+" "+org)||
+     /^https?:\/\/(?:[^/]+\.)?va\.gov\//i.test(url))return "veteran";
+  return "any";
+}
+function audienceMatches(item,role){
+  const audience=intendedAudience(item);
+  if(audience==="any")return true;
+  if(audience==="survivor")return role==="survivor";
+  if(audience==="veteran_or_survivor")return role==="veteran"||role==="survivor";
+  return role==="veteran";
+}
 const CRISIS=/\b(suicid(?:e|al)|kill myself|end my life|hurt myself|self.harm|want to die|overdose)\b/i;
 const DANGER=/\b(immediate danger|life.threatening|violence right now|medical emergency)\b/i;
 function clean(s){return String(s??"").trim().replace(/\s+/g," ")}
@@ -77,20 +112,20 @@ export function createPlan({state="OH",county="",message="",person="veteran",res
   const selectedCounty=countyItem?.county||"";
   const request=clean(message).slice(0,2000);
   if(!request)throw new Error("Describe what kind of help is needed.");
-  const urgent=isUrgent(request),topics=identifyTopics(request);
+  const urgent=isUrgent(request),topics=identifyTopics(request),role=beneficiaryRole(person);
   const eligible=resources.filter(x=>x?.verification?.record_status==="official_source_reviewed"&&
-     isAllowedURL(x.official_url)&&areaMatch(x,code,selectedCounty));
+     isAllowedURL(x.official_url)&&areaMatch(x,code,selectedCounty)&&audienceMatches(x,role));
   const candidates=eligible.map(x=>({resource:x,score:scoredResource(x,topics,selectedCounty)}))
     .filter(x=>x.score>0).sort((a,b)=>b.score-a.score||a.resource.name.localeCompare(b.resource.name));
   const picks=[];const used=new Set();
   for(const c of candidates){const key=c.resource.program_id||c.resource.name;if(used.has(key))continue;used.add(key);picks.push(c.resource);if(picks.length>=5)break}
-  const office=selectedCounty&&countyItem?{
+  const office=(role==="veteran"||role==="survivor")&&selectedCounty&&countyItem?{
     name:selectedCounty+" County Veterans Service Office",
     phone:clean(countyItem.phone),url:isAllowedURL(countyItem.website)?countyItem.website:isAllowedURL(countyItem.source_url)?countyItem.source_url:null,
     sourceStatus:"Published directory contact; verify directly",reviewedOn:countyItem.reviewed_on||null
   }:null;
   return {
-    state:code,stateName:location,county:selectedCounty,person:clean(person),topics,
+    state:code,stateName:location,county:selectedCounty,person:clean(person),beneficiary:role,topics,
     urgent,office,
     recommendations:picks.map(x=>({
       id:x.program_id||"",name:x.name,organization:x.organization||"",
@@ -100,6 +135,9 @@ export function createPlan({state="OH",county="",message="",person="veteran",res
       verification:"Official source reviewed, not agency-confirmed intake",
       constraints:Array.isArray(x.constraints)?x.constraints.slice(0,2):[]
     })),
+    fallback:role==="other"?"Start with the state or regional aging and disability agencies listed in the main guide.":
+      role==="unknown"?"Clarify whether the person needing assistance is a veteran, surviving spouse or another senior/person with a disability; meanwhile use the main guide for general aging and disability services.":
+      "Contact the county or regional veterans service representative if listed; otherwise use the main guide's state veterans referral route.",
     disclaimer:"This is a referral starting point, not an eligibility decision. Confirm current services, application rules and availability directly with each organization. VHG does not provide emergency response or accredited VA claims representation."
   };
 }
@@ -110,7 +148,7 @@ export function planToEmail(plan){
     ""];
   if(plan.urgent)lines.push("URGENT: If anyone is in immediate danger, call 911. For suicidal thoughts or emotional crisis, call 988 and press 1 for the Veterans Crisis Line, or text 838255.","");
   if(plan.office)lines.push("County veterans office: "+plan.office.name+" — "+(plan.office.phone||"confirm contact")+(plan.office.url?" ("+plan.office.url+")":""),"");
-  if(!plan.recommendations.length)lines.push("We could not find a sufficiently source-reviewed program for this request in the current guide. Start with your county veterans office (if listed) and check the guide for broader resources.","");
+  if(!plan.recommendations.length)lines.push("We could not find a sufficiently source-reviewed program for this request in the current guide. "+plan.fallback,"");
   for(const [i,x] of plan.recommendations.entries()){
     lines.push((i+1)+". "+x.name+(x.organization?" — "+x.organization:""),x.description,
       "Next step: "+x.nextStep,"Contact: "+[x.phone,x.url].filter(Boolean).join(" | "),
