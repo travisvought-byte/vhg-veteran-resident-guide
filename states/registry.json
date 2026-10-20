@@ -121,8 +121,8 @@
     "offices": "data/public/indiana-county-veterans-offices.json",
     "resources": "data/public/indiana-resources.json",
     "statewide_area_names": [],
-    "coverage_scope": "Initial referral edition. Veterans contacts for all 92 counties, 15 aging agencies serving 16 areas and local or statewide long-term-care ombudsman routes. Published directory conflicts and Marion’s subcounty assignments are shown.",
-    "coverage_note": "Official sources reviewed October 19, 2026. Union’s only published veterans contact is a role cell phone. For conflicting ombudsman listings, use statewide routing first; Marion has subcounty assignments. Published contacts are not telephone-confirmed. Local providers, equipment stock and available funding are not fully inventoried.",
+    "coverage_scope": "Initial referral edition. Veterans contacts for all 92 counties, 15 aging agencies serving 16 areas and local or statewide long-term-care ombudsman routes. Published directory conflicts and Marion\u2019s subcounty assignments are shown.",
+    "coverage_note": "Official sources reviewed October 19, 2026. Union\u2019s only published veterans contact is a role cell phone. For conflicting ombudsman listings, use statewide routing first; Marion has subcounty assignments. Published contacts are not telephone-confirmed. Local providers, equipment stock and available funding are not fully inventoried.",
     "share_description": "county veterans contacts, county-matched aging agencies and long-term-care ombudsman referrals",
     "share_replacements": [
       [
@@ -232,6 +232,36 @@
       [
         "Updated October 8, 2026",
         "Updated October 19, 2026"
+      ]
+    ]
+  },
+  {
+    "code": "VA",
+    "name": "Virginia",
+    "page": "va.html",
+    "share_page": "share-va.html",
+    "qr": "assets/guide-qr-va.svg",
+    "counties": 133,
+    "programs": "data/public/va-programs.json",
+    "referrals": "data/public/va-regional-referrals.json",
+    "offices": "data/public/virginia-county-veterans-offices.json",
+    "resources": "data/public/virginia-resources.json",
+    "statewide_area_names": [],
+    "coverage_scope": "Initial referral edition. All 95 counties and 38 independent cities have veterans referrals, matched aging agencies and ombudsman routes. Independent cities stay separate from same-named counties.",
+    "coverage_note": "Virginia has 25 aging agencies and 22 ombudsman regions, with separate service maps. The 13 statewide programs and local aging/ombudsman directories received full official-source review on October 20, 2026. Regional veterans assignments rely on official search text; the owner spot-checked Fairfax, Quantico and Tazewell page screenshots. Fairfax\u2019s corrected page phone differs from older indexed text. Alexandria City and Falls Church City use statewide DVS routing. Central Virginia ombudsman calls use the explicitly instructed state-office line. Contacts are not telephone-confirmed.",
+    "share_description": "veterans referrals, county- and independent-city-matched aging agencies and long-term-care ombudsmen",
+    "share_replacements": [
+      [
+        "county veterans offices",
+        "regional veterans contacts"
+      ],
+      [
+        "Updated October 8, 2026",
+        "Updated October 20, 2026"
+      ],
+      [
+        "133 counties",
+        "95 counties and 38 independent cities"
       ]
     ]
   }

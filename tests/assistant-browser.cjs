@@ -24,7 +24,7 @@ const {chromium}=require("playwright");
   await page.waitForFunction(()=>document.querySelector("#feedback").textContent.includes("Ready"));
   assert.equal(await page.locator("#state").inputValue(),"OH");
   assert.equal(await page.locator("#county option").count(),89);
-  assert.equal(await page.locator("#state option").count(),11);
+  assert.equal(await page.locator("#state option").count(),12);
   await page.selectOption("#person","veteran");
   await page.selectOption("#county","Muskingum");
   await page.fill("#message","Disabled veteran needs a wheelchair ramp and housing assistance.");

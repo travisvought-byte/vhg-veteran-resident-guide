@@ -1,7 +1,7 @@
 import {STATES,createPlan,planToEmail,isUrgent} from "./engine.mjs";
 
 const $=id=>document.getElementById(id);
-import {STATE_FILES as fileNames} from "./state-files.mjs";
+import {STATE_FILES as fileNames,localityLabel} from "./state-files.mjs";
 import {buildHandoff} from "./handoff.mjs";
 const cache=new Map();let plan=null,requestVersion=0;
 async function load(state){
@@ -25,10 +25,11 @@ function safeLink(where,title,url){
 }
 function phoneLink(where,phone){
   if(!phone)return;
-  const a=textNode("a",phone);a.href="tel:"+phone.replace(/[^0-9+]/g,"");where.append(a);
+  const a=textNode("a",phone);const parts=phone.split(/\s+ext\.?\s*/i);a.href="tel:"+parts[0].replace(/[^0-9+]/g,"")+(parts[1]?";ext="+parts[1].replace(/\D/g,""):"");where.append(a);
 }
 async function refreshCounties(){
  const state=$("state").value,version=++requestVersion,county=$("county");
+ document.querySelector('label[for="county"]').textContent=state==="VA"?"County or independent city":"County";
  $("print-handoff").replaceChildren();
  county.replaceChildren(new Option("Loading counties…",""));county.disabled=true;
  $("feedback").textContent="Loading "+STATES[state]+" county contacts.";
@@ -36,7 +37,7 @@ async function refreshCounties(){
  try{
    const [,counties]=await load(state);if(version!==requestVersion)return;
    county.replaceChildren(new Option("Statewide resources only",""));
-   for(const row of counties){if(!row.county)continue;county.append(new Option(row.county+" County",row.county))}
+   for(const row of counties){if(!row.county)continue;county.append(new Option(localityLabel(row),row.county))}
    county.disabled=false;$("feedback").textContent="Ready. Enter a general description of the need.";
  }catch(e){if(version!==requestVersion)return;$("feedback").textContent=e.message;county.replaceChildren(new Option("Unavailable",""))}
 }
@@ -45,6 +46,7 @@ function showOffice(office){
  if(!office)return;
  const section=textNode("article","");section.className="resource";section.append(textNode("h3",office.name));
  if(office.phone){section.append(textNode("span","Published telephone: "));phoneLink(section,office.phone)}
+ if(office.note)para(section,office.note);
  if(office.url){para(section,"The source below is a published office listing; confirm the current intake process.");safeLink(section,"County contact source",office.url)}
  section.append(textNode("p",office.sourceStatus));node.append(section);
 }
@@ -132,7 +134,7 @@ $("intake").addEventListener("submit",async e=>{
   const [resources,counties]=await load(state);if(version!==requestVersion)return;
   plan=createPlan({state,county:$("county").value,person:$("person").value,message:$("message").value,resources,counties});
   $("crisis").hidden=!plan.urgent;
-  $("summary").textContent="Published starting points for "+[plan.county&&plan.county+" County",plan.stateName].filter(Boolean).join(", ")+". Matching is automated; current availability has not been verified.";
+  $("summary").textContent="Published starting points for "+[plan.county&&(plan.countyLabel||plan.county+" County"),plan.stateName].filter(Boolean).join(", ")+". Matching is automated; current availability has not been verified.";
   showOffice(plan.office);showResources(plan.recommendations,plan.fallback);
   $("results").hidden=false;$("feedback").textContent="Found "+plan.recommendations.length+" possible programs; review them below.";
   $("results").scrollIntoView({behavior:"smooth",block:"start"});

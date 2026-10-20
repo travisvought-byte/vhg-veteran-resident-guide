@@ -1,0 +1,26 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const {JSDOM}=require('jsdom'),root=path.resolve(__dirname,'..'),read=f=>fs.readFileSync(path.join(root,f),'utf8');
+const offices=JSON.parse(read('data/public/virginia-county-veterans-offices.json')),resources=JSON.parse(read('data/public/virginia-resources.json'));
+assert.equal(offices.filter(c=>c.county_type==='county').length,95);assert.equal(offices.filter(c=>c.county_type==='independent_city').length,38);
+assert.equal(resources.filter(r=>r.state==='VA').length,60);assert.equal(offices.filter(c=>c.office_type==='state').length,2);
+const dom=new JSDOM(read('index.html'),{url:'https://example.org/?state=VA&county=Fairfax%20City&help=1',runScripts:'outside-only',pretendToBeVisual:true});
+dom.window.HTMLElement.prototype.scrollIntoView=function(){};let printed=0;dom.window.print=()=>printed++;
+dom.window.eval(fs.readdirSync(path.join(root,'assets/editions')).filter(x=>x.endsWith('.js')).map(x=>read('assets/editions/'+x)).join('\n')+'\n'+read('assets/guide.js')+'\nwindow.__handoff=helperHandoffText;');
+const d=dom.window.document,change=(id,v)=>{d.getElementById(id).value=v;d.getElementById(id).dispatchEvent(new dom.window.Event('change'))},text=id=>d.getElementById(id).textContent;
+assert.equal(d.querySelectorAll('#county option').length,134);assert.equal(d.querySelector('#county option[value="Fairfax City"]').textContent,'Fairfax City');assert.equal(d.querySelector('#county option[value="Fairfax"]').textContent,'Fairfax County');
+change('helper-person','veteran');assert(text('helper-next').includes('703-805-0177'));assert(text('helper-next').includes('703-359-1210'));assert(!text('helper-next').includes('Fairfax City County'));assert(dom.window.__handoff().includes('Fairfax City'));assert(!dom.window.__handoff().includes('Fairfax City County'));d.getElementById('helper-print').click();assert.equal(printed,1);
+d.getElementById('helper-close').click();change('county','Prince William');assert(text('county-panel').includes('Older indexed phone'));assert(text('county-panel').includes('703-805-0177'));
+for(const [city,county] of [['Fairfax City','Fairfax'],['Franklin City','Franklin'],['Richmond City','Richmond'],['Roanoke City','Roanoke']]){change('county',city);assert(!text('county-panel').includes(city+' County'));assert(text('county-panel').includes(city));change('county',county);assert(text('county-panel').includes(county+' County'))}
+change('county','Alexandria City');assert(text('county-panel').includes('Statewide referral fallback'));assert(text('county-panel').includes('804-786-0286'));
+change('county','Culpeper');assert(d.querySelector('#county-panel a[href="tel:5716975915;ext=75915"]'));assert(text('county-panel').includes('military installation'));
+change('county','Amherst');assert(text('county-panel').includes('804-565-1600'));assert(text('county-panel').includes('statewide ombudsman routing'));
+d.getElementById('helper-open').click();change('helper-person','other');change('helper-need','benefits');assert(!text('helper-next').includes('regional veterans contact'));
+d.getElementById('helper-close').click();d.querySelector('[data-route="accessibility"]').click();change('access-veteran','no');change('access-waiver','waiver');assert(text('access-first').includes('MCO care coordinator'));assert(text('access-steps').includes('written authorization'));assert(!text('access-routing').includes('Medi-Cal'));
+(async()=>{const {createPlan,planToEmail}=await import('../assistant/engine.mjs');
+ const args={state:'VA',county:'Fairfax City',message:'wheelchair ramp accessibility',resources,counties:offices};
+ const general=createPlan({...args,person:'other',resources:resources.filter(x=>['va-at','va-waiver','va-hisa','va-claims','va-homes'].includes(x.program_id))});
+ assert(general.recommendations.some(x=>x.id==='va-at'));assert(general.recommendations.some(x=>x.id==='va-waiver'));assert(!general.recommendations.some(x=>['va-hisa','va-claims','va-homes'].includes(x.id)));assert.equal(general.office,null);assert(!planToEmail(general).includes('Fairfax City County'));
+ const survivor=createPlan({...args,person:'survivor',message:'claims benefits',resources:resources.filter(x=>['va-claims','va-hisa'].includes(x.program_id))});assert(survivor.recommendations.some(x=>x.id==='va-claims'));assert(!survivor.recommendations.some(x=>x.id==='va-hisa'));
+ const veteran=createPlan({...args,person:'veteran'});assert.equal(veteran.office.phone,'703-805-0177');assert(planToEmail(veteran).includes('703-359-1210'));
+ console.log('PASS: Virginia 95 counties/38 cities, same-name isolation, corrected/alternative phones, source labels, state fallback, Quantico extension, ombudsman routing, Medicaid guidance, federal/state VA audience distinction and copy/print city labels.');
+})().catch(e=>{console.error(e);process.exitCode=1});
