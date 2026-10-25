@@ -90,6 +90,7 @@ def unified_outputs(root, editions, states):
         short='<aside class="november-campaign" aria-label="November retail fundraiser"><strong>Retailers:</strong> run a November roundup for veterans — <strong>Marine Corps birthday (Nov. 10)</strong> and Veterans Day (Nov. 11). <a href="november-campaign.html">Campaign details →</a></aside>'
         county=section(unified,'county-start')
         unified=unified.replace(county,county+short,1)
+    unified=unified.replace('<a class="jump" href="#support-vhg">Support VHG</a>', '<a class="jump" href="mobility-independence.html">Mobility independence: repair &amp; adapt</a><a class="jump" href="#support-vhg">Support VHG</a>',1)
     # One small shared bundle plus one file per state; the base state is preloaded.
     def versioned(path, text):
         return path+'?v='+hashlib.sha256(text.encode()).hexdigest()[:10]
