@@ -4,6 +4,8 @@ A free public guide created and maintained by Travis Vought, and shared by Veter
 
 **Live guide:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/
 
+**Ohio Bingo & Senior Centers:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/bingo.html — find games and activities by ZIP code. This directory is part of this repository, with direct links in the guide’s main navigation and homepage.
+
 **Guided assistance beta:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/assistant/ — an optional, browser-only, source-linked navigator for 13 states with referral drafts, accessibility preparation checklists and printable handoffs. It does not submit benefit applications, send messages, save cases or decide eligibility.
 
 **Pennsylvania guide:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/pa.html
