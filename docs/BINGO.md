@@ -154,3 +154,13 @@ The submission form now collects game days (checkboxes), doors and first-game ti
 The Bingo Bugle web directory was still the October edition on October 29 (same 34 rows as the October 9 pull). Rerun the monthly import when the November edition posts.
 
 Google Maps listings and reviews can point to games (Knights of Columbus 671: reviewers describe Sunday-afternoon and Thursday-night bingo, consistent with its license days). Reviews are undated, and Google's terms bar copying Places data. Use them only to decide whom to ask, never as a published source.
+
+## Keeping schedules current
+
+The page hides an expired schedule or price offer at display time, so visitors never see a past date as upcoming. That alone does not keep the directory useful, because a listing that quietly loses its schedule falls back to "ask the venue."
+
+`scripts/check_schedule_freshness.py` reports schedules that have ended, end within 14 days, or have not been reviewed in over 30 days, plus price offers that have ended. `.github/workflows/schedule-freshness.yml` runs it every Monday and writes the result into one open issue titled "Bingo schedule freshness (automated weekly report)", creating it if it does not exist. The report never changes data. Work it from the top: recheck the organizer page or call, update `reviewed_on` and the schedule, and rebuild. `tests/freshness.py` covers the classification and runs in CI.
+
+## Facilities page paging
+
+The facilities page draws 60 cards at a time with a "Show more" button. Drawing all 1,741 at once produced about 24,600 page elements and a 3.3 second load on a simulated phone; paging brought that to about 1,000 elements and 1.1 seconds. Filters and the ZIP search return to the first page. "Print this list" includes every match.
