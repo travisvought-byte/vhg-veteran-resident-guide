@@ -211,3 +211,10 @@ assert(html.includes('id="submit-groups"')&&html.includes('name="submit-day" val
 vm.runInContext('renderOrganizerFlyer()',context);assert(nodes.flyer.innerHTML.includes('Is your bingo game listed?'));assert(nodes.flyer.innerHTML.includes('assets/bingo-submit-qr.svg'));assert(nodes.flyer.innerHTML.includes('Inclusion never depends on donations'));
 assert(fs.existsSync(path.join(root,'assets/bingo-submit-qr.svg')));
 console.log('PASS: structured submission email and organizer flyer.');
+// A listing link (#id) must reveal that listing even when it is license-only.
+const linkHtml=fs.readFileSync(path.join(root,'bingo.html'),'utf8');
+const linkNodes=Object.fromEntries(Object.keys(nodes).map(k=>[k,{value:'',innerHTML:'',textContent:'',options:nodes[k].options,addEventListener(){}}]));
+const linkCtx=vm.createContext({Date:GuideDate,URL,URLSearchParams,document:{getElementById:id=>linkNodes[id]},location:{href:'https://example.org/bingo.html#oh-license-0096-37-272-1',search:'',hash:'#oh-license-0096-37-272-1'},history:{replaceState(){}},window:{print(){}}});
+vm.runInContext(linkHtml.match(/<script>([\s\S]*?)<\/script>/)[1],linkCtx);
+assert(linkNodes.listings.innerHTML.includes('id="oh-license-0096-37-272-1"'));
+console.log('PASS: per-listing links reveal license-only cards.');
