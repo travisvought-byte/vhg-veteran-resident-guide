@@ -195,3 +195,12 @@ vm.runInContext("renderFlyer('<b>x</b>','43334',10,'2026-10-09')",context);asser
 assert(fs.existsSync(path.join(root,'assets/bingo-qr.svg')));assert(html.includes('id="flyer-form"'));
 assert(vm.runInContext("!!ZIP_CENTROIDS['43334']&&!!ZIP_CENTROIDS['15001']&&!ZIP_CENTROIDS['90210']",context));
 console.log('PASS: published-first default, time-of-day filter, last-checked dates, facility flyer and regional ZIP data.');
+// State enforcement notices are shown, kept factual, and excluded from printed facility flyers.
+const noticed=authorized.filter(r=>r.enforcement);assert.equal(noticed.length,4);
+for(const r of noticed){assert.equal(r.enforcement.status,'notice_of_intent');assert(r.enforcement.url.startsWith('https://charitable.ohioago.gov/'));assert(r.sources.some(s=>s.url===r.enforcement.url));}
+nodes['bingo-reset'].onclick();nodes['bingo-kind'].value='licensed';nodes['bingo-county'].value='Marion';vm.runInContext('render()',context);
+const mcab=nodes.listings.innerHTML.split('id="oh-license-0113-39-306-3"')[1].split('</article>')[0];assert(mcab.includes('State licensing notice:'));assert(mcab.includes('This is not a final decision.'));assert(mcab.includes('Nov 18, 2026'));
+const koc=nodes.listings.innerHTML.split('id="oh-license-0096-37-272-1"')[1].split('</article>')[0];assert(koc.includes('tel:7403823671'));assert(!koc.includes('State licensing notice'));
+nodes['bingo-reset'].onclick();
+assert(!JSON.parse(vm.runInContext("JSON.stringify(flyerRows('45042',50,'2026-10-09'))",context)).some(r=>r.enforcement));
+console.log('PASS: Attorney General enforcement notices labeled as non-final and excluded from flyers.');

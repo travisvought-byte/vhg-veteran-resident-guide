@@ -138,3 +138,9 @@ Each card shows "Last checked" from `reviewed_on`. The facility flyer (`bingo.ht
 The page now embeds ZIP centroids only for Ohio and its neighboring states (OH, PA, WV, KY, IN, MI). That roughly halves the page size, from 1.95 MB to 0.96 MB. The full US source file and its provenance are unchanged.
 
 Accessibility and group-admission filters were not added: only a handful of records hold that information. Collect it through operator submissions and research passes before building a filter.
+
+## October 29: local research batch and state enforcement check
+
+Seven listings in VHG's four operating counties were reviewed (see `research/bingo-session-review-2026-10-29-enforcement.json`). No new schedules met the publication standard: the Delaware Eagles source is an undated newspaper calendar, the newest available Marion Senior Center newsletter is from January 2025, and no 2026 details were found for Altrusa Marion (November 8) or East Knox Athletic Boosters (November 7). Knights of Columbus 671 gained a hall phone.
+
+The Ohio Attorney General's Bingo Enforcement page was checked against every listing. Four listings now carry an `enforcement` record and a card notice: Marion County Athletic Booster Association, Harry Clevenger Scholarship Foundation, Knights of Columbus #1610 and Huber Heights Athletic Foundation. Each has a pending notice of intent affecting its Type I license. The card states the notice date and any scheduled hearing, says plainly that it is not a final decision, and links the notice. These listings are left off facility flyers. Remove or update a record when the page lists a settlement or adjudication order. Tiffin Moose 846 is on the list, but its notice could not be retrieved, so it is not flagged. Recheck after the November 18 and 24 hearings.
