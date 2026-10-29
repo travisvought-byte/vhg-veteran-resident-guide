@@ -24,7 +24,7 @@ function setState(state,initial=false){
  $('coverage-detail').innerHTML='<p>'+esc(config.name)+': referral routes for '+COUNTIES.length+(state==='VA'?' counties and independent cities.':' counties.')+' Local service coverage is still growing.</p><p>'+pending+' resource records need further source checks. Check the status on each listing and confirm availability with the agency.</p>';
  if(config.coverageNote)$('coverage-detail').innerHTML+='<p>'+esc(config.coverageNote)+'</p>';
  document.querySelector('label[for="county"]').textContent=(state==='VA'?'County or independent city in ':'County in ')+config.name;
- $('aid-open').hidden=state!=='OH';document.querySelector('.office-directory summary').textContent='Browse '+config.name+(state==='VA'?' county and city contacts':' county contacts');
+ $('aid-open').hidden=state!=='OH';document.querySelectorAll('.ohio-only').forEach(e=>{e.hidden=state!=='OH'});document.querySelector('.office-directory summary').textContent='Browse '+config.name+(state==='VA'?' county and city contacts':' county contacts');
  $('office-search').placeholder='Search '+config.name+(state==='VA'?' counties or independent cities':' counties');
  document.title=config.name+' | Veteran Resident Resource Guide';
  document.querySelectorAll('a[href^="share"]').forEach(a=>a.href=config.sharePage);

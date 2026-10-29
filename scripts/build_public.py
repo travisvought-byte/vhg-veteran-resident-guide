@@ -7,6 +7,7 @@ from pathlib import Path
 from state_registry import (load_registry, load_counties, state_resources, make_edition,
                             make_share, add_share_links, add_state_options, BASE_URL)
 from bingo_edition import make_bingo
+from facilities_edition import make_facilities
 from unified_guide import unified_outputs
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -69,13 +70,14 @@ def outputs():
     result['index.html'] = result['index.html'].replace('const STATE=', aid + '\nconst STATE=', 1)
     result['index.html'] = result['index.html'].replace('<section id="county-start"', f'<p id="ohio-aid-link"><a href="?view=aid"><strong>Ohio veteran and aid organizations</strong></a> · Housing providers, claims help, legal aid, utility assistance and medical transportation. Local veteran housing providers are mapped for {housing_count} of {len(counties)} counties; other counties retain VA referral routes. For emergency financial assistance, choose your county below and ask its veterans office about eligibility and current programs.</p><section id="county-start"', 1)
     result['bingo.html'] = make_bingo(ROOT)
+    result['facilities.html'] = make_facilities(ROOT)
     result['index.html'] = result['index.html'].replace('<h3>For posts and community groups</h3>', '<p id="ohio-bingo-link"><a href="bingo.html"><strong>Find Ohio bingo and senior centers</strong></a> - find nearby senior centers, exercise, crafts, games, meals and bingo by ZIP code.</p><h3>For posts and community groups</h3>', 1)
     # Keep state adapter regression fixtures private to tests; the public site has one view.
     for page in [s['page'] for s in states]:
         result['tests/fixtures/'+page] = result[page]
     result.update(unified_outputs(ROOT, result, states))
     # Track public landing/sharing pages once; state redirects count at destination.
-    for page in ['index.html', 'bingo.html'] + [s['share_page'] for s in states]:
+    for page in ['index.html', 'bingo.html', 'facilities.html'] + [s['share_page'] for s in states]:
         result[page] = re.sub(r'<script[^>]*data-goatcounter=[^>]*></script>', '', result[page])
         result[page] = result[page].replace('<script defer src="assets/analytics.js"></script>', '')
         result[page] = result[page].replace('</body>', '<script defer src="assets/analytics.js"></script></body>')
