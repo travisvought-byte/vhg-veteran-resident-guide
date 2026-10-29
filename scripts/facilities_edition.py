@@ -41,7 +41,7 @@ TEMPLATE = r'''<!doctype html>
 <meta name="description" content="Find Ohio nursing homes, rehabilitation facilities and assisted living or residential care communities by name, county or ZIP code, with phone numbers and nearby bingo games and activities.">
 <link rel="canonical" href="https://travisvought-byte.github.io/vhg-veteran-resident-guide/facilities.html">
 <style>__STYLE__
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}.vhg{background:#e0ecdf;border:1px solid #9bbd9a}.state-home{background:#e7e9f3;border:1px solid #aab1d6}.facts{font-size:15px;margin:6px 0}
+.more{margin:18px 0}#fac-more{background:var(--green);color:white;border:0;margin-right:10px}@media print{.more{display:none}}.chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}.vhg{background:#e0ecdf;border:1px solid #9bbd9a}.state-home{background:#e7e9f3;border:1px solid #aab1d6}.facts{font-size:15px;margin:6px 0}
 </style></head><body><a class="skip" href="#listings">Skip to listings</a>
 <header class="page-only"><a href="index.html?view=seniors">&larr; Ohio Veteran Resident Resource Guide</a><p><img src="assets/vhg-logo.png" alt="Veteran Home Guardians" width="64" height="64"></p><h1>Ohio Nursing Homes, Rehab &amp; Assisted Living</h1><p>Find a nursing home, rehabilitation facility or assisted living community by name, county or ZIP code, then see the bingo games, senior centers and activities near it.</p></header>
 <main class="page-only"><p class="notice"><strong>What this list is.</strong> It has all __NH_COUNT__ Medicare- and Medicaid-certified nursing homes in Ohio (federal Provider Data Catalog) and __AL_COUNT__ active, state-licensed residential care or assisted living facilities (Ohio Department of Health), both retrieved __RETRIEVED__. It does not identify memory care units and does not include adult day services. It does not rate or recommend any facility. Confirm services, admission and visiting rules by phone, and check the state&rsquo;s <a href="https://aging.ohio.gov/navigator" target="_blank" rel="noopener noreferrer">Nursing Home Quality Navigator</a> for nursing home quality information.</p>
@@ -55,6 +55,7 @@ TEMPLATE = r'''<!doctype html>
 const FAC=__DATA__;
 const ZIPS=__ZIPDATA__;
 let activeZip='';
+const PAGE=60;let limit=PAGE;
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');
 function miles(a,b){const r=x=>x*Math.PI/180,la=r(b[0]-a[0]),lo=r(b[1]-a[1]),h=Math.sin(la/2)**2+Math.cos(r(a[0]))*Math.cos(r(b[0]))*Math.sin(lo/2)**2;return 3958.7613*2*Math.atan2(Math.sqrt(h),Math.sqrt(Math.max(0,1-h)))}
@@ -67,11 +68,15 @@ return '<article id="'+esc(f.id)+'"><div class="chips">'+chips+'</div><h2>'+esc(
 function render(){const county=$('fac-county').value,own=$('fac-own').value,q=$('fac-search').value,type=$('fac-type').value,base=filteredFacilities(county,own,q,type),radius=$('fac-radius').value==='all'?Infinity:Number($('fac-radius').value);
 const rows=activeZip?nearbyFacilities(base,activeZip,radius):[...base].sort((a,b)=>(b.vhg_visiting-a.vhg_visiting)||a.name.localeCompare(b.name));
 $('fac-count').textContent=rows.length+(activeZip?' facilities'+($('fac-radius').value==='all'?'':' within '+$('fac-radius').value+' miles')+' of '+activeZip+' · closest first':' of '+FAC.length+' facilities')+(county?' in '+county+' County':'');
-$('listings').innerHTML=rows.length?'<div class="grid">'+rows.map(card).join('')+'</div>':'<p class="empty">No facilities match these filters. Try a larger distance or clear filters.</p>';
+const shown=rows.slice(0,limit);$('listings').innerHTML=rows.length?'<div class="grid">'+shown.map(card).join('')+'</div>'+(rows.length>shown.length?'<p class="more"><button id="fac-more" type="button">Show '+Math.min(PAGE,rows.length-shown.length)+' more</button> <span class="small">Showing '+shown.length+' of '+rows.length+'. Narrow by county, type or ZIP code to find a specific facility.</span></p>':''):'<p class="empty">No facilities match these filters. Try a larger distance or clear filters.</p>';
 const u=new URL(location.href);u.search='';if(county)u.searchParams.set('county',county);if(own)u.searchParams.set('own',own);if(type)u.searchParams.set('type',type);if(q)u.searchParams.set('q',q);if(activeZip){u.searchParams.set('zip',activeZip);u.searchParams.set('radius',$('fac-radius').value)}history.replaceState(null,'',u)}
-function applyNearby(){const zip=$('fac-zip').value.trim();if(!zip){activeZip='';$('fac-status').textContent='Distances are approximate straight-line miles.';render();return}if(!/^[0-9]{5}$/.test(zip)||!ZIPS[zip]){activeZip='';$('fac-status').textContent='Enter a valid five-digit Ohio ZIP code.';render();return}activeZip=zip;$('fac-status').textContent='Distances are approximate straight-line miles.';render()}
-$('fac-nearby').onsubmit=e=>{e.preventDefault();applyNearby()};$('fac-radius').addEventListener('change',()=>{if(activeZip)render()});
+function refresh(){limit=PAGE;render()}
+function applyNearby(){const zip=$('fac-zip').value.trim();if(!zip){activeZip='';$('fac-status').textContent='Distances are approximate straight-line miles.';refresh();return}if(!/^[0-9]{5}$/.test(zip)||!ZIPS[zip]){activeZip='';$('fac-status').textContent='Enter a valid five-digit Ohio ZIP code.';refresh();return}activeZip=zip;$('fac-status').textContent='Distances are approximate straight-line miles.';refresh()}
+$('fac-nearby').onsubmit=e=>{e.preventDefault();applyNearby()};$('fac-radius').addEventListener('change',()=>{if(activeZip)refresh()});$('listings').onclick=e=>{if(e.target.closest('#fac-more')){limit+=PAGE;render()}};
 const params=new URLSearchParams(location.search);if([...$('fac-county').options].some(o=>o.value===params.get('county')))$('fac-county').value=params.get('county');if(['Non profit','For profit','Government'].includes(params.get('own')))$('fac-own').value=params.get('own');if(['nursing_home','residential_care'].includes(params.get('type')))$('fac-type').value=params.get('type');$('fac-search').value=params.get('q')||'';$('fac-zip').value=params.get('zip')||'';$('fac-radius').value=['10','25','50','all'].includes(params.get('radius'))?params.get('radius'):'25';if(/^[0-9]{5}$/.test($('fac-zip').value)&&ZIPS[$('fac-zip').value])activeZip=$('fac-zip').value;
-['fac-county','fac-own','fac-type'].forEach(id=>$(id).addEventListener('change',render));$('fac-search').addEventListener('input',render);
-$('fac-reset').onclick=()=>{['fac-county','fac-own','fac-type','fac-search','fac-zip'].forEach(id=>$(id).value='');activeZip='';$('fac-radius').value='25';$('fac-status').textContent='Distances are approximate straight-line miles.';render()};$('fac-print').onclick=()=>window.print();render();
+['fac-county','fac-own','fac-type'].forEach(id=>$(id).addEventListener('change',refresh));$('fac-search').addEventListener('input',refresh);
+$('fac-reset').onclick=()=>{['fac-county','fac-own','fac-type','fac-search','fac-zip'].forEach(id=>$(id).value='');activeZip='';$('fac-radius').value='25';$('fac-status').textContent='Distances are approximate straight-line miles.';refresh()};
+// Printing includes every match, not only the visible page; the page returns to its short view afterwards.
+$('fac-print').onclick=()=>{limit=Infinity;render();window.print();limit=PAGE;render()};
+render();
 </script></body></html>'''

@@ -19,6 +19,7 @@ jobs:
         run: |
           python3 tests/bingo_report.py
           python3 tests/bingo_bugle.py
+          python3 tests/freshness.py
           node tests/bingo.cjs
           node tests/facilities.cjs
       - name: Check public data and sharing files

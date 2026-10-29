@@ -1,0 +1,26 @@
+name: Bingo schedule freshness
+on:
+  schedule:
+    - cron: '17 12 * * 1'   # Mondays, 8:17 a.m. Eastern
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+jobs:
+  report:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+      - name: Build the freshness report
+        run: python3 scripts/check_schedule_freshness.py > report.md
+      - name: Update the single tracking issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          title="Bingo schedule freshness (automated weekly report)"
+          number=$(gh issue list --state open --search "$title in:title" --json number,title --jq ".[] | select(.title == \"$title\") | .number" | head -n1)
+          if [ -n "$number" ]; then
+            gh issue edit "$number" --body-file report.md
+          else
+            gh issue create --title "$title" --body-file report.md
+          fi

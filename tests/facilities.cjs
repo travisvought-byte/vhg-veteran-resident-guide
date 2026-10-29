@@ -61,3 +61,13 @@ console.log('PASS: 924 nursing homes and 817 assisted living facilities, provena
 // Name and address hygiene: no doubled words from abbreviation cleanup, no stray spaces or trailing commas.
 for(const f of data){assert(!/ive\b.*Driveive|Driveive|Roadad/.test(f.address),f.id);assert(!/\s{2,}/.test(f.name+f.address),f.id);assert(!/[,;\s]$/.test(f.name),f.id);assert(!/\b(Dr|Rd)\b(?!\.)/.test(f.address),f.id)}
 console.log('PASS: facility names and addresses are clean.');
+
+// Paging: the full list is never drawn at once; "Show more" adds a page; filters and printing behave.
+const cardsIn=h=>(h.match(/<article /g)||[]).length;
+nodes['fac-reset'].onclick();assert.equal(cardsIn(nodes.listings.innerHTML),60);assert(nodes.listings.innerHTML.includes('id="fac-more"'));assert(nodes.listings.innerHTML.includes('Showing 60 of 1741'));assert(nodes['fac-count'].textContent.includes('of 1741 facilities'));
+nodes.listings.onclick({target:{closest:sel=>sel==='#fac-more'?{}:null}});assert.equal(cardsIn(nodes.listings.innerHTML),120);assert(nodes.listings.innerHTML.includes('Showing 120 of 1741'));
+nodes['fac-county'].value='Marion';nodes['fac-county'].addEventListener=()=>{};vm.runInContext('refresh()',ctx);assert.equal(cardsIn(nodes.listings.innerHTML),10);assert(!nodes.listings.innerHTML.includes('fac-more'));
+nodes['fac-county'].value='';vm.runInContext('refresh()',ctx);assert.equal(cardsIn(nodes.listings.innerHTML),60);
+let printedCards=0;ctx.window.print=()=>{printedCards=cardsIn(nodes.listings.innerHTML)};nodes['fac-print'].onclick();assert.equal(printedCards,1741);assert.equal(cardsIn(nodes.listings.innerHTML),60);
+nodes['fac-reset'].onclick();
+console.log('PASS: paged listings, show more, filter reset to first page, and print includes every match.');
