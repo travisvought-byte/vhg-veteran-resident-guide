@@ -204,3 +204,10 @@ const koc=nodes.listings.innerHTML.split('id="oh-license-0096-37-272-1"')[1].spl
 nodes['bingo-reset'].onclick();
 assert(!JSON.parse(vm.runInContext("JSON.stringify(flyerRows('45042',50,'2026-10-09'))",context)).some(r=>r.enforcement));
 console.log('PASS: Attorney General enforcement notices labeled as non-final and excluded from flyers.');
+// Structured submissions arrive ready to enter; the organizer flyer points to the form.
+const structured=new URL(vm.runInContext("submissionEmail('Hall','Marion','','','',['Game days: Sunday, Thursday','Doors: 5 p.m.','Care-facility groups: Yes, call ahead'])",context));
+const sb=structured.searchParams.get('body');assert(sb.includes('Game days: Sunday, Thursday'));assert(sb.indexOf('County: Marion')<sb.indexOf('Game days'));assert(sb.includes('Care-facility groups: Yes, call ahead'));
+assert(html.includes('id="submit-groups"')&&html.includes('name="submit-day" value="Sunday"'));
+vm.runInContext('renderOrganizerFlyer()',context);assert(nodes.flyer.innerHTML.includes('Is your bingo game listed?'));assert(nodes.flyer.innerHTML.includes('assets/bingo-submit-qr.svg'));assert(nodes.flyer.innerHTML.includes('Inclusion never depends on donations'));
+assert(fs.existsSync(path.join(root,'assets/bingo-submit-qr.svg')));
+console.log('PASS: structured submission email and organizer flyer.');

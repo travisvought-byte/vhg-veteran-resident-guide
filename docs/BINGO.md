@@ -144,3 +144,13 @@ Accessibility and group-admission filters were not added: only a handful of reco
 Seven listings in VHG's four operating counties were reviewed (see `research/bingo-session-review-2026-10-29-enforcement.json`). No new schedules met the publication standard: the Delaware Eagles source is an undated newspaper calendar, the newest available Marion Senior Center newsletter is from January 2025, and no 2026 details were found for Altrusa Marion (November 8) or East Knox Athletic Boosters (November 7). Knights of Columbus 671 gained a hall phone.
 
 The Ohio Attorney General's Bingo Enforcement page was checked against every listing. Four listings now carry an `enforcement` record and a card notice: Marion County Athletic Booster Association, Harry Clevenger Scholarship Foundation, Knights of Columbus #1610 and Huber Heights Athletic Foundation. Each has a pending notice of intent affecting its Type I license. The card states the notice date and any scheduled hearing, says plainly that it is not a final decision, and links the notice. These listings are left off facility flyers. Remove or update a record when the page lists a settlement or adjudication order. Tiffin Moose 846 is on the list, but its notice could not be retrieved, so it is not flagged. Recheck after the November 18 and 24 hearings.
+
+## October 29: organizer submissions and hall flyer
+
+The submission form now collects game days (checkboxes), doors and first-game times, price, public phone, link, public attendance, step-free entrance and whether care-facility groups are welcome. It also asks whether the sender is an organizer, a player or activity staff. Every field arrives as a labeled line in the email draft ("not given" when blank), so a submission can be entered without follow-up. "Add or update details" on a card prefills venue, county and address. Accessibility and group answers from organizers are the intended source for future filters; the role line helps weigh a player's report against an organizer's.
+
+`bingo.html?organizer=1` prints a one-page "Is your bingo game listed?" flyer for halls, bulletin boards and Guardian drop-offs, with a large QR code (`assets/bingo-submit-qr.svg`) to the submission form. It is linked from the "Run a bingo game?" section.
+
+The Bingo Bugle web directory was still the October edition on October 29 (same 34 rows as the October 9 pull). Rerun the monthly import when the November edition posts.
+
+Google Maps listings and reviews can point to games (Knights of Columbus 671: reviewers describe Sunday-afternoon and Thursday-night bingo, consistent with its license days). Reviews are undated, and Google's terms bar copying Places data. Use them only to decide whom to ask, never as a published source.
