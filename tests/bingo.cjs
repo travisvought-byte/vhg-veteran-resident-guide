@@ -218,3 +218,8 @@ const linkCtx=vm.createContext({Date:GuideDate,URL,URLSearchParams,document:{get
 vm.runInContext(linkHtml.match(/<script>([\s\S]*?)<\/script>/)[1],linkCtx);
 assert(linkNodes.listings.innerHTML.includes('id="oh-license-0096-37-272-1"'));
 console.log('PASS: per-listing links reveal license-only cards.');
+// First screen: the ZIP search comes before the explanatory text, and quick searches are real buttons-sized links.
+const mainStart=html.indexOf('<main class="page-only">');const zipAt=html.indexOf('id="bingo-zip"',mainStart),introAt=html.indexOf('class="intro"',mainStart),noticeAt=html.indexOf('Planning a group outing',mainStart);
+assert(mainStart>0&&zipAt>mainStart&&zipAt<introAt&&introAt<noticeAt,'ZIP search must come first');
+assert(html.includes('<nav class="quick" aria-label="Quick searches">')&&html.includes('min-height:44px'));
+console.log('PASS: ZIP search leads the page and quick searches have 44px touch targets.');
