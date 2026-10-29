@@ -164,3 +164,7 @@ The page hides an expired schedule or price offer at display time, so visitors n
 ## Facilities page paging
 
 The facilities page draws 60 cards at a time with a "Show more" button. Drawing all 1,741 at once produced about 24,600 page elements and a 3.3 second load on a simulated phone; paging brought that to about 1,000 elements and 1.1 seconds. Filters and the ZIP search return to the first page. "Print this list" includes every match.
+
+## Senior centers from the state association directory
+
+47 centers were added from the Ohio Association of Senior Centers 2024 member directory (https://ohioasc.org/wp-content/uploads/2024/10/2024MemberDirectory-2.pdf), bringing the senior-center layer to 62. The PDF is scanned images, so it was read by OCR and each name, address and phone was checked by hand against the directory page. Only name, address and phone are published; the directory's contact names and email addresses are not. Entries that are not senior centers (an Area Office on Aging, a hospice, a meals-on-wheels office, a community action agency and a PO-box-only listing) and centers already in the file were left out. These records have no schedule or program detail yet, so they show the "call ahead" note until a center's own site is reviewed. Counties were assigned from the city. The directory covers member centers only, so Ohio has more centers than this list.
