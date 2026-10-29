@@ -126,3 +126,15 @@ Batch 2 reviewed Genoa Legion 324, Newark Catholic’s Green Wave Drive venue, P
 Two advertised games were added. Pierce’s Crew’s organizer and ticket pages match the November 6 state-listed date and Hancock Hotel address; doors/dinner are distinguished from an unpublished exact first-call time. The Delphos venue homepage with current October 2026 notices and dedicated bingo page advertise Wednesday bingo at the state-listed Knights hall, with early bird at 6:45 p.m. and regular games at 7 p.m. The campus festival authorization does not inherit this schedule. Published step-free entry is a venue statement, not an independent access assessment.
 
 Newark Catholic and Kno-Ho-Co gained scoped inquiry contacts; no current licensed-game schedule was inferred from volunteer signups or old senior activities. Genoa’s older notice remains deferred. Records now contain 75 published schedules; venue and Type I totals remain 732 and 717. One-off event titles and ticket prices expire after their published event.
+
+## October 29: activity-director view and facility flyer
+
+Audience shift: nursing-home activity staff planning outings. Default listings now show only senior centers, researched venues and games with an active published schedule. State-licensed entries without a published schedule remain one click away ("Show them", `all=1` in shared links); choosing "State-listed Type I bingo" always shows all 717. The count line reports how many license-only listings are hidden for the current area.
+
+Time of day filter (`time=afternoon|evening`): afternoon means a published game time before 5 p.m.; evening, 5 p.m. or later. Times come from the active schedule text. Door, dinner, concession, packet and instant-sale times are ignored. Schedules without a stated game time match neither option. It does not use authorization days.
+
+Each card shows "Last checked" from `reviewed_on`. The facility flyer (`bingo.html?flyer=1&place=NAME&zip=ZIP&radius=10|25|50`) prints a one-page list of the ten nearest active-schedule games and senior centers. It includes phones, straight-line miles, group-outing call-ahead guidance and a QR code (`assets/bingo-qr.svg`) to this page. Print layout was checked at eight Ohio ZIPs: every flyer fit one Letter page. Keep `bingo.html` as a redirect if the finder moves, so printed QR codes keep working.
+
+The page now embeds ZIP centroids only for Ohio and its neighboring states (OH, PA, WV, KY, IN, MI). That roughly halves the page size, from 1.95 MB to 0.96 MB. The full US source file and its provenance are unchanged.
+
+Accessibility and group-admission filters were not added: only a handful of records hold that information. Collect it through operator submissions and research passes before building a filter.
