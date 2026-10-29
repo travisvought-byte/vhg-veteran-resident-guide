@@ -146,6 +146,7 @@ See the [maintenance process](docs/MAINTENANCE.md), [verification queue](docs/VE
 |---|---|
 | `index.html`, `assets/guide.js`, `assets/editions/` | Shared public interface, shared bundle and generated per-state data/routing files |
 | `bingo.html`, `data/public/ohio-bingo.json`, `docs/BINGO.md` | Ohio bingo page, canonical venue records and source/expansion notes |
+| `facilities.html`, `data/public/ohio-facilities.json`, `scripts/build_facilities_data.py`, `docs/FACILITIES.md` | Ohio nursing homes, rehab and assisted living page (CMS and Ohio Department of Health sources), canonical records and the refresh script |
 | `share.html`, `share-pa.html`, `share-ny.html`, `share-mi.html`, `share-ky.html`, `share-ut.html`, `share-in.html`, `share-wv.html`, `share-tx.html`, `share-fl.html` | State-specific QR flyers and newsletter introductions |
 | `pa.html`, `ny.html`, `mi.html`, `ky.html`, `ut.html`, `in.html`, `wv.html`, `tx.html`, `fl.html` | Compatibility redirects into the shared guide |
 | `assets/` | VHG logo, QR code and social preview image |

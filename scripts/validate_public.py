@@ -34,7 +34,7 @@ class Links(HTMLParser):
                 continue
             assert (ROOT / url.path).is_file() or (ROOT / url.path).is_dir(), ('Missing local file', value)
 
-for name in ['index.html', 'bingo.html', 'pa.html', 'ny.html', 'share.html', 'share-pa.html', 'share-ny.html', 'mi.html', 'share-mi.html', 'ky.html', 'share-ky.html', 'ut.html', 'share-ut.html']:
+for name in ['index.html', 'bingo.html', 'facilities.html', 'pa.html', 'ny.html', 'share.html', 'share-pa.html', 'share-ny.html', 'mi.html', 'share-mi.html', 'ky.html', 'share-ky.html', 'ut.html', 'share-ut.html']:
     Links().feed((ROOT / name).read_text())
 county_sets = {}
 for name, state in [('ohio-county-veterans-offices.json', 'OH'), ('pennsylvania-county-veterans-offices.json', 'PA'), ('new-york-county-veterans-offices.json', 'NY'), ('michigan-county-veterans-offices.json', 'MI'), ('kentucky-county-veterans-offices.json', 'KY'), ('utah-county-veterans-offices.json', 'UT')]:

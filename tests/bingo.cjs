@@ -195,3 +195,26 @@ vm.runInContext("renderFlyer('<b>x</b>','43334',10,'2026-10-09')",context);asser
 assert(fs.existsSync(path.join(root,'assets/bingo-qr.svg')));assert(html.includes('id="flyer-form"'));
 assert(vm.runInContext("!!ZIP_CENTROIDS['43334']&&!!ZIP_CENTROIDS['15001']&&!ZIP_CENTROIDS['90210']",context));
 console.log('PASS: published-first default, time-of-day filter, last-checked dates, facility flyer and regional ZIP data.');
+// State enforcement notices are shown, kept factual, and excluded from printed facility flyers.
+const noticed=authorized.filter(r=>r.enforcement);assert.equal(noticed.length,4);
+for(const r of noticed){assert.equal(r.enforcement.status,'notice_of_intent');assert(r.enforcement.url.startsWith('https://charitable.ohioago.gov/'));assert(r.sources.some(s=>s.url===r.enforcement.url));}
+nodes['bingo-reset'].onclick();nodes['bingo-kind'].value='licensed';nodes['bingo-county'].value='Marion';vm.runInContext('render()',context);
+const mcab=nodes.listings.innerHTML.split('id="oh-license-0113-39-306-3"')[1].split('</article>')[0];assert(mcab.includes('State licensing notice:'));assert(mcab.includes('This is not a final decision.'));assert(mcab.includes('Nov 18, 2026'));
+const koc=nodes.listings.innerHTML.split('id="oh-license-0096-37-272-1"')[1].split('</article>')[0];assert(koc.includes('tel:7403823671'));assert(!koc.includes('State licensing notice'));
+nodes['bingo-reset'].onclick();
+assert(!JSON.parse(vm.runInContext("JSON.stringify(flyerRows('45042',50,'2026-10-09'))",context)).some(r=>r.enforcement));
+console.log('PASS: Attorney General enforcement notices labeled as non-final and excluded from flyers.');
+// Structured submissions arrive ready to enter; the organizer flyer points to the form.
+const structured=new URL(vm.runInContext("submissionEmail('Hall','Marion','','','',['Game days: Sunday, Thursday','Doors: 5 p.m.','Care-facility groups: Yes, call ahead'])",context));
+const sb=structured.searchParams.get('body');assert(sb.includes('Game days: Sunday, Thursday'));assert(sb.indexOf('County: Marion')<sb.indexOf('Game days'));assert(sb.includes('Care-facility groups: Yes, call ahead'));
+assert(html.includes('id="submit-groups"')&&html.includes('name="submit-day" value="Sunday"'));
+vm.runInContext('renderOrganizerFlyer()',context);assert(nodes.flyer.innerHTML.includes('Is your bingo game listed?'));assert(nodes.flyer.innerHTML.includes('assets/bingo-submit-qr.svg'));assert(nodes.flyer.innerHTML.includes('Inclusion never depends on donations'));
+assert(fs.existsSync(path.join(root,'assets/bingo-submit-qr.svg')));
+console.log('PASS: structured submission email and organizer flyer.');
+// A listing link (#id) must reveal that listing even when it is license-only.
+const linkHtml=fs.readFileSync(path.join(root,'bingo.html'),'utf8');
+const linkNodes=Object.fromEntries(Object.keys(nodes).map(k=>[k,{value:'',innerHTML:'',textContent:'',options:nodes[k].options,addEventListener(){}}]));
+const linkCtx=vm.createContext({Date:GuideDate,URL,URLSearchParams,document:{getElementById:id=>linkNodes[id]},location:{href:'https://example.org/bingo.html#oh-license-0096-37-272-1',search:'',hash:'#oh-license-0096-37-272-1'},history:{replaceState(){}},window:{print(){}}});
+vm.runInContext(linkHtml.match(/<script>([\s\S]*?)<\/script>/)[1],linkCtx);
+assert(linkNodes.listings.innerHTML.includes('id="oh-license-0096-37-272-1"'));
+console.log('PASS: per-listing links reveal license-only cards.');

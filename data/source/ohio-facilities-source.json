@@ -1,0 +1,20 @@
+{
+ "nursing_homes": {
+  "source_url": "https://data.cms.gov/provider-data/dataset/4pq5-n9py",
+  "publisher": "Centers for Medicare & Medicaid Services, Provider Data Catalog: Nursing Home Provider Information",
+  "file": "e9cdd36d-NH_ProviderInfo_Oct2026.csv",
+  "retrieved_on": "2026-10-29",
+  "sha256": "ab70309ae6f0ee86b19fe9acb61a6d2953f970d3b09e80bb9b090e4b19ce35a2",
+  "ohio_rows": 924,
+  "scope": "Medicare/Medicaid-certified nursing homes only."
+ },
+ "residential_care": {
+  "source_url": "https://publicapps.odh.ohio.gov/eid/reports/EID_Report_Criteria.aspx",
+  "publisher": "Ohio Department of Health, Office of Health Assurance and Licensing: Health Care Provider Report and Information Extract, Facility Listing (Residential Care or Assisted Living, active, state license)",
+  "file": "7ebaab00-FacilityListing-20261029-010408.csv",
+  "retrieved_on": "2026-10-29",
+  "sha256": "83c80226b9c7c0c2a10683a86cdbf78ca75a81ef7ca09b07905f62900a5e2175",
+  "rows": 817,
+  "scope": "Active state-licensed residential care or assisted living facilities. The export does not identify memory care units, and email, fax and owner fields in it are not published here."
+ }
+}
