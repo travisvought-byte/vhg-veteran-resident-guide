@@ -223,3 +223,6 @@ const mainStart=html.indexOf('<main class="page-only">');const zipAt=html.indexO
 assert(mainStart>0&&zipAt>mainStart&&zipAt<introAt&&introAt<noticeAt,'ZIP search must come first');
 assert(html.includes('<nav class="quick" aria-label="Quick searches">')&&html.includes('min-height:44px'));
 console.log('PASS: ZIP search leads the page and quick searches have 44px touch targets.');
+{const src=centers.filter(c=>c.schedule_source);assert(src.length>=16);assert(src.every(c=>c.schedule&&!/^Bingo:/i.test(c.schedule)));
+const tpl=fs.readFileSync(path.join(root,'scripts/bingo_edition.py'),'utf8');assert(tpl.includes('These times come from')&&tpl.includes('Next game day, if unchanged:'));
+console.log('PASS: older-source schedules name their source on the card and never claim to be freshly checked.');}
