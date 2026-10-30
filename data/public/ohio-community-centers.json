@@ -879,7 +879,7 @@
   "activity_tags": [],
   "opening_hours": null,
   "participation": null,
-  "schedule": null,
+  "schedule": "Bingo: second and fourth Wednesdays, 2:00 p.m. (two-card maximum); Breakfast Bingo first Friday, 9:00 a.m. (sign up ahead)",
   "cost": null,
   "admission": null,
   "accessibility": null,
@@ -887,19 +887,41 @@
   "license_type": null,
   "license_status": null,
   "notes": [
-   "Listed in the 2024 member directory of the Ohio Association of Senior Centers. Call ahead to confirm hours, programs and who may attend."
+   "Listed in the 2024 member directory of the Ohio Association of Senior Centers. Call ahead to confirm hours, programs and who may attend.",
+   "Times are from the center's own events calendar (2023–2024). Regular senior-center schedules rarely change, but call the center to confirm, and tell us if it has changed."
   ],
   "sources": [
    {
     "url": "https://ohioasc.org/wp-content/uploads/2024/10/2024MemberDirectory-2.pdf",
     "scope": "Ohio Association of Senior Centers 2024 member directory: name, address and phone",
     "reviewed_on": "2026-10-29"
+   },
+   {
+    "url": "https://prebleseniorcenter.org/events/2024-08-14",
+    "scope": "Preble Senior Center event series (2023-2024): bingo second and fourth Wednesdays 2 p.m.; breakfast bingo first Friday 9 a.m.",
+    "reviewed_on": "2026-10-30"
    }
   ],
-  "reviewed_on": "2026-10-29",
-  "offers_bingo": false,
-  "getting_started": null,
-  "transportation": null
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": true,
+  "getting_started": "Call 937-456-4947 to confirm the day and time before you go.",
+  "transportation": null,
+  "session_monthly": [
+   {
+    "weekday": 3,
+    "weeks": [
+     2,
+     4
+    ]
+   },
+   {
+    "weekday": 5,
+    "weeks": [
+     1
+    ]
+   }
+  ],
+  "schedule_valid_until": "2027-03-31"
  },
  {
   "id": "united-senior-services-of-clark-county",
@@ -1286,27 +1308,43 @@
   "activity_tags": [],
   "opening_hours": null,
   "participation": null,
-  "schedule": null,
-  "cost": null,
+  "schedule": "Bingo: second and third Mondays, 2:30 p.m.",
+  "cost": "Free",
   "admission": null,
   "accessibility": null,
   "license_number": null,
   "license_type": null,
   "license_status": null,
   "notes": [
-   "Listed in the 2024 member directory of the Ohio Association of Senior Centers. Call ahead to confirm hours, programs and who may attend."
+   "Listed in the 2024 member directory of the Ohio Association of Senior Centers. Call ahead to confirm hours, programs and who may attend.",
+   "Bingo times are from an October 2021 Bluffton Icon article (two games a month, free and open to the public, sponsored by local care providers). Regular senior-center schedules rarely change, but call to confirm, and tell us if it has changed."
   ],
   "sources": [
    {
     "url": "https://ohioasc.org/wp-content/uploads/2024/10/2024MemberDirectory-2.pdf",
     "scope": "Ohio Association of Senior Centers 2024 member directory: name, address and phone",
     "reviewed_on": "2026-10-29"
+   },
+   {
+    "url": "https://www.blufftonicon.com/node/53128",
+    "scope": "Bluffton Icon, Oct. 27, 2021: bingo second and third Mondays at 2:30 p.m., free",
+    "reviewed_on": "2026-10-30"
    }
   ],
-  "reviewed_on": "2026-10-29",
-  "offers_bingo": false,
-  "getting_started": null,
-  "transportation": null
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": true,
+  "getting_started": "Call 419-358-8971 to confirm the day and time before you go.",
+  "transportation": null,
+  "session_monthly": [
+   {
+    "weekday": 1,
+    "weeks": [
+     2,
+     3
+    ]
+   }
+  ],
+  "schedule_valid_until": "2027-03-31"
  },
  {
   "id": "van-wert-county-council-on-aging",
@@ -1323,7 +1361,7 @@
   "activity_tags": [],
   "opening_hours": null,
   "participation": null,
-  "schedule": null,
+  "schedule": "Bingo: Monday evenings (start time not published)",
   "cost": null,
   "admission": null,
   "accessibility": null,
@@ -1331,19 +1369,29 @@
   "license_type": null,
   "license_status": null,
   "notes": [
-   "Listed in the 2024 member directory of the Ohio Association of Senior Centers. Call ahead to confirm hours, programs and who may attend."
+   "Listed in the 2024 member directory of the Ohio Association of Senior Centers. Call ahead to confirm hours, programs and who may attend.",
+   "Day is from a Van Wert Independent notice about Monday evening bingo. Regular senior-center schedules rarely change, but call the center to confirm, and tell us if it has changed."
   ],
   "sources": [
    {
     "url": "https://ohioasc.org/wp-content/uploads/2024/10/2024MemberDirectory-2.pdf",
     "scope": "Ohio Association of Senior Centers 2024 member directory: name, address and phone",
     "reviewed_on": "2026-10-29"
+   },
+   {
+    "url": "https://thevwindependent.com/news/?p=22408",
+    "scope": "Van Wert Independent: the Council on Aging seeks kitchen volunteers for Monday evening bingo",
+    "reviewed_on": "2026-10-30"
    }
   ],
-  "reviewed_on": "2026-10-29",
-  "offers_bingo": false,
-  "getting_started": null,
-  "transportation": null
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": true,
+  "getting_started": "Call 419-238-5011 to confirm the day and time before you go.",
+  "transportation": null,
+  "session_days": [
+   1
+  ],
+  "schedule_valid_until": "2027-03-31"
  },
  {
   "id": "east-toledo-senior-activities-center",
@@ -1611,7 +1659,7 @@
   "state": "OH",
   "category": "center",
   "is_center": true,
-  "address": "140 South Grove Street, Bowling Green, OH 43402",
+  "address": "140 North Main Street, Bowling Green, OH 43402",
   "phone": "419-353-5661",
   "official_url": null,
   "program_url": null,
@@ -1619,7 +1667,7 @@
   "activity_tags": [],
   "opening_hours": null,
   "participation": null,
-  "schedule": null,
+  "schedule": "Tuesdays 1–3 p.m.",
   "cost": null,
   "admission": null,
   "accessibility": null,
@@ -1627,19 +1675,34 @@
   "license_type": null,
   "license_status": null,
   "notes": [
-   "Listed in the 2024 member directory of the Ohio Association of Senior Centers. Call ahead to confirm hours, programs and who may attend."
+   "Listed in the 2024 member directory of the Ohio Association of Senior Centers. Call ahead to confirm hours, programs and who may attend.",
+   "Bingo times are from the Wood County Committee on Aging's July 2025 games schedule, the latest we have. Regular senior-center schedules rarely change, but call the center to confirm, and tell us if it has changed."
   ],
   "sources": [
    {
     "url": "https://ohioasc.org/wp-content/uploads/2024/10/2024MemberDirectory-2.pdf",
     "scope": "Ohio Association of Senior Centers 2024 member directory: name, address and phone",
     "reviewed_on": "2026-10-29"
+   },
+   {
+    "url": "https://wccoa.net/wp-content/uploads/2025/07/07-2025Monthly-Cards-and-Games-Schedule.pdf",
+    "scope": "Wood County Committee on Aging schedule PDF (July 2025): address and phone",
+    "reviewed_on": "2026-10-30"
+   },
+   {
+    "url": "https://wccoa.net/wp-content/uploads/2025/07/07-2025Monthly-Cards-and-Games-Schedule.pdf",
+    "scope": "Wood County Committee on Aging Monthly Cards and Games Schedule (last modified July 8, 2025): bingo days and times",
+    "reviewed_on": "2026-10-30"
    }
   ],
-  "reviewed_on": "2026-10-29",
-  "offers_bingo": false,
-  "getting_started": null,
-  "transportation": null
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": true,
+  "getting_started": "Call 419-353-5661 to confirm the day and time before you go.",
+  "transportation": null,
+  "session_days": [
+   2
+  ],
+  "schedule_valid_until": "2027-03-31"
  },
  {
   "id": "allen-eiry-center",
@@ -1878,27 +1941,37 @@
   "activity_tags": [],
   "opening_hours": null,
   "participation": null,
-  "schedule": null,
-  "cost": null,
+  "schedule": "Bingo: Thursdays 9:30 a.m. (20 games, a nickel per card per game; seating limited)",
+  "cost": "Free at the door; a nickel per card per game",
   "admission": null,
   "accessibility": null,
   "license_number": null,
   "license_type": null,
   "license_status": null,
   "notes": [
-   "Listed in the 2024 member directory of the Ohio Association of Senior Centers. Call ahead to confirm hours, programs and who may attend."
+   "Listed in the 2024 member directory of the Ohio Association of Senior Centers. Call ahead to confirm hours, programs and who may attend.",
+   "Time is from a June 2023 Marietta Times listing and a September 2023 news story about weekly nickel bingo. Regular senior-center schedules rarely change, but call the center to confirm, and tell us if it has changed."
   ],
   "sources": [
    {
     "url": "https://ohioasc.org/wp-content/uploads/2024/10/2024MemberDirectory-2.pdf",
     "scope": "Ohio Association of Senior Centers 2024 member directory: name, address and phone",
     "reviewed_on": "2026-10-29"
+   },
+   {
+    "url": "https://www.mariettatimes.com/news/2023/06/local-events-209",
+    "scope": "Marietta Times local events, June 2023: bingo 9:30 a.m. Thursdays at the O'Neill Center",
+    "reviewed_on": "2026-10-30"
    }
   ],
-  "reviewed_on": "2026-10-29",
-  "offers_bingo": false,
-  "getting_started": null,
-  "transportation": null
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": true,
+  "getting_started": "Call 740-373-3914 to confirm the day and time before you go.",
+  "transportation": null,
+  "session_days": [
+   4
+  ],
+  "schedule_valid_until": "2027-03-31"
  },
  {
   "id": "scenic-hills-senior-center",
@@ -2063,7 +2136,7 @@
   "activity_tags": [],
   "opening_hours": null,
   "participation": null,
-  "schedule": null,
+  "schedule": "Bingocize (bingo with fall-prevention exercises): Thursdays 1 p.m., ages 60+, no registration",
   "cost": null,
   "admission": null,
   "accessibility": null,
@@ -2071,19 +2144,29 @@
   "license_type": null,
   "license_status": null,
   "notes": [
-   "Listed in the 2024 member directory of the Ohio Association of Senior Centers. Call ahead to confirm hours, programs and who may attend."
+   "Listed in the 2024 member directory of the Ohio Association of Senior Centers. Call ahead to confirm hours, programs and who may attend.",
+   "Time is from a news story about the center's Bingocize program. Regular senior-center schedules rarely change, but call the center to confirm, and tell us if it has changed."
   ],
   "sources": [
    {
     "url": "https://ohioasc.org/wp-content/uploads/2024/10/2024MemberDirectory-2.pdf",
     "scope": "Ohio Association of Senior Centers 2024 member directory: name, address and phone",
     "reviewed_on": "2026-10-29"
+   },
+   {
+    "url": "https://www.yourohionews.com/holmes-county/bingocize-at-the-senior-center/329182",
+    "scope": "Your Ohio News: Bingocize every Thursday at 1 p.m. at the Coshocton Senior Center",
+    "reviewed_on": "2026-10-30"
    }
   ],
-  "reviewed_on": "2026-10-29",
-  "offers_bingo": false,
-  "getting_started": null,
-  "transportation": null
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": true,
+  "getting_started": "Call 740-622-4852 to confirm the day and time before you go.",
+  "transportation": null,
+  "session_days": [
+   4
+  ],
+  "schedule_valid_until": "2027-03-31"
  },
  {
   "id": "senior-services-of-belmont-county",
@@ -2388,7 +2471,7 @@
   "state": "OH",
   "category": "center",
   "is_center": true,
-  "address": "412 Westchester Dr., Austintown, OH 44515",
+  "address": "112 Westchester Drive, Austintown, OH 44515",
   "phone": "330-953-1416",
   "official_url": null,
   "program_url": null,
@@ -2396,7 +2479,7 @@
   "activity_tags": [],
   "opening_hours": null,
   "participation": null,
-  "schedule": null,
+  "schedule": "Bingo: Monday mornings, about 10 a.m. (other weekday mornings in some listings)",
   "cost": null,
   "admission": null,
   "accessibility": null,
@@ -2404,19 +2487,29 @@
   "license_type": null,
   "license_status": null,
   "notes": [
-   "Listed in the 2024 member directory of the Ohio Association of Senior Centers. Call ahead to confirm hours, programs and who may attend."
+   "Listed in the 2024 member directory of the Ohio Association of Senior Centers. Call ahead to confirm hours, programs and who may attend.",
+   "Time is from Vindicator listings, 2011–2019; the address is from a 2025 calendar. Regular senior-center schedules rarely change, but call the center to confirm, and tell us if it has changed."
   ],
   "sources": [
    {
     "url": "https://ohioasc.org/wp-content/uploads/2024/10/2024MemberDirectory-2.pdf",
     "scope": "Ohio Association of Senior Centers 2024 member directory: name, address and phone",
     "reviewed_on": "2026-10-29"
+   },
+   {
+    "url": "https://vindyarchives.com/news/2019/jan/20/senior-sidelights/",
+    "scope": "Vindicator Senior Sidelights (2011-2019): bingo at 10 a.m. Mondays",
+    "reviewed_on": "2026-10-30"
    }
   ],
-  "reviewed_on": "2026-10-29",
-  "offers_bingo": false,
-  "getting_started": null,
-  "transportation": null
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": true,
+  "getting_started": "Call 330-953-1416 to confirm the day and time before you go.",
+  "transportation": null,
+  "session_days": [
+   1
+  ],
+  "schedule_valid_until": "2027-03-31"
  },
  {
   "id": "conneaut-human-resources-council",
@@ -2507,6 +2600,53 @@
   "activity_tags": [],
   "opening_hours": null,
   "participation": null,
+  "schedule": "Bingo: Wednesdays 1–2:30 p.m., after the $3 lunch (11:30 a.m.–12:30 p.m.)",
+  "cost": "Bingo cards 25 cents each",
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Listed in the 2024 member directory of the Ohio Association of Senior Centers. Call ahead to confirm hours, programs and who may attend.",
+   "Time is from a 2016 Vindicator listing. Regular senior-center schedules rarely change, but call the center to confirm, and tell us if it has changed."
+  ],
+  "sources": [
+   {
+    "url": "https://ohioasc.org/wp-content/uploads/2024/10/2024MemberDirectory-2.pdf",
+    "scope": "Ohio Association of Senior Centers 2024 member directory: name, address and phone",
+    "reviewed_on": "2026-10-29"
+   },
+   {
+    "url": "https://vindyarchives.com/news/2016/may/22/senior-sidelights",
+    "scope": "Vindicator Senior Sidelights, May 2016: Wednesday lunch then bingo 1–2:30 p.m., 25-cent cards",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": true,
+  "getting_started": "Call 330-545-6596 to confirm the day and time before you go.",
+  "transportation": null,
+  "session_days": [
+   3
+  ],
+  "schedule_valid_until": "2027-03-31"
+ },
+ {
+  "id": "adams-county-senior-citizens-council",
+  "name": "Adams County Senior Citizens Council",
+  "county": "Adams",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "10835 State Route 41 South, West Union, OH 45693",
+  "phone": "937-544-3956",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
   "schedule": null,
   "cost": null,
   "admission": null,
@@ -2515,16 +2655,2035 @@
   "license_type": null,
   "license_status": null,
   "notes": [
-   "Listed in the 2024 member directory of the Ohio Association of Senior Centers. Call ahead to confirm hours, programs and who may attend."
+   "Name, address and phone only. Call ahead to confirm hours, programs and who may attend."
   ],
   "sources": [
    {
-    "url": "https://ohioasc.org/wp-content/uploads/2024/10/2024MemberDirectory-2.pdf",
-    "scope": "Ohio Association of Senior Centers 2024 member directory: name, address and phone",
-    "reviewed_on": "2026-10-29"
+    "url": "https://aaa7.org/aaa7s-10-counties",
+    "scope": "Area Agency on Aging District 7 county focal points page: name, address and phone",
+    "reviewed_on": "2026-10-30"
    }
   ],
-  "reviewed_on": "2026-10-29",
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "brown-county-senior-citizens-center",
+  "name": "Brown County Senior Citizens Center",
+  "county": "Brown",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "505 N. Main Street, Georgetown, OH 45121",
+  "phone": "937-378-6603",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name, address and phone only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://aaa7.org/aaa7s-10-counties",
+    "scope": "Area Agency on Aging District 7 county focal points page: name, address and phone",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "gallia-county-council-on-aging-multi-purpose-senior-citizens",
+  "name": "Gallia County Council on Aging / Multi-Purpose Senior Citizens Center",
+  "county": "Gallia",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "1167 State Route 160, Gallipolis, OH 45631",
+  "phone": "740-446-7000",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name, address and phone only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://aaa7.org/aaa7s-10-counties",
+    "scope": "Area Agency on Aging District 7 county focal points page: name, address and phone",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "highland-county-senior-citizens-center",
+  "name": "Highland County Senior Citizens Center",
+  "county": "Highland",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "185 Muntz Street, Hillsboro, OH 45133",
+  "phone": "937-393-4745",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name, address and phone only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://aaa7.org/aaa7s-10-counties",
+    "scope": "Area Agency on Aging District 7 county focal points page: name, address and phone",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "highland-county-community-action-senior-nutrition-site-green",
+  "name": "Highland County Community Action Senior Nutrition Site (Greenfield)",
+  "county": "Highland",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "1300 Jefferson Street, Greenfield, OH 45123",
+  "phone": "937-981-2895",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name, address and phone only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://aaa7.org/aaa7s-10-counties",
+    "scope": "Area Agency on Aging District 7 county focal points page: name, address and phone",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "jackson-county-board-on-aging",
+  "name": "Jackson County Board on Aging",
+  "county": "Jackson",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "25 Mound Street, Jackson, OH 45640",
+  "phone": "740-286-2909",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name, address and phone only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://aaa7.org/aaa7s-10-counties",
+    "scope": "Area Agency on Aging District 7 county focal points page: name, address and phone",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "ironton-senior-center-third-and-center",
+  "name": "Ironton Senior Center (Third and Center)",
+  "county": "Lawrence",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "202 Park Avenue, 2nd Floor, Ironton, OH 45638",
+  "phone": "740-646-5865",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name, address and phone only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://aaa7.org/aaa7s-10-counties",
+    "scope": "Area Agency on Aging District 7 county focal points page: name, address and phone",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "pike-county-community-action-multi-purpose-senior-citizens-c",
+  "name": "Pike County Community Action Multi-Purpose Senior Citizens Center",
+  "county": "Pike",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "402 Clough Street, Waverly, OH 45690",
+  "phone": "740-947-5555",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name, address and phone only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://aaa7.org/aaa7s-10-counties",
+    "scope": "Area Agency on Aging District 7 county focal points page: name, address and phone",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "ross-county-committee-for-elderly",
+  "name": "Ross County Committee for Elderly",
+  "county": "Ross",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "1824 Western Avenue, Chillicothe, OH 45601",
+  "phone": "740-773-3544",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name, address and phone only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://aaa7.org/aaa7s-10-counties",
+    "scope": "Area Agency on Aging District 7 county focal points page: name, address and phone",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "united-scioto-senior-activities",
+  "name": "United Scioto Senior Activities",
+  "county": "Scioto",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "117-119 Market Street, Portsmouth, OH 45662",
+  "phone": "740-354-6672",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name, address and phone only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://aaa7.org/aaa7s-10-counties",
+    "scope": "Area Agency on Aging District 7 county focal points page: name, address and phone",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "vinton-county-senior-citizens-center",
+  "name": "Vinton County Senior Citizens Center",
+  "county": "Vinton",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "31935 State Route 93 North, McArthur, OH 45651",
+  "phone": "740-596-4706",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name, address and phone only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://aaa7.org/aaa7s-10-counties",
+    "scope": "Area Agency on Aging District 7 county focal points page: name, address and phone",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "meigs-county-council-on-aging",
+  "name": "Meigs County Council on Aging",
+  "county": "Meigs",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "112 E Memorial Drive, Pomeroy, OH 45769",
+  "phone": "740-992-2161",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name, address and phone only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://meigsindypress.com/?p=34299",
+    "scope": "Buckeye Hills Regional Council senior center list, 2024; the center was relocating to the Blakeslee Center in Middleport: name, address and phone",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "monroe-county-senior-center",
+  "name": "Monroe County Senior Center",
+  "county": "Monroe",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "118 Home Avenue, Woodsfield, OH 43793",
+  "phone": "740-472-1312",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name, address and phone only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://meigsindypress.com/?p=34299",
+    "scope": "Buckeye Hills Regional Council senior center list, 2024: name, address and phone",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "morgan-county-council-on-aging",
+  "name": "Morgan County Council on Aging",
+  "county": "Morgan",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "10 W Main Street, McConnelsville, OH 43756",
+  "phone": "740-962-5600",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name, address and phone only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://meigsindypress.com/?p=34299",
+    "scope": "Buckeye Hills Regional Council senior center list, 2024: name, address and phone",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "noble-county-senior-center",
+  "name": "Noble County Senior Center",
+  "county": "Noble",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "300 Cumberland Street, Caldwell, OH 43724",
+  "phone": "740-732-5129",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name, address and phone only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://meigsindypress.com/?p=34299",
+    "scope": "Buckeye Hills Regional Council senior center list, 2024: name, address and phone",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "perry-county-senior-center",
+  "name": "Perry County Senior Center",
+  "county": "Perry",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "520 1st Street, New Lexington, OH 43764",
+  "phone": "740-342-2149",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name, address and phone only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://meigsindypress.com/?p=34299",
+    "scope": "Buckeye Hills Regional Council senior center list, 2024: name, address and phone",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "belpre-senior-center",
+  "name": "Belpre Senior Center",
+  "county": "Washington",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "1614 Washington Boulevard, Belpre, OH 45714",
+  "phone": "740-423-6022",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name, address and phone only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://meigsindypress.com/?p=34299",
+    "scope": "Buckeye Hills Regional Council senior center list, 2024: name, address and phone",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "erie-county-senior-center",
+  "name": "Erie County Senior Center",
+  "county": "Erie",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "620 E. Water St., Sandusky, OH 44870",
+  "phone": "419-626-2560",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name, address and phone only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://www.supremecourt.ohio.gov/JCS/CFC/resources/CountyGuides/Erie.pdf",
+    "scope": "Ohio Supreme Court Erie County resource guide (toll-free (800) 701-3221 also listed there): name, address and phone",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "charles-i-lathrem-senior-center",
+  "name": "Charles I. Lathrem Senior Center",
+  "county": "Montgomery",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "2900 Glengarry Drive, Kettering, OH 45420",
+  "phone": "937-296-3268",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name, address and phone only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://www.supremecourt.ohio.gov/JCS/CFC/resources/CountyGuides/Montogmery.pdf",
+    "scope": "Ohio Supreme Court Montgomery County resource guide: name, address and phone",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "senior-center-of-sidney-shelby-county",
+  "name": "Senior Center of Sidney-Shelby County",
+  "county": "Shelby",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "304 S West Ave, Sidney, OH 45365",
+  "phone": "937-492-5266",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name, address and phone only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://www.whio.com/news/local/area-cooling-centers-open-due-dangerous-heat/FCTXPPFX3VCQ3EHBYVENCA4U4Q/",
+    "scope": "Ohio EMA cooling-center list reported by WHIO: name, address and phone",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "lorain-senior-center",
+  "name": "Lorain Senior Center",
+  "county": "Lorain",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "3361 Garfield Blvd, Lorain, OH 44052",
+  "phone": "440-288-4040",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name, address and phone only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://www.mapquest.com/us/ohio/lorain-senior-center-5696764",
+    "scope": "Public business listing; the center's own site is lorainseniorcenter.com: name, address and phone",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "geauga-county-department-on-aging-senior-citizens-of-geauga",
+  "name": "Geauga County Department on Aging (Senior Citizens of Geauga County)",
+  "county": "Geauga",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "12555 Ravenwood Drive, Chardon, OH 44024",
+  "phone": "440-279-2130",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name, address and phone only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://www.visitingangels.com/portage/seniorlocalresources",
+    "scope": "Local resource listing; older, confirm by phone: name, address and phone",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "harrison-senior-center",
+  "name": "Harrison Senior Center",
+  "county": "Hamilton",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "300 George Street, Harrison, OH 45030",
+  "phone": "513-367-0649",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name, address and phone only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://www.harrisontownshipohio.com/senior-center",
+    "scope": "Harrison Township senior center page: name, address and phone",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "fairport-harbor-senior-center",
+  "name": "Fairport Harbor Senior Center",
+  "county": "Lake",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "1380 East St., Fairport Harbor, OH 44077",
+  "phone": "440-354-3674",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name, address and phone only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://business.easternlakecountychamber.org/members/ql/family-community-civic-organizations-9",
+    "scope": "Eastern Lake County Chamber member listing: name, address and phone",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "north-baltimore-area-senior-center",
+  "name": "North Baltimore Area Senior Center",
+  "county": "Wood",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "210 N. 2nd Street, North Baltimore, OH 45872",
+  "phone": "419-257-3306",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name, address and phone only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://www.supremecourt.ohio.gov/JCS/CFC/resources/CountyGuides/Wood.pdf",
+    "scope": "Ohio Supreme Court Wood County resource guide (older): name, address and phone",
+    "reviewed_on": "2026-10-30"
+   },
+   {
+    "url": "https://wccoa.net/wp-content/uploads/2025/07/07-2025Monthly-Cards-and-Games-Schedule.pdf",
+    "scope": "Wood County Committee on Aging schedule PDF (July 2025): address and phone",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "northeast-area-senior-center-walbridge",
+  "name": "Northeast Area Senior Center (Walbridge)",
+  "county": "Wood",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "705 N. Main St., Walbridge, OH 43465",
+  "phone": "567-249-4921",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": "Card bingo: third Thursday, 12:45 p.m.",
+  "cost": "Free",
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name, address and phone only. Call ahead to confirm hours, programs and who may attend.",
+   "Bingo times are from the Wood County Committee on Aging's July 2025 games schedule, the latest we have. Regular senior-center schedules rarely change, but call the center to confirm, and tell us if it has changed."
+  ],
+  "sources": [
+   {
+    "url": "https://www.supremecourt.ohio.gov/JCS/CFC/resources/CountyGuides/Wood.pdf",
+    "scope": "Ohio Supreme Court Wood County resource guide (older): name, address and phone",
+    "reviewed_on": "2026-10-30"
+   },
+   {
+    "url": "https://wccoa.net/wp-content/uploads/2025/07/07-2025Monthly-Cards-and-Games-Schedule.pdf",
+    "scope": "Wood County Committee on Aging schedule PDF (July 2025): address and phone",
+    "reviewed_on": "2026-10-30"
+   },
+   {
+    "url": "https://wccoa.net/wp-content/uploads/2025/07/07-2025Monthly-Cards-and-Games-Schedule.pdf",
+    "scope": "Wood County Committee on Aging Monthly Cards and Games Schedule (last modified July 8, 2025): bingo days and times",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": true,
+  "getting_started": "Call 567-249-4921 to confirm the day and time before you go.",
+  "transportation": null,
+  "session_monthly": [
+   {
+    "weekday": 4,
+    "weeks": [
+     3
+    ]
+   }
+  ],
+  "schedule_valid_until": "2027-03-31"
+ },
+ {
+  "id": "pemberville-area-senior-center",
+  "name": "Pemberville Area Senior Center",
+  "county": "Wood",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "220 Cedar St., Pemberville, OH 43450",
+  "phone": "419-287-4109",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": "Bingo: first Tuesday 12:30 p.m. (free); second Thursday 1 p.m.; Name That Tune bingo fourth Tuesday 12:30 p.m.",
+  "cost": "First-Tuesday bingo is free",
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name, address and phone only. Call ahead to confirm hours, programs and who may attend.",
+   "Bingo times are from the Wood County Committee on Aging's July 2025 games schedule, the latest we have. Regular senior-center schedules rarely change, but call the center to confirm, and tell us if it has changed."
+  ],
+  "sources": [
+   {
+    "url": "https://www.supremecourt.ohio.gov/JCS/CFC/resources/CountyGuides/Wood.pdf",
+    "scope": "Ohio Supreme Court Wood County resource guide (older): name, address and phone",
+    "reviewed_on": "2026-10-30"
+   },
+   {
+    "url": "https://wccoa.net/wp-content/uploads/2025/07/07-2025Monthly-Cards-and-Games-Schedule.pdf",
+    "scope": "Wood County Committee on Aging Monthly Cards and Games Schedule (last modified July 8, 2025): bingo days and times",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": true,
+  "getting_started": "Call 419-287-4109 to confirm the day and time before you go.",
+  "transportation": null,
+  "session_monthly": [
+   {
+    "weekday": 2,
+    "weeks": [
+     1,
+     4
+    ]
+   },
+   {
+    "weekday": 4,
+    "weeks": [
+     2
+    ]
+   }
+  ],
+  "schedule_valid_until": "2027-03-31"
+ },
+ {
+  "id": "perrysburg-area-senior-center",
+  "name": "Perrysburg Area Senior Center",
+  "county": "Wood",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "140 West Indiana Avenue, Perrysburg, OH 43551",
+  "phone": "419-874-0847",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": "Bingo: Tuesdays and Fridays 9:15 a.m.; Wednesdays 1:30 p.m.; also second Tuesday 12:45 p.m. and card bingo fourth Friday 12:30 p.m.",
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name, address and phone only. Call ahead to confirm hours, programs and who may attend.",
+   "Bingo times are from the Wood County Committee on Aging's July 2025 games schedule, the latest we have. Regular senior-center schedules rarely change, but call the center to confirm, and tell us if it has changed."
+  ],
+  "sources": [
+   {
+    "url": "https://www.supremecourt.ohio.gov/JCS/CFC/resources/CountyGuides/Wood.pdf",
+    "scope": "Ohio Supreme Court Wood County resource guide (older): name, address and phone",
+    "reviewed_on": "2026-10-30"
+   },
+   {
+    "url": "https://wccoa.net/wp-content/uploads/2025/07/07-2025Monthly-Cards-and-Games-Schedule.pdf",
+    "scope": "Wood County Committee on Aging schedule PDF (July 2025): address and phone",
+    "reviewed_on": "2026-10-30"
+   },
+   {
+    "url": "https://wccoa.net/wp-content/uploads/2025/07/07-2025Monthly-Cards-and-Games-Schedule.pdf",
+    "scope": "Wood County Committee on Aging Monthly Cards and Games Schedule (last modified July 8, 2025): bingo days and times",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": true,
+  "getting_started": "Call 419-874-0847 to confirm the day and time before you go.",
+  "transportation": null,
+  "session_days": [
+   2,
+   3,
+   5
+  ],
+  "schedule_valid_until": "2027-03-31"
+ },
+ {
+  "id": "rossford-area-senior-center",
+  "name": "Rossford Area Senior Center",
+  "county": "Wood",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "400 Dixie Hwy., Rossford, OH 43460",
+  "phone": "419-666-8494",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": "Card bingo: second Monday 12:30 p.m.; bingo third Thursday 12:45 p.m.",
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name, address and phone only. Call ahead to confirm hours, programs and who may attend.",
+   "Bingo times are from the Wood County Committee on Aging's July 2025 games schedule, the latest we have. Regular senior-center schedules rarely change, but call the center to confirm, and tell us if it has changed."
+  ],
+  "sources": [
+   {
+    "url": "https://www.supremecourt.ohio.gov/JCS/CFC/resources/CountyGuides/Wood.pdf",
+    "scope": "Ohio Supreme Court Wood County resource guide (older): name, address and phone",
+    "reviewed_on": "2026-10-30"
+   },
+   {
+    "url": "https://wccoa.net/wp-content/uploads/2025/07/07-2025Monthly-Cards-and-Games-Schedule.pdf",
+    "scope": "Wood County Committee on Aging Monthly Cards and Games Schedule (last modified July 8, 2025): bingo days and times",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": true,
+  "getting_started": "Call 419-666-8494 to confirm the day and time before you go.",
+  "transportation": null,
+  "session_monthly": [
+   {
+    "weekday": 1,
+    "weeks": [
+     2
+    ]
+   },
+   {
+    "weekday": 4,
+    "weeks": [
+     3
+    ]
+   }
+  ],
+  "schedule_valid_until": "2027-03-31"
+ },
+ {
+  "id": "wayne-area-senior-center",
+  "name": "Wayne Area Senior Center",
+  "county": "Wood",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "202 E. Main St., Wayne, OH 43466",
+  "phone": "419-288-2896",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": "Bingo: first Monday 12:30 p.m.; Name That Tune bingo first Tuesday 12:30 p.m.; card bingo first Wednesday 1 p.m.; second Tuesday 1 p.m.",
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name, address and phone only. Call ahead to confirm hours, programs and who may attend.",
+   "Bingo times are from the Wood County Committee on Aging's July 2025 games schedule, the latest we have. Regular senior-center schedules rarely change, but call the center to confirm, and tell us if it has changed."
+  ],
+  "sources": [
+   {
+    "url": "https://www.supremecourt.ohio.gov/JCS/CFC/resources/CountyGuides/Wood.pdf",
+    "scope": "Ohio Supreme Court Wood County resource guide (older): name, address and phone",
+    "reviewed_on": "2026-10-30"
+   },
+   {
+    "url": "https://wccoa.net/wp-content/uploads/2025/07/07-2025Monthly-Cards-and-Games-Schedule.pdf",
+    "scope": "Wood County Committee on Aging Monthly Cards and Games Schedule (last modified July 8, 2025): bingo days and times",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": true,
+  "getting_started": "Call 419-288-2896 to confirm the day and time before you go.",
+  "transportation": null,
+  "session_monthly": [
+   {
+    "weekday": 1,
+    "weeks": [
+     1
+    ]
+   },
+   {
+    "weekday": 2,
+    "weeks": [
+     1,
+     2
+    ]
+   },
+   {
+    "weekday": 3,
+    "weeks": [
+     1
+    ]
+   }
+  ],
+  "schedule_valid_until": "2027-03-31"
+ },
+ {
+  "id": "muskingum-county-center-for-seniors",
+  "name": "Muskingum County Center for Seniors",
+  "county": "Muskingum",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "160 N 4th Street, Zanesville, OH 43701",
+  "phone": "740-454-9761",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name, address and phone only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://www.nnlm.gov/membership/directory/58303",
+    "scope": "National Library of Medicine network directory listing",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "clermont-senior-services",
+  "name": "Clermont Senior Services",
+  "county": "Clermont",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "2085 James E. Sauls Sr. Drive, Batavia, OH 45103",
+  "phone": "513-724-1255",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name, address and phone only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://clermontseniors.com/_files/ugd/573352_6a0674a9735c4634b8f98eaaba37c0c3.pdf",
+    "scope": "Clermont Senior Services resource guide",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "741-senior-center-warren-county-community-services",
+  "name": "741 Senior Center (Warren County Community Services)",
+  "county": "Warren",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "570 N State Route 741, Lebanon, OH 45036",
+  "phone": null,
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name and address only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://phoenix.aws.mapquest.com/us/ohio/741-senior-center-352250810",
+    "scope": "Public business listing; no phone found, call Warren County Community Services",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "champaign-county-senior-center-urbana",
+  "name": "Champaign County Senior Center (Urbana)",
+  "county": "Champaign",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "701 S Walnut St, Urbana, OH 43078",
+  "phone": null,
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name and address only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://feedam.org/resource/205135",
+    "scope": "Food-assistance directory listing; no phone found",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "alliance-area-senior-citizens-center",
+  "name": "Alliance Area Senior Citizens Center",
+  "county": "Stark",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "602 W. Vine, Alliance, OH 44601",
+  "phone": null,
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name and address only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://news.yahoo.com/area-news-brief-oct-21-132924624.html?fr=sycsrp_catchall",
+    "scope": "Local news brief naming the center's address; no phone found",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "grand-rapids-area-senior-center",
+  "name": "Grand Rapids Area Senior Center",
+  "county": "Wood",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "23019 Kellogg Road, Grand Rapids, OH 43522",
+  "phone": "419-601-1896",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": "Bingo: Tuesdays and Fridays 10:30 a.m.",
+  "cost": "Free",
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name, address and phone only. Call ahead to confirm hours, programs and who may attend.",
+   "Bingo times are from the Wood County Committee on Aging's July 2025 games schedule, the latest we have. Regular senior-center schedules rarely change, but call the center to confirm, and tell us if it has changed."
+  ],
+  "sources": [
+   {
+    "url": "https://wccoa.net/wp-content/uploads/2025/07/07-2025Monthly-Cards-and-Games-Schedule.pdf",
+    "scope": "Wood County Committee on Aging schedule PDF (July 2025): address and phone",
+    "reviewed_on": "2026-10-30"
+   },
+   {
+    "url": "https://wccoa.net/wp-content/uploads/2025/07/07-2025Monthly-Cards-and-Games-Schedule.pdf",
+    "scope": "Wood County Committee on Aging Monthly Cards and Games Schedule (last modified July 8, 2025): bingo days and times",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": true,
+  "getting_started": "Call 419-601-1896 to confirm the day and time before you go.",
+  "transportation": null,
+  "session_days": [
+   2,
+   5
+  ],
+  "schedule_valid_until": "2027-03-31"
+ },
+ {
+  "id": "minerva-senior-center",
+  "name": "Minerva Senior Center",
+  "county": "Stark",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "1200 Valley St., Minerva, OH 44657",
+  "phone": "330-868-6004",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": "Bingo: Wednesdays 1–3 p.m.",
+  "session_days": [
+   3
+  ],
+  "schedule_valid_until": "2027-03-31",
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Bingo time is from the Village of Minerva's events calendar. Regular senior-center schedules rarely change, but call to confirm, and tell us if it has changed."
+  ],
+  "sources": [
+   {
+    "url": "https://minerva.oh.us/event/bingo-at-the-minerva-senior-center/2031-02-26/",
+    "scope": "Village of Minerva event page: bingo every Wednesday 1–3 p.m., address and phone",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": true,
+  "getting_started": "Call 330-868-6004 to confirm the day and time before you go.",
+  "transportation": null
+ },
+ {
+  "id": "darb-snyder-holmes-county-senior-center",
+  "name": "Darb Snyder Holmes County Senior Center",
+  "county": "Holmes",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "170 Parkview Drive, Millersburg, OH 44654",
+  "phone": "330-674-0580",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": "Bingo: Tuesday mornings; bingo and instant tickets the third Saturday of the month (times not published)",
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Days are from Your Ohio News stories about the center (bingo Tuesday mornings; third Saturday bingo and instant tickets). Regular senior-center schedules rarely change, but call the center to confirm, and tell us if it has changed."
+  ],
+  "sources": [
+   {
+    "url": "https://www.yourohionews.com/holmes-county/seniors-speak-up-about-holmes-co-senior-center/957788",
+    "scope": "Local news (address) and Area Agency on Aging Region 9 county list (phone)",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": true,
+  "getting_started": "Call 330-674-0580 to confirm the day and time before you go.",
+  "transportation": null,
+  "session_days": [
+   2
+  ],
+  "schedule_valid_until": "2027-03-31"
+ },
+ {
+  "id": "williams-county-department-of-aging-main-office",
+  "name": "Williams County Department of Aging (main office)",
+  "county": "Williams",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "1425 E. High Street, Suite 102, Bryan, OH 43506",
+  "phone": "419-633-4317",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name and address and phone only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://thevillagereporter.com/?p=404707",
+    "scope": "Village Reporter, March 2026: main office; runs seven senior centers in Bryan, Montpelier, Edgerton, Edon, Pioneer, Stryker and West Unity",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "edgerton-senior-center-williams-county",
+  "name": "Edgerton Senior Center (Williams County)",
+  "county": "Williams",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "224 Laubach Drive, Edgerton, OH 43517",
+  "phone": "419-633-4317",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Bingo is offered here, but the days are not published where we looked. Call to ask. Name, address and phone only."
+  ],
+  "sources": [
+   {
+    "url": "https://thevillagereporter.com/?p=404707",
+    "scope": "Village Reporter, March 2026: Edgerton center at the Church of Christ, 224 Laubach Drive; cards and games, Lincoln Bingo, euchre. Phone is the department's.",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": true,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "fulton-county-senior-center-wauseon",
+  "name": "Fulton County Senior Center (Wauseon)",
+  "county": "Fulton",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "695 S. Shoop Avenue, Wauseon, OH 43567",
+  "phone": "419-337-9299",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name and address and phone only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://fultoncountyoh.com/1353/Senior-Center",
+    "scope": "Fulton County website: main center, with sites in Archbold, Delta, Fayette and Swanton",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "delta-senior-center-fulton-county",
+  "name": "Delta Senior Center (Fulton County)",
+  "county": "Fulton",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "101 Northwood Drive (Hope Church of Delta), Delta, OH 43515",
+  "phone": "419-337-9299",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name and address and phone only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://fultoncountyoh.com/Archive.aspx?ADID=2241",
+    "scope": "Fulton County Senior Center newsletter, October 2025: Delta site address; the newsletter mentions a bingo day at Delta. Phone is the county center's.",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "summit-60-social-center-and-senior-services-defiance",
+  "name": "Summit 60 Social Center and Senior Services (Defiance)",
+  "county": "Defiance",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "140 E. Broadway Street, Defiance, OH 43512",
+  "phone": "419-782-3233",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name and address and phone only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://defiance-county.com/senior-services/September_2024_Weekly_update_1.pdf",
+    "scope": "Defiance County senior services weekly update, September 2024",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "summit-60-social-center-of-hicksville",
+  "name": "Summit 60 Social Center of Hicksville",
+  "county": "Defiance",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "708 E. High Street, Hicksville, OH 43526",
+  "phone": "419-782-3233",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name and address and phone only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://defiance-county.com/senior-services/September_2024_Weekly_update_1.pdf",
+    "scope": "Defiance County senior services weekly update, September 2024. Phone is the headquarters'.",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "genoa-senior-center-edward-griswold-center",
+  "name": "Genoa Senior Center (Edward Griswold Center)",
+  "county": "Ottawa",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "514 Main Street, Genoa, OH 43430",
+  "phone": "419-855-4491",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Bingo is offered here, but the days are not published where we looked. Call to ask. Name, address and phone only."
+  ],
+  "sources": [
+   {
+    "url": "https://genoaohio.org/community/senior-center/",
+    "scope": "Village of Genoa: open Monday–Friday for lunch, bingo and pinochle (days for bingo not published)",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": true,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "put-in-bay-senior-center",
+  "name": "Put-in-Bay Senior Center",
+  "county": "Ottawa",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "195 Concord Avenue, Put-in-Bay, OH 43456",
+  "phone": null,
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name and address only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://www.visitputinbay.com/associate-member/put-in-bay-senior-center/",
+    "scope": "Put-in-Bay visitor site listing; no phone found",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "oak-harbor-senior-center-ottawa-county-senior-resources",
+  "name": "Oak Harbor Senior Center (Ottawa County Senior Resources)",
+  "county": "Ottawa",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "8180 W. State Route 163, Oak Harbor, OH 43449",
+  "phone": null,
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name and address only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://presspublications.com/content/prime-times-briefs-6",
+    "scope": "Press Publications Prime Times briefs: Oak Harbor Senior Center at the Riverview Healthcare Campus; no phone found",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "port-clinton-senior-center",
+  "name": "Port Clinton Senior Center",
+  "county": "Ottawa",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "320 E. 3rd Street, Port Clinton, OH 43452",
+  "phone": null,
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name and address only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://www.superpages.com/danbury-oh/senior-citizens-services-organizations",
+    "scope": "Business directory listing; no phone found",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "prime-time-senior-center-steubenville",
+  "name": "Prime Time Senior Center (Steubenville)",
+  "county": "Jefferson",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "300 Lovers Lane, Steubenville, OH 43952",
+  "phone": "740-314-5197",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Bingo is offered here, but the days are not published where we looked. Call to ask. Name, address and phone only."
+  ],
+  "sources": [
+   {
+    "url": "https://www.weirtondailytimes.com/news/community/2021/06/prime-time-senior-center-getting-ready-for-grand-reopening-friday/",
+    "scope": "Weirton Daily Times: Prime Time Senior Center, 300 Lovers Lane; a 2025 Herald-Star story says members play bingo and cards (days not published)",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": true,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "harrison-county-senior-center",
+  "name": "Harrison County Senior Center",
+  "county": "Harrison",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "120 North Main Street, Cadiz, OH 43907",
+  "phone": null,
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name and address only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://feedam.org/resource/180776",
+    "scope": "Food-assistance directory listing; no phone found",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "logan-county-friendly-senior-center",
+  "name": "Logan County Friendly Senior Center",
+  "county": "Logan",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "934 S. Main Street, Bellefontaine, OH 43311",
+  "phone": "937-593-1511",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name and address and phone only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://members.logancountyohio.com/list/category/senior-living-1014",
+    "scope": "Logan County Chamber of Commerce member listing",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
+  "offers_bingo": false,
+  "getting_started": null,
+  "transportation": null
+ },
+ {
+  "id": "madison-county-senior-citizens-center",
+  "name": "Madison County Senior Citizens Center",
+  "county": "Madison",
+  "state": "OH",
+  "category": "center",
+  "is_center": true,
+  "address": "280 W. High Street, London, OH 43140",
+  "phone": "740-852-3001",
+  "official_url": null,
+  "program_url": null,
+  "activities": [],
+  "activity_tags": [],
+  "opening_hours": null,
+  "participation": null,
+  "schedule": null,
+  "cost": null,
+  "admission": null,
+  "accessibility": null,
+  "license_number": null,
+  "license_type": null,
+  "license_status": null,
+  "notes": [
+   "Name and address and phone only. Call ahead to confirm hours, programs and who may attend."
+  ],
+  "sources": [
+   {
+    "url": "https://www.coaaa.org/cdn/Title-III-Providers-rev012726.pdf",
+    "scope": "Central Ohio Area Agency on Aging Title III provider list (January 2026)",
+    "reviewed_on": "2026-10-30"
+   }
+  ],
+  "reviewed_on": "2026-10-30",
   "offers_bingo": false,
   "getting_started": null,
   "transportation": null

@@ -168,3 +168,23 @@ The facilities page draws 60 cards at a time with a "Show more" button. Drawing 
 ## Senior centers from the state association directory
 
 47 centers were added from the Ohio Association of Senior Centers 2024 member directory (https://ohioasc.org/wp-content/uploads/2024/10/2024MemberDirectory-2.pdf), bringing the senior-center layer to 62. The PDF is scanned images, so it was read by OCR and each name, address and phone was checked by hand against the directory page. Only name, address and phone are published; the directory's contact names and email addresses are not. Entries that are not senior centers (an Area Office on Aging, a hospice, a meals-on-wheels office, a community action agency and a PO-box-only listing) and centers already in the file were left out. These records have no schedule or program detail yet, so they show the "call ahead" note until a center's own site is reviewed. Counties were assigned from the city. The directory covers member centers only, so Ohio has more centers than this list.
+
+## Senior centers from Area Agency on Aging and county sources
+
+37 more centers were added, bringing the layer to 99 centers in 72 of Ohio's 88 counties. Sources: the Area Agency on Aging District 7 county focal points (10 southern counties), the Buckeye Hills Regional Council center list (southeast), Ohio Supreme Court county resource guides (Erie, Montgomery, Wood), and the centers' own or local pages for Clermont, Warren, Lake, Hamilton, Lorain, Geauga, Shelby, Muskingum, Champaign and Stark. Each record carries its own source and a "call ahead" note; five have an address but no phone because none was found. Some sources are older (the Wood and Geauga listings), so the cards say to confirm by phone.
+
+Counties still without a listed center: Clinton, Columbiana, Darke, Miami, Sandusky, Summit and Wayne. A 2026 local news item says Darke County has no dedicated senior center. For the others, the sources we could reach did not publish a center's address.
+
+The Wood County centers' addresses and phones were checked against the Wood County Committee on Aging's own July 2025 games schedule, which corrected North Baltimore (210 N. 2nd Street), Walbridge (567-249-4921) and the Bowling Green main center (140 North Main Street), and added the Grand Rapids Area Senior Center.
+
+## Publishing older schedules
+
+Regular senior-center bingo rarely changes from year to year, so schedules from older sources are published with a call-ahead note and a review date rather than held back. Seven Wood County centers now show bingo days and times from the July 2025 schedule; Bluffton shows its second and third Monday games from an October 2021 article; and Minerva (added as a new center) shows Wednesday bingo from the village events calendar. Each card says where the time came from, the schedules carry a March 31, 2027 review date so the weekly freshness report flags them for a recheck, and the "Add or update details" link on each card is how corrections arrive. Yellow Springs lists a 4:00-5:30 p.m. bingo for ages 21 and over but no weekday, so it is not published until the day is known.
+
+## Third collection pass (October 30, 2026)
+
+Two passes ran before any edits: one for bingo times at listed centers, one for centers in the 16 empty counties. Findings were staged in one file and applied together. The result is 114 centers in 81 of 88 counties, and bingo days or times at 91 listings (it was 84).
+
+New schedules: Preble County Council on Aging (second and fourth Wednesdays, plus first-Friday breakfast bingo, from the center's own events calendar), Girard (Wednesdays, 2016 listing), Austintown (Monday mornings, 2011-2019 listings, with its address corrected to 112 Westchester Drive), O'Neill in Marietta (Thursdays 9:30 a.m., 2023), Coshocton (Bingocize Thursdays 1 p.m.), Van Wert (Monday evenings) and Holmes County (Tuesday mornings). New centers: 15, in Holmes, Williams, Fulton, Defiance, Ottawa, Jefferson, Harrison, Logan and Madison counties. Four of them (Genoa, Prime Time, Edgerton, Delta) are known to offer bingo, but the days were not published, so their cards tell people to call.
+
+Leads not yet published: Yellow Springs (a 4:00-5:30 p.m. bingo for ages 21 and over, weekday unknown), the Richland Voluntary Council on Aging (daily bingo, no address found), the Belmont County centers (a 2022 calendar shows bingo around 12:15 p.m. Wednesdays and Fridays), and Perkins Township's seasonal senior bingo in Erie County.
