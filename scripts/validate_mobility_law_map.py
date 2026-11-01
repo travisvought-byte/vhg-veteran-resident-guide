@@ -5,6 +5,7 @@ import json
 from datetime import date
 from pathlib import Path
 from urllib.parse import urlparse
+from build_mobility_routes import STATES
 ROOT=Path(__file__).resolve().parents[1]
 PACKAGE=ROOT/'research/mobility-laws-2026-11-01'
 KINDS={'current-code','current-rule','enacted-text','legislative-summary','program-manual','official-guidance'}
@@ -19,6 +20,7 @@ def validate(d):
  maps={}
  for group,key in [('sources','id'),('claims','id'),('states','code'),('issues','id'),('inferences','id')]:
   rows=d[group];maps[group]={r[key]:r for r in rows};need(len(rows)==len(maps[group]),'Duplicate '+group)
+ need(set(maps['states'])==set(STATES),'National matrix must track all 50 states and DC')
  for s in d['sources']:
   need(s.get('retrieval')=='content-reviewed','Source content must be reviewed')
   need(s.get('kind') in KINDS,'Unknown source kind')
@@ -57,7 +59,18 @@ def validate(d):
   need(inf.get('status')=='analyst-inference','Inference mislabeled as law')
   need(bool(inf.get('limitations')) and bool(inf.get('proposed_next_action')),'Inference needs limits/action')
   need(bool(inf['premise_claim_ids']) and all(i in maps['claims'] for i in inf['premise_claim_ids']),'Inference without evidence')
+ comparisons=d.get('advocacy_comparisons',[])
+ need(len({c['id'] for c in comparisons})==len(comparisons),'Duplicate advocacy comparison')
+ for comparison in comparisons:
+  need(comparison.get('status')=='analyst-comparison','Comparison mislabeled as established law')
+  need(comparison.get('issue') in maps['issues'],'Unknown comparison issue')
+  refs=[maps['claims'].get(i) for i in comparison.get('premise_claim_ids',[])]
+  need(bool(refs) and all(refs),'Comparison without evidence')
+  need({c['jurisdiction'] for c in refs if c}==set(comparison.get('states_compared',[])),'Comparison state/evidence mismatch')
+  need(all(c and c['issue']==comparison.get('issue') for c in refs),'Comparison issue/evidence mismatch')
+  need(all(comparison.get(k) for k in ['title','disparity','proposed_change','decision_makers','limitations']),'Comparison needs bounded findings and policy action')
  for lead in d['existing_directory_leads']:
+
   need(lead.get('fresh_legal_review') is False and lead.get('status')=='existing-directory-lead','Old directory lead promoted to legal evidence')
   p=ROOT/lead['origin'];need(p.is_file(),'Missing lead origin')
   rows=json.loads(p.read_text()) if p.is_file() else []
@@ -69,7 +82,18 @@ def validate(d):
 
 def report(d):
  sources={s['id']:s for s in d['sources']};issues={i['id']:i['label'] for i in d['issues']}
- lines=['# Mobility issues and state laws: first research pass','',f"As of {d['as_of']}. Research only: {len(d['states'])} states, {len(d['claims'])} observations, {len(d['sources'])} reviewed primary-publisher sources, eight issue families. Federal observations are separate. No public action letters or state-program records changed.",'','A reviewed cell means at least one bounded observation, not a complete legal review. Missing evidence means not reviewed, never no right. Legislative summaries and program gateways retain weaker labels. Existing-program leads are not new legal evidence.','', '## Barrier first, then responsible actor','', '| Barrier | Logic for the next route (analyst proposal) |','| --- | --- |', '| Parts/software withheld | Check device scope and manufacturer-access duties. Separate independent repair from warranty and insurance. |', '| Repeated defect | Check device age, warranty and statutory remedy triggers; manufacturer/dealer route may come before a new-law request. |', '| No usable chair during repair | Check warranty loaner/rental duties, payer reimbursement and supplier obligations separately. |', '| Approval or payment denied | Identify payer and plan type first; review the denial and applicable authorization/appeal process. |', '| Cannot enter/use home | Check program eligibility, modifications approval and housing duties separately. |', '| Vehicle adaptation needed | Check specific funding/program and vehicle rules; a benefit listing is not universal approval. |', '| Transit cannot be used | Identify transit mode/provider and local process; distinguish access rights from availability of a ride. |', '| Cannot remain in community | Check state services and federal integration conditions; do not promise a waiver slot. |','', '## State comparison','', '| State | Observations and scope | Remaining work |','| --- | --- |']
+ observed={c['jurisdiction'] for c in d['claims'] if c['jurisdiction']!='US'}
+ lines=['# State-by-state disability advocacy research matrix','',f"As of {d['as_of']}. Research pass {d.get('research_pass',1)}: 50 states and DC tracked; selected evidence for {len(observed)} states; {len(d['claims'])} observations and {len(d['sources'])} reviewed primary-publisher sources. Eight issue families; federal observations remain separate. Public site content is unchanged.",'','This matrix supports advocacy: compare protections, exclusions and accountability, then identify policy changes. It does not route individual service requests. A reviewed cell means at least one bounded observation, not a complete legal review. Unknown never means no right. Source types and version limits remain visible.','', '## Advocacy comparisons to develop','', 'These are bounded analyst comparisons, not state rankings or proof of real-world outcomes. Priority order is not scored: population affected, lived experience and enforcement data still need collection.','', '| Issue | States | Documented difference | Policy direction | Evidence |','| --- | --- | --- | --- | --- |']
+ claims={c['id']:c for c in d['claims']}
+ for c in d.get('advocacy_comparisons',[]):
+  refs='; '.join(f"[{cid}]({sources[claims[cid]['source_ids'][0]]['url']})" for cid in c['premise_claim_ids'])
+  lines.append(f"| {c['title']} | {', '.join(c['states_compared'])} | {c['disparity']} | {c['proposed_change']} | {refs} |")
+ for c in d.get('advocacy_comparisons',[]):
+  lines += ['',f"**{c['title']}:** Decision-makers: {c['decision_makers']}. Limits: {c['limitations']}"]
+ lines+=['','## Advocacy questions by issue','','| Issue | What to establish before choosing a campaign |','| --- | --- |']
+ questions={'repair-access':'Who can access parts, tools and software, for which devices, on what terms?','warranty':'Which devices, consumers, transfers and donated equipment qualify; what remedies are enforceable?','downtime':'What triggers response, parts ordering, temporary equipment and completion duties; who pays?','payer':'Which payer covers repair and backup mobility; what exclusions create discontinuity?','home':'Which housing and modification duties apply; how do eligibility and funding exclusions affect independence?','vehicle':'Which adaptation rights, approval restrictions and maintenance responsibilities apply?','transit':'What accessibility duties, service exclusions and accountability mechanisms apply?','community':'What supports community choice; what service limits and enforcement gaps remain?'}
+ for i,label in issues.items():lines.append(f"| {label} | {questions[i]} |")
+ lines+=['','## State comparison','','| State | Observations and scope | Remaining work |','| --- | --- | --- |']
  for st in d['states']:
   cs=[c for c in d['claims'] if c['jurisdiction']==st['code']]
   refs=list(dict.fromkeys(i for c in cs for i in c['source_ids']))
@@ -84,7 +108,7 @@ def report(d):
  lines+=['## Coverage matrix','', 'T = text reviewed; S = legislative summary only; R = program gateway only; U = not reviewed. These are research-status codes, not legal yes/no answers.','', '| State | '+ ' | '.join(issues)+' |','| --- | '+ ' | '.join('---' for _ in issues)+' |']
  lookup={(c['state'],c['issue']):c for c in d['state_issue_matrix']};codes={'text-reviewed':'T','summary-only':'S','route-only':'R','not-reviewed':'U'}
  for st in d['states']:lines.append('| '+st['code']+' | '+' | '.join(codes[lookup[(st['code'],i)]['review_status']] for i in issues)+' |')
- populated=sum(bool(c['claim_ids']) for c in d['state_issue_matrix']);lines+=['',f'{populated} of {len(d["state_issue_matrix"])} state/issue cells have some evidence. This is not a completeness percentage. Deep repair/warranty work is ahead of home, vehicle, transit and community-service research.','', '## Next research queue','']
+ populated=sum(bool(c['claim_ids']) for c in d['state_issue_matrix']);lines+=['',f'{populated} of {len(d["state_issue_matrix"])} state/issue cells have some evidence. This is not a completeness percentage. The matrix tracks all jurisdictions, but substantive repair/warranty research remains ahead of home, vehicle, transit and community-service research. A filled cell is not a finding that protections are adequate.','', '## Next research queue','']
  lines+=['- '+q for q in d['open_questions']]
  lines+=['',f"The JSON also preserves {len(d['existing_directory_leads'])} leads from existing state resource records for follow-on research. Their URLs were not all freshly retrieved; original resource IDs and origin files are retained. No lead is treated as law.",'','## Source version and retrieval limits','']
  for s in d['sources']:lines.append(f"- **{s['id']}**: [{s['title']}]({s['url']}); {s['kind']}; locator {s['locator']}; reviewed {s['reviewed_on']}. {s['version_note']}")
