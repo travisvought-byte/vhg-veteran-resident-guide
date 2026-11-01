@@ -12,6 +12,7 @@ jobs:
       - name: Check public data synchronization
         run: |
           python3 scripts/build_public.py --check
+          python3 tests/mobility_routes.py
           python3 scripts/build_public.py --test-fixtures
       - name: Check all states, county mappings, referral behavior and feedback links
         run: node tests/feedback.cjs
