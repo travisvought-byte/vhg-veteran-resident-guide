@@ -12,9 +12,9 @@ def outputs():
  assert len({t['id'] for t in data['topics']})==len(data['topics'])
  cards=[]
  for t in data['topics']:
-  assert set(t['asks'])=={'OH','US'} and all(s in sources for s in t['sources'])
+  assert set(t['asks'])=={'OH','STATE','US'} and '{state}' in t['asks']['STATE'] and all(s in sources for s in t['sources'])
   citations=''.join(f'<li><a href="{html.escape(sources[s]["url"],quote=True)}">{html.escape(sources[s]["title"])}</a> · {html.escape(sources[s]["kind"])} · checked {sources[s]["reviewed_on"]}</li>' for s in t['sources'])
-  cards.append(f'<article id="{t["id"]}" class="topic"><p class="eyebrow">{html.escape(t["tag"])}</p><h3>{html.escape(t["title"])}</h3><p>{html.escape(t["summary"])}</p><details><summary>Policy requests and sources</summary><h4>Proposed Ohio request</h4><p>{html.escape(t["asks"]["OH"])}</p><h4>Proposed federal request</h4><p>{html.escape(t["asks"]["US"])}</p><ul>{citations}</ul></details><p><a href="{html.escape(t["help_url"],quote=True)}">{html.escape(t["help"])}</a></p><a class="button topic-action" href="#compose" data-topic="{t["id"]}">Write about this</a></article>')
+  cards.append(f'<article id="{t["id"]}" class="topic"><p class="eyebrow">{html.escape(t["tag"])}</p><h3>{html.escape(t["title"])}</h3><p>{html.escape(t["summary"])}</p><details><summary>Policy requests and sources</summary><h4 data-state-ask-title>Proposed state request</h4><p data-state-ask="{t["id"]}">{html.escape(t["asks"]["STATE"].replace("{state}","your state"))}</p><h4>Proposed federal request</h4><p>{html.escape(t["asks"]["US"])}</p><ul>{citations}</ul></details><p><a href="{html.escape(t["help_url"],quote=True)}">{html.escape(t["help"])}</a></p><a class="button topic-action" href="#compose" data-topic="{t["id"]}">Write about this</a></article>')
  options=''.join(f'<option value="{t["id"]}">{html.escape(t["title"])}</option>' for t in data['topics'])
  default='Dear Ohio state lawmaker,\n\n'+data['topics'][0]['asks']['OH']+'\n\nPlease tell me what your office can do and how people with disabilities can take part.\n\nThank you.'
  state_options=''.join(f'<option value="{code}"'+(' selected' if code=='OH' else '')+f'>{name}</option>' for code,name in STATES.items())
@@ -22,4 +22,4 @@ def outputs():
  return {'disability-advocacy.html':page}
 if __name__=='__main__':
  for path,text in outputs().items(): (ROOT/path).write_text(text)
- print('Built disability advocacy hub: five topics, Ohio and federal requests.')
+ print('Built disability advocacy hub: five topics, state and federal requests.')

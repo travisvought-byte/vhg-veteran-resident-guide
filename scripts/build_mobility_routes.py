@@ -7,6 +7,8 @@ from datetime import date
 ROOT=Path(__file__).resolve().parents[1]
 STATE_NAMES='AL:Alabama|AK:Alaska|AZ:Arizona|AR:Arkansas|CA:California|CO:Colorado|CT:Connecticut|DE:Delaware|DC:District of Columbia|FL:Florida|GA:Georgia|HI:Hawaii|ID:Idaho|IL:Illinois|IN:Indiana|IA:Iowa|KS:Kansas|KY:Kentucky|LA:Louisiana|ME:Maine|MD:Maryland|MA:Massachusetts|MI:Michigan|MN:Minnesota|MS:Mississippi|MO:Missouri|MT:Montana|NE:Nebraska|NV:Nevada|NH:New Hampshire|NJ:New Jersey|NM:New Mexico|NY:New York|NC:North Carolina|ND:North Dakota|OH:Ohio|OK:Oklahoma|OR:Oregon|PA:Pennsylvania|RI:Rhode Island|SC:South Carolina|SD:South Dakota|TN:Tennessee|TX:Texas|UT:Utah|VT:Vermont|VA:Virginia|WA:Washington|WV:West Virginia|WI:Wisconsin|WY:Wyoming'
 STATES=dict(s.split(':',1) for s in STATE_NAMES.split('|'))
+# Plain-language source labels shown to visitors; keep in sync with assets/mobility-routes.js.
+LABELS={'text-reviewed':'from the law or rule text','summary-only':'from an official summary of the law','route-only':'official program page'}
 def validate(data):
  assert data['publication_status']=='reviewed-information-snapshot'
  assert date.fromisoformat(data['reviewed_on'])<=date.today()
@@ -17,7 +19,7 @@ def validate(data):
  for c in data['claims']:
   assert c['jurisdiction'] in {*STATES,'US'} and c['issue'] in issues
   assert c['status'] in {'text-reviewed','summary-only','route-only'}
-  assert c['title'] and c['scope'] and c['limitations'] and c['citation'] and c['source_ids']
+  assert c['title'] and c['plain'] and c['scope'] and c['limitations'] and c['citation'] and c['source_ids']
   for sid in c['source_ids']:
    s=sources[sid];assert s['jurisdiction']==c['jurisdiction'] and s['retrieval']=='content-reviewed'
    assert s['url'].startswith('https://')
@@ -42,7 +44,7 @@ def outputs():
   for c in data['claims']:
    if c['jurisdiction']!=st['code']:continue
    links=' · '.join(f'<a target="_blank" rel="noopener" href="{escape(sources[s]["url"])}">{escape(sources[s]["title"])}</a>' for s in c['source_ids'])
-   records.append(f'<article><h4>{escape(c["citation"])} ({escape(c["status"])})</h4><p>{escape(c["statement"])}</p><p><strong>Scope:</strong> {escape(c["scope"])}</p><p>{escape(c["limitations"])}</p><p>{links} · checked {c["reviewed_on"]}</p></article>')
+   records.append(f'<article><h4>{escape(c["title"])}</h4><p>{escape(c["plain"])}</p><p class="small">Source: {escape(c["citation"])} ({LABELS[c["status"]]}) · {links} · checked {c["reviewed_on"]}</p><details><summary>Fine print</summary><p>{escape(c["statement"])}</p><p><strong>Who it covers:</strong> {escape(c["scope"])}</p><p>{escape(c["limitations"])}</p></details></article>')
   fallback.append(f'<details><summary>{escape(st["name"])}</summary>'+''.join(records)+'</details>')
  data['state_names']=STATES
  page=(ROOT/'templates/mobility-rights.html').read_text().replace('__STATES__',state_options).replace('__ISSUES__',issue_options).replace('__FALLBACK__','\n'.join(fallback)).replace('__DATA__',json.dumps(data,ensure_ascii=False).replace('<','\\u003c'))
