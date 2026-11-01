@@ -14,6 +14,10 @@ jobs:
           python3 scripts/build_public.py --check
           python3 tests/mobility_routes.py
           python3 scripts/build_public.py --test-fixtures
+      - name: Validate staged mobility law research
+        run: |
+          python3 scripts/validate_mobility_law_map.py
+          python3 tests/mobility_law_map.py
       - name: Check all states, county mappings, referral behavior and feedback links
         run: node tests/feedback.cjs
       - name: Check bingo report extraction regressions

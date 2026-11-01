@@ -1,0 +1,2777 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-01",
+  "publication_status": "research-only",
+  "scope": "17-state first pass, eight issue families; federal layer separate. No 50-state completeness or state ranking.",
+  "states": [
+    {
+      "code": "OH",
+      "name": "Ohio",
+      "role": "guide-state",
+      "summary": "Warranty loaners, Medicaid repair/payment rules, and waiver home/vehicle services are separate routes."
+    },
+    {
+      "code": "PA",
+      "name": "Pennsylvania",
+      "role": "guide-state",
+      "summary": "Motorized-wheelchair warranty remedies; independent-repair access remains a separate research question."
+    },
+    {
+      "code": "NY",
+      "name": "New York",
+      "role": "guide-state",
+      "summary": "Wheelchair warranty replacement/refund triggers; pending repair proposals are not treated as enacted."
+    },
+    {
+      "code": "MI",
+      "name": "Michigan",
+      "role": "guide-state",
+      "summary": "Medicaid repair-policy gateway reviewed; wheelchair warranty statute retrieval remains blocked."
+    },
+    {
+      "code": "KY",
+      "name": "Kentucky",
+      "role": "guide-state",
+      "summary": "Assistive-device warranty and conditional substitute-device or rental-reimbursement duties."
+    },
+    {
+      "code": "UT",
+      "name": "Utah",
+      "role": "guide-state",
+      "summary": "Assistive-technology warranty has a price threshold and device exclusions."
+    },
+    {
+      "code": "IN",
+      "name": "Indiana",
+      "role": "guide-state",
+      "summary": "Medicaid repair authorization, warranty-payment exclusion and rental-provider responsibility."
+    },
+    {
+      "code": "WV",
+      "name": "West Virginia",
+      "role": "guide-state",
+      "summary": "Assistive-device warranty requirement reviewed; remedy details remain to extract."
+    },
+    {
+      "code": "TX",
+      "name": "Texas",
+      "role": "guide-state",
+      "summary": "STAR+PLUS HCBS adaptive-aid and vehicle-modification pathway; older manual revision needs current-plan checks."
+    },
+    {
+      "code": "FL",
+      "name": "Florida",
+      "role": "guide-state",
+      "summary": "Assistive-technology warranty requirement reviewed; definitions and remedy procedure remain to extract."
+    },
+    {
+      "code": "CA",
+      "name": "California",
+      "role": "guide-state",
+      "summary": "Chaptered powered-wheelchair repair-access summary reviewed; full current code and component limits remain open."
+    },
+    {
+      "code": "VA",
+      "name": "Virginia",
+      "role": "guide-state",
+      "summary": "Assistive-device warranty remedies depend on device and defect definitions."
+    },
+    {
+      "code": "NC",
+      "name": "North Carolina",
+      "role": "guide-state",
+      "summary": "State public-place and transportation access text reviewed; repair-law questions remain open."
+    },
+    {
+      "code": "CO",
+      "name": "Colorado",
+      "role": "comparator",
+      "summary": "Powered-wheelchair repair-resource access established by enacted legislative summaries; current-code reconciliation remains open."
+    },
+    {
+      "code": "WA",
+      "name": "Washington",
+      "role": "comparator",
+      "summary": "Mobility-device repair access covers broader equipment classes than powered chairs alone."
+    },
+    {
+      "code": "NV",
+      "name": "Nevada",
+      "role": "comparator",
+      "summary": "Mobility-device repair access and specified parts-pairing restrictions; approval-date commencement verified."
+    },
+    {
+      "code": "CT",
+      "name": "Connecticut",
+      "role": "comparator",
+      "summary": "Dealer repair-response/parts-order duties, warranty remedies and specified insurance authorization restrictions."
+    }
+  ],
+  "issues": [
+    {
+      "id": "repair-access",
+      "label": "Parts, software and independent repair"
+    },
+    {
+      "id": "warranty",
+      "label": "Defective equipment and warranty remedies"
+    },
+    {
+      "id": "downtime",
+      "label": "Repair delays, loaners and downtime"
+    },
+    {
+      "id": "payer",
+      "label": "Insurance and public-payer approvals"
+    },
+    {
+      "id": "home",
+      "label": "Home accessibility and modifications"
+    },
+    {
+      "id": "vehicle",
+      "label": "Vehicle adaptations"
+    },
+    {
+      "id": "transit",
+      "label": "Public transportation access"
+    },
+    {
+      "id": "community",
+      "label": "Community living and personal assistance"
+    }
+  ],
+  "sources": [
+    {
+      "id": "oh-warranty",
+      "jurisdiction": "OH",
+      "title": "Ohio assistive-device warranty",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-1345.91",
+      "kind": "current-code",
+      "reviewed_on": "2026-11-01",
+      "retrieval": "content-reviewed",
+      "locator": "1345.91(B)-(D)",
+      "version_note": "Current publisher page retrieved; later amendments and implementation not exhaustively reconciled.",
+      "instrument_status": "published-code"
+    },
+    {
+      "id": "oh-dme",
+      "jurisdiction": "OH",
+      "title": "Ohio Medicaid wheelchair rule",
+      "url": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-10-16",
+      "kind": "current-rule",
+      "reviewed_on": "2026-11-01",
+      "retrieval": "content-reviewed",
+      "locator": "(C)(1)-(3), especially (C)(3)(b)(ii)",
+      "version_note": "Current publisher page retrieved; later amendments and implementation not exhaustively reconciled.",
+      "instrument_status": "published-rule"
+    },
+    {
+      "id": "oh-hcbs",
+      "jurisdiction": "OH",
+      "title": "Ohio Home Care Waiver covered services",
+      "url": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-46-06",
+      "kind": "current-rule",
+      "reviewed_on": "2026-11-01",
+      "retrieval": "content-reviewed",
+      "locator": "(A)(3), (4), (8), (12), (13)",
+      "version_note": "Current publisher page retrieved; later amendments and implementation not exhaustively reconciled.",
+      "instrument_status": "published-rule"
+    },
+    {
+      "id": "pa-warranty",
+      "jurisdiction": "PA",
+      "title": "Motorized Wheelchair Warranty Act",
+      "url": "https://www.palegis.us/statutes/unconsolidated/law-information/view-statute?ActNum=0117.&SessInd=0&SessYr=1994&txtType=PDF",
+      "kind": "enacted-text",
+      "reviewed_on": "2026-11-01",
+      "retrieval": "content-reviewed",
+      "locator": "Act 117 of 1994, sections 2-4",
+      "version_note": "Current publisher page retrieved; later amendments and implementation not exhaustively reconciled.",
+      "instrument_status": "enacted"
+    },
+    {
+      "id": "ny-warranty",
+      "jurisdiction": "NY",
+      "title": "Wheelchair warranty remedies",
+      "url": "https://www.nysenate.gov/legislation/laws/GBS/670*2",
+      "kind": "current-code",
+      "reviewed_on": "2026-11-01",
+      "retrieval": "content-reviewed",
+      "locator": "GBS 670*2 subdivisions 1(k),2,3",
+      "version_note": "Publisher displays most recent revision September 22, 2014. Separate 2025-26 proposals are not treated as law.",
+      "instrument_status": "published-code"
+    },
+    {
+      "id": "mi-payer",
+      "jurisdiction": "MI",
+      "title": "Michigan medical supplier policy gateway",
+      "url": "https://www.michigan.gov/mdhhs/doing-business/providers/providers/billingreimbursement/medical-suppliers-orthotists-prosthetists-dme-dealers",
+      "kind": "official-guidance",
+      "reviewed_on": "2026-11-01",
+      "retrieval": "content-reviewed",
+      "locator": "Wheelchair Repair/Labor Guide and provider-manual precedence",
+      "version_note": "Current publisher page retrieved; later amendments and implementation not exhaustively reconciled.",
+      "instrument_status": "guidance"
+    },
+    {
+      "id": "ky-warranty",
+      "jurisdiction": "KY",
+      "title": "Kentucky new assistive-device warranty",
+      "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=2235",
+      "kind": "current-code",
+      "reviewed_on": "2026-11-01",
+      "retrieval": "content-reviewed",
+      "locator": "KRS 151B.305",
+      "version_note": "Current publisher page retrieved; later amendments and implementation not exhaustively reconciled.",
+      "instrument_status": "published-code"
+    },
+    {
+      "id": "ky-loaner",
+      "jurisdiction": "KY",
+      "title": "Kentucky substitute device during repair",
+      "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=2239",
+      "kind": "current-code",
+      "reviewed_on": "2026-11-01",
+      "retrieval": "content-reviewed",
+      "locator": "KRS 151B.325",
+      "version_note": "Current publisher page retrieved; later amendments and implementation not exhaustively reconciled.",
+      "instrument_status": "published-code"
+    },
+    {
+      "id": "ky-definitions",
+      "jurisdiction": "KY",
+      "title": "Kentucky assistive-device definitions",
+      "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=2234",
+      "kind": "current-code",
+      "reviewed_on": "2026-11-01",
+      "retrieval": "content-reviewed",
+      "locator": "KRS 151B.300",
+      "version_note": "Current publisher page retrieved; later amendments and implementation not exhaustively reconciled.",
+      "instrument_status": "published-code"
+    },
+    {
+      "id": "ut-warranty",
+      "jurisdiction": "UT",
+      "title": "Utah Assistive Technology Warranty Act",
+      "url": "https://le.utah.gov/xcode/Title70A/Chapter2/C70A-2-P8_1800010118000101.pdf",
+      "kind": "current-code",
+      "reviewed_on": "2026-11-01",
+      "retrieval": "content-reviewed",
+      "locator": "70A-2-802 through 804",
+      "version_note": "Current publisher page retrieved; later amendments and implementation not exhaustively reconciled.",
+      "instrument_status": "published-code"
+    },
+    {
+      "id": "in-payer",
+      "jurisdiction": "IN",
+      "title": "Indiana DME/HME provider manual",
+      "url": "https://www.in.gov/medicaid/providers/files/modules/durable-and-home-medical-equipment-and-supplies.pdf",
+      "kind": "program-manual",
+      "reviewed_on": "2026-11-01",
+      "retrieval": "content-reviewed",
+      "locator": "Printed page 11, Repair and Servicing; PDF page 17",
+      "version_note": "Published August 13, 2026; policies as of February 1, 2026; version 7.0. Fee schedules and MCE variations require checking.",
+      "instrument_status": "program-policy"
+    },
+    {
+      "id": "wv-warranty",
+      "jurisdiction": "WV",
+      "title": "West Virginia assistive-device warranty",
+      "url": "https://code.wvlegislature.gov/46A-6E-2/",
+      "kind": "current-code",
+      "reviewed_on": "2026-11-01",
+      "retrieval": "content-reviewed",
+      "locator": "46A-6E-2",
+      "version_note": "Current publisher page retrieved; later amendments and implementation not exhaustively reconciled.",
+      "instrument_status": "published-code"
+    },
+    {
+      "id": "tx-program",
+      "jurisdiction": "TX",
+      "title": "Texas STAR+PLUS adaptive aids",
+      "url": "https://fhb.hhs.texas.gov/handbooks/starplus-handbook/6400-adaptive-aids-medical-supplies",
+      "kind": "program-manual",
+      "reviewed_on": "2026-11-01",
+      "retrieval": "content-reviewed",
+      "locator": "Section 6400, opening paragraphs and mobility aids",
+      "version_note": "Revision 19-1, effective June 3, 2019; current HHS-hosted page, but operational changes since revision need reconciliation.",
+      "instrument_status": "program-policy"
+    },
+    {
+      "id": "fl-warranty",
+      "jurisdiction": "FL",
+      "title": "Florida assistive technology warranty",
+      "url": "https://www.flsenate.gov/Laws/Statutes/2026/0427.803",
+      "kind": "current-code",
+      "reviewed_on": "2026-11-01",
+      "retrieval": "content-reviewed",
+      "locator": "Florida Statutes 427.803",
+      "version_note": "Current publisher page retrieved; later amendments and implementation not exhaustively reconciled.",
+      "instrument_status": "published-code"
+    },
+    {
+      "id": "ca-summary",
+      "jurisdiction": "CA",
+      "title": "California Senate SB 1384 chaptered summary",
+      "url": "https://sbp.senate.ca.gov/system/files/2024-12/2023-2024-legislative-bill-summary-final.pdf",
+      "kind": "legislative-summary",
+      "reviewed_on": "2026-11-01",
+      "retrieval": "content-reviewed",
+      "locator": "Printed pages 20 and 69; SB-1384",
+      "version_note": "Chapter 797, Statutes of 2024. Full current BPC 21300-21305 retrieval blocked; no detailed exclusion claims promoted.",
+      "instrument_status": "enacted"
+    },
+    {
+      "id": "va-warranty",
+      "jurisdiction": "VA",
+      "title": "Virginia Assistive Technology Device Warranties Act",
+      "url": "https://law.lis.virginia.gov/vacodefull/title59.1/chapter40/",
+      "kind": "current-code",
+      "reviewed_on": "2026-11-01",
+      "retrieval": "content-reviewed",
+      "locator": "59.1-470 and 471",
+      "version_note": "Current publisher page retrieved; later amendments and implementation not exhaustively reconciled.",
+      "instrument_status": "published-code"
+    },
+    {
+      "id": "nc-access",
+      "jurisdiction": "NC",
+      "title": "North Carolina disability access rights",
+      "url": "https://www.ncleg.gov/enactedlegislation/statutes/html/bychapter/chapter_168.html",
+      "kind": "current-code",
+      "reviewed_on": "2026-11-01",
+      "retrieval": "content-reviewed",
+      "locator": "G.S.168-2 and 168-3",
+      "version_note": "Legislature-hosted compilation; publisher says online General Statutes are not official. Read applicable limitations.",
+      "instrument_status": "published-code"
+    },
+    {
+      "id": "co-repair",
+      "jurisdiction": "CO",
+      "title": "Colorado powered wheelchair repair act",
+      "url": "https://www.leg.colorado.gov/bills/hb22-1031",
+      "kind": "legislative-summary",
+      "reviewed_on": "2026-11-01",
+      "retrieval": "content-reviewed",
+      "locator": "Enacted bill summary, HB22-1031",
+      "version_note": "Current publisher page retrieved; later amendments and implementation not exhaustively reconciled.",
+      "instrument_status": "enacted"
+    },
+    {
+      "id": "co-update",
+      "jurisdiction": "CO",
+      "title": "Colorado repair-law expansion",
+      "url": "https://www.leg.colorado.gov/bills/hb24-1121",
+      "kind": "legislative-summary",
+      "reviewed_on": "2026-11-01",
+      "retrieval": "content-reviewed",
+      "locator": "Enacted summary, existing powered-wheelchair rights and medical-device exception",
+      "version_note": "Current publisher page retrieved; later amendments and implementation not exhaustively reconciled.",
+      "instrument_status": "enacted"
+    },
+    {
+      "id": "wa-repair",
+      "jurisdiction": "WA",
+      "title": "Washington mobility-equipment repair act",
+      "url": "https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/Session%20Laws/Senate/5680.SL.htm",
+      "kind": "enacted-text",
+      "reviewed_on": "2026-11-01",
+      "retrieval": "content-reviewed",
+      "locator": "2025 chapter 354, sections 2-5",
+      "version_note": "Current publisher page retrieved; later amendments and implementation not exhaustively reconciled.",
+      "instrument_status": "enacted"
+    },
+    {
+      "id": "nv-repair",
+      "jurisdiction": "NV",
+      "title": "Nevada mobility-device repair act",
+      "url": "https://www.leg.state.nv.us/Statutes/83rd2025/Stats202506.html",
+      "kind": "enacted-text",
+      "reviewed_on": "2026-11-01",
+      "retrieval": "content-reviewed",
+      "locator": "Chapter 129, AB407, sections 7.5,26,28,30,32.5,33",
+      "version_note": "Current publisher page retrieved; later amendments and implementation not exhaustively reconciled.",
+      "instrument_status": "enacted"
+    },
+    {
+      "id": "ct-repair",
+      "jurisdiction": "CT",
+      "title": "Connecticut assistive device and wheelchair repair law",
+      "url": "https://prdext2.cga.ct.gov/current/pub/chap_743q.htm",
+      "kind": "current-code",
+      "reviewed_on": "2026-11-01",
+      "retrieval": "content-reviewed",
+      "locator": "42-331 and 42-338",
+      "version_note": "2025 revision plus 2026 supplement title index checked; chapter743q not listed among supplement amendments. Later 2026 session changes not exhaustively checked.",
+      "instrument_status": "published-code"
+    },
+    {
+      "id": "ct-insurance",
+      "jurisdiction": "CT",
+      "title": "Connecticut 2026 insurance supplement",
+      "url": "https://prdext2.cga.ct.gov/2026/sup/chap_700c.htm",
+      "kind": "current-code",
+      "reviewed_on": "2026-11-01",
+      "retrieval": "content-reviewed",
+      "locator": "38a-492w and 38a-518w",
+      "version_note": "Supplement revised to January 1, 2026; 2025 amendment changes regulation authority, not five-year rule.",
+      "instrument_status": "published-code"
+    },
+    {
+      "id": "us-medicare",
+      "jurisdiction": "US",
+      "title": "Medicare wheelchairs and scooters",
+      "url": "https://www.medicare.gov/coverage/wheelchairs-scooters",
+      "kind": "official-guidance",
+      "reviewed_on": "2026-11-01",
+      "retrieval": "content-reviewed",
+      "locator": "Eligibility, provider requirements and prior approval",
+      "version_note": "Current publisher page retrieved; later amendments and implementation not exhaustively reconciled.",
+      "instrument_status": "guidance"
+    },
+    {
+      "id": "us-transit",
+      "jurisdiction": "US",
+      "title": "FTA transit complaint process",
+      "url": "https://www.transit.dot.gov/regulations-and-guidance/civil-rights-ada/file-complaint-fta",
+      "kind": "official-guidance",
+      "reviewed_on": "2026-11-01",
+      "retrieval": "content-reviewed",
+      "locator": "Who may file; local complaint route",
+      "version_note": "Current publisher page retrieved; later amendments and implementation not exhaustively reconciled.",
+      "instrument_status": "guidance"
+    },
+    {
+      "id": "us-community",
+      "jurisdiction": "US",
+      "title": "DOJ community integration guidance",
+      "url": "https://www.ada.gov/topics/community-integration/",
+      "kind": "official-guidance",
+      "reviewed_on": "2026-11-01",
+      "retrieval": "content-reviewed",
+      "locator": "Olmstead conditions and community-based service examples",
+      "version_note": "Current publisher page retrieved; later amendments and implementation not exhaustively reconciled.",
+      "instrument_status": "guidance"
+    }
+  ],
+  "claims": [
+    {
+      "id": "oh-warranty-1",
+      "jurisdiction": "OH",
+      "issue": "warranty",
+      "status": "text-reviewed",
+      "statement": "At least a one-year express warranty covers qualifying assistive-device defects.",
+      "scope": "Covered consumer transactions and warranty defects",
+      "source_ids": [
+        "oh-warranty"
+      ],
+      "citation": "ORC 1345.91(B)",
+      "effective_on": "1996-10-31",
+      "effective_date_note": "",
+      "limitations": "Individual applicability, definitions and current implementation require case-specific checking.",
+      "timing": null,
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "oh-loaner-1",
+      "jurisdiction": "OH",
+      "issue": "downtime",
+      "status": "text-reviewed",
+      "statement": "Comparable loaner required for qualifying warranty repair when repair exceeds 21 days, or the same defect was returned on three or more previous occasions.",
+      "scope": "Manufacturer/supplier warranty repair, not every breakdown",
+      "source_ids": [
+        "oh-warranty"
+      ],
+      "citation": "ORC 1345.91(C)",
+      "effective_on": "1996-10-31",
+      "effective_date_note": "",
+      "limitations": "Individual applicability, definitions and current implementation require case-specific checking.",
+      "timing": {
+        "event": "repair period",
+        "operator": ">",
+        "value": 21,
+        "unit": "days",
+        "trigger_note": "Includes tender day; alternate repeated-defect trigger also applies."
+      },
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "oh-payer-1",
+      "jurisdiction": "OH",
+      "issue": "payer",
+      "status": "text-reviewed",
+      "statement": "Component repairs may require need verification; wear-item repairs do not. Medicaid does not pay for temporary loaner equipment while a wheelchair is repaired.",
+      "scope": "Wheelchairs for community users and custom chairs for LTC residents as specified",
+      "source_ids": [
+        "oh-dme"
+      ],
+      "citation": "OAC 5160-10-16(C)(3)",
+      "effective_on": "2021-07-01",
+      "effective_date_note": "",
+      "limitations": "Non-custom LTC chairs have a separate facility responsibility rule. Managed-care implementation not reconciled.",
+      "timing": null,
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "oh-home-1",
+      "jurisdiction": "OH",
+      "issue": "home",
+      "status": "text-reviewed",
+      "statement": "Home modification is listed among Ohio Home Care Waiver services.",
+      "scope": "Eligible waiver participants; service authorization required",
+      "source_ids": [
+        "oh-hcbs"
+      ],
+      "citation": "OAC 5160-46-06(A)(3)",
+      "effective_on": "2026-04-17",
+      "effective_date_note": "",
+      "limitations": "Individual applicability, definitions and current implementation require case-specific checking.",
+      "timing": null,
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "oh-vehicle-1",
+      "jurisdiction": "OH",
+      "issue": "vehicle",
+      "status": "text-reviewed",
+      "statement": "Vehicle modifications are listed among waiver services.",
+      "scope": "Eligible Ohio Home Care Waiver participants",
+      "source_ids": [
+        "oh-hcbs"
+      ],
+      "citation": "OAC 5160-46-06(A)(12)",
+      "effective_on": "2026-04-17",
+      "effective_date_note": "",
+      "limitations": "Individual applicability, definitions and current implementation require case-specific checking.",
+      "timing": null,
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "oh-community-1",
+      "jurisdiction": "OH",
+      "issue": "community",
+      "status": "text-reviewed",
+      "statement": "Community integration and transition are listed waiver services.",
+      "scope": "Eligible Ohio Home Care Waiver participants",
+      "source_ids": [
+        "oh-hcbs"
+      ],
+      "citation": "OAC 5160-46-06(A)(4),(8)",
+      "effective_on": "2026-04-17",
+      "effective_date_note": "",
+      "limitations": "Individual applicability, definitions and current implementation require case-specific checking.",
+      "timing": null,
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "pa-warranty-1",
+      "jurisdiction": "PA",
+      "issue": "warranty",
+      "status": "text-reviewed",
+      "statement": "Minimum one-year warranty; qualifying unresolved defects can lead to replacement or refund after a reasonable repair attempt.",
+      "scope": "New motorized wheelchairs and covered consumers",
+      "source_ids": [
+        "pa-warranty"
+      ],
+      "citation": "1994 Act 117, sections 3-4",
+      "effective_on": null,
+      "effective_date_note": "Exact commencement date not established in this pass.",
+      "limitations": "Motorized scope; definition of reasonable repair attempt and consumer procedure must be retained. This is not independent parts access.",
+      "timing": null,
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "ny-warranty-1",
+      "jurisdiction": "NY",
+      "issue": "warranty",
+      "status": "text-reviewed",
+      "statement": "One-year minimum wheelchair warranty; reasonable-repair definition includes at least three repair attempts with continuing defect, or at least 30 aggregate days out of service.",
+      "scope": "New wheelchair warranty nonconformities; definitions/exclusions apply",
+      "source_ids": [
+        "ny-warranty"
+      ],
+      "citation": "GBS 670*2(1)(k),(2),(3)",
+      "effective_on": null,
+      "effective_date_note": "Exact commencement date not established in this pass.",
+      "limitations": "Threshold is a remedy trigger, not a universal repair-completion deadline.",
+      "timing": null,
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "mi-payer-1",
+      "jurisdiction": "MI",
+      "issue": "payer",
+      "status": "route-only",
+      "statement": "MDHHS publishes a wheelchair repair/labor guide and states its provider manual controls policy discrepancies.",
+      "scope": "Michigan Medicaid provider policy; underlying code-specific rules not yet extracted",
+      "source_ids": [
+        "mi-payer"
+      ],
+      "citation": "MDHHS DME provider page",
+      "effective_on": null,
+      "effective_date_note": "Exact commencement date not established in this pass.",
+      "limitations": "Gateway verified, not a coverage determination; fee schedule, manual and plan rules need review.",
+      "timing": null,
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "ky-warranty-1",
+      "jurisdiction": "KY",
+      "issue": "warranty",
+      "status": "text-reviewed",
+      "statement": "A new assistive device has a minimum one-year warranty under the act.",
+      "scope": "Covered new devices, including manual/power wheelchairs",
+      "source_ids": [
+        "ky-warranty",
+        "ky-definitions"
+      ],
+      "citation": "KRS 151B.300,.305",
+      "effective_on": "1998-07-15",
+      "effective_date_note": "",
+      "limitations": "Individual applicability, definitions and current implementation require case-specific checking.",
+      "timing": null,
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "ky-loaner-1",
+      "jurisdiction": "KY",
+      "issue": "downtime",
+      "status": "text-reviewed",
+      "statement": "Comparable substitute device or rental reimbursement is required during qualifying warranty repair exceeding ten working days, or for the same problem after at least two previous repair tenders.",
+      "scope": "Warranty device tendered to original/exchange dealer; statutory conditions apply",
+      "source_ids": [
+        "ky-loaner"
+      ],
+      "citation": "KRS 151B.325",
+      "effective_on": "1998-07-15",
+      "effective_date_note": "",
+      "limitations": "Individual applicability, definitions and current implementation require case-specific checking.",
+      "timing": {
+        "event": "repair period",
+        "operator": ">",
+        "value": 10,
+        "unit": "working-days",
+        "trigger_note": "Includes tender day; alternative repeat-repair trigger exists."
+      },
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "ut-warranty-1",
+      "jurisdiction": "UT",
+      "issue": "warranty",
+      "status": "text-reviewed",
+      "statement": "Minimum one-year warranty; qualifying warranty repairs are without parts/labor charge.",
+      "scope": "New assistive technology with retail price at least $1,000; specified exclusions",
+      "source_ids": [
+        "ut-warranty"
+      ],
+      "citation": "Utah 70A-2-802 to 804",
+      "effective_on": null,
+      "effective_date_note": "Exact commencement date not established in this pass.",
+      "limitations": "Batteries, nonfunctional accessories and normal recurring maintenance excluded; do not generalize to lower-priced devices.",
+      "timing": null,
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "in-payer-1",
+      "jurisdiction": "IN",
+      "issue": "payer",
+      "status": "text-reviewed",
+      "statement": "Repair-code prior authorization depends on the fee schedule; warranty repairs are not paid by IHCP, and rental repairs are the rental provider’s responsibility.",
+      "scope": "Indiana Health Coverage Programs DME/HME provider manual",
+      "source_ids": [
+        "in-payer"
+      ],
+      "citation": "PROMOD00024 v7.0, Repair and Servicing",
+      "effective_on": "2026-02-01",
+      "effective_date_note": "",
+      "limitations": "Manual policy date, not a statute commencement. MCE-specific implementation and code requirements remain open.",
+      "timing": null,
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "wv-warranty-1",
+      "jurisdiction": "WV",
+      "issue": "warranty",
+      "status": "text-reviewed",
+      "statement": "At least a one-year express warranty is required; specified warranty/remedy limitations are void.",
+      "scope": "Covered assistive devices/consumers under article definitions",
+      "source_ids": [
+        "wv-warranty"
+      ],
+      "citation": "WV Code 46A-6E-2",
+      "effective_on": null,
+      "effective_date_note": "Exact commencement date not established in this pass.",
+      "limitations": "Definitions and remedy procedures in adjacent sections still need extraction.",
+      "timing": null,
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "tx-payer-1",
+      "jurisdiction": "TX",
+      "issue": "payer",
+      "status": "text-reviewed",
+      "statement": "STAR+PLUS HCBS adaptive aids include mobility aids and repair/maintenance outside warranty, subject to the individual service plan.",
+      "scope": "STAR+PLUS HCBS participants; not all Texans",
+      "source_ids": [
+        "tx-program"
+      ],
+      "citation": "STAR+PLUS Handbook 6400",
+      "effective_on": "2019-06-03",
+      "effective_date_note": "",
+      "limitations": "Older handbook revision; verify current MCO policy and authorization before use.",
+      "timing": null,
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "tx-vehicle-1",
+      "jurisdiction": "TX",
+      "issue": "vehicle",
+      "status": "text-reviewed",
+      "statement": "Vehicle modifications are among the described adaptive-aid categories.",
+      "scope": "STAR+PLUS HCBS service-plan route",
+      "source_ids": [
+        "tx-program"
+      ],
+      "citation": "STAR+PLUS Handbook 6400",
+      "effective_on": "2019-06-03",
+      "effective_date_note": "",
+      "limitations": "Not a universal vehicle purchase or modification entitlement; current limits and approval remain to verify.",
+      "timing": null,
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "fl-warranty-1",
+      "jurisdiction": "FL",
+      "issue": "warranty",
+      "status": "text-reviewed",
+      "statement": "Minimum one-year express warranty applies to new covered assistive-technology devices.",
+      "scope": "Definitions in 427.802 and remedy procedures in 427.804 need accompanying review",
+      "source_ids": [
+        "fl-warranty"
+      ],
+      "citation": "Fla. Stat. 427.803",
+      "effective_on": null,
+      "effective_date_note": "Exact commencement date not established in this pass.",
+      "limitations": "Warranty existence reviewed; device exclusions and remedy deadlines not yet mapped.",
+      "timing": null,
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "ca-repair-1",
+      "jurisdiction": "CA",
+      "issue": "repair-access",
+      "status": "summary-only",
+      "statement": "Official chaptered summary identifies powered-wheelchair parts, tools and information access on fair/reasonable terms.",
+      "scope": "Powered wheelchairs; detailed part/clinical exclusions not verified in current code",
+      "source_ids": [
+        "ca-summary"
+      ],
+      "citation": "SB 1384, Chapter 797 (2024)",
+      "effective_on": null,
+      "effective_date_note": "Official summary gives a January 1, 2025 product-sale scope date, not separately verified commencement.",
+      "limitations": "Summary says products sold on/after January 1, 2025. Full code applicability, including in-use equipment and clinical component limits, requires verification.",
+      "timing": null,
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "va-warranty-1",
+      "jurisdiction": "VA",
+      "issue": "warranty",
+      "status": "text-reviewed",
+      "statement": "One-year implied warranty supplements express warranty; qualifying nonconformities are repaired without parts/labor charge, with replacement/refund remedies after reasonable repair attempts.",
+      "scope": "New covered assistive devices; definitions and exclusions apply",
+      "source_ids": [
+        "va-warranty"
+      ],
+      "citation": "Va. Code 59.1-470 to 471",
+      "effective_on": null,
+      "effective_date_note": "Exact commencement date not established in this pass.",
+      "limitations": "Normal wear, routine maintenance and unauthorized modifications are among exclusions; downtime rules account for loaner availability.",
+      "timing": null,
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "nc-transit-1",
+      "jurisdiction": "NC",
+      "issue": "transit",
+      "status": "text-reviewed",
+      "statement": "State text recognizes equal use of public places and transport accommodations, subject to lawful conditions.",
+      "scope": "People with disabilities; actual mode/provider obligations need further review",
+      "source_ids": [
+        "nc-access"
+      ],
+      "citation": "N.C.G.S.168-2,168-3",
+      "effective_on": null,
+      "effective_date_note": "Exact commencement date not established in this pass.",
+      "limitations": "Does not establish a door-to-door ride, a specific rural service level or a wheelchair repair right.",
+      "timing": null,
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "co-repair-1",
+      "jurisdiction": "CO",
+      "issue": "repair-access",
+      "status": "summary-only",
+      "statement": "Enacted summaries establish manufacturer resources for powered-wheelchair repair by owners and independent providers; later digital-equipment expansion preserves the powered-wheelchair distinction.",
+      "scope": "Powered wheelchair repair; not all medical devices or all mobility aids",
+      "source_ids": [
+        "co-repair",
+        "co-update"
+      ],
+      "citation": "HB22-1031; HB24-1121",
+      "effective_on": "2023-01-01",
+      "effective_date_note": "",
+      "limitations": "Full current CRS Part 15 and device-specific application must be checked before an enforcement claim.",
+      "timing": null,
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "wa-repair-1",
+      "jurisdiction": "WA",
+      "issue": "repair-access",
+      "status": "text-reviewed",
+      "statement": "Manufacturers must make repair resources available on fair/reasonable terms for covered mobility equipment.",
+      "scope": "Includes powered/manual wheelchairs, mobility scooters and manual-chair power assists",
+      "source_ids": [
+        "wa-repair"
+      ],
+      "citation": "2025 Wash. Laws ch.354, sections 2-3",
+      "effective_on": "2025-07-27",
+      "effective_date_note": "",
+      "limitations": "Exceptions and manufacturer availability constraints apply; payer coverage and repair completion time are separate questions.",
+      "timing": null,
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "nv-repair-1",
+      "jurisdiction": "NV",
+      "issue": "repair-access",
+      "status": "text-reviewed",
+      "statement": "Manufacturers must provide repair resources on fair/reasonable terms; the act also restricts specified parts-pairing barriers.",
+      "scope": "Mobility devices including powered/manual wheelchairs, scooters and power assists",
+      "source_ids": [
+        "nv-repair"
+      ],
+      "citation": "2025 Nev. Stats. ch.129, AB407",
+      "effective_on": "2025-05-30",
+      "effective_date_note": "",
+      "limitations": "Effective on approval under section 33, not the October date from neighboring bills. Exceptions and civil enforcement procedures require individual review.",
+      "timing": null,
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "ct-timely-1",
+      "jurisdiction": "CT",
+      "issue": "downtime",
+      "status": "text-reviewed",
+      "statement": "Authorized wheelchair dealer must respond within one business day and order parts within three business days after assessment or insurer authorization.",
+      "scope": "Wheelchairs sold/leased by the dealer; CRT home-repair provision also exists",
+      "source_ids": [
+        "ct-repair"
+      ],
+      "citation": "Conn. Gen. Stat.42-338(a)-(b)",
+      "effective_on": "2024-07-01",
+      "effective_date_note": "",
+      "limitations": "Individual applicability, definitions and current implementation require case-specific checking.",
+      "timing": {
+        "event": "repair-request response",
+        "operator": "<=",
+        "value": 1,
+        "unit": "business-days",
+        "trigger_note": "Parts-order deadline is separate: three business days after assessment or insurer authorization. No universal three-day completion guarantee."
+      },
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "ct-payer-1",
+      "jurisdiction": "CT",
+      "issue": "payer",
+      "status": "text-reviewed",
+      "statement": "Specified individual/group policies cannot require a new prescription or prior authorization for medically necessary CRT wheelchair repair/replacement unless the original prescription is older than five years.",
+      "scope": "Specified state-regulated health policies and CRT; not automatically Medicare, self-funded ERISA plans or every payer",
+      "source_ids": [
+        "ct-insurance"
+      ],
+      "citation": "Conn. Gen. Stat.38a-492w,38a-518w",
+      "effective_on": "2025-01-01",
+      "effective_date_note": "",
+      "limitations": "Written medical-necessity determination and policy/device definitions apply. Medicaid section is not fully reconciled here.",
+      "timing": null,
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "ct-warranty-1",
+      "jurisdiction": "CT",
+      "issue": "warranty",
+      "status": "text-reviewed",
+      "statement": "Assistive-device nonconformity repair protection uses the express-warranty period or two years after delivery, whichever is longer.",
+      "scope": "Covered AT devices; excludes batteries/nonessential accessories",
+      "source_ids": [
+        "ct-repair"
+      ],
+      "citation": "Conn. Gen. Stat.42-330,42-331(a)",
+      "effective_on": null,
+      "effective_date_note": "Exact commencement date not established in this pass.",
+      "limitations": "Not the same as a universal two-year manufacturer express warranty; claim reporting and availability conditions apply.",
+      "timing": null,
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "us-payer-1",
+      "jurisdiction": "US",
+      "issue": "payer",
+      "status": "text-reviewed",
+      "statement": "Medicare Part B wheelchair/scooter coverage has medical necessity, examination/prescription and supplier requirements; certain power chairs require prior approval.",
+      "scope": "Eligible Medicare beneficiaries; original Medicare guidance",
+      "source_ids": [
+        "us-medicare"
+      ],
+      "citation": "Medicare.gov coverage guidance",
+      "effective_on": null,
+      "effective_date_note": "Exact commencement date not established in this pass.",
+      "limitations": "Not a Medicaid, private-insurer or universal repair-access rule; distinguish Medicare Advantage administration.",
+      "timing": null,
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "us-transit-1",
+      "jurisdiction": "US",
+      "issue": "transit",
+      "status": "text-reviewed",
+      "statement": "FTA accepts public-transit discrimination complaints and encourages contacting the local transit provider first.",
+      "scope": "Covered public-transit providers and discrimination concerns",
+      "source_ids": [
+        "us-transit"
+      ],
+      "citation": "FTA complaint guidance",
+      "effective_on": null,
+      "effective_date_note": "Exact commencement date not established in this pass.",
+      "limitations": "FTA guidance recommends filing within 180 days; do not substitute a policy letter for a complaint process.",
+      "timing": null,
+      "reviewed_on": "2026-11-01"
+    },
+    {
+      "id": "us-community-1",
+      "jurisdiction": "US",
+      "issue": "community",
+      "status": "text-reviewed",
+      "statement": "DOJ describes conditional rights to community integration rather than unnecessary institutional segregation.",
+      "scope": "State/local disability services; appropriateness, individual wishes and reasonable modification conditions",
+      "source_ids": [
+        "us-community"
+      ],
+      "citation": "ADA community integration guidance",
+      "effective_on": null,
+      "effective_date_note": "Exact commencement date not established in this pass.",
+      "limitations": "Does not guarantee a specific waiver slot, personal-assistance hours or chosen equipment.",
+      "timing": null,
+      "reviewed_on": "2026-11-01"
+    }
+  ],
+  "state_issue_matrix": [
+    {
+      "state": "OH",
+      "issue": "repair-access",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "OH",
+      "issue": "warranty",
+      "review_status": "text-reviewed",
+      "claim_ids": [
+        "oh-warranty-1"
+      ],
+      "missing_question": "Additional definitions, later amendments and implementation remain to reconcile."
+    },
+    {
+      "state": "OH",
+      "issue": "downtime",
+      "review_status": "text-reviewed",
+      "claim_ids": [
+        "oh-loaner-1"
+      ],
+      "missing_question": "Additional definitions, later amendments and implementation remain to reconcile."
+    },
+    {
+      "state": "OH",
+      "issue": "payer",
+      "review_status": "text-reviewed",
+      "claim_ids": [
+        "oh-payer-1"
+      ],
+      "missing_question": "Additional definitions, later amendments and implementation remain to reconcile."
+    },
+    {
+      "state": "OH",
+      "issue": "home",
+      "review_status": "text-reviewed",
+      "claim_ids": [
+        "oh-home-1"
+      ],
+      "missing_question": "Additional definitions, later amendments and implementation remain to reconcile."
+    },
+    {
+      "state": "OH",
+      "issue": "vehicle",
+      "review_status": "text-reviewed",
+      "claim_ids": [
+        "oh-vehicle-1"
+      ],
+      "missing_question": "Additional definitions, later amendments and implementation remain to reconcile."
+    },
+    {
+      "state": "OH",
+      "issue": "transit",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "OH",
+      "issue": "community",
+      "review_status": "text-reviewed",
+      "claim_ids": [
+        "oh-community-1"
+      ],
+      "missing_question": "Additional definitions, later amendments and implementation remain to reconcile."
+    },
+    {
+      "state": "PA",
+      "issue": "repair-access",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "PA",
+      "issue": "warranty",
+      "review_status": "text-reviewed",
+      "claim_ids": [
+        "pa-warranty-1"
+      ],
+      "missing_question": "Additional definitions, later amendments and implementation remain to reconcile."
+    },
+    {
+      "state": "PA",
+      "issue": "downtime",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "PA",
+      "issue": "payer",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "PA",
+      "issue": "home",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "PA",
+      "issue": "vehicle",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "PA",
+      "issue": "transit",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "PA",
+      "issue": "community",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "NY",
+      "issue": "repair-access",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "NY",
+      "issue": "warranty",
+      "review_status": "text-reviewed",
+      "claim_ids": [
+        "ny-warranty-1"
+      ],
+      "missing_question": "Additional definitions, later amendments and implementation remain to reconcile."
+    },
+    {
+      "state": "NY",
+      "issue": "downtime",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "NY",
+      "issue": "payer",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "NY",
+      "issue": "home",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "NY",
+      "issue": "vehicle",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "NY",
+      "issue": "transit",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "NY",
+      "issue": "community",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "MI",
+      "issue": "repair-access",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "MI",
+      "issue": "warranty",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "MI",
+      "issue": "downtime",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "MI",
+      "issue": "payer",
+      "review_status": "route-only",
+      "claim_ids": [
+        "mi-payer-1"
+      ],
+      "missing_question": "Additional definitions, later amendments and implementation remain to reconcile."
+    },
+    {
+      "state": "MI",
+      "issue": "home",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "MI",
+      "issue": "vehicle",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "MI",
+      "issue": "transit",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "MI",
+      "issue": "community",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "KY",
+      "issue": "repair-access",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "KY",
+      "issue": "warranty",
+      "review_status": "text-reviewed",
+      "claim_ids": [
+        "ky-warranty-1"
+      ],
+      "missing_question": "Additional definitions, later amendments and implementation remain to reconcile."
+    },
+    {
+      "state": "KY",
+      "issue": "downtime",
+      "review_status": "text-reviewed",
+      "claim_ids": [
+        "ky-loaner-1"
+      ],
+      "missing_question": "Additional definitions, later amendments and implementation remain to reconcile."
+    },
+    {
+      "state": "KY",
+      "issue": "payer",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "KY",
+      "issue": "home",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "KY",
+      "issue": "vehicle",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "KY",
+      "issue": "transit",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "KY",
+      "issue": "community",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "UT",
+      "issue": "repair-access",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "UT",
+      "issue": "warranty",
+      "review_status": "text-reviewed",
+      "claim_ids": [
+        "ut-warranty-1"
+      ],
+      "missing_question": "Additional definitions, later amendments and implementation remain to reconcile."
+    },
+    {
+      "state": "UT",
+      "issue": "downtime",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "UT",
+      "issue": "payer",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "UT",
+      "issue": "home",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "UT",
+      "issue": "vehicle",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "UT",
+      "issue": "transit",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "UT",
+      "issue": "community",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "IN",
+      "issue": "repair-access",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "IN",
+      "issue": "warranty",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "IN",
+      "issue": "downtime",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "IN",
+      "issue": "payer",
+      "review_status": "text-reviewed",
+      "claim_ids": [
+        "in-payer-1"
+      ],
+      "missing_question": "Additional definitions, later amendments and implementation remain to reconcile."
+    },
+    {
+      "state": "IN",
+      "issue": "home",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "IN",
+      "issue": "vehicle",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "IN",
+      "issue": "transit",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "IN",
+      "issue": "community",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "WV",
+      "issue": "repair-access",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "WV",
+      "issue": "warranty",
+      "review_status": "text-reviewed",
+      "claim_ids": [
+        "wv-warranty-1"
+      ],
+      "missing_question": "Additional definitions, later amendments and implementation remain to reconcile."
+    },
+    {
+      "state": "WV",
+      "issue": "downtime",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "WV",
+      "issue": "payer",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "WV",
+      "issue": "home",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "WV",
+      "issue": "vehicle",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "WV",
+      "issue": "transit",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "WV",
+      "issue": "community",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "TX",
+      "issue": "repair-access",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "TX",
+      "issue": "warranty",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "TX",
+      "issue": "downtime",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "TX",
+      "issue": "payer",
+      "review_status": "text-reviewed",
+      "claim_ids": [
+        "tx-payer-1"
+      ],
+      "missing_question": "Additional definitions, later amendments and implementation remain to reconcile."
+    },
+    {
+      "state": "TX",
+      "issue": "home",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "TX",
+      "issue": "vehicle",
+      "review_status": "text-reviewed",
+      "claim_ids": [
+        "tx-vehicle-1"
+      ],
+      "missing_question": "Additional definitions, later amendments and implementation remain to reconcile."
+    },
+    {
+      "state": "TX",
+      "issue": "transit",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "TX",
+      "issue": "community",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "FL",
+      "issue": "repair-access",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "FL",
+      "issue": "warranty",
+      "review_status": "text-reviewed",
+      "claim_ids": [
+        "fl-warranty-1"
+      ],
+      "missing_question": "Additional definitions, later amendments and implementation remain to reconcile."
+    },
+    {
+      "state": "FL",
+      "issue": "downtime",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "FL",
+      "issue": "payer",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "FL",
+      "issue": "home",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "FL",
+      "issue": "vehicle",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "FL",
+      "issue": "transit",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "FL",
+      "issue": "community",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "CA",
+      "issue": "repair-access",
+      "review_status": "summary-only",
+      "claim_ids": [
+        "ca-repair-1"
+      ],
+      "missing_question": "Additional definitions, later amendments and implementation remain to reconcile."
+    },
+    {
+      "state": "CA",
+      "issue": "warranty",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "CA",
+      "issue": "downtime",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "CA",
+      "issue": "payer",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "CA",
+      "issue": "home",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "CA",
+      "issue": "vehicle",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "CA",
+      "issue": "transit",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "CA",
+      "issue": "community",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "VA",
+      "issue": "repair-access",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "VA",
+      "issue": "warranty",
+      "review_status": "text-reviewed",
+      "claim_ids": [
+        "va-warranty-1"
+      ],
+      "missing_question": "Additional definitions, later amendments and implementation remain to reconcile."
+    },
+    {
+      "state": "VA",
+      "issue": "downtime",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "VA",
+      "issue": "payer",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "VA",
+      "issue": "home",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "VA",
+      "issue": "vehicle",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "VA",
+      "issue": "transit",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "VA",
+      "issue": "community",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "NC",
+      "issue": "repair-access",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "NC",
+      "issue": "warranty",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "NC",
+      "issue": "downtime",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "NC",
+      "issue": "payer",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "NC",
+      "issue": "home",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "NC",
+      "issue": "vehicle",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "NC",
+      "issue": "transit",
+      "review_status": "text-reviewed",
+      "claim_ids": [
+        "nc-transit-1"
+      ],
+      "missing_question": "Additional definitions, later amendments and implementation remain to reconcile."
+    },
+    {
+      "state": "NC",
+      "issue": "community",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "CO",
+      "issue": "repair-access",
+      "review_status": "summary-only",
+      "claim_ids": [
+        "co-repair-1"
+      ],
+      "missing_question": "Additional definitions, later amendments and implementation remain to reconcile."
+    },
+    {
+      "state": "CO",
+      "issue": "warranty",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "CO",
+      "issue": "downtime",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "CO",
+      "issue": "payer",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "CO",
+      "issue": "home",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "CO",
+      "issue": "vehicle",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "CO",
+      "issue": "transit",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "CO",
+      "issue": "community",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "WA",
+      "issue": "repair-access",
+      "review_status": "text-reviewed",
+      "claim_ids": [
+        "wa-repair-1"
+      ],
+      "missing_question": "Additional definitions, later amendments and implementation remain to reconcile."
+    },
+    {
+      "state": "WA",
+      "issue": "warranty",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "WA",
+      "issue": "downtime",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "WA",
+      "issue": "payer",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "WA",
+      "issue": "home",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "WA",
+      "issue": "vehicle",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "WA",
+      "issue": "transit",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "WA",
+      "issue": "community",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "NV",
+      "issue": "repair-access",
+      "review_status": "text-reviewed",
+      "claim_ids": [
+        "nv-repair-1"
+      ],
+      "missing_question": "Additional definitions, later amendments and implementation remain to reconcile."
+    },
+    {
+      "state": "NV",
+      "issue": "warranty",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "NV",
+      "issue": "downtime",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "NV",
+      "issue": "payer",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "NV",
+      "issue": "home",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "NV",
+      "issue": "vehicle",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "NV",
+      "issue": "transit",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "NV",
+      "issue": "community",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "CT",
+      "issue": "repair-access",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "CT",
+      "issue": "warranty",
+      "review_status": "text-reviewed",
+      "claim_ids": [
+        "ct-warranty-1"
+      ],
+      "missing_question": "Additional definitions, later amendments and implementation remain to reconcile."
+    },
+    {
+      "state": "CT",
+      "issue": "downtime",
+      "review_status": "text-reviewed",
+      "claim_ids": [
+        "ct-timely-1"
+      ],
+      "missing_question": "Additional definitions, later amendments and implementation remain to reconcile."
+    },
+    {
+      "state": "CT",
+      "issue": "payer",
+      "review_status": "text-reviewed",
+      "claim_ids": [
+        "ct-payer-1"
+      ],
+      "missing_question": "Additional definitions, later amendments and implementation remain to reconcile."
+    },
+    {
+      "state": "CT",
+      "issue": "home",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "CT",
+      "issue": "vehicle",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "CT",
+      "issue": "transit",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    },
+    {
+      "state": "CT",
+      "issue": "community",
+      "review_status": "not-reviewed",
+      "claim_ids": [],
+      "missing_question": "Locate state-specific law, program and complaint rules; no conclusion about absence or prohibition."
+    }
+  ],
+  "inferences": [
+    {
+      "id": "oh-downtime-gap",
+      "status": "analyst-inference",
+      "premise_claim_ids": [
+        "oh-loaner-1",
+        "oh-payer-1"
+      ],
+      "statement": "Warranty-backed loaners and Medicaid payment restrictions may leave a continuity gap outside the warranty route.",
+      "proposed_next_action": "Research who supplies and funds backup mobility outside qualifying warranty cases; ask ODM about an interim-equipment policy.",
+      "limitations": "Does not establish that every person lacks a backup option or that a particular denial is unlawful."
+    },
+    {
+      "id": "enforcement-before-newlaw",
+      "status": "analyst-inference",
+      "premise_claim_ids": [
+        "oh-loaner-1",
+        "ky-loaner-1",
+        "ct-timely-1"
+      ],
+      "statement": "Some repair-delay problems may be enforcement or awareness issues, not missing-law issues.",
+      "proposed_next_action": "Ask about warranty status and repair dates, then verify complaint route before generating a new-law request.",
+      "limitations": "No individual violation or deadline calculation is inferred."
+    },
+    {
+      "id": "repair-access-not-coverage",
+      "status": "analyst-inference",
+      "premise_claim_ids": [
+        "wa-repair-1",
+        "nv-repair-1",
+        "us-payer-1"
+      ],
+      "statement": "Access to manufacturer resources does not by itself establish an insurance payment entitlement.",
+      "proposed_next_action": "Separate parts/tool refusal from payer denial and route each to the responsible actor.",
+      "limitations": "No conclusion that more repair rights reduce cost or delays without outcome data."
+    },
+    {
+      "id": "parts-vs-provider",
+      "status": "analyst-inference",
+      "premise_claim_ids": [
+        "wa-repair-1",
+        "ct-timely-1"
+      ],
+      "statement": "Manufacturer-access duties and dealer service-time duties address distinct bottlenecks.",
+      "proposed_next_action": "Offer separate advocacy requests for parts access, service response/parts ordering, and continuity equipment.",
+      "limitations": "Cross-state comparison suggests policy options; it is not a ranking of state accessibility."
+    },
+    {
+      "id": "warranty-scope",
+      "status": "analyst-inference",
+      "premise_claim_ids": [
+        "pa-warranty-1",
+        "ut-warranty-1",
+        "va-warranty-1"
+      ],
+      "statement": "Device type, price, age and defect cause can change whether a warranty route is relevant.",
+      "proposed_next_action": "Use a short intake: state, device, purchase/lease date, warranty, problem and payer.",
+      "limitations": "Do not collect serial numbers or medical records merely to choose a public information route."
+    },
+    {
+      "id": "payer-specific-authorization",
+      "status": "analyst-inference",
+      "premise_claim_ids": [
+        "ct-payer-1",
+        "in-payer-1",
+        "us-payer-1"
+      ],
+      "statement": "A state insurance authorization restriction cannot be treated as a rule for every payer.",
+      "proposed_next_action": "Identify Medicare, Medicaid, state-regulated private, self-funded employer, VA or self-pay before suggesting a route.",
+      "limitations": "Actual plan classification and appeals need confirmation with the responsible program."
+    }
+  ],
+  "existing_directory_leads": [
+    {
+      "state": "OH",
+      "resource_id": "ohio-waiver-home-modifications",
+      "name": "Ohio waiver home modifications",
+      "url": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
+      "origin": "prototype-data.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-08"
+      }
+    },
+    {
+      "state": "OH",
+      "resource_id": "ohio-dd-home-adaptations",
+      "name": "Developmental disability waiver home adaptations",
+      "url": "https://codes.ohio.gov/ohio-administrative-code/rule-5123-9-23",
+      "origin": "prototype-data.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-08"
+      }
+    },
+    {
+      "state": "OH",
+      "resource_id": "ohio-older-blind",
+      "name": "Vision loss: Independent Living Older Blind program",
+      "url": "https://dam.assets.ohio.gov/image/upload/ood.ohio.gov/Literature/Agency%20Outreach/OOD_Fact_Sheet_Independent_Living_Older_Blind_Program.pdf",
+      "origin": "prototype-data.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-08"
+      }
+    },
+    {
+      "state": "OH",
+      "resource_id": "ohio-independent-living",
+      "name": "Disability independence: find a Center for Independent Living",
+      "url": "https://ohiosilc.org/independent-living/centers-for-independent-living-2/",
+      "origin": "prototype-data.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-09"
+      }
+    },
+    {
+      "state": "OH",
+      "resource_id": "ohio-cil-socil",
+      "name": "Southeastern Ohio Center for Independent Living",
+      "url": "https://www.socil.org/",
+      "origin": "prototype-data.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-09"
+      }
+    },
+    {
+      "state": "OH",
+      "resource_id": "ohio-cil-acil",
+      "name": "Access Center for Independent Living",
+      "url": "https://www.ohiosilc.org/wp-content/uploads/2024/10/Ohio-State-Plan-For-Independent-Living-2025-2027-Approved-by-ACL-.pdf",
+      "origin": "prototype-data.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-09"
+      }
+    },
+    {
+      "state": "OH",
+      "resource_id": "ohio-cil-north-central",
+      "name": "Independent Living Center of North Central Ohio",
+      "url": "https://www.ohiosilc.org/wp-content/uploads/2024/10/Ohio-State-Plan-For-Independent-Living-2025-2027-Approved-by-ACL-.pdf",
+      "origin": "prototype-data.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-09"
+      }
+    },
+    {
+      "state": "OH",
+      "resource_id": "ohio-cil-mobile",
+      "name": "MOBILE: Mid-Ohio Board for an Independent Living Environment",
+      "url": "https://www.mobileonline.org/",
+      "origin": "prototype-data.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-09"
+      }
+    },
+    {
+      "state": "OH",
+      "resource_id": "ohio-cil-sil",
+      "name": "Services for Independent Living",
+      "url": "https://sil-oh.org/",
+      "origin": "prototype-data.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-09"
+      }
+    },
+    {
+      "state": "OH",
+      "resource_id": "ohio-cil-western-reserve",
+      "name": "Western Reserve Independent Living Center",
+      "url": "https://www.ohiosilc.org/wp-content/uploads/2024/10/DD-Council-SILC-Broc_101124.pdf",
+      "origin": "prototype-data.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-09"
+      }
+    },
+    {
+      "state": "PA",
+      "resource_id": "pa-techowl-reuse",
+      "name": "TechOWL: reused assistive equipment",
+      "url": "https://techowlpa.org/reep/",
+      "origin": "data/public/pennsylvania-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-08"
+      }
+    },
+    {
+      "state": "PA",
+      "resource_id": "pa-techowl-library",
+      "name": "TechOWL assistive technology lending library",
+      "url": "https://techowlpa.org/library/",
+      "origin": "data/public/pennsylvania-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-08"
+      }
+    },
+    {
+      "state": "PA",
+      "resource_id": "pa-patf",
+      "name": "PATF: assistive technology financing",
+      "url": "https://patf.us/what-we-do/financial-loans/",
+      "origin": "data/public/pennsylvania-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-08"
+      }
+    },
+    {
+      "state": "PA",
+      "resource_id": "pa-phfa-access",
+      "name": "PHFA ACCESS: modifications when purchasing a home",
+      "url": "https://www.phfa.org/programs/accesshomemod.aspx",
+      "origin": "data/public/pennsylvania-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-08"
+      }
+    },
+    {
+      "state": "NY",
+      "resource_id": "ny-access-home",
+      "name": "Access to Home: disability accessibility modifications",
+      "url": "https://hcr.ny.gov/access-home",
+      "origin": "data/public/new-york-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-08"
+      }
+    },
+    {
+      "state": "NY",
+      "resource_id": "ny-traid",
+      "name": "TRAID: assistive technology loans and demonstrations",
+      "url": "https://www.justicecenter.ny.gov/traid-program",
+      "origin": "data/public/new-york-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-08"
+      }
+    },
+    {
+      "state": "NY",
+      "resource_id": "ny-nhtd",
+      "name": "Nursing Home Transition and Diversion waiver screening",
+      "url": "https://www.health.ny.gov/facilities/long_term_care/nhtd/participant/index.htm",
+      "origin": "data/public/new-york-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_search_extract_only",
+        "last_reviewed_on": "2026-10-08"
+      }
+    },
+    {
+      "state": "NY",
+      "resource_id": "ny-independent-living",
+      "name": "Find a New York Independent Living Center",
+      "url": "https://www.acces.nysed.gov/vr/independent-living-centers",
+      "origin": "data/public/new-york-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_search_extract_only",
+        "last_reviewed_on": "2026-10-08"
+      }
+    },
+    {
+      "state": "MI",
+      "resource_id": "mi-choice",
+      "name": "MI Choice Medicaid waiver",
+      "url": "https://www.michigan.gov/mdhhs/assistance-programs/healthcare/seniors/michoicewaiver/mi-choice-waiver-program-Use",
+      "origin": "data/public/michigan-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-08"
+      }
+    },
+    {
+      "state": "MI",
+      "resource_id": "mi-at",
+      "name": "Michigan Assistive Technology Program: trials and loans",
+      "url": "https://www.michigan.gov/mdhhs/keep-mi-healthy/mentalhealth/developmentaldisability/michigan-at-help-hub/try-at",
+      "origin": "data/public/michigan-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-08"
+      }
+    },
+    {
+      "state": "MI",
+      "resource_id": "mi-blind",
+      "name": "Blind and low-vision independent living: age 55+",
+      "url": "https://www.michigan.gov/leo/bureaus-agencies/bureau-of-services-for-blind-persons/independent-living-services-for-seniors",
+      "origin": "data/public/michigan-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-08"
+      }
+    },
+    {
+      "state": "KY",
+      "resource_id": "ky-hcb",
+      "name": "Kentucky Home and Community Based waiver",
+      "url": "https://www.chfs.ky.gov/agencies/dms/dca/pages/hcb-waiver.aspx",
+      "origin": "data/public/kentucky-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-08"
+      }
+    },
+    {
+      "state": "KY",
+      "resource_id": "ky-at-finance",
+      "name": "Kentucky assistive technology financing",
+      "url": "https://www.katsnet.org/paying-for-tech/alternative-financing/",
+      "origin": "data/public/kentucky-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-08"
+      }
+    },
+    {
+      "state": "KY",
+      "resource_id": "ky-blind",
+      "name": "Kentucky vision loss: independent living services",
+      "url": "https://kcc.ky.gov/Vocational-Rehabilitation/seeking-services/Blind-Services/Pages/Independent-Living-Services-and-Older-Individuals-Who-Are-Blind-Services.aspx",
+      "origin": "data/public/kentucky-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-08"
+      }
+    },
+    {
+      "state": "KY",
+      "resource_id": "ky-aging-purchase",
+      "name": "Purchase Area Agency on Aging and Independent Living — aging and disability referrals",
+      "url": "https://www.chfs.ky.gov/agencies/dail/Pages/adrc.aspx",
+      "origin": "data/public/kentucky-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-08"
+      }
+    },
+    {
+      "state": "KY",
+      "resource_id": "ky-aging-pennyrile",
+      "name": "Pennyrile Area Agency on Aging and Independent Living — aging and disability referrals",
+      "url": "https://www.chfs.ky.gov/agencies/dail/Pages/adrc.aspx",
+      "origin": "data/public/kentucky-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-08"
+      }
+    },
+    {
+      "state": "KY",
+      "resource_id": "ky-aging-green-river",
+      "name": "Green River Area Agency on Aging and Independent Living — aging and disability referrals",
+      "url": "https://www.chfs.ky.gov/agencies/dail/Pages/adrc.aspx",
+      "origin": "data/public/kentucky-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-08"
+      }
+    },
+    {
+      "state": "KY",
+      "resource_id": "ky-aging-barren-river",
+      "name": "Barren River Area Agency on Aging and Independent Living — aging and disability referrals",
+      "url": "https://www.chfs.ky.gov/agencies/dail/Pages/adrc.aspx",
+      "origin": "data/public/kentucky-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-08"
+      }
+    },
+    {
+      "state": "KY",
+      "resource_id": "ky-aging-lincoln-trail",
+      "name": "Lincoln Trail Area Agency on Aging and Independent Living — aging and disability referrals",
+      "url": "https://www.chfs.ky.gov/agencies/dail/Pages/adrc.aspx",
+      "origin": "data/public/kentucky-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-08"
+      }
+    },
+    {
+      "state": "KY",
+      "resource_id": "ky-aging-kipda",
+      "name": "KIPDA Area Agency on Aging and Independent Living — aging and disability referrals",
+      "url": "https://www.chfs.ky.gov/agencies/dail/Pages/adrc.aspx",
+      "origin": "data/public/kentucky-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-08"
+      }
+    },
+    {
+      "state": "KY",
+      "resource_id": "ky-aging-northern-kentucky",
+      "name": "Northern Kentucky Area Agency on Aging and Independent Living — aging and disability referrals",
+      "url": "https://www.chfs.ky.gov/agencies/dail/Pages/adrc.aspx",
+      "origin": "data/public/kentucky-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-08"
+      }
+    },
+    {
+      "state": "KY",
+      "resource_id": "ky-aging-buffalo-trace",
+      "name": "Buffalo Trace Area Agency on Aging and Independent Living — aging and disability referrals",
+      "url": "https://www.chfs.ky.gov/agencies/dail/Pages/adrc.aspx",
+      "origin": "data/public/kentucky-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-08"
+      }
+    },
+    {
+      "state": "KY",
+      "resource_id": "ky-aging-gateway",
+      "name": "Gateway Area Agency on Aging and Independent Living — aging and disability referrals",
+      "url": "https://www.chfs.ky.gov/agencies/dail/Pages/adrc.aspx",
+      "origin": "data/public/kentucky-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-08"
+      }
+    },
+    {
+      "state": "KY",
+      "resource_id": "ky-aging-fivco",
+      "name": "FIVCO Area Agency on Aging and Independent Living — aging and disability referrals",
+      "url": "https://www.chfs.ky.gov/agencies/dail/Pages/adrc.aspx",
+      "origin": "data/public/kentucky-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-08"
+      }
+    },
+    {
+      "state": "KY",
+      "resource_id": "ky-aging-big-sandy",
+      "name": "Big Sandy Area Agency on Aging and Independent Living — aging and disability referrals",
+      "url": "https://www.chfs.ky.gov/agencies/dail/Pages/adrc.aspx",
+      "origin": "data/public/kentucky-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-08"
+      }
+    },
+    {
+      "state": "KY",
+      "resource_id": "ky-aging-kentucky-river",
+      "name": "Kentucky River Area Agency on Aging and Independent Living — aging and disability referrals",
+      "url": "https://www.chfs.ky.gov/agencies/dail/Pages/adrc.aspx",
+      "origin": "data/public/kentucky-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-08"
+      }
+    },
+    {
+      "state": "KY",
+      "resource_id": "ky-aging-cumberland-valley",
+      "name": "Cumberland Valley Area Agency on Aging and Independent Living — aging and disability referrals",
+      "url": "https://www.chfs.ky.gov/agencies/dail/Pages/adrc.aspx",
+      "origin": "data/public/kentucky-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-08"
+      }
+    },
+    {
+      "state": "KY",
+      "resource_id": "ky-aging-lake-cumberland",
+      "name": "Lake Cumberland Area Agency on Aging and Independent Living — aging and disability referrals",
+      "url": "https://www.chfs.ky.gov/agencies/dail/Pages/adrc.aspx",
+      "origin": "data/public/kentucky-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-08"
+      }
+    },
+    {
+      "state": "KY",
+      "resource_id": "ky-aging-bluegrass",
+      "name": "Bluegrass Area Agency on Aging and Independent Living — aging and disability referrals",
+      "url": "https://www.chfs.ky.gov/agencies/dail/Pages/adrc.aspx",
+      "origin": "data/public/kentucky-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-08"
+      }
+    },
+    {
+      "state": "UT",
+      "resource_id": "ut-waiver",
+      "name": "Utah Aging Waiver: assessment and support",
+      "url": "https://medicaid.utah.gov/medicaid-long-term-care-and-waiver-programs/",
+      "origin": "data/public/utah-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-14"
+      }
+    },
+    {
+      "state": "UT",
+      "resource_id": "ut-new-choices",
+      "name": "Utah New Choices Waiver: moving from institutional care",
+      "url": "https://medicaid.utah.gov/medicaid-long-term-care-and-waiver-programs/",
+      "origin": "data/public/utah-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-14"
+      }
+    },
+    {
+      "state": "UT",
+      "resource_id": "ut-at",
+      "name": "Utah Assistive Technology Program: equipment and financing",
+      "url": "https://idrpp.usu.edu/uatp/about-us/",
+      "origin": "data/public/utah-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-14"
+      }
+    },
+    {
+      "state": "IN",
+      "resource_id": "in-at",
+      "name": "INDATA — assistive technology demonstrations, loans and reuse",
+      "url": "https://www.eastersealstech.com/indata-project/",
+      "origin": "data/public/indiana-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-19"
+      }
+    },
+    {
+      "state": "WV",
+      "resource_id": "wv-waiver",
+      "name": "Aged and Disabled Waiver screening",
+      "url": "https://adwprogram.wv.gov/",
+      "origin": "data/public/west-virginia-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-19"
+      }
+    },
+    {
+      "state": "WV",
+      "resource_id": "wv-at",
+      "name": "West Virginia Assistive Technology System",
+      "url": "https://wvats.cedwvu.org/wvats-services/",
+      "origin": "data/public/west-virginia-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-19"
+      }
+    },
+    {
+      "state": "WV",
+      "resource_id": "wv-blind",
+      "name": "VISIONS independent living services",
+      "url": "https://wvdrs.org/adults/specialized-services/visions/",
+      "origin": "data/public/west-virginia-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-19"
+      }
+    },
+    {
+      "state": "TX",
+      "resource_id": "tx-blind",
+      "name": "Independent Living Services for Older Individuals Who Are Blind",
+      "url": "https://newtools.cira.state.tx.us/upload/page/4433/New%20Resource%20Guide%202025.pdf",
+      "origin": "data/public/texas-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-19"
+      }
+    },
+    {
+      "state": "FL",
+      "resource_id": "fl-at",
+      "name": "FAAST Assistive Technology",
+      "url": "https://faast.org/services/information-and-assistance/",
+      "origin": "data/public/florida-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-19"
+      }
+    },
+    {
+      "state": "CA",
+      "resource_id": "ca-at",
+      "name": "Ability Tools assistive technology program",
+      "url": "https://abilitytools.org/information-advocacy/",
+      "origin": "data/public/california-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-19"
+      }
+    },
+    {
+      "state": "VA",
+      "resource_id": "va-waiver",
+      "name": "Virginia CCC Plus Medicaid waiver screening",
+      "url": "https://www.dmas.virginia.gov/for-members/benefits-and-services/waivers/ccc-plus-waiver/",
+      "origin": "data/public/virginia-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-20"
+      }
+    },
+    {
+      "state": "VA",
+      "resource_id": "va-at",
+      "name": "Virginia Assistive Technology System",
+      "url": "https://dars.virginia.gov/assistive-technology/",
+      "origin": "data/public/virginia-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-20"
+      }
+    },
+    {
+      "state": "NC",
+      "resource_id": "nc-at",
+      "name": "North Carolina Assistive Technology Program",
+      "url": "https://www.ncdhhs.gov/divisions/employment-and-independence-people-disabilities/north-carolina-assistive-technology-program",
+      "origin": "data/public/north-carolina-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-20"
+      }
+    },
+    {
+      "state": "NC",
+      "resource_id": "nc-independent-living",
+      "name": "North Carolina Independent Living information and intake — purchase pause",
+      "url": "https://www.ncdhhs.gov/divisions/employment-and-independence-people-disabilities/independent-living-people-disabilities",
+      "origin": "data/public/north-carolina-resources.json",
+      "status": "existing-directory-lead",
+      "fresh_legal_review": false,
+      "original_verification": {
+        "record_status": "official_source_reviewed",
+        "last_reviewed_on": "2026-10-20"
+      }
+    }
+  ],
+  "retrieval_attempts": [
+    {
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=21301.",
+      "attempted_on": "2026-11-01",
+      "result": "403; full code not reviewed",
+      "next_step": "Obtain current official code text and exclusions; legislative summary retained separately."
+    },
+    {
+      "url": "https://www.legislature.mi.gov/documents/mcl/pdf/mcl-chap445.pdf",
+      "attempted_on": "2026-11-01",
+      "result": "403 in web and direct fetch; search excerpt is lead only",
+      "next_step": "Obtain current MCL445.1081-1087. No warranty claim promoted."
+    },
+    {
+      "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-445-1082",
+      "attempted_on": "2026-11-01",
+      "result": "502; no content review",
+      "next_step": "Retrieve alternative official current code."
+    },
+    {
+      "url": "https://cga.ct.gov/2026/sup/chap_700c.htm",
+      "attempted_on": "2026-11-01",
+      "result": "502 on main host; successful review through legislature prdext2 host",
+      "next_step": "Use reviewed supplement source, not failed endpoint."
+    }
+  ],
+  "open_questions": [
+    "Reconcile 2026 session amendments and current codification for enacted acts and legislative summaries.",
+    "Extract each state Medicaid equipment repair, loaner, emergency authorization, managed-care and EPSDT rules.",
+    "Review home and vehicle modification program limits, waiver eligibility, wait lists and appeals separately.",
+    "Review transport mode/provider and local service/complaint rules; federal baseline is not a state service guarantee.",
+    "Map reuse, ownership transfer, independent adaptation and warranty exclusions separately; do not equate repair with modification.",
+    "Verify case-specific complaint routes and named responsible agencies before public action templates.",
+    "Research remaining 33 states and DC; no absence claims based on this search."
+  ]
+}
