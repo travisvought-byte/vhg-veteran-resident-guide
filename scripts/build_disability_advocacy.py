@@ -2,6 +2,7 @@
 """Build the disability action hub from dated sources and reusable topic records."""
 import html
 import json
+from build_mobility_routes import STATES
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 def outputs():
@@ -16,7 +17,8 @@ def outputs():
   cards.append(f'<article id="{t["id"]}" class="topic"><p class="eyebrow">{html.escape(t["tag"])}</p><h3>{html.escape(t["title"])}</h3><p>{html.escape(t["summary"])}</p><details><summary>Policy requests and sources</summary><h4>Proposed Ohio request</h4><p>{html.escape(t["asks"]["OH"])}</p><h4>Proposed federal request</h4><p>{html.escape(t["asks"]["US"])}</p><ul>{citations}</ul></details><p><a href="{html.escape(t["help_url"],quote=True)}">{html.escape(t["help"])}</a></p><a class="button topic-action" href="#compose" data-topic="{t["id"]}">Write about this</a></article>')
  options=''.join(f'<option value="{t["id"]}">{html.escape(t["title"])}</option>' for t in data['topics'])
  default='Dear Ohio state lawmaker,\n\n'+data['topics'][0]['asks']['OH']+'\n\nPlease tell me what your office can do and how people with disabilities can take part.\n\nThank you.'
- page=(ROOT/'templates/disability-advocacy.html').read_text().replace('__CARDS__','\n'.join(cards)).replace('__OPTIONS__',options).replace('__DEFAULT__',html.escape(default)).replace('__DATA__',json.dumps(data,ensure_ascii=False).replace('<','\\u003c'))
+ state_options=''.join(f'<option value="{code}"'+(' selected' if code=='OH' else '')+f'>{name}</option>' for code,name in STATES.items())
+ page=(ROOT/'templates/disability-advocacy.html').read_text().replace('__STATES__',state_options).replace('__CARDS__','\n'.join(cards)).replace('__OPTIONS__',options).replace('__DEFAULT__',html.escape(default)).replace('__DATA__',json.dumps(data,ensure_ascii=False).replace('<','\\u003c'))
  return {'disability-advocacy.html':page}
 if __name__=='__main__':
  for path,text in outputs().items(): (ROOT/path).write_text(text)
