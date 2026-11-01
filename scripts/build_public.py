@@ -9,6 +9,7 @@ from state_registry import (load_registry, load_counties, state_resources, make_
 from bingo_edition import make_bingo
 from facilities_edition import make_facilities
 from unified_guide import unified_outputs
+from build_disability_advocacy import outputs as disability_advocacy_outputs
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -76,6 +77,7 @@ def outputs():
     for page in [s['page'] for s in states]:
         result['tests/fixtures/'+page] = result[page]
     result.update(unified_outputs(ROOT, result, states))
+    result.update(disability_advocacy_outputs())
     # Track public landing/sharing pages once; state redirects count at destination.
     for page in ['index.html', 'bingo.html', 'facilities.html'] + [s['share_page'] for s in states]:
         result[page] = re.sub(r'<script[^>]*data-goatcounter=[^>]*></script>', '', result[page])
