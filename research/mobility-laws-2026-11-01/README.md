@@ -1,43 +1,102 @@
-# Mobility issues and state laws: first research pass
+# State-by-state disability advocacy research matrix
 
-As of 2026-11-01. Research only: 17 states, 29 observations, 26 reviewed primary-publisher sources, eight issue families. Federal observations are separate. No public action letters or state-program records changed.
+As of 2026-11-01. Research pass 2: 50 states and DC tracked; selected evidence for 22 states; 40 observations and 36 reviewed primary-publisher sources. Eight issue families; federal observations remain separate. Public site content is unchanged.
 
-A reviewed cell means at least one bounded observation, not a complete legal review. Missing evidence means not reviewed, never no right. Legislative summaries and program gateways retain weaker labels. Existing-program leads are not new legal evidence.
+This matrix supports advocacy: compare protections, exclusions and accountability, then identify policy changes. It does not route individual service requests. A reviewed cell means at least one bounded observation, not a complete legal review. Unknown never means no right. Source types and version limits remain visible.
 
-## Barrier first, then responsible actor
+## Advocacy comparisons to develop
 
-| Barrier | Logic for the next route (analyst proposal) |
+These are bounded analyst comparisons, not state rankings or proof of real-world outcomes. Priority order is not scored: population affected, lived experience and enforcement data still need collection.
+
+| Issue | States | Documented difference | Policy direction | Evidence |
+| --- | --- | --- | --- | --- |
+| Repair-period backup payment | OH, WI, MN | Ohio reviewed rule excludes temporary repair loaner payment; Wisconsin and Minnesota policies provide conditional rental payment. | Develop a funded continuity-equipment policy. | [oh-payer-1](https://codes.ohio.gov/ohio-administrative-code/rule-5160-10-16); [wi-payer-1](https://www.forwardhealth.wi.gov/WIPortal/Subsystem/KW/Print.aspx?c=291&ia=1&nt=&p=1&s=2&sa=17); [mn-payer-1](https://www.dhs.state.mn.us/main/idcplg?IdcService=GET_DYNAMIC_CONVERSION&RevisionSelectionMethod=LatestReleased&dDocName=dhs16_140901) |
+| Temporary-equipment trigger | OH, KY, ME, MN | Ohio uses more than 21 days; Kentucky and Minnesota use more than ten working days; Maine uses as soon as feasible. | Define timely, suitable temporary equipment and responsibility for its cost. | [oh-loaner-1](https://codes.ohio.gov/ohio-revised-code/section-1345.91); [ky-loaner-1](https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=2239); [me-loaner-1](https://www.legislature.maine.gov/legis/statutes/10/title10sec1500-B.html); [mn-loaner-1](https://www.revisor.mn.gov/statutes/cite/325G.208) |
+| Equipment definitions | WI, MA, MN, ME | Reviewed protections use motorized, customized or broader assistive-device definitions. | Test an inclusive equipment definition for the proposed policy. | [wi-warranty-1](https://www.dhs.wisconsin.gov/disabilities/physical/lemonlaw.htm); [ma-warranty-1](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXV/Chapter93/Section107); [mn-warranty-1](https://www.revisor.mn.gov/statutes/cite/325G/full); [me-warranty-1](https://www.mainelegislature.org/legis/statutes/10/title10sec1500.html) |
+| Free-donation exclusion | IL | Illinois expressly excludes free-donation recipients from this Act’s consumer definition. | Review extending this statutory protection to qualifying donated-device recipients. | [il-donation-1](https://www.ilga.gov/Legislation/ILCS/Articles?ActID=2721&Chapter=BUSINESS+TRANSACTIONS&ChapterID=67&MajorTopic=BUSINESS+AND+EMPLOYMENT) |
+| Suitable backup equipment | ME, MN | Maine warranty text requires a comparable device; MHCP does not expect an equivalent customized chair on hand. | Define functional suitability and fund accessible backup inventory. | [me-loaner-1](https://www.legislature.maine.gov/legis/statutes/10/title10sec1500-B.html); [mn-program-loaner-1](https://www.dhs.state.mn.us/main/idcplg?IdcService=GET_DYNAMIC_CONVERSION&RevisionSelectionMethod=LatestReleased&dDocName=dhs16_140901) |
+| Response versus continuity | CT, OH, MN | Connecticut response/parts-order duties and Ohio/Minnesota loaner triggers target different repair bottlenecks. | Pair response standards with temporary-equipment protections. | [ct-timely-1](https://prdext2.cga.ct.gov/current/pub/chap_743q.htm); [oh-loaner-1](https://codes.ohio.gov/ohio-revised-code/section-1345.91); [mn-loaner-1](https://www.revisor.mn.gov/statutes/cite/325G.208) |
+
+**Repair-period backup payment:** Decision-makers: State Medicaid agencies and state legislatures. Limits: Payer and facility scopes differ; managed-care practice and suitable inventory remain unmeasured.
+
+**Temporary-equipment trigger:** Decision-makers: State legislatures and consumer-protection regulators. Limits: Different day units, alternate triggers and warranty scopes prevent a simple numeric ranking.
+
+**Equipment definitions:** Decision-makers: State legislatures. Limits: A narrower cited law does not prove the state lacks other protections.
+
+**Free-donation exclusion:** Decision-makers: Illinois legislature. Limits: Other rights remain possible; transferable warranties, donor duties and effects need research.
+
+**Suitable backup equipment:** Decision-makers: Legislatures, Medicaid agencies and manufacturers. Limits: Different legal mechanisms; no delivery-outcome data or full-state ranking.
+
+**Response versus continuity:** Decision-makers: State legislatures and consumer-protection regulators. Limits: Response or ordering deadlines are not repair-completion guarantees.
+
+## Advocacy questions by issue
+
+| Issue | What to establish before choosing a campaign |
 | --- | --- |
-| Parts/software withheld | Check device scope and manufacturer-access duties. Separate independent repair from warranty and insurance. |
-| Repeated defect | Check device age, warranty and statutory remedy triggers; manufacturer/dealer route may come before a new-law request. |
-| No usable chair during repair | Check warranty loaner/rental duties, payer reimbursement and supplier obligations separately. |
-| Approval or payment denied | Identify payer and plan type first; review the denial and applicable authorization/appeal process. |
-| Cannot enter/use home | Check program eligibility, modifications approval and housing duties separately. |
-| Vehicle adaptation needed | Check specific funding/program and vehicle rules; a benefit listing is not universal approval. |
-| Transit cannot be used | Identify transit mode/provider and local process; distinguish access rights from availability of a ride. |
-| Cannot remain in community | Check state services and federal integration conditions; do not promise a waiver slot. |
+| Parts, software and independent repair | Who can access parts, tools and software, for which devices, on what terms? |
+| Defective equipment and warranty remedies | Which devices, consumers, transfers and donated equipment qualify; what remedies are enforceable? |
+| Repair delays, loaners and downtime | What triggers response, parts ordering, temporary equipment and completion duties; who pays? |
+| Insurance and public-payer approvals | Which payer covers repair and backup mobility; what exclusions create discontinuity? |
+| Home accessibility and modifications | Which housing and modification duties apply; how do eligibility and funding exclusions affect independence? |
+| Vehicle adaptations | Which adaptation rights, approval restrictions and maintenance responsibilities apply? |
+| Public transportation access | What accessibility duties, service exclusions and accountability mechanisms apply? |
+| Community living and personal assistance | What supports community choice; what service limits and enforcement gaps remain? |
 
 ## State comparison
 
 | State | Observations and scope | Remaining work |
-| --- | --- |
-| Ohio (guide-state) | Warranty loaners, Medicaid repair/payment rules, and waiver home/vehicle services are separate routes. [oh-warranty](https://codes.ohio.gov/ohio-revised-code/section-1345.91) [oh-dme](https://codes.ohio.gov/ohio-administrative-code/rule-5160-10-16) [oh-hcbs](https://codes.ohio.gov/ohio-administrative-code/rule-5160-46-06) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
-| Pennsylvania (guide-state) | Motorized-wheelchair warranty remedies; independent-repair access remains a separate research question. [pa-warranty](https://www.palegis.us/statutes/unconsolidated/law-information/view-statute?ActNum=0117.&SessInd=0&SessYr=1994&txtType=PDF) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
-| New York (guide-state) | Wheelchair warranty replacement/refund triggers; pending repair proposals are not treated as enacted. [ny-warranty](https://www.nysenate.gov/legislation/laws/GBS/670*2) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
-| Michigan (guide-state) | Medicaid repair-policy gateway reviewed; wheelchair warranty statute retrieval remains blocked. [mi-payer](https://www.michigan.gov/mdhhs/doing-business/providers/providers/billingreimbursement/medical-suppliers-orthotists-prosthetists-dme-dealers) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
-| Kentucky (guide-state) | Assistive-device warranty and conditional substitute-device or rental-reimbursement duties. [ky-warranty](https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=2235) [ky-definitions](https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=2234) [ky-loaner](https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=2239) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
-| Utah (guide-state) | Assistive-technology warranty has a price threshold and device exclusions. [ut-warranty](https://le.utah.gov/xcode/Title70A/Chapter2/C70A-2-P8_1800010118000101.pdf) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
-| Indiana (guide-state) | Medicaid repair authorization, warranty-payment exclusion and rental-provider responsibility. [in-payer](https://www.in.gov/medicaid/providers/files/modules/durable-and-home-medical-equipment-and-supplies.pdf) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
-| West Virginia (guide-state) | Assistive-device warranty requirement reviewed; remedy details remain to extract. [wv-warranty](https://code.wvlegislature.gov/46A-6E-2/) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
-| Texas (guide-state) | STAR+PLUS HCBS adaptive-aid and vehicle-modification pathway; older manual revision needs current-plan checks. [tx-program](https://fhb.hhs.texas.gov/handbooks/starplus-handbook/6400-adaptive-aids-medical-supplies) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
-| Florida (guide-state) | Assistive-technology warranty requirement reviewed; definitions and remedy procedure remain to extract. [fl-warranty](https://www.flsenate.gov/Laws/Statutes/2026/0427.803) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| --- | --- | --- |
+| Alabama (unreviewed) | No state-specific primary-source observation reviewed yet.  | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Alaska (unreviewed) | No state-specific primary-source observation reviewed yet.  | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Arizona (unreviewed) | No state-specific primary-source observation reviewed yet.  | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Arkansas (unreviewed) | No state-specific primary-source observation reviewed yet.  | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
 | California (guide-state) | Chaptered powered-wheelchair repair-access summary reviewed; full current code and component limits remain open. [ca-summary](https://sbp.senate.ca.gov/system/files/2024-12/2023-2024-legislative-bill-summary-final.pdf) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
-| Virginia (guide-state) | Assistive-device warranty remedies depend on device and defect definitions. [va-warranty](https://law.lis.virginia.gov/vacodefull/title59.1/chapter40/) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
-| North Carolina (guide-state) | State public-place and transportation access text reviewed; repair-law questions remain open. [nc-access](https://www.ncleg.gov/enactedlegislation/statutes/html/bychapter/chapter_168.html) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
 | Colorado (comparator) | Powered-wheelchair repair-resource access established by enacted legislative summaries; current-code reconciliation remains open. [co-repair](https://www.leg.colorado.gov/bills/hb22-1031) [co-update](https://www.leg.colorado.gov/bills/hb24-1121) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
-| Washington (comparator) | Mobility-device repair access covers broader equipment classes than powered chairs alone. [wa-repair](https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/Session%20Laws/Senate/5680.SL.htm) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
-| Nevada (comparator) | Mobility-device repair access and specified parts-pairing restrictions; approval-date commencement verified. [nv-repair](https://www.leg.state.nv.us/Statutes/83rd2025/Stats202506.html) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
 | Connecticut (comparator) | Dealer repair-response/parts-order duties, warranty remedies and specified insurance authorization restrictions. [ct-repair](https://prdext2.cga.ct.gov/current/pub/chap_743q.htm) [ct-insurance](https://prdext2.cga.ct.gov/2026/sup/chap_700c.htm) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Delaware (unreviewed) | No state-specific primary-source observation reviewed yet.  | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| District of Columbia (unreviewed) | No state-specific primary-source observation reviewed yet.  | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Florida (guide-state) | Assistive-technology warranty requirement reviewed; definitions and remedy procedure remain to extract. [fl-warranty](https://www.flsenate.gov/Laws/Statutes/2026/0427.803) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Georgia (unreviewed) | No state-specific primary-source observation reviewed yet.  | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Hawaii (unreviewed) | No state-specific primary-source observation reviewed yet.  | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Idaho (unreviewed) | No state-specific primary-source observation reviewed yet.  | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Illinois (comparator) | Assistive Technology Warranty Act expressly excludes recipients of free donated devices from its consumer definition. [il-at-warranty](https://www.ilga.gov/Legislation/ILCS/Articles?ActID=2721&Chapter=BUSINESS+TRANSACTIONS&ChapterID=67&MajorTopic=BUSINESS+AND+EMPLOYMENT) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Indiana (guide-state) | Medicaid repair authorization, warranty-payment exclusion and rental-provider responsibility. [in-payer](https://www.in.gov/medicaid/providers/files/modules/durable-and-home-medical-equipment-and-supplies.pdf) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Iowa (unreviewed) | No state-specific primary-source observation reviewed yet.  | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Kansas (unreviewed) | No state-specific primary-source observation reviewed yet.  | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Kentucky (guide-state) | Assistive-device warranty and conditional substitute-device or rental-reimbursement duties. [ky-warranty](https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=2235) [ky-definitions](https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=2234) [ky-loaner](https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=2239) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Louisiana (unreviewed) | No state-specific primary-source observation reviewed yet.  | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Maine (comparator) | Broad device definitions and comparable temporary equipment during qualifying warranty repair. [me-definitions](https://www.mainelegislature.org/legis/statutes/10/title10sec1500.html) [me-warranty](https://www.legislature.maine.gov/legis/statutes/10/title10sec1500-B.html) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Maryland (unreviewed) | No state-specific primary-source observation reviewed yet.  | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Massachusetts (comparator) | Customized manual and motorized wheelchair warranties and statutory arbitration option. [ma-customized-warranty](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXV/Chapter93/Section107) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Michigan (guide-state) | Medicaid repair-policy gateway reviewed; wheelchair warranty statute retrieval remains blocked. [mi-payer](https://www.michigan.gov/mdhhs/doing-business/providers/providers/billingreimbursement/medical-suppliers-orthotists-prosthetists-dme-dealers) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Minnesota (comparator) | Broad assistive-device warranty, conditional temporary replacement and a separate MHCP loaner policy. [mn-definitions](https://www.revisor.mn.gov/statutes/cite/325G/full) [mn-warranty](https://www.revisor.mn.gov/statutes/cite/325G.204) [mn-temporary](https://www.revisor.mn.gov/statutes/cite/325G.208) [mn-mhcp-mobility](https://www.dhs.state.mn.us/main/idcplg?IdcService=GET_DYNAMIC_CONVERSION&RevisionSelectionMethod=LatestReleased&dDocName=dhs16_140901) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Mississippi (unreviewed) | No state-specific primary-source observation reviewed yet.  | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Missouri (unreviewed) | No state-specific primary-source observation reviewed yet.  | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Montana (unreviewed) | No state-specific primary-source observation reviewed yet.  | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Nebraska (unreviewed) | No state-specific primary-source observation reviewed yet.  | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Nevada (comparator) | Mobility-device repair access and specified parts-pairing restrictions; approval-date commencement verified. [nv-repair](https://www.leg.state.nv.us/Statutes/83rd2025/Stats202506.html) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| New Hampshire (unreviewed) | No state-specific primary-source observation reviewed yet.  | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| New Jersey (unreviewed) | No state-specific primary-source observation reviewed yet.  | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| New Mexico (unreviewed) | No state-specific primary-source observation reviewed yet.  | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| New York (guide-state) | Wheelchair warranty replacement/refund triggers; pending repair proposals are not treated as enacted. [ny-warranty](https://www.nysenate.gov/legislation/laws/GBS/670*2) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| North Carolina (guide-state) | State public-place and transportation access text reviewed; repair-law questions remain open. [nc-access](https://www.ncleg.gov/enactedlegislation/statutes/html/bychapter/chapter_168.html) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| North Dakota (unreviewed) | No state-specific primary-source observation reviewed yet.  | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Ohio (guide-state) | Warranty loaners, Medicaid repair/payment rules, and waiver home/vehicle services are separate routes. [oh-warranty](https://codes.ohio.gov/ohio-revised-code/section-1345.91) [oh-dme](https://codes.ohio.gov/ohio-administrative-code/rule-5160-10-16) [oh-hcbs](https://codes.ohio.gov/ohio-administrative-code/rule-5160-46-06) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Oklahoma (unreviewed) | No state-specific primary-source observation reviewed yet.  | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Oregon (unreviewed) | No state-specific primary-source observation reviewed yet.  | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Pennsylvania (guide-state) | Motorized-wheelchair warranty remedies; independent-repair access remains a separate research question. [pa-warranty](https://www.palegis.us/statutes/unconsolidated/law-information/view-statute?ActNum=0117.&SessInd=0&SessYr=1994&txtType=PDF) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Rhode Island (unreviewed) | No state-specific primary-source observation reviewed yet.  | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| South Carolina (unreviewed) | No state-specific primary-source observation reviewed yet.  | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| South Dakota (unreviewed) | No state-specific primary-source observation reviewed yet.  | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Tennessee (unreviewed) | No state-specific primary-source observation reviewed yet.  | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Texas (guide-state) | STAR+PLUS HCBS adaptive-aid and vehicle-modification pathway; older manual revision needs current-plan checks. [tx-program](https://fhb.hhs.texas.gov/handbooks/starplus-handbook/6400-adaptive-aids-medical-supplies) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Utah (guide-state) | Assistive-technology warranty has a price threshold and device exclusions. [ut-warranty](https://le.utah.gov/xcode/Title70A/Chapter2/C70A-2-P8_1800010118000101.pdf) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Vermont (unreviewed) | No state-specific primary-source observation reviewed yet.  | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Virginia (guide-state) | Assistive-device warranty remedies depend on device and defect definitions. [va-warranty](https://law.lis.virginia.gov/vacodefull/title59.1/chapter40/) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Washington (comparator) | Mobility-device repair access covers broader equipment classes than powered chairs alone. [wa-repair](https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/Session%20Laws/Senate/5680.SL.htm) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| West Virginia (guide-state) | Assistive-device warranty requirement reviewed; remedy details remain to extract. [wv-warranty](https://code.wvlegislature.gov/46A-6E-2/) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Wisconsin (comparator) | Motorized-device warranty guidance and Medicaid repair-rental coverage; scopes differ. [wi-warranty-guidance](https://www.dhs.wisconsin.gov/disabilities/physical/lemonlaw.htm) [wi-medicaid-mobility](https://www.forwardhealth.wi.gov/WIPortal/Subsystem/KW/Print.aspx?c=291&ia=1&nt=&p=1&s=2&sa=17) | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
+| Wyoming (unreviewed) | No state-specific primary-source observation reviewed yet.  | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |
 
 ## Federal layer
 
@@ -95,25 +154,59 @@ T = text reviewed; S = legislative summary only; R = program gateway only; U = n
 
 | State | repair-access | warranty | downtime | payer | home | vehicle | transit | community |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OH | U | T | T | T | T | T | U | T |
-| PA | U | T | U | U | U | U | U | U |
-| NY | U | T | U | U | U | U | U | U |
-| MI | U | U | U | R | U | U | U | U |
-| KY | U | T | T | U | U | U | U | U |
-| UT | U | T | U | U | U | U | U | U |
-| IN | U | U | U | T | U | U | U | U |
-| WV | U | T | U | U | U | U | U | U |
-| TX | U | U | U | T | U | T | U | U |
-| FL | U | T | U | U | U | U | U | U |
+| AL | U | U | U | U | U | U | U | U |
+| AK | U | U | U | U | U | U | U | U |
+| AZ | U | U | U | U | U | U | U | U |
+| AR | U | U | U | U | U | U | U | U |
 | CA | S | U | U | U | U | U | U | U |
-| VA | U | T | U | U | U | U | U | U |
-| NC | U | U | U | U | U | U | T | U |
 | CO | S | U | U | U | U | U | U | U |
-| WA | T | U | U | U | U | U | U | U |
-| NV | T | U | U | U | U | U | U | U |
 | CT | U | T | T | T | U | U | U | U |
+| DE | U | U | U | U | U | U | U | U |
+| DC | U | U | U | U | U | U | U | U |
+| FL | U | T | U | U | U | U | U | U |
+| GA | U | U | U | U | U | U | U | U |
+| HI | U | U | U | U | U | U | U | U |
+| ID | U | U | U | U | U | U | U | U |
+| IL | U | T | U | U | U | U | U | U |
+| IN | U | U | U | T | U | U | U | U |
+| IA | U | U | U | U | U | U | U | U |
+| KS | U | U | U | U | U | U | U | U |
+| KY | U | T | T | U | U | U | U | U |
+| LA | U | U | U | U | U | U | U | U |
+| ME | U | T | T | U | U | U | U | U |
+| MD | U | U | U | U | U | U | U | U |
+| MA | U | T | U | U | U | U | U | U |
+| MI | U | U | U | R | U | U | U | U |
+| MN | U | T | T | T | U | U | U | U |
+| MS | U | U | U | U | U | U | U | U |
+| MO | U | U | U | U | U | U | U | U |
+| MT | U | U | U | U | U | U | U | U |
+| NE | U | U | U | U | U | U | U | U |
+| NV | T | U | U | U | U | U | U | U |
+| NH | U | U | U | U | U | U | U | U |
+| NJ | U | U | U | U | U | U | U | U |
+| NM | U | U | U | U | U | U | U | U |
+| NY | U | T | U | U | U | U | U | U |
+| NC | U | U | U | U | U | U | T | U |
+| ND | U | U | U | U | U | U | U | U |
+| OH | U | T | T | T | T | T | U | T |
+| OK | U | U | U | U | U | U | U | U |
+| OR | U | U | U | U | U | U | U | U |
+| PA | U | T | U | U | U | U | U | U |
+| RI | U | U | U | U | U | U | U | U |
+| SC | U | U | U | U | U | U | U | U |
+| SD | U | U | U | U | U | U | U | U |
+| TN | U | U | U | U | U | U | U | U |
+| TX | U | U | U | T | U | T | U | U |
+| UT | U | T | U | U | U | U | U | U |
+| VT | U | U | U | U | U | U | U | U |
+| VA | U | T | U | U | U | U | U | U |
+| WA | T | U | U | U | U | U | U | U |
+| WV | U | T | U | U | U | U | U | U |
+| WI | U | T | T | T | U | U | U | U |
+| WY | U | U | U | U | U | U | U | U |
 
-26 of 136 state/issue cells have some evidence. This is not a completeness percentage. Deep repair/warranty work is ahead of home, vehicle, transit and community-service research.
+36 of 408 state/issue cells have some evidence. This is not a completeness percentage. The matrix tracks all jurisdictions, but substantive repair/warranty research remains ahead of home, vehicle, transit and community-service research. A filled cell is not a finding that protections are adequate.
 
 ## Next research queue
 
@@ -123,7 +216,9 @@ T = text reviewed; S = legislative summary only; R = program gateway only; U = n
 - Review transport mode/provider and local service/complaint rules; federal baseline is not a state service guarantee.
 - Map reuse, ownership transfer, independent adaptation and warranty exclusions separately; do not equate repair with modification.
 - Verify case-specific complaint routes and named responsible agencies before public action templates.
-- Research remaining 33 states and DC; no absence claims based on this search.
+- Review the 28 states plus DC with no observations; tracked rows are not completed reviews.
+- Reconcile the dated New Jersey regulator compilation against current rules before admitting new claims.
+- For advocacy prioritization, measure people affected, real-world downtime and enforcement outcomes; do not infer impact from statute text alone.
 
 The JSON also preserves 53 leads from existing state resource records for follow-on research. Their URLs were not all freshly retrieved; original resource IDs and origin files are retained. No lead is treated as law.
 
@@ -155,6 +250,16 @@ The JSON also preserves 53 leads from existing state resource records for follow
 - **us-medicare**: [Medicare wheelchairs and scooters](https://www.medicare.gov/coverage/wheelchairs-scooters); official-guidance; locator Eligibility, provider requirements and prior approval; reviewed 2026-11-01. Current publisher page retrieved; later amendments and implementation not exhaustively reconciled.
 - **us-transit**: [FTA transit complaint process](https://www.transit.dot.gov/regulations-and-guidance/civil-rights-ada/file-complaint-fta); official-guidance; locator Who may file; local complaint route; reviewed 2026-11-01. Current publisher page retrieved; later amendments and implementation not exhaustively reconciled.
 - **us-community**: [DOJ community integration guidance](https://www.ada.gov/topics/community-integration/); official-guidance; locator Olmstead conditions and community-based service examples; reviewed 2026-11-01. Current publisher page retrieved; later amendments and implementation not exhaustively reconciled.
+- **wi-warranty-guidance**: [Wisconsin DHS motorized wheelchair lemon-law guidance](https://www.dhs.wisconsin.gov/disabilities/physical/lemonlaw.htm); official-guidance; locator Equipment scope; remedies; complaint discussion; reviewed 2026-11-01. Agency explanation of Wis. Stat.134.87; underlying current code retrieval timed out. Guidance is not a fresh code reconciliation.
+- **wi-medicaid-mobility**: [ForwardHealth mobility-device handbook](https://www.forwardhealth.wi.gov/WIPortal/Subsystem/KW/Print.aspx?c=291&ia=1&nt=&p=1&s=2&sa=17); program-manual; locator Topic 1777, Second Mobility Device; reviewed 2026-11-01. Live BadgerCare Plus/Medicaid handbook checked November 1, 2026; plan-specific implementation not exhaustively reviewed.
+- **il-at-warranty**: [Illinois Assistive Technology Warranty Act](https://www.ilga.gov/Legislation/ILCS/Articles?ActID=2721&Chapter=BUSINESS+TRANSACTIONS&ChapterID=67&MajorTopic=BUSINESS+AND+EMPLOYMENT); current-code; locator 815 ILCS 301/5, consumer definition; reviewed 2026-11-01. Primary-publisher indexed statutory text reviewed; direct full-page retrieval intermittent. ILCS warns recent public acts may not yet be incorporated. No universal donation-rights conclusion.
+- **me-definitions**: [Maine assistive-device definitions](https://www.mainelegislature.org/legis/statutes/10/title10sec1500.html); current-code; locator 10 MRS 1500(1)-(3); reviewed 2026-11-01. Publisher extraction dated October 5, 2026; device, consumer and nonconformity definitions checked.
+- **me-warranty**: [Maine assistive-device express warranty](https://www.legislature.maine.gov/legis/statutes/10/title10sec1500-B.html); current-code; locator 10 MRS 1500-B(1)-(2); reviewed 2026-11-01. Publisher extraction dated October 5, 2026; no separate review of every later session act.
+- **mn-definitions**: [Minnesota assistive-device definitions](https://www.revisor.mn.gov/statutes/cite/325G/full); current-code; locator 325G.203 subd.2; reviewed 2026-11-01. 2026 current chapter publisher text; only the assistive-device portion used, not unrelated consumer statutes.
+- **mn-warranty**: [Minnesota express warranties](https://www.revisor.mn.gov/statutes/cite/325G.204); current-code; locator 325G.204 subds.1-2; reviewed 2026-11-01. 2026 Minnesota Statutes publisher text.
+- **mn-temporary**: [Minnesota temporary replacement duty](https://www.revisor.mn.gov/statutes/cite/325G.208); current-code; locator 325G.208 subds.1-2; reviewed 2026-11-01. 2026 Minnesota Statutes; working-day and alternative repeat-defect conditions retained separately.
+- **mn-mhcp-mobility**: [MHCP mobility-device provider manual](https://www.dhs.state.mn.us/main/idcplg?IdcService=GET_DYNAMIC_CONVERSION&RevisionSelectionMethod=LatestReleased&dDocName=dhs16_140901); program-manual; locator Eligible Providers; Loaner Wheelchairs; Billing; reviewed 2026-11-01. Revised October 1, 2026. Short loaner paragraph and longer-rental authorization billing instruction read together; managed-care details not exhaustively reviewed.
+- **ma-customized-warranty**: [Massachusetts customized-wheelchair law](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXV/Chapter93/Section107); current-code; locator MGL c.93 s.107(A),(B),(D),(F); reviewed 2026-11-01. Current publisher law text, not pending S.2662. Later enactments not exhaustively reconciled; nonconformity-definition wording requires caution.
 
 ## Failed or alternate retrievals
 
@@ -162,3 +267,7 @@ The JSON also preserves 53 leads from existing state resource records for follow
 - https://www.legislature.mi.gov/documents/mcl/pdf/mcl-chap445.pdf: 403 in web and direct fetch; search excerpt is lead only. Next: Obtain current MCL445.1081-1087. No warranty claim promoted.
 - https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-445-1082: 502; no content review. Next: Retrieve alternative official current code.
 - https://cga.ct.gov/2026/sup/chap_700c.htm: 502 on main host; successful review through legislature prdext2 host. Next: Use reviewed supplement source, not failed endpoint.
+- https://docs.legis.wisconsin.gov/statutes/statutes/134/87/3/c: Current statute retrieval timed out; agency explanation used with guidance label.. Next: Reconcile current statutory text and amendments.
+- https://www.njconsumeraffairs.gov/regulations/Chapter-45A-Administrative-Rules-of-the-Division-of-Consumer-Affairs.pdf: Indexed official PDF text retrieved, but compilation revision is June20,2022; direct open returned403. No current-law observation added.. Next: Find current statutory/regulatory publication and confirm later amendments; NJ cells remain not reviewed.
+- https://malegislature.gov/Bills/194/S2662.Html: Proposed amendments surfaced; not used as enacted protection.. Next: Check official bill history and any enacted chapter before recording as law.
+- https://my.ilga.gov/ftp/ILCS/Ch%200815/Act%200301/081503010K5.html: Direct retrieval502; primary-publisher indexed definition reviewed on the main Act page.. Next: Obtain stable full text and reconcile recent public acts.

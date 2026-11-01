@@ -19,4 +19,15 @@ rejects(lambda d:d['inferences'][0].update(premise_claim_ids=['imaginary']),'Inf
 rejects(lambda d:d['existing_directory_leads'][0].update(fresh_legal_review=True),'Old directory lead')
 rejects(lambda d:d['claims'][1]['timing'].update(unit=''),'Timing must retain')
 rejects(lambda d:d['state_issue_matrix'].pop(),'Incomplete state/issue')
-print('PASS mobility map regressions: unknowns, jurisdictions, summaries, proposals, dates, inferences, lead freshness, timing and matrix completeness.')
+rejects(lambda d:d['states'].pop(),'National matrix')
+rejects(lambda d:d['advocacy_comparisons'][0].update(status='confirmed-law'),'Comparison mislabeled')
+rejects(lambda d:d['advocacy_comparisons'][0].update(premise_claim_ids=['imaginary']),'Comparison without evidence')
+rejects(lambda d:d['advocacy_comparisons'][0].update(states_compared=['CA']),'Comparison state/evidence')
+rejects(lambda d:d['advocacy_comparisons'][0].update(issue='home'),'Comparison issue/evidence')
+rejects(lambda d:d['advocacy_comparisons'][0].update(limitations=''),'Comparison needs bounded')
+assert len(base['states'])==51 and len(base['state_issue_matrix'])==408
+assert len({c['jurisdiction'] for c in base['claims'] if c['jurisdiction']!='US'})==22
+mn=next(c for c in base['claims'] if c['id']=='mn-loaner-1');assert mn['timing']['unit']=='working-days' and mn['timing']['operator']=='>'
+assert all(not c['claim_ids'] for c in base['state_issue_matrix'] if c['state']=='NJ')
+assert 'donation' in next(c for c in base['claims'] if c['id']=='il-donation-1')['statement']
+print('PASS mobility map regressions: unknowns, jurisdictions, summaries, proposals, dates, inferences, lead freshness, timing, national matrix completeness and evidence-linked advocacy comparisons.')

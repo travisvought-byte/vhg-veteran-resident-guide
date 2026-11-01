@@ -222,3 +222,11 @@ An in-page action record holds the office contacted, contact date, response and 
 Process links checked November 1, 2026: [Medicare appeal instructions](https://www.medicare.gov/providers-services/claims-appeals-complaints/appeals), [FTA complaint instructions](https://www.transit.dot.gov/regulations-and-guidance/civil-rights-ada/file-complaint-fta), and [USAGov official contacts](https://www.usa.gov/elected-officials). These navigation additions do not expand the reviewed state-law snapshot.
 
 Validation: `node tests/advocacy-actions.cjs` covers all 51 state entry choices, request routing, preservation of drafts, guided stories, exact record exports, follow-up guards and private-text clearing. Browser regression coverage lives in the existing advocacy and mobility browser suites.
+
+### State-by-state advocacy matrix, research pass 2
+
+The existing [mobility-law research matrix](research/mobility-laws-2026-11-01/README.md) now tracks all 50 states and DC across eight issue families. Selected evidence covers 22 states, with 40 observations and 36 primary-publisher sources. This is a research inventory, not a 51-jurisdiction completed review.
+
+The new pass adds Illinois, Maine, Massachusetts, Minnesota and Wisconsin, plus six evidence-linked advocacy comparisons covering backup-equipment payment, temporary-equipment triggers, device definitions, donated-device exclusion, functional suitability and repair bottlenecks. The JSON remains research-only; the public site's approved snapshot and individual-help flows are unchanged. New Jersey remains unreviewed pending reconciliation of a dated regulator compilation.
+
+Run `python3 scripts/validate_mobility_law_map.py --write` to regenerate the matrix report and `python3 tests/mobility_law_map.py` to check evidence boundaries and comparison premises.
