@@ -25,6 +25,8 @@
   $('subject').value=topic.subject;$('message').value=(scope==='OH'?'Dear Ohio state lawmaker,':'Dear member of Congress,')+'\n\n'+intro+topic.asks[scope]+(story?'\n\n'+story:'')+'\n\n'+close+'\n\nThank you.';
   contacts();count();$('selection-status').textContent='Message rebuilt from your current choices. Review and edit it before sharing.';$('action-status').textContent='';if(focus)$('message').focus();
  }
+ function startLinks(){const state=$('start-state').value;document.querySelectorAll('[data-barrier]').forEach(a=>{const u=new URL(a.href);u.searchParams.set('state',state);a.href=u.href;});const u=new URL($('start-state-policy').href);u.searchParams.set('state',state);$('start-state-policy').href=u.href;const guideStates=['OH','PA','NY','MI','KY','UT','IN','VA','TX','FL','CA','NC','WV'];$('start-guide').href=guideStates.includes(state)?'./?state='+state:'./';}
+ const entryState=new URLSearchParams(location.search).get('state');if([...$('start-state').options].some(o=>o.value===entryState))$('start-state').value=entryState;$('start-state').addEventListener('change',startLinks);startLinks();
  $('build').addEventListener('click',()=>build());for(const id of ['topic','scope','format'])$(id).addEventListener('change',changed);$('message').addEventListener('input',count);
  document.querySelectorAll('[data-topic]').forEach(a=>a.addEventListener('click',()=>{$('topic').value=a.dataset.topic;changed();$('topic').focus();}));
  function hasText(){if($('message').value.trim())return true;$('action-status').textContent='Build or write a message first.';return false;}
