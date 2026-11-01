@@ -65,6 +65,7 @@ function setState(state,initial=false){
  $('aid-open').hidden=state!=='OH';document.querySelectorAll('.ohio-only').forEach(e=>{e.hidden=state!=='OH'});document.querySelector('.office-directory summary').textContent='Browse '+config.name+(state==='VA'?' county and city contacts':' county contacts');
  $('office-search').placeholder='Search '+config.name+(state==='VA'?' counties or independent cities':' counties');
  document.title=config.name+' | Veteran Resident Resource Guide';
+ document.querySelectorAll('[data-mobility-route]').forEach(a=>a.href='mobility-rights.html?state='+state);
  document.querySelectorAll('a[href^="share"]').forEach(a=>a.href=config.sharePage);
  document.querySelectorAll('.footer-links a').forEach(a=>{if(a.textContent==='County contact data')a.href=config.files.offices;if(a.textContent==='Resource data')a.href=config.files.resources});
  document.querySelectorAll('#urgent-help a[href^="?view="]').forEach(a=>{const u=new URL(a.href,location.href);u.searchParams.set('state',state);a.href=u.href});
