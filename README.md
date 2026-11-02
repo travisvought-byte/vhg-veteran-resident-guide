@@ -225,7 +225,7 @@ Validation: `node tests/advocacy-actions.cjs` covers all 51 state entry choices,
 
 ### State-by-state advocacy matrix, research pass 2
 
-The existing [mobility-law research matrix](research/mobility-laws-2026-11-01/README.md) now tracks all 50 states and DC across nine issue families. All 50 states and DC have a minimum substantive official-source baseline, with 70 observations and 66 primary-publisher sources. Each baseline records scope, limitations, review date, responsible actor and an advocacy question. This is a research inventory, not a comprehensive review of every issue in every jurisdiction.
+The existing [mobility-law research matrix](research/mobility-laws-2026-11-01/README.md) now tracks all 50 states and DC across nine issue families. All 50 states and DC have a minimum substantive official-source baseline, with 86 observations and 75 primary-publisher sources. Each baseline records scope, limitations, review date, responsible actor and an advocacy question. This is a research inventory, not a comprehensive review of every issue in every jurisdiction.
 
 The new pass adds Illinois, Maine, Massachusetts, Minnesota and Wisconsin, plus six evidence-linked advocacy comparisons covering backup-equipment payment, temporary-equipment triggers, device definitions, donated-device exclusion, functional suitability and repair bottlenecks. The JSON remains research-only; the public site's approved snapshot and individual-help flows are unchanged. New Jersey remains unreviewed pending reconciliation of a dated regulator compilation.
 

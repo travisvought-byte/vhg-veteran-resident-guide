@@ -28,11 +28,21 @@ rejects(lambda d:d['advocacy_comparisons'][0].update(limitations=''),'Comparison
 assert len(base['states'])==51 and len(base['state_issue_matrix'])==459
 assert len({c['jurisdiction'] for c in base['claims'] if c['jurisdiction']!='US'})==51
 mn=next(c for c in base['claims'] if c['id']=='mn-loaner-1');assert mn['timing']['unit']=='working-days' and mn['timing']['operator']=='>'
-assert all(not c['claim_ids'] for c in base['state_issue_matrix'] if c['state']=='NJ' and c['issue']!='public-access')
+assert all(not c['claim_ids'] for c in base['state_issue_matrix'] if c['state']=='NJ' and c['issue'] not in {'public-access','warranty','downtime'})
 assert len(base['state_baselines'])==51
 rejects(lambda d:d['state_baselines'].pop(),'Minimum baseline')
 rejects(lambda d:d['state_baselines'][0].update(claim_id='us-medicare-repair-1'),'Baseline needs substantive')
 rejects(lambda d:d['state_baselines'][0].update(responsible_actor=''),'Baseline needs accountable')
 rejects(lambda d:d['claims'][0].update(reviewed_on='2099-01-01'),'Future claim review')
 assert 'donation' in next(c for c in base['claims'] if c['id']=='il-donation-1')['statement']
+or_loaner=next(c for c in base['claims'] if c['id']=='or-loaner-1')
+assert or_loaner['timing']['operator']=='>' and or_loaner['timing']['value']==7 and or_loaner['timing']['unit']=='days'
+assert 'safety' in or_loaner['timing']['trigger_note']
+mi_clock=next(c for c in base['claims'] if c['id']=='mi-remedy-clock-1');assert mi_clock['timing']['unit']=='business-days'
+assert '2025' in next(s for s in base['sources'] if s['id']=='mi-wheelchair-act')['version_note']
+assert next(s for s in base['sources'] if s['id']=='mi-wheelchair-act')['kind']=='historical-code'
+ny=next(c for c in base['claims'] if c['id']=='ny-backup-payer-1');assert ny['effective_on']=='2026-01-01' and 'March 1' in ny['effective_date_note']
+assert all(next(s for s in base['sources'] if s['id']==sid)['kind']=='program-manual' for sid in ny['source_ids'])
+assert next(s for s in base['sources'] if s['id']=='nj-wheelchair-guidance')['kind']=='official-guidance'
+assert not any('scdhhs.gov' in s['url'] for s in base['sources'])
 print('PASS mobility map regressions: unknowns, jurisdictions, summaries, proposals, dates, inferences, lead freshness, timing, national matrix completeness and evidence-linked advocacy comparisons.')
