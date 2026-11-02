@@ -4,7 +4,7 @@ import {createPlan,identifyTopics,isUrgent,planToEmail} from "../assistant/engin
 
 const read=file=>JSON.parse(readFileSync(new URL("../"+file,import.meta.url),"utf8"));
 import {STATE_FILES as stateFiles, STATES} from "../assistant/state-files.mjs";
-const registry=read("states/registry.json");
+const registry=read("states/registry.json").filter(x=>!x.starter);
 assert.equal(Object.keys(STATES).length,registry.length);
 assert.deepEqual(Object.keys(stateFiles).sort(),registry.map(x=>x.code).sort());
 for(const entry of registry){assert.deepEqual(stateFiles[entry.code],[entry.resources,entry.offices]);}

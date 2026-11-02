@@ -40,7 +40,7 @@ async function clickCopy(t){
   await clickCopy(t);
   assert.equal(t.captures.length,1,s.code+' copies one handoff');
   let copy=t.captures[0];
-  assert(copy.includes('Location: '+s.name+' · '+county+' County'),s.code+' correct location');
+  assert(copy.includes('Location: '+s.name+' · '+(office.county_type==='statewide'?county:county+' County')),s.code+' correct location');
   assert(copy.includes(office.phone),s.code+' includes published phone');
   assert(copy.includes('Source: https://'),s.code+' includes source link');
   assert(copy.includes('Need: Benefits or help paying for care'),s.code+' contextualizes need');

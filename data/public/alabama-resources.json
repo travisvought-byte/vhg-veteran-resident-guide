@@ -1,0 +1,1087 @@
+[
+  {
+    "program_id": "cms-care-compare",
+    "name": "Medicare Care Compare",
+    "official_url": "https://www.medicare.gov/care-compare/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "care_facilities"
+    ],
+    "description": "Compare published Medicare provider and quality information.",
+    "next_step": "Compare published Medicare provider and quality information.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "identity": "official_search_extract_only",
+      "contact": "official_search_extract_only",
+      "eligibility": "official_search_extract_only",
+      "last_reviewed_on": "2026-10-02"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.medicare.gov/care-compare/"
+    },
+    "organization": "Centers for Medicare & Medicaid Services",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-aid-attendance-housebound",
+    "name": "Pension additions: Aid and Attendance or Housebound",
+    "official_url": "https://www.va.gov/pension/aid-attendance-housebound/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "Extra monthly payments added to VA pension for qualifying veterans or survivors who need daily help or are housebound.",
+    "next_step": "Ask an accredited representative about pension eligibility and Aid and Attendance. For a nursing home resident, ask about VA Form 21-0779; medical evidence is also required.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/pension/aid-attendance-housebound/"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-dic",
+    "name": "Dependency and Indemnity Compensation",
+    "official_url": "https://www.va.gov/family-and-caregiver-benefits/survivor-compensation/dependency-indemnity-compensation/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "A potential survivor benefit when a service member died in the line of duty or a veteran’s death meets VA’s service-related or other qualifying rules.",
+    "next_step": "Ask an accredited representative whether DIC should be explored and what evidence is needed.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/family-and-caregiver-benefits/survivor-compensation/dependency-indemnity-compensation/"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-disability-increase",
+    "name": "Increased VA disability compensation",
+    "official_url": "https://www.va.gov/disability/how-to-file-claim/evidence-needed/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "A review route for an existing service-connected disability that has worsened.",
+    "next_step": "Ask an accredited representative what evidence may support a request for an increased rating.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-02"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/disability/how-to-file-claim/evidence-needed/"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-family-caregiver",
+    "name": "VA Program of Comprehensive Assistance for Family Caregivers",
+    "official_url": "https://www.va.gov/CAREGIVER/PCAFC.asp",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "A VA caregiver assistance program with specific veteran and caregiver eligibility requirements.",
+    "next_step": "Ask the VA caregiver support team about eligibility and the application process.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-02"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/CAREGIVER/PCAFC.asp"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-general-caregiver",
+    "name": "VA Program of General Caregiver Support Services",
+    "official_url": "https://www.va.gov/the-program-of-general-caregiver-support-services/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "VA resources and support for people caring for veterans.",
+    "next_step": "Ask the veteran’s VA care team which caregiver supports fit the situation.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-02"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/the-program-of-general-caregiver-support-services/"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-hospice",
+    "name": "VA hospice care",
+    "official_url": "https://www.va.gov/geriatrics/pages/Hospice_Care.asp",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "VA hospice care focuses on comfort and support near the end of life.",
+    "next_step": "Ask the treating clinician or VA social worker about hospice assessment and coordination.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/geriatrics/pages/Hospice_Care.asp"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-palliative",
+    "name": "VA palliative care",
+    "official_url": "https://www.va.gov/geriatrics/pages/Palliative_Care.asp",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "Palliative care addresses symptoms, comfort and care goals for serious illness.",
+    "next_step": "Ask the treating clinician about palliative care options.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/geriatrics/pages/Palliative_Care.asp"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-pension-medicaid-rule",
+    "name": "VA pension during Medicaid-covered nursing home care",
+    "official_url": "https://www.ecfr.gov/current/title-38/section-3.551",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "VA pension payments can be affected by Medicaid-covered nursing home care. The rules depend on the beneficiary’s circumstances.",
+    "next_step": "Ask an accredited representative and the care facility’s benefits staff to review VA pension and Medicaid together before changing benefits.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-02"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.ecfr.gov/current/title-38/section-3.551"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-survivors-pension",
+    "name": "Survivors Pension",
+    "official_url": "https://www.va.gov/family-and-caregiver-benefits/survivor-compensation/survivors-pension/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "A potential monthly benefit for qualifying surviving spouses and dependent children of wartime veterans, subject to income, net worth and other requirements.",
+    "next_step": "Ask an accredited representative to screen for Survivors Pension and explain the evidence needed.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/family-and-caregiver-benefits/survivor-compensation/survivors-pension/"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-va-burial",
+    "name": "VA burial allowance and memorial routes",
+    "official_url": "https://www.va.gov/burials-memorials/veterans-burial-allowance/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "Ask the county office or VA burial program about the correct application.",
+    "next_step": "Ask the county office or VA burial program about the correct application.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-02"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/burials-memorials/veterans-burial-allowance/"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-va-clc",
+    "name": "VA Community Living Centers",
+    "official_url": "https://www.va.gov/GERIATRICS/pages/VA_Community_Living_Centers.asp",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "VA-operated Community Living Centers provide nursing home level care for eligible veterans.",
+    "next_step": "Ask the VA care team or social worker about eligibility, assessment and local availability.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/GERIATRICS/pages/VA_Community_Living_Centers.asp"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-va-cnh",
+    "name": "VA Community Nursing Home program",
+    "official_url": "https://www.va.gov/GERIATRICS/pages/Community_Nursing_Homes.asp",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "A VA pathway for care in participating community nursing homes, subject to eligibility and available services.",
+    "next_step": "Ask the resident’s VA care team or social worker about community nursing home options.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/GERIATRICS/pages/Community_Nursing_Homes.asp"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-va-health-enrollment",
+    "name": "VA health care enrollment",
+    "official_url": "https://www.va.gov/health-care/how-to-apply/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "Apply for VA health care or get help understanding the enrollment process.",
+    "next_step": "Call VA enrollment or ask your county veterans office about the application and supporting information.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": "877-222-8387",
+      "phone_label": "VA health care enrollment line",
+      "email": null,
+      "contact_type": "office",
+      "web_route": "https://www.va.gov/health-care/how-to-apply/"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-va-pension",
+    "name": "Veterans Pension",
+    "official_url": "https://www.va.gov/pension/eligibility/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "Monthly pension for qualifying wartime veterans who meet age or disability, income, net worth and service requirements.",
+    "next_step": "Ask an accredited representative to screen for pension and explain how care expenses may affect the application.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/pension/eligibility/"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "r02-whv",
+    "name": "We Honor Veterans public resources",
+    "official_url": "https://www.wehonorveterans.org/about/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "Use public veteran-care resources and ask the clinical team about coordinated care.",
+    "next_step": "Use public veteran-care resources and ask the clinical team about coordinated care.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "eligibility": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-02"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.wehonorveterans.org/about/"
+    },
+    "organization": "National Alliance for Care at Home",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-hisa",
+    "name": "VA Home Improvements and Structural Alterations (HISA)",
+    "official_url": "https://www.rehab.va.gov/PROSTHETICS/psas/HISA2.asp",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "equipment_home_accessibility"
+    ],
+    "description": "Medically necessary changes to a veteran’s primary home, including permanent ramps, accessible bathrooms and widened access. Some non-service-connected needs can qualify.",
+    "next_step": "Ask your VA care team for a clinical review and contact your VA medical facility’s Prosthetic and Sensory Aids Service. Confirm your remaining lifetime benefit and obtain the HISA application checklist.",
+    "constraints": [
+      "HISA excludes portable ramps, stair glides, new construction and routine home repairs. VA determines eligibility, medical necessity and the available benefit. Prepare VA Form 10-0103, a VA-written or approved prescription, owner authorization (notarized for renters), an itemized estimate and a before photograph."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "identity": "official_source_reviewed",
+      "contact": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": "web_form_or_locator",
+      "web_route": "https://www.va.gov/find-locations/?facilityType=health"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-sah",
+    "name": "VA Specially Adapted Housing (SAH) grant",
+    "official_url": "https://www.va.gov/housing-assistance/disability-housing-grants/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "equipment_home_accessibility"
+    ],
+    "description": "A housing grant route for veterans with qualifying service-connected disabilities.",
+    "next_step": "Review the qualifying disability and ownership rules with VA or an accredited representative. Apply online through VA or use VA Form 26-4555; ask VA about project planning and approval before construction.",
+    "constraints": [
+      "These grants require specific qualifying service-connected disabilities; a disability rating alone does not establish eligibility. Confirm the current fiscal-year maximum and any benefit already used with VA."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": null,
+      "web_route": null
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-sha",
+    "name": "VA Special Housing Adaptation (SHA) grant",
+    "official_url": "https://www.va.gov/housing-assistance/disability-housing-grants/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "equipment_home_accessibility"
+    ],
+    "description": "A housing adaptation grant route with specific service-connected disability requirements.",
+    "next_step": "Review the qualifying disability and ownership rules with VA or an accredited representative. Apply online through VA or use VA Form 26-4555; ask VA about project planning and approval before construction.",
+    "constraints": [
+      "These grants require specific qualifying service-connected disabilities; a disability rating alone does not establish eligibility. Confirm the current fiscal-year maximum and any benefit already used with VA."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null,
+      "phone_label": null,
+      "email": null,
+      "contact_type": null,
+      "web_route": null
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "nara-discharge-records",
+    "name": "Get a missing DD214 or service record",
+    "official_url": "https://www.archives.gov/veterans/military-service-records",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "general_navigation"
+    ],
+    "description": "Request military records that may help document service for a benefits application.",
+    "next_step": "Use the National Archives request instructions or ask the county veterans office for help. Who may request records and any fee depend on the record and request.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": "314-801-0800"
+    },
+    "organization": "National Archives and Records Administration",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-accredited-help",
+    "name": "Find accredited help with a VA claim",
+    "official_url": "https://www.va.gov/get-help-from-accredited-representative/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "benefits_and_funding"
+    ],
+    "description": "Find and appoint an accredited representative for a benefits claim or decision review. Accredited VSO claims assistance is free.",
+    "next_step": "Use VA’s representative search, then ask the representative if they are available. Attorneys and claims agents may charge fees.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-location-finder",
+    "name": "Find a VA medical facility or benefits office",
+    "official_url": "https://www.va.gov/find-locations/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "Search for VA locations near the resident and identify where to ask about care or benefits.",
+    "next_step": "Use the official locator with the resident’s city or ZIP code and select the kind of facility needed.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": null
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-housing-help",
+    "name": "Veteran housing and homelessness help",
+    "official_url": "https://department.va.gov/homeless/nationalcallcenter/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "general_navigation"
+    ],
+    "description": "A 24-hour VA contact for veterans who are homeless or at risk of losing housing.",
+    "next_step": "Call 877-424-3838, available 24/7, if homeless or at risk of losing housing. Family, care teams and supporters may also call. Ask for local VA and community housing support.",
+    "constraints": null,
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": "877-424-3838"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-tra",
+    "name": "VA Temporary Residence Adaptation (TRA)",
+    "official_url": "https://www.va.gov/housing-assistance/disability-housing-grants/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "equipment_home_accessibility",
+      "general_navigation"
+    ],
+    "description": "Changes to a family member’s home where a qualifying veteran or service member is living temporarily.",
+    "next_step": "Ask VA about TRA if you qualify for SAH or SHA and are temporarily living in a family member’s home.",
+    "constraints": [
+      "TRA requires SAH or SHA eligibility; it is not a general temporary-housing or renter grant."
+    ],
+    "organization": "U.S. Department of Veterans Affairs",
+    "public_contact": {
+      "phone": null
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "state": "shared"
+  },
+  {
+    "program_id": "alz-dementia-support",
+    "name": "Memory loss and dementia: 24/7 support",
+    "official_url": "https://www.alz.org/help-support/i-have-alz/programs-support",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "general_navigation"
+    ],
+    "description": "Free, confidential dementia information, caregiver support and referrals to local community resources.",
+    "next_step": "Call the Alzheimer’s Association helpline for care planning, local support groups and caregiver guidance. Seek medical evaluation for new memory concerns.",
+    "constraints": [
+      "The helpline provides support and referrals; it does not replace clinical assessment or emergency services."
+    ],
+    "organization": "Alzheimer’s Association",
+    "public_contact": {
+      "phone": "800-272-3900"
+    },
+    "senior_topic": "memory",
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "state": "shared"
+  },
+  {
+    "program_id": "american-legion-post-locator",
+    "name": "American Legion: find a local post",
+    "official_url": "https://mylegion.org/PersonifyEbusiness/Find-a-Post",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "general_navigation"
+    ],
+    "description": "Official post lookup for community connections and identifying public contacts to share the guide with.",
+    "next_step": "Search the official directory for your town or ZIP code. Confirm the post’s public phone or email and ask who handles community partnerships.",
+    "constraints": [
+      "A local post is not automatically an accredited claims office or a funding provider. Confirm its services, membership or visitor rules, accessibility and current contact details."
+    ],
+    "organization": "The American Legion",
+    "public_contact": {
+      "phone": null
+    },
+    "resource_role": "community_locator",
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "state": "shared"
+  },
+  {
+    "program_id": "amvets-post-locator",
+    "name": "AMVETS: find a local post",
+    "official_url": "https://www.amvets.org/find-a-post",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "general_navigation"
+    ],
+    "description": "Official post lookup for community connections and identifying public contacts to share the guide with.",
+    "next_step": "Search the official directory for your town or ZIP code. Confirm the post’s public phone or email and ask who handles community partnerships.",
+    "constraints": [
+      "A local post is not automatically an accredited claims office or a funding provider. Confirm its services, membership or visitor rules, accessibility and current contact details."
+    ],
+    "organization": "AMVETS",
+    "public_contact": {
+      "phone": null
+    },
+    "resource_role": "community_locator",
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "state": "shared"
+  },
+  {
+    "program_id": "vfw-post-locator",
+    "name": "VFW: find a local post",
+    "official_url": "https://vfw.org/find-a-post",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "general_navigation"
+    ],
+    "description": "Official post lookup for community connections and identifying public contacts to share the guide with.",
+    "next_step": "Search the official directory for your town or ZIP code. Confirm the post’s public phone or email and ask who handles community partnerships.",
+    "constraints": [
+      "A local post is not automatically an accredited claims office or a funding provider. Confirm its services, membership or visitor rules, accessibility and current contact details."
+    ],
+    "organization": "Veterans of Foreign Wars",
+    "public_contact": {
+      "phone": null
+    },
+    "resource_role": "community_locator",
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "state": "shared"
+  },
+  {
+    "program_id": "crisis-988",
+    "name": "Suicide and emotional crisis support: 988",
+    "official_url": "https://988lifeline.org?oai_link_source=model_response_hotline",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "general_navigation"
+    ],
+    "description": "Crisis counseling and referrals for people in suicidal crisis or emotional distress, including veterans and concerned supporters.",
+    "next_step": "Call or text 988 for crisis support. Veterans-specific support is available through the call service. For immediate danger, call 911 or go to the nearest emergency department.",
+    "constraints": [
+      "Crisis support is separate from benefits eligibility and scheduled mental health treatment."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": "988"
+    },
+    "organization": "988 Suicide & Crisis Lifeline",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-mental-health",
+    "name": "Veterans: mental health care and suicide prevention",
+    "official_url": "https://www.va.gov/health-care/health-needs-conditions/mental-health/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "general_navigation"
+    ],
+    "description": "VA mental health care, suicide-prevention guidance, counseling and routes to VA medical centers and Vet Centers. Some services are available without VA enrollment.",
+    "next_step": "Use the VA page to connect with care. Existing patients can ask their primary care provider; others can contact a VA medical center or Vet Center. For urgent emotional distress, use 988 instead of waiting for an appointment.",
+    "constraints": [
+      "Confirm which services fit the person’s eligibility and needs. Scheduled care is not a substitute for immediate crisis help."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {},
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-ssvf",
+    "name": "Housing stability: Supportive Services for Veteran Families (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "general_navigation"
+    ],
+    "description": "Housing stability services through community organizations for low-income veteran families experiencing homelessness or imminent housing loss.",
+    "next_step": "Use the SSVF Providers link on the VA page to find an awarded organization. Ask about county coverage, prevention or rapid rehousing, eligibility and current assistance.",
+    "constraints": [
+      "Provider service areas, funding and eligibility vary. An award or referral does not guarantee financial assistance."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {},
+    "organization": "VA-funded community SSVF providers",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-hud-vash",
+    "name": "HUD-VASH: housing vouchers and VA support",
+    "official_url": "https://department.va.gov/homeless/hud-vash/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "general_navigation"
+    ],
+    "description": "Housing voucher assistance paired with VA case management for veterans experiencing homelessness who need ongoing support.",
+    "next_step": "Call VA homelessness routing at 877-424-3838 and ask whether HUD-VASH screening is appropriate. Ask about local assessment, vouchers and housing availability.",
+    "constraints": [
+      "Screening, program criteria, voucher availability and qualifying housing requirements apply; immediate housing is not guaranteed."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": "877-424-3838"
+    },
+    "organization": "U.S. Department of Veterans Affairs / HUD",
+    "state": "shared"
+  },
+  {
+    "program_id": "va-crrc",
+    "name": "VA Community Resource and Referral Centers",
+    "official_url": "https://department.va.gov/homeless/hchv/community-resource-and-referral-centers/",
+    "service_area": [
+      "National"
+    ],
+    "needs_supported": [
+      "veteran_services",
+      "general_navigation"
+    ],
+    "description": "Find walk-in community resource centers connecting homeless and at-risk veterans with VA and non-VA services.",
+    "next_step": "Use the official center directory and confirm the nearest location, hours and intake. If no nearby center is listed, call VA homelessness routing at 877-424-3838.",
+    "constraints": [
+      "Centers are not present in every county. Confirm local access and resources; a listing does not guarantee a shelter bed."
+    ],
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-10-08"
+    },
+    "public_contact": {
+      "phone": "877-424-3838"
+    },
+    "organization": "U.S. Department of Veterans Affairs",
+    "state": "shared"
+  },
+  {
+    "program_id": "al-claims",
+    "name": "Alabama veterans: accredited claims help",
+    "official_url": "https://va.alabama.gov/wp-content/uploads/2026/09/AL-Laws-Affecting-Veterans-2026.pdf",
+    "organization": "Alabama Department of Veterans Affairs",
+    "service_area": [
+      "All Alabama counties"
+    ],
+    "state": "AL",
+    "needs_supported": [
+      "general_navigation",
+      "benefits_and_funding"
+    ],
+    "description": "Free help with VA claims, applications and appeals for veterans and families.",
+    "next_step": "Call the state veterans agency; ask for a benefits review and the office that serves your county.",
+    "constraints": [],
+    "public_contact": {
+      "phone": "334-242-5077"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://va.alabama.gov/wp-content/uploads/2026/09/AL-Laws-Affecting-Veterans-2026.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://va.alabama.gov/wp-content/uploads/2026/09/AL-Laws-Affecting-Veterans-2026.pdf",
+        "title": "Official published source",
+        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+      }
+    ]
+  },
+  {
+    "program_id": "al-ship",
+    "name": "Medicare counseling (SHIP) for Alabama",
+    "official_url": "https://www.shiphelp.org/",
+    "organization": "SHIP Technical Assistance Center",
+    "service_area": [
+      "All Alabama counties"
+    ],
+    "state": "AL",
+    "needs_supported": [
+      "benefits_and_funding"
+    ],
+    "description": "Free, unbiased Medicare counseling from the State Health Insurance Assistance Program.",
+    "next_step": "Call or use the locator to reach the Alabama SHIP and ask for a counseling appointment.",
+    "constraints": [],
+    "public_contact": {
+      "phone": "877-839-2675"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.shiphelp.org/?p=317"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.shiphelp.org/?p=317",
+        "title": "Official published source",
+        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+      }
+    ]
+  },
+  {
+    "program_id": "al-aging",
+    "name": "Local aging help in Alabama (Eldercare Locator)",
+    "official_url": "https://eldercare.acl.gov/home",
+    "organization": "U.S. Administration for Community Living",
+    "service_area": [
+      "All Alabama counties"
+    ],
+    "state": "AL",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
+    "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
+    "constraints": [
+      "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
+    ],
+    "public_contact": {
+      "phone": "800-677-1116"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.acl.gov/contact"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.acl.gov/contact",
+        "title": "Official published source",
+        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+      }
+    ],
+    "regional_role": "aging_agency"
+  },
+  {
+    "program_id": "al-ombudsman",
+    "name": "Alabama long-term-care ombudsman",
+    "official_url": "https://theconsumervoice.org/get_help",
+    "organization": "National Long-Term Care Ombudsman Resource Center",
+    "service_area": [
+      "All Alabama counties"
+    ],
+    "state": "AL",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
+    "next_step": "Use the locator to find the Alabama program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
+    "constraints": [
+      "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
+    ],
+    "public_contact": {
+      "phone": "800-677-1116"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
+        "title": "Official published source",
+        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+      }
+    ],
+    "regional_role": "ombudsman"
+  }
+]
