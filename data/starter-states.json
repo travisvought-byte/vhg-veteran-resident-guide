@@ -2,22 +2,377 @@
   "about": "Starter editions: statewide contacts for states without county-level research yet. Every county routes to the state veterans agency plus national aging, ombudsman and Medicare counseling locators. Each veterans phone was matched to the agency's own website on the review date. Run scripts/make_starter_states.py after editing, then scripts/build_public.py.",
   "reviewed_on": "2026-11-02",
   "national": {
-    "aging": {"name": "Eldercare Locator", "organization": "U.S. Administration for Community Living", "phone": "800-677-1116", "url": "https://eldercare.acl.gov/home", "source": "https://www.acl.gov/contact"},
-    "ombudsman": {"name": "Long-term care ombudsman locator", "organization": "National Long-Term Care Ombudsman Resource Center", "phone": "800-677-1116", "url": "https://theconsumervoice.org/get_help", "source": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"},
-    "ship": {"name": "Medicare counseling (SHIP) locator", "organization": "SHIP Technical Assistance Center", "phone": "877-839-2675", "url": "https://www.shiphelp.org/", "source": "https://www.shiphelp.org/?p=317"}
+    "aging": {
+      "name": "Eldercare Locator",
+      "organization": "U.S. Administration for Community Living",
+      "phone": "800-677-1116",
+      "url": "https://eldercare.acl.gov/home",
+      "source": "https://www.acl.gov/contact"
+    },
+    "ombudsman": {
+      "name": "Long-term care ombudsman locator",
+      "organization": "National Long-Term Care Ombudsman Resource Center",
+      "phone": "800-677-1116",
+      "url": "https://theconsumervoice.org/get_help",
+      "source": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
+    },
+    "ship": {
+      "name": "Medicare counseling (SHIP) locator",
+      "organization": "SHIP Technical Assistance Center",
+      "phone": "877-839-2675",
+      "url": "https://www.shiphelp.org/",
+      "source": "https://www.shiphelp.org/?p=317"
+    }
   },
   "states": [
-    {"code": "AL", "name": "Alabama", "agency": "Alabama Department of Veterans Affairs", "phone": "334-242-5077", "url": "https://va.alabama.gov/wp-content/uploads/2026/09/AL-Laws-Affecting-Veterans-2026.pdf", "local_url": "https://va.alabama.gov/serviceofficer", "local_note": "The department has veterans service offices in 62 counties."},
-    {"code": "AK", "name": "Alaska", "agency": "Alaska Office of Veterans Affairs", "phone": "888-248-3682", "url": "https://veterans.alaska.gov/contact-us", "local_note": "Also reachable at 907-334-0874."},
-    {"code": "AZ", "name": "Arizona", "agency": "Arizona Department of Veterans’ Services", "phone": "602-535-1215", "url": "https://dvs.az.gov/services/veteran-benefits-counselors-vbcs", "local_note": "This number schedules a free, accredited Veteran Benefits Counselor appointment in person, by phone or by video. Main office: 602-255-3373."},
-    {"code": "AR", "name": "Arkansas", "agency": "Arkansas Department of Veterans Affairs", "phone": "501-683-2382", "url": "https://www.veterans.arkansas.gov/veteran-services-1", "local_url": "https://www.veterans.arkansas.gov/veteran-services-map"},
-    {"code": "CO", "name": "Colorado", "agency": "Colorado Division of Veterans Affairs", "phone": "303-914-5832", "url": "https://vets.colorado.gov/dva-contact-about", "local_url": "https://vets.colorado.gov/services-benefits/county-veterans-service-offices", "local_note": "Each Colorado county has a veterans service office."},
-    {"code": "CT", "name": "Connecticut", "agency": "Connecticut Department of Veterans Affairs, Office of Advocacy and Assistance", "phone": "860-616-3685", "url": "https://portal.ct.gov/dva/advocacy-and-assistance", "local_url": "https://portal.ct.gov/dva/advocacy-and-assistance", "local_note": "The office has five district offices. Main department line: 860-616-3600."},
-    {"code": "DE", "name": "Delaware", "agency": "Delaware Office of Veterans Services", "phone": "302-739-2792", "url": "https://vets.delaware.gov/contact-information/", "local_note": "Service officers work from the Dover office and serve all three counties."},
-    {"code": "DC", "name": "District of Columbia", "agency": "Mayor’s Office of Veterans Affairs", "phone": "202-724-5454", "url": "https://communityaffairs.dc.gov/mova", "area": "District of Columbia", "local_note": "The office acts as the state-level veterans agency for District residents."},
-    {"code": "GA", "name": "Georgia", "agency": "Georgia Department of Veterans Service", "phone": "404-656-2300", "url": "https://veterans.georgia.gov/contact-us-0", "local_url": "https://veterans.georgia.gov/field-offices", "local_note": "Veterans Field Service Offices across the state give direct help with benefits."},
-    {"code": "WA", "name": "Washington", "agency": "Washington State Department of Veterans Affairs", "phone": "800-562-2308", "url": "https://dva.wa.gov/veterans-service-members-and-their-families/veterans-benefits/claims-assistance", "local_note": "This number schedules accredited claims help in person or by video, and can connect you to a contracted service officer near you."},
-    {"code": "TN", "name": "Tennessee", "agency": "Tennessee Department of Veterans Services", "phone": "615-741-2345", "url": "https://www.tn.gov/veteran/contact-us.html", "local_url": "https://www.tn.gov/veteran/contact-us/state-veterans-services-offices.html", "local_note": "The department runs field offices across the state."},
-    {"code": "IL", "name": "Illinois", "agency": "Illinois Department of Veterans’ Affairs", "phone": "800-437-9824", "url": "https://veterans.illinois.gov/about-us/communications/contact-us.html", "local_url": "https://veterans.illinois.gov/serviceoffices/vso-locator-countylist.html", "local_note": "Call to reach the nearest Veteran Service Officer."}
+    {
+      "code": "AL",
+      "name": "Alabama",
+      "agency": "Alabama Department of Veterans Affairs",
+      "phone": "334-242-5077",
+      "url": "https://va.alabama.gov/wp-content/uploads/2026/09/AL-Laws-Affecting-Veterans-2026.pdf",
+      "local_url": "https://va.alabama.gov/serviceofficer",
+      "local_note": "The department has veterans service offices in 62 counties."
+    },
+    {
+      "code": "AK",
+      "name": "Alaska",
+      "agency": "Alaska Office of Veterans Affairs",
+      "phone": "888-248-3682",
+      "url": "https://veterans.alaska.gov/contact-us",
+      "local_note": "Also reachable at 907-334-0874."
+    },
+    {
+      "code": "AZ",
+      "name": "Arizona",
+      "agency": "Arizona Department of Veterans’ Services",
+      "phone": "602-535-1215",
+      "url": "https://dvs.az.gov/services/veteran-benefits-counselors-vbcs",
+      "local_note": "This number schedules a free, accredited Veteran Benefits Counselor appointment in person, by phone or by video. Main office: 602-255-3373."
+    },
+    {
+      "code": "AR",
+      "name": "Arkansas",
+      "agency": "Arkansas Department of Veterans Affairs",
+      "phone": "501-683-2382",
+      "url": "https://www.veterans.arkansas.gov/veteran-services-1",
+      "local_url": "https://www.veterans.arkansas.gov/veteran-services-map"
+    },
+    {
+      "code": "CO",
+      "name": "Colorado",
+      "agency": "Colorado Division of Veterans Affairs",
+      "phone": "303-914-5832",
+      "url": "https://vets.colorado.gov/dva-contact-about",
+      "local_url": "https://vets.colorado.gov/services-benefits/county-veterans-service-offices",
+      "local_note": "Each Colorado county has a veterans service office."
+    },
+    {
+      "code": "CT",
+      "name": "Connecticut",
+      "agency": "Connecticut Department of Veterans Affairs, Office of Advocacy and Assistance",
+      "phone": "860-616-3685",
+      "url": "https://portal.ct.gov/dva/advocacy-and-assistance",
+      "local_url": "https://portal.ct.gov/dva/advocacy-and-assistance",
+      "local_note": "The office has five district offices. Main department line: 860-616-3600."
+    },
+    {
+      "code": "DE",
+      "name": "Delaware",
+      "agency": "Delaware Office of Veterans Services",
+      "phone": "302-739-2792",
+      "url": "https://vets.delaware.gov/contact-information/",
+      "local_note": "Service officers work from the Dover office and serve all three counties."
+    },
+    {
+      "code": "DC",
+      "name": "District of Columbia",
+      "agency": "Mayor’s Office of Veterans Affairs",
+      "phone": "202-724-5454",
+      "url": "https://communityaffairs.dc.gov/mova",
+      "area": "District of Columbia",
+      "local_note": "The office acts as the state-level veterans agency for District residents."
+    },
+    {
+      "code": "GA",
+      "name": "Georgia",
+      "agency": "Georgia Department of Veterans Service",
+      "phone": "404-656-2300",
+      "url": "https://veterans.georgia.gov/contact-us-0",
+      "local_url": "https://veterans.georgia.gov/field-offices",
+      "local_note": "Veterans Field Service Offices across the state give direct help with benefits."
+    },
+    {
+      "code": "WA",
+      "name": "Washington",
+      "agency": "Washington State Department of Veterans Affairs",
+      "phone": "800-562-2308",
+      "url": "https://dva.wa.gov/veterans-service-members-and-their-families/veterans-benefits/claims-assistance",
+      "local_note": "This number schedules accredited claims help in person or by video, and can connect you to a contracted service officer near you."
+    },
+    {
+      "code": "TN",
+      "name": "Tennessee",
+      "agency": "Tennessee Department of Veterans Services",
+      "phone": "615-741-2345",
+      "url": "https://www.tn.gov/veteran/contact-us.html",
+      "local_url": "https://www.tn.gov/veteran/contact-us/state-veterans-services-offices.html",
+      "local_note": "The department runs field offices across the state."
+    },
+    {
+      "code": "IL",
+      "name": "Illinois",
+      "agency": "Illinois Department of Veterans’ Affairs",
+      "phone": "800-437-9824",
+      "url": "https://veterans.illinois.gov/about-us/communications/contact-us.html",
+      "local_url": "https://veterans.illinois.gov/serviceoffices/vso-locator-countylist.html",
+      "local_note": "Call to reach the nearest Veteran Service Officer."
+    },
+    {
+      "code": "HI",
+      "name": "Hawaii",
+      "agency": "Hawai‘i Office of Veterans’ Services",
+      "phone": "808-433-0420",
+      "url": "https://dod.hawaii.gov/ovs/",
+      "local_note": "Part of the State of Hawai‘i Department of Defense.",
+      "review": "page"
+    },
+    {
+      "code": "ID",
+      "name": "Idaho",
+      "agency": "Idaho Division of Veterans Services",
+      "phone": "208-780-1300",
+      "url": "https://veterans.idaho.gov/",
+      "local_url": "https://veterans.idaho.gov/advocacy/service-officers/",
+      "local_note": "Ask for a service officer near you.",
+      "review": "page"
+    },
+    {
+      "code": "IA",
+      "name": "Iowa",
+      "agency": "Iowa Department of Veterans Affairs",
+      "phone": "641-752-1501",
+      "url": "https://dva.iowa.gov/",
+      "local_url": "https://dva.iowa.gov/county-state-federal-service-map",
+      "local_note": "This is the department’s front office. Each Iowa county has a veterans service officer; use the map to find yours.",
+      "review": "page"
+    },
+    {
+      "code": "KS",
+      "name": "Kansas",
+      "agency": "Kansas Office of Veterans Services",
+      "phone": "785-296-3976",
+      "url": "https://kcva.ks.gov/veteran-services",
+      "local_note": "Free Veteran Service Representatives help with VA claims from field offices across Kansas."
+    },
+    {
+      "code": "LA",
+      "name": "Louisiana",
+      "agency": "Louisiana Department of Veterans Affairs",
+      "phone": "225-219-5000",
+      "url": "https://www.vetaffairs.la.gov/benefits/",
+      "local_url": "https://www.vetaffairs.la.gov/locations",
+      "local_note": "Ask for the parish veterans service office that serves you.",
+      "review": "page"
+    },
+    {
+      "code": "ME",
+      "name": "Maine",
+      "agency": "Maine Bureau of Veterans’ Services",
+      "phone": "207-287-7020",
+      "url": "https://www.maine.gov/veterans/",
+      "local_url": "https://www.maine.gov/veterans/veterans-services-offices/locations",
+      "local_note": "Field and itinerant offices serve veterans across Maine.",
+      "review": "page"
+    },
+    {
+      "code": "MD",
+      "name": "Maryland",
+      "agency": "Maryland Department of Veterans and Military Families",
+      "phone": "410-260-3838",
+      "url": "https://veterans.maryland.gov/",
+      "local_note": "Main line. Ask for a veterans service officer and the office that serves your county.",
+      "review": "page"
+    },
+    {
+      "code": "MA",
+      "name": "Massachusetts",
+      "agency": "Massachusetts Executive Office of Veterans Services",
+      "phone": "617-210-5480",
+      "url": "https://www.mass.gov/orgs/massachusetts-department-of-veterans-services",
+      "local_url": "https://www.mass.gov/info-details/find-your-local-veterans-service-officer-vso",
+      "local_note": "Constituent services line. Every city and town has a local Veterans Service Officer.",
+      "review": "page"
+    },
+    {
+      "code": "MN",
+      "name": "Minnesota",
+      "agency": "Minnesota Department of Veterans Affairs",
+      "phone": "888-546-5838",
+      "url": "https://mn.gov/mdva/",
+      "local_url": "https://www.macvso.org/find-a-cvso.html",
+      "local_note": "LinkVet line for all veteran-related questions. Each county has a veterans service officer.",
+      "review": "page"
+    },
+    {
+      "code": "MS",
+      "name": "Mississippi",
+      "agency": "Mississippi Veterans Affairs",
+      "phone": "601-576-4850",
+      "url": "https://www.msva.ms.gov/",
+      "local_url": "https://www.msva.ms.gov/serviceofficers",
+      "local_note": "Main office. Ask for a Veterans Benefits Specialist near you.",
+      "review": "page"
+    },
+    {
+      "code": "MO",
+      "name": "Missouri",
+      "agency": "Missouri Veterans Commission",
+      "phone": "573-751-3779",
+      "url": "https://mvc.dps.mo.gov/about/staff.php",
+      "local_url": "https://mvc.dps.mo.gov/service/serviceofficer/",
+      "local_note": "Veterans Service Officers work in almost every county."
+    },
+    {
+      "code": "MT",
+      "name": "Montana",
+      "agency": "Montana Veterans Affairs Division",
+      "phone": "406-324-3742",
+      "url": "https://dma.mt.gov/MVAD/index",
+      "local_note": "Ask for the veterans service office that serves your area.",
+      "review": "page"
+    },
+    {
+      "code": "NE",
+      "name": "Nebraska",
+      "agency": "Nebraska Department of Veterans’ Affairs",
+      "phone": "402-420-4021",
+      "url": "https://veterans.nebraska.gov/",
+      "local_url": "https://veterans.nebraska.gov/cvso",
+      "local_note": "State Service Office. Each county has a County Veterans Service Officer.",
+      "review": "page"
+    },
+    {
+      "code": "NV",
+      "name": "Nevada",
+      "agency": "Nevada Department of Veterans Services",
+      "phone": "702-224-6025",
+      "url": "https://veterans.nv.gov/veterans-service-officers/",
+      "local_url": "https://veterans.nv.gov/veterans-service-officers/",
+      "local_note": "Las Vegas Veterans Advocacy Support Team. Northern Nevada: 775-321-4880. Appointments currently take about 30 to 90 days to schedule.",
+      "review": "page"
+    },
+    {
+      "code": "NH",
+      "name": "New Hampshire",
+      "agency": "New Hampshire Division of Veterans Services",
+      "phone": "603-624-9230",
+      "url": "https://www.dmavs.nh.gov/veterans-services",
+      "local_note": "Part of the Department of Military Affairs and Veterans Services."
+    },
+    {
+      "code": "NJ",
+      "name": "New Jersey",
+      "agency": "New Jersey Department of Military and Veterans Affairs",
+      "phone": "609-530-4600",
+      "url": "https://www.nj.gov/military/veterans/",
+      "local_url": "https://www.nj.gov/military/veterans/services/vso",
+      "local_note": "Main line. Veterans Service Offices help with claims.",
+      "review": "page"
+    },
+    {
+      "code": "NM",
+      "name": "New Mexico",
+      "agency": "New Mexico Department of Veterans’ Services",
+      "phone": "866-433-8387",
+      "url": "https://www.dvs.nm.gov/new-mexico-offices/",
+      "local_url": "https://www.dvs.nm.gov/new-mexico-offices/",
+      "local_note": "Main line. To file a claim, Field Services: 505-383-2400."
+    },
+    {
+      "code": "ND",
+      "name": "North Dakota",
+      "agency": "North Dakota Department of Veterans Affairs",
+      "phone": "701-239-7165",
+      "url": "https://www.veterans.nd.gov/vso",
+      "local_url": "https://www.veterans.nd.gov/vso",
+      "local_note": "County Veterans Service Officers help with claims; the department lists each office."
+    },
+    {
+      "code": "OK",
+      "name": "Oklahoma",
+      "agency": "Oklahoma Department of Veterans Affairs",
+      "phone": "855-701-6382",
+      "url": "https://oklahoma.gov/veterans.html",
+      "local_url": "https://oklahoma.gov/veterans/veterans-services/find-a-service-officer.html",
+      "local_note": "Toll-free line. Ask for a service officer near you.",
+      "review": "page"
+    },
+    {
+      "code": "OR",
+      "name": "Oregon",
+      "agency": "Oregon Department of Veterans’ Affairs",
+      "phone": "800-692-9666",
+      "url": "https://www.oregon.gov/ODVA/Pages/default.aspx",
+      "local_url": "https://www.oregon.gov/ODVA/Services/Pages/County-Veteran-Services-Offices.aspx",
+      "local_note": "General inquiries. Each county has a veteran services office.",
+      "review": "page"
+    },
+    {
+      "code": "RI",
+      "name": "Rhode Island",
+      "agency": "Rhode Island Office of Veterans Services",
+      "phone": "401-921-2119",
+      "url": "https://vets.ri.gov/",
+      "local_note": "The veterans resource center helps with benefits navigation and referrals."
+    },
+    {
+      "code": "SC",
+      "name": "South Carolina",
+      "agency": "South Carolina Department of Veterans’ Affairs",
+      "phone": "803-734-0200",
+      "url": "https://scdva.sc.gov/",
+      "local_url": "https://scdva.sc.gov/county-resources",
+      "local_note": "Each county has a veterans affairs office.",
+      "review": "page"
+    },
+    {
+      "code": "SD",
+      "name": "South Dakota",
+      "agency": "South Dakota Department of Veterans Affairs",
+      "phone": "605-773-3269",
+      "url": "https://vetaffairs.sd.gov/",
+      "local_url": "https://vetaffairs.sd.gov/veteransserviceofficers/locatevso.aspx",
+      "local_note": "Toll-free: 877-579-0015. County and tribal veterans service officers help with claims.",
+      "review": "page"
+    },
+    {
+      "code": "VT",
+      "name": "Vermont",
+      "agency": "Vermont Office of Veterans Affairs",
+      "phone": "802-828-3379",
+      "url": "https://veterans.vermont.gov/",
+      "local_note": "Toll-free in Vermont: 888-666-9844.",
+      "review": "page"
+    },
+    {
+      "code": "WI",
+      "name": "Wisconsin",
+      "agency": "Wisconsin Department of Veterans Affairs",
+      "phone": "800-947-8387",
+      "url": "https://dva.wi.gov/resources/",
+      "local_url": "https://dva.wi.gov/resources/find-my-cvso-tvso/",
+      "local_note": "Benefits line (1-800-WIS-VETS). Federal claims help: 833-494-7256. Each county has a veterans service officer."
+    },
+    {
+      "code": "WY",
+      "name": "Wyoming",
+      "agency": "Wyoming Veterans Commission",
+      "phone": "800-833-5987",
+      "url": "https://www.wyomilitary.wyo.gov/veterans/",
+      "local_url": "https://www.wyomilitary.wyo.gov/resources/veteran/veterans-commission/veteran-service-officers/",
+      "local_note": "Wyoming Veterans Hotline. Office: 307-777-8152.",
+      "review": "page"
+    }
   ]
 }

@@ -4,7 +4,6 @@
  const data=JSON.parse(document.getElementById('advocacy-data').textContent),$=id=>document.getElementById(id);
  const topics=new Map(data.topics.map(t=>[t.id,t]));
  const names=new Map([...$('start-state').options].map(o=>[o.value,o.textContent]));
- const guideStates=['OH','PA','NY','MI','KY','UT','IN','VA','TX','FL','CA','NC','WV'];
  const validState=s=>names.has(s)?s:'OH';
  const stateLabel=s=>s==='DC'?'D.C. Council members':names.get(s)+' state lawmakers';
  const scopeLabel=(scope,s)=>scope==='US'?'Federal lawmakers':stateLabel(s);
@@ -31,7 +30,7 @@
   $('start-state').value=s;$('compose-state').value=s;$('scope').querySelector('option[value="state"]').textContent=stateLabel(s);
   document.querySelectorAll('[data-barrier]').forEach(a=>{const u=new URL(a.href);u.searchParams.set('state',s);a.href=u.href;});
   const u=new URL($('start-state-policy').href);u.searchParams.set('state',s);$('start-state-policy').href=u.href;
-  $('start-guide').href=guideStates.includes(s)?'./?state='+s:'./';
+  $('start-guide').href='./?state='+s;
   const place=s==='DC'?'District of Columbia':names.get(s);
   document.querySelectorAll('[data-state-ask-title]').forEach(h=>h.textContent='Proposed '+place+' request');
   document.querySelectorAll('[data-state-ask]').forEach(p=>{const t=topics.get(p.dataset.stateAsk);if(t)p.textContent=ask(t,'state',s);});

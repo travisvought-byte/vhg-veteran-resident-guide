@@ -46,7 +46,7 @@ Invite retailers to run a voluntary roundup, top-up or donation campaign for Vet
 
 ## Starter editions
 
-Alabama, Alaska, Arizona, Arkansas, Colorado, Connecticut, Delaware, the District of Columbia, Georgia, Illinois, Tennessee and Washington are **starter editions** (added November 2, 2026). Each lists the state veterans agency, with its phone matched to the agency’s own website, plus national routes to local aging help (Eldercare Locator), the long-term-care ombudsman and free Medicare counseling (SHIP). Every county uses these statewide contacts until county research is added. Starter states are labeled as such in the guide and are not yet part of the guided-assistance beta.
+The guide now covers all 50 states and the District of Columbia. Thirteen states have full county editions; the other 37 states and D.C. are **starter editions** (added November 2, 2026), listed in `data/starter-states.json`. Each lists the state veterans agency, with its phone checked on the agency’s own website (each record says whether the page was read in full or matched through search results), plus national routes to local aging help (Eldercare Locator), the long-term-care ombudsman and free Medicare counseling (SHIP). Every county uses these statewide contacts until county research is added. Starter states are labeled as such in the guide and are not yet part of the guided-assistance beta.
 
 To add or update a starter state, edit `data/starter-states.json`, then run `python3 scripts/make_starter_states.py`, `python3 scripts/make_qr.py` and `python3 scripts/build_public.py`. To upgrade a starter state to a full county edition, remove it from that file and follow [Adding a state](docs/ADDING-A-STATE.md).
 

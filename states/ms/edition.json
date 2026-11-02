@@ -1,0 +1,187 @@
+{
+ "ops": [
+  {
+   "op": "clear_data"
+  },
+  {
+   "op": "replace",
+   "old": "Ohio",
+   "new": "Mississippi"
+  },
+  {
+   "op": "replace",
+   "old": "All 88",
+   "new": "All"
+  },
+  {
+   "op": "replace",
+   "old": "all 88",
+   "new": "all"
+  },
+  {
+   "op": "replace",
+   "old": "<option value=\"OH\">Mississippi</option>",
+   "new": "<option value=\"OH\">Ohio</option>"
+  },
+  {
+   "op": "replace",
+   "old": "const STATE='OH';",
+   "new": "const STATE='MS';"
+  },
+  {
+   "op": "replace",
+   "old": "county veterans office",
+   "new": "state veterans agency"
+  },
+  {
+   "op": "replace",
+   "old": "county office",
+   "new": "state veterans agency"
+  },
+  {
+   "op": "replace",
+   "old": "Statewide edition · Updated October 8, 2026",
+   "new": "Mississippi starter edition · Updated November 2, 2026"
+  },
+  {
+   "op": "replace",
+   "old": "Mississippi’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
+   "new": "Ask the local aging agency or state Medicaid agency about waiver assessment and written approval; VA and other funders have their own processes."
+  },
+  {
+   "op": "replace",
+   "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
+   "new": "https://eldercare.acl.gov/home"
+  },
+  {
+   "op": "replace",
+   "old": "Mississippi home modification authorization and provider rules",
+   "new": "Find local aging and disability help (Eldercare Locator)"
+  },
+  {
+   "op": "replace",
+   "old": "href=\"share.html\"",
+   "new": "href=\"share-ms.html\""
+  },
+  {
+   "op": "replace",
+   "old": "href=\"prototype-data.json\"",
+   "new": "href=\"data/public/mississippi-resources.json\""
+  },
+  {
+   "op": "replace",
+   "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
+   "new": "href=\"data/public/mississippi-county-veterans-offices.json\""
+  },
+  {
+   "op": "declare",
+   "name": "priority",
+   "value": [
+    "ms-claims",
+    "ms-aging",
+    "ms-ship",
+    "ms-ombudsman",
+    "r02-aid-attendance-housebound",
+    "r02-va-pension",
+    "r02-survivors-pension"
+   ]
+  },
+  {
+   "op": "declare",
+   "name": "routes",
+   "value": {
+    "benefits": [
+     "ms-claims",
+     "ms-ship",
+     "r02-va-pension",
+     "r02-aid-attendance-housebound",
+     "r02-disability-increase",
+     "r02-pension-medicaid-rule",
+     "r02-survivors-pension",
+     "r02-dic",
+     "va-accredited-help"
+    ],
+    "survivors": [
+     "ms-claims",
+     "r02-survivors-pension",
+     "r02-dic",
+     "r02-aid-attendance-housebound",
+     "r02-va-burial",
+     "va-accredited-help",
+     "nara-discharge-records"
+    ],
+    "care": [
+     "ms-aging",
+     "r02-va-health-enrollment",
+     "va-location-finder",
+     "r02-va-cnh",
+     "r02-va-clc",
+     "r02-general-caregiver",
+     "r02-family-caregiver",
+     "r02-hospice",
+     "r02-palliative"
+    ],
+    "rights": [
+     "ms-ombudsman",
+     "ms-aging"
+    ],
+    "local": [
+     "ms-aging",
+     "ms-claims"
+    ],
+    "housing": [
+     "va-housing-help",
+     "va-location-finder",
+     "va-accredited-help",
+     "nara-discharge-records"
+    ]
+   }
+  },
+  {
+   "op": "declare",
+   "name": "seniorTopics",
+   "value": {
+    "daily": [
+     "ms-aging"
+    ],
+    "accessibility": [
+     "ms-aging"
+    ],
+    "vision": [
+     "ms-aging"
+    ],
+    "hearing": [
+     "ms-aging"
+    ],
+    "memory": [
+     "alz-dementia-support",
+     "ms-aging"
+    ],
+    "costs": [
+     "ms-ship",
+     "ms-aging"
+    ],
+    "rights": [
+     "ms-ombudsman",
+     "ms-aging"
+    ]
+   }
+  },
+  {
+   "op": "line",
+   "prefix": "routes.accessibility=",
+   "new": "routes.accessibility=['va-hisa','va-sah','va-sha','va-tra','ms-aging','va-location-finder'];"
+  },
+  {
+   "op": "line",
+   "prefix": "routes.seniors=",
+   "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
+  },
+  {
+   "op": "adapter"
+  },
+  {
+   "op": "embed_data"
+  }
+ ]
+}

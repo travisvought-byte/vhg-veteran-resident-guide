@@ -81,7 +81,8 @@
   primary.append(el('p','A starting point to verify','route-badge'),el('h3',route.actor),el('p','Start by asking the responsible provider or program what applies to this situation. The sources here describe selected rules, not a decision about your eligibility.'));
   const list=el('ol',undefined,'route-checklist');for(const q of route.questions)list.append(el('li',q));primary.append(list);const prep=el('details');prep.append(el('summary','What to have ready'));const checklist=el('ul');for(const item of preparation(r))checklist.append(el('li',item));prep.append(checklist,el('p','Keep supporting records privately. Do not enter medical records or claim numbers into this page.','small'));primary.append(prep);
   const refinements=notes(r);if(refinements.length){const wrap=el('div',undefined,'route-refinements');wrap.append(el('h4','For the choices you made'));for(const n of refinements)wrap.append(el('p',n));primary.append(wrap);}
-  const guide=data.states.find(s=>s.code===r.state&&s.role==='guide-state');$('route-back-guide').href=guide?'./?state='+r.state:'./';if(guide){primary.append(link('Find '+states[r.state]+' referrals in the resource guide','./?state='+r.state+'&view='+(['community','transit','public-access'].includes(r.issue)?'seniors':'accessibility')));}
+  // Every state and D.C. has a resource guide edition (full or starter).
+  const guide=Object.hasOwn(states,r.state);$('route-back-guide').href=guide?'./?state='+r.state:'./';if(guide){primary.append(link('Find '+states[r.state]+' referrals in the resource guide','./?state='+r.state+'&view='+(['community','transit','public-access'].includes(r.issue)?'seniors':'accessibility')));}
   else primary.append(el('p','This state is not yet a referral edition in the guide. Start with the responsible program and the source links shown here.'));
   const actions=el('div',undefined,'actions');const draftLink=el('a','Prepare a message','button');draftLink.href='#route-compose';actions.append(draftLink);const print=el('button','Print these next steps');print.type='button';print.id='route-print-plan';print.addEventListener('click',()=>{printMode='plan';preparePrint();window.print();});actions.append(print);primary.append(actions);
   info.append(el('h3','What the sources say'));
@@ -105,7 +106,7 @@
    else if(d.issue==='payer'&&d.payer==='medicare')wrap.append(link('Medicare coverage and supplier information','https://www.medicare.gov/coverage/wheelchairs-scooters'));
    else if(d.issue==='transit')wrap.append(link('FTA: local and federal transit complaint instructions','https://www.transit.dot.gov/regulations-and-guidance/civil-rights-ada/file-complaint-fta'));
    else if(d.issue==='public-access'&&d.type==='complaint')wrap.append(link('U.S. Department of Justice: file an ADA complaint',adaURL));
-   else if(data.states.some(s=>s.code===d.state&&s.role==='guide-state'))wrap.append(link('Find '+states[d.state]+' referrals','./?state='+d.state+'&view='+(['community','transit','public-access'].includes(d.issue)?'seniors':'accessibility')));
+   else if(Object.hasOwn(states,d.state))wrap.append(link('Find '+states[d.state]+' referrals','./?state='+d.state+'&view='+(['community','transit','public-access'].includes(d.issue)?'seniors':'accessibility')));
    else for(const c of evidence(d))for(const sid of c.source_ids){const s=sources.get(sid);wrap.append(link(s.title,s.url),el('br'));}
   }
   wrap.append(el('p','Copy your message, open the contact route, add the details the office requests, then review and send there. Keep any confirmation. For an application, appeal or complaint, follow that process and its deadlines.','small'));
