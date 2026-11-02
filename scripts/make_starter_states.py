@@ -17,7 +17,10 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-STATUS = 'official_search_extract_only'  # phones matched to official pages via search excerpts
+# A state's "review" field says how its veterans contact was checked: "page" means the agency's own
+# page was opened and read; anything else means it was matched through search excerpts of that page.
+STATUS = {'page': 'official_source_reviewed'}
+METHOD = {'page': 'full_official_page_text'}
 
 
 def slug(name):
@@ -28,13 +31,13 @@ def area_name(s):
     return s.get('area') or 'All ' + s['name'] + ' counties'
 
 
-def record(pid, s, name, org, url, phone, needs, description, next_step, reviewed, source, role=None, area=None, constraints=None):
+def record(pid, s, name, org, url, phone, needs, description, next_step, reviewed, source, role=None, area=None, constraints=None, review=None):
     r = {'program_id': pid, 'name': name, 'official_url': url, 'organization': org,
          'service_area': [area] if area else ['statewide'], 'state': s['code'],
          'needs_supported': needs, 'description': description, 'next_step': next_step,
          'constraints': constraints or [], 'public_contact': {'phone': phone},
-         'verification': {'record_status': STATUS, 'last_reviewed_on': reviewed},
-         'evidence': {'review_method': 'official_search_excerpt', 'direct_agency_confirmation': False, 'phone_source_url': source},
+         'verification': {'record_status': STATUS.get(review, 'official_search_extract_only'), 'last_reviewed_on': reviewed},
+         'evidence': {'review_method': METHOD.get(review, 'official_search_excerpt'), 'direct_agency_confirmation': False, 'phone_source_url': source},
          'source_evidence': [{'url': source, 'title': 'Official published source', 'scope': 'Name and phone matched to the publisher’s own page on ' + reviewed + '; not direct intake confirmation.'}]}
     if role:
         r['regional_role'] = role
@@ -121,14 +124,14 @@ def main():
             raise SystemExit(code + ' already has a full edition; remove it from data/starter-states.json')
         office = {'state': code, 'county': area, 'county_type': 'statewide', 'phone': s['phone'], 'organization': s['agency'],
                   'office_type': 'statewide', 'source_url': s['url'], 'source_title': s['agency'] + ' — official contact page',
-                  'reviewed_on': reviewed, 'contact_status': 'official_website',
+                  'reviewed_on': s.get('reviewed_on', reviewed), 'contact_status': 'official_website', 'review_method': METHOD.get(s.get('review'), 'official_search_excerpt'),
                   'note': s.get('local_note') or 'Statewide contact. Ask which office serves your county.'}
         if s.get('local_url'):
             office['local_url'] = s['local_url']
         programs = [
             record(ids[0], s, name + ' veterans: accredited claims help', s['agency'], s['url'], s['phone'],
                    ['general_navigation', 'benefits_and_funding'], 'Free help with VA claims, applications and appeals for veterans and families.',
-                   'Call the state veterans agency; ask for a benefits review and the office that serves your county.', reviewed, s['url'], area=area),
+                   'Call the state veterans agency; ask for a benefits review and the office that serves your county.', reviewed, s['url'], area=area, review=s.get('review')),
             record(ids[1], s, 'Medicare counseling (SHIP) for ' + name, nat['ship']['organization'], nat['ship']['url'], nat['ship']['phone'],
                    ['benefits_and_funding'], 'Free, unbiased Medicare counseling from the State Health Insurance Assistance Program.',
                    'Call or use the locator to reach the ' + name + ' SHIP and ask for a counseling appointment.', reviewed, nat['ship']['source'], area=area)]

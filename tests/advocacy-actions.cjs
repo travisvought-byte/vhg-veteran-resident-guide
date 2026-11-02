@@ -11,7 +11,7 @@ function page(file,script,query=''){
   a.set('start-state',state);for(const link of a.d.querySelectorAll('[data-barrier]')){const u=new URL(link.href);assert.equal(u.searchParams.get('state'),state);assert(u.searchParams.get('barrier'));assert(!u.search.includes('story'));}
   assert.equal(new URL(a.$('start-state-policy').href).searchParams.get('state'),state);
  }
- a.set('start-state','AL');assert.equal(new URL(a.$('start-guide').href).search,'');a.dom.window.close();
+ a.set('start-state','AL');assert.equal(new URL(a.$('start-guide').href).search,'?state=AL');a.dom.window.close();
  const p=page('mobility-rights.html','assets/mobility-routes.js','?state=PA&barrier=payer&request=appeal'),{$,set,w,d}=p;
  assert.equal($('request-type').value,'appeal');assert($('request-guidance').textContent.includes('does not file an appeal'));assert($('route-result').textContent.includes('YOUR NEXT ACTION'));assert($('route-result').textContent.includes('What to have ready'));
  set('route-payer','medicare');$('show-route').click();assert($('request-guidance').querySelector('a').href.includes('/appeals'));

@@ -1,0 +1,80 @@
+[
+ {
+  "program_id": "ms-aging",
+  "name": "Local aging help in Mississippi (Eldercare Locator)",
+  "official_url": "https://eldercare.acl.gov/home",
+  "organization": "U.S. Administration for Community Living",
+  "service_area": [
+   "All Mississippi counties"
+  ],
+  "state": "MS",
+  "needs_supported": [
+   "general_navigation",
+   "help_at_home"
+  ],
+  "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
+  "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
+  "constraints": [
+   "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
+  ],
+  "public_contact": {
+   "phone": "800-677-1116"
+  },
+  "verification": {
+   "record_status": "official_search_extract_only",
+   "last_reviewed_on": "2026-11-02"
+  },
+  "evidence": {
+   "review_method": "official_search_excerpt",
+   "direct_agency_confirmation": false,
+   "phone_source_url": "https://www.acl.gov/contact"
+  },
+  "source_evidence": [
+   {
+    "url": "https://www.acl.gov/contact",
+    "title": "Official published source",
+    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+   }
+  ],
+  "regional_role": "aging_agency"
+ },
+ {
+  "program_id": "ms-ombudsman",
+  "name": "Mississippi long-term-care ombudsman",
+  "official_url": "https://theconsumervoice.org/get_help",
+  "organization": "National Long-Term Care Ombudsman Resource Center",
+  "service_area": [
+   "All Mississippi counties"
+  ],
+  "state": "MS",
+  "needs_supported": [
+   "resident_rights",
+   "general_navigation"
+  ],
+  "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
+  "next_step": "Use the locator to find the Mississippi program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
+  "constraints": [
+   "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
+  ],
+  "public_contact": {
+   "phone": "800-677-1116"
+  },
+  "verification": {
+   "record_status": "official_search_extract_only",
+   "last_reviewed_on": "2026-11-02"
+  },
+  "evidence": {
+   "review_method": "official_search_excerpt",
+   "direct_agency_confirmation": false,
+   "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
+  },
+  "source_evidence": [
+   {
+    "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
+    "title": "Official published source",
+    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+   }
+  ],
+  "regional_role": "ombudsman"
+ }
+]
