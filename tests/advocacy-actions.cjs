@@ -6,7 +6,7 @@ function page(file,script,query=''){
 }
 (async()=>{
  const a=page('disability-advocacy.html','assets/disability-advocacy.js','?state=PA');
- assert.equal(a.$('start-state').value,'PA');assert.equal(a.$('start-state').options.length,51);assert.equal(a.d.querySelectorAll('.problem-grid>a').length,6);
+ assert.equal(a.$('start-state').value,'PA');assert.equal(a.$('start-state').options.length,51);assert.equal(a.d.querySelectorAll('.problem-grid>a').length,7);
  for(const state of [...a.$('start-state').options].map(o=>o.value)){
   a.set('start-state',state);for(const link of a.d.querySelectorAll('[data-barrier]')){const u=new URL(link.href);assert.equal(u.searchParams.get('state'),state);assert(u.searchParams.get('barrier'));assert(!u.search.includes('story'));}
   assert.equal(new URL(a.$('start-state-policy').href).searchParams.get('state'),state);
