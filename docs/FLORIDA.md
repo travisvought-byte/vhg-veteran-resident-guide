@@ -12,6 +12,10 @@ Florida has **67 counties** with a county veterans contact, matched aging helpli
 - [Florida AHCA's SMMC Long-Term Care program](https://ahca.myflorida.com/medicaid/statewide-medicaid-managed-care/long-term-care-program/find-out-about-long-term-care-services.html) includes **Home Accessibility Adaptation**, which is not a general home-improvement grant. Enrolled members should ask the plan case manager about the person's care plan, authorization and vendors. New applicants should begin with the Elder Helpline.
 - FAAST, Florida SHINE, Disability Rights Florida, the Division of Blind Services, Florida Relay and Florida 211 provide the additional statewide referral routes.
 
+## County office details
+
+County veterans office records can carry an address, hours, email, website and county-published walk-in outreach sessions, shown on the county card. **Seminole County** (November 2, 2026) uses the [county’s own Veterans Services page](https://www.seminolecountyfl.gov/departments-services/community-services/veterans-services): main office at 520 W. Lake Mary Blvd, Suite 102, Sanford; walk-ins Monday, Tuesday and Thursday mornings; outreach at VFW Post 243 in Oviedo (1st and 3rd Wednesday) and VFW Post 5405 in Winter Springs (1st Wednesday). County pages disagree on the Winter Springs schedule, so the current main page is used and visitors are told to confirm. This comes from staged research in draft PR #72. The other 66 counties will be filled from FDVA’s April 2026 county directory.
+
 ## Exceptions and quality controls
 
 The FDVA directory shows shared county veteran-service arrangements for Jefferson/Madison and Bradford/Union; preserve their attribution rather than describing separate local staffing. The Northwest ombudsman number differs between Elder Affairs pages; the dedicated ombudsman program page is used as the primary publication. The dedicated ombudsman page prints **Oceola**, normalized to **Osceola** in the county map. The detailed district page maps that county to South Central.
