@@ -8,7 +8,7 @@ from urllib.parse import urlparse
 from build_mobility_routes import STATES
 ROOT=Path(__file__).resolve().parents[1]
 PACKAGE=ROOT/'research/mobility-laws-2026-11-01'
-KINDS={'current-code','current-rule','enacted-text','legislative-summary','program-manual','official-guidance'}
+KINDS={'historical-code','current-code','current-rule','enacted-text','legislative-summary','program-manual','official-guidance'}
 STATUSES={'text-reviewed','summary-only','route-only'}
 def validate(d):
  errors=[]
@@ -24,7 +24,7 @@ def validate(d):
  for s in d['sources']:
   need(s.get('retrieval')=='content-reviewed','Source content must be reviewed')
   need(s.get('kind') in KINDS,'Unknown source kind')
-  required={'current-code':'published-code','current-rule':'published-rule','enacted-text':'enacted','legislative-summary':'enacted','program-manual':'program-policy','official-guidance':'guidance'}
+  required={'historical-code':'published-code','current-code':'published-code','current-rule':'published-rule','enacted-text':'enacted','legislative-summary':'enacted','program-manual':'program-policy','official-guidance':'guidance'}
   need(s.get('instrument_status')==required.get(s.get('kind')),'Proposed or unknown instrument promoted to enacted law')
   u=urlparse(s.get('url',''));need(u.scheme=='https' and bool(u.netloc),'Invalid source URL')
   need(bool(s.get('locator')) and bool(s.get('version_note')),'Source lacks locator/version limits')
@@ -112,6 +112,11 @@ def report(d):
   refs=list(dict.fromkeys(i for c in cs for i in c['source_ids']))
   detail=st['summary']+' '+' '.join(f'[{s}]('+sources[s]['url']+')' for s in refs)
   lines.append(f"| {st['name']} ({st['role']}) | {detail} | Definitions, later amendments and implementation remain; see claim limitations and matrix gaps. |")
+ lines+=['','## Observation ledger','','These bounded observations retain their source type, scope and limits. A statutory remedy threshold is not a general repair deadline. Earlier review dates remain unchanged.','', '| State / issue | Observation | Scope and limits | Evidence |','| --- | --- | --- | --- |']
+ for c in d['claims']:
+  refs='; '.join(f"[{sources[sid]['kind']}]({sources[sid]['url']})" for sid in c['source_ids'])
+  detail=f"{c['scope']}. {c['limitations']}"
+  lines.append(f"| {c['jurisdiction']} / {issues[c['issue']]} | **{c['id']}**: {c['statement']} | {detail} | {c['citation']}; reviewed {c['reviewed_on']}. {refs} |")
  lines+=['','## Federal layer','']
  for c in d['claims']:
   if c['jurisdiction']=='US':lines.append(f"- **{issues[c['issue']]}:** {c['statement']} {c['limitations']} "+' '.join(f'[{s}]('+sources[s]['url']+')' for s in c['source_ids']))
