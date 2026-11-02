@@ -25,9 +25,14 @@ rejects(lambda d:d['advocacy_comparisons'][0].update(premise_claim_ids=['imagina
 rejects(lambda d:d['advocacy_comparisons'][0].update(states_compared=['CA']),'Comparison state/evidence')
 rejects(lambda d:d['advocacy_comparisons'][0].update(issue='home'),'Comparison issue/evidence')
 rejects(lambda d:d['advocacy_comparisons'][0].update(limitations=''),'Comparison needs bounded')
-assert len(base['states'])==51 and len(base['state_issue_matrix'])==408
-assert len({c['jurisdiction'] for c in base['claims'] if c['jurisdiction']!='US'})==22
+assert len(base['states'])==51 and len(base['state_issue_matrix'])==459
+assert len({c['jurisdiction'] for c in base['claims'] if c['jurisdiction']!='US'})==51
 mn=next(c for c in base['claims'] if c['id']=='mn-loaner-1');assert mn['timing']['unit']=='working-days' and mn['timing']['operator']=='>'
-assert all(not c['claim_ids'] for c in base['state_issue_matrix'] if c['state']=='NJ')
+assert all(not c['claim_ids'] for c in base['state_issue_matrix'] if c['state']=='NJ' and c['issue']!='public-access')
+assert len(base['state_baselines'])==51
+rejects(lambda d:d['state_baselines'].pop(),'Minimum baseline')
+rejects(lambda d:d['state_baselines'][0].update(claim_id='us-medicare-repair-1'),'Baseline needs substantive')
+rejects(lambda d:d['state_baselines'][0].update(responsible_actor=''),'Baseline needs accountable')
+rejects(lambda d:d['claims'][0].update(reviewed_on='2099-01-01'),'Future claim review')
 assert 'donation' in next(c for c in base['claims'] if c['id']=='il-donation-1')['statement']
 print('PASS mobility map regressions: unknowns, jurisdictions, summaries, proposals, dates, inferences, lead freshness, timing, national matrix completeness and evidence-linked advocacy comparisons.')

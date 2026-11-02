@@ -38,7 +38,8 @@ def validate(d):
   refs=[maps['sources'].get(i) for i in c['source_ids']];need(all(refs),'Missing source reference')
   need(all(s and s['jurisdiction']==c['jurisdiction'] for s in refs),'Cross-jurisdiction source')
   if any(s and s['kind']=='legislative-summary' for s in refs):need(c['status']=='summary-only','Summary promoted to text-reviewed law')
-  need(c.get('reviewed_on')==d['as_of'],'Claim review date mismatch')
+  try:need(date.fromisoformat(c['reviewed_on'])<=asof,'Future claim review')
+  except (ValueError,KeyError):errors.append('Invalid claim review date')
   if c.get('effective_on'):
    try:need(date.fromisoformat(c['effective_on'])<=asof,'Future rule treated as in force')
    except ValueError:errors.append('Invalid effective date')
@@ -69,6 +70,14 @@ def validate(d):
   need({c['jurisdiction'] for c in refs if c}==set(comparison.get('states_compared',[])),'Comparison state/evidence mismatch')
   need(all(c and c['issue']==comparison.get('issue') for c in refs),'Comparison issue/evidence mismatch')
   need(all(comparison.get(k) for k in ['title','disparity','proposed_change','decision_makers','limitations']),'Comparison needs bounded findings and policy action')
+ baselines=d.get('state_baselines',[])
+ need(len(baselines)==len(maps['states']) and {b.get('state') for b in baselines}==set(maps['states']),'Minimum baseline must cover every jurisdiction exactly once')
+ need(bool(d.get('minimum_coverage_definition')),'Minimum coverage needs a definition')
+ for b in baselines:
+  c=maps['claims'].get(b.get('claim_id'))
+  need(bool(c) and c['jurisdiction']==b.get('state') and c['status']!='route-only','Baseline needs substantive state evidence')
+  need(b.get('status')=='minimum-evidence-baseline' and all(b.get(k) for k in ['responsible_actor','advocacy_question','completion_note']),'Baseline needs accountable actor, question and limits')
+  need(bool(c) and b.get('reviewed_on')==c.get('reviewed_on'),'Baseline review must match evidence')
  for lead in d['existing_directory_leads']:
 
   need(lead.get('fresh_legal_review') is False and lead.get('status')=='existing-directory-lead','Old directory lead promoted to legal evidence')
@@ -83,7 +92,7 @@ def validate(d):
 def report(d):
  sources={s['id']:s for s in d['sources']};issues={i['id']:i['label'] for i in d['issues']}
  observed={c['jurisdiction'] for c in d['claims'] if c['jurisdiction']!='US'}
- lines=['# State-by-state disability advocacy research matrix','',f"As of {d['as_of']}. Research pass {d.get('research_pass',1)}: 50 states and DC tracked; selected evidence for {len(observed)} states; {len(d['claims'])} observations and {len(d['sources'])} reviewed primary-publisher sources. Eight issue families; federal observations remain separate. Public site content is unchanged.",'','This matrix supports advocacy: compare protections, exclusions and accountability, then identify policy changes. It does not route individual service requests. A reviewed cell means at least one bounded observation, not a complete legal review. Unknown never means no right. Source types and version limits remain visible.','', '## Advocacy comparisons to develop','', 'These are bounded analyst comparisons, not state rankings or proof of real-world outcomes. Priority order is not scored: population affected, lived experience and enforcement data still need collection.','', '| Issue | States | Documented difference | Policy direction | Evidence |','| --- | --- | --- | --- | --- |']
+ lines=['# State-by-state disability advocacy research matrix','',f"As of {d['as_of']}. Research pass {d.get('research_pass',1)}: 50 states and DC tracked; selected evidence for {len(observed)} states; {len(d['claims'])} observations and {len(d['sources'])} reviewed primary-publisher sources. {len(d['issues'])} issue families; federal observations remain separate. Public site content is unchanged.",'','This matrix supports advocacy: compare protections, exclusions and accountability, then identify policy changes. It does not route individual service requests. A reviewed cell means at least one bounded observation, not a complete legal review. Unknown never means no right. Source types and version limits remain visible.','', '## Advocacy comparisons to develop','', 'These are bounded analyst comparisons, not state rankings or proof of real-world outcomes. Priority order is not scored: population affected, lived experience and enforcement data still need collection.','', '| Issue | States | Documented difference | Policy direction | Evidence |','| --- | --- | --- | --- | --- |']
  claims={c['id']:c for c in d['claims']}
  for c in d.get('advocacy_comparisons',[]):
   refs='; '.join(f"[{cid}]({sources[claims[cid]['source_ids'][0]]['url']})" for cid in c['premise_claim_ids'])
@@ -91,8 +100,12 @@ def report(d):
  for c in d.get('advocacy_comparisons',[]):
   lines += ['',f"**{c['title']}:** Decision-makers: {c['decision_makers']}. Limits: {c['limitations']}"]
  lines+=['','## Advocacy questions by issue','','| Issue | What to establish before choosing a campaign |','| --- | --- |']
- questions={'repair-access':'Who can access parts, tools and software, for which devices, on what terms?','warranty':'Which devices, consumers, transfers and donated equipment qualify; what remedies are enforceable?','downtime':'What triggers response, parts ordering, temporary equipment and completion duties; who pays?','payer':'Which payer covers repair and backup mobility; what exclusions create discontinuity?','home':'Which housing and modification duties apply; how do eligibility and funding exclusions affect independence?','vehicle':'Which adaptation rights, approval restrictions and maintenance responsibilities apply?','transit':'What accessibility duties, service exclusions and accountability mechanisms apply?','community':'What supports community choice; what service limits and enforcement gaps remain?'}
+ questions={'repair-access':'Who can access parts, tools and software, for which devices, on what terms?','warranty':'Which devices, consumers, transfers and donated equipment qualify; what remedies are enforceable?','downtime':'What triggers response, parts ordering, temporary equipment and completion duties; who pays?','payer':'Which payer covers repair and backup mobility; what exclusions create discontinuity?','home':'Which housing and modification duties apply; how do eligibility and funding exclusions affect independence?','vehicle':'Which adaptation rights, approval restrictions and maintenance responsibilities apply?','transit':'What accessibility duties, service exclusions and accountability mechanisms apply?','community':'What supports community choice; what service limits and enforcement gaps remain?','public-access':'Which public places and services are covered, what exclusions apply, and who enforces access duties?'}
  for i,label in issues.items():lines.append(f"| {label} | {questions[i]} |")
+ lines+=['','## Minimum national baseline','',d['minimum_coverage_definition'],'','| State | Evidence | Responsible actor | Advocacy question |','| --- | --- | --- | --- |']
+ for b in d['state_baselines']:
+  c=claims[b['claim_id']];source=sources[c['source_ids'][0]]
+  lines.append(f"| {b['state']} | [{c['id']}]({source['url']}) — {c['status']}, reviewed {b['reviewed_on']} | {b['responsible_actor']} | {b['advocacy_question']} |")
  lines+=['','## State comparison','','| State | Observations and scope | Remaining work |','| --- | --- | --- |']
  for st in d['states']:
   cs=[c for c in d['claims'] if c['jurisdiction']==st['code']]
