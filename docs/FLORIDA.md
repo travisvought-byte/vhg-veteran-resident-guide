@@ -12,6 +12,18 @@ Florida has **67 counties** with a county veterans contact, matched aging helpli
 - [Florida AHCA's SMMC Long-Term Care program](https://ahca.myflorida.com/medicaid/statewide-medicaid-managed-care/long-term-care-program/find-out-about-long-term-care-services.html) includes **Home Accessibility Adaptation**, which is not a general home-improvement grant. Enrolled members should ask the plan case manager about the person's care plan, authorization and vendors. New applicants should begin with the Elder Helpline.
 - FAAST, Florida SHINE, Disability Rights Florida, the Division of Blind Services, Florida Relay and Florida 211 provide the additional statewide referral routes.
 
+## County office details
+
+County veterans office records can carry an address, hours, email, website and county-published walk-in outreach sessions, shown on the county card. **Seminole County** (November 2, 2026) uses the [county’s own Veterans Services page](https://www.seminolecountyfl.gov/departments-services/community-services/veterans-services): main office at 520 W. Lake Mary Blvd, Suite 102, Sanford; walk-ins Monday, Tuesday and Thursday mornings; outreach at VFW Post 243 in Oviedo (1st and 3rd Wednesday) and VFW Post 5405 in Winter Springs (1st Wednesday). County pages disagree on the Winter Springs schedule, so the current main page is used and visitors are told to confirm. This comes from staged research in draft PR #72. The other 66 counties will be filled from FDVA’s April 2026 county directory.
+
+## Centers for Independent Living
+
+All 67 counties map to exactly one of Florida’s 16 Centers for Independent Living (November 2, 2026). Center names and phones come from [Florida Vocational Rehabilitation’s center list](https://beta.rehabworks.org/rehabworks/adult-programs/il-plan.html); counties served and office addresses come from the [ILRU national CIL directory](https://www.ilru.org/cil-directory/fl). Where ILRU shows a different local number (for example Coalition for Independent Living Options, Central Florida and North Central Florida), the state-published phone is used. Four centers list only `http://` websites, so their cards link to the state list and print the website in the next step. Centers appear in the local-help, accessibility, care and senior daily-support and accessibility views, limited to the selected county.
+
+## Civil legal aid
+
+Twenty-four civil legal aid providers are mapped to the counties they serve, from [Funding Florida Legal Aid’s program chart](https://fundingfla.org/?p=24389) (page modified October 20, 2026; reviewed November 2, 2026). Every county has at least one provider. The list keeps general civil legal aid programs plus Stetson University’s Veterans Law Institute (Hillsborough), and leaves out immigration-only, children-only, post-conviction and law-school clinic programs. Phones are included only where the chart lists one; `http://` websites are printed in the next step, and the card links to the chart. Legal aid appears in the local-help, rights and housing views, limited to the selected county.
+
 ## Exceptions and quality controls
 
 The FDVA directory shows shared county veteran-service arrangements for Jefferson/Madison and Bradford/Union; preserve their attribution rather than describing separate local staffing. The Northwest ombudsman number differs between Elder Affairs pages; the dedicated ombudsman program page is used as the primary publication. The dedicated ombudsman page prints **Oceola**, normalized to **Osceola** in the county map. The detailed district page maps that county to South Central.
