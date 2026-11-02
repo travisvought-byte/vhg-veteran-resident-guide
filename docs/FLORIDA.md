@@ -14,7 +14,7 @@ Florida has **67 counties** with a county veterans contact, matched aging helpli
 
 ## County office details
 
-County veterans office records can carry an address, hours, email, website and county-published walk-in outreach sessions, shown on the county card. **Seminole County** (November 2, 2026) uses the [county’s own Veterans Services page](https://www.seminolecountyfl.gov/departments-services/community-services/veterans-services): main office at 520 W. Lake Mary Blvd, Suite 102, Sanford; walk-ins Monday, Tuesday and Thursday mornings; outreach at VFW Post 243 in Oviedo (1st and 3rd Wednesday) and VFW Post 5405 in Winter Springs (1st Wednesday). County pages disagree on the Winter Springs schedule, so the current main page is used and visitors are told to confirm. This comes from staged research in draft PR #72. The other 66 counties will be filled from FDVA’s April 2026 county directory.
+County veterans office records can carry an address, hours, email, website and county-published walk-in outreach sessions, shown on the county card. **Seminole County** (November 2, 2026) uses the [county’s own Veterans Services page](https://www.seminolecountyfl.gov/departments-services/community-services/veterans-services): main office at 520 W. Lake Mary Blvd, Suite 102, Sanford; walk-ins Monday, Tuesday and Thursday mornings; outreach at VFW Post 243 in Oviedo (1st and 3rd Wednesday) and VFW Post 5405 in Winter Springs (1st Wednesday). County pages disagree on the Winter Springs schedule, so the current main page is used and visitors are told to confirm. This comes from staged research in draft PR #72. The other 66 counties are filled from [FDVA’s April 2026 county directory](https://floridavets.org/wp-content/uploads/2026/04/CVSO-Directory-Apr-2026.pdf) (reviewed November 2, 2026): street or mailing address, published hours, a general office email where one is printed, and other office locations. Staff names and personal staff emails are not published, and emails printed with apparent typos (Lafayette, Nassau) are left out. Every primary phone in the guide matched the April directory. The directory prints Seminole’s suite as 100; the county’s own page says 102, which is used.
 
 ## Centers for Independent Living
 
@@ -23,6 +23,10 @@ All 67 counties map to exactly one of Florida’s 16 Centers for Independent Liv
 ## Civil legal aid
 
 Twenty-four civil legal aid providers are mapped to the counties they serve, from [Funding Florida Legal Aid’s program chart](https://fundingfla.org/?p=24389) (page modified October 20, 2026; reviewed November 2, 2026). Every county has at least one provider. The list keeps general civil legal aid programs plus Stetson University’s Veterans Law Institute (Hillsborough), and leaves out immigration-only, children-only, post-conviction and law-school clinic programs. Phones are included only where the chart lists one; `http://` websites are printed in the next step, and the card links to the chart. Legal aid appears in the local-help, rights and housing views, limited to the selected county.
+
+## Veteran housing (SSVF)
+
+VA’s FY 2027 SSVF award list (supplied by the maintainer; [VA awards page](https://department.va.gov/homeless/fy-2027-grant-awards/)) names 13 Florida grantees but not the counties each serves. The housing view shows one statewide card listing all 13 and routes veterans to the National Call Center for Homeless Veterans (877-424-3838) or 211 for the provider serving their county. County-level SSVF mapping remains open.
 
 ## Exceptions and quality controls
 
