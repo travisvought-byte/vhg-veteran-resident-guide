@@ -93,7 +93,7 @@ const STATE='OH';
 let route='priority';
 const officeLegacyIds=new Set(['morrow-vso','knox-vso','marion-vso','delaware-vso']);
 const tel=p=>{const parts=p.split(/\s+ext\.?\s*/i);return 'tel:'+parts[0].replace(/[^+0-9]/g,'')+(parts[1]?';ext='+parts[1].replace(/\D/g,''):'')};
-function localityLabel(value){const c=typeof value==='string'?COUNTIES.find(c=>c.county===value):value;return c?(c.county_type==='independent_city'?c.county:c.county+' County'):(value||'')}
+function localityLabel(value){const c=typeof value==='string'?COUNTIES.find(c=>c.county===value):value;return c?(['independent_city','statewide'].includes(c.county_type)?c.county:c.county+' County'):(value||'')}
 const phoneLink=p=>p?'<a class="phone" href="'+esc(tel(p))+'">'+esc(p)+'</a>':'';
 const sourceURL=c=>c.source_url+(c.source_page?'#page='+c.source_page:'');
 COUNTIES.forEach(c=>{const o=document.createElement('option');o.value=c.county;o.textContent=c.county+' County';$('county').append(o)});

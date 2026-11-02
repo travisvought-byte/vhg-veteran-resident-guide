@@ -6,7 +6,7 @@ let DATA=[],COUNTIES=[],STATE='OH',priority=[],routes={},seniorTopics={},routeNa
 const regionalIDs=role=>DATA.filter(x=>x.regional_role===role).map(x=>x.program_id);
 const officeLegacyIds=new Set(['morrow-vso','knox-vso','marion-vso','delaware-vso']);
 const tel=p=>{const parts=p.split(/\s+ext\.?\s*/i);return 'tel:'+parts[0].replace(/[^+0-9]/g,'')+(parts[1]?';ext='+parts[1].replace(/\D/g,''):'')};
-function localityLabel(value){const c=typeof value==='string'?COUNTIES.find(c=>c.county===value):value;return c?(c.county_type==='independent_city'?c.county:c.county+' County'):(value||'')}
+function localityLabel(value){const c=typeof value==='string'?COUNTIES.find(c=>c.county===value):value;return c?(['independent_city','statewide'].includes(c.county_type)?c.county:c.county+' County'):(value||'')}
 const phoneLink=p=>p?'<a class="phone" href="'+esc(tel(p))+'">'+esc(p)+'</a>':'';
 const sourceURL=c=>c.source_url+(c.source_page?'#page='+c.source_page:'');
 function officeCard(...args){return EDITIONS[STATE].officeCard(...args)}
@@ -35,7 +35,7 @@ $('results').innerHTML=rows.map(x=>{const c=x.public_contact||{},v=x.verificatio
 renderCounty();renderAccessibility();renderSeniorGuide();renderHelper();if(county&&!$('county-panel').hidden&&COUNTIES.some(c=>c.county===county))$('county-panel').innerHTML+=countyReportLink(county);document.querySelectorAll('[data-route]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.route===route)));$('share-status').textContent='';history.replaceState(null,'',shareURL())}
 
 const EDITIONS=window.VHG_EDITIONS=window.VHG_EDITIONS||{};
-const EDITION_FILES={"OH": "assets/editions/oh.js?v=709ee24be7", "PA": "assets/editions/pa.js?v=c32769a243", "NY": "assets/editions/ny.js?v=313bc0862e", "MI": "assets/editions/mi.js?v=1ac2862276", "KY": "assets/editions/ky.js?v=732b30c095", "UT": "assets/editions/ut.js?v=e6f6af1593", "IN": "assets/editions/in.js?v=d4daff6dcf", "WV": "assets/editions/wv.js?v=c4e1a5fbdd", "TX": "assets/editions/tx.js?v=cef76f0be6", "FL": "assets/editions/fl.js?v=05aed573f2", "CA": "assets/editions/ca.js?v=382c7b0687", "VA": "assets/editions/va.js?v=5ad070caec", "NC": "assets/editions/nc.js?v=59afe054cc"};
+const EDITION_FILES={"OH": "assets/editions/oh.js?v=709ee24be7", "PA": "assets/editions/pa.js?v=c32769a243", "NY": "assets/editions/ny.js?v=313bc0862e", "MI": "assets/editions/mi.js?v=1ac2862276", "KY": "assets/editions/ky.js?v=732b30c095", "UT": "assets/editions/ut.js?v=e6f6af1593", "IN": "assets/editions/in.js?v=d4daff6dcf", "WV": "assets/editions/wv.js?v=c4e1a5fbdd", "TX": "assets/editions/tx.js?v=cef76f0be6", "FL": "assets/editions/fl.js?v=05aed573f2", "CA": "assets/editions/ca.js?v=382c7b0687", "VA": "assets/editions/va.js?v=5ad070caec", "NC": "assets/editions/nc.js?v=59afe054cc", "AL": "assets/editions/al.js?v=55a6214c53", "AK": "assets/editions/ak.js?v=c645aaa99b", "AZ": "assets/editions/az.js?v=66a2a6630a", "AR": "assets/editions/ar.js?v=85e6cd30a8", "CO": "assets/editions/co.js?v=4fd7883ee3", "CT": "assets/editions/ct.js?v=27e046c181", "DE": "assets/editions/de.js?v=5dd0a22b41", "DC": "assets/editions/dc.js?v=c99d44d61f", "GA": "assets/editions/ga.js?v=4d2fcef410", "IL": "assets/editions/il.js?v=64232a0cfa", "TN": "assets/editions/tn.js?v=23e718ccce", "WA": "assets/editions/wa.js?v=3782846307"};
 let helperActive=false,helperShowingResults=false,helperRoute='benefits';
 function agingContactsHTML(...args){return EDITIONS[STATE].agingContactsHTML(...args)}
 function countyContactsHTML(...args){return EDITIONS[STATE].countyContactsHTML(...args)}

@@ -2,6 +2,10 @@
 
 Established October 18, 2026. Every state follows the same standard: each county resolves to a veterans contact, a local aging contact and a long-term-care ombudsman route, each backed by an official published source and a review date. A state is added with data and configuration only. No build code changes are needed.
 
+## Starter editions
+
+A state without county research can start as a starter edition: one statewide locality that routes to the state veterans agency and national aging, ombudsman and Medicare counseling locators. Add it to `data/starter-states.json` and run `scripts/make_starter_states.py`; the script writes the files below and the registry entry (`"starter": true`). When county research is ready, remove the state from that file and build a full edition as described here.
+
 ## What a state consists of
 
 | File | Contents |
