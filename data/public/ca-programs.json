@@ -401,5 +401,538 @@
       "direct_agency_confirmation": false,
       "phone_source_url": "https://211ca.org/"
     }
+  },
+  {
+    "program_id": "ca-vahealth-norcal",
+    "name": "VA Northern California Health Care System",
+    "organization": "U.S. Department of Veterans Affairs",
+    "official_url": "https://www.va.gov/northern-california-health-care/about-us/",
+    "service_area": [
+      "Alameda",
+      "Amador",
+      "Butte",
+      "Colusa",
+      "Contra Costa",
+      "El Dorado",
+      "Glenn",
+      "Placer",
+      "Sacramento",
+      "Shasta",
+      "Siskiyou",
+      "Solano",
+      "Sutter",
+      "Tehama",
+      "Trinity",
+      "Yolo",
+      "Yuba"
+    ],
+    "state": "CA",
+    "resource_role": "va_health_system",
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "The VA health care system for this county. Sacramento VA Medical Center (Mather), the Martinez center, and clinics across the Sacramento Valley, East Bay and far north, including Chico, Redding, Fairfield, Oakland, Yuba City and Mare Island.",
+    "next_step": "Call 800-382-8387 to ask about enrolling, being assigned a clinic, or reaching your care team. Use VA’s facility locator with your ZIP code to find the closest clinic. Not enrolled yet? You can also call 877-222-8387 or ask your county veterans office for help applying.",
+    "constraints": [
+      "Your VA care team may be at a different clinic or system; follow what VA tells you. Hours, services and openings vary by clinic.",
+      "Parts of Alameda, El Dorado and Placer counties are served by other VA systems; VA will tell you which one you are assigned to."
+    ],
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://webarchive.library.unt.edu/web/20130214100644/http://www.northerncalifornia.va.gov/about"
+    },
+    "source_evidence": [
+      {
+        "url": "https://webarchive.library.unt.edu/web/20130214100644/http://www.northerncalifornia.va.gov/about",
+        "title": "VA Northern California: about this facility (archived VA page)",
+        "reviewed_on": "2026-11-02",
+        "scope": "17 counties served, some partial (Alameda, El Dorado, Placer); search excerpt."
+      },
+      {
+        "url": "https://www.va.gov/northern-california-health-care/about-us/",
+        "title": "VA Northern California: about us",
+        "reviewed_on": "2026-11-02",
+        "scope": "Current page: 17 counties served; search excerpt."
+      },
+      {
+        "url": "https://www.va.gov/directory/guide/fac_list_by_state.cfm?State=CA",
+        "title": "VA facility list, California",
+        "reviewed_on": "2026-11-02",
+        "scope": "Main phone; search excerpt."
+      }
+    ],
+    "public_contact": {
+      "phone": "800-382-8387",
+      "phone_label": "VA Northern California Health Care System main line"
+    }
+  },
+  {
+    "program_id": "ca-vahealth-sf",
+    "name": "San Francisco VA Health Care System",
+    "organization": "U.S. Department of Veterans Affairs",
+    "official_url": "https://www.va.gov/san-francisco-health-care/about-us/",
+    "service_area": [
+      "Alameda",
+      "Marin",
+      "Napa",
+      "Sonoma",
+      "Lake",
+      "Mendocino",
+      "Humboldt",
+      "San Francisco",
+      "San Mateo",
+      "Del Norte"
+    ],
+    "state": "CA",
+    "resource_role": "va_health_system",
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "The VA health care system for this county. San Francisco VA Medical Center, with clinics north of the Bay and along the North Coast, including Santa Rosa, Ukiah, Eureka, Clearlake, San Bruno and downtown San Francisco.",
+    "next_step": "Call 415-221-4810 to ask about enrolling, being assigned a clinic, or reaching your care team. Use VA’s facility locator with your ZIP code to find the closest clinic. Not enrolled yet? You can also call 877-222-8387 or ask your county veterans office for help applying.",
+    "constraints": [
+      "Your VA care team may be at a different clinic or system; follow what VA tells you. Hours, services and openings vary by clinic."
+    ],
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.va.gov/files/2024-01/SFVAHCS%20Fact%20Sheet%20FY24_0.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.va.gov/files/2024-01/SFVAHCS%20Fact%20Sheet%20FY24_0.pdf",
+        "title": "San Francisco VA fact sheet FY24",
+        "reviewed_on": "2026-11-02",
+        "scope": "Counties served: Alameda, Marin, Napa, Sonoma, Lake, Mendocino, Humboldt, San Francisco and San Mateo; search excerpt."
+      },
+      {
+        "url": "https://www.smc-connect.org/locations/united-states-government/veterans-affairs-san-francisco-health-care-system",
+        "title": "San Mateo County SMC Connect: San Francisco VA",
+        "reviewed_on": "2026-11-02",
+        "scope": "Service areas include Del Norte County; search excerpt."
+      },
+      {
+        "url": "https://www.va.gov/directory/guide/fac_list_by_state.cfm?State=CA",
+        "title": "VA facility list, California",
+        "reviewed_on": "2026-11-02",
+        "scope": "Main phone; search excerpt."
+      }
+    ],
+    "public_contact": {
+      "phone": "415-221-4810",
+      "phone_label": "San Francisco VA Health Care System main line"
+    }
+  },
+  {
+    "program_id": "ca-vahealth-paloalto",
+    "name": "VA Palo Alto Health Care System",
+    "organization": "U.S. Department of Veterans Affairs",
+    "official_url": "https://www.va.gov/palo-alto-health-care/",
+    "service_area": [
+      "Santa Clara",
+      "San Mateo",
+      "Santa Cruz",
+      "Monterey",
+      "San Joaquin",
+      "Stanislaus",
+      "Tuolumne",
+      "Alameda",
+      "Amador",
+      "Calaveras"
+    ],
+    "state": "CA",
+    "resource_role": "va_health_system",
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "The VA health care system for this county. Medical centers in Palo Alto, Menlo Park and Livermore, with clinics including San Jose, Capitola, Monterey, Stockton, Modesto and Sonora.",
+    "next_step": "Call 650-493-5000 to ask about enrolling, being assigned a clinic, or reaching your care team. Use VA’s facility locator with your ZIP code to find the closest clinic. Not enrolled yet? You can also call 877-222-8387 or ask your county veterans office for help applying.",
+    "constraints": [
+      "Your VA care team may be at a different clinic or system; follow what VA tells you. Hours, services and openings vary by clinic.",
+      "VA describes a 10-county area; the county list here is assembled from clinic locations and directory listings."
+    ],
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://webarchive.library.unt.edu/eot2008/20090114090944/http://www.palo-alto.med.va.gov/paloalto/about.asp"
+    },
+    "source_evidence": [
+      {
+        "url": "https://webarchive.library.unt.edu/eot2008/20090114090944/http://www.palo-alto.med.va.gov/paloalto/about.asp",
+        "title": "VA Palo Alto: about (archived VA page)",
+        "reviewed_on": "2026-11-02",
+        "scope": "Inpatient sites and outpatient clinic cities; search excerpt."
+      },
+      {
+        "url": "https://www.dreyfussblackford.com/project/san-joaquin-county-va-palo-alto-community-outpatient-clinic",
+        "title": "Stockton VA Palo Alto clinic project page",
+        "reviewed_on": "2026-11-02",
+        "scope": "Clinic serves San Joaquin, Amador and Calaveras counties; search excerpt."
+      },
+      {
+        "url": "https://www.1degree.org/opp/get-case-management-and-support-veterans-affairs-palo-alto-palo-alto-ca?s=related",
+        "title": "One Degree: VA Palo Alto case management listing",
+        "reviewed_on": "2026-11-02",
+        "scope": "Counties served including Monterey, San Joaquin, San Mateo, Santa Clara, Stanislaus and Tuolumne; search excerpt."
+      }
+    ],
+    "public_contact": {
+      "phone": "650-493-5000",
+      "phone_label": "VA Palo Alto Health Care System main line"
+    }
+  },
+  {
+    "program_id": "ca-vahealth-central",
+    "name": "VA Central California Health Care System",
+    "organization": "U.S. Department of Veterans Affairs",
+    "official_url": "https://www.va.gov/central-california-health-care/about-us/",
+    "service_area": [
+      "Tulare",
+      "Kings",
+      "Fresno",
+      "Madera",
+      "Merced",
+      "Mariposa"
+    ],
+    "state": "CA",
+    "resource_role": "va_health_system",
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "The VA health care system for this county. Fresno VA Medical Center, with clinics in Merced, Oakhurst and Visalia.",
+    "next_step": "Call 559-225-6100 to ask about enrolling, being assigned a clinic, or reaching your care team. Use VA’s facility locator with your ZIP code to find the closest clinic. Not enrolled yet? You can also call 877-222-8387 or ask your county veterans office for help applying.",
+    "constraints": [
+      "Your VA care team may be at a different clinic or system; follow what VA tells you. Hours, services and openings vary by clinic."
+    ],
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.va.gov/central-california-health-care/about-us/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.va.gov/central-california-health-care/about-us/",
+        "title": "VA Central California: about us",
+        "reviewed_on": "2026-11-02",
+        "scope": "Counties served: Tulare, Kings, Fresno, Madera, Merced and Mariposa; search excerpt."
+      }
+    ],
+    "public_contact": {
+      "phone": "559-225-6100",
+      "phone_label": "VA Central California Health Care System main line"
+    }
+  },
+  {
+    "program_id": "ca-vahealth-sierranevada",
+    "name": "VA Sierra Nevada Health Care System",
+    "organization": "U.S. Department of Veterans Affairs",
+    "official_url": "https://www.va.gov/sierra-nevada-health-care/about-us/",
+    "service_area": [
+      "Lassen"
+    ],
+    "state": "CA",
+    "resource_role": "va_health_system",
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "The VA health care system for this county. Ioannis A. Lougaris VA Medical Center in Reno, Nevada, with the Diamond View VA Clinic in Susanville, California.",
+    "next_step": "Call 775-786-7200 to ask about enrolling, being assigned a clinic, or reaching your care team. Use VA’s facility locator with your ZIP code to find the closest clinic. Not enrolled yet? You can also call 877-222-8387 or ask your county veterans office for help applying.",
+    "constraints": [
+      "Your VA care team may be at a different clinic or system; follow what VA tells you. Hours, services and openings vary by clinic.",
+      "VA Sierra Nevada also serves other northeastern California counties; VA does not publish the list in a source we found."
+    ],
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.va.gov/sierra-nevada-health-care/about-us/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.va.gov/sierra-nevada-health-care/about-us/",
+        "title": "VA Sierra Nevada: about us",
+        "reviewed_on": "2026-11-02",
+        "scope": "Serves northern Nevada and northeastern California, with a clinic in Susanville; search excerpt."
+      },
+      {
+        "url": "https://www.brainline.org/military-resource-directory/state/NV",
+        "title": "BrainLine directory: VA Sierra Nevada",
+        "reviewed_on": "2026-11-02",
+        "scope": "Main phone; search excerpt."
+      }
+    ],
+    "public_contact": {
+      "phone": "775-786-7200",
+      "phone_label": "VA Sierra Nevada Health Care System main line"
+    }
+  },
+  {
+    "program_id": "ca-vahealth-gla",
+    "name": "VA Greater Los Angeles Healthcare System",
+    "organization": "U.S. Department of Veterans Affairs",
+    "official_url": "https://www.va.gov/greater-los-angeles-health-care/",
+    "service_area": [
+      "Los Angeles",
+      "Ventura",
+      "Santa Barbara",
+      "Kern",
+      "San Luis Obispo"
+    ],
+    "state": "CA",
+    "resource_role": "va_health_system",
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "The VA health care system for this county. West Los Angeles VA Medical Center, with clinics including Sepulveda, downtown Los Angeles, Bakersfield, Oxnard, Santa Barbara, Santa Maria, San Luis Obispo and Lancaster.",
+    "next_step": "Call 310-478-3711 to ask about enrolling, being assigned a clinic, or reaching your care team. Use VA’s facility locator with your ZIP code to find the closest clinic. Not enrolled yet? You can also call 877-222-8387 or ask your county veterans office for help applying.",
+    "constraints": [
+      "Your VA care team may be at a different clinic or system; follow what VA tells you. Hours, services and openings vary by clinic.",
+      "Los Angeles County is split between Greater Los Angeles and Long Beach VA."
+    ],
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://webarchive.library.unt.edu/eot2008/20080922144611/http:/www1.va.gov/directory/guide/facility.asp?ID=78"
+    },
+    "source_evidence": [
+      {
+        "url": "https://webarchive.library.unt.edu/eot2008/20080922144611/http:/www1.va.gov/directory/guide/facility.asp?ID=78",
+        "title": "VA facility directory: Greater Los Angeles (archived)",
+        "reviewed_on": "2026-11-02",
+        "scope": "Counties served: Kern, Los Angeles, San Luis Obispo, Santa Barbara and Ventura; search excerpt."
+      },
+      {
+        "url": "https://corpora.tika.apache.org/base/docs/govdocs1/722/722198.html",
+        "title": "VISN 22 network report (government document)",
+        "reviewed_on": "2026-11-02",
+        "scope": "Medical center phone and clinic cities; search excerpt."
+      }
+    ],
+    "public_contact": {
+      "phone": "310-478-3711",
+      "phone_label": "VA Greater Los Angeles Healthcare System main line"
+    }
+  },
+  {
+    "program_id": "ca-vahealth-longbeach",
+    "name": "VA Long Beach Healthcare System",
+    "organization": "U.S. Department of Veterans Affairs",
+    "official_url": "https://www.va.gov/long-beach-health-care/about-us/mission-and-vision/",
+    "service_area": [
+      "Los Angeles",
+      "Orange"
+    ],
+    "state": "CA",
+    "resource_role": "va_health_system",
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "The VA health care system for this county. Tibor Rubin VA Medical Center in Long Beach, with clinics in Cabrillo, Gardena, Laguna Hills, Placentia, Santa Ana and Santa Fe Springs.",
+    "next_step": "Call 562-826-8000 to ask about enrolling, being assigned a clinic, or reaching your care team. Use VA’s facility locator with your ZIP code to find the closest clinic. Not enrolled yet? You can also call 877-222-8387 or ask your county veterans office for help applying.",
+    "constraints": [
+      "Your VA care team may be at a different clinic or system; follow what VA tells you. Hours, services and openings vary by clinic.",
+      "Los Angeles County is split between Long Beach and Greater Los Angeles VA."
+    ],
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.va.gov/long-beach-health-care/about-us/mission-and-vision/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.va.gov/long-beach-health-care/about-us/mission-and-vision/",
+        "title": "VA Long Beach: mission and vision",
+        "reviewed_on": "2026-11-02",
+        "scope": "Locations in Los Angeles and Orange counties; search excerpt."
+      },
+      {
+        "url": "https://corpora.tika.apache.org/base/docs/govdocs1/722/722198.html",
+        "title": "VISN 22 network report (government document)",
+        "reviewed_on": "2026-11-02",
+        "scope": "Medical center phone; search excerpt."
+      }
+    ],
+    "public_contact": {
+      "phone": "562-826-8000",
+      "phone_label": "VA Long Beach Healthcare System main line"
+    }
+  },
+  {
+    "program_id": "ca-vahealth-lomalinda",
+    "name": "VA Loma Linda Healthcare System",
+    "organization": "U.S. Department of Veterans Affairs",
+    "official_url": "https://www.va.gov/loma-linda-health-care/about-us/",
+    "service_area": [
+      "San Bernardino",
+      "Riverside"
+    ],
+    "state": "CA",
+    "resource_role": "va_health_system",
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "The VA health care system for this county. Jerry L. Pettis Memorial VA Medical Center in Loma Linda, with clinics across San Bernardino and Riverside counties, including Corona, Palm Desert, Victorville and Blythe.",
+    "next_step": "Call 909-825-7084 to ask about enrolling, being assigned a clinic, or reaching your care team. Use VA’s facility locator with your ZIP code to find the closest clinic. Not enrolled yet? You can also call 877-222-8387 or ask your county veterans office for help applying.",
+    "constraints": [
+      "Your VA care team may be at a different clinic or system; follow what VA tells you. Hours, services and openings vary by clinic."
+    ],
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.va.gov/loma-linda-health-care/about-us/mission-and-vision/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.va.gov/loma-linda-health-care/about-us/mission-and-vision/",
+        "title": "VA Loma Linda: mission and vision",
+        "reviewed_on": "2026-11-02",
+        "scope": "Serves San Bernardino and Riverside counties; search excerpt."
+      },
+      {
+        "url": "https://corpora.tika.apache.org/base/docs/govdocs1/722/722198.html",
+        "title": "VISN 22 network report (government document)",
+        "reviewed_on": "2026-11-02",
+        "scope": "Medical center phone; search excerpt."
+      }
+    ],
+    "public_contact": {
+      "phone": "909-825-7084",
+      "phone_label": "VA Loma Linda Healthcare System main line"
+    }
+  },
+  {
+    "program_id": "ca-vahealth-sandiego",
+    "name": "VA San Diego Healthcare System",
+    "organization": "U.S. Department of Veterans Affairs",
+    "official_url": "https://www.va.gov/san-diego-health-care/about-us/",
+    "service_area": [
+      "San Diego",
+      "Imperial"
+    ],
+    "state": "CA",
+    "resource_role": "va_health_system",
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "The VA health care system for this county. VA San Diego Medical Center in La Jolla, with clinics across San Diego County and the Imperial Valley VA Clinic in El Centro.",
+    "next_step": "Call 858-552-8585 to ask about enrolling, being assigned a clinic, or reaching your care team. Use VA’s facility locator with your ZIP code to find the closest clinic. Not enrolled yet? You can also call 877-222-8387 or ask your county veterans office for help applying.",
+    "constraints": [
+      "Your VA care team may be at a different clinic or system; follow what VA tells you. Hours, services and openings vary by clinic."
+    ],
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.va.gov/san-diego-health-care/stories/a-brief-history-of-va-san-diego-healthcare-system/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.va.gov/san-diego-health-care/stories/a-brief-history-of-va-san-diego-healthcare-system/",
+        "title": "VA San Diego: brief history",
+        "reviewed_on": "2026-11-02",
+        "scope": "Serves San Diego and Imperial Valley veterans; search excerpt."
+      },
+      {
+        "url": "https://webarchive.library.unt.edu/web/20130215044037/http://www.sandiego.va.gov/docs/patientguide.pdf",
+        "title": "VA San Diego patient guide (archived)",
+        "reviewed_on": "2026-11-02",
+        "scope": "Medical center phone; search excerpt."
+      }
+    ],
+    "public_contact": {
+      "phone": "858-552-8585",
+      "phone_label": "VA San Diego Healthcare System main line"
+    }
+  },
+  {
+    "program_id": "ca-vahealth-find",
+    "name": "Find your VA health care system",
+    "organization": "U.S. Department of Veterans Affairs",
+    "official_url": "https://www.va.gov/find-locations/?facilityType=health",
+    "service_area": [
+      "Alpine",
+      "Inyo",
+      "Modoc",
+      "Mono",
+      "Nevada",
+      "Plumas",
+      "San Benito",
+      "Sierra"
+    ],
+    "state": "CA",
+    "resource_role": "va_health_system",
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "We did not find a VA source naming the health care system for this county. Northeastern counties are often served from Reno (VA Sierra Nevada, 775-786-7200); others by the nearest California system. VA’s locator shows the closest clinic.",
+    "next_step": "Use VA’s facility locator with your ZIP code to find the closest clinic. Not enrolled yet? You can also call 877-222-8387 or ask your county veterans office for help applying.",
+    "constraints": [
+      "Your VA care team may be at a different clinic or system; follow what VA tells you. Hours, services and openings vary by clinic."
+    ],
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.va.gov/find-locations/?facilityType=health"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.va.gov/find-locations/?facilityType=health",
+        "title": "VA facility locator",
+        "reviewed_on": "2026-11-02",
+        "scope": "Search by ZIP code for the nearest VA health facility."
+      }
+    ],
+    "public_contact": {
+      "phone": null
+    }
   }
 ]
