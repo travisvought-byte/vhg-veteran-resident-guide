@@ -33,3 +33,52 @@ California's HCBA and MSSP home and community services have distinct rules and g
 ## Remaining research
 
 Confirm a local Alpine veterans contact, a callable Sierra CVSO phone, direct local ombudsman phones, up-to-date county veterans appointments, local accessibility equipment and contractors, current funding and service availability. The five-file self-checked research return, county maps and full source/decision notes are in `research/returns/R-06-CA/`. **Python return checker: 0 errors, 0 warnings.** No agencies were contacted.
+
+## County office details
+
+All 57 county offices listed in the CACVSO directory now show an address, published hours and the office website. Satellite offices and outreach sites are listed where the directory gives them. Every phone in the guide matched the directory. Source: https://www.cacvso.org/county-contacts/, reviewed 2026-11-02.
+
+- **Shared offices:** Inyo and Mono share the Bishop office. Yuba and Sutter share the Marysville office.
+- **Alpine:** not in the directory, so it keeps the statewide CalVet fallback.
+- **Sierra:** the directory lists an address but no phone.
+- **Details left out where the directory text was inconsistent:**
+  - Butte: the address was listed with the wrong city.
+  - Los Angeles: the "Long Beach" satellite entry was garbled.
+  - Alameda, Temecula and Barstow: mistyped ZIP codes were dropped.
+
+## VA health care by county
+
+`ca-vahealth-*` cards name the VA health care system for each county, with its main phone and clinic cities. They appear in the local and care views.
+
+| System | County list source |
+|---|---|
+| Central California (6 counties) | VA page |
+| Loma Linda | VA page |
+| Long Beach | VA page |
+| Northern California (17 counties) | Archived VA page; parts of Alameda, El Dorado and Placer are served elsewhere |
+| San Francisco | VA fact sheet, plus Del Norte from a San Mateo County directory |
+| Greater Los Angeles | Archived VA directory |
+| San Diego | VA history page |
+| Palo Alto (10 counties) | Assembled from clinic locations and directory listings |
+| Sierra Nevada (Reno) | Lassen only, from its Susanville clinic |
+
+Alpine, Inyo, Modoc, Mono, Nevada, Plumas, San Benito and Sierra get a "Find your VA health care system" card that points to VA's locator, because no source found names their system. All of these records are search excerpts.
+
+## Independent Living Centers
+
+28 `ca-cil-*` records cover all 58 counties. Phones, websites and counties served come from the ILRU national directory (https://www.ilru.org/cil-directory/ca, reviewed in full). Centers with only http websites use the ILRU page as `official_url` and print the website in the next step.
+
+## Civil and senior legal aid
+
+- **General legal aid:**
+  - Legal Services of Northern California: eight office cards.
+  - Bay Area Legal Aid, Inland Counties Legal Services and Central California Legal Services: from their own pages, reviewed.
+  - Greater Bakersfield Legal Assistance, Legal Aid Foundation of Los Angeles, Neighborhood Legal Services of Los Angeles County, Community Legal Aid SoCal, Legal Aid Society of San Diego and California Rural Legal Assistance: from search excerpts.
+  - LawHelpCA: a statewide card.
+- **Senior legal services (60+):** 22 providers from the California Department of Aging providers list, which was reviewed in full. That list prints no phones, so these cards route through the provider or the Area Agency on Aging.
+- **Coverage:** every county has a county-specific legal card except Inyo and Mono, which get the statewide LawHelpCA card.
+
+## Veteran housing (SSVF)
+
+Not yet mapped. VA's FY 2027 award list names 29 California grantees but not their counties. VA's SSVF provider intake spreadsheet would give county coverage for every state, but the server refused to fetch it.
+
