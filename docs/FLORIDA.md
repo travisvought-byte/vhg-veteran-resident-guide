@@ -36,6 +36,22 @@ Caveats kept on the cards:
 - Hearts & Homes for Veterans (Lee) and Housing for Homeless (Brevard) are new 2027 grantees whose full areas are not published.
 - Thirteen counties have no county-specific card and rely on the statewide card: Baker, Bay, Calhoun, Dixie, Flagler, Glades, Gulf, Holmes, Jackson, Okeechobee, St. Johns, Volusia and Washington.
 
+## VA health care by county
+
+Seven `fl-vahealth-*` cards name the VA health care system for every Florida county, with its main phone and its medical center and clinic cities. They appear in the local and care views.
+
+| System | Counties | County list source |
+|---|---|---|
+| Bay Pines | 10 | VA page |
+| Tampa | 4 | VA page |
+| Miami | 3 | VA page |
+| West Palm Beach | 7 | VA states seven; names from an NSU training brochure |
+| Orlando | 6 | American Legion 2014 report |
+| Gulf Coast (Panhandle) | 7 | VA states seven; names from an American Legion 2017 report |
+| North Florida/South Georgia | 31 | Remaining counties; matches VA's count of 31 North Florida counties |
+
+Hillsborough is listed by both Bay Pines and Tampa. All seven records are search excerpts (`official_search_extract_only`). Each card points to VA's facility locator for the nearest clinic.
+
 ## Exceptions and quality controls
 
 The FDVA directory shows shared county veteran-service arrangements for Jefferson/Madison and Bradford/Union; preserve their attribution rather than describing separate local staffing. The Northwest ombudsman number differs between Elder Affairs pages; the dedicated ombudsman program page is used as the primary publication. The dedicated ombudsman page prints **Oceola**, normalized to **Osceola** in the county map. The detailed district page maps that county to South Central.
