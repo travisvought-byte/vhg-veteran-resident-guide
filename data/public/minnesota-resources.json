@@ -1007,6 +1007,51 @@
     ]
   },
   {
+    "program_id": "mn-ssvf-19-mn-046",
+    "name": "Minnesota Assistance Council For Veterans: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Minnesota Assistance Council For Veterans",
+    "service_area": [
+      "All Minnesota counties"
+    ],
+    "state": "MN",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 19-MN-046): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Aitkin County, Anoka County, Becker County, Beltrami County, Benton County, Big Stone County, Blue Earth County, Brown County, Carlton County, Carver County, Cass County, Chippewa County and 75 more.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "833-222-6228",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 147",
+        "sheet": "Contacts",
+        "row": 147,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
+  },
+  {
     "program_id": "mn-aging",
     "name": "Local aging help in Minnesota (Eldercare Locator)",
     "official_url": "https://eldercare.acl.gov/home",

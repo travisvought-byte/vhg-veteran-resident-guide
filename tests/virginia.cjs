@@ -2,7 +2,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const {JSDOM}=require('jsdom'),root=path.resolve(__dirname,'..'),read=f=>fs.readFileSync(path.join(root,f),'utf8');
 const offices=JSON.parse(read('data/public/virginia-county-veterans-offices.json')),resources=JSON.parse(read('data/public/virginia-resources.json'));
 assert.equal(offices.filter(c=>c.county_type==='county').length,95);assert.equal(offices.filter(c=>c.county_type==='independent_city').length,38);
-assert.equal(resources.filter(r=>r.state==='VA').length,60);assert.equal(offices.filter(c=>c.office_type==='state').length,2);
+assert.equal(resources.filter(r=>r.state==='VA').length,69);assert.equal(offices.filter(c=>c.office_type==='state').length,2);
 const dom=new JSDOM(read('index.html'),{url:'https://example.org/?state=VA&county=Fairfax%20City&help=1',runScripts:'outside-only',pretendToBeVisual:true});
 dom.window.HTMLElement.prototype.scrollIntoView=function(){};let printed=0;dom.window.print=()=>printed++;
 dom.window.eval(fs.readdirSync(path.join(root,'assets/editions')).filter(x=>x.endsWith('.js')).map(x=>read('assets/editions/'+x)).join('\n')+'\n'+read('assets/guide.js')+'\nwindow.__handoff=helperHandoffText;');
