@@ -26,15 +26,7 @@ Twenty-four civil legal aid providers are mapped to the counties they serve, fro
 
 ## Veteran housing (SSVF)
 
-VA’s FY 2027 SSVF award list (supplied by the maintainer; [VA awards page](https://department.va.gov/homeless/fy-2027-grant-awards/)) names 13 Florida grantees but not the counties each serves. The housing view keeps one statewide card listing all 13, with the National Call Center for Homeless Veterans (877-424-3838) and 211 as the fallback.
-
-Sixteen county-limited provider cards (`fl-ssvf-*`) add the grantee that serves each county where a public page says so. Volunteers of America has four office cards. Service areas come from search excerpts of grantee pages, county or city government pages, or VA's earlier award lists, so these records are marked `official_search_extract_only`, not page-reviewed. Phones are listed only where a grantee or government page printed one; otherwise the card routes through 877-424-3838 or 211.
-
-Caveats kept on the cards:
-- St. Vincent de Paul CARES lists 19 counties as its agency-wide area, not specifically SSVF.
-- Changing Homelessness is mapped to Duval, Clay and Nassau. VA's earlier award list also showed St. Johns, Volusia and Flagler, which is noted on the card.
-- Hearts & Homes for Veterans (Lee) and Housing for Homeless (Brevard) are new 2027 grantees whose full areas are not published.
-- Thirteen counties have no county-specific card and rely on the statewide card: Baker, Bay, Calhoun, Dixie, Flagler, Glades, Gulf, Holmes, Jackson, Okeechobee, St. Johns, Volusia and Washington.
+County provider cards now come from VA's FY26 SSVF provider intake list: 11 grants covering all 67 counties. See [SSVF-HOUSING.md](SSVF-HOUSING.md). The statewide card still lists the 13 FY 2027 grantees. Hearts & Homes for Veterans (Lee) and Housing for Homeless (Brevard), new in 2027, keep search-excerpt cards.
 
 ## VA health care by county
 

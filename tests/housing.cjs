@@ -19,7 +19,7 @@ const lss=providers.find(x=>x.program_id==='ohio-lss-ssvf');assert(!lss.service_
 const dayton=providers.find(x=>x.program_id==='ohio-st-vincent-ssvf');assert.equal(dayton.public_contact.phone,'888-751-1238');assert(!dayton.service_area.includes('Wayne'));
 const knox=setup('?view=housing&county=Knox');assert(knox.nodes.results.innerHTML.includes('VA Knox County homeless resources'));assert(knox.nodes.results.innerHTML.includes('lcchousing.org/need-help'));
 const mr=setup('?view=housing&county=Morrow');assert(mr.nodes.results.innerHTML.includes('tel:6144372130'));
-for(const page of ['pa.html','ny.html','mi.html','ky.html']){const t=setup('?view=housing',page),rs=vm.runInContext('DATA',t.ctx);assert(!rs.some(x=>x.resource_role==='housing_provider'));for(const p of providers)assert(!t.nodes.results.innerHTML.includes(p.program_id));}
+for(const page of ['pa.html','ny.html','mi.html','ky.html']){const t=setup('?view=housing',page),rs=vm.runInContext('DATA',t.ctx);assert(rs.filter(x=>x.resource_role==='housing_provider').every(x=>x.state&&x.state!=='OH'));for(const p of providers)assert(!t.nodes.results.innerHTML.includes(p.program_id));}
 console.log('PASS: all 88 Ohio county housing views, 86 mapped counties, 2 honest coverage gaps, primary evidence links, intake limits and state isolation.');
 
 const axess=providers.find(x=>x.program_id==='ohio-axess-ssvf');assert.equal(axess.public_contact.phone,'855-234-7310');assert.equal(axess.service_area.length,9);assert(axess.service_area.includes('Ashtabula'));assert(!axess.service_area.includes('Cuyahoga'));

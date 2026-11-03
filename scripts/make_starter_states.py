@@ -44,6 +44,39 @@ def record(pid, s, name, org, url, phone, needs, description, next_step, reviewe
     return r
 
 
+SSVF_PAGE = 'https://department.va.gov/homeless/supportive-services-for-veteran-families/'
+
+
+def ssvf_records(s, area, reviewed):
+    """Statewide-area cards for each VA SSVF grantee that serves this state, from the FY26 intake list projection."""
+    src = json.loads((ROOT / 'data/public/ssvf-intake-fy26.json').read_text())
+    out = []
+    for g in src['records']:
+        counties = [c['name'] for c in g['counties'] if c['state'] == s['code']]
+        if not counties:
+            continue
+        phones = g['intake_phones']
+        where = ', '.join(counties) if len(counties) <= 12 else ', '.join(counties[:12]) + ' and ' + str(len(counties) - 12) + ' more'
+        nxt = ('Call SSVF intake' if phones else 'Ask VA’s National Call Center for Homeless Veterans (877-424-3838) to connect you') + \
+              ' with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.'
+        if len(phones) > 1:
+            nxt += ' A second intake number is listed: ' + phones[1] + '.'
+        r = {'program_id': s['code'].lower() + '-ssvf-' + g['fain'].lower(), 'name': g['organization'] + ': veteran housing help (SSVF)',
+             'official_url': SSVF_PAGE, 'organization': g['organization'], 'service_area': [area], 'state': s['code'],
+             'resource_role': 'housing_provider', 'needs_supported': ['housing', 'veteran_services'],
+             'description': 'VA-funded Supportive Services for Veteran Families (SSVF, grant ' + g['fain'] + '): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: ' + where + '.',
+             'next_step': nxt,
+             'constraints': ['Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.',
+                             'County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling.'],
+             'public_contact': {'phone': phones[0] if phones else None, 'phone_label': 'VA-listed SSVF intake'},
+             'verification': {'record_status': 'official_source_reviewed', 'last_reviewed_on': src['reviewed_on']},
+             'evidence': {'review_method': 'full_official_spreadsheet', 'direct_agency_confirmation': False, 'service_area_source_url': src['source_url']},
+             'source_evidence': [{'url': src['source_url'], 'title': 'VA SSVF provider intake list (FY26)', 'reviewed_on': src['reviewed_on'],
+                                  'scope': 'County coverage and SSVF intake; Contacts worksheet row ' + str(g['row']), 'sheet': src['sheet'], 'row': g['row'], 'source_sha256': src['source_sha256']}]}
+        out.append(r)
+    return out
+
+
 ADAPTER = r'''
 function agingContactsHTML(county){return DATA.filter(x=>x.regional_role==='aging_agency').map(x=>'<p><strong>'+esc(x.name)+'</strong><br>'+phoneLink(x.public_contact.phone)+'</p><p>Give the ZIP code or town where help is needed. The Eldercare Locator connects you to the local aging agency and services.</p><p class="meta"><a href="'+esc(x.official_url)+'" target="_blank" rel="noopener">Search by ZIP code</a> · '+esc(x.verification.last_reviewed_on)+'</p>').join('')}
 function officeCard(c){return `<article class="office-card"><span class="badge">${esc(c.county)} · statewide veterans agency</span><h2>${esc(c.organization)}</h2><p>${phoneLink(c.phone)}</p><p>${esc(c.note)}</p><p>Ask for free, accredited help with VA claims, a benefits review and the office that serves your county.</p>${c.local_url?`<p><a href="${esc(c.local_url)}" target="_blank" rel="noopener">Find a local veterans office</a></p>`:''}<p class="meta"><a href="${esc(sourceURL(c))}" target="_blank" rel="noopener">Official contact source</a> · Reviewed ${esc(c.reviewed_on)}. Starter edition: county offices are not listed here yet.</p></article>`}
@@ -55,7 +88,7 @@ function renderAccessibility(){const active=route==='accessibility';$('accessibi
 '''
 
 
-def edition_ops(s, ids, reviewed):
+def edition_ops(s, ids, reviewed, ssvf_ids=()):
     code, name = s['code'], s['name']
     claims, ship, aging, omb = ids
     month = 'November 2, 2026'
@@ -82,7 +115,7 @@ def edition_ops(s, ids, reviewed):
             'care': [aging, 'r02-va-health-enrollment', 'va-location-finder', 'r02-va-cnh', 'r02-va-clc', 'r02-general-caregiver', 'r02-family-caregiver', 'r02-hospice', 'r02-palliative'],
             'rights': [omb, aging],
             'local': [aging, claims],
-            'housing': ['va-housing-help', 'va-location-finder', 'va-accredited-help', 'nara-discharge-records']}},
+            'housing': ['va-housing-help', *ssvf_ids, 'va-location-finder', 'va-accredited-help', 'nara-discharge-records']}},
         {'op': 'declare', 'name': 'seniorTopics', 'value': {
             'daily': [aging], 'accessibility': [aging], 'vision': [aging], 'hearing': [aging],
             'memory': ['alz-dementia-support', aging], 'costs': [ship, aging], 'rights': [omb, aging]}},
@@ -144,13 +177,15 @@ def main():
                    ['resident_rights', 'general_navigation'], 'Ombudsmen advocate for residents of nursing homes and assisted living facilities.',
                    'Use the locator to find the ' + name + ' program, or ask the Eldercare Locator for the ombudsman nearest the facility.', reviewed, nat['ombudsman']['source'],
                    role='ombudsman', area=area, constraints=['Routes to the state program through a national locator; local ombudsman offices are not yet listed.'])]
+        ssvf = ssvf_records(s, area, reviewed)
+        programs += ssvf
         out = ROOT / 'data/public'
         (out / (slug(name) + '-county-veterans-offices.json')).write_text(json.dumps([office], ensure_ascii=False, indent=1) + '\n')
         (out / (lc + '-programs.json')).write_text(json.dumps(programs, ensure_ascii=False, indent=1) + '\n')
         (out / (lc + '-regional-referrals.json')).write_text(json.dumps(referrals, ensure_ascii=False, indent=1) + '\n')
         folder = ROOT / 'states' / lc
         folder.mkdir(exist_ok=True)
-        (folder / 'edition.json').write_text(json.dumps({'ops': edition_ops(s, ids, reviewed)}, ensure_ascii=False, indent=1) + '\n')
+        (folder / 'edition.json').write_text(json.dumps({'ops': edition_ops(s, ids, reviewed, [r['program_id'] for r in ssvf])}, ensure_ascii=False, indent=1) + '\n')
         adapter = ADAPTER.strip().replace('@@NAME@@', name).replace('@@AREA@@', area).replace('@@SHIP@@', nat['ship']['phone'])
         (folder / 'adapter.js').write_text(adapter + '\n')
         starters.append({'code': code, 'name': name, 'starter': True, 'page': lc + '.html', 'share_page': 'share-' + lc + '.html',

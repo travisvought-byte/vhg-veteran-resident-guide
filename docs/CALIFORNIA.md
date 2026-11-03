@@ -80,5 +80,5 @@ Alpine, Inyo, Modoc, Mono, Nevada, Plumas, San Benito and Sierra get a "Find you
 
 ## Veteran housing (SSVF)
 
-Not yet mapped. VA's FY 2027 award list names 29 California grantees but not their counties. VA's SSVF provider intake spreadsheet would give county coverage for every state, but the server refused to fetch it.
+County provider cards come from VA's FY26 SSVF provider intake list: 29 grants covering 55 of 58 counties. Alpine, Inyo and Mono rely on the national VA housing line and 211. See [SSVF-HOUSING.md](SSVF-HOUSING.md).
 
