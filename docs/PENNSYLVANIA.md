@@ -99,6 +99,11 @@ VA publishes a county list only for Lebanon VA Medical Center, which serves 9 co
 
 County provider cards come from VA's FY26 SSVF provider intake list (see [SSVF-HOUSING.md](SSVF-HOUSING.md)).
 
-## Still open
+## County office addresses (2026-11-04)
 
-County office addresses and hours from the PA DMVA county directors PDF. The PDF could not be fetched this session.
+All 67 county veterans office cards now show the office address from the PA DMVA county directors directory dated September 9, 2026 (`ma-va 400 county directors 09.09.2026.pdf`, sha256 `daecb736…c5c9c5`, supplied by the maintainer).
+
+- Fields: `address`, `hours` (Wyoming only: "Fridays only"), `other_phones` (Beaver, Warren), `details_source_url`, `details_source_page`, `details_reviewed_on`, `details_review_method: full_official_pdf`.
+- Every primary phone in the PDF matched the phone already published. No phones were changed.
+- Director names, staff first names that appear next to phone numbers, and email addresses were left out.
+- Addresses are as printed. Adams lists only the city and ZIP. Montgomery lists a street location plus a P.O. Box. Snyder is served through the Union-Snyder Community Action Agency.
