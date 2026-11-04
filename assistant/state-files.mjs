@@ -19,7 +19,8 @@ export const STATES=Object.freeze({
   "WA": "Washington",
   "TN": "Tennessee",
   "SC": "South Carolina",
-  "IL": "Illinois"
+  "IL": "Illinois",
+  "MO": "Missouri"
 });
 export const STATE_FILES=Object.freeze({
   "OH": [
@@ -97,6 +98,10 @@ export const STATE_FILES=Object.freeze({
   "IL": [
     "data/public/illinois-resources.json",
     "data/public/illinois-county-veterans-offices.json"
+  ],
+  "MO": [
+    "data/public/missouri-resources.json",
+    "data/public/missouri-county-veterans-offices.json"
   ]
 });
 export const localityLabel=row=>row?(["independent_city","statewide"].includes(row.county_type)?row.county:row.county+" County"):"";
