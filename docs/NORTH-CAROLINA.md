@@ -30,7 +30,7 @@ The research checker reports 0 errors and 2 explained warnings for programs rout
 
 12 records were added to `data/public/nc-programs.json`, bringing the public resources to 97.
 
-- **Centers for Independent Living (7 records, `nc-cil-*`).** Taken from the ILRU national directory for North Carolina, with full page text reviewed. The list covers 6 centers plus the Asheville branch of disABILITY Partners, with county lists as published. 42 counties are covered. The other 58 rely on PA-style statewide routing (NC Independent Living, the ADRC and aging agencies). Websites the directory lists only as http are given in the next step, and the card links to the ILRU page.
+- **Centers for Independent Living (7 records, `nc-cil-*`).** Taken from the ILRU national directory for North Carolina, with full page text reviewed. The list covers 6 centers plus the Asheville branch of disABILITY Partners, with county lists as published. 42 counties are covered. The other 58 rely on statewide routing (NC Independent Living, the ADRC and aging agencies). Websites the directory lists only as http are given in the next step, and the card links to the ILRU page.
 - **Legal aid (4 records, `nc-legal-*`).**
   - Legal Aid of North Carolina: statewide helpline 866-219-5262. The next step also names the Veterans Law Project voicemail line, 919-850-5959.
   - LANC Senior Legal Helpline for age 60+: 877-579-7562.
