@@ -436,6 +436,28 @@
     ]
   },
   {
+    "code": "MO",
+    "name": "Missouri",
+    "page": "mo.html",
+    "share_page": "share-mo.html",
+    "qr": "assets/guide-qr-mo.svg",
+    "counties": 115,
+    "programs": "data/public/mo-programs.json",
+    "referrals": "data/public/mo-regional-referrals.json",
+    "offices": "data/public/missouri-county-veterans-offices.json",
+    "resources": "data/public/missouri-resources.json",
+    "statewide_area_names": [],
+    "coverage_scope": "Referral edition. All 114 counties and the City of St. Louis have their Missouri Veterans Commission Veterans Service Office, a matched Area Agency on Aging and a regional long-term-care ombudsman.",
+    "coverage_note": "Veterans Service Office addresses, phones and county coverage come from the Missouri Veterans Commission’s Veterans Benefits & Resources Guide; the Chillicothe office has no published phone and shows the MVC main line. Area Agencies on Aging and their counties come from the Department of Health and Senior Services; regional ombudsman programs from DHSS ombudsman materials, with Northeast Missouri using the state ombudsman line. Reviewed November 4, 2026. Contacts are not telephone-confirmed.",
+    "share_description": "Missouri Veterans Commission Veterans Service Offices, county-matched Area Agencies on Aging and regional long-term-care ombudsmen",
+    "share_replacements": [
+      [
+        "Updated October 8, 2026",
+        "Updated November 4, 2026"
+      ]
+    ]
+  },
+  {
     "code": "AL",
     "name": "Alabama",
     "starter": true,
@@ -772,26 +794,6 @@
     ],
     "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
     "coverage_note": "Starter edition. Every county uses the Mississippi Veterans Affairs and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
-    "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
-    "share_replacements": []
-  },
-  {
-    "code": "MO",
-    "name": "Missouri",
-    "starter": true,
-    "page": "mo.html",
-    "share_page": "share-mo.html",
-    "qr": "assets/guide-qr-mo.svg",
-    "counties": 1,
-    "programs": "data/public/mo-programs.json",
-    "referrals": "data/public/mo-regional-referrals.json",
-    "offices": "data/public/missouri-county-veterans-offices.json",
-    "resources": "data/public/missouri-resources.json",
-    "statewide_area_names": [
-      "All Missouri counties"
-    ],
-    "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
-    "coverage_note": "Starter edition. Every county uses the Missouri Veterans Commission and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
     "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
     "share_replacements": []
   },

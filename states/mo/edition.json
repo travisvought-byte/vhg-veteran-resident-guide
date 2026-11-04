@@ -1,193 +1,281 @@
 {
- "ops": [
-  {
-   "op": "clear_data"
-  },
-  {
-   "op": "replace",
-   "old": "Ohio",
-   "new": "Missouri"
-  },
-  {
-   "op": "replace",
-   "old": "All 88",
-   "new": "All"
-  },
-  {
-   "op": "replace",
-   "old": "all 88",
-   "new": "all"
-  },
-  {
-   "op": "replace",
-   "old": "<option value=\"OH\">Missouri</option>",
-   "new": "<option value=\"OH\">Ohio</option>"
-  },
-  {
-   "op": "replace",
-   "old": "const STATE='OH';",
-   "new": "const STATE='MO';"
-  },
-  {
-   "op": "replace",
-   "old": "county veterans office",
-   "new": "state veterans agency"
-  },
-  {
-   "op": "replace",
-   "old": "county office",
-   "new": "state veterans agency"
-  },
-  {
-   "op": "replace",
-   "old": "Statewide edition · Updated October 8, 2026",
-   "new": "Missouri starter edition · Updated November 2, 2026"
-  },
-  {
-   "op": "replace",
-   "old": "Missouri’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
-   "new": "Ask the local aging agency or state Medicaid agency about waiver assessment and written approval; VA and other funders have their own processes."
-  },
-  {
-   "op": "replace",
-   "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
-   "new": "https://eldercare.acl.gov/home"
-  },
-  {
-   "op": "replace",
-   "old": "Missouri home modification authorization and provider rules",
-   "new": "Find local aging and disability help (Eldercare Locator)"
-  },
-  {
-   "op": "replace",
-   "old": "href=\"share.html\"",
-   "new": "href=\"share-mo.html\""
-  },
-  {
-   "op": "replace",
-   "old": "href=\"prototype-data.json\"",
-   "new": "href=\"data/public/missouri-resources.json\""
-  },
-  {
-   "op": "replace",
-   "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
-   "new": "href=\"data/public/missouri-county-veterans-offices.json\""
-  },
-  {
-   "op": "declare",
-   "name": "priority",
-   "value": [
-    "mo-claims",
-    "mo-aging",
-    "mo-ship",
-    "mo-ombudsman",
-    "r02-aid-attendance-housebound",
-    "r02-va-pension",
-    "r02-survivors-pension"
-   ]
-  },
-  {
-   "op": "declare",
-   "name": "routes",
-   "value": {
-    "benefits": [
-     "mo-claims",
-     "mo-ship",
-     "r02-va-pension",
-     "r02-aid-attendance-housebound",
-     "r02-disability-increase",
-     "r02-pension-medicaid-rule",
-     "r02-survivors-pension",
-     "r02-dic",
-     "va-accredited-help"
-    ],
-    "survivors": [
-     "mo-claims",
-     "r02-survivors-pension",
-     "r02-dic",
-     "r02-aid-attendance-housebound",
-     "r02-va-burial",
-     "va-accredited-help",
-     "nara-discharge-records"
-    ],
-    "care": [
-     "mo-aging",
-     "r02-va-health-enrollment",
-     "va-location-finder",
-     "r02-va-cnh",
-     "r02-va-clc",
-     "r02-general-caregiver",
-     "r02-family-caregiver",
-     "r02-hospice",
-     "r02-palliative"
-    ],
-    "rights": [
-     "mo-ombudsman",
-     "mo-aging"
-    ],
-    "local": [
-     "mo-aging",
-     "mo-claims"
-    ],
-    "housing": [
-     "va-housing-help",
-     "mo-ssvf-14-mo-228",
-     "mo-ssvf-15-mo-330",
-     "mo-ssvf-16-mo-048",
-     "mo-ssvf-23-mo-229",
-     "mo-ssvf-26-mo-476",
-     "mo-ssvf-26-zz-110",
-     "va-location-finder",
-     "va-accredited-help",
-     "nara-discharge-records"
-    ]
-   }
-  },
-  {
-   "op": "declare",
-   "name": "seniorTopics",
-   "value": {
-    "daily": [
-     "mo-aging"
-    ],
-    "accessibility": [
-     "mo-aging"
-    ],
-    "vision": [
-     "mo-aging"
-    ],
-    "hearing": [
-     "mo-aging"
-    ],
-    "memory": [
-     "alz-dementia-support",
-     "mo-aging"
-    ],
-    "costs": [
-     "mo-ship",
-     "mo-aging"
-    ],
-    "rights": [
-     "mo-ombudsman",
-     "mo-aging"
-    ]
-   }
-  },
-  {
-   "op": "line",
-   "prefix": "routes.accessibility=",
-   "new": "routes.accessibility=['va-hisa','va-sah','va-sha','va-tra','mo-aging','va-location-finder'];"
-  },
-  {
-   "op": "line",
-   "prefix": "routes.seniors=",
-   "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
-  },
-  {
-   "op": "adapter"
-  },
-  {
-   "op": "embed_data"
-  }
- ]
+  "ops": [
+    {
+      "op": "clear_data"
+    },
+    {
+      "op": "replace",
+      "old": "Ohio",
+      "new": "Missouri"
+    },
+    {
+      "op": "replace",
+      "old": "All 88",
+      "new": "All 115"
+    },
+    {
+      "op": "replace",
+      "old": "all 88",
+      "new": "all 115"
+    },
+    {
+      "op": "replace",
+      "old": "<option value=\"OH\">Missouri</option>",
+      "new": "<option value=\"OH\">Ohio</option>"
+    },
+    {
+      "op": "replace",
+      "old": "const STATE='OH';",
+      "new": "const STATE='MO';"
+    },
+    {
+      "op": "replace",
+      "old": "Statewide edition · Updated October 8, 2026",
+      "new": "Missouri edition · Updated November 4, 2026"
+    },
+    {
+      "op": "replace",
+      "old": "Most phones come from Missouri AMVETS’ 2025–2026 directory.",
+      "new": "Veterans Service Office phones come from the Missouri Veterans Commission benefits guide. Call for hours and outreach locations."
+    },
+    {
+      "op": "replace",
+      "old": "Missouri’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
+      "new": "Ask the local aging agency or state Medicaid agency about waiver assessment and written approval; VA and other funders have their own processes."
+    },
+    {
+      "op": "replace",
+      "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
+      "new": "https://eldercare.acl.gov/home"
+    },
+    {
+      "op": "replace",
+      "old": "Missouri home modification authorization and provider rules",
+      "new": "Find local aging and disability help (Eldercare Locator)"
+    },
+    {
+      "op": "replace",
+      "old": "href=\"share.html\"",
+      "new": "href=\"share-mo.html\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"prototype-data.json\"",
+      "new": "href=\"data/public/missouri-resources.json\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
+      "new": "href=\"data/public/missouri-county-veterans-offices.json\""
+    },
+    {
+      "op": "declare",
+      "name": "priority",
+      "value": [
+        "mo-claims",
+        "mo-senior-resource-line",
+        "mo-ship",
+        "mo-ombudsman",
+        "mo-legal-programs",
+        "r02-aid-attendance-housebound",
+        "r02-va-pension",
+        "r02-survivors-pension",
+        "r02-va-health-enrollment",
+        "va-accredited-help"
+      ]
+    },
+    {
+      "op": "declare",
+      "name": "routes",
+      "value": {
+        "benefits": [
+          "mo-claims",
+          "mo-ship",
+          "r02-va-pension",
+          "r02-aid-attendance-housebound",
+          "r02-disability-increase",
+          "r02-pension-medicaid-rule",
+          "r02-survivors-pension",
+          "r02-dic",
+          "va-accredited-help",
+          "mo-senior-resource-line"
+        ],
+        "survivors": [
+          "mo-claims",
+          "r02-survivors-pension",
+          "r02-dic",
+          "r02-aid-attendance-housebound",
+          "r02-va-burial",
+          "va-accredited-help",
+          "nara-discharge-records"
+        ],
+        "care": [
+          "r02-va-health-enrollment",
+          "va-location-finder",
+          "r02-va-cnh",
+          "r02-va-clc",
+          "r02-general-caregiver",
+          "r02-family-caregiver",
+          "r02-hospice",
+          "r02-palliative",
+          "mo-senior-resource-line",
+          "mo-cil-access-ii",
+          "mo-cil-bails",
+          "mo-cil-dcil",
+          "mo-cil-dra",
+          "mo-cil-dcai",
+          "mo-cil-empower",
+          "mo-cil-hilc",
+          "mo-cil-ilcsemo",
+          "mo-cil-ilrc",
+          "mo-cil-life",
+          "mo-cil-meril",
+          "mo-cil-neils",
+          "mo-cil-omo",
+          "mo-cil-oil",
+          "mo-cil-paraquad",
+          "mo-cil-rail",
+          "mo-cil-sadi",
+          "mo-cil-sil",
+          "mo-cil-tilc",
+          "mo-cil-tcil",
+          "mo-cil-wils",
+          "mo-vahealth-systems"
+        ],
+        "rights": [
+          "mo-ombudsman",
+          "mo-legal-programs"
+        ],
+        "local": [
+          "mo-claims",
+          "mo-senior-resource-line",
+          "mo-cil-access-ii",
+          "mo-cil-bails",
+          "mo-cil-dcil",
+          "mo-cil-dra",
+          "mo-cil-dcai",
+          "mo-cil-empower",
+          "mo-cil-hilc",
+          "mo-cil-ilcsemo",
+          "mo-cil-ilrc",
+          "mo-cil-life",
+          "mo-cil-meril",
+          "mo-cil-neils",
+          "mo-cil-omo",
+          "mo-cil-oil",
+          "mo-cil-paraquad",
+          "mo-cil-rail",
+          "mo-cil-sadi",
+          "mo-cil-sil",
+          "mo-cil-tilc",
+          "mo-cil-tcil",
+          "mo-cil-wils",
+          "mo-legal-programs",
+          "mo-vahealth-systems"
+        ],
+        "housing": [
+          "va-housing-help",
+          "mo-ssvf-14-mo-228",
+          "mo-ssvf-15-mo-330",
+          "mo-ssvf-16-mo-048",
+          "mo-ssvf-23-mo-229",
+          "mo-ssvf-26-mo-476",
+          "mo-ssvf-26-zz-110",
+          "va-location-finder",
+          "va-accredited-help",
+          "nara-discharge-records",
+          "mo-legal-programs"
+        ]
+      }
+    },
+    {
+      "op": "declare",
+      "name": "seniorTopics",
+      "value": {
+        "daily": [
+          "mo-senior-resource-line",
+          "mo-cil-access-ii",
+          "mo-cil-bails",
+          "mo-cil-dcil",
+          "mo-cil-dra",
+          "mo-cil-dcai",
+          "mo-cil-empower",
+          "mo-cil-hilc",
+          "mo-cil-ilcsemo",
+          "mo-cil-ilrc",
+          "mo-cil-life",
+          "mo-cil-meril",
+          "mo-cil-neils",
+          "mo-cil-omo",
+          "mo-cil-oil",
+          "mo-cil-paraquad",
+          "mo-cil-rail",
+          "mo-cil-sadi",
+          "mo-cil-sil",
+          "mo-cil-tilc",
+          "mo-cil-tcil",
+          "mo-cil-wils"
+        ],
+        "accessibility": [
+          "mo-senior-resource-line",
+          "mo-cil-access-ii",
+          "mo-cil-bails",
+          "mo-cil-dcil",
+          "mo-cil-dra",
+          "mo-cil-dcai",
+          "mo-cil-empower",
+          "mo-cil-hilc",
+          "mo-cil-ilcsemo",
+          "mo-cil-ilrc",
+          "mo-cil-life",
+          "mo-cil-meril",
+          "mo-cil-neils",
+          "mo-cil-omo",
+          "mo-cil-oil",
+          "mo-cil-paraquad",
+          "mo-cil-rail",
+          "mo-cil-sadi",
+          "mo-cil-sil",
+          "mo-cil-tilc",
+          "mo-cil-tcil",
+          "mo-cil-wils"
+        ],
+        "vision": [
+          "mo-senior-resource-line"
+        ],
+        "hearing": [
+          "mo-senior-resource-line"
+        ],
+        "memory": [
+          "alz-dementia-support",
+          "mo-senior-resource-line"
+        ],
+        "costs": [
+          "mo-ship",
+          "mo-senior-resource-line",
+          "mo-legal-programs"
+        ],
+        "rights": [
+          "mo-ombudsman",
+          "mo-legal-programs"
+        ]
+      }
+    },
+    {
+      "op": "line",
+      "prefix": "routes.accessibility=",
+      "new": "routes.accessibility=['va-hisa','va-sah','va-sha','va-tra','mo-senior-resource-line','mo-cil-access-ii','mo-cil-bails','mo-cil-dcil','mo-cil-dra','mo-cil-dcai','mo-cil-empower','mo-cil-hilc','mo-cil-ilcsemo','mo-cil-ilrc','mo-cil-life','mo-cil-meril','mo-cil-neils','mo-cil-omo','mo-cil-oil','mo-cil-paraquad','mo-cil-rail','mo-cil-sadi','mo-cil-sil','mo-cil-tilc','mo-cil-tcil','mo-cil-wils','va-location-finder',...DATA.filter(x=>x.regional_role==='aging_agency').map(x=>x.program_id)];"
+    },
+    {
+      "op": "line",
+      "prefix": "routes.seniors=",
+      "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
+    },
+    {
+      "op": "adapter"
+    },
+    {
+      "op": "embed_data"
+    }
+  ]
 }

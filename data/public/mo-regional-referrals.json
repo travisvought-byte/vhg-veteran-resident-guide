@@ -1,80 +1,1019 @@
 [
- {
-  "program_id": "mo-aging",
-  "name": "Local aging help in Missouri (Eldercare Locator)",
-  "official_url": "https://eldercare.acl.gov/home",
-  "organization": "U.S. Administration for Community Living",
-  "service_area": [
-   "All Missouri counties"
-  ],
-  "state": "MO",
-  "needs_supported": [
-   "general_navigation",
-   "help_at_home"
-  ],
-  "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-  "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
-  "constraints": [
-   "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "mo-aging-r1",
+    "name": "SeniorAge Area Agency on Aging",
+    "organization": "SeniorAge Area Agency on Aging (Region 1)",
+    "official_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+    "state": "MO",
+    "service_area": [
+      "Barry",
+      "Christian",
+      "Dade",
+      "Dallas",
+      "Douglas",
+      "Greene",
+      "Howell",
+      "Lawrence",
+      "Oregon",
+      "Ozark",
+      "Polk",
+      "Shannon",
+      "Stone",
+      "Taney",
+      "Texas",
+      "Webster",
+      "Wright"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the Missouri Senior Resource Line, 800-235-5503, which connects you to this agency. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Local number: 417-862-0762."
+    ],
+    "public_contact": {
+      "phone": "800-497-0822",
+      "phone_label": "Area Agency on Aging, Region 1"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+      "phone_source_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+        "title": "Missouri DHSS: Area Agencies on Aging (Silver Haired Legislature delegations table)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Area Agency names, phones, toll-free numbers and counties served; full page text."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "mo-aging-r2",
+    "name": "Aging Matters",
+    "organization": "Aging Matters (Region 2)",
+    "official_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+    "state": "MO",
+    "service_area": [
+      "Bollinger",
+      "Butler",
+      "Cape Girardeau",
+      "Carter",
+      "Dunklin",
+      "Iron",
+      "Madison",
+      "Mississippi",
+      "New Madrid",
+      "Pemiscot",
+      "Perry",
+      "Reynolds",
+      "Ripley",
+      "Scott",
+      "St. Francois",
+      "Ste. Genevieve",
+      "Stoddard",
+      "Wayne"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the Missouri Senior Resource Line, 800-235-5503, which connects you to this agency. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Local number: 573-335-3331."
+    ],
+    "public_contact": {
+      "phone": "800-392-8771",
+      "phone_label": "Area Agency on Aging, Region 2"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+      "phone_source_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+        "title": "Missouri DHSS: Area Agencies on Aging (Silver Haired Legislature delegations table)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Area Agency names, phones, toll-free numbers and counties served; full page text."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.acl.gov/contact"
+  {
+    "program_id": "mo-aging-r3",
+    "name": "Care Connection for Aging Services",
+    "organization": "Care Connection for Aging Services (Region 3)",
+    "official_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+    "state": "MO",
+    "service_area": [
+      "Bates",
+      "Benton",
+      "Carroll",
+      "Cedar",
+      "Chariton",
+      "Henry",
+      "Hickory",
+      "Lafayette",
+      "Johnson",
+      "Pettis",
+      "Saline",
+      "St. Clair",
+      "Vernon"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the Missouri Senior Resource Line, 800-235-5503, which connects you to this agency. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Local number: 660-747-3107."
+    ],
+    "public_contact": {
+      "phone": "800-748-7826",
+      "phone_label": "Area Agency on Aging, Region 3"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+      "phone_source_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+        "title": "Missouri DHSS: Area Agencies on Aging (Silver Haired Legislature delegations table)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Area Agency names, phones, toll-free numbers and counties served; full page text."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.acl.gov/contact",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "aging_agency"
- },
- {
-  "program_id": "mo-ombudsman",
-  "name": "Missouri long-term-care ombudsman",
-  "official_url": "https://theconsumervoice.org/get_help",
-  "organization": "National Long-Term Care Ombudsman Resource Center",
-  "service_area": [
-   "All Missouri counties"
-  ],
-  "state": "MO",
-  "needs_supported": [
-   "resident_rights",
-   "general_navigation"
-  ],
-  "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-  "next_step": "Use the locator to find the Missouri program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
-  "constraints": [
-   "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "mo-aging-r4",
+    "name": "Young at Heart Resources",
+    "organization": "Young at Heart Resources (Region 4)",
+    "official_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+    "state": "MO",
+    "service_area": [
+      "Andrew",
+      "Atchison",
+      "Buchanan",
+      "Caldwell",
+      "Clinton",
+      "Daviess",
+      "DeKalb",
+      "Grundy",
+      "Gentry",
+      "Harrison",
+      "Holt",
+      "Linn",
+      "Livingston",
+      "Mercer",
+      "Nodaway",
+      "Putnam",
+      "Sullivan",
+      "Worth"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the Missouri Senior Resource Line, 800-235-5503, which connects you to this agency. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Local number: 660-240-9400."
+    ],
+    "public_contact": {
+      "phone": "888-844-5626",
+      "phone_label": "Area Agency on Aging, Region 4"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+      "phone_source_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+        "title": "Missouri DHSS: Area Agencies on Aging (Silver Haired Legislature delegations table)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Area Agency names, phones, toll-free numbers and counties served; full page text."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "mo-aging-r5",
+    "name": "Northeast Missouri Area Agency on Aging",
+    "organization": "Northeast Missouri Area Agency on Aging (Region 5)",
+    "official_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+    "state": "MO",
+    "service_area": [
+      "Adair",
+      "Clark",
+      "Knox",
+      "Lewis",
+      "Lincoln",
+      "Macon",
+      "Marion",
+      "Monroe",
+      "Montgomery",
+      "Pike",
+      "Ralls",
+      "Randolph",
+      "Schuyler",
+      "Scotland",
+      "Shelby",
+      "Warren"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the Missouri Senior Resource Line, 800-235-5503, which connects you to this agency. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Local number: 660-665-4682."
+    ],
+    "public_contact": {
+      "phone": "800-664-6338",
+      "phone_label": "Area Agency on Aging, Region 5"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+      "phone_source_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+        "title": "Missouri DHSS: Area Agencies on Aging (Silver Haired Legislature delegations table)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Area Agency names, phones, toll-free numbers and counties served; full page text."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
+  {
+    "program_id": "mo-aging-r6",
+    "name": "Aging Best",
+    "organization": "Aging Best (Region 6)",
+    "official_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+    "state": "MO",
+    "service_area": [
+      "Audrain",
+      "Boone",
+      "Callaway",
+      "Camden",
+      "Cole",
+      "Cooper",
+      "Crawford",
+      "Dent",
+      "Gasconade",
+      "Howard",
+      "Laclede",
+      "Maries",
+      "Miller",
+      "Moniteau",
+      "Morgan",
+      "Osage",
+      "Phelps",
+      "Pulaski",
+      "Washington"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the Missouri Senior Resource Line, 800-235-5503, which connects you to this agency. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Local number: 573-443-5823."
+    ],
+    "public_contact": {
+      "phone": "800-369-5211",
+      "phone_label": "Area Agency on Aging, Region 6"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+      "phone_source_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+        "title": "Missouri DHSS: Area Agencies on Aging (Silver Haired Legislature delegations table)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Area Agency names, phones, toll-free numbers and counties served; full page text."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "ombudsman"
- }
+  {
+    "program_id": "mo-aging-r7",
+    "name": "Mid-America Regional Council Area Agency on Aging",
+    "organization": "Mid-America Regional Council Area Agency on Aging (Region 7)",
+    "official_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+    "state": "MO",
+    "service_area": [
+      "Cass",
+      "Clay",
+      "Jackson",
+      "Platte",
+      "Ray"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the Missouri Senior Resource Line, 800-235-5503, which connects you to this agency. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Local number: 816-474-4240."
+    ],
+    "public_contact": {
+      "phone": "800-593-7948",
+      "phone_label": "Area Agency on Aging, Region 7"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+      "phone_source_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+        "title": "Missouri DHSS: Area Agencies on Aging (Silver Haired Legislature delegations table)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Area Agency names, phones, toll-free numbers and counties served; full page text."
+      }
+    ]
+  },
+  {
+    "program_id": "mo-aging-r8",
+    "name": "Aging Ahead",
+    "organization": "Aging Ahead (Region 8)",
+    "official_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+    "state": "MO",
+    "service_area": [
+      "Franklin",
+      "Jefferson",
+      "St. Charles",
+      "St. Louis"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the Missouri Senior Resource Line, 800-235-5503, which connects you to this agency. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Local number: 636-207-4211."
+    ],
+    "public_contact": {
+      "phone": "800-243-6060",
+      "phone_label": "Area Agency on Aging, Region 8"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+      "phone_source_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+        "title": "Missouri DHSS: Area Agencies on Aging (Silver Haired Legislature delegations table)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Area Agency names, phones, toll-free numbers and counties served; full page text."
+      }
+    ]
+  },
+  {
+    "program_id": "mo-aging-r9",
+    "name": "St. Louis Area Agency on Aging",
+    "organization": "St. Louis Area Agency on Aging (Region 9)",
+    "official_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+    "state": "MO",
+    "service_area": [
+      "St. Louis City"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the Missouri Senior Resource Line, 800-235-5503, which connects you to this agency. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program."
+    ],
+    "public_contact": {
+      "phone": "877-612-5918",
+      "phone_label": "Area Agency on Aging, Region 9"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+      "phone_source_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+        "title": "Missouri DHSS: Area Agencies on Aging (Silver Haired Legislature delegations table)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Area Agency names, phones, toll-free numbers and counties served; full page text."
+      }
+    ]
+  },
+  {
+    "program_id": "mo-aging-r10",
+    "name": "Region X Area Agency on Aging",
+    "organization": "Region X Area Agency on Aging (Region 10)",
+    "official_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+    "state": "MO",
+    "service_area": [
+      "Barton",
+      "Jasper",
+      "McDonald",
+      "Newton"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the Missouri Senior Resource Line, 800-235-5503, which connects you to this agency. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program."
+    ],
+    "public_contact": {
+      "phone": "417-781-7562",
+      "phone_label": "Area Agency on Aging, Region 10"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+      "phone_source_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+        "title": "Missouri DHSS: Area Agencies on Aging (Silver Haired Legislature delegations table)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Area Agency names, phones, toll-free numbers and counties served; full page text."
+      }
+    ]
+  },
+  {
+    "program_id": "mo-ombudsman-ozarks",
+    "name": "Council of Churches of the Ozarks Long-Term Care Ombudsman Program",
+    "organization": "Council of Churches of the Ozarks Long-Term Care Ombudsman Program",
+    "official_url": "https://dhss.mo.gov/seniors/ombudsman/pdf/veterans-advocate-brochure.pdf",
+    "state": "MO",
+    "service_area": [
+      "Barry",
+      "Christian",
+      "Dade",
+      "Dallas",
+      "Douglas",
+      "Greene",
+      "Howell",
+      "Lawrence",
+      "Oregon",
+      "Ozark",
+      "Polk",
+      "Shannon",
+      "Stone",
+      "Taney",
+      "Texas",
+      "Webster",
+      "Wright",
+      "Barton",
+      "Jasper",
+      "McDonald",
+      "Newton"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "417-862-3598",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+      "phone_source_url": "https://dhss.mo.gov/seniors/ombudsman/pdf/veterans-advocate-brochure.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dhss.mo.gov/seniors/ombudsman/pdf/veterans-advocate-brochure.pdf",
+        "title": "Missouri DHSS: Long-Term Care Ombudsman regional programs",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional ombudsman program names and phones."
+      },
+      {
+        "url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+        "title": "Missouri DHSS: Area Agencies on Aging",
+        "reviewed_on": "2026-11-04",
+        "scope": "Counties in each aging region."
+      }
+    ]
+  },
+  {
+    "program_id": "mo-ombudsman-r2",
+    "name": "Aging Matters Long-Term Care Ombudsman Program",
+    "organization": "Aging Matters Long-Term Care Ombudsman Program",
+    "official_url": "https://dhss.mo.gov/seniors/ombudsman/pdf/veterans-advocate-brochure.pdf",
+    "state": "MO",
+    "service_area": [
+      "Bollinger",
+      "Butler",
+      "Cape Girardeau",
+      "Carter",
+      "Dunklin",
+      "Iron",
+      "Madison",
+      "Mississippi",
+      "New Madrid",
+      "Pemiscot",
+      "Perry",
+      "Reynolds",
+      "Ripley",
+      "Scott",
+      "St. Francois",
+      "Ste. Genevieve",
+      "Stoddard",
+      "Wayne"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "800-392-8771",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+      "phone_source_url": "https://dhss.mo.gov/seniors/ombudsman/pdf/veterans-advocate-brochure.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dhss.mo.gov/seniors/ombudsman/pdf/veterans-advocate-brochure.pdf",
+        "title": "Missouri DHSS: Long-Term Care Ombudsman regional programs",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional ombudsman program names and phones."
+      },
+      {
+        "url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+        "title": "Missouri DHSS: Area Agencies on Aging",
+        "reviewed_on": "2026-11-04",
+        "scope": "Counties in each aging region."
+      }
+    ]
+  },
+  {
+    "program_id": "mo-ombudsman-r3",
+    "name": "Care Connection for Aging Services Long-Term Care Ombudsman Program",
+    "organization": "Care Connection for Aging Services Long-Term Care Ombudsman Program",
+    "official_url": "https://dhss.mo.gov/seniors/ombudsman/pdf/veterans-advocate-brochure.pdf",
+    "state": "MO",
+    "service_area": [
+      "Bates",
+      "Benton",
+      "Carroll",
+      "Cedar",
+      "Chariton",
+      "Henry",
+      "Hickory",
+      "Lafayette",
+      "Johnson",
+      "Pettis",
+      "Saline",
+      "St. Clair",
+      "Vernon"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "800-748-7826",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+      "phone_source_url": "https://dhss.mo.gov/seniors/ombudsman/pdf/veterans-advocate-brochure.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dhss.mo.gov/seniors/ombudsman/pdf/veterans-advocate-brochure.pdf",
+        "title": "Missouri DHSS: Long-Term Care Ombudsman regional programs",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional ombudsman program names and phones."
+      },
+      {
+        "url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+        "title": "Missouri DHSS: Area Agencies on Aging",
+        "reviewed_on": "2026-11-04",
+        "scope": "Counties in each aging region."
+      }
+    ]
+  },
+  {
+    "program_id": "mo-ombudsman-r4",
+    "name": "Young at Heart Resources Long-Term Care Ombudsman Program",
+    "organization": "Young at Heart Resources Long-Term Care Ombudsman Program",
+    "official_url": "https://dhss.mo.gov/seniors/ombudsman/pdf/veterans-advocate-brochure.pdf",
+    "state": "MO",
+    "service_area": [
+      "Andrew",
+      "Atchison",
+      "Buchanan",
+      "Caldwell",
+      "Clinton",
+      "Daviess",
+      "DeKalb",
+      "Grundy",
+      "Gentry",
+      "Harrison",
+      "Holt",
+      "Linn",
+      "Livingston",
+      "Mercer",
+      "Nodaway",
+      "Putnam",
+      "Sullivan",
+      "Worth"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "660-240-9400",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+      "phone_source_url": "https://dhss.mo.gov/seniors/ombudsman/pdf/veterans-advocate-brochure.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dhss.mo.gov/seniors/ombudsman/pdf/veterans-advocate-brochure.pdf",
+        "title": "Missouri DHSS: Long-Term Care Ombudsman regional programs",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional ombudsman program names and phones."
+      },
+      {
+        "url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+        "title": "Missouri DHSS: Area Agencies on Aging",
+        "reviewed_on": "2026-11-04",
+        "scope": "Counties in each aging region."
+      }
+    ]
+  },
+  {
+    "program_id": "mo-ombudsman-r6",
+    "name": "Aging Best Long-Term Care Ombudsman Program",
+    "organization": "Aging Best Long-Term Care Ombudsman Program",
+    "official_url": "https://dhss.mo.gov/seniors/ombudsman/pdf/veterans-advocate-brochure.pdf",
+    "state": "MO",
+    "service_area": [
+      "Audrain",
+      "Boone",
+      "Callaway",
+      "Camden",
+      "Cole",
+      "Cooper",
+      "Crawford",
+      "Dent",
+      "Gasconade",
+      "Howard",
+      "Laclede",
+      "Maries",
+      "Miller",
+      "Moniteau",
+      "Morgan",
+      "Osage",
+      "Phelps",
+      "Pulaski",
+      "Washington"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "800-369-5211",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+      "phone_source_url": "https://dhss.mo.gov/seniors/ombudsman/pdf/veterans-advocate-brochure.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dhss.mo.gov/seniors/ombudsman/pdf/veterans-advocate-brochure.pdf",
+        "title": "Missouri DHSS: Long-Term Care Ombudsman regional programs",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional ombudsman program names and phones."
+      },
+      {
+        "url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+        "title": "Missouri DHSS: Area Agencies on Aging",
+        "reviewed_on": "2026-11-04",
+        "scope": "Counties in each aging region."
+      }
+    ]
+  },
+  {
+    "program_id": "mo-ombudsman-r7",
+    "name": "Mid-America Regional Council Long-Term Care Ombudsman Program",
+    "organization": "Mid-America Regional Council Long-Term Care Ombudsman Program",
+    "official_url": "https://health.mo.gov/seniors/ombudsman/pdf/regional-map.pdf",
+    "state": "MO",
+    "service_area": [
+      "Cass",
+      "Clay",
+      "Jackson",
+      "Platte",
+      "Ray"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "816-474-4240",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+      "phone_source_url": "https://health.mo.gov/seniors/ombudsman/pdf/regional-map.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.mo.gov/seniors/ombudsman/pdf/regional-map.pdf",
+        "title": "Missouri DHSS: Long-Term Care Ombudsman regional programs",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional ombudsman program names and phones."
+      },
+      {
+        "url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+        "title": "Missouri DHSS: Area Agencies on Aging",
+        "reviewed_on": "2026-11-04",
+        "scope": "Counties in each aging region."
+      }
+    ]
+  },
+  {
+    "program_id": "mo-ombudsman-voyce",
+    "name": "VOYCE Long-Term Care Ombudsman Program (St. Louis area)",
+    "organization": "VOYCE Long-Term Care Ombudsman Program (St. Louis area)",
+    "official_url": "https://dhss.mo.gov/seniors/ombudsman/pdf/veterans-advocate-brochure.pdf",
+    "state": "MO",
+    "service_area": [
+      "Franklin",
+      "Jefferson",
+      "St. Charles",
+      "St. Louis",
+      "St. Louis City"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "866-918-8222",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+      "phone_source_url": "https://dhss.mo.gov/seniors/ombudsman/pdf/veterans-advocate-brochure.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dhss.mo.gov/seniors/ombudsman/pdf/veterans-advocate-brochure.pdf",
+        "title": "Missouri DHSS: Long-Term Care Ombudsman regional programs",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional ombudsman program names and phones."
+      },
+      {
+        "url": "https://health.mo.gov/partners-providers/silver-haired-legislature/missouri-silver-haired-legislature-delegations",
+        "title": "Missouri DHSS: Area Agencies on Aging",
+        "reviewed_on": "2026-11-04",
+        "scope": "Counties in each aging region."
+      }
+    ]
+  },
+  {
+    "program_id": "mo-ombudsman-r5",
+    "name": "State Long-Term Care Ombudsman line (Northeast Missouri)",
+    "organization": "Office of the State Long-Term Care Ombudsman, Missouri DHSS",
+    "official_url": "https://health.mo.gov/seniors/ombudsman/",
+    "state": "MO",
+    "service_area": [
+      "Adair",
+      "Clark",
+      "Knox",
+      "Lewis",
+      "Lincoln",
+      "Macon",
+      "Marion",
+      "Monroe",
+      "Montgomery",
+      "Pike",
+      "Ralls",
+      "Randolph",
+      "Schuyler",
+      "Scotland",
+      "Shelby",
+      "Warren"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "Advocacy for residents of long-term care facilities. No regional program phone for Northeast Missouri was found in a current official source, so this uses the state ombudsman line, which connects callers to the regional ombudsman.",
+    "next_step": "Call 800-309-3282 and ask for the regional ombudsman for your county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "800-309-3282",
+      "phone_label": "State Long-Term Care Ombudsman (toll-free)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://health.mo.gov/seniors/ombudsman/pdf/regional-map.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.mo.gov/seniors/ombudsman/pdf/regional-map.pdf",
+        "title": "Missouri DHSS: Long-Term Care Ombudsman regional map",
+        "reviewed_on": "2026-11-04",
+        "scope": "State ombudsman toll-free number; search excerpt."
+      }
+    ]
+  }
 ]

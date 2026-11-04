@@ -1,343 +1,1622 @@
 [
- {
-  "program_id": "mo-claims",
-  "name": "Missouri veterans: accredited claims help",
-  "official_url": "https://mvc.dps.mo.gov/about/staff.php",
-  "organization": "Missouri Veterans Commission",
-  "service_area": [
-   "All Missouri counties"
-  ],
-  "state": "MO",
-  "needs_supported": [
-   "general_navigation",
-   "benefits_and_funding"
-  ],
-  "description": "Free help with VA claims, applications and appeals for veterans and families.",
-  "next_step": "Call the state veterans agency; ask for a benefits review and the office that serves your county.",
-  "constraints": [],
-  "public_contact": {
-   "phone": "573-751-3779"
+  {
+    "program_id": "mo-claims",
+    "name": "Missouri veterans: accredited claims help",
+    "official_url": "https://mvc.dps.mo.gov/about/staff.php",
+    "organization": "Missouri Veterans Commission",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "MO",
+    "needs_supported": [
+      "general_navigation",
+      "benefits_and_funding"
+    ],
+    "description": "Free help with VA claims, applications and appeals for veterans and families.",
+    "next_step": "Choose your county for its Missouri Veterans Commission Veterans Service Office, or call MVC at 573-751-3779.",
+    "constraints": [],
+    "public_contact": {
+      "phone": "573-751-3779"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://mvc.dps.mo.gov/about/staff.php"
+    },
+    "source_evidence": [
+      {
+        "url": "https://mvc.dps.mo.gov/about/staff.php",
+        "title": "Official published source",
+        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "mo-ship",
+    "name": "Medicare counseling (SHIP) for Missouri",
+    "official_url": "https://www.shiphelp.org/",
+    "organization": "SHIP Technical Assistance Center",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "MO",
+    "needs_supported": [
+      "benefits_and_funding"
+    ],
+    "description": "Free, unbiased Medicare counseling from the State Health Insurance Assistance Program.",
+    "next_step": "Call or use the locator to reach the Missouri SHIP and ask for a counseling appointment.",
+    "constraints": [],
+    "public_contact": {
+      "phone": "877-839-2675"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.shiphelp.org/?p=317"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.shiphelp.org/?p=317",
+        "title": "Official published source",
+        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://mvc.dps.mo.gov/about/staff.php"
+  {
+    "program_id": "mo-ssvf-14-mo-228",
+    "name": "Kitchen Inc: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Kitchen Inc",
+    "service_area": [
+      "Christian",
+      "Greene",
+      "Webster"
+    ],
+    "state": "MO",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 14-MO-228): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 417-225-7404.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "417-225-7430",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 69",
+        "sheet": "Contacts",
+        "row": 69,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://mvc.dps.mo.gov/about/staff.php",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ]
- },
- {
-  "program_id": "mo-ship",
-  "name": "Medicare counseling (SHIP) for Missouri",
-  "official_url": "https://www.shiphelp.org/",
-  "organization": "SHIP Technical Assistance Center",
-  "service_area": [
-   "All Missouri counties"
-  ],
-  "state": "MO",
-  "needs_supported": [
-   "benefits_and_funding"
-  ],
-  "description": "Free, unbiased Medicare counseling from the State Health Insurance Assistance Program.",
-  "next_step": "Call or use the locator to reach the Missouri SHIP and ask for a counseling appointment.",
-  "constraints": [],
-  "public_contact": {
-   "phone": "877-839-2675"
+  {
+    "program_id": "mo-ssvf-15-mo-330",
+    "name": "Catholic Charities of Southern Missouri, Inc.: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Catholic Charities of Southern Missouri, Inc.",
+    "service_area": [
+      "Barry",
+      "Barton",
+      "Bollinger",
+      "Butler",
+      "Cape Girardeau",
+      "Carter",
+      "Cedar",
+      "Dade",
+      "Dallas",
+      "Dent",
+      "Douglas",
+      "Dunklin",
+      "Howell",
+      "Iron",
+      "Jasper",
+      "Laclede",
+      "Lawrence",
+      "Madison",
+      "McDonald",
+      "Mississippi",
+      "New Madrid",
+      "Newton",
+      "Oregon",
+      "Ozark",
+      "Pemiscot",
+      "Perry",
+      "Polk",
+      "Reynolds",
+      "Ripley",
+      "Scott",
+      "Shannon",
+      "Stoddard",
+      "Stone",
+      "Taney",
+      "Texas",
+      "Wayne",
+      "Wright"
+    ],
+    "state": "MO",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 15-MO-330): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "417-720-4213",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 115",
+        "sheet": "Contacts",
+        "row": 115,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "mo-ssvf-16-mo-048",
+    "name": "St. Patrick Center: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "St. Patrick Center",
+    "service_area": [
+      "Crawford",
+      "Franklin",
+      "Jefferson",
+      "Lincoln",
+      "St. Charles",
+      "St. Francois",
+      "St. Louis City",
+      "St. Louis",
+      "Ste. Genevieve",
+      "Warren",
+      "Washington"
+    ],
+    "state": "MO",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 16-MO-048): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 618-484-7447.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "314-356-0657",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 119",
+        "sheet": "Contacts",
+        "row": 119,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.shiphelp.org/?p=317"
+  {
+    "program_id": "mo-ssvf-23-mo-229",
+    "name": "Welcome Home, Inc.: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Welcome Home, Inc.",
+    "service_area": [
+      "Adair",
+      "Audrain",
+      "Boone",
+      "Callaway",
+      "Camden",
+      "Carroll",
+      "Chariton",
+      "Cole",
+      "Cooper",
+      "Gasconade",
+      "Howard",
+      "Linn",
+      "Macon",
+      "Maries",
+      "Miller",
+      "Moniteau",
+      "Monroe",
+      "Montgomery",
+      "Morgan",
+      "Osage",
+      "Pettis",
+      "Phelps",
+      "Pulaski",
+      "Randolph",
+      "Saline",
+      "Shelby"
+    ],
+    "state": "MO",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 23-MO-229): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Ask VA’s National Call Center for Homeless Veterans (877-424-3838) to connect you with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": null,
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 211",
+        "sheet": "Contacts",
+        "row": 211,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.shiphelp.org/?p=317",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ]
- },
- {
-  "program_id": "mo-ssvf-14-mo-228",
-  "name": "Kitchen Inc: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Kitchen Inc",
-  "service_area": [
-   "All Missouri counties"
-  ],
-  "state": "MO",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 14-MO-228): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Christian County, Greene County, Webster County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 417-225-7404.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "417-225-7430",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "mo-ssvf-26-mo-476",
+    "name": "PETTIS COUNTY COMMUNITY PARTNERSHIP INC: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "PETTIS COUNTY COMMUNITY PARTNERSHIP INC",
+    "service_area": [
+      "Benton",
+      "Cass",
+      "Henry",
+      "Johnson",
+      "Lafayette",
+      "Morgan",
+      "Pettis",
+      "Saline",
+      "St. Clair"
+    ],
+    "state": "MO",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 26-MO-476): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "660-827-0560",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 230",
+        "sheet": "Contacts",
+        "row": 230,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "mo-ssvf-26-zz-110",
+    "name": "Catholic Charities of Kansas City - St Joseph, Inc.: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Catholic Charities of Kansas City - St Joseph, Inc.",
+    "service_area": [
+      "Andrew",
+      "Atchison",
+      "Bates",
+      "Benton",
+      "Buchanan",
+      "Caldwell",
+      "Cass",
+      "Clay",
+      "Clinton",
+      "DeKalb",
+      "Henry",
+      "Holt",
+      "Jackson",
+      "Johnson",
+      "Lafayette",
+      "Livingston",
+      "Nodaway",
+      "Platte",
+      "Ray",
+      "St. Clair",
+      "Vernon"
+    ],
+    "state": "MO",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 26-ZZ-110): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "816-659-8263",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 235",
+        "sheet": "Contacts",
+        "row": 235,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "mo-ombudsman",
+    "name": "Missouri Long-Term Care Ombudsman Program",
+    "organization": "Office of the State Long-Term Care Ombudsman, Missouri DHSS",
+    "official_url": "https://health.mo.gov/seniors/ombudsman/",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "MO",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "description": "Statewide advocacy for residents of long-term care facilities, delivered through regional ombudsman programs.",
+    "next_step": "Choose your county for its regional ombudsman, or call 800-309-3282. To report abuse, neglect or exploitation of an older adult or adult with a disability, call the Adult Abuse and Neglect Hotline, 800-392-0210 (7 a.m. to 8 p.m. daily). For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "800-309-3282",
+      "phone_label": "State Long-Term Care Ombudsman (toll-free)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://health.mo.gov/seniors/ombudsman/pdf/regional-map.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.mo.gov/seniors/ombudsman/pdf/regional-map.pdf",
+        "title": "Missouri DHSS: Long-Term Care Ombudsman regional map",
+        "reviewed_on": "2026-11-04",
+        "scope": "State ombudsman toll-free number; search excerpt."
+      },
+      {
+        "url": "https://health.mo.gov/abuse",
+        "title": "Missouri DHSS: Stop Adult Abuse",
+        "reviewed_on": "2026-11-04",
+        "scope": "Adult Abuse and Neglect Hotline number and hours; search excerpt."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 69",
-    "sheet": "Contacts",
-    "row": 69,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "mo-ssvf-15-mo-330",
-  "name": "Catholic Charities of Southern Missouri, Inc.: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Catholic Charities of Southern Missouri, Inc.",
-  "service_area": [
-   "All Missouri counties"
-  ],
-  "state": "MO",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 15-MO-330): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Barry County, Barton County, Bollinger County, Butler County, Cape Girardeau County, Carter County, Cedar County, Dade County, Dallas County, Dent County, Douglas County, Dunklin County and 25 more.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "417-720-4213",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "mo-senior-resource-line",
+    "name": "Missouri Senior Resource Line",
+    "organization": "Missouri Department of Health and Senior Services",
+    "official_url": "https://health.mo.gov/seniors/aaa/",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "MO",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "A statewide line that connects you to your local Area Agency on Aging for meals, in-home services, transportation, caregiver support and senior legal assistance. Military service is not required.",
+    "next_step": "Call 800-235-5503 from anywhere in Missouri. Choose a county above for the direct number of its Area Agency on Aging.",
+    "constraints": [
+      "Each program has its own eligibility and waitlist."
+    ],
+    "public_contact": {
+      "phone": "800-235-5503",
+      "phone_label": "Missouri Senior Resource Line (toll-free)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://health.mo.gov/seniors/aaa/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.mo.gov/seniors/aaa/",
+        "title": "Missouri DHSS: Area Agencies on Aging",
+        "reviewed_on": "2026-11-04",
+        "scope": "Senior Resource Line description; search excerpt."
+      },
+      {
+        "url": "https://www.newstribune.com/news/2022/aug/25/new-phone-line-connects-seniors-to-more-services/",
+        "title": "News Tribune: new phone line connects seniors to more services",
+        "reviewed_on": "2026-11-04",
+        "scope": "Senior Resource Line number; search excerpt."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "mo-cil-access-ii",
+    "name": "Access II Independent Living Center (Gallatin)",
+    "organization": "Access II Independent Living Center",
+    "official_url": "https://www.ilru.org/cil-directory/mo",
+    "service_area": [
+      "Andrew",
+      "Atchison",
+      "Buchanan",
+      "Caldwell",
+      "Carroll",
+      "Clinton",
+      "Daviess",
+      "DeKalb",
+      "Gentry",
+      "Grundy",
+      "Harrison",
+      "Holt",
+      "Livingston",
+      "Mercer",
+      "Nodaway",
+      "Ray",
+      "Worth"
+    ],
+    "state": "MO",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.  Website: accessii.org.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "660-663-2423",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/mo",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/mo"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/mo",
+        "title": "ILRU national directory of Centers for Independent Living (Missouri)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "mo-cil-bails",
+    "name": "Bootheel Area Independent Living Services (Kennett)",
+    "organization": "Bootheel Area Independent Living Services",
+    "official_url": "https://www.ilru.org/cil-directory/mo",
+    "service_area": [
+      "Dunklin",
+      "New Madrid",
+      "Pemiscot",
+      "Stoddard"
+    ],
+    "state": "MO",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.  Website: bails.org.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "573-888-0002",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/mo",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/mo"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/mo",
+        "title": "ILRU national directory of Centers for Independent Living (Missouri)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 115",
-    "sheet": "Contacts",
-    "row": 115,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "mo-ssvf-16-mo-048",
-  "name": "St. Patrick Center: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "St. Patrick Center",
-  "service_area": [
-   "All Missouri counties"
-  ],
-  "state": "MO",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 16-MO-048): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Crawford County, Franklin County, Jefferson County, Lincoln County, St. Charles County, St. Francois County, St. Louis city, St. Louis County, Ste. Genevieve County, Warren County, Washington County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 618-484-7447.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "314-356-0657",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "mo-cil-dcil",
+    "name": "Delta Center for Independent Living (St. Peters)",
+    "organization": "Delta Center for Independent Living",
+    "official_url": "https://dcil.org/",
+    "service_area": [
+      "Lincoln",
+      "St. Charles",
+      "Warren"
+    ],
+    "state": "MO",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "636-926-8761",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/mo",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/mo"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/mo",
+        "title": "ILRU national directory of Centers for Independent Living (Missouri)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "mo-cil-dra",
+    "name": "Disability Resource Association (Festus)",
+    "organization": "Disability Resource Association",
+    "official_url": "https://dra4help.org/",
+    "service_area": [
+      "Jefferson"
+    ],
+    "state": "MO",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility. The ILRU listing says Jefferson \"and surrounding counties.\"",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "636-931-7696",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/mo",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/mo"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/mo",
+        "title": "ILRU national directory of Centers for Independent Living (Missouri)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "mo-cil-dcai",
+    "name": "Disabled Citizens Alliance for Independence (Viburnum)",
+    "organization": "Disabled Citizens Alliance for Independence",
+    "official_url": "https://www.ilru.org/cil-directory/mo",
+    "service_area": [
+      "Crawford",
+      "Dent",
+      "Iron",
+      "Reynolds",
+      "Washington"
+    ],
+    "state": "MO",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility. Its consumer-directed services department also serves Carter, Franklin, Gasconade, Jefferson, Madison, Phelps, Shannon, St. Francois, Texas and Wayne counties. Website: dcai.us.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "573-244-5402",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/mo",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/mo"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/mo",
+        "title": "ILRU national directory of Centers for Independent Living (Missouri)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 119",
-    "sheet": "Contacts",
-    "row": 119,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "mo-ssvf-23-mo-229",
-  "name": "Welcome Home, Inc.: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Welcome Home, Inc.",
-  "service_area": [
-   "All Missouri counties"
-  ],
-  "state": "MO",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 23-MO-229): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Adair County, Audrain County, Boone County, Callaway County, Camden County, Carroll County, Chariton County, Cole County, Cooper County, Gasconade County, Howard County, Linn County and 14 more.",
-  "next_step": "Ask VA’s National Call Center for Homeless Veterans (877-424-3838) to connect you with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": null,
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "mo-cil-empower",
+    "name": "empower: abilities (Springfield)",
+    "organization": "empower: abilities",
+    "official_url": "https://empowerabilities.org",
+    "service_area": [
+      "Christian",
+      "Dallas",
+      "Greene",
+      "Lawrence",
+      "Polk",
+      "Stone",
+      "Taney",
+      "Webster"
+    ],
+    "state": "MO",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "417-886-1188",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/mo",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/mo"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/mo",
+        "title": "ILRU national directory of Centers for Independent Living (Missouri)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "mo-cil-hilc",
+    "name": "Heartland Independent Living Center (Owensville)",
+    "organization": "Heartland Independent Living Center",
+    "official_url": "https://www.heartlandilc.org/",
+    "service_area": [
+      "Franklin",
+      "Gasconade",
+      "Maries"
+    ],
+    "state": "MO",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility. Union office: 636-583-7977.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "573-861-2273",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/mo",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/mo"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/mo",
+        "title": "ILRU national directory of Centers for Independent Living (Missouri)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "mo-cil-ilcsemo",
+    "name": "ILC of Southeast Missouri (Poplar Bluff)",
+    "organization": "ILC of Southeast Missouri",
+    "official_url": "https://ilcsemo.org/",
+    "service_area": [
+      "Butler",
+      "Carter",
+      "Ripley",
+      "Wayne"
+    ],
+    "state": "MO",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "573-686-2333",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/mo",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/mo"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/mo",
+        "title": "ILRU national directory of Centers for Independent Living (Missouri)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 211",
-    "sheet": "Contacts",
-    "row": 211,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "mo-ssvf-26-mo-476",
-  "name": "PETTIS COUNTY COMMUNITY PARTNERSHIP INC: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "PETTIS COUNTY COMMUNITY PARTNERSHIP INC",
-  "service_area": [
-   "All Missouri counties"
-  ],
-  "state": "MO",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 26-MO-476): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Benton County, Cass County, Henry County, Johnson County, Lafayette County, Morgan County, Pettis County, Saline County, St. Clair County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "660-827-0560",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "mo-cil-ilrc",
+    "name": "Independent Living Resource Center (Jefferson City)",
+    "organization": "Independent Living Resource Center",
+    "official_url": "https://ilrcjcmo.org/",
+    "service_area": [
+      "Callaway",
+      "Camden",
+      "Cole",
+      "Miller",
+      "Moniteau",
+      "Morgan",
+      "Osage"
+    ],
+    "state": "MO",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "573-556-0400",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/mo",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/mo"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/mo",
+        "title": "ILRU national directory of Centers for Independent Living (Missouri)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "mo-cil-life",
+    "name": "LIFE Center for Independent Living (Farmington)",
+    "organization": "LIFE Center for Independent Living",
+    "official_url": "https://www.lifecilmo.org/",
+    "service_area": [
+      "Madison",
+      "St. Francois",
+      "Ste. Genevieve"
+    ],
+    "state": "MO",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "573-756-4314",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/mo",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/mo"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/mo",
+        "title": "ILRU national directory of Centers for Independent Living (Missouri)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "mo-cil-meril",
+    "name": "Midland Empire Resources for Independent Living (St. Joseph)",
+    "organization": "Midland Empire Resources for Independent Living",
+    "official_url": "https://meril.org/",
+    "service_area": [
+      "Andrew",
+      "Atchison",
+      "Buchanan",
+      "Clinton",
+      "DeKalb",
+      "Gentry",
+      "Holt",
+      "Nodaway",
+      "Worth"
+    ],
+    "state": "MO",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "816-279-8558",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/mo",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/mo"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/mo",
+        "title": "ILRU national directory of Centers for Independent Living (Missouri)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 230",
-    "sheet": "Contacts",
-    "row": 230,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "mo-ssvf-26-zz-110",
-  "name": "Catholic Charities of Kansas City - St Joseph, Inc.: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Catholic Charities of Kansas City - St Joseph, Inc.",
-  "service_area": [
-   "All Missouri counties"
-  ],
-  "state": "MO",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 26-ZZ-110): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Andrew County, Atchison County, Bates County, Benton County, Buchanan County, Caldwell County, Cass County, Clay County, Clinton County, DeKalb County, Henry County, Holt County and 9 more.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "816-659-8263",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "mo-cil-neils",
+    "name": "NorthEast Independent Living Services (Hannibal)",
+    "organization": "NorthEast Independent Living Services",
+    "official_url": "https://www.neils.org/",
+    "service_area": [
+      "Clark",
+      "Lewis",
+      "Marion",
+      "Monroe",
+      "Pike",
+      "Ralls"
+    ],
+    "state": "MO",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "573-221-8282",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/mo",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/mo"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/mo",
+        "title": "ILRU national directory of Centers for Independent Living (Missouri)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "mo-cil-omo",
+    "name": "On My Own (Nevada)",
+    "organization": "On My Own",
+    "official_url": "https://omoinc.org/",
+    "service_area": [
+      "Bates",
+      "Cedar",
+      "Hickory",
+      "St. Clair",
+      "Vernon"
+    ],
+    "state": "MO",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility. Collins office: 417-275-1115.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "417-667-7007",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/mo",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/mo"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/mo",
+        "title": "ILRU national directory of Centers for Independent Living (Missouri)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "mo-cil-oil",
+    "name": "Ozark Independent Living (West Plains)",
+    "organization": "Ozark Independent Living",
+    "official_url": "https://ozarkcil.com/",
+    "service_area": [
+      "Douglas",
+      "Howell",
+      "Oregon",
+      "Ozark",
+      "Shannon",
+      "Texas",
+      "Wright"
+    ],
+    "state": "MO",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "417-257-0038",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/mo",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/mo"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/mo",
+        "title": "ILRU national directory of Centers for Independent Living (Missouri)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 235",
-    "sheet": "Contacts",
-    "row": 235,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- }
+  {
+    "program_id": "mo-cil-paraquad",
+    "name": "Paraquad (St. Louis)",
+    "organization": "Paraquad",
+    "official_url": "https://www.paraquad.org/",
+    "service_area": [
+      "St. Louis City",
+      "St. Louis"
+    ],
+    "state": "MO",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "314-289-4200",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/mo",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/mo"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/mo",
+        "title": "ILRU national directory of Centers for Independent Living (Missouri)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
+  },
+  {
+    "program_id": "mo-cil-rail",
+    "name": "Rural Advocates for Independent Living (Macon)",
+    "organization": "Rural Advocates for Independent Living",
+    "official_url": "https://www.ilru.org/cil-directory/mo",
+    "service_area": [
+      "Adair",
+      "Chariton",
+      "Knox",
+      "Linn",
+      "Macon",
+      "Putnam",
+      "Schuyler",
+      "Scotland",
+      "Shelby",
+      "Sullivan"
+    ],
+    "state": "MO",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility. Kirksville office: 660-627-7245. Website: railkv.org.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "660-385-6789",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/mo",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/mo"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/mo",
+        "title": "ILRU national directory of Centers for Independent Living (Missouri)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
+  },
+  {
+    "program_id": "mo-cil-sadi",
+    "name": "SEMO Alliance for Disability Independence (Cape Girardeau)",
+    "organization": "SEMO Alliance for Disability Independence",
+    "official_url": "https://sadi.org/",
+    "service_area": [
+      "Bollinger",
+      "Cape Girardeau",
+      "Mississippi",
+      "Perry",
+      "Scott"
+    ],
+    "state": "MO",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "573-651-6464",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/mo",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/mo"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/mo",
+        "title": "ILRU national directory of Centers for Independent Living (Missouri)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
+  },
+  {
+    "program_id": "mo-cil-sil",
+    "name": "Services for Independent Living (Columbia)",
+    "organization": "Services for Independent Living",
+    "official_url": "https://www.silcolumbia.org/",
+    "service_area": [
+      "Audrain",
+      "Boone",
+      "Callaway",
+      "Cooper",
+      "Howard",
+      "Montgomery",
+      "Randolph"
+    ],
+    "state": "MO",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "573-874-1646",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/mo",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/mo"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/mo",
+        "title": "ILRU national directory of Centers for Independent Living (Missouri)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
+  },
+  {
+    "program_id": "mo-cil-tilc",
+    "name": "The Independent Living Center (Joplin)",
+    "organization": "The Independent Living Center",
+    "official_url": "https://www.ilcenter.org/",
+    "service_area": [
+      "Barry",
+      "Barton",
+      "Dade",
+      "Jasper",
+      "McDonald",
+      "Newton"
+    ],
+    "state": "MO",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "417-659-8086",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/mo",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/mo"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/mo",
+        "title": "ILRU national directory of Centers for Independent Living (Missouri)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
+  },
+  {
+    "program_id": "mo-cil-tcil",
+    "name": "Tri-County Center for Independent Living (Rolla)",
+    "organization": "Tri-County Center for Independent Living",
+    "official_url": "https://www.ilru.org/cil-directory/mo",
+    "service_area": [
+      "Laclede",
+      "Phelps",
+      "Pulaski"
+    ],
+    "state": "MO",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.  Website: tricountycenter.com.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "573-368-5933",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/mo",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/mo"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/mo",
+        "title": "ILRU national directory of Centers for Independent Living (Missouri)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
+  },
+  {
+    "program_id": "mo-cil-wils",
+    "name": "West-Central Independent Living Solutions (Sedalia)",
+    "organization": "West-Central Independent Living Solutions",
+    "official_url": "https://w-ils.org/",
+    "service_area": [
+      "Benton",
+      "Henry",
+      "Johnson",
+      "Lafayette",
+      "Pettis",
+      "Saline"
+    ],
+    "state": "MO",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility. Warrensburg office: 660-422-7883.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "660-829-1980",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/mo",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/mo"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/mo",
+        "title": "ILRU national directory of Centers for Independent Living (Missouri)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
+  },
+  {
+    "program_id": "mo-legal-programs",
+    "name": "Missouri legal aid programs",
+    "organization": "Missouri's four legal services programs",
+    "official_url": "https://www.lsmo.org/",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "MO",
+    "resource_role": "legal_aid",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation",
+      "housing"
+    ],
+    "description": "Free civil legal help for people with low income and older adults: Legal Aid of Western Missouri (816-474-6750); Legal Services of Eastern Missouri (800-444-0514); Mid-Missouri Legal Services (888-476-4545); Legal Services of Southern Missouri (800-444-4863). Not criminal defense.",
+    "next_step": "Find the program for your county at lsmo.org, or call the program for your part of the state. Have your county and the legal problem ready.",
+    "constraints": [
+      "Income, case type and capacity limits apply. This card does not assign counties; lsmo.org shows which program serves each county."
+    ],
+    "public_contact": {
+      "phone": "800-444-4863",
+      "phone_label": "Legal Services of Southern Missouri (one of four programs)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.justice.gov/usao-edmo/page/file/1300461/dl"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.justice.gov/usao-edmo/page/file/1300461/dl",
+        "title": "U.S. Attorney, Eastern District of Missouri: Legal Aid Programs in Missouri",
+        "reviewed_on": "2026-11-04",
+        "scope": "Program names and phones; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "mo-vahealth-systems",
+    "name": "VA medical centers serving Missouri",
+    "organization": "U.S. Department of Veterans Affairs",
+    "official_url": "https://www.va.gov/find-locations/?facilityType=health",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "MO",
+    "resource_role": "va_health_system",
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "VA medical centers in Missouri: VA St. Louis Health Care System (314-652-4100); Kansas City VA Medical Center (816-861-4700); Harry S. Truman Memorial Veterans’ Hospital, Columbia (573-814-6000); John J. Pershing VA Medical Center, Poplar Bluff (573-686-4151). Some southwest and border counties are served by VA systems in Arkansas, Kansas or Illinois.",
+    "next_step": "Use VA’s facility locator with your ZIP code to find the closest clinic and its medical center. Not enrolled yet? Call 877-222-8387 or ask your Veterans Service Officer for help applying.",
+    "constraints": [
+      "VA does not publish county lists for these systems, so this card does not assign counties. Your VA care team may be at a different clinic or system; follow what VA tells you."
+    ],
+    "public_contact": {
+      "phone": "877-222-8387",
+      "phone_label": "VA health care enrollment line"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.va.gov/directory/guide/state_SUD.cfm?STATE=MO",
+        "title": "VA program directory: Missouri",
+        "reviewed_on": "2026-11-04",
+        "scope": "Medical center names and phones; search excerpt."
+      }
+    ]
+  }
 ]
