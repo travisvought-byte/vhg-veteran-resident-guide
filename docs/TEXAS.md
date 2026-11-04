@@ -24,6 +24,37 @@ Existing STAR+PLUS HCBS members contact their health plan/MCO service coordinato
 
 TTAP offers device demonstrations, loans and reuse information; a device referral does not promise permanent ramp installation. OIB’s 844-633-3642 and published age 55 or older/significant visual impairment criteria are supported by the fully reviewed official Hockley County resource guide and corroborating indexed TWC brochure. Direct TWC access was blocked; it is not represented as a full review of the direct TWC page. HICAP uses the fully reviewed CMS directory; caregiver information has full DSHS support. Relay operator information is supported by the operator’s full page and TTAP’s identification of state oversight. TDHCA’s official directory supports 211 routing where the operator page was unavailable. A blocked page is not evidence of closure. Source-specific methods remain in public JSON.
 
+## Centers for Independent Living
+
+24 `tx-cil-*` records cover all 254 counties. Phones and counties served come from the ILRU national directory (https://www.ilru.org/cil-directory/tx), reviewed in full on 2026-11-04.
+
+- **Office merges:** centers with several offices that list the same counties are one record each (ARCIL, Crockett, Heart of Central Texas). REACH's four offices list different counties, so they stay separate.
+- **Spellings:** directory misspellings are normalized: McMullan → McMullen, McCulloh and McCullen → McCulloch, Hutchison → Hutchinson.
+- **Kept as published:** ARCIL's listed area includes Dallas–Fort Worth counties. It is kept as the directory publishes it, and those counties also show their REACH center.
+
+## Civil legal aid
+
+Texas's three regional legal aid programs together cover 253 of 254 counties, using the county lists on the Texas Legal Services Center's local legal aid page (https://www.tlsc.org/locallegalaid, reviewed in full):
+
+- Legal Aid of NorthWest Texas: 888-529-5277
+- Lone Star Legal Aid: 800-733-8394
+- Texas RioGrande Legal Aid: 888-988-9996
+
+Val Verde isn't on any of the three lists on that page. It falls back to the statewide TexasLawHelp card.
+
+## VA health care
+
+VA publishes how many counties each Texas health care system serves, but not which ones. So `tx-vahealth-systems` is one statewide card naming the eight systems, their main cities and the phones that are sourced. It points to VA's facility locator for the nearest clinic and does not assign counties.
+
+## Veteran housing (SSVF)
+
+County provider cards come from VA's FY26 SSVF provider intake list (see [SSVF-HOUSING.md](SSVF-HOUSING.md)).
+
+## Still open
+
+- **County office details:** addresses and hours for the TexVet directory, which couldn't be fetched this session.
+- **County VA health system map:** needs a VA county list.
+
 ## Validation and maintenance
 
 Canonical files are `data/public/texas-county-veterans-offices.json`, `tx-programs.json` and `tx-regional-referrals.json`. Configuration is in `states/tx/`; registry-driven checks cover all 254 county panels and cross-state isolation. `tests/texas.cjs` covers boundaries, fallbacks, alternatives, menu options, source differences, privacy, senior topics, authorization guidance and caregiver printing. Run the complete checks in `docs/ADDING-A-STATE.md`. Sharing and QR links select Texas in the common guide. Contacts are published referrals, not telephone-confirmed services; local providers, current openings and available funding are not fully inventoried.
