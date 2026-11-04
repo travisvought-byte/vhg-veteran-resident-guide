@@ -68,3 +68,37 @@ The build merges canonical local records into `data/public/pennsylvania-resource
 Local county/agency sources, dates and evidence methods appear in `data/public/pa-regional-referrals.json`. Local services, intake, costs and availability remain subject to agency confirmation. The map is referral coverage, not an exhaustive local service inventory.
 
 County mapping reference: https://p4a.org/aaas/
+
+## Centers for Independent Living (added 2026-11-04)
+
+16 `pa-cil-*` records cover all 67 counties. Phones and counties served come from the ILRU national directory (https://www.ilru.org/cil-directory/pa), reviewed in full. Where a center has several offices, it is one record that gives the main office and lists the other office phones.
+
+Two oddities in the directory are kept as published:
+- **CRI:** the directory gives the same Erie-region county list for every CRI office.
+- **Liberty Resources:** its southeastern counties are listed under the Allentown office.
+
+## Civil legal aid
+
+The Pennsylvania Legal Aid Network's regional programs cover all 67 counties, from search excerpts of the PLAN regional program page and the Allegheny County Law Library's PLAN listing:
+
+- Northwestern Legal Services
+- Neighborhood Legal Services
+- Summit Legal Aid
+- MidPenn Legal Services
+- North Penn Legal Services
+- Legal Aid of Southeastern Pennsylvania
+- Philadelphia's two programs: Community Legal Services and Philadelphia Legal Assistance
+
+Intake phones come from WomensLaw listings. Programs without a sourced phone route to the PLAN online application.
+
+## VA health care
+
+VA publishes a county list only for Lebanon VA Medical Center, which serves 9 counties. Those counties get a Lebanon card. A statewide card lists all eight Pennsylvania VA medical centers with sourced phones and points to VA's locator.
+
+## Veteran housing (SSVF)
+
+County provider cards come from VA's FY26 SSVF provider intake list (see [SSVF-HOUSING.md](SSVF-HOUSING.md)).
+
+## Still open
+
+County office addresses and hours from the PA DMVA county directors PDF. The PDF could not be fetched this session.
