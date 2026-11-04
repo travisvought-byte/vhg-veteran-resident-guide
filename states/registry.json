@@ -344,6 +344,32 @@
     ]
   },
   {
+    "code": "WA",
+    "name": "Washington",
+    "page": "wa.html",
+    "share_page": "share-wa.html",
+    "qr": "assets/guide-qr-wa.svg",
+    "counties": 39,
+    "programs": "data/public/wa-programs.json",
+    "referrals": "data/public/wa-regional-referrals.json",
+    "offices": "data/public/washington-county-veterans-offices.json",
+    "resources": "data/public/washington-resources.json",
+    "statewide_area_names": [],
+    "coverage_scope": "Referral edition. All 39 counties have their county veterans assistance program from the WDVA county pages (three use the WDVA statewide line), a matched Area Agency on Aging and the statewide long-term-care ombuds route.",
+    "coverage_note": "County veterans program phones, addresses and websites come from each county’s WDVA resources page, reviewed November 4, 2026. Adams and Franklin list no county program and Pend Oreille lists no phone, so those counties use the WDVA line (800-562-2308). The 11 county-based Area Agencies on Aging come from the WA Cares Fund contact list, with the Yakama Nation and Colville tribal aging agencies noted on each card. Contacts are not telephone-confirmed.",
+    "share_description": "county veterans assistance programs, county-matched Area Agencies on Aging and the statewide long-term-care ombuds",
+    "share_replacements": [
+      [
+        "county veterans offices",
+        "county veterans programs"
+      ],
+      [
+        "Updated October 8, 2026",
+        "Updated November 4, 2026"
+      ]
+    ]
+  },
+  {
     "code": "AL",
     "name": "Alabama",
     "starter": true,
@@ -1000,26 +1026,6 @@
     ],
     "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
     "coverage_note": "Starter edition. Every county uses the Vermont Office of Veterans Affairs and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
-    "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
-    "share_replacements": []
-  },
-  {
-    "code": "WA",
-    "name": "Washington",
-    "starter": true,
-    "page": "wa.html",
-    "share_page": "share-wa.html",
-    "qr": "assets/guide-qr-wa.svg",
-    "counties": 1,
-    "programs": "data/public/wa-programs.json",
-    "referrals": "data/public/wa-regional-referrals.json",
-    "offices": "data/public/washington-county-veterans-offices.json",
-    "resources": "data/public/washington-resources.json",
-    "statewide_area_names": [
-      "All Washington counties"
-    ],
-    "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
-    "coverage_note": "Starter edition. Every county uses the Washington State Department of Veterans Affairs and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
     "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
     "share_replacements": []
   },

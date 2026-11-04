@@ -1,433 +1,931 @@
 [
- {
-  "program_id": "wa-claims",
-  "name": "Washington veterans: accredited claims help",
-  "official_url": "https://dva.wa.gov/veterans-service-members-and-their-families/veterans-benefits/claims-assistance",
-  "organization": "Washington State Department of Veterans Affairs",
-  "service_area": [
-   "All Washington counties"
-  ],
-  "state": "WA",
-  "needs_supported": [
-   "general_navigation",
-   "benefits_and_funding"
-  ],
-  "description": "Free help with VA claims, applications and appeals for veterans and families.",
-  "next_step": "Call the state veterans agency; ask for a benefits review and the office that serves your county.",
-  "constraints": [],
-  "public_contact": {
-   "phone": "800-562-2308"
+  {
+    "program_id": "wa-claims",
+    "name": "Washington veterans: accredited claims help",
+    "official_url": "https://dva.wa.gov/veterans-service-members-and-their-families/veterans-benefits/claims-assistance",
+    "organization": "Washington State Department of Veterans Affairs",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "WA",
+    "needs_supported": [
+      "general_navigation",
+      "benefits_and_funding"
+    ],
+    "description": "Free help with VA claims, applications and appeals for veterans and families.",
+    "next_step": "Choose your county for its county veterans program, or call WDVA at 800-562-2308 for accredited claims help in person or by video.",
+    "constraints": [],
+    "public_contact": {
+      "phone": "800-562-2308"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://dva.wa.gov/veterans-service-members-and-their-families/veterans-benefits/claims-assistance"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dva.wa.gov/veterans-service-members-and-their-families/veterans-benefits/claims-assistance",
+        "title": "Official published source",
+        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "wa-ship",
+    "name": "Medicare counseling (SHIP) for Washington",
+    "official_url": "https://www.shiphelp.org/",
+    "organization": "SHIP Technical Assistance Center",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "WA",
+    "needs_supported": [
+      "benefits_and_funding"
+    ],
+    "description": "Free, unbiased Medicare counseling from the State Health Insurance Assistance Program.",
+    "next_step": "Call or use the locator to reach the Washington SHIP and ask for a counseling appointment.",
+    "constraints": [],
+    "public_contact": {
+      "phone": "877-839-2675"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.shiphelp.org/?p=317"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.shiphelp.org/?p=317",
+        "title": "Official published source",
+        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://dva.wa.gov/veterans-service-members-and-their-families/veterans-benefits/claims-assistance"
+  {
+    "program_id": "wa-ssvf-13-wa-148",
+    "name": "YWCA of Seattle - King County - Snohomish County: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "YWCA of Seattle - King County - Snohomish County",
+    "service_area": [
+      "King",
+      "Snohomish"
+    ],
+    "state": "WA",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 13-WA-148): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 425-264-1401.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "206-730-9356",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 43",
+        "sheet": "Contacts",
+        "row": 43,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://dva.wa.gov/veterans-service-members-and-their-families/veterans-benefits/claims-assistance",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ]
- },
- {
-  "program_id": "wa-ship",
-  "name": "Medicare counseling (SHIP) for Washington",
-  "official_url": "https://www.shiphelp.org/",
-  "organization": "SHIP Technical Assistance Center",
-  "service_area": [
-   "All Washington counties"
-  ],
-  "state": "WA",
-  "needs_supported": [
-   "benefits_and_funding"
-  ],
-  "description": "Free, unbiased Medicare counseling from the State Health Insurance Assistance Program.",
-  "next_step": "Call or use the locator to reach the Washington SHIP and ask for a counseling appointment.",
-  "constraints": [],
-  "public_contact": {
-   "phone": "877-839-2675"
+  {
+    "program_id": "wa-ssvf-19-wa-078",
+    "name": "Sound: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Sound",
+    "service_area": [
+      "King"
+    ],
+    "state": "WA",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 19-WA-078): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "206-444-7806",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 154",
+        "sheet": "Contacts",
+        "row": 154,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "wa-ssvf-19-wa-079",
+    "name": "Opportunity Council: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Opportunity Council",
+    "service_area": [
+      "Clallam",
+      "Island",
+      "Jefferson",
+      "San Juan",
+      "Skagit",
+      "Whatcom"
+    ],
+    "state": "WA",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 19-WA-079): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "360-734-5121",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 155",
+        "sheet": "Contacts",
+        "row": 155,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.shiphelp.org/?p=317"
+  {
+    "program_id": "wa-ssvf-19-zz-127",
+    "name": "Transition Projects, Inc.: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Transition Projects, Inc.",
+    "service_area": [
+      "Clark"
+    ],
+    "state": "WA",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 19-ZZ-127): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 503-710-5021.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "855-425-5544",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 157",
+        "sheet": "Contacts",
+        "row": 157,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.shiphelp.org/?p=317",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ]
- },
- {
-  "program_id": "wa-ssvf-13-wa-148",
-  "name": "YWCA of Seattle - King County - Snohomish County: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "YWCA of Seattle - King County - Snohomish County",
-  "service_area": [
-   "All Washington counties"
-  ],
-  "state": "WA",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 13-WA-148): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: King County, Snohomish County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 425-264-1401.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "206-730-9356",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "wa-ssvf-20-wa-146",
+    "name": "Catholic Community Services Of Western Washington: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Catholic Community Services Of Western Washington",
+    "service_area": [
+      "Cowlitz",
+      "Grays Harbor",
+      "King",
+      "Kitsap",
+      "Lewis",
+      "Mason",
+      "Pacific",
+      "Pierce",
+      "Thurston",
+      "Wahkiakum"
+    ],
+    "state": "WA",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-WA-146): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 253-278-6548.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "206-814-1660",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 193",
+        "sheet": "Contacts",
+        "row": 193,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "wa-ssvf-20-wa-338",
+    "name": "Hopesource: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Hopesource",
+    "service_area": [
+      "Adams",
+      "Chelan",
+      "Douglas",
+      "Grant",
+      "Kittitas",
+      "Okanogan"
+    ],
+    "state": "WA",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-WA-338): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "509-925-1448",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 194",
+        "sheet": "Contacts",
+        "row": 194,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "wa-ssvf-20-zz-147",
+    "name": "Blue Mountain Action Council: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Blue Mountain Action Council",
+    "service_area": [
+      "Asotin",
+      "Benton",
+      "Columbia",
+      "Franklin",
+      "Garfield",
+      "Klickitat",
+      "Skamania",
+      "Walla Walla",
+      "Yakima"
+    ],
+    "state": "WA",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-ZZ-147): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Ask VA’s National Call Center for Homeless Veterans (877-424-3838) to connect you with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": null,
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 197",
+        "sheet": "Contacts",
+        "row": 197,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 43",
-    "sheet": "Contacts",
-    "row": 43,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "wa-ssvf-19-wa-078",
-  "name": "Sound: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Sound",
-  "service_area": [
-   "All Washington counties"
-  ],
-  "state": "WA",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 19-WA-078): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: King County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "206-444-7806",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "wa-ssvf-20-zz-301",
+    "name": "Goodwill Industries Of The Inland Northwest: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Goodwill Industries Of The Inland Northwest",
+    "service_area": [
+      "Ferry",
+      "Lincoln",
+      "Pend Oreille",
+      "Spokane",
+      "Stevens",
+      "Whitman"
+    ],
+    "state": "WA",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-ZZ-301): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "509-828-2449",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 198",
+        "sheet": "Contacts",
+        "row": 198,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "wa-ombudsman",
+    "name": "Washington State Long-Term Care Ombuds Program",
+    "organization": "Washington State Long-Term Care Ombuds Program (Multi-Service Center)",
+    "official_url": "https://www.dshs.wa.gov/node/32320",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "WA",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "description": "Ombuds advocate for residents of nursing homes, assisted living and adult family homes and help resolve problems with long-term care. Regional ombuds programs serve each area of the state.",
+    "next_step": "Call 800-562-6028 and give the facility’s county to reach the regional ombuds. For immediate danger, call 911. To report abuse or neglect in a licensed facility, call 800-562-6078.",
+    "constraints": [
+      "The ombuds acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "800-562-6028",
+      "phone_label": "State Long-Term Care Ombuds Program"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.dshs.wa.gov/node/32320"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.dshs.wa.gov/node/32320",
+        "title": "DSHS: who do I contact to file a complaint or solve a problem with my long-term care?",
+        "reviewed_on": "2026-11-04",
+        "scope": "State ombuds phone; search excerpt."
+      },
+      {
+        "url": "https://www.dshs.wa.gov/sites/default/files/ALTSA/rcs/documents/Hotline%20Poster.pdf",
+        "title": "DSHS facility hotline poster",
+        "reviewed_on": "2026-11-04",
+        "scope": "State ombuds and abuse hotline numbers; search excerpt."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "wa-cil-cfi",
+    "name": "Center for Independence",
+    "organization": "Center for Independence",
+    "official_url": "https://www.cfi-wa.org/",
+    "service_area": [
+      "Pierce",
+      "San Juan",
+      "Skagit",
+      "Snohomish",
+      "King",
+      "Thurston",
+      "Whatcom"
+    ],
+    "state": "WA",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility. Based in Lakewood, with a Marysville office. In King County the directory lists South King County.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "253-582-1253",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/wa",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/wa"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/wa",
+        "title": "ILRU national directory of Centers for Independent Living (Washington)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 154",
-    "sheet": "Contacts",
-    "row": 154,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "wa-ssvf-19-wa-079",
-  "name": "Opportunity Council: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Opportunity Council",
-  "service_area": [
-   "All Washington counties"
-  ],
-  "state": "WA",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 19-WA-079): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Clallam County, Island County, Jefferson County, San Juan County, Skagit County, Whatcom County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "360-734-5121",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "wa-cil-cwdr",
+    "name": "Central Washington Disability Resources",
+    "organization": "Central Washington Disability Resources",
+    "official_url": "https://www.mycwdr.org/",
+    "service_area": [
+      "Chelan",
+      "Douglas",
+      "Grant",
+      "Kittitas",
+      "Yakima"
+    ],
+    "state": "WA",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility. Based in Ellensburg.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "509-962-9620",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/wa",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/wa"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/wa",
+        "title": "ILRU national directory of Centers for Independent Living (Washington)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "wa-cil-dac",
+    "name": "Disability Action Center Northeast Washington",
+    "organization": "Disability Action Center Northeast Washington",
+    "official_url": "https://dacnw.org/spokane-wa/",
+    "service_area": [
+      "Ferry",
+      "Lincoln",
+      "Pend Oreille",
+      "Stevens",
+      "Spokane"
+    ],
+    "state": "WA",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility. Based in Spokane.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "509-606-4639",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/wa",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/wa"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/wa",
+        "title": "ILRU national directory of Centers for Independent Living (Washington)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "wa-cil-dec",
+    "name": "Disability Empowerment Center",
+    "organization": "Disability Empowerment Center",
+    "official_url": "https://www.ilru.org/cil-directory/wa",
+    "service_area": [
+      "King"
+    ],
+    "state": "WA",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility. Based in Seattle, with offices in Auburn and Redmond. Website: www.disabilityempowerment.org.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "206-545-7055",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/wa",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/wa"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/wa",
+        "title": "ILRU national directory of Centers for Independent Living (Washington)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 155",
-    "sheet": "Contacts",
-    "row": 155,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "wa-ssvf-19-zz-127",
-  "name": "Transition Projects, Inc.: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Transition Projects, Inc.",
-  "service_area": [
-   "All Washington counties"
-  ],
-  "state": "WA",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 19-ZZ-127): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Clark County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 503-710-5021.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "855-425-5544",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "wa-legal-clear",
+    "name": "Northwest Justice Project CLEAR hotline",
+    "organization": "Northwest Justice Project",
+    "official_url": "https://nwjustice.org/get-legal-help",
+    "service_area": [
+      "Adams",
+      "Asotin",
+      "Benton",
+      "Chelan",
+      "Clallam",
+      "Clark",
+      "Columbia",
+      "Cowlitz",
+      "Douglas",
+      "Ferry",
+      "Franklin",
+      "Garfield",
+      "Grant",
+      "Grays Harbor",
+      "Island",
+      "Jefferson",
+      "Kitsap",
+      "Kittitas",
+      "Klickitat",
+      "Lewis",
+      "Lincoln",
+      "Mason",
+      "Okanogan",
+      "Pacific",
+      "Pend Oreille",
+      "Pierce",
+      "San Juan",
+      "Skagit",
+      "Skamania",
+      "Snohomish",
+      "Spokane",
+      "Stevens",
+      "Thurston",
+      "Wahkiakum",
+      "Walla Walla",
+      "Whatcom",
+      "Whitman",
+      "Yakima"
+    ],
+    "state": "WA",
+    "resource_role": "legal_aid",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation",
+      "housing"
+    ],
+    "description": "Free civil legal advice and referral for people with low income who live outside King County. Not criminal defense.",
+    "next_step": "Call weekdays 9:15 AM–12:15 PM, or apply online. Interpreters are provided. Facing eviction? Call 855-657-8387.",
+    "constraints": [
+      "Income limits apply (about 125% of the federal poverty level). Legal aid is not guaranteed representation."
+    ],
+    "public_contact": {
+      "phone": "888-201-1014",
+      "phone_label": "CLEAR legal hotline (outside King County)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.courts.wa.gov/self-help/get-legal-help"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.courts.wa.gov/self-help/get-legal-help",
+        "title": "Washington Courts: get legal help",
+        "reviewed_on": "2026-11-04",
+        "scope": "CLEAR, King County 2-1-1 and CLEAR*Sr routes and hours; search excerpt."
+      },
+      {
+        "url": "https://ocla.wa.gov/?p=129",
+        "title": "Washington Office of Civil Legal Aid: where do I get help?",
+        "reviewed_on": "2026-11-04",
+        "scope": "CLEAR, King County 2-1-1 toll-free number and CLEAR*Sr; search excerpt."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "wa-legal-king211",
+    "name": "King County legal aid referral through 2-1-1",
+    "organization": "Northwest Justice Project and King County legal aid providers",
+    "official_url": "https://nwjustice.org/get-legal-help",
+    "service_area": [
+      "King"
+    ],
+    "state": "WA",
+    "resource_role": "legal_aid",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation",
+      "housing"
+    ],
+    "description": "King County residents with a civil legal problem are screened and referred to the right legal aid provider through 2-1-1. Not criminal defense.",
+    "next_step": "Dial 2-1-1 (or 877-211-9274) weekdays 8:00 AM–6:00 PM. Interpreters are provided.",
+    "constraints": [
+      "Income and case-type limits apply. A referral is not guaranteed representation."
+    ],
+    "public_contact": {
+      "phone": "877-211-9274",
+      "phone_label": "King County 2-1-1 (toll-free number)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.courts.wa.gov/self-help/get-legal-help"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.courts.wa.gov/self-help/get-legal-help",
+        "title": "Washington Courts: get legal help",
+        "reviewed_on": "2026-11-04",
+        "scope": "CLEAR, King County 2-1-1 and CLEAR*Sr routes and hours; search excerpt."
+      },
+      {
+        "url": "https://ocla.wa.gov/?p=129",
+        "title": "Washington Office of Civil Legal Aid: where do I get help?",
+        "reviewed_on": "2026-11-04",
+        "scope": "CLEAR, King County 2-1-1 toll-free number and CLEAR*Sr; search excerpt."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "wa-legal-clearsr",
+    "name": "CLEAR*Sr legal hotline (age 60+)",
+    "organization": "Northwest Justice Project",
+    "official_url": "https://nwjustice.org/get-legal-help",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "WA",
+    "resource_role": "legal_aid",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation",
+      "housing"
+    ],
+    "description": "Free civil legal advice for Washington residents age 60 and older, regardless of income.",
+    "next_step": "Call weekdays starting at 9:15 AM and leave a message with your name and phone number; the line closes when voicemail is full. Low-income seniors can also call CLEAR at 888-201-1014.",
+    "constraints": [
+      "Asset limits may apply. Advice and referral; ongoing representation is not guaranteed."
+    ],
+    "public_contact": {
+      "phone": "888-387-7111",
+      "phone_label": "CLEAR*Sr (age 60+)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.courts.wa.gov/self-help/get-legal-help"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.courts.wa.gov/self-help/get-legal-help",
+        "title": "Washington Courts: get legal help",
+        "reviewed_on": "2026-11-04",
+        "scope": "CLEAR, King County 2-1-1 and CLEAR*Sr routes and hours; search excerpt."
+      },
+      {
+        "url": "https://ocla.wa.gov/?p=129",
+        "title": "Washington Office of Civil Legal Aid: where do I get help?",
+        "reviewed_on": "2026-11-04",
+        "scope": "CLEAR, King County 2-1-1 toll-free number and CLEAR*Sr; search excerpt."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 157",
-    "sheet": "Contacts",
-    "row": 157,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "wa-ssvf-20-wa-146",
-  "name": "Catholic Community Services Of Western Washington: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Catholic Community Services Of Western Washington",
-  "service_area": [
-   "All Washington counties"
-  ],
-  "state": "WA",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-WA-146): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Cowlitz County, Grays Harbor County, King County, Kitsap County, Lewis County, Mason County, Pacific County, Pierce County, Thurston County, Wahkiakum County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 253-278-6548.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "206-814-1660",
-   "phone_label": "VA-listed SSVF intake"
-  },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
-  },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
-  },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 193",
-    "sheet": "Contacts",
-    "row": 193,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "wa-ssvf-20-wa-338",
-  "name": "Hopesource: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Hopesource",
-  "service_area": [
-   "All Washington counties"
-  ],
-  "state": "WA",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-WA-338): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Adams County, Chelan County, Douglas County, Grant County, Kittitas County, Okanogan County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "509-925-1448",
-   "phone_label": "VA-listed SSVF intake"
-  },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
-  },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
-  },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 194",
-    "sheet": "Contacts",
-    "row": 194,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "wa-ssvf-20-zz-147",
-  "name": "Blue Mountain Action Council: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Blue Mountain Action Council",
-  "service_area": [
-   "All Washington counties"
-  ],
-  "state": "WA",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-ZZ-147): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Asotin County, Benton County, Columbia County, Franklin County, Garfield County, Klickitat County, Skamania County, Walla Walla County, Yakima County.",
-  "next_step": "Ask VA’s National Call Center for Homeless Veterans (877-424-3838) to connect you with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": null,
-   "phone_label": "VA-listed SSVF intake"
-  },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
-  },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
-  },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 197",
-    "sheet": "Contacts",
-    "row": 197,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "wa-ssvf-20-zz-301",
-  "name": "Goodwill Industries Of The Inland Northwest: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Goodwill Industries Of The Inland Northwest",
-  "service_area": [
-   "All Washington counties"
-  ],
-  "state": "WA",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-ZZ-301): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Ferry County, Lincoln County, Pend Oreille County, Spokane County, Stevens County, Whitman County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "509-828-2449",
-   "phone_label": "VA-listed SSVF intake"
-  },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
-  },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
-  },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 198",
-    "sheet": "Contacts",
-    "row": 198,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- }
+  {
+    "program_id": "wa-vahealth-systems",
+    "name": "VA medical centers serving Washington",
+    "organization": "U.S. Department of Veterans Affairs",
+    "official_url": "https://www.va.gov/find-locations/?facilityType=health",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "WA",
+    "resource_role": "va_health_system",
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "VA medical centers serving Washington: VA Puget Sound Health Care System, Seattle (206-762-1010) and American Lake, Tacoma (253-582-8440); Mann-Grandstaff VA Medical Center, Spokane (509-434-7000); and Jonathan M. Wainwright Memorial VA Medical Center, Walla Walla (509-525-5200). Southwest Washington is served by the VA Portland Health Care System, including its Vancouver campus.",
+    "next_step": "Use VA’s facility locator with your ZIP code to find the closest clinic and its medical center. Not enrolled yet? Call 877-222-8387 or ask your county veterans program or WDVA for help applying.",
+    "constraints": [
+      "VA does not publish county lists for these systems, so this card does not assign counties. Your VA care team may be at a different clinic or system; follow what VA tells you."
+    ],
+    "public_contact": {
+      "phone": "877-222-8387",
+      "phone_label": "VA health care enrollment line"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.va.gov/directory/GUIDE/state_SUD.cfm?STATE=WA",
+        "title": "VA Washington program directory",
+        "reviewed_on": "2026-11-04",
+        "scope": "Medical center main phones; search excerpt."
+      },
+      {
+        "url": "https://www.piercecountywa.gov/708/VA-Facilities---Washington-State",
+        "title": "Pierce County: VA facilities in Washington State",
+        "reviewed_on": "2026-11-04",
+        "scope": "Seattle, American Lake, Spokane and Walla Walla phones; search excerpt."
+      },
+      {
+        "url": "https://volunteer.va.gov/volunteer/directory/state.asp?STATE=WA",
+        "title": "VA Voluntary Service directory, Washington",
+        "reviewed_on": "2026-11-04",
+        "scope": "VA Portland Health Care System serving Portland and Vancouver; search excerpt."
+      }
+    ]
+  }
 ]
