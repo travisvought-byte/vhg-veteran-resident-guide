@@ -18,7 +18,8 @@ export const STATES=Object.freeze({
   "AZ": "Arizona",
   "WA": "Washington",
   "TN": "Tennessee",
-  "SC": "South Carolina"
+  "SC": "South Carolina",
+  "IL": "Illinois"
 });
 export const STATE_FILES=Object.freeze({
   "OH": [
@@ -92,6 +93,10 @@ export const STATE_FILES=Object.freeze({
   "SC": [
     "data/public/south-carolina-resources.json",
     "data/public/south-carolina-county-veterans-offices.json"
+  ],
+  "IL": [
+    "data/public/illinois-resources.json",
+    "data/public/illinois-county-veterans-offices.json"
   ]
 });
 export const localityLabel=row=>row?(["independent_city","statewide"].includes(row.county_type)?row.county:row.county+" County"):"";

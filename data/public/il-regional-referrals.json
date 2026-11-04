@@ -1,80 +1,1465 @@
 [
- {
-  "program_id": "il-aging",
-  "name": "Local aging help in Illinois (Eldercare Locator)",
-  "official_url": "https://eldercare.acl.gov/home",
-  "organization": "U.S. Administration for Community Living",
-  "service_area": [
-   "All Illinois counties"
-  ],
-  "state": "IL",
-  "needs_supported": [
-   "general_navigation",
-   "help_at_home"
-  ],
-  "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-  "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
-  "constraints": [
-   "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "il-aging-psa1",
+    "name": "Northwestern Illinois Area Agency on Aging",
+    "organization": "Northwestern Illinois Area Agency on Aging (Planning and Service Area 1)",
+    "official_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+    "state": "IL",
+    "service_area": [
+      "Boone",
+      "Carroll",
+      "DeKalb",
+      "Jo Daviess",
+      "Lee",
+      "Ogle",
+      "Stephenson",
+      "Whiteside",
+      "Winnebago"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this area: information and assistance, caregiver support, meals, transportation, legal help for older adults and referrals to local service providers.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance or a screening. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Local number: 815-226-4901. Toll-free line: toll-free in the nine-county area."
+    ],
+    "public_contact": {
+      "phone": "800-542-8402",
+      "phone_label": "Area Agency on Aging, PSA 1"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+      "phone_source_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+        "title": "Illinois Department on Aging: Senior Centers and Focal Points (updated February 25, 2025)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Area Agency on Aging names, phones and counties by Planning and Service Area; full document text."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "il-aging-psa2",
+    "name": "AgeGuide (Northeastern Illinois Area Agency on Aging)",
+    "organization": "AgeGuide (Northeastern Illinois Area Agency on Aging) (Planning and Service Area 2)",
+    "official_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+    "state": "IL",
+    "service_area": [
+      "DuPage",
+      "Grundy",
+      "Kane",
+      "Kankakee",
+      "Kendall",
+      "Lake",
+      "McHenry",
+      "Will"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this area: information and assistance, caregiver support, meals, transportation, legal help for older adults and referrals to local service providers.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance or a screening. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Local number: 630-293-5990."
+    ],
+    "public_contact": {
+      "phone": "800-528-2000",
+      "phone_label": "Area Agency on Aging, PSA 2"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+      "phone_source_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+        "title": "Illinois Department on Aging: Senior Centers and Focal Points (updated February 25, 2025)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Area Agency on Aging names, phones and counties by Planning and Service Area; full document text."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.acl.gov/contact"
+  {
+    "program_id": "il-aging-psa3",
+    "name": "Western Illinois Area Agency on Aging",
+    "organization": "Western Illinois Area Agency on Aging (Planning and Service Area 3)",
+    "official_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+    "state": "IL",
+    "service_area": [
+      "Bureau",
+      "Henderson",
+      "Henry",
+      "Knox",
+      "LaSalle",
+      "McDonough",
+      "Mercer",
+      "Putnam",
+      "Rock Island",
+      "Warren"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this area: information and assistance, caregiver support, meals, transportation, legal help for older adults and referrals to local service providers.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance or a screening. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Local number: 309-793-6800. Toll-free line: information and assistance."
+    ],
+    "public_contact": {
+      "phone": "800-322-1051",
+      "phone_label": "Area Agency on Aging, PSA 3"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+      "phone_source_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+        "title": "Illinois Department on Aging: Senior Centers and Focal Points (updated February 25, 2025)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Area Agency on Aging names, phones and counties by Planning and Service Area; full document text."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.acl.gov/contact",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "aging_agency"
- },
- {
-  "program_id": "il-ombudsman",
-  "name": "Illinois long-term-care ombudsman",
-  "official_url": "https://theconsumervoice.org/get_help",
-  "organization": "National Long-Term Care Ombudsman Resource Center",
-  "service_area": [
-   "All Illinois counties"
-  ],
-  "state": "IL",
-  "needs_supported": [
-   "resident_rights",
-   "general_navigation"
-  ],
-  "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-  "next_step": "Use the locator to find the Illinois program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
-  "constraints": [
-   "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "il-aging-psa4",
+    "name": "Central Illinois Agency on Aging",
+    "organization": "Central Illinois Agency on Aging (Planning and Service Area 4)",
+    "official_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+    "state": "IL",
+    "service_area": [
+      "Fulton",
+      "Marshall",
+      "Peoria",
+      "Stark",
+      "Tazewell",
+      "Woodford"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this area: information and assistance, caregiver support, meals, transportation, legal help for older adults and referrals to local service providers.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance or a screening. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Local number: 309-674-2071."
+    ],
+    "public_contact": {
+      "phone": "877-777-2422",
+      "phone_label": "Area Agency on Aging, PSA 4"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+      "phone_source_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+        "title": "Illinois Department on Aging: Senior Centers and Focal Points (updated February 25, 2025)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Area Agency on Aging names, phones and counties by Planning and Service Area; full document text."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "il-aging-psa5",
+    "name": "East Central Illinois Area Agency on Aging",
+    "organization": "East Central Illinois Area Agency on Aging (Planning and Service Area 5)",
+    "official_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+    "state": "IL",
+    "service_area": [
+      "Champaign",
+      "Clark",
+      "Coles",
+      "Cumberland",
+      "DeWitt",
+      "Douglas",
+      "Edgar",
+      "Ford",
+      "Iroquois",
+      "Livingston",
+      "Macon",
+      "McLean",
+      "Moultrie",
+      "Piatt",
+      "Shelby",
+      "Vermilion"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this area: information and assistance, caregiver support, meals, transportation, legal help for older adults and referrals to local service providers.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance or a screening. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Local number: 309-829-2065. Toll-free line: information and assistance, toll-free in the 16-county area."
+    ],
+    "public_contact": {
+      "phone": "800-888-4456",
+      "phone_label": "Area Agency on Aging, PSA 5"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+      "phone_source_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+        "title": "Illinois Department on Aging: Senior Centers and Focal Points (updated February 25, 2025)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Area Agency on Aging names, phones and counties by Planning and Service Area; full document text."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
+  {
+    "program_id": "il-aging-psa6",
+    "name": "West Central Illinois Area Agency on Aging",
+    "organization": "West Central Illinois Area Agency on Aging (Planning and Service Area 6)",
+    "official_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+    "state": "IL",
+    "service_area": [
+      "Adams",
+      "Brown",
+      "Calhoun",
+      "Hancock",
+      "Pike",
+      "Schuyler"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this area: information and assistance, caregiver support, meals, transportation, legal help for older adults and referrals to local service providers.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance or a screening. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Local number: 217-223-7904. Toll-free line: information and assistance, voice and TTY."
+    ],
+    "public_contact": {
+      "phone": "800-252-9027",
+      "phone_label": "Area Agency on Aging, PSA 6"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+      "phone_source_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+        "title": "Illinois Department on Aging: Senior Centers and Focal Points (updated February 25, 2025)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Area Agency on Aging names, phones and counties by Planning and Service Area; full document text."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "ombudsman"
- }
+  {
+    "program_id": "il-aging-psa7",
+    "name": "AgeLinc",
+    "organization": "AgeLinc (Planning and Service Area 7)",
+    "official_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+    "state": "IL",
+    "service_area": [
+      "Cass",
+      "Christian",
+      "Greene",
+      "Jersey",
+      "Logan",
+      "Macoupin",
+      "Mason",
+      "Menard",
+      "Montgomery",
+      "Morgan",
+      "Sangamon",
+      "Scott"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this area: information and assistance, caregiver support, meals, transportation, legal help for older adults and referrals to local service providers.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance or a screening. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Local number: 217-787-9234. Toll-free line: information and assistance, toll-free from 217, 309 and 618 area codes."
+    ],
+    "public_contact": {
+      "phone": "800-252-2918",
+      "phone_label": "Area Agency on Aging, PSA 7"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+      "phone_source_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+        "title": "Illinois Department on Aging: Senior Centers and Focal Points (updated February 25, 2025)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Area Agency on Aging names, phones and counties by Planning and Service Area; full document text."
+      }
+    ]
+  },
+  {
+    "program_id": "il-aging-psa8",
+    "name": "AgeSmart Community Resources",
+    "organization": "AgeSmart Community Resources (Planning and Service Area 8)",
+    "official_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+    "state": "IL",
+    "service_area": [
+      "Bond",
+      "Clinton",
+      "Madison",
+      "Monroe",
+      "Randolph",
+      "St. Clair",
+      "Washington"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this area: information and assistance, caregiver support, meals, transportation, legal help for older adults and referrals to local service providers.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance or a screening. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Local number: 618-222-2561."
+    ],
+    "public_contact": {
+      "phone": "800-326-3221",
+      "phone_label": "Area Agency on Aging, PSA 8"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+      "phone_source_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+        "title": "Illinois Department on Aging: Senior Centers and Focal Points (updated February 25, 2025)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Area Agency on Aging names, phones and counties by Planning and Service Area; full document text."
+      }
+    ]
+  },
+  {
+    "program_id": "il-aging-psa9",
+    "name": "Midland Area Agency on Aging",
+    "organization": "Midland Area Agency on Aging (Planning and Service Area 9)",
+    "official_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+    "state": "IL",
+    "service_area": [
+      "Clay",
+      "Effingham",
+      "Fayette",
+      "Jefferson",
+      "Marion"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this area: information and assistance, caregiver support, meals, transportation, legal help for older adults and referrals to local service providers.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance or a screening. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Local number: 618-532-1853."
+    ],
+    "public_contact": {
+      "phone": "877-532-1853",
+      "phone_label": "Area Agency on Aging, PSA 9"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+      "phone_source_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+        "title": "Illinois Department on Aging: Senior Centers and Focal Points (updated February 25, 2025)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Area Agency on Aging names, phones and counties by Planning and Service Area; full document text."
+      }
+    ]
+  },
+  {
+    "program_id": "il-aging-psa10",
+    "name": "Southeastern Illinois Agency on Aging",
+    "organization": "Southeastern Illinois Agency on Aging (Planning and Service Area 10)",
+    "official_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+    "state": "IL",
+    "service_area": [
+      "Crawford",
+      "Edwards",
+      "Hamilton",
+      "Jasper",
+      "Lawrence",
+      "Richland",
+      "Wabash",
+      "Wayne",
+      "White"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this area: information and assistance, caregiver support, meals, transportation, legal help for older adults and referrals to local service providers.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance or a screening. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program."
+    ],
+    "public_contact": {
+      "phone": "217-262-0678",
+      "phone_label": "Area Agency on Aging, PSA 10"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+      "phone_source_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+        "title": "Illinois Department on Aging: Senior Centers and Focal Points (updated February 25, 2025)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Area Agency on Aging names, phones and counties by Planning and Service Area; full document text."
+      }
+    ]
+  },
+  {
+    "program_id": "il-aging-psa11",
+    "name": "Egyptian Area Agency on Aging",
+    "organization": "Egyptian Area Agency on Aging (Planning and Service Area 11)",
+    "official_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+    "state": "IL",
+    "service_area": [
+      "Alexander",
+      "Franklin",
+      "Gallatin",
+      "Hardin",
+      "Jackson",
+      "Johnson",
+      "Massac",
+      "Perry",
+      "Pope",
+      "Pulaski",
+      "Saline",
+      "Union",
+      "Williamson"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this area: information and assistance, caregiver support, meals, transportation, legal help for older adults and referrals to local service providers.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance or a screening. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Local number: 618-985-8311."
+    ],
+    "public_contact": {
+      "phone": "888-895-3306",
+      "phone_label": "Area Agency on Aging, PSA 11"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+      "phone_source_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+        "title": "Illinois Department on Aging: Senior Centers and Focal Points (updated February 25, 2025)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Area Agency on Aging names, phones and counties by Planning and Service Area; full document text."
+      }
+    ]
+  },
+  {
+    "program_id": "il-aging-psa12",
+    "name": "Chicago Department of Family and Support Services, Senior Services Area Agency on Aging",
+    "organization": "Chicago Department of Family and Support Services, Senior Services Area Agency on Aging (Planning and Service Area 12)",
+    "official_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+    "state": "IL",
+    "service_area": [
+      "Cook"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this area: information and assistance, caregiver support, meals, transportation, legal help for older adults and referrals to local service providers.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance or a screening. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Serves residents of the City of Chicago. Suburban Cook County is served by AgeOptions.",
+      "TTY: 312-744-6777."
+    ],
+    "public_contact": {
+      "phone": "312-744-4016",
+      "phone_label": "Area Agency on Aging, PSA 12"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+      "phone_source_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+        "title": "Illinois Department on Aging: Senior Centers and Focal Points (updated February 25, 2025)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Area Agency on Aging names, phones and counties by Planning and Service Area; full document text."
+      }
+    ]
+  },
+  {
+    "program_id": "il-aging-psa13",
+    "name": "AgeOptions",
+    "organization": "AgeOptions (Planning and Service Area 13)",
+    "official_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+    "state": "IL",
+    "service_area": [
+      "Cook"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this area: information and assistance, caregiver support, meals, transportation, legal help for older adults and referrals to local service providers.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance or a screening. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Serves suburban Cook County. Chicago residents are served by the City of Chicago Senior Services Area Agency on Aging.",
+      "Local number: 708-383-0258."
+    ],
+    "public_contact": {
+      "phone": "800-699-9043",
+      "phone_label": "Area Agency on Aging, PSA 13"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+      "phone_source_url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ilaging.illinois.gov/content/dam/soi/en/web/aging/resources/documents/seniorcenters.pdf",
+        "title": "Illinois Department on Aging: Senior Centers and Focal Points (updated February 25, 2025)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Area Agency on Aging names, phones and counties by Planning and Service Area; full document text."
+      }
+    ]
+  },
+  {
+    "program_id": "il-ombudsman-psa1",
+    "name": "Catholic Charities Long-Term Care Ombudsman Program (Rockford)",
+    "organization": "Catholic Charities Long-Term Care Ombudsman Program (Rockford)",
+    "official_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+    "state": "IL",
+    "service_area": [
+      "Boone",
+      "Carroll",
+      "DeKalb",
+      "Jo Daviess",
+      "Lee",
+      "Ogle",
+      "Stephenson",
+      "Whiteside",
+      "Winnebago"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living, supportive living and other long-term care settings.",
+    "next_step": "Call the regional ombudsman office. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "800-369-0895",
+      "phone_label": "Regional ombudsman office"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+      "phone_source_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+        "title": "Illinois Department on Aging: regional ombudsman public contact list",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional programs, phones and counties served; full page text."
+      }
+    ]
+  },
+  {
+    "program_id": "il-ombudsman-dupage",
+    "name": "DuPage County Department of Community Services Ombudsman Program",
+    "organization": "DuPage County Department of Community Services Ombudsman Program",
+    "official_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+    "state": "IL",
+    "service_area": [
+      "DuPage"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living, supportive living and other long-term care settings.",
+    "next_step": "Call the regional ombudsman office. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Main intake: 630-407-6500."
+    ],
+    "public_contact": {
+      "phone": "800-942-9412",
+      "phone_label": "Regional ombudsman office"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+      "phone_source_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+        "title": "Illinois Department on Aging: regional ombudsman public contact list",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional programs, phones and counties served; full page text."
+      }
+    ]
+  },
+  {
+    "program_id": "il-ombudsman-ssa",
+    "name": "Senior Services Associates Ombudsman Program (Aurora)",
+    "organization": "Senior Services Associates Ombudsman Program (Aurora)",
+    "official_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+    "state": "IL",
+    "service_area": [
+      "Kane",
+      "Kendall",
+      "McHenry"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living, supportive living and other long-term care settings.",
+    "next_step": "Call the regional ombudsman office. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "630-897-4035",
+      "phone_label": "Regional ombudsman office"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+      "phone_source_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+        "title": "Illinois Department on Aging: regional ombudsman public contact list",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional programs, phones and counties served; full page text."
+      }
+    ]
+  },
+  {
+    "program_id": "il-ombudsman-lake",
+    "name": "Legal Aid Chicago Long-Term Care Ombudsman Program (Lake County)",
+    "organization": "Legal Aid Chicago Long-Term Care Ombudsman Program (Lake County)",
+    "official_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+    "state": "IL",
+    "service_area": [
+      "Lake"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living, supportive living and other long-term care settings.",
+    "next_step": "Call the regional ombudsman office. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "888-401-8200",
+      "phone_label": "Regional ombudsman office"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+      "phone_source_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+        "title": "Illinois Department on Aging: regional ombudsman public contact list",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional programs, phones and counties served; full page text."
+      }
+    ]
+  },
+  {
+    "program_id": "il-ombudsman-joliet",
+    "name": "Catholic Charities, Diocese of Joliet Ombudsman Program",
+    "organization": "Catholic Charities, Diocese of Joliet Ombudsman Program",
+    "official_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+    "state": "IL",
+    "service_area": [
+      "Grundy",
+      "Kankakee",
+      "Will"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living, supportive living and other long-term care settings.",
+    "next_step": "Call the regional ombudsman office. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "815-724-1120",
+      "phone_label": "Regional ombudsman office"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+      "phone_source_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+        "title": "Illinois Department on Aging: regional ombudsman public contact list",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional programs, phones and counties served; full page text."
+      }
+    ]
+  },
+  {
+    "program_id": "il-ombudsman-psa3",
+    "name": "Alternatives for the Older Adult Ombudsman Program (Moline)",
+    "organization": "Alternatives for the Older Adult Ombudsman Program (Moline)",
+    "official_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+    "state": "IL",
+    "service_area": [
+      "Bureau",
+      "Henderson",
+      "Henry",
+      "Knox",
+      "LaSalle",
+      "McDonough",
+      "Mercer",
+      "Putnam",
+      "Rock Island",
+      "Warren"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living, supportive living and other long-term care settings.",
+    "next_step": "Call the regional ombudsman office. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Local: 309-277-0167."
+    ],
+    "public_contact": {
+      "phone": "800-798-0988",
+      "phone_label": "Regional ombudsman office"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+      "phone_source_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+        "title": "Illinois Department on Aging: regional ombudsman public contact list",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional programs, phones and counties served; full page text."
+      }
+    ]
+  },
+  {
+    "program_id": "il-ombudsman-psa4",
+    "name": "The Center for Prevention of Abuse Ombudsman Program (Peoria)",
+    "organization": "The Center for Prevention of Abuse Ombudsman Program (Peoria)",
+    "official_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+    "state": "IL",
+    "service_area": [
+      "Fulton",
+      "Marshall",
+      "Peoria",
+      "Stark",
+      "Tazewell",
+      "Woodford"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living, supportive living and other long-term care settings.",
+    "next_step": "Call the regional ombudsman office. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "309-272-2917",
+      "phone_label": "Regional ombudsman office"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+      "phone_source_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+        "title": "Illinois Department on Aging: regional ombudsman public contact list",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional programs, phones and counties served; full page text."
+      }
+    ]
+  },
+  {
+    "program_id": "il-ombudsman-psa5",
+    "name": "East Central Illinois Area Agency on Aging Ombudsman Program",
+    "organization": "East Central Illinois Area Agency on Aging Ombudsman Program",
+    "official_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+    "state": "IL",
+    "service_area": [
+      "Champaign",
+      "Clark",
+      "Coles",
+      "Cumberland",
+      "DeWitt",
+      "Douglas",
+      "Edgar",
+      "Ford",
+      "Iroquois",
+      "Livingston",
+      "Macon",
+      "McLean",
+      "Moultrie",
+      "Piatt",
+      "Shelby",
+      "Vermilion"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living, supportive living and other long-term care settings.",
+    "next_step": "Call the regional ombudsman office. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Local: 309-829-2065 ext. 1227."
+    ],
+    "public_contact": {
+      "phone": "800-888-4456",
+      "phone_label": "Regional ombudsman office"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+      "phone_source_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+        "title": "Illinois Department on Aging: regional ombudsman public contact list",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional programs, phones and counties served; full page text."
+      }
+    ]
+  },
+  {
+    "program_id": "il-ombudsman-psa6",
+    "name": "River’s Edge Ombudsman Program",
+    "organization": "River’s Edge Ombudsman Program",
+    "official_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+    "state": "IL",
+    "service_area": [
+      "Adams",
+      "Brown",
+      "Calhoun",
+      "Hancock",
+      "Pike",
+      "Schuyler"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living, supportive living and other long-term care settings.",
+    "next_step": "Call the regional ombudsman office. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Local: 217-617-4700."
+    ],
+    "public_contact": {
+      "phone": "888-348-2530",
+      "phone_label": "Regional ombudsman office"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+      "phone_source_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+        "title": "Illinois Department on Aging: regional ombudsman public contact list",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional programs, phones and counties served; full page text."
+      }
+    ]
+  },
+  {
+    "program_id": "il-ombudsman-psa7",
+    "name": "ICARE – Project Advocate (AgeLinc)",
+    "organization": "ICARE – Project Advocate (AgeLinc)",
+    "official_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+    "state": "IL",
+    "service_area": [
+      "Cass",
+      "Christian",
+      "Greene",
+      "Jersey",
+      "Logan",
+      "Macoupin",
+      "Mason",
+      "Menard",
+      "Montgomery",
+      "Morgan",
+      "Sangamon",
+      "Scott"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living, supportive living and other long-term care settings.",
+    "next_step": "Call the regional ombudsman office. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Local: 217-523-8419."
+    ],
+    "public_contact": {
+      "phone": "800-842-8538",
+      "phone_label": "Regional ombudsman office"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+      "phone_source_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+        "title": "Illinois Department on Aging: regional ombudsman public contact list",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional programs, phones and counties served; full page text."
+      }
+    ]
+  },
+  {
+    "program_id": "il-ombudsman-psa8",
+    "name": "Senior Services Plus Ombudsman Program (Alton)",
+    "organization": "Senior Services Plus Ombudsman Program (Alton)",
+    "official_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+    "state": "IL",
+    "service_area": [
+      "Bond",
+      "Clinton",
+      "Madison",
+      "Monroe",
+      "Randolph",
+      "St. Clair",
+      "Washington"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living, supportive living and other long-term care settings.",
+    "next_step": "Call the regional ombudsman office. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Local: 618-465-3298 ext. 127."
+    ],
+    "public_contact": {
+      "phone": "855-336-4778",
+      "phone_label": "Regional ombudsman office"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+      "phone_source_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+        "title": "Illinois Department on Aging: regional ombudsman public contact list",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional programs, phones and counties served; full page text."
+      }
+    ]
+  },
+  {
+    "program_id": "il-ombudsman-psa9",
+    "name": "ECCOA Ombudsman Program (Effingham)",
+    "organization": "ECCOA Ombudsman Program (Effingham)",
+    "official_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+    "state": "IL",
+    "service_area": [
+      "Clay",
+      "Effingham",
+      "Fayette",
+      "Jefferson",
+      "Marion"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living, supportive living and other long-term care settings.",
+    "next_step": "Call the regional ombudsman office. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Local: 217-347-5216."
+    ],
+    "public_contact": {
+      "phone": "800-283-4070",
+      "phone_label": "Regional ombudsman office"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+      "phone_source_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+        "title": "Illinois Department on Aging: regional ombudsman public contact list",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional programs, phones and counties served; full page text."
+      }
+    ]
+  },
+  {
+    "program_id": "il-ombudsman-psa10",
+    "name": "SWAN Ombudsman Program (Olney)",
+    "organization": "SWAN Ombudsman Program (Olney)",
+    "official_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+    "state": "IL",
+    "service_area": [
+      "Crawford",
+      "Edwards",
+      "Hamilton",
+      "Jasper",
+      "Lawrence",
+      "Richland",
+      "Wabash",
+      "Wayne",
+      "White"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living, supportive living and other long-term care settings.",
+    "next_step": "Call the regional ombudsman office. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Local: 618-879-2214."
+    ],
+    "public_contact": {
+      "phone": "888-715-6260",
+      "phone_label": "Regional ombudsman office"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+      "phone_source_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+        "title": "Illinois Department on Aging: regional ombudsman public contact list",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional programs, phones and counties served; full page text."
+      }
+    ]
+  },
+  {
+    "program_id": "il-ombudsman-psa11",
+    "name": "Shawnee Alliance for Seniors Ombudsman Program",
+    "organization": "Shawnee Alliance for Seniors Ombudsman Program",
+    "official_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+    "state": "IL",
+    "service_area": [
+      "Alexander",
+      "Franklin",
+      "Gallatin",
+      "Hardin",
+      "Jackson",
+      "Johnson",
+      "Massac",
+      "Perry",
+      "Pope",
+      "Pulaski",
+      "Saline",
+      "Union",
+      "Williamson"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living, supportive living and other long-term care settings.",
+    "next_step": "Call the regional ombudsman office. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Local: 618-985-8322."
+    ],
+    "public_contact": {
+      "phone": "800-642-7773",
+      "phone_label": "Regional ombudsman office"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+      "phone_source_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+        "title": "Illinois Department on Aging: regional ombudsman public contact list",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional programs, phones and counties served; full page text."
+      }
+    ]
+  },
+  {
+    "program_id": "il-ombudsman-chicago",
+    "name": "City of Chicago Long-Term Care Ombudsman Program",
+    "organization": "City of Chicago Long-Term Care Ombudsman Program",
+    "official_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+    "state": "IL",
+    "service_area": [
+      "Cook"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living, supportive living and other long-term care settings.",
+    "next_step": "Call the regional ombudsman office. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "For facilities in the City of Chicago."
+    ],
+    "public_contact": {
+      "phone": "312-746-7490",
+      "phone_label": "Regional ombudsman office"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+      "phone_source_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+        "title": "Illinois Department on Aging: regional ombudsman public contact list",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional programs, phones and counties served; full page text."
+      }
+    ]
+  },
+  {
+    "program_id": "il-ombudsman-evanston",
+    "name": "City of Evanston Long-Term Care Ombudsman Program",
+    "organization": "City of Evanston Long-Term Care Ombudsman Program",
+    "official_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+    "state": "IL",
+    "service_area": [
+      "Cook"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living, supportive living and other long-term care settings.",
+    "next_step": "Call the regional ombudsman office. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "For facilities in the City of Evanston."
+    ],
+    "public_contact": {
+      "phone": "847-448-8696",
+      "phone_label": "Regional ombudsman office"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+      "phone_source_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+        "title": "Illinois Department on Aging: regional ombudsman public contact list",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional programs, phones and counties served; full page text."
+      }
+    ]
+  },
+  {
+    "program_id": "il-ombudsman-suburban-cook",
+    "name": "Legal Aid Chicago Long-Term Care Ombudsman Program (suburban Cook County)",
+    "organization": "Legal Aid Chicago Long-Term Care Ombudsman Program (suburban Cook County)",
+    "official_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+    "state": "IL",
+    "service_area": [
+      "Cook"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living, supportive living and other long-term care settings.",
+    "next_step": "Call the regional ombudsman office. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "For facilities in suburban Cook County outside Evanston."
+    ],
+    "public_contact": {
+      "phone": "888-401-8200",
+      "phone_label": "Regional ombudsman office"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+      "phone_source_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+        "title": "Illinois Department on Aging: regional ombudsman public contact list",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional programs, phones and counties served; full page text."
+      }
+    ]
+  }
 ]

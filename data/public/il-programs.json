@@ -1,478 +1,1762 @@
 [
- {
-  "program_id": "il-claims",
-  "name": "Illinois veterans: accredited claims help",
-  "official_url": "https://veterans.illinois.gov/about-us/communications/contact-us.html",
-  "organization": "Illinois Department of Veterans’ Affairs",
-  "service_area": [
-   "All Illinois counties"
-  ],
-  "state": "IL",
-  "needs_supported": [
-   "general_navigation",
-   "benefits_and_funding"
-  ],
-  "description": "Free help with VA claims, applications and appeals for veterans and families.",
-  "next_step": "Call the state veterans agency; ask for a benefits review and the office that serves your county.",
-  "constraints": [],
-  "public_contact": {
-   "phone": "800-437-9824"
+  {
+    "program_id": "il-claims",
+    "name": "Illinois veterans: accredited claims help",
+    "official_url": "https://veterans.illinois.gov/about-us/communications/contact-us.html",
+    "organization": "Illinois Department of Veterans’ Affairs",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "IL",
+    "needs_supported": [
+      "general_navigation",
+      "benefits_and_funding"
+    ],
+    "description": "Free help with VA claims, applications and appeals for veterans and families.",
+    "next_step": "Choose your county for its IDVA Veteran Service Office, or call IDVA at 800-437-9824.",
+    "constraints": [],
+    "public_contact": {
+      "phone": "800-437-9824"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://veterans.illinois.gov/about-us/communications/contact-us.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://veterans.illinois.gov/about-us/communications/contact-us.html",
+        "title": "Official published source",
+        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "il-ship",
+    "name": "Medicare counseling (SHIP) for Illinois",
+    "official_url": "https://www.shiphelp.org/",
+    "organization": "SHIP Technical Assistance Center",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "IL",
+    "needs_supported": [
+      "benefits_and_funding"
+    ],
+    "description": "Free, unbiased Medicare counseling from the State Health Insurance Assistance Program.",
+    "next_step": "Call or use the locator to reach the Illinois SHIP and ask for a counseling appointment.",
+    "constraints": [],
+    "public_contact": {
+      "phone": "877-839-2675"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.shiphelp.org/?p=317"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.shiphelp.org/?p=317",
+        "title": "Official published source",
+        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://veterans.illinois.gov/about-us/communications/contact-us.html"
+  {
+    "program_id": "il-ssvf-12-il-033",
+    "name": "Thresholds: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Thresholds",
+    "service_area": [
+      "Cook"
+    ],
+    "state": "IL",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 12-IL-033): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 773-572-5500.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "773-572-5321",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 12",
+        "sheet": "Contacts",
+        "row": 12,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://veterans.illinois.gov/about-us/communications/contact-us.html",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ]
- },
- {
-  "program_id": "il-ship",
-  "name": "Medicare counseling (SHIP) for Illinois",
-  "official_url": "https://www.shiphelp.org/",
-  "organization": "SHIP Technical Assistance Center",
-  "service_area": [
-   "All Illinois counties"
-  ],
-  "state": "IL",
-  "needs_supported": [
-   "benefits_and_funding"
-  ],
-  "description": "Free, unbiased Medicare counseling from the State Health Insurance Assistance Program.",
-  "next_step": "Call or use the locator to reach the Illinois SHIP and ask for a counseling appointment.",
-  "constraints": [],
-  "public_contact": {
-   "phone": "877-839-2675"
+  {
+    "program_id": "il-ssvf-12-zz-031",
+    "name": "Humility Homes and Services, Inc.: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Humility Homes and Services, Inc.",
+    "service_area": [
+      "Henry",
+      "Lee",
+      "Mercer",
+      "Rock Island",
+      "Whiteside"
+    ],
+    "state": "IL",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 12-ZZ-031): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "563-594-9742",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 26",
+        "sheet": "Contacts",
+        "row": 26,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "il-ssvf-13-il-105",
+    "name": "Heartland Human Care Services, Inc.: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Heartland Human Care Services, Inc.",
+    "service_area": [
+      "Cook"
+    ],
+    "state": "IL",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 13-IL-105): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 773-336-6015.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "773-991-1456",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 32",
+        "sheet": "Contacts",
+        "row": 32,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.shiphelp.org/?p=317"
+  {
+    "program_id": "il-ssvf-14-il-194",
+    "name": "Featherfist: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Featherfist",
+    "service_area": [
+      "Cook"
+    ],
+    "state": "IL",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 14-IL-194): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 773-721-7088.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "773-251-7254",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 56",
+        "sheet": "Contacts",
+        "row": 56,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.shiphelp.org/?p=317",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ]
- },
- {
-  "program_id": "il-ssvf-12-il-033",
-  "name": "Thresholds: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Thresholds",
-  "service_area": [
-   "All Illinois counties"
-  ],
-  "state": "IL",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 12-IL-033): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Cook County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 773-572-5500.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "773-572-5321",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "il-ssvf-14-il-196",
+    "name": "Midwest Shelter for Homeless Veterans, Inc.: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Midwest Shelter for Homeless Veterans, Inc.",
+    "service_area": [
+      "Bureau",
+      "Cook",
+      "DeKalb",
+      "DuPage",
+      "Grundy",
+      "Iroquois",
+      "Kane",
+      "Kankakee",
+      "Kendall",
+      "LaSalle",
+      "Lake",
+      "Putnam",
+      "Will"
+    ],
+    "state": "IL",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 14-IL-196): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Ask VA’s National Call Center for Homeless Veterans (877-424-3838) to connect you with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": null,
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 57",
+        "sheet": "Contacts",
+        "row": 57,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "il-ssvf-14-il-197",
+    "name": "Chestnut Health Systems, Inc.: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Chestnut Health Systems, Inc.",
+    "service_area": [
+      "Madison",
+      "St. Clair"
+    ],
+    "state": "IL",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 14-IL-197): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "618-512-1823",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 58",
+        "sheet": "Contacts",
+        "row": 58,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "il-ssvf-14-zz-308",
+    "name": "Transitional Living Services: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Transitional Living Services",
+    "service_area": [
+      "Boone",
+      "Cook",
+      "Lake",
+      "McHenry",
+      "Winnebago"
+    ],
+    "state": "IL",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 14-ZZ-308): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "224-634-0029",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 107",
+        "sheet": "Contacts",
+        "row": 107,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 12",
-    "sheet": "Contacts",
-    "row": 12,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "il-ssvf-12-zz-031",
-  "name": "Humility Homes and Services, Inc.: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Humility Homes and Services, Inc.",
-  "service_area": [
-   "All Illinois counties"
-  ],
-  "state": "IL",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 12-ZZ-031): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Henry County, Lee County, Mercer County, Rock Island County, Whiteside County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "563-594-9742",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "il-ssvf-18-zz-034",
+    "name": "Volunteers of America of Illinois: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Volunteers of America of Illinois",
+    "service_area": [
+      "Cook",
+      "Will"
+    ],
+    "state": "IL",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 18-ZZ-034): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 312-564-2333.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "312-564-2300",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 139",
+        "sheet": "Contacts",
+        "row": 139,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "il-ssvf-23-zz-104",
+    "name": "The Salvation Army: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "The Salvation Army",
+    "service_area": [
+      "Adams",
+      "Alexander",
+      "Bond",
+      "Brown",
+      "Bureau",
+      "Calhoun",
+      "Carroll",
+      "Cass",
+      "Champaign",
+      "Christian",
+      "Clark",
+      "Clay",
+      "Clinton",
+      "Coles",
+      "Crawford",
+      "Cumberland",
+      "DeWitt",
+      "Douglas",
+      "Edgar",
+      "Edwards",
+      "Effingham",
+      "Fayette",
+      "Ford",
+      "Franklin",
+      "Fulton",
+      "Gallatin",
+      "Greene",
+      "Hamilton",
+      "Hancock",
+      "Hardin",
+      "Henderson",
+      "Iroquois",
+      "Jackson",
+      "Jasper",
+      "Jefferson",
+      "Jersey",
+      "Jo Daviess",
+      "Johnson",
+      "Knox",
+      "Lawrence",
+      "Livingston",
+      "Logan",
+      "Macon",
+      "Macoupin",
+      "Marion",
+      "Marshall",
+      "Mason",
+      "Massac",
+      "McDonough",
+      "McLean",
+      "Menard",
+      "Monroe",
+      "Montgomery",
+      "Morgan",
+      "Moultrie",
+      "Ogle",
+      "Peoria",
+      "Perry",
+      "Piatt",
+      "Pike",
+      "Pope",
+      "Pulaski",
+      "Putnam",
+      "Randolph",
+      "Richland",
+      "Saline",
+      "Sangamon",
+      "Schuyler",
+      "Scott",
+      "Shelby",
+      "Stark",
+      "Stephenson",
+      "Tazewell",
+      "Union",
+      "Vermilion",
+      "Wabash",
+      "Warren",
+      "Washington",
+      "Wayne",
+      "White",
+      "Williamson",
+      "Woodford"
+    ],
+    "state": "IL",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 23-ZZ-104): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 309-218-2525.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "217-278-9897",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 215",
+        "sheet": "Contacts",
+        "row": 215,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "il-ombudsman",
+    "name": "Illinois Long-Term Care Ombudsman Program",
+    "organization": "Office of the State Long-Term Care Ombudsman, Illinois Department on Aging",
+    "official_url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "IL",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "description": "Statewide advocacy for residents of long-term care facilities, delivered through regional ombudsman programs. The Senior HelpLine connects callers to the regional program.",
+    "next_step": "Choose your county for its regional ombudsman, or call the Senior HelpLine at 800-252-8966 (Monday to Friday, 8:30 a.m. to 5 p.m.). To report abuse of an adult living in the community, call 866-800-1409. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "800-252-8966",
+      "phone_label": "Illinois Department on Aging Senior HelpLine"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://ilaging.illinois.gov/contactus.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ilaging.illinois.gov/contactus.html",
+        "title": "Illinois Department on Aging: contact us",
+        "reviewed_on": "2026-11-04",
+        "scope": "Senior HelpLine and Adult Protective Services hotline; search excerpt."
+      },
+      {
+        "url": "https://ilaging.illinois.gov/programs/ltcombudsman/ltcop-regional-ombudsman-public-contact-list.html",
+        "title": "Illinois Department on Aging: regional ombudsman public contact list",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional ombudsman programs; full page text."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 26",
-    "sheet": "Contacts",
-    "row": 26,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "il-ssvf-13-il-105",
-  "name": "Heartland Human Care Services, Inc.: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Heartland Human Care Services, Inc.",
-  "service_area": [
-   "All Illinois counties"
-  ],
-  "state": "IL",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 13-IL-105): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Cook County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 773-336-6015.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "773-991-1456",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "il-senior-helpline",
+    "name": "Illinois Department on Aging Senior HelpLine",
+    "organization": "Illinois Department on Aging",
+    "official_url": "https://ilaging.illinois.gov/contactus.html",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "IL",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "The state aging agency's helpline for programs for older adults and people with disabilities, including the Community Care Program, Benefit Access and SHIP Medicare counseling, and referral to your Area Agency on Aging. Military service is not required.",
+    "next_step": "Call 800-252-8966 (711 for relay), Monday to Friday 8:30 a.m. to 5 p.m. Choose a county above for the direct number of its Area Agency on Aging.",
+    "constraints": [
+      "Each program has its own eligibility and waitlist."
+    ],
+    "public_contact": {
+      "phone": "800-252-8966",
+      "phone_label": "Senior HelpLine (toll-free)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://ilaging.illinois.gov/contactus.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ilaging.illinois.gov/contactus.html",
+        "title": "Illinois Department on Aging: contact us",
+        "reviewed_on": "2026-11-04",
+        "scope": "Senior HelpLine hours and number; search excerpt."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "il-cil-access-living",
+    "name": "Access Living (Chicago)",
+    "organization": "Access Living",
+    "official_url": "https://www.accessliving.org/",
+    "service_area": [
+      "Cook"
+    ],
+    "state": "IL",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "312-640-2100",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/il",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/il"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/il",
+        "title": "ILRU national directory of Centers for Independent Living (Illinois)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "il-cil-progress",
+    "name": "Progress Center for Independent Living (Forest Park)",
+    "organization": "Progress Center for Independent Living",
+    "official_url": "https://www.ilru.org/cil-directory/il",
+    "service_area": [
+      "Cook"
+    ],
+    "state": "IL",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility. Blue Island office: 708-388-5011. Website: progresscil.org.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "708-209-1500",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/il",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/il"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/il",
+        "title": "ILRU national directory of Centers for Independent Living (Illinois)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 32",
-    "sheet": "Contacts",
-    "row": 32,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "il-ssvf-14-il-194",
-  "name": "Featherfist: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Featherfist",
-  "service_area": [
-   "All Illinois counties"
-  ],
-  "state": "IL",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 14-IL-194): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Cook County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 773-721-7088.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "773-251-7254",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "il-cil-advocates-access",
+    "name": "Advocates for Access (Peoria Heights)",
+    "organization": "Advocates for Access",
+    "official_url": "https://www.ilru.org/cil-directory/il",
+    "service_area": [
+      "Fulton",
+      "Peoria",
+      "Tazewell",
+      "Woodford"
+    ],
+    "state": "IL",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.  Website: advocatesforaccess.com.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "309-682-3500",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/il",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/il"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/il",
+        "title": "ILRU national directory of Centers for Independent Living (Illinois)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "il-cil-drc",
+    "name": "Disability Resource Center (Joliet)",
+    "organization": "Disability Resource Center",
+    "official_url": "https://drcjoliet.org",
+    "service_area": [
+      "Grundy",
+      "Will"
+    ],
+    "state": "IL",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "815-729-0162",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/il",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/il"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/il",
+        "title": "ILRU national directory of Centers for Independent Living (Illinois)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "il-cil-iicil",
+    "name": "Illinois Iowa Center for Independent Living (Rock Island)",
+    "organization": "Illinois Iowa Center for Independent Living",
+    "official_url": "https://www.iicil.com",
+    "service_area": [
+      "Henry",
+      "Mercer",
+      "Rock Island"
+    ],
+    "state": "IL",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility. The center also serves Clinton, Muscatine and Scott counties in Iowa.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "309-793-0090",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/il",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/il"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/il",
+        "title": "ILRU national directory of Centers for Independent Living (Illinois)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 56",
-    "sheet": "Contacts",
-    "row": 56,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "il-ssvf-14-il-196",
-  "name": "Midwest Shelter for Homeless Veterans, Inc.: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Midwest Shelter for Homeless Veterans, Inc.",
-  "service_area": [
-   "All Illinois counties"
-  ],
-  "state": "IL",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 14-IL-196): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Bureau County, Cook County, DeKalb County, DuPage County, Grundy County, Iroquois County, Kane County, Kankakee County, Kendall County, La Salle County, Lake County, Putnam County and 1 more.",
-  "next_step": "Ask VA’s National Call Center for Homeless Veterans (877-424-3838) to connect you with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": null,
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "il-cil-ivcil",
+    "name": "Illinois Valley Center for Independent Living (Spring Valley)",
+    "organization": "Illinois Valley Center for Independent Living",
+    "official_url": "https://ivcil.com/",
+    "service_area": [
+      "Bureau",
+      "LaSalle",
+      "Marshall",
+      "Putnam",
+      "Stark"
+    ],
+    "state": "IL",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "815-224-3126",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/il",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/il"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/il",
+        "title": "ILRU national directory of Centers for Independent Living (Illinois)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "il-cil-impact",
+    "name": "IMPACT Center for Independent Living (Alton)",
+    "organization": "IMPACT Center for Independent Living",
+    "official_url": "https://impactcil.org/",
+    "service_area": [
+      "Bond",
+      "Calhoun",
+      "Greene",
+      "Jersey",
+      "Macoupin",
+      "Madison"
+    ],
+    "state": "IL",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "618-462-1411",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/il",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/il"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/il",
+        "title": "ILRU national directory of Centers for Independent Living (Illinois)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "il-cil-jacil",
+    "name": "Jacksonville Area Center for Independent Living",
+    "organization": "Jacksonville Area Center for Independent Living",
+    "official_url": "https://jacil.org/",
+    "service_area": [
+      "Cass",
+      "Mason",
+      "Morgan",
+      "Scott"
+    ],
+    "state": "IL",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility. Havana office (Mason County): 309-543-6680.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "217-245-8371",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/il",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/il"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/il",
+        "title": "ILRU national directory of Centers for Independent Living (Illinois)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 57",
-    "sheet": "Contacts",
-    "row": 57,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "il-ssvf-14-il-197",
-  "name": "Chestnut Health Systems, Inc.: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Chestnut Health Systems, Inc.",
-  "service_area": [
-   "All Illinois counties"
-  ],
-  "state": "IL",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 14-IL-197): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Madison County, St. Clair County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "618-512-1823",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "il-cil-lccil",
+    "name": "Lake County Center for Independent Living (Mundelein)",
+    "organization": "Lake County Center for Independent Living",
+    "official_url": "https://www.lccil.org/",
+    "service_area": [
+      "Lake",
+      "McHenry"
+    ],
+    "state": "IL",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "847-949-4440",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/il",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/il"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/il",
+        "title": "ILRU national directory of Centers for Independent Living (Illinois)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "il-cil-life",
+    "name": "LIFE Center for Independent Living (Bloomington)",
+    "organization": "LIFE Center for Independent Living",
+    "official_url": "https://www.ilru.org/cil-directory/il",
+    "service_area": [
+      "DeWitt",
+      "Ford",
+      "Livingston",
+      "McLean"
+    ],
+    "state": "IL",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility. Pontiac office: 815-844-1132. Website: lifecil.org.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "309-663-5433",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/il",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/il"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/il",
+        "title": "ILRU national directory of Centers for Independent Living (Illinois)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "il-cil-linc",
+    "name": "LINC, Inc. (Swansea)",
+    "organization": "LINC, Inc.",
+    "official_url": "https://www.ilru.org/cil-directory/il",
+    "service_area": [
+      "Monroe",
+      "Randolph",
+      "St. Clair"
+    ],
+    "state": "IL",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility. Red Bud office: 618-282-2123. Website: lincinc.org.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "618-235-9988",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/il",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/il"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/il",
+        "title": "ILRU national directory of Centers for Independent Living (Illinois)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 58",
-    "sheet": "Contacts",
-    "row": 58,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "il-ssvf-14-zz-308",
-  "name": "Transitional Living Services: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Transitional Living Services",
-  "service_area": [
-   "All Illinois counties"
-  ],
-  "state": "IL",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 14-ZZ-308): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Boone County, Cook County, Lake County, McHenry County, Winnebago County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "224-634-0029",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "il-cil-nicil",
+    "name": "Northwestern Illinois Center for Independent Living (Sterling)",
+    "organization": "Northwestern Illinois Center for Independent Living",
+    "official_url": "https://nicil.org/",
+    "service_area": [
+      "Carroll",
+      "Jo Daviess",
+      "Lee",
+      "Ogle",
+      "Whiteside"
+    ],
+    "state": "IL",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "815-625-7860",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/il",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/il"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/il",
+        "title": "ILRU national directory of Centers for Independent Living (Illinois)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "il-cil-ofa",
+    "name": "Opportunities for Access (Mt. Vernon)",
+    "organization": "Opportunities for Access",
+    "official_url": "https://www.ilru.org/cil-directory/il",
+    "service_area": [
+      "Clay",
+      "Clinton",
+      "Edwards",
+      "Effingham",
+      "Fayette",
+      "Hamilton",
+      "Jasper",
+      "Jefferson",
+      "Marion",
+      "Wabash",
+      "Washington",
+      "Wayne",
+      "White"
+    ],
+    "state": "IL",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility. Carmi office: 618-382-7300. Effingham office: 217-342-5521. Website: ofacil.org.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "618-244-9212",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/il",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/il"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/il",
+        "title": "ILRU national directory of Centers for Independent Living (Illinois)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "il-cil-options",
+    "name": "Options Center for Independent Living (Bourbonnais)",
+    "organization": "Options Center for Independent Living",
+    "official_url": "https://www.ilru.org/cil-directory/il",
+    "service_area": [
+      "Iroquois",
+      "Kankakee"
+    ],
+    "state": "IL",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility. Watseka office: 815-432-1332. Website: optionscil.org.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "815-936-0100",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/il",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/il"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/il",
+        "title": "ILRU national directory of Centers for Independent Living (Illinois)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 107",
-    "sheet": "Contacts",
-    "row": 107,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "il-ssvf-18-zz-034",
-  "name": "Volunteers of America of Illinois: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Volunteers of America of Illinois",
-  "service_area": [
-   "All Illinois counties"
-  ],
-  "state": "IL",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 18-ZZ-034): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Cook County, Will County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 312-564-2333.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "312-564-2300",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "il-cil-pace",
+    "name": "PACE, Inc. (Urbana)",
+    "organization": "PACE, Inc.",
+    "official_url": "https://www.ilru.org/cil-directory/il",
+    "service_area": [
+      "Champaign",
+      "Douglas",
+      "Edgar",
+      "Piatt",
+      "Vermilion"
+    ],
+    "state": "IL",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.  Website: pacecil.org.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "217-344-5433",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/il",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/il"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/il",
+        "title": "ILRU national directory of Centers for Independent Living (Illinois)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "il-cil-ramp",
+    "name": "RAMP Disability Resources & Services (Rockford)",
+    "organization": "RAMP Disability Resources & Services",
+    "official_url": "https://rampcil.org/",
+    "service_area": [
+      "Boone",
+      "DeKalb",
+      "Stephenson",
+      "Winnebago"
+    ],
+    "state": "IL",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility. DeKalb office: 815-756-3202. Freeport office: 815-233-1128.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "815-968-7467",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/il",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/il"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/il",
+        "title": "ILRU national directory of Centers for Independent Living (Illinois)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "il-cil-sail",
+    "name": "SAIL (Decatur)",
+    "organization": "SAIL",
+    "official_url": "https://decatursail.com/",
+    "service_area": [
+      "Clark",
+      "Coles",
+      "Cumberland",
+      "Macon",
+      "Moultrie",
+      "Shelby"
+    ],
+    "state": "IL",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility. Charleston office: 217-345-7245. Shelbyville office: 217-774-4322. The ILRU listing omits Macon County; it is included here because the main office is in Decatur.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "217-876-8888",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/il",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/il"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/il",
+        "title": "ILRU national directory of Centers for Independent Living (Illinois)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 139",
-    "sheet": "Contacts",
-    "row": 139,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "il-ssvf-23-zz-104",
-  "name": "The Salvation Army: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "The Salvation Army",
-  "service_area": [
-   "All Illinois counties"
-  ],
-  "state": "IL",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 23-ZZ-104): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Adams County, Alexander County, Bond County, Brown County, Bureau County, Calhoun County, Carroll County, Cass County, Champaign County, Christian County, Clark County, Clay County and 70 more.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 309-218-2525.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "217-278-9897",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "il-cil-sicil",
+    "name": "Southern Illinois Center for Independent Living (Harrisburg)",
+    "organization": "Southern Illinois Center for Independent Living",
+    "official_url": "https://www.ilru.org/cil-directory/il",
+    "service_area": [
+      "Franklin",
+      "Jackson",
+      "Perry",
+      "Williamson"
+    ],
+    "state": "IL",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility. Carbondale office: 618-457-3318. Website: sicil1.org.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "618-252-7233",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/il",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/il"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/il",
+        "title": "ILRU national directory of Centers for Independent Living (Illinois)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "il-cil-scil",
+    "name": "Springfield Center for Independent Living",
+    "organization": "Springfield Center for Independent Living",
+    "official_url": "https://www.ilru.org/cil-directory/il",
+    "service_area": [
+      "Christian",
+      "Logan",
+      "Menard",
+      "Montgomery",
+      "Sangamon"
+    ],
+    "state": "IL",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.  Website: scil.org.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "217-523-2587",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/il",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/il"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/il",
+        "title": "ILRU national directory of Centers for Independent Living (Illinois)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "il-cil-stone-hayes",
+    "name": "Stone-Hayes Center for Independent Living (Galesburg)",
+    "organization": "Stone-Hayes Center for Independent Living",
+    "official_url": "https://www.ilru.org/cil-directory/il",
+    "service_area": [
+      "Henderson",
+      "Knox",
+      "Warren"
+    ],
+    "state": "IL",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.  Website: stone-hayes.org.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "309-344-1306",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/il",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/il"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/il",
+        "title": "ILRU national directory of Centers for Independent Living (Illinois)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 215",
-    "sheet": "Contacts",
-    "row": 215,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- }
+  {
+    "program_id": "il-cil-wcicil",
+    "name": "West Central Illinois Center for Independent Living (Quincy)",
+    "organization": "West Central Illinois Center for Independent Living",
+    "official_url": "https://www.wcicil.org/",
+    "service_area": [
+      "Adams",
+      "Brown",
+      "Hancock",
+      "McDonough",
+      "Pike",
+      "Schuyler"
+    ],
+    "state": "IL",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility. Macomb office: 309-833-5766.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "217-223-0400",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/il",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/il"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/il",
+        "title": "ILRU national directory of Centers for Independent Living (Illinois)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
+  },
+  {
+    "program_id": "il-legal-chicago",
+    "name": "Legal Aid Chicago",
+    "organization": "Legal Aid Chicago (formerly LAF)",
+    "official_url": "https://shdh.illinois.gov/legal-assistance.html",
+    "service_area": [
+      "Cook"
+    ],
+    "state": "IL",
+    "resource_role": "legal_aid",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation",
+      "housing"
+    ],
+    "description": "Free civil legal help for residents of Chicago and suburban Cook County with low income, including housing, public benefits and consumer problems. Not criminal defense.",
+    "next_step": "Call 312-341-1070 or apply through Illinois Legal Aid Online (illinoislegalaid.org). Have the legal problem and any papers ready.",
+    "constraints": [
+      "Income, case type and capacity limits apply."
+    ],
+    "public_contact": {
+      "phone": "312-341-1070",
+      "phone_label": "Legal Aid Chicago"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://shdh.illinois.gov/legal-assistance.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://shdh.illinois.gov/legal-assistance.html",
+        "title": "Illinois Department of Human Rights: legal assistance",
+        "reviewed_on": "2026-11-04",
+        "scope": "LAF (now Legal Aid Chicago) Cook County phone; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "il-legal-programs",
+    "name": "Illinois legal aid outside Cook County",
+    "organization": "Land of Lincoln Legal Aid and Prairie State Legal Services",
+    "official_url": "https://www.illinoislegalaid.org/",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "IL",
+    "resource_role": "legal_aid",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation",
+      "housing"
+    ],
+    "description": "Free civil legal help for people with low income. Land of Lincoln Legal Aid serves 65 central and southern Illinois counties (877-342-7891). Prairie State Legal Services serves 36 northern and central counties through local offices (pslegal.org). Illinois Legal Aid Online helps you find the right program and apply. Not criminal defense.",
+    "next_step": "Start at illinoislegalaid.org, or call Land of Lincoln at 877-342-7891 if you live in central or southern Illinois. Have your county and the legal problem ready.",
+    "constraints": [
+      "Income, case type and capacity limits apply. Full county lists were not available, so this card does not assign counties."
+    ],
+    "public_contact": {
+      "phone": "877-342-7891",
+      "phone_label": "Land of Lincoln Legal Aid"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.illinoisattorneygeneral.gov/Page-Attachments/RockfordandDownstateLegalAidProviders.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.illinoisattorneygeneral.gov/Page-Attachments/RockfordandDownstateLegalAidProviders.pdf",
+        "title": "Illinois Attorney General: Rockford and downstate legal aid providers",
+        "reviewed_on": "2026-11-04",
+        "scope": "Land of Lincoln and Prairie State office phones; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "il-vahealth-systems",
+    "name": "VA medical centers serving Illinois",
+    "organization": "U.S. Department of Veterans Affairs",
+    "official_url": "https://www.va.gov/find-locations/?facilityType=health",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "IL",
+    "resource_role": "va_health_system",
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "VA medical centers in Illinois: Edward Hines Jr. VA Hospital, Hines (708-202-8387); Jesse Brown VA Medical Center, Chicago (312-569-8387); Captain James A. Lovell Federal Health Care Center, North Chicago (847-688-1900); VA Illiana Health Care System, Danville (217-554-3000); Marion VA Medical Center (618-997-5311). Some Metro East and western counties are served by VA systems in St. Louis or Iowa City.",
+    "next_step": "Use VA’s facility locator with your ZIP code to find the closest clinic and its medical center. Not enrolled yet? Call 877-222-8387 or ask your Veteran Service Officer for help applying.",
+    "constraints": [
+      "VA does not publish county lists for these systems, so this card does not assign counties. Your VA care team may be at a different clinic or system; follow what VA tells you."
+    ],
+    "public_contact": {
+      "phone": "877-222-8387",
+      "phone_label": "VA health care enrollment line"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.va.gov/directory/guide/fac_list_by_state.cfm?State=IL",
+        "title": "VA facility directory: Illinois",
+        "reviewed_on": "2026-11-04",
+        "scope": "Medical center names and phones; search excerpt."
+      }
+    ]
+  }
 ]
