@@ -370,6 +370,28 @@
     ]
   },
   {
+    "code": "TN",
+    "name": "Tennessee",
+    "page": "tn.html",
+    "share_page": "share-tn.html",
+    "qr": "assets/guide-qr-tn.svg",
+    "counties": 95,
+    "programs": "data/public/tn-programs.json",
+    "referrals": "data/public/tn-regional-referrals.json",
+    "offices": "data/public/tennessee-county-veterans-offices.json",
+    "resources": "data/public/tennessee-resources.json",
+    "statewide_area_names": [],
+    "coverage_scope": "Referral edition. All 95 counties have their County Veterans Service Office from the TDVS roster (two use the TDVS main line), a matched Area Agency on Aging and Disability and a district long-term-care ombudsman.",
+    "coverage_note": "County office phones, addresses and hours come from the TDVS County and State Service Officer Contact Roster (May 2026), with staff names and emails left out; state TDVS offices in the same county are listed as other offices. Lake and Moore have roster rows with no contact details and use the TDVS main line. The nine aging and ombudsman districts come from the Department of Disability and Aging district ombudsman page. Reviewed November 4, 2026. Contacts are not telephone-confirmed.",
+    "share_description": "County Veterans Service Offices, county-matched Area Agencies on Aging and Disability and district long-term-care ombudsmen",
+    "share_replacements": [
+      [
+        "Updated October 8, 2026",
+        "Updated November 4, 2026"
+      ]
+    ]
+  },
+  {
     "code": "AL",
     "name": "Alabama",
     "starter": true,
@@ -986,26 +1008,6 @@
     ],
     "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
     "coverage_note": "Starter edition. Every county uses the South Dakota Department of Veterans Affairs and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
-    "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
-    "share_replacements": []
-  },
-  {
-    "code": "TN",
-    "name": "Tennessee",
-    "starter": true,
-    "page": "tn.html",
-    "share_page": "share-tn.html",
-    "qr": "assets/guide-qr-tn.svg",
-    "counties": 1,
-    "programs": "data/public/tn-programs.json",
-    "referrals": "data/public/tn-regional-referrals.json",
-    "offices": "data/public/tennessee-county-veterans-offices.json",
-    "resources": "data/public/tennessee-resources.json",
-    "statewide_area_names": [
-      "All Tennessee counties"
-    ],
-    "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
-    "coverage_note": "Starter edition. Every county uses the Tennessee Department of Veterans Services and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
     "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
     "share_replacements": []
   },

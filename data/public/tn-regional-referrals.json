@@ -1,80 +1,984 @@
 [
- {
-  "program_id": "tn-aging",
-  "name": "Local aging help in Tennessee (Eldercare Locator)",
-  "official_url": "https://eldercare.acl.gov/home",
-  "organization": "U.S. Administration for Community Living",
-  "service_area": [
-   "All Tennessee counties"
-  ],
-  "state": "TN",
-  "needs_supported": [
-   "general_navigation",
-   "help_at_home"
-  ],
-  "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-  "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
-  "constraints": [
-   "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "tn-aging-d1",
+    "name": "First Tennessee Area Agency on Aging and Disability",
+    "organization": "First Tennessee Area Agency on Aging and Disability",
+    "official_url": "https://www.tn.gov/disability-and-aging/resource-directory/aaad.html",
+    "state": "TN",
+    "service_area": [
+      "Carter",
+      "Greene",
+      "Hancock",
+      "Hawkins",
+      "Johnson",
+      "Sullivan",
+      "Unicoi",
+      "Washington"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging and Disability for this county (District 1, First Tennessee): the Aging and Disability Resource Center for information and assistance, OPTIONS for Community Living, meals, caregiver support and screening for long-term services.",
+    "next_step": "Call 866-836-6678 from anywhere in Tennessee; the line connects you to this county’s Area Agency on Aging and Disability. Ask for information and assistance or a screening. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program."
+    ],
+    "public_contact": {
+      "phone": "866-836-6678",
+      "phone_label": "Statewide line to your Area Agency on Aging and Disability"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+      "phone_source_url": "https://www.tn.gov/disability-and-aging/resource-directory/aaad.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+        "title": "Tennessee DDA: district long-term care ombudsman",
+        "reviewed_on": "2026-11-04",
+        "scope": "District names, host agencies and counties served; page text."
+      },
+      {
+        "url": "https://www.tn.gov/disability-and-aging/resource-directory/aaad.html",
+        "title": "Tennessee DDA: Area Agencies on Aging and Disability",
+        "reviewed_on": "2026-11-04",
+        "scope": "Statewide routing line 866-836-6678; search excerpt."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "tn-ombudsman-d1",
+    "name": "District 1 long-term care ombudsman (First Tennessee)",
+    "organization": "First Tennessee Area Agency on Aging and Disability",
+    "official_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+    "state": "TN",
+    "service_area": [
+      "Carter",
+      "Greene",
+      "Hancock",
+      "Hawkins",
+      "Johnson",
+      "Sullivan",
+      "Unicoi",
+      "Washington"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The district long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted care living facilities and residential homes for the aged.",
+    "next_step": "Call the district ombudsman office. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "423-979-2599",
+      "phone_label": "District ombudsman office"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+      "phone_source_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+        "title": "Tennessee DDA: district long-term care ombudsman",
+        "reviewed_on": "2026-11-04",
+        "scope": "District office phones and counties served; full page text."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.acl.gov/contact"
+  {
+    "program_id": "tn-aging-d2",
+    "name": "East Tennessee Human Resource Agency (Area Agency on Aging and Disability)",
+    "organization": "East Tennessee Human Resource Agency (Area Agency on Aging and Disability)",
+    "official_url": "https://www.tn.gov/disability-and-aging/resource-directory/aaad.html",
+    "state": "TN",
+    "service_area": [
+      "Anderson",
+      "Blount",
+      "Campbell",
+      "Claiborne",
+      "Cocke",
+      "Grainger",
+      "Hamblen",
+      "Jefferson",
+      "Knox",
+      "Loudon",
+      "Monroe",
+      "Morgan",
+      "Roane",
+      "Scott",
+      "Sevier",
+      "Union"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging and Disability for this county (District 2, East Tennessee): the Aging and Disability Resource Center for information and assistance, OPTIONS for Community Living, meals, caregiver support and screening for long-term services.",
+    "next_step": "Call 866-836-6678 from anywhere in Tennessee; the line connects you to this county’s Area Agency on Aging and Disability. Ask for information and assistance or a screening. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program."
+    ],
+    "public_contact": {
+      "phone": "866-836-6678",
+      "phone_label": "Statewide line to your Area Agency on Aging and Disability"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+      "phone_source_url": "https://www.tn.gov/disability-and-aging/resource-directory/aaad.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+        "title": "Tennessee DDA: district long-term care ombudsman",
+        "reviewed_on": "2026-11-04",
+        "scope": "District names, host agencies and counties served; page text."
+      },
+      {
+        "url": "https://www.tn.gov/disability-and-aging/resource-directory/aaad.html",
+        "title": "Tennessee DDA: Area Agencies on Aging and Disability",
+        "reviewed_on": "2026-11-04",
+        "scope": "Statewide routing line 866-836-6678; search excerpt."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.acl.gov/contact",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "aging_agency"
- },
- {
-  "program_id": "tn-ombudsman",
-  "name": "Tennessee long-term-care ombudsman",
-  "official_url": "https://theconsumervoice.org/get_help",
-  "organization": "National Long-Term Care Ombudsman Resource Center",
-  "service_area": [
-   "All Tennessee counties"
-  ],
-  "state": "TN",
-  "needs_supported": [
-   "resident_rights",
-   "general_navigation"
-  ],
-  "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-  "next_step": "Use the locator to find the Tennessee program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
-  "constraints": [
-   "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "tn-ombudsman-d2",
+    "name": "District 2 long-term care ombudsman (East Tennessee)",
+    "organization": "East Tennessee Human Resource Agency (Area Agency on Aging and Disability)",
+    "official_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+    "state": "TN",
+    "service_area": [
+      "Anderson",
+      "Blount",
+      "Campbell",
+      "Claiborne",
+      "Cocke",
+      "Grainger",
+      "Hamblen",
+      "Jefferson",
+      "Knox",
+      "Loudon",
+      "Monroe",
+      "Morgan",
+      "Roane",
+      "Scott",
+      "Sevier",
+      "Union"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The district long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted care living facilities and residential homes for the aged.",
+    "next_step": "Call the district ombudsman office. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "865-691-2551 ext. 4223",
+      "phone_label": "District ombudsman office"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+      "phone_source_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+        "title": "Tennessee DDA: district long-term care ombudsman",
+        "reviewed_on": "2026-11-04",
+        "scope": "District office phones and counties served; full page text."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "tn-aging-d3",
+    "name": "Southeast Tennessee Area Agency on Aging and Disability",
+    "organization": "Southeast Tennessee Area Agency on Aging and Disability",
+    "official_url": "https://www.tn.gov/disability-and-aging/resource-directory/aaad.html",
+    "state": "TN",
+    "service_area": [
+      "Bledsoe",
+      "Bradley",
+      "Grundy",
+      "Hamilton",
+      "McMinn",
+      "Marion",
+      "Meigs",
+      "Polk",
+      "Rhea",
+      "Sequatchie"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging and Disability for this county (District 3, Southeast Tennessee): the Aging and Disability Resource Center for information and assistance, OPTIONS for Community Living, meals, caregiver support and screening for long-term services.",
+    "next_step": "Call 866-836-6678 from anywhere in Tennessee; the line connects you to this county’s Area Agency on Aging and Disability. Ask for information and assistance or a screening. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program."
+    ],
+    "public_contact": {
+      "phone": "866-836-6678",
+      "phone_label": "Statewide line to your Area Agency on Aging and Disability"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+      "phone_source_url": "https://www.tn.gov/disability-and-aging/resource-directory/aaad.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+        "title": "Tennessee DDA: district long-term care ombudsman",
+        "reviewed_on": "2026-11-04",
+        "scope": "District names, host agencies and counties served; page text."
+      },
+      {
+        "url": "https://www.tn.gov/disability-and-aging/resource-directory/aaad.html",
+        "title": "Tennessee DDA: Area Agencies on Aging and Disability",
+        "reviewed_on": "2026-11-04",
+        "scope": "Statewide routing line 866-836-6678; search excerpt."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
+  {
+    "program_id": "tn-ombudsman-d3",
+    "name": "District 3 long-term care ombudsman (Southeast Tennessee)",
+    "organization": "Southeast Tennessee Area Agency on Aging and Disability",
+    "official_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+    "state": "TN",
+    "service_area": [
+      "Bledsoe",
+      "Bradley",
+      "Grundy",
+      "Hamilton",
+      "McMinn",
+      "Marion",
+      "Meigs",
+      "Polk",
+      "Rhea",
+      "Sequatchie"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The district long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted care living facilities and residential homes for the aged.",
+    "next_step": "Call the district ombudsman office. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "423-591-7719",
+      "phone_label": "District ombudsman office"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+      "phone_source_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+        "title": "Tennessee DDA: district long-term care ombudsman",
+        "reviewed_on": "2026-11-04",
+        "scope": "District office phones and counties served; full page text."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "ombudsman"
- }
+  {
+    "program_id": "tn-aging-d4",
+    "name": "Upper Cumberland Area Agency on Aging and Disability",
+    "organization": "Upper Cumberland Area Agency on Aging and Disability",
+    "official_url": "https://www.tn.gov/disability-and-aging/resource-directory/aaad.html",
+    "state": "TN",
+    "service_area": [
+      "Cannon",
+      "Clay",
+      "Cumberland",
+      "DeKalb",
+      "Fentress",
+      "Jackson",
+      "Macon",
+      "Overton",
+      "Pickett",
+      "Putnam",
+      "Smith",
+      "Van Buren",
+      "Warren",
+      "White"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging and Disability for this county (District 4, Upper Cumberland): the Aging and Disability Resource Center for information and assistance, OPTIONS for Community Living, meals, caregiver support and screening for long-term services.",
+    "next_step": "Call 866-836-6678 from anywhere in Tennessee; the line connects you to this county’s Area Agency on Aging and Disability. Ask for information and assistance or a screening. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program."
+    ],
+    "public_contact": {
+      "phone": "866-836-6678",
+      "phone_label": "Statewide line to your Area Agency on Aging and Disability"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+      "phone_source_url": "https://www.tn.gov/disability-and-aging/resource-directory/aaad.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+        "title": "Tennessee DDA: district long-term care ombudsman",
+        "reviewed_on": "2026-11-04",
+        "scope": "District names, host agencies and counties served; page text."
+      },
+      {
+        "url": "https://www.tn.gov/disability-and-aging/resource-directory/aaad.html",
+        "title": "Tennessee DDA: Area Agencies on Aging and Disability",
+        "reviewed_on": "2026-11-04",
+        "scope": "Statewide routing line 866-836-6678; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "tn-ombudsman-d4",
+    "name": "District 4 long-term care ombudsman (Upper Cumberland)",
+    "organization": "Upper Cumberland Area Agency on Aging and Disability",
+    "official_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+    "state": "TN",
+    "service_area": [
+      "Cannon",
+      "Clay",
+      "Cumberland",
+      "DeKalb",
+      "Fentress",
+      "Jackson",
+      "Macon",
+      "Overton",
+      "Pickett",
+      "Putnam",
+      "Smith",
+      "Van Buren",
+      "Warren",
+      "White"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The district long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted care living facilities and residential homes for the aged.",
+    "next_step": "Call the district ombudsman office. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "931-476-4161",
+      "phone_label": "District ombudsman office"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+      "phone_source_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+        "title": "Tennessee DDA: district long-term care ombudsman",
+        "reviewed_on": "2026-11-04",
+        "scope": "District office phones and counties served; full page text."
+      }
+    ]
+  },
+  {
+    "program_id": "tn-aging-d5",
+    "name": "Greater Nashville Area Agency on Aging and Disability",
+    "organization": "Greater Nashville Area Agency on Aging and Disability",
+    "official_url": "https://www.tn.gov/disability-and-aging/resource-directory/aaad.html",
+    "state": "TN",
+    "service_area": [
+      "Cheatham",
+      "Davidson",
+      "Dickson",
+      "Houston",
+      "Humphreys",
+      "Montgomery",
+      "Robertson",
+      "Rutherford",
+      "Stewart",
+      "Sumner",
+      "Trousdale",
+      "Williamson",
+      "Wilson"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging and Disability for this county (District 5, Greater Nashville): the Aging and Disability Resource Center for information and assistance, OPTIONS for Community Living, meals, caregiver support and screening for long-term services.",
+    "next_step": "Call 866-836-6678 from anywhere in Tennessee; the line connects you to this county’s Area Agency on Aging and Disability. Ask for information and assistance or a screening. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program."
+    ],
+    "public_contact": {
+      "phone": "866-836-6678",
+      "phone_label": "Statewide line to your Area Agency on Aging and Disability"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+      "phone_source_url": "https://www.tn.gov/disability-and-aging/resource-directory/aaad.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+        "title": "Tennessee DDA: district long-term care ombudsman",
+        "reviewed_on": "2026-11-04",
+        "scope": "District names, host agencies and counties served; page text."
+      },
+      {
+        "url": "https://www.tn.gov/disability-and-aging/resource-directory/aaad.html",
+        "title": "Tennessee DDA: Area Agencies on Aging and Disability",
+        "reviewed_on": "2026-11-04",
+        "scope": "Statewide routing line 866-836-6678; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "tn-ombudsman-d5",
+    "name": "District 5 long-term care ombudsman (Greater Nashville)",
+    "organization": "Greater Nashville Area Agency on Aging and Disability",
+    "official_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+    "state": "TN",
+    "service_area": [
+      "Cheatham",
+      "Davidson",
+      "Dickson",
+      "Houston",
+      "Humphreys",
+      "Montgomery",
+      "Robertson",
+      "Rutherford",
+      "Stewart",
+      "Sumner",
+      "Trousdale",
+      "Williamson",
+      "Wilson"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The district long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted care living facilities and residential homes for the aged.",
+    "next_step": "Call the district ombudsman office. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "615-840-9311",
+      "phone_label": "District ombudsman office"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+      "phone_source_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+        "title": "Tennessee DDA: district long-term care ombudsman",
+        "reviewed_on": "2026-11-04",
+        "scope": "District office phones and counties served; full page text."
+      }
+    ]
+  },
+  {
+    "program_id": "tn-aging-d6",
+    "name": "South Central Area Agency on Aging and Disability",
+    "organization": "South Central Area Agency on Aging and Disability",
+    "official_url": "https://www.tn.gov/disability-and-aging/resource-directory/aaad.html",
+    "state": "TN",
+    "service_area": [
+      "Bedford",
+      "Coffee",
+      "Franklin",
+      "Giles",
+      "Hickman",
+      "Lawrence",
+      "Lewis",
+      "Lincoln",
+      "Marshall",
+      "Maury",
+      "Moore",
+      "Perry",
+      "Wayne"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging and Disability for this county (District 6, South Central): the Aging and Disability Resource Center for information and assistance, OPTIONS for Community Living, meals, caregiver support and screening for long-term services.",
+    "next_step": "Call 866-836-6678 from anywhere in Tennessee; the line connects you to this county’s Area Agency on Aging and Disability. Ask for information and assistance or a screening. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program."
+    ],
+    "public_contact": {
+      "phone": "866-836-6678",
+      "phone_label": "Statewide line to your Area Agency on Aging and Disability"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+      "phone_source_url": "https://www.tn.gov/disability-and-aging/resource-directory/aaad.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+        "title": "Tennessee DDA: district long-term care ombudsman",
+        "reviewed_on": "2026-11-04",
+        "scope": "District names, host agencies and counties served; page text."
+      },
+      {
+        "url": "https://www.tn.gov/disability-and-aging/resource-directory/aaad.html",
+        "title": "Tennessee DDA: Area Agencies on Aging and Disability",
+        "reviewed_on": "2026-11-04",
+        "scope": "Statewide routing line 866-836-6678; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "tn-ombudsman-d6",
+    "name": "District 6 long-term care ombudsman (South Central)",
+    "organization": "South Central Area Agency on Aging and Disability",
+    "official_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+    "state": "TN",
+    "service_area": [
+      "Bedford",
+      "Coffee",
+      "Franklin",
+      "Giles",
+      "Hickman",
+      "Lawrence",
+      "Lewis",
+      "Lincoln",
+      "Marshall",
+      "Maury",
+      "Moore",
+      "Perry",
+      "Wayne"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The district long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted care living facilities and residential homes for the aged.",
+    "next_step": "Call the district ombudsman office. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "931-379-2926",
+      "phone_label": "District ombudsman office"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+      "phone_source_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+        "title": "Tennessee DDA: district long-term care ombudsman",
+        "reviewed_on": "2026-11-04",
+        "scope": "District office phones and counties served; full page text."
+      }
+    ]
+  },
+  {
+    "program_id": "tn-aging-d7",
+    "name": "Northwest Area Agency on Aging and Disability",
+    "organization": "Northwest Area Agency on Aging and Disability",
+    "official_url": "https://www.tn.gov/disability-and-aging/resource-directory/aaad.html",
+    "state": "TN",
+    "service_area": [
+      "Benton",
+      "Carroll",
+      "Crockett",
+      "Dyer",
+      "Gibson",
+      "Henry",
+      "Lake",
+      "Obion",
+      "Weakley"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging and Disability for this county (District 7, Northwest): the Aging and Disability Resource Center for information and assistance, OPTIONS for Community Living, meals, caregiver support and screening for long-term services.",
+    "next_step": "Call 866-836-6678 from anywhere in Tennessee; the line connects you to this county’s Area Agency on Aging and Disability. Ask for information and assistance or a screening. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program."
+    ],
+    "public_contact": {
+      "phone": "866-836-6678",
+      "phone_label": "Statewide line to your Area Agency on Aging and Disability"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+      "phone_source_url": "https://www.tn.gov/disability-and-aging/resource-directory/aaad.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+        "title": "Tennessee DDA: district long-term care ombudsman",
+        "reviewed_on": "2026-11-04",
+        "scope": "District names, host agencies and counties served; page text."
+      },
+      {
+        "url": "https://www.tn.gov/disability-and-aging/resource-directory/aaad.html",
+        "title": "Tennessee DDA: Area Agencies on Aging and Disability",
+        "reviewed_on": "2026-11-04",
+        "scope": "Statewide routing line 866-836-6678; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "tn-ombudsman-d7",
+    "name": "District 7 long-term care ombudsman (Northwest)",
+    "organization": "Northwest Area Agency on Aging and Disability",
+    "official_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+    "state": "TN",
+    "service_area": [
+      "Benton",
+      "Carroll",
+      "Crockett",
+      "Dyer",
+      "Gibson",
+      "Henry",
+      "Lake",
+      "Obion",
+      "Weakley"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The district long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted care living facilities and residential homes for the aged.",
+    "next_step": "Call the district ombudsman office. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "731-514-3983",
+      "phone_label": "District ombudsman office"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+      "phone_source_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+        "title": "Tennessee DDA: district long-term care ombudsman",
+        "reviewed_on": "2026-11-04",
+        "scope": "District office phones and counties served; full page text."
+      }
+    ]
+  },
+  {
+    "program_id": "tn-aging-d8",
+    "name": "Southwest Tennessee Area Agency on Aging and Disability",
+    "organization": "Southwest Tennessee Area Agency on Aging and Disability",
+    "official_url": "https://www.tn.gov/disability-and-aging/resource-directory/aaad.html",
+    "state": "TN",
+    "service_area": [
+      "Chester",
+      "Decatur",
+      "Hardeman",
+      "Hardin",
+      "Haywood",
+      "Henderson",
+      "McNairy",
+      "Madison"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging and Disability for this county (District 8, Southwest): the Aging and Disability Resource Center for information and assistance, OPTIONS for Community Living, meals, caregiver support and screening for long-term services.",
+    "next_step": "Call 866-836-6678 from anywhere in Tennessee; the line connects you to this county’s Area Agency on Aging and Disability. Ask for information and assistance or a screening. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program."
+    ],
+    "public_contact": {
+      "phone": "866-836-6678",
+      "phone_label": "Statewide line to your Area Agency on Aging and Disability"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+      "phone_source_url": "https://www.tn.gov/disability-and-aging/resource-directory/aaad.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+        "title": "Tennessee DDA: district long-term care ombudsman",
+        "reviewed_on": "2026-11-04",
+        "scope": "District names, host agencies and counties served; page text."
+      },
+      {
+        "url": "https://www.tn.gov/disability-and-aging/resource-directory/aaad.html",
+        "title": "Tennessee DDA: Area Agencies on Aging and Disability",
+        "reviewed_on": "2026-11-04",
+        "scope": "Statewide routing line 866-836-6678; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "tn-ombudsman-d8",
+    "name": "District 8 long-term care ombudsman (Southwest)",
+    "organization": "Southwest Tennessee Area Agency on Aging and Disability",
+    "official_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+    "state": "TN",
+    "service_area": [
+      "Chester",
+      "Decatur",
+      "Hardeman",
+      "Hardin",
+      "Haywood",
+      "Henderson",
+      "McNairy",
+      "Madison"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The district long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted care living facilities and residential homes for the aged.",
+    "next_step": "Call the district ombudsman office. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "731-668-6411",
+      "phone_label": "District ombudsman office"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+      "phone_source_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+        "title": "Tennessee DDA: district long-term care ombudsman",
+        "reviewed_on": "2026-11-04",
+        "scope": "District office phones and counties served; full page text."
+      }
+    ]
+  },
+  {
+    "program_id": "tn-aging-d9",
+    "name": "Aging Commission of the Mid-South (Memphis Delta Area Agency on Aging and Disability)",
+    "organization": "Aging Commission of the Mid-South (Memphis Delta Area Agency on Aging and Disability)",
+    "official_url": "https://www.tn.gov/disability-and-aging/resource-directory/aaad.html",
+    "state": "TN",
+    "service_area": [
+      "Fayette",
+      "Lauderdale",
+      "Shelby",
+      "Tipton"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging and Disability for this county (District 9, Memphis Delta): the Aging and Disability Resource Center for information and assistance, OPTIONS for Community Living, meals, caregiver support and screening for long-term services.",
+    "next_step": "Call 866-836-6678 from anywhere in Tennessee; the line connects you to this county’s Area Agency on Aging and Disability. Ask for information and assistance or a screening. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program."
+    ],
+    "public_contact": {
+      "phone": "866-836-6678",
+      "phone_label": "Statewide line to your Area Agency on Aging and Disability"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+      "phone_source_url": "https://www.tn.gov/disability-and-aging/resource-directory/aaad.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+        "title": "Tennessee DDA: district long-term care ombudsman",
+        "reviewed_on": "2026-11-04",
+        "scope": "District names, host agencies and counties served; page text."
+      },
+      {
+        "url": "https://www.tn.gov/disability-and-aging/resource-directory/aaad.html",
+        "title": "Tennessee DDA: Area Agencies on Aging and Disability",
+        "reviewed_on": "2026-11-04",
+        "scope": "Statewide routing line 866-836-6678; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "tn-ombudsman-d9",
+    "name": "District 9 long-term care ombudsman (Memphis Delta)",
+    "organization": "Metropolitan Inter-Faith Association (MIFA)",
+    "official_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+    "state": "TN",
+    "service_area": [
+      "Fayette",
+      "Lauderdale",
+      "Shelby",
+      "Tipton"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The district long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted care living facilities and residential homes for the aged.",
+    "next_step": "Call the statewide ombudsman line 877-236-0013 and ask for the Memphis Delta district ombudsman. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "877-236-0013",
+      "phone_label": "Statewide ombudsman line (no district office number listed)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+      "phone_source_url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/long-term-care-ombudsman/district-long-term-care-ombudsman.html",
+        "title": "Tennessee DDA: district long-term care ombudsman",
+        "reviewed_on": "2026-11-04",
+        "scope": "District office phones and counties served; full page text."
+      }
+    ]
+  }
 ]
