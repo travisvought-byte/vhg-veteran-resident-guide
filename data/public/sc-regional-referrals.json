@@ -1,80 +1,467 @@
 [
- {
-  "program_id": "sc-aging",
-  "name": "Local aging help in South Carolina (Eldercare Locator)",
-  "official_url": "https://eldercare.acl.gov/home",
-  "organization": "U.S. Administration for Community Living",
-  "service_area": [
-   "All South Carolina counties"
-  ],
-  "state": "SC",
-  "needs_supported": [
-   "general_navigation",
-   "help_at_home"
-  ],
-  "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-  "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
-  "constraints": [
-   "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "sc-aging-r1",
+    "name": "Appalachia Area Agency on Aging",
+    "organization": "Appalachia Area Agency on Aging / Aging and Disability Resource Center (Region 1)",
+    "official_url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf",
+    "state": "SC",
+    "service_area": [
+      "Anderson",
+      "Cherokee",
+      "Greenville",
+      "Oconee",
+      "Pickens",
+      "Spartanburg"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging and Aging and Disability Resource Center for this county (Region 1, Appalachia): information and referral, home-delivered meals, transportation, in-home care, family caregiver support and the regional long-term care ombudsman.",
+    "next_step": "Call and describe what is hard right now. Ask for information and referral or an assessment. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free 800-434-4036 from outside Greenville County."
+    ],
+    "public_contact": {
+      "phone": "864-242-9733",
+      "phone_label": "Region 1 Area Agency on Aging"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf",
+      "phone_source_url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf",
+        "title": "SC Department on Aging: Senior P.R.E.P. brochure (2025)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional AAA/ADRC phones, toll-free numbers and counties served; full document text."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "sc-aging-r2",
+    "name": "Upper Savannah Area Agency on Aging",
+    "organization": "Upper Savannah Area Agency on Aging / Aging and Disability Resource Center (Region 2)",
+    "official_url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf",
+    "state": "SC",
+    "service_area": [
+      "Abbeville",
+      "Edgefield",
+      "Greenwood",
+      "Laurens",
+      "McCormick",
+      "Saluda"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging and Aging and Disability Resource Center for this county (Region 2, Upper Savannah): information and referral, home-delivered meals, transportation, in-home care, family caregiver support and the regional long-term care ombudsman.",
+    "next_step": "Call and describe what is hard right now. Ask for information and referral or an assessment. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free 800-922-7729 from outside Greenwood County."
+    ],
+    "public_contact": {
+      "phone": "864-941-8050",
+      "phone_label": "Region 2 Area Agency on Aging"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf",
+      "phone_source_url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf",
+        "title": "SC Department on Aging: Senior P.R.E.P. brochure (2025)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional AAA/ADRC phones, toll-free numbers and counties served; full document text."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.acl.gov/contact"
+  {
+    "program_id": "sc-aging-r3",
+    "name": "Catawba Area Agency on Aging",
+    "organization": "Catawba Area Agency on Aging / Aging and Disability Resource Center (Region 3)",
+    "official_url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf",
+    "state": "SC",
+    "service_area": [
+      "Chester",
+      "Lancaster",
+      "Union",
+      "York"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging and Aging and Disability Resource Center for this county (Region 3, Catawba): information and referral, home-delivered meals, transportation, in-home care, family caregiver support and the regional long-term care ombudsman.",
+    "next_step": "Call and describe what is hard right now. Ask for information and referral or an assessment. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free 800-662-8330 from outside York County."
+    ],
+    "public_contact": {
+      "phone": "803-329-9670",
+      "phone_label": "Region 3 Area Agency on Aging"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf",
+      "phone_source_url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf",
+        "title": "SC Department on Aging: Senior P.R.E.P. brochure (2025)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional AAA/ADRC phones, toll-free numbers and counties served; full document text."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.acl.gov/contact",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "aging_agency"
- },
- {
-  "program_id": "sc-ombudsman",
-  "name": "South Carolina long-term-care ombudsman",
-  "official_url": "https://theconsumervoice.org/get_help",
-  "organization": "National Long-Term Care Ombudsman Resource Center",
-  "service_area": [
-   "All South Carolina counties"
-  ],
-  "state": "SC",
-  "needs_supported": [
-   "resident_rights",
-   "general_navigation"
-  ],
-  "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-  "next_step": "Use the locator to find the South Carolina program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
-  "constraints": [
-   "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "sc-aging-r4",
+    "name": "Central Midlands Area Agency on Aging",
+    "organization": "Central Midlands Area Agency on Aging / Aging and Disability Resource Center (Region 4)",
+    "official_url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf",
+    "state": "SC",
+    "service_area": [
+      "Fairfield",
+      "Lexington",
+      "Newberry",
+      "Richland"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging and Aging and Disability Resource Center for this county (Region 4, Central Midlands): information and referral, home-delivered meals, transportation, in-home care, family caregiver support and the regional long-term care ombudsman.",
+    "next_step": "Call and describe what is hard right now. Ask for information and referral or an assessment. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free 866-394-4166 from outside Richland County."
+    ],
+    "public_contact": {
+      "phone": "803-376-5390",
+      "phone_label": "Region 4 Area Agency on Aging"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf",
+      "phone_source_url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf",
+        "title": "SC Department on Aging: Senior P.R.E.P. brochure (2025)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional AAA/ADRC phones, toll-free numbers and counties served; full document text."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "sc-aging-r5",
+    "name": "Lower Savannah Area Agency on Aging",
+    "organization": "Lower Savannah Area Agency on Aging / Aging and Disability Resource Center (Region 5)",
+    "official_url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf",
+    "state": "SC",
+    "service_area": [
+      "Aiken",
+      "Allendale",
+      "Bamberg",
+      "Barnwell",
+      "Calhoun",
+      "Orangeburg"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging and Aging and Disability Resource Center for this county (Region 5, Lower Savannah): information and referral, home-delivered meals, transportation, in-home care, family caregiver support and the regional long-term care ombudsman.",
+    "next_step": "Call and describe what is hard right now. Ask for information and referral or an assessment. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free 866-845-1550 from outside Aiken County."
+    ],
+    "public_contact": {
+      "phone": "803-649-7981",
+      "phone_label": "Region 5 Area Agency on Aging"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf",
+      "phone_source_url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf",
+        "title": "SC Department on Aging: Senior P.R.E.P. brochure (2025)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional AAA/ADRC phones, toll-free numbers and counties served; full document text."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
+  {
+    "program_id": "sc-aging-r6",
+    "name": "Santee-Lynches Area Agency on Aging",
+    "organization": "Santee-Lynches Area Agency on Aging / Aging and Disability Resource Center (Region 6)",
+    "official_url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf",
+    "state": "SC",
+    "service_area": [
+      "Clarendon",
+      "Kershaw",
+      "Lee",
+      "Sumter"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging and Aging and Disability Resource Center for this county (Region 6, Santee-Lynches): information and referral, home-delivered meals, transportation, in-home care, family caregiver support and the regional long-term care ombudsman.",
+    "next_step": "Call and describe what is hard right now. Ask for information and referral or an assessment. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program."
+    ],
+    "public_contact": {
+      "phone": "803-775-7381",
+      "phone_label": "Region 6 Area Agency on Aging"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf",
+      "phone_source_url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf",
+        "title": "SC Department on Aging: Senior P.R.E.P. brochure (2025)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional AAA/ADRC phones, toll-free numbers and counties served; full document text."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "ombudsman"
- }
+  {
+    "program_id": "sc-aging-r7",
+    "name": "Pee Dee Area Agency on Aging",
+    "organization": "Pee Dee Area Agency on Aging / Aging and Disability Resource Center (Region 7)",
+    "official_url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf",
+    "state": "SC",
+    "service_area": [
+      "Chesterfield",
+      "Darlington",
+      "Dillon",
+      "Florence",
+      "Marion",
+      "Marlboro"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging and Aging and Disability Resource Center for this county (Region 7, Pee Dee): information and referral, home-delivered meals, transportation, in-home care, family caregiver support and the regional long-term care ombudsman.",
+    "next_step": "Call and describe what is hard right now. Ask for information and referral or an assessment. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free 866-505-3331 from outside Darlington County."
+    ],
+    "public_contact": {
+      "phone": "843-383-8632",
+      "phone_label": "Region 7 Area Agency on Aging"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf",
+      "phone_source_url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf",
+        "title": "SC Department on Aging: Senior P.R.E.P. brochure (2025)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional AAA/ADRC phones, toll-free numbers and counties served; full document text."
+      }
+    ]
+  },
+  {
+    "program_id": "sc-aging-r8",
+    "name": "Waccamaw Area Agency on Aging",
+    "organization": "Waccamaw Area Agency on Aging / Aging and Disability Resource Center (Region 8)",
+    "official_url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf",
+    "state": "SC",
+    "service_area": [
+      "Georgetown",
+      "Horry",
+      "Williamsburg"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging and Aging and Disability Resource Center for this county (Region 8, Waccamaw): information and referral, home-delivered meals, transportation, in-home care, family caregiver support and the regional long-term care ombudsman.",
+    "next_step": "Call and describe what is hard right now. Ask for information and referral or an assessment. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free 888-302-7550 from outside Georgetown County."
+    ],
+    "public_contact": {
+      "phone": "843-546-8502",
+      "phone_label": "Region 8 Area Agency on Aging"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf",
+      "phone_source_url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf",
+        "title": "SC Department on Aging: Senior P.R.E.P. brochure (2025)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional AAA/ADRC phones, toll-free numbers and counties served; full document text."
+      }
+    ]
+  },
+  {
+    "program_id": "sc-aging-r9",
+    "name": "Trident Area Agency on Aging",
+    "organization": "Trident Area Agency on Aging / Aging and Disability Resource Center (Region 9)",
+    "official_url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf",
+    "state": "SC",
+    "service_area": [
+      "Berkeley",
+      "Charleston",
+      "Dorchester"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging and Aging and Disability Resource Center for this county (Region 9, Trident): information and referral, home-delivered meals, transportation, in-home care, family caregiver support and the regional long-term care ombudsman.",
+    "next_step": "Call and describe what is hard right now. Ask for information and referral or an assessment. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free 800-894-0415 from outside Charleston County."
+    ],
+    "public_contact": {
+      "phone": "843-554-2275",
+      "phone_label": "Region 9 Area Agency on Aging"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf",
+      "phone_source_url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf",
+        "title": "SC Department on Aging: Senior P.R.E.P. brochure (2025)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional AAA/ADRC phones, toll-free numbers and counties served; full document text."
+      }
+    ]
+  },
+  {
+    "program_id": "sc-aging-r10",
+    "name": "Lowcountry Area Agency on Aging",
+    "organization": "Lowcountry Area Agency on Aging / Aging and Disability Resource Center (Region 10)",
+    "official_url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf",
+    "state": "SC",
+    "service_area": [
+      "Beaufort",
+      "Colleton",
+      "Hampton",
+      "Jasper"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging and Aging and Disability Resource Center for this county (Region 10, Lowcountry): information and referral, home-delivered meals, transportation, in-home care, family caregiver support and the regional long-term care ombudsman.",
+    "next_step": "Call and describe what is hard right now. Ask for information and referral or an assessment. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free 877-846-8148 from outside Jasper County."
+    ],
+    "public_contact": {
+      "phone": "843-473-3991",
+      "phone_label": "Region 10 Area Agency on Aging"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf",
+      "phone_source_url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf",
+        "title": "SC Department on Aging: Senior P.R.E.P. brochure (2025)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Regional AAA/ADRC phones, toll-free numbers and counties served; full document text."
+      }
+    ]
+  }
 ]

@@ -1,190 +1,210 @@
 {
- "ops": [
-  {
-   "op": "clear_data"
-  },
-  {
-   "op": "replace",
-   "old": "Ohio",
-   "new": "South Carolina"
-  },
-  {
-   "op": "replace",
-   "old": "All 88",
-   "new": "All"
-  },
-  {
-   "op": "replace",
-   "old": "all 88",
-   "new": "all"
-  },
-  {
-   "op": "replace",
-   "old": "<option value=\"OH\">South Carolina</option>",
-   "new": "<option value=\"OH\">Ohio</option>"
-  },
-  {
-   "op": "replace",
-   "old": "const STATE='OH';",
-   "new": "const STATE='SC';"
-  },
-  {
-   "op": "replace",
-   "old": "county veterans office",
-   "new": "state veterans agency"
-  },
-  {
-   "op": "replace",
-   "old": "county office",
-   "new": "state veterans agency"
-  },
-  {
-   "op": "replace",
-   "old": "Statewide edition · Updated October 8, 2026",
-   "new": "South Carolina starter edition · Updated November 2, 2026"
-  },
-  {
-   "op": "replace",
-   "old": "South Carolina’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
-   "new": "Ask the local aging agency or state Medicaid agency about waiver assessment and written approval; VA and other funders have their own processes."
-  },
-  {
-   "op": "replace",
-   "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
-   "new": "https://eldercare.acl.gov/home"
-  },
-  {
-   "op": "replace",
-   "old": "South Carolina home modification authorization and provider rules",
-   "new": "Find local aging and disability help (Eldercare Locator)"
-  },
-  {
-   "op": "replace",
-   "old": "href=\"share.html\"",
-   "new": "href=\"share-sc.html\""
-  },
-  {
-   "op": "replace",
-   "old": "href=\"prototype-data.json\"",
-   "new": "href=\"data/public/south-carolina-resources.json\""
-  },
-  {
-   "op": "replace",
-   "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
-   "new": "href=\"data/public/south-carolina-county-veterans-offices.json\""
-  },
-  {
-   "op": "declare",
-   "name": "priority",
-   "value": [
-    "sc-claims",
-    "sc-aging",
-    "sc-ship",
-    "sc-ombudsman",
-    "r02-aid-attendance-housebound",
-    "r02-va-pension",
-    "r02-survivors-pension"
-   ]
-  },
-  {
-   "op": "declare",
-   "name": "routes",
-   "value": {
-    "benefits": [
-     "sc-claims",
-     "sc-ship",
-     "r02-va-pension",
-     "r02-aid-attendance-housebound",
-     "r02-disability-increase",
-     "r02-pension-medicaid-rule",
-     "r02-survivors-pension",
-     "r02-dic",
-     "va-accredited-help"
-    ],
-    "survivors": [
-     "sc-claims",
-     "r02-survivors-pension",
-     "r02-dic",
-     "r02-aid-attendance-housebound",
-     "r02-va-burial",
-     "va-accredited-help",
-     "nara-discharge-records"
-    ],
-    "care": [
-     "sc-aging",
-     "r02-va-health-enrollment",
-     "va-location-finder",
-     "r02-va-cnh",
-     "r02-va-clc",
-     "r02-general-caregiver",
-     "r02-family-caregiver",
-     "r02-hospice",
-     "r02-palliative"
-    ],
-    "rights": [
-     "sc-ombudsman",
-     "sc-aging"
-    ],
-    "local": [
-     "sc-aging",
-     "sc-claims"
-    ],
-    "housing": [
-     "va-housing-help",
-     "sc-ssvf-18-sc-069",
-     "sc-ssvf-20-sc-402",
-     "sc-ssvf-25-sc-134",
-     "va-location-finder",
-     "va-accredited-help",
-     "nara-discharge-records"
-    ]
-   }
-  },
-  {
-   "op": "declare",
-   "name": "seniorTopics",
-   "value": {
-    "daily": [
-     "sc-aging"
-    ],
-    "accessibility": [
-     "sc-aging"
-    ],
-    "vision": [
-     "sc-aging"
-    ],
-    "hearing": [
-     "sc-aging"
-    ],
-    "memory": [
-     "alz-dementia-support",
-     "sc-aging"
-    ],
-    "costs": [
-     "sc-ship",
-     "sc-aging"
-    ],
-    "rights": [
-     "sc-ombudsman",
-     "sc-aging"
-    ]
-   }
-  },
-  {
-   "op": "line",
-   "prefix": "routes.accessibility=",
-   "new": "routes.accessibility=['va-hisa','va-sah','va-sha','va-tra','sc-aging','va-location-finder'];"
-  },
-  {
-   "op": "line",
-   "prefix": "routes.seniors=",
-   "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
-  },
-  {
-   "op": "adapter"
-  },
-  {
-   "op": "embed_data"
-  }
- ]
+  "ops": [
+    {
+      "op": "clear_data"
+    },
+    {
+      "op": "replace",
+      "old": "Ohio",
+      "new": "South Carolina"
+    },
+    {
+      "op": "replace",
+      "old": "All 88",
+      "new": "All 46"
+    },
+    {
+      "op": "replace",
+      "old": "all 88",
+      "new": "all 46"
+    },
+    {
+      "op": "replace",
+      "old": "<option value=\"OH\">South Carolina</option>",
+      "new": "<option value=\"OH\">Ohio</option>"
+    },
+    {
+      "op": "replace",
+      "old": "const STATE='OH';",
+      "new": "const STATE='SC';"
+    },
+    {
+      "op": "replace",
+      "old": "Statewide edition · Updated October 8, 2026",
+      "new": "South Carolina edition · Updated November 4, 2026"
+    },
+    {
+      "op": "replace",
+      "old": "Most phones come from South Carolina AMVETS’ 2025–2026 directory.",
+      "new": "County office phones come from the South Carolina Department of Veterans’ Affairs county offices page. Confirm intake before traveling."
+    },
+    {
+      "op": "replace",
+      "old": "South Carolina’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
+      "new": "Ask the local aging agency or state Medicaid agency about waiver assessment and written approval; VA and other funders have their own processes."
+    },
+    {
+      "op": "replace",
+      "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
+      "new": "https://eldercare.acl.gov/home"
+    },
+    {
+      "op": "replace",
+      "old": "South Carolina home modification authorization and provider rules",
+      "new": "Find local aging and disability help (Eldercare Locator)"
+    },
+    {
+      "op": "replace",
+      "old": "href=\"share.html\"",
+      "new": "href=\"share-sc.html\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"prototype-data.json\"",
+      "new": "href=\"data/public/south-carolina-resources.json\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
+      "new": "href=\"data/public/south-carolina-county-veterans-offices.json\""
+    },
+    {
+      "op": "declare",
+      "name": "priority",
+      "value": [
+        "sc-claims",
+        "sc-doa",
+        "sc-ship",
+        "sc-ombudsman",
+        "sc-legal-scls",
+        "r02-aid-attendance-housebound",
+        "r02-va-pension",
+        "r02-survivors-pension",
+        "r02-va-health-enrollment",
+        "va-accredited-help"
+      ]
+    },
+    {
+      "op": "declare",
+      "name": "routes",
+      "value": {
+        "benefits": [
+          "sc-claims",
+          "sc-ship",
+          "r02-va-pension",
+          "r02-aid-attendance-housebound",
+          "r02-disability-increase",
+          "r02-pension-medicaid-rule",
+          "r02-survivors-pension",
+          "r02-dic",
+          "va-accredited-help",
+          "sc-doa"
+        ],
+        "survivors": [
+          "sc-claims",
+          "r02-survivors-pension",
+          "r02-dic",
+          "r02-aid-attendance-housebound",
+          "r02-va-burial",
+          "va-accredited-help",
+          "nara-discharge-records"
+        ],
+        "care": [
+          "r02-va-health-enrollment",
+          "va-location-finder",
+          "r02-va-cnh",
+          "r02-va-clc",
+          "r02-general-caregiver",
+          "r02-family-caregiver",
+          "r02-hospice",
+          "r02-palliative",
+          "sc-doa",
+          "sc-cil-able-columbia",
+          "sc-cil-able-greenville",
+          "sc-cil-accessability",
+          "sc-cil-walton",
+          "sc-vahealth-systems"
+        ],
+        "rights": [
+          "sc-ombudsman",
+          "sc-legal-scls"
+        ],
+        "local": [
+          "sc-claims",
+          "sc-doa",
+          "sc-cil-able-columbia",
+          "sc-cil-able-greenville",
+          "sc-cil-accessability",
+          "sc-cil-walton",
+          "sc-legal-scls",
+          "sc-vahealth-systems"
+        ],
+        "housing": [
+          "va-housing-help",
+          "sc-ssvf-18-sc-069",
+          "sc-ssvf-20-sc-402",
+          "sc-ssvf-25-sc-134",
+          "va-location-finder",
+          "va-accredited-help",
+          "nara-discharge-records",
+          "sc-legal-scls"
+        ]
+      }
+    },
+    {
+      "op": "declare",
+      "name": "seniorTopics",
+      "value": {
+        "daily": [
+          "sc-doa",
+          "sc-cil-able-columbia",
+          "sc-cil-able-greenville",
+          "sc-cil-accessability",
+          "sc-cil-walton"
+        ],
+        "accessibility": [
+          "sc-doa",
+          "sc-cil-able-columbia",
+          "sc-cil-able-greenville",
+          "sc-cil-accessability",
+          "sc-cil-walton"
+        ],
+        "vision": [
+          "sc-doa"
+        ],
+        "hearing": [
+          "sc-doa"
+        ],
+        "memory": [
+          "alz-dementia-support",
+          "sc-doa"
+        ],
+        "costs": [
+          "sc-ship",
+          "sc-doa",
+          "sc-legal-scls"
+        ],
+        "rights": [
+          "sc-ombudsman",
+          "sc-legal-scls"
+        ]
+      }
+    },
+    {
+      "op": "line",
+      "prefix": "routes.accessibility=",
+      "new": "routes.accessibility=['va-hisa','va-sah','va-sha','va-tra','sc-doa','sc-cil-able-columbia','sc-cil-able-greenville','sc-cil-accessability','sc-cil-walton','va-location-finder',...DATA.filter(x=>x.regional_role==='aging_agency').map(x=>x.program_id)];"
+    },
+    {
+      "op": "line",
+      "prefix": "routes.seniors=",
+      "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
+    },
+    {
+      "op": "adapter"
+    },
+    {
+      "op": "embed_data"
+    }
+  ]
 }

@@ -1,208 +1,651 @@
 [
- {
-  "program_id": "sc-claims",
-  "name": "South Carolina veterans: accredited claims help",
-  "official_url": "https://scdva.sc.gov/",
-  "organization": "South Carolina Department of Veterans’ Affairs",
-  "service_area": [
-   "All South Carolina counties"
-  ],
-  "state": "SC",
-  "needs_supported": [
-   "general_navigation",
-   "benefits_and_funding"
-  ],
-  "description": "Free help with VA claims, applications and appeals for veterans and families.",
-  "next_step": "Call the state veterans agency; ask for a benefits review and the office that serves your county.",
-  "constraints": [],
-  "public_contact": {
-   "phone": "803-734-0200"
+  {
+    "program_id": "sc-claims",
+    "name": "South Carolina veterans: accredited claims help",
+    "official_url": "https://scdva.sc.gov/",
+    "organization": "South Carolina Department of Veterans’ Affairs",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "SC",
+    "needs_supported": [
+      "general_navigation",
+      "benefits_and_funding"
+    ],
+    "description": "Free help with VA claims, applications and appeals for veterans and families.",
+    "next_step": "Choose your county for its County Veterans Affairs Office, or call SCDVA at 803-734-0200.",
+    "constraints": [],
+    "public_contact": {
+      "phone": "803-734-0200"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://scdva.sc.gov/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://scdva.sc.gov/",
+        "title": "Official published source",
+        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "sc-ship",
+    "name": "Medicare counseling (SHIP) for South Carolina",
+    "official_url": "https://www.shiphelp.org/",
+    "organization": "SHIP Technical Assistance Center",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "SC",
+    "needs_supported": [
+      "benefits_and_funding"
+    ],
+    "description": "Free, unbiased Medicare counseling from the State Health Insurance Assistance Program.",
+    "next_step": "Call or use the locator to reach the South Carolina SHIP and ask for a counseling appointment.",
+    "constraints": [],
+    "public_contact": {
+      "phone": "877-839-2675"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.shiphelp.org/?p=317"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.shiphelp.org/?p=317",
+        "title": "Official published source",
+        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_page_text",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://scdva.sc.gov/"
+  {
+    "program_id": "sc-ssvf-18-sc-069",
+    "name": "One-Eighty Place: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "One-Eighty Place",
+    "service_area": [
+      "Aiken",
+      "Allendale",
+      "Bamberg",
+      "Barnwell",
+      "Beaufort",
+      "Berkeley",
+      "Calhoun",
+      "Charleston",
+      "Chester",
+      "Colleton",
+      "Dorchester",
+      "Fairfield",
+      "Hampton",
+      "Jasper",
+      "Lancaster",
+      "Lexington",
+      "Newberry",
+      "Orangeburg",
+      "Richland",
+      "York"
+    ],
+    "state": "SC",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 18-SC-069): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 803-726-6348.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "843-212-8668",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 136",
+        "sheet": "Contacts",
+        "row": 136,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://scdva.sc.gov/",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ]
- },
- {
-  "program_id": "sc-ship",
-  "name": "Medicare counseling (SHIP) for South Carolina",
-  "official_url": "https://www.shiphelp.org/",
-  "organization": "SHIP Technical Assistance Center",
-  "service_area": [
-   "All South Carolina counties"
-  ],
-  "state": "SC",
-  "needs_supported": [
-   "benefits_and_funding"
-  ],
-  "description": "Free, unbiased Medicare counseling from the State Health Insurance Assistance Program.",
-  "next_step": "Call or use the locator to reach the South Carolina SHIP and ask for a counseling appointment.",
-  "constraints": [],
-  "public_contact": {
-   "phone": "877-839-2675"
+  {
+    "program_id": "sc-ssvf-20-sc-402",
+    "name": "Eastern Carolina Homelessness Organization, Inc.: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Eastern Carolina Homelessness Organization, Inc.",
+    "service_area": [
+      "Chesterfield",
+      "Clarendon",
+      "Darlington",
+      "Dillon",
+      "Florence",
+      "Georgetown",
+      "Horry",
+      "Lee",
+      "Marion",
+      "Marlboro",
+      "Sumter",
+      "Williamsburg"
+    ],
+    "state": "SC",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-SC-402): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 843-957-2038.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "843-213-1798",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 188",
+        "sheet": "Contacts",
+        "row": 188,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "sc-ssvf-25-sc-134",
+    "name": "Alston Wilkes Society: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Alston Wilkes Society",
+    "service_area": [
+      "Abbeville",
+      "Aiken",
+      "Allendale",
+      "Anderson",
+      "Bamberg",
+      "Barnwell",
+      "Beaufort",
+      "Berkeley",
+      "Calhoun",
+      "Charleston",
+      "Cherokee",
+      "Chester",
+      "Colleton",
+      "Dorchester",
+      "Edgefield",
+      "Fairfield",
+      "Greenville",
+      "Greenwood",
+      "Hampton",
+      "Jasper",
+      "Kershaw",
+      "Lancaster",
+      "Laurens",
+      "Lexington",
+      "McCormick",
+      "Newberry",
+      "Oconee",
+      "Orangeburg",
+      "Pickens",
+      "Richland",
+      "Saluda",
+      "Spartanburg",
+      "Union",
+      "York"
+    ],
+    "state": "SC",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 25-SC-134): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "803-995-8464",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 223",
+        "sheet": "Contacts",
+        "row": 223,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.shiphelp.org/?p=317"
+  {
+    "program_id": "sc-ombudsman",
+    "name": "South Carolina Long Term Care Ombudsman",
+    "organization": "Office of the State Long-Term Care Ombudsman, South Carolina Department on Aging",
+    "official_url": "https://www.aging.sc.gov/programs-initiatives/long-term-care-ombudsman-program",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "SC",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "description": "Advocacy for residents of nursing homes and assisted living (community residential care) facilities. Regional ombudsmen work out of the ten Area Agencies on Aging; the state line connects you to them.",
+    "next_step": "Call 800-868-9095 and give the facility name and county. You can also ask your Area Agency on Aging for the regional ombudsman. To report abuse of an adult living in the community, call 888-227-3487. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "800-868-9095",
+      "phone_label": "SCDOA Long Term Care Ombudsman (toll-free)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.aging.sc.gov/programs-initiatives/long-term-care-ombudsman-program"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.aging.sc.gov/programs-initiatives/long-term-care-ombudsman-program",
+        "title": "SC Department on Aging: Long Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-04",
+        "scope": "Ombudsman toll-free number; search excerpt."
+      },
+      {
+        "url": "https://dss.sc.gov/adult-protection/",
+        "title": "SCDSS: Adult Protection",
+        "reviewed_on": "2026-11-04",
+        "scope": "Abuse reporting line for community settings; search excerpt."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.shiphelp.org/?p=317",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ]
- },
- {
-  "program_id": "sc-ssvf-18-sc-069",
-  "name": "One-Eighty Place: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "One-Eighty Place",
-  "service_area": [
-   "All South Carolina counties"
-  ],
-  "state": "SC",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 18-SC-069): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Aiken County, Allendale County, Bamberg County, Barnwell County, Beaufort County, Berkeley County, Calhoun County, Charleston County, Chester County, Colleton County, Dorchester County, Fairfield County and 8 more.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 803-726-6348.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "843-212-8668",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "sc-doa",
+    "name": "South Carolina Department on Aging and GetCareSC",
+    "organization": "South Carolina Department on Aging",
+    "official_url": "https://aging.sc.gov/",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "SC",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "The state aging agency. Its toll-free line routes callers to the right regional Area Agency on Aging and Aging and Disability Resource Center for meals, transportation, in-home care, caregiver support and assessment. Military service is not required.",
+    "next_step": "Call 800-868-9095 from anywhere in South Carolina and give the county where help is needed. Choose a county above for the direct number of its Area Agency on Aging.",
+    "constraints": [
+      "Each program has its own eligibility and waitlist."
+    ],
+    "public_contact": {
+      "phone": "800-868-9095",
+      "phone_label": "SC Department on Aging (toll-free)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.sc.gov/sites/default/files/2025-05/2025%20Senior%20P.R.E.P%20Brochure.pdf",
+        "title": "SC Department on Aging: Senior P.R.E.P. brochure (2025)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Department on Aging toll-free number; full document text."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "sc-cil-able-columbia",
+    "name": "Able South Carolina (Columbia)",
+    "organization": "Able South Carolina",
+    "official_url": "https://www.able-sc.org/",
+    "service_area": [
+      "Calhoun",
+      "Chester",
+      "Fairfield",
+      "Kershaw",
+      "Lee",
+      "Lexington",
+      "Newberry",
+      "Orangeburg",
+      "Richland",
+      "Saluda",
+      "Sumter",
+      "York"
+    ],
+    "state": "SC",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility. ",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "803-779-5121",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/sc",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/sc"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/sc",
+        "title": "ILRU national directory of Centers for Independent Living (South Carolina)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "sc-cil-able-greenville",
+    "name": "Able South Carolina (Greenville)",
+    "organization": "Able South Carolina",
+    "official_url": "https://www.able-sc.org/",
+    "service_area": [
+      "Abbeville",
+      "Anderson",
+      "Cherokee",
+      "Greenville",
+      "Greenwood",
+      "Laurens",
+      "Oconee",
+      "Pickens",
+      "Spartanburg",
+      "Union"
+    ],
+    "state": "SC",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility. The ILRU listing for this Greenville office omits Greenville County itself; it is included here because the office is in Greenville.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "864-235-1421",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/sc",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/sc"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/sc",
+        "title": "ILRU national directory of Centers for Independent Living (South Carolina)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 136",
-    "sheet": "Contacts",
-    "row": 136,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "sc-ssvf-20-sc-402",
-  "name": "Eastern Carolina Homelessness Organization, Inc.: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Eastern Carolina Homelessness Organization, Inc.",
-  "service_area": [
-   "All South Carolina counties"
-  ],
-  "state": "SC",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-SC-402): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Chesterfield County, Clarendon County, Darlington County, Dillon County, Florence County, Georgetown County, Horry County, Lee County, Marion County, Marlboro County, Sumter County, Williamsburg County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 843-957-2038.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "843-213-1798",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "sc-cil-accessability",
+    "name": "AccessAbility (Charleston)",
+    "organization": "AccessAbility",
+    "official_url": "https://www.ilru.org/cil-directory/sc",
+    "service_area": [
+      "Berkeley",
+      "Charleston",
+      "Dorchester",
+      "Orangeburg",
+      "Williamsburg"
+    ],
+    "state": "SC",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility. ",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "843-225-5082",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/sc",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/sc"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/sc",
+        "title": "ILRU national directory of Centers for Independent Living (South Carolina)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "sc-cil-walton",
+    "name": "Walton Options (North Augusta)",
+    "organization": "Walton Options",
+    "official_url": "https://www.waltonoptions.org/",
+    "service_area": [
+      "Aiken",
+      "Barnwell",
+      "Edgefield",
+      "McCormick"
+    ],
+    "state": "SC",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility. Walton Options is based in North Augusta and also serves the Augusta, Georgia area.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "803-279-9611",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/sc",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/sc"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/sc",
+        "title": "ILRU national directory of Centers for Independent Living (South Carolina)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "sc-legal-scls",
+    "name": "South Carolina Legal Services (LATIS intake)",
+    "organization": "South Carolina Legal Services",
+    "official_url": "https://sclegal.org/services/",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "SC",
+    "resource_role": "legal_aid",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation",
+      "housing"
+    ],
+    "description": "Free civil legal help statewide for South Carolinians with low income, including housing, public benefits and consumer problems. Not criminal defense.",
+    "next_step": "Call 888-346-5592 (803-744-9430 in Richland and Lexington counties), Monday to Thursday 9 a.m. to 6 p.m., or apply online at sclegal.org. Have your county and the legal problem ready.",
+    "constraints": [
+      "Income, case type and capacity limits apply. Intake may be paused or limited at times; ask about current intake."
+    ],
+    "public_contact": {
+      "phone": "888-346-5592",
+      "phone_label": "SCLS statewide intake (LATIS)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://sclegal.org/services/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://sclegal.org/services/",
+        "title": "South Carolina Legal Services: services",
+        "reviewed_on": "2026-11-04",
+        "scope": "Intake phones and hours; search excerpt."
+      },
+      {
+        "url": "https://scbar.org/public/get-legal-help/common-legal-topics/legal-aid-services-in-south-carolina",
+        "title": "SC Bar: legal aid services in South Carolina",
+        "reviewed_on": "2026-11-04",
+        "scope": "LATIS numbers by area; search excerpt."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 188",
-    "sheet": "Contacts",
-    "row": 188,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "sc-ssvf-25-sc-134",
-  "name": "Alston Wilkes Society: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Alston Wilkes Society",
-  "service_area": [
-   "All South Carolina counties"
-  ],
-  "state": "SC",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 25-SC-134): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Abbeville County, Aiken County, Allendale County, Anderson County, Bamberg County, Barnwell County, Beaufort County, Berkeley County, Calhoun County, Charleston County, Cherokee County, Chester County and 22 more.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "803-995-8464",
-   "phone_label": "VA-listed SSVF intake"
-  },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
-  },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
-  },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 223",
-    "sheet": "Contacts",
-    "row": 223,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- }
+  {
+    "program_id": "sc-vahealth-systems",
+    "name": "VA medical centers serving South Carolina",
+    "organization": "U.S. Department of Veterans Affairs",
+    "official_url": "https://www.va.gov/find-locations/?facilityType=health",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "SC",
+    "resource_role": "va_health_system",
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "VA medical centers in South Carolina: Wm. Jennings Bryan Dorn VA Medical Center, Columbia VA Health Care System (803-776-4000), with clinics in Anderson, Florence, Greenville, Orangeburg, Rock Hill, Spartanburg and Sumter; Ralph H. Johnson VA Medical Center, Charleston (843-577-5011), with coastal clinics including Myrtle Beach and Beaufort. Some border counties are served by VA systems in Augusta, Georgia or Charlotte, North Carolina.",
+    "next_step": "Use VA’s facility locator with your ZIP code to find the closest clinic and its medical center. Not enrolled yet? Call 877-222-8387 or ask your County Veterans Affairs Office for help applying.",
+    "constraints": [
+      "VA does not publish county lists for these systems, so this card does not assign counties. Your VA care team may be at a different clinic or system; follow what VA tells you."
+    ],
+    "public_contact": {
+      "phone": "877-222-8387",
+      "phone_label": "VA health care enrollment line"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.va.gov/directory/guide/fac_list_by_state.cfm?State=SC",
+        "title": "VA facility directory: South Carolina",
+        "reviewed_on": "2026-11-04",
+        "scope": "Medical center names and phones; search excerpt."
+      },
+      {
+        "url": "https://www.va.gov/columbia-south-carolina-health-care/about-us/",
+        "title": "VA Columbia South Carolina health care: about us",
+        "reviewed_on": "2026-11-04",
+        "scope": "Clinic towns; search excerpt."
+      }
+    ]
+  }
 ]
