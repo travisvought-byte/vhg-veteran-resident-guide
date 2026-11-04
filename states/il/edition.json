@@ -1,196 +1,290 @@
 {
- "ops": [
-  {
-   "op": "clear_data"
-  },
-  {
-   "op": "replace",
-   "old": "Ohio",
-   "new": "Illinois"
-  },
-  {
-   "op": "replace",
-   "old": "All 88",
-   "new": "All"
-  },
-  {
-   "op": "replace",
-   "old": "all 88",
-   "new": "all"
-  },
-  {
-   "op": "replace",
-   "old": "<option value=\"OH\">Illinois</option>",
-   "new": "<option value=\"OH\">Ohio</option>"
-  },
-  {
-   "op": "replace",
-   "old": "const STATE='OH';",
-   "new": "const STATE='IL';"
-  },
-  {
-   "op": "replace",
-   "old": "county veterans office",
-   "new": "state veterans agency"
-  },
-  {
-   "op": "replace",
-   "old": "county office",
-   "new": "state veterans agency"
-  },
-  {
-   "op": "replace",
-   "old": "Statewide edition · Updated October 8, 2026",
-   "new": "Illinois starter edition · Updated November 2, 2026"
-  },
-  {
-   "op": "replace",
-   "old": "Illinois’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
-   "new": "Ask the local aging agency or state Medicaid agency about waiver assessment and written approval; VA and other funders have their own processes."
-  },
-  {
-   "op": "replace",
-   "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
-   "new": "https://eldercare.acl.gov/home"
-  },
-  {
-   "op": "replace",
-   "old": "Illinois home modification authorization and provider rules",
-   "new": "Find local aging and disability help (Eldercare Locator)"
-  },
-  {
-   "op": "replace",
-   "old": "href=\"share.html\"",
-   "new": "href=\"share-il.html\""
-  },
-  {
-   "op": "replace",
-   "old": "href=\"prototype-data.json\"",
-   "new": "href=\"data/public/illinois-resources.json\""
-  },
-  {
-   "op": "replace",
-   "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
-   "new": "href=\"data/public/illinois-county-veterans-offices.json\""
-  },
-  {
-   "op": "declare",
-   "name": "priority",
-   "value": [
-    "il-claims",
-    "il-aging",
-    "il-ship",
-    "il-ombudsman",
-    "r02-aid-attendance-housebound",
-    "r02-va-pension",
-    "r02-survivors-pension"
-   ]
-  },
-  {
-   "op": "declare",
-   "name": "routes",
-   "value": {
-    "benefits": [
-     "il-claims",
-     "il-ship",
-     "r02-va-pension",
-     "r02-aid-attendance-housebound",
-     "r02-disability-increase",
-     "r02-pension-medicaid-rule",
-     "r02-survivors-pension",
-     "r02-dic",
-     "va-accredited-help"
-    ],
-    "survivors": [
-     "il-claims",
-     "r02-survivors-pension",
-     "r02-dic",
-     "r02-aid-attendance-housebound",
-     "r02-va-burial",
-     "va-accredited-help",
-     "nara-discharge-records"
-    ],
-    "care": [
-     "il-aging",
-     "r02-va-health-enrollment",
-     "va-location-finder",
-     "r02-va-cnh",
-     "r02-va-clc",
-     "r02-general-caregiver",
-     "r02-family-caregiver",
-     "r02-hospice",
-     "r02-palliative"
-    ],
-    "rights": [
-     "il-ombudsman",
-     "il-aging"
-    ],
-    "local": [
-     "il-aging",
-     "il-claims"
-    ],
-    "housing": [
-     "va-housing-help",
-     "il-ssvf-12-il-033",
-     "il-ssvf-12-zz-031",
-     "il-ssvf-13-il-105",
-     "il-ssvf-14-il-194",
-     "il-ssvf-14-il-196",
-     "il-ssvf-14-il-197",
-     "il-ssvf-14-zz-308",
-     "il-ssvf-18-zz-034",
-     "il-ssvf-23-zz-104",
-     "va-location-finder",
-     "va-accredited-help",
-     "nara-discharge-records"
-    ]
-   }
-  },
-  {
-   "op": "declare",
-   "name": "seniorTopics",
-   "value": {
-    "daily": [
-     "il-aging"
-    ],
-    "accessibility": [
-     "il-aging"
-    ],
-    "vision": [
-     "il-aging"
-    ],
-    "hearing": [
-     "il-aging"
-    ],
-    "memory": [
-     "alz-dementia-support",
-     "il-aging"
-    ],
-    "costs": [
-     "il-ship",
-     "il-aging"
-    ],
-    "rights": [
-     "il-ombudsman",
-     "il-aging"
-    ]
-   }
-  },
-  {
-   "op": "line",
-   "prefix": "routes.accessibility=",
-   "new": "routes.accessibility=['va-hisa','va-sah','va-sha','va-tra','il-aging','va-location-finder'];"
-  },
-  {
-   "op": "line",
-   "prefix": "routes.seniors=",
-   "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
-  },
-  {
-   "op": "adapter"
-  },
-  {
-   "op": "embed_data"
-  }
- ]
+  "ops": [
+    {
+      "op": "clear_data"
+    },
+    {
+      "op": "replace",
+      "old": "Ohio",
+      "new": "Illinois"
+    },
+    {
+      "op": "replace",
+      "old": "All 88",
+      "new": "All 102"
+    },
+    {
+      "op": "replace",
+      "old": "all 88",
+      "new": "all 102"
+    },
+    {
+      "op": "replace",
+      "old": "<option value=\"OH\">Illinois</option>",
+      "new": "<option value=\"OH\">Ohio</option>"
+    },
+    {
+      "op": "replace",
+      "old": "const STATE='OH';",
+      "new": "const STATE='IL';"
+    },
+    {
+      "op": "replace",
+      "old": "Statewide edition · Updated October 8, 2026",
+      "new": "Illinois edition · Updated November 4, 2026"
+    },
+    {
+      "op": "replace",
+      "old": "Most phones come from Illinois AMVETS’ 2025–2026 directory.",
+      "new": "Veterans office phones come from the Illinois Department of Veterans’ Affairs office locator and county Veterans Assistance Commission websites. Days and times vary; call ahead."
+    },
+    {
+      "op": "replace",
+      "old": "Illinois’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
+      "new": "Ask the local aging agency or state Medicaid agency about waiver assessment and written approval; VA and other funders have their own processes."
+    },
+    {
+      "op": "replace",
+      "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
+      "new": "https://eldercare.acl.gov/home"
+    },
+    {
+      "op": "replace",
+      "old": "Illinois home modification authorization and provider rules",
+      "new": "Find local aging and disability help (Eldercare Locator)"
+    },
+    {
+      "op": "replace",
+      "old": "href=\"share.html\"",
+      "new": "href=\"share-il.html\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"prototype-data.json\"",
+      "new": "href=\"data/public/illinois-resources.json\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
+      "new": "href=\"data/public/illinois-county-veterans-offices.json\""
+    },
+    {
+      "op": "declare",
+      "name": "priority",
+      "value": [
+        "il-claims",
+        "il-senior-helpline",
+        "il-ship",
+        "il-ombudsman",
+        "il-legal-chicago",
+        "il-legal-programs",
+        "r02-aid-attendance-housebound",
+        "r02-va-pension",
+        "r02-survivors-pension",
+        "r02-va-health-enrollment",
+        "va-accredited-help"
+      ]
+    },
+    {
+      "op": "declare",
+      "name": "routes",
+      "value": {
+        "benefits": [
+          "il-claims",
+          "il-ship",
+          "r02-va-pension",
+          "r02-aid-attendance-housebound",
+          "r02-disability-increase",
+          "r02-pension-medicaid-rule",
+          "r02-survivors-pension",
+          "r02-dic",
+          "va-accredited-help",
+          "il-senior-helpline"
+        ],
+        "survivors": [
+          "il-claims",
+          "r02-survivors-pension",
+          "r02-dic",
+          "r02-aid-attendance-housebound",
+          "r02-va-burial",
+          "va-accredited-help",
+          "nara-discharge-records"
+        ],
+        "care": [
+          "r02-va-health-enrollment",
+          "va-location-finder",
+          "r02-va-cnh",
+          "r02-va-clc",
+          "r02-general-caregiver",
+          "r02-family-caregiver",
+          "r02-hospice",
+          "r02-palliative",
+          "il-senior-helpline",
+          "il-cil-access-living",
+          "il-cil-progress",
+          "il-cil-advocates-access",
+          "il-cil-drc",
+          "il-cil-iicil",
+          "il-cil-ivcil",
+          "il-cil-impact",
+          "il-cil-jacil",
+          "il-cil-lccil",
+          "il-cil-life",
+          "il-cil-linc",
+          "il-cil-nicil",
+          "il-cil-ofa",
+          "il-cil-options",
+          "il-cil-pace",
+          "il-cil-ramp",
+          "il-cil-sail",
+          "il-cil-sicil",
+          "il-cil-scil",
+          "il-cil-stone-hayes",
+          "il-cil-wcicil",
+          "il-vahealth-systems"
+        ],
+        "rights": [
+          "il-ombudsman",
+          "il-legal-chicago",
+          "il-legal-programs"
+        ],
+        "local": [
+          "il-claims",
+          "il-senior-helpline",
+          "il-cil-access-living",
+          "il-cil-progress",
+          "il-cil-advocates-access",
+          "il-cil-drc",
+          "il-cil-iicil",
+          "il-cil-ivcil",
+          "il-cil-impact",
+          "il-cil-jacil",
+          "il-cil-lccil",
+          "il-cil-life",
+          "il-cil-linc",
+          "il-cil-nicil",
+          "il-cil-ofa",
+          "il-cil-options",
+          "il-cil-pace",
+          "il-cil-ramp",
+          "il-cil-sail",
+          "il-cil-sicil",
+          "il-cil-scil",
+          "il-cil-stone-hayes",
+          "il-cil-wcicil",
+          "il-legal-chicago",
+          "il-legal-programs",
+          "il-vahealth-systems"
+        ],
+        "housing": [
+          "va-housing-help",
+          "il-ssvf-12-il-033",
+          "il-ssvf-12-zz-031",
+          "il-ssvf-13-il-105",
+          "il-ssvf-14-il-194",
+          "il-ssvf-14-il-196",
+          "il-ssvf-14-il-197",
+          "il-ssvf-14-zz-308",
+          "il-ssvf-18-zz-034",
+          "il-ssvf-23-zz-104",
+          "va-location-finder",
+          "va-accredited-help",
+          "nara-discharge-records",
+          "il-legal-chicago",
+          "il-legal-programs"
+        ]
+      }
+    },
+    {
+      "op": "declare",
+      "name": "seniorTopics",
+      "value": {
+        "daily": [
+          "il-senior-helpline",
+          "il-cil-access-living",
+          "il-cil-progress",
+          "il-cil-advocates-access",
+          "il-cil-drc",
+          "il-cil-iicil",
+          "il-cil-ivcil",
+          "il-cil-impact",
+          "il-cil-jacil",
+          "il-cil-lccil",
+          "il-cil-life",
+          "il-cil-linc",
+          "il-cil-nicil",
+          "il-cil-ofa",
+          "il-cil-options",
+          "il-cil-pace",
+          "il-cil-ramp",
+          "il-cil-sail",
+          "il-cil-sicil",
+          "il-cil-scil",
+          "il-cil-stone-hayes",
+          "il-cil-wcicil"
+        ],
+        "accessibility": [
+          "il-senior-helpline",
+          "il-cil-access-living",
+          "il-cil-progress",
+          "il-cil-advocates-access",
+          "il-cil-drc",
+          "il-cil-iicil",
+          "il-cil-ivcil",
+          "il-cil-impact",
+          "il-cil-jacil",
+          "il-cil-lccil",
+          "il-cil-life",
+          "il-cil-linc",
+          "il-cil-nicil",
+          "il-cil-ofa",
+          "il-cil-options",
+          "il-cil-pace",
+          "il-cil-ramp",
+          "il-cil-sail",
+          "il-cil-sicil",
+          "il-cil-scil",
+          "il-cil-stone-hayes",
+          "il-cil-wcicil"
+        ],
+        "vision": [
+          "il-senior-helpline"
+        ],
+        "hearing": [
+          "il-senior-helpline"
+        ],
+        "memory": [
+          "alz-dementia-support",
+          "il-senior-helpline"
+        ],
+        "costs": [
+          "il-ship",
+          "il-senior-helpline",
+          "il-legal-chicago",
+          "il-legal-programs"
+        ],
+        "rights": [
+          "il-ombudsman",
+          "il-legal-chicago",
+          "il-legal-programs"
+        ]
+      }
+    },
+    {
+      "op": "line",
+      "prefix": "routes.accessibility=",
+      "new": "routes.accessibility=['va-hisa','va-sah','va-sha','va-tra','il-senior-helpline','il-cil-access-living','il-cil-progress','il-cil-advocates-access','il-cil-drc','il-cil-iicil','il-cil-ivcil','il-cil-impact','il-cil-jacil','il-cil-lccil','il-cil-life','il-cil-linc','il-cil-nicil','il-cil-ofa','il-cil-options','il-cil-pace','il-cil-ramp','il-cil-sail','il-cil-sicil','il-cil-scil','il-cil-stone-hayes','il-cil-wcicil','va-location-finder',...DATA.filter(x=>x.regional_role==='aging_agency').map(x=>x.program_id)];"
+    },
+    {
+      "op": "line",
+      "prefix": "routes.seniors=",
+      "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
+    },
+    {
+      "op": "adapter"
+    },
+    {
+      "op": "embed_data"
+    }
+  ]
 }

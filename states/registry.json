@@ -414,6 +414,28 @@
     ]
   },
   {
+    "code": "IL",
+    "name": "Illinois",
+    "page": "il.html",
+    "share_page": "share-il.html",
+    "qr": "assets/guide-qr-il.svg",
+    "counties": 102,
+    "programs": "data/public/il-programs.json",
+    "referrals": "data/public/il-regional-referrals.json",
+    "offices": "data/public/illinois-county-veterans-offices.json",
+    "resources": "data/public/illinois-resources.json",
+    "statewide_area_names": [],
+    "coverage_scope": "Referral edition. All 102 counties have a veterans contact (an IDVA Veteran Service Office in 54 counties, a county Veterans Assistance Commission in 8, the IDVA statewide line in 40), a matched Area Agency on Aging and a regional long-term-care ombudsman.",
+    "coverage_note": "Veterans offices come from the Illinois Department of Veterans’ Affairs office locator, with temporarily closed locations left out. Where IDVA lists no open office, the county Veterans Assistance Commission is used when its phone is published on the county’s website; otherwise the IDVA line, 800-437-9824. Area Agencies on Aging come from the Department on Aging’s senior centers directory (February 2025) and regional ombudsmen from its ombudsman contact list. Reviewed November 4, 2026. Contacts are not telephone-confirmed.",
+    "share_description": "IDVA Veteran Service Offices and county Veterans Assistance Commissions, county-matched Area Agencies on Aging and regional long-term-care ombudsmen",
+    "share_replacements": [
+      [
+        "Updated October 8, 2026",
+        "Updated November 4, 2026"
+      ]
+    ]
+  },
+  {
     "code": "AL",
     "name": "Alabama",
     "starter": true,
@@ -590,26 +612,6 @@
     ],
     "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
     "coverage_note": "Starter edition. Every county uses the Idaho Division of Veterans Services and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
-    "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
-    "share_replacements": []
-  },
-  {
-    "code": "IL",
-    "name": "Illinois",
-    "starter": true,
-    "page": "il.html",
-    "share_page": "share-il.html",
-    "qr": "assets/guide-qr-il.svg",
-    "counties": 1,
-    "programs": "data/public/il-programs.json",
-    "referrals": "data/public/il-regional-referrals.json",
-    "offices": "data/public/illinois-county-veterans-offices.json",
-    "resources": "data/public/illinois-resources.json",
-    "statewide_area_names": [
-      "All Illinois counties"
-    ],
-    "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
-    "coverage_note": "Starter edition. Every county uses the Illinois Department of Veterans’ Affairs and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
     "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
     "share_replacements": []
   },
