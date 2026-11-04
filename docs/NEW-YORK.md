@@ -57,3 +57,25 @@ Generated outputs are `ny.html`, `data/public/new-york-resources.json` and `shar
 Run `python3 scripts/build_public.py --check`, `node tests/new-york.cjs` and `python3 scripts/validate_public.py`. Checks cover all 217 county selections across the three editions, New York county isolation, corrected phones, extensions, borough aliases, non-veteran senior routing, accessibility branches, print actions and local sharing assets.
 
 The simulated DOM checks do not establish WCAG compliance or visual print pagination. Browser and print review remain pending. Next research: stronger evidence for the two excerpt-only state routes, dedicated local ombudsman contacts, local HCR administrators and device reuse contacts. No agency outreach or resident information collection was performed. Corrections and maintenance: travis@vethomeguard.org.
+
+## Independent living, legal aid and VA health care (2026-11-04)
+
+44 records were added to `data/public/ny-programs.json`, bringing the public resources to 165.
+
+- **Centers for Independent Living (36 records, `ny-cil-*`).** Taken from the ILRU national directory for New York, with full page text reviewed. Its 61 listings were folded into one record per center, with branch phones in the next step. They cover 59 of 62 counties; Hamilton, Otsego and Washington are not covered. Directory problems were handled as follows:
+  - **WILC (White Plains):** the directory lists Georgia counties for it. The card uses Westchester and says why.
+  - **ARISE:** its "Fulton" listing is the office in the city of Fulton (Oswego County), so Fulton County is not assigned to ARISE.
+  - **"Unknown" service areas:** AIM, CDCI and RCIL's Utica office list no counties. Their cards cover only the counties where they have offices, and say so.
+  - **ILCHV and SAIL:** each card combines the county lists of the center's offices.
+- **Legal aid (7 records, `ny-legal-*`).** Together these cover all 62 counties:
+  - Legal Aid Society of Northeastern New York: 16 counties, 833-628-0087.
+  - Legal Services of Central New York: 13 counties, 877-777-6152.
+  - LawNY: 14 counties, 866-781-5235.
+  - Neighborhood Legal Services (Buffalo): 5 counties.
+  - Legal Services NYC: the five boroughs, 917-661-4500.
+  - Legal Services of Long Island: Nassau and Suffolk.
+  - Legal Services of the Hudson Valley: 7 counties, 877-574-8529.
+  - Sources are LawHelpNY, NY Courts, the NYS Bar and the programs' own pages, as search excerpts. LawNY's 14-county list comes from a published summary of its service area and carries a "confirm your county" note.
+- **VA health care (`ny-vahealth-systems`).** One statewide card listing the 10 VA medical centers and campuses with their main phones. No counties are assigned.
+
+`tests/new-york.cjs` and `tests/unified.cjs` now expect 165 New York resources.
