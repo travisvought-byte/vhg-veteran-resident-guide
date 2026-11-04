@@ -25,3 +25,17 @@ The [research notes](../research/returns/R-06-NC/notes.md) contain the complete 
 ## Validation
 
 The research checker reports 0 errors and 2 explained warnings for programs routed through local agencies without a dedicated statewide intake number. Build synchronization, all-state routing tests and North Carolina browser, mobile, assistant and print checks are required before publication.
+
+## Independent living, legal aid and VA health care (2026-11-04)
+
+12 records were added to `data/public/nc-programs.json`, bringing the public resources to 97.
+
+- **Centers for Independent Living (7 records, `nc-cil-*`).** Taken from the ILRU national directory for North Carolina, with full page text reviewed. The list covers 6 centers plus the Asheville branch of disABILITY Partners, with county lists as published. 42 counties are covered. The other 58 rely on PA-style statewide routing (NC Independent Living, the ADRC and aging agencies). Websites the directory lists only as http are given in the next step, and the card links to the ILRU page.
+- **Legal aid (4 records, `nc-legal-*`).**
+  - Legal Aid of North Carolina: statewide helpline 866-219-5262. The next step also names the Veterans Law Project voicemail line, 919-850-5959.
+  - LANC Senior Legal Helpline for age 60+: 877-579-7562.
+  - Pisgah Legal Services: Pisgah says it serves 18 counties and the Qualla Boundary but publishes no list. The card covers the 11 counties where it has offices, and the next step tells people in other western counties to call.
+  - Charlotte Center for Legal Advocacy: Mecklenburg only, because the published area ("Charlotte metro and west-central NC") has no county list.
+- **VA health care (`nc-vahealth-systems`).** One statewide card for the four medical centers (Asheville, Durham, Fayetteville, Salisbury) and their main phones. VA publishes county counts, not county lists, so no counties are assigned.
+
+All records come from official pages or official search excerpts. None were telephone-confirmed.
