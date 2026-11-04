@@ -13,6 +13,8 @@ GDVS runs state Veterans Field Service Offices, not county offices.
 - **Counties with no assigned office.** The list assigns no office to Elbert, Lincoln or Wilkes. Those counties use the GDVS main line (404-656-2300), with a note saying so.
 - **Brunswick.** The Brunswick CBOC office (Glynn, McIntosh) is temporarily closed. Its page sends veterans to Hinesville, Glennville, St. Marys or Waycross. Glynn uses St. Marys, McIntosh uses Hinesville, and all four alternatives are listed on the card.
 - **Office pages not under `/locations/`.** Six pages were read at other GDVS addresses (node or short URLs): Augusta-VAMC, Augusta-DHS, GWVH-Milledgeville, Decatur-VAMC, Rock Spring (LaFayette) and the Cobb Multi-Specialty VA Clinic. The Cobb clinic page is a staff contact page; only its phone and address are used.
+- **Liberty County** uses Hinesville, the office inside the county, rather than the first-listed Glennville office.
+- **Zebulon** (Lamar, Pike, Talbot, Upson) is temporarily closed. It is left out of those counties' alternatives, and their cards say so; they keep Griffin or Macon as their main office.
 - **Office notices shown on cards:**
   - St. Marys has no in-person service on Fridays.
   - Albany is temporarily relocated during renovations.
