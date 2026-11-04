@@ -14,7 +14,8 @@ export const STATES=Object.freeze({
   "CA": "California",
   "VA": "Virginia",
   "NC": "North Carolina",
-  "GA": "Georgia"
+  "GA": "Georgia",
+  "AZ": "Arizona"
 });
 export const STATE_FILES=Object.freeze({
   "OH": [
@@ -72,6 +73,10 @@ export const STATE_FILES=Object.freeze({
   "GA": [
     "data/public/georgia-resources.json",
     "data/public/georgia-county-veterans-offices.json"
+  ],
+  "AZ": [
+    "data/public/arizona-resources.json",
+    "data/public/arizona-county-veterans-offices.json"
   ]
 });
 export const localityLabel=row=>row?(["independent_city","statewide"].includes(row.county_type)?row.county:row.county+" County"):"";

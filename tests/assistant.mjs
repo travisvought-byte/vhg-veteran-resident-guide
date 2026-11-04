@@ -18,7 +18,7 @@ assert.throws(()=>createPlan({state:"OH",message:"Housing",county:"Madeup",count
 for(const [state,[resourceFile,countyFile]] of Object.entries(stateFiles)){
  const resources=read(resourceFile),counties=read(countyFile);
  assert(resources.length>10, state+" resources");
- assert(counties.length>20, state+" county offices");
+ assert.equal(counties.length, registry.find(r=>r.code===state).counties, state+" county offices");
  const sampleCounty=counties.find(x=>x.phone&&x.county);
  const plan=createPlan({state,county:sampleCounty.county,person:"veteran",message:"My father is a veteran who needs benefits and home care.",resources,counties});
  assert.equal(plan.state,state);
