@@ -16,7 +16,8 @@ export const STATES=Object.freeze({
   "NC": "North Carolina",
   "GA": "Georgia",
   "AZ": "Arizona",
-  "WA": "Washington"
+  "WA": "Washington",
+  "TN": "Tennessee"
 });
 export const STATE_FILES=Object.freeze({
   "OH": [
@@ -82,6 +83,10 @@ export const STATE_FILES=Object.freeze({
   "WA": [
     "data/public/washington-resources.json",
     "data/public/washington-county-veterans-offices.json"
+  ],
+  "TN": [
+    "data/public/tennessee-resources.json",
+    "data/public/tennessee-county-veterans-offices.json"
   ]
 });
 export const localityLabel=row=>row?(["independent_city","statewide"].includes(row.county_type)?row.county:row.county+" County"):"";
