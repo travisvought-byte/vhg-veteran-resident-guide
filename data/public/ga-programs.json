@@ -1,388 +1,1500 @@
 [
- {
-  "program_id": "ga-claims",
-  "name": "Georgia veterans: accredited claims help",
-  "official_url": "https://veterans.georgia.gov/contact-us-0",
-  "organization": "Georgia Department of Veterans Service",
-  "service_area": [
-   "All Georgia counties"
-  ],
-  "state": "GA",
-  "needs_supported": [
-   "general_navigation",
-   "benefits_and_funding"
-  ],
-  "description": "Free help with VA claims, applications and appeals for veterans and families.",
-  "next_step": "Call the state veterans agency; ask for a benefits review and the office that serves your county.",
-  "constraints": [],
-  "public_contact": {
-   "phone": "404-656-2300"
+  {
+    "program_id": "ga-claims",
+    "name": "Georgia veterans: accredited claims help",
+    "official_url": "https://veterans.georgia.gov/contact-us-0",
+    "organization": "Georgia Department of Veterans Service",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "GA",
+    "needs_supported": [
+      "general_navigation",
+      "benefits_and_funding"
+    ],
+    "description": "Free help with VA claims, applications and appeals for veterans and families.",
+    "next_step": "Choose your county for its GDVS Veterans Field Service Office, or call the main line and ask which office serves your county. Appointments are preferred; many offices schedule online through ReFrame.",
+    "constraints": [],
+    "public_contact": {
+      "phone": "404-656-2300"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://veterans.georgia.gov/contact-us-0"
+    },
+    "source_evidence": [
+      {
+        "url": "https://veterans.georgia.gov/contact-us-0",
+        "title": "Official published source",
+        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "ga-ship",
+    "name": "Medicare counseling (SHIP) for Georgia",
+    "official_url": "https://www.shiphelp.org/",
+    "organization": "SHIP Technical Assistance Center",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "GA",
+    "needs_supported": [
+      "benefits_and_funding"
+    ],
+    "description": "Free, unbiased Medicare counseling from the State Health Insurance Assistance Program.",
+    "next_step": "Call or use the locator to reach the Georgia SHIP and ask for a counseling appointment.",
+    "constraints": [],
+    "public_contact": {
+      "phone": "877-839-2675"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.shiphelp.org/?p=317"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.shiphelp.org/?p=317",
+        "title": "Official published source",
+        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://veterans.georgia.gov/contact-us-0"
+  {
+    "program_id": "ga-ssvf-12-ga-029",
+    "name": "Central Savannah River Area Economic Opportunity Authority, Inc. (CSRA EOA): veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Central Savannah River Area Economic Opportunity Authority, Inc. (CSRA EOA)",
+    "service_area": [
+      "Bulloch",
+      "Burke",
+      "Candler",
+      "Clarke",
+      "Columbia",
+      "Effingham",
+      "Elbert",
+      "Emanuel",
+      "Glascock",
+      "Greene",
+      "Hancock",
+      "Jefferson",
+      "Jenkins",
+      "Johnson",
+      "Lincoln",
+      "McDuffie",
+      "Oglethorpe",
+      "Richmond",
+      "Screven",
+      "Taliaferro",
+      "Warren",
+      "Washington",
+      "Wilkes"
+    ],
+    "state": "GA",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 12-GA-029): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "706-364-6548",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 10",
+        "sheet": "Contacts",
+        "row": 10,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://veterans.georgia.gov/contact-us-0",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ]
- },
- {
-  "program_id": "ga-ship",
-  "name": "Medicare counseling (SHIP) for Georgia",
-  "official_url": "https://www.shiphelp.org/",
-  "organization": "SHIP Technical Assistance Center",
-  "service_area": [
-   "All Georgia counties"
-  ],
-  "state": "GA",
-  "needs_supported": [
-   "benefits_and_funding"
-  ],
-  "description": "Free, unbiased Medicare counseling from the State Health Insurance Assistance Program.",
-  "next_step": "Call or use the locator to reach the Georgia SHIP and ask for a counseling appointment.",
-  "constraints": [],
-  "public_contact": {
-   "phone": "877-839-2675"
+  {
+    "program_id": "ga-ssvf-14-tn-284",
+    "name": "Volunteer Behavioral Health Care System: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Volunteer Behavioral Health Care System",
+    "service_area": [
+      "Catoosa",
+      "Dade",
+      "Murray",
+      "Walker",
+      "Whitfield"
+    ],
+    "state": "GA",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 14-TN-284): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "877-567-6051",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 95",
+        "sheet": "Contacts",
+        "row": 95,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "ga-ssvf-15-ga-325",
+    "name": "Volunteers of America Southeast, Inc.: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Volunteers of America Southeast, Inc.",
+    "service_area": [
+      "Baldwin",
+      "Bibb",
+      "Chattahoochee",
+      "Crawford",
+      "Crisp",
+      "Dooly",
+      "Harris",
+      "Houston",
+      "Jones",
+      "Laurens",
+      "Macon",
+      "Marion",
+      "Muscogee",
+      "Peach",
+      "Pulaski",
+      "Schley",
+      "Stewart",
+      "Sumter",
+      "Talbot",
+      "Taylor",
+      "Troup",
+      "Twiggs",
+      "Webster",
+      "Wilkinson"
+    ],
+    "state": "GA",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 15-GA-325): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "478-919-2377",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 110",
+        "sheet": "Contacts",
+        "row": 110,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.shiphelp.org/?p=317"
+  {
+    "program_id": "ga-ssvf-20-ga-188",
+    "name": "Travelers Aid of Metro Atlanta, Inc.: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Travelers Aid of Metro Atlanta, Inc.",
+    "service_area": [
+      "Banks",
+      "Barrow",
+      "Bartow",
+      "Butts",
+      "Carroll",
+      "Cherokee",
+      "Clayton",
+      "Cobb",
+      "Coweta",
+      "DeKalb",
+      "Douglas",
+      "Fayette",
+      "Floyd",
+      "Forsyth",
+      "Franklin",
+      "Fulton",
+      "Hall",
+      "Hart",
+      "Henry",
+      "Jackson",
+      "Madison",
+      "Newton",
+      "Oconee",
+      "Paulding",
+      "Rockdale",
+      "Spalding",
+      "Stephens",
+      "Walton"
+    ],
+    "state": "GA",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-GA-188): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 404-817-7070.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "404-574-1681",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 169",
+        "sheet": "Contacts",
+        "row": 169,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.shiphelp.org/?p=317",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ]
- },
- {
-  "program_id": "ga-ssvf-12-ga-029",
-  "name": "Central Savannah River Area Economic Opportunity Authority, Inc. (CSRA EOA): veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Central Savannah River Area Economic Opportunity Authority, Inc. (CSRA EOA)",
-  "service_area": [
-   "All Georgia counties"
-  ],
-  "state": "GA",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 12-GA-029): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Bulloch County, Burke County, Candler County, Clarke County, Columbia County, Effingham County, Elbert County, Emanuel County, Glascock County, Greene County, Hancock County, Jefferson County and 11 more.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "706-364-6548",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "ga-ssvf-20-ga-369",
+    "name": "Project Community Connections, Inc.: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Project Community Connections, Inc.",
+    "service_area": [
+      "Clayton",
+      "DeKalb",
+      "Douglas",
+      "Fulton",
+      "Gwinnett",
+      "Henry",
+      "Rockdale"
+    ],
+    "state": "GA",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-GA-369): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 404-215-9991.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "470-645-3220",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 170",
+        "sheet": "Contacts",
+        "row": 170,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "ga-ssvf-23-zz-324",
+    "name": "Changing Homelessness, Inc.: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Changing Homelessness, Inc.",
+    "service_area": [
+      "Appling",
+      "Atkinson",
+      "Bacon",
+      "Baker",
+      "Ben Hill",
+      "Berrien",
+      "Bleckley",
+      "Brantley",
+      "Brooks",
+      "Bryan",
+      "Bulloch",
+      "Calhoun",
+      "Camden",
+      "Candler",
+      "Charlton",
+      "Chatham",
+      "Clinch",
+      "Coffee",
+      "Colquitt",
+      "Cook",
+      "Decatur",
+      "Dodge",
+      "Dougherty",
+      "Early",
+      "Echols",
+      "Effingham",
+      "Emanuel",
+      "Evans",
+      "Glynn",
+      "Grady",
+      "Irwin",
+      "Jeff Davis",
+      "Johnson",
+      "Lanier",
+      "Laurens",
+      "Lee",
+      "Liberty",
+      "Long",
+      "Lowndes",
+      "McIntosh",
+      "Mitchell",
+      "Montgomery",
+      "Pierce",
+      "Seminole",
+      "Tattnall",
+      "Telfair",
+      "Terrell",
+      "Thomas",
+      "Tift",
+      "Toombs",
+      "Treutlen",
+      "Turner",
+      "Ware",
+      "Wayne",
+      "Wheeler",
+      "Wilcox",
+      "Worth"
+    ],
+    "state": "GA",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 23-ZZ-324): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "904-354-1100",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 217",
+        "sheet": "Contacts",
+        "row": 217,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "ga-ssvf-26-ga-471",
+    "name": "Volunteers of America Southeast, Inc.: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Volunteers of America Southeast, Inc.",
+    "service_area": [
+      "Chattooga",
+      "Clay",
+      "Dawson",
+      "Fannin",
+      "Gilmer",
+      "Gordon",
+      "Habersham",
+      "Haralson",
+      "Heard",
+      "Jasper",
+      "Lamar",
+      "Lumpkin",
+      "Meriwether",
+      "Monroe",
+      "Morgan",
+      "Pickens",
+      "Pike",
+      "Polk",
+      "Putnam",
+      "Quitman",
+      "Rabun",
+      "Randolph",
+      "Spalding",
+      "Towns",
+      "Union",
+      "Upson",
+      "White"
+    ],
+    "state": "GA",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 26-GA-471): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "478-919-2377",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 227",
+        "sheet": "Contacts",
+        "row": 227,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 10",
-    "sheet": "Contacts",
-    "row": 10,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "ga-ssvf-14-tn-284",
-  "name": "Volunteer Behavioral Health Care System: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Volunteer Behavioral Health Care System",
-  "service_area": [
-   "All Georgia counties"
-  ],
-  "state": "GA",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 14-TN-284): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Catoosa County, Dade County, Murray County, Walker County, Whitfield County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "877-567-6051",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "ga-ombudsman",
+    "name": "Georgia Long-Term Care Ombudsman Program",
+    "organization": "Georgia Office of the State Long-Term Care Ombudsman",
+    "official_url": "https://aging.georgia.gov/node/86",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "GA",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "description": "Ombudsmen advocate for residents of nursing homes and personal care homes (assisted living) and help resolve complaints about care. Community ombudsman programs serve each area of the state.",
+    "next_step": "Call 866-552-4464 and choose option 5, or file a complaint online. Give the facility’s county and ask for the community ombudsman. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "866-552-4464",
+      "phone_label": "Long-Term Care Ombudsman: 866-552-4464, option 5"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.georgia.gov/node/14166"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.georgia.gov/node/14166",
+        "title": "Georgia Division of Aging Services: frequently asked questions",
+        "reviewed_on": "2026-11-04",
+        "scope": "Ombudsman complaints at 866-552-4464, option 5; search excerpt."
+      },
+      {
+        "url": "https://aging.georgia.gov/document/document/das-elder-rights-program-fact-sheet-7-2pdf/download",
+        "title": "DAS Elder Rights fact sheet",
+        "reviewed_on": "2026-11-04",
+        "scope": "Statewide ombudsman number and local community programs through the Area Agency on Aging; search excerpt."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "ga-adrc",
+    "name": "Georgia Aging and Disability Resource Connection (ADRC)",
+    "organization": "Georgia DHS Division of Aging Services",
+    "official_url": "https://aging.georgia.gov/node/14166",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "GA",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Statewide counseling line for older adults, people with disabilities and caregivers: services at home, caregiver support, memory resources, benefits questions and local referrals. Any age; military service is not required.",
+    "next_step": "Call 866-552-4464 and choose option 2 to speak with an ADRC counselor. Give the county and describe what is hard right now.",
+    "constraints": [
+      "Counseling and referral; each program has its own eligibility and waitlist."
+    ],
+    "public_contact": {
+      "phone": "866-552-4464",
+      "phone_label": "ADRC counselor: 866-552-4464, option 2"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.georgia.gov/node/14166"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.georgia.gov/node/14166",
+        "title": "Georgia Division of Aging Services: frequently asked questions",
+        "reviewed_on": "2026-11-04",
+        "scope": "ADRC counselor at 866-552-4464, option 2; search excerpt."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "ga-cil-a2i",
+    "name": "Access 2 Independence",
+    "organization": "Access 2 Independence",
+    "official_url": "https://www.ilru.org/cil-directory/ga",
+    "service_area": [
+      "Chattahoochee",
+      "Harris",
+      "Marion",
+      "Muscogee",
+      "Quitman",
+      "Stewart",
+      "Talbot",
+      "Taylor",
+      "Webster"
+    ],
+    "state": "GA",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility. Based in Columbus. Website: www.access2independence.com.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "706-405-2393",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/ga",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/ga"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/ga",
+        "title": "ILRU national directory of Centers for Independent Living (Georgia)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 95",
-    "sheet": "Contacts",
-    "row": 95,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "ga-ssvf-15-ga-325",
-  "name": "Volunteers of America Southeast, Inc.: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Volunteers of America Southeast, Inc.",
-  "service_area": [
-   "All Georgia counties"
-  ],
-  "state": "GA",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 15-GA-325): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Baldwin County, Bibb County, Chattahoochee County, Crawford County, Crisp County, Dooly County, Harris County, Houston County, Jones County, Laurens County, Macon County, Marion County and 12 more.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "478-919-2377",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "ga-cil-bain",
+    "name": "Bainbridge Advocacy Individual Network (BAIN)",
+    "organization": "Bainbridge Advocacy Individual Network",
+    "official_url": "https://www.ilru.org/cil-directory/ga",
+    "service_area": [
+      "Atkinson",
+      "Baker",
+      "Berrien",
+      "Brooks",
+      "Calhoun",
+      "Clay",
+      "Clinch",
+      "Colquitt",
+      "Cook",
+      "Decatur",
+      "Dougherty",
+      "Early",
+      "Echols",
+      "Grady",
+      "Lanier",
+      "Lee",
+      "Lowndes",
+      "Miller",
+      "Mitchell",
+      "Randolph",
+      "Seminole",
+      "Terrell",
+      "Thomas",
+      "Tift",
+      "Worth"
+    ],
+    "state": "GA",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility. Based in Bainbridge. Website: www.baincil.org.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "229-246-0150",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/ga",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/ga"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/ga",
+        "title": "ILRU national directory of Centers for Independent Living (Georgia)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "ga-cil-dc",
+    "name": "Disability Connections",
+    "organization": "Disability Connections",
+    "official_url": "https://www.disabilityconnections.com/",
+    "service_area": [
+      "Baldwin",
+      "Bibb",
+      "Crawford",
+      "Houston",
+      "Jasper",
+      "Jones",
+      "Monroe",
+      "Peach",
+      "Pulaski",
+      "Putnam",
+      "Twiggs",
+      "Wilkinson",
+      "Bleckley",
+      "Coffee",
+      "Dodge",
+      "Jeff Davis",
+      "Laurens",
+      "Montgomery",
+      "Telfair",
+      "Treutlen",
+      "Wheeler",
+      "Ben Hill",
+      "Irwin",
+      "Turner",
+      "Wilcox"
+    ],
+    "state": "GA",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility. Based in Macon, with offices in Dublin and Pitts that share the main phone.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "478-741-1425",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/ga",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/ga"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/ga",
+        "title": "ILRU national directory of Centers for Independent Living (Georgia)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "ga-cil-dlink",
+    "name": "disABILITY LINK",
+    "organization": "disABILITY LINK",
+    "official_url": "https://www.ilru.org/cil-directory/ga",
+    "service_area": [
+      "Butts",
+      "Cherokee",
+      "Clayton",
+      "Cobb",
+      "Coweta",
+      "DeKalb",
+      "Douglas",
+      "Fayette",
+      "Fulton",
+      "Gwinnett",
+      "Henry",
+      "Lamar",
+      "Meriwether",
+      "Newton",
+      "Pike",
+      "Rockdale",
+      "Spalding",
+      "Upson"
+    ],
+    "state": "GA",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility. Based in Tucker. Website: disabilitylink.org.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "404-687-8890",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/ga",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/ga"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/ga",
+        "title": "ILRU national directory of Centers for Independent Living (Georgia)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 110",
-    "sheet": "Contacts",
-    "row": 110,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "ga-ssvf-20-ga-188",
-  "name": "Travelers Aid of Metro Atlanta, Inc.: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Travelers Aid of Metro Atlanta, Inc.",
-  "service_area": [
-   "All Georgia counties"
-  ],
-  "state": "GA",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-GA-188): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Banks County, Barrow County, Bartow County, Butts County, Carroll County, Cherokee County, Clayton County, Cobb County, Coweta County, DeKalb County, Douglas County, Fayette County and 16 more.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 404-817-7070.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "404-574-1681",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "ga-cil-drc",
+    "name": "Disability Resource Center",
+    "organization": "Disability Resource Center",
+    "official_url": "https://disabilityresourcecenter.org/",
+    "service_area": [
+      "Banks",
+      "Dawson",
+      "Forsyth",
+      "Franklin",
+      "Habersham",
+      "Hall",
+      "Hart",
+      "Lumpkin",
+      "Rabun",
+      "Stephens",
+      "Towns",
+      "Union",
+      "White"
+    ],
+    "state": "GA",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility. Based in Demorest, with a Gainesville office (770-534-6656).",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "706-778-5355",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/ga",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/ga"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/ga",
+        "title": "ILRU national directory of Centers for Independent Living (Georgia)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "ga-cil-life",
+    "name": "Living Independence for Everyone (LIFE)",
+    "organization": "Living Independence for Everyone",
+    "official_url": "https://lifecil.com/",
+    "service_area": [
+      "Bryan",
+      "Bulloch",
+      "Camden",
+      "Chatham",
+      "Effingham",
+      "Evans",
+      "Glynn",
+      "Liberty",
+      "McIntosh",
+      "Tattnall",
+      "Toombs"
+    ],
+    "state": "GA",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility. Based in Savannah.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "912-920-2414",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/ga",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/ga"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/ga",
+        "title": "ILRU national directory of Centers for Independent Living (Georgia)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "ga-cil-mc",
+    "name": "Multiple Choices Center for Independent Living",
+    "organization": "Multiple Choices Center for Independent Living",
+    "official_url": "https://multiplechoices.us/",
+    "service_area": [
+      "Barrow",
+      "Clarke",
+      "Elbert",
+      "Greene",
+      "Jackson",
+      "Madison",
+      "Morgan",
+      "Oconee",
+      "Oglethorpe",
+      "Walton"
+    ],
+    "state": "GA",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility. Based in Athens.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "706-850-4025",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/ga",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/ga"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/ga",
+        "title": "ILRU national directory of Centers for Independent Living (Georgia)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 169",
-    "sheet": "Contacts",
-    "row": 169,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "ga-ssvf-20-ga-369",
-  "name": "Project Community Connections, Inc.: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Project Community Connections, Inc.",
-  "service_area": [
-   "All Georgia counties"
-  ],
-  "state": "GA",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-GA-369): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Clayton County, DeKalb County, Douglas County, Fulton County, Gwinnett County, Henry County, Rockdale County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 404-215-9991.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "470-645-3220",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "ga-cil-nwga",
+    "name": "Northwest GA Center for Independent Living",
+    "organization": "Northwest GA Center for Independent Living",
+    "official_url": "https://nwgacil.org/",
+    "service_area": [
+      "Bartow",
+      "Catoosa",
+      "Chattooga",
+      "Dade",
+      "Fannin",
+      "Floyd",
+      "Gilmer",
+      "Gordon",
+      "Haralson",
+      "Murray",
+      "Paulding",
+      "Pickens",
+      "Polk",
+      "Walker",
+      "Whitfield"
+    ],
+    "state": "GA",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility. Based in Rome.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "706-314-0008",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/ga",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/ga"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/ga",
+        "title": "ILRU national directory of Centers for Independent Living (Georgia)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "ga-cil-walton",
+    "name": "Walton Options for Independent Living",
+    "organization": "Walton Options for Independent Living",
+    "official_url": "https://www.waltonoptions.org/",
+    "service_area": [
+      "Burke",
+      "Columbia",
+      "Emanuel",
+      "Glascock",
+      "Hancock",
+      "Jefferson",
+      "Jenkins",
+      "Johnson",
+      "Lincoln",
+      "McDuffie",
+      "Richmond",
+      "Screven",
+      "Taliaferro",
+      "Warren",
+      "Washington",
+      "Wilkes"
+    ],
+    "state": "GA",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility. Based in Augusta; also serves part of South Carolina.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "706-724-6262",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/ga",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/ga"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/ga",
+        "title": "ILRU national directory of Centers for Independent Living (Georgia)",
+        "reviewed_on": "2026-11-04",
+        "scope": "Center offices, local phones, websites and counties served as listed."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "ga-legal-glsp",
+    "name": "Georgia Legal Services Program",
+    "organization": "Georgia Legal Services Program",
+    "official_url": "https://www.glsp.org/",
+    "service_area": [
+      "Appling",
+      "Atkinson",
+      "Bacon",
+      "Baker",
+      "Baldwin",
+      "Banks",
+      "Barrow",
+      "Bartow",
+      "Ben Hill",
+      "Berrien",
+      "Bibb",
+      "Bleckley",
+      "Brantley",
+      "Brooks",
+      "Bryan",
+      "Bulloch",
+      "Burke",
+      "Butts",
+      "Calhoun",
+      "Camden",
+      "Candler",
+      "Carroll",
+      "Catoosa",
+      "Charlton",
+      "Chatham",
+      "Chattahoochee",
+      "Chattooga",
+      "Cherokee",
+      "Clarke",
+      "Clay",
+      "Clinch",
+      "Coffee",
+      "Colquitt",
+      "Columbia",
+      "Cook",
+      "Coweta",
+      "Crawford",
+      "Crisp",
+      "Dade",
+      "Dawson",
+      "Decatur",
+      "Dodge",
+      "Dooly",
+      "Dougherty",
+      "Douglas",
+      "Early",
+      "Echols",
+      "Effingham",
+      "Elbert",
+      "Emanuel",
+      "Evans",
+      "Fannin",
+      "Fayette",
+      "Floyd",
+      "Forsyth",
+      "Franklin",
+      "Gilmer",
+      "Glascock",
+      "Glynn",
+      "Gordon",
+      "Grady",
+      "Greene",
+      "Habersham",
+      "Hall",
+      "Hancock",
+      "Haralson",
+      "Harris",
+      "Hart",
+      "Heard",
+      "Henry",
+      "Houston",
+      "Irwin",
+      "Jackson",
+      "Jasper",
+      "Jeff Davis",
+      "Jefferson",
+      "Jenkins",
+      "Johnson",
+      "Jones",
+      "Lamar",
+      "Lanier",
+      "Laurens",
+      "Lee",
+      "Liberty",
+      "Lincoln",
+      "Long",
+      "Lowndes",
+      "Lumpkin",
+      "Macon",
+      "Madison",
+      "Marion",
+      "McDuffie",
+      "McIntosh",
+      "Meriwether",
+      "Miller",
+      "Mitchell",
+      "Monroe",
+      "Montgomery",
+      "Morgan",
+      "Murray",
+      "Muscogee",
+      "Newton",
+      "Oconee",
+      "Oglethorpe",
+      "Paulding",
+      "Peach",
+      "Pickens",
+      "Pierce",
+      "Pike",
+      "Polk",
+      "Pulaski",
+      "Putnam",
+      "Quitman",
+      "Rabun",
+      "Randolph",
+      "Richmond",
+      "Rockdale",
+      "Schley",
+      "Screven",
+      "Seminole",
+      "Spalding",
+      "Stephens",
+      "Stewart",
+      "Sumter",
+      "Talbot",
+      "Taliaferro",
+      "Tattnall",
+      "Taylor",
+      "Telfair",
+      "Terrell",
+      "Thomas",
+      "Tift",
+      "Toombs",
+      "Towns",
+      "Treutlen",
+      "Troup",
+      "Turner",
+      "Twiggs",
+      "Union",
+      "Upson",
+      "Walker",
+      "Walton",
+      "Ware",
+      "Warren",
+      "Washington",
+      "Wayne",
+      "Webster",
+      "Wheeler",
+      "White",
+      "Whitfield",
+      "Wilcox",
+      "Wilkes",
+      "Wilkinson",
+      "Worth"
+    ],
+    "state": "GA",
+    "resource_role": "legal_aid",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation",
+      "housing"
+    ],
+    "description": "Free civil legal help for people with low income and for people age 60 and older in the 154 Georgia counties outside metro Atlanta: housing, public benefits, consumer, family and other civil matters. Not criminal defense.",
+    "next_step": "Call 833-457-7529 or apply online at glsp.org. Give your county and the legal problem.",
+    "constraints": [
+      "Income, case type and capacity limits apply. Legal aid is not guaranteed representation."
+    ],
+    "public_contact": {
+      "phone": "833-457-7529",
+      "phone_label": "GLSP intake (833-GLSPLAW)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://georgiacourts.gov/?p=25832"
+    },
+    "source_evidence": [
+      {
+        "url": "https://georgiacourts.gov/?p=25832",
+        "title": "Georgia courts: GeorgiaLegalAid.org background",
+        "reviewed_on": "2026-11-04",
+        "scope": "Atlanta Legal Aid’s five counties, GLSP’s 154 counties and intake phones; search excerpt."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 170",
-    "sheet": "Contacts",
-    "row": 170,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "ga-ssvf-23-zz-324",
-  "name": "Changing Homelessness, Inc.: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Changing Homelessness, Inc.",
-  "service_area": [
-   "All Georgia counties"
-  ],
-  "state": "GA",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 23-ZZ-324): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Appling County, Atkinson County, Bacon County, Baker County, Ben Hill County, Berrien County, Bleckley County, Brantley County, Brooks County, Bryan County, Bulloch County, Calhoun County and 45 more.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "904-354-1100",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "ga-legal-alas",
+    "name": "Atlanta Legal Aid Society",
+    "organization": "Atlanta Legal Aid Society",
+    "official_url": "https://atlantalegalaid.org/",
+    "service_area": [
+      "Clayton",
+      "Cobb",
+      "DeKalb",
+      "Fulton",
+      "Gwinnett"
+    ],
+    "state": "GA",
+    "resource_role": "legal_aid",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation",
+      "housing"
+    ],
+    "description": "Free civil legal help for people with low income in Clayton, Cobb, DeKalb, Fulton and Gwinnett counties. Not criminal defense.",
+    "next_step": "Call 404-524-5811 or use the online intake application. If you are 60 or older, call the Georgia Senior Legal Hotline.",
+    "constraints": [
+      "Income, case type and capacity limits apply. Legal aid is not guaranteed representation."
+    ],
+    "public_contact": {
+      "phone": "404-524-5811",
+      "phone_label": "Atlanta Legal Aid intake"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://georgiacourts.gov/?p=25832"
+    },
+    "source_evidence": [
+      {
+        "url": "https://georgiacourts.gov/?p=25832",
+        "title": "Georgia courts: GeorgiaLegalAid.org background",
+        "reviewed_on": "2026-11-04",
+        "scope": "Atlanta Legal Aid’s five counties, GLSP’s 154 counties and intake phones; search excerpt."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "ga-legal-senior",
+    "name": "Georgia Senior Legal Hotline",
+    "organization": "Georgia Senior Legal Hotline",
+    "official_url": "https://atlantalegalaid.org/",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "GA",
+    "resource_role": "legal_aid",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation",
+      "care_facilities"
+    ],
+    "description": "Free legal advice, brief service and referrals by phone for Georgians age 60 and older, on almost any civil legal problem. Run by Atlanta Legal Aid Society with the Division of Aging Services.",
+    "next_step": "Age 60 or older anywhere in Georgia: call 888-257-9519 (metro Atlanta: 404-389-9992). You can also reach it through 866-552-4464, option 7. An attorney calls back.",
+    "constraints": [
+      "Advice and brief service; ongoing representation depends on the local legal aid program."
+    ],
+    "public_contact": {
+      "phone": "888-257-9519",
+      "phone_label": "Georgia Senior Legal Hotline (age 60+)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.georgia.gov/document/document/das-elder-rights-program-fact-sheet-7-2pdf/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.georgia.gov/document/document/das-elder-rights-program-fact-sheet-7-2pdf/download",
+        "title": "DAS Elder Rights fact sheet",
+        "reviewed_on": "2026-11-04",
+        "scope": "Senior Legal Hotline toll-free number, age 60+ and callback process; search excerpt."
+      },
+      {
+        "url": "https://aging.georgia.gov/faqs",
+        "title": "Georgia Division of Aging Services: FAQs",
+        "reviewed_on": "2026-11-04",
+        "scope": "Senior Legal Hotline through 866-552-4464, option 7; search excerpt."
+      },
+      {
+        "url": "https://georgiacourts.gov/?p=25832",
+        "title": "Georgia courts: GeorgiaLegalAid.org background",
+        "reviewed_on": "2026-11-04",
+        "scope": "Atlanta Legal Aid’s five counties, GLSP’s 154 counties and intake phones; search excerpt."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
-  },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 217",
-    "sheet": "Contacts",
-    "row": 217,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "ga-ssvf-26-ga-471",
-  "name": "Volunteers of America Southeast, Inc.: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Volunteers of America Southeast, Inc.",
-  "service_area": [
-   "All Georgia counties"
-  ],
-  "state": "GA",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 26-GA-471): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Chattooga County, Clay County, Dawson County, Fannin County, Gilmer County, Gordon County, Habersham County, Haralson County, Heard County, Jasper County, Lamar County, Lumpkin County and 15 more.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "478-919-2377",
-   "phone_label": "VA-listed SSVF intake"
-  },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
-  },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
-  },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 227",
-    "sheet": "Contacts",
-    "row": 227,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- }
+  {
+    "program_id": "ga-vahealth-systems",
+    "name": "VA medical centers serving Georgia",
+    "organization": "U.S. Department of Veterans Affairs",
+    "official_url": "https://www.va.gov/find-locations/?facilityType=health",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "GA",
+    "resource_role": "va_health_system",
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "Three VA medical centers are in Georgia: Atlanta VA Health Care System, Decatur (404-321-6111); Charlie Norwood VA Medical Center, Augusta (706-733-0188); and Carl Vinson VA Medical Center, Dublin (478-272-1210). Each runs clinics across its area; some south Georgia clinics, such as Waycross, belong to VA’s Florida network.",
+    "next_step": "Use VA’s facility locator with your ZIP code to find the closest clinic and its medical center. Not enrolled yet? Call 877-222-8387 or ask your GDVS field office for help applying.",
+    "constraints": [
+      "VA does not publish county lists for these medical centers, so this card does not assign counties. Your VA care team may be at a different clinic or system; follow what VA tells you."
+    ],
+    "public_contact": {
+      "phone": "877-222-8387",
+      "phone_label": "VA health care enrollment line"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.va.gov/directory/guide/fac_list_by_state.cfm?State=GA",
+        "title": "VA facility list, Georgia",
+        "reviewed_on": "2026-11-04",
+        "scope": "Medical centers, main phones and the VISN 8 Waycross clinic; search excerpt."
+      },
+      {
+        "url": "https://www.va.gov/directory/Guide/state_SUD.cfm?STATE=GA",
+        "title": "VA Georgia program directory",
+        "reviewed_on": "2026-11-04",
+        "scope": "Charlie Norwood VA Medical Center main phone; search excerpt."
+      }
+    ]
+  }
 ]

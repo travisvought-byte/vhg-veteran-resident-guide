@@ -292,6 +292,32 @@
     ]
   },
   {
+    "code": "GA",
+    "name": "Georgia",
+    "page": "ga.html",
+    "share_page": "share-ga.html",
+    "qr": "assets/guide-qr-ga.svg",
+    "counties": 159,
+    "programs": "data/public/ga-programs.json",
+    "referrals": "data/public/ga-regional-referrals.json",
+    "offices": "data/public/georgia-county-veterans-offices.json",
+    "resources": "data/public/georgia-resources.json",
+    "statewide_area_names": [],
+    "coverage_scope": "Referral edition. All 159 counties have their Georgia Department of Veterans Service field office (three use the GDVS main line), a matched Area Agency on Aging and the statewide long-term-care ombudsman route.",
+    "coverage_note": "Field office phones, hours and notices come from each office’s GDVS page; counties served and addresses from the GDVS field office list, reviewed November 4, 2026. The list assigns no office to Elbert, Lincoln or Wilkes, so those counties use the GDVS main line. Brunswick is temporarily closed; Glynn and McIntosh are routed to St. Marys and Hinesville. The 12 aging agencies and their counties come from the 2024–2027 State Plan on Aging. Contacts are not telephone-confirmed; confirm intake before traveling.",
+    "share_description": "Georgia Department of Veterans Service field offices, county-matched aging agencies and the statewide long-term-care ombudsman",
+    "share_replacements": [
+      [
+        "county veterans offices",
+        "veterans field service offices"
+      ],
+      [
+        "Updated October 8, 2026",
+        "Updated November 4, 2026"
+      ]
+    ]
+  },
+  {
     "code": "AL",
     "name": "Alabama",
     "starter": true,
@@ -448,26 +474,6 @@
     ],
     "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
     "coverage_note": "Starter edition. Every county uses the Mayor’s Office of Veterans Affairs and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
-    "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
-    "share_replacements": []
-  },
-  {
-    "code": "GA",
-    "name": "Georgia",
-    "starter": true,
-    "page": "ga.html",
-    "share_page": "share-ga.html",
-    "qr": "assets/guide-qr-ga.svg",
-    "counties": 1,
-    "programs": "data/public/ga-programs.json",
-    "referrals": "data/public/ga-regional-referrals.json",
-    "offices": "data/public/georgia-county-veterans-offices.json",
-    "resources": "data/public/georgia-resources.json",
-    "statewide_area_names": [
-      "All Georgia counties"
-    ],
-    "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
-    "coverage_note": "Starter edition. Every county uses the Georgia Department of Veterans Service and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
     "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
     "share_replacements": []
   },

@@ -1,80 +1,653 @@
 [
- {
-  "program_id": "ga-aging",
-  "name": "Local aging help in Georgia (Eldercare Locator)",
-  "official_url": "https://eldercare.acl.gov/home",
-  "organization": "U.S. Administration for Community Living",
-  "service_area": [
-   "All Georgia counties"
-  ],
-  "state": "GA",
-  "needs_supported": [
-   "general_navigation",
-   "help_at_home"
-  ],
-  "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-  "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
-  "constraints": [
-   "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "ga-aging-heart-of-georgia",
+    "name": "Heart of Georgia Area Agency on Aging",
+    "organization": "Heart of Georgia Area Agency on Aging",
+    "official_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+    "state": "GA",
+    "service_area": [
+      "Appling",
+      "Bleckley",
+      "Candler",
+      "Dodge",
+      "Emanuel",
+      "Evans",
+      "Jeff Davis",
+      "Johnson",
+      "Laurens",
+      "Montgomery",
+      "Tattnall",
+      "Telfair",
+      "Toombs",
+      "Treutlen",
+      "Wayne",
+      "Wheeler",
+      "Wilcox"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: the local door to meals, transportation, caregiver support, services at home and Aging and Disability Resource Connection (ADRC) counseling.",
+    "next_step": "Call with the county and what is hard right now. Ask for an assessment and the next referral. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older or their caregivers; waitlists and eligibility rules vary by service."
+    ],
+    "public_contact": {
+      "phone": "888-367-9913",
+      "phone_label": "Heart of Georgia region aging line (2024–2027 State Plan on Aging)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+      "phone_source_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+        "title": "Georgia DHS Division of Aging Services: 2024–2027 State Plan on Aging, contact information",
+        "reviewed_on": "2026-11-04",
+        "scope": "Region phones and counties served for all 12 Area Agencies on Aging."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "ga-aging-southern-georgia",
+    "name": "Southern Georgia Area Agency on Aging",
+    "organization": "Southern Georgia Area Agency on Aging",
+    "official_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+    "state": "GA",
+    "service_area": [
+      "Atkinson",
+      "Bacon",
+      "Ben Hill",
+      "Berrien",
+      "Brantley",
+      "Brooks",
+      "Charlton",
+      "Clinch",
+      "Coffee",
+      "Cook",
+      "Echols",
+      "Irwin",
+      "Lanier",
+      "Lowndes",
+      "Pierce",
+      "Tift",
+      "Turner",
+      "Ware"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: the local door to meals, transportation, caregiver support, services at home and Aging and Disability Resource Connection (ADRC) counseling.",
+    "next_step": "Call with the county and what is hard right now. Ask for an assessment and the next referral. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older or their caregivers; waitlists and eligibility rules vary by service."
+    ],
+    "public_contact": {
+      "phone": "888-732-4464",
+      "phone_label": "Southern Georgia region aging line (2024–2027 State Plan on Aging)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+      "phone_source_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+        "title": "Georgia DHS Division of Aging Services: 2024–2027 State Plan on Aging, contact information",
+        "reviewed_on": "2026-11-04",
+        "scope": "Region phones and counties served for all 12 Area Agencies on Aging."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.acl.gov/contact"
+  {
+    "program_id": "ga-aging-central-savannah-river",
+    "name": "Central Savannah River Area Agency on Aging",
+    "organization": "Central Savannah River Area Agency on Aging",
+    "official_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+    "state": "GA",
+    "service_area": [
+      "Burke",
+      "Columbia",
+      "Glascock",
+      "Hancock",
+      "Jefferson",
+      "Jenkins",
+      "Lincoln",
+      "McDuffie",
+      "Richmond",
+      "Screven",
+      "Taliaferro",
+      "Warren",
+      "Washington",
+      "Wilkes"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: the local door to meals, transportation, caregiver support, services at home and Aging and Disability Resource Connection (ADRC) counseling.",
+    "next_step": "Call with the county and what is hard right now. Ask for an assessment and the next referral. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older or their caregivers; waitlists and eligibility rules vary by service."
+    ],
+    "public_contact": {
+      "phone": "888-922-4464",
+      "phone_label": "Central Savannah River region aging line (2024–2027 State Plan on Aging)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+      "phone_source_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+        "title": "Georgia DHS Division of Aging Services: 2024–2027 State Plan on Aging, contact information",
+        "reviewed_on": "2026-11-04",
+        "scope": "Region phones and counties served for all 12 Area Agencies on Aging."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.acl.gov/contact",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "aging_agency"
- },
- {
-  "program_id": "ga-ombudsman",
-  "name": "Georgia long-term-care ombudsman",
-  "official_url": "https://theconsumervoice.org/get_help",
-  "organization": "National Long-Term Care Ombudsman Resource Center",
-  "service_area": [
-   "All Georgia counties"
-  ],
-  "state": "GA",
-  "needs_supported": [
-   "resident_rights",
-   "general_navigation"
-  ],
-  "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-  "next_step": "Use the locator to find the Georgia program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
-  "constraints": [
-   "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "ga-aging-river-valley",
+    "name": "River Valley Area Agency on Aging",
+    "organization": "River Valley Area Agency on Aging",
+    "official_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+    "state": "GA",
+    "service_area": [
+      "Chattahoochee",
+      "Clay",
+      "Crisp",
+      "Dooly",
+      "Harris",
+      "Macon",
+      "Marion",
+      "Muscogee",
+      "Quitman",
+      "Randolph",
+      "Schley",
+      "Stewart",
+      "Sumter",
+      "Talbot",
+      "Taylor",
+      "Webster"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: the local door to meals, transportation, caregiver support, services at home and Aging and Disability Resource Connection (ADRC) counseling.",
+    "next_step": "Call with the county and what is hard right now. Ask for an assessment and the next referral. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older or their caregivers; waitlists and eligibility rules vary by service."
+    ],
+    "public_contact": {
+      "phone": "800-615-4379",
+      "phone_label": "River Valley region aging line (2024–2027 State Plan on Aging)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+      "phone_source_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+        "title": "Georgia DHS Division of Aging Services: 2024–2027 State Plan on Aging, contact information",
+        "reviewed_on": "2026-11-04",
+        "scope": "Region phones and counties served for all 12 Area Agencies on Aging."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "ga-aging-southwest-georgia",
+    "name": "Southwest Georgia Area Agency on Aging",
+    "organization": "Southwest Georgia Area Agency on Aging",
+    "official_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+    "state": "GA",
+    "service_area": [
+      "Baker",
+      "Calhoun",
+      "Colquitt",
+      "Decatur",
+      "Dougherty",
+      "Early",
+      "Grady",
+      "Lee",
+      "Miller",
+      "Mitchell",
+      "Seminole",
+      "Terrell",
+      "Thomas",
+      "Worth"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: the local door to meals, transportation, caregiver support, services at home and Aging and Disability Resource Connection (ADRC) counseling.",
+    "next_step": "Call with the county and what is hard right now. Ask for an assessment and the next referral. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older or their caregivers; waitlists and eligibility rules vary by service."
+    ],
+    "public_contact": {
+      "phone": "800-282-6612",
+      "phone_label": "Southwest Georgia region aging line (2024–2027 State Plan on Aging)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+      "phone_source_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+        "title": "Georgia DHS Division of Aging Services: 2024–2027 State Plan on Aging, contact information",
+        "reviewed_on": "2026-11-04",
+        "scope": "Region phones and counties served for all 12 Area Agencies on Aging."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
+  {
+    "program_id": "ga-aging-northeast-georgia",
+    "name": "Northeast Georgia Area Agency on Aging",
+    "organization": "Northeast Georgia Area Agency on Aging",
+    "official_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+    "state": "GA",
+    "service_area": [
+      "Barrow",
+      "Clarke",
+      "Elbert",
+      "Greene",
+      "Jackson",
+      "Jasper",
+      "Madison",
+      "Morgan",
+      "Newton",
+      "Oconee",
+      "Oglethorpe",
+      "Walton"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: the local door to meals, transportation, caregiver support, services at home and Aging and Disability Resource Connection (ADRC) counseling.",
+    "next_step": "Call with the county and what is hard right now. Ask for an assessment and the next referral. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older or their caregivers; waitlists and eligibility rules vary by service."
+    ],
+    "public_contact": {
+      "phone": "800-474-7540",
+      "phone_label": "Northeast Georgia region aging line (2024–2027 State Plan on Aging)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+      "phone_source_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+        "title": "Georgia DHS Division of Aging Services: 2024–2027 State Plan on Aging, contact information",
+        "reviewed_on": "2026-11-04",
+        "scope": "Region phones and counties served for all 12 Area Agencies on Aging."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "ombudsman"
- }
+  {
+    "program_id": "ga-aging-three-rivers",
+    "name": "Three Rivers Area Agency on Aging",
+    "organization": "Three Rivers Area Agency on Aging",
+    "official_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+    "state": "GA",
+    "service_area": [
+      "Butts",
+      "Carroll",
+      "Coweta",
+      "Heard",
+      "Lamar",
+      "Meriwether",
+      "Pike",
+      "Spalding",
+      "Troup",
+      "Upson"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: the local door to meals, transportation, caregiver support, services at home and Aging and Disability Resource Connection (ADRC) counseling.",
+    "next_step": "Call with the county and what is hard right now. Ask for an assessment and the next referral. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older or their caregivers; waitlists and eligibility rules vary by service."
+    ],
+    "public_contact": {
+      "phone": "866-854-5652",
+      "phone_label": "Three Rivers region aging line (2024–2027 State Plan on Aging)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+      "phone_source_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+        "title": "Georgia DHS Division of Aging Services: 2024–2027 State Plan on Aging, contact information",
+        "reviewed_on": "2026-11-04",
+        "scope": "Region phones and counties served for all 12 Area Agencies on Aging."
+      }
+    ]
+  },
+  {
+    "program_id": "ga-aging-coastal",
+    "name": "Coastal Area Agency on Aging",
+    "organization": "Coastal Area Agency on Aging",
+    "official_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+    "state": "GA",
+    "service_area": [
+      "Bryan",
+      "Bulloch",
+      "Camden",
+      "Chatham",
+      "Effingham",
+      "Glynn",
+      "Liberty",
+      "Long",
+      "McIntosh"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: the local door to meals, transportation, caregiver support, services at home and Aging and Disability Resource Connection (ADRC) counseling.",
+    "next_step": "Call with the county and what is hard right now. Ask for an assessment and the next referral. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older or their caregivers; waitlists and eligibility rules vary by service."
+    ],
+    "public_contact": {
+      "phone": "800-580-6860",
+      "phone_label": "Coastal region aging line (2024–2027 State Plan on Aging)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+      "phone_source_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+        "title": "Georgia DHS Division of Aging Services: 2024–2027 State Plan on Aging, contact information",
+        "reviewed_on": "2026-11-04",
+        "scope": "Region phones and counties served for all 12 Area Agencies on Aging."
+      }
+    ]
+  },
+  {
+    "program_id": "ga-aging-georgia-mountains",
+    "name": "Georgia Mountains Area Agency on Aging",
+    "organization": "Georgia Mountains Area Agency on Aging",
+    "official_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+    "state": "GA",
+    "service_area": [
+      "Banks",
+      "Dawson",
+      "Forsyth",
+      "Franklin",
+      "Habersham",
+      "Hall",
+      "Hart",
+      "Lumpkin",
+      "Rabun",
+      "Stephens",
+      "Towns",
+      "Union",
+      "White"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: the local door to meals, transportation, caregiver support, services at home and Aging and Disability Resource Connection (ADRC) counseling.",
+    "next_step": "Call with the county and what is hard right now. Ask for an assessment and the next referral. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older or their caregivers; waitlists and eligibility rules vary by service."
+    ],
+    "public_contact": {
+      "phone": "800-845-5465",
+      "phone_label": "Georgia Mountains region aging line (2024–2027 State Plan on Aging)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+      "phone_source_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+        "title": "Georgia DHS Division of Aging Services: 2024–2027 State Plan on Aging, contact information",
+        "reviewed_on": "2026-11-04",
+        "scope": "Region phones and counties served for all 12 Area Agencies on Aging."
+      }
+    ]
+  },
+  {
+    "program_id": "ga-aging-northwest-georgia",
+    "name": "Northwest Georgia Area Agency on Aging",
+    "organization": "Northwest Georgia Area Agency on Aging",
+    "official_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+    "state": "GA",
+    "service_area": [
+      "Bartow",
+      "Catoosa",
+      "Chattooga",
+      "Dade",
+      "Fannin",
+      "Floyd",
+      "Gilmer",
+      "Gordon",
+      "Haralson",
+      "Murray",
+      "Paulding",
+      "Pickens",
+      "Polk",
+      "Walker",
+      "Whitfield"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: the local door to meals, transportation, caregiver support, services at home and Aging and Disability Resource Connection (ADRC) counseling.",
+    "next_step": "Call with the county and what is hard right now. Ask for an assessment and the next referral. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older or their caregivers; waitlists and eligibility rules vary by service."
+    ],
+    "public_contact": {
+      "phone": "706-295-6485",
+      "phone_label": "Northwest Georgia region aging line (2024–2027 State Plan on Aging)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+      "phone_source_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+        "title": "Georgia DHS Division of Aging Services: 2024–2027 State Plan on Aging, contact information",
+        "reviewed_on": "2026-11-04",
+        "scope": "Region phones and counties served for all 12 Area Agencies on Aging."
+      }
+    ]
+  },
+  {
+    "program_id": "ga-aging-middle-georgia",
+    "name": "Middle Georgia Area Agency on Aging",
+    "organization": "Middle Georgia Area Agency on Aging",
+    "official_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+    "state": "GA",
+    "service_area": [
+      "Baldwin",
+      "Bibb",
+      "Crawford",
+      "Houston",
+      "Jones",
+      "Monroe",
+      "Peach",
+      "Pulaski",
+      "Putnam",
+      "Twiggs",
+      "Wilkinson"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: the local door to meals, transportation, caregiver support, services at home and Aging and Disability Resource Connection (ADRC) counseling.",
+    "next_step": "Call with the county and what is hard right now. Ask for an assessment and the next referral. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older or their caregivers; waitlists and eligibility rules vary by service."
+    ],
+    "public_contact": {
+      "phone": "888-548-1456",
+      "phone_label": "Middle Georgia region aging line (2024–2027 State Plan on Aging)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+      "phone_source_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+        "title": "Georgia DHS Division of Aging Services: 2024–2027 State Plan on Aging, contact information",
+        "reviewed_on": "2026-11-04",
+        "scope": "Region phones and counties served for all 12 Area Agencies on Aging."
+      }
+    ]
+  },
+  {
+    "program_id": "ga-aging-atlanta-region",
+    "name": "Atlanta Regional Commission Area Agency on Aging",
+    "organization": "Atlanta Regional Commission Area Agency on Aging",
+    "official_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+    "state": "GA",
+    "service_area": [
+      "Cherokee",
+      "Clayton",
+      "Cobb",
+      "DeKalb",
+      "Douglas",
+      "Fayette",
+      "Fulton",
+      "Gwinnett",
+      "Henry",
+      "Rockdale"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: the local door to meals, transportation, caregiver support, services at home and Aging and Disability Resource Connection (ADRC) counseling.",
+    "next_step": "Call with the county and what is hard right now. Ask for an assessment and the next referral. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older or their caregivers; waitlists and eligibility rules vary by service."
+    ],
+    "public_contact": {
+      "phone": "404-463-3333",
+      "phone_label": "Atlanta Region region aging line (2024–2027 State Plan on Aging)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+      "phone_source_url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.georgia.gov/document/document/das-state-plan-2024-2027/download",
+        "title": "Georgia DHS Division of Aging Services: 2024–2027 State Plan on Aging, contact information",
+        "reviewed_on": "2026-11-04",
+        "scope": "Region phones and counties served for all 12 Area Agencies on Aging."
+      }
+    ]
+  }
 ]

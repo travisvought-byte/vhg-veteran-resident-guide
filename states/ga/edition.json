@@ -1,194 +1,253 @@
 {
- "ops": [
-  {
-   "op": "clear_data"
-  },
-  {
-   "op": "replace",
-   "old": "Ohio",
-   "new": "Georgia"
-  },
-  {
-   "op": "replace",
-   "old": "All 88",
-   "new": "All"
-  },
-  {
-   "op": "replace",
-   "old": "all 88",
-   "new": "all"
-  },
-  {
-   "op": "replace",
-   "old": "<option value=\"OH\">Georgia</option>",
-   "new": "<option value=\"OH\">Ohio</option>"
-  },
-  {
-   "op": "replace",
-   "old": "const STATE='OH';",
-   "new": "const STATE='GA';"
-  },
-  {
-   "op": "replace",
-   "old": "county veterans office",
-   "new": "state veterans agency"
-  },
-  {
-   "op": "replace",
-   "old": "county office",
-   "new": "state veterans agency"
-  },
-  {
-   "op": "replace",
-   "old": "Statewide edition · Updated October 8, 2026",
-   "new": "Georgia starter edition · Updated November 2, 2026"
-  },
-  {
-   "op": "replace",
-   "old": "Georgia’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
-   "new": "Ask the local aging agency or state Medicaid agency about waiver assessment and written approval; VA and other funders have their own processes."
-  },
-  {
-   "op": "replace",
-   "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
-   "new": "https://eldercare.acl.gov/home"
-  },
-  {
-   "op": "replace",
-   "old": "Georgia home modification authorization and provider rules",
-   "new": "Find local aging and disability help (Eldercare Locator)"
-  },
-  {
-   "op": "replace",
-   "old": "href=\"share.html\"",
-   "new": "href=\"share-ga.html\""
-  },
-  {
-   "op": "replace",
-   "old": "href=\"prototype-data.json\"",
-   "new": "href=\"data/public/georgia-resources.json\""
-  },
-  {
-   "op": "replace",
-   "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
-   "new": "href=\"data/public/georgia-county-veterans-offices.json\""
-  },
-  {
-   "op": "declare",
-   "name": "priority",
-   "value": [
-    "ga-claims",
-    "ga-aging",
-    "ga-ship",
-    "ga-ombudsman",
-    "r02-aid-attendance-housebound",
-    "r02-va-pension",
-    "r02-survivors-pension"
-   ]
-  },
-  {
-   "op": "declare",
-   "name": "routes",
-   "value": {
-    "benefits": [
-     "ga-claims",
-     "ga-ship",
-     "r02-va-pension",
-     "r02-aid-attendance-housebound",
-     "r02-disability-increase",
-     "r02-pension-medicaid-rule",
-     "r02-survivors-pension",
-     "r02-dic",
-     "va-accredited-help"
-    ],
-    "survivors": [
-     "ga-claims",
-     "r02-survivors-pension",
-     "r02-dic",
-     "r02-aid-attendance-housebound",
-     "r02-va-burial",
-     "va-accredited-help",
-     "nara-discharge-records"
-    ],
-    "care": [
-     "ga-aging",
-     "r02-va-health-enrollment",
-     "va-location-finder",
-     "r02-va-cnh",
-     "r02-va-clc",
-     "r02-general-caregiver",
-     "r02-family-caregiver",
-     "r02-hospice",
-     "r02-palliative"
-    ],
-    "rights": [
-     "ga-ombudsman",
-     "ga-aging"
-    ],
-    "local": [
-     "ga-aging",
-     "ga-claims"
-    ],
-    "housing": [
-     "va-housing-help",
-     "ga-ssvf-12-ga-029",
-     "ga-ssvf-14-tn-284",
-     "ga-ssvf-15-ga-325",
-     "ga-ssvf-20-ga-188",
-     "ga-ssvf-20-ga-369",
-     "ga-ssvf-23-zz-324",
-     "ga-ssvf-26-ga-471",
-     "va-location-finder",
-     "va-accredited-help",
-     "nara-discharge-records"
-    ]
-   }
-  },
-  {
-   "op": "declare",
-   "name": "seniorTopics",
-   "value": {
-    "daily": [
-     "ga-aging"
-    ],
-    "accessibility": [
-     "ga-aging"
-    ],
-    "vision": [
-     "ga-aging"
-    ],
-    "hearing": [
-     "ga-aging"
-    ],
-    "memory": [
-     "alz-dementia-support",
-     "ga-aging"
-    ],
-    "costs": [
-     "ga-ship",
-     "ga-aging"
-    ],
-    "rights": [
-     "ga-ombudsman",
-     "ga-aging"
-    ]
-   }
-  },
-  {
-   "op": "line",
-   "prefix": "routes.accessibility=",
-   "new": "routes.accessibility=['va-hisa','va-sah','va-sha','va-tra','ga-aging','va-location-finder'];"
-  },
-  {
-   "op": "line",
-   "prefix": "routes.seniors=",
-   "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
-  },
-  {
-   "op": "adapter"
-  },
-  {
-   "op": "embed_data"
-  }
- ]
+  "ops": [
+    {
+      "op": "clear_data"
+    },
+    {
+      "op": "replace",
+      "old": "Ohio",
+      "new": "Georgia"
+    },
+    {
+      "op": "replace",
+      "old": "All 88",
+      "new": "All 159"
+    },
+    {
+      "op": "replace",
+      "old": "all 88",
+      "new": "all 159"
+    },
+    {
+      "op": "replace",
+      "old": "<option value=\"OH\">Georgia</option>",
+      "new": "<option value=\"OH\">Ohio</option>"
+    },
+    {
+      "op": "replace",
+      "old": "const STATE='OH';",
+      "new": "const STATE='GA';"
+    },
+    {
+      "op": "replace",
+      "old": "county veterans office",
+      "new": "veterans field service office"
+    },
+    {
+      "op": "replace",
+      "old": "county office",
+      "new": "field service office"
+    },
+    {
+      "op": "replace",
+      "old": "Statewide edition · Updated October 8, 2026",
+      "new": "Georgia edition · Updated November 4, 2026"
+    },
+    {
+      "op": "replace",
+      "old": "Most phones come from Georgia AMVETS’ 2025–2026 directory.",
+      "new": "Veterans phones come from each Georgia Department of Veterans Service field office page; counties served come from the GDVS field office list. Confirm intake before traveling."
+    },
+    {
+      "op": "replace",
+      "old": "Georgia’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
+      "new": "Ask the local aging agency or state Medicaid agency about waiver assessment and written approval; VA and other funders have their own processes."
+    },
+    {
+      "op": "replace",
+      "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
+      "new": "https://eldercare.acl.gov/home"
+    },
+    {
+      "op": "replace",
+      "old": "Georgia home modification authorization and provider rules",
+      "new": "Find local aging and disability help (Eldercare Locator)"
+    },
+    {
+      "op": "replace",
+      "old": "href=\"share.html\"",
+      "new": "href=\"share-ga.html\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"prototype-data.json\"",
+      "new": "href=\"data/public/georgia-resources.json\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
+      "new": "href=\"data/public/georgia-county-veterans-offices.json\""
+    },
+    {
+      "op": "declare",
+      "name": "priority",
+      "value": [
+        "ga-claims",
+        "ga-adrc",
+        "ga-ship",
+        "ga-ombudsman",
+        "ga-legal-senior",
+        "r02-aid-attendance-housebound",
+        "r02-va-pension",
+        "r02-survivors-pension",
+        "r02-va-health-enrollment",
+        "va-accredited-help"
+      ]
+    },
+    {
+      "op": "declare",
+      "name": "routes",
+      "value": {
+        "benefits": [
+          "ga-claims",
+          "ga-ship",
+          "r02-va-pension",
+          "r02-aid-attendance-housebound",
+          "r02-disability-increase",
+          "r02-pension-medicaid-rule",
+          "r02-survivors-pension",
+          "r02-dic",
+          "va-accredited-help",
+          "ga-adrc"
+        ],
+        "survivors": [
+          "ga-claims",
+          "r02-survivors-pension",
+          "r02-dic",
+          "r02-aid-attendance-housebound",
+          "r02-va-burial",
+          "va-accredited-help",
+          "nara-discharge-records"
+        ],
+        "care": [
+          "r02-va-health-enrollment",
+          "va-location-finder",
+          "r02-va-cnh",
+          "r02-va-clc",
+          "r02-general-caregiver",
+          "r02-family-caregiver",
+          "r02-hospice",
+          "r02-palliative",
+          "ga-adrc",
+          "ga-cil-a2i",
+          "ga-cil-bain",
+          "ga-cil-dc",
+          "ga-cil-dlink",
+          "ga-cil-drc",
+          "ga-cil-life",
+          "ga-cil-mc",
+          "ga-cil-nwga",
+          "ga-cil-walton",
+          "ga-vahealth-systems"
+        ],
+        "rights": [
+          "ga-ombudsman",
+          "ga-legal-glsp",
+          "ga-legal-alas",
+          "ga-legal-senior",
+          "ga-adrc"
+        ],
+        "local": [
+          "ga-claims",
+          "ga-adrc",
+          "ga-cil-a2i",
+          "ga-cil-bain",
+          "ga-cil-dc",
+          "ga-cil-dlink",
+          "ga-cil-drc",
+          "ga-cil-life",
+          "ga-cil-mc",
+          "ga-cil-nwga",
+          "ga-cil-walton",
+          "ga-legal-glsp",
+          "ga-legal-alas",
+          "ga-legal-senior",
+          "ga-vahealth-systems"
+        ],
+        "housing": [
+          "va-housing-help",
+          "ga-ssvf-12-ga-029",
+          "ga-ssvf-14-tn-284",
+          "ga-ssvf-15-ga-325",
+          "ga-ssvf-20-ga-188",
+          "ga-ssvf-20-ga-369",
+          "ga-ssvf-23-zz-324",
+          "ga-ssvf-26-ga-471",
+          "va-location-finder",
+          "va-accredited-help",
+          "nara-discharge-records",
+          "ga-legal-glsp",
+          "ga-legal-alas",
+          "ga-legal-senior"
+        ]
+      }
+    },
+    {
+      "op": "declare",
+      "name": "seniorTopics",
+      "value": {
+        "daily": [
+          "ga-adrc",
+          "ga-cil-a2i",
+          "ga-cil-bain",
+          "ga-cil-dc",
+          "ga-cil-dlink",
+          "ga-cil-drc",
+          "ga-cil-life",
+          "ga-cil-mc",
+          "ga-cil-nwga",
+          "ga-cil-walton"
+        ],
+        "accessibility": [
+          "ga-adrc",
+          "ga-cil-a2i",
+          "ga-cil-bain",
+          "ga-cil-dc",
+          "ga-cil-dlink",
+          "ga-cil-drc",
+          "ga-cil-life",
+          "ga-cil-mc",
+          "ga-cil-nwga",
+          "ga-cil-walton"
+        ],
+        "vision": [
+          "ga-adrc"
+        ],
+        "hearing": [
+          "ga-adrc"
+        ],
+        "memory": [
+          "alz-dementia-support",
+          "ga-adrc"
+        ],
+        "costs": [
+          "ga-ship",
+          "ga-adrc",
+          "ga-legal-senior"
+        ],
+        "rights": [
+          "ga-ombudsman",
+          "ga-legal-senior",
+          "ga-legal-glsp",
+          "ga-legal-alas"
+        ]
+      }
+    },
+    {
+      "op": "line",
+      "prefix": "routes.accessibility=",
+      "new": "routes.accessibility=['va-hisa','va-sah','va-sha','va-tra','ga-adrc','ga-cil-a2i','ga-cil-bain','ga-cil-dc','ga-cil-dlink','ga-cil-drc','ga-cil-life','ga-cil-mc','ga-cil-nwga','ga-cil-walton','va-location-finder',...DATA.filter(x=>x.regional_role==='aging_agency').map(x=>x.program_id)];"
+    },
+    {
+      "op": "line",
+      "prefix": "routes.seniors=",
+      "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
+    },
+    {
+      "op": "adapter"
+    },
+    {
+      "op": "embed_data"
+    }
+  ]
 }
