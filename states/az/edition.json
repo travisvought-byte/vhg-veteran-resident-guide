@@ -1,193 +1,233 @@
 {
- "ops": [
-  {
-   "op": "clear_data"
-  },
-  {
-   "op": "replace",
-   "old": "Ohio",
-   "new": "Arizona"
-  },
-  {
-   "op": "replace",
-   "old": "All 88",
-   "new": "All"
-  },
-  {
-   "op": "replace",
-   "old": "all 88",
-   "new": "all"
-  },
-  {
-   "op": "replace",
-   "old": "<option value=\"OH\">Arizona</option>",
-   "new": "<option value=\"OH\">Ohio</option>"
-  },
-  {
-   "op": "replace",
-   "old": "const STATE='OH';",
-   "new": "const STATE='AZ';"
-  },
-  {
-   "op": "replace",
-   "old": "county veterans office",
-   "new": "state veterans agency"
-  },
-  {
-   "op": "replace",
-   "old": "county office",
-   "new": "state veterans agency"
-  },
-  {
-   "op": "replace",
-   "old": "Statewide edition · Updated October 8, 2026",
-   "new": "Arizona starter edition · Updated November 2, 2026"
-  },
-  {
-   "op": "replace",
-   "old": "Arizona’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
-   "new": "Ask the local aging agency or state Medicaid agency about waiver assessment and written approval; VA and other funders have their own processes."
-  },
-  {
-   "op": "replace",
-   "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
-   "new": "https://eldercare.acl.gov/home"
-  },
-  {
-   "op": "replace",
-   "old": "Arizona home modification authorization and provider rules",
-   "new": "Find local aging and disability help (Eldercare Locator)"
-  },
-  {
-   "op": "replace",
-   "old": "href=\"share.html\"",
-   "new": "href=\"share-az.html\""
-  },
-  {
-   "op": "replace",
-   "old": "href=\"prototype-data.json\"",
-   "new": "href=\"data/public/arizona-resources.json\""
-  },
-  {
-   "op": "replace",
-   "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
-   "new": "href=\"data/public/arizona-county-veterans-offices.json\""
-  },
-  {
-   "op": "declare",
-   "name": "priority",
-   "value": [
-    "az-claims",
-    "az-aging",
-    "az-ship",
-    "az-ombudsman",
-    "r02-aid-attendance-housebound",
-    "r02-va-pension",
-    "r02-survivors-pension"
-   ]
-  },
-  {
-   "op": "declare",
-   "name": "routes",
-   "value": {
-    "benefits": [
-     "az-claims",
-     "az-ship",
-     "r02-va-pension",
-     "r02-aid-attendance-housebound",
-     "r02-disability-increase",
-     "r02-pension-medicaid-rule",
-     "r02-survivors-pension",
-     "r02-dic",
-     "va-accredited-help"
-    ],
-    "survivors": [
-     "az-claims",
-     "r02-survivors-pension",
-     "r02-dic",
-     "r02-aid-attendance-housebound",
-     "r02-va-burial",
-     "va-accredited-help",
-     "nara-discharge-records"
-    ],
-    "care": [
-     "az-aging",
-     "r02-va-health-enrollment",
-     "va-location-finder",
-     "r02-va-cnh",
-     "r02-va-clc",
-     "r02-general-caregiver",
-     "r02-family-caregiver",
-     "r02-hospice",
-     "r02-palliative"
-    ],
-    "rights": [
-     "az-ombudsman",
-     "az-aging"
-    ],
-    "local": [
-     "az-aging",
-     "az-claims"
-    ],
-    "housing": [
-     "va-housing-help",
-     "az-ssvf-14-az-157",
-     "az-ssvf-14-az-160",
-     "az-ssvf-19-az-004",
-     "az-ssvf-19-az-436",
-     "az-ssvf-20-az-159",
-     "az-ssvf-25-zz-158",
-     "va-location-finder",
-     "va-accredited-help",
-     "nara-discharge-records"
-    ]
-   }
-  },
-  {
-   "op": "declare",
-   "name": "seniorTopics",
-   "value": {
-    "daily": [
-     "az-aging"
-    ],
-    "accessibility": [
-     "az-aging"
-    ],
-    "vision": [
-     "az-aging"
-    ],
-    "hearing": [
-     "az-aging"
-    ],
-    "memory": [
-     "alz-dementia-support",
-     "az-aging"
-    ],
-    "costs": [
-     "az-ship",
-     "az-aging"
-    ],
-    "rights": [
-     "az-ombudsman",
-     "az-aging"
-    ]
-   }
-  },
-  {
-   "op": "line",
-   "prefix": "routes.accessibility=",
-   "new": "routes.accessibility=['va-hisa','va-sah','va-sha','va-tra','az-aging','va-location-finder'];"
-  },
-  {
-   "op": "line",
-   "prefix": "routes.seniors=",
-   "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
-  },
-  {
-   "op": "adapter"
-  },
-  {
-   "op": "embed_data"
-  }
- ]
+  "ops": [
+    {
+      "op": "clear_data"
+    },
+    {
+      "op": "replace",
+      "old": "Ohio",
+      "new": "Arizona"
+    },
+    {
+      "op": "replace",
+      "old": "All 88",
+      "new": "All 15"
+    },
+    {
+      "op": "replace",
+      "old": "all 88",
+      "new": "all 15"
+    },
+    {
+      "op": "replace",
+      "old": "<option value=\"OH\">Arizona</option>",
+      "new": "<option value=\"OH\">Ohio</option>"
+    },
+    {
+      "op": "replace",
+      "old": "const STATE='OH';",
+      "new": "const STATE='AZ';"
+    },
+    {
+      "op": "replace",
+      "old": "county veterans office",
+      "new": "veterans counselor contact"
+    },
+    {
+      "op": "replace",
+      "old": "county office",
+      "new": "veterans counselor contact"
+    },
+    {
+      "op": "replace",
+      "old": "Statewide edition · Updated October 8, 2026",
+      "new": "Arizona edition · Updated November 4, 2026"
+    },
+    {
+      "op": "replace",
+      "old": "Most phones come from Arizona AMVETS’ 2025–2026 directory.",
+      "new": "Arizona Department of Veterans’ Services counselors work statewide; every county uses the ADVS appointment line. Confirm intake before traveling."
+    },
+    {
+      "op": "replace",
+      "old": "Arizona’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
+      "new": "Ask the local aging agency or state Medicaid agency about waiver assessment and written approval; VA and other funders have their own processes."
+    },
+    {
+      "op": "replace",
+      "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
+      "new": "https://eldercare.acl.gov/home"
+    },
+    {
+      "op": "replace",
+      "old": "Arizona home modification authorization and provider rules",
+      "new": "Find local aging and disability help (Eldercare Locator)"
+    },
+    {
+      "op": "replace",
+      "old": "href=\"share.html\"",
+      "new": "href=\"share-az.html\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"prototype-data.json\"",
+      "new": "href=\"data/public/arizona-resources.json\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
+      "new": "href=\"data/public/arizona-county-veterans-offices.json\""
+    },
+    {
+      "op": "declare",
+      "name": "priority",
+      "value": [
+        "az-claims",
+        "az-daas",
+        "az-ship",
+        "az-ombudsman",
+        "r02-aid-attendance-housebound",
+        "r02-va-pension",
+        "r02-survivors-pension",
+        "r02-va-health-enrollment",
+        "va-accredited-help"
+      ]
+    },
+    {
+      "op": "declare",
+      "name": "routes",
+      "value": {
+        "benefits": [
+          "az-claims",
+          "az-ship",
+          "r02-va-pension",
+          "r02-aid-attendance-housebound",
+          "r02-disability-increase",
+          "r02-pension-medicaid-rule",
+          "r02-survivors-pension",
+          "r02-dic",
+          "va-accredited-help",
+          "az-daas"
+        ],
+        "survivors": [
+          "az-claims",
+          "r02-survivors-pension",
+          "r02-dic",
+          "r02-aid-attendance-housebound",
+          "r02-va-burial",
+          "va-accredited-help",
+          "nara-discharge-records"
+        ],
+        "care": [
+          "r02-va-health-enrollment",
+          "va-location-finder",
+          "r02-va-cnh",
+          "r02-va-clc",
+          "r02-general-caregiver",
+          "r02-family-caregiver",
+          "r02-hospice",
+          "r02-palliative",
+          "az-daas",
+          "az-cil-ability360",
+          "az-cil-assist",
+          "az-cil-direct",
+          "az-cil-nhdec",
+          "az-cil-smile",
+          "az-vahealth-systems"
+        ],
+        "rights": [
+          "az-ombudsman",
+          "az-legal-cls",
+          "az-legal-sala",
+          "az-legal-dna"
+        ],
+        "local": [
+          "az-claims",
+          "az-daas",
+          "az-cil-ability360",
+          "az-cil-assist",
+          "az-cil-direct",
+          "az-cil-nhdec",
+          "az-cil-smile",
+          "az-legal-cls",
+          "az-legal-sala",
+          "az-legal-dna",
+          "az-vahealth-systems"
+        ],
+        "housing": [
+          "va-housing-help",
+          "az-ssvf-14-az-157",
+          "az-ssvf-14-az-160",
+          "az-ssvf-19-az-004",
+          "az-ssvf-19-az-436",
+          "az-ssvf-20-az-159",
+          "az-ssvf-25-zz-158",
+          "va-location-finder",
+          "va-accredited-help",
+          "nara-discharge-records",
+          "az-legal-cls",
+          "az-legal-sala",
+          "az-legal-dna"
+        ]
+      }
+    },
+    {
+      "op": "declare",
+      "name": "seniorTopics",
+      "value": {
+        "daily": [
+          "az-daas",
+          "az-cil-ability360",
+          "az-cil-assist",
+          "az-cil-direct",
+          "az-cil-nhdec",
+          "az-cil-smile"
+        ],
+        "accessibility": [
+          "az-daas",
+          "az-cil-ability360",
+          "az-cil-assist",
+          "az-cil-direct",
+          "az-cil-nhdec",
+          "az-cil-smile"
+        ],
+        "vision": [
+          "az-daas"
+        ],
+        "hearing": [
+          "az-daas"
+        ],
+        "memory": [
+          "alz-dementia-support",
+          "az-daas"
+        ],
+        "costs": [
+          "az-ship",
+          "az-daas"
+        ],
+        "rights": [
+          "az-ombudsman",
+          "az-legal-cls",
+          "az-legal-sala",
+          "az-legal-dna"
+        ]
+      }
+    },
+    {
+      "op": "line",
+      "prefix": "routes.accessibility=",
+      "new": "routes.accessibility=['va-hisa','va-sah','va-sha','va-tra','az-daas','az-cil-ability360','az-cil-assist','az-cil-direct','az-cil-nhdec','az-cil-smile','va-location-finder',...DATA.filter(x=>x.regional_role==='aging_agency').map(x=>x.program_id)];"
+    },
+    {
+      "op": "line",
+      "prefix": "routes.seniors=",
+      "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
+    },
+    {
+      "op": "adapter"
+    },
+    {
+      "op": "embed_data"
+    }
+  ]
 }
