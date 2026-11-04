@@ -36,3 +36,24 @@ These three checks complete the owner-selected sample. Other office records are 
 - Local providers, equipment stock, available funding, bed openings, costs and individual eligibility are not comprehensively confirmed.
 
 Virginia’s `va-` state program IDs are distinct from shared federal VA records. The assistance matcher uses record state and audience information so nonveterans can receive Virginia aging, Medicaid and disability routes while veteran-only federal programs remain restricted to appropriate beneficiaries.
+
+## Independent living, legal aid and VA health care (2026-11-04)
+
+20 records were added to `data/public/va-programs.json`. There are now 89 Virginia-specific resource records and 122 public resources in total.
+
+- **Centers for Independent Living (17 records, `va-cil-*`).** Taken from the ILRU national directory for Virginia, with full page text reviewed. Branch listings are folded into their center's record, with the branch phones in the next step. The exception is Resources for Independent Living's Petersburg satellite, which has its own locality list and gets its own record. The centers cover 92 of 133 localities.
+- **Normalizing the directory's locality names:**
+  - "Bristol" and "Galax City" (Appalachian Independence Center) are mapped to the independent cities.
+  - "Franklin" means Franklin County for DRRC (Rocky Mount) and Franklin City for Endependence Center (Norfolk).
+  - ECNV's loosely worded list is read as Arlington, Fairfax County, Fairfax City, Falls Church, Loudoun and Alexandria.
+- **Directory entries handled specially:**
+  - LACIL lists no service area, so its card covers only Lynchburg City.
+  - The Peninsula CIL entry lists only "Elizabeth City," which is not a current Virginia locality, so it was left out.
+  - The directory notes that Independence Empowerment Center offers phone services only, and its card says to call first.
+- **Legal aid (2 statewide records).**
+  - 1-866-LEGLAID (866-534-5243) connects callers with Virginia's nine regional legal aid programs.
+  - The Statewide Senior Legal Helpline (844-802-5910) serves people 60 and older.
+  - Both come from DARS and VaLegalAid.org. Regional programs were not mapped to localities because no complete official county list was available.
+- **VA health care (`va-vahealth-systems`).** One statewide card for the Hampton, Richmond and Salem medical centers. It also notes that some Virginia clinics belong to systems in Mountain Home TN, Martinsburg WV and Washington DC. No localities are assigned.
+
+`tests/virginia.cjs` now expects 89 Virginia records. A check that a city and the county with the same name get different centers passed for Franklin and Richmond.
