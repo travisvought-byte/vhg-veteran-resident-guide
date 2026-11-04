@@ -1,80 +1,569 @@
 [
- {
-  "program_id": "wa-aging",
-  "name": "Local aging help in Washington (Eldercare Locator)",
-  "official_url": "https://eldercare.acl.gov/home",
-  "organization": "U.S. Administration for Community Living",
-  "service_area": [
-   "All Washington counties"
-  ],
-  "state": "WA",
-  "needs_supported": [
-   "general_navigation",
-   "help_at_home"
-  ],
-  "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-  "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
-  "constraints": [
-   "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "wa-aging-olympic",
+    "name": "Olympic Area Agency on Aging",
+    "organization": "Olympic Area Agency on Aging",
+    "official_url": "https://wacaresfund.wa.gov/media/752",
+    "state": "WA",
+    "service_area": [
+      "Clallam",
+      "Grays Harbor",
+      "Jefferson",
+      "Pacific"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: the local door to information and assistance, meals, caregiver support, in-home services and long-term care case management.",
+    "next_step": "Call with the county and what is hard right now. Ask for information and assistance or an assessment. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older, tribal members 55 and older, adults with disabilities and their caregivers; eligibility varies by service.",
+      "Tribal elders can also contact the Yakama Nation Area Agency on Aging (509-865-7164) or the Colville Indian Area Agency on Aging (509-634-2759)."
+    ],
+    "public_contact": {
+      "phone": "866-720-4863",
+      "phone_label": "Olympic Area Agency on Aging"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://wacaresfund.wa.gov/media/752",
+      "phone_source_url": "https://manuals.dshs.wa.gov/sites/default/files/ALTSA/hcs/documents/AAA%20Directory.docx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://wacaresfund.wa.gov/media/752",
+        "title": "WA Cares Fund: Area Agency on Aging contacts",
+        "reviewed_on": "2026-11-04",
+        "scope": "Counties served by each Area Agency on Aging; search excerpt."
+      },
+      {
+        "url": "https://manuals.dshs.wa.gov/sites/default/files/ALTSA/hcs/documents/AAA%20Directory.docx",
+        "title": "Washington DSHS / state Area Agency on Aging contact list",
+        "reviewed_on": "2026-11-04",
+        "scope": "Agency phone; search excerpt."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "wa-aging-nwrc",
+    "name": "Northwest Regional Council",
+    "organization": "Northwest Regional Council",
+    "official_url": "https://wacaresfund.wa.gov/media/752",
+    "state": "WA",
+    "service_area": [
+      "Island",
+      "San Juan",
+      "Skagit",
+      "Whatcom"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: the local door to information and assistance, meals, caregiver support, in-home services and long-term care case management.",
+    "next_step": "Call with the county and what is hard right now. Ask for information and assistance or an assessment. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older, tribal members 55 and older, adults with disabilities and their caregivers; eligibility varies by service.",
+      "Tribal elders can also contact the Yakama Nation Area Agency on Aging (509-865-7164) or the Colville Indian Area Agency on Aging (509-634-2759)."
+    ],
+    "public_contact": {
+      "phone": "800-585-6749",
+      "phone_label": "Northwest Regional Council"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://wacaresfund.wa.gov/media/752",
+      "phone_source_url": "https://manuals.dshs.wa.gov/sites/default/files/ALTSA/hcs/documents/AAA%20Directory.docx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://wacaresfund.wa.gov/media/752",
+        "title": "WA Cares Fund: Area Agency on Aging contacts",
+        "reviewed_on": "2026-11-04",
+        "scope": "Counties served by each Area Agency on Aging; search excerpt."
+      },
+      {
+        "url": "https://manuals.dshs.wa.gov/sites/default/files/ALTSA/hcs/documents/AAA%20Directory.docx",
+        "title": "Washington DSHS / state Area Agency on Aging contact list",
+        "reviewed_on": "2026-11-04",
+        "scope": "Agency phone; search excerpt."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.acl.gov/contact"
+  {
+    "program_id": "wa-aging-snohomish",
+    "name": "Snohomish County Aging and Disability Services",
+    "organization": "Snohomish County Aging and Disability Services",
+    "official_url": "https://wacaresfund.wa.gov/media/752",
+    "state": "WA",
+    "service_area": [
+      "Snohomish"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: the local door to information and assistance, meals, caregiver support, in-home services and long-term care case management.",
+    "next_step": "Call with the county and what is hard right now. Ask for information and assistance or an assessment. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older, tribal members 55 and older, adults with disabilities and their caregivers; eligibility varies by service.",
+      "Tribal elders can also contact the Yakama Nation Area Agency on Aging (509-865-7164) or the Colville Indian Area Agency on Aging (509-634-2759)."
+    ],
+    "public_contact": {
+      "phone": "800-422-2024",
+      "phone_label": "Snohomish County Aging and Disability Services"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://wacaresfund.wa.gov/media/752",
+      "phone_source_url": "https://manuals.dshs.wa.gov/sites/default/files/ALTSA/hcs/documents/AAA%20Directory.docx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://wacaresfund.wa.gov/media/752",
+        "title": "WA Cares Fund: Area Agency on Aging contacts",
+        "reviewed_on": "2026-11-04",
+        "scope": "Counties served by each Area Agency on Aging; search excerpt."
+      },
+      {
+        "url": "https://manuals.dshs.wa.gov/sites/default/files/ALTSA/hcs/documents/AAA%20Directory.docx",
+        "title": "Washington DSHS / state Area Agency on Aging contact list",
+        "reviewed_on": "2026-11-04",
+        "scope": "Agency phone; search excerpt."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.acl.gov/contact",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "aging_agency"
- },
- {
-  "program_id": "wa-ombudsman",
-  "name": "Washington long-term-care ombudsman",
-  "official_url": "https://theconsumervoice.org/get_help",
-  "organization": "National Long-Term Care Ombudsman Resource Center",
-  "service_area": [
-   "All Washington counties"
-  ],
-  "state": "WA",
-  "needs_supported": [
-   "resident_rights",
-   "general_navigation"
-  ],
-  "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-  "next_step": "Use the locator to find the Washington program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
-  "constraints": [
-   "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "wa-aging-king",
+    "name": "Aging and Disability Services for Seattle and King County (Community Living Connections)",
+    "organization": "Aging and Disability Services for Seattle and King County (Community Living Connections)",
+    "official_url": "https://wacaresfund.wa.gov/media/752",
+    "state": "WA",
+    "service_area": [
+      "King"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: the local door to information and assistance, meals, caregiver support, in-home services and long-term care case management.",
+    "next_step": "Call with the county and what is hard right now. Ask for information and assistance or an assessment. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older, tribal members 55 and older, adults with disabilities and their caregivers; eligibility varies by service.",
+      "Tribal elders can also contact the Yakama Nation Area Agency on Aging (509-865-7164) or the Colville Indian Area Agency on Aging (509-634-2759)."
+    ],
+    "public_contact": {
+      "phone": "844-348-5464",
+      "phone_label": "Aging and Disability Services for Seattle and King County (Community Living Connections)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://wacaresfund.wa.gov/media/752",
+      "phone_source_url": "https://www.dshs.wa.gov/node/10199"
+    },
+    "source_evidence": [
+      {
+        "url": "https://wacaresfund.wa.gov/media/752",
+        "title": "WA Cares Fund: Area Agency on Aging contacts",
+        "reviewed_on": "2026-11-04",
+        "scope": "Counties served by each Area Agency on Aging; search excerpt."
+      },
+      {
+        "url": "https://www.dshs.wa.gov/node/10199",
+        "title": "Washington DSHS / state Area Agency on Aging contact list",
+        "reviewed_on": "2026-11-04",
+        "scope": "Agency phone; search excerpt."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "wa-aging-pierce",
+    "name": "Pierce County Aging and Disability Resources",
+    "organization": "Pierce County Aging and Disability Resources",
+    "official_url": "https://wacaresfund.wa.gov/media/752",
+    "state": "WA",
+    "service_area": [
+      "Pierce"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: the local door to information and assistance, meals, caregiver support, in-home services and long-term care case management.",
+    "next_step": "Call with the county and what is hard right now. Ask for information and assistance or an assessment. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older, tribal members 55 and older, adults with disabilities and their caregivers; eligibility varies by service.",
+      "Tribal elders can also contact the Yakama Nation Area Agency on Aging (509-865-7164) or the Colville Indian Area Agency on Aging (509-634-2759)."
+    ],
+    "public_contact": {
+      "phone": "800-562-0332",
+      "phone_label": "Pierce County Aging and Disability Resources"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://wacaresfund.wa.gov/media/752",
+      "phone_source_url": "https://manuals.dshs.wa.gov/sites/default/files/ALTSA/hcs/documents/AAA%20Directory.docx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://wacaresfund.wa.gov/media/752",
+        "title": "WA Cares Fund: Area Agency on Aging contacts",
+        "reviewed_on": "2026-11-04",
+        "scope": "Counties served by each Area Agency on Aging; search excerpt."
+      },
+      {
+        "url": "https://manuals.dshs.wa.gov/sites/default/files/ALTSA/hcs/documents/AAA%20Directory.docx",
+        "title": "Washington DSHS / state Area Agency on Aging contact list",
+        "reviewed_on": "2026-11-04",
+        "scope": "Agency phone; search excerpt."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
+  {
+    "program_id": "wa-aging-kitsap",
+    "name": "Kitsap County Division of Aging and Long-Term Care",
+    "organization": "Kitsap County Division of Aging and Long-Term Care",
+    "official_url": "https://wacaresfund.wa.gov/media/752",
+    "state": "WA",
+    "service_area": [
+      "Kitsap"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: the local door to information and assistance, meals, caregiver support, in-home services and long-term care case management.",
+    "next_step": "Call with the county and what is hard right now. Ask for information and assistance or an assessment. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older, tribal members 55 and older, adults with disabilities and their caregivers; eligibility varies by service.",
+      "Tribal elders can also contact the Yakama Nation Area Agency on Aging (509-865-7164) or the Colville Indian Area Agency on Aging (509-634-2759)."
+    ],
+    "public_contact": {
+      "phone": "800-562-6418",
+      "phone_label": "Kitsap County Division of Aging and Long-Term Care"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://wacaresfund.wa.gov/media/752",
+      "phone_source_url": "https://www.dshs.wa.gov/sites/default/files/ALTSA/hcs/documents/AAA/AAA%20Medicaid%20Intake%20Contacts.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://wacaresfund.wa.gov/media/752",
+        "title": "WA Cares Fund: Area Agency on Aging contacts",
+        "reviewed_on": "2026-11-04",
+        "scope": "Counties served by each Area Agency on Aging; search excerpt."
+      },
+      {
+        "url": "https://www.dshs.wa.gov/sites/default/files/ALTSA/hcs/documents/AAA/AAA%20Medicaid%20Intake%20Contacts.pdf",
+        "title": "Washington DSHS / state Area Agency on Aging contact list",
+        "reviewed_on": "2026-11-04",
+        "scope": "Agency phone; search excerpt."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "ombudsman"
- }
+  {
+    "program_id": "wa-aging-lmt",
+    "name": "Lewis-Mason-Thurston Area Agency on Aging",
+    "organization": "Lewis-Mason-Thurston Area Agency on Aging",
+    "official_url": "https://wacaresfund.wa.gov/media/752",
+    "state": "WA",
+    "service_area": [
+      "Lewis",
+      "Mason",
+      "Thurston"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: the local door to information and assistance, meals, caregiver support, in-home services and long-term care case management.",
+    "next_step": "Call with the county and what is hard right now. Ask for information and assistance or an assessment. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older, tribal members 55 and older, adults with disabilities and their caregivers; eligibility varies by service.",
+      "Tribal elders can also contact the Yakama Nation Area Agency on Aging (509-865-7164) or the Colville Indian Area Agency on Aging (509-634-2759)."
+    ],
+    "public_contact": {
+      "phone": "888-545-0910",
+      "phone_label": "Lewis-Mason-Thurston Area Agency on Aging"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://wacaresfund.wa.gov/media/752",
+      "phone_source_url": "https://www.dshs.wa.gov/sites/default/files/ALTSA/hcs/documents/AAA/AAA%20Medicaid%20Intake%20Contacts.docx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://wacaresfund.wa.gov/media/752",
+        "title": "WA Cares Fund: Area Agency on Aging contacts",
+        "reviewed_on": "2026-11-04",
+        "scope": "Counties served by each Area Agency on Aging; search excerpt."
+      },
+      {
+        "url": "https://www.dshs.wa.gov/sites/default/files/ALTSA/hcs/documents/AAA/AAA%20Medicaid%20Intake%20Contacts.docx",
+        "title": "Washington DSHS / state Area Agency on Aging contact list",
+        "reviewed_on": "2026-11-04",
+        "scope": "Agency phone; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "wa-aging-southwest",
+    "name": "Area Agency on Aging and Disabilities of Southwest Washington",
+    "organization": "Area Agency on Aging and Disabilities of Southwest Washington",
+    "official_url": "https://wacaresfund.wa.gov/media/752",
+    "state": "WA",
+    "service_area": [
+      "Clark",
+      "Cowlitz",
+      "Klickitat",
+      "Skamania",
+      "Wahkiakum"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: the local door to information and assistance, meals, caregiver support, in-home services and long-term care case management.",
+    "next_step": "Call with the county and what is hard right now. Ask for information and assistance or an assessment. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older, tribal members 55 and older, adults with disabilities and their caregivers; eligibility varies by service.",
+      "Tribal elders can also contact the Yakama Nation Area Agency on Aging (509-865-7164) or the Colville Indian Area Agency on Aging (509-634-2759)."
+    ],
+    "public_contact": {
+      "phone": "888-637-6060",
+      "phone_label": "Area Agency on Aging and Disabilities of Southwest Washington"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://wacaresfund.wa.gov/media/752",
+      "phone_source_url": "https://manuals.dshs.wa.gov/sites/default/files/ALTSA/hcs/documents/AAA%20Directory.docx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://wacaresfund.wa.gov/media/752",
+        "title": "WA Cares Fund: Area Agency on Aging contacts",
+        "reviewed_on": "2026-11-04",
+        "scope": "Counties served by each Area Agency on Aging; search excerpt."
+      },
+      {
+        "url": "https://manuals.dshs.wa.gov/sites/default/files/ALTSA/hcs/documents/AAA%20Directory.docx",
+        "title": "Washington DSHS / state Area Agency on Aging contact list",
+        "reviewed_on": "2026-11-04",
+        "scope": "Agency phone; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "wa-aging-central",
+    "name": "Aging and Adult Care of Central Washington",
+    "organization": "Aging and Adult Care of Central Washington",
+    "official_url": "https://wacaresfund.wa.gov/media/752",
+    "state": "WA",
+    "service_area": [
+      "Adams",
+      "Chelan",
+      "Douglas",
+      "Grant",
+      "Lincoln",
+      "Okanogan"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: the local door to information and assistance, meals, caregiver support, in-home services and long-term care case management.",
+    "next_step": "Call with the county and what is hard right now. Ask for information and assistance or an assessment. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older, tribal members 55 and older, adults with disabilities and their caregivers; eligibility varies by service.",
+      "Tribal elders can also contact the Yakama Nation Area Agency on Aging (509-865-7164) or the Colville Indian Area Agency on Aging (509-634-2759)."
+    ],
+    "public_contact": {
+      "phone": "800-572-4459",
+      "phone_label": "Aging and Adult Care of Central Washington"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://wacaresfund.wa.gov/media/752",
+      "phone_source_url": "https://wacaresfund.wa.gov/media/752"
+    },
+    "source_evidence": [
+      {
+        "url": "https://wacaresfund.wa.gov/media/752",
+        "title": "WA Cares Fund: Area Agency on Aging contacts",
+        "reviewed_on": "2026-11-04",
+        "scope": "Counties served by each Area Agency on Aging; search excerpt."
+      },
+      {
+        "url": "https://wacaresfund.wa.gov/media/752",
+        "title": "Washington DSHS / state Area Agency on Aging contact list",
+        "reviewed_on": "2026-11-04",
+        "scope": "Agency phone; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "wa-aging-eastern",
+    "name": "Aging and Long-Term Care of Eastern Washington",
+    "organization": "Aging and Long-Term Care of Eastern Washington",
+    "official_url": "https://wacaresfund.wa.gov/media/752",
+    "state": "WA",
+    "service_area": [
+      "Ferry",
+      "Pend Oreille",
+      "Spokane",
+      "Stevens",
+      "Whitman"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: the local door to information and assistance, meals, caregiver support, in-home services and long-term care case management.",
+    "next_step": "Call with the county and what is hard right now. Ask for information and assistance or an assessment. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older, tribal members 55 and older, adults with disabilities and their caregivers; eligibility varies by service.",
+      "Tribal elders can also contact the Yakama Nation Area Agency on Aging (509-865-7164) or the Colville Indian Area Agency on Aging (509-634-2759)."
+    ],
+    "public_contact": {
+      "phone": "509-458-2509",
+      "phone_label": "Aging and Long-Term Care of Eastern Washington"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://wacaresfund.wa.gov/media/752",
+      "phone_source_url": "https://www.dshs.wa.gov/sites/default/files/ALTSA/hcs/documents/AAA/AAA%20Medicaid%20Intake%20Contacts.docx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://wacaresfund.wa.gov/media/752",
+        "title": "WA Cares Fund: Area Agency on Aging contacts",
+        "reviewed_on": "2026-11-04",
+        "scope": "Counties served by each Area Agency on Aging; search excerpt."
+      },
+      {
+        "url": "https://www.dshs.wa.gov/sites/default/files/ALTSA/hcs/documents/AAA/AAA%20Medicaid%20Intake%20Contacts.docx",
+        "title": "Washington DSHS / state Area Agency on Aging contact list",
+        "reviewed_on": "2026-11-04",
+        "scope": "Agency phone; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "wa-aging-southeast",
+    "name": "Southeast Washington Aging and Long-Term Care",
+    "organization": "Southeast Washington Aging and Long-Term Care",
+    "official_url": "https://wacaresfund.wa.gov/media/752",
+    "state": "WA",
+    "service_area": [
+      "Asotin",
+      "Benton",
+      "Columbia",
+      "Franklin",
+      "Garfield",
+      "Kittitas",
+      "Walla Walla",
+      "Yakima"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: the local door to information and assistance, meals, caregiver support, in-home services and long-term care case management.",
+    "next_step": "Call with the county and what is hard right now. Ask for information and assistance or an assessment. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older, tribal members 55 and older, adults with disabilities and their caregivers; eligibility varies by service.",
+      "Tribal elders can also contact the Yakama Nation Area Agency on Aging (509-865-7164) or the Colville Indian Area Agency on Aging (509-634-2759)."
+    ],
+    "public_contact": {
+      "phone": "509-965-0105",
+      "phone_label": "Southeast Washington Aging and Long-Term Care"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-04"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://wacaresfund.wa.gov/media/752",
+      "phone_source_url": "https://wacaresfund.wa.gov/sites/default/files/2025-08/AAA%20contact%20information%20for%20providers.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://wacaresfund.wa.gov/media/752",
+        "title": "WA Cares Fund: Area Agency on Aging contacts",
+        "reviewed_on": "2026-11-04",
+        "scope": "Counties served by each Area Agency on Aging; search excerpt."
+      },
+      {
+        "url": "https://wacaresfund.wa.gov/sites/default/files/2025-08/AAA%20contact%20information%20for%20providers.pdf",
+        "title": "Washington DSHS / state Area Agency on Aging contact list",
+        "reviewed_on": "2026-11-04",
+        "scope": "Agency phone; search excerpt."
+      }
+    ]
+  }
 ]
