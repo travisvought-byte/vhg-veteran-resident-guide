@@ -16,8 +16,11 @@ assert(!/__[A-Z]+__/.test(html),'unreplaced template token');
  const cards=visible('#cards .resource');
  assert(cards.includes('oh-help-me-grow')&&cards.includes('oh-ocecd'));
  assert(!cards.includes('cdc-find-ei')&&!cards.includes('parent-center'));
- assert.equal(cards.length,data.resources.filter(r=>r.scope!=='MIL').length-2);
+ assert.equal(cards.length,data.resources.filter(r=>r.scope!=='MIL'&&!(r.state_replacements||{}).OH).length);
+ assert(!cards.includes('family-voices')&&!cards.includes('p2p-usa')&&cards.includes('oh-f2f-p2p'));
  assert.equal(visible('#military-cards .resource').length,data.resources.filter(r=>r.scope==='MIL').length);
+ assert.equal($('military-count').textContent,String(data.resources.filter(r=>r.scope==='MIL').length));assert(!$('military-details').open);
+ assert.equal(d.querySelectorAll('.glossary dt').length,data.glossary.length);
  assert(!$('county-wrap').hidden);assert($('anchors-title').textContent.includes('Ohio'));
  assert.equal(d.querySelectorAll('#pa-list li').length,51);
  assert(!bad.test($('result-status').textContent));}
@@ -57,11 +60,25 @@ for(const [code,name] of Object.entries(data.states)){
 
 // Ohio counties: pilot boards use their published intake phone; others use the directory and state line.
 {const {$,set,w}=load('?state=OH&county=Morrow');
- assert($('county-result').textContent.includes('419-947-1159'));
+ assert($('county-result').textContent.includes('419-947-1159')&&$('county-result').textContent.includes('Morrow County Board of DD'));
  assert($('cvso-link').getAttribute('href')==='./?state=OH&county=Morrow');
  set('county','Adams');assert($('county-result').textContent.includes('800-617-6733'));assert(w.location.search.includes('county=Adams'));
  set('state','PA');assert.equal($('county').value,'');assert.equal($('county-result').textContent,'');assert(!w.location.search.includes('county'));}
 {const {$}=load('?state=OH&county=Atlantis');assert.equal($('county').value,'');}
 {const {w,$}=load('?state=ZZ&stage=bogus&need=bogus');assert.equal($('state').value,'OH');$('print').click();assert(w.printed);
  assert.equal(w.localStorage.length+w.sessionStorage.length,0);}
-console.log('PASS family guide: 51 state entries, Ohio replacements, stage/need filters, county board routes, correction links and no storage.');
+
+// Stage-aware first calls, need matches sorted first, and print context.
+{const {$,d,visible}=load('?state=OH&stage=transition');
+ const a=$('anchor-list').textContent;assert(!a.includes('Under age 3')&&a.includes('OCECD')&&a.includes('Disability Rights Ohio'));
+ const cards=visible('#cards .resource');assert(cards.includes('oh-sdm-toolkit')&&cards.includes('sdm-center')&&cards.includes('oh-ood-preets'));
+ assert($('print-context').textContent.includes('Teens heading into adulthood'));}
+{const {$,d,visible}=load('?state=OH&need=autism');
+ const cards=visible('#cards .resource');const first=d.getElementById('r-'+cards[0]);
+ assert(first.classList.contains('match')&&first.dataset.needs.includes('autism'),cards[0]);
+ assert($('needs-box').open);assert(/made for autism are at the top/.test($('result-status').textContent));}
+{const {$}=load('?state=OH&need=learning');assert(/None are only for learning/.test($('result-status').textContent));}
+{const {$,d}=load('?state=OH');const btn=d.querySelector('.stage[data-stage=early]');
+ assert.equal(btn.getAttribute('aria-labelledby'),'st-early');assert.equal(d.getElementById('st-early').textContent,'Birth to age 3');}
+{const {w,$}=load('?state=PA#military');assert($('military-details').open);}
+console.log('PASS family guide: 51 state entries, Ohio replacements, stage/need filters, county board routes, correction links, stage-aware first calls, need ordering, military toggle, glossary and no storage.');

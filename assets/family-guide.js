@@ -6,12 +6,15 @@
  const states = data.states, pa = data.protection_advocacy;
  const stageIds = new Set(data.stages.map(s => s.id));
  const stageLabel = new Map(data.stages.map(s => [s.id, s.label]));
- const needIds = new Set(data.needs.map(n => n.id));
+ const needName = new Map(data.needs.map(n => [n.id, n.label.split(' (')[0]]));
  const counties = new Map(data.ohio_counties.map(c => [c.county, c]));
- const ohioAnchors = $('anchor-list').innerHTML;
+ const reduceMotion = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
  const el = (tag, attrs = {}, text = '') => { const e = document.createElement(tag); Object.entries(attrs).forEach(([k, v]) => e.setAttribute(k, v)); if (text) e.textContent = text; return e; };
- const digits = p => 'tel:' + p.replace(/\D/g, '');
- const link = (href, text, external = true) => { const a = el('a', external ? {href, target: '_blank', rel: 'noopener'} : {href}, text); return a; };
+ const tel = p => 'tel:' + p.replace(/\D/g, '');
+ const link = (href, text) => el('a', /^https?:/.test(href) ? {href, target: '_blank', rel: 'noopener'} : {href}, text);
+ // Remember authored order so sorting can always return to it.
+ const original = new Map();
+ document.querySelectorAll('.resource').forEach((c, i) => original.set(c, i));
  let stage = 'all';
 
  function readParams() {
@@ -22,11 +25,12 @@
   $('county').value = counties.has(c) ? c : '';
   const st = p.get('stage') || 'all';
   stage = stageIds.has(st) ? st : 'all';
-  const needs = new Set((p.get('need') || '').split(',').filter(n => needIds.has(n)));
+  const needs = new Set((p.get('need') || '').split(',').filter(n => needName.has(n)));
   document.querySelectorAll('input[name=need]').forEach(i => { i.checked = needs.has(i.value); });
+  if (needs.size) $('needs-box').open = true;
  }
 
- function selectedNeeds() { return [...document.querySelectorAll('input[name=need]:checked')].map(i => i.value); }
+ const selectedNeeds = () => [...document.querySelectorAll('input[name=need]:checked')].map(i => i.value);
 
  function writeParams(state, county, needs) {
   const p = new URLSearchParams();
@@ -38,10 +42,8 @@
  }
 
  function matches(card, state, needs) {
-  const scope = card.dataset.scope;
-  if (scope === 'OH' && state !== 'OH') return false;
-  const replaced = (card.dataset.replaced || '').split(' ').some(r => r.split(':')[0] === state);
-  if (replaced) return false;
+  if (card.dataset.scope === 'OH' && state !== 'OH') return false;
+  if ((card.dataset.replaced || '').split(' ').some(r => r.split(':')[0] === state)) return false;
   if (stage !== 'all' && !card.dataset.stages.split(' ').includes(stage)) return false;
   if (needs.length) {
    const cardNeeds = card.dataset.needs.split(' ');
@@ -50,37 +52,51 @@
   return true;
  }
 
- function anchorItem(label, nodes) {
-  const li = el('li'); li.append(el('strong', {}, label + ': '));
-  nodes.forEach((n, i) => { if (i) li.append(' · '); li.append(n); });
-  return li;
+ // Show a container's cards: programs made for a checked need first, then the state's own programs, then authored order.
+ function showCards(container, state, needs) {
+  const cards = [...container.querySelectorAll('.resource')];
+  let shown = 0, specific = 0;
+  const rank = c => {
+   const isMatch = needs.length > 0 && needs.some(n => c.dataset.needs.split(' ').includes(n));
+   c.classList.toggle('match', isMatch);
+   return (isMatch ? 0 : 2) + (c.dataset.scope === state ? 0 : 1);
+  };
+  cards.sort((a, b) => rank(a) - rank(b) || original.get(a) - original.get(b)).forEach(c => {
+   const ok = matches(c, state, needs);
+   c.hidden = !ok;
+   if (ok) { shown++; if (c.classList.contains('match')) specific++; }
+   container.append(c);
+  });
+  return {shown, specific};
  }
 
  function renderAnchors(state, county) {
   const name = states[state];
   $('anchors-title').textContent = 'Your first calls in ' + name;
   const list = $('anchor-list');
-  if (state === 'OH') list.innerHTML = ohioAnchors;
-  else {
-   list.replaceChildren();
-   const agency = pa[state];
-   list.append(
-    anchorItem('Parent center', [link('https://www.parentcenterhub.org/find-your-center/', 'find ' + name + "'s Parent Training and Information Center")]),
-    anchorItem('Disability rights and legal help', [link(agency.url, agency.name), link(digits(agency.phone), agency.phone, false)]),
-    anchorItem('Under age 3', [link('https://www.cdc.gov/FindEI', 'find ' + name + "'s early intervention program")]),
-    anchorItem('Age 3 and older', [document.createTextNode('ask your local public school district for a free evaluation, in writing')]),
-    anchorItem('Health care and insurance questions', [link('https://familyvoices.org/sao/', 'find your Family-to-Family Health Information Center')]));
+  list.replaceChildren();
+  for (const a of data.anchors[state === 'OH' ? 'OH' : 'default']) {
+   if (stage !== 'all' && !a.stages.includes(stage)) continue;
+   const li = el('li'), parts = [];
+   li.append(el('strong', {}, a.label + ': '));
+   for (const item of a.items) {
+    if (item.pa) parts.push(link(pa[state].url, pa[state].name), link(tel(pa[state].phone), pa[state].phone));
+    else if (item.tel) parts.push(link(tel(item.tel), item.tel));
+    else if (item.href) parts.push(link(item.href, item.text.replace('{state}', name)));
+    else parts.push(document.createTextNode(item.text));
+   }
+   parts.forEach((n, i) => { if (i) li.append(' · '); li.append(n); });
+   list.append(li);
   }
   const box = $('county-result');
   box.replaceChildren();
   if (state !== 'OH' || !county) return;
-  const c = counties.get(county), wrap = el('div', {class: 'county-box'});
+  const c = counties.get(county), wrap = el('div', {class: 'county-box'}), ul = el('ul');
   wrap.append(el('h4', {}, county + ' County'));
-  const ul = el('ul');
-  if (c.dd) ul.append(anchorItem('County board of DD', [link(c.dd.url, c.dd.name), link(digits(c.dd.phone), c.dd.phone, false)]));
-  else ul.append(anchorItem('County board of DD', [link('https://www.oacbdd.org/familyresources', 'choose ' + county + ' County on the directory map'), link('tel:8006176733', '800-617-6733 (state referral line)', false)]));
-  ul.append(anchorItem('Under age 3', [document.createTextNode('Help Me Grow Early Intervention'), link('tel:8007554769', '800-755-4769', false)]));
-  ul.append(anchorItem('Veteran families', [link('./?state=OH&county=' + encodeURIComponent(county), county + ' County veterans service office and local resources', false)]));
+  const row = (label, nodes) => { const li = el('li'); li.append(el('strong', {}, label + ': ')); nodes.forEach((n, i) => { if (i) li.append(' · '); li.append(n); }); ul.append(li); };
+  if (c.dd) row('County board of DD', [link(c.dd.url, county + ' County Board of DD'), link(tel(c.dd.phone), c.dd.phone)]);
+  else row('County board of DD', [link('https://www.oacbdd.org/familyresources', 'pick ' + county + ' County on the map'), link('tel:8006176733', '800-617-6733')]);
+  row('Veteran families', [link('./?state=OH&county=' + encodeURIComponent(county), county + ' County veterans service office')]);
   wrap.append(ul);
   box.append(wrap);
  }
@@ -99,18 +115,20 @@
   if (!ohio) $('county').value = '';
   const county = $('county').value, needs = selectedNeeds();
   document.querySelectorAll('.stage').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.stage === stage)));
-  let shown = 0;
-  document.querySelectorAll('#cards .resource').forEach(card => { const ok = matches(card, state, needs); card.hidden = !ok; card.style.order = card.dataset.scope === 'OH' ? '0' : '1'; if (ok) shown++; });
-  let mil = 0;
-  document.querySelectorAll('#military-cards .resource').forEach(card => { const ok = matches(card, state, needs); card.hidden = !ok; if (ok) mil++; });
-  $('empty').hidden = shown > 0;
+  const main = showCards($('cards'), state, needs), mil = showCards($('military-cards'), state, needs);
+  $('empty').hidden = main.shown > 0;
+  $('military-count').textContent = mil.shown;
   const where = ohio ? (county ? county + ' County, Ohio' : 'Ohio') : states[state];
-  const topic = stage === 'all' ? 'all ages and topics' : stageLabel.get(stage).toLowerCase();
-  const needText = needs.length ? ', matching ' + needs.map(n => data.needs.find(x => x.id === n).label.split(' (')[0].toLowerCase()).join(', ') + ' or any disability' : '';
-  $('result-status').textContent = 'Showing ' + shown + (shown === 1 ? ' listing' : ' listings') + ' for ' + topic + ' in ' + where + needText + ', plus ' + mil + ' for military and veteran families.';
+  const topic = stage === 'all' ? '' : ' for ' + stageLabel.get(stage).toLowerCase();
+  let text = 'Showing ' + main.shown + (main.shown === 1 ? ' program' : ' programs') + topic + ' in ' + where + '.';
+  if (needs.length) {
+   const names = needs.map(n => needName.get(n).toLowerCase()).join(' or ');
+   text += main.specific ? ' ' + main.specific + ' made for ' + names + ' are at the top; the rest help with any disability.' : ' None are only for ' + names + ', so these help with any disability.';
+  }
+  $('result-status').textContent = text;
+  $('print-context').textContent = where + (stage === 'all' ? '' : ' · ' + stageLabel.get(stage)) + (needs.length ? ' · ' + needs.map(n => needName.get(n)).join(', ') : '');
   renderAnchors(state, county);
-  const guide = './?state=' + state + (ohio && county ? '&county=' + encodeURIComponent(county) : '');
-  $('cvso-link').href = guide;
+  $('cvso-link').href = './?state=' + state + (ohio && county ? '&county=' + encodeURIComponent(county) : '');
   $('back-guide').href = './?state=' + state;
   updateReports(state);
   if (write) writeParams(state, county, needs);
@@ -120,15 +138,21 @@
   const list = $('pa-list');
   Object.entries(states).forEach(([code, name]) => {
    const a = pa[code], li = el('li');
-   li.append(el('strong', {}, name + ': '), link(a.url, a.name), ' · ', link(digits(a.phone), a.phone, false));
+   li.append(el('strong', {}, name + ': '), link(a.url, a.name), ' · ', link(tel(a.phone), a.phone));
    list.append(li);
   });
  }
 
- document.querySelectorAll('.stage').forEach(b => b.addEventListener('click', () => { stage = b.dataset.stage; apply(); }));
+ // After a stage tap, bring the first calls and result count into view so the change is visible.
+ function reveal() { if ($('anchors').scrollIntoView) $('anchors').scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth', block: 'start'}); }
+ function openMilitary() { if (location.hash === '#military') $('military-details').open = true; }
+
+ document.querySelectorAll('.stage').forEach(b => b.addEventListener('click', () => { stage = b.dataset.stage; apply(); reveal(); }));
  $('state').addEventListener('change', () => apply());
  $('county').addEventListener('change', () => apply());
  document.querySelectorAll('input[name=need]').forEach(i => i.addEventListener('change', () => apply()));
+ document.querySelectorAll('[data-open-military]').forEach(a => a.addEventListener('click', () => { $('military-details').open = true; }));
+ window.addEventListener('hashchange', openMilitary);
  $('print').addEventListener('click', () => window.print());
  $('share').addEventListener('click', async () => {
   const url = location.href.split('#')[0];
@@ -137,5 +161,6 @@
  });
  readParams();
  renderAgencies();
+ openMilitary();
  apply(false);
 })();
