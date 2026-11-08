@@ -127,4 +127,26 @@ for(const code of Object.keys(data.states)){const {$,d}=load('?lang=es&state='+c
  assert($('anchors-title').textContent.startsWith('Sus primeras llamadas en'),code);
  const a=$('anchor-list');[...a.querySelectorAll('strong')].forEach(s=>assert(!/^(Under|Age|Parent|County|Health|Talk|Disability)/.test(s.textContent),code+s.textContent));
  assert(!bad.test(a.textContent+$('result-status').textContent),code);}
-console.log('PASS family guide: 51 state entries, Ohio replacements, stage/need filters, county board routes, correction links, stage-aware first calls, need ordering, military toggle, glossary, each state early intervention and parent center, Ohio crisis line, verified Ohio first calls, Ohio hospital evaluation centers, CHADD of Ohio, Spanish top of page in all 51 jurisdictions and no storage.');
+
+// Quick start: two age choices ahead of the filters; the written-request letter appears for school-age evaluation.
+{const {w,$,d}=load('?state=OH');
+ const q=[...d.querySelectorAll('.quick-btn')];assert.equal(q.length,2);
+ assert(d.querySelector('.quick').compareDocumentPosition(d.querySelector('.stages'))&w.Node.DOCUMENT_POSITION_FOLLOWING,'quick start comes before the stage cards');
+ assert($('letter').hidden);
+ q[0].click();assert.equal(q[0].getAttribute('aria-pressed'),'true');assert(w.location.search.includes('stage=early'));
+ assert($('anchor-list').textContent.includes('800-755-4769'));assert($('letter').hidden);
+ q[1].click();assert.equal(q[1].getAttribute('aria-pressed'),'true');assert.equal(q[0].getAttribute('aria-pressed'),'false');
+ assert(w.location.search.includes('stage=school'));assert(!$('letter').hidden);
+ assert($('anchor-list').textContent.includes('ask your public school district in writing'));
+ const v=$('letter-text').value;assert(v.startsWith('Dear Director of Special Education')&&v.includes('[briefly describe what you')&&v.includes('request an evaluation'));
+ assert(!/undefined|null/.test(v));
+ d.querySelector('.stage[data-stage=transition]').click();assert($('letter').hidden);
+ d.querySelector('.stage[data-stage=concern]').click();assert(!$('letter').hidden);
+ $('letter-copy').click();}
+{const {$,d}=load('?state=TX&stage=school&lang=es');
+ assert(!$('letter').hidden);assert($('letter-text').value.startsWith('Estimado/a director/a'));
+ assert.equal(d.querySelector('.quick-btn[data-quick=early]').textContent,'Mi hijo tiene menos de 3 años');
+ assert.equal(d.querySelector('.quick-btn[data-quick=school]').getAttribute('aria-pressed'),'true');
+ const box=$('letter-text');box.value='edited';box.dispatchEvent(new d.defaultView.Event('input'));
+ $('lang-toggle').click();assert.equal(box.value,'edited','a parent\'s edits survive a language switch');}
+console.log('PASS family guide: 51 state entries, Ohio replacements, stage/need filters, county board routes, correction links, stage-aware first calls, need ordering, military toggle, glossary, each state early intervention and parent center, Ohio crisis line, verified Ohio first calls, Ohio hospital evaluation centers, CHADD of Ohio, quick start, evaluation request letter, Spanish top of page in all 51 jurisdictions and no storage.');

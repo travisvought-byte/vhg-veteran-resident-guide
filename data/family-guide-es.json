@@ -24,24 +24,76 @@
   "share": "Copiar el enlace",
   "results-title": "Programas y próximos pasos",
   "es-note": "Las descripciones de los programas están en inglés por ahora. Cuando llame, puede pedir un intérprete gratuito; muchos programas lo ofrecen. Esta sección en español se preparó con ayuda de inteligencia artificial y está pendiente de revisión.",
-  "empty": "Nada coincide con todas sus opciones. Pruebe «Mostrar todo» o desmarque una necesidad. Su centro para padres y su agencia de derechos de las personas con discapacidad pueden ayudar con cualquier discapacidad."
+  "empty": "Nada coincide con todas sus opciones. Pruebe «Mostrar todo» o desmarque una necesidad. Su centro para padres y su agencia de derechos de las personas con discapacidad pueden ayudar con cualquier discapacidad.",
+  "quick-title": "¿Qué edad tiene su hijo?",
+  "quick-under3": "Mi hijo tiene menos de 3 años",
+  "quick-3plus": "Mi hijo tiene 3 años o más",
+  "quick-note": "Cualquiera de las dos le lleva directo a sus primeras llamadas. Para adolescentes, dinero y derechos, elija una etapa abajo.",
+  "letter-title": "Pídalo a la escuela por escrito",
+  "letter-how": "Complete los espacios entre corchetes aquí y luego cópielo en un correo electrónico o carta para el director de educación especial de su distrito escolar o para el director de la escuela de su hijo. Guarde una copia y anote la fecha en que lo envió.",
+  "letter-copy": "Copiar esta carta"
  },
  "stages": {
-  "concern": {"label": "Algo parece diferente", "ages": "Cualquier edad", "summary": "Listas de desarrollo, evaluaciones gratuitas y quién puede explicar los resultados."},
-  "early": {"label": "Desde el nacimiento hasta los 3 años", "ages": "De 0 a 3 años", "summary": "Intervención temprana gratuita en casa. Termina a los 3 años, así que llame pronto."},
-  "school": {"label": "Años escolares", "ages": "De 3 a 21 años", "summary": "Evaluaciones, planes IEP y 504, y ayuda con las reuniones escolares."},
-  "transition": {"label": "Adolescentes camino a la adultez", "ages": "14 años o más", "summary": "Preparación para el trabajo, SSI a los 18, cuentas de ahorro y opciones distintas a la tutela legal."},
-  "everyday": {"label": "Dinero, atención médica y apoyo", "ages": "Cualquier edad", "summary": "Medicaid, SSI, cuidado de relevo y otros padres que han pasado por lo mismo."},
-  "rights": {"label": "Algo no está funcionando", "ages": "Cualquier edad", "summary": "Defensa y ayuda legal gratuitas cuando una escuela o agencia dice que no."}
+  "concern": {
+   "label": "Algo parece diferente",
+   "ages": "Cualquier edad",
+   "summary": "Listas de desarrollo, evaluaciones gratuitas y quién puede explicar los resultados."
+  },
+  "early": {
+   "label": "Desde el nacimiento hasta los 3 años",
+   "ages": "De 0 a 3 años",
+   "summary": "Intervención temprana gratuita en casa. Termina a los 3 años, así que llame pronto."
+  },
+  "school": {
+   "label": "Años escolares",
+   "ages": "De 3 a 21 años",
+   "summary": "Evaluaciones, planes IEP y 504, y ayuda con las reuniones escolares."
+  },
+  "transition": {
+   "label": "Adolescentes camino a la adultez",
+   "ages": "14 años o más",
+   "summary": "Preparación para el trabajo, SSI a los 18, cuentas de ahorro y opciones distintas a la tutela legal."
+  },
+  "everyday": {
+   "label": "Dinero, atención médica y apoyo",
+   "ages": "Cualquier edad",
+   "summary": "Medicaid, SSI, cuidado de relevo y otros padres que han pasado por lo mismo."
+  },
+  "rights": {
+   "label": "Algo no está funcionando",
+   "ages": "Cualquier edad",
+   "summary": "Defensa y ayuda legal gratuitas cuando una escuela o agencia dice que no."
+  }
  },
  "needs": {
-  "autism": {"label": "Autismo", "short": "autismo"},
-  "adhd": {"label": "TDAH", "short": "TDAH"},
-  "developmental": {"label": "Discapacidad del desarrollo o intelectual (incluido el síndrome de Down)", "short": "discapacidad del desarrollo o intelectual"},
-  "learning": {"label": "Aprendizaje, habla o lenguaje", "short": "aprendizaje, habla o lenguaje"},
-  "physical": {"label": "Necesidades físicas o médicas complejas", "short": "necesidades físicas o médicas complejas"},
-  "behavioral": {"label": "Salud mental o conducta", "short": "salud mental o conducta"},
-  "sensory": {"label": "Audición o visión", "short": "audición o visión"}
+  "autism": {
+   "label": "Autismo",
+   "short": "autismo"
+  },
+  "adhd": {
+   "label": "TDAH",
+   "short": "TDAH"
+  },
+  "developmental": {
+   "label": "Discapacidad del desarrollo o intelectual (incluido el síndrome de Down)",
+   "short": "discapacidad del desarrollo o intelectual"
+  },
+  "learning": {
+   "label": "Aprendizaje, habla o lenguaje",
+   "short": "aprendizaje, habla o lenguaje"
+  },
+  "physical": {
+   "label": "Necesidades físicas o médicas complejas",
+   "short": "necesidades físicas o médicas complejas"
+  },
+  "behavioral": {
+   "label": "Salud mental o conducta",
+   "short": "salud mental o conducta"
+  },
+  "sensory": {
+   "label": "Audición o visión",
+   "short": "audición o visión"
+  }
  },
  "anchor_labels": {
   "Under age 3": "Menores de 3 años",
@@ -76,6 +128,9 @@
   "veteran_families": "Familias de veteranos",
   "cvso": "Oficina de servicios para veteranos del condado de {county}",
   "copied": "Enlace copiado. Solo incluye su estado, condado, etapa, necesidades e idioma.",
-  "copy_this": "Copie este enlace: "
+  "copy_this": "Copie este enlace: ",
+  "letter": "Estimado/a director/a de educación especial:\n\nSoy el padre o la madre de [nombre de su hijo], que está en [grado] en [nombre de la escuela]. Le escribo para solicitar una evaluación para servicios de educación especial porque me preocupa [describa brevemente lo que nota].\n\nPor favor, envíeme el formulario de consentimiento y dígame cuáles son los próximos pasos.\n\nGracias,\n[Su nombre]\n[Teléfono o correo electrónico]",
+  "letter_copied": "Carta copiada. Complete los espacios entre corchetes antes de enviarla.",
+  "letter_select": "Seleccione el texto de la carta y cópielo."
  }
 }
