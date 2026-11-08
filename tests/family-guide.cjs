@@ -86,6 +86,12 @@ for(const code of Object.keys(data.states)){const {$}=load('?state='+code);const
 {const {$}=load('?state=TX&stage=early');const a=$('anchor-list').textContent;assert(a.includes('Early Childhood Intervention (ECI)')&&!a.includes('parent center'));}
 {const {$,d}=load('?state=OH');const btn=d.querySelector('.stage[data-stage=early]');
  assert.equal(btn.getAttribute('aria-labelledby'),'st-early');assert.equal(d.getElementById('st-early').textContent,'Birth to age 3');}
+// Only California and New York still fall back to the national parent center map.
+assert.deepEqual(Object.keys(data.states).filter(c=>c!=='OH'&&!data.parent_centers[c]).sort(),['CA','NY']);
+{const {d,visible}=load('?state=OH&stage=concern&need=autism');assert(visible('#cards .resource').includes('oh-hospital-eval'));
+ const card=d.getElementById('r-oh-hospital-eval');assert.equal(card.querySelectorAll('.locations li').length,5);assert.equal(card.querySelectorAll('.locations a[href^="tel:"]').length,5);assert(!card.querySelector('.visit'));}
+{const {visible}=load('?state=PA&stage=concern');assert(!visible('#cards .resource').includes('oh-hospital-eval'));}
+{const {visible}=load('?state=OH&need=adhd');const cards=visible('#cards .resource');assert(cards.indexOf('oh-chadd')>-1&&cards.indexOf('oh-chadd')<cards.indexOf('oh-medicaid'));}
 {const {w,$}=load('?state=PA#military');assert($('military-details').open);}
 
 // Verified Ohio contacts: one Disability Rights Ohio number, Ohio F2F's currently published line, honest MRSS hours.
@@ -121,4 +127,4 @@ for(const code of Object.keys(data.states)){const {$,d}=load('?lang=es&state='+c
  assert($('anchors-title').textContent.startsWith('Sus primeras llamadas en'),code);
  const a=$('anchor-list');[...a.querySelectorAll('strong')].forEach(s=>assert(!/^(Under|Age|Parent|County|Health|Talk|Disability)/.test(s.textContent),code+s.textContent));
  assert(!bad.test(a.textContent+$('result-status').textContent),code);}
-console.log('PASS family guide: 51 state entries, Ohio replacements, stage/need filters, county board routes, correction links, stage-aware first calls, need ordering, military toggle, glossary, each state early intervention and parent center, Ohio crisis line, verified Ohio first calls, Spanish top of page in all 51 jurisdictions and no storage.');
+console.log('PASS family guide: 51 state entries, Ohio replacements, stage/need filters, county board routes, correction links, stage-aware first calls, need ordering, military toggle, glossary, each state early intervention and parent center, Ohio crisis line, verified Ohio first calls, Ohio hospital evaluation centers, CHADD of Ohio, Spanish top of page in all 51 jurisdictions and no storage.');
