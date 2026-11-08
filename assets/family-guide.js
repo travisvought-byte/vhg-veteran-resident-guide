@@ -32,8 +32,14 @@
  const stageName = id => lang === 'es' ? es.stages[id].label : stageLabel.get(id);
  const needShort = id => lang === 'es' ? es.needs[id].short : needName.get(id).toLowerCase();
 
+ const LETTER_EN = "Dear Director of Special Education,\n\nI am the parent of [child's name], who is in [grade] at [school name]. I am writing to request an evaluation for special education services because I am concerned about [briefly describe what you're seeing].\n\nPlease send me the consent form and let me know what happens next.\n\nThank you,\n[Your name]\n[Phone or email]";
+ const letterTemplate = () => lang === 'es' ? es.dynamic.letter : LETTER_EN;
+ let letterEdited = false;
+
  function applyLang() {
   const spanish = lang === 'es';
+  if (!letterEdited) $('letter-text').value = letterTemplate();
+  $('letter-status').textContent = '';
   marked().forEach(e => {
    e.innerHTML = spanish ? esText(e) : english.get(e);
    if (spanish) e.setAttribute('lang', 'es'); else e.removeAttribute('lang');
@@ -153,6 +159,9 @@
   if (!ohio) $('county').value = '';
   const county = $('county').value, needs = selectedNeeds();
   document.querySelectorAll('.stage').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.stage === stage)));
+  document.querySelectorAll('.quick-btn').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.quick === stage)));
+  // The written-request letter appears when school-age evaluation is the next step.
+  $('letter').hidden = !(stage === 'school' || stage === 'concern');
   const main = showCards($('cards'), state, needs), mil = showCards($('military-cards'), state, needs);
   $('empty').hidden = main.shown > 0;
   $('military-count').textContent = mil.shown;
@@ -197,6 +206,13 @@
  function openMilitary() { if (location.hash === '#military') $('military-details').open = true; }
 
  document.querySelectorAll('.stage').forEach(b => b.addEventListener('click', () => { stage = b.dataset.stage; apply(); reveal(); }));
+ document.querySelectorAll('.quick-btn').forEach(b => b.addEventListener('click', () => { stage = b.dataset.quick; apply(); reveal(); }));
+ $('letter-text').addEventListener('input', () => { letterEdited = true; });
+ $('letter-copy').addEventListener('click', async () => {
+  const spanish = lang === 'es', box = $('letter-text');
+  try { await navigator.clipboard.writeText(box.value); $('letter-status').textContent = spanish ? es.dynamic.letter_copied : 'Letter copied. Fill in the brackets before you send it.'; }
+  catch { box.focus(); box.select(); $('letter-status').textContent = spanish ? es.dynamic.letter_select : 'Select the letter text and copy it.'; }
+ });
  $('state').addEventListener('change', () => apply());
  $('county').addEventListener('change', () => apply());
  document.querySelectorAll('input[name=need]').forEach(i => i.addEventListener('change', () => apply()));
