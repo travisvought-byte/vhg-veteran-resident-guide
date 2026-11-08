@@ -1,0 +1,81 @@
+{
+ "review_status": "Machine-assisted draft, pending review by a native Spanish speaker. Covers the top of the page only; program listings stay in English.",
+ "static": {
+  "lang-toggle": "English",
+  "hero-eyebrow": "GUÍA PARA FAMILIAS · AUTISMO, TDAH Y OTRAS DISCAPACIDADES",
+  "hero-title": "Ayuda para familias que crían a un niño con una discapacidad",
+  "hero-text": "Programas gratuitos y próximos pasos claros, según la edad de su hijo. Cada estado tiene por dónde empezar. Las familias de Ohio también encuentran programas estatales y la oficina de discapacidades del desarrollo de su condado.",
+  "hero-button": "Buscar ayuda para mi hijo",
+  "urgent-title": "¿Necesita ayuda ahora mismo?",
+  "urgent-text": "Si su hijo o alguien de su familia está en crisis, llame o envíe un mensaje de texto al <a href=\"tel:988\">988</a> a cualquier hora. Para hablar en español, marque 2. Si alguien está en peligro, llame al <a href=\"tel:911\">911</a>.",
+  "ohio-crisis": "En Ohio, para cualquier persona de 20 años o menos, pida al 988 el servicio <strong>MRSS</strong>: ayuda gratuita en una crisis de su hijo. De lunes a viernes, de 8 a. m. a 8 p. m., un equipo suele llegar en menos de una hora. En otros horarios, un consejero ayuda por teléfono o video y un equipo lo visita al día siguiente.",
+  "finder-title": "Empiece aquí",
+  "finder-intro": "No se necesita un diagnóstico. Lo que elija no se guarda ni se envía. ¿Es nuevo en esto? <a href=\"#words\">Vea las palabras que escuchará</a> (en inglés).",
+  "state-label": "Su estado",
+  "county-label": "Su condado de Ohio (opcional)",
+  "county-none": "Elija un condado",
+  "stage-title": "¿En qué etapa está ahora?",
+  "stage-all": "Mostrar todo",
+  "stage-all-desc": "Todas las edades y temas",
+  "needs-summary": "Mostrar ayuda adicional para una necesidad específica <span class=\"small\">(opcional)</span>",
+  "needs-note": "Los programas hechos para la necesidad que marque pasan al principio. Los programas que ayudan con cualquier discapacidad siguen en la lista.",
+  "see-list": "Ver la lista",
+  "print": "Imprimir esta lista",
+  "share": "Copiar el enlace",
+  "results-title": "Programas y próximos pasos",
+  "es-note": "Las descripciones de los programas están en inglés por ahora. Cuando llame, puede pedir un intérprete gratuito; muchos programas lo ofrecen. Esta sección en español se preparó con ayuda de inteligencia artificial y está pendiente de revisión.",
+  "empty": "Nada coincide con todas sus opciones. Pruebe «Mostrar todo» o desmarque una necesidad. Su centro para padres y su agencia de derechos de las personas con discapacidad pueden ayudar con cualquier discapacidad."
+ },
+ "stages": {
+  "concern": {"label": "Algo parece diferente", "ages": "Cualquier edad", "summary": "Listas de desarrollo, evaluaciones gratuitas y quién puede explicar los resultados."},
+  "early": {"label": "Desde el nacimiento hasta los 3 años", "ages": "De 0 a 3 años", "summary": "Intervención temprana gratuita en casa. Termina a los 3 años, así que llame pronto."},
+  "school": {"label": "Años escolares", "ages": "De 3 a 21 años", "summary": "Evaluaciones, planes IEP y 504, y ayuda con las reuniones escolares."},
+  "transition": {"label": "Adolescentes camino a la adultez", "ages": "14 años o más", "summary": "Preparación para el trabajo, SSI a los 18, cuentas de ahorro y opciones distintas a la tutela legal."},
+  "everyday": {"label": "Dinero, atención médica y apoyo", "ages": "Cualquier edad", "summary": "Medicaid, SSI, cuidado de relevo y otros padres que han pasado por lo mismo."},
+  "rights": {"label": "Algo no está funcionando", "ages": "Cualquier edad", "summary": "Defensa y ayuda legal gratuitas cuando una escuela o agencia dice que no."}
+ },
+ "needs": {
+  "autism": {"label": "Autismo", "short": "autismo"},
+  "adhd": {"label": "TDAH", "short": "TDAH"},
+  "developmental": {"label": "Discapacidad del desarrollo o intelectual (incluido el síndrome de Down)", "short": "discapacidad del desarrollo o intelectual"},
+  "learning": {"label": "Aprendizaje, habla o lenguaje", "short": "aprendizaje, habla o lenguaje"},
+  "physical": {"label": "Necesidades físicas o médicas complejas", "short": "necesidades físicas o médicas complejas"},
+  "behavioral": {"label": "Salud mental o conducta", "short": "salud mental o conducta"},
+  "sensory": {"label": "Audición o visión", "short": "audición o visión"}
+ },
+ "anchor_labels": {
+  "Under age 3": "Menores de 3 años",
+  "Age 3 and older": "De 3 años en adelante",
+  "Parent center (school help)": "Centro para padres (ayuda con la escuela)",
+  "County developmental disability services": "Servicios de discapacidades del desarrollo del condado",
+  "Health care questions and parent mentors": "Preguntas sobre atención médica y padres mentores",
+  "Health care questions": "Preguntas sobre atención médica",
+  "Talk with another parent": "Hable con otro padre o madre",
+  "Disability rights and legal help": "Derechos de las personas con discapacidad y ayuda legal"
+ },
+ "anchor_text": {
+  "ask your public school district in writing for a free evaluation": "pida por escrito a su distrito escolar público una evaluación gratuita",
+  "find your county board of DD": "busque la junta de discapacidades del desarrollo (DD) de su condado",
+  "find your Family-to-Family Health Information Center": "busque su centro Family-to-Family",
+  "find your Parent to Parent program": "busque su programa Parent to Parent",
+  "parent_centers": "busque los centros para padres de {state} (hay más de uno en el estado)"
+ },
+ "dynamic": {
+  "anchors_title": "Sus primeras llamadas en {state}",
+  "showing_one": "Mostrando {n} programa{topic} en {where}.",
+  "showing_many": "Mostrando {n} programas{topic} en {where}.",
+  "topic": " para la etapa «{stage}»",
+  "need_match": " {k} pensados para {names} aparecen primero; los demás ayudan con cualquier discapacidad.",
+  "need_none": " Ninguno es solo para {names}, así que estos ayudan con cualquier discapacidad.",
+  "or": " o ",
+  "county_where": "el condado de {county}, Ohio",
+  "county_heading": "Condado de {county}",
+  "county_dd": "Junta de DD del condado",
+  "county_dd_link": "Junta de DD del condado de {county}",
+  "county_dd_map": "elija el condado de {county} en el mapa",
+  "veteran_families": "Familias de veteranos",
+  "cvso": "Oficina de servicios para veteranos del condado de {county}",
+  "copied": "Enlace copiado. Solo incluye su estado, condado, etapa, necesidades e idioma.",
+  "copy_this": "Copie este enlace: "
+ }
+}

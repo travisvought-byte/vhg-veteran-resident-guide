@@ -87,4 +87,38 @@ for(const code of Object.keys(data.states)){const {$}=load('?state='+code);const
 {const {$,d}=load('?state=OH');const btn=d.querySelector('.stage[data-stage=early]');
  assert.equal(btn.getAttribute('aria-labelledby'),'st-early');assert.equal(d.getElementById('st-early').textContent,'Birth to age 3');}
 {const {w,$}=load('?state=PA#military');assert($('military-details').open);}
-console.log('PASS family guide: 51 state entries, Ohio replacements, stage/need filters, county board routes, correction links, stage-aware first calls, need ordering, military toggle, glossary, each state early intervention and parent center, Ohio crisis line and no storage.');
+
+// Verified Ohio contacts: one Disability Rights Ohio number, Ohio F2F's currently published line, honest MRSS hours.
+{const {$,d}=load('?state=OH');
+ assert(!html.includes('844-644-6323'),'retired Ohio F2F 844 number');
+ assert($('anchor-list').textContent.includes('513-803-5557'));
+ assert(d.getElementById('r-oh-sdm-toolkit').textContent.includes('800-282-9181')&&!html.includes('614-466-7264'));
+ assert(/8 a\.m\. to 8 p\.m\./.test($('ohio-crisis').textContent)&&/next day/.test($('ohio-crisis').textContent));
+ assert(/8 a\.m\. to 8 p\.m\./.test(d.getElementById('r-oh-mrss').textContent));}
+
+// Spanish: the top of the page switches, listings stay English with a note, the choice rides in the URL and switches back.
+{const {w,$,d}=load('?state=OH&county=Morrow&stage=early&need=autism&lang=es');
+ const top=d.querySelector('h1');assert.equal(top.getAttribute('lang'),'es');assert(top.textContent.startsWith('Ayuda para familias'));
+ assert($('urgent-help').textContent.includes('marque 2')&&$('ohio-crisis').textContent.includes('MRSS'));
+ assert.equal($('anchors-title').textContent,'Sus primeras llamadas en Ohio');
+ const a=$('anchor-list').textContent;assert(a.includes('Menores de 3 años')&&a.includes('Derechos de las personas con discapacidad'));
+ assert(!/Under age 3|Disability rights and legal help/.test(a));
+ assert($('county-result').textContent.includes('Condado de Morrow')&&$('county-result').textContent.includes('419-947-1159'));
+ const s=$('result-status').textContent;assert(s.startsWith('Mostrando ')&&s.includes('en el condado de Morrow, Ohio')&&s.includes('«Desde el nacimiento hasta los 3 años»')&&s.includes('autismo'),s);
+ assert.equal(d.getElementById('st-early').textContent,'Desde el nacimiento hasta los 3 años');
+ assert.equal(d.querySelector('[data-i18n-need=adhd]').textContent,'TDAH');
+ assert(d.querySelector('input[value=autism]').checked,'need checkbox survives translation');
+ assert(!$('es-note').hidden&&$('es-note').textContent.includes('inglés'));
+ assert.equal($('lang-toggle').textContent,'English');
+ assert(!bad.test($('finder').textContent+$('urgent-help').textContent+d.querySelector('header').textContent));
+ d.querySelector('.stage[data-stage=school]').click();assert(w.location.search.includes('lang=es')&&w.location.search.includes('stage=school'));
+ $('lang-toggle').click();
+ assert.equal(d.querySelector('h1').textContent,'Help for families raising a child with a disability');assert(!d.querySelector('h1').hasAttribute('lang'));
+ assert.equal($('anchors-title').textContent,'Your first calls in Ohio');assert($('es-note').hidden);assert(!w.location.search.includes('lang='));
+ assert($('result-status').textContent.startsWith('Showing '));assert(d.querySelector('input[value=autism]').checked);
+ $('lang-toggle').click();assert(w.location.search.includes('lang=es'));assert.equal($('lang-toggle').textContent,'English');}
+for(const code of Object.keys(data.states)){const {$,d}=load('?lang=es&state='+code);
+ assert($('anchors-title').textContent.startsWith('Sus primeras llamadas en'),code);
+ const a=$('anchor-list');[...a.querySelectorAll('strong')].forEach(s=>assert(!/^(Under|Age|Parent|County|Health|Talk|Disability)/.test(s.textContent),code+s.textContent));
+ assert(!bad.test(a.textContent+$('result-status').textContent),code);}
+console.log('PASS family guide: 51 state entries, Ohio replacements, stage/need filters, county board routes, correction links, stage-aware first calls, need ordering, military toggle, glossary, each state early intervention and parent center, Ohio crisis line, verified Ohio first calls, Spanish top of page in all 51 jurisdictions and no storage.');
