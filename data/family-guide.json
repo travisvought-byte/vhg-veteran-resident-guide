@@ -490,6 +490,69 @@
    "url": "https://aphconnectcenter.org/directory/profile/8319",
    "publisher": "APH ConnectCenter",
    "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "chadd-locator",
+   "title": "CHADD chapter locator (CHADD of Ohio, Cincinnati and Toledo branches)",
+   "url": "https://chadd.org/affiliate-locator/",
+   "publisher": "CHADD",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "chadd-oh-group",
+   "title": "ADHD Parent Support Group hosted by CHADD of Ohio (virtual, third Thursday monthly)",
+   "url": "https://chadd.app.neoncrm.com/np/clients/chadd/event.jsp?event=8832",
+   "publisher": "CHADD",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "cchmc-ddbp",
+   "title": "Developmental and Behavioral Pediatrics",
+   "url": "https://www.cincinnatichildrens.org/service/d/developmental-behavioral",
+   "publisher": "Cincinnati Children's",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "milestones-ddbp",
+   "title": "Developmental and Behavioral Pediatrics, Cincinnati Children's Hospital (listing with phone)",
+   "url": "https://legacy.milestones.org/resource/developmental-and-behavioral-pediatrics-cincinnati-childrens-hospital",
+   "publisher": "Milestones Autism Resources",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "cchmc-wait",
+   "title": "What to do while you wait for a developmental evaluation",
+   "url": "https://files.constantcontact.com/d8026fa7801/56dce8bb-4dc4-464e-88d9-ec0a8f00f3ab.pdf",
+   "publisher": "Cincinnati Children's",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "nch-screening",
+   "title": "Autism early screening and diagnosis",
+   "url": "https://www.nationwidechildrens.org/autism-early-screening-and-diagnosis",
+   "publisher": "Nationwide Children's Hospital",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "akron-adc",
+   "title": "Autism Diagnostic Clinic",
+   "url": "https://www.akronchildrens.org/departments/Autism-Diagnostic-Clinic.html",
+   "publisher": "Akron Children's",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "ccf-autism",
+   "title": "Center for Autism: programs and services",
+   "url": "https://my.clevelandclinic.org/pediatrics/departments/autism/programs-services",
+   "publisher": "Cleveland Clinic Children's",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "dayton-devped",
+   "title": "Developmental pediatrics",
+   "url": "https://childrensdayton.org/services/developmental-pediatrics/",
+   "publisher": "Dayton Children's",
+   "reviewed_on": "2026-11-08"
   }
  ],
  "resources": [
@@ -919,6 +982,67 @@
    ]
   },
   {
+   "id": "oh-hospital-eval",
+   "scope": "OH",
+   "name": "Children's hospital evaluations for autism and development",
+   "org": "Ohio children's hospitals",
+   "what": "Ohio's large children's hospitals have teams that check children for autism, developmental delay and complex ADHD. These visits often have a wait of several months, so it helps to get on the list early.",
+   "how": "Ask your child's doctor for a referral. Most hospitals then call you to set the visit. Keep using Help Me Grow or the school while you wait. Your child does not need a medical diagnosis to get those services.",
+   "phone": "",
+   "phone_label": "",
+   "url": "",
+   "locations": [
+    {
+     "name": "Cincinnati Children's Developmental and Behavioral Pediatrics",
+     "place": "Cincinnati, Liberty Township, Mason",
+     "phone": "513-636-4611",
+     "url": "https://www.cincinnatichildrens.org/service/d/developmental-behavioral"
+    },
+    {
+     "name": "Nationwide Children's Child Development Center",
+     "place": "Columbus area",
+     "phone": "614-355-8080",
+     "url": "https://www.nationwidechildrens.org/specialties/child-development-center"
+    },
+    {
+     "name": "Cleveland Clinic Children's Center for Autism",
+     "place": "Cleveland",
+     "phone": "216-448-6440",
+     "url": "https://my.clevelandclinic.org/pediatrics/departments/autism/programs-services"
+    },
+    {
+     "name": "Akron Children's Autism Diagnostic Clinic",
+     "place": "Akron",
+     "phone": "330-543-2778",
+     "url": "https://www.akronchildrens.org/departments/Autism-Diagnostic-Clinic.html"
+    },
+    {
+     "name": "Dayton Children's Developmental Pediatrics",
+     "place": "Dayton",
+     "phone": "937-641-4000",
+     "url": "https://childrensdayton.org/services/developmental-pediatrics/"
+    }
+   ],
+   "stages": [
+    "concern",
+    "early"
+   ],
+   "needs": [
+    "autism",
+    "developmental",
+    "adhd"
+   ],
+   "sources": [
+    "cchmc-ddbp",
+    "milestones-ddbp",
+    "cchmc-wait",
+    "nch-screening",
+    "ccf-autism",
+    "akron-adc",
+    "dayton-devped"
+   ]
+  },
+  {
    "id": "oh-ocecd",
    "scope": "OH",
    "name": "Ohio Coalition for the Education of Children with Disabilities (OCECD)",
@@ -1158,6 +1282,29 @@
    ],
    "sources": [
     "odm-healthchek"
+   ]
+  },
+  {
+   "id": "oh-chadd",
+   "scope": "OH",
+   "name": "CHADD of Ohio parent support group",
+   "org": "CHADD of Ohio",
+   "what": "A free online group for parents of children with ADHD, run by Ohio's CHADD chapter. Topics include feelings and self-control, school and homework, daily routines, and taking care of yourself. Cincinnati and Toledo also have local branches.",
+   "how": "Find CHADD of Ohio on CHADD's chapter list and sign up for the next meeting. The group has met online on the third Thursday of each month at noon.",
+   "phone": "",
+   "phone_label": "",
+   "url": "https://chadd.org/affiliate-locator/",
+   "stages": [
+    "concern",
+    "school",
+    "everyday"
+   ],
+   "needs": [
+    "adhd"
+   ],
+   "sources": [
+    "chadd-locator",
+    "chadd-oh-group"
    ]
   },
   {
@@ -2065,25 +2212,25 @@
   }
  },
  "parent_centers": {
-  "AL": {
-   "name": "Alabama Parent Education Center",
-   "phone": "334-567-2252",
-   "url": "https://www.alabamaparentcenter.com/"
-  },
   "AK": {
    "name": "Stone Soup Group",
    "phone": "907-561-3701",
    "url": "https://www.stonesoupgroup.org/"
   },
-  "AZ": {
-   "name": "Raising Special Kids",
-   "phone": "602-242-4366",
-   "url": "https://www.raisingspecialkids.org/"
+  "AL": {
+   "name": "Alabama Parent Education Center",
+   "phone": "334-567-2252",
+   "url": "https://www.alabamaparentcenter.com/"
   },
   "AR": {
    "name": "The Center for Exceptional Families",
    "phone": "870-336-3012",
    "url": "https://www.thecenterforexceptionalfamilies.org/"
+  },
+  "AZ": {
+   "name": "Raising Special Kids",
+   "phone": "602-242-4366",
+   "url": "https://www.raisingspecialkids.org/"
   },
   "CO": {
    "name": "PEAK Parent Center",
@@ -2095,15 +2242,21 @@
    "phone": "860-739-3089",
    "url": "https://www.cpacinc.org/"
   },
+  "DC": {
+   "name": "Advocates for Justice and Education",
+   "phone": "202-678-8060",
+   "url": "https://www.aje-dc.org/"
+  },
   "DE": {
    "name": "Parent Information Center of Delaware",
    "phone": "302-999-7394",
    "url": "https://www.picofdel.org/"
   },
-  "DC": {
-   "name": "Advocates for Justice and Education",
-   "phone": "202-678-8060",
-   "url": "https://www.aje-dc.org/"
+  "FL": {
+   "name": "Family Network on Disabilities",
+   "phone": "800-825-5736",
+   "url": "https://fndusa.org/",
+   "source": "https://fndusa.org/"
   },
   "GA": {
    "name": "Parent to Parent of Georgia",
@@ -2115,20 +2268,26 @@
    "phone": "808-536-9684",
    "url": "https://www.ldahawaii.org/"
   },
+  "IA": {
+   "name": "ASK Resource Center",
+   "phone": "515-243-1713",
+   "url": "https://askresource.org/"
+  },
   "ID": {
    "name": "Idaho Parents Unlimited",
    "phone": "208-342-5884",
    "url": "https://ipulidaho.org/"
   },
+  "IL": {
+   "name": "Family Matters Parent Training and Information Center",
+   "phone": "866-436-7842",
+   "url": "https://www.fmptic.org/",
+   "source": "https://www.fmptic.org/"
+  },
   "IN": {
    "name": "IN*SOURCE",
    "phone": "574-234-7101",
    "url": "https://www.insource.org/"
-  },
-  "IA": {
-   "name": "ASK Resource Center",
-   "phone": "515-243-1713",
-   "url": "https://askresource.org/"
   },
   "KS": {
    "name": "Families Together",
@@ -2145,15 +2304,68 @@
    "phone": "504-888-9111",
    "url": "https://fhfjefferson.org/laptic"
   },
+  "MA": {
+   "name": "Federation for Children with Special Needs",
+   "phone": "800-331-0688",
+   "url": "https://fcsn.org/",
+   "source": "https://www.aphconnectcenter.org/directory/profile/9256"
+  },
+  "MD": {
+   "name": "The Parents' Place of Maryland",
+   "phone": "800-394-5694",
+   "url": "https://www.ppmd.org/",
+   "source": "https://www.ppmd.org/programs/"
+  },
+  "ME": {
+   "name": "Maine Parent Federation",
+   "phone": "800-870-7746",
+   "url": "https://www.mpf.org/",
+   "source": "https://cadreworks.org/state-parent-centers/maine"
+  },
+  "MI": {
+   "name": "Michigan Alliance for Families",
+   "phone": "800-552-4821",
+   "url": "https://www.michiganallianceforfamilies.org/",
+   "source": "https://www.michiganallianceforfamilies.org/"
+  },
+  "MN": {
+   "name": "PACER Center",
+   "phone": "952-838-9000",
+   "url": "https://www.pacer.org/",
+   "source": "https://www.pacer.org/?p=3659"
+  },
+  "MO": {
+   "name": "Missouri Parents Act (MPACT)",
+   "phone": "800-743-7634",
+   "url": "https://www.missouriparentsact.org/",
+   "source": "https://www.missouriparentsact.org/"
+  },
+  "MS": {
+   "name": "Mississippi Parent Training and Information Center",
+   "phone": "601-969-0601",
+   "url": "https://www.mspti.org/",
+   "source": "https://www.parentprojectmd.org/?p=1249"
+  },
+  "MT": {
+   "name": "Montana Empowerment Center",
+   "phone": "877-870-1190",
+   "url": "https://www.mtempowermentcenter.org/",
+   "source": "https://www.gfgazette.com/?p=19485"
+  },
+  "NC": {
+   "name": "ECAC",
+   "phone": "704-892-1321",
+   "url": "https://www.ecac-parentcenter.org/"
+  },
+  "ND": {
+   "name": "Pathfinder Parent Center",
+   "phone": "701-837-7500",
+   "url": "https://www.pathfinder-nd.org/"
+  },
   "NE": {
    "name": "PTI Nebraska",
    "phone": "402-346-0525",
    "url": "https://www.pti-nebraska.org/"
-  },
-  "NV": {
-   "name": "Nevada PEP",
-   "phone": "702-388-8899",
-   "url": "https://www.nvpep.org/"
   },
   "NH": {
    "name": "Parent Information Center",
@@ -2170,15 +2382,10 @@
    "phone": "505-247-0192",
    "url": "https://www.parentsreachingout.org/"
   },
-  "NC": {
-   "name": "ECAC",
-   "phone": "704-892-1321",
-   "url": "https://www.ecac-parentcenter.org/"
-  },
-  "ND": {
-   "name": "Pathfinder Parent Center",
-   "phone": "701-837-7500",
-   "url": "https://www.pathfinder-nd.org/"
+  "NV": {
+   "name": "Nevada PEP",
+   "phone": "702-388-8899",
+   "url": "https://www.nvpep.org/"
   },
   "OH": {
    "name": "Ohio Coalition for the Education of Children with Disabilities (OCECD)",
@@ -2194,6 +2401,12 @@
    "name": "FACT Oregon",
    "phone": "503-786-6082",
    "url": "https://factoregon.org/"
+  },
+  "PA": {
+   "name": "PEAL Center",
+   "phone": "866-950-1040",
+   "url": "https://www.pealcenter.org/",
+   "source": "https://www.pealcenter.org/"
   },
   "RI": {
    "name": "Rhode Island Parent Information Network (RIPIN)",
@@ -2215,35 +2428,41 @@
    "phone": "423-639-0125",
    "url": "https://www.tnstep.org/"
   },
+  "TX": {
+   "name": "Partners Resource Network",
+   "phone": "800-866-4726",
+   "url": "https://prntexas.org/",
+   "source": "https://tea.texas.gov/node/106496"
+  },
   "UT": {
    "name": "Utah Parent Center",
    "phone": "801-272-1051",
    "url": "https://www.utahparentcenter.org/"
-  },
-  "VT": {
-   "name": "Vermont Family Network",
-   "phone": "802-876-5315",
-   "url": "https://www.vermontfamilynetwork.org/"
   },
   "VA": {
    "name": "Parent Educational Advocacy Training Center (PEATC)",
    "phone": "703-923-0010",
    "url": "https://www.peatc.org/"
   },
+  "VT": {
+   "name": "Vermont Family Network",
+   "phone": "802-876-5315",
+   "url": "https://www.vermontfamilynetwork.org/"
+  },
   "WA": {
    "name": "PAVE",
    "phone": "253-565-2266",
    "url": "https://www.wapave.org/"
   },
-  "WV": {
-   "name": "West Virginia Parent Training and Information",
-   "phone": "304-624-1436",
-   "url": "https://www.wvpti.org/"
-  },
   "WI": {
    "name": "Wisconsin FACETS",
    "phone": "414-374-4645",
    "url": "https://www.wifacets.org/"
+  },
+  "WV": {
+   "name": "West Virginia Parent Training and Information",
+   "phone": "304-624-1436",
+   "url": "https://www.wvpti.org/"
   },
   "WY": {
    "name": "Parent Information Center",
@@ -2251,5 +2470,5 @@
    "url": "https://www.wpic.org/"
   }
  },
- "parent_centers_note": "States not listed have several regional parent centers or no complete listing; the guide links to the national map for them."
+ "parent_centers_note": "California and New York have several regional parent centers, so the guide links to the national map for them. Montana's and Illinois's centers changed recently; the national list may still show the old names."
 }
