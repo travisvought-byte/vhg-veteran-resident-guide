@@ -1,7 +1,7 @@
 {
  "reviewed_on": "2026-11-08",
  "publication_status": "published-source-snapshot",
- "scope_note": "Free public programs, nonprofits and official locators for families raising children and young adults with autism, ADHD, developmental, learning, physical, medical or behavioral health disabilities. Private therapy providers are not listed. Contacts come from published official or organization sources and are not telephone-confirmed.",
+ "scope_note": "Free public programs, nonprofits and official locators for families raising children and young adults with autism, ADHD, developmental, learning, physical, medical or behavioral health disabilities. Private therapy providers are not listed. Contacts come from published official or organization sources and are not telephone-confirmed. Ohio's first-call numbers were matched against each organization's own website on the review date.",
  "stages": [
   {
    "id": "concern",
@@ -345,13 +345,6 @@
    "reviewed_on": "2026-11-08"
   },
   {
-   "id": "ohio-f2f-brochure",
-   "title": "Ohio Family to Family brochure (1-844-OHIOF2F)",
-   "url": "https://www.ohiof2f.org/wp-content/uploads/2017/11/CCHMC_048_F2FBrochure_PD2.pdf",
-   "publisher": "Ohio Family to Family Health Information Center",
-   "reviewed_on": "2026-11-08"
-  },
-  {
    "id": "ocali-adep",
    "title": "Autism Diagnosis Education Project",
    "url": "https://www.ocali.org/project/adep",
@@ -489,6 +482,48 @@
    "title": "Ohio State School for the Blind (directory listing)",
    "url": "https://aphconnectcenter.org/directory/profile/8319",
    "publisher": "APH ConnectCenter",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "dro-home",
+   "title": "Disability Rights Ohio (phone numbers in site footer)",
+   "url": "https://www.disabilityrightsohio.org/",
+   "publisher": "Disability Rights Ohio",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "ohio-f2f-connect",
+   "title": "Ohio Family to Family: connect with us",
+   "url": "https://www.ohiof2f.org/connect-with-us/",
+   "publisher": "Ohio Family-to-Family Health Information Center",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "odm-mrss-bulletin",
+   "title": "Ohio Medicaid: MRSS available in all 88 counties",
+   "url": "https://content.govdelivery.com/accounts/OHMEDICAID/bulletins/426e8bb",
+   "publisher": "Ohio Department of Medicaid",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "dodd-home",
+   "title": "Ohio Department of Developmental Disabilities (toll-free line in site footer)",
+   "url": "https://dodd.ohio.gov/",
+   "publisher": "Ohio Department of Developmental Disabilities",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "ohio-ei-home",
+   "title": "Ohio Early Intervention: make a referral",
+   "url": "https://ohioearlyintervention.org/",
+   "publisher": "Ohio Department of Children and Youth",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "ocecd-home",
+   "title": "OCECD: need assistance and contact",
+   "url": "https://www.ocecd.org/",
+   "publisher": "Ohio Coalition for the Education of Children with Disabilities",
    "reviewed_on": "2026-11-08"
   }
  ],
@@ -870,7 +905,8 @@
     "any"
    ],
    "sources": [
-    "dcy-hmg-refer"
+    "dcy-hmg-refer",
+    "ohio-ei-home"
    ]
   },
   {
@@ -939,7 +975,8 @@
    ],
    "sources": [
     "ocecd-guide",
-    "dew-families"
+    "dew-families",
+    "ocecd-home"
    ]
   },
   {
@@ -948,9 +985,9 @@
    "name": "Ohio Family to Family and Parent to Parent",
    "org": "Ohio Family-to-Family Health Information Center",
    "what": "Ohio parents who have been there give free help with doctors, insurance and Medicaid. Ohio Parent to Parent can also match you with a trained parent mentor for one-to-one support.",
-   "how": "Call or email, or ask to be matched with a parent mentor.",
-   "phone": "844-644-6323",
-   "phone_label": "844-OHIOF2F",
+   "how": "Call or email ohiof2f@cchmc.org, or ask to be matched with a parent mentor.",
+   "phone": "513-803-5557",
+   "phone_label": "Ohio Parent to Parent",
    "url": "https://ohiof2f.org/ohiop2p",
    "stages": [
     "concern",
@@ -961,7 +998,7 @@
    ],
    "sources": [
     "ohio-p2p",
-    "ohio-f2f-brochure"
+    "ohio-f2f-connect"
    ]
   },
   {
@@ -1137,7 +1174,8 @@
    ],
    "sources": [
     "oacb-family",
-    "milestones-dodd"
+    "milestones-dodd",
+    "dodd-home"
    ]
   },
   {
@@ -1187,11 +1225,11 @@
    "scope": "OH",
    "name": "Youth mobile crisis team (MRSS)",
    "org": "Ohio Department of Behavioral Health and Ohio Medicaid",
-   "what": "Free crisis help that comes to your child, for anyone 20 or younger in any Ohio county. A trained team, including a licensed counselor, can usually arrive within an hour at home, school or another safe place. You decide if it's a crisis.",
+   "what": "Free crisis help for anyone 20 or younger in any Ohio county. On weekdays from 8 a.m. to 8 p.m., a trained team usually comes within an hour to your home, school or another safe place. At other times, a counselor helps by phone or video and a team visits the next day. You decide if it's a crisis.",
    "how": "Call or text 988 and ask for MRSS. If anyone is in physical danger, call 911.",
    "phone": "988",
    "phone_label": "ask for MRSS",
-   "url": "https://mrss.ohio.gov/",
+   "url": "https://education.ohio.gov/Media/Ed-Connection/Nov-18-2025/Emergency-crisis-service-for-students-and-young-ad",
    "stages": [
     "everyday",
     "rights"
@@ -1201,6 +1239,7 @@
    ],
    "sources": [
     "dew-mrss",
+    "odm-mrss-bulletin",
     "ohioguidestone-mrss"
    ]
   },
@@ -1275,8 +1314,8 @@
    "org": "Disability Rights Ohio",
    "what": "A free 2026 toolkit for young people with disabilities and their families. It explains supported decision-making, powers of attorney and other choices that are less restrictive than guardianship.",
    "how": "Go through the toolkit with your teen before 18. Call Disability Rights Ohio with questions.",
-   "phone": "614-466-7264",
-   "phone_label": "Disability Rights Ohio",
+   "phone": "800-282-9181",
+   "phone_label": "Disability Rights Ohio, toll-free",
    "url": "https://www.disabilityrightsohio.org/assets/documents/sdmtoolkit2026print.pdf",
    "stages": [
     "transition",
@@ -1286,7 +1325,8 @@
     "any"
    ],
    "sources": [
-    "dro-sdm-toolkit"
+    "dro-sdm-toolkit",
+    "dro-home"
    ]
   },
   {

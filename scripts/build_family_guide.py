@@ -7,6 +7,7 @@ so both stay single-sourced.
 """
 import html
 import json
+import re
 from datetime import date
 from pathlib import Path
 from build_mobility_routes import STATES
@@ -22,7 +23,7 @@ ANCHORS = {
         {'label': 'Age 3 and older', 'stages': ['concern', 'school'], 'items': [{'text': 'ask your public school district in writing for a free evaluation'}]},
         {'label': 'Parent center (school help)', 'stages': ['concern', 'school', 'transition', 'rights'], 'items': [{'text': 'OCECD', 'href': 'https://www.ocecd.org/'}, {'tel': '844-382-5452'}]},
         {'label': 'County developmental disability services', 'stages': ['early', 'school', 'transition', 'everyday'], 'items': [{'text': 'find your county board of DD', 'href': 'https://www.oacbdd.org/familyresources'}, {'tel': '800-617-6733'}]},
-        {'label': 'Health care questions and parent mentors', 'stages': ['concern', 'everyday'], 'items': [{'text': 'Ohio Family to Family', 'href': 'https://ohiof2f.org/ohiop2p'}, {'tel': '844-644-6323'}]},
+        {'label': 'Health care questions and parent mentors', 'stages': ['concern', 'everyday'], 'items': [{'text': 'Ohio Family to Family', 'href': 'https://ohiof2f.org/ohiop2p'}, {'tel': '513-803-5557'}]},
         {'label': 'Disability rights and legal help', 'stages': ALL_STAGES, 'items': [{'pa': True}]},
     ],
     'default': [
@@ -140,26 +141,40 @@ def anchor_html(state, pa):
     return ''.join(rows)
 
 
+def spanish(data):
+    """Spanish for the top of the page. Every key the page uses must be present."""
+    es = json.loads((ROOT / 'data/family-guide-es.json').read_text())
+    assert es['review_status']
+    assert set(es['stages']) == {s['id'] for s in data['stages']}
+    assert all(v['label'] and v['ages'] and v['summary'] for v in es['stages'].values())
+    assert set(es['needs']) == {n['id'] for n in data['needs']}
+    labels = {a['label'] for rows in ANCHORS.values() for a in rows}
+    assert labels == set(es['anchor_labels']), labels ^ set(es['anchor_labels'])
+    texts = {i['text'] for rows in ANCHORS.values() for a in rows for i in a['items'] if 'text' in i and 'href' not in i or i.get('text', '').startswith('find your')}
+    assert texts <= set(es['anchor_text']), texts - set(es['anchor_text'])
+    return {k: es[k] for k in ('static', 'stages', 'needs', 'anchor_labels', 'anchor_text', 'dynamic')}
+
+
 def outputs():
     data = validate(json.loads((ROOT / 'data/family-guide.json').read_text()))
     sources = {s['id']: s for s in data['sources']}
     need_names = {n['id']: n['label'].split(' (')[0] for n in data['needs']}
     counties = ohio_counties()
-    page_data = dict(data, ohio_counties=counties, states=STATES, anchors=ANCHORS)
+    page_data = dict(data, ohio_counties=counties, states=STATES, anchors=ANCHORS, es=spanish(data))
     cards = [card(r, sources, need_names) for r in data['resources'] if r['scope'] != 'MIL']
     military = [card(r, sources, need_names) for r in data['resources'] if r['scope'] == 'MIL']
     state_options = ''.join(f'<option value="{c}"' + (' selected' if c == 'OH' else '') + f'>{esc(n)}</option>'
                             for c, n in STATES.items())
-    county_options = '<option value="">Choose a county</option>' + ''.join(
+    county_options = '<option value="" data-i18n="county-none">Choose a county</option>' + ''.join(
         f'<option value="{esc(c["county"])}">{esc(c["county"])} County</option>' for c in counties)
-    stage_buttons = ('<button type="button" class="stage" data-stage="all" aria-pressed="true"><strong id="st-all">Show everything</strong>'
-                     '<span>All ages and topics</span></button>') + ''.join(
+    stage_buttons = ('<button type="button" class="stage" data-stage="all" aria-pressed="true"><strong id="st-all" data-i18n="stage-all">Show everything</strong>'
+                     '<span data-i18n="stage-all-desc">All ages and topics</span></button>') + ''.join(
         f'<button type="button" class="stage" data-stage="{s["id"]}" aria-pressed="false" aria-labelledby="st-{s["id"]}" aria-describedby="sd-{s["id"]}">'
-        f'<strong id="st-{s["id"]}">{esc(s["label"])}</strong><span class="ages">{esc(s["ages"])}</span>'
-        f'<span class="desc" id="sd-{s["id"]}">{esc(s["summary"])}</span></button>'
+        f'<strong id="st-{s["id"]}" data-i18n-stage="{s["id"]}:label">{esc(s["label"])}</strong><span class="ages" data-i18n-stage="{s["id"]}:ages">{esc(s["ages"])}</span>'
+        f'<span class="desc" id="sd-{s["id"]}" data-i18n-stage="{s["id"]}:summary">{esc(s["summary"])}</span></button>'
         for s in data['stages'])
     need_boxes = ''.join(
-        f'<label class="check"><input type="checkbox" name="need" value="{n["id"]}"> {esc(n["label"])}</label>'
+        f'<label class="check"><input type="checkbox" name="need" value="{n["id"]}"> <span data-i18n-need="{n["id"]}">{esc(n["label"])}</span></label>'
         for n in data['needs'])
     changes = ''.join(
         f'<article><h3>{esc(c["title"])}</h3><p>{esc(c["text"])}</p><p class="small">Sources: '
@@ -177,6 +192,8 @@ def outputs():
     }.items():
         assert key in page, key
         page = page.replace(key, value)
+    keys = set(re.findall(r'data-i18n="([^"]+)"', page))
+    assert keys | {'lang-toggle', 'es-note'} == set(page_data['es']['static']), keys ^ set(page_data['es']['static'])
     return {'family-guide.html': page}
 
 

@@ -16,9 +16,39 @@
  const original = new Map();
  document.querySelectorAll('.resource').forEach((c, i) => original.set(c, i));
  let stage = 'all';
+ // Language: English by default; ?lang=es switches the top of the page to Spanish. Listings stay in English.
+ const es = data.es;
+ let lang = 'en';
+ const fill = (tpl, vals) => tpl.replace(/\{(\w+)\}/g, (_, k) => vals[k]);
+ const english = new Map();
+ const marked = () => document.querySelectorAll('[data-i18n],[data-i18n-stage],[data-i18n-need]');
+ marked().forEach(e => english.set(e, e.innerHTML));
+ const esText = e => {
+  if (e.dataset.i18n) return es.static[e.dataset.i18n];
+  if (e.dataset.i18nNeed) return es.needs[e.dataset.i18nNeed].label;
+  const [id, field] = e.dataset.i18nStage.split(':');
+  return es.stages[id][field];
+ };
+ const stageName = id => lang === 'es' ? es.stages[id].label : stageLabel.get(id);
+ const needShort = id => lang === 'es' ? es.needs[id].short : needName.get(id).toLowerCase();
+
+ function applyLang() {
+  const spanish = lang === 'es';
+  marked().forEach(e => {
+   e.innerHTML = spanish ? esText(e) : english.get(e);
+   if (spanish) e.setAttribute('lang', 'es'); else e.removeAttribute('lang');
+  });
+  const toggle = $('lang-toggle');
+  toggle.textContent = spanish ? es.static['lang-toggle'] : 'Español';
+  toggle.setAttribute('lang', spanish ? 'en' : 'es');
+  toggle.setAttribute('hreflang', spanish ? 'en' : 'es');
+  $('es-note').textContent = es.static['es-note'];
+  $('es-note').hidden = !spanish;
+ }
 
  function readParams() {
   const p = new URLSearchParams(location.search);
+  lang = p.get('lang') === 'es' ? 'es' : 'en';
   const s = (p.get('state') || 'OH').toUpperCase();
   $('state').value = states[s] ? s : 'OH';
   const c = p.get('county') || '';
@@ -38,6 +68,7 @@
   if (state === 'OH' && county) p.set('county', county);
   if (stage !== 'all') p.set('stage', stage);
   if (needs.length) p.set('need', needs.join(','));
+  if (lang === 'es') p.set('lang', 'es');
   history.replaceState(null, '', location.pathname + '?' + p.toString() + location.hash);
  }
 
@@ -72,20 +103,22 @@
 
  function renderAnchors(state, county) {
   const name = states[state];
-  $('anchors-title').textContent = 'Your first calls in ' + name;
+  const spanish = lang === 'es';
+  const say = text => spanish && es.anchor_text[text] ? es.anchor_text[text] : text;
+  $('anchors-title').textContent = spanish ? fill(es.dynamic.anchors_title, {state: name}) : 'Your first calls in ' + name;
   const list = $('anchor-list');
   list.replaceChildren();
   for (const a of data.anchors[state === 'OH' ? 'OH' : 'default']) {
    if (stage !== 'all' && !a.stages.includes(stage)) continue;
    const li = el('li'), parts = [];
-   li.append(el('strong', {}, a.label + ': '));
+   li.append(el('strong', {}, (spanish ? es.anchor_labels[a.label] : a.label) + ': '));
    for (const item of a.items) {
     if (item.pa) parts.push(link(pa[state].url, pa[state].name), link(tel(pa[state].phone), pa[state].phone));
     else if (item.ei) { const e = data.early_intervention[state]; parts.push(link(e.url, e.name), link(tel(e.phone), e.phone)); }
-    else if (item.pti) { const c = data.parent_centers[state]; if (c) parts.push(link(c.url, c.name), link(tel(c.phone), c.phone)); else parts.push(link('https://www.parentcenterhub.org/find-your-center/', 'find ' + name + "'s parent centers (more than one serves the state)")); }
+    else if (item.pti) { const c = data.parent_centers[state]; if (c) parts.push(link(c.url, c.name), link(tel(c.phone), c.phone)); else parts.push(link('https://www.parentcenterhub.org/find-your-center/', spanish ? fill(es.anchor_text.parent_centers, {state: name}) : 'find ' + name + "'s parent centers (more than one serves the state)")); }
     else if (item.tel) parts.push(link(tel(item.tel), item.tel));
-    else if (item.href) parts.push(link(item.href, item.text.replace('{state}', name)));
-    else parts.push(document.createTextNode(item.text));
+    else if (item.href) parts.push(link(item.href, say(item.text).replace('{state}', name)));
+    else parts.push(document.createTextNode(say(item.text)));
    }
    parts.forEach((n, i) => { if (i) li.append(' · '); li.append(n); });
    list.append(li);
@@ -94,11 +127,13 @@
   box.replaceChildren();
   if (state !== 'OH' || !county) return;
   const c = counties.get(county), wrap = el('div', {class: 'county-box'}), ul = el('ul');
-  wrap.append(el('h4', {}, county + ' County'));
+  const d = es.dynamic;
+  wrap.append(el('h4', {}, spanish ? fill(d.county_heading, {county}) : county + ' County'));
   const row = (label, nodes) => { const li = el('li'); li.append(el('strong', {}, label + ': ')); nodes.forEach((n, i) => { if (i) li.append(' · '); li.append(n); }); ul.append(li); };
-  if (c.dd) row('County board of DD', [link(c.dd.url, county + ' County Board of DD'), link(tel(c.dd.phone), c.dd.phone)]);
-  else row('County board of DD', [link('https://www.oacbdd.org/familyresources', 'pick ' + county + ' County on the map'), link('tel:8006176733', '800-617-6733')]);
-  row('Veteran families', [link('./?state=OH&county=' + encodeURIComponent(county), county + ' County veterans service office')]);
+  const ddLabel = spanish ? d.county_dd : 'County board of DD';
+  if (c.dd) row(ddLabel, [link(c.dd.url, spanish ? fill(d.county_dd_link, {county}) : county + ' County Board of DD'), link(tel(c.dd.phone), c.dd.phone)]);
+  else row(ddLabel, [link('https://www.oacbdd.org/familyresources', spanish ? fill(d.county_dd_map, {county}) : 'pick ' + county + ' County on the map'), link('tel:8006176733', '800-617-6733')]);
+  row(spanish ? d.veteran_families : 'Veteran families', [link('./?state=OH&county=' + encodeURIComponent(county), spanish ? fill(d.cvso, {county}) : county + ' County veterans service office')]);
   wrap.append(ul);
   box.append(wrap);
  }
@@ -121,12 +156,23 @@
   const main = showCards($('cards'), state, needs), mil = showCards($('military-cards'), state, needs);
   $('empty').hidden = main.shown > 0;
   $('military-count').textContent = mil.shown;
-  const where = ohio ? (county ? county + ' County, Ohio' : 'Ohio') : states[state];
-  const topic = stage === 'all' ? '' : ' for ' + stageLabel.get(stage).toLowerCase();
-  let text = 'Showing ' + main.shown + (main.shown === 1 ? ' program' : ' programs') + topic + ' in ' + where + '.';
-  if (needs.length) {
-   const names = needs.map(n => needName.get(n).toLowerCase()).join(' or ');
-   text += main.specific ? ' ' + main.specific + ' made for ' + names + ' are at the top; the rest help with any disability.' : ' None are only for ' + names + ', so these help with any disability.';
+  const spanish = lang === 'es', d = es.dynamic;
+  const where = ohio ? (county ? (spanish ? fill(d.county_where, {county}) : county + ' County, Ohio') : 'Ohio') : states[state];
+  let text;
+  if (spanish) {
+   const topic = stage === 'all' ? '' : fill(d.topic, {stage: stageName(stage)});
+   text = fill(main.shown === 1 ? d.showing_one : d.showing_many, {n: main.shown, topic, where});
+   if (needs.length) {
+    const names = needs.map(needShort).join(d.or);
+    text += main.specific ? fill(d.need_match, {k: main.specific, names}) : fill(d.need_none, {names});
+   }
+  } else {
+   const topic = stage === 'all' ? '' : ' for ' + stageLabel.get(stage).toLowerCase();
+   text = 'Showing ' + main.shown + (main.shown === 1 ? ' program' : ' programs') + topic + ' in ' + where + '.';
+   if (needs.length) {
+    const names = needs.map(needShort).join(' or ');
+    text += main.specific ? ' ' + main.specific + ' made for ' + names + ' are at the top; the rest help with any disability.' : ' None are only for ' + names + ', so these help with any disability.';
+   }
   }
   $('result-status').textContent = text;
   $('print-context').textContent = where + (stage === 'all' ? '' : ' · ' + stageLabel.get(stage)) + (needs.length ? ' · ' + needs.map(n => needName.get(n)).join(', ') : '');
@@ -159,10 +205,13 @@
  $('print').addEventListener('click', () => window.print());
  $('share').addEventListener('click', async () => {
   const url = location.href.split('#')[0];
-  try { await navigator.clipboard.writeText(url); $('share-status').textContent = 'Link copied. It includes only your state, county, stage and need choices.'; }
-  catch { $('share-status').textContent = 'Copy this link: ' + url; }
+  const spanish = lang === 'es';
+  try { await navigator.clipboard.writeText(url); $('share-status').textContent = spanish ? es.dynamic.copied : 'Link copied. It includes only your state, county, stage and need choices.'; }
+  catch { $('share-status').textContent = (spanish ? es.dynamic.copy_this : 'Copy this link: ') + url; }
  });
+ $('lang-toggle').addEventListener('click', e => { e.preventDefault(); lang = lang === 'es' ? 'en' : 'es'; $('share-status').textContent = ''; applyLang(); apply(); });
  readParams();
+ applyLang();
  renderAgencies();
  openMilitary();
  apply(false);
