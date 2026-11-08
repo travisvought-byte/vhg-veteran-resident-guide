@@ -1,146 +1,1480 @@
 {
-  "reviewed_on": "2026-11-08",
-  "publication_status": "published-source-snapshot",
-  "scope_note": "Free public programs, nonprofits and official locators for families raising children and young adults with autism, ADHD, developmental, learning, physical, medical or behavioral health disabilities. Private therapy providers are not listed. Contacts come from published official or organization sources and are not telephone-confirmed.",
-  "stages": [
-    {"id": "concern", "label": "Something seems different", "ages": "Any age", "summary": "Milestone checklists, how to ask for a free evaluation and who can help you understand the results."},
-    {"id": "early", "label": "Birth to age 3", "ages": "0–3", "summary": "Early intervention is free to start, comes to your home and ends at the third birthday, so call early."},
-    {"id": "school", "label": "School years", "ages": "3–21", "summary": "Evaluations, IEPs and 504 plans, preschool special education and help preparing for school meetings."},
-    {"id": "transition", "label": "Teens heading into adulthood", "ages": "14+", "summary": "Transition planning, work experience, SSI at 18, savings accounts and decision-making support."},
-    {"id": "everyday", "label": "Money, health care and support", "ages": "Any age", "summary": "Medicaid, disability benefits, respite care, family support groups and behavioral health help."},
-    {"id": "rights", "label": "Something isn't working", "ages": "Any age", "summary": "Free advocacy and legal help when a school, agency or program says no."}
-  ],
-  "needs": [
-    {"id": "autism", "label": "Autism"},
-    {"id": "adhd", "label": "ADHD"},
-    {"id": "developmental", "label": "Developmental or intellectual disability (including Down syndrome)"},
-    {"id": "learning", "label": "Learning, speech or language"},
-    {"id": "physical", "label": "Physical or complex medical needs"},
-    {"id": "behavioral", "label": "Mental health or behavior"}
-  ],
-  "sources": [
-    {"id": "ndrn-list", "title": "NDRN: Protection and Advocacy agencies and Client Assistance Programs (list updated May 5, 2025)", "url": "https://www.ndrn.org/wp-content/uploads/2025/05/PA-CAP-LIST-Updated-5-5-2025.docx", "publisher": "National Disability Rights Network", "reviewed_on": "2026-11-08"},
-    {"id": "ndrn-members", "title": "NDRN member agencies", "url": "https://www.ndrn.org/about/ndrn-member-agencies/", "publisher": "National Disability Rights Network", "reviewed_on": "2026-11-08"},
-    {"id": "cpir-find", "title": "Find Your Parent Center", "url": "https://www.parentcenterhub.org/find-your-center/", "publisher": "Center for Parent Information and Resources", "reviewed_on": "2026-11-08"},
-    {"id": "cdc-concerned", "title": "CDC: Concerned about your child's development", "url": "https://www.cdc.gov/act-early/families/concerned.html", "publisher": "Centers for Disease Control and Prevention", "reviewed_on": "2026-11-08"},
-    {"id": "cdc-milestones", "title": "CDC: Developmental milestones", "url": "https://www.cdc.gov/act-early/milestones/", "publisher": "Centers for Disease Control and Prevention", "reviewed_on": "2026-11-08"},
-    {"id": "fv-sao", "title": "Family Voices: Find help in your community", "url": "https://familyvoices.org/sao/", "publisher": "Family Voices", "reviewed_on": "2026-11-08"},
-    {"id": "asa-helpline", "title": "Autism Society National Helpline", "url": "https://autismsociety.org/helpline", "publisher": "Autism Society of America", "reviewed_on": "2026-11-08"},
-    {"id": "cdc-adhd-families", "title": "CDC: ADHD resources for families", "url": "https://www.cdc.gov/adhd/php/partner-toolkit/resources-for-families.html", "publisher": "Centers for Disease Control and Prevention", "reviewed_on": "2026-11-08"},
-    {"id": "ssa-child", "title": "SSA: Supplemental Security Income for children", "url": "https://www.ssa.gov/benefits/disability/apply-child.html", "publisher": "Social Security Administration", "reviewed_on": "2026-11-08"},
-    {"id": "ssa-ssi-child-2026", "title": "SSA: Understanding SSI for children, 2026 edition", "url": "https://www.ssa.gov/ssi/text-child-ussi.htm", "publisher": "Social Security Administration", "reviewed_on": "2026-11-08"},
-    {"id": "arch-locator", "title": "ARCH National Respite Locator", "url": "https://archrespite.org/caregiver-resources/respitelocator/", "publisher": "ARCH National Respite Network", "reviewed_on": "2026-11-08"},
-    {"id": "dcy-hmg-refer", "title": "Help Me Grow referral form", "url": "https://ochids.childrenandyouth.ohio.gov/public/refer", "publisher": "Ohio Department of Children and Youth", "reviewed_on": "2026-11-08"},
-    {"id": "ocecd-guide", "title": "OCECD: On the Road to Positive Outcomes (parent guide)", "url": "https://ohiofamiliesengage.osu.edu/wp-content/uploads/2024/01/OntheRoadtoPositiveOutcomes.OCECD_.pdf", "publisher": "Ohio Coalition for the Education of Children with Disabilities", "reviewed_on": "2026-11-08"},
-    {"id": "dew-families", "title": "Families of Students with Disabilities", "url": "https://education.ohio.gov/Topics/Special-Education/Families-of-Students-with-Disabilities", "publisher": "Ohio Department of Education and Workforce", "reviewed_on": "2026-11-08"},
-    {"id": "parent-mentor", "title": "Ohio Parent Mentor Project", "url": "https://parentmentor.osu.edu/", "publisher": "The Ohio State University, Center on Education and Training for Employment", "reviewed_on": "2026-11-08"},
-    {"id": "dew-autism-schol", "title": "Autism Scholarship Program: information for parents", "url": "https://education.ohio.gov/Topics/Other-Resources/Scholarships/Autism-Scholarship-Program/Autism-Scholarship-Program-Information-for-Parents", "publisher": "Ohio Department of Education and Workforce", "reviewed_on": "2026-11-08"},
-    {"id": "dew-jpsn", "title": "Jon Peterson Special Needs Scholarship: FY 2026 maximum amounts", "url": "https://education.ohio.gov/getattachment/Topics/Other-Resources/Scholarships/Jon-Peterson-Special-Needs-Scholarship/Jon-Peterson-Special-Needs-Scholarship-Resources/FY-2026-JPSN-Category-Award-Amounts.pdf.aspx?lang=en-US", "publisher": "Ohio Department of Education and Workforce", "reviewed_on": "2026-11-08"},
-    {"id": "dew-ocali", "title": "Ohio Center for Autism and Low Incidence (OCALI)", "url": "https://education.ohio.gov/Topics/Special-Education/Disability-Specific-Resources/Resources-for-Autistic-Children/Ohio-Center-for-Autism-and-Low-Incidence-OCALI", "publisher": "Ohio Department of Education and Workforce", "reviewed_on": "2026-11-08"},
-    {"id": "oacb-family", "title": "Contact your county board of DD (directory map)", "url": "https://www.oacbdd.org/familyresources", "publisher": "Ohio Association of County Boards of DD", "reviewed_on": "2026-11-08"},
-    {"id": "milestones-dodd", "title": "Navigating the Department of Developmental Disabilities (DODD referral phone)", "url": "https://www.milestones.org/resources/tool-kits/navigating-the-dept-of-developmental-disabilities", "publisher": "Milestones Autism Resources", "reviewed_on": "2026-11-08"},
-    {"id": "odm-healthchek", "title": "Ohio Medicaid Healthchek: how to apply", "url": "https://dam.assets.ohio.gov/image/upload/medicaid.ohio.gov/Resources/Publications/Materials/English/Healthchek.pdf", "publisher": "Ohio Department of Medicaid", "reviewed_on": "2026-11-08"},
-    {"id": "odm-ohiorise", "title": "Ohio Medicaid: OhioRISE launch and eligibility", "url": "https://content.govdelivery.com/accounts/OHMEDICAID/bulletins/31e0ff5", "publisher": "Ohio Department of Medicaid", "reviewed_on": "2026-11-08"},
-    {"id": "odh-cmh", "title": "Children with Medical Handicaps / Complex Medical Help", "url": "https://odh.ohio.gov/know-our-programs/children-with-medical-handicaps", "publisher": "Ohio Department of Health", "reviewed_on": "2026-11-08"},
-    {"id": "portage-cmh", "title": "Complex Medical Help (formerly Children with Medical Handicaps)", "url": "https://portagehealth.net/our-programs/nursing/children-with-medical-handicaps/", "publisher": "Portage County Health District", "reviewed_on": "2026-11-08"},
-    {"id": "stable-fact", "title": "STABLE Account fact sheet", "url": "https://wvable.com/assets/docs/stable-fact-sheet.pdf", "publisher": "Ohio Treasurer of State", "reviewed_on": "2026-11-08"},
-    {"id": "dew-otsp", "title": "Ohio Transition Support Partnership (OOD Pre-Employment Transition Services)", "url": "https://education.ohio.gov/Topics/Special-Education/Federal-and-State-Requirements/Secondary-Transition-and-Workforce-Development/Ohio-Transition-Support-Partnership", "publisher": "Ohio Department of Education and Workforce", "reviewed_on": "2026-11-08"},
-    {"id": "dew-early-resolution", "title": "Special education early resolution information sheet", "url": "https://education.ohio.gov/getattachment/Topics/Special-Education/Dispute-Resolution/EarlyResolution_Information-sheet.pdf.aspx", "publisher": "Ohio Department of Education and Workforce", "reviewed_on": "2026-11-08"},
-    {"id": "mos-snc", "title": "Military OneSource special needs consultations", "url": "https://www.militaryonesource.mil/benefits/special-needs-consultations/", "publisher": "U.S. Department of Defense, Military OneSource", "reviewed_on": "2026-11-08"},
-    {"id": "mos-efmp", "title": "EFMP: Exceptional Family Member Program", "url": "https://militaryonesource.mil/efmp", "publisher": "U.S. Department of Defense, Military OneSource", "reviewed_on": "2026-11-08"},
-    {"id": "tricare-echo", "title": "TRICARE Extended Care Health Option (ECHO) benefits", "url": "https://tricare.mil/Plans/SpecialPrograms/ECHO/Benefits", "publisher": "Defense Health Agency, TRICARE", "reviewed_on": "2026-11-08"},
-    {"id": "tricare-acd", "title": "TRICARE Autism Care Demonstration", "url": "https://tricare.mil/Plans/SpecialPrograms/ACD", "publisher": "Defense Health Agency, TRICARE", "reviewed_on": "2026-11-08"},
-    {"id": "stomp", "title": "Specialized Training of Military Parents (STOMP)", "url": "https://wapave.org/specialized-training-of-military-parents-stomp/", "publisher": "Washington PAVE", "reviewed_on": "2026-11-08"},
-    {"id": "va-champva", "title": "CHAMPVA benefits", "url": "https://www.va.gov/family-and-caregiver-benefits/health-and-disability/champva/", "publisher": "U.S. Department of Veterans Affairs", "reviewed_on": "2026-11-08"},
-    {"id": "ncsl-idea", "title": "The federal role in special education: 5 questions (June 24, 2026)", "url": "https://www.ncsl.org/resources/details/The-Federal-Role-in-Special-Education-5-Questions", "publisher": "National Conference of State Legislatures", "reviewed_on": "2026-11-08"},
-    {"id": "asha-idea", "title": "Education Department shifting some responsibility for special education programs (June 17, 2026)", "url": "https://www.asha.org/news/2026/education-department-shifting-some-responsibility-for-key-special-education-programs-what-it-could-mean-for-students-and-providers/", "publisher": "American Speech-Language-Hearing Association", "reviewed_on": "2026-11-08"},
-    {"id": "senate-acd", "title": "Senators' letter on the National Academies ABA study (June 26, 2026)", "url": "https://www.schmitt.senate.gov/wp-content/uploads/2026/06/Schmitt-Gillibrand-NASEM-Study-Letter-to-SecDef.pdf", "publisher": "U.S. Senate offices of Sens. Schmitt and Gillibrand", "reviewed_on": "2026-11-08"}
-  ],
-  "resources": [
-    {"id": "cdc-act-early", "scope": "US", "name": "CDC milestone checklists and Milestone Tracker app", "org": "Centers for Disease Control and Prevention", "what": "Free checklists for ages 2 months to 5 years, in English and Spanish, to track how your child plays, learns, speaks, acts and moves.", "how": "Fill out the checklist for your child's age and bring it to the next doctor visit. You do not need to wait for a diagnosis to ask for an evaluation.", "phone": "800-232-4636", "phone_label": "CDC-INFO", "url": "https://www.cdc.gov/act-early/milestones/", "stages": ["concern", "early"], "needs": ["any"], "sources": ["cdc-milestones", "cdc-concerned"]},
-    {"id": "cdc-find-ei", "scope": "US", "state_replacements": {"OH": "oh-help-me-grow"}, "name": "Find your state's early intervention program", "org": "Centers for Disease Control and Prevention", "what": "Every state runs a free early intervention program for children under 3 with delays or disabilities. Parents can call directly. No doctor's referral is needed.", "how": "Look up your state's contact and ask for a free evaluation. If your child is 3 or older, call your local public school district instead, even if your child does not attend that school.", "phone": "", "phone_label": "", "url": "https://www.cdc.gov/FindEI", "stages": ["concern", "early"], "needs": ["any"], "sources": ["cdc-concerned"]},
-    {"id": "parent-center", "scope": "US", "state_replacements": {"OH": "oh-ocecd"}, "name": "Your state's Parent Training and Information Center", "org": "Center for Parent Information and Resources", "what": "Every state has at least one free, federally funded parent center for families of children with any disability, birth to 26. Staff help with IEPs, 504 plans, school meetings and your rights.", "how": "Choose your state on the map to find its parent center, then call before your next school meeting.", "phone": "", "phone_label": "", "url": "https://www.parentcenterhub.org/find-your-center/", "stages": ["concern", "school", "transition", "rights"], "needs": ["any"], "sources": ["cpir-find"]},
-    {"id": "family-voices", "scope": "US", "name": "Family-to-Family Health Information Center", "org": "Family Voices", "what": "Family-led centers in every state help parents of children with special health care needs work with doctors, insurance, Medicaid and disability services.", "how": "Choose your state to find its family-to-family center or Family Voices affiliate.", "phone": "", "phone_label": "", "url": "https://familyvoices.org/sao/", "stages": ["everyday", "transition"], "needs": ["any"], "sources": ["fv-sao"]},
-    {"id": "autism-society", "scope": "US", "name": "Autism Society National Helpline", "org": "Autism Society of America", "what": "Information and referral specialists help families find local autism services, affiliates and support groups. It is not a crisis line.", "how": "Call or use the online form. Ask about the Autism Society affiliate in your state.", "phone": "800-328-8476", "phone_label": "800-3-AUTISM, weekdays", "url": "https://autismsociety.org/helpline", "stages": ["concern", "early", "school", "transition", "everyday"], "needs": ["autism"], "sources": ["asa-helpline"]},
-    {"id": "chadd-nrc", "scope": "US", "name": "National Resource Center on ADHD helpline", "org": "CHADD, funded by CDC", "what": "Health information specialists answer questions about ADHD diagnosis, treatment, school supports and finding local help. Spanish-speaking specialists are available.", "how": "Call the ADHD helpline or use the website's parent toolkits and local support-group finder.", "phone": "866-200-8098", "phone_label": "ADHD helpline", "url": "https://chadd.org/nrc", "stages": ["concern", "school", "everyday"], "needs": ["adhd"], "sources": ["cdc-adhd-families"]},
-    {"id": "ssa-ssi-child", "scope": "US", "name": "SSI for children with disabilities", "org": "Social Security Administration", "what": "Monthly payments for children with qualifying disabilities in families with limited income and resources. In most states, SSI also opens the door to Medicaid. Benefits are reviewed again at age 18 under adult rules.", "how": "Start online or call to set up an appointment. Have your child's medical and school records ready.", "phone": "800-772-1213", "phone_label": "TTY 800-325-0778", "url": "https://www.ssa.gov/benefits/disability/apply-child.html", "stages": ["everyday", "transition"], "needs": ["any"], "sources": ["ssa-child", "ssa-ssi-child-2026"]},
-    {"id": "arch-respite", "scope": "US", "name": "National Respite Locator", "org": "ARCH National Respite Network", "what": "Find respite programs, short breaks for family caregivers, and ways to pay for them in your state.", "how": "Search by state and the kind of care your child needs. Listings are not complete, so also ask your county or state disability agency.", "phone": "", "phone_label": "", "url": "https://archrespite.org/caregiver-resources/respitelocator/", "stages": ["everyday"], "needs": ["any"], "sources": ["arch-locator"]},
-    {"id": "oh-help-me-grow", "scope": "OH", "name": "Help Me Grow Early Intervention", "org": "Ohio Department of Children and Youth", "what": "Ohio's free early intervention program for children under 3 with delays or disabilities, available in all 88 counties. Services usually happen at home. Anyone can refer, and parents can refer themselves.", "how": "Call or complete the online referral. A local coordinator contacts the family. If your child is close to 3, call right away, because early intervention ends at the third birthday and the school district takes over.", "phone": "800-755-4769", "phone_label": "800-755-GROW", "url": "https://ochids.childrenandyouth.ohio.gov/public/refer", "stages": ["concern", "early"], "needs": ["any"], "sources": ["dcy-hmg-refer"]},
-    {"id": "oh-ocecd", "scope": "OH", "name": "Ohio Coalition for the Education of Children with Disabilities (OCECD)", "org": "Ohio's Parent Training and Information Center", "what": "Free help for Ohio families of children with any disability, birth through 26: understanding evaluations, IEPs, rights and school meetings. Based in Marion.", "how": "Call before an evaluation or IEP meeting, or when you disagree with the school.", "phone": "844-382-5452", "phone_label": "toll-free", "url": "https://www.ocecd.org/", "stages": ["concern", "school", "transition", "rights"], "needs": ["any"], "sources": ["ocecd-guide", "dew-families"]},
-    {"id": "oh-parent-mentors", "scope": "OH", "name": "Ohio Parent Mentors", "org": "Ohio Parent Mentor Project", "what": "Parent mentors are parents of children with disabilities who work with school districts and educational service centers to help other families through special education.", "how": "Ask your school district or educational service center whether a parent mentor serves your area.", "phone": "", "phone_label": "", "url": "https://parentmentor.osu.edu/", "stages": ["school", "transition"], "needs": ["any"], "sources": ["parent-mentor", "dew-families"]},
-    {"id": "oh-dew-families", "scope": "OH", "name": "Ohio special education: information for families", "org": "Ohio Department of Education and Workforce", "what": "The state's guide for families of students with disabilities, including evaluations, IEPs, parent rights and where to get help.", "how": "To ask for a free evaluation, write to your school district's special education director. Keep a copy and note the date you sent it.", "phone": "", "phone_label": "", "url": "https://education.ohio.gov/Topics/Special-Education/Families-of-Students-with-Disabilities", "stages": ["concern", "school"], "needs": ["any"], "sources": ["dew-families"]},
-    {"id": "oh-autism-scholarship", "scope": "OH", "name": "Autism Scholarship Program", "org": "Ohio Department of Education and Workforce", "what": "Pays for special education services from approved private providers or other public programs for children identified with autism who have an IEP from their school district.", "how": "Read the parent information, then confirm your child's IEP and autism identification with your district before you apply.", "phone": "", "phone_label": "", "url": "https://education.ohio.gov/Topics/Other-Resources/Scholarships/Autism-Scholarship-Program/Autism-Scholarship-Program-Information-for-Parents", "stages": ["school"], "needs": ["autism"], "sources": ["dew-autism-schol"]},
-    {"id": "oh-jpsn", "scope": "OH", "name": "Jon Peterson Special Needs Scholarship", "org": "Ohio Department of Education and Workforce", "what": "Pays for special education services from approved providers for children with an IEP. The maximum amount depends on the child's disability category.", "how": "Visit the program page or email peterson.scholarship@education.ohio.gov with questions.", "phone": "", "phone_label": "", "url": "https://education.ohio.gov/jonpeterson", "stages": ["school"], "needs": ["any"], "sources": ["dew-jpsn"]},
-    {"id": "oh-ocali", "scope": "OH", "name": "OCALI (Ohio Center for Autism and Low Incidence)", "org": "Funded by the Ohio Department of Education and Workforce", "what": "Guides, training and a family outreach center for families of children with autism and low-incidence disabilities, from early childhood into adulthood.", "how": "Start with the family section of the website for guides and the lending library.", "phone": "", "phone_label": "", "url": "https://www.ocali.org/", "stages": ["concern", "school", "transition"], "needs": ["autism", "developmental", "physical"], "sources": ["dew-ocali"]},
-    {"id": "oh-county-dd", "scope": "OH", "name": "Your county board of developmental disabilities", "org": "Ohio's 88 county boards of DD", "what": "Your county board is the local starting point for developmental disability services: eligibility, service coordination, Medicaid waivers, family support funds and, in some counties, early intervention.", "how": "Find your county's board on the directory map, or call the Ohio Department of Developmental Disabilities to be referred to your county.", "phone": "800-617-6733", "phone_label": "Ohio DODD referral line", "url": "https://www.oacbdd.org/familyresources", "stages": ["early", "school", "transition", "everyday"], "needs": ["autism", "developmental", "physical"], "sources": ["oacb-family", "milestones-dodd"]},
-    {"id": "oh-medicaid", "scope": "OH", "name": "Ohio Medicaid for children", "org": "Ohio Department of Medicaid", "what": "Health coverage for children in eligible families, including checkups, therapies and behavioral health services. Children with disabilities may also qualify through SSI or a county board waiver.", "how": "Apply online at benefits.ohio.gov, by phone or at your county Department of Job and Family Services.", "phone": "800-324-8680", "phone_label": "Medicaid consumer hotline", "url": "https://benefits.ohio.gov/", "stages": ["everyday"], "needs": ["any"], "sources": ["odm-healthchek"]},
-    {"id": "oh-ohiorise", "scope": "OH", "name": "OhioRISE", "org": "Ohio Department of Medicaid with Aetna Better Health of Ohio", "what": "A specialized Medicaid program for children and youth 0–20 with significant behavioral health needs. It adds care coordination, in-home and crisis services.", "how": "Ask your child's Medicaid plan, doctor or behavioral health provider about a CANS assessment for OhioRISE.", "phone": "", "phone_label": "", "url": "https://managedcare.medicaid.ohio.gov/ohiorise", "stages": ["everyday"], "needs": ["behavioral", "autism", "adhd"], "sources": ["odm-ohiorise"]},
-    {"id": "oh-cmh", "scope": "OH", "name": "Complex Medical Help (formerly Children with Medical Handicaps)", "org": "Ohio Department of Health", "what": "Helps pay for diagnosis and treatment of eligible chronic medical conditions and links families to approved providers. The diagnostic program can help confirm a diagnosis.", "how": "Contact the public health nurse at your county or city health department to start the application.", "phone": "", "phone_label": "", "url": "https://odh.ohio.gov/know-our-programs/children-with-medical-handicaps", "stages": ["concern", "everyday"], "needs": ["physical"], "sources": ["odh-cmh", "portage-cmh"]},
-    {"id": "oh-stable", "scope": "OH", "name": "STABLE Account (Ohio's ABLE account)", "org": "Ohio Treasurer of State", "what": "A tax-advantaged savings account for people with disabilities that does not count against SSI or Medicaid limits in the way an ordinary savings account would.", "how": "Read the program details or call the STABLE team before opening an account.", "phone": "800-439-1653", "phone_label": "STABLE team", "url": "https://www.stableaccount.com/", "stages": ["transition", "everyday"], "needs": ["any"], "sources": ["stable-fact"]},
-    {"id": "oh-ood-preets", "scope": "OH", "name": "Pre-Employment Transition Services", "org": "Opportunities for Ohioans with Disabilities (OOD)", "what": "Free job exploration, work-based learning, workplace readiness, self-advocacy and college counseling for students with disabilities, starting at age 14.", "how": "Ask your child's IEP team or school transition coordinator to request Pre-ETS from OOD.", "phone": "", "phone_label": "", "url": "https://ood.ohio.gov/", "stages": ["transition"], "needs": ["any"], "sources": ["dew-otsp"]},
-    {"id": "oh-early-resolution", "scope": "OH", "name": "Resolving special education disagreements", "org": "Ohio Department of Education and Workforce", "what": "Ohio's guidance on settling special education disputes early: talk with the district's special education director, ask a parent mentor or parent center for help, and use facilitated meetings or mediation.", "how": "Read the information sheet before you escalate, and keep written records of every request.", "phone": "", "phone_label": "", "url": "https://education.ohio.gov/getattachment/Topics/Special-Education/Dispute-Resolution/EarlyResolution_Information-sheet.pdf.aspx", "stages": ["rights"], "needs": ["any"], "sources": ["dew-early-resolution"]},
-    {"id": "mil-onesource", "scope": "MIL", "name": "Military OneSource special needs consultations", "org": "U.S. Department of Defense", "what": "Free consultants help military families with special education, TRICARE, EFMP and community services. Retirees and honorably discharged service members can use Military OneSource for 365 days after separation.", "how": "Call 24/7 or start a secure chat to schedule a phone or video consultation.", "phone": "800-342-9647", "phone_label": "24/7", "url": "https://www.militaryonesource.mil/benefits/special-needs-consultations/", "stages": ["concern", "early", "school", "transition", "everyday", "rights"], "needs": ["any"], "sources": ["mos-snc"]},
-    {"id": "mil-efmp", "scope": "MIL", "name": "Exceptional Family Member Program (EFMP)", "org": "Each military service branch", "what": "Active duty families enroll a family member with special medical or educational needs so assignments and family support take those needs into account. EFMP enrollment is also required for some TRICARE programs.", "how": "Contact your installation's EFMP family support office or Military OneSource.", "phone": "800-342-9647", "phone_label": "Military OneSource", "url": "https://militaryonesource.mil/efmp", "stages": ["everyday"], "needs": ["any"], "sources": ["mos-efmp"]},
-    {"id": "mil-echo", "scope": "MIL", "name": "TRICARE Extended Care Health Option (ECHO)", "org": "TRICARE", "what": "Extra benefits for eligible active duty family members with qualifying disabilities: training, special education, assistive technology, home health care and respite care for the primary caregiver.", "how": "Contact your TRICARE regional contractor to register. Services need pre-authorization.", "phone": "", "phone_label": "", "url": "https://tricare.mil/Plans/SpecialPrograms/ECHO/Benefits", "stages": ["everyday"], "needs": ["any"], "sources": ["tricare-echo"]},
-    {"id": "mil-acd", "scope": "MIL", "name": "TRICARE Autism Care Demonstration", "org": "TRICARE", "what": "TRICARE's route to applied behavior analysis (ABA) for beneficiaries diagnosed with autism, with no yearly or lifetime cap. Active duty families also need EFMP enrollment (unless waived) and ECHO registration.", "how": "Follow the enrollment steps on the TRICARE page and work with the assigned autism services navigator.", "phone": "", "phone_label": "", "url": "https://tricare.mil/Plans/SpecialPrograms/ACD", "stages": ["early", "school", "everyday"], "needs": ["autism"], "sources": ["tricare-acd"]},
-    {"id": "mil-stomp", "scope": "MIL", "name": "STOMP: Specialized Training of Military Parents", "org": "Washington PAVE", "what": "The parent training and information center for military families of children with disabilities, in the U.S. or overseas. Workshops and webinars are open to all military-connected families.", "how": "Call or check upcoming virtual workshops.", "phone": "253-565-2266", "phone_label": "", "url": "https://wapave.org/specialized-training-of-military-parents-stomp/", "stages": ["school", "rights"], "needs": ["any"], "sources": ["stomp"]},
-    {"id": "va-champva", "scope": "MIL", "name": "CHAMPVA health coverage for veterans' children", "org": "U.S. Department of Veterans Affairs", "what": "Health coverage for children of veterans rated permanently and totally disabled from a service-connected disability (or who died from one), when the family is not eligible for TRICARE. Coverage usually ends at 18, or 23 for full-time students, but a child who became permanently unable to support themselves before 18 may stay eligible.", "how": "Check eligibility and apply on VA.gov, or ask a county veterans service officer to help with the paperwork.", "phone": "800-733-8387", "phone_label": "CHAMPVA", "url": "https://www.va.gov/family-and-caregiver-benefits/health-and-disability/champva/", "stages": ["everyday", "transition"], "needs": ["any"], "sources": ["va-champva"]}
-  ],
-  "protection_advocacy": {
-    "AL": {"name": "Alabama Disabilities Advocacy Program", "url": "https://adap.ua.edu/", "phone": "800-826-1675"},
-    "AK": {"name": "Disability Law Center of Alaska", "url": "https://www.dlcak.org/", "phone": "800-478-1234"},
-    "AZ": {"name": "Disability Rights Arizona", "url": "https://www.azdisabilitylaw.org/", "phone": "800-927-0992"},
-    "AR": {"name": "Disability Rights Arkansas", "url": "https://www.disabilityrightsar.org/", "phone": "800-482-1174"},
-    "CA": {"name": "Disability Rights California", "url": "https://www.disabilityrightsca.org/", "phone": "800-776-5746"},
-    "CO": {"name": "Disability Law Colorado", "url": "https://www.disabilitylawco.org/", "phone": "800-288-1376"},
-    "CT": {"name": "Disability Rights Connecticut", "url": "https://www.disrightsct.org/", "phone": "800-842-7303"},
-    "DE": {"name": "Community Legal Aid Society, Inc.", "url": "https://www.declasi.org/", "phone": "302-575-0660"},
-    "DC": {"name": "Disability Rights DC at University Legal Services", "url": "https://www.uls-dc.org/", "phone": "202-547-0198"},
-    "FL": {"name": "Disability Rights Florida", "url": "https://www.disabilityrightsflorida.org/", "phone": "800-342-0823"},
-    "GA": {"name": "Georgia Advocacy Office", "url": "https://www.thegao.org/", "phone": "800-537-2329"},
-    "HI": {"name": "Hawaii Disability Rights Center", "url": "https://www.hawaiidisabilityrights.org/", "phone": "808-949-2922"},
-    "ID": {"name": "DisAbility Rights Idaho", "url": "https://www.disabilityrightsidaho.org/", "phone": "866-262-3462"},
-    "IL": {"name": "Equip for Equality", "url": "https://www.equipforequality.org/", "phone": "800-537-2632"},
-    "IN": {"name": "Indiana Disability Rights", "url": "https://www.indianadisabilityrights.org/", "phone": "800-622-4845"},
-    "IA": {"name": "Disability Rights Iowa", "url": "https://www.driowa.org/", "phone": "800-779-2502"},
-    "KS": {"name": "Disability Rights Center of Kansas", "url": "https://www.drckansas.org/", "phone": "877-776-1541"},
-    "KY": {"name": "Kentucky Protection and Advocacy", "url": "https://www.kypa.net/", "phone": "502-564-2967"},
-    "LA": {"name": "Disability Rights Louisiana", "url": "https://www.disabilityrightsla.org/", "phone": "800-960-7705"},
-    "ME": {"name": "Disability Rights Maine", "url": "https://www.drme.org/", "phone": "207-626-2774"},
-    "MD": {"name": "Disability Rights Maryland", "url": "https://www.disabilityrightsmd.org/", "phone": "800-233-7201"},
-    "MA": {"name": "Disability Law Center", "url": "https://www.dlc-ma.org/", "phone": "800-872-9992"},
-    "MI": {"name": "Disability Rights Michigan", "url": "https://www.drmich.org/", "phone": "800-288-5923"},
-    "MN": {"name": "Minnesota Disability Law Center", "url": "https://www.mylegalaid.org/", "phone": "800-292-4150"},
-    "MS": {"name": "Disability Rights Mississippi", "url": "https://www.drms.ms/", "phone": "800-772-4057"},
-    "MO": {"name": "Missouri Protection and Advocacy Services", "url": "https://www.moadvocacy.org/", "phone": "800-392-8667"},
-    "MT": {"name": "Disability Rights Montana", "url": "https://www.disabilityrightsmt.org/", "phone": "800-245-4743"},
-    "NE": {"name": "Disability Rights Nebraska", "url": "https://www.disabilityrightsnebraska.org/", "phone": "800-422-6691"},
-    "NV": {"name": "Nevada Disability Advocacy & Law Center", "url": "https://www.ndalc.org/", "phone": "888-349-3843"},
-    "NH": {"name": "Disability Rights Center New Hampshire", "url": "https://www.drcnh.org/", "phone": "800-834-1721"},
-    "NJ": {"name": "Disability Rights New Jersey", "url": "https://www.drnj.org/", "phone": "800-922-7233"},
-    "NM": {"name": "Disability Rights New Mexico", "url": "https://www.drnm.org/", "phone": "800-432-4682"},
-    "NY": {"name": "Disability Rights New York", "url": "https://www.drny.org/", "phone": "800-993-8982"},
-    "NC": {"name": "Disability Rights North Carolina", "url": "https://www.disabilityrightsnc.org/", "phone": "877-235-4210"},
-    "ND": {"name": "North Dakota Protection & Advocacy Project", "url": "https://www.ndpanda.org/", "phone": "800-472-2670"},
-    "OH": {"name": "Disability Rights Ohio", "url": "https://www.disabilityrightsohio.org/", "phone": "800-282-9181"},
-    "OK": {"name": "Oklahoma Disability Law Center", "url": "https://www.okdlc.org/", "phone": "800-880-7755"},
-    "OR": {"name": "Disability Rights Oregon", "url": "https://www.disabilityrightsoregon.org/", "phone": "800-452-1694"},
-    "PA": {"name": "Disability Rights Pennsylvania", "url": "https://www.disabilityrightspa.org/", "phone": "800-692-7443"},
-    "RI": {"name": "Disability Rights Rhode Island", "url": "https://www.drri.org/", "phone": "800-733-5332"},
-    "SC": {"name": "Disability Rights South Carolina", "url": "https://www.disabilityrightssc.org/", "phone": "866-275-7273"},
-    "SD": {"name": "Disability Rights South Dakota", "url": "https://www.drsdlaw.org/", "phone": "800-658-4782"},
-    "TN": {"name": "Disability Rights Tennessee", "url": "https://www.disabilityrightstn.org/", "phone": "800-342-1660"},
-    "TX": {"name": "Disability Rights Texas", "url": "https://www.disabilityrightstx.org/", "phone": "800-252-9108"},
-    "UT": {"name": "Disability Law Center", "url": "https://www.disabilitylawcenter.org/", "phone": "800-662-9080"},
-    "VT": {"name": "Disability Rights Vermont", "url": "https://www.disabilityrightsvt.org/", "phone": "800-834-7890"},
-    "VA": {"name": "disAbility Law Center of Virginia", "url": "https://www.dlcv.org/", "phone": "800-552-3962"},
-    "WA": {"name": "Disability Rights Washington", "url": "https://www.disabilityrightswa.org/", "phone": "800-562-2702"},
-    "WV": {"name": "Disability Rights West Virginia", "url": "https://www.drofwv.org/", "phone": "800-950-5250"},
-    "WI": {"name": "Disability Rights Wisconsin", "url": "https://www.disabilityrightswi.org/", "phone": "800-928-8778"},
-    "WY": {"name": "Wyoming Protection & Advocacy System", "url": "https://www.wypanda.com/", "phone": "800-821-3091"}
+ "reviewed_on": "2026-11-08",
+ "publication_status": "published-source-snapshot",
+ "scope_note": "Free public programs, nonprofits and official locators for families raising children and young adults with autism, ADHD, developmental, learning, physical, medical or behavioral health disabilities. Private therapy providers are not listed. Contacts come from published official or organization sources and are not telephone-confirmed.",
+ "stages": [
+  {
+   "id": "concern",
+   "label": "Something seems different",
+   "ages": "Any age",
+   "summary": "Milestone checklists, free evaluations and who can explain the results."
   },
-  "changes": [
-    {"id": "idea-hhs", "title": "Federal special education oversight is moving", "text": "In June 2026 the U.S. Department of Education announced agreements moving day-to-day administration of special education programs to the Department of Health and Human Services and civil rights enforcement to the Department of Justice. The law itself, including your child's right to a free appropriate public education and an IEP, has not changed. Your school district and state remain responsible for services.", "sources": ["ncsl-idea", "asha-idea"]},
-    {"id": "acd-review", "title": "TRICARE autism coverage is under review", "text": "A National Academies study recommended replacing the Autism Care Demonstration with ABA as a regular TRICARE benefit, and senators have urged the Defense Department to act on it. Check TRICARE's page for the current rules before you enroll.", "sources": ["senate-acd", "tricare-acd"]}
-  ]
+  {
+   "id": "early",
+   "label": "Birth to age 3",
+   "ages": "Ages 0–3",
+   "summary": "Free early intervention at home. It ends at age 3, so call early."
+  },
+  {
+   "id": "school",
+   "label": "School years",
+   "ages": "Ages 3–21",
+   "summary": "Evaluations, IEPs and 504 plans, and help with school meetings."
+  },
+  {
+   "id": "transition",
+   "label": "Teens heading into adulthood",
+   "ages": "Ages 14+",
+   "summary": "Job readiness, SSI at 18, savings accounts and choices besides guardianship."
+  },
+  {
+   "id": "everyday",
+   "label": "Money, health care and support",
+   "ages": "Any age",
+   "summary": "Medicaid, SSI, respite care and other parents who have been there."
+  },
+  {
+   "id": "rights",
+   "label": "Something isn't working",
+   "ages": "Any age",
+   "summary": "Free advocacy and legal help when a school or agency says no."
+  }
+ ],
+ "needs": [
+  {
+   "id": "autism",
+   "label": "Autism"
+  },
+  {
+   "id": "adhd",
+   "label": "ADHD"
+  },
+  {
+   "id": "developmental",
+   "label": "Developmental or intellectual disability (including Down syndrome)"
+  },
+  {
+   "id": "learning",
+   "label": "Learning, speech or language"
+  },
+  {
+   "id": "physical",
+   "label": "Physical or complex medical needs"
+  },
+  {
+   "id": "behavioral",
+   "label": "Mental health or behavior"
+  }
+ ],
+ "sources": [
+  {
+   "id": "ndrn-list",
+   "title": "NDRN: Protection and Advocacy agencies and Client Assistance Programs (list updated May 5, 2025)",
+   "url": "https://www.ndrn.org/wp-content/uploads/2025/05/PA-CAP-LIST-Updated-5-5-2025.docx",
+   "publisher": "National Disability Rights Network",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "ndrn-members",
+   "title": "NDRN member agencies",
+   "url": "https://www.ndrn.org/about/ndrn-member-agencies/",
+   "publisher": "National Disability Rights Network",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "cpir-find",
+   "title": "Find Your Parent Center",
+   "url": "https://www.parentcenterhub.org/find-your-center/",
+   "publisher": "Center for Parent Information and Resources",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "cdc-concerned",
+   "title": "CDC: Concerned about your child's development",
+   "url": "https://www.cdc.gov/act-early/families/concerned.html",
+   "publisher": "Centers for Disease Control and Prevention",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "cdc-milestones",
+   "title": "CDC: Developmental milestones",
+   "url": "https://www.cdc.gov/act-early/milestones/",
+   "publisher": "Centers for Disease Control and Prevention",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "fv-sao",
+   "title": "Family Voices: Find help in your community",
+   "url": "https://familyvoices.org/sao/",
+   "publisher": "Family Voices",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "asa-helpline",
+   "title": "Autism Society National Helpline",
+   "url": "https://autismsociety.org/helpline",
+   "publisher": "Autism Society of America",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "cdc-adhd-families",
+   "title": "CDC: ADHD resources for families",
+   "url": "https://www.cdc.gov/adhd/php/partner-toolkit/resources-for-families.html",
+   "publisher": "Centers for Disease Control and Prevention",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "ssa-child",
+   "title": "SSA: Supplemental Security Income for children",
+   "url": "https://www.ssa.gov/benefits/disability/apply-child.html",
+   "publisher": "Social Security Administration",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "ssa-ssi-child-2026",
+   "title": "SSA: Understanding SSI for children, 2026 edition",
+   "url": "https://www.ssa.gov/ssi/text-child-ussi.htm",
+   "publisher": "Social Security Administration",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "arch-locator",
+   "title": "ARCH National Respite Locator",
+   "url": "https://archrespite.org/caregiver-resources/respitelocator/",
+   "publisher": "ARCH National Respite Network",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "dcy-hmg-refer",
+   "title": "Help Me Grow referral form",
+   "url": "https://ochids.childrenandyouth.ohio.gov/public/refer",
+   "publisher": "Ohio Department of Children and Youth",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "ocecd-guide",
+   "title": "OCECD: On the Road to Positive Outcomes (parent guide)",
+   "url": "https://ohiofamiliesengage.osu.edu/wp-content/uploads/2024/01/OntheRoadtoPositiveOutcomes.OCECD_.pdf",
+   "publisher": "Ohio Coalition for the Education of Children with Disabilities",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "dew-families",
+   "title": "Families of Students with Disabilities",
+   "url": "https://education.ohio.gov/Topics/Special-Education/Families-of-Students-with-Disabilities",
+   "publisher": "Ohio Department of Education and Workforce",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "parent-mentor",
+   "title": "Ohio Parent Mentor Project",
+   "url": "https://parentmentor.osu.edu/",
+   "publisher": "The Ohio State University, Center on Education and Training for Employment",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "dew-autism-schol",
+   "title": "Autism Scholarship Program: information for parents",
+   "url": "https://education.ohio.gov/Topics/Other-Resources/Scholarships/Autism-Scholarship-Program/Autism-Scholarship-Program-Information-for-Parents",
+   "publisher": "Ohio Department of Education and Workforce",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "dew-jpsn",
+   "title": "Jon Peterson Special Needs Scholarship: FY 2026 maximum amounts",
+   "url": "https://education.ohio.gov/getattachment/Topics/Other-Resources/Scholarships/Jon-Peterson-Special-Needs-Scholarship/Jon-Peterson-Special-Needs-Scholarship-Resources/FY-2026-JPSN-Category-Award-Amounts.pdf.aspx?lang=en-US",
+   "publisher": "Ohio Department of Education and Workforce",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "dew-ocali",
+   "title": "Ohio Center for Autism and Low Incidence (OCALI)",
+   "url": "https://education.ohio.gov/Topics/Special-Education/Disability-Specific-Resources/Resources-for-Autistic-Children/Ohio-Center-for-Autism-and-Low-Incidence-OCALI",
+   "publisher": "Ohio Department of Education and Workforce",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "oacb-family",
+   "title": "Contact your county board of DD (directory map)",
+   "url": "https://www.oacbdd.org/familyresources",
+   "publisher": "Ohio Association of County Boards of DD",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "milestones-dodd",
+   "title": "Navigating the Department of Developmental Disabilities (DODD referral phone)",
+   "url": "https://www.milestones.org/resources/tool-kits/navigating-the-dept-of-developmental-disabilities",
+   "publisher": "Milestones Autism Resources",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "odm-healthchek",
+   "title": "Ohio Medicaid Healthchek: how to apply",
+   "url": "https://dam.assets.ohio.gov/image/upload/medicaid.ohio.gov/Resources/Publications/Materials/English/Healthchek.pdf",
+   "publisher": "Ohio Department of Medicaid",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "odm-ohiorise",
+   "title": "Ohio Medicaid: OhioRISE launch and eligibility",
+   "url": "https://content.govdelivery.com/accounts/OHMEDICAID/bulletins/31e0ff5",
+   "publisher": "Ohio Department of Medicaid",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "odh-cmh",
+   "title": "Children with Medical Handicaps / Complex Medical Help",
+   "url": "https://odh.ohio.gov/know-our-programs/children-with-medical-handicaps",
+   "publisher": "Ohio Department of Health",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "portage-cmh",
+   "title": "Complex Medical Help (formerly Children with Medical Handicaps)",
+   "url": "https://portagehealth.net/our-programs/nursing/children-with-medical-handicaps/",
+   "publisher": "Portage County Health District",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "stable-fact",
+   "title": "STABLE Account fact sheet",
+   "url": "https://wvable.com/assets/docs/stable-fact-sheet.pdf",
+   "publisher": "Ohio Treasurer of State",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "dew-otsp",
+   "title": "Ohio Transition Support Partnership (OOD Pre-Employment Transition Services)",
+   "url": "https://education.ohio.gov/Topics/Special-Education/Federal-and-State-Requirements/Secondary-Transition-and-Workforce-Development/Ohio-Transition-Support-Partnership",
+   "publisher": "Ohio Department of Education and Workforce",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "dew-early-resolution",
+   "title": "Special education early resolution information sheet",
+   "url": "https://education.ohio.gov/getattachment/Topics/Special-Education/Dispute-Resolution/EarlyResolution_Information-sheet.pdf.aspx",
+   "publisher": "Ohio Department of Education and Workforce",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "mos-snc",
+   "title": "Military OneSource special needs consultations",
+   "url": "https://www.militaryonesource.mil/benefits/special-needs-consultations/",
+   "publisher": "U.S. Department of Defense, Military OneSource",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "mos-efmp",
+   "title": "EFMP: Exceptional Family Member Program",
+   "url": "https://militaryonesource.mil/efmp",
+   "publisher": "U.S. Department of Defense, Military OneSource",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "tricare-echo",
+   "title": "TRICARE Extended Care Health Option (ECHO) benefits",
+   "url": "https://tricare.mil/Plans/SpecialPrograms/ECHO/Benefits",
+   "publisher": "Defense Health Agency, TRICARE",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "tricare-acd",
+   "title": "TRICARE Autism Care Demonstration",
+   "url": "https://tricare.mil/Plans/SpecialPrograms/ACD",
+   "publisher": "Defense Health Agency, TRICARE",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "stomp",
+   "title": "Specialized Training of Military Parents (STOMP)",
+   "url": "https://wapave.org/specialized-training-of-military-parents-stomp/",
+   "publisher": "Washington PAVE",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "va-champva",
+   "title": "CHAMPVA benefits",
+   "url": "https://www.va.gov/family-and-caregiver-benefits/health-and-disability/champva/",
+   "publisher": "U.S. Department of Veterans Affairs",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "ncsl-idea",
+   "title": "The federal role in special education: 5 questions (June 24, 2026)",
+   "url": "https://www.ncsl.org/resources/details/The-Federal-Role-in-Special-Education-5-Questions",
+   "publisher": "National Conference of State Legislatures",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "asha-idea",
+   "title": "Education Department shifting some responsibility for special education programs (June 17, 2026)",
+   "url": "https://www.asha.org/news/2026/education-department-shifting-some-responsibility-for-key-special-education-programs-what-it-could-mean-for-students-and-providers/",
+   "publisher": "American Speech-Language-Hearing Association",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "senate-acd",
+   "title": "Senators' letter on the National Academies ABA study (June 26, 2026)",
+   "url": "https://www.schmitt.senate.gov/wp-content/uploads/2026/06/Schmitt-Gillibrand-NASEM-Study-Letter-to-SecDef.pdf",
+   "publisher": "U.S. Senate offices of Sens. Schmitt and Gillibrand",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "p2pusa-parents",
+   "title": "Parent to Parent USA: find your local program",
+   "url": "https://www.p2pusa.org/parents/",
+   "publisher": "Parent to Parent USA",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "sdm-ohio",
+   "title": "Supported decision-making in Ohio",
+   "url": "https://supporteddecisionmaking.org/in-your-state/ohio/",
+   "publisher": "National Resource Center for Supported Decision-Making",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "ohio-p2p",
+   "title": "Ohio Parent to Parent statewide mentoring and support program",
+   "url": "https://ohiof2f.org/ohiop2p",
+   "publisher": "Ohio Family to Family, University of Cincinnati Center for Excellence in Developmental Disabilities",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "ohio-f2f-brochure",
+   "title": "Ohio Family to Family brochure (1-844-OHIOF2F)",
+   "url": "https://www.ohiof2f.org/wp-content/uploads/2017/11/CCHMC_048_F2FBrochure_PD2.pdf",
+   "publisher": "Ohio Family to Family Health Information Center",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "ocali-adep",
+   "title": "Autism Diagnosis Education Project",
+   "url": "https://www.ocali.org/project/adep",
+   "publisher": "Ohio Center for Autism and Low Incidence",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "nisonger-location",
+   "title": "Ohio State Nisonger Center",
+   "url": "https://wexnermedical.osu.edu/locations/nisonger-center",
+   "publisher": "The Ohio State University Wexner Medical Center",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "dro-sdm-toolkit",
+   "title": "Supported Decision Making and Transition Toolkit (2026)",
+   "url": "https://www.disabilityrightsohio.org/assets/documents/sdmtoolkit2026print.pdf",
+   "publisher": "Disability Rights Ohio",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "oh-sb35",
+   "title": "Ohio Senate Bill 35 (136th General Assembly)",
+   "url": "https://www.ohiohouse.gov/legislation/136/sb35",
+   "publisher": "Ohio General Assembly",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "oh-sb35-senate",
+   "title": "Senate passes supported decision-making bill",
+   "url": "https://ohiosenate.gov/members/jerry-c-cirino/news/senate-passes-cirino-and-reynolds-bill-supporting-adults-with-a-developmental-disability",
+   "publisher": "Ohio Senate",
+   "reviewed_on": "2026-11-08"
+  }
+ ],
+ "resources": [
+  {
+   "id": "cdc-act-early",
+   "scope": "US",
+   "name": "CDC milestone checklists and Milestone Tracker app",
+   "org": "Centers for Disease Control and Prevention",
+   "what": "Free checklists show what most children do at each age, from 2 months to 5 years. They come in English and Spanish, and there is a free phone app.",
+   "how": "Fill out the checklist for your child's age. Take it to your child's next doctor visit. You do not need a diagnosis to ask for help.",
+   "phone": "800-232-4636",
+   "phone_label": "CDC-INFO",
+   "url": "https://www.cdc.gov/act-early/milestones/",
+   "stages": [
+    "concern",
+    "early"
+   ],
+   "needs": [
+    "any"
+   ],
+   "sources": [
+    "cdc-milestones",
+    "cdc-concerned"
+   ]
+  },
+  {
+   "id": "cdc-find-ei",
+   "scope": "US",
+   "state_replacements": {
+    "OH": "oh-help-me-grow"
+   },
+   "name": "Find your state's early intervention program",
+   "org": "Centers for Disease Control and Prevention",
+   "what": "Every state has free early intervention for children under 3 who are behind or have a disability. You can call yourself. You do not need a doctor's note.",
+   "how": "Look up your state's number and ask for a free evaluation. If your child is 3 or older, call your public school district instead.",
+   "phone": "",
+   "phone_label": "",
+   "url": "https://www.cdc.gov/FindEI",
+   "stages": [
+    "concern",
+    "early"
+   ],
+   "needs": [
+    "any"
+   ],
+   "sources": [
+    "cdc-concerned"
+   ]
+  },
+  {
+   "id": "parent-center",
+   "scope": "US",
+   "state_replacements": {
+    "OH": "oh-ocecd"
+   },
+   "name": "Your state's Parent Training and Information Center",
+   "org": "Center for Parent Information and Resources",
+   "what": "Every state has a free parent center for families of children with any disability, from birth to age 26. Staff help with school plans, meetings and your rights.",
+   "how": "Find your state on the map. Call before your next school meeting.",
+   "phone": "",
+   "phone_label": "",
+   "url": "https://www.parentcenterhub.org/find-your-center/",
+   "stages": [
+    "concern",
+    "school",
+    "transition",
+    "rights"
+   ],
+   "needs": [
+    "any"
+   ],
+   "sources": [
+    "cpir-find"
+   ]
+  },
+  {
+   "id": "family-voices",
+   "scope": "US",
+   "name": "Family-to-Family Health Information Center",
+   "org": "Family Voices",
+   "what": "Parents who have been there help other families with doctors, insurance, Medicaid and disability services. There is one in every state.",
+   "how": "Find your state's center on the map and call or email them.",
+   "phone": "",
+   "phone_label": "",
+   "url": "https://familyvoices.org/sao/",
+   "stages": [
+    "everyday",
+    "transition"
+   ],
+   "needs": [
+    "any"
+   ],
+   "sources": [
+    "fv-sao"
+   ],
+   "state_replacements": {
+    "OH": "oh-f2f-p2p"
+   }
+  },
+  {
+   "id": "p2p-usa",
+   "scope": "US",
+   "state_replacements": {
+    "OH": "oh-f2f-p2p"
+   },
+   "name": "Parent to Parent: get matched with another parent",
+   "org": "Parent to Parent USA",
+   "what": "A trained volunteer parent whose child has a similar disability calls you, listens and shares what helped them. It is free.",
+   "how": "Find your state's Parent to Parent program on the map and ask to be matched.",
+   "phone": "",
+   "phone_label": "",
+   "url": "https://www.p2pusa.org/parents/",
+   "stages": [
+    "concern",
+    "everyday"
+   ],
+   "needs": [
+    "any"
+   ],
+   "sources": [
+    "p2pusa-parents"
+   ]
+  },
+  {
+   "id": "autism-society",
+   "scope": "US",
+   "name": "Autism Society National Helpline",
+   "org": "Autism Society of America",
+   "what": "Trained staff help families find autism services, support groups and local chapters. This is not a crisis line.",
+   "how": "Call on a weekday or fill out the online form. Ask about the chapter in your state.",
+   "phone": "800-328-8476",
+   "phone_label": "800-3-AUTISM, weekdays",
+   "url": "https://autismsociety.org/helpline",
+   "stages": [
+    "concern",
+    "early",
+    "school",
+    "transition",
+    "everyday"
+   ],
+   "needs": [
+    "autism"
+   ],
+   "sources": [
+    "asa-helpline"
+   ]
+  },
+  {
+   "id": "chadd-nrc",
+   "scope": "US",
+   "name": "National Resource Center on ADHD helpline",
+   "org": "CHADD, funded by CDC",
+   "what": "A helpline answers questions about ADHD: diagnosis, treatment, school help and local support groups. Spanish speakers are available.",
+   "how": "Call the ADHD helpline, or use the parent toolkits on the website.",
+   "phone": "866-200-8098",
+   "phone_label": "ADHD helpline",
+   "url": "https://chadd.org/nrc",
+   "stages": [
+    "concern",
+    "school",
+    "everyday"
+   ],
+   "needs": [
+    "adhd"
+   ],
+   "sources": [
+    "cdc-adhd-families"
+   ]
+  },
+  {
+   "id": "ssa-ssi-child",
+   "scope": "US",
+   "name": "SSI for children with disabilities",
+   "org": "Social Security Administration",
+   "what": "Monthly payments for children with serious disabilities in families with low income and savings. In most states, SSI also means Medicaid. At 18, Social Security checks again using adult rules.",
+   "how": "Start online or call for an appointment. Have medical and school records ready.",
+   "phone": "800-772-1213",
+   "phone_label": "TTY 800-325-0778",
+   "url": "https://www.ssa.gov/benefits/disability/apply-child.html",
+   "stages": [
+    "everyday",
+    "transition"
+   ],
+   "needs": [
+    "any"
+   ],
+   "sources": [
+    "ssa-child",
+    "ssa-ssi-child-2026"
+   ]
+  },
+  {
+   "id": "arch-respite",
+   "scope": "US",
+   "name": "National Respite Locator",
+   "org": "ARCH National Respite Network",
+   "what": "Respite gives family caregivers a short break while someone trained cares for your child. This search finds respite programs and ways to pay for them.",
+   "how": "Search by state. The list is not complete, so also ask your county or state disability office.",
+   "phone": "",
+   "phone_label": "",
+   "url": "https://archrespite.org/caregiver-resources/respitelocator/",
+   "stages": [
+    "everyday"
+   ],
+   "needs": [
+    "any"
+   ],
+   "sources": [
+    "arch-locator"
+   ]
+  },
+  {
+   "id": "sdm-center",
+   "scope": "US",
+   "name": "Choices besides guardianship at 18",
+   "org": "National Resource Center for Supported Decision-Making",
+   "what": "At 18, your child legally makes their own decisions. Guardianship is not the only option. Supported decision-making lets your child choose trusted people to help with decisions while keeping their rights.",
+   "how": "Read about the options before you go to court. Ask your parent center or disability rights agency for help.",
+   "phone": "",
+   "phone_label": "",
+   "url": "https://supporteddecisionmaking.org/",
+   "stages": [
+    "transition"
+   ],
+   "needs": [
+    "any"
+   ],
+   "sources": [
+    "sdm-ohio"
+   ]
+  },
+  {
+   "id": "oh-help-me-grow",
+   "scope": "OH",
+   "name": "Help Me Grow Early Intervention",
+   "org": "Ohio Department of Children and Youth",
+   "what": "Ohio's free early intervention for children under 3 who are behind or have a disability. It is in all 88 counties, and visits usually happen at home. Parents can sign up their own child.",
+   "how": "Call or fill out the online form, and a local coordinator will call you. If your child is almost 3, call now. This program ends at age 3, and the school district takes over.",
+   "phone": "800-755-4769",
+   "phone_label": "800-755-GROW",
+   "url": "https://ochids.childrenandyouth.ohio.gov/public/refer",
+   "stages": [
+    "concern",
+    "early"
+   ],
+   "needs": [
+    "any"
+   ],
+   "sources": [
+    "dcy-hmg-refer"
+   ]
+  },
+  {
+   "id": "oh-adep",
+   "scope": "OH",
+   "name": "Faster autism evaluations close to home (ADEP)",
+   "org": "OCALI, Help Me Grow and the Ohio Department of Developmental Disabilities",
+   "what": "In many Ohio counties, local doctors and early intervention staff work as a team to evaluate young children for autism sooner, without a long wait for a big hospital.",
+   "how": "Ask Help Me Grow or your child's doctor if an ADEP team serves your county.",
+   "phone": "",
+   "phone_label": "",
+   "url": "https://www.ocali.org/project/adep",
+   "stages": [
+    "concern",
+    "early"
+   ],
+   "needs": [
+    "autism"
+   ],
+   "sources": [
+    "ocali-adep"
+   ]
+  },
+  {
+   "id": "oh-nisonger",
+   "scope": "OH",
+   "name": "Nisonger Center at Ohio State",
+   "org": "The Ohio State University",
+   "what": "A university center in Columbus with clinics that evaluate children, teens and young adults for autism and other developmental disabilities, including mental health concerns.",
+   "how": "Call to ask which clinic fits your child's age and how to get on the schedule.",
+   "phone": "614-685-3192",
+   "phone_label": "main office",
+   "url": "https://nisonger.osu.edu/",
+   "stages": [
+    "concern",
+    "school",
+    "transition"
+   ],
+   "needs": [
+    "autism",
+    "developmental",
+    "behavioral"
+   ],
+   "sources": [
+    "nisonger-location"
+   ]
+  },
+  {
+   "id": "oh-ocecd",
+   "scope": "OH",
+   "name": "Ohio Coalition for the Education of Children with Disabilities (OCECD)",
+   "org": "Ohio's Parent Training and Information Center",
+   "what": "Ohio's free parent center for families of children with any disability, from birth to 26. Staff explain evaluations, school plans and your rights. Based in Marion.",
+   "how": "Call before an evaluation or school meeting, or when you disagree with the school.",
+   "phone": "844-382-5452",
+   "phone_label": "toll-free",
+   "url": "https://www.ocecd.org/",
+   "stages": [
+    "concern",
+    "school",
+    "transition",
+    "rights"
+   ],
+   "needs": [
+    "any"
+   ],
+   "sources": [
+    "ocecd-guide",
+    "dew-families"
+   ]
+  },
+  {
+   "id": "oh-f2f-p2p",
+   "scope": "OH",
+   "name": "Ohio Family to Family and Parent to Parent",
+   "org": "Ohio Family-to-Family Health Information Center",
+   "what": "Ohio parents who have been there give free help with doctors, insurance and Medicaid. Ohio Parent to Parent can also match you with a trained parent mentor for one-to-one support.",
+   "how": "Call or email, or ask to be matched with a parent mentor.",
+   "phone": "844-644-6323",
+   "phone_label": "844-OHIOF2F",
+   "url": "https://ohiof2f.org/ohiop2p",
+   "stages": [
+    "concern",
+    "everyday"
+   ],
+   "needs": [
+    "any"
+   ],
+   "sources": [
+    "ohio-p2p",
+    "ohio-f2f-brochure"
+   ]
+  },
+  {
+   "id": "oh-parent-mentors",
+   "scope": "OH",
+   "name": "Ohio Parent Mentors",
+   "org": "Ohio Parent Mentor Project",
+   "what": "Parent mentors are parents of children with disabilities. They work with schools to help other families through special education.",
+   "how": "Ask your school district or educational service center if a parent mentor serves your area.",
+   "phone": "",
+   "phone_label": "",
+   "url": "https://parentmentor.osu.edu/",
+   "stages": [
+    "school",
+    "transition"
+   ],
+   "needs": [
+    "any"
+   ],
+   "sources": [
+    "parent-mentor",
+    "dew-families"
+   ]
+  },
+  {
+   "id": "oh-dew-families",
+   "scope": "OH",
+   "name": "Ohio special education: information for families",
+   "org": "Ohio Department of Education and Workforce",
+   "what": "Ohio's guide to special education for families: evaluations, school plans, parent rights and where to get help.",
+   "how": "To ask for a free evaluation, write to your school district's special education director. Keep a copy and write down the date you sent it.",
+   "phone": "",
+   "phone_label": "",
+   "url": "https://education.ohio.gov/Topics/Special-Education/Families-of-Students-with-Disabilities",
+   "stages": [
+    "concern",
+    "school"
+   ],
+   "needs": [
+    "any"
+   ],
+   "sources": [
+    "dew-families"
+   ]
+  },
+  {
+   "id": "oh-autism-scholarship",
+   "scope": "OH",
+   "name": "Autism Scholarship Program",
+   "org": "Ohio Department of Education and Workforce",
+   "what": "Pays for special education from approved providers for children whose school district has found autism and written an IEP.",
+   "how": "Read the parent information. Then check with your district that your child's IEP lists autism before you apply.",
+   "phone": "",
+   "phone_label": "",
+   "url": "https://education.ohio.gov/Topics/Other-Resources/Scholarships/Autism-Scholarship-Program/Autism-Scholarship-Program-Information-for-Parents",
+   "stages": [
+    "school"
+   ],
+   "needs": [
+    "autism"
+   ],
+   "sources": [
+    "dew-autism-schol"
+   ]
+  },
+  {
+   "id": "oh-jpsn",
+   "scope": "OH",
+   "name": "Jon Peterson Special Needs Scholarship",
+   "org": "Ohio Department of Education and Workforce",
+   "what": "Pays for special education from approved providers for children with an IEP. The amount depends on the child's disability.",
+   "how": "Read the program page, or email peterson.scholarship@education.ohio.gov with questions.",
+   "phone": "",
+   "phone_label": "",
+   "url": "https://education.ohio.gov/jonpeterson",
+   "stages": [
+    "school"
+   ],
+   "needs": [
+    "any"
+   ],
+   "sources": [
+    "dew-jpsn"
+   ]
+  },
+  {
+   "id": "oh-ocali",
+   "scope": "OH",
+   "name": "OCALI (Ohio Center for Autism and Low Incidence)",
+   "org": "Funded by the Ohio Department of Education and Workforce",
+   "what": "Free guides, training and a lending library for families of children with autism and other less common disabilities, from early childhood into adulthood.",
+   "how": "Start with the family section of the website.",
+   "phone": "",
+   "phone_label": "",
+   "url": "https://www.ocali.org/",
+   "stages": [
+    "concern",
+    "school",
+    "transition"
+   ],
+   "needs": [
+    "autism",
+    "developmental",
+    "physical"
+   ],
+   "sources": [
+    "dew-ocali"
+   ]
+  },
+  {
+   "id": "oh-county-dd",
+   "scope": "OH",
+   "name": "Your county board of developmental disabilities",
+   "org": "Ohio's 88 county boards of DD",
+   "what": "Your county board is where local services for developmental disabilities start. It decides who qualifies, assigns a helper to plan services, and runs Medicaid waivers and family support money.",
+   "how": "Find your county on the map, or call the state line and ask to be connected to your county.",
+   "phone": "800-617-6733",
+   "phone_label": "Ohio DODD referral line",
+   "url": "https://www.oacbdd.org/familyresources",
+   "stages": [
+    "early",
+    "school",
+    "transition",
+    "everyday"
+   ],
+   "needs": [
+    "autism",
+    "developmental",
+    "physical"
+   ],
+   "sources": [
+    "oacb-family",
+    "milestones-dodd"
+   ]
+  },
+  {
+   "id": "oh-medicaid",
+   "scope": "OH",
+   "name": "Ohio Medicaid for children",
+   "org": "Ohio Department of Medicaid",
+   "what": "Health coverage for children in families who qualify, including checkups, therapies and mental health care. Children with disabilities may also qualify through SSI or a county board waiver.",
+   "how": "Apply online at benefits.ohio.gov, by phone, or at your county Job and Family Services office.",
+   "phone": "800-324-8680",
+   "phone_label": "Medicaid consumer hotline",
+   "url": "https://benefits.ohio.gov/",
+   "stages": [
+    "everyday"
+   ],
+   "needs": [
+    "any"
+   ],
+   "sources": [
+    "odm-healthchek"
+   ]
+  },
+  {
+   "id": "oh-ohiorise",
+   "scope": "OH",
+   "name": "OhioRISE",
+   "org": "Ohio Department of Medicaid with Aetna Better Health of Ohio",
+   "what": "A Medicaid program for children and young people up to age 20 with serious mental health or behavior needs. It adds a care coordinator plus in-home and crisis help.",
+   "how": "Ask your child's Medicaid plan, doctor or counselor whether your child should be checked for OhioRISE.",
+   "phone": "",
+   "phone_label": "",
+   "url": "https://managedcare.medicaid.ohio.gov/ohiorise",
+   "stages": [
+    "everyday"
+   ],
+   "needs": [
+    "behavioral",
+    "autism",
+    "adhd"
+   ],
+   "sources": [
+    "odm-ohiorise"
+   ]
+  },
+  {
+   "id": "oh-cmh",
+   "scope": "OH",
+   "name": "Complex Medical Help (formerly Children with Medical Handicaps)",
+   "org": "Ohio Department of Health",
+   "what": "Helps pay to diagnose and treat certain long-term medical conditions, and connects families with approved doctors. It was called Children with Medical Handicaps.",
+   "how": "Call the public health nurse at your county or city health department to start.",
+   "phone": "",
+   "phone_label": "",
+   "url": "https://odh.ohio.gov/know-our-programs/children-with-medical-handicaps",
+   "stages": [
+    "concern",
+    "everyday"
+   ],
+   "needs": [
+    "physical"
+   ],
+   "sources": [
+    "odh-cmh",
+    "portage-cmh"
+   ]
+  },
+  {
+   "id": "oh-stable",
+   "scope": "OH",
+   "name": "STABLE Account (Ohio's ABLE account)",
+   "org": "Ohio Treasurer of State",
+   "what": "A savings account for people with disabilities. Money saved here does not count against SSI or Medicaid limits the way a regular bank account does.",
+   "how": "Read about the program or call the STABLE team before you open an account.",
+   "phone": "800-439-1653",
+   "phone_label": "STABLE team",
+   "url": "https://www.stableaccount.com/",
+   "stages": [
+    "transition",
+    "everyday"
+   ],
+   "needs": [
+    "any"
+   ],
+   "sources": [
+    "stable-fact"
+   ]
+  },
+  {
+   "id": "oh-sdm-toolkit",
+   "scope": "OH",
+   "name": "Planning for 18: decision-making toolkit",
+   "org": "Disability Rights Ohio",
+   "what": "A free 2026 toolkit for young people with disabilities and their families. It explains supported decision-making, powers of attorney and other choices that are less restrictive than guardianship.",
+   "how": "Go through the toolkit with your teen before 18. Call Disability Rights Ohio with questions.",
+   "phone": "614-466-7264",
+   "phone_label": "Disability Rights Ohio",
+   "url": "https://www.disabilityrightsohio.org/assets/documents/sdmtoolkit2026print.pdf",
+   "stages": [
+    "transition",
+    "rights"
+   ],
+   "needs": [
+    "any"
+   ],
+   "sources": [
+    "dro-sdm-toolkit"
+   ]
+  },
+  {
+   "id": "oh-ood-preets",
+   "scope": "OH",
+   "name": "Pre-Employment Transition Services",
+   "org": "Opportunities for Ohioans with Disabilities (OOD)",
+   "what": "Free help for students with disabilities, starting at age 14: exploring jobs, work experience, job skills, speaking up for yourself and college planning.",
+   "how": "Ask your child's IEP team or transition coordinator to request these services from OOD.",
+   "phone": "",
+   "phone_label": "",
+   "url": "https://ood.ohio.gov/",
+   "stages": [
+    "transition"
+   ],
+   "needs": [
+    "any"
+   ],
+   "sources": [
+    "dew-otsp"
+   ]
+  },
+  {
+   "id": "oh-early-resolution",
+   "scope": "OH",
+   "name": "Resolving special education disagreements",
+   "org": "Ohio Department of Education and Workforce",
+   "what": "Ohio's advice for settling disagreements with the school early: talk to the special education director, get help from a parent mentor or parent center, and ask for a guided meeting or mediation.",
+   "how": "Read this before you file a complaint. Keep copies of every letter and email.",
+   "phone": "",
+   "phone_label": "",
+   "url": "https://education.ohio.gov/getattachment/Topics/Special-Education/Dispute-Resolution/EarlyResolution_Information-sheet.pdf.aspx",
+   "stages": [
+    "rights"
+   ],
+   "needs": [
+    "any"
+   ],
+   "sources": [
+    "dew-early-resolution"
+   ]
+  },
+  {
+   "id": "mil-onesource",
+   "scope": "MIL",
+   "name": "Military OneSource special needs consultations",
+   "org": "U.S. Department of Defense",
+   "what": "Free consultants help military families with special education, TRICARE, EFMP and local services. Retirees and honorably discharged members can use it for one year after leaving service.",
+   "how": "Call any time or start a chat to set up a phone or video meeting.",
+   "phone": "800-342-9647",
+   "phone_label": "24/7",
+   "url": "https://www.militaryonesource.mil/benefits/special-needs-consultations/",
+   "stages": [
+    "concern",
+    "early",
+    "school",
+    "transition",
+    "everyday",
+    "rights"
+   ],
+   "needs": [
+    "any"
+   ],
+   "sources": [
+    "mos-snc"
+   ]
+  },
+  {
+   "id": "mil-efmp",
+   "scope": "MIL",
+   "name": "Exceptional Family Member Program (EFMP)",
+   "org": "Each military service branch",
+   "what": "Active duty families sign up a family member with special medical or school needs. This helps the military plan moves and support around those needs. Some TRICARE programs require it.",
+   "how": "Contact the EFMP office at your base, or call Military OneSource.",
+   "phone": "800-342-9647",
+   "phone_label": "Military OneSource",
+   "url": "https://militaryonesource.mil/efmp",
+   "stages": [
+    "everyday"
+   ],
+   "needs": [
+    "any"
+   ],
+   "sources": [
+    "mos-efmp"
+   ]
+  },
+  {
+   "id": "mil-echo",
+   "scope": "MIL",
+   "name": "TRICARE Extended Care Health Option (ECHO)",
+   "org": "TRICARE",
+   "what": "Extra TRICARE benefits for active duty families whose child has a qualifying disability: training, special education, equipment, home health care and respite for the main caregiver.",
+   "how": "Call your TRICARE regional contractor to sign up. Services must be approved before they start.",
+   "phone": "",
+   "phone_label": "",
+   "url": "https://tricare.mil/Plans/SpecialPrograms/ECHO/Benefits",
+   "stages": [
+    "everyday"
+   ],
+   "needs": [
+    "any"
+   ],
+   "sources": [
+    "tricare-echo"
+   ]
+  },
+  {
+   "id": "mil-acd",
+   "scope": "MIL",
+   "name": "TRICARE Autism Care Demonstration",
+   "org": "TRICARE",
+   "what": "TRICARE's way to pay for ABA therapy for children with autism, with no yearly or lifetime limit. Active duty families must also join EFMP (unless excused) and sign up for ECHO.",
+   "how": "Follow the steps on the TRICARE page. You will be given an autism services navigator to help.",
+   "phone": "",
+   "phone_label": "",
+   "url": "https://tricare.mil/Plans/SpecialPrograms/ACD",
+   "stages": [
+    "early",
+    "school",
+    "everyday"
+   ],
+   "needs": [
+    "autism"
+   ],
+   "sources": [
+    "tricare-acd"
+   ]
+  },
+  {
+   "id": "mil-stomp",
+   "scope": "MIL",
+   "name": "STOMP: Specialized Training of Military Parents",
+   "org": "Washington PAVE",
+   "what": "The parent center for military families of children with disabilities, in the U.S. or overseas. Its workshops and webinars are open to all military-connected families.",
+   "how": "Call, or look up the next online workshop.",
+   "phone": "253-565-2266",
+   "phone_label": "",
+   "url": "https://wapave.org/specialized-training-of-military-parents-stomp/",
+   "stages": [
+    "school",
+    "rights"
+   ],
+   "needs": [
+    "any"
+   ],
+   "sources": [
+    "stomp"
+   ]
+  },
+  {
+   "id": "va-champva",
+   "scope": "MIL",
+   "name": "CHAMPVA health coverage for veterans' children",
+   "org": "U.S. Department of Veterans Affairs",
+   "what": "Health coverage for children of veterans rated permanently and totally disabled by a service-connected condition (or who died from one), if the family cannot get TRICARE. It usually ends at 18, or 23 for full-time students. A child who could not support themselves before 18 may stay covered.",
+   "how": "Check if you qualify and apply on VA.gov, or ask your county veterans service officer to help.",
+   "phone": "800-733-8387",
+   "phone_label": "CHAMPVA",
+   "url": "https://www.va.gov/family-and-caregiver-benefits/health-and-disability/champva/",
+   "stages": [
+    "everyday",
+    "transition"
+   ],
+   "needs": [
+    "any"
+   ],
+   "sources": [
+    "va-champva"
+   ]
+  }
+ ],
+ "protection_advocacy": {
+  "AL": {
+   "name": "Alabama Disabilities Advocacy Program",
+   "url": "https://adap.ua.edu/",
+   "phone": "800-826-1675"
+  },
+  "AK": {
+   "name": "Disability Law Center of Alaska",
+   "url": "https://www.dlcak.org/",
+   "phone": "800-478-1234"
+  },
+  "AZ": {
+   "name": "Disability Rights Arizona",
+   "url": "https://www.azdisabilitylaw.org/",
+   "phone": "800-927-0992"
+  },
+  "AR": {
+   "name": "Disability Rights Arkansas",
+   "url": "https://www.disabilityrightsar.org/",
+   "phone": "800-482-1174"
+  },
+  "CA": {
+   "name": "Disability Rights California",
+   "url": "https://www.disabilityrightsca.org/",
+   "phone": "800-776-5746"
+  },
+  "CO": {
+   "name": "Disability Law Colorado",
+   "url": "https://www.disabilitylawco.org/",
+   "phone": "800-288-1376"
+  },
+  "CT": {
+   "name": "Disability Rights Connecticut",
+   "url": "https://www.disrightsct.org/",
+   "phone": "800-842-7303"
+  },
+  "DE": {
+   "name": "Community Legal Aid Society, Inc.",
+   "url": "https://www.declasi.org/",
+   "phone": "302-575-0660"
+  },
+  "DC": {
+   "name": "Disability Rights DC at University Legal Services",
+   "url": "https://www.uls-dc.org/",
+   "phone": "202-547-0198"
+  },
+  "FL": {
+   "name": "Disability Rights Florida",
+   "url": "https://www.disabilityrightsflorida.org/",
+   "phone": "800-342-0823"
+  },
+  "GA": {
+   "name": "Georgia Advocacy Office",
+   "url": "https://www.thegao.org/",
+   "phone": "800-537-2329"
+  },
+  "HI": {
+   "name": "Hawaii Disability Rights Center",
+   "url": "https://www.hawaiidisabilityrights.org/",
+   "phone": "808-949-2922"
+  },
+  "ID": {
+   "name": "DisAbility Rights Idaho",
+   "url": "https://www.disabilityrightsidaho.org/",
+   "phone": "866-262-3462"
+  },
+  "IL": {
+   "name": "Equip for Equality",
+   "url": "https://www.equipforequality.org/",
+   "phone": "800-537-2632"
+  },
+  "IN": {
+   "name": "Indiana Disability Rights",
+   "url": "https://www.indianadisabilityrights.org/",
+   "phone": "800-622-4845"
+  },
+  "IA": {
+   "name": "Disability Rights Iowa",
+   "url": "https://www.driowa.org/",
+   "phone": "800-779-2502"
+  },
+  "KS": {
+   "name": "Disability Rights Center of Kansas",
+   "url": "https://www.drckansas.org/",
+   "phone": "877-776-1541"
+  },
+  "KY": {
+   "name": "Kentucky Protection and Advocacy",
+   "url": "https://www.kypa.net/",
+   "phone": "502-564-2967"
+  },
+  "LA": {
+   "name": "Disability Rights Louisiana",
+   "url": "https://www.disabilityrightsla.org/",
+   "phone": "800-960-7705"
+  },
+  "ME": {
+   "name": "Disability Rights Maine",
+   "url": "https://www.drme.org/",
+   "phone": "207-626-2774"
+  },
+  "MD": {
+   "name": "Disability Rights Maryland",
+   "url": "https://www.disabilityrightsmd.org/",
+   "phone": "800-233-7201"
+  },
+  "MA": {
+   "name": "Disability Law Center",
+   "url": "https://www.dlc-ma.org/",
+   "phone": "800-872-9992"
+  },
+  "MI": {
+   "name": "Disability Rights Michigan",
+   "url": "https://www.drmich.org/",
+   "phone": "800-288-5923"
+  },
+  "MN": {
+   "name": "Minnesota Disability Law Center",
+   "url": "https://www.mylegalaid.org/",
+   "phone": "800-292-4150"
+  },
+  "MS": {
+   "name": "Disability Rights Mississippi",
+   "url": "https://www.drms.ms/",
+   "phone": "800-772-4057"
+  },
+  "MO": {
+   "name": "Missouri Protection and Advocacy Services",
+   "url": "https://www.moadvocacy.org/",
+   "phone": "800-392-8667"
+  },
+  "MT": {
+   "name": "Disability Rights Montana",
+   "url": "https://www.disabilityrightsmt.org/",
+   "phone": "800-245-4743"
+  },
+  "NE": {
+   "name": "Disability Rights Nebraska",
+   "url": "https://www.disabilityrightsnebraska.org/",
+   "phone": "800-422-6691"
+  },
+  "NV": {
+   "name": "Nevada Disability Advocacy & Law Center",
+   "url": "https://www.ndalc.org/",
+   "phone": "888-349-3843"
+  },
+  "NH": {
+   "name": "Disability Rights Center New Hampshire",
+   "url": "https://www.drcnh.org/",
+   "phone": "800-834-1721"
+  },
+  "NJ": {
+   "name": "Disability Rights New Jersey",
+   "url": "https://www.drnj.org/",
+   "phone": "800-922-7233"
+  },
+  "NM": {
+   "name": "Disability Rights New Mexico",
+   "url": "https://www.drnm.org/",
+   "phone": "800-432-4682"
+  },
+  "NY": {
+   "name": "Disability Rights New York",
+   "url": "https://www.drny.org/",
+   "phone": "800-993-8982"
+  },
+  "NC": {
+   "name": "Disability Rights North Carolina",
+   "url": "https://www.disabilityrightsnc.org/",
+   "phone": "877-235-4210"
+  },
+  "ND": {
+   "name": "North Dakota Protection & Advocacy Project",
+   "url": "https://www.ndpanda.org/",
+   "phone": "800-472-2670"
+  },
+  "OH": {
+   "name": "Disability Rights Ohio",
+   "url": "https://www.disabilityrightsohio.org/",
+   "phone": "800-282-9181"
+  },
+  "OK": {
+   "name": "Oklahoma Disability Law Center",
+   "url": "https://www.okdlc.org/",
+   "phone": "800-880-7755"
+  },
+  "OR": {
+   "name": "Disability Rights Oregon",
+   "url": "https://www.disabilityrightsoregon.org/",
+   "phone": "800-452-1694"
+  },
+  "PA": {
+   "name": "Disability Rights Pennsylvania",
+   "url": "https://www.disabilityrightspa.org/",
+   "phone": "800-692-7443"
+  },
+  "RI": {
+   "name": "Disability Rights Rhode Island",
+   "url": "https://www.drri.org/",
+   "phone": "800-733-5332"
+  },
+  "SC": {
+   "name": "Disability Rights South Carolina",
+   "url": "https://www.disabilityrightssc.org/",
+   "phone": "866-275-7273"
+  },
+  "SD": {
+   "name": "Disability Rights South Dakota",
+   "url": "https://www.drsdlaw.org/",
+   "phone": "800-658-4782"
+  },
+  "TN": {
+   "name": "Disability Rights Tennessee",
+   "url": "https://www.disabilityrightstn.org/",
+   "phone": "800-342-1660"
+  },
+  "TX": {
+   "name": "Disability Rights Texas",
+   "url": "https://www.disabilityrightstx.org/",
+   "phone": "800-252-9108"
+  },
+  "UT": {
+   "name": "Disability Law Center",
+   "url": "https://www.disabilitylawcenter.org/",
+   "phone": "800-662-9080"
+  },
+  "VT": {
+   "name": "Disability Rights Vermont",
+   "url": "https://www.disabilityrightsvt.org/",
+   "phone": "800-834-7890"
+  },
+  "VA": {
+   "name": "disAbility Law Center of Virginia",
+   "url": "https://www.dlcv.org/",
+   "phone": "800-552-3962"
+  },
+  "WA": {
+   "name": "Disability Rights Washington",
+   "url": "https://www.disabilityrightswa.org/",
+   "phone": "800-562-2702"
+  },
+  "WV": {
+   "name": "Disability Rights West Virginia",
+   "url": "https://www.drofwv.org/",
+   "phone": "800-950-5250"
+  },
+  "WI": {
+   "name": "Disability Rights Wisconsin",
+   "url": "https://www.disabilityrightswi.org/",
+   "phone": "800-928-8778"
+  },
+  "WY": {
+   "name": "Wyoming Protection & Advocacy System",
+   "url": "https://www.wypanda.com/",
+   "phone": "800-821-3091"
+  }
+ },
+ "changes": [
+  {
+   "id": "idea-hhs",
+   "title": "Federal special education oversight is moving",
+   "text": "In June 2026 the U.S. Department of Education announced it is moving day-to-day oversight of special education to the Department of Health and Human Services, and civil rights enforcement to the Department of Justice. The law has not changed: your child still has the right to a free public education and an IEP, and your school district and state are still responsible.",
+   "sources": [
+    "ncsl-idea",
+    "asha-idea"
+   ]
+  },
+  {
+   "id": "acd-review",
+   "title": "TRICARE autism coverage is under review",
+   "text": "A national study recommended making ABA therapy a regular TRICARE benefit instead of a pilot program, and senators have asked the Defense Department to act. Check TRICARE's page for the current rules before you sign up.",
+   "sources": [
+    "senate-acd",
+    "tricare-acd"
+   ]
+  },
+  {
+   "id": "oh-sb35",
+   "title": "Ohio may recognize supported decision-making in law",
+   "text": "Senate Bill 35 would recognize supported decision-making as an alternative to guardianship for adults with developmental disabilities. The Ohio Senate passed it unanimously; it is now in a House committee. Supported decision-making can already be used today. The bill would add a standard state form and legal protections.",
+   "sources": [
+    "oh-sb35",
+    "oh-sb35-senate"
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "term": "Evaluation",
+   "plain": "Testing to see if your child has a delay or disability and what help they need. Early intervention and public schools do this for free."
+  },
+  {
+   "term": "Early intervention",
+   "plain": "Free help for children under 3, usually at home, such as speech or physical therapy and coaching for parents."
+  },
+  {
+   "term": "IEP (Individualized Education Program)",
+   "plain": "A written school plan for a child who needs special education. It lists goals, services such as speech therapy, and supports. Parents are part of the team that writes it."
+  },
+  {
+   "term": "504 plan",
+   "plain": "A written school plan for a child with a disability who does not need special education but needs changes to learn, such as extra test time or breaks. A child who does not qualify for an IEP may still get a 504 plan."
+  },
+  {
+   "term": "ABA (applied behavior analysis)",
+   "plain": "A therapy often used for autism that teaches skills step by step. Insurance, Medicaid and TRICARE rules for it vary."
+  },
+  {
+   "term": "County board of DD",
+   "plain": "In Ohio, the county office for developmental disabilities. It decides who qualifies and helps plan and pay for services."
+  },
+  {
+   "term": "Medicaid waiver",
+   "plain": "A Medicaid program that pays for help at home and in the community, such as aides or respite, for people who qualify."
+  },
+  {
+   "term": "SSI",
+   "plain": "Supplemental Security Income: monthly payments from Social Security for people with disabilities who have low income and savings."
+  },
+  {
+   "term": "ABLE / STABLE account",
+   "plain": "A savings account for a person with a disability that does not count against SSI or Medicaid limits."
+  },
+  {
+   "term": "Guardianship",
+   "plain": "A court gives another adult the right to make decisions for a person 18 or older. It removes some of that person's rights, so less restrictive options are worth looking at first."
+  },
+  {
+   "term": "Supported decision-making",
+   "plain": "The young adult keeps their rights and chooses trusted people to help them understand choices and make decisions."
+  },
+  {
+   "term": "Transition plan",
+   "plain": "The part of an IEP, starting by age 14 in Ohio, that plans for life after high school: work, school and living."
+  },
+  {
+   "term": "Respite",
+   "plain": "Short-term care that gives family caregivers a break."
+  },
+  {
+   "term": "EFMP",
+   "plain": "The military's Exceptional Family Member Program for active duty families with special medical or school needs."
+  }
+ ]
 }
