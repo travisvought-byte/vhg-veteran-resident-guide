@@ -26,9 +26,9 @@ ANCHORS = {
         {'label': 'Disability rights and legal help', 'stages': ALL_STAGES, 'items': [{'pa': True}]},
     ],
     'default': [
-        {'label': 'Under age 3', 'stages': ['concern', 'early'], 'items': [{'text': "find {state}'s early intervention program", 'href': 'https://www.cdc.gov/FindEI'}]},
+        {'label': 'Under age 3', 'stages': ['concern', 'early'], 'items': [{'ei': True}]},
         {'label': 'Age 3 and older', 'stages': ['concern', 'school'], 'items': [{'text': 'ask your public school district in writing for a free evaluation'}]},
-        {'label': 'Parent center (school help)', 'stages': ['concern', 'school', 'transition', 'rights'], 'items': [{'text': "find {state}'s parent center", 'href': 'https://www.parentcenterhub.org/find-your-center/'}]},
+        {'label': 'Parent center (school help)', 'stages': ['concern', 'school', 'transition', 'rights'], 'items': [{'pti': True}]},
         {'label': 'Health care questions', 'stages': ['concern', 'everyday'], 'items': [{'text': 'find your Family-to-Family Health Information Center', 'href': 'https://familyvoices.org/sao/'}]},
         {'label': 'Talk with another parent', 'stages': ['concern', 'everyday'], 'items': [{'text': 'find your Parent to Parent program', 'href': 'https://www.p2pusa.org/parents/'}]},
         {'label': 'Disability rights and legal help', 'stages': ALL_STAGES, 'items': [{'pa': True}]},
@@ -70,6 +70,11 @@ def validate(data):
     assert set(pa) == set(STATES), set(STATES) ^ set(pa)
     for code, agency in pa.items():
         assert agency['name'] and agency['url'].startswith('https://') and agency['phone'], code
+    ei, pti = data['early_intervention'], data['parent_centers']
+    assert set(ei) == set(STATES), set(STATES) ^ set(ei)
+    assert set(pti) <= set(STATES)
+    for contact in list(ei.values()) + list(pti.values()):
+        assert contact['name'] and contact['phone'] and contact['url'].startswith('https://'), contact
     assert data['glossary'] and all(g['term'] and g['plain'] for g in data['glossary'])
     for change in data['changes']:
         assert all(s in sources for s in change['sources']), change['id']
