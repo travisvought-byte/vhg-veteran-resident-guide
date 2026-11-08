@@ -31,6 +31,7 @@ fieldset{border:0;padding:0;margin:0}
 .resource{position:relative;min-width:0;overflow-wrap:anywhere;background:#fff;border:1px solid var(--line);border-top:4px solid var(--green);border-radius:6px;padding:18px 20px}
 .resource[data-scope=OH]{border-top-color:#a07014}.resource[data-scope=MIL]{border-top-color:var(--navy)}
 .resource h3{margin-top:0}.resource .next{background:#f3f6f4;border-radius:4px;padding:10px 12px}.contact a{font-size:19px}
+.locations{list-style:none;padding:0;margin:10px 0}.locations li{padding:8px 0;border-top:1px solid #e1e8e4}.locations li:first-child{border-top:0}.locations .small{display:block}.locations a[href^="tel:"]{white-space:nowrap;display:inline-block;min-height:44px;line-height:44px;font-size:18px}
 .for-need{display:inline-block;background:#fdf3dc;border-radius:3px;padding:2px 8px;font-size:15px;font-weight:650;margin:0 0 4px}
 .resource.match{box-shadow:0 0 0 3px #e3c57d}
 .scope{display:inline-block;background:var(--green);color:#fff;border-radius:3px;padding:1px 7px;margin-right:6px;letter-spacing:.6px}
@@ -59,6 +60,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,summary:focus-visible,
  h2{font-size:15pt;margin:8px 0 4px}h3{font-size:12pt;margin:0 0 2px}p{margin:3px 0}
  .cards{display:block}.resource{break-inside:avoid;border:1px solid #999;border-top-width:3px;margin:0 0 6px;padding:6px 10px;box-shadow:none}
  .resource .next{background:none;padding:0}.eyebrow{margin:0}.contact a{font-size:11pt}.visit{padding:0;min-height:0}
+ .locations li{padding:2px 0}.locations a[href^="tel:"]{min-height:0;line-height:1.4;font-size:11pt}.locations .sr{display:none}
  .visit::after{content:": " attr(href);font-size:9pt;word-break:break-all}
  #military:has(#military-details:not([open])){display:none}.military{border-top:0;padding-top:0}
  a{color:#000}@page{margin:14mm}}
