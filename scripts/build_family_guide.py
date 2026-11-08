@@ -60,7 +60,9 @@ def validate(data):
     for r in data['resources']:
         assert r['scope'] in SCOPES, r['id']
         assert r['name'] and r['org'] and r['what'] and r['how'], r['id']
-        assert r['url'].startswith('https://'), r['id']
+        assert r['url'].startswith('https://') or (r.get('locations') and not r['url']), r['id']
+        for loc in r.get('locations', []):
+            assert loc['name'] and loc['place'] and loc['phone'] and loc['url'].startswith('https://'), r['id']
         assert r['stages'] and set(r['stages']) <= stages, r['id']
         assert r['needs'] and set(r['needs']) <= needs, r['id']
         assert r['sources'] and all(s in sources for s in r['sources']), r['id']
@@ -75,6 +77,7 @@ def validate(data):
     assert set(pti) <= set(STATES)
     for contact in list(ei.values()) + list(pti.values()):
         assert contact['name'] and contact['phone'] and contact['url'].startswith('https://'), contact
+        assert contact.get('source', 'https://').startswith('https://'), contact
     assert data['glossary'] and all(g['term'] and g['plain'] for g in data['glossary'])
     for change in data['changes']:
         assert all(s in sources for s in change['sources']), change['id']
@@ -108,6 +111,14 @@ def card(r, sources, need_names):
         for s in r['sources'])
     specific = [n for n in r['needs'] if n != 'any']
     tag = (f'<p class="for-need">Made for: {esc(", ".join(need_names[n] for n in specific))}</p>' if specific else '')
+    places = ''
+    if r.get('locations'):
+        places = '<ul class="locations">' + ''.join(
+            f'<li><a href="{esc(l["url"])}" target="_blank" rel="noopener">{esc(l["name"])}<span class="sr"> (opens new tab)</span></a>'
+            f' <span class="small">{esc(l["place"])}</span> <a href="{tel(l["phone"])}">{esc(l["phone"])}</a></li>'
+            for l in r['locations']) + '</ul>'
+    visit = (f'<p><a class="visit" href="{esc(r["url"])}" target="_blank" rel="noopener">Visit website<span class="sr"> for {esc(r["name"])}</span> (opens new tab)</a></p>'
+             if r['url'] else '')
     replaced = ' '.join(f'{k}:{v}' for k, v in r.get('state_replacements', {}).items())
     return (
         f'<article class="resource" id="r-{esc(r["id"])}" data-id="{esc(r["id"])}" data-scope="{r["scope"]}"'
@@ -115,8 +126,7 @@ def card(r, sources, need_names):
         + (f' data-replaced="{esc(replaced)}"' if replaced else '') + '>'
         f'<p class="eyebrow"><span class="scope scope-{r["scope"].lower()}">{SCOPES[r["scope"]]}</span> {esc(r["org"])}</p>'
         f'<h3>{esc(r["name"])}</h3>{tag}<p>{esc(r["what"])}</p>'
-        f'<p class="next"><strong>Next step:</strong> {esc(r["how"])}</p>{phone}'
-        f'<p><a class="visit" href="{esc(r["url"])}" target="_blank" rel="noopener">Visit website<span class="sr"> for {esc(r["name"])}</span> (opens new tab)</a></p>'
+        f'<p class="next"><strong>Next step:</strong> {esc(r["how"])}</p>{phone}{places}{visit}'
         f'<details class="more"><summary>Sources and corrections</summary><ul>{cites}</ul>'
         f'<p><a class="report" data-report="{esc(r["id"])}" href="mailto:{CORRECTIONS}?subject='
         f'{esc("Family guide correction: " + r["id"])}">Report a problem with this listing</a></p></details></article>')
