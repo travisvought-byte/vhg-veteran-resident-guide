@@ -81,6 +81,8 @@
    li.append(el('strong', {}, a.label + ': '));
    for (const item of a.items) {
     if (item.pa) parts.push(link(pa[state].url, pa[state].name), link(tel(pa[state].phone), pa[state].phone));
+    else if (item.ei) { const e = data.early_intervention[state]; parts.push(link(e.url, e.name), link(tel(e.phone), e.phone)); }
+    else if (item.pti) { const c = data.parent_centers[state]; if (c) parts.push(link(c.url, c.name), link(tel(c.phone), c.phone)); else parts.push(link('https://www.parentcenterhub.org/find-your-center/', 'find ' + name + "'s parent centers (more than one serves the state)")); }
     else if (item.tel) parts.push(link(tel(item.tel), item.tel));
     else if (item.href) parts.push(link(item.href, item.text.replace('{state}', name)));
     else parts.push(document.createTextNode(item.text));
@@ -112,6 +114,7 @@
  function apply(write = true) {
   const state = $('state').value, ohio = state === 'OH';
   $('county-wrap').hidden = !ohio;
+  $('ohio-crisis').hidden = !ohio;
   if (!ohio) $('county').value = '';
   const county = $('county').value, needs = selectedNeeds();
   document.querySelectorAll('.stage').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.stage === stage)));

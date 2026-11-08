@@ -77,8 +77,14 @@ for(const [code,name] of Object.entries(data.states)){
  const cards=visible('#cards .resource');const first=d.getElementById('r-'+cards[0]);
  assert(first.classList.contains('match')&&first.dataset.needs.includes('autism'),cards[0]);
  assert($('needs-box').open);assert(/made for autism are at the top/.test($('result-status').textContent));}
-{const {$}=load('?state=OH&need=learning');assert(/None are only for learning/.test($('result-status').textContent));}
+{const {$,visible}=load('?state=OH&need=learning');assert.equal(visible('#cards .resource')[0],'lda');assert(/made for learning/.test($('result-status').textContent));}
+// Every state's first calls name its own early intervention program; parent centers are named where one statewide center is listed.
+for(const code of Object.keys(data.states)){const {$}=load('?state='+code);const a=$('anchor-list').textContent;
+ assert(a.includes(data.early_intervention[code].phone),code);
+ if(code==='OH')assert(a.includes('OCECD'));else if(data.parent_centers[code])assert(a.includes(data.parent_centers[code].name),code);else assert(a.includes('parent centers (more than one serves the state)'),code);
+ assert.equal($('ohio-crisis').hidden,code!=='OH',code);}
+{const {$}=load('?state=TX&stage=early');const a=$('anchor-list').textContent;assert(a.includes('Early Childhood Intervention (ECI)')&&!a.includes('parent center'));}
 {const {$,d}=load('?state=OH');const btn=d.querySelector('.stage[data-stage=early]');
  assert.equal(btn.getAttribute('aria-labelledby'),'st-early');assert.equal(d.getElementById('st-early').textContent,'Birth to age 3');}
 {const {w,$}=load('?state=PA#military');assert($('military-details').open);}
-console.log('PASS family guide: 51 state entries, Ohio replacements, stage/need filters, county board routes, correction links, stage-aware first calls, need ordering, military toggle, glossary and no storage.');
+console.log('PASS family guide: 51 state entries, Ohio replacements, stage/need filters, county board routes, correction links, stage-aware first calls, need ordering, military toggle, glossary, each state early intervention and parent center, Ohio crisis line and no storage.');

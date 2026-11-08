@@ -64,6 +64,10 @@
   {
    "id": "behavioral",
    "label": "Mental health or behavior"
+  },
+  {
+   "id": "sensory",
+   "label": "Hearing or vision"
   }
  ],
  "sources": [
@@ -381,6 +385,111 @@
    "url": "https://ohiosenate.gov/members/jerry-c-cirino/news/senate-passes-cirino-and-reynolds-bill-supporting-adults-with-a-developmental-disability",
    "publisher": "Ohio Senate",
    "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "cdc-ei-states",
+   "title": "CDC: Early intervention contact information by state",
+   "url": "https://www.cdc.gov/act-early/early-intervention/contact-information-by-state.html",
+   "publisher": "Centers for Disease Control and Prevention",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "cpir-list",
+   "title": "Find Your Parent Center: centers listed alphabetically by state",
+   "url": "https://www.parentcenterhub.org/?p=31647",
+   "publisher": "Center for Parent Information and Resources",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "dew-mrss",
+   "title": "Emergency crisis service for students and young adults (MRSS statewide)",
+   "url": "https://education.ohio.gov/Media/Ed-Connection/Nov-18-2025/Emergency-crisis-service-for-students-and-young-ad",
+   "publisher": "Ohio Department of Education and Workforce",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "ohioguidestone-mrss",
+   "title": "Mobile Response and Stabilization Services (Region 9: Delaware, Knox, Licking, Morrow)",
+   "url": "https://ohioguidestone.org/services/mobile-crisis-services-mrss/",
+   "publisher": "OhioGuidestone",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "fcf-handbook",
+   "title": "Service coordination handbook: overview of county Family and Children First Councils",
+   "url": "https://dam.assets.ohio.gov/image/upload/fcf.ohio.gov/Service%20Coordination%20Resources/SC%20Handbook.v23%20Overview%20FCFCs%20and%20SC%20pgs%204-9.pdf",
+   "publisher": "Ohio Family and Children First",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "nami-basics",
+   "title": "NAMI Basics",
+   "url": "https://nami.org/Support-Education/Mental-Health-Education/NAMI-Basics",
+   "publisher": "National Alliance on Mental Illness",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "nami-helpline",
+   "title": "NAMI HelpLine hours and number",
+   "url": "https://www.nami.org/?p=21485",
+   "publisher": "National Alliance on Mental Illness",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "lda-contact",
+   "title": "Learning Disabilities Association of America: contact",
+   "url": "https://ldaamerica.org/contact/",
+   "publisher": "Learning Disabilities Association of America",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "ndss-guide",
+   "title": "A Promising Future Together: a guide for new and expectant parents",
+   "url": "https://ndss.org/sites/default/files/pdf/2022-05/NEPG_v14.pdf",
+   "publisher": "National Down Syndrome Society",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "hv-new-families",
+   "title": "Hands & Voices: new families",
+   "url": "https://handsandvoices.org/new-families/",
+   "publisher": "Hands & Voices",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "aph-familyconnect",
+   "title": "FamilyConnect, now stewarded by the American Printing House for the Blind",
+   "url": "https://afb.org/blindness-and-low-vision/familyconnect",
+   "publisher": "American Foundation for the Blind",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "sibling-support",
+   "title": "Sibling Support Project: Sibshops",
+   "url": "https://siblingsupport.org/",
+   "publisher": "Sibling Support Project, a Kindering program",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "dew-deaf",
+   "title": "Deaf and hearing impaired: information and resources",
+   "url": "https://education.ohio.gov/Topics/Special-Education/Students-with-Disabilities/Deaf-and-Hearing-Impaired-%E2%80%94-Information-and-Resour",
+   "publisher": "Ohio Department of Education and Workforce",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "dew-blind",
+   "title": "Blind and visually impaired: information and resources",
+   "url": "https://education.ohio.gov/Topics/Special-Education/Students-with-Disabilities/Blind-and-Visually-Impaired-%E2%80%94-Information-and-Reso",
+   "publisher": "Ohio Department of Education and Workforce",
+   "reviewed_on": "2026-11-08"
+  },
+  {
+   "id": "aph-ossb",
+   "title": "Ohio State School for the Blind (directory listing)",
+   "url": "https://aphconnectcenter.org/directory/profile/8319",
+   "publisher": "APH ConnectCenter",
+   "reviewed_on": "2026-11-08"
   }
  ],
  "resources": [
@@ -529,6 +638,95 @@
    ]
   },
   {
+   "id": "ndss",
+   "scope": "US",
+   "name": "National Down Syndrome Society",
+   "org": "National Down Syndrome Society",
+   "what": "Information and support for families of people with Down syndrome at every age, including a free guide for new and expecting parents.",
+   "how": "Call or email, or download the new-parent guide.",
+   "phone": "800-221-4602",
+   "phone_label": "",
+   "url": "https://ndss.org/",
+   "stages": [
+    "concern",
+    "early",
+    "everyday"
+   ],
+   "needs": [
+    "developmental"
+   ],
+   "sources": [
+    "ndss-guide"
+   ]
+  },
+  {
+   "id": "lda",
+   "scope": "US",
+   "name": "Learning Disabilities Association of America",
+   "org": "Learning Disabilities Association of America",
+   "what": "Information for parents on dyslexia and other learning disabilities, evaluations and school help. More than 30 states have a local chapter with support groups and advocacy help.",
+   "how": "Read the parent section and check whether your state has a chapter.",
+   "phone": "412-341-1515",
+   "phone_label": "",
+   "url": "https://ldaamerica.org/",
+   "stages": [
+    "concern",
+    "school"
+   ],
+   "needs": [
+    "learning"
+   ],
+   "sources": [
+    "lda-contact"
+   ]
+  },
+  {
+   "id": "hands-voices",
+   "scope": "US",
+   "name": "Hands & Voices",
+   "org": "Hands & Voices",
+   "what": "A parent-led group for families of children who are deaf or hard of hearing. It supports every communication choice and has state chapters, including Ohio.",
+   "how": "Start with the new-families page and find the chapter near you.",
+   "phone": "",
+   "phone_label": "",
+   "url": "https://handsandvoices.org/new-families/",
+   "stages": [
+    "concern",
+    "early",
+    "school"
+   ],
+   "needs": [
+    "sensory"
+   ],
+   "sources": [
+    "hv-new-families",
+    "dew-deaf"
+   ]
+  },
+  {
+   "id": "familyconnect",
+   "scope": "US",
+   "name": "FamilyConnect",
+   "org": "American Printing House for the Blind",
+   "what": "Free information, parent stories and an online parent support group for families of children who are blind or have low vision.",
+   "how": "Visit the website and join the online parent community.",
+   "phone": "",
+   "phone_label": "",
+   "url": "https://familyconnect.org/",
+   "stages": [
+    "concern",
+    "early",
+    "school",
+    "everyday"
+   ],
+   "needs": [
+    "sensory"
+   ],
+   "sources": [
+    "aph-familyconnect"
+   ]
+  },
+  {
    "id": "chadd-nrc",
    "scope": "US",
    "name": "National Resource Center on ADHD helpline",
@@ -548,6 +746,28 @@
    ],
    "sources": [
     "cdc-adhd-families"
+   ]
+  },
+  {
+   "id": "nami-family",
+   "scope": "US",
+   "name": "NAMI Basics and the NAMI HelpLine",
+   "org": "National Alliance on Mental Illness",
+   "what": "NAMI Basics is a free 6-week class for parents and caregivers of children and teens with mental health symptoms, taught by parents who have been there. It is offered in person or online. The HelpLine gives information and support. It is not a crisis line.",
+   "how": "Find a class through your local NAMI or take the online version. Call the HelpLine on weekdays.",
+   "phone": "800-950-6264",
+   "phone_label": "800-950-NAMI, weekdays",
+   "url": "https://nami.org/Support-Education/Mental-Health-Education/NAMI-Basics",
+   "stages": [
+    "everyday",
+    "concern"
+   ],
+   "needs": [
+    "behavioral"
+   ],
+   "sources": [
+    "nami-basics",
+    "nami-helpline"
    ]
   },
   {
@@ -590,6 +810,26 @@
    ],
    "sources": [
     "arch-locator"
+   ]
+  },
+  {
+   "id": "sibshops",
+   "scope": "US",
+   "name": "Sibshops for brothers and sisters",
+   "org": "Sibling Support Project",
+   "what": "Fun peer-support events for school-age brothers and sisters of kids with disabilities and health needs, offered in most states, plus online groups for teen and adult siblings.",
+   "how": "Use the website to find a Sibshop near you.",
+   "phone": "",
+   "phone_label": "",
+   "url": "https://siblingsupport.org/",
+   "stages": [
+    "everyday"
+   ],
+   "needs": [
+    "any"
+   ],
+   "sources": [
+    "sibling-support"
    ]
   },
   {
@@ -832,6 +1072,49 @@
    ]
   },
   {
+   "id": "oh-osd",
+   "scope": "OH",
+   "name": "Help for Ohio children who are deaf or hard of hearing",
+   "org": "Ohio School for the Deaf statewide services",
+   "what": "The Ohio School for the Deaf helps families and local schools across the state, not just its own students. Ohio Hands & Voices and parent mentors who know hearing loss are also available.",
+   "how": "Read the state's list of programs, then ask your school district or Help Me Grow to connect you with statewide services.",
+   "phone": "",
+   "phone_label": "",
+   "url": "https://education.ohio.gov/Topics/Special-Education/Students-with-Disabilities/Deaf-and-Hearing-Impaired-%E2%80%94-Information-and-Resour",
+   "stages": [
+    "early",
+    "school"
+   ],
+   "needs": [
+    "sensory"
+   ],
+   "sources": [
+    "dew-deaf"
+   ]
+  },
+  {
+   "id": "oh-ossb",
+   "scope": "OH",
+   "name": "Ohio State School for the Blind outreach",
+   "org": "Ohio State School for the Blind",
+   "what": "Serves children from birth to 21 who are blind or have low vision. Besides its school in Columbus, it helps families and local schools across Ohio with materials, training and advice.",
+   "how": "Call to ask about outreach for your child and your school district.",
+   "phone": "614-752-1152",
+   "phone_label": "",
+   "url": "https://ossb.ohio.gov/",
+   "stages": [
+    "early",
+    "school"
+   ],
+   "needs": [
+    "sensory"
+   ],
+   "sources": [
+    "dew-blind",
+    "aph-ossb"
+   ]
+  },
+  {
    "id": "oh-county-dd",
    "scope": "OH",
    "name": "Your county board of developmental disabilities",
@@ -897,6 +1180,49 @@
    ],
    "sources": [
     "odm-ohiorise"
+   ]
+  },
+  {
+   "id": "oh-mrss",
+   "scope": "OH",
+   "name": "Youth mobile crisis team (MRSS)",
+   "org": "Ohio Department of Behavioral Health and Ohio Medicaid",
+   "what": "Free crisis help that comes to your child, for anyone 20 or younger in any Ohio county. A trained team, including a licensed counselor, can usually arrive within an hour at home, school or another safe place. You decide if it's a crisis.",
+   "how": "Call or text 988 and ask for MRSS. If anyone is in physical danger, call 911.",
+   "phone": "988",
+   "phone_label": "ask for MRSS",
+   "url": "https://mrss.ohio.gov/",
+   "stages": [
+    "everyday",
+    "rights"
+   ],
+   "needs": [
+    "any"
+   ],
+   "sources": [
+    "dew-mrss",
+    "ohioguidestone-mrss"
+   ]
+  },
+  {
+   "id": "oh-fcfc",
+   "scope": "OH",
+   "name": "County Family and Children First Council",
+   "org": "Ohio Family and Children First",
+   "what": "When a child's needs involve several agencies at once, such as school, mental health, the county board of DD or children services, your county council can bring everyone to one table to make one plan. Some councils can also help pay for things like respite or mentoring.",
+   "how": "Call your county's Family and Children First Council and ask for service coordination. Families can ask for it themselves.",
+   "phone": "",
+   "phone_label": "",
+   "url": "https://fcf.ohio.gov/",
+   "stages": [
+    "everyday",
+    "rights"
+   ],
+   "needs": [
+    "any"
+   ],
+   "sources": [
+    "fcf-handbook"
    ]
   },
   {
@@ -1475,6 +1801,455 @@
   {
    "term": "EFMP",
    "plain": "The military's Exceptional Family Member Program for active duty families with special medical or school needs."
+  },
+  {
+   "term": "MRSS",
+   "plain": "Mobile Response and Stabilization Services: Ohio's free youth crisis teams. Call or text 988 and ask for MRSS."
   }
- ]
+ ],
+ "early_intervention": {
+  "AL": {
+   "name": "Alabama's Early Intervention System",
+   "phone": "800-543-3098",
+   "url": "https://www.rehab.alabama.gov/services/ei"
+  },
+  "AK": {
+   "name": "Alaska Early Intervention/Infant Learning Program",
+   "phone": "877-477-3659",
+   "url": "https://health.alaska.gov/en/senior-and-disabilities-services/early-intervention-infant-learning/"
+  },
+  "AZ": {
+   "name": "Arizona Early Intervention Program (AzEIP)",
+   "phone": "888-592-0140",
+   "url": "https://des.az.gov/azeip"
+  },
+  "AR": {
+   "name": "First Connections",
+   "phone": "800-643-8258",
+   "url": "https://www.firstconnectionsar.org/"
+  },
+  "CA": {
+   "name": "Early Start",
+   "phone": "800-515-2229",
+   "url": "https://www.dds.ca.gov/services/early-start/"
+  },
+  "CO": {
+   "name": "Early Intervention Colorado",
+   "phone": "888-777-4041",
+   "url": "https://dcfs.my.salesforce-sites.com/eicolorado/EI_Home?lang=en"
+  },
+  "CT": {
+   "name": "Birth to Three",
+   "phone": "800-505-7000",
+   "url": "https://www.birth23.org/"
+  },
+  "DE": {
+   "name": "Birth to Three",
+   "phone": "800-671-0050",
+   "url": "https://www.b23de.org/"
+  },
+  "DC": {
+   "name": "Strong Start",
+   "phone": "202-727-3665",
+   "url": "https://osse.dc.gov/service/strong-start-dc-early-intervention-program-dc-eip"
+  },
+  "FL": {
+   "name": "Early Steps",
+   "phone": "800-218-0001",
+   "url": "https://www.earlystepsdirectory.com/"
+  },
+  "GA": {
+   "name": "Babies Can't Wait",
+   "phone": "800-229-2038",
+   "url": "https://dph.georgia.gov/Babies-Cant-Wait"
+  },
+  "HI": {
+   "name": "Early Intervention Section",
+   "phone": "800-235-5477",
+   "url": "https://health.hawaii.gov/eis/home/eiservices/"
+  },
+  "ID": {
+   "name": "Infant Toddler Program",
+   "phone": "800-926-2588",
+   "url": "https://healthandwelfare.idaho.gov/services-programs/children-families-older-adults/about-infant-toddler-program"
+  },
+  "IL": {
+   "name": "Illinois Early Intervention Program",
+   "phone": "800-323-4769",
+   "url": "https://idec.illinois.gov/forparents/early-intervention.html"
+  },
+  "IN": {
+   "name": "First Steps",
+   "phone": "800-545-7763",
+   "url": "https://www.in.gov/fssa/ddars/bcds/"
+  },
+  "IA": {
+   "name": "Early ACCESS",
+   "phone": "888-425-4371",
+   "url": "https://www.iafamilysupportnetwork.org/families/early-access/"
+  },
+  "KS": {
+   "name": "Infant Toddler Program",
+   "phone": "800-332-6262",
+   "url": "https://www.ksits.org/"
+  },
+  "KY": {
+   "name": "Kentucky Early Intervention System (KEIS)",
+   "phone": "877-417-8377",
+   "url": "https://www.chfs.ky.gov/agencies/dph/dmch/ecdb/Pages/keis.aspx"
+  },
+  "LA": {
+   "name": "Early Steps",
+   "phone": "866-327-5978",
+   "url": "https://ldh.la.gov/page/215"
+  },
+  "ME": {
+   "name": "Child Development Services",
+   "phone": "877-770-8883",
+   "url": "https://www.maine.gov/doe/learning/cds"
+  },
+  "MD": {
+   "name": "Maryland Infants and Toddlers Program",
+   "phone": "800-535-0182",
+   "url": "https://marylandpublicschools.org/programs/Pages/Special-Education/MITP/singlepointentry.aspx"
+  },
+  "MA": {
+   "name": "Massachusetts Early Intervention",
+   "phone": "800-905-8437",
+   "url": "https://www.mass.gov/orgs/early-intervention-division"
+  },
+  "MI": {
+   "name": "Early On",
+   "phone": "800-327-5966",
+   "url": "https://1800earlyon.org/"
+  },
+  "MN": {
+   "name": "Help Me Grow",
+   "phone": "866-693-4769",
+   "url": "https://helpmegrowmn.org/HMG/index.htm"
+  },
+  "MS": {
+   "name": "First Steps",
+   "phone": "800-451-3903",
+   "url": "https://msdh.ms.gov/msdhsite/_static/41,0,74.html"
+  },
+  "MO": {
+   "name": "First Steps",
+   "phone": "866-583-2392",
+   "url": "https://dese.mo.gov/childhood/early-intervention/first-steps"
+  },
+  "MT": {
+   "name": "Early Intervention Program",
+   "phone": "406-444-5647",
+   "url": "https://dphhs.mt.gov/ecfsd/childcare/montanamilestones/index"
+  },
+  "NE": {
+   "name": "Early Development Network",
+   "phone": "888-806-6287",
+   "url": "https://edn.ne.gov/cms/families"
+  },
+  "NV": {
+   "name": "Early Intervention Services",
+   "phone": "800-522-0066",
+   "url": "https://www.nevadaactearly.org/resources/parent-resources/referral-pathway/"
+  },
+  "NH": {
+   "name": "Family Centered Early Supports & Services",
+   "phone": "603-271-5034",
+   "url": "https://www.dhhs.nh.gov/programs-services/disability-care/developmental-services/birth-3-family-centered-early-supports"
+  },
+  "NJ": {
+   "name": "New Jersey Early Intervention System",
+   "phone": "888-653-4463",
+   "url": "https://nj.gov/health/fhs/eis/index.shtml"
+  },
+  "NM": {
+   "name": "Family Infant Toddler Program",
+   "phone": "877-696-1472",
+   "url": "https://www.nmececd.org/fit-families/"
+  },
+  "NY": {
+   "name": "Early Intervention Program",
+   "phone": "800-522-5006",
+   "url": "https://www.health.ny.gov/community/infants_children/early_intervention/"
+  },
+  "NC": {
+   "name": "Infant-Toddler Program",
+   "phone": "919-707-5520",
+   "url": "https://www.ncdhhs.gov/itp-beearly"
+  },
+  "ND": {
+   "name": "Early Intervention Program",
+   "phone": "800-755-8529",
+   "url": "https://www.hhs.nd.gov/early-childhood-services/early-intervention"
+  },
+  "OH": {
+   "name": "Help Me Grow Early Intervention",
+   "phone": "800-755-4769",
+   "url": "https://ohioearlyintervention.org/"
+  },
+  "OK": {
+   "name": "SoonerStart",
+   "phone": "405-271-8333",
+   "url": "https://oklahoma.gov/education/services/soonerstart.html"
+  },
+  "OR": {
+   "name": "Early Intervention and Early Childhood Special Education",
+   "phone": "503-947-5731",
+   "url": "https://www.oregon.gov/ode/students-and-family/SpecialEducation/earlyintervention/Pages/default.aspx"
+  },
+  "PA": {
+   "name": "Early Intervention",
+   "phone": "800-692-7288",
+   "url": "https://www.pa.gov/agencies/education/programs-and-services/instruction/early-learning/early-intervention"
+  },
+  "RI": {
+   "name": "Early Intervention Program",
+   "phone": "401-270-0101",
+   "url": "https://www.eohhs.ri.gov/Consumer/FamilieswithChildren/EarlyIntervention.aspx"
+  },
+  "SC": {
+   "name": "BabyNet",
+   "phone": "877-621-0865",
+   "url": "https://www.scdhhs.gov/resources/programs-and-initiatives/babynet"
+  },
+  "SD": {
+   "name": "Birth to Three",
+   "phone": "800-305-3064",
+   "url": "https://doe.sd.gov/birthto3/"
+  },
+  "TN": {
+   "name": "Tennessee Early Intervention System (TEIS)",
+   "phone": "800-852-7157",
+   "url": "https://www.tn.gov/disability-and-aging/disability-aging-programs/teis.html"
+  },
+  "TX": {
+   "name": "Early Childhood Intervention (ECI)",
+   "phone": "877-787-8999",
+   "url": "https://hhs.texas.gov/eci"
+  },
+  "UT": {
+   "name": "Early Childhood Utah",
+   "phone": "800-961-4226",
+   "url": "https://earlychildhood.utah.gov/"
+  },
+  "VT": {
+   "name": "Early Intervention for Infants and Toddlers",
+   "phone": "800-649-2642",
+   "url": "https://dcf.vermont.gov/services/cis/IDEA"
+  },
+  "VA": {
+   "name": "Infant & Toddler Connection of Virginia",
+   "phone": "800-234-1448",
+   "url": "https://www.itcva.online/"
+  },
+  "WA": {
+   "name": "Early Support for Infants and Toddlers (ESIT)",
+   "phone": "800-322-2588",
+   "url": "https://www.dcyf.wa.gov/services/child-development-supports/esit"
+  },
+  "WV": {
+   "name": "Birth to Three",
+   "phone": "866-321-4728",
+   "url": "https://www.wvdhhr.org/birth23/families.asp"
+  },
+  "WI": {
+   "name": "Birth to 3 Program",
+   "phone": "800-642-7837",
+   "url": "https://www.dhs.wisconsin.gov/birthto3/index.htm"
+  },
+  "WY": {
+   "name": "Early Intervention and Education Program",
+   "phone": "307-777-7115",
+   "url": "https://health.wyo.gov/behavioralhealth/early-intervention-education-program-eiep/"
+  }
+ },
+ "parent_centers": {
+  "AL": {
+   "name": "Alabama Parent Education Center",
+   "phone": "334-567-2252",
+   "url": "https://www.alabamaparentcenter.com/"
+  },
+  "AK": {
+   "name": "Stone Soup Group",
+   "phone": "907-561-3701",
+   "url": "https://www.stonesoupgroup.org/"
+  },
+  "AZ": {
+   "name": "Raising Special Kids",
+   "phone": "602-242-4366",
+   "url": "https://www.raisingspecialkids.org/"
+  },
+  "AR": {
+   "name": "The Center for Exceptional Families",
+   "phone": "870-336-3012",
+   "url": "https://www.thecenterforexceptionalfamilies.org/"
+  },
+  "CO": {
+   "name": "PEAK Parent Center",
+   "phone": "719-531-9400",
+   "url": "https://www.peakparent.org/"
+  },
+  "CT": {
+   "name": "Connecticut Parent Advocacy Center (CPAC)",
+   "phone": "860-739-3089",
+   "url": "https://www.cpacinc.org/"
+  },
+  "DE": {
+   "name": "Parent Information Center of Delaware",
+   "phone": "302-999-7394",
+   "url": "https://www.picofdel.org/"
+  },
+  "DC": {
+   "name": "Advocates for Justice and Education",
+   "phone": "202-678-8060",
+   "url": "https://www.aje-dc.org/"
+  },
+  "GA": {
+   "name": "Parent to Parent of Georgia",
+   "phone": "770-451-5484",
+   "url": "https://www.p2pga.org/"
+  },
+  "HI": {
+   "name": "Leadership in Disabilities & Achievement of Hawaii",
+   "phone": "808-536-9684",
+   "url": "https://www.ldahawaii.org/"
+  },
+  "ID": {
+   "name": "Idaho Parents Unlimited",
+   "phone": "208-342-5884",
+   "url": "https://ipulidaho.org/"
+  },
+  "IN": {
+   "name": "IN*SOURCE",
+   "phone": "574-234-7101",
+   "url": "https://www.insource.org/"
+  },
+  "IA": {
+   "name": "ASK Resource Center",
+   "phone": "515-243-1713",
+   "url": "https://askresource.org/"
+  },
+  "KS": {
+   "name": "Families Together",
+   "phone": "316-945-7747",
+   "url": "https://www.familiestogetherinc.org/"
+  },
+  "KY": {
+   "name": "Kentucky Special Parent Involvement Network (KY-SPIN)",
+   "phone": "502-937-6894",
+   "url": "https://www.kyspin.com/"
+  },
+  "LA": {
+   "name": "Louisiana Parent Training and Information Center",
+   "phone": "504-888-9111",
+   "url": "https://fhfjefferson.org/laptic"
+  },
+  "NE": {
+   "name": "PTI Nebraska",
+   "phone": "402-346-0525",
+   "url": "https://www.pti-nebraska.org/"
+  },
+  "NV": {
+   "name": "Nevada PEP",
+   "phone": "702-388-8899",
+   "url": "https://www.nvpep.org/"
+  },
+  "NH": {
+   "name": "Parent Information Center",
+   "phone": "603-224-7005",
+   "url": "https://www.picnh.org/"
+  },
+  "NJ": {
+   "name": "Statewide Parent Advocacy Network (SPAN)",
+   "phone": "973-642-8100",
+   "url": "https://www.spanadvocacy.org/"
+  },
+  "NM": {
+   "name": "Parents Reaching Out",
+   "phone": "505-247-0192",
+   "url": "https://www.parentsreachingout.org/"
+  },
+  "NC": {
+   "name": "ECAC",
+   "phone": "704-892-1321",
+   "url": "https://www.ecac-parentcenter.org/"
+  },
+  "ND": {
+   "name": "Pathfinder Parent Center",
+   "phone": "701-837-7500",
+   "url": "https://www.pathfinder-nd.org/"
+  },
+  "OH": {
+   "name": "Ohio Coalition for the Education of Children with Disabilities (OCECD)",
+   "phone": "844-382-5452",
+   "url": "https://www.ocecd.org/"
+  },
+  "OK": {
+   "name": "Oklahoma Parents Center",
+   "phone": "877-553-4332",
+   "url": "https://www.oklahomaparentscenter.org/"
+  },
+  "OR": {
+   "name": "FACT Oregon",
+   "phone": "503-786-6082",
+   "url": "https://factoregon.org/"
+  },
+  "RI": {
+   "name": "Rhode Island Parent Information Network (RIPIN)",
+   "phone": "401-270-0101",
+   "url": "https://www.ripin.org/"
+  },
+  "SC": {
+   "name": "Family Connection of South Carolina",
+   "phone": "803-252-0914",
+   "url": "https://www.familyconnectionsc.org/"
+  },
+  "SD": {
+   "name": "South Dakota Parent Connection",
+   "phone": "605-361-3171",
+   "url": "https://www.sdparent.org/"
+  },
+  "TN": {
+   "name": "Support and Training for Exceptional Parents (STEP)",
+   "phone": "423-639-0125",
+   "url": "https://www.tnstep.org/"
+  },
+  "UT": {
+   "name": "Utah Parent Center",
+   "phone": "801-272-1051",
+   "url": "https://www.utahparentcenter.org/"
+  },
+  "VT": {
+   "name": "Vermont Family Network",
+   "phone": "802-876-5315",
+   "url": "https://www.vermontfamilynetwork.org/"
+  },
+  "VA": {
+   "name": "Parent Educational Advocacy Training Center (PEATC)",
+   "phone": "703-923-0010",
+   "url": "https://www.peatc.org/"
+  },
+  "WA": {
+   "name": "PAVE",
+   "phone": "253-565-2266",
+   "url": "https://www.wapave.org/"
+  },
+  "WV": {
+   "name": "West Virginia Parent Training and Information",
+   "phone": "304-624-1436",
+   "url": "https://www.wvpti.org/"
+  },
+  "WI": {
+   "name": "Wisconsin FACETS",
+   "phone": "414-374-4645",
+   "url": "https://www.wifacets.org/"
+  },
+  "WY": {
+   "name": "Parent Information Center",
+   "phone": "307-684-2277",
+   "url": "https://www.wpic.org/"
+  }
+ },
+ "parent_centers_note": "States not listed have several regional parent centers or no complete listing; the guide links to the national map for them."
 }
