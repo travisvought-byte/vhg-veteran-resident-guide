@@ -62,7 +62,7 @@ for(const [code,name] of Object.entries(data.states)){
 {const {$,set,w}=load('?state=OH&county=Morrow');
  assert($('county-result').textContent.includes('419-947-1159')&&$('county-result').textContent.includes('Morrow County Board of DD'));
  assert($('cvso-link').getAttribute('href')==='./?state=OH&county=Morrow');
- set('county','Adams');assert($('county-result').textContent.includes('800-617-6733'));assert(w.location.search.includes('county=Adams'));
+ set('county','Adams');{const r=$('county-result').textContent;assert(r.includes('Adams County Board of DD (West Union)')&&r.includes('937-544-2574')&&r.includes('ask how to apply'),r);}assert(w.location.search.includes('county=Adams'));
  set('state','PA');assert.equal($('county').value,'');assert.equal($('county-result').textContent,'');assert(!w.location.search.includes('county'));}
 {const {$}=load('?state=OH&county=Atlantis');assert.equal($('county').value,'');}
 {const {w,$}=load('?state=ZZ&stage=bogus&need=bogus');assert.equal($('state').value,'OH');$('print').click();assert(w.printed);
@@ -150,4 +150,11 @@ for(const code of Object.keys(data.states)){const {$,d}=load('?lang=es&state='+c
  const box=$('letter-text');box.value='edited';box.dispatchEvent(new d.defaultView.Event('input'));
  $('lang-toggle').click();assert.equal(box.value,'edited','a parent\'s edits survive a language switch');}
 {const {$}=load('?state=OH');assert($('partner').textContent.startsWith("In partnership with Debs Yoga"));assert(!/autis/i.test($('partner').textContent),'partner credit names no diagnosis');}
-console.log('PASS family guide: 51 state entries, Ohio replacements, stage/need filters, county board routes, correction links, stage-aware first calls, need ordering, military toggle, glossary, each state early intervention and parent center, Ohio crisis line, verified Ohio first calls, Ohio hospital evaluation centers, CHADD of Ohio, quick start, evaluation request letter, Spanish top of page in all 51 jurisdictions and no storage.');
+
+// Every Ohio county shows a direct county board number from DODD's statewide directory.
+{const {$,d}=load('?state=OH');const sel=$('county');const opts=[...sel.options].filter(o=>o.value);assert.equal(opts.length,88);
+ for(const o of opts){sel.value=o.value;sel.dispatchEvent(new d.defaultView.Event('change',{bubbles:true}));
+  const r=$('county-result').textContent;assert(/\d{3}-\d{3}-\d{4}/.test(r)&&r.includes(o.value+' County Board of DD'),o.value+': '+r);
+  assert(!r.includes('on the map'),o.value);}}
+{const {$,d}=load('?state=OH&county=Lucas&lang=es');assert($('county-result').textContent.includes('pregunte cómo solicitar servicios'));}
+console.log('PASS family guide: 51 state entries, Ohio replacements, stage/need filters, county board routes, correction links, stage-aware first calls, need ordering, military toggle, glossary, each state early intervention and parent center, Ohio crisis line, verified Ohio first calls, Ohio hospital evaluation centers, CHADD of Ohio, quick start, evaluation request letter, all 88 county boards, Spanish top of page in all 51 jurisdictions and no storage.');

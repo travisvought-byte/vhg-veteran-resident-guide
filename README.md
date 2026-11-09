@@ -207,6 +207,8 @@ North Carolina adds all **100 counties**, 14 state programs, 16 aging agencies a
 
 A Spanish switch (`?lang=es`) translates the top of the page: crisis help, state and county pickers, stages, needs, first calls and the result line. Program listings stay in English with a note to ask for a free interpreter. The Spanish strings live in `data/family-guide-es.json` and are a machine-assisted draft pending review by a native speaker; the build fails if any marked element lacks a Spanish string. Ohio's first-call numbers are matched against each organization's own website on the review date.
 
+Choosing an Ohio county shows that county board of DD's direct number for all 88 counties: Delaware, Knox, Marion and Morrow use their researched intake lines, and the rest use the board's main office from the Ohio Department of Developmental Disabilities' statewide county board directory (`data/ohio-county-boards-dd.json`, with its source and review date).
+
 Source records: `data/family-guide.json` (each listing names its sources and review date); template: `templates/family-guide.html`; behavior and styles: `assets/family-guide.*`; build and validation: `scripts/build_family_guide.py`, run by `scripts/build_public.py`. Choices live only in the URL; nothing is stored or sent. Run `node tests/family-guide.cjs` and `node tests/family-guide-browser.cjs`.
 
 ## Mobility independence
