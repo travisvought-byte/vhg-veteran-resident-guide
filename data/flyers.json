@@ -1,0 +1,31 @@
+{
+ "note": "Printable flyers listed on flyers.html. Each flyer's print source is flyers/src/<id>.html; run `node scripts/build_flyers.cjs` to rebuild the PDFs and preview images after editing a source.",
+ "flyers": [
+  {
+   "id": "family-guide-letter",
+   "title": "Family Guide flyer",
+   "guide": "family-guide.html",
+   "guide_name": "Family Guide",
+   "size": "Letter, 8.5 × 11 in",
+   "width_in": 8.5,
+   "height_in": 11,
+   "use": "For a bulletin board: pediatric and therapy waiting rooms, schools, libraries, churches and community centers.",
+   "alt": "Flyer headed \"Worried about your child?\" with two age choices, Ohio phone numbers, a QR code to the Family Guide and the 988 crisis line.",
+   "qr": "flyers/src/qr-family-guide.svg",
+   "share_card": true
+  },
+  {
+   "id": "family-guide-half",
+   "title": "Family Guide handout",
+   "guide": "family-guide.html",
+   "guide_name": "Family Guide",
+   "size": "Half sheet, 5.5 × 8.5 in",
+   "width_in": 5.5,
+   "height_in": 8.5,
+   "two_up": true,
+   "use": "To hand to a parent or leave at a front desk. The two-per-page version prints on regular letter paper; cut it in half.",
+   "alt": "Half-sheet handout headed \"Worried about your child?\" with two age choices, Ohio phone numbers, a QR code to the Family Guide and the 988 crisis line.",
+   "qr": "flyers/src/qr-family-guide.svg"
+  }
+ ]
+}

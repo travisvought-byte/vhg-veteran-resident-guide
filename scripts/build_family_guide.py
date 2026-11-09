@@ -174,6 +174,26 @@ def spanish(data):
     return {k: es[k] for k in ('static', 'stages', 'needs', 'anchor_labels', 'anchor_text', 'dynamic')}
 
 
+def share_card(guide, place):
+    """A "Share this guide" card: the page's flyer thumbnail, a QR code to the page and download links.
+    Driven by data/flyers.json (the entry for this guide marked share_card). place is 'hero' or 'bottom'."""
+    flyers = json.loads((ROOT / 'data/flyers.json').read_text())['flyers']
+    f = next(x for x in flyers if x['guide'] == guide and x.get('share_card'))
+    for rel in (f'flyers/{f["id"]}-thumb.png', f'flyers/{f["id"]}.pdf', f['qr']):
+        assert (ROOT / rel).is_file(), rel
+    url = 'guide.vethomeguard.org/' + guide
+    hid = 'share-title-' + place
+    return (f'<aside class="share-card share-{place}" aria-labelledby="{hid}">'
+            f'<h2 id="{hid}" data-i18n="share-title">Share this guide</h2>'
+            f'<p class="small" data-i18n="share-text">Scan the code to open it on a phone, or print the flyer for a waiting room, school or front desk.</p>'
+            f'<div class="share-row"><a class="share-thumb" href="flyers/{f["id"]}.pdf"><img src="flyers/{f["id"]}-thumb.png" '
+            f'alt="Preview of the printable flyer" width="110" height="{round(110 * f["height_in"] / f["width_in"])}"></a>'
+            f'<img class="share-qr" src="{esc(f["qr"])}" alt="QR code that opens {esc(url)}" width="110" height="110"></div>'
+            f'<p class="share-url">{esc(url)}</p>'
+            f'<p class="share-links"><a href="flyers/{f["id"]}.pdf" download data-i18n="share-download">Download the flyer (PDF)</a>'
+            f'<a href="flyers.html" data-i18n="share-all">All printable flyers</a></p></aside>')
+
+
 def outputs():
     data = validate(json.loads((ROOT / 'data/family-guide.json').read_text()))
     sources = {s['id']: s for s in data['sources']}
@@ -207,6 +227,7 @@ def outputs():
         '__NEEDS__': need_boxes, '__CARDS__': '\n'.join(cards), '__MILITARY__': '\n'.join(military),
         '__CHANGES__': changes, '__ANCHORS__': anchors, '__REVIEWED__': data['reviewed_on'],
         '__COUNT__': str(sum(1 for r in data['resources'] if r['scope'] != 'MIL' and 'OH' not in r.get('state_replacements', {}))), '__MILCOUNT__': str(len(military)), '__GLOSSARY__': glossary,
+        '__SHARE_HERO__': share_card('family-guide.html', 'hero'), '__SHARE_BOTTOM__': share_card('family-guide.html', 'bottom'),
         '__DATA__': json.dumps(page_data, ensure_ascii=False).replace('<', '\\u003c'),
     }.items():
         assert key in page, key

@@ -90,7 +90,7 @@ def unified_outputs(root, editions, states):
         short='<aside class="november-campaign" aria-label="November retail fundraiser"><strong>Retailers:</strong> run a November roundup for veterans — <strong>Marine Corps birthday (Nov. 10)</strong> and Veterans Day (Nov. 11). <a href="november-campaign.html">Campaign details →</a></aside>'
         county=section(unified,'county-start')
         unified=unified.replace(county,county+short,1)
-    unified=unified.replace('<a class="jump" href="#support-vhg">Support VHG</a>', '<a class="jump" data-advocacy-route href="disability-advocacy.html">Disability rights &amp; advocacy</a><a class="jump" data-family-route href="family-guide.html">Families: autism, ADHD &amp; disabilities</a><a class="jump" href="#support-vhg">Support VHG</a>',1)
+    unified=unified.replace('<a class="jump" href="#support-vhg">Support VHG</a>', '<a class="jump" data-advocacy-route href="disability-advocacy.html">Disability rights &amp; advocacy</a><a class="jump" data-family-route href="family-guide.html">Families: autism, ADHD &amp; disabilities</a><a class="jump" href="flyers.html">Printable flyers</a><a class="jump" href="#support-vhg">Support VHG</a>',1)
     # One small shared bundle plus one file per state; the base state is preloaded.
     def versioned(path, text):
         return path+'?v='+hashlib.sha256(text.encode()).hexdigest()[:10]

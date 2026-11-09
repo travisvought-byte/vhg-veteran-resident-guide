@@ -209,6 +209,8 @@ A Spanish switch (`?lang=es`) translates the top of the page: crisis help, state
 
 Choosing an Ohio county shows that county board of DD's direct number for all 88 counties: Delaware, Knox, Marion and Morrow use their researched intake lines, and the rest use the board's main office from the Ohio Department of Developmental Disabilities' statewide county board directory (`data/ohio-county-boards-dd.json`, with its source and review date).
 
+[Printable flyers](https://guide.vethomeguard.org/flyers.html) lists every flyer as a downloadable PDF with a preview. Each flyer's print source is `flyers/src/<id>.html` (fonts and QR code alongside it) and its entry is in `data/flyers.json`. After editing a source or adding an entry, run `node scripts/build_flyers.cjs` to rebuild the PDFs and previews (it fails if anything would be cut off the page), then `python3 scripts/build_flyers_page.py` to rebuild the page. `tests/flyers.cjs` checks each PDF is one page at its stated size and that the page is current. A flyer entry marked `share_card` also appears on its guide page as a "Share this guide" card: the flyer thumbnail, a QR code to that page (`qr`) and the PDF download. It sits beside the page title on wide screens and above the footer on phones, so it never pushes the first steps down.
+
 Source records: `data/family-guide.json` (each listing names its sources and review date); template: `templates/family-guide.html`; behavior and styles: `assets/family-guide.*`; build and validation: `scripts/build_family_guide.py`, run by `scripts/build_public.py`. Choices live only in the URL; nothing is stored or sent. Run `node tests/family-guide.cjs` and `node tests/family-guide-browser.cjs`.
 
 ## Mobility independence
