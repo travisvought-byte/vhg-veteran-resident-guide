@@ -157,4 +157,12 @@ for(const code of Object.keys(data.states)){const {$,d}=load('?lang=es&state='+c
   const r=$('county-result').textContent;assert(/\d{3}-\d{3}-\d{4}/.test(r)&&r.includes(o.value+' County Board of DD'),o.value+': '+r);
   assert(!r.includes('on the map'),o.value);}}
 {const {$,d}=load('?state=OH&county=Lucas&lang=es');assert($('county-result').textContent.includes('pregunte cómo solicitar servicios'));}
-console.log('PASS family guide: 51 state entries, Ohio replacements, stage/need filters, county board routes, correction links, stage-aware first calls, need ordering, military toggle, glossary, each state early intervention and parent center, Ohio crisis line, verified Ohio first calls, Ohio hospital evaluation centers, CHADD of Ohio, quick start, evaluation request letter, all 88 county boards, Spanish top of page in all 51 jurisdictions and no storage.');
+
+// Share card: flyer thumbnail, QR to this page and the flyer download, once beside the hero and once near the footer for phones.
+{const fs=require('fs'),path=require('path');const {$,d}=load('?state=OH');const cards=[...d.querySelectorAll('.share-card')];assert.equal(cards.length,2);
+ assert(d.querySelector('.hero .share-hero')&&d.querySelector('.share-bottom'));
+ for(const c of cards){for(const img of c.querySelectorAll('img')){const src=img.getAttribute('src');assert(fs.existsSync(path.join(__dirname,'..',src)),src);assert(img.getAttribute('alt'));}
+  assert(c.querySelector('a[href="flyers/family-guide-letter.pdf"][download]')&&c.querySelector('a[href="flyers.html"]'));
+  assert(c.textContent.includes('guide.vethomeguard.org/family-guide.html'));}}
+{const {d}=load('?state=OH&lang=es');assert.equal(d.querySelector('.share-hero h2').textContent,'Comparta esta guía');}
+console.log('PASS family guide: 51 state entries, Ohio replacements, stage/need filters, county board routes, correction links, stage-aware first calls, need ordering, military toggle, glossary, each state early intervention and parent center, Ohio crisis line, verified Ohio first calls, Ohio hospital evaluation centers, CHADD of Ohio, quick start, evaluation request letter, all 88 county boards, share card, Spanish top of page in all 51 jurisdictions and no storage.');

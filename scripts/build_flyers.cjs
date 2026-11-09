@@ -37,6 +37,12 @@ const PX = 96;
     if (problems.length) throw new Error(f.id + ':\n  ' + problems.join('\n  '));
     await page.pdf({path: path.join(OUT, f.id + '.pdf'), width: f.width_in + 'in', height: f.height_in + 'in', printBackground: true, pageRanges: '1'});
     await page.screenshot({path: path.join(OUT, f.id + '.png'), clip: {x: 0, y: 0, width: w, height: h}});
+    // Small preview for the share card on guide pages (240 px wide, shown at 120).
+    const thumb = await browser.newPage({viewport: {width: w, height: h}, deviceScaleFactor: 240 / w});
+    await thumb.goto('file://' + src);
+    await thumb.evaluate(() => document.fonts.ready);
+    await thumb.screenshot({path: path.join(OUT, f.id + '-thumb.png'), clip: {x: 0, y: 0, width: w, height: h}});
+    await thumb.close();
     if (f.two_up) {
       // Two copies side by side on landscape letter (11 × 8.5 in), with a dashed cut line between them.
       const two = await browser.newPage({viewport: {width: 1056, height: 816}});

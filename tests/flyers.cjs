@@ -29,6 +29,8 @@ for (const f of flyers) {
   onePagePdf('flyers/' + f.id + '.pdf', f.width_in, f.height_in);
   if (f.two_up) onePagePdf('flyers/' + f.id + '-2up.pdf', 11, 8.5);
   assert(read('flyers/' + f.id + '.png').subarray(0, 8).equals(Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a])), f.id + ' preview is a PNG');
+  assert(read('flyers/' + f.id + '-thumb.png').subarray(1, 4).toString() === 'PNG', f.id + ' has a share-card thumbnail');
+  assert(fs.existsSync(path.join(ROOT, f.qr)), f.id + ' QR file exists');
   const src = read('flyers/src/' + f.id + '.html').toString();
   assert(!/\{\{|\/_blob\//.test(src), f.id + ' print source has no canvas placeholders');
   assert(page.includes('href="flyers/' + f.id + '.pdf" download'), 'flyers.html offers ' + f.id + '.pdf');
