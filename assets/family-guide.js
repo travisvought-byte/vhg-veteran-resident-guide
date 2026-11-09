@@ -137,7 +137,12 @@
   wrap.append(el('h4', {}, spanish ? fill(d.county_heading, {county}) : county + ' County'));
   const row = (label, nodes) => { const li = el('li'); li.append(el('strong', {}, label + ': ')); nodes.forEach((n, i) => { if (i) li.append(' · '); li.append(n); }); ul.append(li); };
   const ddLabel = spanish ? d.county_dd : 'County board of DD';
-  if (c.dd) row(ddLabel, [link(c.dd.url, spanish ? fill(d.county_dd_link, {county}) : county + ' County Board of DD'), link(tel(c.dd.phone), c.dd.phone)]);
+  if (c.dd) {
+   const boardName = spanish ? fill(d.county_dd_link, {county}) : county + ' County Board of DD';
+   const nodes = [c.dd.url ? link(c.dd.url, boardName) : document.createTextNode(boardName + (c.dd.city ? ' (' + c.dd.city + ')' : '')), link(tel(c.dd.phone), c.dd.phone)];
+   if (c.dd.ask) nodes.push(document.createTextNode(spanish ? d.county_dd_ask : 'ask how to apply for services'));
+   row(ddLabel, nodes);
+  }
   else row(ddLabel, [link('https://www.oacbdd.org/familyresources', spanish ? fill(d.county_dd_map, {county}) : 'pick ' + county + ' County on the map'), link('tel:8006176733', '800-617-6733')]);
   row(spanish ? d.veteran_families : 'Veteran families', [link('./?state=OH&county=' + encodeURIComponent(county), spanish ? fill(d.cvso, {county}) : county + ' County veterans service office')]);
   wrap.append(ul);

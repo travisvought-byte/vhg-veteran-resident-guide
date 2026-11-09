@@ -98,7 +98,16 @@ def ohio_counties():
     names = sorted(c['county'] for c in counties)
     assert len(names) == 88
     assert set(intake) <= set(names)
-    return [{'county': n, 'dd': intake.get(n)} for n in names]
+    # Every other county gets its board's main office from DODD's statewide county board directory.
+    directory = json.loads((ROOT / 'data/ohio-county-boards-dd.json').read_text())
+    main = {b['county']: b for b in directory['boards']}
+    assert set(main) == set(names), set(main) ^ set(names)
+    for n in names:
+        if n not in intake:
+            intake[n] = {'name': n + ' County Board of DD', 'phone': main[n]['phone'], 'url': None,
+                         'city': main[n]['city'], 'ask': True,
+                         'reviewed_on': directory['source']['reviewed_on']}
+    return [{'county': n, 'dd': intake[n]} for n in names]
 
 
 def card(r, sources, need_names):
