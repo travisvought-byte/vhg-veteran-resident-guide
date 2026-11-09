@@ -149,4 +149,5 @@ for(const code of Object.keys(data.states)){const {$,d}=load('?lang=es&state='+c
  assert.equal(d.querySelector('.quick-btn[data-quick=school]').getAttribute('aria-pressed'),'true');
  const box=$('letter-text');box.value='edited';box.dispatchEvent(new d.defaultView.Event('input'));
  $('lang-toggle').click();assert.equal(box.value,'edited','a parent\'s edits survive a language switch');}
+{const {$}=load('?state=OH');assert($('partner').textContent.startsWith("In partnership with Deb's Yoga"));assert(!/autis/i.test($('partner').textContent),'partner credit names no diagnosis');}
 console.log('PASS family guide: 51 state entries, Ohio replacements, stage/need filters, county board routes, correction links, stage-aware first calls, need ordering, military toggle, glossary, each state early intervention and parent center, Ohio crisis line, verified Ohio first calls, Ohio hospital evaluation centers, CHADD of Ohio, quick start, evaluation request letter, Spanish top of page in all 51 jurisdictions and no storage.');
