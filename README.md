@@ -2,47 +2,47 @@
 
 A free public guide created and maintained by Travis Vought, and shared by Veteran Home Guardians (VHG) for veterans, surviving spouses, seniors, people with disabilities, families and care teams. It helps people find their first contact and prepare a useful referral.
 
-**Live guide:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/
+**Live guide:** https://guide.vethomeguard.org/
 
-**Ohio Bingo & Senior Centers:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/bingo.html — find games and activities by ZIP code. This directory is part of this repository, with direct links in the guide’s main navigation and homepage.
+**Ohio Bingo & Senior Centers:** https://guide.vethomeguard.org/bingo.html — find games and activities by ZIP code. This directory is part of this repository, with direct links in the guide’s main navigation and homepage.
 
-**Guided assistance beta:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/assistant/ — an optional, browser-only, source-linked navigator for 13 states with referral drafts, accessibility preparation checklists and printable handoffs. It does not submit benefit applications, send messages, save cases or decide eligibility.
+**Guided assistance beta:** https://guide.vethomeguard.org/assistant/ — an optional, browser-only, source-linked navigator for 13 states with referral drafts, accessibility preparation checklists and printable handoffs. It does not submit benefit applications, send messages, save cases or decide eligibility.
 
-**Pennsylvania guide:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/pa.html
+**Pennsylvania guide:** https://guide.vethomeguard.org/pa.html
 
-**Pennsylvania sharing kit:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/share-pa.html
+**Pennsylvania sharing kit:** https://guide.vethomeguard.org/share-pa.html
 
-**New York guide:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/ny.html
+**New York guide:** https://guide.vethomeguard.org/ny.html
 
-**New York sharing kit:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/share-ny.html
+**New York sharing kit:** https://guide.vethomeguard.org/share-ny.html
 
-**Michigan guide:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/mi.html
+**Michigan guide:** https://guide.vethomeguard.org/mi.html
 
-**Michigan sharing kit:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/share-mi.html
+**Michigan sharing kit:** https://guide.vethomeguard.org/share-mi.html
 
-**Kentucky guide:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/ky.html
+**Kentucky guide:** https://guide.vethomeguard.org/ky.html
 
-**Kentucky sharing kit:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/share-ky.html
+**Kentucky sharing kit:** https://guide.vethomeguard.org/share-ky.html
 
-**Utah guide:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/ut.html
+**Utah guide:** https://guide.vethomeguard.org/ut.html
 
-**Utah sharing kit:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/share-ut.html
+**Utah sharing kit:** https://guide.vethomeguard.org/share-ut.html
 
-**Indiana guide:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/?state=IN
+**Indiana guide:** https://guide.vethomeguard.org/?state=IN
 
-**Indiana sharing kit:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/share-in.html
+**Indiana sharing kit:** https://guide.vethomeguard.org/share-in.html
 
-**West Virginia guide:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/?state=WV
+**West Virginia guide:** https://guide.vethomeguard.org/?state=WV
 
-**West Virginia sharing kit:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/share-wv.html
+**West Virginia sharing kit:** https://guide.vethomeguard.org/share-wv.html
 
-**Ohio sharing kit:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/share.html
+**Ohio sharing kit:** https://guide.vethomeguard.org/share.html
 
 **Created and maintained by:** [Travis Vought](https://travisvought-byte.github.io/ohio-cannabis-directory/work-with-travis.html). **Shared by:** Veteran Home Guardians (VHG). Resource corrections: travis@vethomeguard.org. [Project stewardship](PROJECT_STEWARDSHIP.md).
 
 ## November 2026 retail fundraiser
 
-Invite retailers to run a voluntary roundup, top-up or donation campaign for Veteran Home Guardians during November, celebrating the **Marine Corps birthday (November 10)** and **Veterans Day (November 11)**. [Campaign options and contact](https://travisvought-byte.github.io/vhg-veteran-resident-guide/november-campaign.html). Coordinate with **travis@vethomeguard.org** before launching.
+Invite retailers to run a voluntary roundup, top-up or donation campaign for Veteran Home Guardians during November, celebrating the **Marine Corps birthday (November 10)** and **Veterans Day (November 11)**. [Campaign options and contact](https://guide.vethomeguard.org/november-campaign.html). Coordinate with **travis@vethomeguard.org** before launching.
 
 ## Starter editions
 
@@ -92,13 +92,13 @@ Kentucky has KDVA regional benefits representatives, aging contacts, district om
 
 ## Utah expansion
 
-Utah is the sixth state: all 29 counties have regional veterans referrals, matched aging agencies and long-term-care ombudsmen. Its 66 resources include 33 shared federal/national records, 10 Utah programs, 12 aging contacts and 11 ombudsman regions. Veterans, aging and ombudsman county boundaries are maintained separately, including Uintah County’s separate aging route. Published sources were reviewed October 14, 2026; contacts are not telephone-confirmed. Local providers and activity listings remain incomplete. [Open Utah](https://travisvought-byte.github.io/vhg-veteran-resident-guide/?state=UT), [sharing kit](https://travisvought-byte.github.io/vhg-veteran-resident-guide/share-ut.html), and [coverage and evidence](docs/UTAH.md).
+Utah is the sixth state: all 29 counties have regional veterans referrals, matched aging agencies and long-term-care ombudsmen. Its 66 resources include 33 shared federal/national records, 10 Utah programs, 12 aging contacts and 11 ombudsman regions. Veterans, aging and ombudsman county boundaries are maintained separately, including Uintah County’s separate aging route. Published sources were reviewed October 14, 2026; contacts are not telephone-confirmed. Local providers and activity listings remain incomplete. [Open Utah](https://guide.vethomeguard.org/?state=UT), [sharing kit](https://guide.vethomeguard.org/share-ut.html), and [coverage and evidence](docs/UTAH.md).
 
 Canonical Utah data lives in `data/public/ut-programs.json`, `data/public/ut-regional-referrals.json` and `data/public/utah-county-veterans-offices.json`. The standard build generates the combined data, shared adapter, redirect and sharing kit. Unified DOM and browser checks include all thirteen states and all 1,208 counties and equivalents.
 
 ## Bingo and urgent support
 
-The [Ohio Bingo & Senior Centers section](https://travisvought-byte.github.io/vhg-veteran-resident-guide/bingo.html) includes all 717 state-listed Type I entries and 114 senior centers in 81 counties (15 researched in detail, 47 from the Ohio Association of Senior Centers member directory, 52 from Area Agency on Aging and county sources). Games with published schedules and senior centers are shown first; license-only entries are one click away. Search by ZIP/distance, activity, published bingo day (Today, Tomorrow, or a weekday) or time of day, and print a one-page facility flyer with a QR code. Specific dates, closures and expired offers are handled separately from license authorization days. Seventy-five entries now have published schedule details after seven October research passes. See [bingo evidence and expansion](docs/BINGO.md).
+The [Ohio Bingo & Senior Centers section](https://guide.vethomeguard.org/bingo.html) includes all 717 state-listed Type I entries and 114 senior centers in 81 counties (15 researched in detail, 47 from the Ohio Association of Senior Centers member directory, 52 from Area Agency on Aging and county sources). Games with published schedules and senior centers are shown first; license-only entries are one click away. Search by ZIP/distance, activity, published bingo day (Today, Tomorrow, or a weekday) or time of day, and print a one-page facility flyer with a QR code. Specific dates, closures and expired offers are handled separately from license authorization days. Seventy-five entries now have published schedule details after seven October research passes. See [bingo evidence and expansion](docs/BINGO.md).
 
 All thirteen editions have a prominent urgent-help section, crisis and mental-health resources, and expanded homelessness pathways: the VA national call center, SSVF community providers, HUD-VASH and VA Community Resource and Referral Centers. Local shelter beds, individual provider intake and availability are not comprehensively mapped.
 
@@ -173,13 +173,13 @@ Ohio housing referrals now include four county-scoped SSVF providers covering 30
 
 Texas adds all 254 counties, 13 state programs, 28 aging agencies and 28 ombudsman regions. Eleven counties use statewide veterans referrals. Current county publications, TexVet directory entries and published source differences remain distinguished. [Coverage, sources and limitations](docs/TEXAS.md).
 
-**Florida guide:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/?state=FL
+**Florida guide:** https://guide.vethomeguard.org/?state=FL
 
-**Florida sharing kit:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/share-fl.html
+**Florida sharing kit:** https://guide.vethomeguard.org/share-fl.html
 
-**Texas guide:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/?state=TX
+**Texas guide:** https://guide.vethomeguard.org/?state=TX
 
-**Texas sharing kit:** https://travisvought-byte.github.io/vhg-veteran-resident-guide/share-tx.html
+**Texas sharing kit:** https://guide.vethomeguard.org/share-tx.html
 
 ## License
 
@@ -187,7 +187,7 @@ Resource data in `prototype-data.json`, `data/public/`, CSV files and published 
 
 ## California scope
 
-California is the eleventh state edition, with all 58 counties mapped to published veterans service office contacts or an explicitly labeled CalVet statewide fallback for Alpine and Sierra. Fifty-nine county and Los Angeles City aging helplines cover the state's 33 Area Agencies on Aging. Thirty-four local ombudsman jurisdictions use clearly labeled statewide hotline routing while direct local phones await verification. Thirteen state programs cover benefits, veteran care, aging, disability, Medicare counseling and accessibility. [California guide](https://travisvought-byte.github.io/vhg-veteran-resident-guide/?state=CA), [sharing kit](https://travisvought-byte.github.io/vhg-veteran-resident-guide/share-ca.html), and [coverage and evidence](docs/CALIFORNIA.md).
+California is the eleventh state edition, with all 58 counties mapped to published veterans service office contacts or an explicitly labeled CalVet statewide fallback for Alpine and Sierra. Fifty-nine county and Los Angeles City aging helplines cover the state's 33 Area Agencies on Aging. Thirty-four local ombudsman jurisdictions use clearly labeled statewide hotline routing while direct local phones await verification. Thirteen state programs cover benefits, veteran care, aging, disability, Medicare counseling and accessibility. [California guide](https://guide.vethomeguard.org/?state=CA), [sharing kit](https://guide.vethomeguard.org/share-ca.html), and [coverage and evidence](docs/CALIFORNIA.md).
 
 ## Florida scope
 
@@ -195,15 +195,15 @@ Florida adds published county veterans contacts and aging/ombudsman referral rou
 
 ## Virginia scope
 
-Virginia adds all **95 counties and 38 independent cities** with separate locality names and types, 13 statewide programs, 25 aging agencies and 22 ombudsman routes. Three DVS offices were owner spot-checked; Fairfax’s phone correction and older source conflict are preserved. Two cities use statewide veterans referral. [Virginia guide](https://travisvought-byte.github.io/vhg-veteran-resident-guide/?state=VA), [sharing kit](https://travisvought-byte.github.io/vhg-veteran-resident-guide/share-va.html), and [coverage and evidence](docs/VIRGINIA.md).
+Virginia adds all **95 counties and 38 independent cities** with separate locality names and types, 13 statewide programs, 25 aging agencies and 22 ombudsman routes. Three DVS offices were owner spot-checked; Fairfax’s phone correction and older source conflict are preserved. Two cities use statewide veterans referral. [Virginia guide](https://guide.vethomeguard.org/?state=VA), [sharing kit](https://guide.vethomeguard.org/share-va.html), and [coverage and evidence](docs/VIRGINIA.md).
 
 ## North Carolina scope
 
-North Carolina adds all **100 counties**, 14 state programs, 16 aging agencies and 16 ombudsman regions. 89 county veterans contacts and 11 assigned state regional contacts preserve source periods and phone conflicts. Accessibility guidance includes CAP/DA authorization requirements, new-construction/rental exclusions and the current Independent Living purchase pause. [North Carolina guide](https://travisvought-byte.github.io/vhg-veteran-resident-guide/?state=NC), [sharing kit](https://travisvought-byte.github.io/vhg-veteran-resident-guide/share-nc.html), and [coverage and evidence](docs/NORTH-CAROLINA.md).
+North Carolina adds all **100 counties**, 14 state programs, 16 aging agencies and 16 ombudsman regions. 89 county veterans contacts and 11 assigned state regional contacts preserve source periods and phone conflicts. Accessibility guidance includes CAP/DA authorization requirements, new-construction/rental exclusions and the current Independent Living purchase pause. [North Carolina guide](https://guide.vethomeguard.org/?state=NC), [sharing kit](https://guide.vethomeguard.org/share-nc.html), and [coverage and evidence](docs/NORTH-CAROLINA.md).
 
 ## Family guide: autism, ADHD and other disabilities
 
-[Family guide](https://travisvought-byte.github.io/vhg-veteran-resident-guide/family-guide.html) helps parents and caregivers of children and young adults with autism, ADHD, developmental, learning, physical, medical or behavioral health disabilities find free programs by stage: something seems different, birth to 3, school years, teens heading into adulthood, money/health care/support, and rights. Visitors choose a state (all 50 and D.C.), an optional Ohio county and optional specific needs; programs made for a checked need move to the top. Tapping a stage scrolls to that stage's first calls. Every state gets first calls: its own early intervention program (CDC's state contact list), its statewide parent center where one is listed (37 states and D.C.; states with several regional centers link to the national map), its protection and advocacy agency (NDRN's member list), and Family Voices and Parent to Parent locators. National listings also cover NAMI parent classes, learning disabilities, Down syndrome, hearing and vision loss, and sibling support. Ohio adds the youth mobile crisis teams (MRSS, through 988), county Family and Children First service coordination, Ohio School for the Deaf and State School for the Blind outreach, Help Me Grow, OCECD, Disability Rights Ohio, county boards of DD (pilot-county intake phones come from `prototype-data.json`), Ohio Family to Family and Parent to Parent, ADEP autism diagnosis teams, the Nisonger Center, scholarships, OhioRISE, Complex Medical Help, STABLE, OOD transition services and Disability Rights Ohio's 2026 decision-making toolkit. A collapsible military and veteran family section covers Military OneSource, EFMP, TRICARE ECHO and the Autism Care Demonstration, STOMP and CHAMPVA. Listings are written at about an 8th-grade reading level, with a "Words you'll hear" glossary. Printing produces a short list with the visitor's state, stage and website addresses. Private therapy providers are deliberately not listed.
+[Family guide](https://guide.vethomeguard.org/family-guide.html) helps parents and caregivers of children and young adults with autism, ADHD, developmental, learning, physical, medical or behavioral health disabilities find free programs by stage: something seems different, birth to 3, school years, teens heading into adulthood, money/health care/support, and rights. Visitors choose a state (all 50 and D.C.), an optional Ohio county and optional specific needs; programs made for a checked need move to the top. Tapping a stage scrolls to that stage's first calls. Every state gets first calls: its own early intervention program (CDC's state contact list), its statewide parent center where one is listed (37 states and D.C.; states with several regional centers link to the national map), its protection and advocacy agency (NDRN's member list), and Family Voices and Parent to Parent locators. National listings also cover NAMI parent classes, learning disabilities, Down syndrome, hearing and vision loss, and sibling support. Ohio adds the youth mobile crisis teams (MRSS, through 988), county Family and Children First service coordination, Ohio School for the Deaf and State School for the Blind outreach, Help Me Grow, OCECD, Disability Rights Ohio, county boards of DD (pilot-county intake phones come from `prototype-data.json`), Ohio Family to Family and Parent to Parent, ADEP autism diagnosis teams, the Nisonger Center, scholarships, OhioRISE, Complex Medical Help, STABLE, OOD transition services and Disability Rights Ohio's 2026 decision-making toolkit. A collapsible military and veteran family section covers Military OneSource, EFMP, TRICARE ECHO and the Autism Care Demonstration, STOMP and CHAMPVA. Listings are written at about an 8th-grade reading level, with a "Words you'll hear" glossary. Printing produces a short list with the visitor's state, stage and website addresses. Private therapy providers are deliberately not listed.
 
 A Spanish switch (`?lang=es`) translates the top of the page: crisis help, state and county pickers, stages, needs, first calls and the result line. Program listings stay in English with a note to ask for a free interpreter. The Spanish strings live in `data/family-guide-es.json` and are a machine-assisted draft pending review by a native speaker; the build fails if any marked element lacks a Spanish string. Ohio's first-call numbers are matched against each organization's own website on the review date.
 
@@ -213,11 +213,11 @@ Source records: `data/family-guide.json` (each listing names its sources and rev
 
 ## Mobility independence
 
-[Repair, adaptation and reuse action page](https://travisvought-byte.github.io/vhg-veteran-resident-guide/mobility-independence.html) links to established wheelchair and state repair campaigns, an editable constituent message, official lawmaker lookups, MIF’s open-source mobility mission and a private email story route. No messages are automatically sent and no personal information is stored by the page. Its main-guide navigation link is generated by `scripts/unified_guide.py`.
+[Repair, adaptation and reuse action page](https://guide.vethomeguard.org/mobility-independence.html) links to established wheelchair and state repair campaigns, an editable constituent message, official lawmaker lookups, MIF’s open-source mobility mission and a private email story route. No messages are automatically sent and no personal information is stored by the page. Its main-guide navigation link is generated by `scripts/unified_guide.py`.
 
 ## Disability advocacy
 
-[Disability advocacy hub](https://travisvought-byte.github.io/vhg-veteran-resident-guide/disability-advocacy.html) expands the MIF example with five topics: equipment repair, mobility coverage, home access, transportation and community living. Ohio and federal requests are distinct, sources are dated and current-program background is separate from proposed changes. Visitors explicitly build an editable message, then copy, download or print it themselves. No personal text is stored or automatically sent.
+[Disability advocacy hub](https://guide.vethomeguard.org/disability-advocacy.html) expands the MIF example with five topics: equipment repair, mobility coverage, home access, transportation and community living. Ohio and federal requests are distinct, sources are dated and current-program background is separate from proposed changes. Visitors explicitly build an editable message, then copy, download or print it themselves. No personal text is stored or automatically sent.
 
 Source records: `data/disability-advocacy.json`; template: `templates/disability-advocacy.html`; behavior and styles: `assets/disability-advocacy.*`. `scripts/build_public.py` generates the hub and main navigation. Run `node tests/disability-advocacy.cjs` for letter, routing, privacy and export checks. Current scope is general Ohio/federal policy requests, not pending-bill tracking or a full inventory of state disability laws.
 

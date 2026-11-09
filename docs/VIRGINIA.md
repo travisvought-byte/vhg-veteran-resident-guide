@@ -1,6 +1,6 @@
 # Virginia coverage and evidence
 
-Published referral edition, reviewed October 20, 2026. Virginia is the twelfth state: **95 counties and 38 independent cities**, bringing the guide to **1,108 counties and equivalents**. [Open Virginia](https://travisvought-byte.github.io/vhg-veteran-resident-guide/?state=VA) · [Sharing kit](https://travisvought-byte.github.io/vhg-veteran-resident-guide/share-va.html).
+Published referral edition, reviewed October 20, 2026. Virginia is the twelfth state: **95 counties and 38 independent cities**, bringing the guide to **1,108 counties and equivalents**. [Open Virginia](https://guide.vethomeguard.org/?state=VA) · [Sharing kit](https://guide.vethomeguard.org/share-va.html).
 
 ## What is included
 
