@@ -39,7 +39,7 @@ TEMPLATE = r'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Ohio Nursing Homes, Rehab and Assisted Living | Veteran Home Guardians</title>
 <meta name="description" content="Find Ohio nursing homes, rehabilitation facilities and assisted living or residential care communities by name, county or ZIP code, with phone numbers and nearby bingo games and activities.">
-<link rel="canonical" href="https://travisvought-byte.github.io/vhg-veteran-resident-guide/facilities.html">
+<link rel="canonical" href="https://guide.vethomeguard.org/facilities.html">
 <style>__STYLE__
 .more{margin:18px 0}#fac-more{background:var(--green);color:white;border:0;margin-right:10px}@media print{.more{display:none}}.chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}.vhg{background:#e0ecdf;border:1px solid #9bbd9a}.state-home{background:#e7e9f3;border:1px solid #aab1d6}.facts{font-size:15px;margin:6px 0}
 </style></head><body><a class="skip" href="#listings">Skip to listings</a>

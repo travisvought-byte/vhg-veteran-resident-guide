@@ -15,7 +15,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE_URL = 'https://travisvought-byte.github.io/vhg-veteran-resident-guide/'
+BASE_URL = 'https://guide.vethomeguard.org/'
 
 
 def replace_line(html, prefix, new):

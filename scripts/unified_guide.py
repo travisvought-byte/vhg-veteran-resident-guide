@@ -109,5 +109,5 @@ def unified_outputs(root, editions, states):
     result['index.html']=unified
     for state,page in pages.items():
         if page=='index.html':continue
-        result[page]='<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+names[state]+' Veteran Resource Guide</title><link rel="canonical" href="https://travisvought-byte.github.io/vhg-veteran-resident-guide/?state='+state+'"><p><a href="./?state='+state+'">Open the '+names[state]+' guide</a></p><script>const u=new URL("./",location.href);u.search=location.search;u.searchParams.set("state","'+state+'");u.hash=location.hash;location.replace(u.href);</script></html>\n'
+        result[page]='<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+names[state]+' Veteran Resource Guide</title><link rel="canonical" href="https://guide.vethomeguard.org/?state='+state+'"><p><a href="./?state='+state+'">Open the '+names[state]+' guide</a></p><script>const u=new URL("./",location.href);u.search=location.search;u.searchParams.set("state","'+state+'");u.hash=location.hash;location.replace(u.href);</script></html>\n'
     return result
