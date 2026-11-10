@@ -7,6 +7,7 @@ from pathlib import Path
 from state_registry import (load_registry, load_counties, state_resources, make_edition,
                             make_share, add_share_links, add_state_options, BASE_URL)
 from bingo_edition import make_bingo
+from bingo_site import make_bingo_site
 from facilities_edition import make_facilities
 from unified_guide import unified_outputs
 from build_disability_advocacy import outputs as disability_advocacy_outputs
@@ -73,6 +74,7 @@ def outputs():
     result['index.html'] = result['index.html'].replace('const STATE=', aid + '\nconst STATE=', 1)
     result['index.html'] = result['index.html'].replace('<section id="county-start"', f'<p id="ohio-aid-link"><a href="?view=aid"><strong>Ohio veteran and aid organizations</strong></a> · Housing providers, claims help, legal aid, utility assistance and medical transportation. Local veteran housing providers are mapped for {housing_count} of {len(counties)} counties; other counties retain VA referral routes. For emergency financial assistance, choose your county below and ask its veterans office about eligibility and current programs.</p><section id="county-start"', 1)
     result['bingo.html'] = make_bingo(ROOT)
+    result.update(make_bingo_site(ROOT, result['bingo.html']))
     result['facilities.html'] = make_facilities(ROOT)
     result['index.html'] = result['index.html'].replace('<h3>For posts and community groups</h3>', '<p id="ohio-bingo-link"><a href="bingo.html"><strong>Find Ohio bingo and senior centers</strong></a> - find nearby senior centers, exercise, crafts, games, meals and bingo by ZIP code.</p><h3>For posts and community groups</h3>', 1)
     # Keep state adapter regression fixtures private to tests; the public site has one view.
@@ -99,11 +101,12 @@ if __name__ == '__main__':
         if name.startswith('tests/fixtures/') and not args.test_fixtures:
             continue
         path = ROOT / name
-        if not path.is_file() or path.read_text() != text:
+        binary = isinstance(text, bytes)
+        if not path.is_file() or (path.read_bytes() if binary else path.read_text()) != text:
             drift.append(name)
             if not args.check:
                 path.parent.mkdir(parents=True, exist_ok=True)
-                path.write_text(text)
+                path.write_bytes(text) if binary else path.write_text(text)
     if args.check and drift:
         parser.exit(1, 'Out of sync: ' + ', '.join(drift) + '. Run python3 scripts/build_public.py\n')
     print('Public projections are synchronized.' if args.check else 'Updated: ' + (', '.join(drift) or 'already synchronized'))
