@@ -191,6 +191,7 @@ def make_bingo_site(root, finder_page):
         'bingo-site/poster.html': poster_page(stats),
         'bingo-site/404.html': not_found_page(),
         'bingo-site/CNAME': 'bingo.vethomeguard.org\n',
+        'bingo-site/.nojekyll': '',
         'bingo-site/README.md': README,
         'bingo-site/robots.txt': f'User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n',
         'bingo-site/sitemap.xml': ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
