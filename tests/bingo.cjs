@@ -28,7 +28,7 @@ assert(!vm.runInContext("nearbyBingo(BINGO,'43334',25).some(r=>r.id==='oh-licens
 assert(vm.runInContext("nearbyBingo(BINGO,'00000',50)===null",context));
 const close=JSON.parse(vm.runInContext("JSON.stringify(nearbyBingo(BINGO,'43334',50))",context));assert(close.length>3);assert(close.every((r,i)=>r.distanceMiles<=50&&(!i||close[i-1].distanceMiles<=r.distanceMiles)));
 nodes['bingo-zip'].value='43334';nodes['bingo-radius'].value='25';nodes['bingo-nearby'].onsubmit({preventDefault(){}});assert(nodes.count.textContent.includes('within 25 miles of 43334'));assert(nodes.listings.innerHTML.includes('miles away'));
-nodes['bingo-zip'].value='00000';nodes['bingo-nearby'].onsubmit({preventDefault(){}});assert(nodes['nearby-status'].textContent.includes('valid five-digit'));assert(nodes.count.textContent.includes('published schedules'));assert(nodes['hidden-note'].innerHTML.includes('state-licensed bingo locations with no published schedule yet'));
+nodes['bingo-zip'].value='00000';nodes['bingo-nearby'].onsubmit({preventDefault(){}});assert(nodes['nearby-status'].textContent.includes('valid five-digit'));assert(nodes.count.textContent.includes('published schedules'));assert(nodes['hidden-note'].innerHTML.includes('haven&rsquo;t posted game times yet'));
 nodes['bingo-reset'].onclick();assert.equal(nodes['bingo-zip'].value,'');assert.equal(nodes['bingo-radius'].value,'50');
 console.log('PASS: ZIP distance math, nearest sorting, radius inclusion, invalid ZIP and reset.');
 
@@ -43,13 +43,13 @@ assert(vm.runInContext("nearbyBingo(filteredBingo('','meals',''),'43334',25).som
 assert(centers.every(c=>c.is_center&&c.sources.length));
 console.log('PASS: 114 senior centers, non-bingo categories, no duplicate centers and ZIP integration.');
 assert(nodes.listings.innerHTML.includes('Senior Centers (114)'));
-assert(!nodes.listings.innerHTML.includes('Bingo (717)'));nodes['hidden-note'].onclick({target:{closest:()=>({dataset:{all:'1'}})}});assert(nodes.listings.innerHTML.includes('Bingo (717)'));assert(nodes['hidden-note'].innerHTML.includes('Show only published schedules'));
+assert(!nodes.listings.innerHTML.includes('Bingo (717)'));nodes['hidden-note'].onclick({target:{closest:()=>({dataset:{all:'1'}})}});assert(nodes.listings.innerHTML.includes('Bingo (717)'));assert(nodes['hidden-note'].innerHTML.includes('Hide halls without game times'));
 nodes['bingo-kind'].value='bingo';vm.runInContext('render()',context);
 assert(nodes.listings.innerHTML.includes('Bingo (742)'));
 assert(!nodes.listings.innerHTML.includes('Senior Centers ('));
 nodes['bingo-kind'].value='';vm.runInContext('render()',context);
 console.log('PASS: distinct groups, no duplicate all-view cards and center bingo included in Bingo filter.');
-assert(html.includes('bingo.html?zip=43334&amp;radius=25'));
+assert(html.includes('id="quick"')&&html.includes("u.searchParams.set('zip',activeZip)"),'quick searches keep the visitor ZIP');
 assert(nodes.listings.innerHTML.includes('How to join:'));
 assert(nodes.listings.innerHTML.includes('https://www.google.com/maps/search/?api=1&amp;query=41%20West%20Center'));
 assert(vm.runInContext("filteredBingo('Morrow','','accessible transportation').some(r=>r.id==='seniors-on-center')",context));
@@ -88,7 +88,7 @@ assert.equal(vm.runInContext("activeSchedule(BINGO.find(r=>r.id==='sourcepoint-b
 assert.equal(vm.runInContext("activePrice(BINGO.find(r=>r.license_number==='0024-33'),'2026-11-01')",context),null);
 assert(vm.runInContext("activePrice(BINGO.find(r=>r.license_number==='0024-33'),'2026-10-31')",context));
 nodes['bingo-day'].value='2';vm.runInContext('render()',context);assert(nodes.listings.innerHTML.includes('Tuesday, Oct 20, 2026'));assert(!nodes.listings.innerHTML.includes('id="cardington-legion-97"'));
-nodes['bingo-reset'].onclick();assert.equal(nodes['bingo-day'].value,'');assert(nodes.count.textContent.includes('published schedules'));assert(nodes['hidden-note'].innerHTML.includes('state-licensed bingo locations with no published schedule yet'));
+nodes['bingo-reset'].onclick();assert.equal(nodes['bingo-day'].value,'');assert(nodes.count.textContent.includes('published schedules'));assert(nodes['hidden-note'].innerHTML.includes('haven&rsquo;t posted game times yet'));
 vm.runInContext("todayISO=()=> '2026-11-25'",context);nodes['bingo-day'].value='today';vm.runInContext('render()',context);
 let sourceCard=nodes.listings.innerHTML.split('id="sourcepoint-bingo"')[1]?.split('</article>')[0];assert(sourceCard.includes('Earlier holiday session'));assert(!sourceCard.includes('2:30-4:30'));
 nodes['bingo-reset'].onclick();const northCard=nodes.listings.innerHTML.split('id="northmor-music-bingo"')[1].split('</article>')[0];assert(northCard.includes('Ask the venue for upcoming bingo dates.'));assert(!northCard.includes('Next advertised October session'));assert(!northCard.includes('<strong>When:</strong>'));
@@ -221,7 +221,7 @@ console.log('PASS: per-listing links reveal license-only cards.');
 // First screen: the ZIP search comes before the explanatory text, and quick searches are real buttons-sized links.
 const mainStart=html.indexOf('<main class="page-only">');const zipAt=html.indexOf('id="bingo-zip"',mainStart),introAt=html.indexOf('class="intro"',mainStart),noticeAt=html.indexOf('Planning a group outing',mainStart);
 assert(mainStart>0&&zipAt>mainStart&&zipAt<introAt&&introAt<noticeAt,'ZIP search must come first');
-assert(html.includes('<nav class="quick" aria-label="Quick searches">')&&html.includes('min-height:44px'));
+assert(html.includes('<nav class="quick" id="quick" aria-label="Quick searches">')&&html.includes('min-height:44px'));
 console.log('PASS: ZIP search leads the page and quick searches have 44px touch targets.');
 {const src=centers.filter(c=>c.schedule_source);assert(src.length>=16);assert(src.every(c=>c.schedule&&!/^Bingo:/i.test(c.schedule)));
 const tpl=fs.readFileSync(path.join(root,'scripts/bingo_edition.py'),'utf8');assert(tpl.includes('These times come from')&&tpl.includes('Next game day, if unchanged:'));

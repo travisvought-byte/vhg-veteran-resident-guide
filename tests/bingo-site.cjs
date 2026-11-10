@@ -14,7 +14,7 @@ assert.equal(doc.querySelector('meta[property="og:url"]').content, 'https://bing
 assert(!/["'=]bingo\.html/.test(index), 'no links to the old bingo.html page');
 assert(!index.includes('guide.vethomeguard.org/bingo.html'), 'printed flyers name the bingo address');
 assert.equal(index.split('bingo.vethomeguard.org<br>').length - 1, 2, 'both printable flyers show the address');
-assert.deepEqual([...doc.querySelectorAll('nav.quick a')].map(a => a.getAttribute('href').slice(0, 3)), ['./?', './?', './?', './?', './?']);
+assert.deepEqual([...doc.querySelectorAll('nav.quick a')].map(a => a.getAttribute('href').slice(0, 3)), ['./?', './?', './?', './?']);
 assert.deepEqual([...doc.querySelectorAll('nav.audience a')].map(a => a.getAttribute('href')),
   ['#submit-details', '#flyer-maker', 'https://bingo.vethomeguard.org/partners.html']);
 assert(doc.querySelector('footer a[href="partners.html"]') && doc.querySelector('footer a[href="poster.html"]'));
