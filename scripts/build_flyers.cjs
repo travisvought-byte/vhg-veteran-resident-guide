@@ -25,7 +25,9 @@ const PX = 96;
     // Guard against clipped content: every element must sit inside the page, and no box may overflow.
     const problems = await page.evaluate(([W, H]) => {
       const out = [];
-      if (!document.fonts.check('700 16px "Atkinson Hyperlegible"')) out.push('flyer font did not load');
+      // Every font face the source declares must load (a failed face shows as status "error").
+      for (const face of document.fonts) if (face.status === 'error') out.push('flyer font did not load: ' + face.family + ' ' + face.weight);
+      if (![...document.fonts].some(face => face.status === 'loaded')) out.push('no flyer font loaded');
       for (const el of document.body.querySelectorAll('*')) {
         const r = el.getBoundingClientRect();
         if (r.width && (r.bottom > H + 0.5 || r.right > W + 0.5)) out.push(el.tagName + ' ends outside the page: ' + (el.textContent || '').trim().slice(0, 40));

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Veteran Resource Guide flyer (letter)</title>
+<!-- Print source for flyers/veteran-resource-guide-letter.pdf. Edit here, then run: node scripts/build_flyers.cjs -->
+<style>
+@font-face{font-family:'Barlow Condensed';font-weight:800;src:url(fonts/barlow-condensed-latin-800-normal.woff2) format('woff2')}
+@font-face{font-family:'Source Serif 4';font-weight:700;src:url(fonts/source-serif-4-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:'Source Sans 3';font-weight:400;src:url(fonts/source-sans-3-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Source Sans 3';font-weight:600;src:url(fonts/source-sans-3-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'Source Sans 3';font-weight:700;src:url(fonts/source-sans-3-latin-700-normal.woff2) format('woff2')}
+@page{size:8.5in 11.0in;margin:0}
+html,body{margin:0;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.item{display:flex;gap:12px;align-items:center}
+.icon{width:38px;height:38px;flex-shrink:0;border-radius:50%;background:#FFE03A;border:2px solid #111111;box-sizing:border-box;display:flex;align-items:center;justify-content:center}
+.icon svg{width:20px;height:20px;fill:none;stroke:#111111;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.item b{display:block;font-size:16px;font-weight:700;line-height:1.25}
+.item span{display:block;font-size:14px;line-height:1.35;color:#333333}
+.call b{display:block;font-size:25px;font-weight:700;color:#FFFFFF}
+.call span{display:block;font-size:14px;color:#E6E6E6}
+</style>
+</head>
+<body>
+<div style="width: 816px; height: 1056px; box-sizing: border-box; background: #FFFFFF; display: flex; flex-direction: column; font-family: 'Source Sans 3', system-ui, sans-serif; color: #111111; overflow: hidden">
+
+<div style="background: #FFE03A; padding: 34px 48px 30px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: center; gap: 20px">
+<img src="vhg-logo-print.png" alt="Veteran Home Guardians logo" style="width: 150px; height: 150px; flex-shrink: 0; display: block">
+<div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 8px; align-items: flex-start">
+<div style="background: #111111; color: #FFE03A; font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 6px 12px; border-radius: 4px">Free · No sign-up</div>
+<div style="font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 36px; line-height: 1.05">Veteran Resource Guide</div>
+<div style="font-size: 17px; font-weight: 600; line-height: 1.3">For veterans, families, and care staff</div>
+</div>
+<div style="width: 192px; flex-shrink: 0; box-sizing: border-box; background: #FFFFFF; border: 4px solid #111111; border-radius: 10px; box-shadow: 8px 8px 0 #111111; padding: 10px 10px 8px; display: flex; flex-direction: column; align-items: center; gap: 6px">
+<img src="qr-guide.svg" alt="QR code that opens guide.vethomeguard.org" style="width: 160px; height: 160px; display: block">
+<div style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 22px; letter-spacing: 1.5px; text-transform: uppercase">Scan me</div>
+</div>
+</div>
+
+<h1 style="margin: 4px 0 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 86px; line-height: 0.92; letter-spacing: -0.5px; text-transform: uppercase; text-wrap: balance">Find veteran help near you.</h1>
+
+<p style="margin: 0; font-size: 18px; line-height: 1.4; text-wrap: pretty">Benefits, county veterans offices, senior services, housing, and local activities in every state and Washington, D.C. Choose your state and county, then pick the help you need.</p>
+
+<div style="font-size: 16px">Or type: <span style="font-weight: 700">guide.vethomeguard.org</span></div>
+</div>
+
+<div style="background: #111111; padding: 18px 48px; display: grid; grid-template-columns: 130px repeat(3, minmax(0, 1fr)); gap: 16px; align-items: center">
+<div style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 26px; line-height: 1; text-transform: uppercase; color: #FFE03A">Need help now?</div>
+<div class="call"><b>988, press 1</b><span>Veterans Crisis Line</span></div>
+<div class="call"><b>911</b><span>Immediate danger</span></div>
+<div class="call"><b>877-424-3838</b><span>Veteran housing help, 24/7</span></div>
+</div>
+
+<div style="flex: 1; display: flex; flex-direction: column; gap: 12px; padding: 20px 48px 0">
+<h2 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 28px; line-height: 1.1">What you'll find</h2>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 24px; row-gap: 7px">
+<div class="item"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V6l8-3 8 3v15"/><path d="M9 21v-5h6v5"/><path d="M8 9h2M14 9h2M8 12.5h2M14 12.5h2"/></svg></div><div><b>County Veterans Service Office</b><span>Free help with VA claims and benefits</span></div></div>
+<div class="item"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 8v8M8 12h8"/></svg></div><div><b>VA care &amp; caregiver support</b><span>Health care and caregiver programs</span></div></div>
+<div class="item"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 19V6"/><path d="M3 15h18v4"/><path d="M21 15v-3a3 3 0 0 0-3-3h-7v6"/><circle cx="7" cy="11.5" r="1.8"/></svg></div><div><b>Nursing homes &amp; assisted living</b><span>Care settings near you</span></div></div>
+<div class="item"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18"/><path d="M16.5 7.5c0-1.9-2-3-4.5-3s-4.5 1.1-4.5 3 2 2.6 4.5 3 4.5 1.1 4.5 3-2 3-4.5 3-4.5-1.1-4.5-3"/></svg></div><div><b>Help paying for care</b><span>Programs that help cover care costs</span></div></div>
+<div class="item"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.5 3.3-5.5 6.5-5.5s5.9 2 6.5 5.5"/><path d="M16 4.8a3.5 3.5 0 0 1 0 6.6"/><path d="M18 14.8c2 .7 3.2 2.5 3.5 5.2"/></svg></div><div><b>Senior &amp; disability support</b><span>Area Agencies on Aging, meals, rides</span></div></div>
+<div class="item"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3.5 17.5l3 3 5.8-5.8a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></div><div><b>Ramps &amp; home accessibility</b><span>Ramps, home repairs, and mobility aids</span></div></div>
+<div class="item"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg></div><div><b>Housing &amp; homelessness</b><span>Help finding or keeping a home</span></div></div>
+<div class="item"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10.2A4.2 4.2 0 0 1 12 7.3a4.2 4.2 0 0 1 7.5 2.5C19.5 15.4 12 20 12 20z"/></svg></div><div><b>Survivor help</b><span>Support for surviving spouses and families</span></div></div>
+<div class="item"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 9.3h16M4 14.7h16M9.3 4v16M14.7 4v16"/></svg></div><div><b>Bingo, senior centers &amp; posts</b><span>Local games, events, and veteran posts</span></div></div>
+<div class="item"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6z"/><path d="M12 8v5"/><path d="M12 16.2v.3"/></svg></div><div><b>Concerns about care or rights</b><span>Where to turn when something's wrong</span></div></div>
+</div>
+</div>
+
+<div style="margin: 0 48px; padding: 10px 0 22px; border-top: 2px solid #111111; display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 13px; line-height: 1.45; color: #333333">This guide is free. It's built and kept current by Veteran Home Guardians, an Ohio 501(c)(3) nonprofit that visits veterans in long-term care. If it helped, you can support the work at <span style="font-weight: 700; color: #111111">vethomeguard.org/donate</span>, or send a gift by PayPal or Zelle to <span style="font-weight: 700; color: #111111">veteranhomeguardians@gmail.com</span>.</div>
+<div style="font-size: 13px; line-height: 1.45; color: #333333">Spot something out of date? Use "Report a problem" in the guide.</div>
+</div>
+
+</div>
+</body>
+</html>
