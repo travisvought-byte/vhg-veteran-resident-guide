@@ -2,7 +2,7 @@
   "name": "vhg-veteran-resident-guide",
   "private": true,
   "scripts": {
-    "test": "node tests/unified.cjs && node tests/states.cjs && node tests/indiana.cjs && node tests/west-virginia.cjs && node tests/texas.cjs && node tests/handoff-copy.cjs && node tests/virginia.cjs && node tests/north-carolina.cjs && node tests/disability-advocacy.cjs && node tests/advocacy-all-states.cjs && node tests/mobility-routes.cjs && node tests/advocacy-actions.cjs && node tests/family-guide.cjs && node tests/flyers.cjs",
+    "test": "node tests/unified.cjs && node tests/states.cjs && node tests/indiana.cjs && node tests/west-virginia.cjs && node tests/texas.cjs && node tests/handoff-copy.cjs && node tests/virginia.cjs && node tests/north-carolina.cjs && node tests/disability-advocacy.cjs && node tests/advocacy-all-states.cjs && node tests/mobility-routes.cjs && node tests/advocacy-actions.cjs && node tests/family-guide.cjs && node tests/flyers.cjs && node tests/bingo-site.cjs",
     "test:browser": "node tests/unified-browser.cjs && node tests/editions-browser.cjs && node tests/virginia-browser.cjs && node tests/north-carolina-browser.cjs && node tests/disability-advocacy-browser.cjs && node tests/mobility-routes-browser.cjs && node tests/family-guide-browser.cjs"
   },
   "devDependencies": {

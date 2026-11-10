@@ -192,3 +192,17 @@ Leads not yet published: Yellow Springs (a 4:00-5:30 p.m. bingo for ages 21 and 
 ## Labeling schedules from older sources
 
 Schedules taken from older calendars, newsletters or news stories carry a `schedule_source` field (for example "a 2016 Vindicator listing"). On those cards the page shows, in plain text on the card itself: "These times come from [source]. Please call [phone] to confirm before you go." The next date reads "Next game day, if unchanged," and the "Published dates through" and "Last checked" lines are left off, because neither would be true. Prices from those sources are written with their year ("Bingo cards were 25 cents each in 2016"). The printed flyer adds "(from [source]; call first)" next to the time. Games with no published start time now stay visible when someone filters by afternoon or evening, instead of quietly disappearing.
+
+## Standalone site: bingo.vethomeguard.org
+
+November 10, 2026. The finder is also published on its own at **https://bingo.vethomeguard.org/**, the address used for advertising and partner outreach.
+
+- `scripts/bingo_site.py` builds `bingo-site/` during `python3 scripts/build_public.py`, from the same page and records as `bingo.html`. Do not edit `bingo-site/` by hand; `--check` fails if it drifts.
+- `bingo-site/index.html` is the finder with its own canonical address and social preview. Finder links point to the site root (`./?…`), guide pages and data files point to `https://guide.vethomeguard.org/`, and both printable flyers name `bingo.vethomeguard.org`.
+- `partners.html` pitches the finder to bingo halls and organizers, nursing homes and activity directors, senior centers, libraries and churches, and sponsors. Its numbers come from the published records at build time. It repeats the rule that inclusion never depends on donations or sponsorship.
+- `poster.html` is a one-page letter poster with a QR code to the site.
+- QR codes: `assets/bingo-site-qr.svg` (site root) and `assets/bingo-site-submit-qr.svg` (submission form) are committed sources, copied into `bingo-site/assets/`. They are never regenerated automatically, so printed material stays valid. The guide's own `assets/bingo-qr.svg` is unchanged.
+- The `travisvought-byte/Ohio-Bingo` repository mirrors `bingo-site/` with a scheduled workflow and serves it with GitHub Pages. Its `CNAME` is `bingo.vethomeguard.org`; DNS is a CNAME record for `bingo` pointing to `travisvought-byte.github.io`.
+- `tests/bingo-site.cjs` checks the address, data parity with `bingo.html`, flyer addresses, local links, partner numbers and routes, the poster and the sitemap.
+
+The guide's `bingo.html` stays live and gains the same "who it's for" links in its header, including the partner page.
