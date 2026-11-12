@@ -164,13 +164,13 @@
     "state": "OH",
     "category": "senior",
     "address": "800 Cheshire Road, Delaware, OH 43015",
-    "schedule": "Fall 2026: Wednesday and Friday, generally 2:30-4:30 p.m.; confirm holiday exceptions.",
+    "schedule": "Wednesday and Friday, 2:30–4:30 p.m., through December 23, 2026. November 25: 2:15–3:45 p.m. No bingo November 27 or December 4.",
     "cost": "$1 per pack of 15 bingo sheets",
     "admission": "ComPASS and registration required. Primarily Delaware County residents age 55+; ask about guest passes.",
     "phone": "740-363-6677",
     "official_url": "https://mysourcepoint.org/enrichment/",
     "notes": [
-      "November 25 has a published earlier session. Flyer gives a conflicting Friday/December 30 exception; ask staff for holiday dates. Fall schedule expires January 2, 2027."
+      "November 27 closure and December 4 early building closure prevent the usual afternoon game. Flyer says “Friday, Dec. 30,” but December 30 is Wednesday; dates after December 23 are withheld pending clarification."
     ],
     "sources": [
       {
@@ -182,22 +182,31 @@
         "url": "https://mysourcepoint.org/enrichment/",
         "scope": "Official center: address, phone, age/county scope and ComPASS",
         "reviewed_on": "2026-10-08"
+      },
+      {
+        "url": "https://mysourcepoint.org/app/uploads/2026/09/Q4-Social-1.pdf",
+        "scope": "Full Fall 2026 flyer: weekly times, exact November 25 exception, holiday closures and ambiguous late-December cancellation.",
+        "reviewed_on": "2026-11-11"
       }
     ],
     "accessibility": null,
     "license_number": null,
     "license_type": null,
     "license_status": "Not independently checked against current license",
-    "reviewed_on": "2026-10-08",
+    "reviewed_on": "2026-11-11",
     "firsthand_confirmation": null,
     "session_days": [
       3,
       5
     ],
-    "schedule_valid_until": "2027-01-02",
+    "schedule_valid_until": "2026-12-23",
     "session_exceptions": {
-      "2026-11-25": "Earlier holiday session; ask staff for the start time."
-    }
+      "2026-11-25": "Earlier holiday session: 2:15–3:45 p.m."
+    },
+    "session_excluded_dates": [
+      "2026-11-27",
+      "2026-12-04"
+    ]
   },
   {
     "id": "station-break-bingo",
@@ -224,13 +233,18 @@
         "url": "https://stationbreak.org/contact-us",
         "scope": "Official center: address, phone and activities role contact",
         "reviewed_on": "2026-10-08"
+      },
+      {
+        "url": "https://stationbreak.org/",
+        "scope": "Organizer homepage reconfirms Friday bingo 12:45–2 p.m.; no additional dates inferred.",
+        "reviewed_on": "2026-11-11"
       }
     ],
     "accessibility": null,
     "license_number": null,
     "license_type": null,
     "license_status": "Not independently checked against current license",
-    "reviewed_on": "2026-10-08",
+    "reviewed_on": "2026-11-11",
     "firsthand_confirmation": null,
     "session_days": [
       5

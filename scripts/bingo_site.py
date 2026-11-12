@@ -111,7 +111,7 @@ def partners_page(stats):
 <div class="stat"><b>{stats['listed']}</b>state-listed bingo locations</div>
 <div class="stat"><b>{stats['centers']}</b>senior and community centers</div>
 <div class="stat"><b>{stats['counties']}</b>Ohio counties covered</div>
-<div class="stat"><b>{stats['timed']}</b>with published game times so far</div>
+<div class="stat"><b>{stats['timed']}</b>with published schedules on file</div>
 </section>
 <p class="note">Listings are free and always will be. Inclusion never depends on donations or sponsorship.</p>
 <div class="grid">
