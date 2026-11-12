@@ -206,3 +206,7 @@ November 10, 2026. The finder is also published on its own at **https://bingo.ve
 - `tests/bingo-site.cjs` checks the address, data parity with `bingo.html`, flyer addresses, local links, partner numbers and routes, the poster and the sitemap.
 
 The guide's `bingo.html` stays live and gains the same "who it's for" links in its header, including the partner page.
+
+## Organizer verification
+
+When someone from a hall confirms its game days and times directly (email, phone or in person), set `hall_confirmed_on` on that record to the confirmation date (ISO `YYYY-MM-DD`). The finder then shows a "Verified by organizer" badge with the month and year. The badge disappears automatically 365 days after that date, so halls need to reconfirm yearly. Record who confirmed and how in the record's `notes` or `sources`, not on the public card. A future date fails the build. Verification is free and never depends on partnership, donations or sponsorship.
