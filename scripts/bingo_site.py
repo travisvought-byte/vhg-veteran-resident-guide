@@ -12,7 +12,7 @@ SITE = 'https://bingo.vethomeguard.org'
 GUIDE = 'https://guide.vethomeguard.org'
 EMAIL = 'travis@vethomeguard.org'
 LOGO = 'assets/vhg-logo.png'  # copied into bingo-site/assets; og:image uses SITE + '/' + LOGO
-DONATE = 'https://www.vethomeguard.org/donate'
+DONATE = 'https://www.vethomeguard.org/donate.html'
 ABOUT_VHG = 'Veteran Home Guardians, an Ohio nonprofit that visits veterans in nursing homes'
 
 
