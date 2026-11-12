@@ -118,7 +118,7 @@ def partners_page(stats):
 <article id="organizers"><h2>Run a bingo game?</h2>
 <p>American Legion and VFW posts, booster clubs, churches, fire departments and other licensed charities: get your game in front of players and the activity staff who plan resident outings.</p>
 <p>Send your game days, door and first-game times, packet prices, a public phone or Facebook page, and whether the entrance is step-free and groups are welcome.</p>
-<p><strong>Get verified, free.</strong> When someone from your hall confirms your days and times, your listing shows a &ldquo;Verified by organizer&rdquo; badge with the month you confirmed. It stays for 12 months; confirm again each year to keep it.</p>
+<p><strong>Get verified, free.</strong> When someone from your hall confirms your days and times, your listing shows a &ldquo;Verified&rdquo; badge with the month you confirmed. It stays for 12 months; confirm again each year to keep it.</p>
 <p><a class="button" href="./#submit-details">Add or update your game</a><a class="button alt" href="./?organizer=1">Print a sign for your hall</a></p></article>
 <article id="facilities"><h2>Nursing homes and senior living</h2>
 <p>Activity directors and social workers can print a one-page list of games and senior centers near their building, with a QR code to the full finder. It works well on activity boards, in family packets and in resident newsletters.</p>

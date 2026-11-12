@@ -237,6 +237,6 @@ for (const [id,date,expected] of [
 assert(!authorized.find(r=>r.id==='oh-license-0122-34-257-10').schedule);
 for(const [confirmed,today,expected] of [[null,'2026-11-12',false],['2026-11-12','2026-11-12',true],['2025-11-12','2026-11-12',true],['2025-11-11','2026-11-12',false],['2026-12-01','2026-11-12',false]])
   assert.equal(vm.runInContext(`hallVerified({hall_confirmed_on:${JSON.stringify(confirmed)}},'${today}')`,context),expected,String(confirmed));
-assert(vm.runInContext(`verifiedBadge({hall_confirmed_on:'2026-03-04'},'2026-11-12')`,context).includes('Verified by organizer · Mar 2026'));
+assert(vm.runInContext(`verifiedBadge({hall_confirmed_on:'2026-03-04'},'2026-11-12')`,context).includes('Verified · Mar 2026'));
 assert.equal(vm.runInContext(`verifiedBadge({hall_confirmed_on:'2024-03-04'},'2026-11-12')`,context),'');
 console.log('PASS: November closures, monthly calendar precedence and Humane Society venue isolation.');
