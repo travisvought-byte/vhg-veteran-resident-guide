@@ -6,13 +6,13 @@
   "state": "OH",
   "category": "senior",
   "address": "800 Cheshire Road, Delaware, OH 43015",
-  "schedule": "Fall 2026: Wednesday and Friday, generally 2:30-4:30 p.m.; confirm holiday exceptions.",
+  "schedule": "Wednesday and Friday, 2:30–4:30 p.m., through December 23, 2026. November 25: 2:15–3:45 p.m. No bingo November 27 or December 4.",
   "cost": "$1 per pack of 15 bingo sheets",
   "admission": "ComPASS and registration required. Primarily Delaware County residents age 55+; ask about guest passes.",
   "phone": "740-363-6677",
   "official_url": "https://mysourcepoint.org/enrichment/",
   "notes": [
-   "November 25 has a published earlier session. Flyer gives a conflicting Friday/December 30 exception; ask staff for holiday dates. Fall schedule expires January 2, 2027."
+   "November 27 closure and December 4 early building closure prevent the usual afternoon game. Flyer says “Friday, Dec. 30,” but December 30 is Wednesday; dates after December 23 are withheld pending clarification."
   ],
   "sources": [
    {
@@ -34,13 +34,18 @@
     "url": "https://mysourcepoint.org/enrichment/",
     "scope": "Provider: participation or practical service details",
     "reviewed_on": "2026-10-09"
+   },
+   {
+    "url": "https://mysourcepoint.org/app/uploads/2026/09/Q4-Social-1.pdf",
+    "scope": "Full Fall 2026 flyer: weekly times, exact November 25 exception, holiday closures and ambiguous late-December cancellation.",
+    "reviewed_on": "2026-11-11"
    }
   ],
   "accessibility": null,
   "license_number": null,
   "license_type": null,
   "license_status": "Not independently checked against current license",
-  "reviewed_on": "2026-10-09",
+  "reviewed_on": "2026-11-11",
   "firsthand_confirmation": null,
   "is_center": true,
   "activity_tags": [
@@ -66,10 +71,14 @@
    3,
    5
   ],
-  "schedule_valid_until": "2027-01-02",
+  "schedule_valid_until": "2026-12-23",
   "session_exceptions": {
-   "2026-11-25": "Earlier holiday session; ask staff for the start time."
-  }
+   "2026-11-25": "Earlier holiday session: 2:15–3:45 p.m."
+  },
+  "session_excluded_dates": [
+   "2026-11-27",
+   "2026-12-04"
+  ]
  },
  {
   "id": "station-break-bingo",
@@ -106,13 +115,18 @@
     "url": "https://stationbreak.org/",
     "scope": "Provider: participation or practical service details",
     "reviewed_on": "2026-10-09"
+   },
+   {
+    "url": "https://stationbreak.org/",
+    "scope": "Organizer homepage reconfirms Friday bingo 12:45–2 p.m.; no additional dates inferred.",
+    "reviewed_on": "2026-11-11"
    }
   ],
   "accessibility": null,
   "license_number": null,
   "license_type": null,
   "license_status": "Not independently checked against current license",
-  "reviewed_on": "2026-10-09",
+  "reviewed_on": "2026-11-11",
   "firsthand_confirmation": null,
   "is_center": true,
   "activity_tags": [
@@ -4418,13 +4432,13 @@
   "is_center": true,
   "address": "514 Main Street, Genoa, OH 43430",
   "phone": "419-855-4491",
-  "official_url": null,
-  "program_url": null,
+  "official_url": "https://co.ottawa.oh.us/337/Senior-Centers",
+  "program_url": "https://co.ottawa.oh.us/DocumentCenter/View/6470/2026-Ed-Griswold-Senior-Center-November-PDF",
   "activities": [],
   "activity_tags": [],
   "opening_hours": null,
   "participation": null,
-  "schedule": null,
+  "schedule": "November 2, 9, 16, 23 and 30, 2026: Monday bingo, 9:30–11 a.m.",
   "cost": null,
   "admission": null,
   "accessibility": null,
@@ -4432,19 +4446,37 @@
   "license_type": null,
   "license_status": null,
   "notes": [
-   "Bingo is offered here, but the days are not published where we looked. Call to ask. Name, address and phone only."
+   "County senior-center page gives Monday 9:30–11 a.m.; November calendar visually confirms all five Monday dates. Lunch donations are not bingo prices."
   ],
   "sources": [
    {
     "url": "https://genoaohio.org/community/senior-center/",
     "scope": "Village of Genoa: open Monday–Friday for lunch, bingo and pinochle (days for bingo not published)",
     "reviewed_on": "2026-10-30"
+   },
+   {
+    "url": "https://co.ottawa.oh.us/DocumentCenter/View/6470/2026-Ed-Griswold-Senior-Center-November-PDF",
+    "scope": "Official November 2026 calendar visually reviewed: Monday bingo dates and 9:30 a.m. start.",
+    "reviewed_on": "2026-11-11"
+   },
+   {
+    "url": "https://co.ottawa.oh.us/337/Senior-Centers",
+    "scope": "County senior-center directory: matching address, phone and general activity hours; monthly calendar overrides conflicting recurrence.",
+    "reviewed_on": "2026-11-11"
    }
   ],
-  "reviewed_on": "2026-10-30",
+  "reviewed_on": "2026-11-11",
   "offers_bingo": true,
   "getting_started": null,
-  "transportation": null
+  "transportation": null,
+  "session_dates": [
+   "2026-11-02",
+   "2026-11-09",
+   "2026-11-16",
+   "2026-11-23",
+   "2026-11-30"
+  ],
+  "schedule_valid_until": "2026-11-30"
  },
  {
   "id": "put-in-bay-senior-center",
@@ -4528,14 +4560,14 @@
   "category": "center",
   "is_center": true,
   "address": "320 E. 3rd Street, Port Clinton, OH 43452",
-  "phone": null,
-  "official_url": null,
-  "program_url": null,
+  "phone": "419-734-1481",
+  "official_url": "https://co.ottawa.oh.us/337/Senior-Centers",
+  "program_url": "https://co.ottawa.oh.us/DocumentCenter/View/6468/2026-Port-Clinton-Senior-Center-November-PDF",
   "activities": [],
   "activity_tags": [],
   "opening_hours": null,
   "participation": null,
-  "schedule": null,
+  "schedule": "November 4 and 25, 2026: after-hours bingo following lunch. Call for the exact first-game time.",
   "cost": null,
   "admission": null,
   "accessibility": null,
@@ -4543,19 +4575,34 @@
   "license_type": null,
   "license_status": null,
   "notes": [
-   "Name and address only. Call ahead to confirm hours, programs and who may attend."
+   "November calendar takes precedence over the general county page’s second/fourth-Wednesday schedule. November 11 is closed and November 18 lists a different game. Calendar does not give an exact bingo time."
   ],
   "sources": [
    {
     "url": "https://www.superpages.com/danbury-oh/senior-citizens-services-organizations",
     "scope": "Business directory listing; no phone found",
     "reviewed_on": "2026-10-30"
+   },
+   {
+    "url": "https://co.ottawa.oh.us/DocumentCenter/View/6468/2026-Port-Clinton-Senior-Center-November-PDF",
+    "scope": "Official November calendar visually reviewed: bingo November 4 and 25; matching address and center phone.",
+    "reviewed_on": "2026-11-11"
+   },
+   {
+    "url": "https://co.ottawa.oh.us/337/Senior-Centers",
+    "scope": "County senior-center directory: matching address, phone and general activity hours; monthly calendar overrides conflicting recurrence.",
+    "reviewed_on": "2026-11-11"
    }
   ],
-  "reviewed_on": "2026-10-30",
-  "offers_bingo": false,
+  "reviewed_on": "2026-11-11",
+  "offers_bingo": true,
   "getting_started": null,
-  "transportation": null
+  "transportation": null,
+  "session_dates": [
+   "2026-11-04",
+   "2026-11-25"
+  ],
+  "schedule_valid_until": "2026-11-25"
  },
  {
   "id": "prime-time-senior-center-steubenville",
