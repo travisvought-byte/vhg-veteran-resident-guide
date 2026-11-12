@@ -22,7 +22,7 @@ assert(doc.querySelector('a[href="https://guide.vethomeguard.org/?view=community
 assert(index.includes('<script defer src="assets/analytics.js"></script></body>'));
 
 // Every local link and image in the site resolves to a file in bingo-site/.
-for (const page of ['index.html', 'partners.html', 'poster.html']) {
+for (const page of ['index.html', 'partners.html', 'distributions.html', 'poster.html']) {
   const d = new JSDOM(read(page)).window.document;
   for (const el of d.querySelectorAll('[href],[src]')) {
     const ref = el.getAttribute('href') || el.getAttribute('src');
@@ -40,10 +40,12 @@ assert.deepEqual(stat, [
   new Set(records.map(r => r.county)).size,
   records.filter(r => ['session_days', 'session_dates', 'session_monthly'].some(k => r[k] && r[k].length)).length,
 ]);
-for (const href of ['./#submit-details', './?organizer=1', './#flyer-maker', 'poster.html', 'https://www.vethomeguard.org/donate'])
+for (const href of ['./#submit-details', './?organizer=1', './#flyer-maker', 'poster.html', 'distributions.html'])
   assert(partners.querySelector(`a[href="${href}"]`), 'partners page links to ' + href);
-assert(partners.querySelector('a[href^="mailto:travis@vethomeguard.org?subject=Ohio%20Bingo%20Finder%20partnership"]'));
-assert(partners.body.textContent.includes('Inclusion never depends on donations or sponsorship.'));
+assert(partners.querySelector('a[href^="mailto:travis@vethomeguard.org?subject=Ohio%20Bingo%20Finder%3A%20community%20partner"]'));
+assert(read('distributions.html').includes('https://codes.ohio.gov/ohio-revised-code/section-2915.101'));
+assert(read('sitemap.xml').includes('<loc>https://bingo.vethomeguard.org/distributions.html</loc>'));
+assert(partners.body.textContent.includes('Inclusion never depends on donations, partnership or sponsorship.'));
 assert(partners.querySelector('#share-text').textContent.endsWith('bingo.vethomeguard.org'));
 const poster = read('poster.html');
 assert(poster.includes('<p class="url">bingo.vethomeguard.org</p>') && poster.includes('src="assets/bingo-qr.svg"'));
