@@ -89,6 +89,12 @@ def outputs():
         result[page] = re.sub(r'<script[^>]*data-goatcounter=[^>]*></script>', '', result[page])
         result[page] = result[page].replace('<script defer src="assets/analytics.js"></script>', '')
         result[page] = result[page].replace('</body>', '<script defer src="assets/analytics.js"></script></body>')
+    # Search engines: list the public views, including each state's canonical URL.
+    pages = ['', 'facilities.html', 'family-guide.html', 'disability-advocacy.html', 'mobility-independence.html', 'mobility-rights.html', 'bingo.html', 'flyers.html']
+    urls = [BASE_URL + page for page in pages if page == '' or (ROOT / page).is_file() or page in result]
+    urls += [BASE_URL + '?state=' + s['code'] for s in states[1:]]
+    result['sitemap.xml'] = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join('  <url><loc>' + u.replace('&', '&amp;') + '</loc></url>\n' for u in urls) + '</urlset>\n'
+    result['robots.txt'] = 'User-agent: *\nAllow: /\n\nSitemap: ' + BASE_URL + 'sitemap.xml\n'
     return result
 
 if __name__ == '__main__':

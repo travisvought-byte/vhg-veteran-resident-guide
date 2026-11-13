@@ -6,13 +6,14 @@ which the travisvought-byte/Ohio-Bingo repository mirrors and serves with GitHub
 """
 import json
 import re
+from instant_bingo import instant_page
 from html import escape
 
 SITE = 'https://bingo.vethomeguard.org'
 GUIDE = 'https://guide.vethomeguard.org'
 EMAIL = 'travis@vethomeguard.org'
 LOGO = 'assets/vhg-logo.png'  # copied into bingo-site/assets; og:image uses SITE + '/' + LOGO
-DONATE = 'https://www.vethomeguard.org/donate'
+DONATE = 'https://www.vethomeguard.org/donate.html'
 ABOUT_VHG = 'Veteran Home Guardians, an Ohio nonprofit that visits veterans in nursing homes'
 
 
@@ -58,7 +59,7 @@ def standalone_finder(page):
     page = _replace(page, '<h1>Ohio Bingo &amp; Senior Centers</h1>',
                     '<p class="site-name">Ohio Bingo Finder · bingo.vethomeguard.org</p><h1>Ohio Bingo &amp; Senior Centers</h1>', 1)
     page = _replace(page, '.source-note{', '.site-name{margin:10px 0 0;font-size:14px;letter-spacing:.04em;text-transform:uppercase;opacity:.85}.source-note{', 1)
-    page = _replace(page, '</footer>', '<p><a href="partners.html">Partner with the Ohio Bingo Finder</a> · '
+    page = _replace(page, '</footer>', '<p><a href="partners.html">Partner with the Ohio Bingo Finder</a> · <a href="instant.html">Kinds of bingo</a> · '
                     '<a href="poster.html">Print a poster</a> · '
                     f'<a href="{GUIDE}/">Veteran Resident Resource Guide</a></p></footer>', 1)
     return page.replace('</body>', '<script defer src="assets/analytics.js"></script></body>', 1)
@@ -113,11 +114,12 @@ def partners_page(stats):
 <div class="stat"><b>{stats['counties']}</b>Ohio counties covered</div>
 <div class="stat"><b>{stats['timed']}</b>with published schedules on file</div>
 </section>
-<p class="note">Listings are free and always will be. Inclusion never depends on donations or sponsorship.</p>
+<p class="note">Listings are free and always will be. Inclusion never depends on donations, partnership or sponsorship.</p>
 <div class="grid">
 <article id="organizers"><h2>Run a bingo game?</h2>
 <p>American Legion and VFW posts, booster clubs, churches, fire departments and other licensed charities: get your game in front of players and the activity staff who plan resident outings.</p>
 <p>Send your game days, door and first-game times, packet prices, a public phone or Facebook page, and whether the entrance is step-free and groups are welcome.</p>
+<p><strong>Get verified, free.</strong> When someone from your hall confirms your days and times, your listing shows a &ldquo;Verified&rdquo; badge with the month you confirmed. It stays for 12 months; confirm again each year to keep it.</p>
 <p><a class="button" href="./#submit-details">Add or update your game</a><a class="button alt" href="./?organizer=1">Print a sign for your hall</a></p></article>
 <article id="facilities"><h2>Nursing homes and senior living</h2>
 <p>Activity directors and social workers can print a one-page list of games and senior centers near their building, with a QR code to the full finder. It works well on activity boards, in family packets and in resident newsletters.</p>
@@ -125,9 +127,12 @@ def partners_page(stats):
 <article id="community"><h2>Senior centers, libraries and churches</h2>
 <p>Hang the poster, link to the finder from your website or newsletter, and send us your own program schedule so it shows up for people searching nearby.</p>
 <p><a class="button" href="poster.html">Print the poster</a><a class="button alt" href="mailto:{EMAIL}?subject=Ohio%20Bingo%20Finder%3A%20our%20programs">Send your schedule</a></p></article>
-<article id="sponsors"><h2>Sponsors and community partners</h2>
-<p>Partners help keep schedules current, reach every bingo hall and care facility in the state, and get printed flyers into buildings where residents don't use the internet. Support goes to Veteran Home Guardians' work with veterans in Ohio nursing homes.</p>
-<p><a class="button" href="{sponsor}">Talk about a partnership</a><a class="button alt" href="{DONATE}" target="_blank" rel="noopener">Donate to VHG</a></p></article>
+<article id="sponsors"><h2>Community partner halls</h2>
+<p>Instant bingo halls run by veteran's, fraternal and sporting organizations must give part of their net profit to a qualifying charity. Halls that name Veteran Home Guardians as a recipient, for any share, become Community Partners.</p>
+<p>Partners are recognized on this page and on their listing. We help partners stay current on the distribution rules, send updates on our work, and visit senior veterans in nursing homes in their area.</p>
+<p>We do not sell advertising to halls. Every hall gets the same free listing whether it partners with us or not.</p>
+<p><a class="button" href="mailto:{EMAIL}?subject=Ohio%20Bingo%20Finder%3A%20community%20partner">Become a community partner</a><a class="button alt" href="distributions.html">Read the distribution rules</a></p>
+<p><a href="instant.html">See the posts and lodges licensed for instant bingo</a></p></article>
 </div>
 <section id="share-kit"><h2>Share the finder</h2>
 <div class="share"><img src="assets/bingo-qr.svg" alt="QR code that opens bingo.vethomeguard.org" width="180" height="180">
@@ -139,6 +144,48 @@ def partners_page(stats):
     return _shell('Partner with the Ohio Bingo Finder | Veteran Home Guardians',
                   'Bingo halls, care facilities, senior centers and sponsors: list your game free, print flyers and posters, and partner with the free Ohio Bingo Finder.',
                   'partners.html', body)
+
+
+AG_ENFORCEMENT = 'https://charitable.ohioago.gov/Charitable-Bingo/Bingo-Enforcement'
+ORC_DISTRIBUTION = 'https://codes.ohio.gov/ohio-revised-code/section-2915.101'
+OAC_ADJUSTMENT = 'https://codes.ohio.gov/ohio-administrative-code/rule-109:1-4-21'
+
+
+def distributions_page():
+    body = f'''<header><a class="brand" href="./"><img src="{LOGO}" alt="" width="48" height="48"><span>Ohio Bingo Finder</span></a>
+<h1>Instant bingo distributions: what Ohio law requires</h1>
+<p>A plain-English summary for post commanders, finance officers and bingo volunteers. It follows <a href="{ORC_DISTRIBUTION}">Ohio Revised Code 2915.101</a>. It is not legal advice. When in doubt, ask the Ohio Attorney General&rsquo;s Charitable Law Section.</p></header>
+<main>
+<article><h2>Veteran&rsquo;s, fraternal and sporting organizations</h2>
+<p>This applies to net profit from paper and electronic instant bingo (pull-tabs), each calendar year.</p>
+<h3>Up to the threshold</h3>
+<ul><li>At least <strong>25%</strong> goes to a qualifying charity (see ORC 2915.01(V)(1)) or a government agency.</li>
+<li>Up to <strong>75%</strong> may be kept for the organization&rsquo;s allowed bingo expenses.</li></ul>
+<p>The statute sets the threshold at $250,000 and lets the Attorney General raise it for inflation. Check <a href="{OAC_ADJUSTMENT}">OAC 109:1-4-21</a> for the current amount.</p>
+<h3>Above the threshold</h3>
+<ul><li>At least <strong>50%</strong> goes to a qualifying charity or a government agency.</li>
+<li>Up to <strong>5%</strong> may go to the organization&rsquo;s own charitable purposes or a community action agency.</li>
+<li>Up to <strong>45%</strong> may be kept for allowed expenses.</li></ul>
+<p>Anything not distributed or kept for those purposes must go to a qualifying charity.</p></article>
+<article><h2>Other charitable organizations</h2>
+<p>Churches, schools, booster clubs and other charities that run instant bingo must give <strong>100%</strong> of net profit to a qualifying charity or a government agency.</p></article>
+<article><h2>Pass-through charities</h2>
+<p>The law allows a hall to give to a 501(c)(3) that makes donations to other organizations and lets donors advise where the money goes. Those donations still have to meet 501(c)(3) rules. Money that comes back to the hall for its own operations is not a charitable distribution.</p></article>
+<article><h2>What gets halls in trouble</h2>
+<ul><li>Paying the contracted charity less than the required amount</li>
+<li>Bingo bank accounts that don&rsquo;t match the money collected</li>
+<li>Paying unallowable expenses from bingo accounts</li>
+<li>Missing required reports</li></ul>
+<p>The Attorney General posts notices, settlements and orders on its <a href="{AG_ENFORCEMENT}">bingo enforcement page</a>. Problems are usually caught at annual inspections or license renewal.</p></article>
+<article><h2>Questions</h2>
+<p>Ohio Attorney General, Charitable Law Section: <a href="tel:614-466-3181">614-466-3181</a>.</p>
+<p>To name Veteran Home Guardians as a recipient, or to ask how our community partnership works, email <a href="mailto:{EMAIL}?subject=Instant%20bingo%20distribution">{EMAIL}</a>. Every hall&rsquo;s listing stays free either way.</p>
+<p><a class="button" href="partners.html">Community partners</a><a class="button alt" href="./">Open the finder</a></p></article>
+</main>
+<footer><p>Ohio Bingo Finder · A free community resource from Veteran Home Guardians · <a href="mailto:{EMAIL}">{EMAIL}</a> · <a href="{GUIDE}/">Veteran Resident Resource Guide</a></p></footer>'''
+    return _shell('Instant bingo distributions: what Ohio law requires | Ohio Bingo Finder',
+                  'Plain-English guide to Ohio instant bingo distribution rules for veteran, fraternal and sporting organizations and other charities.',
+                  'distributions.html', body, '\nmain article{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px;margin:0 0 18px}main article h2{margin-top:0}')
 
 
 def poster_page(stats):
@@ -188,6 +235,8 @@ def make_bingo_site(root, finder_page):
     files = {
         'bingo-site/index.html': standalone_finder(finder_page),
         'bingo-site/partners.html': partners_page(stats),
+        'bingo-site/distributions.html': distributions_page(),
+        'bingo-site/instant.html': instant_page(root, LOGO, EMAIL, GUIDE, _shell),
         'bingo-site/poster.html': poster_page(stats),
         'bingo-site/404.html': not_found_page(),
         'bingo-site/CNAME': 'bingo.vethomeguard.org\n',
@@ -195,7 +244,7 @@ def make_bingo_site(root, finder_page):
         'bingo-site/README.md': README,
         'bingo-site/robots.txt': f'User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n',
         'bingo-site/sitemap.xml': ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-                                   + ''.join(f'  <url><loc>{SITE}/{p}</loc></url>\n' for p in ('', 'partners.html', 'poster.html'))
+                                   + ''.join(f'  <url><loc>{SITE}/{p}</loc></url>\n' for p in ('', 'partners.html', 'distributions.html', 'instant.html', 'poster.html'))
                                    + '</urlset>\n'),
         'bingo-site/assets/analytics.js': (root / 'assets/analytics.js').read_text(),
         'bingo-site/assets/vhg-logo.png': (root / 'assets/vhg-logo.png').read_bytes(),
