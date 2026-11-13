@@ -31,15 +31,10 @@ for (const page of ['index.html', 'partners.html', 'distributions.html', 'instan
   }
 }
 
-// Partner page: numbers come from the published data; routes reach the finder's tools.
+// Partner page: no headline counts (kept plain on purpose); routes reach the finder's tools.
 const records = dataOf(index), partners = new JSDOM(read('partners.html')).window.document;
-const stat = [...partners.querySelectorAll('.stat b')].map(b => Number(b.textContent));
-assert.deepEqual(stat, [
-  records.filter(r => ['licensed', 'charitable'].includes(r.category)).length,
-  records.filter(r => ['center', 'senior'].includes(r.category)).length,
-  new Set(records.map(r => r.county)).size,
-  records.filter(r => ['session_days', 'session_dates', 'session_monthly'].some(k => r[k] && r[k].length)).length,
-]);
+assert.equal(partners.querySelectorAll('.stat').length, 0, 'partners page shows no count band');
+assert(!/\b\d{2,4} (state-listed|Ohio counties)/.test(partners.body.textContent));
 for (const href of ['./#submit-details', './?organizer=1', './#flyer-maker', 'poster.html', 'distributions.html'])
   assert(partners.querySelector(`a[href="${href}"]`), 'partners page links to ' + href);
 assert(partners.querySelector('a[href^="mailto:travis@vethomeguard.org?subject=Ohio%20Bingo%20Finder%3A%20community%20partner"]'));
@@ -64,4 +59,4 @@ assert(instant.includes('House Bill 344') && read('sitemap.xml').includes('<loc>
 const marengo = records.find(r => r.license_number === '1006-39');
 assert.deepEqual(marengo.also_sold, ['instant bingo tickets (pull-tabs)'], 'Type III electronic is not shown as sold during games');
 assert(!records.some(r => r.partner_since), 'no community partners are on file yet');
-console.log('PASS bingo site: kinds-of-bingo page (members and guests, no 501(c)(3) bar locations), bingo.vethomeguard.org address, data parity with the guide, printed flyer address, local links, partner numbers and routes, poster, sitemap.');
+console.log('PASS bingo site: kinds-of-bingo page (members and guests, no 501(c)(3) bar locations), bingo.vethomeguard.org address, data parity with the guide, printed flyer address, local links, partner page without count band, partner routes, poster, sitemap.');
