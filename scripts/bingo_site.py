@@ -100,7 +100,7 @@ def _shell(title, description, path, body, extra_style=''):
 
 
 def partners_page(stats):
-    blurb = ('Looking for bingo near you? The free Ohio Bingo Finder lists bingo games and senior centers in all 88 Ohio counties. '
+    blurb = ('Looking for bingo near you? The free Ohio Bingo Finder lists bingo games and senior centers across Ohio. '
              'Search by ZIP code, day and time: bingo.vethomeguard.org')
     sponsor = f'mailto:{EMAIL}?subject=Ohio%20Bingo%20Finder%20partnership'
     body = f'''<header><a class="brand" href="./"><img src="{LOGO}" alt="" width="48" height="48"><span>Ohio Bingo Finder</span></a>
@@ -108,12 +108,6 @@ def partners_page(stats):
 <p>A free statewide finder that helps seniors, veterans, families and activity directors find bingo games and senior centers near them. It is built and kept up by {ABOUT_VHG}.</p>
 <p><a class="button" href="./">Open the finder</a></p></header>
 <main>
-<section class="stats" aria-label="What the finder covers">
-<div class="stat"><b>{stats['listed']}</b>state-listed bingo locations</div>
-<div class="stat"><b>{stats['centers']}</b>senior and community centers</div>
-<div class="stat"><b>{stats['counties']}</b>Ohio counties covered</div>
-<div class="stat"><b>{stats['timed']}</b>with published schedules on file</div>
-</section>
 <p class="note">Listings are free and always will be. Inclusion never depends on donations, partnership or sponsorship.</p>
 <div class="grid">
 <article id="organizers"><h2>Run a bingo game?</h2>
@@ -204,7 +198,7 @@ def poster_page(stats):
 <p class="lead">Free Ohio Bingo Finder. Search by ZIP code, day and time.</p>
 <img class="qr" src="assets/bingo-qr.svg" alt="QR code that opens bingo.vethomeguard.org">
 <p class="url">bingo.vethomeguard.org</p>
-<p class="facts">{stats['listed']} state-listed bingo locations and {stats['centers']} senior centers in all {stats['counties']} Ohio counties.<br>Run a game? List it free at the same address.</p>
+<p class="facts">All registered bingo across Ohio, plus senior centers.<br>Run a game? List it free at the same address.</p>
 <p class="small">A free community resource from {ABOUT_VHG}.</p>
 </section>'''
     return _shell('Ohio Bingo Finder poster | Veteran Home Guardians',
