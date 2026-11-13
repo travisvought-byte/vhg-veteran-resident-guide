@@ -210,3 +210,15 @@ The guide's `bingo.html` stays live and gains the same "who it's for" links in i
 ## Organizer verification
 
 When someone from a hall confirms its game days and times directly (email, phone or in person), set `hall_confirmed_on` on that record to the confirmation date (ISO `YYYY-MM-DD`). The finder then shows a "Verified" badge with the month and year. The badge disappears automatically 365 days after that date, so halls need to reconfirm yearly. Record who confirmed and how in `hall_confirmed_how`, which is not shown publicly (`notes` and `sources` are). Firsthand confirmation by VHG counts. A future date fails the build. Verification is free and never depends on partnership, donations or sponsorship.
+
+## Kinds of bingo and instant bingo at posts and lodges (November 12, 2026)
+
+`scripts/instant_bingo.py` reads the October 2, 2026 authorization report and separates the license types:
+
+- Type I cards in the finder now say what else is sold during games (`also_sold`): instant bingo tickets (Type II paper) and electronic instant bingo (Type II electronic). Matched by license and address, or by license when it has one Type I location. Type III is never shown as sold during games.
+- `bingo-site/instant.html` explains the three kinds of bingo and lists the 946 veterans posts, fraternal lodges and clubs licensed for Type III instant bingo. Framing is members and invited guests, 18+ (ORC 2915.13, 2915.14), never public play. The 4,840 Type III paper locations held by 501(c)(3) charities (bar and retail sales) are not published.
+- Community partners: `data/public/ohio-bingo-partners.json` (`license_number`, `partner_since`). A listed license shows a "Community partner" badge in the finder and on the instant page, and sorts first there. The file is empty until a hall names VHG as a distribution recipient.
+- Internal outreach list (not published, not committed): `python3 scripts/instant_bingo.py --prospects OUT.csv [--home-zip 43334]` lists every non-501(c)(3) location licensed for instant bingo (Type II or III), which owes a charity distribution under ORC 2915.101, sorted by distance.
+- Two source rows with no usable county are corrected from the city (Riverside 45431: Montgomery; East Liverpool 43920: Columbiana).
+
+Law check, November 12, 2026: HB 344 (136th GA; 501(c)(3) electronic instant bingo at bars, 16-hour days from 8 a.m., retailer VLTs) was referred to House Finance on June 11, 2025, with no later action found. The House version of the 2025 budget (HB 96) added longer hours, a new distribution formula, separate instant/electronic profit calculations and sporting-organization e-bingo; the Senate removed them and the enacted budget has none. Current rules stand. Recheck before relying on hours or distribution percentages.

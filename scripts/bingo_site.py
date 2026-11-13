@@ -6,6 +6,7 @@ which the travisvought-byte/Ohio-Bingo repository mirrors and serves with GitHub
 """
 import json
 import re
+from instant_bingo import instant_page
 from html import escape
 
 SITE = 'https://bingo.vethomeguard.org'
@@ -58,7 +59,7 @@ def standalone_finder(page):
     page = _replace(page, '<h1>Ohio Bingo &amp; Senior Centers</h1>',
                     '<p class="site-name">Ohio Bingo Finder · bingo.vethomeguard.org</p><h1>Ohio Bingo &amp; Senior Centers</h1>', 1)
     page = _replace(page, '.source-note{', '.site-name{margin:10px 0 0;font-size:14px;letter-spacing:.04em;text-transform:uppercase;opacity:.85}.source-note{', 1)
-    page = _replace(page, '</footer>', '<p><a href="partners.html">Partner with the Ohio Bingo Finder</a> · '
+    page = _replace(page, '</footer>', '<p><a href="partners.html">Partner with the Ohio Bingo Finder</a> · <a href="instant.html">Kinds of bingo</a> · '
                     '<a href="poster.html">Print a poster</a> · '
                     f'<a href="{GUIDE}/">Veteran Resident Resource Guide</a></p></footer>', 1)
     return page.replace('</body>', '<script defer src="assets/analytics.js"></script></body>', 1)
@@ -130,7 +131,8 @@ def partners_page(stats):
 <p>Instant bingo halls run by veteran's, fraternal and sporting organizations must give part of their net profit to a qualifying charity. Halls that name Veteran Home Guardians as a recipient, for any share, become Community Partners.</p>
 <p>Partners are recognized on this page and on their listing. We help partners stay current on the distribution rules, send updates on our work, and visit senior veterans in nursing homes in their area.</p>
 <p>We do not sell advertising to halls. Every hall gets the same free listing whether it partners with us or not.</p>
-<p><a class="button" href="mailto:{EMAIL}?subject=Ohio%20Bingo%20Finder%3A%20community%20partner">Become a community partner</a><a class="button alt" href="distributions.html">Read the distribution rules</a></p></article>
+<p><a class="button" href="mailto:{EMAIL}?subject=Ohio%20Bingo%20Finder%3A%20community%20partner">Become a community partner</a><a class="button alt" href="distributions.html">Read the distribution rules</a></p>
+<p><a href="instant.html">See the posts and lodges licensed for instant bingo</a></p></article>
 </div>
 <section id="share-kit"><h2>Share the finder</h2>
 <div class="share"><img src="assets/bingo-qr.svg" alt="QR code that opens bingo.vethomeguard.org" width="180" height="180">
@@ -234,6 +236,7 @@ def make_bingo_site(root, finder_page):
         'bingo-site/index.html': standalone_finder(finder_page),
         'bingo-site/partners.html': partners_page(stats),
         'bingo-site/distributions.html': distributions_page(),
+        'bingo-site/instant.html': instant_page(root, LOGO, EMAIL, GUIDE, _shell),
         'bingo-site/poster.html': poster_page(stats),
         'bingo-site/404.html': not_found_page(),
         'bingo-site/CNAME': 'bingo.vethomeguard.org\n',
@@ -241,7 +244,7 @@ def make_bingo_site(root, finder_page):
         'bingo-site/README.md': README,
         'bingo-site/robots.txt': f'User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n',
         'bingo-site/sitemap.xml': ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-                                   + ''.join(f'  <url><loc>{SITE}/{p}</loc></url>\n' for p in ('', 'partners.html', 'distributions.html', 'poster.html'))
+                                   + ''.join(f'  <url><loc>{SITE}/{p}</loc></url>\n' for p in ('', 'partners.html', 'distributions.html', 'instant.html', 'poster.html'))
                                    + '</urlset>\n'),
         'bingo-site/assets/analytics.js': (root / 'assets/analytics.js').read_text(),
         'bingo-site/assets/vhg-logo.png': (root / 'assets/vhg-logo.png').read_bytes(),
