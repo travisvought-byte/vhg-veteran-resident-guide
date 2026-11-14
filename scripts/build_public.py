@@ -93,6 +93,8 @@ def outputs():
     pages = ['', 'facilities.html', 'family-guide.html', 'disability-advocacy.html', 'mobility-independence.html', 'mobility-rights.html', 'bingo.html', 'flyers.html']
     urls = [BASE_URL + page for page in pages if page == '' or (ROOT / page).is_file() or page in result]
     urls += [BASE_URL + '?state=' + s['code'] for s in states[1:]]
+    # The per-state share pages are public, each with its own title and description.
+    urls += [BASE_URL + s['share_page'] for s in states]
     result['sitemap.xml'] = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join('  <url><loc>' + u.replace('&', '&amp;') + '</loc></url>\n' for u in urls) + '</urlset>\n'
     result['robots.txt'] = 'User-agent: *\nAllow: /\n\nSitemap: ' + BASE_URL + 'sitemap.xml\n'
     return result
