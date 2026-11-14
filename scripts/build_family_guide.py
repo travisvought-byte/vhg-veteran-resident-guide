@@ -198,12 +198,13 @@ def outputs():
     data = validate(json.loads((ROOT / 'data/family-guide.json').read_text()))
     sources = {s['id']: s for s in data['sources']}
     need_names = {n['id']: n['label'].split(' (')[0] for n in data['needs']}
-    counties = ohio_counties()
+    counties = []  # Ohio county contacts are served by OhioMom.
     page_data = dict(data, ohio_counties=counties, states=STATES, anchors=ANCHORS, es=spanish(data))
     cards = [card(r, sources, need_names) for r in data['resources'] if r['scope'] != 'MIL']
     military = [card(r, sources, need_names) for r in data['resources'] if r['scope'] == 'MIL']
-    state_options = ''.join(f'<option value="{c}"' + (' selected' if c == 'OH' else '') + f'>{esc(n)}</option>'
+    state_options = ''.join(f'<option value="{c}"' + '' + f'>{esc(n)}</option>'
                             for c, n in STATES.items())
+    state_options = '<option value="US" selected>Choose your state</option>' + state_options
     county_options = '<option value="" data-i18n="county-none">Choose a county</option>' + ''.join(
         f'<option value="{esc(c["county"])}">{esc(c["county"])} County</option>' for c in counties)
     stage_buttons = ('<button type="button" class="stage" data-stage="all" aria-pressed="true"><strong id="st-all" data-i18n="stage-all">Show everything</strong>'
@@ -219,7 +220,7 @@ def outputs():
         f'<article><h3>{esc(c["title"])}</h3><p>{esc(c["text"])}</p><p class="small">Sources: '
         + ' · '.join(f'<a href="{esc(sources[s]["url"])}" target="_blank" rel="noopener">{esc(sources[s]["title"])}</a>' for s in c['sources'])
         + '</p></article>' for c in data['changes'])
-    anchors = anchor_html('OH', data['protection_advocacy']['OH'])
+    anchors = '<li>Choose your state above for early intervention, school support and disability rights contacts.</li>'
     glossary = ''.join(f'<dt>{esc(g["term"])}</dt><dd>{esc(g["plain"])}</dd>' for g in data['glossary'])
     page = (ROOT / 'templates/family-guide.html').read_text()
     for key, value in {

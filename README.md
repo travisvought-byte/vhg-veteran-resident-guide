@@ -248,3 +248,7 @@ The existing [mobility-law research matrix](research/mobility-laws-2026-11-01/RE
 The new pass adds Illinois, Maine, Massachusetts, Minnesota and Wisconsin, plus six evidence-linked advocacy comparisons covering backup-equipment payment, temporary-equipment triggers, device definitions, donated-device exclusion, functional suitability and repair bottlenecks. The JSON remains research-only; the public site's approved snapshot and individual-help flows are unchanged. New Jersey remains unreviewed pending reconciliation of a dated regulator compilation.
 
 Run `python3 scripts/validate_mobility_law_map.py --write` to regenerate the matrix report and `python3 tests/mobility_law_map.py` to check evidence boundaries and comparison premises.
+
+## Resource ownership
+
+Ohio autism, ADHD and family disability resources are owned by `travisvought-byte/Ohiomom` at https://www.ohiomom.org/family-guide.html. OhioMom covers Ohio only. The multi-state family guide remains at https://guide.vethomeguard.org/family-guide.html?state=US. Existing Ohio/default family-guide URLs redirect with their query parameters and fragments preserved. Other independently maintained assets remain in place until they have a working destination; related sites should link to the owning site, not replicate its section.

@@ -55,8 +55,8 @@
  function readParams() {
   const p = new URLSearchParams(location.search);
   lang = p.get('lang') === 'es' ? 'es' : 'en';
-  const s = (p.get('state') || 'OH').toUpperCase();
-  $('state').value = states[s] ? s : 'OH';
+  const s = (p.get('state') || 'US').toUpperCase();
+  $('state').value = states[s] ? s : 'US';
   const c = p.get('county') || '';
   $('county').value = counties.has(c) ? c : '';
   const st = p.get('stage') || 'all';
@@ -152,13 +152,14 @@
  function updateReports(state) {
   document.querySelectorAll('a.report').forEach(a => {
    const subject = 'Family guide correction: ' + a.dataset.report + ' (' + state + ')';
-   const body = 'Listing: ' + a.dataset.report + '\nState: ' + states[state] + '\nWhat should be corrected?\n\n\nPlease do not include a child\'s name, medical details or other personal information.';
+   const body = 'Listing: ' + a.dataset.report + '\nState: ' + (states[state] || 'United States') + '\nWhat should be corrected?\n\n\nPlease do not include a child\'s name, medical details or other personal information.';
    a.href = 'mailto:travis@vethomeguard.org?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
   });
  }
 
  function apply(write = true) {
   const state = $('state').value, ohio = state === 'OH';
+  if (ohio) { writeParams(state, $('county').value, []); location.assign('https://www.ohiomom.org/family-guide.html' + location.search + location.hash); return; }
   $('county-wrap').hidden = !ohio;
   $('ohio-crisis').hidden = !ohio;
   if (!ohio) $('county').value = '';
@@ -171,7 +172,7 @@
   $('empty').hidden = main.shown > 0;
   $('military-count').textContent = mil.shown;
   const spanish = lang === 'es', d = es.dynamic;
-  const where = ohio ? (county ? (spanish ? fill(d.county_where, {county}) : county + ' County, Ohio') : 'Ohio') : states[state];
+  const where = ohio ? (county ? (spanish ? fill(d.county_where, {county}) : county + ' County, Ohio') : 'Ohio') : (states[state] || 'United States');
   let text;
   if (spanish) {
    const topic = stage === 'all' ? '' : fill(d.topic, {stage: stageName(stage)});
@@ -190,7 +191,8 @@
   }
   $('result-status').textContent = text;
   $('print-context').textContent = where + (stage === 'all' ? '' : ' · ' + stageLabel.get(stage)) + (needs.length ? ' · ' + needs.map(n => needName.get(n)).join(', ') : '');
-  renderAnchors(state, county);
+  $('anchors').hidden = state === 'US';
+  if (state !== 'US') renderAnchors(state, county);
   $('cvso-link').href = './?state=' + state + (ohio && county ? '&county=' + encodeURIComponent(county) : '');
   $('back-guide').href = './?state=' + state;
   updateReports(state);
