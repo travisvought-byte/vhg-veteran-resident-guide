@@ -89,8 +89,9 @@ def outputs():
         result[page] = re.sub(r'<script[^>]*data-goatcounter=[^>]*></script>', '', result[page])
         result[page] = result[page].replace('<script defer src="assets/analytics.js"></script>', '')
         result[page] = result[page].replace('</body>', '<script defer src="assets/analytics.js"></script></body>')
+    # The mobility and advocacy pages are canonical at mobilitytalk.org, so they stay out of this sitemap.
     # Search engines: list the public views, including each state's canonical URL.
-    pages = ['', 'facilities.html', 'family-guide.html', 'disability-advocacy.html', 'mobility-independence.html', 'mobility-rights.html', 'bingo.html', 'flyers.html']
+    pages = ['', 'facilities.html', 'family-guide.html', 'bingo.html', 'flyers.html']
     urls = [BASE_URL + page for page in pages if page == '' or (ROOT / page).is_file() or page in result]
     urls += [BASE_URL + '?state=' + s['code'] for s in states[1:]]
     # The per-state share pages are public, each with its own title and description.
