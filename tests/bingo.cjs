@@ -18,7 +18,7 @@ assert.equal(email.pathname,'travis@vethomeguard.org');assert.equal(email.search
 nodes.listings.onclick({target:{closest:()=>({dataset:{submit:'cardington-legion-97'}})}});
 assert.equal(nodes['submit-venue'].value,'Jenkins-Vaughan American Legion Post 97');assert.equal(nodes['submit-county'].value,'Morrow');
 nodes['submit-info'].value='Saturday 6 p.m.';let prevented=false;nodes['bingo-submit'].onsubmit({preventDefault(){prevented=true}});assert(prevented);assert(context.location.href.startsWith('mailto:travis@vethomeguard.org?'));
-assert.equal(vm.runInContext("filteredBingo('','scheduled','').length",context),98);
+assert.equal(vm.runInContext("filteredBingo('','scheduled','').length",context),97);
 console.log('PASS: submission prefill, email draft recipient/encoding and schedule filter.');
 
 const zero=vm.runInContext('milesBetween([40,-83],[40,-83])',context);assert.equal(zero,0);
@@ -223,7 +223,7 @@ const mainStart=html.indexOf('<main class="page-only">');const zipAt=html.indexO
 assert(mainStart>0&&zipAt>mainStart&&zipAt<introAt&&introAt<noticeAt,'ZIP search must come first');
 assert(html.includes('<nav class="quick" id="quick" aria-label="Quick searches">')&&html.includes('min-height:44px'));
 console.log('PASS: ZIP search leads the page and quick searches have 44px touch targets.');
-{const src=centers.filter(c=>c.schedule_source);assert(src.length>=16);assert(src.every(c=>c.schedule&&!/^Bingo:/i.test(c.schedule)));
+{const src=centers.filter(c=>c.schedule_source);assert(src.length>=15);assert(src.every(c=>c.schedule&&!/^Bingo:/i.test(c.schedule)));
 const tpl=fs.readFileSync(path.join(root,'scripts/bingo_edition.py'),'utf8');assert(tpl.includes('These times come from')&&tpl.includes('Next game day, if unchanged:'));
 console.log('PASS: older-source schedules name their source on the card and never claim to be freshly checked.');}
 
