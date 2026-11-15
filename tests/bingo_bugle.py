@@ -11,7 +11,7 @@ assert sum(r['review_status']=='identity_or_location_review' for r in s['rows'])
 assert sum(r['review_status']=='instant_ticket_hours' for r in s['rows'])==2
 public=json.loads((root/'data/public/ohio-bingo-authorized.json').read_text())+json.loads((root/'data/public/ohio-bingo.json').read_text());ids={r['id'] for r in public}
 assert all(set(r.get('matched_ids',[]))<=ids for r in s['rows'])
-north=next(r for r in public if r['id']=='northmor-music-bingo');assert 'October 6 and 20 only' in north['schedule'] and north['schedule_valid_until']=='2026-10-31'
+north=next(r for r in public if r['id']=='northmor-music-bingo');assert 'October 6 and 20' in north['schedule'] and north['session_days']==[2] and 'November 2026' in north['schedule_source'] and 'schedule_valid_until' not in north
 verm=next(r for r in public if r['license_number']=='0155-48');assert 'November 4 and December 2' in verm['schedule']
 assert s['issue']['month']=='2026-10' and s['issue']['pages']==28
 print('PASS: complete Bugle pull, malformed HTML, explicit unresolved rows, instant hours separated and limited-date schedules.')
