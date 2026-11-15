@@ -7,6 +7,7 @@ which the travisvought-byte/Ohio-Bingo repository mirrors and serves with GitHub
 import json
 import re
 from instant_bingo import instant_page
+from bingo_network import outputs as network_outputs
 from html import escape
 
 SITE = 'https://bingo.vethomeguard.org'
@@ -245,4 +246,8 @@ def make_bingo_site(root, finder_page):
         'bingo-site/assets/bingo-qr.svg': (root / 'assets/bingo-site-qr.svg').read_text(),
         'bingo-site/assets/bingo-submit-qr.svg': (root / 'assets/bingo-site-submit-qr.svg').read_text(),
     }
+    files.update(network_outputs(root))
+    files['bingo-site/index.html'] = files['bingo-site/index.html'].replace('<p class="site-name">', '<p><a href="states/">Find bingo in another state</a></p><p class="site-name">', 1)
+    extra_paths = ['states/'] + ['states/' + s['slug'] + '.html' for s in json.loads((root / 'data/bingo/states.json').read_text()) if s['code'] != 'OH']
+    files['bingo-site/sitemap.xml'] = files['bingo-site/sitemap.xml'].replace('</urlset>', ''.join(f'  <url><loc>{SITE}/{p}</loc></url>\n' for p in extra_paths) + '</urlset>')
     return files
