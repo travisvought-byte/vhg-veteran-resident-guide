@@ -222,3 +222,16 @@ When someone from a hall confirms its game days and times directly (email, phone
 - Two source rows with no usable county are corrected from the city (Riverside 45431: Montgomery; East Liverpool 43920: Columbiana).
 
 Law check, November 12, 2026: HB 344 (136th GA; 501(c)(3) electronic instant bingo at bars, 16-hour days from 8 a.m., retailer VLTs) was referred to House Finance on June 11, 2025, with no later action found. The House version of the 2025 budget (HB 96) added longer hours, a new distribution formula, separate instant/electronic profit calculations and sporting-organization e-bingo; the Senate removed them and the enacted budget has none. Current rules stand. Recheck before relying on hours or distribution percentages.
+
+## November 15, 2026: Bugle check, Northmor and finder usability
+
+- **Ohio Bingo Bugle, November edition.** The web directory and the November game guide (`Ohio_Game_Guide_November_2026.pdf`) show the same times as October for every hall still listed. Southeast Athletic Boosters, St. Joan of Arc and Vermilion Boosters no longer appear; their existing listings and dates are kept, per "Publishing older schedules". The raw directory page could not be downloaded from this environment, so no new source snapshot was saved; nothing changed.
+- **Northmor Music Boosters.** The October ad limited play to October 6 and 20, so the listing had dropped out of day searches. The November directory lists Tuesday, start 7 p.m. again (the November ad is an image and was not reviewed). The listing now uses `session_days: [2]` with `schedule_source`, so the card reads "Next game day, if unchanged" and asks people to call before they go, and the schedule text still says not every Tuesday is played. No November dates were inferred. Date-only test cases moved to Knights of Columbus #1610 and Vermilion.
+- **Hall replies.** Van Wert County Council on Aging (November 13): no more Monday evening bingo; already applied in `ohio-community-centers.json`.
+- **Finder usability for older players.**
+  - A finder link that carries a ZIP code (for example from the ZIP box on ohiobingo.org) opens at the results.
+  - A "Change ZIP code or distance" link under the result count returns to the search with the ZIP field ready.
+  - A wrong or unknown ZIP gets a plain message in red, including one that arrived in a link.
+  - No text in the page body is smaller than 16px, and the day checkboxes on the submission form are 24px with 44px rows.
+  - Source dates read "Oct 8, 2026" instead of 2026-10-08.
+  - On bingo.vethomeguard.org the top link returns to ohiobingo.org, and the guide link sits in the footer.

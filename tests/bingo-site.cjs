@@ -19,6 +19,8 @@ assert.deepEqual([...doc.querySelectorAll('nav.audience a')].map(a => a.getAttri
   ['#submit-details', '#flyer-maker', 'https://bingo.vethomeguard.org/partners.html']);
 assert(doc.querySelector('footer a[href="partners.html"]') && doc.querySelector('footer a[href="poster.html"]'));
 assert(doc.querySelector('a[href="https://guide.vethomeguard.org/?view=community"]'), 'link back to the guide');
+assert.equal(doc.querySelector('header a.back').getAttribute('href'), 'https://www.ohiobingo.org/', 'top link returns players to ohiobingo.org');
+assert(doc.querySelector('#change-zip[hidden] a[href="#bingo-nearby"]'), 'results offer a way back to the ZIP search');
 assert(index.includes('<script defer src="assets/analytics.js"></script></body>'));
 
 // Every local link and image in the site resolves to a file in bingo-site/.

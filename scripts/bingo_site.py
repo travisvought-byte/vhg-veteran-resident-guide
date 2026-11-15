@@ -54,14 +54,17 @@ def standalone_finder(page):
     # Pages and files that stay in the guide.
     page = _replace(page, 'href="index.html?view=community"', f'href="{GUIDE}/?view=community"', 1)
     page = _replace(page, 'href="index.html"', f'href="{GUIDE}/"', 1)
+    # Players mostly arrive from ohiobingo.org, so the top link goes back there; the guide link moves to the footer.
+    page = _replace(page, f'<a class="back" href="{GUIDE}/?view=community">← Ohio Veteran Resident Resource Guide</a>',
+                    '<a class="back" href="https://www.ohiobingo.org/">← Ohio Bingo home</a>', 1)
     page = _replace(page, 'href="facilities.html"', f'href="{GUIDE}/facilities.html"', 1)
     page = _replace(page, 'href="data/public/', f'href="{GUIDE}/data/public/')
     page = _replace(page, '<h1>Ohio Bingo &amp; Senior Centers</h1>',
                     '<p class="site-name">Ohio Bingo Finder · bingo.vethomeguard.org</p><h1>Ohio Bingo &amp; Senior Centers</h1>', 1)
-    page = _replace(page, '.source-note{', '.site-name{margin:10px 0 0;font-size:14px;letter-spacing:.04em;text-transform:uppercase;opacity:.85}.source-note{', 1)
+    page = _replace(page, '.source-note{', '.site-name{margin:10px 0 0;font-size:16px;letter-spacing:.04em;text-transform:uppercase;opacity:.85}.source-note{', 1)
     page = _replace(page, '</footer>', '<p><a href="partners.html">Partner with the Ohio Bingo Finder</a> · <a href="instant.html">Kinds of bingo</a> · '
                     '<a href="poster.html">Print a poster</a> · '
-                    f'<a href="{GUIDE}/">Veteran Resident Resource Guide</a></p></footer>', 1)
+                    f'<a href="{GUIDE}/?view=community">Veteran Resident Resource Guide</a></p></footer>', 1)
     return page.replace('</body>', '<script defer src="assets/analytics.js"></script></body>', 1)
 
 
