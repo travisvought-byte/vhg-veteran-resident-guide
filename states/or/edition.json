@@ -1,195 +1,230 @@
 {
- "ops": [
-  {
-   "op": "clear_data"
-  },
-  {
-   "op": "replace",
-   "old": "Ohio",
-   "new": "Oregon"
-  },
-  {
-   "op": "replace",
-   "old": "All 88",
-   "new": "All"
-  },
-  {
-   "op": "replace",
-   "old": "all 88",
-   "new": "all"
-  },
-  {
-   "op": "replace",
-   "old": "<option value=\"OH\">Oregon</option>",
-   "new": "<option value=\"OH\">Ohio</option>"
-  },
-  {
-   "op": "replace",
-   "old": "const STATE='OH';",
-   "new": "const STATE='OR';"
-  },
-  {
-   "op": "replace",
-   "old": "county veterans office",
-   "new": "state veterans agency"
-  },
-  {
-   "op": "replace",
-   "old": "county office",
-   "new": "state veterans agency"
-  },
-  {
-   "op": "replace",
-   "old": "Statewide edition · Updated October 8, 2026",
-   "new": "Oregon starter edition · Updated November 2, 2026"
-  },
-  {
-   "op": "replace",
-   "old": "Oregon’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
-   "new": "Ask the local aging agency or state Medicaid agency about waiver assessment and written approval; VA and other funders have their own processes."
-  },
-  {
-   "op": "replace",
-   "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
-   "new": "https://eldercare.acl.gov/home"
-  },
-  {
-   "op": "replace",
-   "old": "Oregon home modification authorization and provider rules",
-   "new": "Find local aging and disability help (Eldercare Locator)"
-  },
-  {
-   "op": "replace",
-   "old": "href=\"share.html\"",
-   "new": "href=\"share-or.html\""
-  },
-  {
-   "op": "replace",
-   "old": "href=\"prototype-data.json\"",
-   "new": "href=\"data/public/oregon-resources.json\""
-  },
-  {
-   "op": "replace",
-   "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
-   "new": "href=\"data/public/oregon-county-veterans-offices.json\""
-  },
-  {
-   "op": "declare",
-   "name": "priority",
-   "value": [
-    "or-claims",
-    "or-aging",
-    "or-ship",
-    "or-ombudsman",
-    "r02-aid-attendance-housebound",
-    "r02-va-pension",
-    "r02-survivors-pension"
-   ]
-  },
-  {
-   "op": "declare",
-   "name": "routes",
-   "value": {
-    "benefits": [
-     "or-claims",
-     "or-ship",
-     "r02-va-pension",
-     "r02-aid-attendance-housebound",
-     "r02-disability-increase",
-     "r02-pension-medicaid-rule",
-     "r02-survivors-pension",
-     "r02-dic",
-     "va-accredited-help"
-    ],
-    "survivors": [
-     "or-claims",
-     "r02-survivors-pension",
-     "r02-dic",
-     "r02-aid-attendance-housebound",
-     "r02-va-burial",
-     "va-accredited-help",
-     "nara-discharge-records"
-    ],
-    "care": [
-     "or-aging",
-     "r02-va-health-enrollment",
-     "va-location-finder",
-     "r02-va-cnh",
-     "r02-va-clc",
-     "r02-general-caregiver",
-     "r02-family-caregiver",
-     "r02-hospice",
-     "r02-palliative"
-    ],
-    "rights": [
-     "or-ombudsman",
-     "or-aging"
-    ],
-    "local": [
-     "or-aging",
-     "or-claims"
-    ],
-    "housing": [
-     "va-housing-help",
-     "or-ssvf-13-or-125",
-     "or-ssvf-13-or-126",
-     "or-ssvf-18-or-066",
-     "or-ssvf-19-or-128",
-     "or-ssvf-19-zz-127",
-     "or-ssvf-20-or-272",
-     "or-ssvf-20-or-430",
-     "or-ssvf-20-zz-147",
-     "va-location-finder",
-     "va-accredited-help",
-     "nara-discharge-records"
-    ]
-   }
-  },
-  {
-   "op": "declare",
-   "name": "seniorTopics",
-   "value": {
-    "daily": [
-     "or-aging"
-    ],
-    "accessibility": [
-     "or-aging"
-    ],
-    "vision": [
-     "or-aging"
-    ],
-    "hearing": [
-     "or-aging"
-    ],
-    "memory": [
-     "alz-dementia-support",
-     "or-aging"
-    ],
-    "costs": [
-     "or-ship",
-     "or-aging"
-    ],
-    "rights": [
-     "or-ombudsman",
-     "or-aging"
-    ]
-   }
-  },
-  {
-   "op": "line",
-   "prefix": "routes.accessibility=",
-   "new": "routes.accessibility=['va-hisa','va-sah','va-sha','va-tra','or-aging','va-location-finder'];"
-  },
-  {
-   "op": "line",
-   "prefix": "routes.seniors=",
-   "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
-  },
-  {
-   "op": "adapter"
-  },
-  {
-   "op": "embed_data"
-  }
- ]
+  "ops": [
+    {
+      "op": "clear_data"
+    },
+    {
+      "op": "replace",
+      "old": "Ohio",
+      "new": "Oregon"
+    },
+    {
+      "op": "replace",
+      "old": "All 88",
+      "new": "All 36"
+    },
+    {
+      "op": "replace",
+      "old": "all 88",
+      "new": "all 36"
+    },
+    {
+      "op": "replace",
+      "old": "<option value=\"OH\">Oregon</option>",
+      "new": "<option value=\"OH\">Ohio</option>"
+    },
+    {
+      "op": "replace",
+      "old": "const STATE='OH';",
+      "new": "const STATE='OR';"
+    },
+    {
+      "op": "replace",
+      "old": "Statewide edition · Updated October 8, 2026",
+      "new": "Oregon edition · Updated November 16, 2026"
+    },
+    {
+      "op": "replace",
+      "old": "Most phones come from Oregon AMVETS’ 2025–2026 directory.",
+      "new": "County veterans office phones, addresses and hours come from the Oregon Department of Veterans’ Affairs county pages. Many offices work by appointment; call before you go."
+    },
+    {
+      "op": "replace",
+      "old": "Oregon’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
+      "new": "Ask the local aging agency or state Medicaid agency about waiver assessment and written approval; VA and other funders have their own processes."
+    },
+    {
+      "op": "replace",
+      "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
+      "new": "https://eldercare.acl.gov/home"
+    },
+    {
+      "op": "replace",
+      "old": "Oregon home modification authorization and provider rules",
+      "new": "Find local aging and disability help (Eldercare Locator)"
+    },
+    {
+      "op": "replace",
+      "old": "href=\"share.html\"",
+      "new": "href=\"share-or.html\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"prototype-data.json\"",
+      "new": "href=\"data/public/oregon-resources.json\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
+      "new": "href=\"data/public/oregon-county-veterans-offices.json\""
+    },
+    {
+      "op": "declare",
+      "name": "priority",
+      "value": [
+        "or-claims",
+        "or-adrc",
+        "or-ship",
+        "or-ombudsman",
+        "or-legal-programs",
+        "r02-aid-attendance-housebound",
+        "r02-va-pension",
+        "r02-survivors-pension",
+        "r02-va-health-enrollment",
+        "va-accredited-help"
+      ]
+    },
+    {
+      "op": "declare",
+      "name": "routes",
+      "value": {
+        "benefits": [
+          "or-claims",
+          "or-ship",
+          "r02-va-pension",
+          "r02-aid-attendance-housebound",
+          "r02-disability-increase",
+          "r02-pension-medicaid-rule",
+          "r02-survivors-pension",
+          "r02-dic",
+          "va-accredited-help",
+          "or-adrc"
+        ],
+        "survivors": [
+          "or-claims",
+          "r02-survivors-pension",
+          "r02-dic",
+          "r02-aid-attendance-housebound",
+          "r02-va-burial",
+          "va-accredited-help",
+          "nara-discharge-records"
+        ],
+        "care": [
+          "r02-va-health-enrollment",
+          "va-location-finder",
+          "r02-va-cnh",
+          "r02-va-clc",
+          "r02-general-caregiver",
+          "r02-family-caregiver",
+          "r02-hospice",
+          "r02-palliative",
+          "or-adrc",
+          "or-cil-abilitree",
+          "or-cil-eocil",
+          "or-cil-eocil-the-dalles",
+          "or-cil-hasl",
+          "or-cil-ilr",
+          "or-cil-lila",
+          "or-cil-spokes",
+          "or-cil-uvdn",
+          "or-vahealth-systems"
+        ],
+        "rights": [
+          "or-ombudsman",
+          "or-legal-programs"
+        ],
+        "local": [
+          "or-claims",
+          "or-adrc",
+          "or-cil-abilitree",
+          "or-cil-eocil",
+          "or-cil-eocil-the-dalles",
+          "or-cil-hasl",
+          "or-cil-ilr",
+          "or-cil-lila",
+          "or-cil-spokes",
+          "or-cil-uvdn",
+          "or-legal-programs",
+          "or-vahealth-systems"
+        ],
+        "housing": [
+          "va-housing-help",
+          "or-ssvf-13-or-125",
+          "or-ssvf-13-or-126",
+          "or-ssvf-18-or-066",
+          "or-ssvf-19-or-128",
+          "or-ssvf-19-zz-127",
+          "or-ssvf-20-or-272",
+          "or-ssvf-20-or-430",
+          "va-location-finder",
+          "va-accredited-help",
+          "nara-discharge-records",
+          "or-legal-programs"
+        ]
+      }
+    },
+    {
+      "op": "declare",
+      "name": "seniorTopics",
+      "value": {
+        "daily": [
+          "or-adrc",
+          "or-cil-abilitree",
+          "or-cil-eocil",
+          "or-cil-eocil-the-dalles",
+          "or-cil-hasl",
+          "or-cil-ilr",
+          "or-cil-lila",
+          "or-cil-spokes",
+          "or-cil-uvdn"
+        ],
+        "accessibility": [
+          "or-adrc",
+          "or-cil-abilitree",
+          "or-cil-eocil",
+          "or-cil-eocil-the-dalles",
+          "or-cil-hasl",
+          "or-cil-ilr",
+          "or-cil-lila",
+          "or-cil-spokes",
+          "or-cil-uvdn"
+        ],
+        "vision": [
+          "or-adrc"
+        ],
+        "hearing": [
+          "or-adrc"
+        ],
+        "memory": [
+          "alz-dementia-support",
+          "or-adrc"
+        ],
+        "costs": [
+          "or-ship",
+          "or-adrc",
+          "or-legal-programs"
+        ],
+        "rights": [
+          "or-ombudsman",
+          "or-legal-programs"
+        ]
+      }
+    },
+    {
+      "op": "line",
+      "prefix": "routes.accessibility=",
+      "new": "routes.accessibility=['va-hisa','va-sah','va-sha','va-tra','or-adrc','or-cil-abilitree','or-cil-eocil','or-cil-eocil-the-dalles','or-cil-hasl','or-cil-ilr','or-cil-lila','or-cil-spokes','or-cil-uvdn','va-location-finder',...DATA.filter(x=>x.regional_role==='aging_agency').map(x=>x.program_id)];"
+    },
+    {
+      "op": "line",
+      "prefix": "routes.seniors=",
+      "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
+    },
+    {
+      "op": "adapter"
+    },
+    {
+      "op": "embed_data"
+    }
+  ]
 }

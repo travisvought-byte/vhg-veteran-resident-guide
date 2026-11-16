@@ -27,7 +27,8 @@ export const STATES=Object.freeze({
   "WI": "Wisconsin",
   "MN": "Minnesota",
   "OK": "Oklahoma",
-  "NJ": "New Jersey"
+  "NJ": "New Jersey",
+  "OR": "Oregon"
 });
 export const STATE_FILES=Object.freeze({
   "OH": [
@@ -137,6 +138,10 @@ export const STATE_FILES=Object.freeze({
   "NJ": [
     "data/public/new-jersey-resources.json",
     "data/public/new-jersey-county-veterans-offices.json"
+  ],
+  "OR": [
+    "data/public/oregon-resources.json",
+    "data/public/oregon-county-veterans-offices.json"
   ]
 });
 export const localityLabel=row=>row?(["independent_city","statewide"].includes(row.county_type)?row.county:row.county+" County"):"";

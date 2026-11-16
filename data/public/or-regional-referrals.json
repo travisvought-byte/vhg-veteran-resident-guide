@@ -1,80 +1,890 @@
 [
- {
-  "program_id": "or-aging",
-  "name": "Local aging help in Oregon (Eldercare Locator)",
-  "official_url": "https://eldercare.acl.gov/home",
-  "organization": "U.S. Administration for Community Living",
-  "service_area": [
-   "All Oregon counties"
-  ],
-  "state": "OR",
-  "needs_supported": [
-   "general_navigation",
-   "help_at_home"
-  ],
-  "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-  "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
-  "constraints": [
-   "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "or-aaa-cat",
+    "name": "Community Action Team (Columbia County Area Agency on Aging)",
+    "organization": "Community Action Team (Columbia County Area Agency on Aging)",
+    "official_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+    "state": "OR",
+    "service_area": [
+      "Columbia"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Connection, 855-673-2372, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Community Action Team in St. Helens is the county’s Area Agency on Aging; the statewide ADRC line connects you to it."
+    ],
+    "public_contact": {
+      "phone": "855-673-2372",
+      "phone_label": "Area Agency on Aging (Columbia)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+      "phone_source_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/pages/contacts.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+        "title": "Oregon Department of Human Services: Area Agencies on Aging overview (June 9, 2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "The sixteen Area Agencies on Aging, their type and the counties each serves; read in full. The overview prints no phone numbers."
+      },
+      {
+        "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/pages/contacts.aspx",
+        "title": "Oregon Department of Human Services: Aging and disability contacts",
+        "reviewed_on": "2026-11-16",
+        "scope": "Statewide Aging and Disability Resource Connection number 855-673-2372; search excerpt. No current agency phone was found on an official page, so the card uses the statewide line."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "or-aaa-scbec",
+    "name": "South Coast Business Employment Corporation (Area Agency on Aging)",
+    "organization": "South Coast Business Employment Corporation (Area Agency on Aging)",
+    "official_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+    "state": "OR",
+    "service_area": [
+      "Coos",
+      "Curry"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Connection, 855-673-2372, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-974-4054. Office: 800 N. Bayshore Drive, Coos Bay, OR 97420."
+    ],
+    "public_contact": {
+      "phone": "541-269-2013",
+      "phone_label": "Area Agency on Aging (Coos and Curry)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+      "phone_source_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/scbec-area-plan.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+        "title": "Oregon Department of Human Services: Area Agencies on Aging overview (June 9, 2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "The sixteen Area Agencies on Aging, their type and the counties each serves; read in full. The overview prints no phone numbers."
+      },
+      {
+        "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/scbec-area-plan.pdf",
+        "title": "South Coast Business: Area Agency on Aging Area Plan 2025–2029",
+        "reviewed_on": "2026-11-16",
+        "scope": "Agency phone 541-269-2013, toll-free 800-974-4054 and address; search excerpt."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.acl.gov/contact"
+  {
+    "program_id": "or-aaa-cocoa",
+    "name": "Council on Aging of Central Oregon",
+    "organization": "Council on Aging of Central Oregon",
+    "official_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+    "state": "OR",
+    "service_area": [
+      "Crook",
+      "Deschutes",
+      "Jefferson"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Connection, 855-673-2372, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 373 NE Greenwood Avenue, Bend, OR 97701."
+    ],
+    "public_contact": {
+      "phone": "541-678-5483",
+      "phone_label": "Area Agency on Aging (Central Oregon)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+      "phone_source_url": "https://SHIBA.Oregon.gov/Documents/2023-guide-pickup-locations.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+        "title": "Oregon Department of Human Services: Area Agencies on Aging overview (June 9, 2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "The sixteen Area Agencies on Aging, their type and the counties each serves; read in full. The overview prints no phone numbers."
+      },
+      {
+        "url": "https://SHIBA.Oregon.gov/Documents/2023-guide-pickup-locations.pdf",
+        "title": "Oregon SHIBA: 2023 Medicare guide pickup locations",
+        "reviewed_on": "2026-11-16",
+        "scope": "Council on Aging of Central Oregon, 373 NE Greenwood, Bend, 541-678-5483; search excerpt."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.acl.gov/contact",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "aging_agency"
- },
- {
-  "program_id": "or-ombudsman",
-  "name": "Oregon long-term-care ombudsman",
-  "official_url": "https://theconsumervoice.org/get_help",
-  "organization": "National Long-Term Care Ombudsman Resource Center",
-  "service_area": [
-   "All Oregon counties"
-  ],
-  "state": "OR",
-  "needs_supported": [
-   "resident_rights",
-   "general_navigation"
-  ],
-  "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-  "next_step": "Use the locator to find the Oregon program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
-  "constraints": [
-   "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "or-aaa-klccoa",
+    "name": "Klamath and Lake Counties Council on Aging",
+    "organization": "Klamath and Lake Counties Council on Aging",
+    "official_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+    "state": "OR",
+    "service_area": [
+      "Klamath",
+      "Lake"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Connection, 855-673-2372, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 404 Main Street, Suite 6, Klamath Falls, OR 97601."
+    ],
+    "public_contact": {
+      "phone": "541-205-5400",
+      "phone_label": "Area Agency on Aging (Klamath and Lake)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+      "phone_source_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/klccoa-area-plan.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+        "title": "Oregon Department of Human Services: Area Agencies on Aging overview (June 9, 2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "The sixteen Area Agencies on Aging, their type and the counties each serves; read in full. The overview prints no phone numbers."
+      },
+      {
+        "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/klccoa-area-plan.pdf",
+        "title": "Klamath and Lake Counties Council on Aging: Area Plan 2025–2029",
+        "reviewed_on": "2026-11-16",
+        "scope": "Office location and phone 541-205-5400; search excerpt."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "or-aaa-capeco",
+    "name": "Community Action Program of East Central Oregon (CAPECO) Area Agency on Aging",
+    "organization": "Community Action Program of East Central Oregon (CAPECO) Area Agency on Aging",
+    "official_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+    "state": "OR",
+    "service_area": [
+      "Gilliam",
+      "Hood River",
+      "Morrow",
+      "Sherman",
+      "Umatilla",
+      "Wasco",
+      "Wheeler"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Connection, 855-673-2372, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 211 SE Byers Avenue, Pendleton, OR 97801. The agency also has offices in Hermiston and The Dalles."
+    ],
+    "public_contact": {
+      "phone": "541-276-1926",
+      "phone_label": "Area Agency on Aging (East Central Oregon)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+      "phone_source_url": "https://umatillacounty.gov/departments/public-health/news-and-resources/community-resource-guide"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+        "title": "Oregon Department of Human Services: Area Agencies on Aging overview (June 9, 2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "The sixteen Area Agencies on Aging, their type and the counties each serves; read in full. The overview prints no phone numbers."
+      },
+      {
+        "url": "https://umatillacounty.gov/departments/public-health/news-and-resources/community-resource-guide",
+        "title": "Umatilla County: Community resource guide",
+        "reviewed_on": "2026-11-16",
+        "scope": "CAPECO Area Agency on Aging, 211 SE Byers Ave, Pendleton, 541-276-1926; search excerpt. CAPECO’s 2025–2029 area plan prints the address but no phone."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
+  {
+    "program_id": "or-aaa-ccno",
+    "name": "Community Connection of Northeast Oregon (Area Agency on Aging)",
+    "organization": "Community Connection of Northeast Oregon (Area Agency on Aging)",
+    "official_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+    "state": "OR",
+    "service_area": [
+      "Baker",
+      "Grant",
+      "Union",
+      "Wallowa"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Connection, 855-673-2372, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Administrative office: 2802 Adams Avenue, La Grande, OR 97850."
+    ],
+    "public_contact": {
+      "phone": "541-963-3186",
+      "phone_label": "Area Agency on Aging (Northeast Oregon)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+      "phone_source_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/ccno-area-plan.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+        "title": "Oregon Department of Human Services: Area Agencies on Aging overview (June 9, 2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "The sixteen Area Agencies on Aging, their type and the counties each serves; read in full. The overview prints no phone numbers."
+      },
+      {
+        "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/ccno-area-plan.pdf",
+        "title": "Community Connection of Northeast Oregon: 2025–2029 Area Plan",
+        "reviewed_on": "2026-11-16",
+        "scope": "Administrative office address and phone (541) 963-3186; search excerpt."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "ombudsman"
- }
+  {
+    "program_id": "or-aaa-harney",
+    "name": "Harney County Senior and Community Services Center",
+    "organization": "Harney County Senior and Community Services Center",
+    "official_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+    "state": "OR",
+    "service_area": [
+      "Harney"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Connection, 855-673-2372, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 17 S. Alder Street, Burns, OR 97720."
+    ],
+    "public_contact": {
+      "phone": "541-573-6024",
+      "phone_label": "Area Agency on Aging (Harney)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+      "phone_source_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/family-caregiver-coordinators-2018.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+        "title": "Oregon Department of Human Services: Area Agencies on Aging overview (June 9, 2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "The sixteen Area Agencies on Aging, their type and the counties each serves; read in full. The overview prints no phone numbers."
+      },
+      {
+        "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/family-caregiver-coordinators-2018.pdf",
+        "title": "Oregon Department of Human Services: Family Caregiver Support Program coordinators (2018)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Harney County Senior & Community Services, 17 South Alder St, Burns, 541-573-6024; search excerpt of a 2018 list."
+      }
+    ]
+  },
+  {
+    "program_id": "or-aaa-mcoacs",
+    "name": "Malheur Council on Aging and Community Services",
+    "organization": "Malheur Council on Aging and Community Services",
+    "official_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+    "state": "OR",
+    "service_area": [
+      "Malheur"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Connection, 855-673-2372, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 842 SE 1st Avenue, Ontario, OR 97914."
+    ],
+    "public_contact": {
+      "phone": "541-889-7651",
+      "phone_label": "Area Agency on Aging (Malheur)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+      "phone_source_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/family-caregiver-coordinators-2018.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+        "title": "Oregon Department of Human Services: Area Agencies on Aging overview (June 9, 2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "The sixteen Area Agencies on Aging, their type and the counties each serves; read in full. The overview prints no phone numbers."
+      },
+      {
+        "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/family-caregiver-coordinators-2018.pdf",
+        "title": "Oregon Department of Human Services: Family Caregiver Support Program coordinators (2018)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Malheur Council on Aging staff at 541-889-7651, 842 SE 1st Ave, Ontario; search excerpt of a 2018 list."
+      }
+    ]
+  },
+  {
+    "program_id": "or-aaa-clackamas",
+    "name": "Clackamas County Social Services (Area Agency on Aging)",
+    "organization": "Clackamas County Social Services (Area Agency on Aging)",
+    "official_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+    "state": "OR",
+    "service_area": [
+      "Clackamas"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Connection, 855-673-2372, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "This is the county’s Aging and Disability Resource Connection line. Office: 2051 Kaen Road #135, Oregon City, OR 97045; main line 503-655-8640."
+    ],
+    "public_contact": {
+      "phone": "503-650-5622",
+      "phone_label": "Area Agency on Aging (Clackamas)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+      "phone_source_url": "https://www.clackamas.us/socialservices"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+        "title": "Oregon Department of Human Services: Area Agencies on Aging overview (June 9, 2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "The sixteen Area Agencies on Aging, their type and the counties each serves; read in full. The overview prints no phone numbers."
+      },
+      {
+        "url": "https://www.clackamas.us/socialservices",
+        "title": "Clackamas County Social Services",
+        "reviewed_on": "2026-11-16",
+        "scope": "Aging and Disability Resource Connection 503-650-5622; Social Services 503-655-8640, 2051 Kaen Road #135; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "or-aaa-washington",
+    "name": "Washington County Disability, Aging and Veteran Services",
+    "organization": "Washington County Disability, Aging and Veteran Services",
+    "official_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+    "state": "OR",
+    "service_area": [
+      "Washington"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Connection, 855-673-2372, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 5240 NE Elam Young Parkway, Suite 300, Hillsboro, OR 97124."
+    ],
+    "public_contact": {
+      "phone": "503-846-3060",
+      "phone_label": "Area Agency on Aging (Washington)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+      "phone_source_url": "https://washingtoncountyor.gov/DAVS"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+        "title": "Oregon Department of Human Services: Area Agencies on Aging overview (June 9, 2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "The sixteen Area Agencies on Aging, their type and the counties each serves; read in full. The overview prints no phone numbers."
+      },
+      {
+        "url": "https://washingtoncountyor.gov/DAVS",
+        "title": "Washington County: Disability, Aging and Veteran Services",
+        "reviewed_on": "2026-11-16",
+        "scope": "Phone 503-846-3060 and office; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "or-aaa-nwsds",
+    "name": "NorthWest Senior and Disability Services",
+    "organization": "NorthWest Senior and Disability Services",
+    "official_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+    "state": "OR",
+    "service_area": [
+      "Clatsop",
+      "Marion",
+      "Polk",
+      "Tillamook",
+      "Yamhill"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Connection, 855-673-2372, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 866-206-4799. Main office: 3410 Cherry Avenue NE, Salem, OR 97303 (503-304-3400). Offices also in Tillamook (503-842-2770) and Warrenton (503-861-4200)."
+    ],
+    "public_contact": {
+      "phone": "503-304-3420",
+      "phone_label": "Area Agency on Aging (Northwest)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+      "phone_source_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/nwsds-area-plan.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+        "title": "Oregon Department of Human Services: Area Agencies on Aging overview (June 9, 2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "The sixteen Area Agencies on Aging, their type and the counties each serves; read in full. The overview prints no phone numbers."
+      },
+      {
+        "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/nwsds-area-plan.pdf",
+        "title": "NorthWest Senior and Disability Services: 2025–2029 Area Plan",
+        "reviewed_on": "2026-11-16",
+        "scope": "For all service areas: 503-304-3420, toll-free 1-866-206-4799; Salem, Tillamook and Warrenton offices; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "or-aaa-multnomah",
+    "name": "Multnomah County Aging, Disability and Veterans Services",
+    "organization": "Multnomah County Aging, Disability and Veterans Services",
+    "official_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+    "state": "OR",
+    "service_area": [
+      "Multnomah"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Connection, 855-673-2372, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "This is the 24-hour Aging and Disability Resource Connection Helpline."
+    ],
+    "public_contact": {
+      "phone": "503-988-3646",
+      "phone_label": "Area Agency on Aging (Multnomah)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+      "phone_source_url": "https://multco.us/info/aging-disability-and-veterans-services-locations"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+        "title": "Oregon Department of Human Services: Area Agencies on Aging overview (June 9, 2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "The sixteen Area Agencies on Aging, their type and the counties each serves; read in full. The overview prints no phone numbers."
+      },
+      {
+        "url": "https://multco.us/info/aging-disability-and-veterans-services-locations",
+        "title": "Multnomah County: Aging, Disability and Veterans Services locations",
+        "reviewed_on": "2026-11-16",
+        "scope": "ADRC Helpline (503) 988-3646 at the central office; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "or-aaa-ocwcog",
+    "name": "Oregon Cascades West Council of Governments Senior and Disability Services",
+    "organization": "Oregon Cascades West Council of Governments Senior and Disability Services",
+    "official_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+    "state": "OR",
+    "service_area": [
+      "Benton",
+      "Lincoln",
+      "Linn"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Connection, 855-673-2372, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Benton and Linn counties: 541-967-8630 or 800-638-0510. Lincoln County: 541-336-2289 or 800-282-6194."
+    ],
+    "public_contact": {
+      "phone": "541-967-8630",
+      "phone_label": "Area Agency on Aging (Linn, Benton and Lincoln)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+      "phone_source_url": "https://www.ocwcog.org/?p=326"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+        "title": "Oregon Department of Human Services: Area Agencies on Aging overview (June 9, 2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "The sixteen Area Agencies on Aging, their type and the counties each serves; read in full. The overview prints no phone numbers."
+      },
+      {
+        "url": "https://www.ocwcog.org/?p=326",
+        "title": "Oregon Cascades West Council of Governments: Long-Term Supports and Services",
+        "reviewed_on": "2026-11-16",
+        "scope": "Benton and Linn 800-638-0510 or 541-967-8630; Lincoln 800-282-6194 or 541-336-2289; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "or-aaa-lcog",
+    "name": "Lane Council of Governments Senior and Disability Services",
+    "organization": "Lane Council of Governments Senior and Disability Services",
+    "official_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+    "state": "OR",
+    "service_area": [
+      "Lane"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Connection, 855-673-2372, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "This is the Aging and Disability Resource Connection line. Main office: 1015 Willamette Street, Eugene, OR 97401 (541-682-4038)."
+    ],
+    "public_contact": {
+      "phone": "541-682-3353",
+      "phone_label": "Area Agency on Aging (Lane)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+      "phone_source_url": "https://www.oregon.gov/odhs/providers-partners/seniors-disabilities/Documents/lcog-phone-list.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+        "title": "Oregon Department of Human Services: Area Agencies on Aging overview (June 9, 2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "The sixteen Area Agencies on Aging, their type and the counties each serves; read in full. The overview prints no phone numbers."
+      },
+      {
+        "url": "https://www.oregon.gov/odhs/providers-partners/seniors-disabilities/Documents/lcog-phone-list.pdf",
+        "title": "Lane Council of Governments Senior and Disability Services: contact list (January 14, 2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Main number 541-682-4038, ADRC 541-682-3353 and office locations; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "or-aaa-douglas",
+    "name": "Douglas County Senior Services Division",
+    "organization": "Douglas County Senior Services Division",
+    "official_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+    "state": "OR",
+    "service_area": [
+      "Douglas"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Connection, 855-673-2372, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office in Roseburg."
+    ],
+    "public_contact": {
+      "phone": "541-440-3677",
+      "phone_label": "Area Agency on Aging (Douglas)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+      "phone_source_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/dcsds-area-plan.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+        "title": "Oregon Department of Human Services: Area Agencies on Aging overview (June 9, 2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "The sixteen Area Agencies on Aging, their type and the counties each serves; read in full. The overview prints no phone numbers."
+      },
+      {
+        "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/dcsds-area-plan.pdf",
+        "title": "Douglas County Senior Services: Area Agency on Aging Plan 2025–2029",
+        "reviewed_on": "2026-11-16",
+        "scope": "Main phone number 541-440-3677; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "or-aaa-rvcog",
+    "name": "Rogue Valley Council of Governments Senior and Disability Services",
+    "organization": "Rogue Valley Council of Governments Senior and Disability Services",
+    "official_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+    "state": "OR",
+    "service_area": [
+      "Jackson",
+      "Josephine"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Connection, 855-673-2372, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 155 N. 1st Street, Central Point, OR 97502."
+    ],
+    "public_contact": {
+      "phone": "541-664-6674",
+      "phone_label": "Area Agency on Aging (Rogue Valley)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+      "phone_source_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/rvcog-area-plan.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+        "title": "Oregon Department of Human Services: Area Agencies on Aging overview (June 9, 2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "The sixteen Area Agencies on Aging, their type and the counties each serves; read in full. The overview prints no phone numbers."
+      },
+      {
+        "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/rvcog-area-plan.pdf",
+        "title": "Rogue Valley Council of Governments: Area Agency on Aging Area Plan",
+        "reviewed_on": "2026-11-16",
+        "scope": "Area Agency on Aging for Jackson and Josephine counties, (541) 664-6674; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "or-omb-state",
+    "name": "Oregon Office of the Long-Term Care Ombudsman",
+    "organization": "Oregon Office of the Long-Term Care Ombudsman",
+    "official_url": "https://sos.oregon.gov/blue-book/government/pages/long-term-care.aspx",
+    "state": "OR",
+    "service_area": [
+      "Baker",
+      "Benton",
+      "Clackamas",
+      "Clatsop",
+      "Columbia",
+      "Coos",
+      "Crook",
+      "Curry",
+      "Deschutes",
+      "Douglas",
+      "Gilliam",
+      "Grant",
+      "Harney",
+      "Hood River",
+      "Jackson",
+      "Jefferson",
+      "Josephine",
+      "Klamath",
+      "Lake",
+      "Lane",
+      "Lincoln",
+      "Linn",
+      "Malheur",
+      "Marion",
+      "Morrow",
+      "Multnomah",
+      "Polk",
+      "Sherman",
+      "Tillamook",
+      "Umatilla",
+      "Union",
+      "Wallowa",
+      "Wasco",
+      "Washington",
+      "Wheeler",
+      "Yamhill"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "The office serves residents of nursing homes, assisted living, residential care and adult foster homes. Local: 503-378-6533."
+    ],
+    "public_contact": {
+      "phone": "800-522-2602",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+      "phone_source_url": "https://sos.oregon.gov/blue-book/government/pages/long-term-care.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://sos.oregon.gov/blue-book/government/pages/long-term-care.aspx",
+        "title": "Oregon Blue Book: Office of the Long-Term Care Ombudsman",
+        "reviewed_on": "2026-11-16",
+        "scope": "Address, telephone 503-378-6533, toll-free 1-800-522-2602 and email; search excerpt. The office is statewide, so every county shows it."
+      },
+      {
+        "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+        "title": "Oregon Department of Human Services: Area Agencies on Aging overview (June 9, 2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Counties in each aging region."
+      }
+    ]
+  }
 ]
