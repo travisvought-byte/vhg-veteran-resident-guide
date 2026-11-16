@@ -1,0 +1,1369 @@
+{
+  "about": "Research sheet for the Colorado county edition. Every contact below was read on the date in reviewed_on from the page named beside it; scripts/make_county_state.py turns it into the edition files.",
+  "code": "CO",
+  "name": "Colorado",
+  "slug": "colorado",
+  "counties": 64,
+  "reviewed_on": "2026-11-15",
+  "month_label": "November 15, 2026",
+  "template_date": "November 4, 2026",
+  "phones_sentence": "Veterans Service Office phones come from the Colorado Division of Veterans Affairs county office list. Call for hours and appointments.",
+  "senior_line_id": "co-adrc",
+  "agency": {
+    "url": "https://vets.colorado.gov/services/county-veterans-service-offices"
+  },
+  "offices": {
+    "source_url": "https://vets.colorado.gov/services/county-veterans-service-offices",
+    "source_title": "Colorado Division of Veterans Affairs: County Veterans Service Offices",
+    "note": "County Veterans Service Officers can help with VA claims, pension and survivor benefits. Call for hours and appointments.",
+    "selection": "Office, phone, hours and county coverage as printed on the state’s county office list. Staff emails omitted; where the list prints no office phone, the service officers’ numbers it prints are shown and the note says so.",
+    "list": [
+      {
+        "county": "Adams",
+        "phone": "720-523-2770",
+        "address": "11860 Pecos Street, Suite 2300, Westminster, CO 80234",
+        "hours": "Monday–Friday 8:00 a.m.–5:00 p.m. (closed 12–1); online booking available"
+      },
+      {
+        "county": "Alamosa",
+        "phone": "719-589-1109",
+        "address": "8999-B Independence Way, Alamosa, CO 81101",
+        "hours": "Monday 8:00 a.m.–2:00 p.m.; Tuesday–Thursday by appointment"
+      },
+      {
+        "county": "Arapahoe",
+        "phone": "303-738-8045",
+        "address": "15400 E 14th Pl, Suite 500, Aurora, CO 80011",
+        "hours": "Monday–Thursday 9:00 a.m.–4:00 p.m.; closed Friday; appointments by phone or email",
+        "other_offices": [
+          {
+            "address": "1690 W. Littleton Blvd., Suite 300, Littleton, CO 80120",
+            "schedule": "Monday–Thursday 9:00 a.m.–4:00 p.m.; closed Friday",
+            "phone": "303-738-8045"
+          }
+        ],
+        "note": "Aurora and Littleton offices share one phone number."
+      },
+      {
+        "county": "Archuleta",
+        "phone": "970-264-4013",
+        "address": "502 S. 8th Street, PO Box 1507, Pagosa Springs, CO 81147",
+        "hours": "Monday–Friday 8:00 a.m.–4:00 p.m.",
+        "other_phones": [
+          "970-946-3590"
+        ]
+      },
+      {
+        "county": "Baca",
+        "phone": "719-336-2606",
+        "address": "Prowers County Veterans, 1001 South Main St., Lamar, CO 81052",
+        "hours": "Monday–Friday 8 a.m.–12 p.m. and 1–5 p.m.; appointments preferred",
+        "note": "The list shows the Lamar office, run from Prowers County, for Baca County.",
+        "organization": "Prowers County Veterans Service Office (serves Baca County)"
+      },
+      {
+        "county": "Bent",
+        "phone": "719-468-6406",
+        "address": "1214 Ambassador Thompson Blvd, Room 213, PO Box 350, Las Animas, CO 81054",
+        "hours": "Tuesday–Thursday 8:00 a.m.–5:00 p.m."
+      },
+      {
+        "county": "Boulder",
+        "phone": "303-441-3890",
+        "address": "3482 Broadway, Boulder, CO 80304",
+        "hours": "Monday–Friday 8:00 a.m.–4:30 p.m.; in-person appointments Monday–Thursday (online booking)"
+      },
+      {
+        "county": "Broomfield",
+        "phone": "720-887-2263",
+        "address": "100 Spader Way, Broomfield, CO 80020",
+        "hours": "Monday–Friday 8:00 a.m.–5:00 p.m.; call for an appointment"
+      },
+      {
+        "county": "Chaffee",
+        "phone": "719-239-4678",
+        "address": "Touber Building, 448 East 1st Street, Suite 134, Salida, CO 81201",
+        "hours": "Monday–Thursday 8:00 a.m.–4:00 p.m.; evening and weekend appointments available"
+      },
+      {
+        "county": "Cheyenne",
+        "phone": "719-892-4800",
+        "address": "51 S 1st St, Cheyenne Wells, CO 80810",
+        "hours": "Email or call for an appointment",
+        "other_phones": [
+          "719-924-2280",
+          "720-654-4161"
+        ],
+        "note": "The same three service officers (Glen Marcinak, Ray Odum and Maria Secrest) serve Cheyenne, Kiowa, Lincoln and Washington counties; 719-892-4800 is the office number the list prints for them."
+      },
+      {
+        "county": "Clear Creek",
+        "phone": "720-651-0583",
+        "address": "Health and Wellness Center, 1969 Miner Street, 2nd Floor, PO Box 3669, Idaho Springs, CO 80452",
+        "hours": "Monday–Thursday 7:00 a.m.–5:30 p.m.",
+        "other_phones": [
+          "303-914-5837"
+        ],
+        "note": "The list prints no main office phone; these are the two service officers’ numbers (Chad Farris, James Poteet), who also serve Jackson County."
+      },
+      {
+        "county": "Conejos",
+        "phone": "719-376-6728",
+        "address": "6683 County Rd 13, Conejos, CO 81129 (PO Box 157)",
+        "hours": "Wednesday–Thursday 8:00 a.m.–5:00 p.m.",
+        "other_phones": [
+          "719-588-3747"
+        ],
+        "note": "The same service officer, Donald Romero, also serves Saguache County; 719-588-3747 is the cell number the list prints for him."
+      },
+      {
+        "county": "Costilla",
+        "phone": "719-580-6126",
+        "address": "400 Gaspar Street, San Luis, CO 81152",
+        "hours": "Monday–Friday 8:00 a.m.–12:00 p.m., by appointment"
+      },
+      {
+        "county": "Crowley",
+        "phone": "719-267-5241",
+        "address": "603 Main Street, Suite 2, Ordway, CO 81063",
+        "hours": "Call for an appointment"
+      },
+      {
+        "county": "Custer",
+        "phone": "719-618-8266",
+        "address": "205 S. 6th St., Westcliffe, CO 81252",
+        "hours": "Tuesday–Thursday 8 a.m.–4 p.m.; Friday 8–11 a.m. by appointment"
+      },
+      {
+        "county": "Delta",
+        "phone": "970-874-2082",
+        "address": "Delta County Courthouse, 501 Palmer Street, Delta, CO 81428",
+        "hours": "Monday–Friday 8:00 a.m.–5:00 p.m."
+      },
+      {
+        "county": "Denver",
+        "phone": "720-944-3500",
+        "address": "Bill Daniels Veteran Service Center, 1247 Santa Fe, Denver, CO 80204",
+        "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment"
+      },
+      {
+        "county": "Dolores",
+        "phone": "970-394-8586",
+        "address": "VFW Hall, PO Box 428, Dove Creek, CO 81324",
+        "hours": "Monday–Thursday 8:00 a.m.–5:00 p.m., by appointment only",
+        "note": "The list shows the service officer position as vacant and also names John Trocheck."
+      },
+      {
+        "county": "Douglas",
+        "phone": "303-663-6200",
+        "address": "410 S. Wilcox Street, Suite 101, Castle Rock, CO 80104",
+        "hours": "Monday–Thursday 9:00 a.m.–4:00 p.m.; appointments preferred"
+      },
+      {
+        "county": "Eagle",
+        "phone": "970-328-9674",
+        "address": "Health and Human Services Building, 551 Broadway, PO Box 660, Eagle, CO 81631",
+        "hours": "By appointment"
+      },
+      {
+        "county": "Elbert",
+        "phone": "720-869-6772",
+        "address": "214 Comanche Street, Kiowa, CO 80117 (mail: PO Box 7)",
+        "hours": "Monday–Thursday 7:30 a.m.–5:00 p.m."
+      },
+      {
+        "county": "El Paso",
+        "phone": "719-520-7750",
+        "address": "5850 Championship View, Suite 130, Colorado Springs, CO 80922",
+        "hours": "Monday–Friday 8:00 a.m.–4:30 p.m.; appointments required",
+        "other_offices": [
+          {
+            "address": "530 Communication Circle, Colorado Springs, CO 80905",
+            "schedule": "Satellite office",
+            "phone": "719-309-4729"
+          }
+        ]
+      },
+      {
+        "county": "Fremont",
+        "phone": "719-276-7400",
+        "address": "Fremont County Administration Building, 615 Macon Ave, Suite 203, Canon City, CO 81212",
+        "hours": "Monday–Thursday 8:00 a.m.–4:00 p.m.; walk-ins and appointments",
+        "other_phones": [
+          "719-276-7401"
+        ]
+      },
+      {
+        "county": "Garfield",
+        "phone": "970-456-5615",
+        "address": "803 Colorado Avenue, Glenwood Springs, CO 81601",
+        "hours": "In office Tuesday and Thursday 8:30 a.m.–5:00 p.m.; remote Wednesday and Friday 8:30 a.m.–4:00 p.m."
+      },
+      {
+        "county": "Gilpin",
+        "phone": "303-515-4297",
+        "address": "Gilpin Public Health Building, 15193 CO-119, Suite 100, Blackhawk, CO 80422",
+        "hours": "Monday–Thursday 9 a.m.–1 p.m.; Friday 9–11 a.m.",
+        "note": "The phone printed is the Gilpin County Department of Human Services number."
+      },
+      {
+        "county": "Grand",
+        "phone": "970-725-3122",
+        "address": "Grand County Administration Building, 2nd Floor, Box 264, Hot Sulphur Springs, CO 80451",
+        "hours": "Monday–Friday 8:30 a.m.–5:00 p.m.; call for an appointment",
+        "other_phones": [
+          "970-509-9024"
+        ],
+        "note": "The same service officer, Duane Dailey, also serves Summit County."
+      },
+      {
+        "county": "Gunnison",
+        "phone": "970-641-7919",
+        "address": "220 N Spruce Street, Gunnison, CO 81230",
+        "hours": "Call for an appointment"
+      },
+      {
+        "county": "Hinsdale",
+        "phone": "970-784-6845",
+        "address": "Lake City Medical Center, PO Box 307, Lake City, CO 81235",
+        "hours": "By appointment"
+      },
+      {
+        "county": "Huerfano",
+        "phone": "719-924-2280",
+        "address": "401 Main Street, Suite 303, Walsenburg, CO 81089",
+        "hours": "Call for an appointment",
+        "note": "The list prints no main office phone; this is the number for service officer Ray Odum. The number printed for the second officer is not shown because the list prints it two different ways."
+      },
+      {
+        "county": "Jackson",
+        "phone": "720-651-0583",
+        "address": "PO Box 322, Walden, CO 80480",
+        "hours": "Call for an appointment",
+        "other_phones": [
+          "303-914-5837"
+        ],
+        "note": "The list prints no office phone and only a mailing address; these are the two service officers’ numbers (Chad Farris, James Poteet), who also serve Clear Creek County."
+      },
+      {
+        "county": "Jefferson",
+        "phone": "303-271-4616",
+        "address": "Laramie Building, 3500 Illinois St., Suite 1600, Golden, CO 80401",
+        "hours": "Monday–Thursday 7:30 a.m.–5:30 p.m."
+      },
+      {
+        "county": "Kiowa",
+        "phone": "719-892-4800",
+        "address": "1305 Goff St, Eads, CO 81036",
+        "hours": "Email or call for an appointment",
+        "other_phones": [
+          "719-924-2280",
+          "720-654-4161"
+        ],
+        "note": "The same three service officers (Glen Marcinak, Ray Odum and Maria Secrest) serve Cheyenne, Kiowa, Lincoln and Washington counties; 719-892-4800 is the office number the list prints for them."
+      },
+      {
+        "county": "Kit Carson",
+        "phone": "719-343-0595",
+        "address": "1650 Donelan Avenue, Burlington, CO 80807",
+        "hours": "Daily 7:00 a.m.–5:00 p.m."
+      },
+      {
+        "county": "La Plata",
+        "phone": "970-759-0117",
+        "address": "Riverside Professional Building, 1970 East 3rd Ave., Suite 102, Durango, CO 81301",
+        "hours": "Appointments required"
+      },
+      {
+        "county": "Lake",
+        "phone": "719-221-3245",
+        "address": "New Discovery Building, 901 S. Hwy 24, Room 132, Leadville, CO 80461",
+        "hours": "Monday and Wednesday 8:00 a.m.–5:00 p.m.; call for an appointment",
+        "other_offices": [
+          {
+            "address": "Senior Center, 421 W 6th Street, Leadville, CO 80461",
+            "schedule": "Friday 11:00 a.m.–2:00 p.m.; call for an appointment",
+            "phone": "719-221-3245"
+          }
+        ]
+      },
+      {
+        "county": "Larimer",
+        "phone": "970-498-7390",
+        "address": "200 West Oak Street, Suite 5000, Fort Collins, CO (mail: PO Box 1190, Fort Collins, CO 80522-1190)",
+        "hours": "Monday–Thursday 8 a.m.–4 p.m. (closed 12:30–1); Friday 8 a.m.–12:30 p.m."
+      },
+      {
+        "county": "Las Animas",
+        "phone": "719-845-2589",
+        "address": "Las Animas County Courthouse, 200 E. First St, Room 101, Trinidad, CO 81082",
+        "hours": "Monday–Thursday 7:00 a.m.–5:30 p.m.; closed Friday"
+      },
+      {
+        "county": "Lincoln",
+        "phone": "719-892-4800",
+        "address": "Mail: Box 1283, Limon, CO 80828",
+        "hours": "Email or call for an appointment",
+        "other_phones": [
+          "719-924-2280",
+          "720-654-4161"
+        ],
+        "note": "The same three service officers (Glen Marcinak, Ray Odum and Maria Secrest) serve Cheyenne, Kiowa, Lincoln and Washington counties; 719-892-4800 is the office number the list prints for them. The list prints a mailing box and no street address."
+      },
+      {
+        "county": "Logan",
+        "phone": "970-520-5876",
+        "address": "315 Main St, Sterling, CO 80751",
+        "hours": "Monday, Tuesday and Thursday 8:00 a.m.–4:00 p.m.",
+        "note": "The same service officer, Christopher Kelley, also serves Phillips and Sedgwick counties."
+      },
+      {
+        "county": "Mesa",
+        "phone": "970-248-2733",
+        "address": "Workforce Center, 512 29 1/2 Road, Grand Junction, CO 81504",
+        "hours": "Monday, Wednesday and Thursday by appointment; Tuesday walk-in 8 a.m.–3 p.m.; Friday walk-in 8–11 a.m."
+      },
+      {
+        "county": "Mineral",
+        "phone": "719-480-3137",
+        "address": "1201 N Main Street, PO Box 70, Creede, CO 81130",
+        "hours": "Monday, Tuesday and Thursday 7:30 a.m.–12:30 p.m.; appointments preferred"
+      },
+      {
+        "county": "Moffat",
+        "phone": "970-870-5469",
+        "address": "1198 W. Victory Way, Suite 100, Craig, CO 81625",
+        "hours": "Monday–Thursday 8:00 a.m.–1:30 p.m.",
+        "other_phones": [
+          "970-878-9690"
+        ],
+        "note": "The list shows the Moffat County service officer position as vacant and names the Routt County and Rio Blanco County officers as nearby; their numbers are shown (970-870-5469 Routt, 970-878-9690 Rio Blanco)."
+      },
+      {
+        "county": "Montezuma",
+        "phone": "970-565-7155",
+        "address": "107 N. Chestnut, Suite 205, Cortez, CO 81321",
+        "hours": "Monday–Thursday 8:30 a.m.–3:30 p.m.; closed Friday; call for an appointment"
+      },
+      {
+        "county": "Montrose",
+        "phone": "970-249-2115",
+        "address": "320 S. 1st Street, Suite 480, Montrose, CO 81401",
+        "hours": "Monday–Friday 9:00 a.m.–5:00 p.m.; call for an appointment"
+      },
+      {
+        "county": "Morgan",
+        "phone": "970-542-3552",
+        "address": "800 E Beaver Ave, Fort Morgan, CO 80701",
+        "hours": "Monday–Thursday 8:00 a.m.–4:00 p.m.; schedule an appointment",
+        "note": "The same service officer, Brian Uhrich, also serves Yuma County."
+      },
+      {
+        "county": "Otero",
+        "phone": "719-383-3148",
+        "address": "Otero County Courthouse, 13 W 3rd St, Room 110, La Junta, CO 81050",
+        "hours": "Wednesday–Friday 8 a.m.–12 p.m. and 1–5 p.m.",
+        "note": "The list also prints 719-468-6406, which is the Bent County office number, so it is not shown here."
+      },
+      {
+        "county": "Ouray",
+        "phone": "970-708-8757",
+        "address": "333 W. Colorado Avenue, 3rd Floor, Telluride, CO 81435",
+        "hours": "Monday and Wednesday 7:00 a.m.–5:00 p.m.; call for an appointment",
+        "note": "The same service officer, Mikael Madsen, serves Ouray and San Miguel counties from the Telluride office."
+      },
+      {
+        "county": "Park",
+        "phone": "719-838-0014",
+        "address": "Park County Human Services, 825 Clark Street, PO Box 968, Fairplay, CO 80440",
+        "hours": "Call for an appointment",
+        "other_offices": [
+          {
+            "address": "Platte Canyon Fire Station #2, 153 Delwood Drive, PO Box 1193, Bailey, CO 80421",
+            "schedule": "Satellite office",
+            "phone": "719-838-0014"
+          }
+        ]
+      },
+      {
+        "county": "Phillips",
+        "phone": "970-520-5876",
+        "address": "221 S Interocean Ave, Holyoke, CO 80734",
+        "hours": "Wednesday 8:00 a.m.–4:30 p.m.; Monday, Tuesday and Thursday by appointment only",
+        "note": "The same service officer, Christopher Kelley, also serves Logan and Sedgwick counties."
+      },
+      {
+        "county": "Pitkin",
+        "phone": "970-319-5169",
+        "address": "Pitkin County Health & Human Services, 405 Castle Creek Dr, Suite 102, Aspen, CO 81611",
+        "hours": "In office Tuesday and Thursday 8:30 a.m.–5:00 p.m.; remote Wednesday and Friday 8:30 a.m.–4:00 p.m."
+      },
+      {
+        "county": "Prowers",
+        "phone": "719-336-2606",
+        "address": "Prowers County Veterans, 1001 South Main St., Lamar, CO 81052",
+        "hours": "Monday–Friday 8 a.m.–12 p.m. and 1–5 p.m.; appointments preferred",
+        "note": "This office also serves Baca County."
+      },
+      {
+        "county": "Pueblo",
+        "phone": "719-583-6113",
+        "address": "405 W. 9th Street, Pueblo, CO 81003",
+        "hours": "By appointment only",
+        "other_phones": [
+          "719-583-6307"
+        ]
+      },
+      {
+        "county": "Rio Blanco",
+        "phone": "970-878-9690",
+        "address": "County Administration Building, PO Box 599, Meeker, CO 81641",
+        "hours": "By appointment only; Wednesday 1–3 p.m."
+      },
+      {
+        "county": "Rio Grande",
+        "phone": "719-852-5118",
+        "address": "Colorado State Veterans Center, Box 97, Homelake, CO 81135",
+        "hours": "Tuesday–Thursday 7:30 a.m.–12:00 p.m."
+      },
+      {
+        "county": "Routt",
+        "phone": "970-870-5469",
+        "address": "Human Services, 135 6th Street, Steamboat Springs, CO 80487",
+        "hours": "Monday and Tuesday 8 a.m.–5 p.m.; Wednesday 8 a.m.–12 p.m."
+      },
+      {
+        "county": "Saguache",
+        "phone": "719-588-3747",
+        "address": "605 Christy Ave, Saguache, CO 81149",
+        "hours": "Monday–Wednesday 9:00 a.m.–4:00 p.m.",
+        "note": "The same service officer, Don Romero, also serves Conejos County."
+      },
+      {
+        "county": "San Juan",
+        "phone": "970-764-8470",
+        "address": "1315 Snowden St., Suite 306, Silverton, CO 81433 (PO Box 466)",
+        "hours": "By appointment"
+      },
+      {
+        "county": "San Miguel",
+        "phone": "970-708-8757",
+        "address": "333 W. Colorado Avenue, 3rd Floor, Telluride, CO 81435",
+        "hours": "Monday and Wednesday 7:00 a.m.–5:00 p.m.; call for an appointment",
+        "note": "The same service officer, Mikael Madsen, also serves Ouray County."
+      },
+      {
+        "county": "Sedgwick",
+        "phone": "970-520-5876",
+        "address": "118 W 3rd Street, Julesburg, CO 80737",
+        "hours": "Email to schedule an appointment",
+        "note": "The same service officer, Christopher Kelley, also serves Logan and Phillips counties."
+      },
+      {
+        "county": "Summit",
+        "phone": "970-509-9024",
+        "address": "Summit Senior and Community Center, 83 Nancys Pl, Frisco, CO 80443",
+        "hours": "In the office the first Wednesday and third Tuesday of the month; call for an appointment",
+        "note": "The same service officer, Duane Dailey, also serves Grand County."
+      },
+      {
+        "county": "Teller",
+        "phone": "719-686-5526",
+        "address": "Teller County VSO, 800 Research Drive, Suite 230, PO Box 7245, Woodland Park, CO 80863",
+        "hours": "Monday–Friday 8:00 a.m.–4:30 p.m."
+      },
+      {
+        "county": "Washington",
+        "phone": "719-892-4800",
+        "address": "150 Ash Ave, Akron, CO 80720",
+        "hours": "Email or call for an appointment",
+        "other_phones": [
+          "719-924-2280",
+          "720-654-4161"
+        ],
+        "note": "The same three service officers (Glen Marcinak, Ray Odum and Maria Secrest) serve Cheyenne, Kiowa, Lincoln and Washington counties; 719-892-4800 is the office number the list prints for them. The Washington entry itself prints no phone."
+      },
+      {
+        "county": "Weld",
+        "phone": "970-400-3445",
+        "address": "315 N. 11th Avenue, Building B, Greeley, CO 80631",
+        "hours": "Monday–Friday 8 a.m.–5 p.m.",
+        "other_phones": [
+          "970-400-3447",
+          "970-400-3444"
+        ]
+      },
+      {
+        "county": "Yuma",
+        "phone": "970-542-3552",
+        "address": "720 E Ave, Yuma, CO 80759",
+        "hours": "Call for an appointment",
+        "note": "The list says Yuma County is served by the Morgan County office in Fort Morgan."
+      }
+    ]
+  },
+  "aging": {
+    "source_url": "https://www.disabilitylawco.org/sites/default/files/uploads/DLC%20website%209-9-21%20AAA%20Colored%20Map%20%20LIST%202%20PAGES%20PUBLIC%20website.pdf",
+    "source_title": "Disability Law Colorado: Colorado Area Agencies on Aging regions and contacts (dated September 9, 2021)",
+    "source_scope": "Counties, agency names and main phones for all 16 regions. The list is dated September 9, 2021; county groupings agree with the 2023 state transition-contact list (search excerpt).",
+    "review_method": "full_official_pdf",
+    "next_step_extra": "Colorado’s Aging and Disability Resources line, 844-265-2372, also connects you by ZIP code.",
+    "regions": [
+      {
+        "id": "co-aaa-1",
+        "label": "1",
+        "name": "Northeastern Colorado Association of Local Governments",
+        "phone": "970-867-9409",
+        "counties": [
+          "Logan",
+          "Morgan",
+          "Phillips",
+          "Sedgwick",
+          "Washington",
+          "Yuma"
+        ]
+      },
+      {
+        "id": "co-aaa-2a",
+        "label": "2A",
+        "name": "Larimer County Office on Aging",
+        "phone": "970-498-7750",
+        "counties": [
+          "Larimer"
+        ]
+      },
+      {
+        "id": "co-aaa-2b",
+        "label": "2B",
+        "name": "Weld County Area Agency on Aging",
+        "phone": "970-346-6950",
+        "counties": [
+          "Weld"
+        ],
+        "notes": [
+          "Weld County’s own published materials list 970-400-6950 for the same office."
+        ]
+      },
+      {
+        "id": "co-aaa-3a",
+        "label": "3A",
+        "name": "DRCOG Area Agency on Aging",
+        "phone": "303-455-1000",
+        "counties": [
+          "Adams",
+          "Arapahoe",
+          "Broomfield",
+          "Clear Creek",
+          "Denver",
+          "Douglas",
+          "Gilpin",
+          "Jefferson"
+        ]
+      },
+      {
+        "id": "co-aaa-3b",
+        "label": "3B",
+        "name": "Boulder County Area Agency on Aging",
+        "phone": "303-441-3570",
+        "counties": [
+          "Boulder"
+        ]
+      },
+      {
+        "id": "co-aaa-4",
+        "label": "4",
+        "name": "Pikes Peak Area Council of Governments Area Agency on Aging",
+        "phone": "719-471-2096",
+        "counties": [
+          "El Paso",
+          "Park",
+          "Teller"
+        ]
+      },
+      {
+        "id": "co-aaa-5",
+        "label": "5",
+        "name": "East Central Council of Governments Area Agency on Aging",
+        "phone": "719-348-5562",
+        "counties": [
+          "Cheyenne",
+          "Elbert",
+          "Kit Carson",
+          "Lincoln"
+        ]
+      },
+      {
+        "id": "co-aaa-6",
+        "label": "6",
+        "name": "Lower Arkansas Valley Area Agency on Aging",
+        "phone": "719-383-3166",
+        "counties": [
+          "Baca",
+          "Bent",
+          "Crowley",
+          "Kiowa",
+          "Otero",
+          "Prowers"
+        ]
+      },
+      {
+        "id": "co-aaa-7",
+        "label": "7",
+        "name": "Pueblo Area Agency on Aging",
+        "phone": "719-583-6849",
+        "counties": [
+          "Pueblo"
+        ]
+      },
+      {
+        "id": "co-aaa-8",
+        "label": "8",
+        "name": "South-Central Colorado Seniors, Inc.",
+        "phone": "719-589-4511",
+        "counties": [
+          "Alamosa",
+          "Conejos",
+          "Costilla",
+          "Mineral",
+          "Rio Grande",
+          "Saguache"
+        ]
+      },
+      {
+        "id": "co-aaa-9",
+        "label": "9",
+        "name": "San Juan Basin Area Agency on Aging",
+        "phone": "970-264-0501",
+        "counties": [
+          "Archuleta",
+          "Dolores",
+          "La Plata",
+          "Montezuma",
+          "San Juan"
+        ]
+      },
+      {
+        "id": "co-aaa-10",
+        "label": "10",
+        "name": "League for Economic Assistance and Planning",
+        "phone": "970-249-2436",
+        "counties": [
+          "Delta",
+          "Gunnison",
+          "Hinsdale",
+          "Montrose",
+          "Ouray",
+          "San Miguel"
+        ]
+      },
+      {
+        "id": "co-aaa-11",
+        "label": "11",
+        "name": "Associated Governments of Northwest Colorado",
+        "phone": "970-248-2717",
+        "counties": [
+          "Garfield",
+          "Mesa",
+          "Moffat",
+          "Rio Blanco",
+          "Routt"
+        ]
+      },
+      {
+        "id": "co-aaa-12",
+        "label": "12",
+        "name": "Northwest Colorado Council of Governments (Alpine Area Agency on Aging)",
+        "phone": "970-468-0295",
+        "counties": [
+          "Eagle",
+          "Grand",
+          "Jackson",
+          "Pitkin",
+          "Summit"
+        ]
+      },
+      {
+        "id": "co-aaa-13",
+        "label": "13",
+        "name": "Upper Arkansas Area Agency on Aging",
+        "phone": "719-539-3341",
+        "counties": [
+          "Chaffee",
+          "Custer",
+          "Fremont",
+          "Lake"
+        ]
+      },
+      {
+        "id": "co-aaa-14",
+        "label": "14",
+        "name": "Huerfano/Las Animas Area Council of Governments (South Central Council of Governments)",
+        "phone": "719-845-1133",
+        "counties": [
+          "Huerfano",
+          "Las Animas"
+        ]
+      }
+    ]
+  },
+  "ombudsman": {
+    "state_phone": "303-862-3524",
+    "regions": [
+      {
+        "id": "co-omb-1",
+        "name": "Regional long-term care ombudsman, Northeastern Colorado Association of Local Governments (Region 1)",
+        "phone": "970-867-9409",
+        "counties": [
+          "Logan",
+          "Morgan",
+          "Phillips",
+          "Sedgwick",
+          "Washington",
+          "Yuma"
+        ],
+        "source_url": "https://spl.cde.state.co.us/artemis/huserials/hu4512internet/hu45122022internet.pdf",
+        "review": "excerpt",
+        "review_method": "official_search_excerpt",
+        "source_title": "Colorado State Library: Colorado Long-Term Care Ombudsman Program annual report (federal fiscal year 2022)",
+        "source_scope": "Colorado has 16 regional ombudsman programs; the state ombudsman phone is 303-862-3524. The phone shown for this region is its Area Agency on Aging main line, because the regional ombudsman’s own number was not read from an official page. Search excerpt.",
+        "notes": [
+          "Ask the Area Agency on Aging for the regional long-term care ombudsman. If no one answers, call the state ombudsman at 303-862-3524."
+        ]
+      },
+      {
+        "id": "co-omb-2a",
+        "name": "Regional long-term care ombudsman, Larimer County Office on Aging (Region 2A)",
+        "phone": "970-498-7750",
+        "counties": [
+          "Larimer"
+        ],
+        "source_url": "https://spl.cde.state.co.us/artemis/huserials/hu4512internet/hu45122022internet.pdf",
+        "review": "excerpt",
+        "review_method": "official_search_excerpt",
+        "source_title": "Colorado State Library: Colorado Long-Term Care Ombudsman Program annual report (federal fiscal year 2022)",
+        "source_scope": "Colorado has 16 regional ombudsman programs; the state ombudsman phone is 303-862-3524. The phone shown for this region is its Area Agency on Aging main line, because the regional ombudsman’s own number was not read from an official page. Search excerpt.",
+        "notes": [
+          "Ask the Area Agency on Aging for the regional long-term care ombudsman. If no one answers, call the state ombudsman at 303-862-3524."
+        ]
+      },
+      {
+        "id": "co-omb-2b",
+        "name": "Regional long-term care ombudsman, Weld County Area Agency on Aging (Region 2B)",
+        "phone": "970-346-6950",
+        "counties": [
+          "Weld"
+        ],
+        "source_url": "https://spl.cde.state.co.us/artemis/huserials/hu4512internet/hu45122022internet.pdf",
+        "review": "excerpt",
+        "review_method": "official_search_excerpt",
+        "source_title": "Colorado State Library: Colorado Long-Term Care Ombudsman Program annual report (federal fiscal year 2022)",
+        "source_scope": "Colorado has 16 regional ombudsman programs; the state ombudsman phone is 303-862-3524. The phone shown for this region is its Area Agency on Aging main line, because the regional ombudsman’s own number was not read from an official page. Search excerpt.",
+        "notes": [
+          "Ask the Area Agency on Aging for the regional long-term care ombudsman. If no one answers, call the state ombudsman at 303-862-3524."
+        ]
+      },
+      {
+        "id": "co-omb-3a",
+        "name": "Regional long-term care ombudsman, DRCOG Area Agency on Aging (Region 3A)",
+        "phone": "303-455-1000",
+        "counties": [
+          "Adams",
+          "Arapahoe",
+          "Broomfield",
+          "Clear Creek",
+          "Denver",
+          "Douglas",
+          "Gilpin",
+          "Jefferson"
+        ],
+        "source_url": "https://spl.cde.state.co.us/artemis/huserials/hu4512internet/hu45122022internet.pdf",
+        "review": "excerpt",
+        "review_method": "official_search_excerpt",
+        "source_title": "Colorado State Library: Colorado Long-Term Care Ombudsman Program annual report (federal fiscal year 2022)",
+        "source_scope": "Colorado has 16 regional ombudsman programs; the state ombudsman phone is 303-862-3524. The phone shown for this region is its Area Agency on Aging main line, because the regional ombudsman’s own number was not read from an official page. Search excerpt.",
+        "notes": [
+          "Ask the Area Agency on Aging for the regional long-term care ombudsman. If no one answers, call the state ombudsman at 303-862-3524."
+        ]
+      },
+      {
+        "id": "co-omb-3b",
+        "name": "Regional long-term care ombudsman, Boulder County Area Agency on Aging (Region 3B)",
+        "phone": "303-441-3570",
+        "counties": [
+          "Boulder"
+        ],
+        "source_url": "https://spl.cde.state.co.us/artemis/huserials/hu4512internet/hu45122022internet.pdf",
+        "review": "excerpt",
+        "review_method": "official_search_excerpt",
+        "source_title": "Colorado State Library: Colorado Long-Term Care Ombudsman Program annual report (federal fiscal year 2022)",
+        "source_scope": "Colorado has 16 regional ombudsman programs; the state ombudsman phone is 303-862-3524. The phone shown for this region is its Area Agency on Aging main line, because the regional ombudsman’s own number was not read from an official page. Search excerpt.",
+        "notes": [
+          "Ask the Area Agency on Aging for the regional long-term care ombudsman. If no one answers, call the state ombudsman at 303-862-3524."
+        ]
+      },
+      {
+        "id": "co-omb-4",
+        "name": "Regional long-term care ombudsman, Pikes Peak Area Council of Governments Area Agency on Aging (Region 4)",
+        "phone": "719-471-2096",
+        "counties": [
+          "El Paso",
+          "Park",
+          "Teller"
+        ],
+        "source_url": "https://spl.cde.state.co.us/artemis/huserials/hu4512internet/hu45122022internet.pdf",
+        "review": "excerpt",
+        "review_method": "official_search_excerpt",
+        "source_title": "Colorado State Library: Colorado Long-Term Care Ombudsman Program annual report (federal fiscal year 2022)",
+        "source_scope": "Colorado has 16 regional ombudsman programs; the state ombudsman phone is 303-862-3524. The phone shown for this region is its Area Agency on Aging main line, because the regional ombudsman’s own number was not read from an official page. Search excerpt.",
+        "notes": [
+          "Ask the Area Agency on Aging for the regional long-term care ombudsman. If no one answers, call the state ombudsman at 303-862-3524."
+        ]
+      },
+      {
+        "id": "co-omb-5",
+        "name": "Regional long-term care ombudsman, East Central Council of Governments Area Agency on Aging (Region 5)",
+        "phone": "719-348-5562",
+        "counties": [
+          "Cheyenne",
+          "Elbert",
+          "Kit Carson",
+          "Lincoln"
+        ],
+        "source_url": "https://spl.cde.state.co.us/artemis/huserials/hu4512internet/hu45122022internet.pdf",
+        "review": "excerpt",
+        "review_method": "official_search_excerpt",
+        "source_title": "Colorado State Library: Colorado Long-Term Care Ombudsman Program annual report (federal fiscal year 2022)",
+        "source_scope": "Colorado has 16 regional ombudsman programs; the state ombudsman phone is 303-862-3524. The phone shown for this region is its Area Agency on Aging main line, because the regional ombudsman’s own number was not read from an official page. Search excerpt.",
+        "notes": [
+          "Ask the Area Agency on Aging for the regional long-term care ombudsman. If no one answers, call the state ombudsman at 303-862-3524."
+        ]
+      },
+      {
+        "id": "co-omb-6",
+        "name": "Regional long-term care ombudsman, Lower Arkansas Valley Area Agency on Aging (Region 6)",
+        "phone": "719-383-3166",
+        "counties": [
+          "Baca",
+          "Bent",
+          "Crowley",
+          "Kiowa",
+          "Otero",
+          "Prowers"
+        ],
+        "source_url": "https://spl.cde.state.co.us/artemis/huserials/hu4512internet/hu45122022internet.pdf",
+        "review": "excerpt",
+        "review_method": "official_search_excerpt",
+        "source_title": "Colorado State Library: Colorado Long-Term Care Ombudsman Program annual report (federal fiscal year 2022)",
+        "source_scope": "Colorado has 16 regional ombudsman programs; the state ombudsman phone is 303-862-3524. The phone shown for this region is its Area Agency on Aging main line, because the regional ombudsman’s own number was not read from an official page. Search excerpt.",
+        "notes": [
+          "Ask the Area Agency on Aging for the regional long-term care ombudsman. If no one answers, call the state ombudsman at 303-862-3524."
+        ]
+      },
+      {
+        "id": "co-omb-7",
+        "name": "Regional long-term care ombudsman, Pueblo Area Agency on Aging (Region 7)",
+        "phone": "719-583-6849",
+        "counties": [
+          "Pueblo"
+        ],
+        "source_url": "https://spl.cde.state.co.us/artemis/huserials/hu4512internet/hu45122022internet.pdf",
+        "review": "excerpt",
+        "review_method": "official_search_excerpt",
+        "source_title": "Colorado State Library: Colorado Long-Term Care Ombudsman Program annual report (federal fiscal year 2022)",
+        "source_scope": "Colorado has 16 regional ombudsman programs; the state ombudsman phone is 303-862-3524. The phone shown for this region is its Area Agency on Aging main line, because the regional ombudsman’s own number was not read from an official page. Search excerpt.",
+        "notes": [
+          "Ask the Area Agency on Aging for the regional long-term care ombudsman. If no one answers, call the state ombudsman at 303-862-3524."
+        ]
+      },
+      {
+        "id": "co-omb-8",
+        "name": "Regional long-term care ombudsman, South-Central Colorado Seniors, Inc. (Region 8)",
+        "phone": "719-589-4511",
+        "counties": [
+          "Alamosa",
+          "Conejos",
+          "Costilla",
+          "Mineral",
+          "Rio Grande",
+          "Saguache"
+        ],
+        "source_url": "https://spl.cde.state.co.us/artemis/huserials/hu4512internet/hu45122022internet.pdf",
+        "review": "excerpt",
+        "review_method": "official_search_excerpt",
+        "source_title": "Colorado State Library: Colorado Long-Term Care Ombudsman Program annual report (federal fiscal year 2022)",
+        "source_scope": "Colorado has 16 regional ombudsman programs; the state ombudsman phone is 303-862-3524. The phone shown for this region is its Area Agency on Aging main line, because the regional ombudsman’s own number was not read from an official page. Search excerpt.",
+        "notes": [
+          "Ask the Area Agency on Aging for the regional long-term care ombudsman. If no one answers, call the state ombudsman at 303-862-3524."
+        ]
+      },
+      {
+        "id": "co-omb-9",
+        "name": "Regional long-term care ombudsman, San Juan Basin Area Agency on Aging (Region 9)",
+        "phone": "970-264-0501",
+        "counties": [
+          "Archuleta",
+          "Dolores",
+          "La Plata",
+          "Montezuma",
+          "San Juan"
+        ],
+        "source_url": "https://spl.cde.state.co.us/artemis/huserials/hu4512internet/hu45122022internet.pdf",
+        "review": "excerpt",
+        "review_method": "official_search_excerpt",
+        "source_title": "Colorado State Library: Colorado Long-Term Care Ombudsman Program annual report (federal fiscal year 2022)",
+        "source_scope": "Colorado has 16 regional ombudsman programs; the state ombudsman phone is 303-862-3524. The phone shown for this region is its Area Agency on Aging main line, because the regional ombudsman’s own number was not read from an official page. Search excerpt.",
+        "notes": [
+          "Ask the Area Agency on Aging for the regional long-term care ombudsman. If no one answers, call the state ombudsman at 303-862-3524."
+        ]
+      },
+      {
+        "id": "co-omb-10",
+        "name": "Regional long-term care ombudsman, League for Economic Assistance and Planning (Region 10)",
+        "phone": "970-249-2436",
+        "counties": [
+          "Delta",
+          "Gunnison",
+          "Hinsdale",
+          "Montrose",
+          "Ouray",
+          "San Miguel"
+        ],
+        "source_url": "https://spl.cde.state.co.us/artemis/huserials/hu4512internet/hu45122022internet.pdf",
+        "review": "excerpt",
+        "review_method": "official_search_excerpt",
+        "source_title": "Colorado State Library: Colorado Long-Term Care Ombudsman Program annual report (federal fiscal year 2022)",
+        "source_scope": "Colorado has 16 regional ombudsman programs; the state ombudsman phone is 303-862-3524. The phone shown for this region is its Area Agency on Aging main line, because the regional ombudsman’s own number was not read from an official page. Search excerpt.",
+        "notes": [
+          "Ask the Area Agency on Aging for the regional long-term care ombudsman. If no one answers, call the state ombudsman at 303-862-3524."
+        ]
+      },
+      {
+        "id": "co-omb-11",
+        "name": "Regional long-term care ombudsman, Associated Governments of Northwest Colorado (Region 11)",
+        "phone": "970-248-2717",
+        "counties": [
+          "Garfield",
+          "Mesa",
+          "Moffat",
+          "Rio Blanco",
+          "Routt"
+        ],
+        "source_url": "https://spl.cde.state.co.us/artemis/huserials/hu4512internet/hu45122022internet.pdf",
+        "review": "excerpt",
+        "review_method": "official_search_excerpt",
+        "source_title": "Colorado State Library: Colorado Long-Term Care Ombudsman Program annual report (federal fiscal year 2022)",
+        "source_scope": "Colorado has 16 regional ombudsman programs; the state ombudsman phone is 303-862-3524. The phone shown for this region is its Area Agency on Aging main line, because the regional ombudsman’s own number was not read from an official page. Search excerpt.",
+        "notes": [
+          "Ask the Area Agency on Aging for the regional long-term care ombudsman. If no one answers, call the state ombudsman at 303-862-3524."
+        ]
+      },
+      {
+        "id": "co-omb-12",
+        "name": "Regional long-term care ombudsman, Northwest Colorado Council of Governments (Alpine Area Agency on Aging) (Region 12)",
+        "phone": "970-468-0295",
+        "counties": [
+          "Eagle",
+          "Grand",
+          "Jackson",
+          "Pitkin",
+          "Summit"
+        ],
+        "source_url": "https://spl.cde.state.co.us/artemis/huserials/hu4512internet/hu45122022internet.pdf",
+        "review": "excerpt",
+        "review_method": "official_search_excerpt",
+        "source_title": "Colorado State Library: Colorado Long-Term Care Ombudsman Program annual report (federal fiscal year 2022)",
+        "source_scope": "Colorado has 16 regional ombudsman programs; the state ombudsman phone is 303-862-3524. The phone shown for this region is its Area Agency on Aging main line, because the regional ombudsman’s own number was not read from an official page. Search excerpt.",
+        "notes": [
+          "Ask the Area Agency on Aging for the regional long-term care ombudsman. If no one answers, call the state ombudsman at 303-862-3524."
+        ]
+      },
+      {
+        "id": "co-omb-13",
+        "name": "Regional long-term care ombudsman, Upper Arkansas Area Agency on Aging (Region 13)",
+        "phone": "719-539-3341",
+        "counties": [
+          "Chaffee",
+          "Custer",
+          "Fremont",
+          "Lake"
+        ],
+        "source_url": "https://spl.cde.state.co.us/artemis/huserials/hu4512internet/hu45122022internet.pdf",
+        "review": "excerpt",
+        "review_method": "official_search_excerpt",
+        "source_title": "Colorado State Library: Colorado Long-Term Care Ombudsman Program annual report (federal fiscal year 2022)",
+        "source_scope": "Colorado has 16 regional ombudsman programs; the state ombudsman phone is 303-862-3524. The phone shown for this region is its Area Agency on Aging main line, because the regional ombudsman’s own number was not read from an official page. Search excerpt.",
+        "notes": [
+          "Ask the Area Agency on Aging for the regional long-term care ombudsman. If no one answers, call the state ombudsman at 303-862-3524."
+        ]
+      },
+      {
+        "id": "co-omb-14",
+        "name": "Regional long-term care ombudsman, Huerfano/Las Animas Area Council of Governments (South Central Council of Governments) (Region 14)",
+        "phone": "719-845-1133",
+        "counties": [
+          "Huerfano",
+          "Las Animas"
+        ],
+        "source_url": "https://spl.cde.state.co.us/artemis/huserials/hu4512internet/hu45122022internet.pdf",
+        "review": "excerpt",
+        "review_method": "official_search_excerpt",
+        "source_title": "Colorado State Library: Colorado Long-Term Care Ombudsman Program annual report (federal fiscal year 2022)",
+        "source_scope": "Colorado has 16 regional ombudsman programs; the state ombudsman phone is 303-862-3524. The phone shown for this region is its Area Agency on Aging main line, because the regional ombudsman’s own number was not read from an official page. Search excerpt.",
+        "notes": [
+          "Ask the Area Agency on Aging for the regional long-term care ombudsman. If no one answers, call the state ombudsman at 303-862-3524."
+        ]
+      }
+    ]
+  },
+  "cils": {
+    "source_url": "https://dvr.colorado.gov/independent-living-services",
+    "source_title": "Colorado Division of Vocational Rehabilitation: Independent Living Services",
+    "phone_label": "Phone listed by the Colorado Division of Vocational Rehabilitation",
+    "scope": "The nine Centers for Independent Living with their counties served, websites and phones as listed.",
+    "list": [
+      {
+        "id": "co-cil-atlantis",
+        "name": "Atlantis Community",
+        "organization": "Atlantis Community",
+        "url": "https://atlantiscommunity.org/",
+        "phone": "303-733-9324",
+        "counties": [
+          "Adams",
+          "Arapahoe",
+          "Clear Creek",
+          "Denver",
+          "Douglas",
+          "Elbert",
+          "Jefferson"
+        ]
+      },
+      {
+        "id": "co-cil-cfi",
+        "name": "Center for Independence",
+        "organization": "Center for Independence",
+        "url": "https://cfigj.org/",
+        "phone": "970-241-0315",
+        "counties": [
+          "Chaffee",
+          "Delta",
+          "Eagle",
+          "Garfield",
+          "Gunnison",
+          "Hinsdale",
+          "Lake",
+          "Mesa",
+          "Montrose",
+          "Ouray",
+          "Pitkin",
+          "San Miguel"
+        ],
+        "notes": [
+          "Main office in Grand Junction."
+        ]
+      },
+      {
+        "id": "co-cil-cpwd",
+        "name": "Center for People with Disabilities",
+        "organization": "Center for People with Disabilities",
+        "url": "https://cpwd.org/",
+        "phone": "303-442-8662",
+        "counties": [
+          "Adams",
+          "Boulder",
+          "Broomfield",
+          "Gilpin",
+          "Jefferson",
+          "Weld"
+        ],
+        "notes": [
+          "Weld County is shared with Connections for Independent Living."
+        ]
+      },
+      {
+        "id": "co-cil-ctsr",
+        "name": "Center Toward Self-Reliance",
+        "organization": "Center Toward Self-Reliance",
+        "url": "https://cfdpueblo.org/",
+        "phone": "719-546-1271",
+        "counties": [
+          "Alamosa",
+          "Baca",
+          "Bent",
+          "Conejos",
+          "Costilla",
+          "Crowley",
+          "Custer",
+          "Fremont",
+          "Huerfano",
+          "Kiowa",
+          "Las Animas",
+          "Mineral",
+          "Otero",
+          "Prowers",
+          "Pueblo",
+          "Rio Grande",
+          "Saguache"
+        ]
+      },
+      {
+        "id": "co-cil-ic",
+        "name": "Colorado Springs Independence Center",
+        "organization": "Colorado Springs Independence Center",
+        "url": "https://www.theindependencecenter.org/",
+        "phone": "719-471-8181",
+        "counties": [
+          "Cheyenne",
+          "El Paso",
+          "Kit Carson",
+          "Lincoln",
+          "Park",
+          "Teller"
+        ]
+      },
+      {
+        "id": "co-cil-connections",
+        "name": "Connections for Independent Living",
+        "organization": "Connections for Independent Living",
+        "url": "https://www.connectionscolorado.org/",
+        "phone": "970-352-8682",
+        "counties": [
+          "Logan",
+          "Morgan",
+          "Phillips",
+          "Sedgwick",
+          "Washington",
+          "Weld",
+          "Yuma"
+        ],
+        "notes": [
+          "Weld County is shared with the Center for People with Disabilities."
+        ]
+      },
+      {
+        "id": "co-cil-drs",
+        "name": "Disabled Resource Services",
+        "organization": "Disabled Resource Services",
+        "url": "https://drsnoco.org/",
+        "phone": "970-482-2700",
+        "counties": [
+          "Jackson",
+          "Larimer"
+        ],
+        "notes": [
+          "Fort Collins phone shown; the center also has a Loveland office."
+        ]
+      },
+      {
+        "id": "co-cil-nwcci",
+        "name": "NorthWest Colorado Center for Independence",
+        "organization": "NorthWest Colorado Center for Independence",
+        "url": "https://www.nwcci.org/",
+        "phone": "970-871-4838",
+        "counties": [
+          "Grand",
+          "Moffat",
+          "Rio Blanco",
+          "Routt",
+          "Summit"
+        ]
+      },
+      {
+        "id": "co-cil-swci",
+        "name": "Southwest Center for Independence",
+        "organization": "Southwest Center for Independence",
+        "url": "https://swindependence.org/",
+        "phone": "970-259-1672",
+        "counties": [
+          "Archuleta",
+          "Dolores",
+          "La Plata",
+          "Montezuma",
+          "San Juan"
+        ]
+      }
+    ]
+  },
+  "programs": [
+    {
+      "id": "co-claims",
+      "name": "Colorado veterans: accredited claims help",
+      "organization": "Colorado Division of Veterans Affairs",
+      "url": "https://vets.colorado.gov/dva-contact-about",
+      "needs": [
+        "general_navigation",
+        "benefits_and_funding"
+      ],
+      "description": "Free help with VA claims, applications and appeals for veterans and families.",
+      "next_step": "Choose your county for its County Veterans Service Office, or call the Colorado Division of Veterans Affairs at 303-914-5832.",
+      "phone": "303-914-5832",
+      "phone_source": "https://vets.colorado.gov/dva-contact-about",
+      "review": "excerpt",
+      "reviewed": "2026-11-02",
+      "sources": [
+        {
+          "url": "https://vets.colorado.gov/dva-contact-about",
+          "title": "Official published source",
+          "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+        }
+      ]
+    },
+    {
+      "id": "co-adrc",
+      "name": "Aging and Disability Resources for Colorado (ADRC)",
+      "organization": "Colorado Department of Human Services, State Unit on Aging",
+      "url": "https://cdhs.colorado.gov/our-services/older-adult-services/state-unit-on-aging/aging-and-disability-resources-for-colorado",
+      "needs": [
+        "general_navigation",
+        "help_at_home",
+        "equipment_home_accessibility"
+      ],
+      "description": "A statewide line that connects you to your local Area Agency on Aging for meals, in-home services, transportation, caregiver support and senior legal assistance. Military service is not required.",
+      "next_step": "Call 844-265-2372 (1-844-COL-ADRC) from anywhere in Colorado. Choose a county above for the direct number of its Area Agency on Aging.",
+      "constraints": [
+        "Each program has its own eligibility and waitlist."
+      ],
+      "phone": "844-265-2372",
+      "phone_label": "Aging and Disability Resources for Colorado (toll-free)",
+      "phone_source": "https://cdhs.colorado.gov/our-services/older-adult-services/state-unit-on-aging/aging-and-disability-resources-for-colorado",
+      "review": "excerpt",
+      "sources": [
+        {
+          "url": "https://cdhs.colorado.gov/our-services/older-adult-services/state-unit-on-aging/aging-and-disability-resources-for-colorado",
+          "title": "Colorado Department of Human Services: Aging and Disability Resources for Colorado",
+          "scope": "ADRC description and toll-free number; search excerpt."
+        }
+      ]
+    },
+    {
+      "id": "co-ship",
+      "name": "Medicare counseling (SHIP) for Colorado",
+      "organization": "Colorado State Health Insurance Assistance Program (SHIP), Division of Insurance",
+      "url": "https://www.shiphelp.org/",
+      "needs": [
+        "benefits_and_funding"
+      ],
+      "description": "Free, unbiased Medicare counseling from the State Health Insurance Assistance Program.",
+      "next_step": "Call the Colorado SHIP toll-free number and ask for a counseling appointment.",
+      "phone": "888-696-7213",
+      "phone_label": "Colorado SHIP (toll-free)",
+      "phone_source": "https://www.cms.gov/contacts/senior-health-insurance-assistance-program-ship/general-beneficiary-contact/1562026",
+      "review": "excerpt",
+      "sources": [
+        {
+          "url": "https://www.cms.gov/contacts/senior-health-insurance-assistance-program-ship/general-beneficiary-contact/1562026",
+          "title": "CMS contacts database: Colorado SHIP",
+          "scope": "Colorado SHIP toll-free number as listed by CMS; search excerpt."
+        }
+      ]
+    },
+    {
+      "id": "co-ombudsman",
+      "name": "Colorado Long-Term Care Ombudsman Program",
+      "organization": "Colorado State Long-Term Care Ombudsman Program",
+      "url": "https://www.coombudsman.org/",
+      "needs": [
+        "resident_rights",
+        "general_navigation"
+      ],
+      "description": "Statewide advocacy for residents of long-term care facilities, delivered through 16 regional ombudsman programs.",
+      "next_step": "Choose your county for its regional ombudsman, or call the state ombudsman at 303-862-3524. To report mistreatment of an at-risk adult, call the Adult Protective Services intake number at the county department of human services where the adult lives. For immediate danger, call 911.",
+      "constraints": [
+        "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+      ],
+      "phone": "303-862-3524",
+      "phone_label": "State Long-Term Care Ombudsman",
+      "phone_source": "https://spl.cde.state.co.us/artemis/huserials/hu4512internet/hu45122022internet.pdf",
+      "review": "excerpt",
+      "sources": [
+        {
+          "url": "https://spl.cde.state.co.us/artemis/huserials/hu4512internet/hu45122022internet.pdf",
+          "title": "Colorado State Library: Colorado Long-Term Care Ombudsman Program annual report (federal fiscal year 2022)",
+          "scope": "State ombudsman phone and the 16 regional programs; search excerpt."
+        },
+        {
+          "url": "https://cdhs.colorado.gov/report-mistreatment-or-self-neglect-of-an-at-risk-adult",
+          "title": "Colorado Department of Human Services: report mistreatment or self-neglect of an at-risk adult",
+          "scope": "Reports go to the county Adult Protective Services intake number; the page gives no statewide reporting number."
+        }
+      ]
+    },
+    {
+      "id": "co-legal-programs",
+      "name": "Colorado Legal Services",
+      "organization": "Colorado Legal Services",
+      "url": "https://www.coloradolegalservices.org/",
+      "role": "legal_aid",
+      "needs": [
+        "resident_rights",
+        "general_navigation",
+        "housing"
+      ],
+      "description": "Free civil legal help for people with low income and for older adults (60 and older), including help responding to an eviction notice. Not criminal or traffic law.",
+      "next_step": "Apply at coloradolegalservices.org or call the main office. Have your county and the legal problem ready.",
+      "constraints": [
+        "Applicants are screened; this is not a quick-advice hotline. Income, case type and capacity limits apply, and local offices serve different counties."
+      ],
+      "phone": "303-837-1313",
+      "phone_label": "Colorado Legal Services main office (Denver)",
+      "phone_source": "https://oac.colorado.gov/sites/oac/files/documents/Free%20or%20Low%20Cost%20Legal%20Services%204.2024.pdf",
+      "review": "excerpt",
+      "sources": [
+        {
+          "url": "https://oac.colorado.gov/sites/oac/files/documents/Free%20or%20Low%20Cost%20Legal%20Services%204.2024.pdf",
+          "title": "Colorado state publication: free or low-cost legal services (April 2024)",
+          "scope": "Main office phone; search excerpt."
+        },
+        {
+          "url": "https://larimer.senioraccesspoints.colostate.edu/blog/2022/06/01/eviction-legal-aid",
+          "title": "Larimer County Senior Access Points: Colorado Legal Services",
+          "scope": "Senior Law Project for people 60 and older, with screening before help; search excerpt."
+        }
+      ]
+    },
+    {
+      "id": "co-vahealth-systems",
+      "name": "VA medical centers serving Colorado",
+      "organization": "U.S. Department of Veterans Affairs",
+      "url": "https://www.va.gov/find-locations/?facilityType=health",
+      "role": "va_health_system",
+      "needs": [
+        "veteran_services",
+        "care_facilities"
+      ],
+      "description": "VA Eastern Colorado Health Care System: Rocky Mountain Regional VA Medical Center, Aurora (303-399-8020), with community clinics across eastern Colorado, including Colorado Springs, La Junta, Lamar and Salida. VA Western Colorado Health Care System: Grand Junction VA Medical Center (970-242-0731).",
+      "next_step": "Use VA’s facility locator with your ZIP code to find the closest clinic and its medical center. Not enrolled yet? Ask your County Veterans Service Officer for help applying.",
+      "constraints": [
+        "VA does not publish county lists for these systems, so this card does not assign counties. Your VA care team may be at a different clinic or system; follow what VA tells you."
+      ],
+      "phone": "303-399-8020",
+      "phone_label": "Rocky Mountain Regional VA Medical Center (Aurora)",
+      "phone_source": "https://vets.colorado.gov/va-information-for-women-veterans",
+      "review": "excerpt",
+      "sources": [
+        {
+          "url": "https://vets.colorado.gov/va-information-for-women-veterans",
+          "title": "Colorado Division of Veterans Affairs: VA information (Aurora and Grand Junction VA medical centers)",
+          "scope": "Aurora (303-399-8020) and Grand Junction (970-242-0731) VA medical center phone numbers as listed by the state; search excerpt."
+        },
+        {
+          "url": "https://www.va.gov/eastern-colorado-health-care/about-us/",
+          "title": "VA Eastern Colorado Health Care System: about us",
+          "scope": "The Aurora medical center and its community clinics in eastern Colorado; search excerpt."
+        }
+      ]
+    }
+  ],
+  "adapter": {
+    "badge_county": "County Veterans Service Office",
+    "badge_state": "State office",
+    "badge_statewide": "Colorado statewide line",
+    "published_in": "Published on the Colorado Division of Veterans Affairs county office list",
+    "agency_link": "Colorado Division of Veterans Affairs county office list",
+    "officers_can": "County Veterans Service Officers can",
+    "abuse_phone": "911",
+    "abuse_label": "for immediate danger. To report other mistreatment of an at-risk adult, call Adult Protective Services at the county department of human services where the adult lives"
+  },
+  "coverage_scope": "Referral edition. All 64 counties have their County Veterans Service Office, a matched Area Agency on Aging and a regional long-term-care ombudsman.",
+  "coverage_note": "Veterans Service Office addresses, phones and hours come from the Colorado Division of Veterans Affairs county office list; where it prints no office phone (Clear Creek, Huerfano, Jackson, Moffat, Washington) the card shows the service officers’ numbers or the shared office number the list names. Area Agencies on Aging, their counties and phones come from the Disability Law Colorado list dated September 9, 2021. Regional ombudsman cards show the Area Agency on Aging main line, because no separate regional ombudsman phones were read from official pages. Centers for Independent Living come from the Division of Vocational Rehabilitation. Reviewed November 15, 2026. Contacts are not telephone-confirmed.",
+  "share_description": "County Veterans Service Offices, county-matched Area Agencies on Aging and regional long-term-care ombudsmen across Colorado"
+}

@@ -46,7 +46,7 @@ Invite retailers to run a voluntary roundup, top-up or donation campaign for Vet
 
 ## Starter editions
 
-The guide now covers all 50 states and the District of Columbia. Twenty states have full county editions (Ohio, Pennsylvania, New York, Michigan, Kentucky, Utah, Indiana, West Virginia, Texas, Florida, California, Virginia, North Carolina, Georgia, Arizona, Washington, Tennessee, South Carolina, Illinois and Missouri: 1,779 counties and equivalents). The other 30 states and D.C. are **starter editions** (added November 2, 2026), listed in `data/starter-states.json`. Each lists the state veterans agency, with its phone checked on the agency’s own website (each record says whether the page was read in full or matched through search results), plus national routes to local aging help (Eldercare Locator), the long-term-care ombudsman and free Medicare counseling (SHIP). Every county uses these statewide contacts until county research is added. Starter states are labeled as such in the guide and are not yet part of the guided-assistance beta.
+The guide now covers all 50 states and the District of Columbia. Twenty-one states have full county editions (Ohio, Pennsylvania, New York, Michigan, Kentucky, Utah, Indiana, West Virginia, Texas, Florida, California, Virginia, North Carolina, Georgia, Arizona, Washington, Tennessee, South Carolina, Illinois, Missouri and Colorado: 1,843 counties and equivalents). The other 29 states and D.C. are **starter editions** (added November 2, 2026), listed in `data/starter-states.json`. Each lists the state veterans agency, with its phone checked on the agency’s own website (each record says whether the page was read in full or matched through search results), plus national routes to local aging help (Eldercare Locator), the long-term-care ombudsman and free Medicare counseling (SHIP). Every county uses these statewide contacts until county research is added. Starter states are labeled as such in the guide and are not yet part of the guided-assistance beta.
 
 To add or update a starter state, edit `data/starter-states.json`, then run `python3 scripts/make_starter_states.py`, `python3 scripts/make_qr.py` and `python3 scripts/build_public.py`. To upgrade a starter state to a full county edition, remove it from that file and follow [Adding a state](docs/ADDING-A-STATE.md).
 
@@ -58,7 +58,7 @@ The main guide uses one interface. Changing the state updates county contacts, r
 
 ## Coverage and verification
 
-All twenty full state editions are published referral backbones, not complete inventories of local services. Ohio local research is strongest in the four pilot counties; the other nineteen are initial referral editions. The state picker updates the shared interface from separate datasets; depth of local coverage varies.
+All twenty-one full state editions are published referral backbones, not complete inventories of local services. Ohio local research is strongest in the four pilot counties; the other twenty are initial referral editions. The state picker updates the shared interface from separate datasets; depth of local coverage varies.
 
 The guide displays county coverage and calculated verification totals in an expandable section near the state picker. Every resource card shows its source status without requiring an expansion. Search-excerpt, imported and recheck records carry a visible verification notice, including in printed resource lists. A published source review does not mean an agency confirmed its current intake or availability.
 
@@ -100,7 +100,7 @@ Canonical Utah data lives in `data/public/ut-programs.json`, `data/public/ut-reg
 
 The [Ohio Bingo & Senior Centers section](https://guide.vethomeguard.org/bingo.html) includes all 717 state-listed Type I entries and 114 senior centers in 81 counties (15 researched in detail, 47 from the Ohio Association of Senior Centers member directory, 52 from Area Agency on Aging and county sources). Games with published schedules and senior centers are shown first; license-only entries are one click away. Search by ZIP/distance, activity, published bingo day (Today, Tomorrow, or a weekday) or time of day, and print a one-page facility flyer with a QR code. Specific dates, closures and expired offers are handled separately from license authorization days. Seventy-five entries now have published schedule details after seven October research passes. See [bingo evidence and expansion](docs/BINGO.md).
 
-All twenty full editions have a prominent urgent-help section, crisis and mental-health resources, and expanded homelessness pathways: the VA national call center, SSVF community providers, HUD-VASH and VA Community Resource and Referral Centers. Local shelter beds, individual provider intake and availability are not comprehensively mapped.
+All twenty-one full editions have a prominent urgent-help section, crisis and mental-health resources, and expanded homelessness pathways: the VA national call center, SSVF community providers, HUD-VASH and VA Community Resource and Referral Centers. Local shelter beds, individual provider intake and availability are not comprehensively mapped.
 
 ## Corrections from users
 
