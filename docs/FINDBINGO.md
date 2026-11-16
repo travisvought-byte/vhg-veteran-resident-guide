@@ -22,9 +22,9 @@ Started November 15, 2026, at Travis's direction: one national finder, neighbori
 
 `findbingo-site/index.html` is the whole page; it loads `data.json` and `zips.json` from beside
 itself. The build writes the same three files to `bingo-site/findbingo/`. The Ohio-Bingo repository
-mirrors `bingo-site/` every three hours, and **Cloudflare Pages serves findbingo.org from the
-Ohio-Bingo repository** with the build output directory set to `findbingo` (no build command), so
-list updates reach findbingo.org within a few hours of a merge. A preview copy also runs on the Wix
+mirrors `bingo-site/` every three hours, and **Cloudflare serves findbingo.org from the `findbingo`
+folder of the Ohio-Bingo repository** (see "The domain" below), so list updates reach findbingo.org
+within a few hours of a merge. A preview copy also runs on the Wix
 site **Find Bingo** (site ID `9b3c0c21-b49d-45fa-9cb7-26a1a440afdf`); it reads the lists from
 https://guide.vethomeguard.org/findbingo-site/. Upload `index.html` to Wix again
 only when the page itself changes. Because the Wix page reads the lists from `main`, a page change
@@ -94,10 +94,26 @@ U.S. Census Geocoder match for the bingo hall at 228 N 20th St.
 
 ## The domain
 
-findbingo.org is on Cloudflare. In the Cloudflare Pages project connected to the Ohio-Bingo
-repository: production branch `main`, no build command, build output directory `findbingo`, and the
-custom domains `findbingo.org` and `www.findbingo.org` added under **Custom domains** (Cloudflare
-creates the DNS records; do not add them by hand first).
+findbingo.org is registered and hosted on Cloudflare (set up November 16, 2026). The Cloudflare
+project is the Worker **ohio-bingo** (static assets only), connected to the Ohio-Bingo repository:
+production branch `main`, no build command, root directory `/`, and the deploy command
+
+    npx wrangler deploy --name ohio-bingo --assets ./findbingo --compatibility-date 2026-11-13
+
+so only the `findbingo` folder is published. `findbingo.org` and `www.findbingo.org` are attached
+under the Worker's **Domains** tab (Cloudflare creates the DNS records; do not add them by hand).
+
+## Ohio stays separate
+
+Travis's direction (November 16, 2026): findbingo.org is the national directory; Ohio is run
+separately at https://www.ohiobingo.org/, where Veteran Home Guardians operates and partners with
+halls. So:
+
+- `bingo-site/findbingo/_redirects` forwards findbingo.org/ohio (and /oh) to https://www.ohiobingo.org/.
+- The Ohio Bingo Finder keeps its own address, https://bingo.vethomeguard.org/ (GitHub Pages from the
+  Ohio-Bingo repository root), and ohiobingo.org links to it.
+- Other states are plain directories. Partnerships there are meant for local organizations in each
+  state, not Veteran Home Guardians.
 
 ## Related work
 
