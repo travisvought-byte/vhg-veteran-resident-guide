@@ -235,3 +235,30 @@ Law check, November 12, 2026: HB 344 (136th GA; 501(c)(3) electronic instant bin
   - No text in the page body is smaller than 16px, and the day checkboxes on the submission form are 24px with 44px rows.
   - Source dates read "Oct 8, 2026" instead of 2026-10-08.
   - On bingo.vethomeguard.org the top link returns to ohiobingo.org, and the guide link sits in the footer.
+
+## November 15, 2026 (later): game times near Marengo, printed address, accessibility
+
+**Facebook pass on untimed halls within about 30 miles of Marengo.** The pass covered recurring licenses only, read through a signed-in browser. All eight new schedules use `schedule_source`, so cards say "Next game day, if unchanged" and ask people to confirm:
+
+| Hall | Schedule |
+|---|---|
+| Delaware Eagles #376 | Wednesday, doors 5 p.m., bingo 7 p.m. (August 2025 post; the club still promoted Wednesday bingo in August 2026) |
+| Knights of Columbus #671, Marion | Thursday, doors 6 p.m., games 7 p.m., from players' 2024 comments |
+| Bellville Legion #535 | Tuesday paper bingo, 6–8 p.m., open to the public (November 2026). Members-and-guests e-bingo is noted separately. |
+| Utica Legion Post 92 | Sunday, public doors 5:30 p.m., bingo 6–8 p.m.; season began October 18, 2026 |
+| Newark Eagles #387 | Friday, doors 4:30 p.m., bingo 6–8 p.m., open to the public (November 2026) |
+| Newark VFW #1060 | Wednesday, doors 4:30 p.m., bingo 6:30 p.m., public welcome (November 2026 newsletter); phone added |
+| Newark Catholic, One Green Wave Dr | First and third Sundays (`session_monthly`), per the athletic association that took over in May 2025. No start times; the earlier organizers' times are not carried over. |
+| Watkins Memorial Athletic Association, Pataskala | First Sunday monthly, doors noon, regular bingo 2 p.m. (`session_monthly`) |
+
+- **K of C #671 days:** players named Monday and Thursday; the license lists Sunday and Thursday. Only Thursday, which every source agrees on, is a game day.
+- **No usable schedule found:** Abruzzi Club (occasional event nights), LV Athletic Boosters, The B.E.S.T. Wall, Marion County Athletic Boosters and Westerville North Music Boosters.
+- **Source note wording:** the card note now says "This schedule comes from …". With no phone on file, it points to the hall's Facebook page instead of saying "Please call".
+- **Test changes:** the license-only deep-link test now uses Palace Cultural Arts (Marion).
+
+**Printed address.** Flyers, the poster and the share text give `ohiobingo.org` (or `ohiobingo.org/claim.html` on the organizer sign). QR codes still open the finder directly. The ZIP flyer's print styles were tightened so ten listings, the QR code and the address fit on one Letter page; before, the footer spilled onto a second page.
+
+**Accessibility.** An axe-core scan (WCAG 2.2 AA plus best practices) of every ohiobingo.org page and the finder, at phone and desktop sizes, found:
+
+- **On ohiobingo.org:** heading order on the contact and map pages, and low-contrast gold labels on the sample game sheet and map, fixed on the Wix site. The map's region buttons and county links were also enlarged to 44px.
+- **In this repo:** a missing main landmark on the poster and on both printable flyers. The flyer container now takes the main role in flyer mode. A rescan is clean.

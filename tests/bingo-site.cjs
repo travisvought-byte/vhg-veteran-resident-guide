@@ -13,7 +13,7 @@ assert.equal(doc.querySelector('link[rel=canonical]').href, 'https://bingo.vetho
 assert.equal(doc.querySelector('meta[property="og:url"]').content, 'https://bingo.vethomeguard.org/');
 assert(!/["'=]bingo\.html/.test(index), 'no links to the old bingo.html page');
 assert(!index.includes('guide.vethomeguard.org/bingo.html'), 'printed flyers name the bingo address');
-assert.equal(index.split('bingo.vethomeguard.org<br>').length - 1, 2, 'both printable flyers show the address');
+assert.equal(index.split('<strong>ohiobingo.org').length - 1, 2, 'both printable flyers give the short ohiobingo.org address');
 assert.deepEqual([...doc.querySelectorAll('nav.quick a')].map(a => a.getAttribute('href').slice(0, 3)), ['./?', './?', './?', './?']);
 assert.deepEqual([...doc.querySelectorAll('nav.audience a')].map(a => a.getAttribute('href')),
   ['#submit-details', '#flyer-maker', 'https://bingo.vethomeguard.org/partners.html']);
@@ -43,9 +43,9 @@ assert(partners.querySelector('a[href^="mailto:travis@vethomeguard.org?subject=O
 assert(read('distributions.html').includes('https://codes.ohio.gov/ohio-revised-code/section-2915.101'));
 assert(read('sitemap.xml').includes('<loc>https://bingo.vethomeguard.org/distributions.html</loc>'));
 assert(partners.body.textContent.includes('Inclusion never depends on donations, partnership or sponsorship.'));
-assert(partners.querySelector('#share-text').textContent.endsWith('bingo.vethomeguard.org'));
+assert(partners.querySelector('#share-text').textContent.endsWith('ohiobingo.org'));
 const poster = read('poster.html');
-assert(poster.includes('<p class="url">bingo.vethomeguard.org</p>') && poster.includes('src="assets/bingo-qr.svg"'));
+assert(poster.includes('<p class="url">ohiobingo.org</p>') && poster.includes('src="assets/bingo-qr.svg"'));
 assert(read('sitemap.xml').includes('<loc>https://bingo.vethomeguard.org/partners.html</loc>'));
 assert(read('robots.txt').includes('Sitemap: https://bingo.vethomeguard.org/sitemap.xml'));
 
