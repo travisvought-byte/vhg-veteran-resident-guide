@@ -1,80 +1,284 @@
 [
- {
-  "program_id": "vt-aging",
-  "name": "Local aging help in Vermont (Eldercare Locator)",
-  "official_url": "https://eldercare.acl.gov/home",
-  "organization": "U.S. Administration for Community Living",
-  "service_area": [
-   "All Vermont counties"
-  ],
-  "state": "VT",
-  "needs_supported": [
-   "general_navigation",
-   "help_at_home"
-  ],
-  "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-  "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
-  "constraints": [
-   "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "vt-aaa-age-well",
+    "name": "Age Well",
+    "organization": "Age Well",
+    "official_url": "https://asd.vermont.gov/sites/asd/files/documents/Older%20American%20Act%202023%20Snapshot%20with%20AAA%20Map.pdf",
+    "state": "VT",
+    "service_area": [
+      "Addison",
+      "Chittenden",
+      "Franklin",
+      "Grand Isle"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Senior HelpLine, 1-800-642-5119, also reaches your local agency. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "In Addison County, Granville and Hancock are served by Central Vermont Council on Aging (802-479-0531)."
+    ],
+    "public_contact": {
+      "phone": "802-865-0360",
+      "phone_label": "Area Agency on Aging (Champlain Valley)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://asd.vermont.gov/sites/asd/files/documents/Older%20American%20Act%202023%20Snapshot%20with%20AAA%20Map.pdf",
+      "phone_source_url": "https://asd.vermont.gov/sites/asd/files/documents/Older%20American%20Act%202023%20Snapshot%20with%20AAA%20Map.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://asd.vermont.gov/sites/asd/files/documents/Older%20American%20Act%202023%20Snapshot%20with%20AAA%20Map.pdf",
+        "title": "Vermont Department of Disabilities, Aging and Independent Living: Older Americans Act snapshot with Area Agency on Aging map",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each Area Agency on Aging’s service area, with town exceptions, and phone; read in full. The document is dated February 15, 2019, though its title refers to 2023 data. The Department for Children and Families’ Area Agencies on Aging page (https://dcf.vermont.gov/contacts/partners/aaa; read in full, undated) gives the same service areas and the statewide HelpLine, 1-800-642-5119."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "vt-aaa-svcoa",
+    "name": "Southwestern Vermont Council on Aging",
+    "organization": "Southwestern Vermont Council on Aging",
+    "official_url": "https://asd.vermont.gov/sites/asd/files/documents/Older%20American%20Act%202023%20Snapshot%20with%20AAA%20Map.pdf",
+    "state": "VT",
+    "service_area": [
+      "Bennington",
+      "Rutland"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Senior HelpLine, 1-800-642-5119, also reaches your local agency. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Rutland office 802-786-5990; Bennington office 802-442-5436.",
+      "Pittsfield (Rutland County) is served by Central Vermont Council on Aging (802-479-0531); Readsboro, Searsburg and Winhall (Bennington County) by Senior Solutions (802-885-2655)."
+    ],
+    "public_contact": {
+      "phone": "802-786-5990",
+      "phone_label": "Area Agency on Aging (Southwestern Vermont)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://asd.vermont.gov/sites/asd/files/documents/Older%20American%20Act%202023%20Snapshot%20with%20AAA%20Map.pdf",
+      "phone_source_url": "https://asd.vermont.gov/sites/asd/files/documents/Older%20American%20Act%202023%20Snapshot%20with%20AAA%20Map.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://asd.vermont.gov/sites/asd/files/documents/Older%20American%20Act%202023%20Snapshot%20with%20AAA%20Map.pdf",
+        "title": "Vermont Department of Disabilities, Aging and Independent Living: Older Americans Act snapshot with Area Agency on Aging map",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each Area Agency on Aging’s service area, with town exceptions, and phone; read in full. The document is dated February 15, 2019, though its title refers to 2023 data. The Department for Children and Families’ Area Agencies on Aging page (https://dcf.vermont.gov/contacts/partners/aaa; read in full, undated) gives the same service areas and the statewide HelpLine, 1-800-642-5119."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.acl.gov/contact"
+  {
+    "program_id": "vt-aaa-nekcoa",
+    "name": "Northeast Kingdom Council on Aging",
+    "organization": "Northeast Kingdom Council on Aging",
+    "official_url": "https://asd.vermont.gov/sites/asd/files/documents/Older%20American%20Act%202023%20Snapshot%20with%20AAA%20Map.pdf",
+    "state": "VT",
+    "service_area": [
+      "Caledonia",
+      "Essex",
+      "Orleans"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Senior HelpLine, 1-800-642-5119, also reaches your local agency. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program."
+    ],
+    "public_contact": {
+      "phone": "802-748-5182",
+      "phone_label": "Area Agency on Aging (Northeast Kingdom)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://asd.vermont.gov/sites/asd/files/documents/Older%20American%20Act%202023%20Snapshot%20with%20AAA%20Map.pdf",
+      "phone_source_url": "https://asd.vermont.gov/sites/asd/files/documents/Older%20American%20Act%202023%20Snapshot%20with%20AAA%20Map.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://asd.vermont.gov/sites/asd/files/documents/Older%20American%20Act%202023%20Snapshot%20with%20AAA%20Map.pdf",
+        "title": "Vermont Department of Disabilities, Aging and Independent Living: Older Americans Act snapshot with Area Agency on Aging map",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each Area Agency on Aging’s service area, with town exceptions, and phone; read in full. The document is dated February 15, 2019, though its title refers to 2023 data. The Department for Children and Families’ Area Agencies on Aging page (https://dcf.vermont.gov/contacts/partners/aaa; read in full, undated) gives the same service areas and the statewide HelpLine, 1-800-642-5119."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.acl.gov/contact",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "aging_agency"
- },
- {
-  "program_id": "vt-ombudsman",
-  "name": "Vermont long-term-care ombudsman",
-  "official_url": "https://theconsumervoice.org/get_help",
-  "organization": "National Long-Term Care Ombudsman Resource Center",
-  "service_area": [
-   "All Vermont counties"
-  ],
-  "state": "VT",
-  "needs_supported": [
-   "resident_rights",
-   "general_navigation"
-  ],
-  "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-  "next_step": "Use the locator to find the Vermont program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
-  "constraints": [
-   "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "vt-aaa-cvcoa",
+    "name": "Central Vermont Council on Aging",
+    "organization": "Central Vermont Council on Aging",
+    "official_url": "https://asd.vermont.gov/sites/asd/files/documents/Older%20American%20Act%202023%20Snapshot%20with%20AAA%20Map.pdf",
+    "state": "VT",
+    "service_area": [
+      "Lamoille",
+      "Orange",
+      "Washington"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Senior HelpLine, 1-800-642-5119, also reaches your local agency. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "In Orange County, Thetford is served by Senior Solutions (802-885-2655).",
+      "This agency also serves Granville and Hancock (Addison County), Pittsfield (Rutland County), and Bethel, Rochester, Royalton, Sharon and Stockbridge (Windsor County)."
+    ],
+    "public_contact": {
+      "phone": "802-479-0531",
+      "phone_label": "Area Agency on Aging (Central Vermont)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://asd.vermont.gov/sites/asd/files/documents/Older%20American%20Act%202023%20Snapshot%20with%20AAA%20Map.pdf",
+      "phone_source_url": "https://asd.vermont.gov/sites/asd/files/documents/Older%20American%20Act%202023%20Snapshot%20with%20AAA%20Map.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://asd.vermont.gov/sites/asd/files/documents/Older%20American%20Act%202023%20Snapshot%20with%20AAA%20Map.pdf",
+        "title": "Vermont Department of Disabilities, Aging and Independent Living: Older Americans Act snapshot with Area Agency on Aging map",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each Area Agency on Aging’s service area, with town exceptions, and phone; read in full. The document is dated February 15, 2019, though its title refers to 2023 data. The Department for Children and Families’ Area Agencies on Aging page (https://dcf.vermont.gov/contacts/partners/aaa; read in full, undated) gives the same service areas and the statewide HelpLine, 1-800-642-5119."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "vt-aaa-senior-solutions",
+    "name": "Senior Solutions (Council on Aging for Southeastern Vermont)",
+    "organization": "Senior Solutions (Council on Aging for Southeastern Vermont)",
+    "official_url": "https://asd.vermont.gov/sites/asd/files/documents/Older%20American%20Act%202023%20Snapshot%20with%20AAA%20Map.pdf",
+    "state": "VT",
+    "service_area": [
+      "Windham",
+      "Windsor"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Senior HelpLine, 1-800-642-5119, also reaches your local agency. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "In Windsor County, Bethel, Rochester, Royalton, Sharon and Stockbridge are served by Central Vermont Council on Aging (802-479-0531).",
+      "This agency also serves Readsboro, Searsburg and Winhall (Bennington County) and Thetford (Orange County)."
+    ],
+    "public_contact": {
+      "phone": "802-885-2655",
+      "phone_label": "Area Agency on Aging (Southeastern Vermont)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://asd.vermont.gov/sites/asd/files/documents/Older%20American%20Act%202023%20Snapshot%20with%20AAA%20Map.pdf",
+      "phone_source_url": "https://asd.vermont.gov/sites/asd/files/documents/Older%20American%20Act%202023%20Snapshot%20with%20AAA%20Map.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://asd.vermont.gov/sites/asd/files/documents/Older%20American%20Act%202023%20Snapshot%20with%20AAA%20Map.pdf",
+        "title": "Vermont Department of Disabilities, Aging and Independent Living: Older Americans Act snapshot with Area Agency on Aging map",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each Area Agency on Aging’s service area, with town exceptions, and phone; read in full. The document is dated February 15, 2019, though its title refers to 2023 data. The Department for Children and Families’ Area Agencies on Aging page (https://dcf.vermont.gov/contacts/partners/aaa; read in full, undated) gives the same service areas and the statewide HelpLine, 1-800-642-5119."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
-  },
-  "source_evidence": [
-   {
-    "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "ombudsman"
- }
+  {
+    "program_id": "vt-omb-state",
+    "name": "Vermont Long-Term Care Ombudsman Program (Vermont Legal Aid)",
+    "organization": "Vermont Long-Term Care Ombudsman Program (Vermont Legal Aid)",
+    "official_url": "https://vtlegalaid.org/legal-projects/long-term-care-ombudsman",
+    "state": "VT",
+    "service_area": [
+      "Addison",
+      "Bennington",
+      "Caledonia",
+      "Chittenden",
+      "Essex",
+      "Franklin",
+      "Grand Isle",
+      "Lamoille",
+      "Orange",
+      "Orleans",
+      "Rutland",
+      "Washington",
+      "Windham",
+      "Windsor"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ask for extension 3, the ombudsman. Expect a reply within three business days."
+    ],
+    "public_contact": {
+      "phone": "800-889-2047",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://vtlegalaid.org/legal-projects/long-term-care-ombudsman",
+      "phone_source_url": "https://vtlegalaid.org/legal-projects/long-term-care-ombudsman"
+    },
+    "source_evidence": [
+      {
+        "url": "https://vtlegalaid.org/legal-projects/long-term-care-ombudsman",
+        "title": "Vermont Legal Aid: Vermont Long-Term Care Ombudsman Project",
+        "reviewed_on": "2026-11-16",
+        "scope": "Call 1-800-889-2047 ext. 3 or use the online form; replies within three business days; serves people in licensed long-term care facilities and people getting care at home through Choices for Care; read in full. The program is statewide, so every county shows it."
+      }
+    ]
+  }
 ]
