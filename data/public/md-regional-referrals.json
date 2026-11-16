@@ -1,80 +1,1998 @@
 [
- {
-  "program_id": "md-aging",
-  "name": "Local aging help in Maryland (Eldercare Locator)",
-  "official_url": "https://eldercare.acl.gov/home",
-  "organization": "U.S. Administration for Community Living",
-  "service_area": [
-   "All Maryland counties"
-  ],
-  "state": "MD",
-  "needs_supported": [
-   "general_navigation",
-   "help_at_home"
-  ],
-  "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-  "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
-  "constraints": [
-   "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "md-aaa-allegany",
+    "name": "Allegany County Human Resources Development Commission",
+    "organization": "Allegany County Human Resources Development Commission",
+    "official_url": "https://aging.prod.maryland.gov/media/42/download",
+    "state": "MD",
+    "service_area": [
+      "Allegany"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Maryland Access Point, 1-844-627-5465, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 125 Virginia Avenue, Cumberland, MD 21502."
+    ],
+    "public_contact": {
+      "phone": "301-777-5970",
+      "phone_label": "Area Agency on Aging (Allegany)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.prod.maryland.gov/media/42/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Agency names, counties, street addresses and phones for the 19 Area Agencies on Aging serving all 23 counties and Baltimore City; undated; read in full."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "md-aaa-annearundel",
+    "name": "Anne Arundel County Department of Aging and Disabilities",
+    "organization": "Anne Arundel County Department of Aging and Disabilities",
+    "official_url": "https://aging.prod.maryland.gov/media/42/download",
+    "state": "MD",
+    "service_area": [
+      "Anne Arundel"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Maryland Access Point, 1-844-627-5465, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 2666 Riva Road, Annapolis, MD 21401."
+    ],
+    "public_contact": {
+      "phone": "410-222-4464",
+      "phone_label": "Area Agency on Aging (Anne Arundel)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.prod.maryland.gov/media/42/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Agency names, counties, street addresses and phones for the 19 Area Agencies on Aging serving all 23 counties and Baltimore City; undated; read in full."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.acl.gov/contact"
+  {
+    "program_id": "md-aaa-baltimorecity",
+    "name": "Baltimore City Division of Aging and Care Services",
+    "organization": "Baltimore City Division of Aging and Care Services",
+    "official_url": "https://aging.prod.maryland.gov/media/42/download",
+    "state": "MD",
+    "service_area": [
+      "Baltimore City"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Maryland Access Point, 1-844-627-5465, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 417 E. Fayette Street, 6th Floor, Baltimore, MD 21202."
+    ],
+    "public_contact": {
+      "phone": "410-396-4932",
+      "phone_label": "Area Agency on Aging (Baltimore City)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.prod.maryland.gov/media/42/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Agency names, counties, street addresses and phones for the 19 Area Agencies on Aging serving all 23 counties and Baltimore City; undated; read in full."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.acl.gov/contact",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "aging_agency"
- },
- {
-  "program_id": "md-ombudsman",
-  "name": "Maryland long-term-care ombudsman",
-  "official_url": "https://theconsumervoice.org/get_help",
-  "organization": "National Long-Term Care Ombudsman Resource Center",
-  "service_area": [
-   "All Maryland counties"
-  ],
-  "state": "MD",
-  "needs_supported": [
-   "resident_rights",
-   "general_navigation"
-  ],
-  "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-  "next_step": "Use the locator to find the Maryland program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
-  "constraints": [
-   "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "md-aaa-baltimorecounty",
+    "name": "Baltimore County Department of Aging",
+    "organization": "Baltimore County Department of Aging",
+    "official_url": "https://aging.prod.maryland.gov/media/42/download",
+    "state": "MD",
+    "service_area": [
+      "Baltimore"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Maryland Access Point, 1-844-627-5465, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 611 Central Avenue, Towson, MD 21204."
+    ],
+    "public_contact": {
+      "phone": "410-887-2594",
+      "phone_label": "Area Agency on Aging (Baltimore County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.prod.maryland.gov/media/42/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Agency names, counties, street addresses and phones for the 19 Area Agencies on Aging serving all 23 counties and Baltimore City; undated; read in full."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "md-aaa-calvert",
+    "name": "Calvert County Office on Aging",
+    "organization": "Calvert County Office on Aging",
+    "official_url": "https://aging.prod.maryland.gov/media/42/download",
+    "state": "MD",
+    "service_area": [
+      "Calvert"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Maryland Access Point, 1-844-627-5465, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 450 West Dares Beach Road, Prince Frederick, MD 20678."
+    ],
+    "public_contact": {
+      "phone": "410-535-4606",
+      "phone_label": "Area Agency on Aging (Calvert)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.prod.maryland.gov/media/42/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Agency names, counties, street addresses and phones for the 19 Area Agencies on Aging serving all 23 counties and Baltimore City; undated; read in full."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
+  {
+    "program_id": "md-aaa-uppershore",
+    "name": "Upper Shore Aging, Inc.",
+    "organization": "Upper Shore Aging, Inc.",
+    "official_url": "https://aging.prod.maryland.gov/media/42/download",
+    "state": "MD",
+    "service_area": [
+      "Caroline",
+      "Kent",
+      "Talbot"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Maryland Access Point, 1-844-627-5465, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 100 Schauber Road, Chestertown, MD 21620.",
+      "This agency serves Caroline, Kent and Talbot Counties."
+    ],
+    "public_contact": {
+      "phone": "410-778-6000",
+      "phone_label": "Area Agency on Aging (Upper Shore)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.prod.maryland.gov/media/42/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Agency names, counties, street addresses and phones for the 19 Area Agencies on Aging serving all 23 counties and Baltimore City; undated; read in full."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "ombudsman"
- }
+  {
+    "program_id": "md-aaa-carroll",
+    "name": "Carroll County Bureau of Aging and Disabilities",
+    "organization": "Carroll County Bureau of Aging and Disabilities",
+    "official_url": "https://aging.prod.maryland.gov/media/42/download",
+    "state": "MD",
+    "service_area": [
+      "Carroll"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Maryland Access Point, 1-844-627-5465, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 125 Stoner Avenue, Westminster, MD 21157."
+    ],
+    "public_contact": {
+      "phone": "410-386-3800",
+      "phone_label": "Area Agency on Aging (Carroll)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.prod.maryland.gov/media/42/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Agency names, counties, street addresses and phones for the 19 Area Agencies on Aging serving all 23 counties and Baltimore City; undated; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "md-aaa-cecil",
+    "name": "Cecil County Department of Community Services",
+    "organization": "Cecil County Department of Community Services",
+    "official_url": "https://aging.prod.maryland.gov/media/42/download",
+    "state": "MD",
+    "service_area": [
+      "Cecil"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Maryland Access Point, 1-844-627-5465, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 200 Chesapeake Boulevard, Suite 2550, Elkton, MD 21921."
+    ],
+    "public_contact": {
+      "phone": "410-996-5295",
+      "phone_label": "Area Agency on Aging (Cecil)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.prod.maryland.gov/media/42/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Agency names, counties, street addresses and phones for the 19 Area Agencies on Aging serving all 23 counties and Baltimore City; undated; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "md-aaa-charles",
+    "name": "Charles County Aging and Human Services",
+    "organization": "Charles County Aging and Human Services",
+    "official_url": "https://aging.prod.maryland.gov/media/42/download",
+    "state": "MD",
+    "service_area": [
+      "Charles"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Maryland Access Point, 1-844-627-5465, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 8190 Port Tobacco Road, Port Tobacco, MD 20677."
+    ],
+    "public_contact": {
+      "phone": "301-934-9305",
+      "phone_label": "Area Agency on Aging (Charles)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.prod.maryland.gov/media/42/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Agency names, counties, street addresses and phones for the 19 Area Agencies on Aging serving all 23 counties and Baltimore City; undated; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "md-aaa-mac",
+    "name": "MAC, Inc.",
+    "organization": "MAC, Inc.",
+    "official_url": "https://aging.prod.maryland.gov/media/42/download",
+    "state": "MD",
+    "service_area": [
+      "Dorchester",
+      "Somerset",
+      "Wicomico",
+      "Worcester"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Maryland Access Point, 1-844-627-5465, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 909 Progress Circle, Salisbury, MD 21804.",
+      "This agency serves Dorchester, Somerset, Wicomico and Worcester Counties."
+    ],
+    "public_contact": {
+      "phone": "410-742-0505",
+      "phone_label": "Area Agency on Aging (Lower Shore)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.prod.maryland.gov/media/42/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Agency names, counties, street addresses and phones for the 19 Area Agencies on Aging serving all 23 counties and Baltimore City; undated; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "md-aaa-frederick",
+    "name": "Frederick County Division of Aging and Independence",
+    "organization": "Frederick County Division of Aging and Independence",
+    "official_url": "https://aging.prod.maryland.gov/media/42/download",
+    "state": "MD",
+    "service_area": [
+      "Frederick"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Maryland Access Point, 1-844-627-5465, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 1440 Taney Avenue, Frederick, MD 21702."
+    ],
+    "public_contact": {
+      "phone": "301-600-1234",
+      "phone_label": "Area Agency on Aging (Frederick)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.prod.maryland.gov/media/42/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Agency names, counties, street addresses and phones for the 19 Area Agencies on Aging serving all 23 counties and Baltimore City; undated; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "md-aaa-garrett",
+    "name": "Garrett County Area Agency on Aging",
+    "organization": "Garrett County Area Agency on Aging",
+    "official_url": "https://aging.prod.maryland.gov/media/42/download",
+    "state": "MD",
+    "service_area": [
+      "Garrett"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Maryland Access Point, 1-844-627-5465, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 104 East Center Street, Oakland, MD 21550."
+    ],
+    "public_contact": {
+      "phone": "301-334-9431",
+      "phone_label": "Area Agency on Aging (Garrett)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.prod.maryland.gov/media/42/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Agency names, counties, street addresses and phones for the 19 Area Agencies on Aging serving all 23 counties and Baltimore City; undated; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "md-aaa-harford",
+    "name": "Harford County Office on Aging",
+    "organization": "Harford County Office on Aging",
+    "official_url": "https://aging.prod.maryland.gov/media/42/download",
+    "state": "MD",
+    "service_area": [
+      "Harford"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Maryland Access Point, 1-844-627-5465, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 145 North Hickory Avenue, Bel Air, MD 21014."
+    ],
+    "public_contact": {
+      "phone": "410-638-3025",
+      "phone_label": "Area Agency on Aging (Harford)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.prod.maryland.gov/media/42/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Agency names, counties, street addresses and phones for the 19 Area Agencies on Aging serving all 23 counties and Baltimore City; undated; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "md-aaa-howard",
+    "name": "Howard County Office on Aging and Independence",
+    "organization": "Howard County Office on Aging and Independence",
+    "official_url": "https://aging.prod.maryland.gov/media/42/download",
+    "state": "MD",
+    "service_area": [
+      "Howard"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Maryland Access Point, 1-844-627-5465, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 9830 Patuxent Woods Drive, Columbia, MD 21046."
+    ],
+    "public_contact": {
+      "phone": "410-313-1234",
+      "phone_label": "Area Agency on Aging (Howard)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.prod.maryland.gov/media/42/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Agency names, counties, street addresses and phones for the 19 Area Agencies on Aging serving all 23 counties and Baltimore City; undated; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "md-aaa-montgomery",
+    "name": "Montgomery County Department of Health and Human Services",
+    "organization": "Montgomery County Department of Health and Human Services",
+    "official_url": "https://aging.prod.maryland.gov/media/42/download",
+    "state": "MD",
+    "service_area": [
+      "Montgomery"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Maryland Access Point, 1-844-627-5465, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 401 Hungerford Drive, 3rd Floor, Rockville, MD 20850."
+    ],
+    "public_contact": {
+      "phone": "240-777-3000",
+      "phone_label": "Area Agency on Aging (Montgomery)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.prod.maryland.gov/media/42/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Agency names, counties, street addresses and phones for the 19 Area Agencies on Aging serving all 23 counties and Baltimore City; undated; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "md-aaa-princegeorges",
+    "name": "Prince George’s County Department of Family Services",
+    "organization": "Prince George’s County Department of Family Services",
+    "official_url": "https://aging.prod.maryland.gov/media/42/download",
+    "state": "MD",
+    "service_area": [
+      "Prince George's"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Maryland Access Point, 1-844-627-5465, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 6420 Allentown Road, Camp Springs, MD 20748."
+    ],
+    "public_contact": {
+      "phone": "301-265-8450",
+      "phone_label": "Area Agency on Aging (Prince George’s)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.prod.maryland.gov/media/42/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Agency names, counties, street addresses and phones for the 19 Area Agencies on Aging serving all 23 counties and Baltimore City; undated; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "md-aaa-queenannes",
+    "name": "Queen Anne’s County Area Agency on Aging",
+    "organization": "Queen Anne’s County Area Agency on Aging",
+    "official_url": "https://aging.prod.maryland.gov/media/42/download",
+    "state": "MD",
+    "service_area": [
+      "Queen Anne's"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Maryland Access Point, 1-844-627-5465, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 104 Powell Street, Centerville, MD 21617.",
+      "Press option 2 for the Area Agency on Aging."
+    ],
+    "public_contact": {
+      "phone": "410-758-0848",
+      "phone_label": "Area Agency on Aging (Queen Anne’s)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.prod.maryland.gov/media/42/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Agency names, counties, street addresses and phones for the 19 Area Agencies on Aging serving all 23 counties and Baltimore City; undated; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "md-aaa-stmarys",
+    "name": "St. Mary’s County Department of Aging and Human Services",
+    "organization": "St. Mary’s County Department of Aging and Human Services",
+    "official_url": "https://aging.prod.maryland.gov/media/42/download",
+    "state": "MD",
+    "service_area": [
+      "St. Mary's"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Maryland Access Point, 1-844-627-5465, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 41780 Baldridge Street, Leonardtown, MD 20650."
+    ],
+    "public_contact": {
+      "phone": "301-475-4200 ext. 1070",
+      "phone_label": "Area Agency on Aging (St. Mary’s)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.prod.maryland.gov/media/42/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Agency names, counties, street addresses and phones for the 19 Area Agencies on Aging serving all 23 counties and Baltimore City; undated; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "md-aaa-washington",
+    "name": "Washington County Commission on Aging",
+    "organization": "Washington County Commission on Aging",
+    "official_url": "https://aging.prod.maryland.gov/media/42/download",
+    "state": "MD",
+    "service_area": [
+      "Washington"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Maryland Access Point, 1-844-627-5465, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 535 E. Franklin Street, Hagerstown, MD 21740."
+    ],
+    "public_contact": {
+      "phone": "301-790-0275 ext. 203",
+      "phone_label": "Area Agency on Aging (Washington)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.prod.maryland.gov/media/42/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Agency names, counties, street addresses and phones for the 19 Area Agencies on Aging serving all 23 counties and Baltimore City; undated; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "md-omb-allegany",
+    "name": "Local long-term care ombudsman, Allegany County Human Resources Development Commission",
+    "organization": "Local long-term care ombudsman, Allegany County Human Resources Development Commission",
+    "official_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "state": "MD",
+    "service_area": [
+      "Allegany"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ],
+    "public_contact": {
+      "phone": "301-783-1771",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it."
+      },
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/md",
+        "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "md-omb-annearundel",
+    "name": "Local long-term care ombudsman, Anne Arundel County Department of Aging and Disabilities",
+    "organization": "Local long-term care ombudsman, Anne Arundel County Department of Aging and Disabilities",
+    "official_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "state": "MD",
+    "service_area": [
+      "Anne Arundel"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ],
+    "public_contact": {
+      "phone": "410-222-4257",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it."
+      },
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/md",
+        "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "md-omb-baltimorecity",
+    "name": "Local long-term care ombudsman, Baltimore City Division of Aging and Care Services",
+    "organization": "Local long-term care ombudsman, Baltimore City Division of Aging and Care Services",
+    "official_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "state": "MD",
+    "service_area": [
+      "Baltimore City"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ],
+    "public_contact": {
+      "phone": "410-396-3144",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it."
+      },
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/md",
+        "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "md-omb-baltimorecounty",
+    "name": "Local long-term care ombudsman, Baltimore County Department of Aging",
+    "organization": "Local long-term care ombudsman, Baltimore County Department of Aging",
+    "official_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "state": "MD",
+    "service_area": [
+      "Baltimore"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ],
+    "public_contact": {
+      "phone": "410-887-4200",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it."
+      },
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/md",
+        "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "md-omb-calvert",
+    "name": "Local long-term care ombudsman, Calvert County Office on Aging",
+    "organization": "Local long-term care ombudsman, Calvert County Office on Aging",
+    "official_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "state": "MD",
+    "service_area": [
+      "Calvert"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ],
+    "public_contact": {
+      "phone": "410-535-4606 ext. 143",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it."
+      },
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/md",
+        "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "md-omb-uppershore",
+    "name": "Local long-term care ombudsman, Upper Shore Aging, Inc.",
+    "organization": "Local long-term care ombudsman, Upper Shore Aging, Inc.",
+    "official_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "state": "MD",
+    "service_area": [
+      "Caroline",
+      "Kent",
+      "Talbot"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ],
+    "public_contact": {
+      "phone": "410-778-6000",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it."
+      },
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/md",
+        "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "md-omb-carroll",
+    "name": "Local long-term care ombudsman, Carroll County Bureau of Aging and Disabilities",
+    "organization": "Local long-term care ombudsman, Carroll County Bureau of Aging and Disabilities",
+    "official_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "state": "MD",
+    "service_area": [
+      "Carroll"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman.",
+      "The county’s own ombudsman page prints 410-386-3800, the Bureau of Aging and Disabilities main line."
+    ],
+    "public_contact": {
+      "phone": "410-386-3810",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it."
+      },
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/md",
+        "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+      },
+      {
+        "url": "https://www.carrollcountymd.gov/government/directory/citizen-services/aging-disabilities/aging-and-disabilities-services/long-term-care-ombudsman-program/",
+        "title": "Carroll County Bureau of Aging and Disabilities: Long Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Ombudsman program address and phone 410-386-3800; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "md-omb-cecil",
+    "name": "Local long-term care ombudsman, Cecil County Department of Community Services",
+    "organization": "Local long-term care ombudsman, Cecil County Department of Community Services",
+    "official_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "state": "MD",
+    "service_area": [
+      "Cecil"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ],
+    "public_contact": {
+      "phone": "410-996-8429",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it."
+      },
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/md",
+        "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "md-omb-charles",
+    "name": "Local long-term care ombudsman, Charles County Aging and Human Services",
+    "organization": "Local long-term care ombudsman, Charles County Aging and Human Services",
+    "official_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "state": "MD",
+    "service_area": [
+      "Charles"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ],
+    "public_contact": {
+      "phone": "301-934-0109",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it."
+      },
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/md",
+        "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "md-omb-mac",
+    "name": "Local long-term care ombudsman, MAC, Inc.",
+    "organization": "Local long-term care ombudsman, MAC, Inc.",
+    "official_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "state": "MD",
+    "service_area": [
+      "Dorchester",
+      "Somerset",
+      "Wicomico",
+      "Worcester"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ],
+    "public_contact": {
+      "phone": "410-742-0505 ext. 104",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it."
+      },
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/md",
+        "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "md-omb-frederick",
+    "name": "Local long-term care ombudsman, Frederick County Division of Aging and Independence",
+    "organization": "Local long-term care ombudsman, Frederick County Division of Aging and Independence",
+    "official_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "state": "MD",
+    "service_area": [
+      "Frederick"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ],
+    "public_contact": {
+      "phone": "301-600-2877",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it."
+      },
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/md",
+        "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "md-omb-garrett",
+    "name": "Local long-term care ombudsman, Garrett County Area Agency on Aging",
+    "organization": "Local long-term care ombudsman, Garrett County Area Agency on Aging",
+    "official_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "state": "MD",
+    "service_area": [
+      "Garrett"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ],
+    "public_contact": {
+      "phone": "301-334-9431 ext. 6140",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it."
+      },
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/md",
+        "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "md-omb-harford",
+    "name": "Local long-term care ombudsman, Harford County Office on Aging",
+    "organization": "Local long-term care ombudsman, Harford County Office on Aging",
+    "official_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "state": "MD",
+    "service_area": [
+      "Harford"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ],
+    "public_contact": {
+      "phone": "410-638-3025",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it."
+      },
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/md",
+        "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "md-omb-howard",
+    "name": "Local long-term care ombudsman, Howard County Office on Aging and Independence",
+    "organization": "Local long-term care ombudsman, Howard County Office on Aging and Independence",
+    "official_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "state": "MD",
+    "service_area": [
+      "Howard"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ],
+    "public_contact": {
+      "phone": "410-313-6423",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it."
+      },
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/md",
+        "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "md-omb-montgomery",
+    "name": "Local long-term care ombudsman, Montgomery County Department of Health and Human Services",
+    "organization": "Local long-term care ombudsman, Montgomery County Department of Health and Human Services",
+    "official_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "state": "MD",
+    "service_area": [
+      "Montgomery"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ],
+    "public_contact": {
+      "phone": "240-777-3369",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it."
+      },
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/md",
+        "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "md-omb-princegeorges",
+    "name": "Local long-term care ombudsman, Prince George’s County Department of Family Services",
+    "organization": "Local long-term care ombudsman, Prince George’s County Department of Family Services",
+    "official_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "state": "MD",
+    "service_area": [
+      "Prince George's"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ],
+    "public_contact": {
+      "phone": "301-265-8483",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it."
+      },
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/md",
+        "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "md-omb-queenannes",
+    "name": "Local long-term care ombudsman, Queen Anne’s County Area Agency on Aging",
+    "organization": "Local long-term care ombudsman, Queen Anne’s County Area Agency on Aging",
+    "official_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "state": "MD",
+    "service_area": [
+      "Queen Anne's"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ],
+    "public_contact": {
+      "phone": "410-758-0848",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it."
+      },
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/md",
+        "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "md-omb-stmarys",
+    "name": "Local long-term care ombudsman, St. Mary’s County Department of Aging and Human Services",
+    "organization": "Local long-term care ombudsman, St. Mary’s County Department of Aging and Human Services",
+    "official_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "state": "MD",
+    "service_area": [
+      "St. Mary's"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ],
+    "public_contact": {
+      "phone": "301-475-4200 ext. 71055",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it."
+      },
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/md",
+        "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "md-omb-washington",
+    "name": "Local long-term care ombudsman, Washington County Commission on Aging",
+    "organization": "Local long-term care ombudsman, Washington County Commission on Aging",
+    "official_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "state": "MD",
+    "service_area": [
+      "Washington"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ],
+    "public_contact": {
+      "phone": "301-790-0275",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.prod.maryland.gov/media/42/download",
+      "phone_source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it."
+      },
+      {
+        "url": "https://aging.prod.maryland.gov/media/42/download",
+        "title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+        "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/md",
+        "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+      }
+    ]
+  }
 ]

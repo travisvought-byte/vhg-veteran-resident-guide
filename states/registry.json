@@ -502,6 +502,28 @@
     ]
   },
   {
+    "code": "MD",
+    "name": "Maryland",
+    "page": "md.html",
+    "share_page": "share-md.html",
+    "qr": "assets/guide-qr-md.svg",
+    "counties": 24,
+    "programs": "data/public/md-programs.json",
+    "referrals": "data/public/md-regional-referrals.json",
+    "offices": "data/public/maryland-county-veterans-offices.json",
+    "resources": "data/public/maryland-resources.json",
+    "statewide_area_names": [],
+    "coverage_scope": "Referral edition. All 24 jurisdictions have a state benefits contact, a matched Area Agency on Aging and a local long-term-care ombudsman. The state’s office list prints no county coverage: 16 jurisdictions show an office located there and 8 show the statewide service line with nearby offices.",
+    "coverage_note": "Service office addresses, phones and hours come from the Maryland Department of Veterans and Military Families office list, which prints no county coverage; each county shows an office located in it, and counties without one show the statewide service line and nearby offices. Area Agencies on Aging come from the Department of Aging directory. Local ombudsman phones come from search excerpts of the Department of Aging ombudsman page. Centers for Independent Living come from the ILRU directory and the state’s 2024 directory. Reviewed November 15, 2026. Contacts are not telephone-confirmed.",
+    "share_description": "State benefits offices, county-matched Area Agencies on Aging and local long-term-care ombudsmen across Maryland",
+    "share_replacements": [
+      [
+        "Updated October 8, 2026",
+        "Updated November 15, 2026"
+      ]
+    ]
+  },
+  {
     "code": "AK",
     "name": "Alaska",
     "starter": true,
@@ -718,26 +740,6 @@
     ],
     "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
     "coverage_note": "Starter edition. Every county uses the Maine Bureau of Veterans’ Services and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
-    "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
-    "share_replacements": []
-  },
-  {
-    "code": "MD",
-    "name": "Maryland",
-    "starter": true,
-    "page": "md.html",
-    "share_page": "share-md.html",
-    "qr": "assets/guide-qr-md.svg",
-    "counties": 1,
-    "programs": "data/public/md-programs.json",
-    "referrals": "data/public/md-regional-referrals.json",
-    "offices": "data/public/maryland-county-veterans-offices.json",
-    "resources": "data/public/maryland-resources.json",
-    "statewide_area_names": [
-      "All Maryland counties"
-    ],
-    "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
-    "coverage_note": "Starter edition. Every county uses the Maryland Department of Veterans and Military Families and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
     "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
     "share_replacements": []
   },

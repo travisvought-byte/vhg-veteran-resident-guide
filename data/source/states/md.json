@@ -1,0 +1,1531 @@
+{
+ "about": "Research sheet for the Maryland county edition. Every contact below was read on the date in reviewed_on from the page named beside it; scripts/make_county_state.py turns it into the edition files.",
+ "code": "MD",
+ "name": "Maryland",
+ "slug": "maryland",
+ "counties": 24,
+ "reviewed_on": "2026-11-15",
+ "month_label": "November 15, 2026",
+ "template_date": "November 4, 2026",
+ "phones_sentence": "Service office phones, addresses and hours come from the Maryland Department of Veterans and Military Families office list. Offices are open by appointment only; call before you go.",
+ "senior_line_id": "md-adrc",
+ "agency": {
+  "url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits"
+ },
+ "offices": {
+  "source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+  "source_title": "Maryland Department of Veterans and Military Families: How To Apply For Benefits (service offices)",
+  "note": "Department benefits specialists can help with VA claims, pension and survivor benefits. Offices are open by appointment only; call the office first.",
+  "selection": "Office address, phone and hours as printed on the department’s service office list. The list prints no county coverage, so each county shows a department office located in it; counties without one show the statewide service line and the nearest listed offices, as described in docs/MARYLAND.md. Staff names and emails omitted.",
+  "list": [
+   {
+    "county": "Allegany",
+    "phone": "301-729-4676",
+    "address": "Cumberland Motor Vehicle Administration Service Center, 13300 Winchester Road SW, Cumberland, MD 21502",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "organization": "DVMF Service Office, Cumberland",
+    "office_type": "state_field_office",
+    "note": "The department’s list prints no county coverage; this office is located in Allegany County. For help with another county, call the statewide service line, 800-446-4926 ext. 6450."
+   },
+   {
+    "county": "Anne Arundel",
+    "phone": "410-573-4786",
+    "address": "Annapolis Motor Vehicle Administration Service Center, 160 Harry S. Truman Parkway, Annapolis, MD 21401",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "organization": "DVMF Service Office, Annapolis",
+    "office_type": "state_field_office",
+    "other_phones": [
+     "410-573-4787"
+    ],
+    "other_offices": [
+     {
+      "address": "Glen Burnie office: Glen Burnie Motor Vehicle Administration Service Center, Building A, Ground Floor, 6601 Ritchie Highway, Glen Burnie, MD 21062",
+      "schedule": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+      "phone": "410-424-3039"
+     }
+    ],
+    "note": "A second Anne Arundel County office is in Glen Burnie. The department’s list prints no county coverage; this office is located in Anne Arundel County. For help with another county, call the statewide service line, 800-446-4926 ext. 6450."
+   },
+   {
+    "county": "Baltimore",
+    "phone": "410-804-6053",
+    "address": "VA Eastern Baltimore County Community Based Outpatient Clinic, Franklin Square Professional Center, 5235 King Avenue, Suite 200, Rosedale, MD 21237",
+    "hours": "Wednesdays 9:00 a.m.–1:00 p.m., excluding federal holidays",
+    "organization": "DVMF Service Office, Rosedale",
+    "office_type": "state_field_office",
+    "other_offices": [
+     {
+      "address": "Baltimore regional office office: 31 Hopkins Plaza, Room 3020, Baltimore, MD 21201",
+      "schedule": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+      "phone": "800-446-4926 ext. 6450"
+     }
+    ],
+    "note": "This office is open one day a week; the Baltimore regional office, in Baltimore City, is listed as the other office. The department’s list prints no county coverage; this office is located in Baltimore County. For help with another county, call the statewide service line, 800-446-4926 ext. 6450."
+   },
+   {
+    "county": "Baltimore City",
+    "phone": "800-446-4926 ext. 6450",
+    "address": "31 Hopkins Plaza, Room 3020, Baltimore, MD 21201",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "organization": "DVMF Baltimore Regional Office",
+    "office_type": "state_field_office",
+    "county_type": "independent_city",
+    "note": "The department’s list prints no county coverage; this office is located in Baltimore City. For help with another county, call the statewide service line, 800-446-4926 ext. 6450."
+   },
+   {
+    "county": "Calvert",
+    "phone": "800-446-4926 ext. 6450",
+    "address": "31 Hopkins Plaza, Room 3020, Baltimore, MD 21201",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "organization": "DVMF Service and Benefits Program (statewide line)",
+    "office_type": "state_field_office",
+    "other_offices": [
+     {
+      "address": "Charlotte Hall office: 29449 Charlotte Hall Road, Building 3, Room 105, Charlotte Hall, MD 20622",
+      "schedule": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+      "phone": "240-249-0474"
+     },
+     {
+      "address": "Waldorf office: Maryland Motor Vehicle Administration, 11 Industrial Park Drive, Waldorf, MD 20602",
+      "schedule": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+      "phone": "301-632-5784"
+     },
+     {
+      "address": "Annapolis office: Annapolis Motor Vehicle Administration Service Center, 160 Harry S. Truman Parkway, Annapolis, MD 21401",
+      "schedule": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+      "phone": "410-573-4786"
+     }
+    ],
+    "note": "No DVMF service office is located in Calvert County, and the department’s list prints no county coverage. Call the statewide service line, which is answered by the Baltimore regional office, and ask which office serves Calvert County. Nearby offices are listed here (St. Mary’s, Charles and Anne Arundel Counties)."
+   },
+   {
+    "county": "Caroline",
+    "phone": "800-446-4926 ext. 6450",
+    "address": "31 Hopkins Plaza, Room 3020, Baltimore, MD 21201",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "organization": "DVMF Service and Benefits Program (statewide line)",
+    "office_type": "state_field_office",
+    "other_offices": [
+     {
+      "address": "Easton office: 11 South Harrison Street, Easton, MD 21601",
+      "schedule": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+      "phone": "410-690-7181"
+     },
+     {
+      "address": "Salisbury office: Maryland Motor Vehicle Administration, Salisbury Branch, 251 Tilghman Road, Salisbury, MD 21804",
+      "schedule": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+      "phone": "410-219-7256"
+     }
+    ],
+    "note": "No DVMF service office is located in Caroline County, and the department’s list prints no county coverage. Call the statewide service line, which is answered by the Baltimore regional office, and ask which office serves Caroline County. Nearby offices are listed here (Talbot and Wicomico Counties)."
+   },
+   {
+    "county": "Carroll",
+    "phone": "410-386-3800",
+    "address": "Carroll County Veterans Services Program, 125 Stoner Avenue, Westminster, MD 21157",
+    "hours": "Call for information on hours",
+    "organization": "Carroll County Veterans Services Program",
+    "office_type": "county",
+    "note": "The department’s list shows this local program, which it says is supported by the department but is not a department service office."
+   },
+   {
+    "county": "Cecil",
+    "phone": "667-225-6870",
+    "address": "105 Chesapeake Boulevard, Suite A, Elkton, MD 21921",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "organization": "DVMF Service Office, Elkton",
+    "office_type": "state_field_office",
+    "note": "The department’s list prints no county coverage; this office is located in Cecil County. For help with another county, call the statewide service line, 800-446-4926 ext. 6450."
+   },
+   {
+    "county": "Charles",
+    "phone": "301-632-5784",
+    "address": "Maryland Motor Vehicle Administration, 11 Industrial Park Drive, Waldorf, MD 20602",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "organization": "DVMF Service Office, Waldorf",
+    "office_type": "state_field_office",
+    "note": "The department’s list prints no county coverage; this office is located in Charles County. For help with another county, call the statewide service line, 800-446-4926 ext. 6450."
+   },
+   {
+    "county": "Dorchester",
+    "phone": "800-446-4926 ext. 6450",
+    "address": "31 Hopkins Plaza, Room 3020, Baltimore, MD 21201",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "organization": "DVMF Service and Benefits Program (statewide line)",
+    "office_type": "state_field_office",
+    "other_offices": [
+     {
+      "address": "Easton office: 11 South Harrison Street, Easton, MD 21601",
+      "schedule": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+      "phone": "410-690-7181"
+     },
+     {
+      "address": "Salisbury office: Maryland Motor Vehicle Administration, Salisbury Branch, 251 Tilghman Road, Salisbury, MD 21804",
+      "schedule": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+      "phone": "410-219-7256"
+     }
+    ],
+    "note": "No DVMF service office is located in Dorchester County, and the department’s list prints no county coverage. Call the statewide service line, which is answered by the Baltimore regional office, and ask which office serves Dorchester County. Nearby offices are listed here (Talbot and Wicomico Counties)."
+   },
+   {
+    "county": "Frederick",
+    "phone": "240-651-8896",
+    "address": "Veterans Service Center, 1750 Monocacy Boulevard, Frederick, MD 21701",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "organization": "DVMF Service Office, Frederick",
+    "office_type": "state_field_office",
+    "note": "The department’s list prints no county coverage; this office is located in Frederick County. For help with another county, call the statewide service line, 800-446-4926 ext. 6450."
+   },
+   {
+    "county": "Garrett",
+    "phone": "800-446-4926 ext. 6450",
+    "address": "31 Hopkins Plaza, Room 3020, Baltimore, MD 21201",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "organization": "DVMF Service and Benefits Program (statewide line)",
+    "office_type": "state_field_office",
+    "other_offices": [
+     {
+      "address": "Cumberland office: Cumberland Motor Vehicle Administration Service Center, 13300 Winchester Road SW, Cumberland, MD 21502",
+      "schedule": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+      "phone": "301-729-4676"
+     }
+    ],
+    "note": "No DVMF service office is located in Garrett County, and the department’s list prints no county coverage. Call the statewide service line, which is answered by the Baltimore regional office, and ask which office serves Garrett County. Nearby offices are listed here (Allegany County)."
+   },
+   {
+    "county": "Harford",
+    "phone": "410-638-6501",
+    "address": "Bel Air Service Center, Motor Vehicle Administration, 501 W. Macphail Road, Bel Air, MD 21014",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "organization": "DVMF Service Office, Bel Air",
+    "office_type": "state_field_office",
+    "note": "The department’s list prints no county coverage; this office is located in Harford County. For help with another county, call the statewide service line, 800-446-4926 ext. 6450."
+   },
+   {
+    "county": "Howard",
+    "phone": "410-313-0229",
+    "address": "Howard County Multi-Service Center, 9900 Washington Boulevard, Suite I, Laurel, MD 20723",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "organization": "DVMF Service Office, Laurel",
+    "office_type": "state_field_office",
+    "note": "The department’s list prints no county coverage; this office is located in Howard County. For help with another county, call the statewide service line, 800-446-4926 ext. 6450."
+   },
+   {
+    "county": "Kent",
+    "phone": "800-446-4926 ext. 6450",
+    "address": "31 Hopkins Plaza, Room 3020, Baltimore, MD 21201",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "organization": "DVMF Service and Benefits Program (statewide line)",
+    "office_type": "state_field_office",
+    "other_offices": [
+     {
+      "address": "Elkton office: 105 Chesapeake Boulevard, Suite A, Elkton, MD 21921",
+      "schedule": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+      "phone": "667-225-6870"
+     }
+    ],
+    "note": "No DVMF service office is located in Kent County, and the department’s list prints no county coverage. Call the statewide service line, which is answered by the Baltimore regional office, and ask which office serves Kent County. Nearby offices are listed here (Cecil County)."
+   },
+   {
+    "county": "Montgomery",
+    "phone": "301-987-8412",
+    "address": "Gaithersburg Motor Vehicle Administration Service Center, 15 Metropolitan Grove Road, Gaithersburg, MD 20878",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "organization": "DVMF Service Office, Gaithersburg",
+    "office_type": "state_field_office",
+    "other_phones": [
+     "301-987-8413"
+    ],
+    "note": "The department’s list prints no county coverage; this office is located in Montgomery County. For help with another county, call the statewide service line, 800-446-4926 ext. 6450."
+   },
+   {
+    "county": "Prince George's",
+    "phone": "301-248-0463",
+    "address": "Prince George’s County Senior Center, 6420 Allentown Road, Room 39A, Camp Springs, MD 20748",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "organization": "DVMF Service Office, Camp Springs",
+    "office_type": "state_field_office",
+    "note": "The department’s list prints no county coverage; this office is located in Prince George’s County. For help with another county, call the statewide service line, 800-446-4926 ext. 6450."
+   },
+   {
+    "county": "Queen Anne's",
+    "phone": "800-446-4926 ext. 6450",
+    "address": "31 Hopkins Plaza, Room 3020, Baltimore, MD 21201",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "organization": "DVMF Service and Benefits Program (statewide line)",
+    "office_type": "state_field_office",
+    "other_offices": [
+     {
+      "address": "Easton office: 11 South Harrison Street, Easton, MD 21601",
+      "schedule": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+      "phone": "410-690-7181"
+     }
+    ],
+    "note": "No DVMF service office is located in Queen Anne’s County, and the department’s list prints no county coverage. Call the statewide service line, which is answered by the Baltimore regional office, and ask which office serves Queen Anne’s County. Nearby offices are listed here (Talbot County)."
+   },
+   {
+    "county": "Somerset",
+    "phone": "800-446-4926 ext. 6450",
+    "address": "31 Hopkins Plaza, Room 3020, Baltimore, MD 21201",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "organization": "DVMF Service and Benefits Program (statewide line)",
+    "office_type": "state_field_office",
+    "other_offices": [
+     {
+      "address": "Salisbury office: Maryland Motor Vehicle Administration, Salisbury Branch, 251 Tilghman Road, Salisbury, MD 21804",
+      "schedule": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+      "phone": "410-219-7256"
+     }
+    ],
+    "note": "No DVMF service office is located in Somerset County, and the department’s list prints no county coverage. Call the statewide service line, which is answered by the Baltimore regional office, and ask which office serves Somerset County. Nearby offices are listed here (Wicomico County)."
+   },
+   {
+    "county": "St. Mary's",
+    "phone": "240-249-0474",
+    "address": "29449 Charlotte Hall Road, Building 3, Room 105, Charlotte Hall, MD 20622",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "organization": "DVMF Service Office, Charlotte Hall",
+    "office_type": "state_field_office",
+    "note": "The department’s list prints no county coverage; this office is located in St. Mary’s County. For help with another county, call the statewide service line, 800-446-4926 ext. 6450."
+   },
+   {
+    "county": "Talbot",
+    "phone": "410-690-7181",
+    "address": "11 South Harrison Street, Easton, MD 21601",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "organization": "DVMF Service Office, Easton",
+    "office_type": "state_field_office",
+    "note": "The department’s list prints no county coverage; this office is located in Talbot County. For help with another county, call the statewide service line, 800-446-4926 ext. 6450."
+   },
+   {
+    "county": "Washington",
+    "phone": "240-527-6894",
+    "address": "Maryland Motor Vehicle Administration Service Center, 18306 Col. Henry K. Douglas Drive, Hagerstown, MD 21740",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "organization": "DVMF Service Office, Hagerstown",
+    "office_type": "state_field_office",
+    "note": "The department’s list prints no county coverage; this office is located in Washington County. For help with another county, call the statewide service line, 800-446-4926 ext. 6450."
+   },
+   {
+    "county": "Wicomico",
+    "phone": "410-219-7256",
+    "address": "Maryland Motor Vehicle Administration, Salisbury Branch, 251 Tilghman Road, Salisbury, MD 21804",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "organization": "DVMF Service Office, Salisbury",
+    "office_type": "state_field_office",
+    "note": "The department’s list prints no county coverage; this office is located in Wicomico County. For help with another county, call the statewide service line, 800-446-4926 ext. 6450."
+   },
+   {
+    "county": "Worcester",
+    "phone": "800-446-4926 ext. 6450",
+    "address": "31 Hopkins Plaza, Room 3020, Baltimore, MD 21201",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "organization": "DVMF Service and Benefits Program (statewide line)",
+    "office_type": "state_field_office",
+    "other_offices": [
+     {
+      "address": "Salisbury office: Maryland Motor Vehicle Administration, Salisbury Branch, 251 Tilghman Road, Salisbury, MD 21804",
+      "schedule": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+      "phone": "410-219-7256"
+     }
+    ],
+    "note": "No DVMF service office is located in Worcester County, and the department’s list prints no county coverage. Call the statewide service line, which is answered by the Baltimore regional office, and ask which office serves Worcester County. Nearby offices are listed here (Wicomico County)."
+   }
+  ]
+ },
+ "aging": {
+  "source_url": "https://aging.prod.maryland.gov/media/42/download",
+  "source_title": "Maryland Department of Aging: Maryland’s Area Agencies on Aging directory",
+  "source_scope": "Agency names, counties, street addresses and phones for the 19 Area Agencies on Aging serving all 23 counties and Baltimore City; undated; read in full.",
+  "review_method": "full_official_page_text",
+  "region_word": "",
+  "next_step_extra": "Maryland Access Point, 1-844-627-5465, also connects you to the agency for your county.",
+  "regions": [
+   {
+    "id": "md-aaa-allegany",
+    "label": "Allegany",
+    "name": "Allegany County Human Resources Development Commission",
+    "phone": "301-777-5970",
+    "counties": [
+     "Allegany"
+    ],
+    "notes": [
+     "Office: 125 Virginia Avenue, Cumberland, MD 21502."
+    ]
+   },
+   {
+    "id": "md-aaa-annearundel",
+    "label": "Anne Arundel",
+    "name": "Anne Arundel County Department of Aging and Disabilities",
+    "phone": "410-222-4464",
+    "counties": [
+     "Anne Arundel"
+    ],
+    "notes": [
+     "Office: 2666 Riva Road, Annapolis, MD 21401."
+    ]
+   },
+   {
+    "id": "md-aaa-baltimorecity",
+    "label": "Baltimore City",
+    "name": "Baltimore City Division of Aging and Care Services",
+    "phone": "410-396-4932",
+    "counties": [
+     "Baltimore City"
+    ],
+    "notes": [
+     "Office: 417 E. Fayette Street, 6th Floor, Baltimore, MD 21202."
+    ]
+   },
+   {
+    "id": "md-aaa-baltimorecounty",
+    "label": "Baltimore County",
+    "name": "Baltimore County Department of Aging",
+    "phone": "410-887-2594",
+    "counties": [
+     "Baltimore"
+    ],
+    "notes": [
+     "Office: 611 Central Avenue, Towson, MD 21204."
+    ]
+   },
+   {
+    "id": "md-aaa-calvert",
+    "label": "Calvert",
+    "name": "Calvert County Office on Aging",
+    "phone": "410-535-4606",
+    "counties": [
+     "Calvert"
+    ],
+    "notes": [
+     "Office: 450 West Dares Beach Road, Prince Frederick, MD 20678."
+    ]
+   },
+   {
+    "id": "md-aaa-uppershore",
+    "label": "Upper Shore",
+    "name": "Upper Shore Aging, Inc.",
+    "phone": "410-778-6000",
+    "counties": [
+     "Caroline",
+     "Kent",
+     "Talbot"
+    ],
+    "notes": [
+     "Office: 100 Schauber Road, Chestertown, MD 21620.",
+     "This agency serves Caroline, Kent and Talbot Counties."
+    ]
+   },
+   {
+    "id": "md-aaa-carroll",
+    "label": "Carroll",
+    "name": "Carroll County Bureau of Aging and Disabilities",
+    "phone": "410-386-3800",
+    "counties": [
+     "Carroll"
+    ],
+    "notes": [
+     "Office: 125 Stoner Avenue, Westminster, MD 21157."
+    ]
+   },
+   {
+    "id": "md-aaa-cecil",
+    "label": "Cecil",
+    "name": "Cecil County Department of Community Services",
+    "phone": "410-996-5295",
+    "counties": [
+     "Cecil"
+    ],
+    "notes": [
+     "Office: 200 Chesapeake Boulevard, Suite 2550, Elkton, MD 21921."
+    ]
+   },
+   {
+    "id": "md-aaa-charles",
+    "label": "Charles",
+    "name": "Charles County Aging and Human Services",
+    "phone": "301-934-9305",
+    "counties": [
+     "Charles"
+    ],
+    "notes": [
+     "Office: 8190 Port Tobacco Road, Port Tobacco, MD 20677."
+    ]
+   },
+   {
+    "id": "md-aaa-mac",
+    "label": "Lower Shore",
+    "name": "MAC, Inc.",
+    "phone": "410-742-0505",
+    "counties": [
+     "Dorchester",
+     "Somerset",
+     "Wicomico",
+     "Worcester"
+    ],
+    "notes": [
+     "Office: 909 Progress Circle, Salisbury, MD 21804.",
+     "This agency serves Dorchester, Somerset, Wicomico and Worcester Counties."
+    ]
+   },
+   {
+    "id": "md-aaa-frederick",
+    "label": "Frederick",
+    "name": "Frederick County Division of Aging and Independence",
+    "phone": "301-600-1234",
+    "counties": [
+     "Frederick"
+    ],
+    "notes": [
+     "Office: 1440 Taney Avenue, Frederick, MD 21702."
+    ]
+   },
+   {
+    "id": "md-aaa-garrett",
+    "label": "Garrett",
+    "name": "Garrett County Area Agency on Aging",
+    "phone": "301-334-9431",
+    "counties": [
+     "Garrett"
+    ],
+    "notes": [
+     "Office: 104 East Center Street, Oakland, MD 21550."
+    ]
+   },
+   {
+    "id": "md-aaa-harford",
+    "label": "Harford",
+    "name": "Harford County Office on Aging",
+    "phone": "410-638-3025",
+    "counties": [
+     "Harford"
+    ],
+    "notes": [
+     "Office: 145 North Hickory Avenue, Bel Air, MD 21014."
+    ]
+   },
+   {
+    "id": "md-aaa-howard",
+    "label": "Howard",
+    "name": "Howard County Office on Aging and Independence",
+    "phone": "410-313-1234",
+    "counties": [
+     "Howard"
+    ],
+    "notes": [
+     "Office: 9830 Patuxent Woods Drive, Columbia, MD 21046."
+    ]
+   },
+   {
+    "id": "md-aaa-montgomery",
+    "label": "Montgomery",
+    "name": "Montgomery County Department of Health and Human Services",
+    "phone": "240-777-3000",
+    "counties": [
+     "Montgomery"
+    ],
+    "notes": [
+     "Office: 401 Hungerford Drive, 3rd Floor, Rockville, MD 20850."
+    ]
+   },
+   {
+    "id": "md-aaa-princegeorges",
+    "label": "Prince George’s",
+    "name": "Prince George’s County Department of Family Services",
+    "phone": "301-265-8450",
+    "counties": [
+     "Prince George's"
+    ],
+    "notes": [
+     "Office: 6420 Allentown Road, Camp Springs, MD 20748."
+    ]
+   },
+   {
+    "id": "md-aaa-queenannes",
+    "label": "Queen Anne’s",
+    "name": "Queen Anne’s County Area Agency on Aging",
+    "phone": "410-758-0848",
+    "counties": [
+     "Queen Anne's"
+    ],
+    "notes": [
+     "Office: 104 Powell Street, Centerville, MD 21617.",
+     "Press option 2 for the Area Agency on Aging."
+    ]
+   },
+   {
+    "id": "md-aaa-stmarys",
+    "label": "St. Mary’s",
+    "name": "St. Mary’s County Department of Aging and Human Services",
+    "phone": "301-475-4200 ext. 1070",
+    "counties": [
+     "St. Mary's"
+    ],
+    "notes": [
+     "Office: 41780 Baldridge Street, Leonardtown, MD 20650."
+    ]
+   },
+   {
+    "id": "md-aaa-washington",
+    "label": "Washington",
+    "name": "Washington County Commission on Aging",
+    "phone": "301-790-0275 ext. 203",
+    "counties": [
+     "Washington"
+    ],
+    "notes": [
+     "Office: 535 E. Franklin Street, Hagerstown, MD 21740."
+    ]
+   }
+  ]
+ },
+ "ombudsman": {
+  "state_phone": "800-243-3425",
+  "regions": [
+   {
+    "id": "md-omb-allegany",
+    "name": "Local long-term care ombudsman, Allegany County Human Resources Development Commission",
+    "phone": "301-783-1771",
+    "counties": [
+     "Allegany"
+    ],
+    "source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "source_title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+    "source_scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it.",
+    "review": "excerpt",
+    "review_method": "official_search_excerpt",
+    "extra_sources": [
+     {
+      "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+      "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+      "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+     },
+     {
+      "url": "https://theconsumervoice.org/get_help/state_resources/md",
+      "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+      "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+     }
+    ],
+    "notes": [
+     "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ]
+   },
+   {
+    "id": "md-omb-annearundel",
+    "name": "Local long-term care ombudsman, Anne Arundel County Department of Aging and Disabilities",
+    "phone": "410-222-4257",
+    "counties": [
+     "Anne Arundel"
+    ],
+    "source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "source_title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+    "source_scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it.",
+    "review": "excerpt",
+    "review_method": "official_search_excerpt",
+    "extra_sources": [
+     {
+      "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+      "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+      "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+     },
+     {
+      "url": "https://theconsumervoice.org/get_help/state_resources/md",
+      "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+      "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+     }
+    ],
+    "notes": [
+     "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ]
+   },
+   {
+    "id": "md-omb-baltimorecity",
+    "name": "Local long-term care ombudsman, Baltimore City Division of Aging and Care Services",
+    "phone": "410-396-3144",
+    "counties": [
+     "Baltimore City"
+    ],
+    "source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "source_title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+    "source_scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it.",
+    "review": "excerpt",
+    "review_method": "official_search_excerpt",
+    "extra_sources": [
+     {
+      "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+      "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+      "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+     },
+     {
+      "url": "https://theconsumervoice.org/get_help/state_resources/md",
+      "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+      "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+     }
+    ],
+    "notes": [
+     "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ]
+   },
+   {
+    "id": "md-omb-baltimorecounty",
+    "name": "Local long-term care ombudsman, Baltimore County Department of Aging",
+    "phone": "410-887-4200",
+    "counties": [
+     "Baltimore"
+    ],
+    "source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "source_title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+    "source_scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it.",
+    "review": "excerpt",
+    "review_method": "official_search_excerpt",
+    "extra_sources": [
+     {
+      "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+      "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+      "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+     },
+     {
+      "url": "https://theconsumervoice.org/get_help/state_resources/md",
+      "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+      "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+     }
+    ],
+    "notes": [
+     "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ]
+   },
+   {
+    "id": "md-omb-calvert",
+    "name": "Local long-term care ombudsman, Calvert County Office on Aging",
+    "phone": "410-535-4606 ext. 143",
+    "counties": [
+     "Calvert"
+    ],
+    "source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "source_title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+    "source_scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it.",
+    "review": "excerpt",
+    "review_method": "official_search_excerpt",
+    "extra_sources": [
+     {
+      "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+      "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+      "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+     },
+     {
+      "url": "https://theconsumervoice.org/get_help/state_resources/md",
+      "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+      "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+     }
+    ],
+    "notes": [
+     "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ]
+   },
+   {
+    "id": "md-omb-uppershore",
+    "name": "Local long-term care ombudsman, Upper Shore Aging, Inc.",
+    "phone": "410-778-6000",
+    "counties": [
+     "Caroline",
+     "Kent",
+     "Talbot"
+    ],
+    "source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "source_title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+    "source_scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it.",
+    "review": "excerpt",
+    "review_method": "official_search_excerpt",
+    "extra_sources": [
+     {
+      "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+      "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+      "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+     },
+     {
+      "url": "https://theconsumervoice.org/get_help/state_resources/md",
+      "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+      "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+     }
+    ],
+    "notes": [
+     "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ]
+   },
+   {
+    "id": "md-omb-carroll",
+    "name": "Local long-term care ombudsman, Carroll County Bureau of Aging and Disabilities",
+    "phone": "410-386-3810",
+    "counties": [
+     "Carroll"
+    ],
+    "source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "source_title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+    "source_scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it.",
+    "review": "excerpt",
+    "review_method": "official_search_excerpt",
+    "extra_sources": [
+     {
+      "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+      "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+      "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+     },
+     {
+      "url": "https://theconsumervoice.org/get_help/state_resources/md",
+      "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+      "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+     },
+     {
+      "url": "https://www.carrollcountymd.gov/government/directory/citizen-services/aging-disabilities/aging-and-disabilities-services/long-term-care-ombudsman-program/",
+      "title": "Carroll County Bureau of Aging and Disabilities: Long Term Care Ombudsman Program",
+      "scope": "Ombudsman program address and phone 410-386-3800; search excerpt."
+     }
+    ],
+    "notes": [
+     "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman.",
+     "The county’s own ombudsman page prints 410-386-3800, the Bureau of Aging and Disabilities main line."
+    ]
+   },
+   {
+    "id": "md-omb-cecil",
+    "name": "Local long-term care ombudsman, Cecil County Department of Community Services",
+    "phone": "410-996-8429",
+    "counties": [
+     "Cecil"
+    ],
+    "source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "source_title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+    "source_scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it.",
+    "review": "excerpt",
+    "review_method": "official_search_excerpt",
+    "extra_sources": [
+     {
+      "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+      "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+      "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+     },
+     {
+      "url": "https://theconsumervoice.org/get_help/state_resources/md",
+      "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+      "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+     }
+    ],
+    "notes": [
+     "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ]
+   },
+   {
+    "id": "md-omb-charles",
+    "name": "Local long-term care ombudsman, Charles County Aging and Human Services",
+    "phone": "301-934-0109",
+    "counties": [
+     "Charles"
+    ],
+    "source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "source_title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+    "source_scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it.",
+    "review": "excerpt",
+    "review_method": "official_search_excerpt",
+    "extra_sources": [
+     {
+      "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+      "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+      "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+     },
+     {
+      "url": "https://theconsumervoice.org/get_help/state_resources/md",
+      "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+      "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+     }
+    ],
+    "notes": [
+     "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ]
+   },
+   {
+    "id": "md-omb-mac",
+    "name": "Local long-term care ombudsman, MAC, Inc.",
+    "phone": "410-742-0505 ext. 104",
+    "counties": [
+     "Dorchester",
+     "Somerset",
+     "Wicomico",
+     "Worcester"
+    ],
+    "source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "source_title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+    "source_scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it.",
+    "review": "excerpt",
+    "review_method": "official_search_excerpt",
+    "extra_sources": [
+     {
+      "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+      "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+      "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+     },
+     {
+      "url": "https://theconsumervoice.org/get_help/state_resources/md",
+      "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+      "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+     }
+    ],
+    "notes": [
+     "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ]
+   },
+   {
+    "id": "md-omb-frederick",
+    "name": "Local long-term care ombudsman, Frederick County Division of Aging and Independence",
+    "phone": "301-600-2877",
+    "counties": [
+     "Frederick"
+    ],
+    "source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "source_title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+    "source_scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it.",
+    "review": "excerpt",
+    "review_method": "official_search_excerpt",
+    "extra_sources": [
+     {
+      "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+      "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+      "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+     },
+     {
+      "url": "https://theconsumervoice.org/get_help/state_resources/md",
+      "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+      "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+     }
+    ],
+    "notes": [
+     "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ]
+   },
+   {
+    "id": "md-omb-garrett",
+    "name": "Local long-term care ombudsman, Garrett County Area Agency on Aging",
+    "phone": "301-334-9431 ext. 6140",
+    "counties": [
+     "Garrett"
+    ],
+    "source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "source_title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+    "source_scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it.",
+    "review": "excerpt",
+    "review_method": "official_search_excerpt",
+    "extra_sources": [
+     {
+      "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+      "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+      "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+     },
+     {
+      "url": "https://theconsumervoice.org/get_help/state_resources/md",
+      "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+      "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+     }
+    ],
+    "notes": [
+     "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ]
+   },
+   {
+    "id": "md-omb-harford",
+    "name": "Local long-term care ombudsman, Harford County Office on Aging",
+    "phone": "410-638-3025",
+    "counties": [
+     "Harford"
+    ],
+    "source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "source_title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+    "source_scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it.",
+    "review": "excerpt",
+    "review_method": "official_search_excerpt",
+    "extra_sources": [
+     {
+      "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+      "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+      "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+     },
+     {
+      "url": "https://theconsumervoice.org/get_help/state_resources/md",
+      "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+      "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+     }
+    ],
+    "notes": [
+     "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ]
+   },
+   {
+    "id": "md-omb-howard",
+    "name": "Local long-term care ombudsman, Howard County Office on Aging and Independence",
+    "phone": "410-313-6423",
+    "counties": [
+     "Howard"
+    ],
+    "source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "source_title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+    "source_scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it.",
+    "review": "excerpt",
+    "review_method": "official_search_excerpt",
+    "extra_sources": [
+     {
+      "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+      "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+      "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+     },
+     {
+      "url": "https://theconsumervoice.org/get_help/state_resources/md",
+      "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+      "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+     }
+    ],
+    "notes": [
+     "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ]
+   },
+   {
+    "id": "md-omb-montgomery",
+    "name": "Local long-term care ombudsman, Montgomery County Department of Health and Human Services",
+    "phone": "240-777-3369",
+    "counties": [
+     "Montgomery"
+    ],
+    "source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "source_title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+    "source_scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it.",
+    "review": "excerpt",
+    "review_method": "official_search_excerpt",
+    "extra_sources": [
+     {
+      "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+      "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+      "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+     },
+     {
+      "url": "https://theconsumervoice.org/get_help/state_resources/md",
+      "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+      "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+     }
+    ],
+    "notes": [
+     "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ]
+   },
+   {
+    "id": "md-omb-princegeorges",
+    "name": "Local long-term care ombudsman, Prince George’s County Department of Family Services",
+    "phone": "301-265-8483",
+    "counties": [
+     "Prince George's"
+    ],
+    "source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "source_title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+    "source_scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it.",
+    "review": "excerpt",
+    "review_method": "official_search_excerpt",
+    "extra_sources": [
+     {
+      "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+      "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+      "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+     },
+     {
+      "url": "https://theconsumervoice.org/get_help/state_resources/md",
+      "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+      "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+     }
+    ],
+    "notes": [
+     "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ]
+   },
+   {
+    "id": "md-omb-queenannes",
+    "name": "Local long-term care ombudsman, Queen Anne’s County Area Agency on Aging",
+    "phone": "410-758-0848",
+    "counties": [
+     "Queen Anne's"
+    ],
+    "source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "source_title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+    "source_scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it.",
+    "review": "excerpt",
+    "review_method": "official_search_excerpt",
+    "extra_sources": [
+     {
+      "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+      "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+      "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+     },
+     {
+      "url": "https://theconsumervoice.org/get_help/state_resources/md",
+      "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+      "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+     }
+    ],
+    "notes": [
+     "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ]
+   },
+   {
+    "id": "md-omb-stmarys",
+    "name": "Local long-term care ombudsman, St. Mary’s County Department of Aging and Human Services",
+    "phone": "301-475-4200 ext. 71055",
+    "counties": [
+     "St. Mary's"
+    ],
+    "source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "source_title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+    "source_scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it.",
+    "review": "excerpt",
+    "review_method": "official_search_excerpt",
+    "extra_sources": [
+     {
+      "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+      "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+      "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+     },
+     {
+      "url": "https://theconsumervoice.org/get_help/state_resources/md",
+      "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+      "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+     }
+    ],
+    "notes": [
+     "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ]
+   },
+   {
+    "id": "md-omb-washington",
+    "name": "Local long-term care ombudsman, Washington County Commission on Aging",
+    "phone": "301-790-0275",
+    "counties": [
+     "Washington"
+    ],
+    "source_url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+    "source_title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+    "source_scope": "Local ombudsman phone by jurisdiction under “Contact your Local Ombudsman.” A direct fetch returned the heading without the list, so the numbers come from search excerpts of this page, checked against the department’s mdoa.maryland.gov copy of it.",
+    "review": "excerpt",
+    "review_method": "official_search_excerpt",
+    "extra_sources": [
+     {
+      "url": "https://www.mdoa.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+      "title": "Maryland Department of Aging (mdoa.maryland.gov copy): Long-Term Care Ombudsman Program",
+      "scope": "Local ombudsman phone for every county and Baltimore City in one table; search excerpt."
+     },
+     {
+      "url": "https://theconsumervoice.org/get_help/state_resources/md",
+      "title": "National Consumer Voice for Quality Long-Term Care: Maryland state and local ombudsman programs",
+      "scope": "Address and area served for each local ombudsman program; lists no phone numbers. An association directory, undated, read in full."
+     }
+    ],
+    "notes": [
+     "Ask for the local long-term care ombudsman. If no one answers, call the Maryland Department of Aging at 800-243-3425 and ask for the State Long-Term Care Ombudsman."
+    ]
+   }
+  ]
+ },
+ "cils": {
+  "source_url": "https://www.ilru.org/cil-directory/md",
+  "source_title": "ILRU national directory of Centers for Independent Living: Maryland",
+  "scope": "Street address, phone and website for each of Maryland’s Centers for Independent Living; read in full. Counties come from the state’s 2024 directory.",
+  "phone_label": "Local phone listed in the ILRU national directory",
+  "list": [
+   {
+    "id": "md-cil-ari",
+    "name": "Accessible Resources for Independence (Glen Burnie)",
+    "organization": "Accessible Resources for Independence",
+    "url": "https://arinow.org/",
+    "phone": "443-713-3914",
+    "counties": [
+     "Anne Arundel",
+     "Howard"
+    ],
+    "method": "full_association_directory_page",
+    "review": "full",
+    "notes": [
+     "The center’s office is at 1406-B Crain Highway South, Suite 206, Glen Burnie, MD 21061.",
+     "The state’s 2024 directory prints 410-636-2274 for this center."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://mdod.maryland.gov/mdtap/Documents/2024%20Home%20Modifications%20Directory.docx",
+      "title": "Maryland Department of Disabilities: 2024 Home Modifications Directory (Centers for Independent Living)",
+      "scope": "Counties each center serves, as printed by the state; read in full. The directory says seven centers but prints eight entries (one is listed twice)."
+     }
+    ]
+   },
+   {
+    "id": "md-cil-bacil",
+    "name": "Bay Area Center for Independent Living (Salisbury)",
+    "organization": "Bay Area Center for Independent Living",
+    "url": "https://www.bayareacil.org",
+    "phone": "443-260-0822",
+    "counties": [
+     "Caroline",
+     "Dorchester",
+     "Kent",
+     "Queen Anne's",
+     "Somerset",
+     "Talbot",
+     "Wicomico",
+     "Worcester"
+    ],
+    "method": "full_association_directory_page",
+    "review": "full",
+    "notes": [
+     "The center’s office is at 909 Progress Circle, Suite 300, Salisbury, MD 21804.",
+     "The state’s 2024 directory says it serves all 8 Eastern Shore counties from Somerset to Kent; the ILRU directory lists only Wicomico."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://mdod.maryland.gov/mdtap/Documents/2024%20Home%20Modifications%20Directory.docx",
+      "title": "Maryland Department of Disabilities: 2024 Home Modifications Directory (Centers for Independent Living)",
+      "scope": "Counties each center serves, as printed by the state; read in full. The directory says seven centers but prints eight entries (one is listed twice)."
+     }
+    ]
+   },
+   {
+    "id": "md-cil-image",
+    "name": "The IMAGE Center for People with Disabilities (Towson)",
+    "organization": "The IMAGE Center for People with Disabilities",
+    "url": "https://imagemd.org",
+    "phone": "410-982-6311",
+    "counties": [
+     "Baltimore City",
+     "Baltimore",
+     "Harford"
+    ],
+    "method": "full_association_directory_page",
+    "review": "full",
+    "notes": [
+     "The center’s office is at 300 East Joppa Road, Towson, MD 21286.",
+     "The ILRU directory lists Baltimore and Harford Counties; the state’s 2024 directory also lists Baltimore City."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://mdod.maryland.gov/mdtap/Documents/2024%20Home%20Modifications%20Directory.docx",
+      "title": "Maryland Department of Disabilities: 2024 Home Modifications Directory (Centers for Independent Living)",
+      "scope": "Counties each center serves, as printed by the state; read in full. The directory says seven centers but prints eight entries (one is listed twice)."
+     }
+    ]
+   },
+   {
+    "id": "md-cil-innow",
+    "name": "Independence Now (Silver Spring)",
+    "organization": "Independence Now, Inc.",
+    "url": "https://www.innow.org",
+    "phone": "301-277-2839",
+    "counties": [
+     "Montgomery",
+     "Prince George's"
+    ],
+    "method": "full_association_directory_page",
+    "review": "full",
+    "notes": [
+     "The center’s office is at 12301 Old Columbia Pike, Suite 101, Silver Spring, MD 20904."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://mdod.maryland.gov/mdtap/Documents/2024%20Home%20Modifications%20Directory.docx",
+      "title": "Maryland Department of Disabilities: 2024 Home Modifications Directory (Centers for Independent Living)",
+      "scope": "Counties each center serves, as printed by the state; read in full. The directory says seven centers but prints eight entries (one is listed twice)."
+     }
+    ]
+   },
+   {
+    "id": "md-cil-rfi",
+    "name": "Resources for Independence (Cumberland)",
+    "organization": "Resources for Independence, Inc.",
+    "url": "https://www.rficil.org",
+    "phone": "301-784-1774",
+    "counties": [
+     "Allegany",
+     "Garrett",
+     "Washington"
+    ],
+    "method": "full_association_directory_page",
+    "review": "full",
+    "notes": [
+     "The center’s office is at 30 North Mechanic Street, Unit B, Cumberland, MD 21502.",
+     "A toll-free number, 800-371-1986, is also listed.",
+     "The ILRU directory lists only Allegany County; the state’s 2024 directory says Garrett, Allegany and Washington Counties."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://mdod.maryland.gov/mdtap/Documents/2024%20Home%20Modifications%20Directory.docx",
+      "title": "Maryland Department of Disabilities: 2024 Home Modifications Directory (Centers for Independent Living)",
+      "scope": "Counties each center serves, as printed by the state; read in full. The directory says seven centers but prints eight entries (one is listed twice)."
+     }
+    ]
+   },
+   {
+    "id": "md-cil-smcil",
+    "name": "Southern Maryland Center for Independent Living (Mechanicsville)",
+    "organization": "Southern Maryland Center for Independent Living",
+    "url": "https://www.smcil.org",
+    "phone": "301-884-4498",
+    "counties": [
+     "Calvert",
+     "Charles",
+     "St. Mary's"
+    ],
+    "method": "full_association_directory_page",
+    "review": "full",
+    "notes": [
+     "The center’s office is at 38588 Brett Way, Suite 1, Mechanicsville, MD 20622."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://mdod.maryland.gov/mdtap/Documents/2024%20Home%20Modifications%20Directory.docx",
+      "title": "Maryland Department of Disabilities: 2024 Home Modifications Directory (Centers for Independent Living)",
+      "scope": "Counties each center serves, as printed by the state; read in full. The directory says seven centers but prints eight entries (one is listed twice)."
+     }
+    ]
+   },
+   {
+    "id": "md-cil-freedom",
+    "name": "The Freedom Center (Frederick)",
+    "organization": "The Freedom Center, Inc.",
+    "url": "https://www.thefreedomcenter-md.org",
+    "phone": "301-846-7811",
+    "counties": [
+     "Carroll",
+     "Frederick"
+    ],
+    "method": "full_association_directory_page",
+    "review": "full",
+    "notes": [
+     "The center’s office is at 550 Highland Street, Suite 510, Frederick, MD 21701."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://mdod.maryland.gov/mdtap/Documents/2024%20Home%20Modifications%20Directory.docx",
+      "title": "Maryland Department of Disabilities: 2024 Home Modifications Directory (Centers for Independent Living)",
+      "scope": "Counties each center serves, as printed by the state; read in full. The directory says seven centers but prints eight entries (one is listed twice)."
+     }
+    ]
+   }
+  ]
+ },
+ "programs": [
+  {
+   "id": "md-claims",
+   "name": "Maryland veterans: accredited claims help",
+   "organization": "Maryland Department of Veterans and Military Families, Service and Benefits Program",
+   "url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+   "needs": [
+    "general_navigation",
+    "benefits_and_funding"
+   ],
+   "description": "Free help from VA-accredited benefits specialists with VA claims, applications and appeals for veterans, dependents and survivors.",
+   "next_step": "Choose your county for its service office, or call the statewide service line at 800-446-4926 ext. 6450. Offices are by appointment only.",
+   "constraints": [
+    "Offices are open Monday–Friday, 8:00 a.m.–4:00 p.m., by appointment only; call the office first."
+   ],
+   "phone": "800-446-4926 ext. 6450",
+   "phone_label": "DVMF service program (statewide line)",
+   "phone_source": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+   "review": "full",
+   "sources": [
+    {
+     "url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+     "title": "Maryland Department of Veterans and Military Families: How To Apply For Benefits",
+     "scope": "Service office addresses, phones and hours; read in full."
+    },
+    {
+     "url": "https://veterans.maryland.gov/about-us/contact-us",
+     "title": "Maryland Department of Veterans and Military Families: Contact us",
+     "scope": "Statewide service program phone for meeting with a service officer; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "md-adrc",
+   "name": "Maryland Access Point (Aging and Disability Resource Center)",
+   "organization": "Maryland Department of Aging",
+   "url": "https://marylandaccesspoint.211md.org/",
+   "needs": [
+    "general_navigation",
+    "help_at_home",
+    "equipment_home_accessibility"
+   ],
+   "description": "Maryland’s statewide entry point to long-term services and supports for older adults and people with disabilities: information, referral and options counseling through local Maryland Access Point offices, led mainly by Area Agencies on Aging with Centers for Independent Living. Military service is not required.",
+   "next_step": "Call 1-844-627-5465 (1-844-MAP-LINK) or dial 211 and ask for Maryland Access Point. Choose a county above for the direct number of its Area Agency on Aging.",
+   "constraints": [
+    "Each program has its own eligibility and waitlist."
+   ],
+   "phone": "844-627-5465",
+   "phone_label": "Maryland Access Point (toll-free, 1-844-MAP-LINK)",
+   "phone_source": "https://www.mdoa.maryland.gov/Pages/contactus.aspx",
+   "review": "full",
+   "sources": [
+    {
+     "url": "https://www.mdoa.maryland.gov/Pages/contactus.aspx",
+     "title": "Maryland Department of Aging: Contact us",
+     "scope": "Maryland Access Point phone and website; read in full."
+    },
+    {
+     "url": "https://aging.maryland.gov/pages/maryland-access-point.aspx",
+     "title": "Maryland Department of Aging: Maryland Access Point",
+     "scope": "Describes MAP as the state’s no-wrong-door aging and disability resource center; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "md-ship",
+   "name": "Medicare counseling (SHIP) for Maryland",
+   "organization": "Maryland Department of Aging, Senior Health Insurance Assistance Program (SHIP)",
+   "url": "https://aging.maryland.gov/Pages/MedicarePartD.aspx",
+   "needs": [
+    "benefits_and_funding"
+   ],
+   "description": "Free Medicare counseling from the Senior Health Insurance Assistance Program. Each Area Agency on Aging has a SHIP coordinator and trained volunteers who help with plan enrollment and Extra Help applications.",
+   "next_step": "Call 800-243-3425 and ask for Medicare counseling (SHIP), or ask your Area Agency on Aging for its SHIP counselor.",
+   "constraints": [
+    "The state’s SHIP page is undated; the toll-free number on it matches the Department of Aging’s current contact page."
+   ],
+   "phone": "800-243-3425",
+   "phone_label": "Maryland SHIP (Department of Aging toll-free)",
+   "phone_source": "https://aging.maryland.gov/Pages/MedicarePartD.aspx",
+   "review": "full",
+   "sources": [
+    {
+     "url": "https://aging.maryland.gov/Pages/MedicarePartD.aspx",
+     "title": "Maryland Department of Aging: Medicare Part D and SHIP",
+     "scope": "SHIP phone numbers and what counselors do; read in full."
+    },
+    {
+     "url": "https://www.mdoa.maryland.gov/Pages/contactus.aspx",
+     "title": "Maryland Department of Aging: Contact us",
+     "scope": "Department of Aging toll-free number 800-243-3425; read in full."
+    },
+    {
+     "url": "https://aging.maryland.gov/Pages/MedicareOpenEnrollment.aspx",
+     "title": "Maryland Department of Aging: Medicare Open Enrollment",
+     "scope": "SHIP counseling is offered in all 23 counties and Baltimore City; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "md-ombudsman",
+   "name": "Maryland Long-Term Care Ombudsman Program",
+   "organization": "Office of the State Long-Term Care Ombudsman, Maryland Department of Aging",
+   "url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+   "needs": [
+    "resident_rights",
+    "general_navigation"
+   ],
+   "description": "Statewide advocacy for residents of nursing homes and assisted living, delivered through the State office and 19 local ombudsman programs located at Area Agencies on Aging.",
+   "next_step": "Choose your county for its local ombudsman, or call the Maryland Department of Aging at 800-243-3425 and ask for the ombudsman program. To report suspected abuse, neglect or exploitation of an adult, call Adult Protective Services at 800-332-6347. For immediate danger, call 911.",
+   "constraints": [
+    "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+   ],
+   "phone": "800-243-3425",
+   "phone_label": "Maryland Department of Aging toll-free (ask for the ombudsman program)",
+   "phone_source": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://aging.maryland.gov/Pages/state-long-term-care-ombudsman.aspx",
+     "title": "Maryland Department of Aging: Long-Term Care Ombudsman Program",
+     "scope": "Department of Aging contact numbers and the local ombudsman list; the state ombudsman page prints no separate state ombudsman phone; local list from search excerpts."
+    },
+    {
+     "url": "https://marylandaccesspoint.211md.org/?p=1462",
+     "title": "Maryland Access Point: End Abuse",
+     "scope": "Adult Protective Services statewide number 1-800-332-6347; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "md-legal-programs",
+   "name": "Maryland Legal Aid",
+   "organization": "Maryland Legal Aid",
+   "url": "https://www.mdlab.org/",
+   "role": "legal_aid",
+   "needs": [
+    "resident_rights",
+    "general_navigation",
+    "housing"
+   ],
+   "description": "Free civil legal help for people with low income, including a statewide telephone hotline for low-income veterans. Not criminal defense.",
+   "next_step": "Call central intake at 888-465-2468 and say if you are a veteran. Veterans can also call the Joining Forces hotline at 443-863-4040.",
+   "constraints": [
+    "Applicants are screened; income, case type and capacity limits apply. Criminal, personal injury and traffic matters are not accepted.",
+    "The Joining Forces hotline hours listed in a bar-association directory are Tuesdays 3:00–7:00 p.m. and Thursdays 9:30 a.m.–1:30 p.m.; hours can change."
+   ],
+   "phone": "888-465-2468",
+   "phone_label": "Maryland Legal Aid central intake",
+   "phone_source": "https://www.mdlab.org/?p=2135",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://www.mdlab.org/?p=2135",
+     "title": "Maryland Legal Aid",
+     "scope": "Main intake number 888-465-2468; search excerpt."
+    },
+    {
+     "url": "https://www.mdlab.org/wp-content/uploads/Welcome_2025.7_web_V1.pdf",
+     "title": "Maryland Legal Aid: Welcome brochure (July 2025)",
+     "scope": "Central intake number and help for veterans with civil legal issues; search excerpt."
+    },
+    {
+     "url": "https://www.americanbar.org/groups/legal_services/milvets/aba_home_front/directory-programs/maryland/",
+     "title": "American Bar Association: Military Legal Assistance Offices, Maryland",
+     "scope": "Joining Forces hotline 443-863-4040 and its hours; an association directory, search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "md-vahealth-systems",
+   "name": "VA medical centers serving Maryland",
+   "organization": "U.S. Department of Veterans Affairs",
+   "url": "https://www.va.gov/find-locations/?facilityType=health",
+   "role": "va_health_system",
+   "needs": [
+    "veteran_services",
+    "care_facilities"
+   ],
+   "description": "VA Maryland Health Care System: Baltimore VA Medical Center (410-605-7000), Perry Point VA Medical Center (410-642-2411) and the Loch Raven campus. The state department lists the Washington DC VA Medical Center (202-745-8000) for Montgomery and Prince George’s Counties and Southern Maryland, and the Martinsburg VA Medical Center in West Virginia (304-263-0811) for Western Maryland. Community clinics are listed in VA’s facility locator.",
+   "next_step": "Use VA’s facility locator with your ZIP code to find the closest clinic and its medical center. Not enrolled yet? Ask a benefits specialist at your service office for help applying.",
+   "constraints": [
+    "The state’s page names regions rather than counties, so this card does not assign counties. Your VA care team may be at a different clinic or system; follow what VA tells you."
+   ],
+   "phone": "410-605-7000",
+   "phone_label": "Baltimore VA Medical Center",
+   "phone_source": "https://veterans.maryland.gov/benefits-services/healthcare/va-healthcare-enrollment",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://veterans.maryland.gov/benefits-services/healthcare/va-healthcare-enrollment",
+     "title": "Maryland Department of Veterans and Military Families: VA health care enrollment",
+     "scope": "Medical centers, their phones and which regions each serves; search excerpt."
+    },
+    {
+     "url": "https://www.va.gov/maryland-health-care/contact-us/",
+     "title": "VA Maryland Health Care System: Contact us",
+     "scope": "Baltimore, Perry Point and Loch Raven medical centers and addresses; search excerpt."
+    }
+   ]
+  }
+ ],
+ "adapter": {
+  "badge_county": "County veterans office",
+  "badge_state": "State service office",
+  "badge_statewide": "Maryland statewide line",
+  "published_in": "Published on the Maryland Department of Veterans and Military Families office list",
+  "agency_link": "Maryland Department of Veterans and Military Families service offices",
+  "officers_can": "Department benefits specialists can",
+  "abuse_phone": "800-332-6347",
+  "abuse_label": "Adult Protective Services, statewide number",
+  "independent_cities": [
+   "Baltimore City"
+  ]
+ },
+ "coverage_scope": "Referral edition. All 24 jurisdictions have a state benefits contact, a matched Area Agency on Aging and a local long-term-care ombudsman. The state’s office list prints no county coverage: 16 jurisdictions show an office located there and 8 show the statewide service line with nearby offices.",
+ "coverage_note": "Service office addresses, phones and hours come from the Maryland Department of Veterans and Military Families office list, which prints no county coverage; each county shows an office located in it, and counties without one show the statewide service line and nearby offices. Area Agencies on Aging come from the Department of Aging directory. Local ombudsman phones come from search excerpts of the Department of Aging ombudsman page. Centers for Independent Living come from the ILRU directory and the state’s 2024 directory. Reviewed November 15, 2026. Contacts are not telephone-confirmed.",
+ "share_description": "State benefits offices, county-matched Area Agencies on Aging and local long-term-care ombudsmen across Maryland"
+}

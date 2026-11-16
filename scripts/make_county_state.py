@@ -180,15 +180,20 @@ def build_programs(sheet):
             'evidence': {'review_method': c.get('method', 'full_official_page_text' if full else 'official_search_excerpt'),
                          'direct_agency_confirmation': False, 'phone_source_url': src_url, 'service_area_source_url': src_url},
             'source_evidence': [source(src_url, c.get('source_title', cils['source_title']),
-                                       c.get('scope', cils.get('scope', 'Center offices, local phones, websites and counties served as listed.')), reviewed)],
+                                       c.get('scope', cils.get('scope', 'Center offices, local phones, websites and counties served as listed.')), reviewed)]
+                               + [source(e['url'], e['title'], e['scope'], reviewed) for e in c.get('extra_sources', [])],
         })
     # VA housing help (SSVF) from the FY26 intake list already in the repository.
     ssvf = read('data/public/ssvf-intake-fy26.json')
     for row in ssvf['records']:
         if code not in row['states']:
             continue
-        counties = [re.sub(r' (County|Parish|Borough|Municipality|Census Area|city)$', '', c['name']) for c in row['counties'] if c['state'] == code]
+        # Independent cities keep their name ('Baltimore city' becomes 'Baltimore City'); other suffixes are dropped.
+        counties = [c['name'][:-5] + ' City' if c['name'].endswith(' city') else re.sub(r' (County|Parish|Borough|Municipality|Census Area)$', '', c['name'])
+                    for c in row['counties'] if c['state'] == code]
         phones = row['intake_phones']
+        if not phones:  # a card without a phone number would not help anyone; the omission is documented per state
+            continue
         pid = f"{code.lower()}-ssvf-{row['fain'].lower()}"
         out.append({
             'program_id': pid, 'name': f"{row['organization']}: veteran housing help (SSVF)", 'official_url': SSVF_URL,
@@ -280,7 +285,7 @@ def adapter(sheet):
         ('<a href="https://veteranbenefits.mo.gov/" target="_blank" rel="noopener noreferrer">MVC benefits portal ↗</a>',
          f'<a href="{sheet["agency"]["url"]}" target="_blank" rel="noopener noreferrer">{a["agency_link"]} ↗</a>'),
         ('Missouri Veterans Commission Veterans Service Officers can', a['officers_can']),
-        ("county==='St. Louis City'?county:county+' County'", "county+' County'"),
+        ("county==='St. Louis City'?county:county+' County'", (json.dumps(a['independent_cities']) + ".includes(county)?county:county+' County'") if a.get('independent_cities') else "county+' County'"),
         ("'mo-ombudsman'", f"'{code.lower()}-ombudsman'"),
         ('800-309-3282', sheet['ombudsman']['state_phone']),
         ("phoneLink('800-392-0210')+' (Adult Abuse and Neglect Hotline, 7 a.m. to 8 p.m. daily)'",

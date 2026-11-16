@@ -4,7 +4,7 @@ Written November 15, 2026, from an audit of vethomeguard.org, guide.vethomeguard
 
 ## Where things stand
 
-- **Coverage.** 51 editions. Twenty-two states have full county editions (1,910 counties and equivalents; Colorado and Alabama added November 15, 2026). The other 28 states and D.C. are starter editions: the state veterans agency plus national aging, ombudsman and Medicare counseling routes.
+- **Coverage.** 51 editions. Twenty-three states have full county editions (1,934 counties and equivalents; Colorado, Alabama and Maryland added November 15, 2026). The other 27 states and D.C. are starter editions: the state veterans agency plus national aging, ombudsman and Medicare counseling routes.
 - **Evidence.** 3,335 resource records across the editions. 3,019 (90.5%) carry full official-source review, 310 were matched from search excerpts, and 6 are flagged as imported or due a recheck. Of the 1,810 veterans office contacts, 152 were matched from search excerpts. Contacts are checked against published sources, not by telephone.
 - **Links.** 1,727 distinct links on 839 websites. Until this month nothing checked them.
 - **Ohio extras.** 924 nursing homes and 817 assisted living facilities, the bingo finder, 88 county boards of DD in the family guide.
@@ -25,13 +25,13 @@ Written November 15, 2026, from an audit of vethomeguard.org, guide.vethomeguard
 The guide is one address to a search engine. The state a visitor chooses is drawn by script, and every state view names the home page as its canonical address, so "Knox County veterans service office phone" cannot land on this guide today.
 
 1. **A page per state** (in review, see above). Plain HTML built from the same records, one per state, linking into the full guide.
-2. **A page per county** for the twenty-two full editions (1,910 pages), built the same way. Each needs only the office, phone, source, review date and a link into the guide for that county. Do this after the state pages have been indexed for a few weeks, so the result can be measured.
+2. **A page per county** for the twenty-three full editions (1,934 pages), built the same way. Each needs only the office, phone, source, review date and a link into the guide for that county. Do this after the state pages have been indexed for a few weeks, so the result can be measured.
 3. **Search Console** for guide.vethomeguard.org and vethomeguard.org: submit both sitemaps and watch which searches bring people in. Needs the owner to add one DNS record.
 4. **Link previews.** `bingo.html`, `facilities.html`, `flyers.html`, the share pages and the assistant have no preview image, and the assistant has no description.
 
 ## 2. Go deeper where veterans live
 
-5. **Turn starter states into county editions**, largest veteran populations first (Census ACS table S2101 gives the order; Colorado and Alabama are done; Maryland is next). `scripts/make_county_state.py` builds a full edition from one research sheet, `data/source/states/<code>.json`; the method is in [ADDING-A-STATE.md](ADDING-A-STATE.md). In states without county veterans offices, map each county to the state field office that serves it, as Kentucky, Utah, Georgia and Virginia do.
+5. **Turn starter states into county editions**, largest veteran populations first (Census ACS table S2101 gives the order; Colorado, Alabama and Maryland are done; the rest follow in that order). `scripts/make_county_state.py` builds a full edition from one research sheet, `data/source/states/<code>.json`; the method is in [ADDING-A-STATE.md](ADDING-A-STATE.md). In states without county veterans offices, map each county to the state field office that serves it, as Kentucky, Utah, Georgia and Virginia do.
 6. **Raise the search-excerpt records to full source review.** Read the official page and record what it says. The 310 are one shared Medicare record repeated in each edition plus 260 state records: aging agencies, legal aid, ombudsman offices, VA health systems and state programs. California (25), Washington (18), Tennessee (15) and Arizona (14) hold the most, and each starter state has three or four national routes to re-read. The 152 office contacts come next.
 7. **Nursing homes for every state.** The Ohio finder is built from a CMS file that is national. The same builder can publish each state's nursing homes; assisted living stays Ohio-only until another state's licensing list is added.
 8. **Posts in the four pilot counties.** [COMMUNITY-NETWORK.md](COMMUNITY-NETWORK.md) describes the record; `data/public/community-posts.json` is still empty.

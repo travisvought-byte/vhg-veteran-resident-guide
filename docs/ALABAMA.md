@@ -38,6 +38,7 @@ The Alabama Department of Veterans Affairs (ADVA) publishes the list of county V
 
 - **Claims help (`al-claims`).** Phone 334-242-5077, from the department's own page, matched on November 2, 2026 as name and phone only (a search excerpt). It sends callers to the county Veterans Service Office first.
 - **Alabama AGELINE (`al-adrc`).** 800-243-5463, from the Senior Services page (a search excerpt).
+- **Housing help (SSVF).** Three providers from VA's FY26 intake workbook: Housing First, Inc. (Baldwin and Mobile Counties, 251-450-3345, with 251-303-8058 as a second intake number), Volunteers of America Southeast, Inc. (9 counties, 205-945-7172) and United Way of Central Alabama (65 counties, 866-460-3827). These cards are added by the edition builder, not by the research sheet.
 - **Centers for Independent Living (4, `al-cil-*`).** Four centers whose county lists together cover all 67 counties: Disability Rights & Resources (Birmingham, 20 counties), Disability Resource Network (Huntsville, 13), Independent Rights & Resources (Montgomery, 18) and the Independent Living Center of Mobile (16).
   - The first three come from the Alabama centers directory published by Disability Rights & Resources, which is a member-center page, not a state agency page; their cards carry the association-directory label.
   - The Mobile center's address, phone and counties come from the ILRU national directory, because a peer directory lists an older Mobile address (5301 Moffett Road).
