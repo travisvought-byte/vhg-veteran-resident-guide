@@ -937,72 +937,612 @@
   },
   {
     "program_id": "nm-claims",
-    "name": "New Mexico veterans: accredited claims help",
-    "official_url": "https://www.dvs.nm.gov/new-mexico-offices/",
+    "name": "New Mexico veterans: state field offices for claims help",
+    "official_url": "https://www.nmdvs.org/?p=3991",
     "organization": "New Mexico Department of Veterans’ Services",
     "service_area": [
-      "All New Mexico counties"
+      "statewide"
     ],
     "state": "NM",
     "needs_supported": [
       "general_navigation",
       "benefits_and_funding"
     ],
-    "description": "Free help with VA claims, applications and appeals for veterans and families.",
-    "next_step": "Call the state veterans agency; ask for a benefits review and the office that serves your county.",
-    "constraints": [],
+    "description": "Free help with VA claims, pension and survivor benefits and New Mexico state benefits from New Mexico Department of Veterans’ Services veteran service officers. New Mexico has no county veterans offices: 17 field offices, from Farmington to Las Cruces and Clovis, each serve a set of counties.",
+    "next_step": "Choose your county for its field office, or call the department’s toll-free line, 866-433-8387.",
+    "constraints": [
+      "Call to schedule before you travel; the field offices page prints no office hours.",
+      "Torrance County is not assigned to an office on the department’s page; call the toll-free line."
+    ],
     "public_contact": {
-      "phone": "866-433-8387"
+      "phone": "866-433-8387",
+      "phone_label": "New Mexico Department of Veterans’ Services (866-433-8387)"
     },
     "verification": {
       "record_status": "official_search_extract_only",
-      "last_reviewed_on": "2026-11-02"
+      "last_reviewed_on": "2026-11-16"
     },
     "evidence": {
       "review_method": "official_search_excerpt",
       "direct_agency_confirmation": false,
-      "phone_source_url": "https://www.dvs.nm.gov/new-mexico-offices/"
+      "phone_source_url": "https://www.nmdvs.org/?p=3913"
     },
     "source_evidence": [
       {
-        "url": "https://www.dvs.nm.gov/new-mexico-offices/",
-        "title": "Official published source",
-        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+        "url": "https://www.nmdvs.org/?p=3991",
+        "title": "New Mexico Department of Veterans’ Services: Field Offices",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each field office’s address, phones and counties served; read in full. The page is undated."
+      },
+      {
+        "url": "https://www.nmdvs.org/?p=3913",
+        "title": "New Mexico Department of Veterans’ Services: State Benefits",
+        "reviewed_on": "2026-11-16",
+        "scope": "Benefits main office, 407 Galisteo Street, Santa Fe; 1-866-433-8387; search excerpt."
+      },
+      {
+        "url": "https://www.nmlegis.gov/(X(1)S(wad0muqmvxzdjjhkdu1eiys5))/handouts/MVAC%20071525%20Item%204%20NMDVS%20Agency%20Summary.pdf",
+        "title": "New Mexico Department of Veterans’ Services: agency summary to the legislature (July 2025)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Toll-free 1 (866) 433-8387, Albuquerque (505) 383-2400, Santa Fe (505) 827-6300; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "nm-adrc",
+    "name": "New Mexico Aging and Disability Resource Center",
+    "official_url": "https://www.aging.nm.gov/about/contact",
+    "organization": "New Mexico Aging and Long-Term Services Department, Aging and Disability Resource Center (ADRC)",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "NM",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "The state Aging and Disability Resource Center helps older adults, adults with disabilities and caregivers find in-home services, Medicaid home and community-based services, benefits counseling and caregiver support. Military service is not required.",
+    "next_step": "Call 800-432-2080, Monday–Friday 7:45 a.m.–5 p.m. Mountain time, or choose a county above for its Area Agency on Aging.",
+    "constraints": [
+      "Each program has its own eligibility and waitlist."
+    ],
+    "public_contact": {
+      "phone": "800-432-2080",
+      "phone_label": "New Mexico Aging and Disability Resource Center (800-432-2080)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.aging.nm.gov/about/contact"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.aging.nm.gov/about/contact",
+        "title": "New Mexico Aging and Long-Term Services Department: Contact",
+        "reviewed_on": "2026-11-16",
+        "scope": "ADRC 1-800-432-2080, Monday–Friday 7:45am–5pm MT; search excerpt."
+      },
+      {
+        "url": "https://www.gcd.nm.gov/?p=395",
+        "title": "New Mexico Governor’s Commission on Disability: Elderly resources",
+        "reviewed_on": "2026-11-16",
+        "scope": "What the ADRC offers: information and referral, benefits counseling, Medicaid home and community-based services and caregiving; search excerpt."
       }
     ]
   },
   {
     "program_id": "nm-ship",
     "name": "Medicare counseling (SHIP) for New Mexico",
-    "official_url": "https://www.shiphelp.org/",
-    "organization": "SHIP Technical Assistance Center",
+    "official_url": "https://www.aging.nm.gov/about/contact",
+    "organization": "New Mexico Aging and Long-Term Services Department, State Health Insurance Assistance Program (SHIP)",
     "service_area": [
-      "All New Mexico counties"
+      "statewide"
     ],
     "state": "NM",
     "needs_supported": [
       "benefits_and_funding"
     ],
-    "description": "Free, unbiased Medicare counseling from the State Health Insurance Assistance Program.",
-    "next_step": "Call or use the locator to reach the New Mexico SHIP and ask for a counseling appointment.",
-    "constraints": [],
+    "description": "Free Medicare counseling from the Aging and Long-Term Services Department’s State Health Insurance Assistance Program counselors: plan choices, enrollment, costs and help paying for Medicare.",
+    "next_step": "Call 800-432-2080 to reach a SHIP counselor or reserve an appointment. For Medicare itself, call 800-MEDICARE (800-633-4227).",
+    "constraints": [
+      "Have your Medicare card and drug list ready."
+    ],
     "public_contact": {
-      "phone": "877-839-2675"
+      "phone": "800-432-2080",
+      "phone_label": "New Mexico SHIP, through the ADRC (800-432-2080)"
     },
     "verification": {
       "record_status": "official_search_extract_only",
-      "last_reviewed_on": "2026-11-02"
+      "last_reviewed_on": "2026-11-16"
     },
     "evidence": {
       "review_method": "official_search_excerpt",
       "direct_agency_confirmation": false,
-      "phone_source_url": "https://www.shiphelp.org/?p=317"
+      "phone_source_url": "https://www.aging.nm.gov/about/contact"
     },
     "source_evidence": [
       {
-        "url": "https://www.shiphelp.org/?p=317",
-        "title": "Official published source",
-        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+        "url": "https://www.aging.nm.gov/about/contact",
+        "title": "New Mexico Aging and Long-Term Services Department: Contact",
+        "reviewed_on": "2026-11-16",
+        "scope": "Reserve an appointment with a SHIP counselor or call 800-432-2080; search excerpt."
+      },
+      {
+        "url": "https://aging.nm.gov/about/locations",
+        "title": "New Mexico Aging and Long-Term Services Department: Locations",
+        "reviewed_on": "2026-11-16",
+        "scope": "SHIP team office locations; call 1-800-432-2080; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "nm-ombudsman",
+    "name": "New Mexico Long-Term Care Ombudsman and adult abuse reporting",
+    "official_url": "https://www.aging.nm.gov/contact-us",
+    "organization": "New Mexico Aging and Long-Term Services Department, Long-Term Care Ombudsman Program",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "NM",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "description": "Independent advocacy for residents of nursing homes and other long-term care facilities.",
+    "next_step": "Call the Long-Term Care Ombudsman Program at 866-451-2901. To report abuse, neglect or exploitation of an adult, call Adult Protective Services at 866-654-3219, 24 hours a day. In an emergency, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing agency."
+    ],
+    "public_contact": {
+      "phone": "866-451-2901",
+      "phone_label": "New Mexico Long-Term Care Ombudsman (866-451-2901)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.aging.nm.gov/contact-us"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.aging.nm.gov/contact-us",
+        "title": "New Mexico Aging and Long-Term Services Department: Contact us",
+        "reviewed_on": "2026-11-16",
+        "scope": "Long-Term Care Ombudsman Program 866-451-2901, toll-free and statewide; search excerpt."
+      },
+      {
+        "url": "https://aging.nm.gov/protecting-adults",
+        "title": "New Mexico Aging and Long-Term Services Department: Protecting Adults",
+        "reviewed_on": "2026-11-16",
+        "scope": "APS Statewide Intake toll-free 866-654-3219; search excerpt."
+      },
+      {
+        "url": "https://www.aging.nm.gov/?p=977",
+        "title": "New Mexico Aging and Long-Term Services Department: Locations",
+        "reviewed_on": "2026-11-16",
+        "scope": "APS 24/7 toll-free number 866-654-3219; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "nm-legal-programs",
+    "name": "Free legal help for New Mexico veterans and older adults",
+    "official_url": "https://www.sbnm.org/LREP/",
+    "organization": "Legal Resources for the Elderly Program (State Bar Foundation); New Mexico Legal Aid; Senior Citizens’ Law Office",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "NM",
+    "resource_role": "legal_aid",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation",
+      "housing"
+    ],
+    "description": "The Legal Resources for the Elderly Program is a free statewide legal helpline for New Mexicans 55 and older, with no income limits, run by the State Bar Foundation with the Aging and Long-Term Services Department. New Mexico Legal Aid gives free civil legal help to people with low incomes. In Bernalillo County and nearby, the Senior Citizens’ Law Office also helps older adults.",
+    "next_step": "If you are 55 or older, call the Legal Resources for the Elderly Program at 800-876-6657 (505-797-6005 in Albuquerque). For other civil legal help, call New Mexico Legal Aid’s statewide intake line, 833-545-4357. In the Albuquerque area, the Senior Citizens’ Law Office is at 505-265-2300.",
+    "constraints": [
+      "No help with criminal cases.",
+      "New Mexico Legal Aid screens by income and case type."
+    ],
+    "public_contact": {
+      "phone": "800-876-6657",
+      "phone_label": "Legal Resources for the Elderly Program (800-876-6657)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.sbnm.org/LREP/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.sbnm.org/LREP/",
+        "title": "State Bar of New Mexico: Legal Resources for the Elderly Program",
+        "reviewed_on": "2026-11-16",
+        "scope": "Free statewide helpline for residents 55 and older with no income restrictions; 505-797-6005 or 1-800-876-6657; search excerpt."
+      },
+      {
+        "url": "https://sbnm.org/CivilLegalServiceProviders_And_OtherResources",
+        "title": "State Bar of New Mexico: Civil Legal Service Providers and Other Resources",
+        "reviewed_on": "2026-11-16",
+        "scope": "Legal Resources for the Elderly Program; New Mexico Legal Aid 833-545-4357; search excerpt."
+      },
+      {
+        "url": "https://www.cabq.gov/family/services/senior-services",
+        "title": "City of Albuquerque: Area Agency on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "Legal services: Senior Citizen’s Law Office, 505-265-2300; search excerpt."
+      },
+      {
+        "url": "https://lawlibrary.nmcourts.gov/wp-content/uploads/sites/34/2024/03/New-Mexico-Civil-Legal-Service-Providers_Flyer.pdf",
+        "title": "New Mexico Supreme Court Law Library: Civil Legal Service Providers flyer (2024)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Senior Citizens’ Law Office, central New Mexico, including Torrance, Valencia and Sandoval counties with income restrictions; 505-265-2300; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "nm-vahealth-systems",
+    "name": "VA health care systems serving New Mexico",
+    "official_url": "https://www.va.gov/find-locations/?facilityType=health",
+    "organization": "U.S. Department of Veterans Affairs",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "NM",
+    "resource_role": "va_health_system",
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "Most New Mexico veterans are served by VA New Mexico health care (Raymond G. Murphy VA Medical Center, 1501 San Pedro Drive SE, Albuquerque; 505-265-1711 or 800-465-8262) and its clinics. In Doña Ana County, the Las Cruces clinic is run by VA El Paso; in the east, the Clovis clinic is run by VA Amarillo and the Hobbs clinic by VA West Texas.",
+    "next_step": "Use VA’s facility locator with your ZIP code to find the closest clinic. Not enrolled yet? Ask your field office’s veteran service officer for help applying.",
+    "constraints": [
+      "Which system serves you depends on where you live; VA’s locator shows the right clinic."
+    ],
+    "public_contact": {
+      "phone": "505-265-1711",
+      "phone_label": "VA New Mexico health care (505-265-1711)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.va.gov/new-mexico-health-care/contact-us/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.va.gov/new-mexico-health-care/contact-us/",
+        "title": "VA New Mexico health care: Contact us",
+        "reviewed_on": "2026-11-16",
+        "scope": "Main phone local 505-265-1711, toll-free 800-465-8262; search excerpt."
+      },
+      {
+        "url": "https://www.va.gov/el-paso-health-care/health-services/",
+        "title": "VA El Paso health care: Health services",
+        "reviewed_on": "2026-11-16",
+        "scope": "Serves veterans in southwest Texas and Doña Ana County, New Mexico, including the Las Cruces VA Clinic; search excerpt."
+      },
+      {
+        "url": "https://www.va.gov/amarillo-health-care/about-us/",
+        "title": "VA Amarillo health care: About us",
+        "reviewed_on": "2026-11-16",
+        "scope": "Community-based outpatient clinic in Clovis, New Mexico; search excerpt."
+      },
+      {
+        "url": "https://www.va.gov/west-texas-health-care/locations/hobbs-va-clinic/",
+        "title": "VA West Texas health care: Hobbs VA Clinic",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Hobbs clinic is part of VA West Texas health care; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "nm-cil-choices",
+    "name": "Choices Center for Independent Living (Roswell)",
+    "organization": "Choices Center for Independent Living",
+    "official_url": "https://www.ilru.org/cil-directory/nm",
+    "service_area": [
+      "Chaves",
+      "Eddy",
+      "Lea"
+    ],
+    "state": "NM",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 110 W. Country Club Road, Suite 4, Roswell, NM 88201.",
+      "The card links to the national directory because no secure (https) website address for this center appears in the sources read."
+    ],
+    "public_contact": {
+      "phone": "575-627-6727",
+      "phone_label": "Phone listed for the center"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilrcnm.org/new-mexicans-with-disabilities-unmet-needs-survey",
+      "service_area_source_url": "https://www.ilrcnm.org/new-mexicans-with-disabilities-unmet-needs-survey"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilrcnm.org/new-mexicans-with-disabilities-unmet-needs-survey",
+        "title": "Independent Living Resource Center: New Mexicans with Disabilities Unmet Needs Survey (New Mexico SILC)",
+        "reviewed_on": "2026-11-16",
+        "scope": "The five New Mexico Centers for Independent Living and the counties each serves; search excerpt."
+      },
+      {
+        "url": "https://www.dvr.state.nm.us/wp-content/uploads/2025/01/NMSPIL25-27.pdf",
+        "title": "New Mexico State Plan for Independent Living, 2025–2027",
+        "reviewed_on": "2026-11-16",
+        "scope": "The five centers and their counties; Roosevelt, Quay, Curry, Catron and Hidalgo have no center; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "nm-cil-ilrc",
+    "name": "Independent Living Resource Center (Albuquerque)",
+    "organization": "Independent Living Resource Center (ILRC)",
+    "official_url": "https://www.ilrcnm.org/",
+    "service_area": [
+      "Bernalillo",
+      "Cibola",
+      "De Baca",
+      "Guadalupe",
+      "Lincoln",
+      "Otero",
+      "Sandoval",
+      "Socorro",
+      "Torrance",
+      "Valencia"
+    ],
+    "state": "NM",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "The center also has offices in Alamogordo, Moriarty and Socorro."
+    ],
+    "public_contact": {
+      "phone": "505-266-5022",
+      "phone_label": "Phone listed for the center"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilrcnm.org/new-mexicans-with-disabilities-unmet-needs-survey",
+      "service_area_source_url": "https://www.ilrcnm.org/new-mexicans-with-disabilities-unmet-needs-survey"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilrcnm.org/new-mexicans-with-disabilities-unmet-needs-survey",
+        "title": "Independent Living Resource Center: New Mexicans with Disabilities Unmet Needs Survey (New Mexico SILC)",
+        "reviewed_on": "2026-11-16",
+        "scope": "The five New Mexico Centers for Independent Living and the counties each serves; search excerpt."
+      },
+      {
+        "url": "https://www.dvr.state.nm.us/wp-content/uploads/2025/01/NMSPIL25-27.pdf",
+        "title": "New Mexico State Plan for Independent Living, 2025–2027",
+        "reviewed_on": "2026-11-16",
+        "scope": "The five centers and their counties; Roosevelt, Quay, Curry, Catron and Hidalgo have no center; search excerpt."
+      },
+      {
+        "url": "https://www.ilru.org/cil-directory/nm",
+        "title": "ILRU: New Mexico CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "ILRC phone (505) 266-5022 and branch offices; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "nm-cil-new-vistas",
+    "name": "New Vistas (Santa Fe and Las Vegas)",
+    "organization": "New Vistas",
+    "official_url": "https://newvistas.org/",
+    "service_area": [
+      "Colfax",
+      "Harding",
+      "Los Alamos",
+      "Mora",
+      "Rio Arriba",
+      "San Miguel",
+      "Santa Fe",
+      "Taos",
+      "Union"
+    ],
+    "state": "NM",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 1205 Parkway Drive, Suite A, Santa Fe. Las Vegas office: 505-425-5044."
+    ],
+    "public_contact": {
+      "phone": "505-471-1001",
+      "phone_label": "Phone listed for the center"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilrcnm.org/new-mexicans-with-disabilities-unmet-needs-survey",
+      "service_area_source_url": "https://www.ilrcnm.org/new-mexicans-with-disabilities-unmet-needs-survey"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilrcnm.org/new-mexicans-with-disabilities-unmet-needs-survey",
+        "title": "Independent Living Resource Center: New Mexicans with Disabilities Unmet Needs Survey (New Mexico SILC)",
+        "reviewed_on": "2026-11-16",
+        "scope": "The five New Mexico Centers for Independent Living and the counties each serves; search excerpt."
+      },
+      {
+        "url": "https://www.dvr.state.nm.us/wp-content/uploads/2025/01/NMSPIL25-27.pdf",
+        "title": "New Mexico State Plan for Independent Living, 2025–2027",
+        "reviewed_on": "2026-11-16",
+        "scope": "The five centers and their counties; Roosevelt, Quay, Curry, Catron and Hidalgo have no center; search excerpt."
+      },
+      {
+        "url": "https://www.ilru.org/cil-directory/nm",
+        "title": "ILRU: New Mexico CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "New Vistas phones (505) 471-1001 and (505) 425-5044; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "nm-cil-sjci",
+    "name": "San Juan Center for Independence (Farmington and Gallup)",
+    "organization": "San Juan Center for Independence (SJCI)",
+    "official_url": "https://www.ilru.org/cil-directory/nm",
+    "service_area": [
+      "McKinley",
+      "San Juan"
+    ],
+    "state": "NM",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 1240 San Juan Boulevard, Farmington, NM 87401; toll-free 877-484-4500. Gallup office: 505-726-2709.",
+      "The card links to the national directory because no secure (https) website address for this center appears in the sources read."
+    ],
+    "public_contact": {
+      "phone": "505-566-5827",
+      "phone_label": "Phone listed for the center"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilrcnm.org/new-mexicans-with-disabilities-unmet-needs-survey",
+      "service_area_source_url": "https://www.ilrcnm.org/new-mexicans-with-disabilities-unmet-needs-survey"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilrcnm.org/new-mexicans-with-disabilities-unmet-needs-survey",
+        "title": "Independent Living Resource Center: New Mexicans with Disabilities Unmet Needs Survey (New Mexico SILC)",
+        "reviewed_on": "2026-11-16",
+        "scope": "The five New Mexico Centers for Independent Living and the counties each serves; search excerpt."
+      },
+      {
+        "url": "https://www.dvr.state.nm.us/wp-content/uploads/2025/01/NMSPIL25-27.pdf",
+        "title": "New Mexico State Plan for Independent Living, 2025–2027",
+        "reviewed_on": "2026-11-16",
+        "scope": "The five centers and their counties; Roosevelt, Quay, Curry, Catron and Hidalgo have no center; search excerpt."
+      },
+      {
+        "url": "https://www.ilru.org/node/748",
+        "title": "ILRU: San Juan Center for Independence",
+        "reviewed_on": "2026-11-16",
+        "scope": "Phone (505) 566-5827, toll-free (877) 484-4500, counties McKinley and San Juan; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "nm-cil-ability-center",
+    "name": "The Ability Center (Las Cruces)",
+    "organization": "The Ability Center for Independent Living",
+    "official_url": "https://www.ilru.org/cil-directory/nm",
+    "service_area": [
+      "Doña Ana",
+      "Grant",
+      "Luna",
+      "Sierra"
+    ],
+    "state": "NM",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Toll-free: 800-376-4372.",
+      "The card links to the national directory because no secure (https) website address for this center appears in the sources read."
+    ],
+    "public_contact": {
+      "phone": "575-526-5016",
+      "phone_label": "Phone listed for the center"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilrcnm.org/new-mexicans-with-disabilities-unmet-needs-survey",
+      "service_area_source_url": "https://www.ilrcnm.org/new-mexicans-with-disabilities-unmet-needs-survey"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilrcnm.org/new-mexicans-with-disabilities-unmet-needs-survey",
+        "title": "Independent Living Resource Center: New Mexicans with Disabilities Unmet Needs Survey (New Mexico SILC)",
+        "reviewed_on": "2026-11-16",
+        "scope": "The five New Mexico Centers for Independent Living and the counties each serves; search excerpt."
+      },
+      {
+        "url": "https://www.dvr.state.nm.us/wp-content/uploads/2025/01/NMSPIL25-27.pdf",
+        "title": "New Mexico State Plan for Independent Living, 2025–2027",
+        "reviewed_on": "2026-11-16",
+        "scope": "The five centers and their counties; Roosevelt, Quay, Curry, Catron and Hidalgo have no center; search excerpt."
       }
     ]
   },
@@ -1012,7 +1552,32 @@
     "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
     "organization": "Goodwill Industries of New Mexico",
     "service_area": [
-      "All New Mexico counties"
+      "Bernalillo",
+      "Catron",
+      "Chaves",
+      "Cibola",
+      "Colfax",
+      "Curry",
+      "De Baca",
+      "Eddy",
+      "Guadalupe",
+      "Harding",
+      "Lea",
+      "Los Alamos",
+      "McKinley",
+      "Mora",
+      "Quay",
+      "Rio Arriba",
+      "Roosevelt",
+      "San Juan",
+      "San Miguel",
+      "Sandoval",
+      "Santa Fe",
+      "Socorro",
+      "Taos",
+      "Torrance",
+      "Union",
+      "Valencia"
     ],
     "state": "NM",
     "resource_role": "housing_provider",
@@ -1020,7 +1585,7 @@
       "housing",
       "veteran_services"
     ],
-    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 12-NM-055): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Bernalillo County, Catron County, Chaves County, Cibola County, Colfax County, Curry County, De Baca County, Eddy County, Guadalupe County, Harding County, Lea County, Los Alamos County and 14 more.",
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 12-NM-055): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
     "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
     "constraints": [
       "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
@@ -1057,7 +1622,20 @@
     "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
     "organization": "New Mexico Veterans Integration Centers",
     "service_area": [
-      "All New Mexico counties"
+      "Bernalillo",
+      "Chaves",
+      "Eddy",
+      "Grant",
+      "Guadalupe",
+      "Hidalgo",
+      "Lincoln",
+      "Luna",
+      "Otero",
+      "Sandoval",
+      "Santa Fe",
+      "Sierra",
+      "Torrance",
+      "Valencia"
     ],
     "state": "NM",
     "resource_role": "housing_provider",
@@ -1065,7 +1643,7 @@
       "housing",
       "veteran_services"
     ],
-    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 14-NM-246): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Bernalillo County, Chaves County, Eddy County, Grant County, Guadalupe County, Hidalgo County, Lincoln County, Luna County, Otero County, Sandoval County, Santa Fe County, Sierra County and 2 more.",
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 14-NM-246): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
     "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 505-265-0512.",
     "constraints": [
       "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
@@ -1102,7 +1680,7 @@
     "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
     "organization": "Mesilla Valley Community of Hope",
     "service_area": [
-      "All New Mexico counties"
+      "Doña Ana"
     ],
     "state": "NM",
     "resource_role": "housing_provider",
@@ -1110,7 +1688,7 @@
       "housing",
       "veteran_services"
     ],
-    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 14-NM-247): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Dona Ana County.",
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 14-NM-247): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
     "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
     "constraints": [
       "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
@@ -1147,7 +1725,7 @@
     "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
     "organization": "Volunteers of America Colorado Branch",
     "service_area": [
-      "All New Mexico counties"
+      "San Juan"
     ],
     "state": "NM",
     "resource_role": "housing_provider",
@@ -1155,7 +1733,7 @@
       "housing",
       "veteran_services"
     ],
-    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-ZZ-092): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: San Juan County.",
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-ZZ-092): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
     "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
     "constraints": [
       "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
@@ -1187,81 +1765,196 @@
     ]
   },
   {
-    "program_id": "nm-aging",
-    "name": "Local aging help in New Mexico (Eldercare Locator)",
-    "official_url": "https://eldercare.acl.gov/home",
-    "organization": "U.S. Administration for Community Living",
-    "service_area": [
-      "All New Mexico counties"
-    ],
+    "program_id": "nm-aaa-albuquerque",
+    "name": "City of Albuquerque/Bernalillo County Area Agency on Aging",
+    "organization": "City of Albuquerque/Bernalillo County Area Agency on Aging",
+    "official_url": "https://www.cabq.gov/family/services/senior-services",
     "state": "NM",
+    "service_area": [
+      "Bernalillo"
+    ],
     "needs_supported": [
       "general_navigation",
       "help_at_home"
     ],
-    "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-    "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The Aging and Disability Resource Center, 800-432-2080, also connects you to aging and disability help. Military service is not required.",
     "constraints": [
-      "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Call the Department of Senior Affairs’ Senior Information and Assistance line, which takes requests for Area Agency on Aging services."
     ],
     "public_contact": {
-      "phone": "800-677-1116"
+      "phone": "505-764-6400",
+      "phone_label": "Area Agency on Aging (Bernalillo County)"
     },
     "verification": {
       "record_status": "official_search_extract_only",
-      "last_reviewed_on": "2026-11-02"
+      "last_reviewed_on": "2026-11-16"
     },
     "evidence": {
       "review_method": "official_search_excerpt",
       "direct_agency_confirmation": false,
-      "phone_source_url": "https://www.acl.gov/contact"
+      "service_area_source_url": "https://www.cabq.gov/family/services/senior-services",
+      "phone_source_url": "https://www.cabq.gov/family/services/senior-services"
     },
     "source_evidence": [
       {
-        "url": "https://www.acl.gov/contact",
-        "title": "Official published source",
-        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+        "url": "https://www.cabq.gov/family/services/senior-services",
+        "title": "New Mexico Governor’s Commission on Disability: Elderly resources",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Non-Metro Area Agency on Aging funds senior programs in every New Mexico county except Bernalillo, which the Albuquerque Area Agency on Aging serves; phones 505-395-2668 and 1-866-699-4927; search excerpt."
       }
-    ],
-    "regional_role": "aging_agency"
+    ]
   },
   {
-    "program_id": "nm-ombudsman",
-    "name": "New Mexico long-term-care ombudsman",
-    "official_url": "https://theconsumervoice.org/get_help",
-    "organization": "National Long-Term Care Ombudsman Resource Center",
-    "service_area": [
-      "All New Mexico counties"
-    ],
+    "program_id": "nm-aaa-non-metro",
+    "name": "Non-Metro Area Agency on Aging",
+    "organization": "Non-Metro Area Agency on Aging",
+    "official_url": "https://www.gcd.nm.gov/?p=395",
     "state": "NM",
+    "service_area": [
+      "Catron",
+      "Chaves",
+      "Cibola",
+      "Colfax",
+      "Curry",
+      "De Baca",
+      "Doña Ana",
+      "Eddy",
+      "Grant",
+      "Guadalupe",
+      "Harding",
+      "Hidalgo",
+      "Lea",
+      "Lincoln",
+      "Los Alamos",
+      "Luna",
+      "McKinley",
+      "Mora",
+      "Otero",
+      "Quay",
+      "Rio Arriba",
+      "Roosevelt",
+      "San Juan",
+      "San Miguel",
+      "Sandoval",
+      "Santa Fe",
+      "Sierra",
+      "Socorro",
+      "Taos",
+      "Torrance",
+      "Union",
+      "Valencia"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The Aging and Disability Resource Center, 800-432-2080, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Also listed: 505-395-2668.",
+      "Tribal elders may also be served by the Indian Area Agency on Aging or the Navajo Area Agency on Aging; the Aging and Disability Resource Center can connect you."
+    ],
+    "public_contact": {
+      "phone": "866-699-4927",
+      "phone_label": "Area Agency on Aging (all counties but Bernalillo)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.gcd.nm.gov/?p=395",
+      "phone_source_url": "https://www.gcd.nm.gov/?p=395"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.gcd.nm.gov/?p=395",
+        "title": "New Mexico Governor’s Commission on Disability: Elderly resources",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Non-Metro Area Agency on Aging funds senior programs in every New Mexico county except Bernalillo, which the Albuquerque Area Agency on Aging serves; phones 505-395-2668 and 1-866-699-4927; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "nm-omb-state",
+    "name": "New Mexico Long-Term Care Ombudsman Program",
+    "organization": "New Mexico Long-Term Care Ombudsman Program",
+    "official_url": "https://www.aging.nm.gov/contact-us",
+    "state": "NM",
+    "service_area": [
+      "Bernalillo",
+      "Catron",
+      "Chaves",
+      "Cibola",
+      "Colfax",
+      "Curry",
+      "De Baca",
+      "Doña Ana",
+      "Eddy",
+      "Grant",
+      "Guadalupe",
+      "Harding",
+      "Hidalgo",
+      "Lea",
+      "Lincoln",
+      "Los Alamos",
+      "Luna",
+      "McKinley",
+      "Mora",
+      "Otero",
+      "Quay",
+      "Rio Arriba",
+      "Roosevelt",
+      "San Juan",
+      "San Miguel",
+      "Sandoval",
+      "Santa Fe",
+      "Sierra",
+      "Socorro",
+      "Taos",
+      "Torrance",
+      "Union",
+      "Valencia"
+    ],
     "needs_supported": [
       "resident_rights",
       "general_navigation"
     ],
-    "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-    "next_step": "Use the locator to find the New Mexico program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
     "constraints": [
-      "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "The statewide line connects you with the ombudsman for the facility’s area."
     ],
     "public_contact": {
-      "phone": "800-677-1116"
+      "phone": "866-451-2901",
+      "phone_label": "Regional ombudsman program"
     },
     "verification": {
       "record_status": "official_search_extract_only",
-      "last_reviewed_on": "2026-11-02"
+      "last_reviewed_on": "2026-11-16"
     },
     "evidence": {
       "review_method": "official_search_excerpt",
       "direct_agency_confirmation": false,
-      "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
+      "service_area_source_url": "https://www.aging.nm.gov/contact-us",
+      "phone_source_url": "https://www.aging.nm.gov/contact-us"
     },
     "source_evidence": [
       {
-        "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-        "title": "Official published source",
-        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+        "url": "https://www.aging.nm.gov/contact-us",
+        "title": "New Mexico Aging and Long-Term Services Department: Contact us",
+        "reviewed_on": "2026-11-16",
+        "scope": "Long-Term Care Ombudsman Program, 866-451-2901, toll-free and statewide; search excerpt."
       }
-    ],
-    "regional_role": "ombudsman"
+    ]
   }
 ]
