@@ -60,9 +60,18 @@ expiration date drop off automatically.
 and veterans' organizations (and some homeowners' and mobile home park associations) run bingo, sets
 limits (two days a week, $250 jackpots, players 18 and older) and names no state license. Some
 counties license it locally (Pinellas through Consumer Protection, Marion through its County
-Administrator), but neither publishes a list. Florida therefore gets the "no list yet" card for now.
-Building a Florida list means hall-by-hall research from organizer pages and dated city calendars
-(Jacksonville's senior centers, for example, post monthly calendars with bingo days and times).
+Administrator), but neither publishes a list. Florida is a "starter" state: listings come from
+places that publish their own schedules, kept in `data/public/florida-bingo.json`, each with its own
+source, phone and a note on how far to trust the days.
+
+The first Florida listings are City of Jacksonville senior centers, read from the city's November
+2026 monthly calendars
+(https://www.jacksonville.gov/departments/parks-and-recreation/senior-services/senior-center-calendars).
+Only centers with bingo on the same weekday most weeks are listed; one-off events (music bingo,
+outings) are left out. The cards say the days come from the November calendar and can change month
+to month. To refresh, read the newest month's calendars the same way. Next candidates: senior
+centers and posts in the Tampa Bay, Orlando, Southwest and Southeast Florida areas, from organizer
+pages or dated calendars only.
 
 **Kentucky, West Virginia, Pennsylvania.** No public statewide list of games or halls was found:
 Kentucky's Office of Charitable Gaming (now part of Kentucky Horse Racing & Gaming) publishes county
