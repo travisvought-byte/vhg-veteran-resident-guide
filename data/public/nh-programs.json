@@ -1,208 +1,491 @@
 [
- {
-  "program_id": "nh-claims",
-  "name": "New Hampshire veterans: accredited claims help",
-  "official_url": "https://dmavs.nh.gov/veterans-services",
-  "organization": "New Hampshire Division of Veterans Services",
-  "service_area": [
-   "All New Hampshire counties"
-  ],
-  "state": "NH",
-  "needs_supported": [
-   "general_navigation",
-   "benefits_and_funding"
-  ],
-  "description": "Free help with VA claims, applications and appeals for veterans and families.",
-  "next_step": "Call the state veterans agency; ask for a benefits review and the office that serves your county.",
-  "constraints": [],
-  "public_contact": {
-   "phone": "603-624-9230"
+  {
+    "program_id": "nh-claims",
+    "name": "New Hampshire veterans: state veterans service officers for claims help",
+    "official_url": "https://dmavs.nh.gov/veterans-services",
+    "organization": "NH Division of Veterans Services",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "NH",
+    "needs_supported": [
+      "general_navigation",
+      "benefits_and_funding"
+    ],
+    "description": "Free help with VA claims, appeals, pension and survivor benefits from the NH Division of Veterans Services’ veterans service officers, who represent veterans and their dependents throughout the VA claim process. They work from Manchester and meet veterans by appointment at visitation sites around the state.",
+    "next_step": "Call the Division at 603-624-9230 (800-622-9230 toll-free in New Hampshire) to book a phone appointment or a visit at the site nearest you.",
+    "constraints": [
+      "All visitation sites are by appointment only; the Division books them."
+    ],
+    "public_contact": {
+      "phone": "603-624-9230",
+      "phone_label": "NH Division of Veterans Services (603-624-9230)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://dmavs.nh.gov/veterans-services/vsos-and-sites"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dmavs.nh.gov/veterans-services/vsos-and-sites",
+        "title": "NH Department of Military Affairs and Veterans Services: VSOs and Sites",
+        "reviewed_on": "2026-11-16",
+        "scope": "Main office, phones and the eleven visitation sites, all booked through (603) 624-9230; read in full. The page is undated."
+      },
+      {
+        "url": "https://www.dmavs.nh.gov:443/sites/g/files/ehbemt401/files/inline-documents/sonh/dvs-pamphlet-may-2024.pdf",
+        "title": "NH Division of Veterans Services pamphlet (May 2024)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Role of the veterans service officer; 603-624-9230 or 800-622-9230 (NH only); search excerpt."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-15"
+  {
+    "program_id": "nh-adrc",
+    "name": "New Hampshire Aging and Disability Resource Centers (formerly ServiceLink)",
+    "official_url": "https://nhfv.org/?p=31156",
+    "organization": "NH Department of Health and Human Services, Aging and Disability Resource Centers",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "NH",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "A statewide network of Aging and Disability Resource Centers, formerly called ServiceLink, helping older adults, adults with disabilities and family caregivers find services that let them stay independent at home. They are also the entry point for home and community-based care and New Hampshire’s Medicare counseling program. Military service is not required.",
+    "next_step": "Choose a county above for its center, or call the statewide line at 866-634-9412.",
+    "constraints": [
+      "Services are free and confidential, with no financial eligibility requirement; individual programs have their own rules."
+    ],
+    "public_contact": {
+      "phone": "866-634-9412",
+      "phone_label": "NH Aging and Disability Resource Centers, statewide (866-634-9412)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.chesternh.org/node/803"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.chesternh.org/node/803",
+        "title": "Town of Chester, NH: ServiceLink Resource Center",
+        "reviewed_on": "2026-11-16",
+        "scope": "Statewide toll-free (866) 634-9412; entry point for home and community-based care and the SHIP Medicare program; read in full."
+      },
+      {
+        "url": "https://nhfv.org/?p=31156",
+        "title": "New Hampshire Family Voices: Aging and Disability Resource Centers",
+        "reviewed_on": "2026-11-16",
+        "scope": "County offices and phones; read in full."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_page_text",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://dmavs.nh.gov/veterans-services"
+  {
+    "program_id": "nh-ship",
+    "name": "Medicare counseling (NH SHIP) for New Hampshire",
+    "official_url": "https://www.cms.gov/about-cms/contact/directory/nh-ship-servicelink-resource-center/1562141",
+    "organization": "NH SHIP, through the Aging and Disability Resource Centers",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "NH",
+    "needs_supported": [
+      "benefits_and_funding"
+    ],
+    "description": "Free Medicare counseling from New Hampshire’s State Health Insurance Assistance Program, run through the Aging and Disability Resource Centers: plan choices, enrollment, costs and help paying for Medicare.",
+    "next_step": "Call 866-634-9412 and ask for Medicare counseling, or call your county’s center. For Medicare itself, call 800-MEDICARE (800-633-4227).",
+    "constraints": [
+      "Have your Medicare card and drug list ready."
+    ],
+    "public_contact": {
+      "phone": "866-634-9412",
+      "phone_label": "NH SHIP (866-634-9412)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.cms.gov/about-cms/contact/directory/nh-ship-servicelink-resource-center/1562141"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.cms.gov/about-cms/contact/directory/nh-ship-servicelink-resource-center/1562141",
+        "title": "CMS: NH SHIP - ServiceLink Resource Center",
+        "reviewed_on": "2026-11-16",
+        "scope": "Toll-free (866) 634-9412; read in full."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://dmavs.nh.gov/veterans-services",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-15; not direct intake confirmation."
-   }
-  ]
- },
- {
-  "program_id": "nh-ship",
-  "name": "Medicare counseling (SHIP) for New Hampshire",
-  "official_url": "https://www.shiphelp.org/",
-  "organization": "SHIP Technical Assistance Center",
-  "service_area": [
-   "All New Hampshire counties"
-  ],
-  "state": "NH",
-  "needs_supported": [
-   "benefits_and_funding"
-  ],
-  "description": "Free, unbiased Medicare counseling from the State Health Insurance Assistance Program.",
-  "next_step": "Call or use the locator to reach the New Hampshire SHIP and ask for a counseling appointment.",
-  "constraints": [],
-  "public_contact": {
-   "phone": "877-839-2675"
+  {
+    "program_id": "nh-ombudsman",
+    "name": "NH Long-Term Care Ombudsman and adult abuse reporting",
+    "official_url": "https://www.dhhs.nh.gov/report-concern/adult-abuse",
+    "organization": "NH Office of the Long-Term Care Ombudsman; Bureau of Elderly and Adult Services",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "NH",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "description": "Advocacy for residents of nursing and assisted living facilities. Reports of abuse in those facilities go to the ombudsman; other reports of abuse, neglect or exploitation of a vulnerable adult go to Adult Protective Services at the Bureau of Elderly and Adult Services.",
+    "next_step": "For a nursing or assisted living facility, call the ombudsman at 800-442-5640 or 603-271-4375. To report abuse of a vulnerable adult elsewhere, call 800-949-0470 or 603-271-7014 (8 a.m. to 4:30 p.m., Monday to Friday). After hours, weekends and holidays, call 911 or local police.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing agency."
+    ],
+    "public_contact": {
+      "phone": "800-442-5640",
+      "phone_label": "NH Long-Term Care Ombudsman (800-442-5640)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.dhhs.nh.gov/report-concern/adult-abuse"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.dhhs.nh.gov/report-concern/adult-abuse",
+        "title": "NH Department of Health and Human Services: Adult Abuse",
+        "reviewed_on": "2026-11-16",
+        "scope": "Adult Protective Services, ombudsman and after-hours numbers; read in full. The page is undated."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "nh-legal-programs",
+    "name": "Free legal help for New Hampshire veterans and older adults",
+    "official_url": "https://www.nh-cls.org/wp-content/uploads/2024/10/2024-Annual-Report-by-spread.pdf",
+    "organization": "603 Legal Aid; New Hampshire Legal Assistance",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "NH",
+    "resource_role": "legal_aid",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation",
+      "housing"
+    ],
+    "description": "603 Legal Aid is the single point of entry for free civil legal help for eligible New Hampshire residents. New Hampshire Legal Assistance runs the Senior Citizens Law Project for people 60 and older.",
+    "next_step": "Apply at 603legalaid.org or call 603-224-3333. If you are 60 or older, call the Senior Citizens Law Project at 888-353-9944.",
+    "constraints": [
+      "Legal aid screens by income and case type."
+    ],
+    "public_contact": {
+      "phone": "603-224-3333",
+      "phone_label": "603 Legal Aid (603-224-3333)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.nh-cls.org/wp-content/uploads/2024/10/2024-Annual-Report-by-spread.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.nh-cls.org/wp-content/uploads/2024/10/2024-Annual-Report-by-spread.pdf",
+        "title": "NH Campaign for Legal Services: Annual Report",
+        "reviewed_on": "2026-11-16",
+        "scope": "To apply for legal assistance: 603legalaid.org or 1-603-224-3333; search excerpt."
+      },
+      {
+        "url": "https://womenslaw.org/find-help/nh/finding-lawyer/legal-assistance",
+        "title": "WomensLaw.org: New Hampshire legal assistance",
+        "reviewed_on": "2026-11-16",
+        "scope": "New Hampshire Legal Assistance offices; Senior Law Project 1-888-353-9944; search excerpt."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.shiphelp.org/?p=317"
+  {
+    "program_id": "nh-vahealth-systems",
+    "name": "VA health care systems serving New Hampshire",
+    "official_url": "https://www.va.gov/find-locations/?facilityType=health",
+    "organization": "U.S. Department of Veterans Affairs",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "NH",
+    "resource_role": "va_health_system",
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "New Hampshire veterans are served by VA Manchester (Manchester VA Medical Center, 718 Smyth Road; 603-624-4366, toll-free 800-892-8384) and VA White River Junction in Vermont (802-295-9363, toll-free 866-687-8387), which serves Vermont and four neighboring New Hampshire counties and has clinics in Keene and Littleton.",
+    "next_step": "Use VA’s facility locator with your ZIP code to find the closest clinic. Not enrolled yet? Ask a Division of Veterans Services officer for help applying.",
+    "constraints": [
+      "Which system serves you depends on where you live; VA’s locator shows the right clinic."
+    ],
+    "public_contact": {
+      "phone": "603-624-4366",
+      "phone_label": "Manchester VA Medical Center (603-624-4366)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.va.gov/manchester-health-care/contact-us/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.va.gov/manchester-health-care/contact-us/",
+        "title": "VA Manchester health care: Contact us",
+        "reviewed_on": "2026-11-16",
+        "scope": "Manchester VA Medical Center, 718 Smyth Road; local 603-624-4366, toll-free 800-892-8384; search excerpt."
+      },
+      {
+        "url": "https://www.va.gov/white-river-junction-health-care/status/",
+        "title": "VA White River Junction health care: Operating status",
+        "reviewed_on": "2026-11-16",
+        "scope": "Telephone care 802-295-9363 or 866-687-8387; search excerpt."
+      },
+      {
+        "url": "https://brainline.org/node/21944",
+        "title": "BrainLine: White River Junction VA Medical Center",
+        "reviewed_on": "2026-11-16",
+        "scope": "Serves Vermont and the four contiguous New Hampshire counties; clinics include Keene and Littleton; search excerpt."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.shiphelp.org/?p=317",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ]
- },
- {
-  "program_id": "nh-ssvf-12-zz-041",
-  "name": "Veterans Inc.: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Veterans Inc.",
-  "service_area": [
-   "All New Hampshire counties"
-  ],
-  "state": "NH",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 12-ZZ-041): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Belknap County, Carroll County, Cheshire County, Coos County, Grafton County, Hillsborough County, Merrimack County, Rockingham County, Strafford County, Sullivan County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 508-791-1213.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "800-482-2565",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "nh-cil-gsil",
+    "name": "Granite State Independent Living",
+    "organization": "Granite State Independent Living (GSIL)",
+    "official_url": "https://www.gsil.org/",
+    "service_area": [
+      "Belknap",
+      "Carroll",
+      "Cheshire",
+      "Coos",
+      "Grafton",
+      "Hillsborough",
+      "Merrimack",
+      "Rockingham",
+      "Strafford",
+      "Sullivan"
+    ],
+    "state": "NH",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "New Hampshire’s Center for Independent Living serves the whole state. Toll-free: 800-826-3700.",
+      "Offices: 21 Chenell Drive, Concord; 750 Central Avenue, Dover; 105 Castle Street, Keene; 76 Main Street, Littleton; 60 Rogers Street, Manchester (603-518-4600); 14 Celina Avenue, Nashua."
+    ],
+    "public_contact": {
+      "phone": "603-228-9680",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/nh",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/nh"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/nh",
+        "title": "ILRU: New Hampshire CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Granite State Independent Living’s seven offices, phones and counties served (statewide); read in full. The directory is undated."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "nh-ssvf-12-zz-041",
+    "name": "Veterans Inc.: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Veterans Inc.",
+    "service_area": [
+      "Belknap",
+      "Carroll",
+      "Cheshire",
+      "Coos",
+      "Grafton",
+      "Hillsborough",
+      "Merrimack",
+      "Rockingham",
+      "Strafford",
+      "Sullivan"
+    ],
+    "state": "NH",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 12-ZZ-041): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 508-791-1213.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "800-482-2565",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 27",
+        "sheet": "Contacts",
+        "row": 27,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "nh-ssvf-13-nh-115",
+    "name": "Harbor Homes, Inc.: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Harbor Homes, Inc.",
+    "service_area": [
+      "Belknap",
+      "Carroll",
+      "Cheshire",
+      "Coos",
+      "Grafton",
+      "Hillsborough",
+      "Merrimack",
+      "Rockingham",
+      "Strafford",
+      "Sullivan"
+    ],
+    "state": "NH",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 13-NH-115): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 603-704-0906.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "603-305-1122",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 36",
+        "sheet": "Contacts",
+        "row": 36,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 27",
-    "sheet": "Contacts",
-    "row": 27,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "nh-ssvf-13-nh-115",
-  "name": "Harbor Homes, Inc.: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Harbor Homes, Inc.",
-  "service_area": [
-   "All New Hampshire counties"
-  ],
-  "state": "NH",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 13-NH-115): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Belknap County, Carroll County, Cheshire County, Coos County, Grafton County, Hillsborough County, Merrimack County, Rockingham County, Strafford County, Sullivan County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 603-704-0906.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "603-305-1122",
-   "phone_label": "VA-listed SSVF intake"
-  },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
-  },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
-  },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 36",
-    "sheet": "Contacts",
-    "row": 36,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "nh-ssvf-24-ma-460",
-  "name": "Clear Path for Veterans New England Inc.: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Clear Path for Veterans New England Inc.",
-  "service_area": [
-   "All New Hampshire counties"
-  ],
-  "state": "NH",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 24-MA-460): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Belknap County, Carroll County, Cheshire County, Coos County, Grafton County, Hillsborough County, Merrimack County, Rockingham County, Strafford County, Sullivan County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "978-362-9757",
-   "phone_label": "VA-listed SSVF intake"
-  },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
-  },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
-  },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 219",
-    "sheet": "Contacts",
-    "row": 219,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- }
+  {
+    "program_id": "nh-ssvf-24-ma-460",
+    "name": "Clear Path for Veterans New England Inc.: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Clear Path for Veterans New England Inc.",
+    "service_area": [
+      "Belknap",
+      "Carroll",
+      "Cheshire",
+      "Coos",
+      "Grafton",
+      "Hillsborough",
+      "Merrimack",
+      "Rockingham",
+      "Strafford",
+      "Sullivan"
+    ],
+    "state": "NH",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 24-MA-460): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "978-362-9757",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 219",
+        "sheet": "Contacts",
+        "row": 219,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
+  }
 ]

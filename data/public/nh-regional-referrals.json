@@ -1,80 +1,490 @@
 [
- {
-  "program_id": "nh-aging",
-  "name": "Local aging help in New Hampshire (Eldercare Locator)",
-  "official_url": "https://eldercare.acl.gov/home",
-  "organization": "U.S. Administration for Community Living",
-  "service_area": [
-   "All New Hampshire counties"
-  ],
-  "state": "NH",
-  "needs_supported": [
-   "general_navigation",
-   "help_at_home"
-  ],
-  "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-  "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
-  "constraints": [
-   "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "nh-adrc-belknap",
+    "name": "Aging and Disability Resource Center, Belknap County",
+    "organization": "Aging and Disability Resource Center, Belknap County",
+    "official_url": "https://nhfv.org/?p=31156",
+    "state": "NH",
+    "service_area": [
+      "Belknap"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The county’s Aging and Disability Resource Center (formerly ServiceLink): free, confidential help for older adults, adults with disabilities and caregivers to find services at home, plan long-term care and get Medicare counseling. There are no financial eligibility requirements.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the statewide line, 866-634-9412, and ask for your local center. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 67 Water St., Laconia."
+    ],
+    "public_contact": {
+      "phone": "603-528-6945",
+      "phone_label": "Aging and Disability Resource Center (Belknap County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://nhfv.org/?p=31156",
+      "phone_source_url": "https://nhfv.org/?p=31156"
+    },
+    "source_evidence": [
+      {
+        "url": "https://nhfv.org/?p=31156",
+        "title": "New Hampshire Family Voices: Aging and Disability Resource Centers",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each county’s Aging and Disability Resource Center offices and phones; read in full. The Carroll, Cheshire and Hillsborough (Manchester) numbers match the NH Department of Health and Human Services’ own location pages (https://www.dhhs.nh.gov/node/100796, https://www.dhhs.nh.gov/node/100751, https://www.dhhs.nh.gov/node/100776); search excerpts."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "nh-adrc-carroll",
+    "name": "Aging and Disability Resource Center, Carroll County",
+    "organization": "Aging and Disability Resource Center, Carroll County",
+    "official_url": "https://nhfv.org/?p=31156",
+    "state": "NH",
+    "service_area": [
+      "Carroll"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The county’s Aging and Disability Resource Center (formerly ServiceLink): free, confidential help for older adults, adults with disabilities and caregivers to find services at home, plan long-term care and get Medicare counseling. There are no financial eligibility requirements.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the statewide line, 866-634-9412, and ask for your local center. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 448 White Mountain Highway, Tamworth."
+    ],
+    "public_contact": {
+      "phone": "603-323-2043",
+      "phone_label": "Aging and Disability Resource Center (Carroll County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://nhfv.org/?p=31156",
+      "phone_source_url": "https://nhfv.org/?p=31156"
+    },
+    "source_evidence": [
+      {
+        "url": "https://nhfv.org/?p=31156",
+        "title": "New Hampshire Family Voices: Aging and Disability Resource Centers",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each county’s Aging and Disability Resource Center offices and phones; read in full. The Carroll, Cheshire and Hillsborough (Manchester) numbers match the NH Department of Health and Human Services’ own location pages (https://www.dhhs.nh.gov/node/100796, https://www.dhhs.nh.gov/node/100751, https://www.dhhs.nh.gov/node/100776); search excerpts."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.acl.gov/contact"
+  {
+    "program_id": "nh-adrc-cheshire",
+    "name": "Aging and Disability Resource Center, Cheshire County",
+    "organization": "Aging and Disability Resource Center, Cheshire County",
+    "official_url": "https://nhfv.org/?p=31156",
+    "state": "NH",
+    "service_area": [
+      "Cheshire"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The county’s Aging and Disability Resource Center (formerly ServiceLink): free, confidential help for older adults, adults with disabilities and caregivers to find services at home, plan long-term care and get Medicare counseling. There are no financial eligibility requirements.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the statewide line, 866-634-9412, and ask for your local center. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 105 Castle St., Keene."
+    ],
+    "public_contact": {
+      "phone": "603-357-1922",
+      "phone_label": "Aging and Disability Resource Center (Cheshire County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://nhfv.org/?p=31156",
+      "phone_source_url": "https://nhfv.org/?p=31156"
+    },
+    "source_evidence": [
+      {
+        "url": "https://nhfv.org/?p=31156",
+        "title": "New Hampshire Family Voices: Aging and Disability Resource Centers",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each county’s Aging and Disability Resource Center offices and phones; read in full. The Carroll, Cheshire and Hillsborough (Manchester) numbers match the NH Department of Health and Human Services’ own location pages (https://www.dhhs.nh.gov/node/100796, https://www.dhhs.nh.gov/node/100751, https://www.dhhs.nh.gov/node/100776); search excerpts."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.acl.gov/contact",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "aging_agency"
- },
- {
-  "program_id": "nh-ombudsman",
-  "name": "New Hampshire long-term-care ombudsman",
-  "official_url": "https://theconsumervoice.org/get_help",
-  "organization": "National Long-Term Care Ombudsman Resource Center",
-  "service_area": [
-   "All New Hampshire counties"
-  ],
-  "state": "NH",
-  "needs_supported": [
-   "resident_rights",
-   "general_navigation"
-  ],
-  "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-  "next_step": "Use the locator to find the New Hampshire program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
-  "constraints": [
-   "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "nh-adrc-coos",
+    "name": "Aging and Disability Resource Center, Coos County",
+    "organization": "Aging and Disability Resource Center, Coos County",
+    "official_url": "https://nhfv.org/?p=31156",
+    "state": "NH",
+    "service_area": [
+      "Coos"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The county’s Aging and Disability Resource Center (formerly ServiceLink): free, confidential help for older adults, adults with disabilities and caregivers to find services at home, plan long-term care and get Medicare counseling. There are no financial eligibility requirements.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the statewide line, 866-634-9412, and ask for your local center. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 610 Sullivan St., Suite 6, Berlin."
+    ],
+    "public_contact": {
+      "phone": "603-752-6407",
+      "phone_label": "Aging and Disability Resource Center (Coos County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://nhfv.org/?p=31156",
+      "phone_source_url": "https://nhfv.org/?p=31156"
+    },
+    "source_evidence": [
+      {
+        "url": "https://nhfv.org/?p=31156",
+        "title": "New Hampshire Family Voices: Aging and Disability Resource Centers",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each county’s Aging and Disability Resource Center offices and phones; read in full. The Carroll, Cheshire and Hillsborough (Manchester) numbers match the NH Department of Health and Human Services’ own location pages (https://www.dhhs.nh.gov/node/100796, https://www.dhhs.nh.gov/node/100751, https://www.dhhs.nh.gov/node/100776); search excerpts."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "nh-adrc-grafton",
+    "name": "Aging and Disability Resource Center, Grafton County",
+    "organization": "Aging and Disability Resource Center, Grafton County",
+    "official_url": "https://nhfv.org/?p=31156",
+    "state": "NH",
+    "service_area": [
+      "Grafton"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The county’s Aging and Disability Resource Center (formerly ServiceLink): free, confidential help for older adults, adults with disabilities and caregivers to find services at home, plan long-term care and get Medicare counseling. There are no financial eligibility requirements.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the statewide line, 866-634-9412, and ask for your local center. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Littleton office: 262 Cottage St., Suite G-25, Mt. Eustis Commons. Lebanon office: 10 Campbell St., 603-448-1558."
+    ],
+    "public_contact": {
+      "phone": "603-444-4498",
+      "phone_label": "Aging and Disability Resource Center (Grafton County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://nhfv.org/?p=31156",
+      "phone_source_url": "https://nhfv.org/?p=31156"
+    },
+    "source_evidence": [
+      {
+        "url": "https://nhfv.org/?p=31156",
+        "title": "New Hampshire Family Voices: Aging and Disability Resource Centers",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each county’s Aging and Disability Resource Center offices and phones; read in full. The Carroll, Cheshire and Hillsborough (Manchester) numbers match the NH Department of Health and Human Services’ own location pages (https://www.dhhs.nh.gov/node/100796, https://www.dhhs.nh.gov/node/100751, https://www.dhhs.nh.gov/node/100776); search excerpts."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
+  {
+    "program_id": "nh-adrc-hillsborough",
+    "name": "Aging and Disability Resource Center, Hillsborough County",
+    "organization": "Aging and Disability Resource Center, Hillsborough County",
+    "official_url": "https://nhfv.org/?p=31156",
+    "state": "NH",
+    "service_area": [
+      "Hillsborough"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The county’s Aging and Disability Resource Center (formerly ServiceLink): free, confidential help for older adults, adults with disabilities and caregivers to find services at home, plan long-term care and get Medicare counseling. There are no financial eligibility requirements.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the statewide line, 866-634-9412, and ask for your local center. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Manchester office: 555 Auburn St. Nashua office: 70 Temple St., 603-598-4709."
+    ],
+    "public_contact": {
+      "phone": "603-644-2240",
+      "phone_label": "Aging and Disability Resource Center (Hillsborough County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://nhfv.org/?p=31156",
+      "phone_source_url": "https://nhfv.org/?p=31156"
+    },
+    "source_evidence": [
+      {
+        "url": "https://nhfv.org/?p=31156",
+        "title": "New Hampshire Family Voices: Aging and Disability Resource Centers",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each county’s Aging and Disability Resource Center offices and phones; read in full. The Carroll, Cheshire and Hillsborough (Manchester) numbers match the NH Department of Health and Human Services’ own location pages (https://www.dhhs.nh.gov/node/100796, https://www.dhhs.nh.gov/node/100751, https://www.dhhs.nh.gov/node/100776); search excerpts."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "ombudsman"
- }
+  {
+    "program_id": "nh-adrc-merrimack",
+    "name": "Aging and Disability Resource Center, Merrimack County",
+    "organization": "Aging and Disability Resource Center, Merrimack County",
+    "official_url": "https://nhfv.org/?p=31156",
+    "state": "NH",
+    "service_area": [
+      "Merrimack"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The county’s Aging and Disability Resource Center (formerly ServiceLink): free, confidential help for older adults, adults with disabilities and caregivers to find services at home, plan long-term care and get Medicare counseling. There are no financial eligibility requirements.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the statewide line, 866-634-9412, and ask for your local center. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 2 Industrial Park Drive, Concord."
+    ],
+    "public_contact": {
+      "phone": "603-228-6625",
+      "phone_label": "Aging and Disability Resource Center (Merrimack County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://nhfv.org/?p=31156",
+      "phone_source_url": "https://nhfv.org/?p=31156"
+    },
+    "source_evidence": [
+      {
+        "url": "https://nhfv.org/?p=31156",
+        "title": "New Hampshire Family Voices: Aging and Disability Resource Centers",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each county’s Aging and Disability Resource Center offices and phones; read in full. The Carroll, Cheshire and Hillsborough (Manchester) numbers match the NH Department of Health and Human Services’ own location pages (https://www.dhhs.nh.gov/node/100796, https://www.dhhs.nh.gov/node/100751, https://www.dhhs.nh.gov/node/100776); search excerpts."
+      }
+    ]
+  },
+  {
+    "program_id": "nh-adrc-rockingham",
+    "name": "Aging and Disability Resource Center, Rockingham County",
+    "organization": "Aging and Disability Resource Center, Rockingham County",
+    "official_url": "https://nhfv.org/?p=31156",
+    "state": "NH",
+    "service_area": [
+      "Rockingham"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The county’s Aging and Disability Resource Center (formerly ServiceLink): free, confidential help for older adults, adults with disabilities and caregivers to find services at home, plan long-term care and get Medicare counseling. There are no financial eligibility requirements.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the statewide line, 866-634-9412, and ask for your local center. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Stratham office: 72 Portsmouth Ave., Suite 113. Atkinson office: 8 Commerce Drive, Unit 802, 603-893-9769."
+    ],
+    "public_contact": {
+      "phone": "603-334-6594",
+      "phone_label": "Aging and Disability Resource Center (Rockingham County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://nhfv.org/?p=31156",
+      "phone_source_url": "https://nhfv.org/?p=31156"
+    },
+    "source_evidence": [
+      {
+        "url": "https://nhfv.org/?p=31156",
+        "title": "New Hampshire Family Voices: Aging and Disability Resource Centers",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each county’s Aging and Disability Resource Center offices and phones; read in full. The Carroll, Cheshire and Hillsborough (Manchester) numbers match the NH Department of Health and Human Services’ own location pages (https://www.dhhs.nh.gov/node/100796, https://www.dhhs.nh.gov/node/100751, https://www.dhhs.nh.gov/node/100776); search excerpts."
+      }
+    ]
+  },
+  {
+    "program_id": "nh-adrc-strafford",
+    "name": "Aging and Disability Resource Center, Strafford County",
+    "organization": "Aging and Disability Resource Center, Strafford County",
+    "official_url": "https://nhfv.org/?p=31156",
+    "state": "NH",
+    "service_area": [
+      "Strafford"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The county’s Aging and Disability Resource Center (formerly ServiceLink): free, confidential help for older adults, adults with disabilities and caregivers to find services at home, plan long-term care and get Medicare counseling. There are no financial eligibility requirements.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the statewide line, 866-634-9412, and ask for your local center. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: Community Partners, 25 Old Dover Rd., Rochester."
+    ],
+    "public_contact": {
+      "phone": "603-332-7398",
+      "phone_label": "Aging and Disability Resource Center (Strafford County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://nhfv.org/?p=31156",
+      "phone_source_url": "https://nhfv.org/?p=31156"
+    },
+    "source_evidence": [
+      {
+        "url": "https://nhfv.org/?p=31156",
+        "title": "New Hampshire Family Voices: Aging and Disability Resource Centers",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each county’s Aging and Disability Resource Center offices and phones; read in full. The Carroll, Cheshire and Hillsborough (Manchester) numbers match the NH Department of Health and Human Services’ own location pages (https://www.dhhs.nh.gov/node/100796, https://www.dhhs.nh.gov/node/100751, https://www.dhhs.nh.gov/node/100776); search excerpts."
+      }
+    ]
+  },
+  {
+    "program_id": "nh-adrc-sullivan",
+    "name": "Aging and Disability Resource Center, Sullivan County",
+    "organization": "Aging and Disability Resource Center, Sullivan County",
+    "official_url": "https://nhfv.org/?p=31156",
+    "state": "NH",
+    "service_area": [
+      "Sullivan"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The county’s Aging and Disability Resource Center (formerly ServiceLink): free, confidential help for older adults, adults with disabilities and caregivers to find services at home, plan long-term care and get Medicare counseling. There are no financial eligibility requirements.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the statewide line, 866-634-9412, and ask for your local center. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 224 Elm St., Claremont."
+    ],
+    "public_contact": {
+      "phone": "603-542-5177",
+      "phone_label": "Aging and Disability Resource Center (Sullivan County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://nhfv.org/?p=31156",
+      "phone_source_url": "https://nhfv.org/?p=31156"
+    },
+    "source_evidence": [
+      {
+        "url": "https://nhfv.org/?p=31156",
+        "title": "New Hampshire Family Voices: Aging and Disability Resource Centers",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each county’s Aging and Disability Resource Center offices and phones; read in full. The Carroll, Cheshire and Hillsborough (Manchester) numbers match the NH Department of Health and Human Services’ own location pages (https://www.dhhs.nh.gov/node/100796, https://www.dhhs.nh.gov/node/100751, https://www.dhhs.nh.gov/node/100776); search excerpts."
+      }
+    ]
+  },
+  {
+    "program_id": "nh-omb-state",
+    "name": "NH Office of the Long-Term Care Ombudsman",
+    "organization": "NH Office of the Long-Term Care Ombudsman",
+    "official_url": "https://www.dhhs.nh.gov/report-concern/adult-abuse",
+    "state": "NH",
+    "service_area": [
+      "Belknap",
+      "Carroll",
+      "Cheshire",
+      "Coos",
+      "Grafton",
+      "Hillsborough",
+      "Merrimack",
+      "Rockingham",
+      "Strafford",
+      "Sullivan"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Also: 603-271-4375."
+    ],
+    "public_contact": {
+      "phone": "800-442-5640",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.dhhs.nh.gov/report-concern/adult-abuse",
+      "phone_source_url": "https://www.dhhs.nh.gov/report-concern/adult-abuse"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.dhhs.nh.gov/report-concern/adult-abuse",
+        "title": "NH Department of Health and Human Services: Adult Abuse",
+        "reviewed_on": "2026-11-16",
+        "scope": "For nursing or assisted living facilities, contact the Long Term Care Ombudsman at (800) 442-5640 or (603) 271-4375; read in full. The office is statewide, so every county shows it."
+      },
+      {
+        "url": "https://www.gencourt.state.nh.us/rules/State_Agencies/omb400.html",
+        "title": "NH Code of Administrative Rules, Chapter Omb 400: Office of the Long-Term Care Ombudsman",
+        "reviewed_on": "2026-11-16",
+        "scope": "Office address (Brown Building, 129 Pleasant Street, Concord) and phones (603) 271-4375 or 1 (800) 442-5640; search excerpt."
+      }
+    ]
+  }
 ]
