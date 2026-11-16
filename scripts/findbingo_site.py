@@ -59,6 +59,7 @@ def validate(states, venues, licensed, zips):
             assert type(x['day']) is int and 0 <= x['day'] <= 6, v['id']
             assert TIME.fullmatch(x['start']) and TIME.fullmatch(x['end']), v['id']
             assert x['organization'] in v['organizations'], v['id']
+        assert all(type(n) is str and n for n in v.get('notes', [])), v['id']
         assert date.fromisoformat(v['reviewed_on']) and v['sources'] and all(x['url'].startswith('https://') for x in v['sources'])
     for r in licensed:
         assert r['id'] not in ids and r['id'] == 'in-' + r['license_number'], r['id']
@@ -100,7 +101,7 @@ def make_findbingo(root):
     data = {
         'generated_on': generated_on,
         'states': [_public_state(s) for s in states],
-        'venues': [_public_record(v, ('id', 'state', 'name', 'organizations', 'address', 'city', 'zip', 'county', 'sessions', 'reviewed_on')) for v in venues],
+        'venues': [_public_record(v, ('id', 'state', 'name', 'organizations', 'address', 'city', 'zip', 'county', 'sessions', 'notes', 'reviewed_on')) for v in venues],
         'licensed': [_public_record(r, ('id', 'state', 'name', 'address', 'city', 'zip', 'county', 'license_number', 'license_type', 'license_expires', 'reviewed_on')) for r in licensed],
     }
     data_json = json.dumps(data, ensure_ascii=False, separators=(',', ':'))

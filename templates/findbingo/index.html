@@ -119,7 +119,7 @@ function venueCard(v,today,day){const s=STATES[v.state]||{},next=nextGame(v,day,
  +'<div class="big-actions"><a class="solid" href="'+esc(mapURL(v.name+' '+v.address))+'" target="_blank" rel="noopener noreferrer">Look up phone number ↗</a><a class="outline" href="'+esc(mapURL(v.address))+'" target="_blank" rel="noopener noreferrer">Directions ↗</a></div>'
  +'<p class="address">'+esc(v.address)+' · '+esc(v.county)+' County</p>'
  +(many?'<p class="small">Bingo here is run by '+esc(v.organizations.join(', '))+'.</p>':'')
- +'<details class="sources"><summary>Where this comes from · checked '+esc(shortDate(v.reviewed_on))+'</summary><p>'+sourceLine(s)+'</p></details>'
+ +'<details class="sources"><summary>Where this comes from · checked '+esc(shortDate(v.reviewed_on))+'</summary><p>'+sourceLine(s)+'</p>'+(v.notes||[]).map(n=>'<p>'+esc(n)+'</p>').join('')+'</details>'
  +'<p class="small-links"><a href="'+esc(reportURL(v))+'">Report a change</a></p></article>'}
 function licensedCard(r,today){const s=STATES[r.state]||{};
  return '<article id="'+esc(r.id)+'"><p><span class="badge muted">Licensed for bingo · game days not posted</span> <span class="badge state">'+esc(s.name||r.state)+'</span></p><h3>'+esc(r.name)+'</h3>'
