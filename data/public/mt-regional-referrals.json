@@ -1,80 +1,658 @@
 [
- {
-  "program_id": "mt-aging",
-  "name": "Local aging help in Montana (Eldercare Locator)",
-  "official_url": "https://eldercare.acl.gov/home",
-  "organization": "U.S. Administration for Community Living",
-  "service_area": [
-   "All Montana counties"
-  ],
-  "state": "MT",
-  "needs_supported": [
-   "general_navigation",
-   "help_at_home"
-  ],
-  "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-  "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
-  "constraints": [
-   "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "mt-aaa-1",
+    "name": "Action for Eastern Montana, Area I Agency on Aging (Glendive)",
+    "organization": "Action for Eastern Montana, Area I Agency on Aging (Glendive) (Area I)",
+    "official_url": "https://www.dphhs.mt.gov/SLTC/aging/adrc",
+    "state": "MT",
+    "service_area": [
+      "Carter",
+      "Custer",
+      "Daniels",
+      "Dawson",
+      "Fallon",
+      "Garfield",
+      "McCone",
+      "Phillips",
+      "Powder River",
+      "Prairie",
+      "Richland",
+      "Roosevelt",
+      "Rosebud",
+      "Sheridan",
+      "Treasure",
+      "Valley",
+      "Wibaux"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide line, 1-800-551-3191, also rings your local Area Agency on Aging. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "The state’s ADRC page lists the Fort Peck Reservation for Area I; the state ombudsman directory names Roosevelt County with Area I."
+    ],
+    "public_contact": {
+      "phone": "406-377-3564",
+      "phone_label": "Area Agency on Aging, Area I"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.dphhs.mt.gov/SLTC/aging/adrc",
+      "phone_source_url": "https://www.dphhs.mt.gov/SLTC/aging/adrc"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.dphhs.mt.gov/SLTC/aging/adrc",
+        "title": "Montana DPHHS: Aging and Disability Resource Centers",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each Area Agency on Aging ADRC with its city, phone and the counties it serves; read in full; undated. Phones and addresses were checked against the Area Agency on Aging contact list (https://prod-dphhs.mt.gov/assets/sltc/AAA/AAAContacts.pdf; read in full; updated August 2026), which gives the statewide line, 1-800-551-3191. Area III is not on the ADRC page; see its card."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "mt-aaa-2",
+    "name": "Area II Agency on Aging (Roundup)",
+    "organization": "Area II Agency on Aging (Roundup) (Area II)",
+    "official_url": "https://www.dphhs.mt.gov/SLTC/aging/adrc",
+    "state": "MT",
+    "service_area": [
+      "Big Horn",
+      "Carbon",
+      "Fergus",
+      "Golden Valley",
+      "Judith Basin",
+      "Musselshell",
+      "Petroleum",
+      "Stillwater",
+      "Sweet Grass",
+      "Wheatland",
+      "Yellowstone"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide line, 1-800-551-3191, also rings your local Area Agency on Aging. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Yellowstone County: The Alliance Resource Center of Yellowstone County, 406-259-5212. Area II also serves the Crow and Northern Cheyenne reservations."
+    ],
+    "public_contact": {
+      "phone": "406-323-1320",
+      "phone_label": "Area Agency on Aging, Area II"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.dphhs.mt.gov/SLTC/aging/adrc",
+      "phone_source_url": "https://www.dphhs.mt.gov/SLTC/aging/adrc"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.dphhs.mt.gov/SLTC/aging/adrc",
+        "title": "Montana DPHHS: Aging and Disability Resource Centers",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each Area Agency on Aging ADRC with its city, phone and the counties it serves; read in full; undated. Phones and addresses were checked against the Area Agency on Aging contact list (https://prod-dphhs.mt.gov/assets/sltc/AAA/AAAContacts.pdf; read in full; updated August 2026), which gives the statewide line, 1-800-551-3191. Area III is not on the ADRC page; see its card."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.acl.gov/contact"
+  {
+    "program_id": "mt-aaa-3",
+    "name": "North Central Area Agency on Aging (Conrad)",
+    "organization": "North Central Area Agency on Aging (Conrad) (Area III)",
+    "official_url": "https://www.dphhs.mt.gov/SLTC/aging/adrc",
+    "state": "MT",
+    "service_area": [
+      "Blaine",
+      "Chouteau",
+      "Glacier",
+      "Hill",
+      "Liberty",
+      "Pondera",
+      "Teton",
+      "Toole"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide line, 1-800-551-3191, also rings your local Area Agency on Aging. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "The state’s ADRC page does not list Area III’s counties. These eight are the counties no other agency lists; the state ombudsman directory (February 2024) grouped the same eight, with Cascade, as its Area III region."
+    ],
+    "public_contact": {
+      "phone": "406-271-7553",
+      "phone_label": "Area Agency on Aging, Area III"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.dphhs.mt.gov/SLTC/aging/adrc",
+      "phone_source_url": "https://www.dphhs.mt.gov/SLTC/aging/adrc"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.dphhs.mt.gov/SLTC/aging/adrc",
+        "title": "Montana DPHHS: Aging and Disability Resource Centers",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each Area Agency on Aging ADRC with its city, phone and the counties it serves; read in full; undated. Phones and addresses were checked against the Area Agency on Aging contact list (https://prod-dphhs.mt.gov/assets/sltc/AAA/AAAContacts.pdf; read in full; updated August 2026), which gives the statewide line, 1-800-551-3191. Area III is not on the ADRC page; see its card."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.acl.gov/contact",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "aging_agency"
- },
- {
-  "program_id": "mt-ombudsman",
-  "name": "Montana long-term-care ombudsman",
-  "official_url": "https://theconsumervoice.org/get_help",
-  "organization": "National Long-Term Care Ombudsman Resource Center",
-  "service_area": [
-   "All Montana counties"
-  ],
-  "state": "MT",
-  "needs_supported": [
-   "resident_rights",
-   "general_navigation"
-  ],
-  "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-  "next_step": "Use the locator to find the Montana program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
-  "constraints": [
-   "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "mt-aaa-4",
+    "name": "Area IV Agency on Aging (Helena)",
+    "organization": "Area IV Agency on Aging (Helena) (Area IV)",
+    "official_url": "https://www.dphhs.mt.gov/SLTC/aging/adrc",
+    "state": "MT",
+    "service_area": [
+      "Broadwater",
+      "Gallatin",
+      "Jefferson",
+      "Lewis and Clark",
+      "Meagher",
+      "Park"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide line, 1-800-551-3191, also rings your local Area Agency on Aging. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program."
+    ],
+    "public_contact": {
+      "phone": "406-447-1680",
+      "phone_label": "Area Agency on Aging, Area IV"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.dphhs.mt.gov/SLTC/aging/adrc",
+      "phone_source_url": "https://www.dphhs.mt.gov/SLTC/aging/adrc"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.dphhs.mt.gov/SLTC/aging/adrc",
+        "title": "Montana DPHHS: Aging and Disability Resource Centers",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each Area Agency on Aging ADRC with its city, phone and the counties it serves; read in full; undated. Phones and addresses were checked against the Area Agency on Aging contact list (https://prod-dphhs.mt.gov/assets/sltc/AAA/AAAContacts.pdf; read in full; updated August 2026), which gives the statewide line, 1-800-551-3191. Area III is not on the ADRC page; see its card."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "mt-aaa-5",
+    "name": "Southwest Montana Aging and Disability Services, Area V Agency on Aging (Butte)",
+    "organization": "Southwest Montana Aging and Disability Services, Area V Agency on Aging (Butte) (Area V)",
+    "official_url": "https://www.dphhs.mt.gov/SLTC/aging/adrc",
+    "state": "MT",
+    "service_area": [
+      "Beaverhead",
+      "Deer Lodge",
+      "Granite",
+      "Madison",
+      "Powell",
+      "Silver Bow"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide line, 1-800-551-3191, also rings your local Area Agency on Aging. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program."
+    ],
+    "public_contact": {
+      "phone": "406-782-5555",
+      "phone_label": "Area Agency on Aging, Area V"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.dphhs.mt.gov/SLTC/aging/adrc",
+      "phone_source_url": "https://www.dphhs.mt.gov/SLTC/aging/adrc"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.dphhs.mt.gov/SLTC/aging/adrc",
+        "title": "Montana DPHHS: Aging and Disability Resource Centers",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each Area Agency on Aging ADRC with its city, phone and the counties it serves; read in full; undated. Phones and addresses were checked against the Area Agency on Aging contact list (https://prod-dphhs.mt.gov/assets/sltc/AAA/AAAContacts.pdf; read in full; updated August 2026), which gives the statewide line, 1-800-551-3191. Area III is not on the ADRC page; see its card."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
+  {
+    "program_id": "mt-aaa-6",
+    "name": "Western Montana Area VI Agency on Aging (Polson)",
+    "organization": "Western Montana Area VI Agency on Aging (Polson) (Area VI)",
+    "official_url": "https://www.dphhs.mt.gov/SLTC/aging/adrc",
+    "state": "MT",
+    "service_area": [
+      "Lake",
+      "Lincoln",
+      "Mineral",
+      "Sanders"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide line, 1-800-551-3191, also rings your local Area Agency on Aging. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Area VI also serves the Salish Kootenai (Flathead) Reservation."
+    ],
+    "public_contact": {
+      "phone": "406-883-7284",
+      "phone_label": "Area Agency on Aging, Area VI"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.dphhs.mt.gov/SLTC/aging/adrc",
+      "phone_source_url": "https://www.dphhs.mt.gov/SLTC/aging/adrc"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.dphhs.mt.gov/SLTC/aging/adrc",
+        "title": "Montana DPHHS: Aging and Disability Resource Centers",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each Area Agency on Aging ADRC with its city, phone and the counties it serves; read in full; undated. Phones and addresses were checked against the Area Agency on Aging contact list (https://prod-dphhs.mt.gov/assets/sltc/AAA/AAAContacts.pdf; read in full; updated August 2026), which gives the statewide line, 1-800-551-3191. Area III is not on the ADRC page; see its card."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "ombudsman"
- }
+  {
+    "program_id": "mt-aaa-7",
+    "name": "Missoula Aging Services, Area VII Agency on Aging",
+    "organization": "Missoula Aging Services, Area VII Agency on Aging (Area VII)",
+    "official_url": "https://www.dphhs.mt.gov/SLTC/aging/adrc",
+    "state": "MT",
+    "service_area": [
+      "Missoula",
+      "Ravalli"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide line, 1-800-551-3191, also rings your local Area Agency on Aging. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program."
+    ],
+    "public_contact": {
+      "phone": "406-728-7682",
+      "phone_label": "Area Agency on Aging, Area VII"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.dphhs.mt.gov/SLTC/aging/adrc",
+      "phone_source_url": "https://www.dphhs.mt.gov/SLTC/aging/adrc"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.dphhs.mt.gov/SLTC/aging/adrc",
+        "title": "Montana DPHHS: Aging and Disability Resource Centers",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each Area Agency on Aging ADRC with its city, phone and the counties it serves; read in full; undated. Phones and addresses were checked against the Area Agency on Aging contact list (https://prod-dphhs.mt.gov/assets/sltc/AAA/AAAContacts.pdf; read in full; updated August 2026), which gives the statewide line, 1-800-551-3191. Area III is not on the ADRC page; see its card."
+      }
+    ]
+  },
+  {
+    "program_id": "mt-aaa-8",
+    "name": "Cascade County Aging Services, Area VIII Agency on Aging (Great Falls)",
+    "organization": "Cascade County Aging Services, Area VIII Agency on Aging (Great Falls) (Area VIII)",
+    "official_url": "https://www.dphhs.mt.gov/SLTC/aging/adrc",
+    "state": "MT",
+    "service_area": [
+      "Cascade"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide line, 1-800-551-3191, also rings your local Area Agency on Aging. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program."
+    ],
+    "public_contact": {
+      "phone": "406-454-6990",
+      "phone_label": "Area Agency on Aging, Area VIII"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.dphhs.mt.gov/SLTC/aging/adrc",
+      "phone_source_url": "https://www.dphhs.mt.gov/SLTC/aging/adrc"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.dphhs.mt.gov/SLTC/aging/adrc",
+        "title": "Montana DPHHS: Aging and Disability Resource Centers",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each Area Agency on Aging ADRC with its city, phone and the counties it serves; read in full; undated. Phones and addresses were checked against the Area Agency on Aging contact list (https://prod-dphhs.mt.gov/assets/sltc/AAA/AAAContacts.pdf; read in full; updated August 2026), which gives the statewide line, 1-800-551-3191. Area III is not on the ADRC page; see its card."
+      }
+    ]
+  },
+  {
+    "program_id": "mt-aaa-9",
+    "name": "Area IX Agency on Aging (Kalispell)",
+    "organization": "Area IX Agency on Aging (Kalispell) (Area IX)",
+    "official_url": "https://www.dphhs.mt.gov/SLTC/aging/adrc",
+    "state": "MT",
+    "service_area": [
+      "Flathead"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide line, 1-800-551-3191, also rings your local Area Agency on Aging. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program."
+    ],
+    "public_contact": {
+      "phone": "406-758-5730",
+      "phone_label": "Area Agency on Aging, Area IX"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.dphhs.mt.gov/SLTC/aging/adrc",
+      "phone_source_url": "https://www.dphhs.mt.gov/SLTC/aging/adrc"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.dphhs.mt.gov/SLTC/aging/adrc",
+        "title": "Montana DPHHS: Aging and Disability Resource Centers",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each Area Agency on Aging ADRC with its city, phone and the counties it serves; read in full; undated. Phones and addresses were checked against the Area Agency on Aging contact list (https://prod-dphhs.mt.gov/assets/sltc/AAA/AAAContacts.pdf; read in full; updated August 2026), which gives the statewide line, 1-800-551-3191. Area III is not on the ADRC page; see its card."
+      }
+    ]
+  },
+  {
+    "program_id": "mt-omb-area1",
+    "name": "Montana Long-Term Care Ombudsman, Area I region (Glendive)",
+    "organization": "Montana Long-Term Care Ombudsman, Area I region (Glendive)",
+    "official_url": "https://dphhs.mt.gov/assets/sltc/Ombudsman/OmbudsmanDirectory.pdf",
+    "state": "MT",
+    "service_area": [
+      "Carter",
+      "Custer",
+      "Daniels",
+      "Dawson",
+      "Fallon",
+      "Garfield",
+      "McCone",
+      "Phillips",
+      "Powder River",
+      "Prairie",
+      "Richland",
+      "Roosevelt",
+      "Rosebud",
+      "Sheridan",
+      "Treasure",
+      "Valley",
+      "Wibaux"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "406-939-2229",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://dphhs.mt.gov/assets/sltc/Ombudsman/OmbudsmanDirectory.pdf",
+      "phone_source_url": "https://dphhs.mt.gov/assets/sltc/Ombudsman/OmbudsmanDirectory.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dphhs.mt.gov/assets/sltc/Ombudsman/OmbudsmanDirectory.pdf",
+        "title": "Montana DPHHS: Long-Term Care Ombudsman directory (updated August 2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Regional ombudsmen for Areas I, II, and IV and V, each with phone and counties, and the State Long-Term Care Ombudsman, (406) 444-3285; read in full; updated August 2026."
+      }
+    ]
+  },
+  {
+    "program_id": "mt-omb-area2",
+    "name": "Montana Long-Term Care Ombudsman, Area II region (Edgar)",
+    "organization": "Montana Long-Term Care Ombudsman, Area II region (Edgar)",
+    "official_url": "https://dphhs.mt.gov/assets/sltc/Ombudsman/OmbudsmanDirectory.pdf",
+    "state": "MT",
+    "service_area": [
+      "Big Horn",
+      "Carbon",
+      "Fergus",
+      "Golden Valley",
+      "Judith Basin",
+      "Musselshell",
+      "Petroleum",
+      "Stillwater",
+      "Sweet Grass",
+      "Wheatland",
+      "Yellowstone"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "406-860-9993",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://dphhs.mt.gov/assets/sltc/Ombudsman/OmbudsmanDirectory.pdf",
+      "phone_source_url": "https://dphhs.mt.gov/assets/sltc/Ombudsman/OmbudsmanDirectory.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dphhs.mt.gov/assets/sltc/Ombudsman/OmbudsmanDirectory.pdf",
+        "title": "Montana DPHHS: Long-Term Care Ombudsman directory (updated August 2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Regional ombudsmen for Areas I, II, and IV and V, each with phone and counties, and the State Long-Term Care Ombudsman, (406) 444-3285; read in full; updated August 2026."
+      }
+    ]
+  },
+  {
+    "program_id": "mt-omb-area45",
+    "name": "Montana Long-Term Care Ombudsman, Areas IV and V region (Butte)",
+    "organization": "Montana Long-Term Care Ombudsman, Areas IV and V region (Butte)",
+    "official_url": "https://dphhs.mt.gov/assets/sltc/Ombudsman/OmbudsmanDirectory.pdf",
+    "state": "MT",
+    "service_area": [
+      "Broadwater",
+      "Gallatin",
+      "Jefferson",
+      "Lewis and Clark",
+      "Meagher",
+      "Park",
+      "Beaverhead",
+      "Deer Lodge",
+      "Granite",
+      "Madison",
+      "Powell",
+      "Silver Bow"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "406-481-1412",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://dphhs.mt.gov/assets/sltc/Ombudsman/OmbudsmanDirectory.pdf",
+      "phone_source_url": "https://dphhs.mt.gov/assets/sltc/Ombudsman/OmbudsmanDirectory.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dphhs.mt.gov/assets/sltc/Ombudsman/OmbudsmanDirectory.pdf",
+        "title": "Montana DPHHS: Long-Term Care Ombudsman directory (updated August 2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Regional ombudsmen for Areas I, II, and IV and V, each with phone and counties, and the State Long-Term Care Ombudsman, (406) 444-3285; read in full; updated August 2026."
+      }
+    ]
+  },
+  {
+    "program_id": "mt-omb-state",
+    "name": "Montana State Long-Term Care Ombudsman (Helena)",
+    "organization": "Montana State Long-Term Care Ombudsman (Helena)",
+    "official_url": "https://dphhs.mt.gov/assets/sltc/Ombudsman/OmbudsmanDirectory.pdf",
+    "state": "MT",
+    "service_area": [
+      "Blaine",
+      "Cascade",
+      "Chouteau",
+      "Flathead",
+      "Glacier",
+      "Hill",
+      "Lake",
+      "Liberty",
+      "Lincoln",
+      "Mineral",
+      "Missoula",
+      "Pondera",
+      "Ravalli",
+      "Sanders",
+      "Teton",
+      "Toole"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "The state directory names no regional ombudsman for this county, so the card shows the State Long-Term Care Ombudsman."
+    ],
+    "public_contact": {
+      "phone": "406-444-3285",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.dphhs.mt.gov/SLTC/aging/adrc",
+      "phone_source_url": "https://dphhs.mt.gov/assets/sltc/Ombudsman/OmbudsmanDirectory.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dphhs.mt.gov/assets/sltc/Ombudsman/OmbudsmanDirectory.pdf",
+        "title": "Montana DPHHS: Long-Term Care Ombudsman directory (updated August 2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Regional ombudsmen for Areas I, II, and IV and V, each with phone and counties, and the State Long-Term Care Ombudsman, (406) 444-3285; read in full; updated August 2026."
+      },
+      {
+        "url": "https://www.dphhs.mt.gov/SLTC/aging/adrc",
+        "title": "Montana DPHHS: Aging and Disability Resource Centers",
+        "reviewed_on": "2026-11-16",
+        "scope": "Counties in each aging region."
+      }
+    ]
+  }
 ]

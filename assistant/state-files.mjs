@@ -44,7 +44,8 @@ export const STATES=Object.freeze({
   "RI": "Rhode Island",
   "VT": "Vermont",
   "WY": "Wyoming",
-  "DC": "District of Columbia"
+  "DC": "District of Columbia",
+  "MT": "Montana"
 });
 export const STATE_FILES=Object.freeze({
   "OH": [
@@ -222,6 +223,10 @@ export const STATE_FILES=Object.freeze({
   "DC": [
     "data/public/district-of-columbia-resources.json",
     "data/public/district-of-columbia-county-veterans-offices.json"
+  ],
+  "MT": [
+    "data/public/montana-resources.json",
+    "data/public/montana-county-veterans-offices.json"
   ]
 });
 export const localityLabel=row=>row?(["independent_city","statewide"].includes(row.county_type)?row.county:row.county+(row.county_type==="parish"?" Parish":" County")):"";
