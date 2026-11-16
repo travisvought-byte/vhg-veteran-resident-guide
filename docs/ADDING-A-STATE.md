@@ -33,7 +33,7 @@ Rules the checks enforce:
 - Every county appears in at least one aging agency's `service_area`.
 - Every county is covered by a county-mapped ombudsman or a statewide ombudsman program.
 - Every resource has an `https` official link, a `record_status` and a `last_reviewed_on` date.
-- `service_area` values are exact county names from the offices file, or `statewide`.
+- `service_area` values are exact county names from the offices file, or `statewide`. Use the county's correct spelling ("Doña Ana"); the builder matches VA's SSVF workbook, which drops accents, to the sheet's spelling.
 - No program id starts with another registered state's code. By convention, ids start with the state's own lowercase code (`in-claims`, `in-aging-region-1`).
 
 When a county has the same name as the state (New York, Ohio and Utah counties), its records stay county-limited automatically. Only list a name in `statewide_area_names` if the state's records use it to mean statewide.

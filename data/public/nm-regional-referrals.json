@@ -1,80 +1,195 @@
 [
- {
-  "program_id": "nm-aging",
-  "name": "Local aging help in New Mexico (Eldercare Locator)",
-  "official_url": "https://eldercare.acl.gov/home",
-  "organization": "U.S. Administration for Community Living",
-  "service_area": [
-   "All New Mexico counties"
-  ],
-  "state": "NM",
-  "needs_supported": [
-   "general_navigation",
-   "help_at_home"
-  ],
-  "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-  "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
-  "constraints": [
-   "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "nm-aaa-albuquerque",
+    "name": "City of Albuquerque/Bernalillo County Area Agency on Aging",
+    "organization": "City of Albuquerque/Bernalillo County Area Agency on Aging",
+    "official_url": "https://www.cabq.gov/family/services/senior-services",
+    "state": "NM",
+    "service_area": [
+      "Bernalillo"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The Aging and Disability Resource Center, 800-432-2080, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Call the Department of Senior Affairs’ Senior Information and Assistance line, which takes requests for Area Agency on Aging services."
+    ],
+    "public_contact": {
+      "phone": "505-764-6400",
+      "phone_label": "Area Agency on Aging (Bernalillo County)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.cabq.gov/family/services/senior-services",
+      "phone_source_url": "https://www.cabq.gov/family/services/senior-services"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.cabq.gov/family/services/senior-services",
+        "title": "New Mexico Governor’s Commission on Disability: Elderly resources",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Non-Metro Area Agency on Aging funds senior programs in every New Mexico county except Bernalillo, which the Albuquerque Area Agency on Aging serves; phones 505-395-2668 and 1-866-699-4927; search excerpt."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "nm-aaa-non-metro",
+    "name": "Non-Metro Area Agency on Aging",
+    "organization": "Non-Metro Area Agency on Aging",
+    "official_url": "https://www.gcd.nm.gov/?p=395",
+    "state": "NM",
+    "service_area": [
+      "Catron",
+      "Chaves",
+      "Cibola",
+      "Colfax",
+      "Curry",
+      "De Baca",
+      "Doña Ana",
+      "Eddy",
+      "Grant",
+      "Guadalupe",
+      "Harding",
+      "Hidalgo",
+      "Lea",
+      "Lincoln",
+      "Los Alamos",
+      "Luna",
+      "McKinley",
+      "Mora",
+      "Otero",
+      "Quay",
+      "Rio Arriba",
+      "Roosevelt",
+      "San Juan",
+      "San Miguel",
+      "Sandoval",
+      "Santa Fe",
+      "Sierra",
+      "Socorro",
+      "Taos",
+      "Torrance",
+      "Union",
+      "Valencia"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The Aging and Disability Resource Center, 800-432-2080, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Also listed: 505-395-2668.",
+      "Tribal elders may also be served by the Indian Area Agency on Aging or the Navajo Area Agency on Aging; the Aging and Disability Resource Center can connect you."
+    ],
+    "public_contact": {
+      "phone": "866-699-4927",
+      "phone_label": "Area Agency on Aging (all counties but Bernalillo)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.gcd.nm.gov/?p=395",
+      "phone_source_url": "https://www.gcd.nm.gov/?p=395"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.gcd.nm.gov/?p=395",
+        "title": "New Mexico Governor’s Commission on Disability: Elderly resources",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Non-Metro Area Agency on Aging funds senior programs in every New Mexico county except Bernalillo, which the Albuquerque Area Agency on Aging serves; phones 505-395-2668 and 1-866-699-4927; search excerpt."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.acl.gov/contact"
-  },
-  "source_evidence": [
-   {
-    "url": "https://www.acl.gov/contact",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "aging_agency"
- },
- {
-  "program_id": "nm-ombudsman",
-  "name": "New Mexico long-term-care ombudsman",
-  "official_url": "https://theconsumervoice.org/get_help",
-  "organization": "National Long-Term Care Ombudsman Resource Center",
-  "service_area": [
-   "All New Mexico counties"
-  ],
-  "state": "NM",
-  "needs_supported": [
-   "resident_rights",
-   "general_navigation"
-  ],
-  "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-  "next_step": "Use the locator to find the New Mexico program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
-  "constraints": [
-   "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
-  },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
-  },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
-  },
-  "source_evidence": [
-   {
-    "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "ombudsman"
- }
+  {
+    "program_id": "nm-omb-state",
+    "name": "New Mexico Long-Term Care Ombudsman Program",
+    "organization": "New Mexico Long-Term Care Ombudsman Program",
+    "official_url": "https://www.aging.nm.gov/contact-us",
+    "state": "NM",
+    "service_area": [
+      "Bernalillo",
+      "Catron",
+      "Chaves",
+      "Cibola",
+      "Colfax",
+      "Curry",
+      "De Baca",
+      "Doña Ana",
+      "Eddy",
+      "Grant",
+      "Guadalupe",
+      "Harding",
+      "Hidalgo",
+      "Lea",
+      "Lincoln",
+      "Los Alamos",
+      "Luna",
+      "McKinley",
+      "Mora",
+      "Otero",
+      "Quay",
+      "Rio Arriba",
+      "Roosevelt",
+      "San Juan",
+      "San Miguel",
+      "Sandoval",
+      "Santa Fe",
+      "Sierra",
+      "Socorro",
+      "Taos",
+      "Torrance",
+      "Union",
+      "Valencia"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "The statewide line connects you with the ombudsman for the facility’s area."
+    ],
+    "public_contact": {
+      "phone": "866-451-2901",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.aging.nm.gov/contact-us",
+      "phone_source_url": "https://www.aging.nm.gov/contact-us"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.aging.nm.gov/contact-us",
+        "title": "New Mexico Aging and Long-Term Services Department: Contact us",
+        "reviewed_on": "2026-11-16",
+        "scope": "Long-Term Care Ombudsman Program, 866-451-2901, toll-free and statewide; search excerpt."
+      }
+    ]
+  }
 ]
