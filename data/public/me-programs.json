@@ -1,163 +1,448 @@
 [
- {
-  "program_id": "me-claims",
-  "name": "Maine veterans: accredited claims help",
-  "official_url": "https://www.maine.gov/veterans/",
-  "organization": "Maine Bureau of Veterans’ Services",
-  "service_area": [
-   "All Maine counties"
-  ],
-  "state": "ME",
-  "needs_supported": [
-   "general_navigation",
-   "benefits_and_funding"
-  ],
-  "description": "Free help with VA claims, applications and appeals for veterans and families.",
-  "next_step": "Call the state veterans agency; ask for a benefits review and the office that serves your county.",
-  "constraints": [],
-  "public_contact": {
-   "phone": "207-287-7020"
+  {
+    "program_id": "me-claims",
+    "name": "Maine veterans: Bureau of Veterans’ Services field offices for claims help",
+    "official_url": "https://www.maine.gov/veterans/veterans-services-offices/locations",
+    "organization": "Maine Bureau of Veterans’ Services",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "ME",
+    "needs_supported": [
+      "general_navigation",
+      "benefits_and_funding"
+    ],
+    "description": "Free help with VA claims, appeals, pension, survivor benefits and VA health care enrollment from the Maine Bureau of Veterans’ Services’ veterans service officers, in field offices in Augusta, Bangor, Caribou, Lewiston, Machias, Portland, Springvale and Togus.",
+    "next_step": "Call the field office for your county (choose a county above) or the Bureau’s central line, 207-287-7020, to make an appointment.",
+    "constraints": [
+      "Offices are open Monday to Friday, 7:30 a.m. to 4 p.m.; most ask you to call for an appointment."
+    ],
+    "public_contact": {
+      "phone": "207-287-7020",
+      "phone_label": "Maine Bureau of Veterans’ Services (207-287-7020)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www11.maine.gov/veterans/veterans-services-offices/locations/augusta.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.maine.gov/veterans/veterans-services-offices/locations",
+        "title": "Maine Bureau of Veterans’ Services: Field Office and Itinerant Office Locations",
+        "reviewed_on": "2026-11-16",
+        "scope": "The eight field offices, addresses, phones and hours; read in full."
+      },
+      {
+        "url": "https://www11.maine.gov/veterans/veterans-services-offices/locations/augusta.html",
+        "title": "Maine Bureau of Veterans’ Services: Augusta office",
+        "reviewed_on": "2026-11-16",
+        "scope": "Service area Kennebec and Somerset; telephone 207-287-7020; read in full."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "me-adrc",
+    "name": "Maine Area Agencies on Aging and Aging and Disability Resource Centers",
+    "official_url": "https://mobile.maine.gov/dhhs/oads/get-support/older-adults-disabilities/area-agencies-on-aging",
+    "organization": "Maine Office of Aging and Disability Services and the five Area Agencies on Aging",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "ME",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Maine’s five Area Agencies on Aging are also its Aging and Disability Resource Centers: one-stop help for older adults, adults with disabilities and care partners with in-home, community and long-term care services, meals, caregiver support and Medicare counseling. Military service is not required.",
+    "next_step": "Call 877-353-3771 and choose your county, or choose a county above for its agency.",
+    "constraints": [
+      "Each program has its own eligibility and waitlist."
+    ],
+    "public_contact": {
+      "phone": "877-353-3771",
+      "phone_label": "Maine Aging and Disability Resource Centers (877-353-3771)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://mobile.maine.gov/dhhs/oads/get-support/older-adults-disabilities/area-agencies-on-aging"
+    },
+    "source_evidence": [
+      {
+        "url": "https://mobile.maine.gov/dhhs/oads/get-support/older-adults-disabilities/area-agencies-on-aging",
+        "title": "Maine Office of Aging and Disability Services: Area Agencies on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "Statewide ADRC line 1-877-353-3771 and the five agencies; read in full."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_page_text",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.maine.gov/veterans/"
+  {
+    "program_id": "me-ship",
+    "name": "Medicare counseling (Maine SHIP)",
+    "official_url": "https://www.maine.gov/dhhs/oads/get-support/older-adults-disabilities/older-adult-services/ship-medicare-assistance",
+    "organization": "Maine State Health Insurance Assistance Program, through the Area Agencies on Aging",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "ME",
+    "needs_supported": [
+      "benefits_and_funding"
+    ],
+    "description": "Free Medicare counseling from Maine’s State Health Insurance Assistance Program, sponsored by the Office of Aging and Disability Services, the five Area Agencies on Aging and Legal Services for Maine Elders: Part D and supplement plans, costs and help paying for Medicare.",
+    "next_step": "Call 877-353-3771 (877-ELDERS1) and choose your county. For Medicare itself, call 800-MEDICARE (800-633-4227).",
+    "constraints": [
+      "Have your Medicare card and drug list ready."
+    ],
+    "public_contact": {
+      "phone": "877-353-3771",
+      "phone_label": "Maine SHIP (877-353-3771)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.maine.gov/pfr/insurance/consumers/medicare-supplement-insurance/where-to-get-help"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.maine.gov/pfr/insurance/consumers/medicare-supplement-insurance/where-to-get-help",
+        "title": "Maine Bureau of Insurance: Where to Get Help",
+        "reviewed_on": "2026-11-16",
+        "scope": "Maine’s SHIP: 1-877-ELDERS1 (1-877-353-3771); search excerpt."
+      },
+      {
+        "url": "https://www.maine.gov/dhhs/oads/get-support/older-adults-disabilities/older-adult-services/ship-medicare-assistance",
+        "title": "Maine Office of Aging and Disability Services: SHIP & Medicare Assistance",
+        "reviewed_on": "2026-11-16",
+        "scope": "SHIP sponsored by OADS, the five Area Agencies on Aging and Legal Services for Maine Elders; search excerpt."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.maine.gov/veterans/",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ]
- },
- {
-  "program_id": "me-ship",
-  "name": "Medicare counseling (SHIP) for Maine",
-  "official_url": "https://www.shiphelp.org/",
-  "organization": "SHIP Technical Assistance Center",
-  "service_area": [
-   "All Maine counties"
-  ],
-  "state": "ME",
-  "needs_supported": [
-   "benefits_and_funding"
-  ],
-  "description": "Free, unbiased Medicare counseling from the State Health Insurance Assistance Program.",
-  "next_step": "Call or use the locator to reach the Maine SHIP and ask for a counseling appointment.",
-  "constraints": [],
-  "public_contact": {
-   "phone": "877-839-2675"
+  {
+    "program_id": "me-ombudsman",
+    "name": "Maine Long-Term Care Ombudsman and adult abuse reporting",
+    "official_url": "https://www.maine.gov/ag/consumer-protection/consumer-help-topics/older-mainers",
+    "organization": "Maine Long-Term Care Ombudsman Program; Maine Adult Protective Services",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "ME",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "description": "Advocacy for residents of nursing, boarding and adult foster homes and people receiving home care. Adult Protective Services takes reports of abuse, neglect or exploitation of incapacitated or dependent adults 24 hours a day.",
+    "next_step": "Call the ombudsman at 800-499-0229. To report abuse, neglect or exploitation, call Adult Protective Services at 800-624-8404 or 207-287-1234, or use the online form. In an emergency, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing agency."
+    ],
+    "public_contact": {
+      "phone": "800-499-0229",
+      "phone_label": "Maine Long-Term Care Ombudsman (800-499-0229)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.maine.gov/ag/consumer-protection/consumer-help-topics/older-mainers"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.maine.gov/ag/consumer-protection/consumer-help-topics/older-mainers",
+        "title": "Office of the Maine Attorney General: Older Mainers",
+        "reviewed_on": "2026-11-16",
+        "scope": "Ombudsman 1-800-499-0229 and Adult Protective Services 1-800-624-8404 (24 hours); read in full."
+      },
+      {
+        "url": "https://maine.gov/dhhs/oads/get-support/aps",
+        "title": "Maine Office of Aging and Disability Services: Adult Protective Services",
+        "reviewed_on": "2026-11-16",
+        "scope": "Report by phone 1-800-624-8404 or 207-287-1234, TTY Maine Relay 711, or the online form; read in full."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "me-legal-programs",
+    "name": "Free legal help for Maine veterans and older adults",
+    "official_url": "https://www.maine.gov/dhhs/oads/get-support/older-adults-disabilities/older-adult-services/legal-assistance",
+    "organization": "Legal Services for Maine Elders; Volunteer Lawyers Project",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "ME",
+    "resource_role": "legal_aid",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation",
+      "housing"
+    ],
+    "description": "Legal Services for Maine Elders gives free legal help to Mainers 60 and older in many civil cases, including benefits, health insurance, powers of attorney, consumer problems, abuse and guardianship defense, with offices in Augusta, Bangor, Lewiston, Portland and Presque Isle.",
+    "next_step": "Call the Legal Services for Maine Elders Helpline at 800-750-5353 (207-623-1797 from out of state). Under 60? Call the Volunteer Lawyers Project: southern Maine 800-422-4293, northern Maine 888-956-4276.",
+    "constraints": [
+      "Legal aid screens by age, income and case type."
+    ],
+    "public_contact": {
+      "phone": "800-750-5353",
+      "phone_label": "Legal Services for Maine Elders Helpline (800-750-5353)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.maine.gov/ag/consumer-protection/consumer-help-topics/older-mainers"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.maine.gov/ag/consumer-protection/consumer-help-topics/older-mainers",
+        "title": "Office of the Maine Attorney General: Older Mainers",
+        "reviewed_on": "2026-11-16",
+        "scope": "Legal Services for Maine Elders: 1-800-750-5353 in state or 1-207-623-1797, age 60 and over, offices in five cities; read in full."
+      },
+      {
+        "url": "https://www.maine.gov/ag/consumer-protection/consumer-help-topics/consumer-complaints/finding-an-attorney",
+        "title": "Office of the Maine Attorney General: Finding an Attorney",
+        "reviewed_on": "2026-11-16",
+        "scope": "Volunteer Lawyers Project lines for southern and northern Maine; search excerpt."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.shiphelp.org/?p=317"
+  {
+    "program_id": "me-vahealth-systems",
+    "name": "VA health care in Maine",
+    "official_url": "https://www.va.gov/maine-health-care/",
+    "organization": "U.S. Department of Veterans Affairs, VA Maine Healthcare System",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "ME",
+    "resource_role": "va_health_system",
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "Maine veterans are served by the VA Maine Healthcare System, centered at Togus (main telephone 207-623-8411), with clinics around the state.",
+    "next_step": "Use VA’s facility locator with your ZIP code to find the closest clinic. Not enrolled yet? Ask a Bureau of Veterans’ Services officer for help applying.",
+    "constraints": [
+      "Ask about travel and community care options if the nearest clinic is far."
+    ],
+    "public_contact": {
+      "phone": "207-623-8411",
+      "phone_label": "VA Maine Healthcare System (207-623-8411)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www11.maine.gov/veterans/sites/maine.gov.veterans/files/Resources%20Card.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www11.maine.gov/veterans/sites/maine.gov.veterans/files/Resources%20Card.pdf",
+        "title": "Maine Bureau of Veterans’ Services: Resources Card",
+        "reviewed_on": "2026-11-16",
+        "scope": "VA Maine Healthcare System main telephone 207-623-8411; search excerpt."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.shiphelp.org/?p=317",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ]
- },
- {
-  "program_id": "me-ssvf-12-me-043",
-  "name": "Preble Street: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Preble Street",
-  "service_area": [
-   "All Maine counties"
-  ],
-  "state": "ME",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 12-ME-043): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Androscoggin County, Aroostook County, Cumberland County, Franklin County, Hancock County, Kennebec County, Knox County, Lincoln County, Oxford County, Penobscot County, Piscataquis County, Sagadahoc County and 4 more.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 800-377-5709.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "207-956-6556",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "me-cil-alpha-one",
+    "name": "Alpha One (Maine’s Center for Independent Living)",
+    "organization": "Alpha One",
+    "official_url": "https://www.alphaonenow.org/",
+    "service_area": [
+      "Androscoggin",
+      "Aroostook",
+      "Cumberland",
+      "Franklin",
+      "Hancock",
+      "Kennebec",
+      "Knox",
+      "Lincoln",
+      "Oxford",
+      "Penobscot",
+      "Piscataquis",
+      "Sagadahoc",
+      "Somerset",
+      "Waldo",
+      "Washington",
+      "York"
+    ],
+    "state": "ME",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Also 207-767-2189 (voice/TTY). Offices: 127 Main Street, South Portland; 11 Bangor Mall Blvd., Unit A, Bangor; 66 Spruce Street, Presque Isle."
+    ],
+    "public_contact": {
+      "phone": "800-640-7200",
+      "phone_label": "Phone listed in the Maine Bureau of Rehabilitation Services resource guide"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://maine.gov/rehab/dod/resource_guide/agencies.shtml",
+      "service_area_source_url": "https://maine.gov/rehab/dod/resource_guide/agencies.shtml"
+    },
+    "source_evidence": [
+      {
+        "url": "https://maine.gov/rehab/dod/resource_guide/agencies.shtml",
+        "title": "Maine Bureau of Rehabilitation Services: Resource Guide, Agencies (updated May 28, 2025)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Alpha One’s phones and its South Portland, Bangor and Presque Isle offices; search excerpt."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "me-ssvf-12-me-043",
+    "name": "Preble Street: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Preble Street",
+    "service_area": [
+      "Androscoggin",
+      "Aroostook",
+      "Cumberland",
+      "Franklin",
+      "Hancock",
+      "Kennebec",
+      "Knox",
+      "Lincoln",
+      "Oxford",
+      "Penobscot",
+      "Piscataquis",
+      "Sagadahoc",
+      "Somerset",
+      "Waldo",
+      "Washington",
+      "York"
+    ],
+    "state": "ME",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 12-ME-043): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 800-377-5709.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "207-956-6556",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 15",
+        "sheet": "Contacts",
+        "row": 15,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
-  },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 15",
-    "sheet": "Contacts",
-    "row": 15,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "me-ssvf-12-zz-041",
-  "name": "Veterans Inc.: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Veterans Inc.",
-  "service_area": [
-   "All Maine counties"
-  ],
-  "state": "ME",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 12-ZZ-041): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Androscoggin County, Aroostook County, Cumberland County, Franklin County, Hancock County, Kennebec County, Knox County, Lincoln County, Oxford County, Penobscot County, Piscataquis County, Sagadahoc County and 4 more.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 508-791-1213.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "800-482-2565",
-   "phone_label": "VA-listed SSVF intake"
-  },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
-  },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
-  },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 27",
-    "sheet": "Contacts",
-    "row": 27,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- }
+  {
+    "program_id": "me-ssvf-12-zz-041",
+    "name": "Veterans Inc.: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Veterans Inc.",
+    "service_area": [
+      "Androscoggin",
+      "Aroostook",
+      "Cumberland",
+      "Franklin",
+      "Hancock",
+      "Kennebec",
+      "Knox",
+      "Lincoln",
+      "Oxford",
+      "Penobscot",
+      "Piscataquis",
+      "Sagadahoc",
+      "Somerset",
+      "Waldo",
+      "Washington",
+      "York"
+    ],
+    "state": "ME",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 12-ZZ-041): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 508-791-1213.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "800-482-2565",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 27",
+        "sheet": "Contacts",
+        "row": 27,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
+  }
 ]
