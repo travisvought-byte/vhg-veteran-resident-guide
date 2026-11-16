@@ -1,80 +1,275 @@
 [
- {
-  "program_id": "ct-aging",
-  "name": "Local aging help in Connecticut (Eldercare Locator)",
-  "official_url": "https://eldercare.acl.gov/home",
-  "organization": "U.S. Administration for Community Living",
-  "service_area": [
-   "All Connecticut counties"
-  ],
-  "state": "CT",
-  "needs_supported": [
-   "general_navigation",
-   "help_at_home"
-  ],
-  "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-  "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
-  "constraints": [
-   "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "ct-aaa-senior-resources",
+    "name": "Senior Resources Agency on Aging (Norwich)",
+    "organization": "Senior Resources Agency on Aging (Norwich)",
+    "official_url": "https://portal.ct.gov/-/media/aginganddisability/agingservices/choices/2024-choices-training-flyer.pdf?rev=aad5e43b928140189ce0785d77811736&hash=7255911F1BC3A8345F7A8FBC008578DA",
+    "state": "CT",
+    "service_area": [
+      "Middlesex",
+      "New London",
+      "Windham"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Connecticut’s five Area Agencies on Aging serve lists of towns. They help older adults, people with disabilities and caregivers with information, benefits counseling, caregiver support and in-home services.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide CHOICES line, 1-800-994-9422, also reaches the agency serving your town. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "This agency also serves Columbia, Coventry, Mansfield, Union and Willington (Tolland County)."
+    ],
+    "public_contact": {
+      "phone": "860-887-3561",
+      "phone_label": "Area Agency on Aging (Eastern, Middlesex and shoreline)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://portal.ct.gov/-/media/aginganddisability/agingservices/choices/2024-choices-training-flyer.pdf?rev=aad5e43b928140189ce0785d77811736&hash=7255911F1BC3A8345F7A8FBC008578DA",
+      "phone_source_url": "https://portal.ct.gov/-/media/aginganddisability/agingservices/choices/2024-choices-training-flyer.pdf?rev=aad5e43b928140189ce0785d77811736&hash=7255911F1BC3A8345F7A8FBC008578DA"
+    },
+    "source_evidence": [
+      {
+        "url": "https://portal.ct.gov/-/media/aginganddisability/agingservices/choices/2024-choices-training-flyer.pdf?rev=aad5e43b928140189ce0785d77811736&hash=7255911F1BC3A8345F7A8FBC008578DA",
+        "title": "Connecticut Department of Aging and Disability Services: 2024 CHOICES training flyer (Area Agency on Aging towns served)",
+        "reviewed_on": "2026-11-16",
+        "scope": "The towns each Area Agency on Aging serves; read in full. Agency addresses and phones come from the Department of Aging and Disability Services Additional Resources page (https://portal.ct.gov/ads/additional-resources; read in full). The flyer omits Meriden; the 2022 CHOICES brochure lists it with South Central (search excerpt). Each county shows the agency serving most of its towns; town exceptions are on each card."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "ct-aaa-north-central",
+    "name": "North Central Area Agency on Aging (Hartford)",
+    "organization": "North Central Area Agency on Aging (Hartford)",
+    "official_url": "https://portal.ct.gov/-/media/aginganddisability/agingservices/choices/2024-choices-training-flyer.pdf?rev=aad5e43b928140189ce0785d77811736&hash=7255911F1BC3A8345F7A8FBC008578DA",
+    "state": "CT",
+    "service_area": [
+      "Hartford",
+      "Tolland"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Connecticut’s five Area Agencies on Aging serve lists of towns. They help older adults, people with disabilities and caregivers with information, benefits counseling, caregiver support and in-home services.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide CHOICES line, 1-800-994-9422, also reaches the agency serving your town. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "In Tolland County, Columbia, Coventry, Mansfield, Union and Willington are served by Senior Resources Agency on Aging (Norwich), 860-887-3561.",
+      "This agency also serves Plymouth (Litchfield County)."
+    ],
+    "public_contact": {
+      "phone": "860-724-6443",
+      "phone_label": "Area Agency on Aging (North Central)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://portal.ct.gov/-/media/aginganddisability/agingservices/choices/2024-choices-training-flyer.pdf?rev=aad5e43b928140189ce0785d77811736&hash=7255911F1BC3A8345F7A8FBC008578DA",
+      "phone_source_url": "https://portal.ct.gov/-/media/aginganddisability/agingservices/choices/2024-choices-training-flyer.pdf?rev=aad5e43b928140189ce0785d77811736&hash=7255911F1BC3A8345F7A8FBC008578DA"
+    },
+    "source_evidence": [
+      {
+        "url": "https://portal.ct.gov/-/media/aginganddisability/agingservices/choices/2024-choices-training-flyer.pdf?rev=aad5e43b928140189ce0785d77811736&hash=7255911F1BC3A8345F7A8FBC008578DA",
+        "title": "Connecticut Department of Aging and Disability Services: 2024 CHOICES training flyer (Area Agency on Aging towns served)",
+        "reviewed_on": "2026-11-16",
+        "scope": "The towns each Area Agency on Aging serves; read in full. Agency addresses and phones come from the Department of Aging and Disability Services Additional Resources page (https://portal.ct.gov/ads/additional-resources; read in full). The flyer omits Meriden; the 2022 CHOICES brochure lists it with South Central (search excerpt). Each county shows the agency serving most of its towns; town exceptions are on each card."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.acl.gov/contact"
+  {
+    "program_id": "ct-aaa-south-central",
+    "name": "Agency on Aging of South Central Connecticut (North Haven)",
+    "organization": "Agency on Aging of South Central Connecticut (North Haven)",
+    "official_url": "https://portal.ct.gov/-/media/aginganddisability/agingservices/choices/2024-choices-training-flyer.pdf?rev=aad5e43b928140189ce0785d77811736&hash=7255911F1BC3A8345F7A8FBC008578DA",
+    "state": "CT",
+    "service_area": [
+      "New Haven"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Connecticut’s five Area Agencies on Aging serve lists of towns. They help older adults, people with disabilities and caregivers with information, benefits counseling, caregiver support and in-home services.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide CHOICES line, 1-800-994-9422, also reaches the agency serving your town. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "In New Haven County, Beacon Falls, Cheshire, Middlebury, Naugatuck, Prospect, Southbury, Waterbury and Wolcott are served by Western Connecticut Area Agency on Aging (Waterbury), 203-757-5449.",
+      "This agency also serves Shelton (Fairfield County).",
+      "The 2024 CHOICES flyer leaves Meriden out of every list; the 2022 CHOICES brochure lists it here."
+    ],
+    "public_contact": {
+      "phone": "203-785-8533",
+      "phone_label": "Area Agency on Aging (South Central)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://portal.ct.gov/-/media/aginganddisability/agingservices/choices/2024-choices-training-flyer.pdf?rev=aad5e43b928140189ce0785d77811736&hash=7255911F1BC3A8345F7A8FBC008578DA",
+      "phone_source_url": "https://portal.ct.gov/-/media/aginganddisability/agingservices/choices/2024-choices-training-flyer.pdf?rev=aad5e43b928140189ce0785d77811736&hash=7255911F1BC3A8345F7A8FBC008578DA"
+    },
+    "source_evidence": [
+      {
+        "url": "https://portal.ct.gov/-/media/aginganddisability/agingservices/choices/2024-choices-training-flyer.pdf?rev=aad5e43b928140189ce0785d77811736&hash=7255911F1BC3A8345F7A8FBC008578DA",
+        "title": "Connecticut Department of Aging and Disability Services: 2024 CHOICES training flyer (Area Agency on Aging towns served)",
+        "reviewed_on": "2026-11-16",
+        "scope": "The towns each Area Agency on Aging serves; read in full. Agency addresses and phones come from the Department of Aging and Disability Services Additional Resources page (https://portal.ct.gov/ads/additional-resources; read in full). The flyer omits Meriden; the 2022 CHOICES brochure lists it with South Central (search excerpt). Each county shows the agency serving most of its towns; town exceptions are on each card."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.acl.gov/contact",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "aging_agency"
- },
- {
-  "program_id": "ct-ombudsman",
-  "name": "Connecticut long-term-care ombudsman",
-  "official_url": "https://theconsumervoice.org/get_help",
-  "organization": "National Long-Term Care Ombudsman Resource Center",
-  "service_area": [
-   "All Connecticut counties"
-  ],
-  "state": "CT",
-  "needs_supported": [
-   "resident_rights",
-   "general_navigation"
-  ],
-  "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-  "next_step": "Use the locator to find the Connecticut program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
-  "constraints": [
-   "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "ct-aaa-southwestern",
+    "name": "Southwestern Connecticut Agency on Aging (Bridgeport)",
+    "organization": "Southwestern Connecticut Agency on Aging (Bridgeport)",
+    "official_url": "https://portal.ct.gov/-/media/aginganddisability/agingservices/choices/2024-choices-training-flyer.pdf?rev=aad5e43b928140189ce0785d77811736&hash=7255911F1BC3A8345F7A8FBC008578DA",
+    "state": "CT",
+    "service_area": [
+      "Fairfield"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Connecticut’s five Area Agencies on Aging serve lists of towns. They help older adults, people with disabilities and caregivers with information, benefits counseling, caregiver support and in-home services.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide CHOICES line, 1-800-994-9422, also reaches the agency serving your town. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "In Fairfield County, Shelton is served by Agency on Aging of South Central Connecticut (North Haven), 203-785-8533.",
+      "In Fairfield County, Bethel, Brookfield, Danbury, New Fairfield, Newtown, Redding, Ridgefield and Sherman are served by Western Connecticut Area Agency on Aging (Waterbury), 203-757-5449."
+    ],
+    "public_contact": {
+      "phone": "203-814-3698",
+      "phone_label": "Area Agency on Aging (Southwestern)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://portal.ct.gov/-/media/aginganddisability/agingservices/choices/2024-choices-training-flyer.pdf?rev=aad5e43b928140189ce0785d77811736&hash=7255911F1BC3A8345F7A8FBC008578DA",
+      "phone_source_url": "https://portal.ct.gov/-/media/aginganddisability/agingservices/choices/2024-choices-training-flyer.pdf?rev=aad5e43b928140189ce0785d77811736&hash=7255911F1BC3A8345F7A8FBC008578DA"
+    },
+    "source_evidence": [
+      {
+        "url": "https://portal.ct.gov/-/media/aginganddisability/agingservices/choices/2024-choices-training-flyer.pdf?rev=aad5e43b928140189ce0785d77811736&hash=7255911F1BC3A8345F7A8FBC008578DA",
+        "title": "Connecticut Department of Aging and Disability Services: 2024 CHOICES training flyer (Area Agency on Aging towns served)",
+        "reviewed_on": "2026-11-16",
+        "scope": "The towns each Area Agency on Aging serves; read in full. Agency addresses and phones come from the Department of Aging and Disability Services Additional Resources page (https://portal.ct.gov/ads/additional-resources; read in full). The flyer omits Meriden; the 2022 CHOICES brochure lists it with South Central (search excerpt). Each county shows the agency serving most of its towns; town exceptions are on each card."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "ct-aaa-western",
+    "name": "Western Connecticut Area Agency on Aging (Waterbury)",
+    "organization": "Western Connecticut Area Agency on Aging (Waterbury)",
+    "official_url": "https://portal.ct.gov/-/media/aginganddisability/agingservices/choices/2024-choices-training-flyer.pdf?rev=aad5e43b928140189ce0785d77811736&hash=7255911F1BC3A8345F7A8FBC008578DA",
+    "state": "CT",
+    "service_area": [
+      "Litchfield"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Connecticut’s five Area Agencies on Aging serve lists of towns. They help older adults, people with disabilities and caregivers with information, benefits counseling, caregiver support and in-home services.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide CHOICES line, 1-800-994-9422, also reaches the agency serving your town. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "In Litchfield County, Plymouth is served by North Central Area Agency on Aging (Hartford), 860-724-6443.",
+      "This agency also serves Bethel, Brookfield, Danbury, New Fairfield, Newtown, Redding, Ridgefield and Sherman (Fairfield County); Beacon Falls, Cheshire, Middlebury, Naugatuck, Prospect, Southbury, Waterbury and Wolcott (New Haven County)."
+    ],
+    "public_contact": {
+      "phone": "203-757-5449",
+      "phone_label": "Area Agency on Aging (Western)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://portal.ct.gov/-/media/aginganddisability/agingservices/choices/2024-choices-training-flyer.pdf?rev=aad5e43b928140189ce0785d77811736&hash=7255911F1BC3A8345F7A8FBC008578DA",
+      "phone_source_url": "https://portal.ct.gov/-/media/aginganddisability/agingservices/choices/2024-choices-training-flyer.pdf?rev=aad5e43b928140189ce0785d77811736&hash=7255911F1BC3A8345F7A8FBC008578DA"
+    },
+    "source_evidence": [
+      {
+        "url": "https://portal.ct.gov/-/media/aginganddisability/agingservices/choices/2024-choices-training-flyer.pdf?rev=aad5e43b928140189ce0785d77811736&hash=7255911F1BC3A8345F7A8FBC008578DA",
+        "title": "Connecticut Department of Aging and Disability Services: 2024 CHOICES training flyer (Area Agency on Aging towns served)",
+        "reviewed_on": "2026-11-16",
+        "scope": "The towns each Area Agency on Aging serves; read in full. Agency addresses and phones come from the Department of Aging and Disability Services Additional Resources page (https://portal.ct.gov/ads/additional-resources; read in full). The flyer omits Meriden; the 2022 CHOICES brochure lists it with South Central (search excerpt). Each county shows the agency serving most of its towns; town exceptions are on each card."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
-  },
-  "source_evidence": [
-   {
-    "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "ombudsman"
- }
+  {
+    "program_id": "ct-omb-state",
+    "name": "Connecticut Long Term Care Ombudsman Program",
+    "organization": "Connecticut Long Term Care Ombudsman Program",
+    "official_url": "https://portal.ct.gov/ltcop/ombudsman",
+    "state": "CT",
+    "service_area": [
+      "Fairfield",
+      "Hartford",
+      "Litchfield",
+      "Middlesex",
+      "New Haven",
+      "New London",
+      "Tolland",
+      "Windham"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Regional ombudsmen are assigned by town; the same numbers reach yours. Office: 860-424-5200."
+    ],
+    "public_contact": {
+      "phone": "866-388-1888",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://portal.ct.gov/ltcop/ombudsman",
+      "phone_source_url": "https://portal.ct.gov/ltcop/ombudsman"
+    },
+    "source_evidence": [
+      {
+        "url": "https://portal.ct.gov/ltcop/ombudsman",
+        "title": "Connecticut Long Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-16",
+        "scope": "Toll-free 1-866-388-1888; read in full; undated. Regional ombudsmen are assigned by town, and all share the program number 860-424-5200 (https://portal.ct.gov/LTCOP/Content/Contact-Us/All-Regions; search excerpt), so every county shows the statewide line."
+      }
+    ]
+  }
 ]
