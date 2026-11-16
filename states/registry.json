@@ -934,6 +934,36 @@
     ]
   },
   {
+    "code": "HI",
+    "name": "Hawaii",
+    "page": "hi.html",
+    "share_page": "share-hi.html",
+    "qr": "assets/guide-qr-hi.svg",
+    "counties": 5,
+    "programs": "data/public/hi-programs.json",
+    "referrals": "data/public/hi-regional-referrals.json",
+    "offices": "data/public/hawaii-county-veterans-offices.json",
+    "resources": "data/public/hawaii-resources.json",
+    "statewide_area_names": [],
+    "coverage_scope": "Referral edition. All five counties have an Office of Veterans’ Services office (Kalawao through Maui), a county office on aging, the statewide long-term care ombudsman and a Center for Independent Living (Kalawao excepted).",
+    "coverage_note": "Veterans offices come from the Office of Veterans’ Services contact page. Area Agencies on Aging come from the Executive Office on Aging. Centers for Independent Living come from the ILRU national directory. Reviewed November 16, 2026. Contacts are not telephone-confirmed.",
+    "share_description": "state veterans offices, county offices on aging and long-term care ombudsman help across Hawai‘i",
+    "share_replacements": [
+      [
+        "Updated October 8, 2026",
+        "Updated November 16, 2026"
+      ],
+      [
+        "county veterans offices, benefits and care referrals",
+        "state veterans offices, benefits and care referrals"
+      ],
+      [
+        "County veterans offices",
+        "state veterans offices"
+      ]
+    ]
+  },
+  {
     "code": "AK",
     "name": "Alaska",
     "starter": true,
@@ -1030,26 +1060,6 @@
     ],
     "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
     "coverage_note": "Starter edition. Every county uses the Mayor’s Office of Veterans Affairs and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
-    "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
-    "share_replacements": []
-  },
-  {
-    "code": "HI",
-    "name": "Hawaii",
-    "starter": true,
-    "page": "hi.html",
-    "share_page": "share-hi.html",
-    "qr": "assets/guide-qr-hi.svg",
-    "counties": 1,
-    "programs": "data/public/hi-programs.json",
-    "referrals": "data/public/hi-regional-referrals.json",
-    "offices": "data/public/hawaii-county-veterans-offices.json",
-    "resources": "data/public/hawaii-resources.json",
-    "statewide_area_names": [
-      "All Hawaii counties"
-    ],
-    "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
-    "coverage_note": "Starter edition. Every county uses the Hawai‘i Office of Veterans’ Services and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
     "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
     "share_replacements": []
   },

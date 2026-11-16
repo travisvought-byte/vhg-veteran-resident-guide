@@ -1,190 +1,202 @@
 {
- "ops": [
-  {
-   "op": "clear_data"
-  },
-  {
-   "op": "replace",
-   "old": "Ohio",
-   "new": "Hawaii"
-  },
-  {
-   "op": "replace",
-   "old": "All 88",
-   "new": "All"
-  },
-  {
-   "op": "replace",
-   "old": "all 88",
-   "new": "all"
-  },
-  {
-   "op": "replace",
-   "old": "<option value=\"OH\">Hawaii</option>",
-   "new": "<option value=\"OH\">Ohio</option>"
-  },
-  {
-   "op": "replace",
-   "old": "const STATE='OH';",
-   "new": "const STATE='HI';"
-  },
-  {
-   "op": "replace",
-   "old": "county veterans office",
-   "new": "state veterans agency"
-  },
-  {
-   "op": "replace",
-   "old": "county office",
-   "new": "state veterans agency"
-  },
-  {
-   "op": "replace",
-   "old": "Statewide edition · Updated October 8, 2026",
-   "new": "Hawaii starter edition · Updated November 2, 2026"
-  },
-  {
-   "op": "replace",
-   "old": "Hawaii’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
-   "new": "Ask the local aging agency or state Medicaid agency about waiver assessment and written approval; VA and other funders have their own processes."
-  },
-  {
-   "op": "replace",
-   "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
-   "new": "https://eldercare.acl.gov/home"
-  },
-  {
-   "op": "replace",
-   "old": "Hawaii home modification authorization and provider rules",
-   "new": "Find local aging and disability help (Eldercare Locator)"
-  },
-  {
-   "op": "replace",
-   "old": "href=\"share.html\"",
-   "new": "href=\"share-hi.html\""
-  },
-  {
-   "op": "replace",
-   "old": "href=\"prototype-data.json\"",
-   "new": "href=\"data/public/hawaii-resources.json\""
-  },
-  {
-   "op": "replace",
-   "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
-   "new": "href=\"data/public/hawaii-county-veterans-offices.json\""
-  },
-  {
-   "op": "declare",
-   "name": "priority",
-   "value": [
-    "hi-claims",
-    "hi-aging",
-    "hi-ship",
-    "hi-ombudsman",
-    "r02-aid-attendance-housebound",
-    "r02-va-pension",
-    "r02-survivors-pension"
-   ]
-  },
-  {
-   "op": "declare",
-   "name": "routes",
-   "value": {
-    "benefits": [
-     "hi-claims",
-     "hi-ship",
-     "r02-va-pension",
-     "r02-aid-attendance-housebound",
-     "r02-disability-increase",
-     "r02-pension-medicaid-rule",
-     "r02-survivors-pension",
-     "r02-dic",
-     "va-accredited-help"
-    ],
-    "survivors": [
-     "hi-claims",
-     "r02-survivors-pension",
-     "r02-dic",
-     "r02-aid-attendance-housebound",
-     "r02-va-burial",
-     "va-accredited-help",
-     "nara-discharge-records"
-    ],
-    "care": [
-     "hi-aging",
-     "r02-va-health-enrollment",
-     "va-location-finder",
-     "r02-va-cnh",
-     "r02-va-clc",
-     "r02-general-caregiver",
-     "r02-family-caregiver",
-     "r02-hospice",
-     "r02-palliative"
-    ],
-    "rights": [
-     "hi-ombudsman",
-     "hi-aging"
-    ],
-    "local": [
-     "hi-aging",
-     "hi-claims"
-    ],
-    "housing": [
-     "va-housing-help",
-     "hi-ssvf-18-hi-190",
-     "hi-ssvf-18-hi-374",
-     "hi-ssvf-26-hi-472",
-     "va-location-finder",
-     "va-accredited-help",
-     "nara-discharge-records"
-    ]
-   }
-  },
-  {
-   "op": "declare",
-   "name": "seniorTopics",
-   "value": {
-    "daily": [
-     "hi-aging"
-    ],
-    "accessibility": [
-     "hi-aging"
-    ],
-    "vision": [
-     "hi-aging"
-    ],
-    "hearing": [
-     "hi-aging"
-    ],
-    "memory": [
-     "alz-dementia-support",
-     "hi-aging"
-    ],
-    "costs": [
-     "hi-ship",
-     "hi-aging"
-    ],
-    "rights": [
-     "hi-ombudsman",
-     "hi-aging"
-    ]
-   }
-  },
-  {
-   "op": "line",
-   "prefix": "routes.accessibility=",
-   "new": "routes.accessibility=['va-hisa','va-sah','va-sha','va-tra','hi-aging','va-location-finder'];"
-  },
-  {
-   "op": "line",
-   "prefix": "routes.seniors=",
-   "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
-  },
-  {
-   "op": "adapter"
-  },
-  {
-   "op": "embed_data"
-  }
- ]
+  "ops": [
+    {
+      "op": "clear_data"
+    },
+    {
+      "op": "replace",
+      "old": "Ohio",
+      "new": "Hawaii"
+    },
+    {
+      "op": "replace",
+      "old": "All 88",
+      "new": "All 5"
+    },
+    {
+      "op": "replace",
+      "old": "all 88",
+      "new": "all 5"
+    },
+    {
+      "op": "replace",
+      "old": "<option value=\"OH\">Hawaii</option>",
+      "new": "<option value=\"OH\">Ohio</option>"
+    },
+    {
+      "op": "replace",
+      "old": "const STATE='OH';",
+      "new": "const STATE='HI';"
+    },
+    {
+      "op": "replace",
+      "old": "Statewide edition · Updated October 8, 2026",
+      "new": "Hawaii edition · Updated November 16, 2026"
+    },
+    {
+      "op": "replace",
+      "old": "Most phones come from Hawaii AMVETS’ 2025–2026 directory.",
+      "new": "Veterans office phones and addresses come from the Office of Veterans’ Services’ contact page. Most offices see veterans by appointment only."
+    },
+    {
+      "op": "replace",
+      "old": "Hawaii’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
+      "new": "Ask the local aging agency or state Medicaid agency about waiver assessment and written approval; VA and other funders have their own processes."
+    },
+    {
+      "op": "replace",
+      "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
+      "new": "https://eldercare.acl.gov/home"
+    },
+    {
+      "op": "replace",
+      "old": "Hawaii home modification authorization and provider rules",
+      "new": "Find local aging and disability help (Eldercare Locator)"
+    },
+    {
+      "op": "replace",
+      "old": "href=\"share.html\"",
+      "new": "href=\"share-hi.html\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"prototype-data.json\"",
+      "new": "href=\"data/public/hawaii-resources.json\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
+      "new": "href=\"data/public/hawaii-county-veterans-offices.json\""
+    },
+    {
+      "op": "declare",
+      "name": "priority",
+      "value": [
+        "hi-claims",
+        "hi-adrc",
+        "hi-ship",
+        "hi-ombudsman",
+        "hi-legal-programs",
+        "r02-aid-attendance-housebound",
+        "r02-va-pension",
+        "r02-survivors-pension",
+        "r02-va-health-enrollment",
+        "va-accredited-help"
+      ]
+    },
+    {
+      "op": "declare",
+      "name": "routes",
+      "value": {
+        "benefits": [
+          "hi-claims",
+          "hi-ship",
+          "r02-va-pension",
+          "r02-aid-attendance-housebound",
+          "r02-disability-increase",
+          "r02-pension-medicaid-rule",
+          "r02-survivors-pension",
+          "r02-dic",
+          "va-accredited-help",
+          "hi-adrc"
+        ],
+        "survivors": [
+          "hi-claims",
+          "r02-survivors-pension",
+          "r02-dic",
+          "r02-aid-attendance-housebound",
+          "r02-va-burial",
+          "va-accredited-help",
+          "nara-discharge-records"
+        ],
+        "care": [
+          "r02-va-health-enrollment",
+          "va-location-finder",
+          "r02-va-cnh",
+          "r02-va-clc",
+          "r02-general-caregiver",
+          "r02-family-caregiver",
+          "r02-hospice",
+          "r02-palliative",
+          "hi-adrc",
+          "hi-cil-access-to-independence",
+          "hi-cil-aloha",
+          "hi-vahealth-systems"
+        ],
+        "rights": [
+          "hi-ombudsman",
+          "hi-legal-programs"
+        ],
+        "local": [
+          "hi-claims",
+          "hi-adrc",
+          "hi-cil-access-to-independence",
+          "hi-cil-aloha",
+          "hi-legal-programs",
+          "hi-vahealth-systems"
+        ],
+        "housing": [
+          "va-housing-help",
+          "hi-ssvf-18-hi-190",
+          "hi-ssvf-18-hi-374",
+          "hi-ssvf-26-hi-472",
+          "va-location-finder",
+          "va-accredited-help",
+          "nara-discharge-records",
+          "hi-legal-programs"
+        ]
+      }
+    },
+    {
+      "op": "declare",
+      "name": "seniorTopics",
+      "value": {
+        "daily": [
+          "hi-adrc",
+          "hi-cil-access-to-independence",
+          "hi-cil-aloha"
+        ],
+        "accessibility": [
+          "hi-adrc",
+          "hi-cil-access-to-independence",
+          "hi-cil-aloha"
+        ],
+        "vision": [
+          "hi-adrc"
+        ],
+        "hearing": [
+          "hi-adrc"
+        ],
+        "memory": [
+          "alz-dementia-support",
+          "hi-adrc"
+        ],
+        "costs": [
+          "hi-ship",
+          "hi-adrc",
+          "hi-legal-programs"
+        ],
+        "rights": [
+          "hi-ombudsman",
+          "hi-legal-programs"
+        ]
+      }
+    },
+    {
+      "op": "line",
+      "prefix": "routes.accessibility=",
+      "new": "routes.accessibility=['va-hisa','va-sah','va-sha','va-tra','hi-adrc','hi-cil-access-to-independence','hi-cil-aloha','va-location-finder',...DATA.filter(x=>x.regional_role==='aging_agency').map(x=>x.program_id)];"
+    },
+    {
+      "op": "line",
+      "prefix": "routes.seniors=",
+      "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
+    },
+    {
+      "op": "adapter"
+    },
+    {
+      "op": "embed_data"
+    }
+  ]
 }
