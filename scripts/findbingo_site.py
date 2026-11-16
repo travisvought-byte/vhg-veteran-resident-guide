@@ -170,6 +170,9 @@ Lists updated {_date_label(generated_on)}.
     assert page.count('</body>') == 1
     page = page.replace('</body>', '<script>' + (root / 'assets/analytics.js').read_text().strip() + '</script></body>', 1)
     site = {
+        # Google Search Console ownership file for https://www.findbingo.org/ (owner direction, Nov 16, 2026).
+        # Keep it: Google rechecks the file, and removing it drops verification.
+        'googleae90b5079bda9bbc.html': 'google-site-verification: googleae90b5079bda9bbc.html',
         'index.html': page,
         'data.json': data_json + '\n',
         'zips.json': json.dumps(zips, separators=(',', ':')) + '\n',
