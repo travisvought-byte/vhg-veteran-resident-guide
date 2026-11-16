@@ -1,0 +1,1056 @@
+{
+ "about": "Research sheet for the North Dakota county edition. Every contact below was read on the date in reviewed_on from the page named beside it; scripts/make_county_state.py turns it into the edition files.",
+ "code": "ND",
+ "name": "North Dakota",
+ "slug": "north-dakota",
+ "counties": 53,
+ "reviewed_on": "2026-11-16",
+ "month_label": "November 16, 2026",
+ "template_date": "November 4, 2026",
+ "phones_sentence": "County veterans service officer phones, addresses and hours come from each county’s page on the North Dakota Department of Veterans Affairs website. Many rural offices are open only certain days; call ahead.",
+ "senior_line_id": "nd-adrc",
+ "agency": {
+  "url": "https://www.veterans.nd.gov/about/find-a-service-officer"
+ },
+ "offices": {
+  "source_url": "https://www.veterans.nd.gov/about/find-a-service-officer",
+  "source_title": "North Dakota Department of Veterans Affairs: Veteran Service Officers",
+  "review_method": "full_official_page_text",
+  "note": "County veterans service officers help with VA claims, pension and survivor benefits at no charge.",
+  "selection": "Office address, phone and hours as printed on each county’s page on the department’s website, each read in full; officers’ names, emails, cell and home phones omitted. The Billings, Golden Valley, Grant, Hettinger and Mercer pages send veterans to the Stark County office in Dickinson. Slope’s page lists no office phone, so it shows the officer’s work phone. Phone extensions are in the notes. Renville’s mailing address is left out because its ZIP code does not match the town.",
+  "list": [
+   {
+    "county": "Adams",
+    "organization": "Adams County Veterans Service Office",
+    "phone": "701-567-7120",
+    "address": "Veterans Memorial Building, Lower Level, 609 2nd Avenue North, Suite 1, Hettinger, ND 58639 (mailing: PO Box 589, Hettinger, ND 58639)",
+    "hours": "Tue and Wed 7–11 a.m., and by appointment",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/adams",
+    "source_title": "North Dakota Department of Veterans Affairs: Adams County page"
+   },
+   {
+    "county": "Barnes",
+    "organization": "Barnes County Veterans Service Office",
+    "phone": "701-845-8511",
+    "address": "575 10th St. SW, Suite 7, Valley City, ND 58072",
+    "hours": "Mon–Fri 8 a.m.–5 p.m.",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/barnes",
+    "source_title": "North Dakota Department of Veterans Affairs: Barnes County page"
+   },
+   {
+    "county": "Benson",
+    "organization": "Benson County Veterans Service Office",
+    "phone": "701-473-5451",
+    "address": "Courthouse, 311 B Avenue South, Minnewaukan, ND 58352 (mailing: PO Box 52, Minnewaukan, ND 58352)",
+    "hours": "Thu 8:30 a.m.–4:30 p.m.; call for an appointment",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/benson",
+    "source_title": "North Dakota Department of Veterans Affairs: Benson County page",
+    "note": "Benson County Transportation: call 701-438-2192 by noon the business day before your ride."
+   },
+   {
+    "county": "Billings",
+    "organization": "Stark County Veterans Service Office (Dickinson)",
+    "phone": "701-456-7654",
+    "address": "Courthouse, 51 3rd Street East, Dickinson, ND 58601 (mailing: PO Box 130, Dickinson, ND 58602-0130)",
+    "hours": "Mon–Thu 8 a.m.–5 p.m.; Fri 8 a.m.–noon",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/veteran-service-officers-vso/billings",
+    "source_title": "North Dakota Department of Veterans Affairs: Billings County page",
+    "note": "The department’s Billings County page says Billings County veterans should contact the Stark County Veterans Service Officer in Dickinson."
+   },
+   {
+    "county": "Bottineau",
+    "organization": "Bottineau County Veterans Service Office",
+    "phone": "701-228-3904",
+    "address": "104 North Main Street, Bottineau, ND 58318",
+    "hours": "Mon and Wed 9 a.m.–5 p.m.; by appointment",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/bottineau",
+    "source_title": "North Dakota Department of Veterans Affairs: Bottineau County page",
+    "note": "The office schedules free HRTG van rides to VA-authorized medical appointments."
+   },
+   {
+    "county": "Bowman",
+    "organization": "Bowman County Veterans Service Office",
+    "phone": "701-523-7774",
+    "address": "Courthouse, 104 1st Street NW, Bowman, ND 58623 (mailing: PO Box 3, Bowman, ND 58623)",
+    "hours": "Wed 8:30 a.m.–4:30 p.m.",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/bowman",
+    "source_title": "North Dakota Department of Veterans Affairs: Bowman County page"
+   },
+   {
+    "county": "Burke",
+    "organization": "Burke County Veterans Service Office",
+    "phone": "701-377-2820",
+    "address": "103 Main St NE, Bowbells, ND 58721 (mailing: PO Box 310, Bowbells, ND 58721)",
+    "hours": "Wed 9 a.m.–3 p.m., or by appointment",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/veteran-service-officers-vso/burke",
+    "source_title": "North Dakota Department of Veterans Affairs: Burke County page"
+   },
+   {
+    "county": "Burleigh",
+    "organization": "Burleigh County Veterans Service Office",
+    "phone": "701-222-6698",
+    "address": "221 North 5th Street, Bismarck, ND 58501 (mailing: PO Box 5518, Bismarck, ND 58506-5518)",
+    "hours": "Mon–Fri 8 a.m.–5 p.m.",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/burleigh",
+    "source_title": "North Dakota Department of Veterans Affairs: Burleigh County page"
+   },
+   {
+    "county": "Cass",
+    "organization": "Cass County Veterans Service Office",
+    "phone": "701-241-5756",
+    "address": "Courthouse, 1st Floor, 211 9th Street South, Fargo, ND 58103 (mailing: PO Box 2806, Fargo, ND 58108-2806)",
+    "hours": "Mon–Fri 8 a.m.–5 p.m.",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/veteran-service-officers-vso/cass",
+    "source_title": "North Dakota Department of Veterans Affairs: Cass County page"
+   },
+   {
+    "county": "Cavalier",
+    "organization": "Cavalier County Veterans Service Office",
+    "phone": "701-256-2146",
+    "address": "Courthouse, 901 3rd Street, Langdon, ND 58249",
+    "hours": "Tue and Wed 8 a.m.–5 p.m.",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/cavalier",
+    "source_title": "North Dakota Department of Veterans Affairs: Cavalier County page",
+    "note": "Cavalier County Transit gives free rides to VA-authorized medical appointments; the office schedules them."
+   },
+   {
+    "county": "Dickey",
+    "organization": "Dickey County Veterans Service Office",
+    "phone": "701-349-8409",
+    "address": "Courthouse, 309 2nd Street North, Ellendale, ND 58436 (mailing: PO Box 237, Ellendale, ND 58436)",
+    "hours": "Ellendale: Wed 8 a.m.–4:30 p.m.",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/dickey",
+    "source_title": "North Dakota Department of Veterans Affairs: Dickey County page",
+    "note": "Dickey County has a second office in Oakes, open Tuesdays.",
+    "other_offices": [
+     {
+      "address": "517 Main Avenue, Oakes, ND 58474",
+      "schedule": "Tue 9 a.m.–4:30 p.m.",
+      "phone": "701-742-2223"
+     }
+    ]
+   },
+   {
+    "county": "Divide",
+    "organization": "Divide County Veterans Service Office",
+    "phone": "701-965-6641",
+    "address": "200 North Main, Crosby, ND 58730 (mailing: PO Box 143, Crosby, ND 58730)",
+    "hours": "Call for an appointment",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/divide",
+    "source_title": "North Dakota Department of Veterans Affairs: Divide County page"
+   },
+   {
+    "county": "Dunn",
+    "organization": "Dunn County Veterans Service Office",
+    "phone": "701-573-8387",
+    "address": "Dunn County Courthouse, 205 Owens Street, Manning, ND 58642",
+    "hours": "Mon, Tue and Thu 8 a.m.–4:30 p.m.",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/veteran-service-officers-vso/dunn",
+    "source_title": "North Dakota Department of Veterans Affairs: Dunn County page",
+    "note": "For free HRTG van rides to VA-authorized medical appointments, the department’s page says to call the McKenzie County office, 701-444-6853."
+   },
+   {
+    "county": "Eddy",
+    "organization": "Eddy County Veterans Service Office",
+    "phone": "701-302-8087",
+    "address": "22 9th Street S, New Rockford, ND 58356",
+    "hours": "Mon and Thu 9 a.m.–3 p.m.; other days by appointment",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/eddy",
+    "source_title": "North Dakota Department of Veterans Affairs: Eddy County page"
+   },
+   {
+    "county": "Emmons",
+    "organization": "Emmons County Veterans Service Office",
+    "phone": "701-254-5410",
+    "address": "Courthouse, 100 4th Street NW, Linton, ND 58552 (mailing: PO Box 272, Linton, ND 58552)",
+    "hours": "Mon and Tue 8 a.m.–4:30 p.m.; Wed 8 a.m.–noon",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/emmons",
+    "source_title": "North Dakota Department of Veterans Affairs: Emmons County page"
+   },
+   {
+    "county": "Foster",
+    "organization": "Foster County Veterans Service Office",
+    "phone": "701-652-2170",
+    "address": "Courthouse, 1000 5th Street North, Carrington, ND 58421 (mailing: PO Box 80, Carrington, ND 58421)",
+    "hours": "Tue 12:30–4:30 p.m.; Wed 9–11:30 a.m.",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/veteran-service-officers-vso/foster",
+    "source_title": "North Dakota Department of Veterans Affairs: Foster County page"
+   },
+   {
+    "county": "Golden Valley",
+    "organization": "Stark County Veterans Service Office (Dickinson)",
+    "phone": "701-456-7654",
+    "address": "Courthouse, 51 3rd Street East, Dickinson, ND 58601 (mailing: PO Box 130, Dickinson, ND 58602-0130)",
+    "hours": "Mon–Thu 8 a.m.–5 p.m.; Fri 8 a.m.–noon",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/golden-valley",
+    "source_title": "North Dakota Department of Veterans Affairs: Golden Valley County page",
+    "note": "The department’s Golden Valley County page says Golden Valley County veterans should contact the Stark County Veterans Service Officer in Dickinson."
+   },
+   {
+    "county": "Grand Forks",
+    "organization": "Grand Forks County Veterans Service Office",
+    "phone": "701-780-8296",
+    "address": "County Office Building, 151 South 4th Street, Grand Forks, ND 58201 (mailing: PO Box 5547, Grand Forks, ND 58206)",
+    "hours": "Mon–Fri 8 a.m.–5 p.m.",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/veteran-service-officers-vso/grand-forks",
+    "source_title": "North Dakota Department of Veterans Affairs: Grand Forks County page"
+   },
+   {
+    "county": "Grant",
+    "organization": "Stark County Veterans Service Office (Dickinson)",
+    "phone": "701-456-7654",
+    "address": "Courthouse, 51 3rd Street East, Dickinson, ND 58601 (mailing: PO Box 130, Dickinson, ND 58602-0130)",
+    "hours": "Mon–Thu 8 a.m.–5 p.m.; Fri 8 a.m.–noon",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/grant",
+    "source_title": "North Dakota Department of Veterans Affairs: Grant County page",
+    "note": "The department’s Grant County page says Grant County veterans should contact the Stark County Veterans Service Officer in Dickinson."
+   },
+   {
+    "county": "Griggs",
+    "organization": "Griggs County Veterans Service Office",
+    "phone": "701-797-3717",
+    "address": "Courthouse, 808 Rollin Ave SW, Cooperstown, ND 58425 (mailing: PO Box 326, Cooperstown, ND 58425)",
+    "hours": "2nd and 4th Thu 9 a.m.–noon",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/griggs",
+    "source_title": "North Dakota Department of Veterans Affairs: Griggs County page"
+   },
+   {
+    "county": "Hettinger",
+    "organization": "Stark County Veterans Service Office (Dickinson)",
+    "phone": "701-456-7654",
+    "address": "Courthouse, 51 3rd Street East, Dickinson, ND 58601 (mailing: PO Box 130, Dickinson, ND 58602-0130)",
+    "hours": "Mon–Thu 8 a.m.–5 p.m.; Fri 8 a.m.–noon",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/hettinger",
+    "source_title": "North Dakota Department of Veterans Affairs: Hettinger County page",
+    "note": "The department’s Hettinger County page says Hettinger County veterans should contact the Stark County Veterans Service Officer in Dickinson."
+   },
+   {
+    "county": "Kidder",
+    "organization": "Kidder County Veterans Service Office",
+    "phone": "701-475-4549",
+    "address": "2393 39th St SE, Steele, ND 58482 (mailing: PO Box 225, Steele, ND 58482)",
+    "hours": "Tue 9 a.m.–5 p.m.",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/kidder",
+    "source_title": "North Dakota Department of Veterans Affairs: Kidder County page"
+   },
+   {
+    "county": "LaMoure",
+    "organization": "LaMoure County Veterans Service Office",
+    "phone": "701-883-6055",
+    "address": "Courthouse, 202 4th Avenue NE, LaMoure, ND 58458 (mailing: PO Box 37, LaMoure, ND 58458)",
+    "hours": "Wed 8:30 a.m.–12:30 p.m.",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/lamoure",
+    "source_title": "North Dakota Department of Veterans Affairs: LaMoure County page",
+    "other_phones": [
+     "701-845-8511 (the officer’s work phone on the page; also the Barnes County office number)"
+    ]
+   },
+   {
+    "county": "Logan",
+    "organization": "Logan County Veterans Service Office",
+    "phone": "701-754-4546",
+    "address": "Courthouse, 301 Broadway, Napoleon, ND 58561 (mailing: PO Box 38, Napoleon, ND 58561-7010)",
+    "hours": "Tue 8:30 a.m.–4:30 p.m.; by appointment other days",
+    "office_type": "county",
+    "source_url": "https://veterans.nd.gov/about/veteran-service-officers-vso/logan",
+    "source_title": "North Dakota Department of Veterans Affairs: Logan County page"
+   },
+   {
+    "county": "McHenry",
+    "organization": "McHenry County Veterans Service Office",
+    "phone": "701-537-5724",
+    "address": "Courthouse, 407 Main Street South, Room 201, Towner, ND 58788",
+    "hours": "Wed and Thu 9 a.m.–4 p.m.; on call other days",
+    "office_type": "county",
+    "source_url": "https://veterans.nd.gov/about/veteran-service-officers-vso/mchenry",
+    "source_title": "North Dakota Department of Veterans Affairs: McHenry County page",
+    "note": "For free van rides to VA-authorized medical appointments, the department’s page says to call the Bottineau County office, 701-228-3904."
+   },
+   {
+    "county": "McIntosh",
+    "organization": "McIntosh County Veterans Service Office",
+    "phone": "701-452-2885",
+    "address": "109 10th St S, Wishek, ND 58495 (mailing: PO Box 493, Wishek, ND 58495)",
+    "hours": "No regular hours; call for an appointment. 2nd Friday 9 a.m.–noon at the Ashley courthouse",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/mcintosh",
+    "source_title": "North Dakota Department of Veterans Affairs: McIntosh County page"
+   },
+   {
+    "county": "McKenzie",
+    "organization": "McKenzie County Veterans Service Office",
+    "phone": "701-444-6853",
+    "address": "Courthouse, 201 5th Street NW, Watford City, ND 58854 (mailing: PO Box 1036, Watford City, ND 58854)",
+    "hours": "Mon–Fri 8 a.m.–5 p.m.",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/mckenzie",
+    "source_title": "North Dakota Department of Veterans Affairs: McKenzie County page"
+   },
+   {
+    "county": "McLean",
+    "organization": "McLean County Veterans Service Office",
+    "phone": "701-462-8541",
+    "address": "Courthouse, 712 5th Avenue, Washburn, ND 58577 (mailing: PO Box 1108, Washburn, ND 58577-1108)",
+    "hours": "Mon–Fri 8 a.m.–4:30 p.m.",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/veteran-service-officers-vso/mclean",
+    "source_title": "North Dakota Department of Veterans Affairs: McLean County page",
+    "note": "Ask for extension 804. For free HRTG van rides to VA-authorized medical appointments, the department’s page says to call the Sheridan County office, 701-889-1067."
+   },
+   {
+    "county": "Mercer",
+    "organization": "Stark County Veterans Service Office (Dickinson)",
+    "phone": "701-456-7654",
+    "address": "Courthouse, 51 3rd Street East, Dickinson, ND 58601 (mailing: PO Box 130, Dickinson, ND 58602-0130)",
+    "hours": "Mon–Thu 8 a.m.–5 p.m.; Fri 8 a.m.–noon",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/mercer",
+    "source_title": "North Dakota Department of Veterans Affairs: Mercer County page",
+    "note": "The department’s Mercer County page says Mercer County veterans should contact the Stark County Veterans Service Officer in Dickinson."
+   },
+   {
+    "county": "Morton",
+    "organization": "Morton County Veterans Service Office",
+    "phone": "701-667-3365",
+    "address": "Courthouse, 210 2nd Avenue NW, Mandan, ND 58554",
+    "hours": "Mon–Fri 8 a.m.–5 p.m.",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/morton",
+    "source_title": "North Dakota Department of Veterans Affairs: Morton County page"
+   },
+   {
+    "county": "Mountrail",
+    "organization": "Mountrail County Veterans Service Office",
+    "phone": "701-628-3063",
+    "address": "120 South Main Street, Stanley, ND 58784 (mailing: PO Box 421, Stanley, ND 58784)",
+    "hours": "Mon–Fri 8:30 a.m.–5 p.m.",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/mountrail",
+    "source_title": "North Dakota Department of Veterans Affairs: Mountrail County page"
+   },
+   {
+    "county": "Nelson",
+    "organization": "Nelson County Veterans Service Office",
+    "phone": "701-247-2531",
+    "address": "Courthouse, 210 B Avenue West, Suite 202, Lakota, ND 58344",
+    "hours": "Tue 1–4:30 p.m.; call for an appointment",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/nelson",
+    "source_title": "North Dakota Department of Veterans Affairs: Nelson County page"
+   },
+   {
+    "county": "Oliver",
+    "organization": "Oliver County Veterans Service Office",
+    "phone": "701-794-3404",
+    "address": "Courthouse, 115 West Main Street, Center, ND 58530-0188 (mailing: PO Box 188, Center, ND 58530)",
+    "hours": "2nd and 4th Tue 8:30 a.m.–4 p.m.",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/oliver",
+    "source_title": "North Dakota Department of Veterans Affairs: Oliver County page",
+    "other_phones": [
+     "701-667-3365 (the officer’s work phone on the page; the Morton County office in Mandan)"
+    ]
+   },
+   {
+    "county": "Pembina",
+    "organization": "Pembina County Veterans Service Office",
+    "phone": "701-265-4460",
+    "address": "308 Courthouse Dr, 2nd Floor, Cavalier, ND 58220 (mailing: 301 Dakota St W, #16, Cavalier, ND 58220-4100)",
+    "hours": "Mon–Fri 8 a.m.–4:30 p.m.",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/pembina",
+    "source_title": "North Dakota Department of Veterans Affairs: Pembina County page"
+   },
+   {
+    "county": "Pierce",
+    "organization": "Pierce County Veterans Service Office",
+    "phone": "701-776-6178",
+    "address": "Courthouse, 240 2nd Street South, Suite 5, Rugby, ND 58368-0258",
+    "hours": "Wed 8:30 a.m.–3 p.m., or by appointment",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/veteran-service-officers-vso/pierce",
+    "source_title": "North Dakota Department of Veterans Affairs: Pierce County page",
+    "note": "Ask for extension 7. For free van rides to VA-authorized medical appointments, the department’s page says to call the Bottineau County office, 701-228-3904."
+   },
+   {
+    "county": "Ramsey",
+    "organization": "Ramsey County Veterans Service Office",
+    "phone": "701-662-7048",
+    "address": "Courthouse, 524 4th Avenue #17, Devils Lake, ND 58301",
+    "hours": "Mon, Wed and Fri 8 a.m.–5 p.m.; Tue 8 a.m.–noon; call for an appointment",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/ramsey",
+    "source_title": "North Dakota Department of Veterans Affairs: Ramsey County page"
+   },
+   {
+    "county": "Ransom",
+    "organization": "Ransom County Veterans Service Office",
+    "phone": "701-683-6126",
+    "address": "Courthouse, 204 5th Avenue West, Lisbon, ND 58054 (mailing: PO Box 830, Lisbon, ND 58054)",
+    "hours": "Tue and Thu 8:30 a.m.–5 p.m.; Wed 8:30 a.m.–5 p.m. at the Veterans Home; 3rd Tue 8:30 a.m.–5 p.m. in Enderlin",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/ransom",
+    "source_title": "North Dakota Department of Veterans Affairs: Ransom County page",
+    "note": "The same officer also serves Sargent County."
+   },
+   {
+    "county": "Renville",
+    "organization": "Renville County Veterans Service Office",
+    "phone": "701-833-8743",
+    "address": "Courthouse, 205 Main Street East, Mohall, ND 58761",
+    "hours": "Call for an appointment",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/renville",
+    "source_title": "North Dakota Department of Veterans Affairs: Renville County page",
+    "other_phones": [
+     "701-756-6403 (the officer’s work phone on the page)"
+    ],
+    "note": "For free van rides to VA-authorized medical appointments, the department’s page says to call the Bottineau County office, 701-228-3904."
+   },
+   {
+    "county": "Richland",
+    "organization": "Richland County Veterans Service Office",
+    "phone": "701-642-7807",
+    "address": "502 2nd Ave North, Wahpeton, ND 58075",
+    "hours": "Mon–Fri 8 a.m.–4:30 p.m.",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/veteran-service-officers-vso/richland",
+    "source_title": "North Dakota Department of Veterans Affairs: Richland County page"
+   },
+   {
+    "county": "Rolette",
+    "organization": "Rolette County Veterans Service Office",
+    "phone": "701-477-5265",
+    "address": "Courthouse, 102 2nd Street NE, Rolla, ND 58367 (mailing: PO Box 939, Rolla, ND 58367)",
+    "hours": "By appointment only",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/rolette",
+    "source_title": "North Dakota Department of Veterans Affairs: Rolette County page"
+   },
+   {
+    "county": "Sargent",
+    "organization": "Sargent County Veterans Service Office",
+    "phone": "701-724-6241",
+    "address": "Courthouse, 355 Main St South, Suite 8, Forman, ND 58032",
+    "hours": "Mon 9 a.m.–4:30 p.m.",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/sargent",
+    "source_title": "North Dakota Department of Veterans Affairs: Sargent County page",
+    "note": "Ask for extension 114. The same officer also serves Ransom County."
+   },
+   {
+    "county": "Sheridan",
+    "organization": "Sheridan County Veterans Service Office",
+    "phone": "701-889-1067",
+    "address": "1571 11th Avenue NE, Denhoff, ND 58430",
+    "hours": "No regular hours; call for an appointment",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/sheridan-county-veterans-service-office",
+    "source_title": "North Dakota Department of Veterans Affairs: Sheridan County Veterans Service Office",
+    "note": "The office schedules free HRTG van rides to VA-authorized medical appointments for McLean and Wells counties."
+   },
+   {
+    "county": "Sioux",
+    "organization": "Sioux County Veterans Service Office",
+    "phone": "701-854-8527",
+    "address": "Tribal Building 1, Standing Rock Ave, Fort Yates, ND 58538",
+    "hours": "Mon–Fri 8 a.m.–4:30 p.m.",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/sioux",
+    "source_title": "North Dakota Department of Veterans Affairs: Sioux County page",
+    "note": "The office is in the Standing Rock tribal building in Fort Yates; the Standing Rock Tribal Veterans Service Office uses the same number."
+   },
+   {
+    "county": "Slope",
+    "organization": "Slope County Veterans Service Office",
+    "phone": "701-523-7774",
+    "address": "13910 64th Street SW, Amidon, ND 58620-9657",
+    "hours": "By appointment only",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/slope",
+    "source_title": "North Dakota Department of Veterans Affairs: Slope County page",
+    "note": "The page lists no office phone; this is the officer’s work phone, the same number as the Bowman County office."
+   },
+   {
+    "county": "Stark",
+    "organization": "Stark County Veterans Service Office",
+    "phone": "701-456-7654",
+    "address": "Courthouse, 51 3rd Street East, Dickinson, ND 58601 (mailing: PO Box 130, Dickinson, ND 58602-0130)",
+    "hours": "Mon–Thu 8 a.m.–5 p.m.; Fri 8 a.m.–noon",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/stark",
+    "source_title": "North Dakota Department of Veterans Affairs: Stark County page",
+    "note": "The Stark County office also serves Billings, Golden Valley, Grant, Hettinger and Mercer counties."
+   },
+   {
+    "county": "Steele",
+    "organization": "Steele County Veterans Service Office",
+    "phone": "701-524-1926",
+    "address": "Courthouse, 201 Washington Avenue West, Finley, ND 58230",
+    "hours": "Wed noon–4 p.m.",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/steele",
+    "source_title": "North Dakota Department of Veterans Affairs: Steele County page"
+   },
+   {
+    "county": "Stutsman",
+    "organization": "Stutsman County Veterans Service Office",
+    "phone": "701-252-9043",
+    "address": "Law Enforcement Center, 205 6th Street SE, Suite 1, Jamestown, ND 58401",
+    "hours": "Mon–Fri 8 a.m.–5 p.m.",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/veteran-service-officers-vso/stutsman",
+    "source_title": "North Dakota Department of Veterans Affairs: Stutsman County page"
+   },
+   {
+    "county": "Towner",
+    "organization": "Towner County Veterans Service Office",
+    "phone": "701-968-4363",
+    "address": "Memorial Building, 404 5th Avenue, Cando, ND 58324 (mailing: PO Box 279, Cando, ND 58324)",
+    "hours": "Mon 8 a.m.–5 p.m.",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/towner",
+    "source_title": "North Dakota Department of Veterans Affairs: Towner County page"
+   },
+   {
+    "county": "Traill",
+    "organization": "Traill County Veterans Service Office",
+    "phone": "701-636-4414",
+    "address": "Courthouse, 114 West Caledonia Avenue, Hillsboro, ND 58045 (mailing: PO Box 785, Hillsboro, ND 58045)",
+    "hours": "Hillsboro: Mon–Thu 7:30 a.m.–5:30 p.m. Mayville: Fri 8 a.m.–noon. County outreach: Fri noon–4 p.m.",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/traill",
+    "source_title": "North Dakota Department of Veterans Affairs: Traill County page"
+   },
+   {
+    "county": "Walsh",
+    "organization": "Walsh County Veterans Service Office",
+    "phone": "701-352-5030",
+    "address": "638 Cooper Avenue, Suite 5, Grafton, ND 58237",
+    "hours": "Mon–Fri 8 a.m.–4:30 p.m.",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/walsh",
+    "source_title": "North Dakota Department of Veterans Affairs: Walsh County page"
+   },
+   {
+    "county": "Ward",
+    "organization": "Ward County Veterans Service Office",
+    "phone": "701-857-6492",
+    "address": "Courthouse, 225 3rd Street SE, Suite 124, Minot, ND 58701 (mailing: PO Box 5005, Minot, ND 58702-5005)",
+    "hours": "Mon–Fri 8 a.m.–4:30 p.m.",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/veteran-service-officers-vso/ward",
+    "source_title": "North Dakota Department of Veterans Affairs: Ward County page"
+   },
+   {
+    "county": "Wells",
+    "organization": "Wells County Veterans Service Office",
+    "phone": "701-324-2665",
+    "address": "Harvey Armory, 120 West 8th Street, Harvey, ND 58341 (mailing: PO Box 362, Harvey, ND 58341)",
+    "hours": "By appointment only",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/wells",
+    "source_title": "North Dakota Department of Veterans Affairs: Wells County page",
+    "note": "For free HRTG van rides to VA-authorized medical appointments, the department’s page says to call the Sheridan County office, 701-889-1067."
+   },
+   {
+    "county": "Williams",
+    "organization": "Williams County Veterans Service Office",
+    "phone": "701-577-4550",
+    "address": "Courthouse, 205 East Broadway, Williston, ND 58801 (mailing: PO Box 2047, Williston, ND 58802-2047)",
+    "hours": "Mon–Fri 8 a.m.–5 p.m.",
+    "office_type": "county",
+    "source_url": "https://www.veterans.nd.gov/about/veteran-service-officers-vso/williams",
+    "source_title": "North Dakota Department of Veterans Affairs: Williams County page"
+   }
+  ]
+ },
+ "aging": {
+  "source_url": "https://hhs.nd.gov/node/1832",
+  "source_title": "North Dakota Health and Human Services: Adults and Aging Services",
+  "source_scope": "Aging and Disability Resource LINK, toll-free (855) 462-5465, Relay ND TTY 711; the Adults and Aging Services section, 1237 W. Divide Avenue, Suite 6, Bismarck; read in full. The page is undated. The 2023 Vulnerable Adult Protective Services handout gives option 1 for the Resource LINK (https://www.hhs.nd.gov/sites/www/files/documents/vaps-handout-2023.pdf; search excerpt). North Dakota has no Area Agencies on Aging; the state section runs Older Americans Act services statewide.",
+  "review": "full",
+  "review_method": "full_official_page_text",
+  "region_word": "",
+  "agency_label": "Aging & Disability Resource LINK",
+  "description": "The Aging & Disability Resource LINK, run statewide by North Dakota Health and Human Services: free information and referral on help at home, meals, caregiver support, assisted living and other long-term services for older adults, adults with disabilities and caregivers, at any income.",
+  "next_step_extra": "Press 1 for the Resource LINK. TTY users can call 711.",
+  "regions": [
+   {
+    "id": "nd-adrl",
+    "label": "North Dakota",
+    "name": "Aging & Disability Resource LINK (North Dakota Health and Human Services)",
+    "phone": "855-462-5465",
+    "counties": [
+     "Adams",
+     "Barnes",
+     "Benson",
+     "Billings",
+     "Bottineau",
+     "Bowman",
+     "Burke",
+     "Burleigh",
+     "Cass",
+     "Cavalier",
+     "Dickey",
+     "Divide",
+     "Dunn",
+     "Eddy",
+     "Emmons",
+     "Foster",
+     "Golden Valley",
+     "Grand Forks",
+     "Grant",
+     "Griggs",
+     "Hettinger",
+     "Kidder",
+     "LaMoure",
+     "Logan",
+     "McHenry",
+     "McIntosh",
+     "McKenzie",
+     "McLean",
+     "Mercer",
+     "Morton",
+     "Mountrail",
+     "Nelson",
+     "Oliver",
+     "Pembina",
+     "Pierce",
+     "Ramsey",
+     "Ransom",
+     "Renville",
+     "Richland",
+     "Rolette",
+     "Sargent",
+     "Sheridan",
+     "Sioux",
+     "Slope",
+     "Stark",
+     "Steele",
+     "Stutsman",
+     "Towner",
+     "Traill",
+     "Walsh",
+     "Ward",
+     "Wells",
+     "Williams"
+    ],
+    "notes": [
+     "Statewide; one number for all 53 counties. Press 1 for the Resource LINK."
+    ]
+   }
+  ]
+ },
+ "ombudsman": {
+  "state_phone": "701-328-4617",
+  "regions": [
+   {
+    "id": "nd-omb-state",
+    "name": "North Dakota State Long-Term Care Ombudsman",
+    "phone": "701-328-4617",
+    "counties": [
+     "Adams",
+     "Barnes",
+     "Benson",
+     "Billings",
+     "Bottineau",
+     "Bowman",
+     "Burke",
+     "Burleigh",
+     "Cass",
+     "Cavalier",
+     "Dickey",
+     "Divide",
+     "Dunn",
+     "Eddy",
+     "Emmons",
+     "Foster",
+     "Golden Valley",
+     "Grand Forks",
+     "Grant",
+     "Griggs",
+     "Hettinger",
+     "Kidder",
+     "LaMoure",
+     "Logan",
+     "McHenry",
+     "McIntosh",
+     "McKenzie",
+     "McLean",
+     "Mercer",
+     "Morton",
+     "Mountrail",
+     "Nelson",
+     "Oliver",
+     "Pembina",
+     "Pierce",
+     "Ramsey",
+     "Ransom",
+     "Renville",
+     "Richland",
+     "Rolette",
+     "Sargent",
+     "Sheridan",
+     "Sioux",
+     "Slope",
+     "Stark",
+     "Steele",
+     "Stutsman",
+     "Towner",
+     "Traill",
+     "Walsh",
+     "Ward",
+     "Wells",
+     "Williams"
+    ],
+    "source_url": "https://www.hhs.nd.gov/sites/www/files/documents/New%20LTCOP%20Brochure%202023%20v4%20(1).pdf",
+    "source_title": "North Dakota Long-Term Care Ombudsman Program brochure (DN 647, December 2023)",
+    "source_scope": "State Long-Term Care Ombudsman, Adult and Aging Services, 1237 W. Divide Ave., Suite 6, Bismarck: 701-328-4617 or 711 (TTY), toll-free 1-855-462-5465, option 3; read in full. The brochure lists no regional ombudsmen, so every county shows the state office.",
+    "review": "full",
+    "review_method": "full_official_pdf",
+    "counties_from_source": true,
+    "notes": [
+     "Toll-free: 855-462-5465, option 3. TTY: 711."
+    ]
+   }
+  ]
+ },
+ "cils": {
+  "source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/ND",
+  "source_title": "ILRU: Directory of Centers for Independent Living, North Dakota",
+  "scope": "Each office’s address, phones, website and counties served; read in full; undated. The Fargo listing mixes North Dakota and Minnesota counties (its Grant is Grant County, Minnesota); its North Dakota counties match the Jamestown and Lisbon listings. Options Interstate Resource Center is listed in the Minnesota directory (https://www.ilru.org/cil-directory/mn, read in full) with 14 North Dakota counties.",
+  "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living",
+  "list": [
+   {
+    "id": "nd-cil-dakota",
+    "name": "Dakota Center for Independent Living",
+    "organization": "Dakota Center for Independent Living",
+    "url": "https://dakotacil.org/",
+    "phone": "701-222-3636",
+    "counties": [
+     "Adams",
+     "Billings",
+     "Bowman",
+     "Burleigh",
+     "Dunn",
+     "Emmons",
+     "Golden Valley",
+     "Grant",
+     "Hettinger",
+     "Kidder",
+     "McLean",
+     "Mercer",
+     "Morton",
+     "Oliver",
+     "Sheridan",
+     "Sioux",
+     "Slope",
+     "Stark"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "Main office: 3111 East Broadway Avenue, Bismarck. Toll-free: 800-489-5013. Dickinson office: 26 First Street East, Suite 103, 701-483-4363."
+    ]
+   },
+   {
+    "id": "nd-cil-freedom",
+    "name": "Freedom Resource Center for Independent Living",
+    "organization": "Freedom Resource Center for Independent Living",
+    "url": "https://www.freedomrc.org/",
+    "phone": "701-478-0459",
+    "counties": [
+     "Barnes",
+     "Cass",
+     "Dickey",
+     "LaMoure",
+     "Logan",
+     "McIntosh",
+     "Ransom",
+     "Richland",
+     "Sargent",
+     "Stutsman"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "Main office: 2701 9th Ave. S., Suite H, Fargo. Toll-free: 800-450-0459. Also Jamestown 701-252-4693, Lisbon 701-683-6850 and Wahpeton 701-672-1648."
+    ]
+   },
+   {
+    "id": "nd-cil-independence",
+    "name": "Independence, Inc.",
+    "organization": "Independence, Inc.",
+    "url": "https://www.independencecil.org/",
+    "phone": "701-839-4724",
+    "counties": [
+     "Bottineau",
+     "Burke",
+     "Divide",
+     "McHenry",
+     "McKenzie",
+     "Mountrail",
+     "Pierce",
+     "Renville",
+     "Rolette",
+     "Ward",
+     "Williams"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "Main office: 315 3rd Ave SW, Minot. Toll-free: 800-377-5114. Bottineau office: 701-228-2221."
+    ]
+   },
+   {
+    "id": "nd-cil-options",
+    "name": "Options Interstate Resource Center for Independent Living",
+    "organization": "Options Interstate Resource Center for Independent Living",
+    "url": "https://www.ilru.org/cil-directory/mn",
+    "phone": "218-773-6100",
+    "counties": [
+     "Benson",
+     "Cavalier",
+     "Eddy",
+     "Foster",
+     "Grand Forks",
+     "Griggs",
+     "Nelson",
+     "Pembina",
+     "Ramsey",
+     "Steele",
+     "Towner",
+     "Traill",
+     "Walsh",
+     "Wells"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "Office: 318 3rd St NW, East Grand Forks, Minnesota. Toll-free: 800-726-3692. ILRU lists it under Minnesota and notes that it serves North Dakota."
+    ]
+   }
+  ]
+ },
+ "programs": [
+  {
+   "id": "nd-claims",
+   "name": "North Dakota veterans: county and tribal veterans service officers for claims help",
+   "organization": "North Dakota Department of Veterans Affairs",
+   "url": "https://www.veterans.nd.gov/about/find-a-service-officer",
+   "needs": [
+    "general_navigation",
+    "benefits_and_funding"
+   ],
+   "description": "Free help with VA claims, appeals, pension and survivor benefits from county veterans service officers in every county and tribal veterans service officers for Fort Berthold, Lake Traverse, Spirit Lake, Standing Rock and Turtle Mountain. The department and the national service officers of AMVETS, the American Legion, DAV and VFW work at the Fargo VA Regional Office.",
+   "next_step": "Choose a county above for its county veterans service officer. Or call the North Dakota Department of Veterans Affairs at 701-239-7165. National service officers at the Fargo VA Regional Office: American Legion 701-451-4646, DAV 701-451-4636, VFW 701-451-4635.",
+   "constraints": [
+    "Many rural county offices are open only a few days a month; check the hours on the county card and call ahead."
+   ],
+   "phone": "701-239-7165",
+   "phone_label": "North Dakota Department of Veterans Affairs (701-239-7165)",
+   "phone_source": "https://www.veterans.nd.gov/about/find-a-service-officer",
+   "review": "full",
+   "sources": [
+    {
+     "url": "https://www.veterans.nd.gov/about/find-a-service-officer",
+     "title": "North Dakota Department of Veterans Affairs: Veteran Service Officers",
+     "scope": "National and state service officers with phones; links to each county and tribal veterans service officer page; read in full."
+    }
+   ]
+  },
+  {
+   "id": "nd-adrc",
+   "name": "Aging & Disability Resource LINK: North Dakota’s aging and disability line",
+   "organization": "North Dakota Health and Human Services, Adults and Aging Services",
+   "url": "https://hhs.nd.gov/node/1832",
+   "needs": [
+    "general_navigation",
+    "help_at_home",
+    "equipment_home_accessibility"
+   ],
+   "description": "The Aging & Disability Resource LINK is the statewide starting point for older adults, adults with disabilities and caregivers: information and referral for help at home, meals, caregiver support, assisted living and other long-term services. Military service is not required.",
+   "next_step": "Call 855-462-5465 and press 1 for the Resource LINK. TTY users can call 711.",
+   "constraints": [
+    "Each program has its own eligibility and waitlist."
+   ],
+   "phone": "855-462-5465",
+   "phone_label": "Aging & Disability Resource LINK (855-462-5465)",
+   "phone_source": "https://hhs.nd.gov/node/1832",
+   "review": "full",
+   "sources": [
+    {
+     "url": "https://hhs.nd.gov/node/1832",
+     "title": "North Dakota Health and Human Services: Adults and Aging Services",
+     "scope": "Toll-free number, TTY, address and the section’s services; read in full."
+    },
+    {
+     "url": "https://www.hhs.nd.gov/sites/www/files/documents/vaps-handout-2023.pdf",
+     "title": "North Dakota HHS: Vulnerable Adult Protective Services handout (2023)",
+     "scope": "Resource LINK at 1-855-462-5465, option 1; reports at option 2, weekdays 8 a.m. to 5 p.m.; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "nd-ship",
+   "name": "Medicare counseling (State Health Insurance Counseling, SHIC) for North Dakota",
+   "organization": "North Dakota Insurance Department, State Health Insurance Counseling (SHIC)",
+   "url": "https://www.cms.gov/about-cms/contact/directory/senior-health-insurance-counseling-shic/1562166",
+   "needs": [
+    "benefits_and_funding"
+   ],
+   "description": "Free Medicare counseling from North Dakota’s State Health Insurance Assistance Program, SHIC, run by the Insurance Department with trained volunteer counselors.",
+   "next_step": "Call SHIC toll-free at 888-575-6611 (TDD 800-366-6888). For Medicare itself, call 800-MEDICARE (800-633-4227).",
+   "constraints": [
+    "Have your Medicare card and drug list ready."
+   ],
+   "phone": "888-575-6611",
+   "phone_label": "North Dakota SHIC (888-575-6611)",
+   "phone_source": "https://www.cms.gov/about-cms/contact/directory/senior-health-insurance-counseling-shic/1562166",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://www.cms.gov/about-cms/contact/directory/senior-health-insurance-counseling-shic/1562166",
+     "title": "CMS: Senior Health Insurance Counseling (SHIC), North Dakota",
+     "scope": "North Dakota Insurance Department, 600 East Boulevard, Bismarck; toll-free (888) 575-6611, TDD (800) 366-6888; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "nd-ombudsman",
+   "name": "North Dakota Long-Term Care Ombudsman and adult abuse reporting",
+   "organization": "North Dakota Health and Human Services: Long-Term Care Ombudsman Program; Vulnerable Adult Protective Services",
+   "url": "https://www.hhs.nd.gov/sites/www/files/documents/New%20LTCOP%20Brochure%202023%20v4%20(1).pdf",
+   "needs": [
+    "resident_rights",
+    "general_navigation"
+   ],
+   "description": "Advocacy for people living in nursing homes, basic care, assisted living and swing-bed hospitals. Vulnerable Adult Protective Services takes reports of abuse, neglect or exploitation of adults living in the community.",
+   "next_step": "Call the ombudsman at 701-328-4617, or 855-462-5465 and press 3. To report abuse, neglect or exploitation of a vulnerable adult, call 855-462-5465 and press 2 (weekdays 8 a.m. to 5 p.m.; messages can be left), or report online. In an emergency, call 911 first.",
+   "constraints": [
+    "The ombudsman acts with the resident’s permission and is not a licensing agency."
+   ],
+   "phone": "701-328-4617",
+   "phone_label": "North Dakota State Long-Term Care Ombudsman (701-328-4617)",
+   "phone_source": "https://www.hhs.nd.gov/sites/www/files/documents/New%20LTCOP%20Brochure%202023%20v4%20(1).pdf",
+   "review": "full",
+   "method": "full_official_pdf",
+   "sources": [
+    {
+     "url": "https://www.hhs.nd.gov/sites/www/files/documents/New%20LTCOP%20Brochure%202023%20v4%20(1).pdf",
+     "title": "North Dakota Long-Term Care Ombudsman Program brochure (December 2023)",
+     "scope": "State ombudsman address and phones, including 1-855-462-5465 option 3; read in full."
+    },
+    {
+     "url": "https://hhs.nd.gov/reporting",
+     "title": "North Dakota HHS: How to Report",
+     "scope": "Report by phone at 1-855-462-5465, press 2, online or by form; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "nd-legal-programs",
+   "name": "Free legal help for older North Dakotans",
+   "organization": "Legal Services of North Dakota; Dakota Plains Legal Services",
+   "url": "https://www.ndcourts.gov/legal-self-help/other-resources",
+   "role": "legal_aid",
+   "needs": [
+    "resident_rights",
+    "general_navigation",
+    "housing"
+   ],
+   "description": "Legal Services of North Dakota gives free civil legal help to low-income and older North Dakotans, with a separate line for callers 60 and older. Dakota Plains Legal Services serves low-income people, older Americans and veterans, including in tribal courts.",
+   "next_step": "Age 60 and older: call Legal Services of North Dakota at 866-621-9886. Under 60: 800-634-5263.",
+   "constraints": [
+    "Legal aid screens by income and case type."
+   ],
+   "phone": "866-621-9886",
+   "phone_label": "Legal Services of North Dakota, age 60+ (866-621-9886)",
+   "phone_source": "https://www.ndcourts.gov/legal-self-help/other-resources",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://www.ndcourts.gov/legal-self-help/other-resources",
+     "title": "North Dakota Courts: Legal Self-Help, other resources",
+     "scope": "Legal Services of North Dakota, (800) 634-5263 under age 60 and (866) 621-9886 age 60+; Dakota Plains Legal Services; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "nd-vahealth-systems",
+   "name": "VA health care in North Dakota",
+   "organization": "U.S. Department of Veterans Affairs, Fargo VA Health Care System",
+   "url": "https://www.va.gov/fargo-health-care/contact-us/",
+   "role": "va_health_system",
+   "needs": [
+    "veteran_services",
+    "care_facilities"
+   ],
+   "description": "North Dakota veterans are served by the Fargo VA Health Care System: the Fargo VA Medical Center (2101 Elm Street North) and clinics including Bismarck, Grafton, Grand Forks, Jamestown and Minot.",
+   "next_step": "Call 701-239-3700 or toll-free 800-410-9723. Not enrolled yet? Ask your county veterans service officer for help applying.",
+   "constraints": [
+    "If a service you need is not offered near you, ask about travel benefits and community care."
+   ],
+   "phone": "800-410-9723",
+   "phone_label": "Fargo VA Health Care System (800-410-9723)",
+   "phone_source": "https://www.va.gov/fargo-health-care/contact-us/",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://www.va.gov/fargo-health-care/contact-us/",
+     "title": "VA Fargo health care: Contact us",
+     "scope": "Mailing address 2101 Elm Street North, Fargo; local 701-239-3700, toll-free 800-410-9723; search excerpt."
+    },
+    {
+     "url": "https://www.va.gov/fargo-health-care/locations/",
+     "title": "VA Fargo health care: Locations",
+     "scope": "Fargo VA Medical Center and clinics in Bismarck, Grafton, Grand Forks, Jamestown and Minot, among others; search excerpt."
+    }
+   ]
+  }
+ ],
+ "adapter": {
+  "badge_county": "County veterans service officer",
+  "badge_state": "State veterans line",
+  "badge_statewide": "North Dakota statewide line",
+  "published_in": "Published on the North Dakota Department of Veterans Affairs county pages",
+  "agency_link": "North Dakota Department of Veterans Affairs",
+  "officers_can": "County Veterans Service Officers can",
+  "abuse_phone": "855-462-5465",
+  "abuse_label": "Vulnerable Adult Protective Services: press 2, weekdays 8 a.m. to 5 p.m.",
+  "aging_term": "Aging & Disability Resource LINK",
+  "extra_swaps": [
+   [
+    "Choose a county for its County Veterans Service Office, matched Area Agency on Aging, regional ombudsman",
+    "Choose a county for its County Veterans Service Office, the statewide Aging & Disability Resource LINK, the statewide ombudsman"
+   ]
+  ]
+ },
+ "coverage_scope": "Referral edition. All 53 counties show a county veterans service officer (five through the Stark County office), the statewide Aging & Disability Resource LINK, the statewide long-term care ombudsman and a Center for Independent Living.",
+ "coverage_note": "County veterans service officers come from the North Dakota Department of Veterans Affairs county pages. North Dakota has no Area Agencies on Aging; aging help, adult protective services and the ombudsman are reached through the statewide Resource LINK number. Independent living offices come from the ILRU national directory. Reviewed November 16, 2026. Contacts are not telephone-confirmed.",
+ "share_description": "county veterans service officers, aging and disability help and long-term care ombudsman help across North Dakota"
+}

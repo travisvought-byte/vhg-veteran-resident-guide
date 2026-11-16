@@ -937,26 +937,29 @@
   },
   {
     "program_id": "nd-claims",
-    "name": "North Dakota veterans: accredited claims help",
+    "name": "North Dakota veterans: county and tribal veterans service officers for claims help",
     "official_url": "https://www.veterans.nd.gov/about/find-a-service-officer",
     "organization": "North Dakota Department of Veterans Affairs",
     "service_area": [
-      "All North Dakota counties"
+      "statewide"
     ],
     "state": "ND",
     "needs_supported": [
       "general_navigation",
       "benefits_and_funding"
     ],
-    "description": "Free help with VA claims, applications and appeals for veterans and families.",
-    "next_step": "Call the state veterans agency; ask for a benefits review and the office that serves your county.",
-    "constraints": [],
+    "description": "Free help with VA claims, appeals, pension and survivor benefits from county veterans service officers in every county and tribal veterans service officers for Fort Berthold, Lake Traverse, Spirit Lake, Standing Rock and Turtle Mountain. The department and the national service officers of AMVETS, the American Legion, DAV and VFW work at the Fargo VA Regional Office.",
+    "next_step": "Choose a county above for its county veterans service officer. Or call the North Dakota Department of Veterans Affairs at 701-239-7165. National service officers at the Fargo VA Regional Office: American Legion 701-451-4646, DAV 701-451-4636, VFW 701-451-4635.",
+    "constraints": [
+      "Many rural county offices are open only a few days a month; check the hours on the county card and call ahead."
+    ],
     "public_contact": {
-      "phone": "701-239-7165"
+      "phone": "701-239-7165",
+      "phone_label": "North Dakota Department of Veterans Affairs (701-239-7165)"
     },
     "verification": {
       "record_status": "official_source_reviewed",
-      "last_reviewed_on": "2026-11-15"
+      "last_reviewed_on": "2026-11-16"
     },
     "evidence": {
       "review_method": "full_official_page_text",
@@ -966,43 +969,455 @@
     "source_evidence": [
       {
         "url": "https://www.veterans.nd.gov/about/find-a-service-officer",
-        "title": "Official published source",
-        "scope": "Name and phone matched to the publisher’s own page on 2026-11-15; not direct intake confirmation."
+        "title": "North Dakota Department of Veterans Affairs: Veteran Service Officers",
+        "reviewed_on": "2026-11-16",
+        "scope": "National and state service officers with phones; links to each county and tribal veterans service officer page; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "nd-adrc",
+    "name": "Aging & Disability Resource LINK: North Dakota’s aging and disability line",
+    "official_url": "https://hhs.nd.gov/node/1832",
+    "organization": "North Dakota Health and Human Services, Adults and Aging Services",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "ND",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "The Aging & Disability Resource LINK is the statewide starting point for older adults, adults with disabilities and caregivers: information and referral for help at home, meals, caregiver support, assisted living and other long-term services. Military service is not required.",
+    "next_step": "Call 855-462-5465 and press 1 for the Resource LINK. TTY users can call 711.",
+    "constraints": [
+      "Each program has its own eligibility and waitlist."
+    ],
+    "public_contact": {
+      "phone": "855-462-5465",
+      "phone_label": "Aging & Disability Resource LINK (855-462-5465)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://hhs.nd.gov/node/1832"
+    },
+    "source_evidence": [
+      {
+        "url": "https://hhs.nd.gov/node/1832",
+        "title": "North Dakota Health and Human Services: Adults and Aging Services",
+        "reviewed_on": "2026-11-16",
+        "scope": "Toll-free number, TTY, address and the section’s services; read in full."
+      },
+      {
+        "url": "https://www.hhs.nd.gov/sites/www/files/documents/vaps-handout-2023.pdf",
+        "title": "North Dakota HHS: Vulnerable Adult Protective Services handout (2023)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Resource LINK at 1-855-462-5465, option 1; reports at option 2, weekdays 8 a.m. to 5 p.m.; search excerpt."
       }
     ]
   },
   {
     "program_id": "nd-ship",
-    "name": "Medicare counseling (SHIP) for North Dakota",
-    "official_url": "https://www.shiphelp.org/",
-    "organization": "SHIP Technical Assistance Center",
+    "name": "Medicare counseling (State Health Insurance Counseling, SHIC) for North Dakota",
+    "official_url": "https://www.cms.gov/about-cms/contact/directory/senior-health-insurance-counseling-shic/1562166",
+    "organization": "North Dakota Insurance Department, State Health Insurance Counseling (SHIC)",
     "service_area": [
-      "All North Dakota counties"
+      "statewide"
     ],
     "state": "ND",
     "needs_supported": [
       "benefits_and_funding"
     ],
-    "description": "Free, unbiased Medicare counseling from the State Health Insurance Assistance Program.",
-    "next_step": "Call or use the locator to reach the North Dakota SHIP and ask for a counseling appointment.",
-    "constraints": [],
+    "description": "Free Medicare counseling from North Dakota’s State Health Insurance Assistance Program, SHIC, run by the Insurance Department with trained volunteer counselors.",
+    "next_step": "Call SHIC toll-free at 888-575-6611 (TDD 800-366-6888). For Medicare itself, call 800-MEDICARE (800-633-4227).",
+    "constraints": [
+      "Have your Medicare card and drug list ready."
+    ],
     "public_contact": {
-      "phone": "877-839-2675"
+      "phone": "888-575-6611",
+      "phone_label": "North Dakota SHIC (888-575-6611)"
     },
     "verification": {
       "record_status": "official_search_extract_only",
-      "last_reviewed_on": "2026-11-02"
+      "last_reviewed_on": "2026-11-16"
     },
     "evidence": {
       "review_method": "official_search_excerpt",
       "direct_agency_confirmation": false,
-      "phone_source_url": "https://www.shiphelp.org/?p=317"
+      "phone_source_url": "https://www.cms.gov/about-cms/contact/directory/senior-health-insurance-counseling-shic/1562166"
     },
     "source_evidence": [
       {
-        "url": "https://www.shiphelp.org/?p=317",
-        "title": "Official published source",
-        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+        "url": "https://www.cms.gov/about-cms/contact/directory/senior-health-insurance-counseling-shic/1562166",
+        "title": "CMS: Senior Health Insurance Counseling (SHIC), North Dakota",
+        "reviewed_on": "2026-11-16",
+        "scope": "North Dakota Insurance Department, 600 East Boulevard, Bismarck; toll-free (888) 575-6611, TDD (800) 366-6888; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "nd-ombudsman",
+    "name": "North Dakota Long-Term Care Ombudsman and adult abuse reporting",
+    "official_url": "https://www.hhs.nd.gov/sites/www/files/documents/New%20LTCOP%20Brochure%202023%20v4%20(1).pdf",
+    "organization": "North Dakota Health and Human Services: Long-Term Care Ombudsman Program; Vulnerable Adult Protective Services",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "ND",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "description": "Advocacy for people living in nursing homes, basic care, assisted living and swing-bed hospitals. Vulnerable Adult Protective Services takes reports of abuse, neglect or exploitation of adults living in the community.",
+    "next_step": "Call the ombudsman at 701-328-4617, or 855-462-5465 and press 3. To report abuse, neglect or exploitation of a vulnerable adult, call 855-462-5465 and press 2 (weekdays 8 a.m. to 5 p.m.; messages can be left), or report online. In an emergency, call 911 first.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing agency."
+    ],
+    "public_contact": {
+      "phone": "701-328-4617",
+      "phone_label": "North Dakota State Long-Term Care Ombudsman (701-328-4617)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.hhs.nd.gov/sites/www/files/documents/New%20LTCOP%20Brochure%202023%20v4%20(1).pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.hhs.nd.gov/sites/www/files/documents/New%20LTCOP%20Brochure%202023%20v4%20(1).pdf",
+        "title": "North Dakota Long-Term Care Ombudsman Program brochure (December 2023)",
+        "reviewed_on": "2026-11-16",
+        "scope": "State ombudsman address and phones, including 1-855-462-5465 option 3; read in full."
+      },
+      {
+        "url": "https://hhs.nd.gov/reporting",
+        "title": "North Dakota HHS: How to Report",
+        "reviewed_on": "2026-11-16",
+        "scope": "Report by phone at 1-855-462-5465, press 2, online or by form; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "nd-legal-programs",
+    "name": "Free legal help for older North Dakotans",
+    "official_url": "https://www.ndcourts.gov/legal-self-help/other-resources",
+    "organization": "Legal Services of North Dakota; Dakota Plains Legal Services",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "ND",
+    "resource_role": "legal_aid",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation",
+      "housing"
+    ],
+    "description": "Legal Services of North Dakota gives free civil legal help to low-income and older North Dakotans, with a separate line for callers 60 and older. Dakota Plains Legal Services serves low-income people, older Americans and veterans, including in tribal courts.",
+    "next_step": "Age 60 and older: call Legal Services of North Dakota at 866-621-9886. Under 60: 800-634-5263.",
+    "constraints": [
+      "Legal aid screens by income and case type."
+    ],
+    "public_contact": {
+      "phone": "866-621-9886",
+      "phone_label": "Legal Services of North Dakota, age 60+ (866-621-9886)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ndcourts.gov/legal-self-help/other-resources"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ndcourts.gov/legal-self-help/other-resources",
+        "title": "North Dakota Courts: Legal Self-Help, other resources",
+        "reviewed_on": "2026-11-16",
+        "scope": "Legal Services of North Dakota, (800) 634-5263 under age 60 and (866) 621-9886 age 60+; Dakota Plains Legal Services; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "nd-vahealth-systems",
+    "name": "VA health care in North Dakota",
+    "official_url": "https://www.va.gov/fargo-health-care/contact-us/",
+    "organization": "U.S. Department of Veterans Affairs, Fargo VA Health Care System",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "ND",
+    "resource_role": "va_health_system",
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "North Dakota veterans are served by the Fargo VA Health Care System: the Fargo VA Medical Center (2101 Elm Street North) and clinics including Bismarck, Grafton, Grand Forks, Jamestown and Minot.",
+    "next_step": "Call 701-239-3700 or toll-free 800-410-9723. Not enrolled yet? Ask your county veterans service officer for help applying.",
+    "constraints": [
+      "If a service you need is not offered near you, ask about travel benefits and community care."
+    ],
+    "public_contact": {
+      "phone": "800-410-9723",
+      "phone_label": "Fargo VA Health Care System (800-410-9723)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.va.gov/fargo-health-care/contact-us/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.va.gov/fargo-health-care/contact-us/",
+        "title": "VA Fargo health care: Contact us",
+        "reviewed_on": "2026-11-16",
+        "scope": "Mailing address 2101 Elm Street North, Fargo; local 701-239-3700, toll-free 800-410-9723; search excerpt."
+      },
+      {
+        "url": "https://www.va.gov/fargo-health-care/locations/",
+        "title": "VA Fargo health care: Locations",
+        "reviewed_on": "2026-11-16",
+        "scope": "Fargo VA Medical Center and clinics in Bismarck, Grafton, Grand Forks, Jamestown and Minot, among others; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "nd-cil-dakota",
+    "name": "Dakota Center for Independent Living",
+    "organization": "Dakota Center for Independent Living",
+    "official_url": "https://dakotacil.org/",
+    "service_area": [
+      "Adams",
+      "Billings",
+      "Bowman",
+      "Burleigh",
+      "Dunn",
+      "Emmons",
+      "Golden Valley",
+      "Grant",
+      "Hettinger",
+      "Kidder",
+      "McLean",
+      "Mercer",
+      "Morton",
+      "Oliver",
+      "Sheridan",
+      "Sioux",
+      "Slope",
+      "Stark"
+    ],
+    "state": "ND",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Main office: 3111 East Broadway Avenue, Bismarck. Toll-free: 800-489-5013. Dickinson office: 26 First Street East, Suite 103, 701-483-4363."
+    ],
+    "public_contact": {
+      "phone": "701-222-3636",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/ND",
+      "service_area_source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/ND"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/ND",
+        "title": "ILRU: Directory of Centers for Independent Living, North Dakota",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each office’s address, phones, website and counties served; read in full; undated. The Fargo listing mixes North Dakota and Minnesota counties (its Grant is Grant County, Minnesota); its North Dakota counties match the Jamestown and Lisbon listings. Options Interstate Resource Center is listed in the Minnesota directory (https://www.ilru.org/cil-directory/mn, read in full) with 14 North Dakota counties."
+      }
+    ]
+  },
+  {
+    "program_id": "nd-cil-freedom",
+    "name": "Freedom Resource Center for Independent Living",
+    "organization": "Freedom Resource Center for Independent Living",
+    "official_url": "https://www.freedomrc.org/",
+    "service_area": [
+      "Barnes",
+      "Cass",
+      "Dickey",
+      "LaMoure",
+      "Logan",
+      "McIntosh",
+      "Ransom",
+      "Richland",
+      "Sargent",
+      "Stutsman"
+    ],
+    "state": "ND",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Main office: 2701 9th Ave. S., Suite H, Fargo. Toll-free: 800-450-0459. Also Jamestown 701-252-4693, Lisbon 701-683-6850 and Wahpeton 701-672-1648."
+    ],
+    "public_contact": {
+      "phone": "701-478-0459",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/ND",
+      "service_area_source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/ND"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/ND",
+        "title": "ILRU: Directory of Centers for Independent Living, North Dakota",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each office’s address, phones, website and counties served; read in full; undated. The Fargo listing mixes North Dakota and Minnesota counties (its Grant is Grant County, Minnesota); its North Dakota counties match the Jamestown and Lisbon listings. Options Interstate Resource Center is listed in the Minnesota directory (https://www.ilru.org/cil-directory/mn, read in full) with 14 North Dakota counties."
+      }
+    ]
+  },
+  {
+    "program_id": "nd-cil-independence",
+    "name": "Independence, Inc.",
+    "organization": "Independence, Inc.",
+    "official_url": "https://www.independencecil.org/",
+    "service_area": [
+      "Bottineau",
+      "Burke",
+      "Divide",
+      "McHenry",
+      "McKenzie",
+      "Mountrail",
+      "Pierce",
+      "Renville",
+      "Rolette",
+      "Ward",
+      "Williams"
+    ],
+    "state": "ND",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Main office: 315 3rd Ave SW, Minot. Toll-free: 800-377-5114. Bottineau office: 701-228-2221."
+    ],
+    "public_contact": {
+      "phone": "701-839-4724",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/ND",
+      "service_area_source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/ND"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/ND",
+        "title": "ILRU: Directory of Centers for Independent Living, North Dakota",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each office’s address, phones, website and counties served; read in full; undated. The Fargo listing mixes North Dakota and Minnesota counties (its Grant is Grant County, Minnesota); its North Dakota counties match the Jamestown and Lisbon listings. Options Interstate Resource Center is listed in the Minnesota directory (https://www.ilru.org/cil-directory/mn, read in full) with 14 North Dakota counties."
+      }
+    ]
+  },
+  {
+    "program_id": "nd-cil-options",
+    "name": "Options Interstate Resource Center for Independent Living",
+    "organization": "Options Interstate Resource Center for Independent Living",
+    "official_url": "https://www.ilru.org/cil-directory/mn",
+    "service_area": [
+      "Benson",
+      "Cavalier",
+      "Eddy",
+      "Foster",
+      "Grand Forks",
+      "Griggs",
+      "Nelson",
+      "Pembina",
+      "Ramsey",
+      "Steele",
+      "Towner",
+      "Traill",
+      "Walsh",
+      "Wells"
+    ],
+    "state": "ND",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 318 3rd St NW, East Grand Forks, Minnesota. Toll-free: 800-726-3692. ILRU lists it under Minnesota and notes that it serves North Dakota."
+    ],
+    "public_contact": {
+      "phone": "218-773-6100",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/ND",
+      "service_area_source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/ND"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/ND",
+        "title": "ILRU: Directory of Centers for Independent Living, North Dakota",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each office’s address, phones, website and counties served; read in full; undated. The Fargo listing mixes North Dakota and Minnesota counties (its Grant is Grant County, Minnesota); its North Dakota counties match the Jamestown and Lisbon listings. Options Interstate Resource Center is listed in the Minnesota directory (https://www.ilru.org/cil-directory/mn, read in full) with 14 North Dakota counties."
       }
     ]
   },
@@ -1012,7 +1427,59 @@
     "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
     "organization": "Community Action Partnership of North Dakota",
     "service_area": [
-      "All North Dakota counties"
+      "Adams",
+      "Barnes",
+      "Benson",
+      "Billings",
+      "Bottineau",
+      "Bowman",
+      "Burke",
+      "Burleigh",
+      "Cass",
+      "Cavalier",
+      "Dickey",
+      "Divide",
+      "Dunn",
+      "Eddy",
+      "Emmons",
+      "Foster",
+      "Golden Valley",
+      "Grand Forks",
+      "Grant",
+      "Griggs",
+      "Hettinger",
+      "Kidder",
+      "LaMoure",
+      "Logan",
+      "McHenry",
+      "McIntosh",
+      "McKenzie",
+      "McLean",
+      "Mercer",
+      "Morton",
+      "Mountrail",
+      "Nelson",
+      "Oliver",
+      "Pembina",
+      "Pierce",
+      "Ramsey",
+      "Ransom",
+      "Renville",
+      "Richland",
+      "Rolette",
+      "Sargent",
+      "Sheridan",
+      "Sioux",
+      "Slope",
+      "Stark",
+      "Steele",
+      "Stutsman",
+      "Towner",
+      "Traill",
+      "Walsh",
+      "Ward",
+      "Wells",
+      "Williams"
     ],
     "state": "ND",
     "resource_role": "housing_provider",
@@ -1020,7 +1487,7 @@
       "housing",
       "veteran_services"
     ],
-    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 12-ND-051): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Adams County, Barnes County, Benson County, Billings County, Bottineau County, Bowman County, Burke County, Burleigh County, Cass County, Cavalier County, Dickey County, Divide County and 41 more.",
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 12-ND-051): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
     "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
     "constraints": [
       "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
@@ -1052,81 +1519,193 @@
     ]
   },
   {
-    "program_id": "nd-aging",
-    "name": "Local aging help in North Dakota (Eldercare Locator)",
-    "official_url": "https://eldercare.acl.gov/home",
-    "organization": "U.S. Administration for Community Living",
-    "service_area": [
-      "All North Dakota counties"
-    ],
+    "program_id": "nd-adrl",
+    "name": "Aging & Disability Resource LINK (North Dakota Health and Human Services)",
+    "organization": "Aging & Disability Resource LINK (North Dakota Health and Human Services)",
+    "official_url": "https://hhs.nd.gov/node/1832",
     "state": "ND",
+    "service_area": [
+      "Adams",
+      "Barnes",
+      "Benson",
+      "Billings",
+      "Bottineau",
+      "Bowman",
+      "Burke",
+      "Burleigh",
+      "Cass",
+      "Cavalier",
+      "Dickey",
+      "Divide",
+      "Dunn",
+      "Eddy",
+      "Emmons",
+      "Foster",
+      "Golden Valley",
+      "Grand Forks",
+      "Grant",
+      "Griggs",
+      "Hettinger",
+      "Kidder",
+      "LaMoure",
+      "Logan",
+      "McHenry",
+      "McIntosh",
+      "McKenzie",
+      "McLean",
+      "Mercer",
+      "Morton",
+      "Mountrail",
+      "Nelson",
+      "Oliver",
+      "Pembina",
+      "Pierce",
+      "Ramsey",
+      "Ransom",
+      "Renville",
+      "Richland",
+      "Rolette",
+      "Sargent",
+      "Sheridan",
+      "Sioux",
+      "Slope",
+      "Stark",
+      "Steele",
+      "Stutsman",
+      "Towner",
+      "Traill",
+      "Walsh",
+      "Ward",
+      "Wells",
+      "Williams"
+    ],
     "needs_supported": [
       "general_navigation",
       "help_at_home"
     ],
-    "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-    "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
+    "regional_role": "aging_agency",
+    "description": "The Aging & Disability Resource LINK, run statewide by North Dakota Health and Human Services: free information and referral on help at home, meals, caregiver support, assisted living and other long-term services for older adults, adults with disabilities and caregivers, at any income.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Press 1 for the Resource LINK. TTY users can call 711. Military service is not required.",
     "constraints": [
-      "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Statewide; one number for all 53 counties. Press 1 for the Resource LINK."
     ],
     "public_contact": {
-      "phone": "800-677-1116"
+      "phone": "855-462-5465",
+      "phone_label": "Aging & Disability Resource LINK (North Dakota)"
     },
     "verification": {
-      "record_status": "official_search_extract_only",
-      "last_reviewed_on": "2026-11-02"
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
     },
     "evidence": {
-      "review_method": "official_search_excerpt",
+      "review_method": "full_official_page_text",
       "direct_agency_confirmation": false,
-      "phone_source_url": "https://www.acl.gov/contact"
+      "service_area_source_url": "https://hhs.nd.gov/node/1832",
+      "phone_source_url": "https://hhs.nd.gov/node/1832"
     },
     "source_evidence": [
       {
-        "url": "https://www.acl.gov/contact",
-        "title": "Official published source",
-        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+        "url": "https://hhs.nd.gov/node/1832",
+        "title": "North Dakota Health and Human Services: Adults and Aging Services",
+        "reviewed_on": "2026-11-16",
+        "scope": "Aging and Disability Resource LINK, toll-free (855) 462-5465, Relay ND TTY 711; the Adults and Aging Services section, 1237 W. Divide Avenue, Suite 6, Bismarck; read in full. The page is undated. The 2023 Vulnerable Adult Protective Services handout gives option 1 for the Resource LINK (https://www.hhs.nd.gov/sites/www/files/documents/vaps-handout-2023.pdf; search excerpt). North Dakota has no Area Agencies on Aging; the state section runs Older Americans Act services statewide."
       }
-    ],
-    "regional_role": "aging_agency"
+    ]
   },
   {
-    "program_id": "nd-ombudsman",
-    "name": "North Dakota long-term-care ombudsman",
-    "official_url": "https://theconsumervoice.org/get_help",
-    "organization": "National Long-Term Care Ombudsman Resource Center",
-    "service_area": [
-      "All North Dakota counties"
-    ],
+    "program_id": "nd-omb-state",
+    "name": "North Dakota State Long-Term Care Ombudsman",
+    "organization": "North Dakota State Long-Term Care Ombudsman",
+    "official_url": "https://www.hhs.nd.gov/sites/www/files/documents/New%20LTCOP%20Brochure%202023%20v4%20(1).pdf",
     "state": "ND",
+    "service_area": [
+      "Adams",
+      "Barnes",
+      "Benson",
+      "Billings",
+      "Bottineau",
+      "Bowman",
+      "Burke",
+      "Burleigh",
+      "Cass",
+      "Cavalier",
+      "Dickey",
+      "Divide",
+      "Dunn",
+      "Eddy",
+      "Emmons",
+      "Foster",
+      "Golden Valley",
+      "Grand Forks",
+      "Grant",
+      "Griggs",
+      "Hettinger",
+      "Kidder",
+      "LaMoure",
+      "Logan",
+      "McHenry",
+      "McIntosh",
+      "McKenzie",
+      "McLean",
+      "Mercer",
+      "Morton",
+      "Mountrail",
+      "Nelson",
+      "Oliver",
+      "Pembina",
+      "Pierce",
+      "Ramsey",
+      "Ransom",
+      "Renville",
+      "Richland",
+      "Rolette",
+      "Sargent",
+      "Sheridan",
+      "Sioux",
+      "Slope",
+      "Stark",
+      "Steele",
+      "Stutsman",
+      "Towner",
+      "Traill",
+      "Walsh",
+      "Ward",
+      "Wells",
+      "Williams"
+    ],
     "needs_supported": [
       "resident_rights",
       "general_navigation"
     ],
-    "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-    "next_step": "Use the locator to find the North Dakota program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
     "constraints": [
-      "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Toll-free: 855-462-5465, option 3. TTY: 711."
     ],
     "public_contact": {
-      "phone": "800-677-1116"
+      "phone": "701-328-4617",
+      "phone_label": "Regional ombudsman program"
     },
     "verification": {
-      "record_status": "official_search_extract_only",
-      "last_reviewed_on": "2026-11-02"
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
     },
     "evidence": {
-      "review_method": "official_search_excerpt",
+      "review_method": "full_official_pdf",
       "direct_agency_confirmation": false,
-      "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
+      "service_area_source_url": "https://www.hhs.nd.gov/sites/www/files/documents/New%20LTCOP%20Brochure%202023%20v4%20(1).pdf",
+      "phone_source_url": "https://www.hhs.nd.gov/sites/www/files/documents/New%20LTCOP%20Brochure%202023%20v4%20(1).pdf"
     },
     "source_evidence": [
       {
-        "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-        "title": "Official published source",
-        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+        "url": "https://www.hhs.nd.gov/sites/www/files/documents/New%20LTCOP%20Brochure%202023%20v4%20(1).pdf",
+        "title": "North Dakota Long-Term Care Ombudsman Program brochure (DN 647, December 2023)",
+        "reviewed_on": "2026-11-16",
+        "scope": "State Long-Term Care Ombudsman, Adult and Aging Services, 1237 W. Divide Ave., Suite 6, Bismarck: 701-328-4617 or 711 (TTY), toll-free 1-855-462-5465, option 3; read in full. The brochure lists no regional ombudsmen, so every county shows the state office."
       }
-    ],
-    "regional_role": "ombudsman"
+    ]
   }
 ]

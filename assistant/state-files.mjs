@@ -46,7 +46,8 @@ export const STATES=Object.freeze({
   "WY": "Wyoming",
   "DC": "District of Columbia",
   "MT": "Montana",
-  "AK": "Alaska"
+  "AK": "Alaska",
+  "ND": "North Dakota"
 });
 export const STATE_FILES=Object.freeze({
   "OH": [
@@ -232,6 +233,10 @@ export const STATE_FILES=Object.freeze({
   "AK": [
     "data/public/alaska-resources.json",
     "data/public/alaska-county-veterans-offices.json"
+  ],
+  "ND": [
+    "data/public/north-dakota-resources.json",
+    "data/public/north-dakota-county-veterans-offices.json"
   ]
 });
 export const localityLabel=row=>row?(["independent_city","statewide","borough","census_area","city_and_county"].includes(row.county_type)?row.county:row.county+(row.county_type==="parish"?" Parish":" County")):"";
