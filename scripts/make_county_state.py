@@ -89,12 +89,15 @@ def build_offices(sheet):
             record['hours'] = o['hours']
         if o.get('other_offices'):
             record['other_offices'] = o['other_offices']
+        # An office may name its own source when the state's list is stitched from two (Minnesota); otherwise the list's apply.
+        src_url = o.get('source_url', spec['source_url'])
         record.update({
-            'source_url': spec['source_url'], 'source_title': spec['source_title'], 'reviewed_on': reviewed,
+            'source_url': src_url, 'source_title': o.get('source_title', spec['source_title']), 'reviewed_on': reviewed,
             'contact_status': 'official_website',
             'note': (o['note'] + ' ' if o.get('note') else '') + spec['note'],
-            'evidence': {'review_method': spec.get('review_method', 'full_official_page_text'), 'direct_agency_confirmation': False,
-                         'county_list_source_url': spec['source_url'], 'selection': spec['selection']},
+            'evidence': {'review_method': o.get('review_method', spec.get('review_method', 'full_official_page_text')),
+                         'direct_agency_confirmation': False,
+                         'county_list_source_url': src_url, 'selection': o.get('selection', spec['selection'])},
         })
         out.append(record)
     return out
