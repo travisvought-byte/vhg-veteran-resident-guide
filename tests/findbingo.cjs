@@ -8,6 +8,11 @@ const zips = JSON.parse(fs.readFileSync(path.join(site, 'zips.json'), 'utf8'));
 const states = JSON.parse(fs.readFileSync(path.join(root, 'data/public/bingo-states.json'), 'utf8'));
 for (const f of ['index.html', 'data.json', 'zips.json'])  // the Ohio-Bingo mirror carries the same files for Cloudflare Pages
   assert.equal(fs.readFileSync(path.join(root, 'bingo-site/findbingo', f), 'utf8'), fs.readFileSync(path.join(site, f), 'utf8'), 'bingo-site/findbingo/' + f);
+// The Ohio finder is the folder ohio/ on the same site; other spellings forward to it.
+assert(fs.existsSync(path.join(root, 'bingo-site/findbingo/ohio/index.html')), 'Ohio finder is served at findbingo.org/ohio/');
+const redirects = fs.readFileSync(path.join(root, 'bingo-site/findbingo/_redirects'), 'utf8').trim().split('\n').map(l => l.split(' '));
+assert(redirects.some(r => r[0] === '/oh') && !redirects.some(r => r[0] === '/ohio' || r[0] === '/ohio/'), 'spellings forward; /ohio itself is the finder');
+for (const r of redirects) assert(r.length === 3 && r[0].startsWith('/') && r[1] === '/ohio/' && r[2] === '301', r.join(' '));
 assert.equal(data.generated_on, [...states.map(s => s.reviewed_on), ...data.venues.map(v => v.reviewed_on), ...data.licensed.map(r => r.reviewed_on)].sort().pop());
 assert(data.venues.length > 150 && data.licensed.length > 300, 'Michigan venues and Indiana licenses are loaded');
 for (const r of [...data.venues, ...data.licensed]) assert(zips[r.zip], 'every listing can be placed by ZIP: ' + r.id);

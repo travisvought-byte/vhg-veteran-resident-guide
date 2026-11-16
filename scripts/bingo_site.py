@@ -1,15 +1,21 @@
-"""Build the standalone Ohio Bingo Finder site published at https://bingo.vethomeguard.org/.
+"""Build the Ohio Bingo Finder, published at https://www.findbingo.org/ohio/.
 
-The finder page is generated from the same records as the guide's bingo.html, so the
-guide repository stays the single source of truth. Everything is written to bingo-site/,
-which the travisvought-byte/Ohio-Bingo repository mirrors and serves with GitHub Pages.
+The finder page is generated from the same records as the guide's bingo.html, so the guide
+repository stays the single source of truth. The site is written to bingo-site/findbingo/ohio/,
+beside the national FindBingo.org page; the travisvought-byte/Ohio-Bingo repository mirrors
+bingo-site/ and Cloudflare serves its findbingo/ folder. The root of bingo-site/ is what GitHub
+Pages still serves at the retired address bingo.vethomeguard.org: forwarding pages only, so
+printed posters and QR codes keep working.
 """
 import json
 import re
 from instant_bingo import instant_page
 from html import escape
 
-SITE = 'https://bingo.vethomeguard.org'
+SITE = 'https://www.findbingo.org/ohio'
+OLD_HOST = 'bingo.vethomeguard.org'  # retired November 16, 2026; forwards to SITE
+OUT = 'bingo-site/findbingo/ohio/'
+PAGES = ('partners.html', 'distributions.html', 'instant.html', 'poster.html')
 GUIDE = 'https://guide.vethomeguard.org'
 EMAIL = 'travis@vethomeguard.org'
 LOGO = 'assets/vhg-logo.png'  # copied into bingo-site/assets; og:image uses SITE + '/' + LOGO
@@ -33,7 +39,7 @@ def finder_stats(page):
 
 
 def standalone_finder(page):
-    """Turn the guide's bingo page into the root page of bingo.vethomeguard.org."""
+    """Turn the guide's bingo page into the Ohio finder at findbingo.org/ohio/."""
     page = _replace(page, '<title>Ohio Bingo and Senior Centers | Veteran Home Guardians</title>',
                     '<title>Ohio Bingo Finder: bingo games and senior centers near you | Veteran Home Guardians</title>', 1)
     page = _replace(page, '<link rel="canonical" href="https://guide.vethomeguard.org/bingo.html">',
@@ -58,10 +64,10 @@ def standalone_finder(page):
     page = _replace(page, 'href="facilities.html"', f'href="{GUIDE}/facilities.html"', 1)
     page = _replace(page, 'href="data/public/', f'href="{GUIDE}/data/public/')
     page = _replace(page, '<h1>Ohio Bingo &amp; Senior Centers</h1>',
-                    '<p class="site-name">Ohio Bingo Finder · bingo.vethomeguard.org</p><h1>Ohio Bingo &amp; Senior Centers</h1>', 1)
+                    '<p class="site-name">Ohio Bingo Finder · findbingo.org/ohio</p><h1>Ohio Bingo &amp; Senior Centers</h1>', 1)
     page = _replace(page, '.source-note{', '.site-name{margin:10px 0 0;font-size:16px;letter-spacing:.04em;text-transform:uppercase;opacity:.85}.source-note{', 1)
     page = _replace(page, '</footer>', '<p><a href="partners.html">Partner with the Ohio Bingo Finder</a> · <a href="instant.html">Kinds of bingo</a> · '
-                    '<a href="poster.html">Print a poster</a> · '
+                    '<a href="poster.html">Print a poster</a> · <a href="../">Bingo in other states</a> · '
                     f'<a href="{GUIDE}/?view=community">Veteran Resident Resource Guide</a></p></footer>', 1)
     return page.replace('</body>', '<script defer src="assets/analytics.js"></script></body>', 1)
 
@@ -130,7 +136,7 @@ def partners_page(stats):
 <p><a href="instant.html">See the posts and lodges licensed for instant bingo</a></p></article>
 </div>
 <section id="share-kit"><h2>Share the finder</h2>
-<div class="share"><img src="assets/bingo-qr.svg" alt="QR code that opens bingo.vethomeguard.org" width="180" height="180">
+<div class="share"><img src="assets/bingo-qr.svg" alt="QR code that opens the Ohio Bingo Finder" width="180" height="180">
 <div><p><strong>ohiobingo.org</strong></p><p>The short address to print or say out loud. The QR code opens the finder directly; use it on posters, newsletters and slides. <a href="assets/bingo-qr.svg" download>Download the QR code</a></p>
 <label for="share-text"><strong>Copy for a newsletter or Facebook post</strong></label><textarea id="share-text" readonly>{escape(blurb)}</textarea></div></div>
 </section>
@@ -197,57 +203,77 @@ def poster_page(stats):
 <p class="brand" style="justify-content:center"><img src="{LOGO}" alt="" width="48" height="48"><span>Veteran Home Guardians</span></p>
 <h1>Find a bingo game near you</h1>
 <p class="lead">Free Ohio Bingo Finder. Search by ZIP code, day and time.</p>
-<img class="qr" src="assets/bingo-qr.svg" alt="QR code that opens bingo.vethomeguard.org">
+<img class="qr" src="assets/bingo-qr.svg" alt="QR code that opens the Ohio Bingo Finder">
 <p class="url">ohiobingo.org</p>
 <p class="facts">All registered bingo across Ohio, plus senior centers.<br>Run a game? List it free at the same address.</p>
 <p class="small">A free community resource from {ABOUT_VHG}.</p>
 </section></main>'''
     return _shell('Ohio Bingo Finder poster | Veteran Home Guardians',
-                  'A printable poster for the free Ohio Bingo Finder at bingo.vethomeguard.org.',
+                  'A printable poster for the free Ohio Bingo Finder.',
                   'poster.html', body, style)
 
 
-def not_found_page():
-    body = f'''<header><a class="brand" href="/"><img src="{LOGO}" alt="" width="48" height="48"><span>Ohio Bingo Finder</span></a><h1>Page not found</h1></header>
-<main><p>That page doesn't exist. <a class="button" href="/">Find a bingo game near you</a></p></main>'''
-    page = _shell('Page not found | Ohio Bingo Finder', 'Find bingo games and senior centers near you in Ohio.', '404.html', body)
-    return page.replace('src="assets/', 'src="/assets/')
+def moved_page(path=''):
+    """A forwarding page for the retired bingo.vethomeguard.org address; keeps the ZIP search and #anchor."""
+    target = f'{SITE}/{path}'
+    return ('<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
+            '<title>The Ohio Bingo Finder moved</title><meta name="robots" content="noindex,follow">'
+            f'<link rel="canonical" href="{target}">'
+            f'<script>location.replace({json.dumps(target)}+location.search+location.hash)</script>'
+            f'<meta http-equiv="refresh" content="0;url={target}"></head>'
+            f'<body><p>The Ohio Bingo Finder moved. <a href="{target}">Open it at findbingo.org/ohio</a>.</p></body></html>\n')
 
 
 README = '''# Ohio Bingo Finder
 
-Live at **https://bingo.vethomeguard.org/**. A free finder for bingo games and senior centers across Ohio, from Veteran Home Guardians.
+Live at **https://www.findbingo.org/ohio/**. A free finder for bingo games and senior centers across Ohio, from Veteran Home Guardians.
 
 Every file in this folder is **generated**. Do not edit it here. The source of truth is
 [vhg-veteran-resident-guide](https://github.com/travisvought-byte/vhg-veteran-resident-guide):
 `scripts/bingo_site.py` builds `bingo-site/` from the same records as the guide's `bingo.html`
-(`python3 scripts/build_public.py`). The Ohio-Bingo repository mirrors `bingo-site/` and serves it with GitHub Pages.
+(`python3 scripts/build_public.py`), and the Ohio-Bingo repository mirrors `bingo-site/`.
 
-`findbingo/` is FindBingo.org (https://www.findbingo.org/), the multi-state finder, built by
-`scripts/findbingo_site.py` in the same guide repository. Cloudflare Pages serves it from this
-repository with the build output directory set to `findbingo` and no build command.
+- `findbingo/ohio/` is the Ohio finder. Cloudflare serves it at https://www.findbingo.org/ohio/.
+- The files in this folder's root are forwarding pages for the retired address
+  bingo.vethomeguard.org (GitHub Pages), so printed posters and QR codes still land on the finder.
+
+- `findbingo/` is FindBingo.org (https://www.findbingo.org/), the multi-state finder, built by
+  `scripts/findbingo_site.py` in the same guide repository. Cloudflare serves this folder (the
+  `ohio-bingo` project; see docs/FINDBINGO.md in the guide).
 '''
 
 
 def make_bingo_site(root, finder_page):
     stats = finder_stats(finder_page)
-    files = {
-        'bingo-site/index.html': standalone_finder(finder_page),
-        'bingo-site/partners.html': partners_page(stats),
-        'bingo-site/distributions.html': distributions_page(),
-        'bingo-site/instant.html': instant_page(root, LOGO, EMAIL, GUIDE, _shell),
-        'bingo-site/poster.html': poster_page(stats),
-        'bingo-site/404.html': not_found_page(),
-        'bingo-site/CNAME': 'bingo.vethomeguard.org\n',
+    site = {
+        'index.html': standalone_finder(finder_page),
+        'partners.html': partners_page(stats),
+        'distributions.html': distributions_page(),
+        'instant.html': instant_page(root, LOGO, EMAIL, GUIDE, _shell),
+        'poster.html': poster_page(stats),
+        'assets/analytics.js': (root / 'assets/analytics.js').read_text(),
+        'assets/vhg-logo.png': (root / 'assets/vhg-logo.png').read_bytes(),
+        # New codes open findbingo.org/ohio directly. The codes printed before the move
+        # (assets/bingo-site-qr.svg, assets/bingo-site-submit-qr.svg) open the retired address and are forwarded.
+        'assets/bingo-qr.svg': (root / 'assets/findbingo-ohio-qr.svg').read_text(),
+        'assets/bingo-submit-qr.svg': (root / 'assets/findbingo-ohio-submit-qr.svg').read_text(),
+    }
+    national = 'https://www.findbingo.org'
+    files = {OUT + name: content for name, content in site.items()}
+    files.update({
+        # Served by Cloudflare at www.findbingo.org: one sitemap for the national page and the Ohio finder.
+        'bingo-site/findbingo/robots.txt': f'User-agent: *\nAllow: /\n\nSitemap: {national}/sitemap.xml\n',
+        'bingo-site/findbingo/sitemap.xml': ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+                                             + f'  <url><loc>{national}/</loc></url>\n'
+                                             + ''.join(f'  <url><loc>{SITE}/{p}</loc></url>\n' for p in ('',) + PAGES)
+                                             + '</urlset>\n'),
+        # Served by GitHub Pages at the retired address: every old page forwards to its new home.
+        'bingo-site/index.html': moved_page(),
+        'bingo-site/404.html': moved_page(),
+        **{'bingo-site/' + p: moved_page(p) for p in PAGES},
+        'bingo-site/CNAME': OLD_HOST + '\n',
         'bingo-site/.nojekyll': '',
         'bingo-site/README.md': README,
-        'bingo-site/robots.txt': f'User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n',
-        'bingo-site/sitemap.xml': ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-                                   + ''.join(f'  <url><loc>{SITE}/{p}</loc></url>\n' for p in ('', 'partners.html', 'distributions.html', 'instant.html', 'poster.html'))
-                                   + '</urlset>\n'),
-        'bingo-site/assets/analytics.js': (root / 'assets/analytics.js').read_text(),
-        'bingo-site/assets/vhg-logo.png': (root / 'assets/vhg-logo.png').read_bytes(),
-        'bingo-site/assets/bingo-qr.svg': (root / 'assets/bingo-site-qr.svg').read_text(),
-        'bingo-site/assets/bingo-submit-qr.svg': (root / 'assets/bingo-site-submit-qr.svg').read_text(),
-    }
+        'bingo-site/robots.txt': 'User-agent: *\nAllow: /\n',
+    })
     return files
