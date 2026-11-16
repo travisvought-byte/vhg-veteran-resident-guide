@@ -86,10 +86,11 @@ for(const s of registry){
   assert(digits(d.getElementById('county-panel').textContent).includes(digits(rows[0].phone)),s.code+' statewide veterans phone shows without choosing a county');
   assert(coverage.includes('statewide referral routes'),s.code+' starter coverage sentence');
  }
- // The footer date is the newest review date in this state's own records.
- const dates=[...JSON.parse(read(s.resources)).map(r=>r.verification.last_reviewed_on),...rows.map(c=>c.reviewed_on)].filter(v=>/^\d{4}-\d{2}-\d{2}$/.test(v||'')).sort();
+ // The footer date is the newest review of this state's own veterans office contacts.
+ const dates=rows.map(c=>c.reviewed_on).filter(v=>/^\d{4}-\d{2}-\d{2}$/.test(v||'')).sort();
+ assert(dates.length,s.code+' office contacts carry review dates');
  const newest=new Date(dates.at(-1)+'T12:00:00').toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
- assert.equal(d.getElementById('edition-updated').textContent,'Most recent source review for '+s.name+': '+newest+'.',s.code+' footer review date');
+ assert.equal(d.getElementById('edition-updated').textContent,'Most recent review of '+s.name+' veterans office contacts: '+newest+'.',s.code+' footer review date');
 }
 assert(registry.some(s=>s.starter)&&registry.filter(s=>s.starter).every(s=>s.counties===1),'starter editions have one statewide entry');
 console.log('PASS: single-entry states show their statewide contacts at once, county states wait for a county, and every footer date comes from the records.');
