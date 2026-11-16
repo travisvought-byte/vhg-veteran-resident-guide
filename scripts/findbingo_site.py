@@ -3,8 +3,8 @@
 index.html is the whole page (markup, styles and script). The build also writes it to
 bingo-site/findbingo/, which the Ohio-Bingo repository mirrors and Cloudflare serves at
 www.findbingo.org. It loads data.json and zips.json from beside itself, then from the guide's GitHub
-Pages site. Ohio keeps its own finder (bingo.vethomeguard.org) and its own home (www.ohiobingo.org);
-this page links to them rather than copying Ohio data, and findbingo.org/ohio forwards to ohiobingo.org.
+Pages site. The Ohio finder is built by bingo_site.py into bingo-site/findbingo/ohio/, so it is served
+from the same site at findbingo.org/ohio/; this page links to it rather than copying Ohio data.
 """
 import json
 import re
@@ -22,9 +22,9 @@ REPO_RAW = 'https://raw.githubusercontent.com/travisvought-byte/vhg-veteran-resi
 # then GitHub Pages, then the raw file on main.
 DATA_SOURCES = ['', 'https://guide.vethomeguard.org/findbingo-site/', REPO_RAW + 'main/findbingo-site/']
 # Served only from bingo-site/findbingo/ (Cloudflare reads _redirects; GitHub Pages does not).
-# Ohio is run separately at ohiobingo.org, so findbingo.org/ohio forwards there.
-OHIO_HOME = 'https://www.ohiobingo.org/'
-REDIRECTS = ''.join(f'{src} {OHIO_HOME} 301\n' for src in ('/ohio', '/ohio/', '/Ohio', '/Ohio/', '/oh', '/oh/', '/OH', '/OH/'))
+# The Ohio finder is the folder /ohio/; these catch the other ways people type it. No rule may
+# match /ohio/ itself in any letter case, or the forward would loop.
+REDIRECTS = ''.join(f'{src} /ohio/ 301\n' for src in ('/Ohio', '/OHIO', '/oh', '/oh/', '/OH', '/OH/'))
 
 
 def _state_of_zip(z):
@@ -151,8 +151,9 @@ centroids. Do not edit these files by hand; run `python3 scripts/build_public.py
 - `data.json` (the lists) and `zips.json` (ZIP code points for the covered states) are loaded by the
   page from https://guide.vethomeguard.org/findbingo-site/, so list updates reach findbingo.org as soon
   as a pull request merges.
-- Ohio is kept separate: games stay on the Ohio Bingo Finder at https://bingo.vethomeguard.org/, and
-  https://www.findbingo.org/ohio forwards to https://www.ohiobingo.org/ (`bingo-site/findbingo/_redirects`).
+- The Ohio Bingo Finder is served from the same site at https://www.findbingo.org/ohio/
+  (`bingo-site/findbingo/ohio/`, built by `scripts/bingo_site.py`). Ohio halls that want to work with
+  Veteran Home Guardians go to https://www.ohiobingo.org/.
 
 Lists updated {_date_label(generated_on)}.
 '''
@@ -162,7 +163,7 @@ Lists updated {_date_label(generated_on)}.
         'zips.json': json.dumps(zips, separators=(',', ':')) + '\n',
     }
     # The same three files also go into bingo-site/findbingo/, which the Ohio-Bingo repository mirrors;
-    # Cloudflare serves www.findbingo.org from that folder, with the /ohio forward in _redirects.
+    # Cloudflare serves www.findbingo.org from that folder (the Ohio finder sits beside them in ohio/).
     return {
         **{'findbingo-site/' + name: text for name, text in site.items()},
         **{'bingo-site/findbingo/' + name: text for name, text in site.items()},

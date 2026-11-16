@@ -31,8 +31,8 @@ only when the page itself changes. Because the Wix page reads the lists from `ma
 that needs new data (a new state, for example) shows only after its pull request merges; until then
 the page hides state buttons the loaded data does not have.
 
-Ohio data is not copied here. Ohio searches hand off to https://bingo.vethomeguard.org/ with the
-same ZIP code and distance, so Ohio has one source of truth.
+Ohio data is not copied into the national page. Ohio searches hand off to https://www.findbingo.org/ohio/
+with the same ZIP code and distance, so Ohio has one source of truth.
 
 ## Sources and how they were read (November 15, 2026)
 
@@ -100,18 +100,24 @@ production branch `main`, no build command, root directory `/`, and the deploy c
 
     npx wrangler deploy --name ohio-bingo --assets ./findbingo --compatibility-date 2026-11-13
 
-so only the `findbingo` folder is published. `findbingo.org` and `www.findbingo.org` are attached
+so only the `findbingo` folder is published (the national page, and the Ohio finder in `ohio/`). `findbingo.org` and `www.findbingo.org` are attached
 under the Worker's **Domains** tab (Cloudflare creates the DNS records; do not add them by hand).
 
-## Ohio stays separate
+## Ohio: one finder, one front door
 
-Travis's direction (November 16, 2026): findbingo.org is the national directory; Ohio is run
-separately at https://www.ohiobingo.org/, where Veteran Home Guardians operates and partners with
-halls. So:
+Travis's direction (November 16, 2026): findbingo.org holds every finder, state by state, and
+ohiobingo.org is the Ohio front door where Veteran Home Guardians operates.
 
-- `bingo-site/findbingo/_redirects` forwards findbingo.org/ohio (and /oh) to https://www.ohiobingo.org/.
-- The Ohio Bingo Finder keeps its own address, https://bingo.vethomeguard.org/ (GitHub Pages from the
-  Ohio-Bingo repository root), and ohiobingo.org links to it.
+- The Ohio Bingo Finder is served at https://www.findbingo.org/ohio/ from `bingo-site/findbingo/ohio/`
+  (built by `scripts/bingo_site.py`). `_redirects` forwards /oh, /OH and /Ohio to it. No rule may match
+  `/ohio/` itself, or the forward would loop.
+- https://www.ohiobingo.org/ (Wix) is for halls, claims, Ohio law and partnering with Veteran Home
+  Guardians. Its "Find a Game" links go to findbingo.org/ohio/.
+- bingo.vethomeguard.org is retired. GitHub Pages still answers there from the root of the Ohio-Bingo
+  repository, but every page is a forwarding page that keeps the ZIP search and #anchor, so printed
+  posters and QR codes still work. Do not remove the `CNAME` file or the DNS record.
+- The guide's `bingo.html` is the build source and test fixture. On guide.vethomeguard.org it forwards
+  to findbingo.org/ohio/ and names it as canonical; it is not in the guide's sitemap.
 - Other states are plain directories. Partnerships there are meant for local organizations in each
   state, not Veteran Home Guardians.
 

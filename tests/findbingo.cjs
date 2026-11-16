@@ -8,10 +8,11 @@ const zips = JSON.parse(fs.readFileSync(path.join(site, 'zips.json'), 'utf8'));
 const states = JSON.parse(fs.readFileSync(path.join(root, 'data/public/bingo-states.json'), 'utf8'));
 for (const f of ['index.html', 'data.json', 'zips.json'])  // the Ohio-Bingo mirror carries the same files for Cloudflare Pages
   assert.equal(fs.readFileSync(path.join(root, 'bingo-site/findbingo', f), 'utf8'), fs.readFileSync(path.join(site, f), 'utf8'), 'bingo-site/findbingo/' + f);
-// findbingo.org/ohio forwards to the separate Ohio home; every line is "source destination 301".
+// The Ohio finder is the folder ohio/ on the same site; other spellings forward to it.
+assert(fs.existsSync(path.join(root, 'bingo-site/findbingo/ohio/index.html')), 'Ohio finder is served at findbingo.org/ohio/');
 const redirects = fs.readFileSync(path.join(root, 'bingo-site/findbingo/_redirects'), 'utf8').trim().split('\n').map(l => l.split(' '));
-assert(redirects.some(r => r[0] === '/ohio'), '/ohio forward');
-for (const r of redirects) assert(r.length === 3 && r[0].startsWith('/') && r[1] === 'https://www.ohiobingo.org/' && r[2] === '301', r.join(' '));
+assert(redirects.some(r => r[0] === '/oh') && !redirects.some(r => r[0] === '/ohio' || r[0] === '/ohio/'), 'spellings forward; /ohio itself is the finder');
+for (const r of redirects) assert(r.length === 3 && r[0].startsWith('/') && r[1] === '/ohio/' && r[2] === '301', r.join(' '));
 assert.equal(data.generated_on, [...states.map(s => s.reviewed_on), ...data.venues.map(v => v.reviewed_on), ...data.licensed.map(r => r.reviewed_on)].sort().pop());
 assert(data.venues.length > 150 && data.licensed.length > 300, 'Michigan venues and Indiana licenses are loaded');
 for (const r of [...data.venues, ...data.licensed]) assert(zips[r.zip], 'every listing can be placed by ZIP: ' + r.id);
@@ -125,7 +126,7 @@ assert(p.cards.length > 0 && p.cards.every(id => data.venues.find(v => v.id === 
 // Ohio ZIP: hand off to the Ohio Bingo Finder first, then nearby Michigan games.
 p = await open('?zip=43604&radius=25');
 assert.equal(p.groups[0], 'Ohio bingo');
-assert.equal(p.d.querySelector('#state-OH a.solid').href, 'https://bingo.vethomeguard.org/?zip=43604&radius=25#count');
+assert.equal(p.d.querySelector('#state-OH a.solid').href, 'https://www.findbingo.org/ohio/?zip=43604&radius=25#count');
 assert(p.cards.some(id => id.startsWith('mi-')), 'Toledo searches include Monroe County, Michigan');
 p = await open('?zip=43334');
 assert.equal(p.count, 'Bingo near 43334 is on the Ohio bingo finder');
@@ -202,7 +203,7 @@ p = await open('?state=IN');
 assert.equal(p.count, data.licensed.length + ' Indiana groups licensed for bingo');
 p = await open('?state=OH');
 assert.deepEqual(p.cards, ['state-OH']);
-assert.equal(p.d.querySelector('#state-OH a.solid').href, 'https://bingo.vethomeguard.org/');
+assert.equal(p.d.querySelector('#state-OH a.solid').href, 'https://www.findbingo.org/ohio/');
 p = await open('?state=WV');
 assert.deepEqual(p.cards, ['state-WV']);
 
