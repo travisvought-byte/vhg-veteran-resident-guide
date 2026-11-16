@@ -40,7 +40,8 @@ export const STATES=Object.freeze({
   "NH": "New Hampshire",
   "ME": "Maine",
   "HI": "Hawaii",
-  "DE": "Delaware"
+  "DE": "Delaware",
+  "RI": "Rhode Island"
 });
 export const STATE_FILES=Object.freeze({
   "OH": [
@@ -202,6 +203,10 @@ export const STATE_FILES=Object.freeze({
   "DE": [
     "data/public/delaware-resources.json",
     "data/public/delaware-county-veterans-offices.json"
+  ],
+  "RI": [
+    "data/public/rhode-island-resources.json",
+    "data/public/rhode-island-county-veterans-offices.json"
   ]
 });
 export const localityLabel=row=>row?(["independent_city","statewide"].includes(row.county_type)?row.county:row.county+(row.county_type==="parish"?" Parish":" County")):"";
