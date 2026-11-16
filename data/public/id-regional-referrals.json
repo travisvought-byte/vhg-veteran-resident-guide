@@ -1,80 +1,662 @@
 [
- {
-  "program_id": "id-aging",
-  "name": "Local aging help in Idaho (Eldercare Locator)",
-  "official_url": "https://eldercare.acl.gov/home",
-  "organization": "U.S. Administration for Community Living",
-  "service_area": [
-   "All Idaho counties"
-  ],
-  "state": "ID",
-  "needs_supported": [
-   "general_navigation",
-   "help_at_home"
-  ],
-  "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-  "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
-  "constraints": [
-   "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "id-aaa-1",
+    "name": "North Idaho Area Agency on Aging (Area 1)",
+    "organization": "North Idaho Area Agency on Aging (Area 1)",
+    "official_url": "https://aging.idaho.gov/contact",
+    "state": "ID",
+    "service_area": [
+      "Benewah",
+      "Boundary",
+      "Bonner",
+      "Kootenai",
+      "Shoshone"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the Idaho Commission on Aging at 877-471-2777 or dial 2-1-1. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-786-5536."
+    ],
+    "public_contact": {
+      "phone": "208-667-3179",
+      "phone_label": "Area Agency on Aging (Area 1)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.idaho.gov/contact",
+      "phone_source_url": "https://aging.idaho.gov/contact"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.idaho.gov/contact",
+        "title": "Idaho Commission on Aging: Contact Us",
+        "reviewed_on": "2026-11-16",
+        "scope": "The six Area Agencies on Aging, the counties each supports and their local and toll-free phones; read in full. The page was last updated July 20, 2026."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "id-aaa-2",
+    "name": "North Central Idaho Area Agency on Aging (Area 2)",
+    "organization": "North Central Idaho Area Agency on Aging (Area 2)",
+    "official_url": "https://aging.idaho.gov/contact",
+    "state": "ID",
+    "service_area": [
+      "Clearwater",
+      "Idaho",
+      "Latah",
+      "Lewis",
+      "Nez Perce"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the Idaho Commission on Aging at 877-471-2777 or dial 2-1-1. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-877-3206."
+    ],
+    "public_contact": {
+      "phone": "208-743-5580",
+      "phone_label": "Area Agency on Aging (Area 2)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.idaho.gov/contact",
+      "phone_source_url": "https://aging.idaho.gov/contact"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.idaho.gov/contact",
+        "title": "Idaho Commission on Aging: Contact Us",
+        "reviewed_on": "2026-11-16",
+        "scope": "The six Area Agencies on Aging, the counties each supports and their local and toll-free phones; read in full. The page was last updated July 20, 2026."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.acl.gov/contact"
+  {
+    "program_id": "id-aaa-3",
+    "name": "Southwest Idaho Area Agency on Aging (Area 3)",
+    "organization": "Southwest Idaho Area Agency on Aging (Area 3)",
+    "official_url": "https://aging.idaho.gov/contact",
+    "state": "ID",
+    "service_area": [
+      "Ada",
+      "Adams",
+      "Boise",
+      "Canyon",
+      "Elmore",
+      "Gem",
+      "Owyhee",
+      "Payette",
+      "Valley",
+      "Washington"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the Idaho Commission on Aging at 877-471-2777 or dial 2-1-1. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 844-850-2883."
+    ],
+    "public_contact": {
+      "phone": "208-898-7060",
+      "phone_label": "Area Agency on Aging (Area 3)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.idaho.gov/contact",
+      "phone_source_url": "https://aging.idaho.gov/contact"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.idaho.gov/contact",
+        "title": "Idaho Commission on Aging: Contact Us",
+        "reviewed_on": "2026-11-16",
+        "scope": "The six Area Agencies on Aging, the counties each supports and their local and toll-free phones; read in full. The page was last updated July 20, 2026."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.acl.gov/contact",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "aging_agency"
- },
- {
-  "program_id": "id-ombudsman",
-  "name": "Idaho long-term-care ombudsman",
-  "official_url": "https://theconsumervoice.org/get_help",
-  "organization": "National Long-Term Care Ombudsman Resource Center",
-  "service_area": [
-   "All Idaho counties"
-  ],
-  "state": "ID",
-  "needs_supported": [
-   "resident_rights",
-   "general_navigation"
-  ],
-  "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-  "next_step": "Use the locator to find the Idaho program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
-  "constraints": [
-   "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "id-aaa-4",
+    "name": "South Central Idaho Area Agency on Aging (Area 4)",
+    "organization": "South Central Idaho Area Agency on Aging (Area 4)",
+    "official_url": "https://aging.idaho.gov/contact",
+    "state": "ID",
+    "service_area": [
+      "Blaine",
+      "Camas",
+      "Cassia",
+      "Gooding",
+      "Jerome",
+      "Lincoln",
+      "Minidoka",
+      "Twin Falls"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the Idaho Commission on Aging at 877-471-2777 or dial 2-1-1. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-574-8656."
+    ],
+    "public_contact": {
+      "phone": "208-736-2122",
+      "phone_label": "Area Agency on Aging (Area 4)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.idaho.gov/contact",
+      "phone_source_url": "https://aging.idaho.gov/contact"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.idaho.gov/contact",
+        "title": "Idaho Commission on Aging: Contact Us",
+        "reviewed_on": "2026-11-16",
+        "scope": "The six Area Agencies on Aging, the counties each supports and their local and toll-free phones; read in full. The page was last updated July 20, 2026."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "id-aaa-5",
+    "name": "Southeast Idaho Area Agency on Aging (Area 5)",
+    "organization": "Southeast Idaho Area Agency on Aging (Area 5)",
+    "official_url": "https://aging.idaho.gov/contact",
+    "state": "ID",
+    "service_area": [
+      "Bannock",
+      "Bear Lake",
+      "Bingham",
+      "Caribou",
+      "Franklin",
+      "Oneida",
+      "Power"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the Idaho Commission on Aging at 877-471-2777 or dial 2-1-1. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-526-8129."
+    ],
+    "public_contact": {
+      "phone": "208-233-4032",
+      "phone_label": "Area Agency on Aging (Area 5)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.idaho.gov/contact",
+      "phone_source_url": "https://aging.idaho.gov/contact"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.idaho.gov/contact",
+        "title": "Idaho Commission on Aging: Contact Us",
+        "reviewed_on": "2026-11-16",
+        "scope": "The six Area Agencies on Aging, the counties each supports and their local and toll-free phones; read in full. The page was last updated July 20, 2026."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
+  {
+    "program_id": "id-aaa-6",
+    "name": "Eastern Idaho Area Agency on Aging (Area 6)",
+    "organization": "Eastern Idaho Area Agency on Aging (Area 6)",
+    "official_url": "https://aging.idaho.gov/contact",
+    "state": "ID",
+    "service_area": [
+      "Bonneville",
+      "Butte",
+      "Clark",
+      "Custer",
+      "Fremont",
+      "Jefferson",
+      "Lemhi",
+      "Madison",
+      "Teton"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the Idaho Commission on Aging at 877-471-2777 or dial 2-1-1. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-632-4813."
+    ],
+    "public_contact": {
+      "phone": "208-522-5391",
+      "phone_label": "Area Agency on Aging (Area 6)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.idaho.gov/contact",
+      "phone_source_url": "https://aging.idaho.gov/contact"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.idaho.gov/contact",
+        "title": "Idaho Commission on Aging: Contact Us",
+        "reviewed_on": "2026-11-16",
+        "scope": "The six Area Agencies on Aging, the counties each supports and their local and toll-free phones; read in full. The page was last updated July 20, 2026."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "ombudsman"
- }
+  {
+    "program_id": "id-omb-1",
+    "name": "Long-Term Care Ombudsman, North Idaho Area Agency on Aging (Area 1)",
+    "organization": "Long-Term Care Ombudsman, North Idaho Area Agency on Aging (Area 1)",
+    "official_url": "https://aging.idaho.gov/contact",
+    "state": "ID",
+    "service_area": [
+      "Benewah",
+      "Boundary",
+      "Bonner",
+      "Kootenai",
+      "Shoshone"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "208-667-3179",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.idaho.gov/contact",
+      "phone_source_url": "https://aging.idaho.gov/contact"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.idaho.gov/contact",
+        "title": "Idaho Commission on Aging: Contact Us",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agency on Aging’s phones and the counties it supports; read in full. The Commission’s ombudsman page says local ombudsmen work at the Area Agencies on Aging."
+      },
+      {
+        "url": "https://aging.idaho.gov/ombudsman-program/",
+        "title": "Idaho Commission on Aging: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-16",
+        "scope": "Contact the State Ombudsman at the Commission on Aging or a local ombudsman at an Area Agency on Aging; read in full. Last updated October 20, 2026."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/id",
+        "title": "National Consumer Voice for Quality Long-Term Care: Idaho ombudsman contacts",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each regional ombudsman program, its phones and the counties it serves; read in full. The page is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "id-omb-2",
+    "name": "Long-Term Care Ombudsman, North Central Idaho Area Agency on Aging (Area 2)",
+    "organization": "Long-Term Care Ombudsman, North Central Idaho Area Agency on Aging (Area 2)",
+    "official_url": "https://aging.idaho.gov/contact",
+    "state": "ID",
+    "service_area": [
+      "Clearwater",
+      "Idaho",
+      "Latah",
+      "Lewis",
+      "Nez Perce"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "208-743-5580",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.idaho.gov/contact",
+      "phone_source_url": "https://aging.idaho.gov/contact"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.idaho.gov/contact",
+        "title": "Idaho Commission on Aging: Contact Us",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agency on Aging’s phones and the counties it supports; read in full. The Commission’s ombudsman page says local ombudsmen work at the Area Agencies on Aging."
+      },
+      {
+        "url": "https://aging.idaho.gov/ombudsman-program/",
+        "title": "Idaho Commission on Aging: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-16",
+        "scope": "Contact the State Ombudsman at the Commission on Aging or a local ombudsman at an Area Agency on Aging; read in full. Last updated October 20, 2026."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/id",
+        "title": "National Consumer Voice for Quality Long-Term Care: Idaho ombudsman contacts",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each regional ombudsman program, its phones and the counties it serves; read in full. The page is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "id-omb-3",
+    "name": "Long-Term Care Ombudsman, Southwest Idaho Area Agency on Aging (Area 3)",
+    "organization": "Long-Term Care Ombudsman, Southwest Idaho Area Agency on Aging (Area 3)",
+    "official_url": "https://aging.idaho.gov/contact",
+    "state": "ID",
+    "service_area": [
+      "Ada",
+      "Adams",
+      "Boise",
+      "Canyon",
+      "Elmore",
+      "Gem",
+      "Owyhee",
+      "Payette",
+      "Valley",
+      "Washington"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "208-898-7060",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.idaho.gov/contact",
+      "phone_source_url": "https://aging.idaho.gov/contact"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.idaho.gov/contact",
+        "title": "Idaho Commission on Aging: Contact Us",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agency on Aging’s phones and the counties it supports; read in full. The Commission’s ombudsman page says local ombudsmen work at the Area Agencies on Aging."
+      },
+      {
+        "url": "https://aging.idaho.gov/ombudsman-program/",
+        "title": "Idaho Commission on Aging: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-16",
+        "scope": "Contact the State Ombudsman at the Commission on Aging or a local ombudsman at an Area Agency on Aging; read in full. Last updated October 20, 2026."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/id",
+        "title": "National Consumer Voice for Quality Long-Term Care: Idaho ombudsman contacts",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each regional ombudsman program, its phones and the counties it serves; read in full. The page is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "id-omb-4",
+    "name": "Long-Term Care Ombudsman, South Central Idaho Area Agency on Aging (Area 4)",
+    "organization": "Long-Term Care Ombudsman, South Central Idaho Area Agency on Aging (Area 4)",
+    "official_url": "https://aging.idaho.gov/contact",
+    "state": "ID",
+    "service_area": [
+      "Blaine",
+      "Camas",
+      "Cassia",
+      "Gooding",
+      "Jerome",
+      "Lincoln",
+      "Minidoka",
+      "Twin Falls"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ombudsman direct line: 208-933-2397."
+    ],
+    "public_contact": {
+      "phone": "208-736-2122",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.idaho.gov/contact",
+      "phone_source_url": "https://aging.idaho.gov/contact"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.idaho.gov/contact",
+        "title": "Idaho Commission on Aging: Contact Us",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agency on Aging’s phones and the counties it supports; read in full. The Commission’s ombudsman page says local ombudsmen work at the Area Agencies on Aging."
+      },
+      {
+        "url": "https://aging.idaho.gov/ombudsman-program/",
+        "title": "Idaho Commission on Aging: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-16",
+        "scope": "Contact the State Ombudsman at the Commission on Aging or a local ombudsman at an Area Agency on Aging; read in full. Last updated October 20, 2026."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/id",
+        "title": "National Consumer Voice for Quality Long-Term Care: Idaho ombudsman contacts",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each regional ombudsman program, its phones and the counties it serves; read in full. The page is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "id-omb-5",
+    "name": "Long-Term Care Ombudsman, Southeast Idaho Area Agency on Aging (Area 5)",
+    "organization": "Long-Term Care Ombudsman, Southeast Idaho Area Agency on Aging (Area 5)",
+    "official_url": "https://aging.idaho.gov/contact",
+    "state": "ID",
+    "service_area": [
+      "Bannock",
+      "Bear Lake",
+      "Bingham",
+      "Caribou",
+      "Franklin",
+      "Oneida",
+      "Power"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ombudsman extension: 804."
+    ],
+    "public_contact": {
+      "phone": "208-233-4032",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.idaho.gov/contact",
+      "phone_source_url": "https://aging.idaho.gov/contact"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.idaho.gov/contact",
+        "title": "Idaho Commission on Aging: Contact Us",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agency on Aging’s phones and the counties it supports; read in full. The Commission’s ombudsman page says local ombudsmen work at the Area Agencies on Aging."
+      },
+      {
+        "url": "https://aging.idaho.gov/ombudsman-program/",
+        "title": "Idaho Commission on Aging: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-16",
+        "scope": "Contact the State Ombudsman at the Commission on Aging or a local ombudsman at an Area Agency on Aging; read in full. Last updated October 20, 2026."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/id",
+        "title": "National Consumer Voice for Quality Long-Term Care: Idaho ombudsman contacts",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each regional ombudsman program, its phones and the counties it serves; read in full. The page is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "id-omb-6",
+    "name": "Long-Term Care Ombudsman, Eastern Idaho Area Agency on Aging (Area 6)",
+    "organization": "Long-Term Care Ombudsman, Eastern Idaho Area Agency on Aging (Area 6)",
+    "official_url": "https://aging.idaho.gov/contact",
+    "state": "ID",
+    "service_area": [
+      "Bonneville",
+      "Butte",
+      "Clark",
+      "Custer",
+      "Fremont",
+      "Jefferson",
+      "Lemhi",
+      "Madison",
+      "Teton"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "208-522-5391",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.idaho.gov/contact",
+      "phone_source_url": "https://aging.idaho.gov/contact"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.idaho.gov/contact",
+        "title": "Idaho Commission on Aging: Contact Us",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agency on Aging’s phones and the counties it supports; read in full. The Commission’s ombudsman page says local ombudsmen work at the Area Agencies on Aging."
+      },
+      {
+        "url": "https://aging.idaho.gov/ombudsman-program/",
+        "title": "Idaho Commission on Aging: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-16",
+        "scope": "Contact the State Ombudsman at the Commission on Aging or a local ombudsman at an Area Agency on Aging; read in full. Last updated October 20, 2026."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/id",
+        "title": "National Consumer Voice for Quality Long-Term Care: Idaho ombudsman contacts",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each regional ombudsman program, its phones and the counties it serves; read in full. The page is undated."
+      }
+    ]
+  }
 ]

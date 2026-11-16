@@ -34,7 +34,8 @@ export const STATES=Object.freeze({
   "KS": "Kansas",
   "NE": "Nebraska",
   "NM": "New Mexico",
-  "MS": "Mississippi"
+  "MS": "Mississippi",
+  "ID": "Idaho"
 });
 export const STATE_FILES=Object.freeze({
   "OH": [
@@ -172,6 +173,10 @@ export const STATE_FILES=Object.freeze({
   "MS": [
     "data/public/mississippi-resources.json",
     "data/public/mississippi-county-veterans-offices.json"
+  ],
+  "ID": [
+    "data/public/idaho-resources.json",
+    "data/public/idaho-county-veterans-offices.json"
   ]
 });
 export const localityLabel=row=>row?(["independent_city","statewide"].includes(row.county_type)?row.county:row.county+(row.county_type==="parish"?" Parish":" County")):"";
