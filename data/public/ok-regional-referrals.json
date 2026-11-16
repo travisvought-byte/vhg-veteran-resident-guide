@@ -1,80 +1,673 @@
 [
- {
-  "program_id": "ok-aging",
-  "name": "Local aging help in Oklahoma (Eldercare Locator)",
-  "official_url": "https://eldercare.acl.gov/home",
-  "organization": "U.S. Administration for Community Living",
-  "service_area": [
-   "All Oklahoma counties"
-  ],
-  "state": "OK",
-  "needs_supported": [
-   "general_navigation",
-   "help_at_home"
-  ],
-  "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-  "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
-  "constraints": [
-   "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "ok-aaa-areawide",
+    "name": "Areawide Aging Agency, Inc.",
+    "organization": "Areawide Aging Agency, Inc.",
+    "official_url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+    "state": "OK",
+    "service_area": [
+      "Canadian",
+      "Cleveland",
+      "Logan",
+      "Oklahoma"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Info-Line, 800-211-2116, connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Based at 4101 Perimeter Center Drive, Suite 310, Oklahoma City. The publication prints this number as a TDD line."
+    ],
+    "public_contact": {
+      "phone": "405-942-8500",
+      "phone_label": "Area Agency on Aging (Areawide Aging Agency)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+      "phone_source_url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+        "title": "Oklahoma Human Services: Oklahoma Area Agencies on Aging, Planning and Service Areas (Pub. 91-27, revised 08/2022)",
+        "reviewed_on": "2026-11-15",
+        "scope": "Name, address, phone and the counties each of the eleven planning and service areas lists, read in full. The publication is dated August 2022. Oklahoma Human Services’ draft FFY 2027–2030 state plan says the eleven areas are now overseen by nine agencies, so which organization answers for a county may differ from this list; the statewide line routes callers to the right one."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "ok-aaa-ascog",
+    "name": "Association of South Central Oklahoma Governments (ASCOG) Area Agency on Aging",
+    "organization": "Association of South Central Oklahoma Governments (ASCOG) Area Agency on Aging",
+    "official_url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+    "state": "OK",
+    "service_area": [
+      "Caddo",
+      "Comanche",
+      "Cotton",
+      "Grady",
+      "Jefferson",
+      "McClain",
+      "Stephens",
+      "Tillman"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Info-Line, 800-211-2116, connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Based in Duncan. Toll-free: 800-658-1466."
+    ],
+    "public_contact": {
+      "phone": "580-736-7036",
+      "phone_label": "Area Agency on Aging (ASCOG)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+      "phone_source_url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+        "title": "Oklahoma Human Services: Oklahoma Area Agencies on Aging, Planning and Service Areas (Pub. 91-27, revised 08/2022)",
+        "reviewed_on": "2026-11-15",
+        "scope": "Name, address, phone and the counties each of the eleven planning and service areas lists, read in full. The publication is dated August 2022. Oklahoma Human Services’ draft FFY 2027–2030 state plan says the eleven areas are now overseen by nine agencies, so which organization answers for a county may differ from this list; the statewide line routes callers to the right one."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.acl.gov/contact"
+  {
+    "program_id": "ok-aaa-coedd",
+    "name": "Central Oklahoma Economic Development District (COEDD) Area Agency on Aging",
+    "organization": "Central Oklahoma Economic Development District (COEDD) Area Agency on Aging",
+    "official_url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+    "state": "OK",
+    "service_area": [
+      "Hughes",
+      "Lincoln",
+      "Okfuskee",
+      "Pawnee",
+      "Payne",
+      "Pottawatomie",
+      "Seminole"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Info-Line, 800-211-2116, connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Based in Shawnee. Toll-free: 800-375-8255."
+    ],
+    "public_contact": {
+      "phone": "405-273-6410",
+      "phone_label": "Area Agency on Aging (COEDD)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+      "phone_source_url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+        "title": "Oklahoma Human Services: Oklahoma Area Agencies on Aging, Planning and Service Areas (Pub. 91-27, revised 08/2022)",
+        "reviewed_on": "2026-11-15",
+        "scope": "Name, address, phone and the counties each of the eleven planning and service areas lists, read in full. The publication is dated August 2022. Oklahoma Human Services’ draft FFY 2027–2030 state plan says the eleven areas are now overseen by nine agencies, so which organization answers for a county may differ from this list; the statewide line routes callers to the right one."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.acl.gov/contact",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "aging_agency"
- },
- {
-  "program_id": "ok-ombudsman",
-  "name": "Oklahoma long-term-care ombudsman",
-  "official_url": "https://theconsumervoice.org/get_help",
-  "organization": "National Long-Term Care Ombudsman Resource Center",
-  "service_area": [
-   "All Oklahoma counties"
-  ],
-  "state": "OK",
-  "needs_supported": [
-   "resident_rights",
-   "general_navigation"
-  ],
-  "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-  "next_step": "Use the locator to find the Oklahoma program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
-  "constraints": [
-   "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "ok-aaa-eodd",
+    "name": "Eastern Oklahoma Development District (EODD) Area Agency on Aging",
+    "organization": "Eastern Oklahoma Development District (EODD) Area Agency on Aging",
+    "official_url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+    "state": "OK",
+    "service_area": [
+      "Adair",
+      "Cherokee",
+      "McIntosh",
+      "Muskogee",
+      "Okmulgee",
+      "Sequoyah",
+      "Wagoner"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Info-Line, 800-211-2116, connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Based in Muskogee."
+    ],
+    "public_contact": {
+      "phone": "918-682-7891",
+      "phone_label": "Area Agency on Aging (EODD)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+      "phone_source_url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+        "title": "Oklahoma Human Services: Oklahoma Area Agencies on Aging, Planning and Service Areas (Pub. 91-27, revised 08/2022)",
+        "reviewed_on": "2026-11-15",
+        "scope": "Name, address, phone and the counties each of the eleven planning and service areas lists, read in full. The publication is dated August 2022. Oklahoma Human Services’ draft FFY 2027–2030 state plan says the eleven areas are now overseen by nine agencies, so which organization answers for a county may differ from this list; the statewide line routes callers to the right one."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "ok-aaa-eodd-panhandle",
+    "name": "Eastern Oklahoma Development District (EODD), interim administrative organization for the northwest area",
+    "organization": "Eastern Oklahoma Development District (EODD), interim administrative organization for the northwest area",
+    "official_url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+    "state": "OK",
+    "service_area": [
+      "Beaver",
+      "Cimarron",
+      "Dewey",
+      "Ellis",
+      "Harper",
+      "Texas",
+      "Woods",
+      "Woodward"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Info-Line, 800-211-2116, connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "The publication lists EODD, based in Muskogee, as the Interim Administrative Organization for these eight counties."
+    ],
+    "public_contact": {
+      "phone": "918-682-7891",
+      "phone_label": "Area Agency on Aging (EODD, northwest area)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+      "phone_source_url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+        "title": "Oklahoma Human Services: Oklahoma Area Agencies on Aging, Planning and Service Areas (Pub. 91-27, revised 08/2022)",
+        "reviewed_on": "2026-11-15",
+        "scope": "Name, address, phone and the counties each of the eleven planning and service areas lists, read in full. The publication is dated August 2022. Oklahoma Human Services’ draft FFY 2027–2030 state plan says the eleven areas are now overseen by nine agencies, so which organization answers for a county may differ from this list; the statewide line routes callers to the right one."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
+  {
+    "program_id": "ok-aaa-grand-gateway",
+    "name": "Grand Gateway Economic Development Association Area Agency on Aging",
+    "organization": "Grand Gateway Economic Development Association Area Agency on Aging",
+    "official_url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+    "state": "OK",
+    "service_area": [
+      "Craig",
+      "Delaware",
+      "Mayes",
+      "Nowata",
+      "Ottawa",
+      "Rogers",
+      "Washington"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Info-Line, 800-211-2116, connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Based in Big Cabin. Toll-free: 800-482-4594."
+    ],
+    "public_contact": {
+      "phone": "918-783-5793",
+      "phone_label": "Area Agency on Aging (Grand Gateway)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+      "phone_source_url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+        "title": "Oklahoma Human Services: Oklahoma Area Agencies on Aging, Planning and Service Areas (Pub. 91-27, revised 08/2022)",
+        "reviewed_on": "2026-11-15",
+        "scope": "Name, address, phone and the counties each of the eleven planning and service areas lists, read in full. The publication is dated August 2022. Oklahoma Human Services’ draft FFY 2027–2030 state plan says the eleven areas are now overseen by nine agencies, so which organization answers for a county may differ from this list; the statewide line routes callers to the right one."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "ombudsman"
- }
+  {
+    "program_id": "ok-aaa-incog",
+    "name": "Indian Nations Council of Governments (INCOG) Area Agency on Aging",
+    "organization": "Indian Nations Council of Governments (INCOG) Area Agency on Aging",
+    "official_url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+    "state": "OK",
+    "service_area": [
+      "Creek",
+      "Osage",
+      "Tulsa"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Info-Line, 800-211-2116, connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Based in Tulsa."
+    ],
+    "public_contact": {
+      "phone": "918-584-7526",
+      "phone_label": "Area Agency on Aging (INCOG)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+      "phone_source_url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+        "title": "Oklahoma Human Services: Oklahoma Area Agencies on Aging, Planning and Service Areas (Pub. 91-27, revised 08/2022)",
+        "reviewed_on": "2026-11-15",
+        "scope": "Name, address, phone and the counties each of the eleven planning and service areas lists, read in full. The publication is dated August 2022. Oklahoma Human Services’ draft FFY 2027–2030 state plan says the eleven areas are now overseen by nine agencies, so which organization answers for a county may differ from this list; the statewide line routes callers to the right one."
+      }
+    ]
+  },
+  {
+    "program_id": "ok-aaa-keddo",
+    "name": "Kiamichi Economic Development District of Oklahoma (KEDDO) Area Agency on Aging",
+    "organization": "Kiamichi Economic Development District of Oklahoma (KEDDO) Area Agency on Aging",
+    "official_url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+    "state": "OK",
+    "service_area": [
+      "Choctaw",
+      "Haskell",
+      "Latimer",
+      "Le Flore",
+      "McCurtain",
+      "Pittsburg",
+      "Pushmataha"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Info-Line, 800-211-2116, connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Based in Wilburton. Toll-free: 800-722-8180 (TDD)."
+    ],
+    "public_contact": {
+      "phone": "918-465-2367",
+      "phone_label": "Area Agency on Aging (KEDDO)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+      "phone_source_url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+        "title": "Oklahoma Human Services: Oklahoma Area Agencies on Aging, Planning and Service Areas (Pub. 91-27, revised 08/2022)",
+        "reviewed_on": "2026-11-15",
+        "scope": "Name, address, phone and the counties each of the eleven planning and service areas lists, read in full. The publication is dated August 2022. Oklahoma Human Services’ draft FFY 2027–2030 state plan says the eleven areas are now overseen by nine agencies, so which organization answers for a county may differ from this list; the statewide line routes callers to the right one."
+      }
+    ]
+  },
+  {
+    "program_id": "ok-aaa-ltcae",
+    "name": "Long Term Care Authority of Enid (LTCA-E) Area Agency on Aging",
+    "organization": "Long Term Care Authority of Enid (LTCA-E) Area Agency on Aging",
+    "official_url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+    "state": "OK",
+    "service_area": [
+      "Alfalfa",
+      "Blaine",
+      "Garfield",
+      "Grant",
+      "Kay",
+      "Kingfisher",
+      "Major",
+      "Noble"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Info-Line, 800-211-2116, connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Based in Enid."
+    ],
+    "public_contact": {
+      "phone": "580-234-7475",
+      "phone_label": "Area Agency on Aging (Long Term Care Authority of Enid)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+      "phone_source_url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+        "title": "Oklahoma Human Services: Oklahoma Area Agencies on Aging, Planning and Service Areas (Pub. 91-27, revised 08/2022)",
+        "reviewed_on": "2026-11-15",
+        "scope": "Name, address, phone and the counties each of the eleven planning and service areas lists, read in full. The publication is dated August 2022. Oklahoma Human Services’ draft FFY 2027–2030 state plan says the eleven areas are now overseen by nine agencies, so which organization answers for a county may differ from this list; the statewide line routes callers to the right one."
+      }
+    ]
+  },
+  {
+    "program_id": "ok-aaa-soda",
+    "name": "Southern Oklahoma Development Association (SODA) Area Agency on Aging",
+    "organization": "Southern Oklahoma Development Association (SODA) Area Agency on Aging",
+    "official_url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+    "state": "OK",
+    "service_area": [
+      "Atoka",
+      "Bryan",
+      "Carter",
+      "Coal",
+      "Garvin",
+      "Johnston",
+      "Love",
+      "Marshall",
+      "Murray",
+      "Pontotoc"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Info-Line, 800-211-2116, connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Based in Durant."
+    ],
+    "public_contact": {
+      "phone": "580-920-1388",
+      "phone_label": "Area Agency on Aging (SODA)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+      "phone_source_url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+        "title": "Oklahoma Human Services: Oklahoma Area Agencies on Aging, Planning and Service Areas (Pub. 91-27, revised 08/2022)",
+        "reviewed_on": "2026-11-15",
+        "scope": "Name, address, phone and the counties each of the eleven planning and service areas lists, read in full. The publication is dated August 2022. Oklahoma Human Services’ draft FFY 2027–2030 state plan says the eleven areas are now overseen by nine agencies, so which organization answers for a county may differ from this list; the statewide line routes callers to the right one."
+      }
+    ]
+  },
+  {
+    "program_id": "ok-aaa-swoda",
+    "name": "Southwestern Oklahoma Development Authority (SWODA) Area Agency on Aging",
+    "organization": "Southwestern Oklahoma Development Authority (SWODA) Area Agency on Aging",
+    "official_url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+    "state": "OK",
+    "service_area": [
+      "Beckham",
+      "Custer",
+      "Greer",
+      "Harmon",
+      "Jackson",
+      "Kiowa",
+      "Roger Mills",
+      "Washita"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Info-Line, 800-211-2116, connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Based in Burns Flat. Toll-free: 800-627-4882 (TDD)."
+    ],
+    "public_contact": {
+      "phone": "580-562-4882",
+      "phone_label": "Area Agency on Aging (SWODA)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+      "phone_source_url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+        "title": "Oklahoma Human Services: Oklahoma Area Agencies on Aging, Planning and Service Areas (Pub. 91-27, revised 08/2022)",
+        "reviewed_on": "2026-11-15",
+        "scope": "Name, address, phone and the counties each of the eleven planning and service areas lists, read in full. The publication is dated August 2022. Oklahoma Human Services’ draft FFY 2027–2030 state plan says the eleven areas are now overseen by nine agencies, so which organization answers for a county may differ from this list; the statewide line routes callers to the right one."
+      }
+    ]
+  },
+  {
+    "program_id": "ok-omb-state",
+    "name": "Oklahoma Office of the State Long-Term Care Ombudsman",
+    "organization": "Oklahoma Office of the State Long-Term Care Ombudsman",
+    "official_url": "https://oklahoma.gov/oag/about/divisions/ltco.html",
+    "state": "OK",
+    "service_area": [
+      "Adair",
+      "Alfalfa",
+      "Atoka",
+      "Beaver",
+      "Beckham",
+      "Blaine",
+      "Bryan",
+      "Caddo",
+      "Canadian",
+      "Carter",
+      "Cherokee",
+      "Choctaw",
+      "Cimarron",
+      "Cleveland",
+      "Coal",
+      "Comanche",
+      "Cotton",
+      "Craig",
+      "Creek",
+      "Custer",
+      "Delaware",
+      "Dewey",
+      "Ellis",
+      "Garfield",
+      "Garvin",
+      "Grady",
+      "Grant",
+      "Greer",
+      "Harmon",
+      "Harper",
+      "Haskell",
+      "Hughes",
+      "Jackson",
+      "Jefferson",
+      "Johnston",
+      "Kay",
+      "Kingfisher",
+      "Kiowa",
+      "Latimer",
+      "Le Flore",
+      "Lincoln",
+      "Logan",
+      "Love",
+      "Major",
+      "Marshall",
+      "Mayes",
+      "McClain",
+      "McCurtain",
+      "McIntosh",
+      "Murray",
+      "Muskogee",
+      "Noble",
+      "Nowata",
+      "Okfuskee",
+      "Oklahoma",
+      "Okmulgee",
+      "Osage",
+      "Ottawa",
+      "Pawnee",
+      "Payne",
+      "Pittsburg",
+      "Pontotoc",
+      "Pottawatomie",
+      "Pushmataha",
+      "Roger Mills",
+      "Rogers",
+      "Seminole",
+      "Sequoyah",
+      "Stephens",
+      "Texas",
+      "Tillman",
+      "Tulsa",
+      "Wagoner",
+      "Washington",
+      "Washita",
+      "Woods",
+      "Woodward"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Call 800-211-2116 and give your county and the name of the facility; the call is routed to the Area Agency on Aging ombudsman for your area. The State Ombudsman’s office line is 405-521-6734.",
+      "The program serves residents of nursing homes, assisted living and similar adult care homes."
+    ],
+    "public_contact": {
+      "phone": "800-211-2116",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+      "phone_source_url": "https://oklahoma.gov/oag/about/divisions/ltco.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://oklahoma.gov/oag/about/divisions/ltco.html",
+        "title": "Oklahoma Long-Term Care Ombudsman",
+        "reviewed_on": "2026-11-15",
+        "scope": "Service description, the State Ombudsman’s phone, the statewide complaint line (800-211-2116) and email, and that complaints go to the Area Agency on Aging ombudsman for your area; search excerpt. The office publishes one statewide line, so every county shows it."
+      },
+      {
+        "url": "https://oklahoma.gov/content/dam/ok/en/okdhs/documents/okdhs-publication-library/91-27.pdf",
+        "title": "Oklahoma Human Services: Oklahoma Area Agencies on Aging, Planning and Service Areas (Pub. 91-27, revised 08/2022)",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://oklahoma.gov/okdhs/contact-us/asdhome.html",
+        "title": "Oklahoma Human Services: Long-Term Care Ombudsman complaints",
+        "reviewed_on": "2026-11-15",
+        "scope": "Contact an ombudsman supervisor at one of the eleven Area Agencies on Aging about care or rights in a nursing home, assisted living or residential care facility; Senior InfoLine 1-800-211-2116; search excerpt."
+      }
+    ]
+  }
 ]
