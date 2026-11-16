@@ -120,17 +120,46 @@
  {
   "code": "PA",
   "name": "Pennsylvania",
-  "coverage": "none",
-  "about": "Pennsylvania bingo licenses come from each county, and we haven't found a statewide list of games yet. We're building one with help from halls and players.",
+  "coverage": "starter",
+  "about": "Pennsylvania bingo licenses come from each county, so there is no statewide list of games. We're building one from places that publish their own schedules, with help from halls and players.",
   "regulator_label": "How county bingo licenses work (Cumberland County example)",
   "regulator_url": "https://cumberlandcountypa.gov/4098/Bingo",
   "regulator_note": "In Pennsylvania, bingo licenses are issued by each county treasurer's office.",
-  "reviewed_on": "2026-11-15",
+  "reviewed_on": "2026-11-16",
   "sources": [
    {
     "url": "https://cumberlandcountypa.gov/4098/Bingo",
     "scope": "\"Bingo licenses are issued through your County Treasurer's office.\" No list of games",
     "reviewed_on": "2026-11-15"
+   },
+   {
+    "url": "https://www.collinsburgfire.org/content/bingo/",
+    "scope": "Example of an organizer-published schedule; each listing names its own source",
+    "reviewed_on": "2026-11-16"
+   }
+  ],
+  "hours_note": "Game days come from each place's own published schedule. Call ahead to confirm."
+ },
+ {
+  "code": "NY",
+  "name": "New York",
+  "coverage": "starter",
+  "about": "New York bingo licenses come from each city, town or village, so there is no statewide list of games. We're building one from places that publish their own schedules, with help from halls and players.",
+  "hours_note": "Game days come from each place's own published schedule. Call ahead to confirm.",
+  "regulator_label": "New York State Gaming Commission: Charitable Gaming",
+  "regulator_url": "https://gaming.ny.gov/charitable-gaming",
+  "regulator_note": "In New York, a group first gets a bingo identification number from the State Gaming Commission's Division of Charitable Gaming, and the license itself comes from the local city, town or village clerk.",
+  "reviewed_on": "2026-11-16",
+  "sources": [
+   {
+    "url": "https://gaming.ny.gov/charitable-gaming",
+    "scope": "Division of Charitable Gaming: issues bingo identification numbers as a prerequisite to licensing by municipalities; no list of games",
+    "reviewed_on": "2026-11-16"
+   },
+   {
+    "url": "https://gaming.ny.gov/bingo",
+    "scope": "Bingo licensing steps: the municipal clerk reviews each application and the municipality issues the license",
+    "reviewed_on": "2026-11-16"
    }
   ]
  },
@@ -164,6 +193,29 @@
     "url": "https://www.jacksonville.gov/departments/parks-and-recreation/senior-services/senior-center-calendars",
     "scope": "City of Jacksonville senior center monthly calendars (November 2026 read for bingo days)",
     "reviewed_on": "2026-11-15"
+   }
+  ]
+ },
+ {
+  "code": "UT",
+  "name": "Utah",
+  "coverage": "starter",
+  "about": "Utah does not license bingo, and state law does not allow gambling. The bingo we list in Utah is free bingo at senior centers. We're building the list with help from centers and players.",
+  "hours_note": "Game days come from each center's own published schedule. Call ahead to confirm.",
+  "regulator_label": "Utah Code: gambling (section 76-9-1402)",
+  "regulator_url": "https://le.utah.gov/xcode/Title76/Chapter9/C76-9-S1402_2025050720250507.pdf",
+  "regulator_note": "Utah has no bingo regulator. State law prohibits gambling, so the places listed here offer bingo free of charge.",
+  "reviewed_on": "2026-11-16",
+  "sources": [
+   {
+    "url": "https://le.utah.gov/xcode/Title76/Chapter9/C76-9-S1402_2025050720250507.pdf",
+    "scope": "Utah Code 76-9-1402, participating in gambling: the section states it acts as the state's prohibition of gambling",
+    "reviewed_on": "2026-11-16"
+   },
+   {
+    "url": "https://coa.washco.utah.gov/enterprise/activities/games/",
+    "scope": "Example of a county senior center games page listing free bingo; each listing names its own source",
+    "reviewed_on": "2026-11-16"
    }
   ]
  }

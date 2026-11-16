@@ -21,12 +21,12 @@ for (const v of data.venues) {
   assert.deepEqual(order, [...order].sort((a, b) => a - b), 'sessions run Monday to Sunday: ' + v.id);
 }
 assert(zips['49037'], 'Census point fills the ZIP missing from the centroid file');
-assert(!zips['10001'] && zips['43334'] && zips['48161'] && zips['46733'] && zips['40601'] && zips['25301'] && zips['15222'] && zips['33701'] && zips['32208']);
+assert(!zips['90210'] && zips['10001'] && zips['84770'] && zips['43334'] && zips['48161'] && zips['46733'] && zips['40601'] && zips['25301'] && zips['15222'] && zips['33701'] && zips['32208']);
 assert(!Object.keys(zips).some(z => z.startsWith('340')), 'military ZIP codes are not Florida');
 
 const static_ = new JSDOM(html).window.document;
 assert.equal(static_.querySelector('link[rel=canonical]').href, 'https://www.findbingo.org/');
-assert.deepEqual([...static_.querySelectorAll('#state-buttons a')].map(a => a.dataset.state), ['MI', 'IN', 'OH', 'KY', 'WV', 'PA', 'FL']);
+assert.deepEqual([...static_.querySelectorAll('#state-buttons a')].map(a => a.dataset.state), ['MI', 'IN', 'OH', 'KY', 'WV', 'PA', 'NY', 'FL', 'UT']);
 assert.equal(static_.querySelectorAll('script[src]').length, 0, 'no outside scripts');
 assert.deepEqual([...static_.querySelectorAll('#about-states h3')].map(h => h.textContent), states.map(s => s.name));
 assert(static_.querySelector('footer a[href="https://creativecommons.org/licenses/by/3.0/"]'), 'ZIP data attribution');
@@ -78,7 +78,7 @@ assert.equal(w0.timeRange('12:00', '16:00'), 'noon to 4 p.m.');
 assert.equal(w0.timeRange('16:00', '00:00'), '4 p.m. to midnight');
 assert.equal(w0.timeRange('21:31', '02:00'), '9:31 p.m. to 2 a.m.');
 assert.equal(w0.timeRange('10:30', '14:30'), '10:30 a.m. to 2:30 p.m.');
-assert.equal(w0.stateOfZip('48161') + w0.stateOfZip('46733') + w0.stateOfZip('43334') + w0.stateOfZip('40601') + w0.stateOfZip('25301') + w0.stateOfZip('15222') + w0.stateOfZip('33701') + w0.stateOfZip('34001') + w0.stateOfZip('10001'), 'MIINOHKYWVPAFL');
+assert.equal(w0.stateOfZip('48161') + w0.stateOfZip('46733') + w0.stateOfZip('43334') + w0.stateOfZip('40601') + w0.stateOfZip('25301') + w0.stateOfZip('15222') + w0.stateOfZip('33701') + w0.stateOfZip('34001') + w0.stateOfZip('10001') + w0.stateOfZip('84770') + w0.stateOfZip('90210'), 'MIINOHKYWVPAFLNYUT');
 const fake = {sessions: [{day: 1, start: '09:00', end: '11:00'}, {day: 3, start: '16:00', end: '00:00'}]};
 assert.equal(w0.nextGame(fake, '', '2026-11-16', 600), '2026-11-16', 'still on this morning');
 assert.equal(w0.nextGame(fake, '', '2026-11-16', 700), '2026-11-18', 'this morning is over, so Wednesday');
@@ -183,12 +183,34 @@ assert.match(p.d.getElementById('fl-charlie-t-joseph-senior-center-jacksonville'
 p = await open('?zip=32246&radius=10');
 assert.match(p.d.getElementById('fl-southside-senior-center-jacksonville').querySelector('.sessions').textContent, /Thursday, 10 a\.m\. · Loteria \(Spanish bingo\)/);
 p = await open('?zip=15222&radius=50');
-assert.equal(p.cards[0], 'state-PA');
+assert.equal(p.cards[0], 'pa-collinsburg-volunteer-fire-company-west-newton', 'Pittsburgh searches lead with the nearest Pennsylvania game');
+assert(p.cards.includes('state-PA'), 'and still offer the way to send Pennsylvania game times');
 assert(p.cards.includes('state-OH') && p.cards.includes('state-WV'), 'Pittsburgh is near Ohio and West Virginia');
 
+// Pennsylvania, New York and Utah starter lists: organizer-published schedules, each with its own source.
+for (const [code, name, min] of [['PA', 'Pennsylvania', 4], ['NY', 'New York', 3], ['UT', 'Utah', 3]]) {
+  const rows = data.venues.filter(v => v.state === code);
+  assert(rows.length >= min && rows.every(v => v.kind && v.source_url && v.schedule_note), name + ' starter list');
+  p = await open('?state=' + code);
+  assert.equal(p.count, rows.length + ' ' + name + ' bingo places with game days');
+  assert.equal(p.cards[p.cards.length - 1], 'state-' + code, name + ' ends with the way to send game times');
+  for (const v of rows) assert(p.d.querySelector('#' + v.id + ' a[href^="mailto:travis@vethomeguard.org?subject=FindBingo.org%20correction"]'), v.id + ' has a report link');
+}
+p = await open('?state=PA');
+assert.match(p.d.getElementById('pa-penbrook-american-legion-post-730-harrisburg').querySelector('.sessions').textContent, /Thursday, 6 p\.m\. · 1st and 3rd Thursday of the month/);
+assert.match(decodeURIComponent(p.d.querySelector('#pa-tylersport-fire-company-tylersport .small-links a').getAttribute('href')), /Bingo days:\nFirst game starts at:\nPhone for players:/, 'the correction email is ready to fill in');
+p = await open('?zip=14624&radius=10');
+const gates = p.d.getElementById('ny-gates-center-bingo-patriot-hall-rochester');
+assert.match(gates.querySelector('.big-actions a.solid').textContent, /Look up phone number/, 'a listing without a published phone offers a lookup');
+assert.match(gates.querySelector('.sessions').textContent, /Wednesday, 7 p\.m\./);
+p = await open('?zip=84770&radius=50');
+assert(p.cards.includes('ut-st-george-senior-citizen-center-st-george') && p.cards.includes('ut-hurricane-senior-citizen-center-hurricane'));
+assert.match(p.d.getElementById('state-UT').textContent, /free bingo at senior centers/);
+assert.match(p.d.getElementById('ut-st-george-senior-citizen-center-st-george').querySelector('.badge').textContent, /Senior center bingo/);
+
 // ZIP mistakes get plain-language help.
-p = await open('?zip=12345');
-assert.match(p.status, /We could not find ZIP code 12345 in Michigan, Indiana, Ohio, Kentucky, West Virginia, Pennsylvania or Florida/);
+p = await open('?zip=90210');
+assert.match(p.status, /We could not find ZIP code 90210 in the states we cover so far: Michigan, Indiana, Ohio, Kentucky, West Virginia, Pennsylvania, New York, Florida, Utah\./);
 assert.equal(p.cards.length, 0);
 p = await open('?zip=4816');
 assert.match(p.status, /Please type the five numbers of your ZIP code/);

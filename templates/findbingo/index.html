@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Find Bingo: bingo games near you | Michigan, Indiana, Ohio, Florida and neighbors</title>
-<meta name="description" content="Free and simple: type your ZIP code to find bingo games near you in Michigan, Indiana and Ohio, with help for Kentucky, West Virginia, Pennsylvania and Florida.">
+<title>Find Bingo: bingo games near you | Michigan, Ohio, Indiana, Pennsylvania, New York and more</title>
+<meta name="description" content="Free and simple: type your ZIP code to find bingo games near you in Michigan, Ohio, Indiana, Pennsylvania, New York, Florida and Utah, with help for Kentucky and West Virginia.">
 <link rel="canonical" href="https://www.findbingo.org/">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Find Bingo"><meta property="og:title" content="Find Bingo: bingo games near you">
 <meta property="og:description" content="Type your ZIP code to find bingo games near you. Free, from Veteran Home Guardians.">
@@ -88,7 +88,7 @@ const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');
 let STATES={},activeZip='',activeState='',showMore=false;
 function index(){STATES=Object.fromEntries(DATA.states.map(s=>[s.code,s]))}
-function stateOfZip(z){const p=Number(String(z).slice(0,3));return p>=430&&p<=459?'OH':p>=480&&p<=499?'MI':p>=460&&p<=479?'IN':p>=400&&p<=427?'KY':p>=247&&p<=268?'WV':p>=150&&p<=196?'PA':p>=320&&p<=349&&p!==340?'FL':''}
+function stateOfZip(z){const p=Number(String(z).slice(0,3));return p>=430&&p<=459?'OH':p>=480&&p<=499?'MI':p>=460&&p<=479?'IN':p>=400&&p<=427?'KY':p>=247&&p<=268?'WV':p>=150&&p<=196?'PA':p>=100&&p<=149?'NY':p>=840&&p<=847?'UT':p>=320&&p<=349&&p!==340?'FL':''}
 function milesBetween(a,b){const rad=x=>x*Math.PI/180,lat=rad(b[0]-a[0]),lon=rad(b[1]-a[1]);const h=Math.sin(lat/2)**2+Math.cos(rad(a[0]))*Math.cos(rad(b[0]))*Math.sin(lon/2)**2;return 3958.7613*2*Math.atan2(Math.sqrt(h),Math.sqrt(Math.max(0,1-h)))}
 function todayISO(d=new Date()){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
 function addDays(iso,n){const d=new Date(iso+'T12:00:00Z');d.setUTCDate(d.getUTCDate()+n);return d.toISOString().slice(0,10)}
@@ -108,7 +108,7 @@ function withDistance(rows,origin,radius){return rows.flatMap(r=>{const c=coords
 function statesInRange(origin,radius){const near={};for(const [z,c] of Object.entries(ZIPS)){const s=stateOfZip(z);if(!s||near[s]!=null&&near[s]<=radius)continue;const d=milesBetween(origin,c);if(d<=radius&&(near[s]==null||d<near[s]))near[s]=d}return near}
 function milesLabel(d){const m=Math.round(d);return m<1?'Under 1 mile away':m===1?'About 1 mile away':'About '+m+' miles away'}
 function mapURL(q){return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q)}
-function reportURL(r){return 'mailto:travis@vethomeguard.org?subject='+encodeURIComponent('FindBingo.org correction: '+r.name+' ('+r.id+')')+'&body='+encodeURIComponent('What should change?\n')}
+function reportURL(r){return 'mailto:travis@vethomeguard.org?subject='+encodeURIComponent('FindBingo.org correction: '+r.name+' ('+r.id+')')+'&body='+encodeURIComponent('What should change? Fill in only what is different.\n\nBingo days:\nFirst game starts at:\nPhone for players:\nAddress:\nAnything else:\n')}
 function sourceLine(s){return s.list_url?'<a href="'+esc(s.list_url)+'" target="_blank" rel="noopener noreferrer">'+esc(s.list_label)+' ↗</a>':''}
 function venueCard(v,today,day){const s=STATES[v.state]||{},next=nextGame(v,day,today),many=v.organizations.length>1;
  return '<article id="'+esc(v.id)+'"><p><span class="badge">'+(v.kind==='senior_center'?'Senior center bingo':'Bingo')+'</span> <span class="badge state">'+esc(s.name||v.state)+'</span></p><h3>'+esc(v.name)+'</h3>'
@@ -162,7 +162,7 @@ function render(){const today=todayISO(),day=$('day').value,radius=Number($('rad
  $('count').textContent=count;$('results').innerHTML=html;
  $('more-note').innerHTML=activeZip&&more?(showMore?'<button type="button" data-more="0">Hide groups without game days</button>':'Plus '+more+' more '+(more===1?'group':'groups')+' licensed for bingo nearby that '+(more===1?'hasn&rsquo;t':'haven&rsquo;t')+' posted game days. <button type="button" data-more="1">Show them too</button>'):'';
  const u=new URL(location.href);u.search='';if(activeZip){u.searchParams.set('zip',activeZip);u.searchParams.set('radius',String(radius))}else if(activeState){u.searchParams.set('state',activeState);if(county)u.searchParams.set('county',county)}if(day)u.searchParams.set('day',day);if(showMore)u.searchParams.set('all','1');try{history.replaceState(null,'',u)}catch(e){}}
-function zipMessage(zip){return /^[0-9]{5}$/.test(zip)?'We could not find ZIP code '+zip+' in Michigan, Indiana, Ohio, Kentucky, West Virginia, Pennsylvania or Florida. Please check the five numbers.':'Please type the five numbers of your ZIP code, for example 48161.'}
+function zipMessage(zip){return /^[0-9]{5}$/.test(zip)?'We could not find ZIP code '+zip+' in the states we cover so far: '+DATA.states.map(x=>x.name).join(', ')+'. Please check the five numbers.':'Please type the five numbers of your ZIP code, for example 48161.'}
 function setStatus(msg,bad){const s=$('zip-status');s.textContent=msg;s.classList.toggle('bad',!!bad)}
 function applyZip(){const zip=$('zip').value.trim();if(!zip){activeZip='';setStatus('Miles are approximate, as the crow flies.');render();return false}if(!/^[0-9]{5}$/.test(zip)||!ZIPS[zip]){activeZip='';setStatus(zipMessage(zip),true);render();return false}activeZip=zip;activeState='';setStatus('Miles are approximate, as the crow flies.');render();return true}
 $('zip-form').addEventListener('submit',e=>{e.preventDefault();if(!DATA){setStatus('Still loading the bingo list. Please try again in a moment.');return}if(applyZip())$('count').scrollIntoView?.({behavior:'smooth',block:'start'})});
