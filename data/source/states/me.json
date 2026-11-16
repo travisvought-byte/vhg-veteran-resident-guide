@@ -1,0 +1,600 @@
+{
+ "about": "Research sheet for the Maine county edition. Every contact below was read on the date in reviewed_on from the page named beside it; scripts/make_county_state.py turns it into the edition files.",
+ "code": "ME",
+ "name": "Maine",
+ "slug": "maine",
+ "counties": 16,
+ "reviewed_on": "2026-11-16",
+ "month_label": "November 16, 2026",
+ "template_date": "November 4, 2026",
+ "phones_sentence": "Veterans office phones and addresses come from the Maine Bureau of Veterans’ Services’ field office pages. Most offices ask you to call for an appointment.",
+ "senior_line_id": "me-adrc",
+ "agency": {
+  "url": "https://www.maine.gov/veterans/veterans-services-offices/locations"
+ },
+ "offices": {
+  "source_url": "https://www.maine.gov/veterans/veterans-services-offices/locations",
+  "source_title": "Maine Bureau of Veterans’ Services: Field Office and Itinerant Office Locations",
+  "review_method": "full_official_page_text",
+  "note": "Maine Bureau of Veterans’ Services veterans service officers help with VA claims, pension, survivor benefits and VA health care enrollment at no charge.",
+  "selection": "Office address and phone from the Bureau’s locations page; counties served from each office’s own page (Augusta: Kennebec and Somerset; Togus: Kennebec and Lincoln). Two pages disagree: the locations page gives Augusta 207-287-9933 (also Togus’s number) and Machias 53 Prescott Drive, while the office pages give 207-287-7020 and 7 Court Street; the cards use the Augusta page’s number and the locations page’s Machias address, and say so. Caribou’s service area (Aroostook) comes from a search excerpt of its page. Knox and Waldo are named by no office page and show the Bureau’s central line. Itinerant visits are shown where an office page lists them.",
+  "list": [
+   {
+    "county": "Androscoggin",
+    "organization": "MBVS Lewiston Field Office",
+    "phone": "207-753-9106",
+    "address": "35 Westminster Street, Lewiston, ME 04240",
+    "hours": "Monday to Friday, 7:30 a.m. to 4 p.m.",
+    "office_type": "state_field_office",
+    "source_url": "https://www11.maine.gov/veterans/veterans-services-offices/locations/lewiston.html",
+    "source_title": "Maine Bureau of Veterans’ Services: Lewiston office"
+   },
+   {
+    "county": "Aroostook",
+    "organization": "MBVS Caribou Field Office",
+    "phone": "207-492-1173",
+    "address": "14 Access Highway, Suite 5, Caribou, ME 04736",
+    "hours": "Monday to Friday, 7:30 a.m. to 4 p.m.",
+    "office_type": "state_field_office",
+    "source_url": "https://www.maine.gov/veterans/veterans-services-offices/locations",
+    "source_title": "Maine Bureau of Veterans’ Services: Field Office and Itinerant Office Locations"
+   },
+   {
+    "county": "Cumberland",
+    "organization": "MBVS Portland Field Office",
+    "phone": "207-822-2391",
+    "address": "151 Jetport Boulevard, Room 138W, Portland, ME 04102",
+    "hours": "Monday to Friday, 7:30 a.m. to 4 p.m.; appointments required",
+    "office_type": "state_field_office",
+    "source_url": "https://www.maine.gov/veterans/veterans-services-offices/locations/portland.html",
+    "source_title": "Maine Bureau of Veterans’ Services: Portland office"
+   },
+   {
+    "county": "Franklin",
+    "organization": "MBVS Lewiston Field Office",
+    "phone": "207-753-9106",
+    "address": "35 Westminster Street, Lewiston, ME 04240",
+    "hours": "Monday to Friday, 7:30 a.m. to 4 p.m.",
+    "office_type": "state_field_office",
+    "source_url": "https://www11.maine.gov/veterans/veterans-services-offices/locations/lewiston.html",
+    "source_title": "Maine Bureau of Veterans’ Services: Lewiston office",
+    "note": "The Lewiston office’s itinerant visits in Farmington, South Paris and Rumford are temporarily suspended."
+   },
+   {
+    "county": "Hancock",
+    "organization": "MBVS Machias Field Office",
+    "phone": "207-255-3306",
+    "address": "53 Prescott Drive, Suite 6, Machias, ME 04654",
+    "hours": "Walk-ins Monday to Friday, 8:30 a.m. to 3:30 p.m.",
+    "note": "The office’s own page gives 7 Court Street, Suite 2; call before you go.",
+    "office_type": "state_field_office",
+    "source_url": "https://www1.maine.gov/veterans/veterans-services-offices/locations/machias.html",
+    "source_title": "Maine Bureau of Veterans’ Services: Machias office",
+    "other_offices": [
+     {
+      "address": "Ellsworth: VFW (Machias and Bangor offices’ itinerant visits)",
+      "schedule": "Every other Tuesday, by appointment",
+      "phone": "207-255-3306"
+     }
+    ]
+   },
+   {
+    "county": "Kennebec",
+    "organization": "MBVS Augusta Field Office (Camp Keyes)",
+    "phone": "207-287-7020",
+    "address": "194 Winthrop Street, Augusta, ME 04330",
+    "hours": "Monday to Friday, 7:30 a.m. to 4 p.m.; call for an appointment",
+    "office_type": "state_field_office",
+    "source_url": "https://www11.maine.gov/veterans/veterans-services-offices/locations/augusta.html",
+    "source_title": "Maine Bureau of Veterans’ Services: Augusta office",
+    "other_offices": [
+     {
+      "address": "Togus office: Veterans Administration Center, Building 248, Room 110, Togus (also serves Kennebec County)",
+      "schedule": "Monday to Friday, 7:30 a.m. to 4 p.m.",
+      "phone": "207-287-9933"
+     }
+    ]
+   },
+   {
+    "county": "Knox",
+    "organization": "Maine Bureau of Veterans’ Services (no field office lists this county)",
+    "phone": "207-287-7020",
+    "address": "Central office: Camp Keyes, 194 Winthrop Street, Augusta, ME 04330. Field offices: Augusta, Bangor, Caribou, Lewiston, Machias, Portland, Springvale and Togus.",
+    "note": "No field office page names this county. Call the Bureau’s central line to be connected with a veterans service officer.",
+    "office_type": "statewide",
+    "source_url": "https://www.maine.gov/veterans/veterans-services-offices/locations",
+    "source_title": "Maine Bureau of Veterans’ Services: Field Office and Itinerant Office Locations"
+   },
+   {
+    "county": "Lincoln",
+    "organization": "MBVS Togus Office",
+    "phone": "207-287-9933",
+    "address": "Veterans Administration Center, Building 248, Room 110, Togus, ME 04330",
+    "hours": "Monday to Friday, 7:30 a.m. to 4 p.m.",
+    "office_type": "state_field_office",
+    "source_url": "https://www1.maine.gov/veterans/veterans-services-offices/locations/togus.html",
+    "source_title": "Maine Bureau of Veterans’ Services: Togus office"
+   },
+   {
+    "county": "Oxford",
+    "organization": "MBVS Lewiston Field Office",
+    "phone": "207-753-9106",
+    "address": "35 Westminster Street, Lewiston, ME 04240",
+    "hours": "Monday to Friday, 7:30 a.m. to 4 p.m.",
+    "office_type": "state_field_office",
+    "source_url": "https://www11.maine.gov/veterans/veterans-services-offices/locations/lewiston.html",
+    "source_title": "Maine Bureau of Veterans’ Services: Lewiston office",
+    "note": "The Lewiston office’s itinerant visits in Farmington, South Paris and Rumford are temporarily suspended."
+   },
+   {
+    "county": "Penobscot",
+    "organization": "MBVS Bangor Field Office",
+    "phone": "207-941-3005",
+    "address": "35 State Hospital Drive, Bangor, ME 04401",
+    "hours": "Monday to Friday, 7:30 a.m. to 4 p.m.",
+    "office_type": "state_field_office",
+    "source_url": "https://www1.maine.gov/veterans/veterans-services-offices/locations/bangor.html",
+    "source_title": "Maine Bureau of Veterans’ Services: Bangor office",
+    "other_offices": [
+     {
+      "address": "Lincoln: American Legion (Bangor office itinerant)",
+      "schedule": "Every other Thursday, by appointment",
+      "phone": "207-941-3005"
+     },
+     {
+      "address": "Newport: American Legion (Bangor office itinerant)",
+      "schedule": "Every other Tuesday, by appointment",
+      "phone": "207-941-3005"
+     }
+    ]
+   },
+   {
+    "county": "Piscataquis",
+    "organization": "MBVS Bangor Field Office",
+    "phone": "207-941-3005",
+    "address": "35 State Hospital Drive, Bangor, ME 04401",
+    "hours": "Monday to Friday, 7:30 a.m. to 4 p.m.",
+    "office_type": "state_field_office",
+    "source_url": "https://www1.maine.gov/veterans/veterans-services-offices/locations/bangor.html",
+    "source_title": "Maine Bureau of Veterans’ Services: Bangor office",
+    "other_offices": [
+     {
+      "address": "Dover-Foxcroft: American Legion (Bangor office itinerant)",
+      "schedule": "Every other Thursday, by appointment",
+      "phone": "207-941-3005"
+     }
+    ]
+   },
+   {
+    "county": "Sagadahoc",
+    "organization": "MBVS Lewiston Field Office",
+    "phone": "207-753-9106",
+    "address": "35 Westminster Street, Lewiston, ME 04240",
+    "hours": "Monday to Friday, 7:30 a.m. to 4 p.m.",
+    "office_type": "state_field_office",
+    "source_url": "https://www11.maine.gov/veterans/veterans-services-offices/locations/lewiston.html",
+    "source_title": "Maine Bureau of Veterans’ Services: Lewiston office"
+   },
+   {
+    "county": "Somerset",
+    "organization": "MBVS Augusta Field Office (Camp Keyes)",
+    "phone": "207-287-7020",
+    "address": "194 Winthrop Street, Augusta, ME 04330",
+    "hours": "Monday to Friday, 7:30 a.m. to 4 p.m.; call for an appointment",
+    "office_type": "state_field_office",
+    "source_url": "https://www11.maine.gov/veterans/veterans-services-offices/locations/augusta.html",
+    "source_title": "Maine Bureau of Veterans’ Services: Augusta office"
+   },
+   {
+    "county": "Waldo",
+    "organization": "Maine Bureau of Veterans’ Services (no field office lists this county)",
+    "phone": "207-287-7020",
+    "address": "Central office: Camp Keyes, 194 Winthrop Street, Augusta, ME 04330. Field offices: Augusta, Bangor, Caribou, Lewiston, Machias, Portland, Springvale and Togus.",
+    "note": "No field office page names this county. Call the Bureau’s central line to be connected with a veterans service officer.",
+    "office_type": "statewide",
+    "source_url": "https://www.maine.gov/veterans/veterans-services-offices/locations",
+    "source_title": "Maine Bureau of Veterans’ Services: Field Office and Itinerant Office Locations"
+   },
+   {
+    "county": "Washington",
+    "organization": "MBVS Machias Field Office",
+    "phone": "207-255-3306",
+    "address": "53 Prescott Drive, Suite 6, Machias, ME 04654",
+    "hours": "Walk-ins Monday to Friday, 8:30 a.m. to 3:30 p.m.",
+    "note": "The office’s own page gives 7 Court Street, Suite 2; call before you go.",
+    "office_type": "state_field_office",
+    "source_url": "https://www1.maine.gov/veterans/veterans-services-offices/locations/machias.html",
+    "source_title": "Maine Bureau of Veterans’ Services: Machias office"
+   },
+   {
+    "county": "York",
+    "organization": "MBVS Springvale Field Office",
+    "phone": "207-324-1839",
+    "address": "634 Main Street, Springvale, ME 04083",
+    "hours": "Monday to Friday, 7:30 a.m. to 4 p.m.",
+    "office_type": "state_field_office",
+    "source_url": "https://www.maine.gov/veterans/veterans-services-offices/locations",
+    "source_title": "Maine Bureau of Veterans’ Services: Field Office and Itinerant Office Locations"
+   }
+  ]
+ },
+ "aging": {
+  "source_url": "https://mobile.maine.gov/dhhs/oads/get-support/older-adults-disabilities/area-agencies-on-aging",
+  "source_title": "Maine Office of Aging and Disability Services: Area Agencies on Aging",
+  "source_scope": "The five Area Agencies on Aging, the counties each serves (Cumberland split at Brunswick and Harpswell), phones and offices, and the statewide line 1-877-353-3771; read in full.",
+  "review": "full",
+  "review_method": "full_official_page_text",
+  "region_word": "",
+  "next_step_extra": "You can also call the statewide line, 877-353-3771, and choose your county.",
+  "regions": [
+   {
+    "id": "me-aaa-aroostook",
+    "label": "Aroostook",
+    "name": "Aroostook Area Agency on Aging",
+    "phone": "207-764-3396",
+    "counties": [
+     "Aroostook"
+    ],
+    "notes": [
+     "Toll-free: 800-439-1789. Office: 260 Main Street, Suite B, Presque Isle."
+    ]
+   },
+   {
+    "id": "me-aaa-eastern",
+    "label": "Eastern Maine",
+    "name": "Eastern Area Agency on Aging",
+    "phone": "207-941-2865",
+    "counties": [
+     "Hancock",
+     "Penobscot",
+     "Piscataquis",
+     "Washington"
+    ],
+    "notes": [
+     "Toll-free: 800-432-7812. Office: 240 State St., Brewer."
+    ]
+   },
+   {
+    "id": "me-aaa-spectrum",
+    "label": "Central Maine",
+    "name": "Spectrum Generations",
+    "phone": "207-622-9212",
+    "counties": [
+     "Kennebec",
+     "Knox",
+     "Lincoln",
+     "Sagadahoc",
+     "Somerset",
+     "Waldo"
+    ],
+    "notes": [
+     "Toll-free: 800-639-1553. Office: One Weston Court, Suite 109, Augusta."
+    ]
+   },
+   {
+    "id": "me-aaa-seniorsplus",
+    "label": "Western Maine",
+    "name": "SeniorsPlus",
+    "phone": "207-795-4010",
+    "counties": [
+     "Androscoggin",
+     "Franklin",
+     "Oxford"
+    ],
+    "notes": [
+     "Toll-free: 800-427-1241. Office: 8 Falcon Road, Lewiston."
+    ]
+   },
+   {
+    "id": "me-aaa-smaa",
+    "label": "Southern Maine",
+    "name": "Southern Maine Agency on Aging",
+    "phone": "207-396-6500",
+    "counties": [
+     "Cumberland",
+     "York"
+    ],
+    "notes": [
+     "Toll-free: 800-427-7411. Office: 30 Barra Rd., Biddeford.",
+     "In Cumberland County, Brunswick and Harpswell are served by Spectrum Generations, 207-622-9212."
+    ]
+   }
+  ]
+ },
+ "ombudsman": {
+  "state_phone": "800-499-0229",
+  "regions": [
+   {
+    "id": "me-omb-state",
+    "name": "Maine Long-Term Care Ombudsman Program",
+    "phone": "800-499-0229",
+    "counties": [
+     "Androscoggin",
+     "Aroostook",
+     "Cumberland",
+     "Franklin",
+     "Hancock",
+     "Kennebec",
+     "Knox",
+     "Lincoln",
+     "Oxford",
+     "Penobscot",
+     "Piscataquis",
+     "Sagadahoc",
+     "Somerset",
+     "Waldo",
+     "Washington",
+     "York"
+    ],
+    "source_url": "https://www.maine.gov/ag/consumer-protection/consumer-help-topics/older-mainers",
+    "source_title": "Office of the Maine Attorney General: Older Mainers",
+    "source_scope": "The Maine Long-Term Care Ombudsman (1-800-499-0229) investigates and resolves complaints for residents of nursing, boarding and adult foster homes and recipients of home care; read in full. The program is statewide, so every county shows it.",
+    "review": "full",
+    "review_method": "full_official_page_text",
+    "counties_from_source": true,
+    "notes": [
+     "Also: 207-621-1079."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://autodiscover.legislature.maine.gov/doc/5270",
+      "title": "Maine Long-Term Care Ombudsman Program brochure (Maine Legislature)",
+      "scope": "1-800-499-0229 and 207-621-1079; 61 Winthrop Street, Augusta; search excerpt."
+     }
+    ]
+   }
+  ]
+ },
+ "cils": {
+  "source_url": "https://maine.gov/rehab/dod/resource_guide/agencies.shtml",
+  "source_title": "Maine Bureau of Rehabilitation Services: Resource Guide, Agencies (updated May 28, 2025)",
+  "scope": "Alpha One’s phones and its South Portland, Bangor and Presque Isle offices; search excerpt.",
+  "phone_label": "Phone listed in the Maine Bureau of Rehabilitation Services resource guide",
+  "list": [
+   {
+    "id": "me-cil-alpha-one",
+    "name": "Alpha One (Maine’s Center for Independent Living)",
+    "organization": "Alpha One",
+    "url": "https://www.alphaonenow.org/",
+    "phone": "800-640-7200",
+    "counties": [
+     "Androscoggin",
+     "Aroostook",
+     "Cumberland",
+     "Franklin",
+     "Hancock",
+     "Kennebec",
+     "Knox",
+     "Lincoln",
+     "Oxford",
+     "Penobscot",
+     "Piscataquis",
+     "Sagadahoc",
+     "Somerset",
+     "Waldo",
+     "Washington",
+     "York"
+    ],
+    "method": "official_search_excerpt",
+    "review": "excerpt",
+    "notes": [
+     "Also 207-767-2189 (voice/TTY). Offices: 127 Main Street, South Portland; 11 Bangor Mall Blvd., Unit A, Bangor; 66 Spruce Street, Presque Isle."
+    ]
+   }
+  ]
+ },
+ "programs": [
+  {
+   "id": "me-claims",
+   "name": "Maine veterans: Bureau of Veterans’ Services field offices for claims help",
+   "organization": "Maine Bureau of Veterans’ Services",
+   "url": "https://www.maine.gov/veterans/veterans-services-offices/locations",
+   "needs": [
+    "general_navigation",
+    "benefits_and_funding"
+   ],
+   "description": "Free help with VA claims, appeals, pension, survivor benefits and VA health care enrollment from the Maine Bureau of Veterans’ Services’ veterans service officers, in field offices in Augusta, Bangor, Caribou, Lewiston, Machias, Portland, Springvale and Togus.",
+   "next_step": "Call the field office for your county (choose a county above) or the Bureau’s central line, 207-287-7020, to make an appointment.",
+   "constraints": [
+    "Offices are open Monday to Friday, 7:30 a.m. to 4 p.m.; most ask you to call for an appointment."
+   ],
+   "phone": "207-287-7020",
+   "phone_label": "Maine Bureau of Veterans’ Services (207-287-7020)",
+   "phone_source": "https://www11.maine.gov/veterans/veterans-services-offices/locations/augusta.html",
+   "review": "full",
+   "sources": [
+    {
+     "url": "https://www.maine.gov/veterans/veterans-services-offices/locations",
+     "title": "Maine Bureau of Veterans’ Services: Field Office and Itinerant Office Locations",
+     "scope": "The eight field offices, addresses, phones and hours; read in full."
+    },
+    {
+     "url": "https://www11.maine.gov/veterans/veterans-services-offices/locations/augusta.html",
+     "title": "Maine Bureau of Veterans’ Services: Augusta office",
+     "scope": "Service area Kennebec and Somerset; telephone 207-287-7020; read in full."
+    }
+   ]
+  },
+  {
+   "id": "me-adrc",
+   "name": "Maine Area Agencies on Aging and Aging and Disability Resource Centers",
+   "organization": "Maine Office of Aging and Disability Services and the five Area Agencies on Aging",
+   "url": "https://mobile.maine.gov/dhhs/oads/get-support/older-adults-disabilities/area-agencies-on-aging",
+   "needs": [
+    "general_navigation",
+    "help_at_home",
+    "equipment_home_accessibility"
+   ],
+   "description": "Maine’s five Area Agencies on Aging are also its Aging and Disability Resource Centers: one-stop help for older adults, adults with disabilities and care partners with in-home, community and long-term care services, meals, caregiver support and Medicare counseling. Military service is not required.",
+   "next_step": "Call 877-353-3771 and choose your county, or choose a county above for its agency.",
+   "constraints": [
+    "Each program has its own eligibility and waitlist."
+   ],
+   "phone": "877-353-3771",
+   "phone_label": "Maine Aging and Disability Resource Centers (877-353-3771)",
+   "phone_source": "https://mobile.maine.gov/dhhs/oads/get-support/older-adults-disabilities/area-agencies-on-aging",
+   "review": "full",
+   "sources": [
+    {
+     "url": "https://mobile.maine.gov/dhhs/oads/get-support/older-adults-disabilities/area-agencies-on-aging",
+     "title": "Maine Office of Aging and Disability Services: Area Agencies on Aging",
+     "scope": "Statewide ADRC line 1-877-353-3771 and the five agencies; read in full."
+    }
+   ]
+  },
+  {
+   "id": "me-ship",
+   "name": "Medicare counseling (Maine SHIP)",
+   "organization": "Maine State Health Insurance Assistance Program, through the Area Agencies on Aging",
+   "url": "https://www.maine.gov/dhhs/oads/get-support/older-adults-disabilities/older-adult-services/ship-medicare-assistance",
+   "needs": [
+    "benefits_and_funding"
+   ],
+   "description": "Free Medicare counseling from Maine’s State Health Insurance Assistance Program, sponsored by the Office of Aging and Disability Services, the five Area Agencies on Aging and Legal Services for Maine Elders: Part D and supplement plans, costs and help paying for Medicare.",
+   "next_step": "Call 877-353-3771 (877-ELDERS1) and choose your county. For Medicare itself, call 800-MEDICARE (800-633-4227).",
+   "constraints": [
+    "Have your Medicare card and drug list ready."
+   ],
+   "phone": "877-353-3771",
+   "phone_label": "Maine SHIP (877-353-3771)",
+   "phone_source": "https://www.maine.gov/pfr/insurance/consumers/medicare-supplement-insurance/where-to-get-help",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://www.maine.gov/pfr/insurance/consumers/medicare-supplement-insurance/where-to-get-help",
+     "title": "Maine Bureau of Insurance: Where to Get Help",
+     "scope": "Maine’s SHIP: 1-877-ELDERS1 (1-877-353-3771); search excerpt."
+    },
+    {
+     "url": "https://www.maine.gov/dhhs/oads/get-support/older-adults-disabilities/older-adult-services/ship-medicare-assistance",
+     "title": "Maine Office of Aging and Disability Services: SHIP & Medicare Assistance",
+     "scope": "SHIP sponsored by OADS, the five Area Agencies on Aging and Legal Services for Maine Elders; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "me-ombudsman",
+   "name": "Maine Long-Term Care Ombudsman and adult abuse reporting",
+   "organization": "Maine Long-Term Care Ombudsman Program; Maine Adult Protective Services",
+   "url": "https://www.maine.gov/ag/consumer-protection/consumer-help-topics/older-mainers",
+   "needs": [
+    "resident_rights",
+    "general_navigation"
+   ],
+   "description": "Advocacy for residents of nursing, boarding and adult foster homes and people receiving home care. Adult Protective Services takes reports of abuse, neglect or exploitation of incapacitated or dependent adults 24 hours a day.",
+   "next_step": "Call the ombudsman at 800-499-0229. To report abuse, neglect or exploitation, call Adult Protective Services at 800-624-8404 or 207-287-1234, or use the online form. In an emergency, call 911.",
+   "constraints": [
+    "The ombudsman acts with the resident’s permission and is not a licensing agency."
+   ],
+   "phone": "800-499-0229",
+   "phone_label": "Maine Long-Term Care Ombudsman (800-499-0229)",
+   "phone_source": "https://www.maine.gov/ag/consumer-protection/consumer-help-topics/older-mainers",
+   "review": "full",
+   "sources": [
+    {
+     "url": "https://www.maine.gov/ag/consumer-protection/consumer-help-topics/older-mainers",
+     "title": "Office of the Maine Attorney General: Older Mainers",
+     "scope": "Ombudsman 1-800-499-0229 and Adult Protective Services 1-800-624-8404 (24 hours); read in full."
+    },
+    {
+     "url": "https://maine.gov/dhhs/oads/get-support/aps",
+     "title": "Maine Office of Aging and Disability Services: Adult Protective Services",
+     "scope": "Report by phone 1-800-624-8404 or 207-287-1234, TTY Maine Relay 711, or the online form; read in full."
+    }
+   ]
+  },
+  {
+   "id": "me-legal-programs",
+   "name": "Free legal help for Maine veterans and older adults",
+   "organization": "Legal Services for Maine Elders; Volunteer Lawyers Project",
+   "url": "https://www.maine.gov/dhhs/oads/get-support/older-adults-disabilities/older-adult-services/legal-assistance",
+   "role": "legal_aid",
+   "needs": [
+    "resident_rights",
+    "general_navigation",
+    "housing"
+   ],
+   "description": "Legal Services for Maine Elders gives free legal help to Mainers 60 and older in many civil cases, including benefits, health insurance, powers of attorney, consumer problems, abuse and guardianship defense, with offices in Augusta, Bangor, Lewiston, Portland and Presque Isle.",
+   "next_step": "Call the Legal Services for Maine Elders Helpline at 800-750-5353 (207-623-1797 from out of state). Under 60? Call the Volunteer Lawyers Project: southern Maine 800-422-4293, northern Maine 888-956-4276.",
+   "constraints": [
+    "Legal aid screens by age, income and case type."
+   ],
+   "phone": "800-750-5353",
+   "phone_label": "Legal Services for Maine Elders Helpline (800-750-5353)",
+   "phone_source": "https://www.maine.gov/ag/consumer-protection/consumer-help-topics/older-mainers",
+   "review": "full",
+   "sources": [
+    {
+     "url": "https://www.maine.gov/ag/consumer-protection/consumer-help-topics/older-mainers",
+     "title": "Office of the Maine Attorney General: Older Mainers",
+     "scope": "Legal Services for Maine Elders: 1-800-750-5353 in state or 1-207-623-1797, age 60 and over, offices in five cities; read in full."
+    },
+    {
+     "url": "https://www.maine.gov/ag/consumer-protection/consumer-help-topics/consumer-complaints/finding-an-attorney",
+     "title": "Office of the Maine Attorney General: Finding an Attorney",
+     "scope": "Volunteer Lawyers Project lines for southern and northern Maine; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "me-vahealth-systems",
+   "name": "VA health care in Maine",
+   "organization": "U.S. Department of Veterans Affairs, VA Maine Healthcare System",
+   "url": "https://www.va.gov/maine-health-care/",
+   "role": "va_health_system",
+   "needs": [
+    "veteran_services",
+    "care_facilities"
+   ],
+   "description": "Maine veterans are served by the VA Maine Healthcare System, centered at Togus (main telephone 207-623-8411), with clinics around the state.",
+   "next_step": "Use VA’s facility locator with your ZIP code to find the closest clinic. Not enrolled yet? Ask a Bureau of Veterans’ Services officer for help applying.",
+   "constraints": [
+    "Ask about travel and community care options if the nearest clinic is far."
+   ],
+   "phone": "207-623-8411",
+   "phone_label": "VA Maine Healthcare System (207-623-8411)",
+   "phone_source": "https://www11.maine.gov/veterans/sites/maine.gov.veterans/files/Resources%20Card.pdf",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://www11.maine.gov/veterans/sites/maine.gov.veterans/files/Resources%20Card.pdf",
+     "title": "Maine Bureau of Veterans’ Services: Resources Card",
+     "scope": "VA Maine Healthcare System main telephone 207-623-8411; search excerpt."
+    }
+   ]
+  }
+ ],
+ "adapter": {
+  "badge_county": "MBVS field office",
+  "badge_state": "MBVS field office",
+  "badge_statewide": "Maine statewide line (no office lists this county)",
+  "published_in": "Published on the Maine Bureau of Veterans’ Services field office pages",
+  "agency_link": "Maine Bureau of Veterans’ Services offices",
+  "officers_can": "Maine Bureau of Veterans’ Services officers can",
+  "abuse_phone": "800-624-8404",
+  "abuse_label": "Maine Adult Protective Services, 24 hours a day",
+  "extra_swaps": [
+   [
+    "Choose a county for its County Veterans Service Office, matched Area Agency on Aging",
+    "Choose a county for its state veterans field office, matched Area Agency on Aging"
+   ],
+   [
+    "Choose a county above for the county veterans office.",
+    "Choose a county above for its state veterans field office."
+   ]
+  ]
+ },
+ "share_replacements": [
+  [
+   "county veterans offices, benefits and care referrals",
+   "state veterans field offices, benefits and care referrals"
+  ],
+  [
+   "County veterans offices",
+   "state veterans field offices"
+  ]
+ ],
+ "coverage_scope": "Referral edition. All 16 counties have a Maine Bureau of Veterans’ Services route (14 named by a field office; Knox and Waldo use the Bureau’s central line), an Area Agency on Aging (five agencies), the statewide long-term care ombudsman and Alpha One.",
+ "coverage_note": "Veterans contacts come from the Maine Bureau of Veterans’ Services’ field office pages. Area Agencies on Aging come from the Office of Aging and Disability Services. The ombudsman, Adult Protective Services and elder legal help lines come from the Attorney General’s Older Mainers page. Reviewed November 16, 2026. Contacts are not telephone-confirmed.",
+ "share_description": "state veterans field offices, Area Agencies on Aging and long-term care ombudsman help across Maine"
+}

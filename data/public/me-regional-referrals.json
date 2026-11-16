@@ -1,80 +1,293 @@
 [
- {
-  "program_id": "me-aging",
-  "name": "Local aging help in Maine (Eldercare Locator)",
-  "official_url": "https://eldercare.acl.gov/home",
-  "organization": "U.S. Administration for Community Living",
-  "service_area": [
-   "All Maine counties"
-  ],
-  "state": "ME",
-  "needs_supported": [
-   "general_navigation",
-   "help_at_home"
-  ],
-  "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-  "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
-  "constraints": [
-   "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "me-aaa-aroostook",
+    "name": "Aroostook Area Agency on Aging",
+    "organization": "Aroostook Area Agency on Aging",
+    "official_url": "https://mobile.maine.gov/dhhs/oads/get-support/older-adults-disabilities/area-agencies-on-aging",
+    "state": "ME",
+    "service_area": [
+      "Aroostook"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the statewide line, 877-353-3771, and choose your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-439-1789. Office: 260 Main Street, Suite B, Presque Isle."
+    ],
+    "public_contact": {
+      "phone": "207-764-3396",
+      "phone_label": "Area Agency on Aging (Aroostook)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://mobile.maine.gov/dhhs/oads/get-support/older-adults-disabilities/area-agencies-on-aging",
+      "phone_source_url": "https://mobile.maine.gov/dhhs/oads/get-support/older-adults-disabilities/area-agencies-on-aging"
+    },
+    "source_evidence": [
+      {
+        "url": "https://mobile.maine.gov/dhhs/oads/get-support/older-adults-disabilities/area-agencies-on-aging",
+        "title": "Maine Office of Aging and Disability Services: Area Agencies on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "The five Area Agencies on Aging, the counties each serves (Cumberland split at Brunswick and Harpswell), phones and offices, and the statewide line 1-877-353-3771; read in full."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "me-aaa-eastern",
+    "name": "Eastern Area Agency on Aging",
+    "organization": "Eastern Area Agency on Aging",
+    "official_url": "https://mobile.maine.gov/dhhs/oads/get-support/older-adults-disabilities/area-agencies-on-aging",
+    "state": "ME",
+    "service_area": [
+      "Hancock",
+      "Penobscot",
+      "Piscataquis",
+      "Washington"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the statewide line, 877-353-3771, and choose your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-432-7812. Office: 240 State St., Brewer."
+    ],
+    "public_contact": {
+      "phone": "207-941-2865",
+      "phone_label": "Area Agency on Aging (Eastern Maine)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://mobile.maine.gov/dhhs/oads/get-support/older-adults-disabilities/area-agencies-on-aging",
+      "phone_source_url": "https://mobile.maine.gov/dhhs/oads/get-support/older-adults-disabilities/area-agencies-on-aging"
+    },
+    "source_evidence": [
+      {
+        "url": "https://mobile.maine.gov/dhhs/oads/get-support/older-adults-disabilities/area-agencies-on-aging",
+        "title": "Maine Office of Aging and Disability Services: Area Agencies on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "The five Area Agencies on Aging, the counties each serves (Cumberland split at Brunswick and Harpswell), phones and offices, and the statewide line 1-877-353-3771; read in full."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.acl.gov/contact"
+  {
+    "program_id": "me-aaa-spectrum",
+    "name": "Spectrum Generations",
+    "organization": "Spectrum Generations",
+    "official_url": "https://mobile.maine.gov/dhhs/oads/get-support/older-adults-disabilities/area-agencies-on-aging",
+    "state": "ME",
+    "service_area": [
+      "Kennebec",
+      "Knox",
+      "Lincoln",
+      "Sagadahoc",
+      "Somerset",
+      "Waldo"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the statewide line, 877-353-3771, and choose your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-639-1553. Office: One Weston Court, Suite 109, Augusta."
+    ],
+    "public_contact": {
+      "phone": "207-622-9212",
+      "phone_label": "Area Agency on Aging (Central Maine)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://mobile.maine.gov/dhhs/oads/get-support/older-adults-disabilities/area-agencies-on-aging",
+      "phone_source_url": "https://mobile.maine.gov/dhhs/oads/get-support/older-adults-disabilities/area-agencies-on-aging"
+    },
+    "source_evidence": [
+      {
+        "url": "https://mobile.maine.gov/dhhs/oads/get-support/older-adults-disabilities/area-agencies-on-aging",
+        "title": "Maine Office of Aging and Disability Services: Area Agencies on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "The five Area Agencies on Aging, the counties each serves (Cumberland split at Brunswick and Harpswell), phones and offices, and the statewide line 1-877-353-3771; read in full."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.acl.gov/contact",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "aging_agency"
- },
- {
-  "program_id": "me-ombudsman",
-  "name": "Maine long-term-care ombudsman",
-  "official_url": "https://theconsumervoice.org/get_help",
-  "organization": "National Long-Term Care Ombudsman Resource Center",
-  "service_area": [
-   "All Maine counties"
-  ],
-  "state": "ME",
-  "needs_supported": [
-   "resident_rights",
-   "general_navigation"
-  ],
-  "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-  "next_step": "Use the locator to find the Maine program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
-  "constraints": [
-   "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "me-aaa-seniorsplus",
+    "name": "SeniorsPlus",
+    "organization": "SeniorsPlus",
+    "official_url": "https://mobile.maine.gov/dhhs/oads/get-support/older-adults-disabilities/area-agencies-on-aging",
+    "state": "ME",
+    "service_area": [
+      "Androscoggin",
+      "Franklin",
+      "Oxford"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the statewide line, 877-353-3771, and choose your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-427-1241. Office: 8 Falcon Road, Lewiston."
+    ],
+    "public_contact": {
+      "phone": "207-795-4010",
+      "phone_label": "Area Agency on Aging (Western Maine)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://mobile.maine.gov/dhhs/oads/get-support/older-adults-disabilities/area-agencies-on-aging",
+      "phone_source_url": "https://mobile.maine.gov/dhhs/oads/get-support/older-adults-disabilities/area-agencies-on-aging"
+    },
+    "source_evidence": [
+      {
+        "url": "https://mobile.maine.gov/dhhs/oads/get-support/older-adults-disabilities/area-agencies-on-aging",
+        "title": "Maine Office of Aging and Disability Services: Area Agencies on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "The five Area Agencies on Aging, the counties each serves (Cumberland split at Brunswick and Harpswell), phones and offices, and the statewide line 1-877-353-3771; read in full."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "me-aaa-smaa",
+    "name": "Southern Maine Agency on Aging",
+    "organization": "Southern Maine Agency on Aging",
+    "official_url": "https://mobile.maine.gov/dhhs/oads/get-support/older-adults-disabilities/area-agencies-on-aging",
+    "state": "ME",
+    "service_area": [
+      "Cumberland",
+      "York"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the statewide line, 877-353-3771, and choose your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-427-7411. Office: 30 Barra Rd., Biddeford.",
+      "In Cumberland County, Brunswick and Harpswell are served by Spectrum Generations, 207-622-9212."
+    ],
+    "public_contact": {
+      "phone": "207-396-6500",
+      "phone_label": "Area Agency on Aging (Southern Maine)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://mobile.maine.gov/dhhs/oads/get-support/older-adults-disabilities/area-agencies-on-aging",
+      "phone_source_url": "https://mobile.maine.gov/dhhs/oads/get-support/older-adults-disabilities/area-agencies-on-aging"
+    },
+    "source_evidence": [
+      {
+        "url": "https://mobile.maine.gov/dhhs/oads/get-support/older-adults-disabilities/area-agencies-on-aging",
+        "title": "Maine Office of Aging and Disability Services: Area Agencies on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "The five Area Agencies on Aging, the counties each serves (Cumberland split at Brunswick and Harpswell), phones and offices, and the statewide line 1-877-353-3771; read in full."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
-  },
-  "source_evidence": [
-   {
-    "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "ombudsman"
- }
+  {
+    "program_id": "me-omb-state",
+    "name": "Maine Long-Term Care Ombudsman Program",
+    "organization": "Maine Long-Term Care Ombudsman Program",
+    "official_url": "https://www.maine.gov/ag/consumer-protection/consumer-help-topics/older-mainers",
+    "state": "ME",
+    "service_area": [
+      "Androscoggin",
+      "Aroostook",
+      "Cumberland",
+      "Franklin",
+      "Hancock",
+      "Kennebec",
+      "Knox",
+      "Lincoln",
+      "Oxford",
+      "Penobscot",
+      "Piscataquis",
+      "Sagadahoc",
+      "Somerset",
+      "Waldo",
+      "Washington",
+      "York"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Also: 207-621-1079."
+    ],
+    "public_contact": {
+      "phone": "800-499-0229",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.maine.gov/ag/consumer-protection/consumer-help-topics/older-mainers",
+      "phone_source_url": "https://www.maine.gov/ag/consumer-protection/consumer-help-topics/older-mainers"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.maine.gov/ag/consumer-protection/consumer-help-topics/older-mainers",
+        "title": "Office of the Maine Attorney General: Older Mainers",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Maine Long-Term Care Ombudsman (1-800-499-0229) investigates and resolves complaints for residents of nursing, boarding and adult foster homes and recipients of home care; read in full. The program is statewide, so every county shows it."
+      },
+      {
+        "url": "https://autodiscover.legislature.maine.gov/doc/5270",
+        "title": "Maine Long-Term Care Ombudsman Program brochure (Maine Legislature)",
+        "reviewed_on": "2026-11-16",
+        "scope": "1-800-499-0229 and 207-621-1079; 61 Winthrop Street, Augusta; search excerpt."
+      }
+    ]
+  }
 ]
