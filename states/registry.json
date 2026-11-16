@@ -822,6 +822,36 @@
     ]
   },
   {
+    "code": "ID",
+    "name": "Idaho",
+    "page": "id.html",
+    "share_page": "share-id.html",
+    "qr": "assets/guide-qr-id.svg",
+    "counties": 44,
+    "programs": "data/public/id-programs.json",
+    "referrals": "data/public/id-regional-referrals.json",
+    "offices": "data/public/idaho-county-veterans-offices.json",
+    "resources": "data/public/idaho-resources.json",
+    "statewide_area_names": [],
+    "coverage_scope": "Referral edition. All 44 counties have an Idaho Division of Veterans Services route (seven counties have an Office of Veterans Advocacy office; the other 37 use the division’s statewide lines), an Area Agency on Aging (six agencies), a local long-term care ombudsman and at least one Center for Independent Living.",
+    "coverage_note": "Veterans offices come from the Idaho Division of Veterans Services’ Office of Veterans Advocacy page; 37 counties have no state office and show its statewide lines. Area Agencies on Aging and local ombudsmen come from the Idaho Commission on Aging. Centers for Independent Living come from the ILRU national directory and the Idaho State Independent Living Council. Reviewed November 16, 2026.",
+    "share_description": "state veterans service officers, Area Agencies on Aging and long-term care ombudsman help across Idaho",
+    "share_replacements": [
+      [
+        "Updated October 8, 2026",
+        "Updated November 16, 2026"
+      ],
+      [
+        "county veterans offices, benefits and care referrals",
+        "state veterans service offices, benefits and care referrals"
+      ],
+      [
+        "County veterans offices",
+        "state veterans service offices"
+      ]
+    ]
+  },
+  {
     "code": "AK",
     "name": "Alaska",
     "starter": true,
@@ -938,26 +968,6 @@
     ],
     "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
     "coverage_note": "Starter edition. Every county uses the Hawai‘i Office of Veterans’ Services and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
-    "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
-    "share_replacements": []
-  },
-  {
-    "code": "ID",
-    "name": "Idaho",
-    "starter": true,
-    "page": "id.html",
-    "share_page": "share-id.html",
-    "qr": "assets/guide-qr-id.svg",
-    "counties": 1,
-    "programs": "data/public/id-programs.json",
-    "referrals": "data/public/id-regional-referrals.json",
-    "offices": "data/public/idaho-county-veterans-offices.json",
-    "resources": "data/public/idaho-resources.json",
-    "statewide_area_names": [
-      "All Idaho counties"
-    ],
-    "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
-    "coverage_note": "Starter edition. Every county uses the Idaho Division of Veterans Services and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
     "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
     "share_replacements": []
   },
