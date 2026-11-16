@@ -937,72 +937,604 @@
   },
   {
     "program_id": "ms-claims",
-    "name": "Mississippi veterans: accredited claims help",
-    "official_url": "https://www.msva.ms.gov/",
-    "organization": "Mississippi Veterans Affairs",
+    "name": "Mississippi veterans: county veterans service officers for claims help",
+    "official_url": "https://www.msva.ms.gov/serviceofficers",
+    "organization": "County veterans service officers; Mississippi Veterans Affairs",
     "service_area": [
-      "All Mississippi counties"
+      "statewide"
     ],
     "state": "MS",
     "needs_supported": [
       "general_navigation",
       "benefits_and_funding"
     ],
-    "description": "Free help with VA claims, applications and appeals for veterans and families.",
-    "next_step": "Call the state veterans agency; ask for a benefits review and the office that serves your county.",
-    "constraints": [],
+    "description": "Free help with VA claims, pension and survivor benefits from county veterans service officers, who are certified each year by the Mississippi State Veterans Affairs Board. Every county has one. Mississippi Veterans Affairs’ Veterans Benefits Specialists also work from offices across the state and at the Jackson VA Medical Center.",
+    "next_step": "Choose your county for its service officer. Mississippi Veterans Affairs’ main office in Jackson is at 601-576-4850.",
+    "constraints": [
+      "Call before you go; many county offices are staffed part of the week."
+    ],
     "public_contact": {
-      "phone": "601-576-4850"
+      "phone": "601-576-4850",
+      "phone_label": "Mississippi Veterans Affairs main office (601-576-4850)"
     },
     "verification": {
       "record_status": "official_source_reviewed",
-      "last_reviewed_on": "2026-11-02"
+      "last_reviewed_on": "2026-11-16"
     },
     "evidence": {
       "review_method": "full_official_page_text",
       "direct_agency_confirmation": false,
-      "phone_source_url": "https://www.msva.ms.gov/"
+      "phone_source_url": "https://www.msva.ms.gov/serviceofficers"
     },
     "source_evidence": [
       {
-        "url": "https://www.msva.ms.gov/",
-        "title": "Official published source",
-        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+        "url": "https://www.msva.ms.gov/serviceofficers",
+        "title": "Mississippi Veterans Affairs: Service Officers",
+        "reviewed_on": "2026-11-16",
+        "scope": "Main office, Veterans Benefits Specialist offices and the 82 county service officers with address and phone; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "ms-adrc",
+    "name": "Mississippi Access to Care (MAC) Centers",
+    "official_url": "https://mdhs.ms.gov/aging/",
+    "organization": "Mississippi Department of Human Services, Division of Aging and Adult Services",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "MS",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Mississippi Access to Care Centers are a free source of objective information about programs and services for older adults, people with disabilities and caregivers, including long-term care options and Medicaid waiver screening. Military service is not required.",
+    "next_step": "Call 844-822-4622, or choose a county above for its Area Agency on Aging.",
+    "constraints": [
+      "Each program has its own eligibility and waitlist."
+    ],
+    "public_contact": {
+      "phone": "844-822-4622",
+      "phone_label": "Mississippi Access to Care (844-822-4622)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://mdhs.ms.gov/aging/",
+        "title": "Mississippi Department of Human Services: Division of Aging & Adult Services",
+        "reviewed_on": "2026-11-16",
+        "scope": "MAC Centers and the number (844) 822-4622; search excerpt."
+      },
+      {
+        "url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
+        "title": "Mississippi Department of Human Services: State Plan on Aging, FFY 2023 update",
+        "reviewed_on": "2026-11-16",
+        "scope": "Mississippi Access to Care/SHIP 844-822-4622; read in full."
       }
     ]
   },
   {
     "program_id": "ms-ship",
     "name": "Medicare counseling (SHIP) for Mississippi",
-    "official_url": "https://www.shiphelp.org/",
-    "organization": "SHIP Technical Assistance Center",
+    "official_url": "https://www.mdhs.ms.gov/?p=22918",
+    "organization": "Mississippi Department of Human Services, State Health Insurance Assistance Program (SHIP)",
     "service_area": [
-      "All Mississippi counties"
+      "statewide"
     ],
     "state": "MS",
     "needs_supported": [
       "benefits_and_funding"
     ],
-    "description": "Free, unbiased Medicare counseling from the State Health Insurance Assistance Program.",
-    "next_step": "Call or use the locator to reach the Mississippi SHIP and ask for a counseling appointment.",
-    "constraints": [],
+    "description": "Free, unbiased Medicare counseling from Mississippi’s State Health Insurance Assistance Program, run by the Division of Aging and Adult Services with the Area Agencies on Aging and the MAC network: plan choices, enrollment, costs and help paying for Medicare.",
+    "next_step": "Call 844-822-4622. For Medicare itself, call 800-MEDICARE (800-633-4227).",
+    "constraints": [
+      "Have your Medicare card and drug list ready."
+    ],
     "public_contact": {
-      "phone": "877-839-2675"
+      "phone": "844-822-4622",
+      "phone_label": "Mississippi SHIP (844-822-4622)"
     },
     "verification": {
       "record_status": "official_search_extract_only",
-      "last_reviewed_on": "2026-11-02"
+      "last_reviewed_on": "2026-11-16"
     },
     "evidence": {
       "review_method": "official_search_excerpt",
       "direct_agency_confirmation": false,
-      "phone_source_url": "https://www.shiphelp.org/?p=317"
+      "phone_source_url": "https://www.mdhs.ms.gov/?p=22918"
     },
     "source_evidence": [
       {
-        "url": "https://www.shiphelp.org/?p=317",
-        "title": "Official published source",
-        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+        "url": "https://www.mdhs.ms.gov/?p=22918",
+        "title": "Mississippi Department of Human Services: SHIP provides free and unbiased Medicare guidance",
+        "reviewed_on": "2026-11-16",
+        "scope": "SHIP run with the Area Agencies on Aging and the MAC network; call 1-844-822-4622; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "ms-ombudsman",
+    "name": "Mississippi Long-Term Care Ombudsman and adult abuse reporting",
+    "official_url": "https://www.mdhs.ms.gov/ombudsman/",
+    "organization": "Mississippi Department of Human Services, Office of the State Long-Term Care Ombudsman",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "MS",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "description": "Independent advocacy for residents of nursing homes and assisted living, through local ombudsmen at the Area Agencies on Aging.",
+    "next_step": "Call the ombudsman help line at 888-844-0041. To report abuse, neglect or exploitation of a vulnerable adult at home, call the 24-hour Adult Protective Services hotline, 844-437-6282. In an emergency, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing agency."
+    ],
+    "public_contact": {
+      "phone": "888-844-0041",
+      "phone_label": "Mississippi Long-Term Care Ombudsman (888-844-0041)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.mdhs.ms.gov/ombudsman/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.mdhs.ms.gov/ombudsman/",
+        "title": "Mississippi Department of Human Services: Long-Term Care Ombudsman",
+        "reviewed_on": "2026-11-16",
+        "scope": "Statewide help line 1-888-844-0041; read in full."
+      },
+      {
+        "url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
+        "title": "Mississippi Department of Human Services: State Plan on Aging, FFY 2023 update",
+        "reviewed_on": "2026-11-16",
+        "scope": "24-Hour Adult Protective Services Hotline 844-437-6282; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "ms-legal-programs",
+    "name": "Free legal help for Mississippi veterans and older adults",
+    "official_url": "https://www.mdhs.ms.gov/wp-content/uploads/2025/11/LEGAL-ASSISTANCE-HELP-GUIDE.pdf",
+    "organization": "Mississippi Center for Legal Services; North Mississippi Rural Legal Services",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "MS",
+    "resource_role": "legal_aid",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation",
+      "housing"
+    ],
+    "description": "Mississippi’s legal services programs give free civil legal help to people with low incomes and, through the Area Agencies on Aging, to older adults. Mississippi Center for Legal Services serves central, east-central and south Mississippi; North Mississippi Rural Legal Services serves the north and the Delta. In the southwest counties, older adults are referred to a contracted law firm in Tylertown.",
+    "next_step": "Call 800-498-1804. In the north and the Delta, North Mississippi Rural Legal Services’ Oxford office is at 662-234-8731; in the Jackson area, Mississippi Center for Legal Services is at 601-948-6752.",
+    "constraints": [
+      "Legal aid screens by income and case type; no criminal cases."
+    ],
+    "public_contact": {
+      "phone": "800-498-1804",
+      "phone_label": "Mississippi legal services (800-498-1804)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.mdhs.ms.gov/wp-content/uploads/2025/11/LEGAL-ASSISTANCE-HELP-GUIDE.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.mdhs.ms.gov/wp-content/uploads/2025/11/LEGAL-ASSISTANCE-HELP-GUIDE.pdf",
+        "title": "Mississippi Department of Human Services: Legal Assistance Help Guide (undated)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each legal provider’s office, phones and the counties it serves for older adults; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "ms-vahealth-systems",
+    "name": "VA health care systems serving Mississippi",
+    "official_url": "https://www.va.gov/find-locations/?facilityType=health",
+    "organization": "U.S. Department of Veterans Affairs",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "MS",
+    "resource_role": "va_health_system",
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "Mississippi veterans are served mainly by VA Jackson health care (G.V. (Sonny) Montgomery VA Medical Center, 1500 E. Woodrow Wilson Avenue, Jackson; 601-362-4471, with clinics in Columbus, Greenville, Hattiesburg, Kosciusko, McComb, Meridian and Natchez) and the VA Gulf Coast Veterans Health Care System (400 Veterans Avenue, Biloxi; 228-523-5000).",
+    "next_step": "Use VA’s facility locator with your ZIP code to find the closest clinic; northern counties may be closer to another system. Not enrolled yet? Ask your county veterans service officer for help applying.",
+    "constraints": [
+      "Which system serves you depends on where you live; VA’s locator shows the right clinic."
+    ],
+    "public_contact": {
+      "phone": "601-362-4471",
+      "phone_label": "G.V. (Sonny) Montgomery VA Medical Center (601-362-4471)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.va.gov/DIRECTORY/GUIDE/state_PTSD.cfm?STATE=MS"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.va.gov/DIRECTORY/GUIDE/state_PTSD.cfm?STATE=MS",
+        "title": "VA PTSD program locator: Mississippi",
+        "reviewed_on": "2026-11-16",
+        "scope": "G.V. (Sonny) Montgomery VA Medical Center, 1500 E. Woodrow Wilson Avenue, Jackson; 601-362-4471; search excerpt."
+      },
+      {
+        "url": "https://www.va.gov/jackson-health-care/stories/jackson-vas-office-of-community-care-launches-new-customer-service-line-for-veterans-and-their-families/",
+        "title": "VA Jackson health care: Community Care customer service line",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Columbus, Greenville, Hattiesburg, Kosciusko, McComb, Meridian and Natchez VA clinics are part of the VA Jackson Health Care System; search excerpt."
+      },
+      {
+        "url": "https://www.va.gov/Directory/Guide/state_SUD.cfm?STATE=MS",
+        "title": "VA substance use disorder program locator: Mississippi",
+        "reviewed_on": "2026-11-16",
+        "scope": "Gulf Coast Veterans Health Care System, 400 Veterans Avenue, Biloxi; 228-523-5000; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "ms-cil-life-jackson",
+    "name": "LIFE of Mississippi (Jackson)",
+    "organization": "Living Independence for Everyone (LIFE) of Mississippi",
+    "official_url": "https://www.lifeofms.com/",
+    "service_area": [
+      "Hinds",
+      "Issaquena",
+      "Kemper",
+      "Lauderdale",
+      "Leake",
+      "Madison",
+      "Neshoba",
+      "Newton",
+      "Pearl River",
+      "Rankin",
+      "Scott",
+      "Sharkey",
+      "Warren",
+      "Winston",
+      "Yazoo"
+    ],
+    "state": "MS",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 1304 Vine Street, Jackson, MS 39202; toll-free 800-748-9398."
+    ],
+    "public_contact": {
+      "phone": "601-969-4009",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/ms",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/ms"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/ms",
+        "title": "ILRU: Mississippi CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each LIFE of Mississippi office’s address, phone, website and counties served; read in full. The directory is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "ms-cil-life-mccomb",
+    "name": "LIFE of Central Mississippi (McComb)",
+    "organization": "Living Independence for Everyone (LIFE) of Mississippi",
+    "official_url": "https://www.lifeofms.com/",
+    "service_area": [
+      "Adams",
+      "Amite",
+      "Claiborne",
+      "Copiah",
+      "Franklin",
+      "Jefferson",
+      "Lawrence",
+      "Lincoln",
+      "Pike",
+      "Simpson",
+      "Walthall",
+      "Wilkinson"
+    ],
+    "state": "MS",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 915-A South Locust Street, McComb, MS 39648."
+    ],
+    "public_contact": {
+      "phone": "601-684-3079",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/ms",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/ms"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/ms",
+        "title": "ILRU: Mississippi CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each LIFE of Mississippi office’s address, phone, website and counties served; read in full. The directory is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "ms-cil-life-biloxi",
+    "name": "LIFE of Mississippi (Biloxi)",
+    "organization": "Living Independence for Everyone (LIFE) of Mississippi",
+    "official_url": "https://www.lifeofms.com/",
+    "service_area": [
+      "George",
+      "Jackson",
+      "Harrison",
+      "Hancock",
+      "Stone"
+    ],
+    "state": "MS",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 2030 Pass Road, Suite C, Biloxi."
+    ],
+    "public_contact": {
+      "phone": "228-388-2401",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/ms",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/ms"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/ms",
+        "title": "ILRU: Mississippi CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each LIFE of Mississippi office’s address, phone, website and counties served; read in full. The directory is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "ms-cil-life-tupelo",
+    "name": "LIFE of North Mississippi (Tupelo)",
+    "organization": "Living Independence for Everyone (LIFE) of Mississippi",
+    "official_url": "https://www.lifeofms.com/",
+    "service_area": [
+      "Alcorn",
+      "Benton",
+      "Chickasaw",
+      "Clay",
+      "DeSoto",
+      "Itawamba",
+      "Lafayette",
+      "Lee",
+      "Lowndes",
+      "Marshall",
+      "Monroe",
+      "Noxubee",
+      "Oktibbeha",
+      "Tippah",
+      "Tishomingo",
+      "Pontotoc",
+      "Prentiss",
+      "Tate"
+    ],
+    "state": "MS",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 1051 Cliff Gookin Blvd., Tupelo, MS 38801."
+    ],
+    "public_contact": {
+      "phone": "662-844-6633",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/ms",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/ms"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/ms",
+        "title": "ILRU: Mississippi CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each LIFE of Mississippi office’s address, phone, website and counties served; read in full. The directory is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "ms-cil-life-delta",
+    "name": "LIFE of Mississippi (Delta office, Indianola)",
+    "organization": "Living Independence for Everyone (LIFE) of Mississippi",
+    "official_url": "https://www.lifeofms.com/",
+    "service_area": [
+      "Attala",
+      "Bolivar",
+      "Carroll",
+      "Coahoma",
+      "Grenada",
+      "Holmes",
+      "Humphreys",
+      "Leflore",
+      "Montgomery",
+      "Sunflower",
+      "Panola",
+      "Quitman",
+      "Tallahatchie",
+      "Tunica",
+      "Yalobusha",
+      "Washington"
+    ],
+    "state": "MS",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 410 Hwy 82 East, Suite C, Indianola, MS 38751. The directory files it as “Greenwood”."
+    ],
+    "public_contact": {
+      "phone": "662-453-9940",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/ms",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/ms"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/ms",
+        "title": "ILRU: Mississippi CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each LIFE of Mississippi office’s address, phone, website and counties served; read in full. The directory is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "ms-cil-life-hattiesburg",
+    "name": "LIFE of South Mississippi (Hattiesburg)",
+    "organization": "Living Independence for Everyone (LIFE) of Mississippi",
+    "official_url": "https://www.lifeofms.com/",
+    "service_area": [
+      "Jefferson Davis",
+      "Covington",
+      "Jones",
+      "Wayne",
+      "Marion",
+      "Lamar",
+      "Forrest",
+      "Perry",
+      "Greene",
+      "Smith",
+      "Jasper",
+      "Clarke"
+    ],
+    "state": "MS",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 710 Katie Avenue, Hattiesburg, MS 39401."
+    ],
+    "public_contact": {
+      "phone": "601-583-2108",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/ms",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/ms"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/ms",
+        "title": "ILRU: Mississippi CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each LIFE of Mississippi office’s address, phone, website and counties served; read in full. The directory is undated."
       }
     ]
   },
@@ -1012,7 +1544,69 @@
     "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
     "organization": "Mississippi United To End Homelessness",
     "service_area": [
-      "All Mississippi counties"
+      "Adams",
+      "Alcorn",
+      "Amite",
+      "Attala",
+      "Benton",
+      "Bolivar",
+      "Calhoun",
+      "Carroll",
+      "Chickasaw",
+      "Choctaw",
+      "Clay",
+      "Coahoma",
+      "Copiah",
+      "DeSoto",
+      "Franklin",
+      "Grenada",
+      "Hinds",
+      "Holmes",
+      "Humphreys",
+      "Issaquena",
+      "Itawamba",
+      "Jasper",
+      "Jefferson",
+      "Kemper",
+      "Lafayette",
+      "Lauderdale",
+      "Leake",
+      "Lee",
+      "Leflore",
+      "Lincoln",
+      "Lowndes",
+      "Madison",
+      "Marshall",
+      "Monroe",
+      "Montgomery",
+      "Neshoba",
+      "Newton",
+      "Noxubee",
+      "Oktibbeha",
+      "Panola",
+      "Pike",
+      "Pontotoc",
+      "Prentiss",
+      "Quitman",
+      "Rankin",
+      "Scott",
+      "Sharkey",
+      "Simpson",
+      "Smith",
+      "Sunflower",
+      "Tallahatchie",
+      "Tate",
+      "Tippah",
+      "Tishomingo",
+      "Tunica",
+      "Union",
+      "Warren",
+      "Washington",
+      "Webster",
+      "Wilkinson",
+      "Winston",
+      "Yalobusha",
+      "Yazoo"
     ],
     "state": "MS",
     "resource_role": "housing_provider",
@@ -1020,7 +1614,7 @@
       "housing",
       "veteran_services"
     ],
-    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 14-MS-231): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Adams County, Alcorn County, Amite County, Attala County, Benton County, Bolivar County, Calhoun County, Carroll County, Chickasaw County, Choctaw County, Clay County, Coahoma County and 51 more.",
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 14-MS-231): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
     "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
     "constraints": [
       "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
@@ -1057,7 +1651,10 @@
     "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
     "organization": "Hancock Resource Center",
     "service_area": [
-      "All Mississippi counties"
+      "Hancock",
+      "Harrison",
+      "Jackson",
+      "Pearl River"
     ],
     "state": "MS",
     "resource_role": "housing_provider",
@@ -1065,7 +1662,7 @@
       "housing",
       "veteran_services"
     ],
-    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 14-MS-232): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Hancock County, Harrison County, Jackson County, Pearl River County.",
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 14-MS-232): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
     "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
     "constraints": [
       "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
@@ -1102,7 +1699,43 @@
     "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
     "organization": "Region XII Commission on Mental Health & Retardation",
     "service_area": [
-      "All Mississippi counties"
+      "Adams",
+      "Amite",
+      "Claiborne",
+      "Clarke",
+      "Copiah",
+      "Covington",
+      "Forrest",
+      "Franklin",
+      "George",
+      "Greene",
+      "Hancock",
+      "Harrison",
+      "Hinds",
+      "Jackson",
+      "Jasper",
+      "Jefferson",
+      "Jefferson Davis",
+      "Jones",
+      "Lamar",
+      "Lauderdale",
+      "Lawrence",
+      "Lincoln",
+      "Madison",
+      "Marion",
+      "Newton",
+      "Pearl River",
+      "Perry",
+      "Pike",
+      "Rankin",
+      "Scott",
+      "Simpson",
+      "Smith",
+      "Stone",
+      "Walthall",
+      "Warren",
+      "Wayne",
+      "Wilkinson"
     ],
     "state": "MS",
     "resource_role": "housing_provider",
@@ -1110,7 +1743,7 @@
       "housing",
       "veteran_services"
     ],
-    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 19-MS-111): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Adams County, Amite County, Claiborne County, Clarke County, Copiah County, Covington County, Forrest County, Franklin County, George County, Greene County, Hancock County, Harrison County and 25 more.",
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 19-MS-111): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
     "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 601-545-2925.",
     "constraints": [
       "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
@@ -1142,81 +1775,635 @@
     ]
   },
   {
-    "program_id": "ms-aging",
-    "name": "Local aging help in Mississippi (Eldercare Locator)",
-    "official_url": "https://eldercare.acl.gov/home",
-    "organization": "U.S. Administration for Community Living",
-    "service_area": [
-      "All Mississippi counties"
-    ],
+    "program_id": "ms-aaa-central",
+    "name": "Central Mississippi Area Agency on Aging",
+    "organization": "Central Mississippi Area Agency on Aging",
+    "official_url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
     "state": "MS",
+    "service_area": [
+      "Copiah",
+      "Hinds",
+      "Madison",
+      "Rankin",
+      "Simpson",
+      "Warren",
+      "Yazoo"
+    ],
     "needs_supported": [
       "general_navigation",
       "help_at_home"
     ],
-    "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-    "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The Mississippi Access to Care line, 844-822-4622, also connects you to aging and disability help. Military service is not required.",
     "constraints": [
-      "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 888-995-9925."
     ],
     "public_contact": {
-      "phone": "800-677-1116"
+      "phone": "601-981-1516",
+      "phone_label": "Area Agency on Aging (Central Mississippi)"
     },
     "verification": {
-      "record_status": "official_search_extract_only",
-      "last_reviewed_on": "2026-11-02"
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
     },
     "evidence": {
-      "review_method": "official_search_excerpt",
+      "review_method": "full_official_pdf",
       "direct_agency_confirmation": false,
-      "phone_source_url": "https://www.acl.gov/contact"
+      "service_area_source_url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
+      "phone_source_url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf"
     },
     "source_evidence": [
       {
-        "url": "https://www.acl.gov/contact",
-        "title": "Official published source",
-        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+        "url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
+        "title": "Mississippi Department of Human Services: State Plan on Aging, FFY 2023 update (approved September 27, 2022)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Contact page listing the ten Area Agencies on Aging, their phones and the counties each serves, with the statewide Adult Protective Services and MAC/SHIP lines; read in full. Central Mississippi’s seven counties are confirmed by its fiscal year 2027 request for proposals: https://cmpdd.org/?p=2177"
       }
-    ],
-    "regional_role": "aging_agency"
+    ]
   },
   {
-    "program_id": "ms-ombudsman",
-    "name": "Mississippi long-term-care ombudsman",
-    "official_url": "https://theconsumervoice.org/get_help",
-    "organization": "National Long-Term Care Ombudsman Resource Center",
-    "service_area": [
-      "All Mississippi counties"
-    ],
+    "program_id": "ms-aaa-east-central",
+    "name": "East Central Area Agency on Aging",
+    "organization": "East Central Area Agency on Aging",
+    "official_url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
     "state": "MS",
+    "service_area": [
+      "Clarke",
+      "Jasper",
+      "Kemper",
+      "Lauderdale",
+      "Leake",
+      "Neshoba",
+      "Newton",
+      "Scott",
+      "Smith"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The Mississippi Access to Care line, 844-822-4622, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-264-2007."
+    ],
+    "public_contact": {
+      "phone": "601-683-2401",
+      "phone_label": "Area Agency on Aging (East Central)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
+      "phone_source_url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
+        "title": "Mississippi Department of Human Services: State Plan on Aging, FFY 2023 update (approved September 27, 2022)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Contact page listing the ten Area Agencies on Aging, their phones and the counties each serves, with the statewide Adult Protective Services and MAC/SHIP lines; read in full. Central Mississippi’s seven counties are confirmed by its fiscal year 2027 request for proposals: https://cmpdd.org/?p=2177"
+      }
+    ]
+  },
+  {
+    "program_id": "ms-aaa-golden-triangle",
+    "name": "Golden Triangle Area Agency on Aging",
+    "organization": "Golden Triangle Area Agency on Aging",
+    "official_url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
+    "state": "MS",
+    "service_area": [
+      "Choctaw",
+      "Clay",
+      "Lowndes",
+      "Noxubee",
+      "Oktibbeha",
+      "Webster",
+      "Winston"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The Mississippi Access to Care line, 844-822-4622, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Also listed: 662-332-2636. Toll-free: 888-324-9000."
+    ],
+    "public_contact": {
+      "phone": "662-324-4650",
+      "phone_label": "Area Agency on Aging (Golden Triangle)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
+      "phone_source_url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
+        "title": "Mississippi Department of Human Services: State Plan on Aging, FFY 2023 update (approved September 27, 2022)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Contact page listing the ten Area Agencies on Aging, their phones and the counties each serves, with the statewide Adult Protective Services and MAC/SHIP lines; read in full. Central Mississippi’s seven counties are confirmed by its fiscal year 2027 request for proposals: https://cmpdd.org/?p=2177"
+      }
+    ]
+  },
+  {
+    "program_id": "ms-aaa-north-central",
+    "name": "North Central Area Agency on Aging",
+    "organization": "North Central Area Agency on Aging",
+    "official_url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
+    "state": "MS",
+    "service_area": [
+      "Attala",
+      "Carroll",
+      "Grenada",
+      "Holmes",
+      "Leflore",
+      "Montgomery",
+      "Yalobusha"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The Mississippi Access to Care line, 844-822-4622, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Also listed: 662-283-2771. Toll-free: 888-427-0714."
+    ],
+    "public_contact": {
+      "phone": "662-283-2675",
+      "phone_label": "Area Agency on Aging (North Central)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
+      "phone_source_url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
+        "title": "Mississippi Department of Human Services: State Plan on Aging, FFY 2023 update (approved September 27, 2022)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Contact page listing the ten Area Agencies on Aging, their phones and the counties each serves, with the statewide Adult Protective Services and MAC/SHIP lines; read in full. Central Mississippi’s seven counties are confirmed by its fiscal year 2027 request for proposals: https://cmpdd.org/?p=2177"
+      }
+    ]
+  },
+  {
+    "program_id": "ms-aaa-north-delta",
+    "name": "North Delta Area Agency on Aging",
+    "organization": "North Delta Area Agency on Aging",
+    "official_url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
+    "state": "MS",
+    "service_area": [
+      "Coahoma",
+      "DeSoto",
+      "Panola",
+      "Quitman",
+      "Tallahatchie",
+      "Tate",
+      "Tunica"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The Mississippi Access to Care line, 844-822-4622, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-844-2433."
+    ],
+    "public_contact": {
+      "phone": "662-561-4100",
+      "phone_label": "Area Agency on Aging (North Delta)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
+      "phone_source_url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
+        "title": "Mississippi Department of Human Services: State Plan on Aging, FFY 2023 update (approved September 27, 2022)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Contact page listing the ten Area Agencies on Aging, their phones and the counties each serves, with the statewide Adult Protective Services and MAC/SHIP lines; read in full. Central Mississippi’s seven counties are confirmed by its fiscal year 2027 request for proposals: https://cmpdd.org/?p=2177"
+      }
+    ]
+  },
+  {
+    "program_id": "ms-aaa-northeast",
+    "name": "Northeast Mississippi Area Agency on Aging",
+    "organization": "Northeast Mississippi Area Agency on Aging",
+    "official_url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
+    "state": "MS",
+    "service_area": [
+      "Alcorn",
+      "Benton",
+      "Marshall",
+      "Prentiss",
+      "Tippah",
+      "Tishomingo"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The Mississippi Access to Care line, 844-822-4622, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-745-6961."
+    ],
+    "public_contact": {
+      "phone": "662-728-7038",
+      "phone_label": "Area Agency on Aging (Northeast Mississippi)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
+      "phone_source_url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
+        "title": "Mississippi Department of Human Services: State Plan on Aging, FFY 2023 update (approved September 27, 2022)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Contact page listing the ten Area Agencies on Aging, their phones and the counties each serves, with the statewide Adult Protective Services and MAC/SHIP lines; read in full. Central Mississippi’s seven counties are confirmed by its fiscal year 2027 request for proposals: https://cmpdd.org/?p=2177"
+      }
+    ]
+  },
+  {
+    "program_id": "ms-aaa-south-delta",
+    "name": "South Delta Area Agency on Aging",
+    "organization": "South Delta Area Agency on Aging",
+    "official_url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
+    "state": "MS",
+    "service_area": [
+      "Bolivar",
+      "Humphreys",
+      "Issaquena",
+      "Sharkey",
+      "Sunflower",
+      "Washington"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The Mississippi Access to Care line, 844-822-4622, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-898-3055."
+    ],
+    "public_contact": {
+      "phone": "662-378-3831",
+      "phone_label": "Area Agency on Aging (South Delta)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
+      "phone_source_url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
+        "title": "Mississippi Department of Human Services: State Plan on Aging, FFY 2023 update (approved September 27, 2022)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Contact page listing the ten Area Agencies on Aging, their phones and the counties each serves, with the statewide Adult Protective Services and MAC/SHIP lines; read in full. Central Mississippi’s seven counties are confirmed by its fiscal year 2027 request for proposals: https://cmpdd.org/?p=2177"
+      }
+    ]
+  },
+  {
+    "program_id": "ms-aaa-southern",
+    "name": "Southern Mississippi Area Agency on Aging",
+    "organization": "Southern Mississippi Area Agency on Aging",
+    "official_url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
+    "state": "MS",
+    "service_area": [
+      "Covington",
+      "Forrest",
+      "George",
+      "Greene",
+      "Hancock",
+      "Harrison",
+      "Jackson",
+      "Jefferson Davis",
+      "Jones",
+      "Lamar",
+      "Marion",
+      "Pearl River",
+      "Perry",
+      "Stone",
+      "Wayne"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The Mississippi Access to Care line, 844-822-4622, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-444-8014."
+    ],
+    "public_contact": {
+      "phone": "228-868-2326",
+      "phone_label": "Area Agency on Aging (Southern Mississippi)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
+      "phone_source_url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
+        "title": "Mississippi Department of Human Services: State Plan on Aging, FFY 2023 update (approved September 27, 2022)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Contact page listing the ten Area Agencies on Aging, their phones and the counties each serves, with the statewide Adult Protective Services and MAC/SHIP lines; read in full. Central Mississippi’s seven counties are confirmed by its fiscal year 2027 request for proposals: https://cmpdd.org/?p=2177"
+      }
+    ]
+  },
+  {
+    "program_id": "ms-aaa-southwest",
+    "name": "Southwest Mississippi Area Agency on Aging",
+    "organization": "Southwest Mississippi Area Agency on Aging",
+    "official_url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
+    "state": "MS",
+    "service_area": [
+      "Adams",
+      "Amite",
+      "Claiborne",
+      "Franklin",
+      "Jefferson",
+      "Lawrence",
+      "Lincoln",
+      "Pike",
+      "Walthall",
+      "Wilkinson"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The Mississippi Access to Care line, 844-822-4622, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-338-2049."
+    ],
+    "public_contact": {
+      "phone": "601-446-6044",
+      "phone_label": "Area Agency on Aging (Southwest Mississippi)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
+      "phone_source_url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
+        "title": "Mississippi Department of Human Services: State Plan on Aging, FFY 2023 update (approved September 27, 2022)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Contact page listing the ten Area Agencies on Aging, their phones and the counties each serves, with the statewide Adult Protective Services and MAC/SHIP lines; read in full. Central Mississippi’s seven counties are confirmed by its fiscal year 2027 request for proposals: https://cmpdd.org/?p=2177"
+      }
+    ]
+  },
+  {
+    "program_id": "ms-aaa-three-rivers",
+    "name": "Three Rivers Area Agency on Aging",
+    "organization": "Three Rivers Area Agency on Aging",
+    "official_url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
+    "state": "MS",
+    "service_area": [
+      "Calhoun",
+      "Chickasaw",
+      "Itawamba",
+      "Lafayette",
+      "Lee",
+      "Monroe",
+      "Pontotoc",
+      "Union"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The Mississippi Access to Care line, 844-822-4622, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Also listed: 662-489-6911. Toll-free: 877-489-6911."
+    ],
+    "public_contact": {
+      "phone": "662-489-2415",
+      "phone_label": "Area Agency on Aging (Three Rivers)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
+      "phone_source_url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
+        "title": "Mississippi Department of Human Services: State Plan on Aging, FFY 2023 update (approved September 27, 2022)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Contact page listing the ten Area Agencies on Aging, their phones and the counties each serves, with the statewide Adult Protective Services and MAC/SHIP lines; read in full. Central Mississippi’s seven counties are confirmed by its fiscal year 2027 request for proposals: https://cmpdd.org/?p=2177"
+      }
+    ]
+  },
+  {
+    "program_id": "ms-omb-state",
+    "name": "Mississippi Long-Term Care Ombudsman Program",
+    "organization": "Mississippi Long-Term Care Ombudsman Program",
+    "official_url": "https://www.mdhs.ms.gov/ombudsman/",
+    "state": "MS",
+    "service_area": [
+      "Adams",
+      "Alcorn",
+      "Amite",
+      "Attala",
+      "Benton",
+      "Bolivar",
+      "Calhoun",
+      "Carroll",
+      "Chickasaw",
+      "Choctaw",
+      "Claiborne",
+      "Clarke",
+      "Clay",
+      "Coahoma",
+      "Copiah",
+      "Covington",
+      "DeSoto",
+      "Forrest",
+      "Franklin",
+      "George",
+      "Greene",
+      "Grenada",
+      "Hancock",
+      "Harrison",
+      "Hinds",
+      "Holmes",
+      "Humphreys",
+      "Issaquena",
+      "Itawamba",
+      "Jackson",
+      "Jasper",
+      "Jefferson",
+      "Jefferson Davis",
+      "Jones",
+      "Kemper",
+      "Lafayette",
+      "Lamar",
+      "Lauderdale",
+      "Lawrence",
+      "Leake",
+      "Lee",
+      "Leflore",
+      "Lincoln",
+      "Lowndes",
+      "Madison",
+      "Marion",
+      "Marshall",
+      "Monroe",
+      "Montgomery",
+      "Neshoba",
+      "Newton",
+      "Noxubee",
+      "Oktibbeha",
+      "Panola",
+      "Pearl River",
+      "Perry",
+      "Pike",
+      "Pontotoc",
+      "Prentiss",
+      "Quitman",
+      "Rankin",
+      "Scott",
+      "Sharkey",
+      "Simpson",
+      "Smith",
+      "Stone",
+      "Sunflower",
+      "Tallahatchie",
+      "Tate",
+      "Tippah",
+      "Tishomingo",
+      "Tunica",
+      "Union",
+      "Walthall",
+      "Warren",
+      "Washington",
+      "Wayne",
+      "Webster",
+      "Wilkinson",
+      "Winston",
+      "Yalobusha",
+      "Yazoo"
+    ],
     "needs_supported": [
       "resident_rights",
       "general_navigation"
     ],
-    "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-    "next_step": "Use the locator to find the Mississippi program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
     "constraints": [
-      "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Mississippi’s ten local ombudsman programs are housed in the Planning and Development Districts with the Area Agencies on Aging; the help line connects you with yours."
     ],
     "public_contact": {
-      "phone": "800-677-1116"
+      "phone": "888-844-0041",
+      "phone_label": "Regional ombudsman program"
     },
     "verification": {
-      "record_status": "official_search_extract_only",
-      "last_reviewed_on": "2026-11-02"
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
     },
     "evidence": {
-      "review_method": "official_search_excerpt",
+      "review_method": "full_official_page_text",
       "direct_agency_confirmation": false,
-      "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
+      "service_area_source_url": "https://www.mdhs.ms.gov/ombudsman/",
+      "phone_source_url": "https://www.mdhs.ms.gov/ombudsman/"
     },
     "source_evidence": [
       {
-        "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-        "title": "Official published source",
-        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+        "url": "https://www.mdhs.ms.gov/ombudsman/",
+        "title": "Mississippi Department of Human Services: Long-Term Care Ombudsman",
+        "reviewed_on": "2026-11-16",
+        "scope": "Statewide Long-Term Care Ombudsman help line, 1-888-844-0041, and the facility types served; read in full. The page was last modified April 8, 2026."
+      },
+      {
+        "url": "https://regulations.justia.com/states/mississippi/title-18/part-26/part-i/section-18-26-1-a",
+        "title": "Mississippi Administrative Code, Title 18, Part 26: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-16",
+        "scope": "Ten local ombudsman programs in the ten Planning and Development Districts; search excerpt."
       }
-    ],
-    "regional_role": "ombudsman"
+    ]
   }
 ]
