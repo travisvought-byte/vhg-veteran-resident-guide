@@ -1054,6 +1054,36 @@
     ]
   },
   {
+    "code": "WY",
+    "name": "Wyoming",
+    "page": "wy.html",
+    "share_page": "share-wy.html",
+    "qr": "assets/guide-qr-wy.svg",
+    "counties": 23,
+    "programs": "data/public/wy-programs.json",
+    "referrals": "data/public/wy-regional-referrals.json",
+    "offices": "data/public/wyoming-county-veterans-offices.json",
+    "resources": "data/public/wyoming-resources.json",
+    "statewide_area_names": [],
+    "coverage_scope": "Referral edition. All 23 counties show the Veterans Commission’s statewide line, the county’s senior centers (Crook County: the Aging Division line), the regional long-term care ombudsman and a Center for Independent Living.",
+    "coverage_note": "Veterans contacts come from the Wyoming Veterans Commission. Senior centers come from the Aging Division’s services-by-county page. Centers for Independent Living come from the ILRU national directory. Reviewed November 16, 2026. Contacts are not telephone-confirmed.",
+    "share_description": "veterans service officers, county senior centers and long-term care ombudsman help across Wyoming",
+    "share_replacements": [
+      [
+        "Updated October 8, 2026",
+        "Updated November 16, 2026"
+      ],
+      [
+        "county veterans offices, benefits and care referrals",
+        "veterans service officers, benefits and care referrals"
+      ],
+      [
+        "County veterans offices",
+        "Veterans service officers"
+      ]
+    ]
+  },
+  {
     "code": "AK",
     "name": "Alaska",
     "starter": true,
@@ -1210,26 +1240,6 @@
     ],
     "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
     "coverage_note": "Starter edition. Every county uses the North Dakota Department of Veterans Affairs and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
-    "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
-    "share_replacements": []
-  },
-  {
-    "code": "WY",
-    "name": "Wyoming",
-    "starter": true,
-    "page": "wy.html",
-    "share_page": "share-wy.html",
-    "qr": "assets/guide-qr-wy.svg",
-    "counties": 1,
-    "programs": "data/public/wy-programs.json",
-    "referrals": "data/public/wy-regional-referrals.json",
-    "offices": "data/public/wyoming-county-veterans-offices.json",
-    "resources": "data/public/wyoming-resources.json",
-    "statewide_area_names": [
-      "All Wyoming counties"
-    ],
-    "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
-    "coverage_note": "Starter edition. Every county uses the Wyoming Veterans Commission and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
     "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
     "share_replacements": []
   }

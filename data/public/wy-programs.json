@@ -1,118 +1,459 @@
 [
- {
-  "program_id": "wy-claims",
-  "name": "Wyoming veterans: accredited claims help",
-  "official_url": "https://www.wyomilitary.wyo.gov/veterans/",
-  "organization": "Wyoming Veterans Commission",
-  "service_area": [
-   "All Wyoming counties"
-  ],
-  "state": "WY",
-  "needs_supported": [
-   "general_navigation",
-   "benefits_and_funding"
-  ],
-  "description": "Free help with VA claims, applications and appeals for veterans and families.",
-  "next_step": "Call the state veterans agency; ask for a benefits review and the office that serves your county.",
-  "constraints": [],
-  "public_contact": {
-   "phone": "800-833-5987"
+  {
+    "program_id": "wy-claims",
+    "name": "Wyoming veterans: Veterans Commission service officers for claims help",
+    "official_url": "https://wyomingveteranscommission.com/",
+    "organization": "Wyoming Veterans Commission",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "WY",
+    "needs_supported": [
+      "general_navigation",
+      "benefits_and_funding"
+    ],
+    "description": "Free help with VA disability and pension claims, health care and state and federal benefits from the Wyoming Veterans Commission’s veterans service officers. Call the statewide line to meet with the officer who covers your area.",
+    "next_step": "Call the Wyoming Veterans Hotline, 1-800-833-5987, and ask to meet with a veterans service officer.",
+    "constraints": [
+      "Service officers travel to outreach sites; call ahead to set a time."
+    ],
+    "public_contact": {
+      "phone": "800-833-5987",
+      "phone_label": "Wyoming Veterans Commission (800-833-5987)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://wyomingveteranscommission.com/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://wyomingveteranscommission.com/",
+        "title": "Wyoming Veterans Commission",
+        "reviewed_on": "2026-11-16",
+        "scope": "Office location 5800 Central Ave., mailing address 5410 Bishop Blvd., Cheyenne, and the main number (800) 833-5987; read in full."
+      },
+      {
+        "url": "https://health.wyo.gov/aging/veteranshome/veterans-resources/",
+        "title": "Wyoming Department of Health: Veterans resources",
+        "reviewed_on": "2026-11-16",
+        "scope": "Veterans service officers help with state and federal benefits, health care and VA disability and pension claims; call the Wyoming Veterans Hotline at 1-800-833-5987 to meet with one; search excerpt."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "wy-adrc",
+    "name": "Wyoming Aging Division and county senior centers",
+    "official_url": "https://health.wyo.gov/aging",
+    "organization": "Wyoming Department of Health, Aging Division, Community Living Section",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "WY",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "The Aging Division funds senior centers in every county for supportive services, meals, caregiver support and Wyoming Home Services, and you apply through the senior center. Military service is not required.",
+    "next_step": "Choose a county above for its senior centers, or call the Aging Division at 1-800-442-2766. Wyoming 2-1-1 also lists local services.",
+    "constraints": [
+      "Each program has its own eligibility and waitlist."
+    ],
+    "public_contact": {
+      "phone": "800-442-2766",
+      "phone_label": "Wyoming Aging Division (800-442-2766)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://health.wyo.gov/aging"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.wyo.gov/aging",
+        "title": "Wyoming Department of Health: Aging Division",
+        "reviewed_on": "2026-11-16",
+        "scope": "(307) 777-7995, (800) 442-2766; services by county through senior centers, where direct application is required; search excerpt."
+      },
+      {
+        "url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+        "title": "Wyoming Department of Health, Aging Division: Services by county (service area maps)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Every provider by county; read in full; updated October 20, 2026."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_page_text",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.wyomilitary.wyo.gov/veterans/"
+  {
+    "program_id": "wy-ship",
+    "name": "Medicare counseling (Wyoming State Health Insurance Information Program)",
+    "official_url": "https://www.cms.gov/contacts/wyoming-state-health-insurance-information-program-wshiip/general-beneficiary-contact/1562261",
+    "organization": "Wyoming Senior Citizens, Inc., Wyoming State Health Insurance Information Program (WSHIIP)",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "WY",
+    "needs_supported": [
+      "benefits_and_funding"
+    ],
+    "description": "Free, one-on-one Medicare counseling from Wyoming’s State Health Insurance Information Program, Wyoming’s SHIP: Medicare, Medicare Savings Programs, prescription drug help and supplemental insurance.",
+    "next_step": "Call WSHIIP toll-free at 1-800-856-4398. For Medicare itself, call 800-MEDICARE (800-633-4227).",
+    "constraints": [
+      "Counseling is by appointment. Have your Medicare card and drug list ready."
+    ],
+    "public_contact": {
+      "phone": "800-856-4398",
+      "phone_label": "Wyoming WSHIIP (800-856-4398)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.cms.gov/contacts/wyoming-state-health-insurance-information-program-wshiip/general-beneficiary-contact/1562261"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.cms.gov/contacts/wyoming-state-health-insurance-information-program-wshiip/general-beneficiary-contact/1562261",
+        "title": "CMS contacts directory: Wyoming State Health Insurance Information Program (WSHIIP)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Toll-free (800) 856-4398, local (307) 856-6880, 106 West Adams Ave., Riverton; search excerpt."
+      },
+      {
+        "url": "https://www.wyocourts.gov/legal-help-by-topic/help-paying-for-healthcare/",
+        "title": "Wyoming Judicial Branch: Help paying for healthcare",
+        "reviewed_on": "2026-11-16",
+        "scope": "WSHIIP, Wyoming’s SHIP, toll-free 1-800-856-4398; search excerpt."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.wyomilitary.wyo.gov/veterans/",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ]
- },
- {
-  "program_id": "wy-ship",
-  "name": "Medicare counseling (SHIP) for Wyoming",
-  "official_url": "https://www.shiphelp.org/",
-  "organization": "SHIP Technical Assistance Center",
-  "service_area": [
-   "All Wyoming counties"
-  ],
-  "state": "WY",
-  "needs_supported": [
-   "benefits_and_funding"
-  ],
-  "description": "Free, unbiased Medicare counseling from the State Health Insurance Assistance Program.",
-  "next_step": "Call or use the locator to reach the Wyoming SHIP and ask for a counseling appointment.",
-  "constraints": [],
-  "public_contact": {
-   "phone": "877-839-2675"
+  {
+    "program_id": "wy-ombudsman",
+    "name": "Wyoming Long-Term Care Ombudsman and adult abuse reporting",
+    "official_url": "https://health.wyo.gov/aging/long-term-care-ombudsman/",
+    "organization": "Wyoming Department of Health, Long-Term Care Ombudsman Program; Department of Family Services, Adult Protective Services",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "WY",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "description": "Advocacy for residents of nursing homes, assisted living and other long-term care settings, through three regional ombudsman offices. Adult Protective Services, in the Department of Family Services, takes reports of abuse, neglect or exploitation of vulnerable adults.",
+    "next_step": "Choose a county above for its regional ombudsman, or call 1-800-856-4398. To report abuse, call your local Department of Family Services office (an on-call caseworker is available 24 hours a day), Adult Protective Services at 307-777-3602, or local law enforcement. In an emergency, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing agency."
+    ],
+    "public_contact": {
+      "phone": "800-856-4398",
+      "phone_label": "Wyoming Long-Term Care Ombudsman (800-856-4398)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://health.wyo.gov/aging/long-term-care-ombudsman/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.wyo.gov/aging/long-term-care-ombudsman/",
+        "title": "Wyoming Department of Health: Long-Term Care Ombudsman",
+        "reviewed_on": "2026-11-16",
+        "scope": "Regional ombudsman offices, phones and counties; read in full; updated April 17, 2026."
+      },
+      {
+        "url": "https://dfs.wyo.gov/services/elderly-and-disabled/adult-protection-services",
+        "title": "Wyoming Department of Family Services: Adult Protective Services",
+        "reviewed_on": "2026-11-16",
+        "scope": "Report to your local DFS office by phone or in person, or to local law enforcement; an on-call caseworker is available 24 hours a day; search excerpt."
+      },
+      {
+        "url": "https://www.wyocourts.gov/legal-help-by-topic/elder-abuse/",
+        "title": "Wyoming Judicial Branch: Elder abuse",
+        "reviewed_on": "2026-11-16",
+        "scope": "Adult Protective Services, (307) 777-3602; search excerpt."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "wy-legal-programs",
+    "name": "Free legal help for older Wyoming residents",
+    "official_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+    "organization": "Legal Aid of Wyoming",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "WY",
+    "resource_role": "legal_aid",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation",
+      "housing"
+    ],
+    "description": "Legal Aid of Wyoming is funded by the Aging Division to provide supportive services for older adults, with offices in Cheyenne, Casper, Gillette and Lander.",
+    "next_step": "Call the nearest Legal Aid of Wyoming office: Cheyenne 307-432-0808, Casper 307-232-9830, Gillette 307-459-5765, Lander 307-332-3517.",
+    "constraints": [
+      "Legal aid screens by age, income and case type."
+    ],
+    "public_contact": {
+      "phone": "307-432-0808",
+      "phone_label": "Legal Aid of Wyoming, Cheyenne office (307-432-0808)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+        "title": "Wyoming Department of Health, Aging Division: Services by county (service area maps)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Legal Aid of Wyoming offices in Cheyenne, Casper, Gillette and Lander, listed as Title III-B supportive services providers, with phones; read in full."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.shiphelp.org/?p=317"
+  {
+    "program_id": "wy-vahealth-systems",
+    "name": "VA health care in Wyoming",
+    "official_url": "https://www.va.gov/cheyenne-health-care/contact-us/",
+    "organization": "U.S. Department of Veterans Affairs: VA Cheyenne and VA Sheridan health care systems",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "WY",
+    "resource_role": "va_health_system",
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "Wyoming veterans are served by two VA health care systems: the Cheyenne VA Medical Center (2360 E. Pershing Blvd.; 307-778-7550, toll-free 888-483-9127) and the Sheridan VA Medical Center (1898 Fort Road; 307-672-3473), each with community clinics.",
+    "next_step": "Call Cheyenne at 307-778-7550 or Sheridan at 307-672-3473 for appointments or VA Health Connect. Not enrolled yet? Ask a veterans service officer for help applying.",
+    "constraints": [
+      "If a service you need is not offered near you, ask about travel benefits and community care."
+    ],
+    "public_contact": {
+      "phone": "307-778-7550",
+      "phone_label": "Cheyenne VA Medical Center (307-778-7550)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.va.gov/cheyenne-health-care/contact-us/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.va.gov/cheyenne-health-care/contact-us/",
+        "title": "VA Cheyenne health care: Contact us",
+        "reviewed_on": "2026-11-16",
+        "scope": "Cheyenne VA Medical Center, 2360 East Pershing Blvd.; local 307-778-7550, toll-free 888-483-9127; search excerpt."
+      },
+      {
+        "url": "https://www.va.gov/sheridan-health-care/locations/sheridan-va-medical-center/",
+        "title": "VA Sheridan health care: Sheridan VA Medical Center",
+        "reviewed_on": "2026-11-16",
+        "scope": "1898 Fort Road, Sheridan; phone 307-672-3473; search excerpt."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.shiphelp.org/?p=317",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ]
- },
- {
-  "program_id": "wy-ssvf-20-zz-113",
-  "name": "Volunteers of America, Northern Rockies: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Volunteers of America, Northern Rockies",
-  "service_area": [
-   "All Wyoming counties"
-  ],
-  "state": "WY",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-ZZ-113): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Albany County, Big Horn County, Campbell County, Carbon County, Converse County, Crook County, Fremont County, Goshen County, Hot Springs County, Johnson County, Laramie County, Lincoln County and 11 more.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 515-669-1780.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "307-381-7877",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "wy-cil-wil",
+    "name": "Wyoming Independent Living",
+    "organization": "Wyoming Independent Living (WIL)",
+    "official_url": "https://www.wilr.org/",
+    "service_area": [
+      "Albany",
+      "Campbell",
+      "Carbon",
+      "Converse",
+      "Crook",
+      "Goshen",
+      "Johnson",
+      "Laramie",
+      "Natrona",
+      "Niobrara",
+      "Platte",
+      "Sheridan",
+      "Weston"
+    ],
+    "state": "WY",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Main office: 305 West First Street, Casper, WY 82601. Toll-free 800-735-8322.",
+      "Other offices: Cheyenne 307-637-5127; Laramie 307-721-4071; Sheridan 307-655-8260."
+    ],
+    "public_contact": {
+      "phone": "307-266-6956",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://ilru.org/projects/cil-net/cil-center-and-association-directory-results/WY",
+      "service_area_source_url": "https://ilru.org/projects/cil-net/cil-center-and-association-directory-results/WY"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ilru.org/projects/cil-net/cil-center-and-association-directory-results/WY",
+        "title": "ILRU: Directory of Centers for Independent Living, Wyoming results",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each office’s address, phones, website and counties served; read in full. The directory is undated and spells Uinta County “Unita”."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "wy-cil-wsil",
+    "name": "Wyoming Services for Independent Living",
+    "organization": "Wyoming Services for Independent Living (WSIL)",
+    "official_url": "https://www.wysil.org/",
+    "service_area": [
+      "Big Horn",
+      "Fremont",
+      "Hot Springs",
+      "Lincoln",
+      "Park",
+      "Sublette",
+      "Sweetwater",
+      "Teton",
+      "Uinta",
+      "Washakie"
+    ],
+    "state": "WY",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Main office: 808 Meadow Lane Avenue, Cody, WY 82414. Toll-free 800-280-0917.",
+      "Other offices: Lander 307-332-4889; Rock Springs 307-362-4159."
+    ],
+    "public_contact": {
+      "phone": "307-586-4141",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://ilru.org/projects/cil-net/cil-center-and-association-directory-results/WY",
+      "service_area_source_url": "https://ilru.org/projects/cil-net/cil-center-and-association-directory-results/WY"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ilru.org/projects/cil-net/cil-center-and-association-directory-results/WY",
+        "title": "ILRU: Directory of Centers for Independent Living, Wyoming results",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each office’s address, phones, website and counties served; read in full. The directory is undated and spells Uinta County “Unita”."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
-  },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 196",
-    "sheet": "Contacts",
-    "row": 196,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- }
+  {
+    "program_id": "wy-ssvf-20-zz-113",
+    "name": "Volunteers of America, Northern Rockies: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Volunteers of America, Northern Rockies",
+    "service_area": [
+      "Albany",
+      "Big Horn",
+      "Campbell",
+      "Carbon",
+      "Converse",
+      "Crook",
+      "Fremont",
+      "Goshen",
+      "Hot Springs",
+      "Johnson",
+      "Laramie",
+      "Lincoln",
+      "Natrona",
+      "Niobrara",
+      "Park",
+      "Platte",
+      "Sheridan",
+      "Sublette",
+      "Sweetwater",
+      "Teton",
+      "Uinta",
+      "Washakie",
+      "Weston"
+    ],
+    "state": "WY",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-ZZ-113): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 515-669-1780.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "307-381-7877",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 196",
+        "sheet": "Contacts",
+        "row": 196,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
+  }
 ]

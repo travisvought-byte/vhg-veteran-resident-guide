@@ -42,7 +42,8 @@ export const STATES=Object.freeze({
   "HI": "Hawaii",
   "DE": "Delaware",
   "RI": "Rhode Island",
-  "VT": "Vermont"
+  "VT": "Vermont",
+  "WY": "Wyoming"
 });
 export const STATE_FILES=Object.freeze({
   "OH": [
@@ -212,6 +213,10 @@ export const STATE_FILES=Object.freeze({
   "VT": [
     "data/public/vermont-resources.json",
     "data/public/vermont-county-veterans-offices.json"
+  ],
+  "WY": [
+    "data/public/wyoming-resources.json",
+    "data/public/wyoming-county-veterans-offices.json"
   ]
 });
 export const localityLabel=row=>row?(["independent_city","statewide"].includes(row.county_type)?row.county:row.county+(row.county_type==="parish"?" Parish":" County")):"";

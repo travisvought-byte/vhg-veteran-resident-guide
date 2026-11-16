@@ -1,80 +1,1135 @@
 [
- {
-  "program_id": "wy-aging",
-  "name": "Local aging help in Wyoming (Eldercare Locator)",
-  "official_url": "https://eldercare.acl.gov/home",
-  "organization": "U.S. Administration for Community Living",
-  "service_area": [
-   "All Wyoming counties"
-  ],
-  "state": "WY",
-  "needs_supported": [
-   "general_navigation",
-   "help_at_home"
-  ],
-  "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-  "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
-  "constraints": [
-   "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "wy-aging-albany",
+    "name": "Eppson Center for Seniors (Laramie)",
+    "organization": "Eppson Center for Seniors (Laramie)",
+    "official_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+    "state": "WY",
+    "service_area": [
+      "Albany"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Senior centers in each county, funded by the Wyoming Department of Health’s Aging Division, provide supportive services, meals, caregiver support and Wyoming Home Services for older adults. You apply for services directly through the senior center.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The state Aging Division can also help, 1-800-442-2766, and Wyoming 2-1-1 lists more local services. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Wyoming Home Services: Wyoming Senior Citizens, Inc., 307-856-6880. Health promotion programs: Wyoming Center on Aging, 307-766-5320."
+    ],
+    "public_contact": {
+      "phone": "307-745-5116",
+      "phone_label": "Senior services (Albany County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+      "phone_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+        "title": "Wyoming Department of Health, Aging Division: Services by county (service area maps)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Every provider by county, with its town, phone and services (supportive services, meals, caregiver support, Wyoming Home Services); read in full; page updated October 20, 2026. Each county card leads with the senior center in the county seat (Big Horn County: the center offering the most programs) and lists the county’s other providers. Foster Grandparent and Senior Companion volunteer programs are left out. The page lists Goshen County’s providers under Crook County, so Crook County shows the Aging Division’s statewide line (https://health.wyo.gov/aging: 307-777-7995, 800-442-2766; search excerpt)."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "wy-aging-big-horn",
+    "name": "South Big Horn Senior Citizens (Greybull)",
+    "organization": "South Big Horn Senior Citizens (Greybull)",
+    "official_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+    "state": "WY",
+    "service_area": [
+      "Big Horn"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Senior centers in each county, funded by the Wyoming Department of Health’s Aging Division, provide supportive services, meals, caregiver support and Wyoming Home Services for older adults. You apply for services directly through the senior center.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The state Aging Division can also help, 1-800-442-2766, and Wyoming 2-1-1 lists more local services. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Also: North Big Horn Senior Citizens Center (Lovell), 307-548-6556."
+    ],
+    "public_contact": {
+      "phone": "307-765-4488",
+      "phone_label": "Senior services (Big Horn County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+      "phone_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+        "title": "Wyoming Department of Health, Aging Division: Services by county (service area maps)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Every provider by county, with its town, phone and services (supportive services, meals, caregiver support, Wyoming Home Services); read in full; page updated October 20, 2026. Each county card leads with the senior center in the county seat (Big Horn County: the center offering the most programs) and lists the county’s other providers. Foster Grandparent and Senior Companion volunteer programs are left out. The page lists Goshen County’s providers under Crook County, so Crook County shows the Aging Division’s statewide line (https://health.wyo.gov/aging: 307-777-7995, 800-442-2766; search excerpt)."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.acl.gov/contact"
+  {
+    "program_id": "wy-aging-campbell",
+    "name": "Campbell County Senior Center (Gillette)",
+    "organization": "Campbell County Senior Center (Gillette)",
+    "official_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+    "state": "WY",
+    "service_area": [
+      "Campbell"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Senior centers in each county, funded by the Wyoming Department of Health’s Aging Division, provide supportive services, meals, caregiver support and Wyoming Home Services for older adults. You apply for services directly through the senior center.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The state Aging Division can also help, 1-800-442-2766, and Wyoming 2-1-1 lists more local services. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program."
+    ],
+    "public_contact": {
+      "phone": "307-686-0804",
+      "phone_label": "Senior services (Campbell County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+      "phone_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+        "title": "Wyoming Department of Health, Aging Division: Services by county (service area maps)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Every provider by county, with its town, phone and services (supportive services, meals, caregiver support, Wyoming Home Services); read in full; page updated October 20, 2026. Each county card leads with the senior center in the county seat (Big Horn County: the center offering the most programs) and lists the county’s other providers. Foster Grandparent and Senior Companion volunteer programs are left out. The page lists Goshen County’s providers under Crook County, so Crook County shows the Aging Division’s statewide line (https://health.wyo.gov/aging: 307-777-7995, 800-442-2766; search excerpt)."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.acl.gov/contact",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "aging_agency"
- },
- {
-  "program_id": "wy-ombudsman",
-  "name": "Wyoming long-term-care ombudsman",
-  "official_url": "https://theconsumervoice.org/get_help",
-  "organization": "National Long-Term Care Ombudsman Resource Center",
-  "service_area": [
-   "All Wyoming counties"
-  ],
-  "state": "WY",
-  "needs_supported": [
-   "resident_rights",
-   "general_navigation"
-  ],
-  "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-  "next_step": "Use the locator to find the Wyoming program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
-  "constraints": [
-   "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "wy-aging-carbon",
+    "name": "Carbon County Senior Services (Rawlins)",
+    "organization": "Carbon County Senior Services (Rawlins)",
+    "official_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+    "state": "WY",
+    "service_area": [
+      "Carbon"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Senior centers in each county, funded by the Wyoming Department of Health’s Aging Division, provide supportive services, meals, caregiver support and Wyoming Home Services for older adults. You apply for services directly through the senior center.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The state Aging Division can also help, 1-800-442-2766, and Wyoming 2-1-1 lists more local services. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Wyoming Home Services: Memorial Hospital of Carbon County, 307-324-8353. Caregiver support: Wyoming Senior Citizens, Inc., 307-235-5959."
+    ],
+    "public_contact": {
+      "phone": "307-328-0320",
+      "phone_label": "Senior services (Carbon County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+      "phone_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+        "title": "Wyoming Department of Health, Aging Division: Services by county (service area maps)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Every provider by county, with its town, phone and services (supportive services, meals, caregiver support, Wyoming Home Services); read in full; page updated October 20, 2026. Each county card leads with the senior center in the county seat (Big Horn County: the center offering the most programs) and lists the county’s other providers. Foster Grandparent and Senior Companion volunteer programs are left out. The page lists Goshen County’s providers under Crook County, so Crook County shows the Aging Division’s statewide line (https://health.wyo.gov/aging: 307-777-7995, 800-442-2766; search excerpt)."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "wy-aging-converse",
+    "name": "Converse County Aging Services (Douglas)",
+    "organization": "Converse County Aging Services (Douglas)",
+    "official_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+    "state": "WY",
+    "service_area": [
+      "Converse"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Senior centers in each county, funded by the Wyoming Department of Health’s Aging Division, provide supportive services, meals, caregiver support and Wyoming Home Services for older adults. You apply for services directly through the senior center.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The state Aging Division can also help, 1-800-442-2766, and Wyoming 2-1-1 lists more local services. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Glenrock office: 307-436-9442. Caregiver support: Wyoming Senior Citizens, Inc., 307-235-5959."
+    ],
+    "public_contact": {
+      "phone": "307-358-4348",
+      "phone_label": "Senior services (Converse County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+      "phone_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+        "title": "Wyoming Department of Health, Aging Division: Services by county (service area maps)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Every provider by county, with its town, phone and services (supportive services, meals, caregiver support, Wyoming Home Services); read in full; page updated October 20, 2026. Each county card leads with the senior center in the county seat (Big Horn County: the center offering the most programs) and lists the county’s other providers. Foster Grandparent and Senior Companion volunteer programs are left out. The page lists Goshen County’s providers under Crook County, so Crook County shows the Aging Division’s statewide line (https://health.wyo.gov/aging: 307-777-7995, 800-442-2766; search excerpt)."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
+  {
+    "program_id": "wy-aging-crook",
+    "name": "Wyoming Aging Division, Community Living Section",
+    "organization": "Wyoming Aging Division, Community Living Section",
+    "official_url": "https://health.wyo.gov/aging",
+    "state": "WY",
+    "service_area": [
+      "Crook"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Senior centers in each county, funded by the Wyoming Department of Health’s Aging Division, provide supportive services, meals, caregiver support and Wyoming Home Services for older adults. You apply for services directly through the senior center.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The state Aging Division can also help, 1-800-442-2766, and Wyoming 2-1-1 lists more local services. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "The Aging Division’s services-by-county page currently lists Goshen County providers under Crook County, so this card shows the division’s statewide line. Ask it for Crook County senior services."
+    ],
+    "public_contact": {
+      "phone": "800-442-2766",
+      "phone_label": "Senior services (Crook County)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.wyo.gov/aging",
+      "phone_source_url": "https://health.wyo.gov/aging"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.wyo.gov/aging",
+        "title": "Wyoming Department of Health, Aging Division: Services by county (service area maps)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Every provider by county, with its town, phone and services (supportive services, meals, caregiver support, Wyoming Home Services); read in full; page updated October 20, 2026. Each county card leads with the senior center in the county seat (Big Horn County: the center offering the most programs) and lists the county’s other providers. Foster Grandparent and Senior Companion volunteer programs are left out. The page lists Goshen County’s providers under Crook County, so Crook County shows the Aging Division’s statewide line (https://health.wyo.gov/aging: 307-777-7995, 800-442-2766; search excerpt)."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "ombudsman"
- }
+  {
+    "program_id": "wy-aging-fremont",
+    "name": "Lander Senior Citizens Center (Lander)",
+    "organization": "Lander Senior Citizens Center (Lander)",
+    "official_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+    "state": "WY",
+    "service_area": [
+      "Fremont"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Senior centers in each county, funded by the Wyoming Department of Health’s Aging Division, provide supportive services, meals, caregiver support and Wyoming Home Services for older adults. You apply for services directly through the senior center.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The state Aging Division can also help, 1-800-442-2766, and Wyoming 2-1-1 lists more local services. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Also: Riverton Senior Citizens Center, 307-856-6332; Shoshoni Senior Citizens Center, 307-876-2703; High Country Senior Citizens (Dubois), 307-455-2990; Northern Arapaho Tribe Black Coal Senior Center (Arapahoe; meals), 307-463-4445.",
+      "Caregiver support and Wyoming Home Services: Wyoming Senior Citizens, Inc. (Riverton), 307-856-6880."
+    ],
+    "public_contact": {
+      "phone": "307-332-2746",
+      "phone_label": "Senior services (Fremont County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+      "phone_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+        "title": "Wyoming Department of Health, Aging Division: Services by county (service area maps)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Every provider by county, with its town, phone and services (supportive services, meals, caregiver support, Wyoming Home Services); read in full; page updated October 20, 2026. Each county card leads with the senior center in the county seat (Big Horn County: the center offering the most programs) and lists the county’s other providers. Foster Grandparent and Senior Companion volunteer programs are left out. The page lists Goshen County’s providers under Crook County, so Crook County shows the Aging Division’s statewide line (https://health.wyo.gov/aging: 307-777-7995, 800-442-2766; search excerpt)."
+      }
+    ]
+  },
+  {
+    "program_id": "wy-aging-goshen",
+    "name": "Goshen County Senior Friendship Center (Torrington)",
+    "organization": "Goshen County Senior Friendship Center (Torrington)",
+    "official_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+    "state": "WY",
+    "service_area": [
+      "Goshen"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Senior centers in each county, funded by the Wyoming Department of Health’s Aging Division, provide supportive services, meals, caregiver support and Wyoming Home Services for older adults. You apply for services directly through the senior center.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The state Aging Division can also help, 1-800-442-2766, and Wyoming 2-1-1 lists more local services. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Caregiver support: Wyoming Senior Citizens, Inc., 307-634-1010."
+    ],
+    "public_contact": {
+      "phone": "307-532-2796",
+      "phone_label": "Senior services (Goshen County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+      "phone_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+        "title": "Wyoming Department of Health, Aging Division: Services by county (service area maps)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Every provider by county, with its town, phone and services (supportive services, meals, caregiver support, Wyoming Home Services); read in full; page updated October 20, 2026. Each county card leads with the senior center in the county seat (Big Horn County: the center offering the most programs) and lists the county’s other providers. Foster Grandparent and Senior Companion volunteer programs are left out. The page lists Goshen County’s providers under Crook County, so Crook County shows the Aging Division’s statewide line (https://health.wyo.gov/aging: 307-777-7995, 800-442-2766; search excerpt)."
+      }
+    ]
+  },
+  {
+    "program_id": "wy-aging-hot-springs",
+    "name": "Hot Springs County Senior Citizens Center (Thermopolis)",
+    "organization": "Hot Springs County Senior Citizens Center (Thermopolis)",
+    "official_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+    "state": "WY",
+    "service_area": [
+      "Hot Springs"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Senior centers in each county, funded by the Wyoming Department of Health’s Aging Division, provide supportive services, meals, caregiver support and Wyoming Home Services for older adults. You apply for services directly through the senior center.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The state Aging Division can also help, 1-800-442-2766, and Wyoming 2-1-1 lists more local services. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program."
+    ],
+    "public_contact": {
+      "phone": "307-864-2151",
+      "phone_label": "Senior services (Hot Springs County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+      "phone_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+        "title": "Wyoming Department of Health, Aging Division: Services by county (service area maps)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Every provider by county, with its town, phone and services (supportive services, meals, caregiver support, Wyoming Home Services); read in full; page updated October 20, 2026. Each county card leads with the senior center in the county seat (Big Horn County: the center offering the most programs) and lists the county’s other providers. Foster Grandparent and Senior Companion volunteer programs are left out. The page lists Goshen County’s providers under Crook County, so Crook County shows the Aging Division’s statewide line (https://health.wyo.gov/aging: 307-777-7995, 800-442-2766; search excerpt)."
+      }
+    ]
+  },
+  {
+    "program_id": "wy-aging-johnson",
+    "name": "Buffalo Senior Center (Buffalo)",
+    "organization": "Buffalo Senior Center (Buffalo)",
+    "official_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+    "state": "WY",
+    "service_area": [
+      "Johnson"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Senior centers in each county, funded by the Wyoming Department of Health’s Aging Division, provide supportive services, meals, caregiver support and Wyoming Home Services for older adults. You apply for services directly through the senior center.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The state Aging Division can also help, 1-800-442-2766, and Wyoming 2-1-1 lists more local services. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program."
+    ],
+    "public_contact": {
+      "phone": "307-684-9551",
+      "phone_label": "Senior services (Johnson County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+      "phone_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+        "title": "Wyoming Department of Health, Aging Division: Services by county (service area maps)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Every provider by county, with its town, phone and services (supportive services, meals, caregiver support, Wyoming Home Services); read in full; page updated October 20, 2026. Each county card leads with the senior center in the county seat (Big Horn County: the center offering the most programs) and lists the county’s other providers. Foster Grandparent and Senior Companion volunteer programs are left out. The page lists Goshen County’s providers under Crook County, so Crook County shows the Aging Division’s statewide line (https://health.wyo.gov/aging: 307-777-7995, 800-442-2766; search excerpt)."
+      }
+    ]
+  },
+  {
+    "program_id": "wy-aging-laramie",
+    "name": "Laramie County Senior Services (Cheyenne)",
+    "organization": "Laramie County Senior Services (Cheyenne)",
+    "official_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+    "state": "WY",
+    "service_area": [
+      "Laramie"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Senior centers in each county, funded by the Wyoming Department of Health’s Aging Division, provide supportive services, meals, caregiver support and Wyoming Home Services for older adults. You apply for services directly through the senior center.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The state Aging Division can also help, 1-800-442-2766, and Wyoming 2-1-1 lists more local services. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Also: Pine Bluffs Senior Center, 307-245-3816; Meals on Wheels of Cheyenne (home-delivered meals), 307-635-5542; Cheyenne Transit, 307-637-6384; Lions Disability Transport Services, 307-514-4363.",
+      "Wyoming Home Services: Community Action of Laramie County, 307-635-9291. Caregiver support: Wyoming Senior Citizens, Inc., 307-634-1010."
+    ],
+    "public_contact": {
+      "phone": "307-635-2435",
+      "phone_label": "Senior services (Laramie County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+      "phone_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+        "title": "Wyoming Department of Health, Aging Division: Services by county (service area maps)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Every provider by county, with its town, phone and services (supportive services, meals, caregiver support, Wyoming Home Services); read in full; page updated October 20, 2026. Each county card leads with the senior center in the county seat (Big Horn County: the center offering the most programs) and lists the county’s other providers. Foster Grandparent and Senior Companion volunteer programs are left out. The page lists Goshen County’s providers under Crook County, so Crook County shows the Aging Division’s statewide line (https://health.wyo.gov/aging: 307-777-7995, 800-442-2766; search excerpt)."
+      }
+    ]
+  },
+  {
+    "program_id": "wy-aging-lincoln",
+    "name": "Kemmerer Senior Center (Kemmerer)",
+    "organization": "Kemmerer Senior Center (Kemmerer)",
+    "official_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+    "state": "WY",
+    "service_area": [
+      "Lincoln"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Senior centers in each county, funded by the Wyoming Department of Health’s Aging Division, provide supportive services, meals, caregiver support and Wyoming Home Services for older adults. You apply for services directly through the senior center.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The state Aging Division can also help, 1-800-442-2766, and Wyoming 2-1-1 lists more local services. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Also: Star Valley Senior Citizens (Afton), 307-885-3780; Thayne Senior Center, 307-883-2678; Cokeville Senior Citizens Center, 307-279-3226. Caregiver support and Wyoming Home Services: Wyoming Senior Citizens, Inc., 307-634-1010."
+    ],
+    "public_contact": {
+      "phone": "307-877-3806",
+      "phone_label": "Senior services (Lincoln County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+      "phone_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+        "title": "Wyoming Department of Health, Aging Division: Services by county (service area maps)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Every provider by county, with its town, phone and services (supportive services, meals, caregiver support, Wyoming Home Services); read in full; page updated October 20, 2026. Each county card leads with the senior center in the county seat (Big Horn County: the center offering the most programs) and lists the county’s other providers. Foster Grandparent and Senior Companion volunteer programs are left out. The page lists Goshen County’s providers under Crook County, so Crook County shows the Aging Division’s statewide line (https://health.wyo.gov/aging: 307-777-7995, 800-442-2766; search excerpt)."
+      }
+    ]
+  },
+  {
+    "program_id": "wy-aging-natrona",
+    "name": "Central Wyoming Senior Services (Casper)",
+    "organization": "Central Wyoming Senior Services (Casper)",
+    "official_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+    "state": "WY",
+    "service_area": [
+      "Natrona"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Senior centers in each county, funded by the Wyoming Department of Health’s Aging Division, provide supportive services, meals, caregiver support and Wyoming Home Services for older adults. You apply for services directly through the senior center.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The state Aging Division can also help, 1-800-442-2766, and Wyoming 2-1-1 lists more local services. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Home-delivered meals: Natrona County Meals on Wheels, 307-265-8659."
+    ],
+    "public_contact": {
+      "phone": "307-265-4678",
+      "phone_label": "Senior services (Natrona County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+      "phone_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+        "title": "Wyoming Department of Health, Aging Division: Services by county (service area maps)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Every provider by county, with its town, phone and services (supportive services, meals, caregiver support, Wyoming Home Services); read in full; page updated October 20, 2026. Each county card leads with the senior center in the county seat (Big Horn County: the center offering the most programs) and lists the county’s other providers. Foster Grandparent and Senior Companion volunteer programs are left out. The page lists Goshen County’s providers under Crook County, so Crook County shows the Aging Division’s statewide line (https://health.wyo.gov/aging: 307-777-7995, 800-442-2766; search excerpt)."
+      }
+    ]
+  },
+  {
+    "program_id": "wy-aging-niobrara",
+    "name": "Niobrara Senior Center (Lusk)",
+    "organization": "Niobrara Senior Center (Lusk)",
+    "official_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+    "state": "WY",
+    "service_area": [
+      "Niobrara"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Senior centers in each county, funded by the Wyoming Department of Health’s Aging Division, provide supportive services, meals, caregiver support and Wyoming Home Services for older adults. You apply for services directly through the senior center.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The state Aging Division can also help, 1-800-442-2766, and Wyoming 2-1-1 lists more local services. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program."
+    ],
+    "public_contact": {
+      "phone": "307-334-2561",
+      "phone_label": "Senior services (Niobrara County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+      "phone_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+        "title": "Wyoming Department of Health, Aging Division: Services by county (service area maps)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Every provider by county, with its town, phone and services (supportive services, meals, caregiver support, Wyoming Home Services); read in full; page updated October 20, 2026. Each county card leads with the senior center in the county seat (Big Horn County: the center offering the most programs) and lists the county’s other providers. Foster Grandparent and Senior Companion volunteer programs are left out. The page lists Goshen County’s providers under Crook County, so Crook County shows the Aging Division’s statewide line (https://health.wyo.gov/aging: 307-777-7995, 800-442-2766; search excerpt)."
+      }
+    ]
+  },
+  {
+    "program_id": "wy-aging-park",
+    "name": "Cody Council on Aging (Cody)",
+    "organization": "Cody Council on Aging (Cody)",
+    "official_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+    "state": "WY",
+    "service_area": [
+      "Park"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Senior centers in each county, funded by the Wyoming Department of Health’s Aging Division, provide supportive services, meals, caregiver support and Wyoming Home Services for older adults. You apply for services directly through the senior center.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The state Aging Division can also help, 1-800-442-2766, and Wyoming 2-1-1 lists more local services. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Also: Powell Senior Citizens A-Go Go, 307-754-4223; Senior Citizens of Meeteetse, 307-868-2622.",
+      "Caregiver support and Wyoming Home Services: Wyoming Senior Citizens, Inc. (Cody), 307-578-8285."
+    ],
+    "public_contact": {
+      "phone": "307-587-6221",
+      "phone_label": "Senior services (Park County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+      "phone_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+        "title": "Wyoming Department of Health, Aging Division: Services by county (service area maps)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Every provider by county, with its town, phone and services (supportive services, meals, caregiver support, Wyoming Home Services); read in full; page updated October 20, 2026. Each county card leads with the senior center in the county seat (Big Horn County: the center offering the most programs) and lists the county’s other providers. Foster Grandparent and Senior Companion volunteer programs are left out. The page lists Goshen County’s providers under Crook County, so Crook County shows the Aging Division’s statewide line (https://health.wyo.gov/aging: 307-777-7995, 800-442-2766; search excerpt)."
+      }
+    ]
+  },
+  {
+    "program_id": "wy-aging-platte",
+    "name": "Services for Seniors (Wheatland)",
+    "organization": "Services for Seniors (Wheatland)",
+    "official_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+    "state": "WY",
+    "service_area": [
+      "Platte"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Senior centers in each county, funded by the Wyoming Department of Health’s Aging Division, provide supportive services, meals, caregiver support and Wyoming Home Services for older adults. You apply for services directly through the senior center.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The state Aging Division can also help, 1-800-442-2766, and Wyoming 2-1-1 lists more local services. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program."
+    ],
+    "public_contact": {
+      "phone": "307-322-3424",
+      "phone_label": "Senior services (Platte County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+      "phone_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+        "title": "Wyoming Department of Health, Aging Division: Services by county (service area maps)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Every provider by county, with its town, phone and services (supportive services, meals, caregiver support, Wyoming Home Services); read in full; page updated October 20, 2026. Each county card leads with the senior center in the county seat (Big Horn County: the center offering the most programs) and lists the county’s other providers. Foster Grandparent and Senior Companion volunteer programs are left out. The page lists Goshen County’s providers under Crook County, so Crook County shows the Aging Division’s statewide line (https://health.wyo.gov/aging: 307-777-7995, 800-442-2766; search excerpt)."
+      }
+    ]
+  },
+  {
+    "program_id": "wy-aging-sheridan",
+    "name": "The Hub on Smith (Senior Citizens Council, Sheridan)",
+    "organization": "The Hub on Smith (Senior Citizens Council, Sheridan)",
+    "official_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+    "state": "WY",
+    "service_area": [
+      "Sheridan"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Senior centers in each county, funded by the Wyoming Department of Health’s Aging Division, provide supportive services, meals, caregiver support and Wyoming Home Services for older adults. You apply for services directly through the senior center.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The state Aging Division can also help, 1-800-442-2766, and Wyoming 2-1-1 lists more local services. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program."
+    ],
+    "public_contact": {
+      "phone": "307-672-2240",
+      "phone_label": "Senior services (Sheridan County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+      "phone_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+        "title": "Wyoming Department of Health, Aging Division: Services by county (service area maps)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Every provider by county, with its town, phone and services (supportive services, meals, caregiver support, Wyoming Home Services); read in full; page updated October 20, 2026. Each county card leads with the senior center in the county seat (Big Horn County: the center offering the most programs) and lists the county’s other providers. Foster Grandparent and Senior Companion volunteer programs are left out. The page lists Goshen County’s providers under Crook County, so Crook County shows the Aging Division’s statewide line (https://health.wyo.gov/aging: 307-777-7995, 800-442-2766; search excerpt)."
+      }
+    ]
+  },
+  {
+    "program_id": "wy-aging-sublette",
+    "name": "Rendezvous Pointe (Pinedale)",
+    "organization": "Rendezvous Pointe (Pinedale)",
+    "official_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+    "state": "WY",
+    "service_area": [
+      "Sublette"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Senior centers in each county, funded by the Wyoming Department of Health’s Aging Division, provide supportive services, meals, caregiver support and Wyoming Home Services for older adults. You apply for services directly through the senior center.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The state Aging Division can also help, 1-800-442-2766, and Wyoming 2-1-1 lists more local services. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Also: Southwest Sublette County Pioneers (Big Piney), 307-276-3249."
+    ],
+    "public_contact": {
+      "phone": "307-367-2881",
+      "phone_label": "Senior services (Sublette County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+      "phone_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+        "title": "Wyoming Department of Health, Aging Division: Services by county (service area maps)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Every provider by county, with its town, phone and services (supportive services, meals, caregiver support, Wyoming Home Services); read in full; page updated October 20, 2026. Each county card leads with the senior center in the county seat (Big Horn County: the center offering the most programs) and lists the county’s other providers. Foster Grandparent and Senior Companion volunteer programs are left out. The page lists Goshen County’s providers under Crook County, so Crook County shows the Aging Division’s statewide line (https://health.wyo.gov/aging: 307-777-7995, 800-442-2766; search excerpt)."
+      }
+    ]
+  },
+  {
+    "program_id": "wy-aging-sweetwater",
+    "name": "Golden Hour Senior Center (Green River)",
+    "organization": "Golden Hour Senior Center (Green River)",
+    "official_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+    "state": "WY",
+    "service_area": [
+      "Sweetwater"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Senior centers in each county, funded by the Wyoming Department of Health’s Aging Division, provide supportive services, meals, caregiver support and Wyoming Home Services for older adults. You apply for services directly through the senior center.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The state Aging Division can also help, 1-800-442-2766, and Wyoming 2-1-1 lists more local services. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Also: Rock Springs Young at Heart, 307-352-6737 (also caregiver support and Wyoming Home Services); Farson Eden Senior Services, 307-749-3577."
+    ],
+    "public_contact": {
+      "phone": "307-872-3223",
+      "phone_label": "Senior services (Sweetwater County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+      "phone_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+        "title": "Wyoming Department of Health, Aging Division: Services by county (service area maps)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Every provider by county, with its town, phone and services (supportive services, meals, caregiver support, Wyoming Home Services); read in full; page updated October 20, 2026. Each county card leads with the senior center in the county seat (Big Horn County: the center offering the most programs) and lists the county’s other providers. Foster Grandparent and Senior Companion volunteer programs are left out. The page lists Goshen County’s providers under Crook County, so Crook County shows the Aging Division’s statewide line (https://health.wyo.gov/aging: 307-777-7995, 800-442-2766; search excerpt)."
+      }
+    ]
+  },
+  {
+    "program_id": "wy-aging-teton",
+    "name": "Senior Center of Jackson Hole (Jackson)",
+    "organization": "Senior Center of Jackson Hole (Jackson)",
+    "official_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+    "state": "WY",
+    "service_area": [
+      "Teton"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Senior centers in each county, funded by the Wyoming Department of Health’s Aging Division, provide supportive services, meals, caregiver support and Wyoming Home Services for older adults. You apply for services directly through the senior center.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The state Aging Division can also help, 1-800-442-2766, and Wyoming 2-1-1 lists more local services. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program."
+    ],
+    "public_contact": {
+      "phone": "307-733-7300",
+      "phone_label": "Senior services (Teton County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+      "phone_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+        "title": "Wyoming Department of Health, Aging Division: Services by county (service area maps)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Every provider by county, with its town, phone and services (supportive services, meals, caregiver support, Wyoming Home Services); read in full; page updated October 20, 2026. Each county card leads with the senior center in the county seat (Big Horn County: the center offering the most programs) and lists the county’s other providers. Foster Grandparent and Senior Companion volunteer programs are left out. The page lists Goshen County’s providers under Crook County, so Crook County shows the Aging Division’s statewide line (https://health.wyo.gov/aging: 307-777-7995, 800-442-2766; search excerpt)."
+      }
+    ]
+  },
+  {
+    "program_id": "wy-aging-uinta",
+    "name": "Uinta Senior Citizens (Evanston)",
+    "organization": "Uinta Senior Citizens (Evanston)",
+    "official_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+    "state": "WY",
+    "service_area": [
+      "Uinta"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Senior centers in each county, funded by the Wyoming Department of Health’s Aging Division, provide supportive services, meals, caregiver support and Wyoming Home Services for older adults. You apply for services directly through the senior center.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The state Aging Division can also help, 1-800-442-2766, and Wyoming 2-1-1 lists more local services. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program."
+    ],
+    "public_contact": {
+      "phone": "307-789-3208",
+      "phone_label": "Senior services (Uinta County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+      "phone_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+        "title": "Wyoming Department of Health, Aging Division: Services by county (service area maps)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Every provider by county, with its town, phone and services (supportive services, meals, caregiver support, Wyoming Home Services); read in full; page updated October 20, 2026. Each county card leads with the senior center in the county seat (Big Horn County: the center offering the most programs) and lists the county’s other providers. Foster Grandparent and Senior Companion volunteer programs are left out. The page lists Goshen County’s providers under Crook County, so Crook County shows the Aging Division’s statewide line (https://health.wyo.gov/aging: 307-777-7995, 800-442-2766; search excerpt)."
+      }
+    ]
+  },
+  {
+    "program_id": "wy-aging-washakie",
+    "name": "Washakie County Senior Services (Worland)",
+    "organization": "Washakie County Senior Services (Worland)",
+    "official_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+    "state": "WY",
+    "service_area": [
+      "Washakie"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Senior centers in each county, funded by the Wyoming Department of Health’s Aging Division, provide supportive services, meals, caregiver support and Wyoming Home Services for older adults. You apply for services directly through the senior center.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The state Aging Division can also help, 1-800-442-2766, and Wyoming 2-1-1 lists more local services. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Also: Ten Sleep Senior Center, 307-366-2210."
+    ],
+    "public_contact": {
+      "phone": "307-347-3208",
+      "phone_label": "Senior services (Washakie County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+      "phone_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+        "title": "Wyoming Department of Health, Aging Division: Services by county (service area maps)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Every provider by county, with its town, phone and services (supportive services, meals, caregiver support, Wyoming Home Services); read in full; page updated October 20, 2026. Each county card leads with the senior center in the county seat (Big Horn County: the center offering the most programs) and lists the county’s other providers. Foster Grandparent and Senior Companion volunteer programs are left out. The page lists Goshen County’s providers under Crook County, so Crook County shows the Aging Division’s statewide line (https://health.wyo.gov/aging: 307-777-7995, 800-442-2766; search excerpt)."
+      }
+    ]
+  },
+  {
+    "program_id": "wy-aging-weston",
+    "name": "Weston County Senior Services (Newcastle)",
+    "organization": "Weston County Senior Services (Newcastle)",
+    "official_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+    "state": "WY",
+    "service_area": [
+      "Weston"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Senior centers in each county, funded by the Wyoming Department of Health’s Aging Division, provide supportive services, meals, caregiver support and Wyoming Home Services for older adults. You apply for services directly through the senior center.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The state Aging Division can also help, 1-800-442-2766, and Wyoming 2-1-1 lists more local services. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Wyoming Home Services: Weston County Health Services, 307-746-3553."
+    ],
+    "public_contact": {
+      "phone": "307-746-4903",
+      "phone_label": "Senior services (Weston County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+      "phone_source_url": "https://health.wyo.gov/aging/communityliving/service-area-maps/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.wyo.gov/aging/communityliving/service-area-maps/",
+        "title": "Wyoming Department of Health, Aging Division: Services by county (service area maps)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Every provider by county, with its town, phone and services (supportive services, meals, caregiver support, Wyoming Home Services); read in full; page updated October 20, 2026. Each county card leads with the senior center in the county seat (Big Horn County: the center offering the most programs) and lists the county’s other providers. Foster Grandparent and Senior Companion volunteer programs are left out. The page lists Goshen County’s providers under Crook County, so Crook County shows the Aging Division’s statewide line (https://health.wyo.gov/aging: 307-777-7995, 800-442-2766; search excerpt)."
+      }
+    ]
+  },
+  {
+    "program_id": "wy-omb-riverton",
+    "name": "Wyoming Long-Term Care Ombudsman, Riverton office",
+    "organization": "Wyoming Long-Term Care Ombudsman, Riverton office",
+    "official_url": "https://health.wyo.gov/aging/long-term-care-ombudsman/",
+    "state": "WY",
+    "service_area": [
+      "Big Horn",
+      "Fremont",
+      "Hot Springs",
+      "Lincoln",
+      "Park",
+      "Sublette",
+      "Teton",
+      "Uinta",
+      "Washakie"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Toll-free: 800-856-4398. Office: 106 E. Adams Ave., Riverton, WY 82501."
+    ],
+    "public_contact": {
+      "phone": "307-856-6880",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.wyo.gov/aging/long-term-care-ombudsman/",
+      "phone_source_url": "https://health.wyo.gov/aging/long-term-care-ombudsman/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.wyo.gov/aging/long-term-care-ombudsman/",
+        "title": "Wyoming Department of Health: Long-Term Care Ombudsman",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each regional ombudsman’s office, phones and counties, and the State Long-Term Care Ombudsman (307-287-7757); read in full; page updated April 17, 2026."
+      }
+    ]
+  },
+  {
+    "program_id": "wy-omb-casper",
+    "name": "Wyoming Long-Term Care Ombudsman, Casper office",
+    "organization": "Wyoming Long-Term Care Ombudsman, Casper office",
+    "official_url": "https://health.wyo.gov/aging/long-term-care-ombudsman/",
+    "state": "WY",
+    "service_area": [
+      "Campbell",
+      "Converse",
+      "Johnson",
+      "Natrona",
+      "Sheridan"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Toll-free: 877-634-1006. Office: 951 Werner Court, Suite 295, Casper, WY 82061."
+    ],
+    "public_contact": {
+      "phone": "307-235-5959",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.wyo.gov/aging/long-term-care-ombudsman/",
+      "phone_source_url": "https://health.wyo.gov/aging/long-term-care-ombudsman/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.wyo.gov/aging/long-term-care-ombudsman/",
+        "title": "Wyoming Department of Health: Long-Term Care Ombudsman",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each regional ombudsman’s office, phones and counties, and the State Long-Term Care Ombudsman (307-287-7757); read in full; page updated April 17, 2026."
+      }
+    ]
+  },
+  {
+    "program_id": "wy-omb-cheyenne",
+    "name": "Wyoming Long-Term Care Ombudsman, Cheyenne office",
+    "organization": "Wyoming Long-Term Care Ombudsman, Cheyenne office",
+    "official_url": "https://health.wyo.gov/aging/long-term-care-ombudsman/",
+    "state": "WY",
+    "service_area": [
+      "Albany",
+      "Carbon",
+      "Crook",
+      "Goshen",
+      "Laramie",
+      "Niobrara",
+      "Platte",
+      "Sweetwater",
+      "Weston"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Toll-free: 877-634-1005. Office: 3120 Old Faithful Road, Suite 200, Cheyenne, WY 82001."
+    ],
+    "public_contact": {
+      "phone": "307-634-1010",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.wyo.gov/aging/long-term-care-ombudsman/",
+      "phone_source_url": "https://health.wyo.gov/aging/long-term-care-ombudsman/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.wyo.gov/aging/long-term-care-ombudsman/",
+        "title": "Wyoming Department of Health: Long-Term Care Ombudsman",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each regional ombudsman’s office, phones and counties, and the State Long-Term Care Ombudsman (307-287-7757); read in full; page updated April 17, 2026."
+      }
+    ]
+  }
 ]
