@@ -1,163 +1,709 @@
 [
- {
-  "program_id": "mt-claims",
-  "name": "Montana veterans: accredited claims help",
-  "official_url": "https://dma.mt.gov/MVAD/",
-  "organization": "Montana Veterans Affairs Division",
-  "service_area": [
-   "All Montana counties"
-  ],
-  "state": "MT",
-  "needs_supported": [
-   "general_navigation",
-   "benefits_and_funding"
-  ],
-  "description": "Free help with VA claims, applications and appeals for veterans and families.",
-  "next_step": "Call the state veterans agency; ask for a benefits review and the office that serves your county.",
-  "constraints": [],
-  "public_contact": {
-   "phone": "406-324-3742"
+  {
+    "program_id": "mt-claims",
+    "name": "Montana veterans: Veterans Affairs Division service officers for claims help",
+    "official_url": "https://dma.mt.gov/MVAD/",
+    "organization": "Montana Department of Military Affairs, Veterans Affairs Division (MVAD)",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "MT",
+    "needs_supported": [
+      "general_navigation",
+      "benefits_and_funding"
+    ],
+    "description": "Free help from MVAD’s accredited Veteran Service Officers: VA compensation and pension claims, appeals and hearings, survivor claims, military records and referrals, from nine offices and outreach visits across Montana.",
+    "next_step": "Call the nearest office (choose a county above) or the division at 406-324-3742.",
+    "constraints": [
+      "Service officers travel for outreach; call ahead for times and places."
+    ],
+    "public_contact": {
+      "phone": "406-324-3742",
+      "phone_label": "Montana Veterans Affairs Division (406-324-3742)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://veterans.mt.gov/Veteran-Services/Veteran-Services-Program-Home"
+    },
+    "source_evidence": [
+      {
+        "url": "https://veterans.mt.gov/Veteran-Services/Veteran-Services-Program-Home",
+        "title": "Montana Veterans Affairs Division: Veteran Services",
+        "reviewed_on": "2026-11-16",
+        "scope": "Nine Veteran Service Offices with phones and emails, the division line and address, and what service officers do; read in full."
+      },
+      {
+        "url": "https://dma.mt.gov/MVAD/MVAD-Documents/MVAD-Office-Contacts.pdf",
+        "title": "Montana Veterans Affairs Division: Office contacts",
+        "reviewed_on": "2026-11-16",
+        "scope": "Street addresses of the service offices; read in full; undated, with one office’s address block unlabeled."
+      },
+      {
+        "url": "https://dma.mt.gov/MVAD/",
+        "title": "Montana Department of Military Affairs: Montana Veteran’s Affairs Division",
+        "reviewed_on": "2026-11-16",
+        "scope": "Division contact (406) 324-3742; statewide network of service offices; search excerpt."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-15"
+  {
+    "program_id": "mt-adrc",
+    "name": "Montana Area Agencies on Aging and Aging and Disability Resource Centers",
+    "official_url": "https://www.dphhs.mt.gov/SLTC/aging/adrc",
+    "organization": "Montana DPHHS Office on Aging and the Area Agencies on Aging",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "MT",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Montana’s Area Agencies on Aging, most also Aging and Disability Resource Centers, give information, options counseling and help with in-home services, meals, caregiver support and benefits. One toll-free line rings the local agency. Military service is not required.",
+    "next_step": "Call 1-800-551-3191, or choose a county above for its Area Agency on Aging.",
+    "constraints": [
+      "Each program has its own eligibility and waitlist."
+    ],
+    "public_contact": {
+      "phone": "800-551-3191",
+      "phone_label": "Montana Area Agencies on Aging (800-551-3191)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://prod-dphhs.mt.gov/assets/sltc/AAA/AAAContacts.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.dphhs.mt.gov/SLTC/aging/adrc",
+        "title": "Montana DPHHS: Aging and Disability Resource Centers",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each ADRC with phone and counties served; read in full."
+      },
+      {
+        "url": "https://prod-dphhs.mt.gov/assets/sltc/AAA/AAAContacts.pdf",
+        "title": "Montana DPHHS: Area Agency on Aging contacts (updated August 2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each agency’s address and phone and the toll-free line (800) 551-3191; read in full."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_page_text",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://dma.mt.gov/MVAD/"
+  {
+    "program_id": "mt-ship",
+    "name": "Medicare counseling (Montana SHIP)",
+    "official_url": "https://dphhs.mt.gov/SLTC/aging/SHIP",
+    "organization": "Montana DPHHS Office on Aging, State Health Insurance Assistance Program (SHIP), through the Area Agencies on Aging",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "MT",
+    "needs_supported": [
+      "benefits_and_funding"
+    ],
+    "description": "Free, confidential health-benefits counseling for Medicare beneficiaries and their families from SHIP counselors at the Area Agencies on Aging.",
+    "next_step": "Call 1-800-551-3191; staff refer you to the SHIP counselor at your county’s Area Agency on Aging. For Medicare itself, call 800-MEDICARE (800-633-4227).",
+    "constraints": [
+      "Counseling is by appointment. Have your Medicare card and drug list ready."
+    ],
+    "public_contact": {
+      "phone": "800-551-3191",
+      "phone_label": "Montana SHIP (800-551-3191)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://dphhs.mt.gov/SLTC/aging/SHIP"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dphhs.mt.gov/SLTC/aging/SHIP",
+        "title": "Montana DPHHS: State Health Insurance Assistance Program",
+        "reviewed_on": "2026-11-16",
+        "scope": "No-cost Medicare counseling; call 1-800-551-3191 to be referred to the local Area Agency on Aging’s SHIP counselor; search excerpt."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://dma.mt.gov/MVAD/",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-15; not direct intake confirmation."
-   }
-  ]
- },
- {
-  "program_id": "mt-ship",
-  "name": "Medicare counseling (SHIP) for Montana",
-  "official_url": "https://www.shiphelp.org/",
-  "organization": "SHIP Technical Assistance Center",
-  "service_area": [
-   "All Montana counties"
-  ],
-  "state": "MT",
-  "needs_supported": [
-   "benefits_and_funding"
-  ],
-  "description": "Free, unbiased Medicare counseling from the State Health Insurance Assistance Program.",
-  "next_step": "Call or use the locator to reach the Montana SHIP and ask for a counseling appointment.",
-  "constraints": [],
-  "public_contact": {
-   "phone": "877-839-2675"
+  {
+    "program_id": "mt-ombudsman",
+    "name": "Montana Long-Term Care Ombudsman and adult abuse reporting",
+    "official_url": "https://dphhs.mt.gov/assets/sltc/Ombudsman/OmbudsmanDirectory.pdf",
+    "organization": "Montana DPHHS: Long-Term Care Ombudsman Program; Adult Protective Services",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "MT",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "description": "Advocacy for residents of nursing homes, assisted living and other long-term care settings, through regional ombudsmen and the State Long-Term Care Ombudsman. Adult Protective Services takes reports of abuse, neglect or exploitation of people 60 and older and adults with disabilities.",
+    "next_step": "Choose a county above for its ombudsman, or call the State Long-Term Care Ombudsman at 406-444-3285. To report abuse, call Adult Protective Services at 1-844-277-9300 (weekdays 8 a.m. to 5 p.m.) or report online any time at aps.mt.gov. In an emergency, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing agency."
+    ],
+    "public_contact": {
+      "phone": "406-444-3285",
+      "phone_label": "Montana State Long-Term Care Ombudsman (406-444-3285)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://dphhs.mt.gov/assets/sltc/Ombudsman/OmbudsmanDirectory.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dphhs.mt.gov/assets/sltc/Ombudsman/OmbudsmanDirectory.pdf",
+        "title": "Montana DPHHS: Long-Term Care Ombudsman directory (updated August 2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Regional and state ombudsman phones and counties; read in full."
+      },
+      {
+        "url": "https://dphhs.mt.gov/SLTC/APS",
+        "title": "Montana DPHHS: Adult Protective Services",
+        "reviewed_on": "2026-11-16",
+        "scope": "Report online or call 1-844-277-9300, weekdays 8 a.m. to 5 p.m.; for emergencies call 911; search excerpt."
+      },
+      {
+        "url": "https://www.dphhs.mt.gov/assets/sltc/aps/Brochure.pdf",
+        "title": "Montana DPHHS: Adult Protective Services brochure",
+        "reviewed_on": "2026-11-16",
+        "scope": "Statewide reporting 1-844-277-9300 weekdays; 24/7 online reporting at aps.mt.gov; search excerpt."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "mt-legal-programs",
+    "name": "Free legal help for older Montanans",
+    "official_url": "https://montanalawhelp.org/apply-legal-services",
+    "organization": "Montana Legal Services Association; DPHHS Office on Aging, Legal Services Developer",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "MT",
+    "resource_role": "legal_aid",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation",
+      "housing"
+    ],
+    "description": "Montana Legal Services Association gives free civil legal help to people with low incomes statewide. The Legal Services Developer in the state Office on Aging provides elder law resources, legal referrals and basic help with legal documents.",
+    "next_step": "Apply online at mtlsa.org or call the MLSA HelpLine at 1-800-666-6899 (Tuesday to Thursday, 9 a.m. to 1 p.m.). For elder law help, call the Office on Aging’s Legal Services Developer at 800-332-2272.",
+    "constraints": [
+      "Legal aid screens by income and case type; HelpLine hours are limited, so keep trying or apply online."
+    ],
+    "public_contact": {
+      "phone": "800-666-6899",
+      "phone_label": "Montana Legal Services Association HelpLine (800-666-6899)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://montanalawhelp.org/apply-legal-services"
+    },
+    "source_evidence": [
+      {
+        "url": "https://montanalawhelp.org/apply-legal-services",
+        "title": "MontanaLawHelp.org: Apply for legal services",
+        "reviewed_on": "2026-11-16",
+        "scope": "HelpLine 1-800-666-6899, Tuesday to Thursday 9 a.m. to 1 p.m.; search excerpt."
+      },
+      {
+        "url": "https://msl.mt.gov/libraries/lifelonglearning/UploadedFiles/20220411-Where-to-Find-Legal-Information-in-Montana.docx",
+        "title": "Montana State Library: Where to find legal information in Montana",
+        "reviewed_on": "2026-11-16",
+        "scope": "Montana Legal Services Developer in the Office on Aging, 800-332-2272: elder law resources, legal referrals and basic help with documents; search excerpt."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.shiphelp.org/?p=317"
+  {
+    "program_id": "mt-vahealth-systems",
+    "name": "VA health care in Montana",
+    "official_url": "https://www.va.gov/montana-health-care/contact-us/",
+    "organization": "U.S. Department of Veterans Affairs, VA Montana Health Care System",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "MT",
+    "resource_role": "va_health_system",
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "Montana veterans are served by the VA Montana Health Care System: the Fort Harrison VA Medical Center (3687 Veterans Drive, Fort Harrison; 406-442-6410, toll-free 877-468-8387) and clinics across the state.",
+    "next_step": "Call 877-468-8387 or 406-442-6410 for appointments. Not enrolled yet? Ask a Veteran Service Officer for help applying.",
+    "constraints": [
+      "If a service you need is not offered near you, ask about travel benefits and community care."
+    ],
+    "public_contact": {
+      "phone": "406-442-6410",
+      "phone_label": "VA Montana Health Care System (406-442-6410)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.va.gov/montana-health-care/contact-us/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.va.gov/montana-health-care/contact-us/",
+        "title": "VA Montana health care: Contact us",
+        "reviewed_on": "2026-11-16",
+        "scope": "Montana VA Medical Center, 3687 Veterans Drive, Fort Harrison; local 406-442-6410, toll-free 877-468-8387; search excerpt."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.shiphelp.org/?p=317",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ]
- },
- {
-  "program_id": "mt-ssvf-20-zz-113",
-  "name": "Volunteers of America, Northern Rockies: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Volunteers of America, Northern Rockies",
-  "service_area": [
-   "All Montana counties"
-  ],
-  "state": "MT",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-ZZ-113): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Beaverhead County, Big Horn County, Blaine County, Broadwater County, Carbon County, Carter County, Cascade County, Chouteau County, Custer County, Daniels County, Dawson County, Deer Lodge County and 44 more.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 515-669-1780.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "307-381-7877",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "mt-cil-liftt",
+    "name": "Living Independently for Today and Tomorrow (LIFTT)",
+    "organization": "Living Independently for Today and Tomorrow",
+    "official_url": "https://www.liftt.org/",
+    "service_area": [
+      "Big Horn",
+      "Carbon",
+      "Carter",
+      "Custer",
+      "Dawson",
+      "Fallon",
+      "Garfield",
+      "Golden Valley",
+      "McCone",
+      "Musselshell",
+      "Powder River",
+      "Prairie",
+      "Richland",
+      "Rosebud",
+      "Stillwater",
+      "Treasure",
+      "Wibaux",
+      "Yellowstone"
+    ],
+    "state": "MT",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Main office: Billings. Glendive office: 406-948-8500."
+    ],
+    "public_contact": {
+      "phone": "406-259-5181",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/MT",
+      "service_area_source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/MT"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/MT",
+        "title": "ILRU: Directory of Centers for Independent Living, Montana results",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each office’s phones and counties served; read in full; undated. ILRU lists North Central Independent Living Services only for Cascade and Valley counties; its 17-county area comes from the DPHHS Community Connections Directory (https://www.dphhs.mt.gov/assets/publichealth/MTDH/CommunityConnectionsDirectory_Final_LargePrint.docx; search excerpt). ILRU’s Helena listing spells Lewis and Clark County as “Clarke” and “Lewis”."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "mt-cil-ability",
+    "name": "Ability Montana (Montana Independent Living Project)",
+    "organization": "Montana Independent Living Project dba Ability Montana",
+    "official_url": "https://www.abilitymt.org/",
+    "service_area": [
+      "Beaverhead",
+      "Broadwater",
+      "Deer Lodge",
+      "Gallatin",
+      "Granite",
+      "Jefferson",
+      "Lewis and Clark",
+      "Madison",
+      "Meagher",
+      "Park",
+      "Powell",
+      "Silver Bow",
+      "Sweet Grass",
+      "Wheatland"
+    ],
+    "state": "MT",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Helena office 406-442-5755; Bozeman 406-522-7300; Butte 406-782-4834; toll-free 800-735-6457."
+    ],
+    "public_contact": {
+      "phone": "406-442-5755",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/MT",
+      "service_area_source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/MT"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/MT",
+        "title": "ILRU: Directory of Centers for Independent Living, Montana results",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each office’s phones and counties served; read in full; undated. ILRU lists North Central Independent Living Services only for Cascade and Valley counties; its 17-county area comes from the DPHHS Community Connections Directory (https://www.dphhs.mt.gov/assets/publichealth/MTDH/CommunityConnectionsDirectory_Final_LargePrint.docx; search excerpt). ILRU’s Helena listing spells Lewis and Clark County as “Clarke” and “Lewis”."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "mt-cil-ncils",
+    "name": "North Central Independent Living Services (NCILS)",
+    "organization": "North Central Independent Living Services",
+    "official_url": "https://ncils.org/",
+    "service_area": [
+      "Blaine",
+      "Cascade",
+      "Chouteau",
+      "Daniels",
+      "Fergus",
+      "Glacier",
+      "Hill",
+      "Judith Basin",
+      "Liberty",
+      "Petroleum",
+      "Phillips",
+      "Pondera",
+      "Roosevelt",
+      "Sheridan",
+      "Teton",
+      "Toole",
+      "Valley"
+    ],
+    "state": "MT",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Main office: Black Eagle (Great Falls); toll-free 800-823-6245. Glasgow office: 406-228-2075."
+    ],
+    "public_contact": {
+      "phone": "406-452-9834",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/MT",
+      "service_area_source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/MT"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/MT",
+        "title": "ILRU: Directory of Centers for Independent Living, Montana results",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each office’s phones and counties served; read in full; undated. ILRU lists North Central Independent Living Services only for Cascade and Valley counties; its 17-county area comes from the DPHHS Community Connections Directory (https://www.dphhs.mt.gov/assets/publichealth/MTDH/CommunityConnectionsDirectory_Final_LargePrint.docx; search excerpt). ILRU’s Helena listing spells Lewis and Clark County as “Clarke” and “Lewis”."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 196",
-    "sheet": "Contacts",
-    "row": 196,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "mt-ssvf-23-mt-454",
-  "name": "Veterans Inc.: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Veterans Inc.",
-  "service_area": [
-   "All Montana counties"
-  ],
-  "state": "MT",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 23-MT-454): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Beaverhead County, Big Horn County, Blaine County, Broadwater County, Carbon County, Carter County, Cascade County, Chouteau County, Custer County, Daniels County, Dawson County, Deer Lodge County and 44 more.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 406-534-1099.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "800-482-2565",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "mt-cil-summit",
+    "name": "Summit Independent Living Center",
+    "organization": "Summit Independent Living Center",
+    "official_url": "https://summitilc.org/",
+    "service_area": [
+      "Flathead",
+      "Lake",
+      "Lincoln",
+      "Mineral",
+      "Missoula",
+      "Ravalli",
+      "Sanders"
+    ],
+    "state": "MT",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Missoula office 406-728-1630 (toll-free 800-398-9002); Hamilton 406-363-5242; Kalispell 406-257-0048; Ronan 406-215-1604."
+    ],
+    "public_contact": {
+      "phone": "406-728-1630",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/MT",
+      "service_area_source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/MT"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/MT",
+        "title": "ILRU: Directory of Centers for Independent Living, Montana results",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each office’s phones and counties served; read in full; undated. ILRU lists North Central Independent Living Services only for Cascade and Valley counties; its 17-county area comes from the DPHHS Community Connections Directory (https://www.dphhs.mt.gov/assets/publichealth/MTDH/CommunityConnectionsDirectory_Final_LargePrint.docx; search excerpt). ILRU’s Helena listing spells Lewis and Clark County as “Clarke” and “Lewis”."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "mt-ssvf-20-zz-113",
+    "name": "Volunteers of America, Northern Rockies: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Volunteers of America, Northern Rockies",
+    "service_area": [
+      "Beaverhead",
+      "Big Horn",
+      "Blaine",
+      "Broadwater",
+      "Carbon",
+      "Carter",
+      "Cascade",
+      "Chouteau",
+      "Custer",
+      "Daniels",
+      "Dawson",
+      "Deer Lodge",
+      "Fallon",
+      "Fergus",
+      "Flathead",
+      "Gallatin",
+      "Garfield",
+      "Glacier",
+      "Golden Valley",
+      "Granite",
+      "Hill",
+      "Jefferson",
+      "Judith Basin",
+      "Lake",
+      "Lewis and Clark",
+      "Liberty",
+      "Lincoln",
+      "Madison",
+      "McCone",
+      "Meagher",
+      "Mineral",
+      "Missoula",
+      "Musselshell",
+      "Park",
+      "Petroleum",
+      "Phillips",
+      "Pondera",
+      "Powder River",
+      "Powell",
+      "Prairie",
+      "Ravalli",
+      "Richland",
+      "Roosevelt",
+      "Rosebud",
+      "Sanders",
+      "Sheridan",
+      "Silver Bow",
+      "Stillwater",
+      "Sweet Grass",
+      "Teton",
+      "Toole",
+      "Treasure",
+      "Valley",
+      "Wheatland",
+      "Wibaux",
+      "Yellowstone"
+    ],
+    "state": "MT",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-ZZ-113): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 515-669-1780.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "307-381-7877",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 196",
+        "sheet": "Contacts",
+        "row": 196,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
-  },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 212",
-    "sheet": "Contacts",
-    "row": 212,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- }
+  {
+    "program_id": "mt-ssvf-23-mt-454",
+    "name": "Veterans Inc.: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Veterans Inc.",
+    "service_area": [
+      "Beaverhead",
+      "Big Horn",
+      "Blaine",
+      "Broadwater",
+      "Carbon",
+      "Carter",
+      "Cascade",
+      "Chouteau",
+      "Custer",
+      "Daniels",
+      "Dawson",
+      "Deer Lodge",
+      "Fallon",
+      "Fergus",
+      "Flathead",
+      "Gallatin",
+      "Garfield",
+      "Glacier",
+      "Golden Valley",
+      "Granite",
+      "Hill",
+      "Jefferson",
+      "Judith Basin",
+      "Lake",
+      "Lewis and Clark",
+      "Liberty",
+      "Lincoln",
+      "Madison",
+      "McCone",
+      "Meagher",
+      "Mineral",
+      "Missoula",
+      "Musselshell",
+      "Park",
+      "Petroleum",
+      "Phillips",
+      "Pondera",
+      "Powder River",
+      "Powell",
+      "Prairie",
+      "Ravalli",
+      "Richland",
+      "Roosevelt",
+      "Rosebud",
+      "Sanders",
+      "Sheridan",
+      "Silver Bow",
+      "Stillwater",
+      "Sweet Grass",
+      "Teton",
+      "Toole",
+      "Treasure",
+      "Valley",
+      "Wheatland",
+      "Wibaux",
+      "Yellowstone"
+    ],
+    "state": "MT",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 23-MT-454): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 406-534-1099.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "800-482-2565",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 212",
+        "sheet": "Contacts",
+        "row": 212,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
+  }
 ]
