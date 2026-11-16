@@ -13,7 +13,7 @@ These intervals are the intended maintenance standard. Record completed checks, 
 
 ## Automatic checks
 
-- **Links, monthly.** `.github/workflows/link-check.yml` runs `scripts/check_links.py` on the 5th of each month. It requests every published link and opens (or updates) one issue, "Guide links to review (automated monthly check)", when a link is broken or now lands on a different website. Each line names the link and the records that use it. Correct the record in its source file, run `python3 scripts/build_public.py`, and the next clean run closes the issue. Sites that refuse robots are only counted.
+- **Links, monthly.** `.github/workflows/link-check.yml` runs `scripts/check_links.py` on the 5th of each month. It requests every published link and opens (or updates) one issue, "Guide links to review (automated monthly check)", when a link is broken or now lands on a different website. Each line names the link and the records that use it. Correct the record in its source file, run `python3 scripts/build_public.py`, and the next clean run closes the issue. Sites that refuse robots are only counted. A page that loads for people but fails for the robot is recorded in `data/link-checks.json` with the date someone opened it in a browser; the report leaves it out for 180 days and then lists it again for another look. The test fails if the ledger names a link no record uses.
 - **Bingo schedules, weekly.** `.github/workflows/schedule-freshness.yml` keeps one issue listing schedules that have ended or have not been reviewed in 30 days.
 
 Neither check changes data, and neither can confirm a phone number, an intake process or current availability.

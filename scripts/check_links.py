@@ -85,7 +85,8 @@ def main():
     results = linkcheck.Checker().check_all(sorted(used))
     text, needs_a_person = linkcheck.report(
         results, used,
-        fix_hint='Correct the record in its source file (see README, "Update and verify"), then run `python3 scripts/build_public.py`.')
+        fix_hint='Correct the record in its source file (see README, "Update and verify"), then run `python3 scripts/build_public.py`.',
+        ledger=linkcheck.load_ledger())
     print(text)
     sys.exit(NEEDS_A_PERSON if needs_a_person else 0)
 
