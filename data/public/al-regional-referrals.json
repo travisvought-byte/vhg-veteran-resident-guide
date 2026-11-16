@@ -1,80 +1,1388 @@
 [
- {
-  "program_id": "al-aging",
-  "name": "Local aging help in Alabama (Eldercare Locator)",
-  "official_url": "https://eldercare.acl.gov/home",
-  "organization": "U.S. Administration for Community Living",
-  "service_area": [
-   "All Alabama counties"
-  ],
-  "state": "AL",
-  "needs_supported": [
-   "general_navigation",
-   "help_at_home"
-  ],
-  "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-  "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
-  "constraints": [
-   "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "al-aaa-nacolg",
+    "name": "Northwest Alabama Council of Local Governments",
+    "organization": "Northwest Alabama Council of Local Governments",
+    "official_url": "https://alabamaageline.gov/?p=2206",
+    "state": "AL",
+    "service_area": [
+      "Colbert",
+      "Franklin",
+      "Lauderdale",
+      "Marion",
+      "Winston"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Alabama’s statewide AGELINE, 800-243-5463, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-838-5845."
+    ],
+    "public_contact": {
+      "phone": "256-389-0500",
+      "phone_label": "Area Agency on Aging (NACOLG)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://alabamaageline.gov/?p=2206",
+      "phone_source_url": "https://alabamaageline.gov/?p=2206"
+    },
+    "source_evidence": [
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties, agency names, main phones, street addresses and websites for all 13 Area Agencies on Aging; read in full."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "al-aaa-narcog",
+    "name": "North Central Alabama Regional Council of Governments",
+    "organization": "North Central Alabama Regional Council of Governments",
+    "official_url": "https://alabamaageline.gov/?p=2206",
+    "state": "AL",
+    "service_area": [
+      "Cullman",
+      "Lawrence",
+      "Morgan"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Alabama’s statewide AGELINE, 800-243-5463, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program."
+    ],
+    "public_contact": {
+      "phone": "256-355-4515",
+      "phone_label": "Area Agency on Aging (NARCOG)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://alabamaageline.gov/?p=2206",
+      "phone_source_url": "https://alabamaageline.gov/?p=2206"
+    },
+    "source_evidence": [
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties, agency names, main phones, street addresses and websites for all 13 Area Agencies on Aging; read in full."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.acl.gov/contact"
+  {
+    "program_id": "al-aaa-tarcog",
+    "name": "Top of Alabama Regional Council of Governments",
+    "organization": "Top of Alabama Regional Council of Governments",
+    "official_url": "https://alabamaageline.gov/?p=2206",
+    "state": "AL",
+    "service_area": [
+      "DeKalb",
+      "Jackson",
+      "Limestone",
+      "Madison",
+      "Marshall"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Alabama’s statewide AGELINE, 800-243-5463, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program."
+    ],
+    "public_contact": {
+      "phone": "256-830-0818",
+      "phone_label": "Area Agency on Aging (TARCOG)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://alabamaageline.gov/?p=2206",
+      "phone_source_url": "https://alabamaageline.gov/?p=2206"
+    },
+    "source_evidence": [
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties, agency names, main phones, street addresses and websites for all 13 Area Agencies on Aging; read in full."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.acl.gov/contact",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "aging_agency"
- },
- {
-  "program_id": "al-ombudsman",
-  "name": "Alabama long-term-care ombudsman",
-  "official_url": "https://theconsumervoice.org/get_help",
-  "organization": "National Long-Term Care Ombudsman Resource Center",
-  "service_area": [
-   "All Alabama counties"
-  ],
-  "state": "AL",
-  "needs_supported": [
-   "resident_rights",
-   "general_navigation"
-  ],
-  "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-  "next_step": "Use the locator to find the Alabama program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
-  "constraints": [
-   "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "al-aaa-earpdc",
+    "name": "East Alabama Regional Planning and Development Commission",
+    "organization": "East Alabama Regional Planning and Development Commission",
+    "official_url": "https://alabamaageline.gov/?p=2206",
+    "state": "AL",
+    "service_area": [
+      "Calhoun",
+      "Chambers",
+      "Cherokee",
+      "Clay",
+      "Cleburne",
+      "Coosa",
+      "Etowah",
+      "Randolph",
+      "Talladega",
+      "Tallapoosa"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Alabama’s statewide AGELINE, 800-243-5463, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-239-6741."
+    ],
+    "public_contact": {
+      "phone": "256-237-6741",
+      "phone_label": "Area Agency on Aging (EARPDC)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://alabamaageline.gov/?p=2206",
+      "phone_source_url": "https://alabamaageline.gov/?p=2206"
+    },
+    "source_evidence": [
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties, agency names, main phones, street addresses and websites for all 13 Area Agencies on Aging; read in full."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "al-aaa-lrcog",
+    "name": "Lee-Russell Council of Governments",
+    "organization": "Lee-Russell Council of Governments",
+    "official_url": "https://alabamaageline.gov/?p=2206",
+    "state": "AL",
+    "service_area": [
+      "Lee",
+      "Russell"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Alabama’s statewide AGELINE, 800-243-5463, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program."
+    ],
+    "public_contact": {
+      "phone": "334-749-5264",
+      "phone_label": "Area Agency on Aging (LRCOG)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://alabamaageline.gov/?p=2206",
+      "phone_source_url": "https://alabamaageline.gov/?p=2206"
+    },
+    "source_evidence": [
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties, agency names, main phones, street addresses and websites for all 13 Area Agencies on Aging; read in full."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
+  {
+    "program_id": "al-aaa-sarcoa",
+    "name": "Southern Alabama Regional Council on Aging",
+    "organization": "Southern Alabama Regional Council on Aging",
+    "official_url": "https://alabamaageline.gov/?p=2206",
+    "state": "AL",
+    "service_area": [
+      "Barbour",
+      "Coffee",
+      "Covington",
+      "Dale",
+      "Geneva",
+      "Henry",
+      "Houston"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Alabama’s statewide AGELINE, 800-243-5463, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-239-3507."
+    ],
+    "public_contact": {
+      "phone": "334-793-6843",
+      "phone_label": "Area Agency on Aging (SARCOA)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://alabamaageline.gov/?p=2206",
+      "phone_source_url": "https://alabamaageline.gov/?p=2206"
+    },
+    "source_evidence": [
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties, agency names, main phones, street addresses and websites for all 13 Area Agencies on Aging; read in full."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "ombudsman"
- }
+  {
+    "program_id": "al-aaa-caac",
+    "name": "Central Alabama Aging Consortium",
+    "organization": "Central Alabama Aging Consortium",
+    "official_url": "https://alabamaageline.gov/?p=2206",
+    "state": "AL",
+    "service_area": [
+      "Autauga",
+      "Elmore",
+      "Montgomery"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Alabama’s statewide AGELINE, 800-243-5463, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-264-4680."
+    ],
+    "public_contact": {
+      "phone": "334-240-4666",
+      "phone_label": "Area Agency on Aging (CAAC)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://alabamaageline.gov/?p=2206",
+      "phone_source_url": "https://alabamaageline.gov/?p=2206"
+    },
+    "source_evidence": [
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties, agency names, main phones, street addresses and websites for all 13 Area Agencies on Aging; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "al-aaa-uwaaa",
+    "name": "United Way Area Agency on Aging of Jefferson County",
+    "organization": "United Way Area Agency on Aging of Jefferson County",
+    "official_url": "https://alabamaageline.gov/?p=2206",
+    "state": "AL",
+    "service_area": [
+      "Jefferson"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Alabama’s statewide AGELINE, 800-243-5463, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "The state’s list marks this agency’s Jefferson County service as Older Americans Act services only."
+    ],
+    "public_contact": {
+      "phone": "205-458-3330",
+      "phone_label": "Area Agency on Aging (UWAAA)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://alabamaageline.gov/?p=2206",
+      "phone_source_url": "https://alabamaageline.gov/?p=2206"
+    },
+    "source_evidence": [
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties, agency names, main phones, street addresses and websites for all 13 Area Agencies on Aging; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "al-aaa-m4a",
+    "name": "Middle Alabama Area Agency on Aging",
+    "organization": "Middle Alabama Area Agency on Aging",
+    "official_url": "https://alabamaageline.gov/?p=2206",
+    "state": "AL",
+    "service_area": [
+      "Blount",
+      "Chilton",
+      "Shelby",
+      "St. Clair",
+      "Walker"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Alabama’s statewide AGELINE, 800-243-5463, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 866-570-2998."
+    ],
+    "public_contact": {
+      "phone": "205-670-5770",
+      "phone_label": "Area Agency on Aging (M4A)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://alabamaageline.gov/?p=2206",
+      "phone_source_url": "https://alabamaageline.gov/?p=2206"
+    },
+    "source_evidence": [
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties, agency names, main phones, street addresses and websites for all 13 Area Agencies on Aging; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "al-aaa-warc",
+    "name": "West Alabama Regional Commission",
+    "organization": "West Alabama Regional Commission",
+    "official_url": "https://alabamaageline.gov/?p=2206",
+    "state": "AL",
+    "service_area": [
+      "Bibb",
+      "Fayette",
+      "Greene",
+      "Hale",
+      "Lamar",
+      "Pickens",
+      "Tuscaloosa"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Alabama’s statewide AGELINE, 800-243-5463, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-432-5030."
+    ],
+    "public_contact": {
+      "phone": "205-333-2990",
+      "phone_label": "Area Agency on Aging (WARC)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://alabamaageline.gov/?p=2206",
+      "phone_source_url": "https://alabamaageline.gov/?p=2206"
+    },
+    "source_evidence": [
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties, agency names, main phones, street addresses and websites for all 13 Area Agencies on Aging; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "al-aaa-scadc",
+    "name": "South Central Alabama Development Commission",
+    "organization": "South Central Alabama Development Commission",
+    "official_url": "https://alabamaageline.gov/?p=2206",
+    "state": "AL",
+    "service_area": [
+      "Bullock",
+      "Butler",
+      "Crenshaw",
+      "Lowndes",
+      "Macon",
+      "Pike"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Alabama’s statewide AGELINE, 800-243-5463, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program."
+    ],
+    "public_contact": {
+      "phone": "334-244-6903",
+      "phone_label": "Area Agency on Aging (SCADC)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://alabamaageline.gov/?p=2206",
+      "phone_source_url": "https://alabamaageline.gov/?p=2206"
+    },
+    "source_evidence": [
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties, agency names, main phones, street addresses and websites for all 13 Area Agencies on Aging; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "al-aaa-atrc",
+    "name": "Alabama Tombigbee Regional Commission",
+    "organization": "Alabama Tombigbee Regional Commission",
+    "official_url": "https://alabamaageline.gov/?p=2206",
+    "state": "AL",
+    "service_area": [
+      "Choctaw",
+      "Clarke",
+      "Conecuh",
+      "Dallas",
+      "Marengo",
+      "Monroe",
+      "Perry",
+      "Sumter",
+      "Washington",
+      "Wilcox"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Alabama’s statewide AGELINE, 800-243-5463, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 888-617-0500."
+    ],
+    "public_contact": {
+      "phone": "334-682-5206",
+      "phone_label": "Area Agency on Aging (ATRC)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://alabamaageline.gov/?p=2206",
+      "phone_source_url": "https://alabamaageline.gov/?p=2206"
+    },
+    "source_evidence": [
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties, agency names, main phones, street addresses and websites for all 13 Area Agencies on Aging; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "al-aaa-sarpc",
+    "name": "South Alabama Regional Planning Commission",
+    "organization": "South Alabama Regional Planning Commission",
+    "official_url": "https://alabamaageline.gov/?p=2206",
+    "state": "AL",
+    "service_area": [
+      "Baldwin",
+      "Escambia",
+      "Mobile"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Alabama’s statewide AGELINE, 800-243-5463, also connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Its senior directories list 251-706-4680 for the Area Agency on Aging."
+    ],
+    "public_contact": {
+      "phone": "251-433-6541",
+      "phone_label": "Area Agency on Aging (SARPC)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://alabamaageline.gov/?p=2206",
+      "phone_source_url": "https://alabamaageline.gov/?p=2206"
+    },
+    "source_evidence": [
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties, agency names, main phones, street addresses and websites for all 13 Area Agencies on Aging; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "al-omb-nacolg",
+    "name": "Regional long-term care ombudsman, Northwest Alabama Council of Local Governments",
+    "organization": "Regional long-term care ombudsman, Northwest Alabama Council of Local Governments",
+    "official_url": "https://alabamaageline.gov/?p=2206",
+    "state": "AL",
+    "service_area": [
+      "Colbert",
+      "Franklin",
+      "Lauderdale",
+      "Marion",
+      "Winston"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ask for the regional long-term care ombudsman. If no one answers, call the state ombudsman office at 334-242-5753.",
+      "The National Consumer Voice directory lists 256-389-0530 for this region’s ombudsman program, and the agency’s own ombudsman brochure prints the same number."
+    ],
+    "public_contact": {
+      "phone": "256-389-0500",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://alabamaageline.gov/?p=2206",
+      "phone_source_url": "https://alabamaageline.gov/?p=2206"
+    },
+    "source_evidence": [
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "The phone shown is the Area Agency on Aging main line that hosts this region’s ombudsman program; the state’s ombudsman page does not list regional numbers."
+      },
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/al",
+        "title": "National Consumer Voice for Quality Long-Term Care: Alabama state and regional ombudsman programs",
+        "reviewed_on": "2026-11-15",
+        "scope": "Names the host agency, phone and counties of each of the 13 regional ombudsman programs. An association directory, undated, read in full; the state ombudsman page lists no regional contacts."
+      },
+      {
+        "url": "https://nacolg.org/s/Ombudsmanbrochure.pdf",
+        "title": "Northwest Alabama Council of Local Governments: long-term care ombudsman brochure",
+        "reviewed_on": "2026-11-15",
+        "scope": "Ombudsman phone 256-389-0530; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "al-omb-narcog",
+    "name": "Regional long-term care ombudsman, North Central Alabama Regional Council of Governments",
+    "organization": "Regional long-term care ombudsman, North Central Alabama Regional Council of Governments",
+    "official_url": "https://alabamaageline.gov/?p=2206",
+    "state": "AL",
+    "service_area": [
+      "Cullman",
+      "Lawrence",
+      "Morgan"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ask for the regional long-term care ombudsman. If no one answers, call the state ombudsman office at 334-242-5753."
+    ],
+    "public_contact": {
+      "phone": "256-355-4515",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://alabamaageline.gov/?p=2206",
+      "phone_source_url": "https://alabamaageline.gov/?p=2206"
+    },
+    "source_evidence": [
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "The phone shown is the Area Agency on Aging main line that hosts this region’s ombudsman program; the state’s ombudsman page does not list regional numbers."
+      },
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/al",
+        "title": "National Consumer Voice for Quality Long-Term Care: Alabama state and regional ombudsman programs",
+        "reviewed_on": "2026-11-15",
+        "scope": "Names the host agency, phone and counties of each of the 13 regional ombudsman programs. An association directory, undated, read in full; the state ombudsman page lists no regional contacts."
+      }
+    ]
+  },
+  {
+    "program_id": "al-omb-tarcog",
+    "name": "Regional long-term care ombudsman, Top of Alabama Regional Council of Governments",
+    "organization": "Regional long-term care ombudsman, Top of Alabama Regional Council of Governments",
+    "official_url": "https://alabamaageline.gov/?p=2206",
+    "state": "AL",
+    "service_area": [
+      "DeKalb",
+      "Jackson",
+      "Limestone",
+      "Madison",
+      "Marshall"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ask for the regional long-term care ombudsman. If no one answers, call the state ombudsman office at 334-242-5753."
+    ],
+    "public_contact": {
+      "phone": "256-830-0818",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://alabamaageline.gov/?p=2206",
+      "phone_source_url": "https://alabamaageline.gov/?p=2206"
+    },
+    "source_evidence": [
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "The phone shown is the Area Agency on Aging main line that hosts this region’s ombudsman program; the state’s ombudsman page does not list regional numbers."
+      },
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/al",
+        "title": "National Consumer Voice for Quality Long-Term Care: Alabama state and regional ombudsman programs",
+        "reviewed_on": "2026-11-15",
+        "scope": "Names the host agency, phone and counties of each of the 13 regional ombudsman programs. An association directory, undated, read in full; the state ombudsman page lists no regional contacts."
+      }
+    ]
+  },
+  {
+    "program_id": "al-omb-earpdc",
+    "name": "Regional long-term care ombudsman, East Alabama Regional Planning and Development Commission",
+    "organization": "Regional long-term care ombudsman, East Alabama Regional Planning and Development Commission",
+    "official_url": "https://alabamaageline.gov/?p=2206",
+    "state": "AL",
+    "service_area": [
+      "Calhoun",
+      "Chambers",
+      "Cherokee",
+      "Clay",
+      "Cleburne",
+      "Coosa",
+      "Etowah",
+      "Randolph",
+      "Talladega",
+      "Tallapoosa"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ask for the regional long-term care ombudsman. If no one answers, call the state ombudsman office at 334-242-5753."
+    ],
+    "public_contact": {
+      "phone": "256-237-6741",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://alabamaageline.gov/?p=2206",
+      "phone_source_url": "https://alabamaageline.gov/?p=2206"
+    },
+    "source_evidence": [
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "The phone shown is the Area Agency on Aging main line that hosts this region’s ombudsman program; the state’s ombudsman page does not list regional numbers."
+      },
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/al",
+        "title": "National Consumer Voice for Quality Long-Term Care: Alabama state and regional ombudsman programs",
+        "reviewed_on": "2026-11-15",
+        "scope": "Names the host agency, phone and counties of each of the 13 regional ombudsman programs. An association directory, undated, read in full; the state ombudsman page lists no regional contacts."
+      }
+    ]
+  },
+  {
+    "program_id": "al-omb-lrcog",
+    "name": "Regional long-term care ombudsman, Lee-Russell Council of Governments",
+    "organization": "Regional long-term care ombudsman, Lee-Russell Council of Governments",
+    "official_url": "https://alabamaageline.gov/?p=2206",
+    "state": "AL",
+    "service_area": [
+      "Lee",
+      "Russell"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ask for the regional long-term care ombudsman. If no one answers, call the state ombudsman office at 334-242-5753."
+    ],
+    "public_contact": {
+      "phone": "334-749-5264",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://alabamaageline.gov/?p=2206",
+      "phone_source_url": "https://alabamaageline.gov/?p=2206"
+    },
+    "source_evidence": [
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "The phone shown is the Area Agency on Aging main line that hosts this region’s ombudsman program; the state’s ombudsman page does not list regional numbers."
+      },
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/al",
+        "title": "National Consumer Voice for Quality Long-Term Care: Alabama state and regional ombudsman programs",
+        "reviewed_on": "2026-11-15",
+        "scope": "Names the host agency, phone and counties of each of the 13 regional ombudsman programs. An association directory, undated, read in full; the state ombudsman page lists no regional contacts."
+      }
+    ]
+  },
+  {
+    "program_id": "al-omb-sarcoa",
+    "name": "Regional long-term care ombudsman, Southern Alabama Regional Council on Aging",
+    "organization": "Regional long-term care ombudsman, Southern Alabama Regional Council on Aging",
+    "official_url": "https://alabamaageline.gov/?p=2206",
+    "state": "AL",
+    "service_area": [
+      "Barbour",
+      "Coffee",
+      "Covington",
+      "Dale",
+      "Geneva",
+      "Henry",
+      "Houston"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ask for the regional long-term care ombudsman. If no one answers, call the state ombudsman office at 334-242-5753."
+    ],
+    "public_contact": {
+      "phone": "334-793-6843",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://alabamaageline.gov/?p=2206",
+      "phone_source_url": "https://alabamaageline.gov/?p=2206"
+    },
+    "source_evidence": [
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "The phone shown is the Area Agency on Aging main line that hosts this region’s ombudsman program; the state’s ombudsman page does not list regional numbers."
+      },
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/al",
+        "title": "National Consumer Voice for Quality Long-Term Care: Alabama state and regional ombudsman programs",
+        "reviewed_on": "2026-11-15",
+        "scope": "Names the host agency, phone and counties of each of the 13 regional ombudsman programs. An association directory, undated, read in full; the state ombudsman page lists no regional contacts."
+      }
+    ]
+  },
+  {
+    "program_id": "al-omb-caac",
+    "name": "Regional long-term care ombudsman, Central Alabama Aging Consortium",
+    "organization": "Regional long-term care ombudsman, Central Alabama Aging Consortium",
+    "official_url": "https://alabamaageline.gov/?p=2206",
+    "state": "AL",
+    "service_area": [
+      "Autauga",
+      "Elmore",
+      "Montgomery"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ask for the regional long-term care ombudsman. If no one answers, call the state ombudsman office at 334-242-5753."
+    ],
+    "public_contact": {
+      "phone": "334-240-4666",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://alabamaageline.gov/?p=2206",
+      "phone_source_url": "https://alabamaageline.gov/?p=2206"
+    },
+    "source_evidence": [
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "The phone shown is the Area Agency on Aging main line that hosts this region’s ombudsman program; the state’s ombudsman page does not list regional numbers."
+      },
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/al",
+        "title": "National Consumer Voice for Quality Long-Term Care: Alabama state and regional ombudsman programs",
+        "reviewed_on": "2026-11-15",
+        "scope": "Names the host agency, phone and counties of each of the 13 regional ombudsman programs. An association directory, undated, read in full; the state ombudsman page lists no regional contacts."
+      }
+    ]
+  },
+  {
+    "program_id": "al-omb-uwaaa",
+    "name": "Regional long-term care ombudsman, United Way Area Agency on Aging of Jefferson County",
+    "organization": "Regional long-term care ombudsman, United Way Area Agency on Aging of Jefferson County",
+    "official_url": "https://alabamaageline.gov/?p=2206",
+    "state": "AL",
+    "service_area": [
+      "Jefferson"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ask for the regional long-term care ombudsman. If no one answers, call the state ombudsman office at 334-242-5753."
+    ],
+    "public_contact": {
+      "phone": "205-458-3330",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://alabamaageline.gov/?p=2206",
+      "phone_source_url": "https://alabamaageline.gov/?p=2206"
+    },
+    "source_evidence": [
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "The phone shown is the Area Agency on Aging main line that hosts this region’s ombudsman program; the state’s ombudsman page does not list regional numbers."
+      },
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/al",
+        "title": "National Consumer Voice for Quality Long-Term Care: Alabama state and regional ombudsman programs",
+        "reviewed_on": "2026-11-15",
+        "scope": "Names the host agency, phone and counties of each of the 13 regional ombudsman programs. An association directory, undated, read in full; the state ombudsman page lists no regional contacts."
+      }
+    ]
+  },
+  {
+    "program_id": "al-omb-m4a",
+    "name": "Regional long-term care ombudsman, Middle Alabama Area Agency on Aging",
+    "organization": "Regional long-term care ombudsman, Middle Alabama Area Agency on Aging",
+    "official_url": "https://alabamaageline.gov/?p=2206",
+    "state": "AL",
+    "service_area": [
+      "Blount",
+      "Chilton",
+      "Shelby",
+      "St. Clair",
+      "Walker"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ask for the regional long-term care ombudsman. If no one answers, call the state ombudsman office at 334-242-5753."
+    ],
+    "public_contact": {
+      "phone": "205-670-5770",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://alabamaageline.gov/?p=2206",
+      "phone_source_url": "https://alabamaageline.gov/?p=2206"
+    },
+    "source_evidence": [
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "The phone shown is the Area Agency on Aging main line that hosts this region’s ombudsman program; the state’s ombudsman page does not list regional numbers."
+      },
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/al",
+        "title": "National Consumer Voice for Quality Long-Term Care: Alabama state and regional ombudsman programs",
+        "reviewed_on": "2026-11-15",
+        "scope": "Names the host agency, phone and counties of each of the 13 regional ombudsman programs. An association directory, undated, read in full; the state ombudsman page lists no regional contacts."
+      }
+    ]
+  },
+  {
+    "program_id": "al-omb-warc",
+    "name": "Regional long-term care ombudsman, West Alabama Regional Commission",
+    "organization": "Regional long-term care ombudsman, West Alabama Regional Commission",
+    "official_url": "https://alabamaageline.gov/?p=2206",
+    "state": "AL",
+    "service_area": [
+      "Bibb",
+      "Fayette",
+      "Greene",
+      "Hale",
+      "Lamar",
+      "Pickens",
+      "Tuscaloosa"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ask for the regional long-term care ombudsman. If no one answers, call the state ombudsman office at 334-242-5753."
+    ],
+    "public_contact": {
+      "phone": "205-333-2990",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://alabamaageline.gov/?p=2206",
+      "phone_source_url": "https://alabamaageline.gov/?p=2206"
+    },
+    "source_evidence": [
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "The phone shown is the Area Agency on Aging main line that hosts this region’s ombudsman program; the state’s ombudsman page does not list regional numbers."
+      },
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/al",
+        "title": "National Consumer Voice for Quality Long-Term Care: Alabama state and regional ombudsman programs",
+        "reviewed_on": "2026-11-15",
+        "scope": "Names the host agency, phone and counties of each of the 13 regional ombudsman programs. An association directory, undated, read in full; the state ombudsman page lists no regional contacts."
+      }
+    ]
+  },
+  {
+    "program_id": "al-omb-scadc",
+    "name": "Regional long-term care ombudsman, South Central Alabama Development Commission",
+    "organization": "Regional long-term care ombudsman, South Central Alabama Development Commission",
+    "official_url": "https://alabamaageline.gov/?p=2206",
+    "state": "AL",
+    "service_area": [
+      "Bullock",
+      "Butler",
+      "Crenshaw",
+      "Lowndes",
+      "Macon",
+      "Pike"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ask for the regional long-term care ombudsman. If no one answers, call the state ombudsman office at 334-242-5753."
+    ],
+    "public_contact": {
+      "phone": "334-244-6903",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://alabamaageline.gov/?p=2206",
+      "phone_source_url": "https://alabamaageline.gov/?p=2206"
+    },
+    "source_evidence": [
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "The phone shown is the Area Agency on Aging main line that hosts this region’s ombudsman program; the state’s ombudsman page does not list regional numbers."
+      },
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/al",
+        "title": "National Consumer Voice for Quality Long-Term Care: Alabama state and regional ombudsman programs",
+        "reviewed_on": "2026-11-15",
+        "scope": "Names the host agency, phone and counties of each of the 13 regional ombudsman programs. An association directory, undated, read in full; the state ombudsman page lists no regional contacts."
+      }
+    ]
+  },
+  {
+    "program_id": "al-omb-atrc",
+    "name": "Regional long-term care ombudsman, Alabama Tombigbee Regional Commission",
+    "organization": "Regional long-term care ombudsman, Alabama Tombigbee Regional Commission",
+    "official_url": "https://alabamaageline.gov/?p=2206",
+    "state": "AL",
+    "service_area": [
+      "Choctaw",
+      "Clarke",
+      "Conecuh",
+      "Dallas",
+      "Marengo",
+      "Monroe",
+      "Perry",
+      "Sumter",
+      "Washington",
+      "Wilcox"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ask for the regional long-term care ombudsman. If no one answers, call the state ombudsman office at 334-242-5753.",
+      "The National Consumer Voice directory lists 334-682-4234 or 888-617-0500 for this region’s ombudsman program."
+    ],
+    "public_contact": {
+      "phone": "334-682-5206",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://alabamaageline.gov/?p=2206",
+      "phone_source_url": "https://alabamaageline.gov/?p=2206"
+    },
+    "source_evidence": [
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "The phone shown is the Area Agency on Aging main line that hosts this region’s ombudsman program; the state’s ombudsman page does not list regional numbers."
+      },
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/al",
+        "title": "National Consumer Voice for Quality Long-Term Care: Alabama state and regional ombudsman programs",
+        "reviewed_on": "2026-11-15",
+        "scope": "Names the host agency, phone and counties of each of the 13 regional ombudsman programs. An association directory, undated, read in full; the state ombudsman page lists no regional contacts."
+      }
+    ]
+  },
+  {
+    "program_id": "al-omb-sarpc",
+    "name": "Regional long-term care ombudsman, South Alabama Regional Planning Commission",
+    "organization": "Regional long-term care ombudsman, South Alabama Regional Planning Commission",
+    "official_url": "https://alabamaageline.gov/?p=2206",
+    "state": "AL",
+    "service_area": [
+      "Baldwin",
+      "Escambia",
+      "Mobile"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ask for the regional long-term care ombudsman. If no one answers, call the state ombudsman office at 334-242-5753."
+    ],
+    "public_contact": {
+      "phone": "251-433-6541",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://alabamaageline.gov/?p=2206",
+      "phone_source_url": "https://alabamaageline.gov/?p=2206"
+    },
+    "source_evidence": [
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "The phone shown is the Area Agency on Aging main line that hosts this region’s ombudsman program; the state’s ombudsman page does not list regional numbers."
+      },
+      {
+        "url": "https://alabamaageline.gov/?p=2206",
+        "title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/al",
+        "title": "National Consumer Voice for Quality Long-Term Care: Alabama state and regional ombudsman programs",
+        "reviewed_on": "2026-11-15",
+        "scope": "Names the host agency, phone and counties of each of the 13 regional ombudsman programs. An association directory, undated, read in full; the state ombudsman page lists no regional contacts."
+      }
+    ]
+  }
 ]

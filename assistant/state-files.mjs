@@ -21,7 +21,8 @@ export const STATES=Object.freeze({
   "SC": "South Carolina",
   "IL": "Illinois",
   "MO": "Missouri",
-  "CO": "Colorado"
+  "CO": "Colorado",
+  "AL": "Alabama"
 });
 export const STATE_FILES=Object.freeze({
   "OH": [
@@ -107,6 +108,10 @@ export const STATE_FILES=Object.freeze({
   "CO": [
     "data/public/colorado-resources.json",
     "data/public/colorado-county-veterans-offices.json"
+  ],
+  "AL": [
+    "data/public/alabama-resources.json",
+    "data/public/alabama-county-veterans-offices.json"
   ]
 });
 export const localityLabel=row=>row?(["independent_city","statewide"].includes(row.county_type)?row.county:row.county+" County"):"";
