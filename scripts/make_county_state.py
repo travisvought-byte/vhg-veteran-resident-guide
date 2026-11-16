@@ -104,16 +104,17 @@ def build_regional(sheet):
     code, name, reviewed = sheet['code'], sheet['name'], sheet['reviewed_on']
     low, aging, omb = code.lower(), sheet['aging'], sheet['ombudsman']
     out = []
+    word = aging.get('region_word', 'Region')  # '' when the state's agencies are known by name, not number
     for r in aging['regions']:
         src = r.get('source_url') or aging['source_url']
         out.append({
-            'program_id': r['id'], 'name': r['name'], 'organization': f"{r['name']} (Region {r['label']})",
+            'program_id': r['id'], 'name': r['name'], 'organization': f"{r['name']} ({word} {r['label']})" if word else r['name'],
             'official_url': src, 'state': code, 'service_area': r['counties'],
             'needs_supported': ['general_navigation', 'help_at_home'], 'regional_role': 'aging_agency',
             'description': 'The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.',
             'next_step': 'Call and describe what is hard right now. Ask for information and assistance. ' + aging['next_step_extra'] + ' Military service is not required.',
             'constraints': ['Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.'] + r.get('notes', []),
-            'public_contact': {'phone': r['phone'], 'phone_label': f"Area Agency on Aging, Region {r['label']}"},
+            'public_contact': {'phone': r['phone'], 'phone_label': f"Area Agency on Aging, {word} {r['label']}" if word else f"Area Agency on Aging ({r['label']})"},
             'verification': verification(STATUS['full'], reviewed),
             'evidence': {'review_method': aging['review_method'], 'direct_agency_confirmation': False,
                          'service_area_source_url': src, 'phone_source_url': src},
@@ -133,7 +134,8 @@ def build_regional(sheet):
             'evidence': {'review_method': r['review_method'], 'direct_agency_confirmation': False,
                          'service_area_source_url': aging['source_url'], 'phone_source_url': src},
             'source_evidence': [source(src, r['source_title'], r['source_scope'], reviewed),
-                                source(aging['source_url'], aging['source_title'], 'Counties in each aging region.', reviewed)],
+                                source(aging['source_url'], aging['source_title'], 'Counties in each aging region.', reviewed)]
+                               + [source(s['url'], s['title'], s['scope'], reviewed) for s in r.get('extra_sources', [])],
         })
     return out
 
@@ -164,6 +166,8 @@ def build_programs(sheet):
     # Centers for Independent Living
     cils = sheet['cils']
     for c in cils['list']:
+        # A center may name its own source, review depth and phone wording; otherwise the list's apply.
+        src_url, full = c.get('source_url', cils['source_url']), c.get('review', 'full') == 'full'
         out.append({
             'program_id': c['id'], 'name': c['name'], 'organization': c['organization'], 'official_url': c['url'],
             'service_area': c['counties'], 'state': code, 'resource_role': 'independent_living',
@@ -171,11 +175,12 @@ def build_programs(sheet):
             'description': 'A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.',
             'next_step': 'Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.',
             'constraints': ['A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.'] + c.get('notes', []),
-            'public_contact': {'phone': c['phone'], 'phone_label': cils.get('phone_label', 'Local phone listed in the ILRU national directory')},
-            'verification': verification(STATUS['full'], reviewed),
-            'evidence': {'review_method': 'full_official_page_text', 'direct_agency_confirmation': False,
-                         'phone_source_url': cils['source_url'], 'service_area_source_url': cils['source_url']},
-            'source_evidence': [source(cils['source_url'], cils['source_title'], cils.get('scope', 'Center offices, local phones, websites and counties served as listed.'), reviewed)],
+            'public_contact': {'phone': c['phone'], 'phone_label': c.get('phone_label', cils.get('phone_label', 'Local phone listed in the ILRU national directory'))},
+            'verification': verification(STATUS['full' if full else 'excerpt'], reviewed),
+            'evidence': {'review_method': c.get('method', 'full_official_page_text' if full else 'official_search_excerpt'),
+                         'direct_agency_confirmation': False, 'phone_source_url': src_url, 'service_area_source_url': src_url},
+            'source_evidence': [source(src_url, c.get('source_title', cils['source_title']),
+                                       c.get('scope', cils.get('scope', 'Center offices, local phones, websites and counties served as listed.')), reviewed)],
         })
     # VA housing help (SSVF) from the FY26 intake list already in the repository.
     ssvf = read('data/public/ssvf-intake-fy26.json')
