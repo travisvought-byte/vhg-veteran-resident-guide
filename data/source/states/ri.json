@@ -1,0 +1,379 @@
+{
+ "about": "Research sheet for the Rhode Island county edition. Every contact below was read on the date in reviewed_on from the page named beside it; scripts/make_county_state.py turns it into the edition files.",
+ "code": "RI",
+ "name": "Rhode Island",
+ "slug": "rhode-island",
+ "counties": 5,
+ "reviewed_on": "2026-11-16",
+ "month_label": "November 16, 2026",
+ "template_date": "November 4, 2026",
+ "phones_sentence": "Rhode Island has one statewide Veterans Resource Center, run by the Office of Veterans Services in Warwick; every county shows it.",
+ "senior_line_id": "ri-adrc",
+ "agency": {
+  "url": "https://vets.ri.gov/about-us"
+ },
+ "offices": {
+  "source_url": "https://vets.ri.gov/about-us",
+  "source_title": "Rhode Island Office of Veterans Services: About Us",
+  "review_method": "official_search_excerpt",
+  "note": "The Office of Veterans Services offers benefits counseling and help applying for VA and state programs at no charge.",
+  "selection": "Rhode Island has no county veterans offices. The Office of Veterans Services’ About Us page (read in full) places the statewide Veterans Resource Center at 560 Jefferson Boulevard in Warwick but lists no phone; the phone, 401-921-2119, comes from the office’s 2021 statement (https://vets.ri.gov/press-releases/rivets-statement-services-and-supports-vets-military-families) and the suite number from the Division of Motor Vehicles’ veteran contacts (https://dmv.ri.gov/node/881), both search excerpts. Every county shows this one office.",
+  "list": [
+   {
+    "county": "Bristol",
+    "organization": "Rhode Island Office of Veterans Services (RIVETS), Veterans Resource Center",
+    "phone": "401-921-2119",
+    "address": "560 Jefferson Blvd., Suite 206, Warwick, RI 02886",
+    "office_type": "state_field_office",
+    "note": "Rhode Island has one statewide Veterans Resource Center, in Warwick (Kent County)."
+   },
+   {
+    "county": "Kent",
+    "organization": "Rhode Island Office of Veterans Services (RIVETS), Veterans Resource Center",
+    "phone": "401-921-2119",
+    "address": "560 Jefferson Blvd., Suite 206, Warwick, RI 02886",
+    "office_type": "state_field_office",
+    "note": "The Veterans Resource Center is in Kent County and serves the whole state."
+   },
+   {
+    "county": "Newport",
+    "organization": "Rhode Island Office of Veterans Services (RIVETS), Veterans Resource Center",
+    "phone": "401-921-2119",
+    "address": "560 Jefferson Blvd., Suite 206, Warwick, RI 02886",
+    "office_type": "state_field_office",
+    "note": "Rhode Island has one statewide Veterans Resource Center, in Warwick (Kent County)."
+   },
+   {
+    "county": "Providence",
+    "organization": "Rhode Island Office of Veterans Services (RIVETS), Veterans Resource Center",
+    "phone": "401-921-2119",
+    "address": "560 Jefferson Blvd., Suite 206, Warwick, RI 02886",
+    "office_type": "state_field_office",
+    "note": "Rhode Island has one statewide Veterans Resource Center, in Warwick (Kent County)."
+   },
+   {
+    "county": "Washington",
+    "organization": "Rhode Island Office of Veterans Services (RIVETS), Veterans Resource Center",
+    "phone": "401-921-2119",
+    "address": "560 Jefferson Blvd., Suite 206, Warwick, RI 02886",
+    "office_type": "state_field_office",
+    "note": "Rhode Island has one statewide Veterans Resource Center, in Warwick (Kent County)."
+   }
+  ]
+ },
+ "aging": {
+  "source_url": "https://www.oha.ri.gov/point",
+  "source_title": "Rhode Island Office of Healthy Aging: Aging and Disability Resource Center (The Point)",
+  "source_scope": "ADRC line (401) 462-4444, answered 24 hours a day, 7 days a week, in Spanish and with interpreters for 100+ languages; read in full. The page lists no office locations. Other sources (search excerpts): the Point is for people 55 and older, adults living with a disability and caregivers (https://oha.ri.gov/get-help); TTY (401) 462-4445 or 2-1-1, and six Point offices (https://dhs.ri.gov/programs-and-services/long-term-services-and-supports/resources); the main Point office is at 50 Valley St., Providence, weekdays 8:30 a.m. to 5 p.m. (https://www.unitedwayri.org/get-help/point/). Regional Point offices serve groups of towns, not counties, so every county shows the statewide line.",
+  "review": "full",
+  "review_method": "full_official_page_text",
+  "region_word": "",
+  "agency_label": "The Point",
+  "description": "The Point, Rhode Island’s Aging and Disability Resource Center, run by the Office of Healthy Aging with United Way: free, confidential help for people 55 and older, adults with disabilities and caregivers to find services and apply for public and private programs, from help at home and meals to caregiver support and long-term care options.",
+  "next_step_extra": "The line answers 24 hours a day (TTY 401-462-4445, or dial 2-1-1). You can also visit the Point at 50 Valley St., Providence, weekdays 8:30 a.m. to 5 p.m.; ask which regional Point office is nearest you.",
+  "regions": [
+   {
+    "id": "ri-point-state",
+    "label": "Rhode Island",
+    "name": "The Point (Rhode Island Aging and Disability Resource Center)",
+    "phone": "401-462-4444",
+    "counties": [
+     "Bristol",
+     "Kent",
+     "Newport",
+     "Providence",
+     "Washington"
+    ],
+    "notes": [
+     "Statewide; one number for every city and town."
+    ]
+   }
+  ]
+ },
+ "ombudsman": {
+  "state_phone": "401-785-3340",
+  "regions": [
+   {
+    "id": "ri-omb-state",
+    "name": "Office of the Rhode Island State Long Term Care Ombudsman",
+    "phone": "401-785-3340",
+    "counties": [
+     "Bristol",
+     "Kent",
+     "Newport",
+     "Providence",
+     "Washington"
+    ],
+    "source_url": "https://oha.ri.gov/what-we-do/protect/ltco",
+    "source_title": "Rhode Island Office of Healthy Aging: Long-Term Care Ombudsman",
+    "source_scope": "Phone 401.785.3340, toll-free 1.888.351.0808, for residents of care facilities such as assisted living and nursing homes, including reports of suspected abuse; read in full. The program is statewide, so every county shows it. Office hours, Monday to Friday 9 a.m. to 5 p.m., come from EOHHS education materials, February 2026 (https://eohhs.ri.gov/sites/g/files/xkgbur226/files/2026-02/RI%20CI%20Education%20Materials%20%281%29.pdf; search excerpt).",
+    "review": "full",
+    "review_method": "full_official_page_text",
+    "counties_from_source": true,
+    "notes": [
+     "Toll-free: 888-351-0808. Weekdays 9 a.m. to 5 p.m."
+    ]
+   }
+  ]
+ },
+ "cils": {
+  "source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/RI",
+  "source_title": "ILRU: Directory of Centers for Independent Living, Rhode Island results",
+  "scope": "Each center’s address, phones, website and counties served; read in full. The directory is undated.",
+  "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living",
+  "list": [
+   {
+    "id": "ri-cil-oscil",
+    "name": "Ocean State Center for Independent Living",
+    "organization": "Ocean State Center for Independent Living",
+    "url": "https://www.oscil.org/",
+    "phone": "401-738-1013",
+    "counties": [
+     "Kent",
+     "Providence"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "Warwick office (Kent County): 1944 Warwick Avenue, Warwick, RI 02889; TTY 401-738-1015.",
+     "Pawtucket office (Providence County): 175 Main Street, Pawtucket; same phone."
+    ]
+   }
+  ]
+ },
+ "programs": [
+  {
+   "id": "ri-claims",
+   "name": "Rhode Island veterans: Office of Veterans Services (RIVETS) Veterans Resource Center",
+   "organization": "Rhode Island Office of Veterans Services (RIVETS)",
+   "url": "https://vets.ri.gov/about-us",
+   "needs": [
+    "general_navigation",
+    "benefits_and_funding"
+   ],
+   "description": "The statewide Veterans Resource Center in Warwick offers benefits counseling, help with discharge papers and help applying for VA and state programs, plus case management for housing, employment, transportation, health and food needs. Veterans, service members, Guard, Reserve and their families can use it.",
+   "next_step": "Call 401-921-2119, or complete the RIVets Intake Form on vets.ri.gov to have a representative contact you.",
+   "constraints": [
+    "RIVETS is a state office, not the VA Regional Office or a VA medical center."
+   ],
+   "phone": "401-921-2119",
+   "phone_label": "Rhode Island Office of Veterans Services (401-921-2119)",
+   "phone_source": "https://vets.ri.gov/press-releases/rivets-statement-services-and-supports-vets-military-families",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://vets.ri.gov/about-us",
+     "title": "Rhode Island Office of Veterans Services: About Us",
+     "scope": "Services, eligibility, the statewide Veterans Resource Center at 560 Jefferson Boulevard in Warwick and the intake form; read in full. No phone or hours listed."
+    },
+    {
+     "url": "https://vets.ri.gov/press-releases/rivets-statement-services-and-supports-vets-military-families",
+     "title": "Rhode Island Office of Veterans Services: statement on services and supports (2021)",
+     "scope": "RIVETS can be reached at 401-921-2119; search excerpt."
+    },
+    {
+     "url": "https://dmv.ri.gov/node/881",
+     "title": "Rhode Island Division of Motor Vehicles: veteran contacts",
+     "scope": "560 Jefferson Blvd., Suite 206, Warwick, RI 02886; (401) 921-2119; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "ri-adrc",
+   "name": "The Point: Rhode Island Aging and Disability Resource Center",
+   "organization": "Rhode Island Office of Healthy Aging, with United Way of Rhode Island",
+   "url": "https://www.oha.ri.gov/point",
+   "needs": [
+    "general_navigation",
+    "help_at_home",
+    "equipment_home_accessibility"
+   ],
+   "description": "One statewide line, answered around the clock, for people 55 and older, adults with disabilities and caregivers: help finding services and applying for public and private programs. Interpreters are available. Military service is not required.",
+   "next_step": "Call 401-462-4444 (TTY 401-462-4445) or dial 2-1-1, any time.",
+   "constraints": [
+    "Each program has its own eligibility and waitlist."
+   ],
+   "phone": "401-462-4444",
+   "phone_label": "The Point (401-462-4444)",
+   "phone_source": "https://www.oha.ri.gov/point",
+   "review": "full",
+   "sources": [
+    {
+     "url": "https://www.oha.ri.gov/point",
+     "title": "Rhode Island Office of Healthy Aging: Aging and Disability Resource Center (The Point)",
+     "scope": "Phone, 24/7 availability and language help; read in full."
+    },
+    {
+     "url": "https://dhs.ri.gov/programs-and-services/long-term-services-and-supports/resources",
+     "title": "Rhode Island Department of Human Services: Long-term services and supports resources",
+     "scope": "The Point helpdesk, 24/7 at (401) 462-4444, 2-1-1 or TTY (401) 462-4445; six Point offices; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "ri-ship",
+   "name": "Medicare counseling (Rhode Island SHIP)",
+   "organization": "Rhode Island Office of Healthy Aging, State Health Insurance Assistance Program (SHIP)",
+   "url": "https://oha.ri.gov/Medicare",
+   "needs": [
+    "benefits_and_funding"
+   ],
+   "description": "Free, unbiased Medicare counseling from Rhode Island’s State Health Insurance Assistance Program, through the Office of Healthy Aging and partner agencies across the state, including senior centers in Johnston, Pawtucket, South Kingstown (Wakefield) and Westerly and community agencies in Woonsocket, East Providence, Central Falls and Newport.",
+   "next_step": "Call the SHIP line at 1-888-884-8721, or call the Point at 401-462-4444. For Medicare itself, call 800-MEDICARE (800-633-4227).",
+   "constraints": [
+    "Counseling is by appointment. Have your Medicare card and drug list ready."
+   ],
+   "phone": "888-884-8721",
+   "phone_label": "Rhode Island SHIP (888-884-8721)",
+   "phone_source": "https://oha.ri.gov/Medicare",
+   "review": "full",
+   "sources": [
+    {
+     "url": "https://oha.ri.gov/Medicare",
+     "title": "Rhode Island Office of Healthy Aging: Medicare counseling (SHIP)",
+     "scope": "SHIP toll-free line 888.884.8721 and the table of partner agencies with addresses and phones; read in full."
+    }
+   ]
+  },
+  {
+   "id": "ri-ombudsman",
+   "name": "Rhode Island Long-Term Care Ombudsman and elder abuse reporting",
+   "organization": "Office of the Rhode Island State Long Term Care Ombudsman; Rhode Island Office of Healthy Aging, Adult Protective Services",
+   "url": "https://oha.ri.gov/what-we-do/protect/ltco",
+   "needs": [
+    "resident_rights",
+    "general_navigation"
+   ],
+   "description": "Advocacy for residents of nursing homes, assisted living and other care facilities, including reports of suspected abuse in a facility. The Office of Healthy Aging’s Adult Protective Services takes reports of abuse, neglect, financial exploitation or self-neglect of people 60 and older living in the community.",
+   "next_step": "Call the ombudsman at 401-785-3340 or toll-free 888-351-0808. To report abuse of an older person at home, call Adult Protective Services at 401-462-0555, any time; reports can be anonymous. If someone is in immediate danger, call 911.",
+   "constraints": [
+    "The ombudsman acts with the resident’s permission and is not a licensing agency."
+   ],
+   "phone": "401-785-3340",
+   "phone_label": "Rhode Island Long-Term Care Ombudsman (401-785-3340)",
+   "phone_source": "https://oha.ri.gov/what-we-do/protect/ltco",
+   "review": "full",
+   "sources": [
+    {
+     "url": "https://oha.ri.gov/what-we-do/protect/ltco",
+     "title": "Rhode Island Office of Healthy Aging: Long-Term Care Ombudsman",
+     "scope": "Phone and toll-free line for residents of care facilities and reports of suspected abuse there; read in full."
+    },
+    {
+     "url": "https://oha.ri.gov/what-we-do/protect",
+     "title": "Rhode Island Office of Healthy Aging: Protect",
+     "scope": "Report elder abuse or exploitation any time at 401-462-0555; reports can be anonymous; search excerpt."
+    },
+    {
+     "url": "https://oha.ri.gov/what-we-do/protect/elder-protective-services",
+     "title": "Rhode Island Office of Healthy Aging: Elder Protective Services",
+     "scope": "Abuse, neglect, financial exploitation by a caregiver or self-neglect of a person 60+ living in the community: call 401-462-0555 anytime; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "ri-legal-programs",
+   "name": "Free and low-cost legal help for older Rhode Islanders",
+   "organization": "Rhode Island Legal Services; Rhode Island Bar Association",
+   "url": "https://oha.ri.gov/what-we-do/connect/legal-assistance",
+   "role": "legal_aid",
+   "needs": [
+    "resident_rights",
+    "general_navigation",
+    "housing"
+   ],
+   "description": "The Office of Healthy Aging lists two legal partners for people 60 and older: Rhode Island Legal Services gives free legal help to lower-income adults 60+ with public-assistance programs, and the Rhode Island Bar Association offers legal help to adults 60+ with fees on a sliding scale.",
+   "next_step": "Call Rhode Island Legal Services at 401-274-2652 or 800-662-5034. For other legal questions, ask the Point (401-462-4444) for the Bar Association’s senior program.",
+   "constraints": [
+    "Legal aid screens by age, income and case type."
+   ],
+   "phone": "401-274-2652",
+   "phone_label": "Rhode Island Legal Services (401-274-2652)",
+   "phone_source": "https://www.helprilaw.org/node/22/rhode-island-meals-wheels",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://oha.ri.gov/what-we-do/connect/legal-assistance",
+     "title": "Rhode Island Office of Healthy Aging: Legal Assistance",
+     "scope": "Rhode Island Legal Services and the Rhode Island Bar Association programs for people 60+; read in full. The page lists no phones."
+    },
+    {
+     "url": "https://www.helprilaw.org/node/22/rhode-island-meals-wheels",
+     "title": "Help RI Law (Rhode Island Legal Services)",
+     "scope": "Contact: (401) 274-2652, (800) 662-5034; 56 Pine Street, Fourth Floor, Providence; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "ri-vahealth-systems",
+   "name": "VA health care in Rhode Island",
+   "organization": "U.S. Department of Veterans Affairs, VA Providence Healthcare System",
+   "url": "https://www.va.gov/providence-health-care/contact-us/",
+   "role": "va_health_system",
+   "needs": [
+    "veteran_services",
+    "care_facilities"
+   ],
+   "description": "Rhode Island veterans are served by the VA Providence Healthcare System: the Providence VA Medical Center (830 Chalkstone Avenue, Providence; 401-273-7100) and its community clinics. The Warwick Vet Center (2038 Warwick Ave.; 401-739-0167) offers readjustment counseling.",
+   "next_step": "Call 401-273-7100 or the local VA call center, 401-457-3336, for appointments. Not enrolled yet? Ask RIVETS for help applying.",
+   "constraints": [
+    "If a service you need is not offered near you, ask about travel benefits and community care."
+   ],
+   "phone": "401-273-7100",
+   "phone_label": "VA Providence Healthcare System (401-273-7100)",
+   "phone_source": "https://www.va.gov/providence-health-care/contact-us/",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://www.va.gov/providence-health-care/contact-us/",
+     "title": "VA Providence health care: Contact us",
+     "scope": "Main phone 401-273-7100; local VA call center 401-457-3336; search excerpt."
+    },
+    {
+     "url": "https://www.va.gov/providence-health-care/make-an-appointment/",
+     "title": "VA Providence health care: Make an appointment",
+     "scope": "Primary care call center, direct 401-273-7100 or 401-457-3336; search excerpt."
+    },
+    {
+     "url": "https://vets.ri.gov/i-am-find-your-benefits/world-war-ii-korean-war-veteran/warwick-vet-center",
+     "title": "Rhode Island Office of Veterans Services: Warwick Vet Center",
+     "scope": "Warwick Vet Center, 401-739-0167, 2038 Warwick Ave, Warwick, RI 02889; search excerpt."
+    }
+   ]
+  }
+ ],
+ "adapter": {
+  "badge_county": "Office of Veterans Services",
+  "badge_state": "Office of Veterans Services",
+  "badge_statewide": "Rhode Island statewide line",
+  "published_in": "Published by the Rhode Island Office of Veterans Services",
+  "agency_link": "Rhode Island Office of Veterans Services",
+  "officers_can": "Office of Veterans Services staff can",
+  "abuse_phone": "401-462-0555",
+  "abuse_label": "Office of Healthy Aging Adult Protective Services, for people 60 and older; any time; reports can be anonymous",
+  "aging_term": "Aging and Disability Resource Center",
+  "extra_swaps": [
+   [
+    "Choose a county for its County Veterans Service Office, matched Area Agency on Aging, regional ombudsman",
+    "Choose a county for its state veterans office, the statewide Aging and Disability Resource Center (the Point), the statewide ombudsman"
+   ],
+   [
+    "Choose a county above for the county veterans office.",
+    "Choose a county above for its state veterans office."
+   ]
+  ]
+ },
+ "share_replacements": [
+  [
+   "county veterans offices, benefits and care referrals",
+   "state veterans offices, benefits and care referrals"
+  ],
+  [
+   "County veterans offices",
+   "state veterans offices"
+  ]
+ ],
+ "coverage_scope": "Referral edition. All five counties show the statewide Veterans Resource Center in Warwick, the Point (the statewide Aging and Disability Resource Center) and the statewide long-term care ombudsman. Kent and Providence counties also show a Center for Independent Living.",
+ "coverage_note": "Veterans contacts come from the Office of Veterans Services. Aging help comes from the Office of Healthy Aging. Centers for Independent Living come from the ILRU national directory. Reviewed November 16, 2026. Contacts are not telephone-confirmed.",
+ "share_description": "the state veterans resource center, aging and disability help and long-term care ombudsman help across Rhode Island"
+}

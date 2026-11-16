@@ -1,80 +1,96 @@
 [
- {
-  "program_id": "ri-aging",
-  "name": "Local aging help in Rhode Island (Eldercare Locator)",
-  "official_url": "https://eldercare.acl.gov/home",
-  "organization": "U.S. Administration for Community Living",
-  "service_area": [
-   "All Rhode Island counties"
-  ],
-  "state": "RI",
-  "needs_supported": [
-   "general_navigation",
-   "help_at_home"
-  ],
-  "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-  "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
-  "constraints": [
-   "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "ri-point-state",
+    "name": "The Point (Rhode Island Aging and Disability Resource Center)",
+    "organization": "The Point (Rhode Island Aging and Disability Resource Center)",
+    "official_url": "https://www.oha.ri.gov/point",
+    "state": "RI",
+    "service_area": [
+      "Bristol",
+      "Kent",
+      "Newport",
+      "Providence",
+      "Washington"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Point, Rhode Island’s Aging and Disability Resource Center, run by the Office of Healthy Aging with United Way: free, confidential help for people 55 and older, adults with disabilities and caregivers to find services and apply for public and private programs, from help at home and meals to caregiver support and long-term care options.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The line answers 24 hours a day (TTY 401-462-4445, or dial 2-1-1). You can also visit the Point at 50 Valley St., Providence, weekdays 8:30 a.m. to 5 p.m.; ask which regional Point office is nearest you. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Statewide; one number for every city and town."
+    ],
+    "public_contact": {
+      "phone": "401-462-4444",
+      "phone_label": "The Point (Rhode Island)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.oha.ri.gov/point",
+      "phone_source_url": "https://www.oha.ri.gov/point"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.oha.ri.gov/point",
+        "title": "Rhode Island Office of Healthy Aging: Aging and Disability Resource Center (The Point)",
+        "reviewed_on": "2026-11-16",
+        "scope": "ADRC line (401) 462-4444, answered 24 hours a day, 7 days a week, in Spanish and with interpreters for 100+ languages; read in full. The page lists no office locations. Other sources (search excerpts): the Point is for people 55 and older, adults living with a disability and caregivers (https://oha.ri.gov/get-help); TTY (401) 462-4445 or 2-1-1, and six Point offices (https://dhs.ri.gov/programs-and-services/long-term-services-and-supports/resources); the main Point office is at 50 Valley St., Providence, weekdays 8:30 a.m. to 5 p.m. (https://www.unitedwayri.org/get-help/point/). Regional Point offices serve groups of towns, not counties, so every county shows the statewide line."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
-  },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.acl.gov/contact"
-  },
-  "source_evidence": [
-   {
-    "url": "https://www.acl.gov/contact",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "aging_agency"
- },
- {
-  "program_id": "ri-ombudsman",
-  "name": "Rhode Island long-term-care ombudsman",
-  "official_url": "https://theconsumervoice.org/get_help",
-  "organization": "National Long-Term Care Ombudsman Resource Center",
-  "service_area": [
-   "All Rhode Island counties"
-  ],
-  "state": "RI",
-  "needs_supported": [
-   "resident_rights",
-   "general_navigation"
-  ],
-  "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-  "next_step": "Use the locator to find the Rhode Island program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
-  "constraints": [
-   "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
-  },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
-  },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
-  },
-  "source_evidence": [
-   {
-    "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "ombudsman"
- }
+  {
+    "program_id": "ri-omb-state",
+    "name": "Office of the Rhode Island State Long Term Care Ombudsman",
+    "organization": "Office of the Rhode Island State Long Term Care Ombudsman",
+    "official_url": "https://oha.ri.gov/what-we-do/protect/ltco",
+    "state": "RI",
+    "service_area": [
+      "Bristol",
+      "Kent",
+      "Newport",
+      "Providence",
+      "Washington"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Toll-free: 888-351-0808. Weekdays 9 a.m. to 5 p.m."
+    ],
+    "public_contact": {
+      "phone": "401-785-3340",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://oha.ri.gov/what-we-do/protect/ltco",
+      "phone_source_url": "https://oha.ri.gov/what-we-do/protect/ltco"
+    },
+    "source_evidence": [
+      {
+        "url": "https://oha.ri.gov/what-we-do/protect/ltco",
+        "title": "Rhode Island Office of Healthy Aging: Long-Term Care Ombudsman",
+        "reviewed_on": "2026-11-16",
+        "scope": "Phone 401.785.3340, toll-free 1.888.351.0808, for residents of care facilities such as assisted living and nursing homes, including reports of suspected abuse; read in full. The program is statewide, so every county shows it. Office hours, Monday to Friday 9 a.m. to 5 p.m., come from EOHHS education materials, February 2026 (https://eohhs.ri.gov/sites/g/files/xkgbur226/files/2026-02/RI%20CI%20Education%20Materials%20%281%29.pdf; search excerpt)."
+      }
+    ]
+  }
 ]
