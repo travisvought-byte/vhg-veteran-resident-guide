@@ -64,7 +64,10 @@ def unified_outputs(root, editions, states):
     unified=re.sub(r'<div class="coverage notice">.*?</div>', '', unified, flags=re.S)
     unified=unified.replace('Browse contacts for all 88 county veterans offices','Browse county contacts')
     unified=unified.replace('Most phones come from Ohio AMVETS’ 2025–2026 directory. Source links and review dates are shown. Call to confirm hours and the current intake process.','Source links and review dates are shown. Confirm hours and intake with the agency.')
-    unified=unified.replace('Statewide edition · Updated October 8, 2026','Updated October 9, 2026')
+    # The footer date is filled in from each state's own records (assets/guide-runtime.js), so it cannot go stale.
+    updated='<p>Statewide edition · Updated October 8, 2026 · Source dates appear on each listing.</p>'
+    assert unified.count(updated)==1,'footer date line'
+    unified=unified.replace(updated,'<p><span id="edition-updated"></span> Each listing shows its own review date.</p>')
     unified=unified.replace('<div class="quick-links" aria-label="Common needs">','<div class="quick-links" aria-label="Common needs"><button data-route="aid" id="aid-open" hidden><strong>Veteran and aid organizations</strong><span>Local housing, legal aid, utilities and transport</span></button>')
     unified=unified.replace('assets/share-preview.png','assets/vhg-logo.png')
     for key,value in {'og:title':'Support for veterans, seniors and families | VHG','twitter:title':'Support for veterans, seniors and families | VHG','og:description':'Find your next contact for benefits, care, housing and support in '+count_words(len(states))+' states. Free to use.','twitter:description':'Find your next contact for benefits, care, housing and support in '+count_words(len(states))+' states. Free to use.','og:image:width':'715','og:image:height':'715','og:image:alt':'Veteran Home Guardians logo'}.items():
@@ -91,6 +94,12 @@ def unified_outputs(root, editions, states):
         county=section(unified,'county-start')
         unified=unified.replace(county,county+short,1)
     unified=unified.replace('<a class="jump" href="#support-vhg">Support VHG</a>', '<a class="jump" data-advocacy-route href="disability-advocacy.html">Disability rights &amp; advocacy</a><a class="jump" data-family-route href="family-guide.html">Families: autism, ADHD &amp; disabilities</a><a class="jump" href="flyers.html">Printable flyers</a><a class="jump" href="https://mobilitytalk.org/states/" rel="noopener">Mobility &amp; disability resources in every state</a><a class="jump" href="#support-vhg">Support VHG</a>',1)
+    # On a phone the header keeps its first four links and folds the rest behind "More guides",
+    # so the state picker and the crisis numbers fit on the first screen. Wider screens show every link.
+    first='<a class="jump" href="assistant/">Guided assistance (beta)</a>'
+    last='<a class="jump" href="#support-vhg">Support VHG</a>'
+    assert unified.count(first)==1 and unified.count(last)==1,'header links to fold'
+    unified=unified.replace(first,'<button type="button" class="jump jump-toggle" id="jump-toggle" aria-expanded="false" aria-controls="jump-more" hidden>More guides</button><span class="jump-more" id="jump-more">'+first).replace(last,last+'</span>')
     # One small shared bundle plus one file per state; the base state is preloaded.
     def versioned(path, text):
         return path+'?v='+hashlib.sha256(text.encode()).hexdigest()[:10]
