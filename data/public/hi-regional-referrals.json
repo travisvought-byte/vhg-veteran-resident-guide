@@ -1,80 +1,221 @@
 [
- {
-  "program_id": "hi-aging",
-  "name": "Local aging help in Hawaii (Eldercare Locator)",
-  "official_url": "https://eldercare.acl.gov/home",
-  "organization": "U.S. Administration for Community Living",
-  "service_area": [
-   "All Hawaii counties"
-  ],
-  "state": "HI",
-  "needs_supported": [
-   "general_navigation",
-   "help_at_home"
-  ],
-  "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-  "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
-  "constraints": [
-   "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "hi-aaa-honolulu",
+    "name": "Elderly Affairs Division, City and County of Honolulu",
+    "organization": "Elderly Affairs Division, City and County of Honolulu",
+    "official_url": "https://health.hawaii.gov/eoa/?p=88",
+    "state": "HI",
+    "service_area": [
+      "Honolulu"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the statewide Aging and Disability Resource Center line, 808-643-2372. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "The Aging and Disability Resource Center for O‘ahu."
+    ],
+    "public_contact": {
+      "phone": "808-768-7700",
+      "phone_label": "Area Agency on Aging (O‘ahu)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.hawaii.gov/eoa/?p=88",
+      "phone_source_url": "https://health.hawaii.gov/eoa/?p=88"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.hawaii.gov/eoa/?p=88",
+        "title": "Hawaii Executive Office on Aging: Aging Network",
+        "reviewed_on": "2026-11-16",
+        "scope": "The four Area Agencies on Aging and their phones (Hawai‘i County’s Kona line included); read in full. The Moloka‘i and Lāna‘i lines for the Maui County Office on Aging come from the Kaua‘i Agency on Elderly Affairs’ contact page (https://www.kauai.gov/Government/Departments-Agencies/Agency-on-Elderly-Affairs/Contact-Information-Links; search excerpt). Kalawao County, on Moloka‘i, is shown with the Maui County Office on Aging."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "hi-aaa-hawaii",
+    "name": "Hawai‘i County Office of Aging",
+    "organization": "Hawai‘i County Office of Aging",
+    "official_url": "https://health.hawaii.gov/eoa/?p=88",
+    "state": "HI",
+    "service_area": [
+      "Hawaii"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the statewide Aging and Disability Resource Center line, 808-643-2372. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Kona office: 808-323-4390."
+    ],
+    "public_contact": {
+      "phone": "808-961-8626",
+      "phone_label": "Area Agency on Aging (Hawai‘i Island)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.hawaii.gov/eoa/?p=88",
+      "phone_source_url": "https://health.hawaii.gov/eoa/?p=88"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.hawaii.gov/eoa/?p=88",
+        "title": "Hawaii Executive Office on Aging: Aging Network",
+        "reviewed_on": "2026-11-16",
+        "scope": "The four Area Agencies on Aging and their phones (Hawai‘i County’s Kona line included); read in full. The Moloka‘i and Lāna‘i lines for the Maui County Office on Aging come from the Kaua‘i Agency on Elderly Affairs’ contact page (https://www.kauai.gov/Government/Departments-Agencies/Agency-on-Elderly-Affairs/Contact-Information-Links; search excerpt). Kalawao County, on Moloka‘i, is shown with the Maui County Office on Aging."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.acl.gov/contact"
+  {
+    "program_id": "hi-aaa-maui",
+    "name": "Maui County Office on Aging",
+    "organization": "Maui County Office on Aging",
+    "official_url": "https://health.hawaii.gov/eoa/?p=88",
+    "state": "HI",
+    "service_area": [
+      "Maui",
+      "Kalawao"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the statewide Aging and Disability Resource Center line, 808-643-2372. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Moloka‘i: 808-553-5241. Lāna‘i: 808-565-6818."
+    ],
+    "public_contact": {
+      "phone": "808-270-7774",
+      "phone_label": "Area Agency on Aging (Maui County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.hawaii.gov/eoa/?p=88",
+      "phone_source_url": "https://health.hawaii.gov/eoa/?p=88"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.hawaii.gov/eoa/?p=88",
+        "title": "Hawaii Executive Office on Aging: Aging Network",
+        "reviewed_on": "2026-11-16",
+        "scope": "The four Area Agencies on Aging and their phones (Hawai‘i County’s Kona line included); read in full. The Moloka‘i and Lāna‘i lines for the Maui County Office on Aging come from the Kaua‘i Agency on Elderly Affairs’ contact page (https://www.kauai.gov/Government/Departments-Agencies/Agency-on-Elderly-Affairs/Contact-Information-Links; search excerpt). Kalawao County, on Moloka‘i, is shown with the Maui County Office on Aging."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.acl.gov/contact",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "aging_agency"
- },
- {
-  "program_id": "hi-ombudsman",
-  "name": "Hawaii long-term-care ombudsman",
-  "official_url": "https://theconsumervoice.org/get_help",
-  "organization": "National Long-Term Care Ombudsman Resource Center",
-  "service_area": [
-   "All Hawaii counties"
-  ],
-  "state": "HI",
-  "needs_supported": [
-   "resident_rights",
-   "general_navigation"
-  ],
-  "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-  "next_step": "Use the locator to find the Hawaii program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
-  "constraints": [
-   "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "hi-aaa-kauai",
+    "name": "Kaua‘i Agency on Elderly Affairs",
+    "organization": "Kaua‘i Agency on Elderly Affairs",
+    "official_url": "https://health.hawaii.gov/eoa/?p=88",
+    "state": "HI",
+    "service_area": [
+      "Kauai"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the statewide Aging and Disability Resource Center line, 808-643-2372. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program."
+    ],
+    "public_contact": {
+      "phone": "808-241-4470",
+      "phone_label": "Area Agency on Aging (Kaua‘i)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.hawaii.gov/eoa/?p=88",
+      "phone_source_url": "https://health.hawaii.gov/eoa/?p=88"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.hawaii.gov/eoa/?p=88",
+        "title": "Hawaii Executive Office on Aging: Aging Network",
+        "reviewed_on": "2026-11-16",
+        "scope": "The four Area Agencies on Aging and their phones (Hawai‘i County’s Kona line included); read in full. The Moloka‘i and Lāna‘i lines for the Maui County Office on Aging come from the Kaua‘i Agency on Elderly Affairs’ contact page (https://www.kauai.gov/Government/Departments-Agencies/Agency-on-Elderly-Affairs/Contact-Information-Links; search excerpt). Kalawao County, on Moloka‘i, is shown with the Maui County Office on Aging."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
-  },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
-  },
-  "source_evidence": [
-   {
-    "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "ombudsman"
- }
+  {
+    "program_id": "hi-omb-state",
+    "name": "Hawai‘i Long-Term Care Ombudsman Program",
+    "organization": "Hawai‘i Long-Term Care Ombudsman Program",
+    "official_url": "https://health.hawaii.gov/eoa/",
+    "state": "HI",
+    "service_area": [
+      "Hawaii",
+      "Honolulu",
+      "Kalawao",
+      "Kauai",
+      "Maui"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Services are free and statewide."
+    ],
+    "public_contact": {
+      "phone": "808-586-7268",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.hawaii.gov/eoa/",
+      "phone_source_url": "https://health.hawaii.gov/eoa/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.hawaii.gov/eoa/",
+        "title": "Hawaii Executive Office on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "For a problem, complaint or question about a long-term care facility, contact the LTC Ombudsman at 586-7268 (O‘ahu); search excerpt. The program is statewide, so every county shows it."
+      }
+    ]
+  }
 ]

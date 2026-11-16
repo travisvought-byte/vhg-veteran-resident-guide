@@ -1,0 +1,419 @@
+{
+ "about": "Research sheet for the Hawaii county edition. Every contact below was read on the date in reviewed_on from the page named beside it; scripts/make_county_state.py turns it into the edition files.",
+ "code": "HI",
+ "name": "Hawaii",
+ "slug": "hawaii",
+ "counties": 5,
+ "reviewed_on": "2026-11-16",
+ "month_label": "November 16, 2026",
+ "template_date": "November 4, 2026",
+ "phones_sentence": "Veterans office phones and addresses come from the Office of Veterans’ Services’ contact page. Most offices see veterans by appointment only.",
+ "senior_line_id": "hi-adrc",
+ "agency": {
+  "url": "https://dod.hawaii.gov/ovs/"
+ },
+ "offices": {
+  "source_url": "https://dod.hawaii.gov/ovs/contact/",
+  "source_title": "Hawaii Department of Defense, Office of Veterans’ Services: Contact",
+  "review_method": "full_official_page_text",
+  "note": "Office of Veterans’ Services counselors help with VA claims, pension, survivor benefits and state veterans benefits at no charge.",
+  "selection": "Office address, phone, hours and walk-in or appointment rules as printed on the Office of Veterans’ Services contact page; staff names and emails omitted. Each county shows its island’s office; Kalawao County (on Moloka‘i) shows the Maui office, which the page lists for Maui, Moloka‘i and Lāna‘i.",
+  "list": [
+   {
+    "county": "Hawaii",
+    "organization": "Office of Veterans’ Services, Hawai‘i Island (Hilo)",
+    "phone": "808-369-3538",
+    "address": "1304 Kekuanaoa St. #L-102, Hilo, HI 96720",
+    "hours": "Monday to Friday, 7:45 a.m. to 4:30 p.m.; closed 12 to 1 p.m. for lunch; by appointment only",
+    "other_offices": [
+     {
+      "address": "Kailua-Kona office: 81-1032 Nani Kupuna Pl, Kealakekua, HI 96750",
+      "schedule": "Monday to Friday, 7:45 a.m. to 4:30 p.m.; closed 12 to 1 p.m. for lunch; by appointment only",
+      "phone": "808-844-6664"
+     }
+    ],
+    "office_type": "state_field_office",
+    "source_url": "https://dod.hawaii.gov/ovs/contact/",
+    "source_title": "Hawaii Department of Defense, Office of Veterans’ Services: Contact"
+   },
+   {
+    "county": "Honolulu",
+    "organization": "Office of Veterans’ Services, O‘ahu (Tripler Army Medical Center)",
+    "phone": "808-433-0420",
+    "address": "459 Patterson Road, E-Wing, Room 1-A103, Honolulu, HI 96819-1522",
+    "hours": "Monday to Friday, 7:45 a.m. to 4:30 p.m.; closed 12 to 1 p.m. for lunch; walk-ins Monday and Wednesday, 8 a.m. to noon",
+    "other_offices": [
+     {
+      "address": "Daniel K. Akaka VA Clinic, 91-1051 Franklin D. Roosevelt Ave, Room 1-K101, Kapolei, HI 96707",
+      "schedule": "Monday to Friday, 7:45 a.m. to 4:30 p.m.; closed 12 to 1 p.m. for lunch; walk-ins Thursday, 9 a.m. to noon; otherwise by appointment",
+      "phone": "808-458-5072"
+     }
+    ],
+    "office_type": "state_field_office",
+    "source_url": "https://dod.hawaii.gov/ovs/contact/",
+    "source_title": "Hawaii Department of Defense, Office of Veterans’ Services: Contact"
+   },
+   {
+    "county": "Kalawao",
+    "organization": "Office of Veterans’ Services, Maui (Kahului)",
+    "phone": "808-369-3541",
+    "address": "333 Dairy Rd., Suite 203, Kahului, HI 96732",
+    "hours": "Monday to Friday, 7:45 a.m. to 4:30 p.m.; closed 12 to 1 p.m. for lunch; by appointment only",
+    "note": "Kalawao County (Kalaupapa) is on Moloka‘i; the Office of Veterans’ Services lists Moloka‘i under its Maui office.",
+    "office_type": "state_field_office",
+    "source_url": "https://dod.hawaii.gov/ovs/contact/",
+    "source_title": "Hawaii Department of Defense, Office of Veterans’ Services: Contact"
+   },
+   {
+    "county": "Kauai",
+    "organization": "Office of Veterans’ Services, Kaua‘i (Lihue)",
+    "phone": "808-369-3535",
+    "address": "3215 Kaua‘i Veterans Memorial Hwy., Suite #2, Lihue, HI 96766",
+    "hours": "Monday to Friday, 7:45 a.m. to 4:30 p.m.; closed 12 to 1 p.m. for lunch; by appointment only",
+    "office_type": "state_field_office",
+    "source_url": "https://dod.hawaii.gov/ovs/contact/",
+    "source_title": "Hawaii Department of Defense, Office of Veterans’ Services: Contact"
+   },
+   {
+    "county": "Maui",
+    "organization": "Office of Veterans’ Services, Maui (Kahului)",
+    "phone": "808-369-3541",
+    "address": "333 Dairy Rd., Suite 203, Kahului, HI 96732",
+    "hours": "Monday to Friday, 7:45 a.m. to 4:30 p.m.; closed 12 to 1 p.m. for lunch; by appointment only",
+    "note": "The Maui office also serves Moloka‘i and Lāna‘i.",
+    "office_type": "state_field_office",
+    "source_url": "https://dod.hawaii.gov/ovs/contact/",
+    "source_title": "Hawaii Department of Defense, Office of Veterans’ Services: Contact"
+   }
+  ]
+ },
+ "aging": {
+  "source_url": "https://health.hawaii.gov/eoa/?p=88",
+  "source_title": "Hawaii Executive Office on Aging: Aging Network",
+  "source_scope": "The four Area Agencies on Aging and their phones (Hawai‘i County’s Kona line included); read in full. The Moloka‘i and Lāna‘i lines for the Maui County Office on Aging come from the Kaua‘i Agency on Elderly Affairs’ contact page (https://www.kauai.gov/Government/Departments-Agencies/Agency-on-Elderly-Affairs/Contact-Information-Links; search excerpt). Kalawao County, on Moloka‘i, is shown with the Maui County Office on Aging.",
+  "review": "full",
+  "review_method": "full_official_page_text",
+  "region_word": "",
+  "next_step_extra": "You can also call the statewide Aging and Disability Resource Center line, 808-643-2372.",
+  "regions": [
+   {
+    "id": "hi-aaa-honolulu",
+    "label": "O‘ahu",
+    "name": "Elderly Affairs Division, City and County of Honolulu",
+    "phone": "808-768-7700",
+    "counties": [
+     "Honolulu"
+    ],
+    "notes": [
+     "The Aging and Disability Resource Center for O‘ahu."
+    ]
+   },
+   {
+    "id": "hi-aaa-hawaii",
+    "label": "Hawai‘i Island",
+    "name": "Hawai‘i County Office of Aging",
+    "phone": "808-961-8626",
+    "counties": [
+     "Hawaii"
+    ],
+    "notes": [
+     "Kona office: 808-323-4390."
+    ]
+   },
+   {
+    "id": "hi-aaa-maui",
+    "label": "Maui County",
+    "name": "Maui County Office on Aging",
+    "phone": "808-270-7774",
+    "counties": [
+     "Maui",
+     "Kalawao"
+    ],
+    "notes": [
+     "Moloka‘i: 808-553-5241. Lāna‘i: 808-565-6818."
+    ]
+   },
+   {
+    "id": "hi-aaa-kauai",
+    "label": "Kaua‘i",
+    "name": "Kaua‘i Agency on Elderly Affairs",
+    "phone": "808-241-4470",
+    "counties": [
+     "Kauai"
+    ],
+    "notes": []
+   }
+  ]
+ },
+ "ombudsman": {
+  "state_phone": "808-586-7268",
+  "regions": [
+   {
+    "id": "hi-omb-state",
+    "name": "Hawai‘i Long-Term Care Ombudsman Program",
+    "phone": "808-586-7268",
+    "counties": [
+     "Hawaii",
+     "Honolulu",
+     "Kalawao",
+     "Kauai",
+     "Maui"
+    ],
+    "source_url": "https://health.hawaii.gov/eoa/",
+    "source_title": "Hawaii Executive Office on Aging",
+    "source_scope": "For a problem, complaint or question about a long-term care facility, contact the LTC Ombudsman at 586-7268 (O‘ahu); search excerpt. The program is statewide, so every county shows it.",
+    "review": "excerpt",
+    "review_method": "official_search_excerpt",
+    "counties_from_source": true,
+    "notes": [
+     "Services are free and statewide."
+    ]
+   }
+  ]
+ },
+ "cils": {
+  "source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/HI",
+  "source_title": "ILRU: Directory of Centers for Independent Living, Hawaii results",
+  "scope": "Each center’s address, phones, website and counties served; read in full. The directory is undated.",
+  "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living",
+  "list": [
+   {
+    "id": "hi-cil-access-to-independence",
+    "name": "Access to Independence (Honolulu)",
+    "organization": "Access to Independence",
+    "url": "https://accesstoindependence.org/honolulu",
+    "phone": "808-369-9521",
+    "counties": [
+     "Honolulu"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "Office: 200 North Vineyard Blvd., Suite 508, Box 4, Honolulu, HI 96817. Toll-free: 800-976-2776."
+    ]
+   },
+   {
+    "id": "hi-cil-aloha",
+    "name": "Aloha Independent Living Hawaii",
+    "organization": "Aloha Independent Living Hawaii",
+    "url": "https://alohailhawaii.org/",
+    "phone": "800-385-2454",
+    "counties": [
+     "Hawaii",
+     "Honolulu",
+     "Kauai",
+     "Maui"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "Mailing address: P.O. Box 283, Pearl City, HI 96782."
+    ]
+   }
+  ]
+ },
+ "programs": [
+  {
+   "id": "hi-claims",
+   "name": "Hawai‘i veterans: Office of Veterans’ Services for claims help",
+   "organization": "Hawaii Department of Defense, Office of Veterans’ Services",
+   "url": "https://dod.hawaii.gov/ovs/",
+   "needs": [
+    "general_navigation",
+    "benefits_and_funding"
+   ],
+   "description": "Free help with VA claims, pension, survivor benefits and state veterans benefits from the Office of Veterans’ Services’ veterans services counselors, with offices on O‘ahu (Tripler and Kapolei), Kaua‘i, Hawai‘i Island (Hilo and Kona) and Maui.",
+   "next_step": "Call your island’s office (choose a county above) or the O‘ahu office at 808-433-0420.",
+   "constraints": [
+    "Most offices see veterans by appointment only; the Tripler and Kapolei offices take walk-ins on set mornings."
+   ],
+   "phone": "808-433-0420",
+   "phone_label": "Office of Veterans’ Services, O‘ahu (808-433-0420)",
+   "phone_source": "https://dod.hawaii.gov/ovs/contact/",
+   "review": "full",
+   "sources": [
+    {
+     "url": "https://dod.hawaii.gov/ovs/contact/",
+     "title": "Hawaii Department of Defense, Office of Veterans’ Services: Contact",
+     "scope": "Every office’s address, phone, hours and walk-in or appointment rules; read in full. The page is undated."
+    }
+   ]
+  },
+  {
+   "id": "hi-adrc",
+   "name": "Hawai‘i Aging and Disability Resource Centers (county offices on aging)",
+   "organization": "Hawaii Executive Office on Aging and the four county Area Agencies on Aging",
+   "url": "https://health.hawaii.gov/eoa/?p=88",
+   "needs": [
+    "general_navigation",
+    "help_at_home",
+    "equipment_home_accessibility"
+   ],
+   "description": "Each county’s office on aging runs its Aging and Disability Resource Center: information on aging, health and disability services, caregiver support, Kupuna Care, legal assistance and transportation. The state Executive Office on Aging coordinates them. Military service is not required.",
+   "next_step": "Choose a county above for its office on aging, or call the statewide Aging and Disability Resource Center line, 808-643-2372.",
+   "constraints": [
+    "Each program has its own eligibility and waitlist."
+   ],
+   "phone": "808-643-2372",
+   "phone_label": "Hawai‘i Aging and Disability Resource Center (808-643-2372)",
+   "phone_source": "https://generations808.com/?p=18446",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://health.hawaii.gov/eoa/?p=88",
+     "title": "Hawaii Executive Office on Aging: Aging Network",
+     "scope": "The four Area Agencies on Aging and their phones; read in full."
+    },
+    {
+     "url": "https://generations808.com/?p=18446",
+     "title": "Generations Magazine: ADRC Hawaii",
+     "scope": "The state Executive Office on Aging and the four county agencies; call 643-ADRC (643-2372); search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "hi-ship",
+   "name": "Medicare counseling (Hawai‘i SHIP)",
+   "organization": "Hawaii Executive Office on Aging, State Health Insurance Assistance Program (SHIP)",
+   "url": "https://governorige.hawaii.gov/?p=42525",
+   "needs": [
+    "benefits_and_funding"
+   ],
+   "description": "Free, one-on-one Medicare counseling from Hawai‘i’s State Health Insurance Assistance Program: plan choices, enrollment, costs and help paying for Medicare, by phone, video or in person.",
+   "next_step": "Call the Hawai‘i SHIP Helpline at 808-586-7299 or toll-free 888-875-9229, or book at hawaiiship.org. For Medicare itself, call 800-MEDICARE (800-633-4227).",
+   "constraints": [
+    "Counseling is by appointment. Have your Medicare card and drug list ready."
+   ],
+   "phone": "808-586-7299",
+   "phone_label": "Hawai‘i SHIP Helpline (808-586-7299)",
+   "phone_source": "https://governorige.hawaii.gov/?p=42525",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://governorige.hawaii.gov/?p=42525",
+     "title": "Office of the Governor: Hawaii SHIP counseling appointments",
+     "scope": "Call the Hawaii SHIP Helpline at 808-586-7299 or toll-free 1-888-875-9229; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "hi-ombudsman",
+   "name": "Hawai‘i Long-Term Care Ombudsman and adult abuse reporting",
+   "organization": "Hawaii Executive Office on Aging, Long-Term Care Ombudsman Program; Department of Human Services, Adult Protective Services",
+   "url": "https://health.hawaii.gov/eoa/",
+   "needs": [
+    "resident_rights",
+    "general_navigation"
+   ],
+   "description": "Advocacy for residents of nursing homes, care homes, assisted living and other long-term care settings. Adult Protective Services takes reports of abuse, neglect or financial exploitation of vulnerable adults.",
+   "next_step": "Call the ombudsman at 808-586-7268. To report abuse of a vulnerable adult, call Adult Protective Services at 808-832-5115 (7:45 a.m. to 4:30 p.m. weekdays; leave a message after hours) or report online at apsreport.hawaii.gov. In an emergency, call 911.",
+   "constraints": [
+    "The ombudsman acts with the resident’s permission and is not a licensing agency."
+   ],
+   "phone": "808-586-7268",
+   "phone_label": "Hawai‘i Long-Term Care Ombudsman (808-586-7268)",
+   "phone_source": "https://health.hawaii.gov/eoa/",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://health.hawaii.gov/eoa/",
+     "title": "Hawaii Executive Office on Aging",
+     "scope": "Long-Term Care Ombudsman 586-7268 (O‘ahu); search excerpt."
+    },
+    {
+     "url": "https://humanservices.hawaii.gov/ssd/files/2026/06/APS-Brochure-6-2026-FINAL-FORMATTED.pdf",
+     "title": "Hawaii Department of Human Services: Adult Protective Services brochure (June 2026)",
+     "scope": "Statewide reporting line (808) 832-5115, hours, after-hours messages and the online form; read in full."
+    }
+   ]
+  },
+  {
+   "id": "hi-legal-programs",
+   "name": "Free legal help for Hawai‘i kūpuna",
+   "organization": "Legal Aid Society of Hawai‘i, Kupuna Legal Aid Services",
+   "url": "https://files.constantcontact.com/bf4c96d8201/512a557b-37fc-4bd2-bd01-38fa7c99ce2b.pdf",
+   "role": "legal_aid",
+   "needs": [
+    "resident_rights",
+    "general_navigation",
+    "housing"
+   ],
+   "description": "The Legal Aid Society of Hawai‘i offers free legal help to people 60 and older through its Senior Legal Hotline, covering elder law, consumer, housing and public benefits matters, and general civil legal intake for people with low and moderate incomes on all islands.",
+   "next_step": "If you are 60 or older, call the Senior Legal Hotline: O‘ahu 808-536-0011, neighbor islands 888-536-0011. General intake: O‘ahu 808-536-4302, neighbor islands 888-499-4302 (weekdays 9 to 11:30 a.m. and 1 to 3:30 p.m.).",
+   "constraints": [
+    "Legal aid screens by age, income and case type."
+   ],
+   "phone": "808-536-0011",
+   "phone_label": "Legal Aid Society of Hawai‘i Senior Legal Hotline (808-536-0011)",
+   "phone_source": "https://files.constantcontact.com/bf4c96d8201/512a557b-37fc-4bd2-bd01-38fa7c99ce2b.pdf",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://files.constantcontact.com/bf4c96d8201/512a557b-37fc-4bd2-bd01-38fa7c99ce2b.pdf",
+     "title": "Legal Aid Society of Hawai‘i: Kupuna Legal Aid Services flyer",
+     "scope": "Senior Legal Hotline O‘ahu 536-0011, neighbor islands 1-888-536-0011; general intake 536-4302 and 1-888-499-4302; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "hi-vahealth-systems",
+   "name": "VA health care in Hawai‘i",
+   "organization": "U.S. Department of Veterans Affairs, VA Pacific Islands Health Care System",
+   "url": "https://www.va.gov/pacific-islands-health-care/",
+   "role": "va_health_system",
+   "needs": [
+    "veteran_services",
+    "care_facilities"
+   ],
+   "description": "Hawai‘i veterans are served by the VA Pacific Islands Health Care System: the Spark M. Matsunaga VA Medical Center (459 Patterson Road, Honolulu; 808-433-0600, toll-free 800-214-1306) and clinics on each island.",
+   "next_step": "Call 808-433-0600 or 800-214-1306 for appointments or the 24/7 VA Health Connect line, or use VA’s facility locator. Not enrolled yet? Ask an Office of Veterans’ Services counselor for help applying.",
+   "constraints": [
+    "Neighbor-island veterans may need to fly to O‘ahu for some specialty care; ask about travel and community care."
+   ],
+   "phone": "808-433-0600",
+   "phone_label": "VA Pacific Islands Health Care System (808-433-0600)",
+   "phone_source": "https://www.va.gov/pacific-islands-health-care/contact-us/",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://www.va.gov/pacific-islands-health-care/contact-us/",
+     "title": "VA Pacific Islands health care: Contact us",
+     "scope": "Spark M. Matsunaga VA Medical Center, 459 Patterson Road; local 808-433-0600, toll-free 800-214-1306; search excerpt."
+    }
+   ]
+  }
+ ],
+ "adapter": {
+  "badge_county": "Office of Veterans’ Services",
+  "badge_state": "Office of Veterans’ Services",
+  "badge_statewide": "Hawai‘i statewide line",
+  "published_in": "Published on the Office of Veterans’ Services contact page",
+  "agency_link": "Hawai‘i Office of Veterans’ Services",
+  "officers_can": "Office of Veterans’ Services counselors can",
+  "abuse_phone": "808-832-5115",
+  "abuse_label": "Adult Protective Services, statewide; 7:45 a.m. to 4:30 p.m. weekdays, leave a message after hours",
+  "extra_swaps": [
+   [
+    "Choose a county for its County Veterans Service Office, matched Area Agency on Aging",
+    "Choose a county for its state veterans office, matched Area Agency on Aging"
+   ],
+   [
+    "Choose a county above for the county veterans office.",
+    "Choose a county above for its state veterans office."
+   ]
+  ]
+ },
+ "share_replacements": [
+  [
+   "county veterans offices, benefits and care referrals",
+   "state veterans offices, benefits and care referrals"
+  ],
+  [
+   "County veterans offices",
+   "state veterans offices"
+  ]
+ ],
+ "coverage_scope": "Referral edition. All five counties have an Office of Veterans’ Services office (Kalawao through Maui), a county office on aging, the statewide long-term care ombudsman and a Center for Independent Living (Kalawao excepted).",
+ "coverage_note": "Veterans offices come from the Office of Veterans’ Services contact page. Area Agencies on Aging come from the Executive Office on Aging. Centers for Independent Living come from the ILRU national directory. Reviewed November 16, 2026. Contacts are not telephone-confirmed.",
+ "share_description": "state veterans offices, county offices on aging and long-term care ombudsman help across Hawai‘i"
+}
