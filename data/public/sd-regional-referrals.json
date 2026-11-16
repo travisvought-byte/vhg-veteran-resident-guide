@@ -1,80 +1,224 @@
 [
- {
-  "program_id": "sd-aging",
-  "name": "Local aging help in South Dakota (Eldercare Locator)",
-  "official_url": "https://eldercare.acl.gov/home",
-  "organization": "U.S. Administration for Community Living",
-  "service_area": [
-   "All South Dakota counties"
-  ],
-  "state": "SD",
-  "needs_supported": [
-   "general_navigation",
-   "help_at_home"
-  ],
-  "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-  "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
-  "constraints": [
-   "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "sd-dah",
+    "name": "Dakota at Home (South Dakota Aging and Disability Resource Center)",
+    "organization": "Dakota at Home (South Dakota Aging and Disability Resource Center)",
+    "official_url": "https://dakotaathome.sd.gov/search/84901553-f7f9-557c-a9a6-5c3d6640cc78",
+    "state": "SD",
+    "service_area": [
+      "Aurora",
+      "Beadle",
+      "Bennett",
+      "Bon Homme",
+      "Brookings",
+      "Brown",
+      "Brule",
+      "Buffalo",
+      "Butte",
+      "Campbell",
+      "Charles Mix",
+      "Clark",
+      "Clay",
+      "Codington",
+      "Corson",
+      "Custer",
+      "Davison",
+      "Day",
+      "Deuel",
+      "Dewey",
+      "Douglas",
+      "Edmunds",
+      "Fall River",
+      "Faulk",
+      "Grant",
+      "Gregory",
+      "Haakon",
+      "Hamlin",
+      "Hand",
+      "Hanson",
+      "Harding",
+      "Hughes",
+      "Hutchinson",
+      "Hyde",
+      "Jackson",
+      "Jerauld",
+      "Jones",
+      "Kingsbury",
+      "Lake",
+      "Lawrence",
+      "Lincoln",
+      "Lyman",
+      "Marshall",
+      "McCook",
+      "McPherson",
+      "Meade",
+      "Mellette",
+      "Miner",
+      "Minnehaha",
+      "Moody",
+      "Oglala Lakota",
+      "Pennington",
+      "Perkins",
+      "Potter",
+      "Roberts",
+      "Sanborn",
+      "Spink",
+      "Stanley",
+      "Sully",
+      "Todd",
+      "Tripp",
+      "Turner",
+      "Union",
+      "Walworth",
+      "Yankton",
+      "Ziebach"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Dakota at Home, South Dakota’s Aging and Disability Resource Center: free information, referral and intake for help at home, meals, caregiver support, assisted living and other long-term services for adults 60 and older and adults with disabilities. South Dakota has no Area Agencies on Aging; this statewide line is the local starting point.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Press 1 for Long Term Services and Supports. Lines are open 8 a.m. to 5 p.m. Central Time, Monday to Friday. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Statewide; 8 a.m. to 5 p.m. Central Time, Monday to Friday."
+    ],
+    "public_contact": {
+      "phone": "833-663-9673",
+      "phone_label": "Dakota at Home (South Dakota)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://dakotaathome.sd.gov/search/84901553-f7f9-557c-a9a6-5c3d6640cc78",
+      "phone_source_url": "https://dakotaathome.sd.gov/search/84901553-f7f9-557c-a9a6-5c3d6640cc78"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dakotaathome.sd.gov/search/84901553-f7f9-557c-a9a6-5c3d6640cc78",
+        "title": "Dakota at Home: Long Term Services and Supports, South Dakota Department of Human Services",
+        "reviewed_on": "2026-11-16",
+        "scope": "Dakota at Home, 833-663-9673: information, intake and referral for Long Term Services and Supports, with elder abuse and ombudsman reports during business hours; read in full. Last updated September 15, 2026. South Dakota has no Area Agencies on Aging; the state division performs that role (ADvancing States state profile, April 2021: https://advancingstates.org/sites/nasuad/files/u34008/South%20Dakota%20State%20Profile%20April%202021.pdf)."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
-  },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.acl.gov/contact"
-  },
-  "source_evidence": [
-   {
-    "url": "https://www.acl.gov/contact",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "aging_agency"
- },
- {
-  "program_id": "sd-ombudsman",
-  "name": "South Dakota long-term-care ombudsman",
-  "official_url": "https://theconsumervoice.org/get_help",
-  "organization": "National Long-Term Care Ombudsman Resource Center",
-  "service_area": [
-   "All South Dakota counties"
-  ],
-  "state": "SD",
-  "needs_supported": [
-   "resident_rights",
-   "general_navigation"
-  ],
-  "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-  "next_step": "Use the locator to find the South Dakota program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
-  "constraints": [
-   "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
-  },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
-  },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
-  },
-  "source_evidence": [
-   {
-    "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "ombudsman"
- }
+  {
+    "program_id": "sd-omb-state",
+    "name": "South Dakota Long Term Care Ombudsman Program",
+    "organization": "South Dakota Long Term Care Ombudsman Program",
+    "official_url": "https://dakotaathome.sd.gov/search/84901553-f7f9-557c-a9a6-5c3d6640cc78",
+    "state": "SD",
+    "service_area": [
+      "Aurora",
+      "Beadle",
+      "Bennett",
+      "Bon Homme",
+      "Brookings",
+      "Brown",
+      "Brule",
+      "Buffalo",
+      "Butte",
+      "Campbell",
+      "Charles Mix",
+      "Clark",
+      "Clay",
+      "Codington",
+      "Corson",
+      "Custer",
+      "Davison",
+      "Day",
+      "Deuel",
+      "Dewey",
+      "Douglas",
+      "Edmunds",
+      "Fall River",
+      "Faulk",
+      "Grant",
+      "Gregory",
+      "Haakon",
+      "Hamlin",
+      "Hand",
+      "Hanson",
+      "Harding",
+      "Hughes",
+      "Hutchinson",
+      "Hyde",
+      "Jackson",
+      "Jerauld",
+      "Jones",
+      "Kingsbury",
+      "Lake",
+      "Lawrence",
+      "Lincoln",
+      "Lyman",
+      "Marshall",
+      "McCook",
+      "McPherson",
+      "Meade",
+      "Mellette",
+      "Miner",
+      "Minnehaha",
+      "Moody",
+      "Oglala Lakota",
+      "Pennington",
+      "Perkins",
+      "Potter",
+      "Roberts",
+      "Sanborn",
+      "Spink",
+      "Stanley",
+      "Sully",
+      "Todd",
+      "Tripp",
+      "Turner",
+      "Union",
+      "Walworth",
+      "Yankton",
+      "Ziebach"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Regional ombudsmen work for the state Division of Long Term Services and Supports."
+    ],
+    "public_contact": {
+      "phone": "833-663-9673",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://dakotaathome.sd.gov/search/84901553-f7f9-557c-a9a6-5c3d6640cc78",
+      "phone_source_url": "https://dakotaathome.sd.gov/search/84901553-f7f9-557c-a9a6-5c3d6640cc78"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dakotaathome.sd.gov/search/84901553-f7f9-557c-a9a6-5c3d6640cc78",
+        "title": "Dakota at Home: Long Term Services and Supports, South Dakota Department of Human Services",
+        "reviewed_on": "2026-11-16",
+        "scope": "Ombudsman reports go to Dakota at Home, 833-663-9673, during business hours; read in full. The program is statewide, so every county shows it."
+      },
+      {
+        "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/9.2023ombuds_rack_card.pdf",
+        "title": "South Dakota Long Term Care Ombudsman Program rack card",
+        "reviewed_on": "2026-11-16",
+        "scope": "Program phone 1-833-663-9673 and dhs.sd.gov/ltss/ombudsman-program; search excerpt."
+      }
+    ]
+  }
 ]

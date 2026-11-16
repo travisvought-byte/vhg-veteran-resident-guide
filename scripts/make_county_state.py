@@ -202,6 +202,8 @@ def build_programs(sheet):
     # VA's workbook drops accents ('Dona Ana'); match its names to the edition's own spelling ('Doña Ana').
     plain = lambda s: unicodedata.normalize('NFKD', s).encode('ascii', 'ignore').decode()
     spelled = {plain(o['county']): o['county'] for o in sheet['offices']['list']}
+    # A sheet can map a county's former name in VA's workbook to its current one (South Dakota: 'Shannon' is now 'Oglala Lakota').
+    spelled.update({plain(old): new for old, new in sheet.get('ssvf_renamed_counties', {}).items()})
     for row in ssvf['records']:
         if code not in row['states']:
             continue
