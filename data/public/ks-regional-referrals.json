@@ -1,80 +1,1017 @@
 [
- {
-  "program_id": "ks-aging",
-  "name": "Local aging help in Kansas (Eldercare Locator)",
-  "official_url": "https://eldercare.acl.gov/home",
-  "organization": "U.S. Administration for Community Living",
-  "service_area": [
-   "All Kansas counties"
-  ],
-  "state": "KS",
-  "needs_supported": [
-   "general_navigation",
-   "help_at_home"
-  ],
-  "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-  "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
-  "constraints": [
-   "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "ks-aaa-wyandotte-leavenworth",
+    "name": "Wyandotte/Leavenworth Area Agency on Aging",
+    "organization": "Wyandotte/Leavenworth Area Agency on Aging",
+    "official_url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers",
+    "state": "KS",
+    "service_area": [
+      "Leavenworth",
+      "Wyandotte"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Center line, 855-200-2372, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 888-661-1444. Office: 849-C North 47th Street, Kansas City, KS 66102."
+    ],
+    "public_contact": {
+      "phone": "913-573-8531",
+      "phone_label": "Area Agency on Aging (Wyandotte/Leavenworth)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers",
+      "phone_source_url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers",
+        "title": "Kansas Commission on Disability Concerns: Service Providers map",
+        "reviewed_on": "2026-11-16",
+        "scope": "The eleven Area Agencies on Aging, their offices, phones and the counties each serves; read in full. The page says its text was updated August 12, 2025."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "ks-aaa-central-plains",
+    "name": "Central Plains Area Agency on Aging",
+    "organization": "Central Plains Area Agency on Aging",
+    "official_url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers",
+    "state": "KS",
+    "service_area": [
+      "Butler",
+      "Harvey",
+      "Sedgwick"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Center line, 855-200-2372, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-367-7298. Office: 271 West 3rd Street North, Suite 500, Wichita, KS 67202."
+    ],
+    "public_contact": {
+      "phone": "316-660-5120",
+      "phone_label": "Area Agency on Aging (Central Plains)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers",
+      "phone_source_url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers",
+        "title": "Kansas Commission on Disability Concerns: Service Providers map",
+        "reviewed_on": "2026-11-16",
+        "scope": "The eleven Area Agencies on Aging, their offices, phones and the counties each serves; read in full. The page says its text was updated August 12, 2025."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.acl.gov/contact"
+  {
+    "program_id": "ks-aaa-northwest",
+    "name": "Northwest Kansas Area Agency on Aging",
+    "organization": "Northwest Kansas Area Agency on Aging",
+    "official_url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers",
+    "state": "KS",
+    "service_area": [
+      "Cheyenne",
+      "Decatur",
+      "Ellis",
+      "Gove",
+      "Graham",
+      "Logan",
+      "Norton",
+      "Osborne",
+      "Phillips",
+      "Rawlins",
+      "Rooks",
+      "Russell",
+      "Sheridan",
+      "Sherman",
+      "Smith",
+      "Thomas",
+      "Trego",
+      "Wallace"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Center line, 855-200-2372, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-432-7422. Office: 510 West 29th Street, Hays, KS 67601."
+    ],
+    "public_contact": {
+      "phone": "785-628-8204",
+      "phone_label": "Area Agency on Aging (Northwest Kansas)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers",
+      "phone_source_url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers",
+        "title": "Kansas Commission on Disability Concerns: Service Providers map",
+        "reviewed_on": "2026-11-16",
+        "scope": "The eleven Area Agencies on Aging, their offices, phones and the counties each serves; read in full. The page says its text was updated August 12, 2025."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.acl.gov/contact",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "aging_agency"
- },
- {
-  "program_id": "ks-ombudsman",
-  "name": "Kansas long-term-care ombudsman",
-  "official_url": "https://theconsumervoice.org/get_help",
-  "organization": "National Long-Term Care Ombudsman Resource Center",
-  "service_area": [
-   "All Kansas counties"
-  ],
-  "state": "KS",
-  "needs_supported": [
-   "resident_rights",
-   "general_navigation"
-  ],
-  "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-  "next_step": "Use the locator to find the Kansas program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
-  "constraints": [
-   "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "ks-aaa-jayhawk",
+    "name": "Jayhawk Area Agency on Aging",
+    "organization": "Jayhawk Area Agency on Aging",
+    "official_url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers",
+    "state": "KS",
+    "service_area": [
+      "Douglas",
+      "Jefferson",
+      "Shawnee"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Center line, 855-200-2372, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-798-1366. Office: 2910 SW Topeka Boulevard, Topeka, KS 66611."
+    ],
+    "public_contact": {
+      "phone": "785-235-1367",
+      "phone_label": "Area Agency on Aging (Jayhawk)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers",
+      "phone_source_url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers",
+        "title": "Kansas Commission on Disability Concerns: Service Providers map",
+        "reviewed_on": "2026-11-16",
+        "scope": "The eleven Area Agencies on Aging, their offices, phones and the counties each serves; read in full. The page says its text was updated August 12, 2025."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "ks-aaa-southeast",
+    "name": "Southeast Kansas Area Agency on Aging",
+    "organization": "Southeast Kansas Area Agency on Aging",
+    "official_url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers",
+    "state": "KS",
+    "service_area": [
+      "Allen",
+      "Bourbon",
+      "Cherokee",
+      "Crawford",
+      "Labette",
+      "Montgomery",
+      "Neosho",
+      "Wilson",
+      "Woodson"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Center line, 855-200-2372, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-794-2440. Office: 1 West Ash, Chanute, KS 66720."
+    ],
+    "public_contact": {
+      "phone": "620-431-2980",
+      "phone_label": "Area Agency on Aging (Southeast Kansas)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers",
+      "phone_source_url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers",
+        "title": "Kansas Commission on Disability Concerns: Service Providers map",
+        "reviewed_on": "2026-11-16",
+        "scope": "The eleven Area Agencies on Aging, their offices, phones and the counties each serves; read in full. The page says its text was updated August 12, 2025."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
+  {
+    "program_id": "ks-aaa-southwest",
+    "name": "Southwest Kansas Area Agency on Aging",
+    "organization": "Southwest Kansas Area Agency on Aging",
+    "official_url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers",
+    "state": "KS",
+    "service_area": [
+      "Barber",
+      "Barton",
+      "Clark",
+      "Comanche",
+      "Edwards",
+      "Finney",
+      "Ford",
+      "Grant",
+      "Gray",
+      "Greeley",
+      "Hamilton",
+      "Haskell",
+      "Hodgeman",
+      "Kearny",
+      "Kiowa",
+      "Lane",
+      "Meade",
+      "Morton",
+      "Ness",
+      "Pawnee",
+      "Pratt",
+      "Rush",
+      "Scott",
+      "Seward",
+      "Stafford",
+      "Stanton",
+      "Stevens",
+      "Wichita"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Center line, 855-200-2372, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-742-9531. Office: 236 San Jose Drive, Dodge City, KS 67801."
+    ],
+    "public_contact": {
+      "phone": "620-225-8230",
+      "phone_label": "Area Agency on Aging (Southwest Kansas)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers",
+      "phone_source_url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers",
+        "title": "Kansas Commission on Disability Concerns: Service Providers map",
+        "reviewed_on": "2026-11-16",
+        "scope": "The eleven Area Agencies on Aging, their offices, phones and the counties each serves; read in full. The page says its text was updated August 12, 2025."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "ombudsman"
- }
+  {
+    "program_id": "ks-aaa-east-central",
+    "name": "East Central Kansas Area Agency on Aging",
+    "organization": "East Central Kansas Area Agency on Aging",
+    "official_url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers",
+    "state": "KS",
+    "service_area": [
+      "Anderson",
+      "Coffey",
+      "Franklin",
+      "Linn",
+      "Miami",
+      "Osage"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Center line, 855-200-2372, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-633-5621. Office: 117 South Main Street, Ottawa, KS 66067."
+    ],
+    "public_contact": {
+      "phone": "785-242-7200",
+      "phone_label": "Area Agency on Aging (East Central Kansas)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers",
+      "phone_source_url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers",
+        "title": "Kansas Commission on Disability Concerns: Service Providers map",
+        "reviewed_on": "2026-11-16",
+        "scope": "The eleven Area Agencies on Aging, their offices, phones and the counties each serves; read in full. The page says its text was updated August 12, 2025."
+      }
+    ]
+  },
+  {
+    "program_id": "ks-aaa-north-central-flint-hills",
+    "name": "North Central-Flint Hills Area Agency on Aging",
+    "organization": "North Central-Flint Hills Area Agency on Aging",
+    "official_url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers",
+    "state": "KS",
+    "service_area": [
+      "Chase",
+      "Clay",
+      "Cloud",
+      "Dickinson",
+      "Ellsworth",
+      "Geary",
+      "Jewell",
+      "Lincoln",
+      "Lyon",
+      "Marion",
+      "Mitchell",
+      "Morris",
+      "Ottawa",
+      "Pottawatomie",
+      "Republic",
+      "Riley",
+      "Saline",
+      "Wabaunsee"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Center line, 855-200-2372, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-432-2703. Office: 401 Houston Street, Manhattan, KS 66502."
+    ],
+    "public_contact": {
+      "phone": "785-776-9294",
+      "phone_label": "Area Agency on Aging (North Central-Flint Hills)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers",
+      "phone_source_url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers",
+        "title": "Kansas Commission on Disability Concerns: Service Providers map",
+        "reviewed_on": "2026-11-16",
+        "scope": "The eleven Area Agencies on Aging, their offices, phones and the counties each serves; read in full. The page says its text was updated August 12, 2025."
+      }
+    ]
+  },
+  {
+    "program_id": "ks-aaa-northeast",
+    "name": "Northeast Kansas Area Agency on Aging",
+    "organization": "Northeast Kansas Area Agency on Aging",
+    "official_url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers",
+    "state": "KS",
+    "service_area": [
+      "Atchison",
+      "Brown",
+      "Doniphan",
+      "Jackson",
+      "Marshall",
+      "Nemaha",
+      "Washington"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Center line, 855-200-2372, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-883-2549. Office: 1803 Oregon Street, Hiawatha, KS 66434."
+    ],
+    "public_contact": {
+      "phone": "785-742-7152",
+      "phone_label": "Area Agency on Aging (Northeast Kansas)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers",
+      "phone_source_url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers",
+        "title": "Kansas Commission on Disability Concerns: Service Providers map",
+        "reviewed_on": "2026-11-16",
+        "scope": "The eleven Area Agencies on Aging, their offices, phones and the counties each serves; read in full. The page says its text was updated August 12, 2025."
+      }
+    ]
+  },
+  {
+    "program_id": "ks-aaa-south-central",
+    "name": "South Central Kansas Area Agency on Aging",
+    "organization": "South Central Kansas Area Agency on Aging",
+    "official_url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers",
+    "state": "KS",
+    "service_area": [
+      "Chautauqua",
+      "Cowley",
+      "Elk",
+      "Greenwood",
+      "Harper",
+      "Kingman",
+      "McPherson",
+      "Reno",
+      "Rice",
+      "Sumner"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Center line, 855-200-2372, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-362-0264. Office: 304 South Summit Street, Arkansas City, KS 67005."
+    ],
+    "public_contact": {
+      "phone": "620-442-0268",
+      "phone_label": "Area Agency on Aging (South Central Kansas)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers",
+      "phone_source_url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers",
+        "title": "Kansas Commission on Disability Concerns: Service Providers map",
+        "reviewed_on": "2026-11-16",
+        "scope": "The eleven Area Agencies on Aging, their offices, phones and the counties each serves; read in full. The page says its text was updated August 12, 2025."
+      }
+    ]
+  },
+  {
+    "program_id": "ks-aaa-johnson",
+    "name": "Johnson County Area Agency on Aging",
+    "organization": "Johnson County Area Agency on Aging",
+    "official_url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers",
+    "state": "KS",
+    "service_area": [
+      "Johnson"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Center line, 855-200-2372, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 888-214-4404. Office: 11811 South Sunset Drive, Suite 1300, Olathe, KS 66061."
+    ],
+    "public_contact": {
+      "phone": "913-715-8861",
+      "phone_label": "Area Agency on Aging (Johnson County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers",
+      "phone_source_url": "https://jocogov.org/department/aging-and-human-services/information-and-community-resources"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers",
+        "title": "Kansas Commission on Disability Concerns: Service Providers map",
+        "reviewed_on": "2026-11-16",
+        "scope": "The eleven Area Agencies on Aging, their offices, phones and the counties each serves; read in full. The page says its text was updated August 12, 2025."
+      },
+      {
+        "url": "https://jocogov.org/department/aging-and-human-services/information-and-community-resources",
+        "title": "Johnson County Aging and Human Services: Information and Community Resources",
+        "reviewed_on": "2026-11-16",
+        "scope": "Information Specialists at 913-715-8861, Monday–Friday 8 a.m.–5 p.m.; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "ks-omb-1",
+    "name": "Kansas Long-Term Care Ombudsman, Region 1 (Justin Erk)",
+    "organization": "Kansas Long-Term Care Ombudsman, Region 1 (Justin Erk)",
+    "official_url": "https://www.ombudsman.ks.gov/contact-us/contact-our-office/region-1",
+    "state": "KS",
+    "service_area": [
+      "Cloud",
+      "Dickinson",
+      "Ellsworth",
+      "Harvey",
+      "Marion",
+      "McPherson",
+      "Ottawa",
+      "Reno",
+      "Republic",
+      "Rice",
+      "Saline"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "620-728-0180",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.ombudsman.ks.gov/contact-us/contact-our-office/region-1",
+      "phone_source_url": "https://www.ombudsman.ks.gov/contact-us/contact-our-office/region-1"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ombudsman.ks.gov/contact-us/contact-our-office/region-1",
+        "title": "Kansas Office of the Long-Term Care Ombudsman: Region 1",
+        "reviewed_on": "2026-11-16",
+        "scope": "The regional ombudsman, phone and counties served; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "ks-omb-2",
+    "name": "Kansas Long-Term Care Ombudsman, Region 2 (Janette Corpstein)",
+    "organization": "Kansas Long-Term Care Ombudsman, Region 2 (Janette Corpstein)",
+    "official_url": "https://ombudsman.ks.gov/contact-us/contact-our-office/region-2",
+    "state": "KS",
+    "service_area": [
+      "Atchison",
+      "Brown",
+      "Chase",
+      "Clay",
+      "Doniphan",
+      "Douglas",
+      "Geary",
+      "Jackson",
+      "Jefferson",
+      "Leavenworth",
+      "Lyon",
+      "Marshall",
+      "Morris",
+      "Nemaha",
+      "Osage",
+      "Pottawatomie",
+      "Riley",
+      "Shawnee",
+      "Wabaunsee",
+      "Washington"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "913-236-9385",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://ombudsman.ks.gov/contact-us/contact-our-office/region-2",
+      "phone_source_url": "https://ombudsman.ks.gov/contact-us/contact-our-office/region-2"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ombudsman.ks.gov/contact-us/contact-our-office/region-2",
+        "title": "Kansas Office of the Long-Term Care Ombudsman: Region 2",
+        "reviewed_on": "2026-11-16",
+        "scope": "The regional ombudsman, phone and counties served; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "ks-omb-3",
+    "name": "Kansas Long-Term Care Ombudsman, Region 3 (Hector Rodriguez)",
+    "organization": "Kansas Long-Term Care Ombudsman, Region 3 (Hector Rodriguez)",
+    "official_url": "https://www.ombudsman.ks.gov/contact-us/contact-our-office/region-3",
+    "state": "KS",
+    "service_area": [
+      "Johnson",
+      "Wyandotte"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "913-329-4606",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.ombudsman.ks.gov/contact-us/contact-our-office/region-3",
+      "phone_source_url": "https://www.ombudsman.ks.gov/contact-us/contact-our-office/region-3"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ombudsman.ks.gov/contact-us/contact-our-office/region-3",
+        "title": "Kansas Office of the Long-Term Care Ombudsman: Region 3",
+        "reviewed_on": "2026-11-16",
+        "scope": "The regional ombudsman, phone and counties served; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "ks-omb-4",
+    "name": "Kansas Long-Term Care Ombudsman, Region 4 (Lou Anne Ward)",
+    "organization": "Kansas Long-Term Care Ombudsman, Region 4 (Lou Anne Ward)",
+    "official_url": "https://www.ombudsman.ks.gov/contact-us/contact-our-office/region-4",
+    "state": "KS",
+    "service_area": [
+      "Sedgwick"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "This ombudsman covers assisted living, residential health care and home plus facilities, and facilities on multi-level care campuses. The position for stand-alone nursing homes in Sedgwick County is open; for a nursing home, call the state office at 785-296-3017."
+    ],
+    "public_contact": {
+      "phone": "785-480-9429",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.ombudsman.ks.gov/contact-us/contact-our-office/region-4",
+      "phone_source_url": "https://www.ombudsman.ks.gov/contact-us/contact-our-office/region-4"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ombudsman.ks.gov/contact-us/contact-our-office/region-4",
+        "title": "Kansas Office of the Long-Term Care Ombudsman: Region 4",
+        "reviewed_on": "2026-11-16",
+        "scope": "The regional ombudsman, phone and counties served; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "ks-omb-4a",
+    "name": "Kansas Long-Term Care Ombudsman, Region 4a (Katie Ross)",
+    "organization": "Kansas Long-Term Care Ombudsman, Region 4a (Katie Ross)",
+    "official_url": "https://ombudsman.ks.gov/find-an-ombudsman/find-the-ombudsman-in-your-region/region-4-copy",
+    "state": "KS",
+    "service_area": [
+      "Butler",
+      "Cowley",
+      "Harper",
+      "Kingman",
+      "Sumner"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "For a home plus facility, call Lou Anne Ward at 785-480-9429."
+    ],
+    "public_contact": {
+      "phone": "316-799-5218",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://ombudsman.ks.gov/find-an-ombudsman/find-the-ombudsman-in-your-region/region-4-copy",
+      "phone_source_url": "https://ombudsman.ks.gov/find-an-ombudsman/find-the-ombudsman-in-your-region/region-4-copy"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ombudsman.ks.gov/find-an-ombudsman/find-the-ombudsman-in-your-region/region-4-copy",
+        "title": "Kansas Office of the Long-Term Care Ombudsman: Region 4a",
+        "reviewed_on": "2026-11-16",
+        "scope": "The regional ombudsman, phone and counties served; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "ks-omb-5",
+    "name": "Kansas Long-Term Care Ombudsman, Region 5",
+    "organization": "Kansas Long-Term Care Ombudsman, Region 5",
+    "official_url": "https://ombudsman.ks.gov/contact-us/contact-our-office/region-5",
+    "state": "KS",
+    "service_area": [
+      "Barber",
+      "Clark",
+      "Comanche",
+      "Edwards",
+      "Finney",
+      "Ford",
+      "Grant",
+      "Gray",
+      "Greeley",
+      "Hamilton",
+      "Haskell",
+      "Hodgeman",
+      "Kearny",
+      "Kiowa",
+      "Lane",
+      "Meade",
+      "Morton",
+      "Ness",
+      "Pawnee",
+      "Pratt",
+      "Scott",
+      "Seward",
+      "Stafford",
+      "Stanton",
+      "Stevens",
+      "Wichita"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "The Region 5 position is open; the page asks callers to contact the state office in Topeka."
+    ],
+    "public_contact": {
+      "phone": "785-296-3017",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://ombudsman.ks.gov/contact-us/contact-our-office/region-5",
+      "phone_source_url": "https://ombudsman.ks.gov/contact-us/contact-our-office/region-5"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ombudsman.ks.gov/contact-us/contact-our-office/region-5",
+        "title": "Kansas Office of the Long-Term Care Ombudsman: Region 5",
+        "reviewed_on": "2026-11-16",
+        "scope": "The regional ombudsman, phone and counties served; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "ks-omb-6",
+    "name": "Kansas Long-Term Care Ombudsman, Region 6 (Velvet Unrein)",
+    "organization": "Kansas Long-Term Care Ombudsman, Region 6 (Velvet Unrein)",
+    "official_url": "https://www.ombudsman.ks.gov/contact-us/contact-our-office/region-6",
+    "state": "KS",
+    "service_area": [
+      "Barton",
+      "Cheyenne",
+      "Decatur",
+      "Ellis",
+      "Gove",
+      "Graham",
+      "Jewell",
+      "Lincoln",
+      "Logan",
+      "Mitchell",
+      "Norton",
+      "Osborne",
+      "Phillips",
+      "Rawlins",
+      "Rooks",
+      "Rush",
+      "Russell",
+      "Sheridan",
+      "Sherman",
+      "Smith",
+      "Thomas",
+      "Trego",
+      "Wallace"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "785-628-3121",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.ombudsman.ks.gov/contact-us/contact-our-office/region-6",
+      "phone_source_url": "https://www.ombudsman.ks.gov/contact-us/contact-our-office/region-6"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ombudsman.ks.gov/contact-us/contact-our-office/region-6",
+        "title": "Kansas Office of the Long-Term Care Ombudsman: Region 6",
+        "reviewed_on": "2026-11-16",
+        "scope": "The regional ombudsman, phone and counties served; read in full."
+      },
+      {
+        "url": "https://www.kcdcinfo.ks.gov/resources/service-maps/service-providers",
+        "title": "Kansas Commission on Disability Concerns: Service Providers map (long-term care ombudsman regions)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Region 6 includes Logan, Mitchell and Norton counties, which the regional page does not print; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "ks-omb-7",
+    "name": "Kansas Long-Term Care Ombudsman, Region 7 (Gina Elliott)",
+    "organization": "Kansas Long-Term Care Ombudsman, Region 7 (Gina Elliott)",
+    "official_url": "https://www.ombudsman.ks.gov/contact-us/contact-our-office/region-7",
+    "state": "KS",
+    "service_area": [
+      "Allen",
+      "Anderson",
+      "Bourbon",
+      "Chautauqua",
+      "Cherokee",
+      "Coffey",
+      "Crawford",
+      "Elk",
+      "Franklin",
+      "Greenwood",
+      "Labette",
+      "Linn",
+      "Miami",
+      "Montgomery",
+      "Neosho",
+      "Wilson",
+      "Woodson"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "620-778-1035",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.ombudsman.ks.gov/contact-us/contact-our-office/region-7",
+      "phone_source_url": "https://www.ombudsman.ks.gov/contact-us/contact-our-office/region-7"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ombudsman.ks.gov/contact-us/contact-our-office/region-7",
+        "title": "Kansas Office of the Long-Term Care Ombudsman: Region 7",
+        "reviewed_on": "2026-11-16",
+        "scope": "The regional ombudsman, phone and counties served; read in full."
+      }
+    ]
+  }
 ]

@@ -718,6 +718,36 @@
     ]
   },
   {
+    "code": "KS",
+    "name": "Kansas",
+    "page": "ks.html",
+    "share_page": "share-ks.html",
+    "qr": "assets/guide-qr-ks.svg",
+    "counties": 105,
+    "programs": "data/public/ks-programs.json",
+    "referrals": "data/public/ks-regional-referrals.json",
+    "offices": "data/public/kansas-county-veterans-offices.json",
+    "resources": "data/public/kansas-resources.json",
+    "statewide_area_names": [],
+    "coverage_scope": "Referral edition. Kansas has no county veterans offices: every one of the 105 counties shows the Kansas Office of Veterans Services field office that serves it (16 offices), with the office’s itinerant schedule for the county where it lists one; Harvey County is listed by two offices. All 105 counties also show an Area Agency on Aging (eleven), a regional long-term care ombudsman and a Center for Independent Living (eight centers).",
+    "coverage_note": "Field offices, their counties and itinerant schedules come from the Kansas Office of Veterans Services office pages; the Fort Dodge office comes from the department’s facility directory, with its counties from the Kansas Commission on Disability Concerns service map. Area Agencies on Aging and Centers for Independent Living come from the Commission’s service-provider map (text updated August 12, 2025) and the regional long-term care ombudsmen from the state ombudsman’s regional pages. Reviewed November 16, 2026. Contacts are not telephone-confirmed.",
+    "share_description": "state veterans field offices, Area Agencies on Aging and long-term care ombudsman help across Kansas",
+    "share_replacements": [
+      [
+        "Updated October 8, 2026",
+        "Updated November 16, 2026"
+      ],
+      [
+        "county veterans offices, benefits and care referrals",
+        "state veterans field offices, benefits and care referrals"
+      ],
+      [
+        "County veterans offices",
+        "State veterans field offices"
+      ]
+    ]
+  },
+  {
     "code": "AK",
     "name": "Alaska",
     "starter": true,
@@ -874,26 +904,6 @@
     ],
     "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
     "coverage_note": "Starter edition. Every county uses the Iowa Department of Veterans Affairs and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
-    "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
-    "share_replacements": []
-  },
-  {
-    "code": "KS",
-    "name": "Kansas",
-    "starter": true,
-    "page": "ks.html",
-    "share_page": "share-ks.html",
-    "qr": "assets/guide-qr-ks.svg",
-    "counties": 1,
-    "programs": "data/public/ks-programs.json",
-    "referrals": "data/public/ks-regional-referrals.json",
-    "offices": "data/public/kansas-county-veterans-offices.json",
-    "resources": "data/public/kansas-resources.json",
-    "statewide_area_names": [
-      "All Kansas counties"
-    ],
-    "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
-    "coverage_note": "Starter edition. Every county uses the Kansas Office of Veterans Services and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
     "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
     "share_replacements": []
   },
