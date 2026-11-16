@@ -1,80 +1,489 @@
 [
- {
-  "program_id": "mn-aging",
-  "name": "Local aging help in Minnesota (Eldercare Locator)",
-  "official_url": "https://eldercare.acl.gov/home",
-  "organization": "U.S. Administration for Community Living",
-  "service_area": [
-   "All Minnesota counties"
-  ],
-  "state": "MN",
-  "needs_supported": [
-   "general_navigation",
-   "help_at_home"
-  ],
-  "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-  "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
-  "constraints": [
-   "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "mn-aaa-arrowhead",
+    "name": "Arrowhead Area Agency on Aging",
+    "organization": "Arrowhead Area Agency on Aging",
+    "official_url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+    "state": "MN",
+    "service_area": [
+      "Aitkin",
+      "Carlton",
+      "Cook",
+      "Itasca",
+      "Koochiching",
+      "Lake",
+      "St. Louis"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Minnesota Aging Pathways (formerly the Senior LinkAge Line), 800-333-2433, is the statewide line and connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Based in Duluth. Toll-free: 800-232-0707."
+    ],
+    "public_contact": {
+      "phone": "218-722-5545",
+      "phone_label": "Area Agency on Aging (Arrowhead)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+      "phone_source_url": "https://mn.gov/board-on-aging/about-us/area-agencies/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+        "title": "Minnesota Board on Aging: Area Agencies on Aging",
+        "reviewed_on": "2026-11-15",
+        "scope": "Name, city, phone and the counties each of the six regional Area Agencies on Aging serves; read as a search excerpt, with the Metropolitan agency’s phone taken from the state’s Aging and Disability Resources directory because the excerpt of the board’s page garbled it. The page also lists a seventh, the Minnesota Indian Area Agency on Aging, which serves the state’s eleven tribal nations rather than counties and is not shown on county cards."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "mn-aaa-cmcoa",
+    "name": "Central Minnesota Council on Aging",
+    "organization": "Central Minnesota Council on Aging",
+    "official_url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+    "state": "MN",
+    "service_area": [
+      "Benton",
+      "Cass",
+      "Chisago",
+      "Crow Wing",
+      "Isanti",
+      "Kanabec",
+      "Mille Lacs",
+      "Morrison",
+      "Pine",
+      "Sherburne",
+      "Stearns",
+      "Todd",
+      "Wadena",
+      "Wright"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Minnesota Aging Pathways (formerly the Senior LinkAge Line), 800-333-2433, is the statewide line and connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Based in St. Cloud."
+    ],
+    "public_contact": {
+      "phone": "320-253-9349",
+      "phone_label": "Area Agency on Aging (Central Minnesota Council on Aging)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+      "phone_source_url": "https://mn.gov/board-on-aging/about-us/area-agencies/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+        "title": "Minnesota Board on Aging: Area Agencies on Aging",
+        "reviewed_on": "2026-11-15",
+        "scope": "Name, city, phone and the counties each of the six regional Area Agencies on Aging serves; read as a search excerpt, with the Metropolitan agency’s phone taken from the state’s Aging and Disability Resources directory because the excerpt of the board’s page garbled it. The page also lists a seventh, the Minnesota Indian Area Agency on Aging, which serves the state’s eleven tribal nations rather than counties and is not shown on county cards."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.acl.gov/contact"
+  {
+    "program_id": "mn-aaa-dancing-sky",
+    "name": "Dancing Sky Area Agency on Aging",
+    "organization": "Dancing Sky Area Agency on Aging",
+    "official_url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+    "state": "MN",
+    "service_area": [
+      "Becker",
+      "Beltrami",
+      "Clay",
+      "Clearwater",
+      "Douglas",
+      "Grant",
+      "Hubbard",
+      "Kittson",
+      "Lake of the Woods",
+      "Mahnomen",
+      "Marshall",
+      "Norman",
+      "Otter Tail",
+      "Pennington",
+      "Polk",
+      "Pope",
+      "Red Lake",
+      "Roseau",
+      "Stevens",
+      "Traverse",
+      "Wilkin"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Minnesota Aging Pathways (formerly the Senior LinkAge Line), 800-333-2433, is the statewide line and connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Based in Warren."
+    ],
+    "public_contact": {
+      "phone": "218-745-6733",
+      "phone_label": "Area Agency on Aging (Dancing Sky)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+      "phone_source_url": "https://mn.gov/board-on-aging/about-us/area-agencies/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+        "title": "Minnesota Board on Aging: Area Agencies on Aging",
+        "reviewed_on": "2026-11-15",
+        "scope": "Name, city, phone and the counties each of the six regional Area Agencies on Aging serves; read as a search excerpt, with the Metropolitan agency’s phone taken from the state’s Aging and Disability Resources directory because the excerpt of the board’s page garbled it. The page also lists a seventh, the Minnesota Indian Area Agency on Aging, which serves the state’s eleven tribal nations rather than counties and is not shown on county cards."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.acl.gov/contact",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "aging_agency"
- },
- {
-  "program_id": "mn-ombudsman",
-  "name": "Minnesota long-term-care ombudsman",
-  "official_url": "https://theconsumervoice.org/get_help",
-  "organization": "National Long-Term Care Ombudsman Resource Center",
-  "service_area": [
-   "All Minnesota counties"
-  ],
-  "state": "MN",
-  "needs_supported": [
-   "resident_rights",
-   "general_navigation"
-  ],
-  "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-  "next_step": "Use the locator to find the Minnesota program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
-  "constraints": [
-   "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "mn-aaa-metro",
+    "name": "Metropolitan Area Agency on Aging (Trellis)",
+    "organization": "Metropolitan Area Agency on Aging (Trellis)",
+    "official_url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+    "state": "MN",
+    "service_area": [
+      "Anoka",
+      "Carver",
+      "Dakota",
+      "Hennepin",
+      "Ramsey",
+      "Scott",
+      "Washington"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Minnesota Aging Pathways (formerly the Senior LinkAge Line), 800-333-2433, is the statewide line and connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Based in Minneapolis; the agency does business as Trellis. Phone from the state’s Aging and Disability Resources directory."
+    ],
+    "public_contact": {
+      "phone": "651-641-8612",
+      "phone_label": "Area Agency on Aging (Metropolitan (Trellis))"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+      "phone_source_url": "https://mn.gov/board-on-aging/about-us/area-agencies/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+        "title": "Minnesota Board on Aging: Area Agencies on Aging",
+        "reviewed_on": "2026-11-15",
+        "scope": "Name, city, phone and the counties each of the six regional Area Agencies on Aging serves; read as a search excerpt, with the Metropolitan agency’s phone taken from the state’s Aging and Disability Resources directory because the excerpt of the board’s page garbled it. The page also lists a seventh, the Minnesota Indian Area Agency on Aging, which serves the state’s eleven tribal nations rather than counties and is not shown on county cards."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "mn-aaa-mnraaa",
+    "name": "Minnesota River Area Agency on Aging",
+    "organization": "Minnesota River Area Agency on Aging",
+    "official_url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+    "state": "MN",
+    "service_area": [
+      "Big Stone",
+      "Blue Earth",
+      "Brown",
+      "Chippewa",
+      "Cottonwood",
+      "Faribault",
+      "Jackson",
+      "Kandiyohi",
+      "Lac qui Parle",
+      "Le Sueur",
+      "Lincoln",
+      "Lyon",
+      "Martin",
+      "McLeod",
+      "Meeker",
+      "Murray",
+      "Nicollet",
+      "Nobles",
+      "Pipestone",
+      "Redwood",
+      "Renville",
+      "Rock",
+      "Sibley",
+      "Swift",
+      "Waseca",
+      "Watonwan",
+      "Yellow Medicine"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Minnesota Aging Pathways (formerly the Senior LinkAge Line), 800-333-2433, is the statewide line and connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Based in Mankato."
+    ],
+    "public_contact": {
+      "phone": "507-387-1256",
+      "phone_label": "Area Agency on Aging (Minnesota River)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+      "phone_source_url": "https://mn.gov/board-on-aging/about-us/area-agencies/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+        "title": "Minnesota Board on Aging: Area Agencies on Aging",
+        "reviewed_on": "2026-11-15",
+        "scope": "Name, city, phone and the counties each of the six regional Area Agencies on Aging serves; read as a search excerpt, with the Metropolitan agency’s phone taken from the state’s Aging and Disability Resources directory because the excerpt of the board’s page garbled it. The page also lists a seventh, the Minnesota Indian Area Agency on Aging, which serves the state’s eleven tribal nations rather than counties and is not shown on county cards."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
+  {
+    "program_id": "mn-aaa-semaaa",
+    "name": "Southeastern Minnesota Area Agency on Aging",
+    "organization": "Southeastern Minnesota Area Agency on Aging",
+    "official_url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+    "state": "MN",
+    "service_area": [
+      "Dodge",
+      "Fillmore",
+      "Freeborn",
+      "Goodhue",
+      "Houston",
+      "Mower",
+      "Olmsted",
+      "Rice",
+      "Steele",
+      "Wabasha",
+      "Winona"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Minnesota Aging Pathways (formerly the Senior LinkAge Line), 800-333-2433, is the statewide line and connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Based in Rochester."
+    ],
+    "public_contact": {
+      "phone": "507-288-6944",
+      "phone_label": "Area Agency on Aging (Southeastern Minnesota)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+      "phone_source_url": "https://mn.gov/board-on-aging/about-us/area-agencies/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+        "title": "Minnesota Board on Aging: Area Agencies on Aging",
+        "reviewed_on": "2026-11-15",
+        "scope": "Name, city, phone and the counties each of the six regional Area Agencies on Aging serves; read as a search excerpt, with the Metropolitan agency’s phone taken from the state’s Aging and Disability Resources directory because the excerpt of the board’s page garbled it. The page also lists a seventh, the Minnesota Indian Area Agency on Aging, which serves the state’s eleven tribal nations rather than counties and is not shown on county cards."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "ombudsman"
- }
+  {
+    "program_id": "mn-omb-ooltc",
+    "name": "Office of Ombudsman for Long-Term Care, Minnesota Board on Aging",
+    "organization": "Office of Ombudsman for Long-Term Care, Minnesota Board on Aging",
+    "official_url": "https://mn.gov/ooltc/contactus/",
+    "state": "MN",
+    "service_area": [
+      "Aitkin",
+      "Anoka",
+      "Becker",
+      "Beltrami",
+      "Benton",
+      "Big Stone",
+      "Blue Earth",
+      "Brown",
+      "Carlton",
+      "Carver",
+      "Cass",
+      "Chippewa",
+      "Chisago",
+      "Clay",
+      "Clearwater",
+      "Cook",
+      "Cottonwood",
+      "Crow Wing",
+      "Dakota",
+      "Dodge",
+      "Douglas",
+      "Faribault",
+      "Fillmore",
+      "Freeborn",
+      "Goodhue",
+      "Grant",
+      "Hennepin",
+      "Houston",
+      "Hubbard",
+      "Isanti",
+      "Itasca",
+      "Jackson",
+      "Kanabec",
+      "Kandiyohi",
+      "Kittson",
+      "Koochiching",
+      "Lac qui Parle",
+      "Lake",
+      "Lake of the Woods",
+      "Le Sueur",
+      "Lincoln",
+      "Lyon",
+      "Mahnomen",
+      "Marshall",
+      "Martin",
+      "McLeod",
+      "Meeker",
+      "Mille Lacs",
+      "Morrison",
+      "Mower",
+      "Murray",
+      "Nicollet",
+      "Nobles",
+      "Norman",
+      "Olmsted",
+      "Otter Tail",
+      "Pennington",
+      "Pine",
+      "Pipestone",
+      "Polk",
+      "Pope",
+      "Ramsey",
+      "Red Lake",
+      "Redwood",
+      "Renville",
+      "Rice",
+      "Rock",
+      "Roseau",
+      "Scott",
+      "Sherburne",
+      "Sibley",
+      "St. Louis",
+      "Stearns",
+      "Steele",
+      "Stevens",
+      "Swift",
+      "Todd",
+      "Traverse",
+      "Wabasha",
+      "Wadena",
+      "Waseca",
+      "Washington",
+      "Watonwan",
+      "Wilkin",
+      "Winona",
+      "Wright",
+      "Yellow Medicine"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Call 800-657-3591 (toll-free) or 651-431-2555 and give your county and the name of the nursing home or care setting.",
+      "The office serves nursing home and boarding care home residents, people in assisted living, customized living and adult foster care, and people receiving home care, including residents of the state veterans homes."
+    ],
+    "public_contact": {
+      "phone": "800-657-3591",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+      "phone_source_url": "https://mn.gov/ooltc/contactus/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://mn.gov/ooltc/contactus/",
+        "title": "Minnesota Office of Ombudsman for Long-Term Care: Contact us",
+        "reviewed_on": "2026-11-15",
+        "scope": "Toll-free and metro phone numbers, hours (8:00 a.m.–4:00 p.m., Monday–Friday) and that calls are routed regionally; search excerpt. The office publishes one statewide line, so every county shows it."
+      },
+      {
+        "url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+        "title": "Minnesota Board on Aging: Area Agencies on Aging",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://mn.gov/ooltc/faqs/",
+        "title": "Minnesota Office of Ombudsman for Long-Term Care: Frequently asked questions",
+        "reviewed_on": "2026-11-15",
+        "scope": "Services are free, confidential and statewide; ombudsmen act with the resident’s consent and have no regulatory authority; call 1-800-657-3591 to be connected to a local ombudsman; search excerpt."
+      },
+      {
+        "url": "https://mn.gov/adresources/search/f92eea3b-f2d0-5a83-bcf3-fcdf779f6908/",
+        "title": "Minnesota Aging and Disability Resources: Office of Ombudsman for Long-Term Care",
+        "reviewed_on": "2026-11-15",
+        "scope": "Who the office serves: nursing home and boarding care residents including veterans homes, assisted living, customized living, foster care and home care; search excerpt."
+      }
+    ]
+  }
 ]

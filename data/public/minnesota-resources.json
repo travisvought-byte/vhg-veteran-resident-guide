@@ -938,71 +938,741 @@
   {
     "program_id": "mn-claims",
     "name": "Minnesota veterans: accredited claims help",
-    "official_url": "https://mn.gov/mdva/",
-    "organization": "Minnesota Department of Veterans Affairs",
+    "official_url": "https://www.macvso.org/find-a-cvso.html",
+    "organization": "Minnesota Department of Veterans Affairs and County Veterans Service Offices",
     "service_area": [
-      "All Minnesota counties"
+      "statewide"
     ],
     "state": "MN",
     "needs_supported": [
       "general_navigation",
       "benefits_and_funding"
     ],
-    "description": "Free help with VA claims, applications and appeals for veterans and families.",
-    "next_step": "Call the state veterans agency; ask for a benefits review and the office that serves your county.",
-    "constraints": [],
+    "description": "Free help from your County Veterans Service Officer and the Minnesota Department of Veterans Affairs with VA claims, appeals, pension and survivor benefits, plus state benefits. Every Minnesota county has a veterans service office.",
+    "next_step": "Choose your county for its Veterans Service Office, or call MDVA’s one-stop line, 1-888-LinkVet (888-546-5838), seven days a week. For a state claims officer, the St. Paul Claims Office is 612-970-5662 and the Fargo Claims Office, which assists northwest Minnesota, is 701-451-4640.",
+    "constraints": [
+      "Hours differ by office; some counties are open only part of the week, so call first.",
+      "Minnesota has Tribal Veterans Service Officers, listed by the state department; they are not shown on county cards."
+    ],
     "public_contact": {
-      "phone": "888-546-5838"
+      "phone": "888-546-5838",
+      "phone_label": "Minnesota Department of Veterans Affairs LinkVet line (1-888-LinkVet)"
     },
     "verification": {
-      "record_status": "official_source_reviewed",
-      "last_reviewed_on": "2026-11-02"
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
     },
     "evidence": {
-      "review_method": "full_official_page_text",
+      "review_method": "official_search_excerpt",
       "direct_agency_confirmation": false,
-      "phone_source_url": "https://mn.gov/mdva/"
+      "phone_source_url": "https://mn.gov/mdva/about/what-we-do.jsp"
     },
     "source_evidence": [
       {
-        "url": "https://mn.gov/mdva/",
-        "title": "Official published source",
-        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+        "url": "https://www.macvso.org/find-a-cvso.html",
+        "title": "Minnesota Association of County Veterans Service Officers: Find a CVSO",
+        "reviewed_on": "2026-11-15",
+        "scope": "Office phone, hours and staff for each county; the page prints a county menu, so county pages were read as search excerpts."
+      },
+      {
+        "url": "https://mn.gov/mdva/about/what-we-do.jsp",
+        "title": "Minnesota Department of Veterans Affairs: About MDVA",
+        "reviewed_on": "2026-11-15",
+        "scope": "County Veterans Service Officers are in each county; 1-888-LinkVet (546-5838); search excerpt."
+      },
+      {
+        "url": "https://mn.gov/mdva/about/veteran-contacts.jsp",
+        "title": "Minnesota Department of Veterans Affairs: Contacts",
+        "reviewed_on": "2026-11-15",
+        "scope": "LinkVet hours, claims offices in St. Paul and Fargo, Tribal Veterans Service Officers; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "mn-adrc",
+    "name": "Minnesota Aging Pathways (formerly the Senior LinkAge Line)",
+    "official_url": "https://mn.gov/board-on-aging/direct-services/aging-pathways",
+    "organization": "Minnesota Board on Aging",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "MN",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Minnesota’s free statewide aging line, run by the Board on Aging with the area agencies on aging. It is the state’s long-term care options counseling service and its Aging and Disability Resource Center for older adults, and it helps with housing, transportation, meals, in-home help and Medicare. Military service is not required.",
+    "next_step": "Call 800-333-2433, Monday through Friday from 8:00 a.m. to 4:30 p.m., or choose a county above for its area agency on aging.",
+    "constraints": [
+      "Each program has its own eligibility and waitlist."
+    ],
+    "public_contact": {
+      "phone": "800-333-2433",
+      "phone_label": "Minnesota Aging Pathways (800-333-2433)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://mn.gov/board-on-aging/direct-services/aging-pathways"
+    },
+    "source_evidence": [
+      {
+        "url": "https://mn.gov/board-on-aging/direct-services/aging-pathways",
+        "title": "Minnesota Board on Aging: Minnesota Aging Pathways",
+        "reviewed_on": "2026-11-15",
+        "scope": "Phone and statement that the service was formerly the Senior LinkAge Line; search excerpt."
+      },
+      {
+        "url": "https://mn.gov/board-on-aging/direct-services/senior-linkage-line/",
+        "title": "Minnesota Board on Aging: Senior LinkAge Line",
+        "reviewed_on": "2026-11-15",
+        "scope": "The service is the state’s long-term care options counseling, SHIP, Senior Medicare Patrol and aging side of the Aging and Disability Resource Center; search excerpt."
       }
     ]
   },
   {
     "program_id": "mn-ship",
     "name": "Medicare counseling (SHIP) for Minnesota",
-    "official_url": "https://www.shiphelp.org/",
-    "organization": "SHIP Technical Assistance Center",
+    "official_url": "https://mn.gov/aging-pathways/medicare/",
+    "organization": "Minnesota Board on Aging, Minnesota Aging Pathways",
     "service_area": [
-      "All Minnesota counties"
+      "statewide"
     ],
     "state": "MN",
     "needs_supported": [
       "benefits_and_funding"
     ],
-    "description": "Free, unbiased Medicare counseling from the State Health Insurance Assistance Program.",
-    "next_step": "Call or use the locator to reach the Minnesota SHIP and ask for a counseling appointment.",
-    "constraints": [],
+    "description": "Free, unbiased help with Medicare choices, enrollment and costs. Minnesota Aging Pathways is the state’s State Health Insurance Assistance Program (SHIP).",
+    "next_step": "Call 800-333-2433, Monday through Friday from 8:00 a.m. to 4:30 p.m. For Medicare itself, call 800-MEDICARE (800-633-4227).",
+    "constraints": [
+      "The line is a telephone and chat service; for a plan decision, have your Medicare card and your drug list ready."
+    ],
     "public_contact": {
-      "phone": "877-839-2675"
+      "phone": "800-333-2433",
+      "phone_label": "Minnesota Aging Pathways, SHIP (800-333-2433)"
     },
     "verification": {
       "record_status": "official_search_extract_only",
-      "last_reviewed_on": "2026-11-02"
+      "last_reviewed_on": "2026-11-15"
     },
     "evidence": {
       "review_method": "official_search_excerpt",
       "direct_agency_confirmation": false,
-      "phone_source_url": "https://www.shiphelp.org/?p=317"
+      "phone_source_url": "https://mn.gov/aging-pathways/medicare/"
     },
     "source_evidence": [
       {
-        "url": "https://www.shiphelp.org/?p=317",
-        "title": "Official published source",
-        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+        "url": "https://mn.gov/aging-pathways/medicare/",
+        "title": "Minnesota Aging Pathways: Medicare",
+        "reviewed_on": "2026-11-15",
+        "scope": "SHIP status, hours and free counseling; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "mn-ombudsman",
+    "name": "Minnesota Long-Term Care Ombudsman and adult abuse reporting",
+    "official_url": "https://mn.gov/ooltc/",
+    "organization": "Minnesota Board on Aging, Office of Ombudsman for Long-Term Care",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "MN",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "description": "Statewide advocacy for people in nursing homes, boarding care homes, assisted living, customized living, foster care and home care, delivered by regional ombudsmen and, in some places, certified volunteers.",
+    "next_step": "Call 800-657-3591 (toll-free) or 651-431-2555, 8:00 a.m. to 4:00 p.m., Monday through Friday, and give the county and facility name. To report suspected abuse, neglect or financial exploitation of a vulnerable adult, call the Minnesota Adult Abuse Reporting Center at 844-880-1574, 24 hours a day. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "800-657-3591",
+      "phone_label": "Minnesota Office of Ombudsman for Long-Term Care (toll-free)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://mn.gov/ooltc/contactus/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://mn.gov/ooltc/contactus/",
+        "title": "Minnesota Office of Ombudsman for Long-Term Care: Contact us",
+        "reviewed_on": "2026-11-15",
+        "scope": "Toll-free and metro phone numbers; calls answered 8:00 a.m.–4:00 p.m., Monday–Friday and routed regionally; search excerpt."
+      },
+      {
+        "url": "https://mn.gov/ooltc/faqs/",
+        "title": "Minnesota Office of Ombudsman for Long-Term Care: Frequently asked questions",
+        "reviewed_on": "2026-11-15",
+        "scope": "Free, confidential and statewide; no regulatory authority over facilities; search excerpt."
+      },
+      {
+        "url": "https://mn.gov/dhs/people-we-serve/adults/services/adult-protection/",
+        "title": "Minnesota Department of Human Services: Adult protection",
+        "reviewed_on": "2026-11-15",
+        "scope": "Report suspected maltreatment of a vulnerable adult to MAARC at 1-844-880-1574, open 24 hours a day, seven days a week; search excerpt."
+      },
+      {
+        "url": "https://mn.gov/dhs/disability-aging/adult-protection/",
+        "title": "Minnesota Department of Human Services: Vulnerable adult protection and elder abuse",
+        "reviewed_on": "2026-11-15",
+        "scope": "MAARC phone and a call-911-first notice for emergencies; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "mn-legal-programs",
+    "name": "Free legal help for Minnesota veterans",
+    "official_url": "https://www.mac-v.org/our-services/vetlaw/",
+    "organization": "Minnesota Assistance Council for Veterans (Vetlaw); LawHelpMN",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "MN",
+    "resource_role": "legal_aid",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation",
+      "housing"
+    ],
+    "description": "The Minnesota Assistance Council for Veterans’ Vetlaw program gives Minnesota veterans free legal information, referrals and advice on most legal topics and holds legal clinics across the state. LawHelpMN.org explains civil legal issues and helps you find your local legal aid program.",
+    "next_step": "Call Vetlaw at 651-200-4750 or email vetlaw@mac-v.org to schedule time with a staff attorney, or ask about the next clinic near you.",
+    "constraints": [
+      "Vetlaw attorneys advise on Minnesota state law only, not federal law or other states’ law.",
+      "Most free veteran legal aid programs screen by income, case type and location; Vetlaw will help you see which you qualify for."
+    ],
+    "public_contact": {
+      "phone": "651-200-4750",
+      "phone_label": "Minnesota Assistance Council for Veterans, Vetlaw (651-200-4750)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.mac-v.org/?p=1628"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.mac-v.org/?p=1628",
+        "title": "Minnesota Assistance Council for Veterans: Vetlaw, Veteran Legal Services",
+        "reviewed_on": "2026-11-15",
+        "scope": "Phone, email, scope of advice and Minnesota-law limit; search excerpt."
+      },
+      {
+        "url": "https://www.mac-v.org/our-services/vetlaw/",
+        "title": "Minnesota Assistance Council for Veterans: Vetlaw",
+        "reviewed_on": "2026-11-15",
+        "scope": "Eligibility depends on income, case type and location; LawHelpMN and the court system’s attorney finder; search excerpt."
+      },
+      {
+        "url": "https://www.lawhelpmn.org/node/3318",
+        "title": "LawHelpMN: Vetlaw Legal Clinics",
+        "reviewed_on": "2026-11-15",
+        "scope": "Free clinics for former members of the US Armed Forces covering civil and criminal questions; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "mn-vahealth-systems",
+    "name": "VA health care systems serving Minnesota",
+    "official_url": "https://www.va.gov/find-locations/?facilityType=health",
+    "organization": "U.S. Department of Veterans Affairs",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "MN",
+    "resource_role": "va_health_system",
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "Minnesota veterans are served mainly by the Minneapolis VA Health Care System (medical center at One Veterans Drive, Minneapolis, 612-725-2000, with 15 locations in Minnesota and western Wisconsin) and the St. Cloud VA Health Care System (medical center at 4801 Veterans Drive, 320-252-1670, with clinics in Brainerd, Alexandria and Montevideo). The association’s health care page also names Sioux Falls among the medical centers Minnesota veterans can use.",
+    "next_step": "Use VA’s facility locator with your ZIP code to find the closest clinic and its medical center. Not enrolled yet? Ask your county veterans service officer for help applying.",
+    "constraints": [
+      "Which system serves a county depends on where you live; VA’s locator shows the right clinic."
+    ],
+    "public_contact": {
+      "phone": "612-725-2000",
+      "phone_label": "Minneapolis VA Medical Center main line (612-725-2000)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.va.gov/minneapolis-health-care/contact-us/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.va.gov/minneapolis-health-care/contact-us/",
+        "title": "VA Minneapolis health care: Contact us",
+        "reviewed_on": "2026-11-15",
+        "scope": "Main phone 612-725-2000; care at 15 locations in Minnesota and western Wisconsin; search excerpt."
+      },
+      {
+        "url": "https://va.gov/st-cloud-health-care/contact-us",
+        "title": "VA St. Cloud health care: Contact us",
+        "reviewed_on": "2026-11-15",
+        "scope": "Main phone numbers for the St. Cloud VA Health Care System: local 320-252-1670, toll-free 800-247-1739; search excerpt."
+      },
+      {
+        "url": "https://www.va.gov/st-cloud-health-care/locations/",
+        "title": "VA St. Cloud health care: Locations",
+        "reviewed_on": "2026-11-15",
+        "scope": "Medical center address and clinics in Brainerd, Alexandria and Montevideo; search excerpt."
+      },
+      {
+        "url": "https://www.macvso.org/benefits/healthcare.html",
+        "title": "Minnesota Association of County Veterans Service Officers: VA Health Care",
+        "reviewed_on": "2026-11-15",
+        "scope": "Lists the major VA medical centers open to Minnesota veterans, including Sioux Falls and St. Cloud; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "mn-cil-access-north",
+    "name": "Access North Center for Independent Living (Hibbing, Duluth, Brainerd)",
+    "organization": "Access North",
+    "official_url": "https://www.accessnorth.net/",
+    "service_area": [
+      "Aitkin",
+      "Carlton",
+      "Cass",
+      "Cook",
+      "Crow Wing",
+      "Itasca",
+      "Koochiching",
+      "Lake",
+      "Pine",
+      "St. Louis"
+    ],
+    "state": "MN",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Main office: 1309 East 40th St., Hibbing, MN 55746. Toll-free: 800-390-3681.",
+      "Duluth office: 118 East Superior St., Suite 100, Duluth, MN 55802, 218-625-1400.",
+      "Brainerd office: 606 NW Fifth St., Brainerd, MN 56401, 218-824-5228."
+    ],
+    "public_contact": {
+      "phone": "218-262-6675",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/mn",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/mn"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/mn",
+        "title": "ILRU: Minnesota CIL Directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address, phone, website and counties served of each center, read in full. The directory prints some centers twice with different counties, mistypes a few county names and carries no update date; those rows were reconciled to the eight centers the Minnesota Statewide Independent Living Council names."
+      }
+    ]
+  },
+  {
+    "program_id": "mn-cil-freedom-resource",
+    "name": "Freedom Resource Center (Fergus Falls)",
+    "organization": "Freedom Resource Center",
+    "official_url": "https://www.freedomrc.org/",
+    "service_area": [
+      "Becker",
+      "Clay",
+      "Douglas",
+      "Grant",
+      "Otter Tail",
+      "Pope",
+      "Stevens",
+      "Todd",
+      "Traverse",
+      "Wadena",
+      "Wilkin"
+    ],
+    "state": "MN",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "The center’s office is at 125 West Lincoln Ave., Suite 1, Fergus Falls, MN 56537.",
+      "Toll-free: 800-450-0459."
+    ],
+    "public_contact": {
+      "phone": "218-998-1799",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/mn",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/mn"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/mn",
+        "title": "ILRU: Minnesota CIL Directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address, phone, website and counties served of each center, read in full. The directory prints some centers twice with different counties, mistypes a few county names and carries no update date; those rows were reconciled to the eight centers the Minnesota Statewide Independent Living Council names."
+      }
+    ]
+  },
+  {
+    "program_id": "mn-cil-independent-lifestyles",
+    "name": "Independent Lifestyles (Sauk Rapids)",
+    "organization": "Independent Lifestyles",
+    "official_url": "https://independentlifestyles.org/",
+    "service_area": [
+      "Benton",
+      "Chisago",
+      "Isanti",
+      "Kanabec",
+      "Kandiyohi",
+      "Meeker",
+      "Mille Lacs",
+      "Morrison",
+      "Sherburne",
+      "Stearns",
+      "Wright"
+    ],
+    "state": "MN",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "The center’s office is at 215 North Benton Dr., Sauk Rapids, MN 56379."
+    ],
+    "public_contact": {
+      "phone": "320-529-9000",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/mn",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/mn"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/mn",
+        "title": "ILRU: Minnesota CIL Directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address, phone, website and counties served of each center, read in full. The directory prints some centers twice with different counties, mistypes a few county names and carries no update date; those rows were reconciled to the eight centers the Minnesota Statewide Independent Living Council names."
+      }
+    ]
+  },
+  {
+    "program_id": "mn-cil-mcil",
+    "name": "Metropolitan Center for Independent Living (St. Paul)",
+    "organization": "Metropolitan Center for Independent Living",
+    "official_url": "https://www.mcil-mn.org/",
+    "service_area": [
+      "Anoka",
+      "Carver",
+      "Dakota",
+      "Hennepin",
+      "Ramsey",
+      "Scott",
+      "Washington"
+    ],
+    "state": "MN",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "The center’s office is at 530 Robert St. North, St. Paul, MN 55101."
+    ],
+    "public_contact": {
+      "phone": "651-646-8342",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/mn",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/mn"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/mn",
+        "title": "ILRU: Minnesota CIL Directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address, phone, website and counties served of each center, read in full. The directory prints some centers twice with different counties, mistypes a few county names and carries no update date; those rows were reconciled to the eight centers the Minnesota Statewide Independent Living Council names."
+      }
+    ]
+  },
+  {
+    "program_id": "mn-cil-options",
+    "name": "Options Interstate Resource Center for Independent Living (East Grand Forks)",
+    "organization": "Options Interstate Resource Center for Independent Living",
+    "official_url": "https://www.myoptions.info/",
+    "service_area": [
+      "Beltrami",
+      "Clearwater",
+      "Hubbard",
+      "Kittson",
+      "Lake of the Woods",
+      "Mahnomen",
+      "Marshall",
+      "Norman",
+      "Pennington",
+      "Polk",
+      "Red Lake",
+      "Roseau"
+    ],
+    "state": "MN",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "The center’s office is at 318 Third St. NW, East Grand Forks, MN 56721. Toll-free: 800-726-3692."
+    ],
+    "public_contact": {
+      "phone": "218-773-6100",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/mn",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/mn"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/mn",
+        "title": "ILRU: Minnesota CIL Directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address, phone, website and counties served of each center, read in full. The directory prints some centers twice with different counties, mistypes a few county names and carries no update date; those rows were reconciled to the eight centers the Minnesota Statewide Independent Living Council names."
+      }
+    ]
+  },
+  {
+    "program_id": "mn-cil-smiles",
+    "name": "SMILES Center for Independent Living (Mankato)",
+    "organization": "SMILES Center for Independent Living",
+    "official_url": "https://smilescil.org/",
+    "service_area": [
+      "Blue Earth",
+      "Brown",
+      "Faribault",
+      "Le Sueur",
+      "Martin",
+      "Nicollet",
+      "Sibley",
+      "Waseca",
+      "Watonwan"
+    ],
+    "state": "MN",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Main office: 709 South Front St., Suite 7, Mankato, MN 56001. Toll-free: 888-676-6498.",
+      "Other offices: Fairmont 507-235-3488, New Ulm 507-354-7106 and Waseca 507-310-0266."
+    ],
+    "public_contact": {
+      "phone": "507-345-7139",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/mn",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/mn"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/mn",
+        "title": "ILRU: Minnesota CIL Directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address, phone, website and counties served of each center, read in full. The directory prints some centers twice with different counties, mistypes a few county names and carries no update date; those rows were reconciled to the eight centers the Minnesota Statewide Independent Living Council names."
+      }
+    ]
+  },
+  {
+    "program_id": "mn-cil-semcil",
+    "name": "Southeastern Minnesota Center for Independent Living (Rochester)",
+    "organization": "Southeastern Minnesota Center for Independent Living",
+    "official_url": "https://www.semcil.org/",
+    "service_area": [
+      "Dodge",
+      "Fillmore",
+      "Freeborn",
+      "Goodhue",
+      "Houston",
+      "Mower",
+      "Olmsted",
+      "Rice",
+      "Steele",
+      "Wabasha",
+      "Winona"
+    ],
+    "state": "MN",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Main office: 2200 2nd St. SW, Rochester, MN 55902.",
+      "A Winona office is at 902 East 2nd St., Suite 277, Winona, MN, with the same phone."
+    ],
+    "public_contact": {
+      "phone": "507-285-1815",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/mn",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/mn"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/mn",
+        "title": "ILRU: Minnesota CIL Directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address, phone, website and counties served of each center, read in full. The directory prints some centers twice with different counties, mistypes a few county names and carries no update date; those rows were reconciled to the eight centers the Minnesota Statewide Independent Living Council names."
+      }
+    ]
+  },
+  {
+    "program_id": "mn-cil-swcil",
+    "name": "Southwestern Center for Independent Living (Marshall)",
+    "organization": "Southwestern Center for Independent Living",
+    "official_url": "https://www.swcil.com/",
+    "service_area": [
+      "Cottonwood",
+      "Jackson",
+      "Lincoln",
+      "Lyon",
+      "Murray",
+      "Nobles",
+      "Pipestone",
+      "Redwood",
+      "Rock",
+      "Yellow Medicine"
+    ],
+    "state": "MN",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "The center’s office is at 109 South 5th St., Suite 700, Marshall, MN 56258. Toll-free: 800-422-1485."
+    ],
+    "public_contact": {
+      "phone": "507-532-2221",
+      "phone_label": "Local phone listed in the ILRU national directory"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/mn",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/mn"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/mn",
+        "title": "ILRU: Minnesota CIL Directory",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address, phone, website and counties served of each center, read in full. The directory prints some centers twice with different counties, mistypes a few county names and carries no update date; those rows were reconciled to the eight centers the Minnesota Statewide Independent Living Council names."
       }
     ]
   },
@@ -1012,7 +1682,93 @@
     "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
     "organization": "Minnesota Assistance Council For Veterans",
     "service_area": [
-      "All Minnesota counties"
+      "Aitkin",
+      "Anoka",
+      "Becker",
+      "Beltrami",
+      "Benton",
+      "Big Stone",
+      "Blue Earth",
+      "Brown",
+      "Carlton",
+      "Carver",
+      "Cass",
+      "Chippewa",
+      "Chisago",
+      "Clay",
+      "Clearwater",
+      "Cook",
+      "Cottonwood",
+      "Crow Wing",
+      "Dakota",
+      "Dodge",
+      "Douglas",
+      "Faribault",
+      "Fillmore",
+      "Freeborn",
+      "Goodhue",
+      "Grant",
+      "Hennepin",
+      "Houston",
+      "Hubbard",
+      "Isanti",
+      "Itasca",
+      "Jackson",
+      "Kanabec",
+      "Kandiyohi",
+      "Kittson",
+      "Koochiching",
+      "Lac qui Parle",
+      "Lake",
+      "Lake of the Woods",
+      "Le Sueur",
+      "Lincoln",
+      "Lyon",
+      "Mahnomen",
+      "Marshall",
+      "Martin",
+      "McLeod",
+      "Meeker",
+      "Mille Lacs",
+      "Morrison",
+      "Mower",
+      "Murray",
+      "Nicollet",
+      "Nobles",
+      "Norman",
+      "Olmsted",
+      "Otter Tail",
+      "Pennington",
+      "Pine",
+      "Pipestone",
+      "Polk",
+      "Pope",
+      "Ramsey",
+      "Red Lake",
+      "Redwood",
+      "Renville",
+      "Rice",
+      "Rock",
+      "Roseau",
+      "Scott",
+      "Sherburne",
+      "Sibley",
+      "St. Louis",
+      "Stearns",
+      "Steele",
+      "Stevens",
+      "Swift",
+      "Todd",
+      "Traverse",
+      "Wabasha",
+      "Wadena",
+      "Waseca",
+      "Washington",
+      "Watonwan",
+      "Wilkin",
+      "Winona",
+      "Wright",
+      "Yellow Medicine"
     ],
     "state": "MN",
     "resource_role": "housing_provider",
@@ -1020,7 +1776,7 @@
       "housing",
       "veteran_services"
     ],
-    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 19-MN-046): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Aitkin County, Anoka County, Becker County, Beltrami County, Benton County, Big Stone County, Blue Earth County, Brown County, Carlton County, Carver County, Cass County, Chippewa County and 75 more.",
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 19-MN-046): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
     "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
     "constraints": [
       "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
@@ -1052,81 +1808,490 @@
     ]
   },
   {
-    "program_id": "mn-aging",
-    "name": "Local aging help in Minnesota (Eldercare Locator)",
-    "official_url": "https://eldercare.acl.gov/home",
-    "organization": "U.S. Administration for Community Living",
-    "service_area": [
-      "All Minnesota counties"
-    ],
+    "program_id": "mn-aaa-arrowhead",
+    "name": "Arrowhead Area Agency on Aging",
+    "organization": "Arrowhead Area Agency on Aging",
+    "official_url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
     "state": "MN",
+    "service_area": [
+      "Aitkin",
+      "Carlton",
+      "Cook",
+      "Itasca",
+      "Koochiching",
+      "Lake",
+      "St. Louis"
+    ],
     "needs_supported": [
       "general_navigation",
       "help_at_home"
     ],
-    "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-    "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Minnesota Aging Pathways (formerly the Senior LinkAge Line), 800-333-2433, is the statewide line and connects you to the agency for your county. Military service is not required.",
     "constraints": [
-      "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Based in Duluth. Toll-free: 800-232-0707."
     ],
     "public_contact": {
-      "phone": "800-677-1116"
+      "phone": "218-722-5545",
+      "phone_label": "Area Agency on Aging (Arrowhead)"
     },
     "verification": {
       "record_status": "official_search_extract_only",
-      "last_reviewed_on": "2026-11-02"
+      "last_reviewed_on": "2026-11-15"
     },
     "evidence": {
       "review_method": "official_search_excerpt",
       "direct_agency_confirmation": false,
-      "phone_source_url": "https://www.acl.gov/contact"
+      "service_area_source_url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+      "phone_source_url": "https://mn.gov/board-on-aging/about-us/area-agencies/"
     },
     "source_evidence": [
       {
-        "url": "https://www.acl.gov/contact",
-        "title": "Official published source",
-        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+        "url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+        "title": "Minnesota Board on Aging: Area Agencies on Aging",
+        "reviewed_on": "2026-11-15",
+        "scope": "Name, city, phone and the counties each of the six regional Area Agencies on Aging serves; read as a search excerpt, with the Metropolitan agency’s phone taken from the state’s Aging and Disability Resources directory because the excerpt of the board’s page garbled it. The page also lists a seventh, the Minnesota Indian Area Agency on Aging, which serves the state’s eleven tribal nations rather than counties and is not shown on county cards."
       }
-    ],
-    "regional_role": "aging_agency"
+    ]
   },
   {
-    "program_id": "mn-ombudsman",
-    "name": "Minnesota long-term-care ombudsman",
-    "official_url": "https://theconsumervoice.org/get_help",
-    "organization": "National Long-Term Care Ombudsman Resource Center",
-    "service_area": [
-      "All Minnesota counties"
-    ],
+    "program_id": "mn-aaa-cmcoa",
+    "name": "Central Minnesota Council on Aging",
+    "organization": "Central Minnesota Council on Aging",
+    "official_url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
     "state": "MN",
+    "service_area": [
+      "Benton",
+      "Cass",
+      "Chisago",
+      "Crow Wing",
+      "Isanti",
+      "Kanabec",
+      "Mille Lacs",
+      "Morrison",
+      "Pine",
+      "Sherburne",
+      "Stearns",
+      "Todd",
+      "Wadena",
+      "Wright"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Minnesota Aging Pathways (formerly the Senior LinkAge Line), 800-333-2433, is the statewide line and connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Based in St. Cloud."
+    ],
+    "public_contact": {
+      "phone": "320-253-9349",
+      "phone_label": "Area Agency on Aging (Central Minnesota Council on Aging)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+      "phone_source_url": "https://mn.gov/board-on-aging/about-us/area-agencies/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+        "title": "Minnesota Board on Aging: Area Agencies on Aging",
+        "reviewed_on": "2026-11-15",
+        "scope": "Name, city, phone and the counties each of the six regional Area Agencies on Aging serves; read as a search excerpt, with the Metropolitan agency’s phone taken from the state’s Aging and Disability Resources directory because the excerpt of the board’s page garbled it. The page also lists a seventh, the Minnesota Indian Area Agency on Aging, which serves the state’s eleven tribal nations rather than counties and is not shown on county cards."
+      }
+    ]
+  },
+  {
+    "program_id": "mn-aaa-dancing-sky",
+    "name": "Dancing Sky Area Agency on Aging",
+    "organization": "Dancing Sky Area Agency on Aging",
+    "official_url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+    "state": "MN",
+    "service_area": [
+      "Becker",
+      "Beltrami",
+      "Clay",
+      "Clearwater",
+      "Douglas",
+      "Grant",
+      "Hubbard",
+      "Kittson",
+      "Lake of the Woods",
+      "Mahnomen",
+      "Marshall",
+      "Norman",
+      "Otter Tail",
+      "Pennington",
+      "Polk",
+      "Pope",
+      "Red Lake",
+      "Roseau",
+      "Stevens",
+      "Traverse",
+      "Wilkin"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Minnesota Aging Pathways (formerly the Senior LinkAge Line), 800-333-2433, is the statewide line and connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Based in Warren."
+    ],
+    "public_contact": {
+      "phone": "218-745-6733",
+      "phone_label": "Area Agency on Aging (Dancing Sky)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+      "phone_source_url": "https://mn.gov/board-on-aging/about-us/area-agencies/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+        "title": "Minnesota Board on Aging: Area Agencies on Aging",
+        "reviewed_on": "2026-11-15",
+        "scope": "Name, city, phone and the counties each of the six regional Area Agencies on Aging serves; read as a search excerpt, with the Metropolitan agency’s phone taken from the state’s Aging and Disability Resources directory because the excerpt of the board’s page garbled it. The page also lists a seventh, the Minnesota Indian Area Agency on Aging, which serves the state’s eleven tribal nations rather than counties and is not shown on county cards."
+      }
+    ]
+  },
+  {
+    "program_id": "mn-aaa-metro",
+    "name": "Metropolitan Area Agency on Aging (Trellis)",
+    "organization": "Metropolitan Area Agency on Aging (Trellis)",
+    "official_url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+    "state": "MN",
+    "service_area": [
+      "Anoka",
+      "Carver",
+      "Dakota",
+      "Hennepin",
+      "Ramsey",
+      "Scott",
+      "Washington"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Minnesota Aging Pathways (formerly the Senior LinkAge Line), 800-333-2433, is the statewide line and connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Based in Minneapolis; the agency does business as Trellis. Phone from the state’s Aging and Disability Resources directory."
+    ],
+    "public_contact": {
+      "phone": "651-641-8612",
+      "phone_label": "Area Agency on Aging (Metropolitan (Trellis))"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+      "phone_source_url": "https://mn.gov/board-on-aging/about-us/area-agencies/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+        "title": "Minnesota Board on Aging: Area Agencies on Aging",
+        "reviewed_on": "2026-11-15",
+        "scope": "Name, city, phone and the counties each of the six regional Area Agencies on Aging serves; read as a search excerpt, with the Metropolitan agency’s phone taken from the state’s Aging and Disability Resources directory because the excerpt of the board’s page garbled it. The page also lists a seventh, the Minnesota Indian Area Agency on Aging, which serves the state’s eleven tribal nations rather than counties and is not shown on county cards."
+      }
+    ]
+  },
+  {
+    "program_id": "mn-aaa-mnraaa",
+    "name": "Minnesota River Area Agency on Aging",
+    "organization": "Minnesota River Area Agency on Aging",
+    "official_url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+    "state": "MN",
+    "service_area": [
+      "Big Stone",
+      "Blue Earth",
+      "Brown",
+      "Chippewa",
+      "Cottonwood",
+      "Faribault",
+      "Jackson",
+      "Kandiyohi",
+      "Lac qui Parle",
+      "Le Sueur",
+      "Lincoln",
+      "Lyon",
+      "Martin",
+      "McLeod",
+      "Meeker",
+      "Murray",
+      "Nicollet",
+      "Nobles",
+      "Pipestone",
+      "Redwood",
+      "Renville",
+      "Rock",
+      "Sibley",
+      "Swift",
+      "Waseca",
+      "Watonwan",
+      "Yellow Medicine"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Minnesota Aging Pathways (formerly the Senior LinkAge Line), 800-333-2433, is the statewide line and connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Based in Mankato."
+    ],
+    "public_contact": {
+      "phone": "507-387-1256",
+      "phone_label": "Area Agency on Aging (Minnesota River)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+      "phone_source_url": "https://mn.gov/board-on-aging/about-us/area-agencies/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+        "title": "Minnesota Board on Aging: Area Agencies on Aging",
+        "reviewed_on": "2026-11-15",
+        "scope": "Name, city, phone and the counties each of the six regional Area Agencies on Aging serves; read as a search excerpt, with the Metropolitan agency’s phone taken from the state’s Aging and Disability Resources directory because the excerpt of the board’s page garbled it. The page also lists a seventh, the Minnesota Indian Area Agency on Aging, which serves the state’s eleven tribal nations rather than counties and is not shown on county cards."
+      }
+    ]
+  },
+  {
+    "program_id": "mn-aaa-semaaa",
+    "name": "Southeastern Minnesota Area Agency on Aging",
+    "organization": "Southeastern Minnesota Area Agency on Aging",
+    "official_url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+    "state": "MN",
+    "service_area": [
+      "Dodge",
+      "Fillmore",
+      "Freeborn",
+      "Goodhue",
+      "Houston",
+      "Mower",
+      "Olmsted",
+      "Rice",
+      "Steele",
+      "Wabasha",
+      "Winona"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Minnesota Aging Pathways (formerly the Senior LinkAge Line), 800-333-2433, is the statewide line and connects you to the agency for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Based in Rochester."
+    ],
+    "public_contact": {
+      "phone": "507-288-6944",
+      "phone_label": "Area Agency on Aging (Southeastern Minnesota)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+      "phone_source_url": "https://mn.gov/board-on-aging/about-us/area-agencies/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+        "title": "Minnesota Board on Aging: Area Agencies on Aging",
+        "reviewed_on": "2026-11-15",
+        "scope": "Name, city, phone and the counties each of the six regional Area Agencies on Aging serves; read as a search excerpt, with the Metropolitan agency’s phone taken from the state’s Aging and Disability Resources directory because the excerpt of the board’s page garbled it. The page also lists a seventh, the Minnesota Indian Area Agency on Aging, which serves the state’s eleven tribal nations rather than counties and is not shown on county cards."
+      }
+    ]
+  },
+  {
+    "program_id": "mn-omb-ooltc",
+    "name": "Office of Ombudsman for Long-Term Care, Minnesota Board on Aging",
+    "organization": "Office of Ombudsman for Long-Term Care, Minnesota Board on Aging",
+    "official_url": "https://mn.gov/ooltc/contactus/",
+    "state": "MN",
+    "service_area": [
+      "Aitkin",
+      "Anoka",
+      "Becker",
+      "Beltrami",
+      "Benton",
+      "Big Stone",
+      "Blue Earth",
+      "Brown",
+      "Carlton",
+      "Carver",
+      "Cass",
+      "Chippewa",
+      "Chisago",
+      "Clay",
+      "Clearwater",
+      "Cook",
+      "Cottonwood",
+      "Crow Wing",
+      "Dakota",
+      "Dodge",
+      "Douglas",
+      "Faribault",
+      "Fillmore",
+      "Freeborn",
+      "Goodhue",
+      "Grant",
+      "Hennepin",
+      "Houston",
+      "Hubbard",
+      "Isanti",
+      "Itasca",
+      "Jackson",
+      "Kanabec",
+      "Kandiyohi",
+      "Kittson",
+      "Koochiching",
+      "Lac qui Parle",
+      "Lake",
+      "Lake of the Woods",
+      "Le Sueur",
+      "Lincoln",
+      "Lyon",
+      "Mahnomen",
+      "Marshall",
+      "Martin",
+      "McLeod",
+      "Meeker",
+      "Mille Lacs",
+      "Morrison",
+      "Mower",
+      "Murray",
+      "Nicollet",
+      "Nobles",
+      "Norman",
+      "Olmsted",
+      "Otter Tail",
+      "Pennington",
+      "Pine",
+      "Pipestone",
+      "Polk",
+      "Pope",
+      "Ramsey",
+      "Red Lake",
+      "Redwood",
+      "Renville",
+      "Rice",
+      "Rock",
+      "Roseau",
+      "Scott",
+      "Sherburne",
+      "Sibley",
+      "St. Louis",
+      "Stearns",
+      "Steele",
+      "Stevens",
+      "Swift",
+      "Todd",
+      "Traverse",
+      "Wabasha",
+      "Wadena",
+      "Waseca",
+      "Washington",
+      "Watonwan",
+      "Wilkin",
+      "Winona",
+      "Wright",
+      "Yellow Medicine"
+    ],
     "needs_supported": [
       "resident_rights",
       "general_navigation"
     ],
-    "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-    "next_step": "Use the locator to find the Minnesota program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
     "constraints": [
-      "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Call 800-657-3591 (toll-free) or 651-431-2555 and give your county and the name of the nursing home or care setting.",
+      "The office serves nursing home and boarding care home residents, people in assisted living, customized living and adult foster care, and people receiving home care, including residents of the state veterans homes."
     ],
     "public_contact": {
-      "phone": "800-677-1116"
+      "phone": "800-657-3591",
+      "phone_label": "Regional ombudsman program"
     },
     "verification": {
       "record_status": "official_search_extract_only",
-      "last_reviewed_on": "2026-11-02"
+      "last_reviewed_on": "2026-11-15"
     },
     "evidence": {
       "review_method": "official_search_excerpt",
       "direct_agency_confirmation": false,
-      "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
+      "service_area_source_url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+      "phone_source_url": "https://mn.gov/ooltc/contactus/"
     },
     "source_evidence": [
       {
-        "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-        "title": "Official published source",
-        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+        "url": "https://mn.gov/ooltc/contactus/",
+        "title": "Minnesota Office of Ombudsman for Long-Term Care: Contact us",
+        "reviewed_on": "2026-11-15",
+        "scope": "Toll-free and metro phone numbers, hours (8:00 a.m.–4:00 p.m., Monday–Friday) and that calls are routed regionally; search excerpt. The office publishes one statewide line, so every county shows it."
+      },
+      {
+        "url": "https://mn.gov/board-on-aging/about-us/area-agencies/",
+        "title": "Minnesota Board on Aging: Area Agencies on Aging",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://mn.gov/ooltc/faqs/",
+        "title": "Minnesota Office of Ombudsman for Long-Term Care: Frequently asked questions",
+        "reviewed_on": "2026-11-15",
+        "scope": "Services are free, confidential and statewide; ombudsmen act with the resident’s consent and have no regulatory authority; call 1-800-657-3591 to be connected to a local ombudsman; search excerpt."
+      },
+      {
+        "url": "https://mn.gov/adresources/search/f92eea3b-f2d0-5a83-bcf3-fcdf779f6908/",
+        "title": "Minnesota Aging and Disability Resources: Office of Ombudsman for Long-Term Care",
+        "reviewed_on": "2026-11-15",
+        "scope": "Who the office serves: nursing home and boarding care residents including veterans homes, assisted living, customized living, foster care and home care; search excerpt."
       }
-    ],
-    "regional_role": "ombudsman"
+    ]
   }
 ]
