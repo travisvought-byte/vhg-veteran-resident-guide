@@ -7,7 +7,7 @@ from pathlib import Path
 from state_registry import (load_registry, load_counties, state_resources, make_edition,
                             make_share, add_share_links, add_state_options, BASE_URL)
 from bingo_edition import make_bingo
-from bingo_site import make_bingo_site
+from bingo_site import make_bingo_site, SITE as OHIO_BINGO
 from findbingo_site import make_findbingo
 from facilities_edition import make_facilities
 from unified_guide import unified_outputs
@@ -76,9 +76,16 @@ def outputs():
     result['index.html'] = result['index.html'].replace('<section id="county-start"', f'<p id="ohio-aid-link"><a href="?view=aid"><strong>Ohio veteran and aid organizations</strong></a> · Housing providers, claims help, legal aid, utility assistance and medical transportation. Local veteran housing providers are mapped for {housing_count} of {len(counties)} counties; other counties retain VA referral routes. For emergency financial assistance, choose your county below and ask its veterans office about eligibility and current programs.</p><section id="county-start"', 1)
     result['bingo.html'] = make_bingo(ROOT)
     result.update(make_bingo_site(ROOT, result['bingo.html']))
+    # The Ohio finder's public home is findbingo.org/ohio. This page stays as the build source and test
+    # fixture; on the live guide it forwards there (keeping the ZIP search and #anchor) and names it as canonical.
+    forward = ('<link rel="canonical" href="' + OHIO_BINGO + '/"><meta name="robots" content="noindex,follow">'
+               "<script data-moved>if(location.hostname==='guide.vethomeguard.org')location.replace('" + OHIO_BINGO + "/'+location.search+location.hash)</script>")
+    canonical = '<link rel="canonical" href="https://guide.vethomeguard.org/bingo.html">'
+    assert result['bingo.html'].count(canonical) == 1
+    result['bingo.html'] = result['bingo.html'].replace(canonical, forward)
     result.update(make_findbingo(ROOT))
     result['facilities.html'] = make_facilities(ROOT)
-    result['index.html'] = result['index.html'].replace('<h3>For posts and community groups</h3>', '<p id="ohio-bingo-link"><a href="bingo.html"><strong>Find Ohio bingo and senior centers</strong></a> - find nearby senior centers, exercise, crafts, games, meals and bingo by ZIP code.</p><h3>For posts and community groups</h3>', 1)
+    result['index.html'] = result['index.html'].replace('<h3>For posts and community groups</h3>', '<p id="ohio-bingo-link"><a href="' + OHIO_BINGO + '/"><strong>Find Ohio bingo and senior centers</strong></a> - find nearby senior centers, exercise, crafts, games, meals and bingo by ZIP code.</p><h3>For posts and community groups</h3>', 1)
     # Keep state adapter regression fixtures private to tests; the public site has one view.
     for page in [s['page'] for s in states]:
         result['tests/fixtures/'+page] = result[page]
@@ -93,7 +100,7 @@ def outputs():
         result[page] = result[page].replace('</body>', '<script defer src="assets/analytics.js"></script></body>')
     # The mobility and advocacy pages are canonical at mobilitytalk.org, so they stay out of this sitemap.
     # Search engines: list the public views, including each state's canonical URL.
-    pages = ['', 'facilities.html', 'family-guide.html', 'bingo.html', 'flyers.html']
+    pages = ['', 'facilities.html', 'family-guide.html', 'flyers.html']
     urls = [BASE_URL + page for page in pages if page == '' or (ROOT / page).is_file() or page in result]
     urls += [BASE_URL + '?state=' + s['code'] for s in states[1:]]
     # The per-state share pages are public, each with its own title and description.
