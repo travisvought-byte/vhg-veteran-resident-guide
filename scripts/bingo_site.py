@@ -42,8 +42,6 @@ def standalone_finder(page):
                     '<meta property="og:title" content="Ohio Bingo Finder">'
                     '<meta property="og:description" content="Free: find bingo games and senior centers near you anywhere in Ohio, by ZIP code, day and time.">'
                     f'<meta property="og:url" content="{SITE}/"><meta property="og:image" content="{SITE}/{LOGO}">', 1)
-    # Printed flyers name the address people should type.
-    page = _replace(page, 'guide.vethomeguard.org/bingo.html<br>', 'bingo.vethomeguard.org<br>', 2)
     page = page.replace('https://guide.vethomeguard.org/bingo.html', SITE + '/')
     # The finder is now the site root.
     page = _replace(page, 'href="bingo.html?', 'href="./?')
@@ -104,7 +102,7 @@ def _shell(title, description, path, body, extra_style=''):
 
 def partners_page(stats):
     blurb = ('Looking for bingo near you? The free Ohio Bingo Finder lists bingo games and senior centers across Ohio. '
-             'Search by ZIP code, day and time: bingo.vethomeguard.org')
+             'Search by ZIP code, day and time: ohiobingo.org')
     sponsor = f'mailto:{EMAIL}?subject=Ohio%20Bingo%20Finder%20partnership'
     body = f'''<header><a class="brand" href="./"><img src="{LOGO}" alt="" width="48" height="48"><span>Ohio Bingo Finder</span></a>
 <h1>Partner with the Ohio Bingo Finder</h1>
@@ -133,7 +131,7 @@ def partners_page(stats):
 </div>
 <section id="share-kit"><h2>Share the finder</h2>
 <div class="share"><img src="assets/bingo-qr.svg" alt="QR code that opens bingo.vethomeguard.org" width="180" height="180">
-<div><p><strong>bingo.vethomeguard.org</strong></p><p>Use this QR code on posters, newsletters and slides. <a href="assets/bingo-qr.svg" download>Download the QR code</a></p>
+<div><p><strong>ohiobingo.org</strong></p><p>The short address to print or say out loud. The QR code opens the finder directly; use it on posters, newsletters and slides. <a href="assets/bingo-qr.svg" download>Download the QR code</a></p>
 <label for="share-text"><strong>Copy for a newsletter or Facebook post</strong></label><textarea id="share-text" readonly>{escape(blurb)}</textarea></div></div>
 </section>
 </main>
@@ -194,16 +192,16 @@ def poster_page(stats):
 .screen-only{max-width:8.5in;margin:16px auto 0;display:flex;gap:12px;flex-wrap:wrap}
 @media print{body{background:#fff}.screen-only{display:none}.poster{border:0;margin:0;padding:0;max-width:none}@page{size:letter;margin:.5in}}
 '''
-    body = f'''<div class="screen-only"><button type="button" class="button" onclick="window.print()">Print this poster</button><a class="button alt" href="partners.html">Back to partners</a></div>
+    body = f'''<main><div class="screen-only"><button type="button" class="button" onclick="window.print()">Print this poster</button><a class="button alt" href="partners.html">Back to partners</a></div>
 <section class="poster">
 <p class="brand" style="justify-content:center"><img src="{LOGO}" alt="" width="48" height="48"><span>Veteran Home Guardians</span></p>
 <h1>Find a bingo game near you</h1>
 <p class="lead">Free Ohio Bingo Finder. Search by ZIP code, day and time.</p>
 <img class="qr" src="assets/bingo-qr.svg" alt="QR code that opens bingo.vethomeguard.org">
-<p class="url">bingo.vethomeguard.org</p>
+<p class="url">ohiobingo.org</p>
 <p class="facts">All registered bingo across Ohio, plus senior centers.<br>Run a game? List it free at the same address.</p>
 <p class="small">A free community resource from {ABOUT_VHG}.</p>
-</section>'''
+</section></main>'''
     return _shell('Ohio Bingo Finder poster | Veteran Home Guardians',
                   'A printable poster for the free Ohio Bingo Finder at bingo.vethomeguard.org.',
                   'poster.html', body, style)
