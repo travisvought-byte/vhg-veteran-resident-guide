@@ -2,8 +2,8 @@
 
 FindBingo.org is the multi-state bingo finder. Players type a ZIP code (or pick a state) and see
 bingo near them, closest first. It covers Michigan and Indiana with state data, sends Ohio players
-to the Ohio Bingo Finder, and tells Kentucky, West Virginia and Pennsylvania players plainly that no
-public list exists yet, with a free way for halls to send game times.
+to the Ohio Bingo Finder, and tells Kentucky, West Virginia, Pennsylvania and Florida players plainly
+that no public list exists yet, with a free way for halls to send game times.
 
 Started November 15, 2026, at Travis's direction: one national finder, neighboring states first.
 
@@ -20,13 +20,16 @@ Started November 15, 2026, at Travis's direction: one national finder, neighbori
 | Generated site | `findbingo-site/index.html`, `data.json`, `zips.json` |
 | Tests | `tests/findbingo.cjs` (part of `npm test`) |
 
-`findbingo-site/index.html` is the whole page. It is uploaded to the Wix site **Find Bingo**
-(site ID `9b3c0c21-b49d-45fa-9cb7-26a1a440afdf`), which is where www.findbingo.org connects. The
-page loads `data.json` and `zips.json` from https://guide.vethomeguard.org/findbingo-site/, so list
-updates go live on findbingo.org as soon as a pull request merges. Upload `index.html` to Wix again
-only when the page itself changes. Until this folder is on `main`, the page reads the same files from
-the `claude/findbingo-national` branch; that fallback can be removed from `DATA_SOURCES` in
-`scripts/findbingo_site.py` after the merge.
+`findbingo-site/index.html` is the whole page; it loads `data.json` and `zips.json` from beside
+itself. The build writes the same three files to `bingo-site/findbingo/`. The Ohio-Bingo repository
+mirrors `bingo-site/` every three hours, and **Cloudflare Pages serves findbingo.org from the
+Ohio-Bingo repository** with the build output directory set to `findbingo` (no build command), so
+list updates reach findbingo.org within a few hours of a merge. A preview copy also runs on the Wix
+site **Find Bingo** (site ID `9b3c0c21-b49d-45fa-9cb7-26a1a440afdf`); it reads the lists from
+https://guide.vethomeguard.org/findbingo-site/. Upload `index.html` to Wix again
+only when the page itself changes. Because the Wix page reads the lists from `main`, a page change
+that needs new data (a new state, for example) shows only after its pull request merges; until then
+the page hides state buttons the loaded data does not have.
 
 Ohio data is not copied here. Ohio searches hand off to https://bingo.vethomeguard.org/ with the
 same ZIP code and distance, so Ohio has one source of truth.
@@ -39,9 +42,12 @@ The page's own lookup (a POST to `/api-proxy/CG-FindABingo-Reverse-Proxy` with a
 read for every county in its list. Each row gives the licensed organization, location, day and
 licensed begin and end time. Rows were grouped by street address into venues; each session keeps
 its organization. The page tells players that hours come from the license list and to call ahead
-for the first game time. The state lookup stopped answering partway through; the counties it had
-not returned yet are listed in `pending_counties` in `bingo-states.json`, and the page names them
-and links the state lookup. To finish them, read those counties the same way, add their venues and
+for the first game time. The state lookup refuses some requests: it throttles bursts, and it returns
+"Unable to process your request" for Clinton County every time (also when searched by city), so a
+county that fails should be retried later rather than stopping the whole run. Counties not loaded
+yet are listed in `pending_counties` in `bingo-states.json`, and the page names them and links the
+state lookup. Two typos in the state list are fixed in the data with a note on the record (a
+Manistique hall listed with Mason's ZIP code, and a street number written "1o1"). To finish them, read those counties the same way, add their venues and
 remove them from `pending_counties` (the build refuses a county that is both listed and pending).
 
 **Indiana.** The Indiana Gaming Commission's
@@ -53,6 +59,23 @@ times or phone numbers, so these listings say so, offer a phone lookup and direc
 behind a "Show them too" button wherever halls with game days are nearby. Licenses past their
 expiration date drop off automatically.
 
+**Florida.** Florida does not license bingo statewide: section 849.0931 lets charitable, nonprofit
+and veterans' organizations (and some homeowners' and mobile home park associations) run bingo, sets
+limits (two days a week, $250 jackpots, players 18 and older) and names no state license. Some
+counties license it locally (Pinellas through Consumer Protection, Marion through its County
+Administrator), but neither publishes a list. Florida is a "starter" state: listings come from
+places that publish their own schedules, kept in `data/public/florida-bingo.json`, each with its own
+source, phone and a note on how far to trust the days.
+
+The first Florida listings are City of Jacksonville senior centers, read from the city's November
+2026 monthly calendars
+(https://www.jacksonville.gov/departments/parks-and-recreation/senior-services/senior-center-calendars).
+Only centers with bingo on the same weekday most weeks are listed; one-off events (music bingo,
+outings) are left out. The cards say the days come from the November calendar and can change month
+to month. To refresh, read the newest month's calendars the same way. Next candidates: senior
+centers and posts in the Tampa Bay, Orlando, Southwest and Southeast Florida areas, from organizer
+pages or dated calendars only.
+
 **Kentucky, West Virginia, Pennsylvania.** No public statewide list of games or halls was found:
 Kentucky's Office of Charitable Gaming (now part of Kentucky Horse Racing & Gaming) publishes county
 totals only; West Virginia's Tax Division links no licensee list; Pennsylvania bingo licenses are
@@ -60,7 +83,7 @@ issued by each county treasurer. These states get an honest "no list yet" card, 
 an email link for halls to send game times.
 
 **ZIP codes.** The guide's GeoNames/Midwire centroids (CC BY 3.0, attributed in the footer), limited
-to the six states' ZIP prefixes. ZIP 49037 (Battle Creek) is missing there; its point comes from the
+to the covered states' ZIP prefixes (Florida's military 340 prefix excluded). ZIP 49037 (Battle Creek) is missing there; its point comes from the
 U.S. Census Geocoder match for the bingo hall at 228 N 20th St.
 
 ## Refreshing the lists
@@ -69,13 +92,12 @@ U.S. Census Geocoder match for the bingo hall at 228 N 20th St.
 2. Update the JSON files and each record's `reviewed_on`.
 3. Run `python3 scripts/build_public.py` and `node tests/findbingo.cjs`, then open a pull request.
 
-## Connecting the domain (Travis)
+## The domain
 
-In Wix, open the **Find Bingo** site dashboard
-(https://manage.wix.com/dashboard/9b3c0c21-b49d-45fa-9cb7-26a1a440afdf), choose a Premium plan that
-allows a custom domain, then connect `findbingo.org` under Settings → Domains. If the domain was
-bought through Wix it can be assigned directly; if it was bought elsewhere, Wix shows the DNS records
-to add at that registrar.
+findbingo.org is on Cloudflare. In the Cloudflare Pages project connected to the Ohio-Bingo
+repository: production branch `main`, no build command, build output directory `findbingo`, and the
+custom domains `findbingo.org` and `www.findbingo.org` added under **Custom domains** (Cloudflare
+creates the DNS records; do not add them by hand first).
 
 ## Related work
 

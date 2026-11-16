@@ -10,20 +10,22 @@ import re
 from datetime import date
 from html import escape
 
-ORDER = ['MI', 'IN', 'OH', 'KY', 'WV', 'PA']
+ORDER = ['MI', 'IN', 'OH', 'KY', 'WV', 'PA', 'FL']
 # First three ZIP digits for each covered state (USPS prefix ranges).
-PREFIXES = {'PA': (150, 196), 'WV': (247, 268), 'KY': (400, 427), 'OH': (430, 459), 'IN': (460, 479), 'MI': (480, 499)}
-COVERAGE = {'times', 'licenses', 'ohio_finder', 'none'}
+PREFIXES = {'PA': (150, 196), 'WV': (247, 268), 'FL': (320, 349), 'KY': (400, 427), 'OH': (430, 459), 'IN': (460, 479), 'MI': (480, 499)}
+COVERAGE = {'times', 'licenses', 'starter', 'ohio_finder', 'none'}
+PHONE = re.compile(r'\d{3}-\d{3}-\d{4}')
 TIME = re.compile(r'(?:[01]\d|2[0-3]):[0-5]\d')
 REPO_RAW = 'https://raw.githubusercontent.com/travisvought-byte/vhg-veteran-resident-guide/'
-# Where the page looks for data.json and zips.json, in order. The branch entry serves the Wix copy
-# until this folder reaches main; it can be dropped after that merge.
-DATA_SOURCES = ['', 'https://guide.vethomeguard.org/findbingo-site/', REPO_RAW + 'main/findbingo-site/',
-                REPO_RAW + 'claude/findbingo-national/findbingo-site/']
+# Where the page looks for data.json and zips.json, in order: beside the page (the guide's copy),
+# then GitHub Pages, then the raw file on main.
+DATA_SOURCES = ['', 'https://guide.vethomeguard.org/findbingo-site/', REPO_RAW + 'main/findbingo-site/']
 
 
 def _state_of_zip(z):
     p = int(z[:3])
+    if p == 340:  # military mail (APO/FPO AA), not Florida
+        return ''
     return next((s for s, (lo, hi) in PREFIXES.items() if lo <= p <= hi), '')
 
 
@@ -37,7 +39,7 @@ def validate(states, venues, licensed, zips):
         assert all(x['url'].startswith('https://') and x['scope'] and date.fromisoformat(x['reviewed_on']) for x in s['sources'])
         if s['coverage'] in ('times', 'licenses'):
             assert s.get('list_url', '').startswith('https://') and s.get('list_label'), s['code']
-        if s['coverage'] == 'times':
+        if s['coverage'] in ('times', 'starter'):
             assert s.get('hours_note'), s['code']
         # Counties the state lookup could not return yet; the page names them and links the state lookup.
         pending = s.get('pending_counties', [])
@@ -48,18 +50,27 @@ def validate(states, venues, licensed, zips):
             assert s.get('finder_url', '').startswith('https://'), s['code']
     pending = {c for s in states for c in s.get('pending_counties', [])}
     assert not pending & {v['county'] for v in venues}, 'a county with listings is no longer pending'
+    with_venues = {s['code'] for s in states if s['coverage'] in ('times', 'starter')}
     ids = set()
     for v in venues:
-        assert v['id'] not in ids and re.fullmatch(r'mi-[a-z0-9-]+', v['id']), v['id']
+        code = v['state']
+        assert code in with_venues and v['id'] not in ids and re.fullmatch(code.lower() + r'-[a-z0-9-]+', v['id']), v['id']
         ids.add(v['id'])
-        assert v['state'] == 'MI' and _state_of_zip(v['zip']) == 'MI' and v['zip'] in zips, v['id']
-        assert v['address'].endswith(', MI ' + v['zip']) and v['city'] in v['address'], v['id']
+        assert _state_of_zip(v['zip']) == code and v['zip'] in zips, v['id']
+        assert v['address'].endswith(', ' + code + ' ' + v['zip']) and v['city'] in v['address'], v['id']
         assert v['name'] and v['county'] and v['organizations'] and v['sessions'], v['id']
         for x in v['sessions']:
             assert type(x['day']) is int and 0 <= x['day'] <= 6, v['id']
-            assert TIME.fullmatch(x['start']) and TIME.fullmatch(x['end']), v['id']
-            assert x['organization'] in v['organizations'], v['id']
+            if code == 'MI':  # the state license list always gives both times
+                assert TIME.fullmatch(x['start']) and TIME.fullmatch(x['end']), v['id']
+            else:  # published schedules give a start time, or none ("time not posted")
+                assert (x['start'] is None or TIME.fullmatch(x['start'])) and 'end' not in x, v['id']
+            assert x['organization'] in v['organizations'] and x.get('label', 'x'), v['id']
         assert all(type(n) is str and n for n in v.get('notes', [])), v['id']
+        if code != 'MI':
+            # Published-schedule listings carry their own source, phone and how far to trust the days.
+            assert v['kind'] in ('hall', 'senior_center') and PHONE.fullmatch(v['phone']), v['id']
+            assert v['source_url'].startswith('https://') and v['source_label'] and v['schedule_note'], v['id']
         assert date.fromisoformat(v['reviewed_on']) and v['sources'] and all(x['url'].startswith('https://') for x in v['sources'])
     for r in licensed:
         assert r['id'] not in ids and r['id'] == 'in-' + r['license_number'], r['id']
@@ -89,6 +100,7 @@ def _date_label(iso):
 def make_findbingo(root):
     states = json.loads((root / 'data/public/bingo-states.json').read_text())
     venues = json.loads((root / 'data/public/michigan-weekly-bingo.json').read_text())
+    venues += json.loads((root / 'data/public/florida-bingo.json').read_text())
     licensed = json.loads((root / 'data/public/indiana-bingo-licenses.json').read_text())
     all_zips = json.loads((root / 'data/public/us-zip-centroids.json').read_text())
     for extra in json.loads((root / 'data/public/zip-points-supplement.json').read_text()):
@@ -101,7 +113,8 @@ def make_findbingo(root):
     data = {
         'generated_on': generated_on,
         'states': [_public_state(s) for s in states],
-        'venues': [_public_record(v, ('id', 'state', 'name', 'organizations', 'address', 'city', 'zip', 'county', 'sessions', 'notes', 'reviewed_on')) for v in venues],
+        'venues': [_public_record(v, ('id', 'state', 'kind', 'name', 'organizations', 'address', 'city', 'zip', 'county', 'phone', 'sessions',
+                                      'audience', 'hours', 'schedule_note', 'notes', 'source_url', 'source_label', 'reviewed_on')) for v in venues],
         'licensed': [_public_record(r, ('id', 'state', 'name', 'address', 'city', 'zip', 'county', 'license_number', 'license_type', 'license_expires', 'reviewed_on')) for r in licensed],
     }
     data_json = json.dumps(data, ensure_ascii=False, separators=(',', ':'))
@@ -127,8 +140,9 @@ Generated by `scripts/findbingo_site.py` from `data/public/bingo-states.json`,
 `data/public/michigan-weekly-bingo.json`, `data/public/indiana-bingo-licenses.json` and the ZIP code
 centroids. Do not edit these files by hand; run `python3 scripts/build_public.py`.
 
-- `index.html` is the whole page. Upload it as the home page of the Wix site that serves
-  https://www.findbingo.org/ (see docs/FINDBINGO.md). Upload it again only when the page itself changes.
+- `index.html` is the whole page. The same files are written to `bingo-site/findbingo/`, which the
+  Ohio-Bingo repository mirrors and Cloudflare Pages serves at https://www.findbingo.org/ (see
+  docs/FINDBINGO.md).
 - `data.json` (the lists) and `zips.json` (ZIP code points for the covered states) are loaded by the
   page from https://guide.vethomeguard.org/findbingo-site/, so list updates reach findbingo.org as soon
   as a pull request merges.
@@ -136,9 +150,15 @@ centroids. Do not edit these files by hand; run `python3 scripts/build_public.py
 
 Lists updated {_date_label(generated_on)}.
 '''
+    site = {
+        'index.html': page,
+        'data.json': data_json + '\n',
+        'zips.json': json.dumps(zips, separators=(',', ':')) + '\n',
+    }
+    # The same three files also go into bingo-site/findbingo/, which the Ohio-Bingo repository mirrors;
+    # Cloudflare Pages serves www.findbingo.org from that folder.
     return {
-        'findbingo-site/index.html': page,
-        'findbingo-site/data.json': data_json + '\n',
-        'findbingo-site/zips.json': json.dumps(zips, separators=(',', ':')) + '\n',
+        **{'findbingo-site/' + name: text for name, text in site.items()},
+        **{'bingo-site/findbingo/' + name: text for name, text in site.items()},
         'findbingo-site/README.md': readme,
     }
