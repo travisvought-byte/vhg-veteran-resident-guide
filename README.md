@@ -1,4 +1,4 @@
-# Veteran Resident Resource Guide: Ohio, Pennsylvania, New York, Michigan, Kentucky, Utah, Indiana, West Virginia, Texas, Florida, California, Virginia and North Carolina
+# Veteran Resident Resource Guide: all 50 states and the District of Columbia
 
 A free public guide created and maintained by Travis Vought, and shared by Veteran Home Guardians (VHG) for veterans, surviving spouses, seniors, people with disabilities, families and care teams. It helps people find their first contact and prepare a useful referral.
 
@@ -6,7 +6,7 @@ A free public guide created and maintained by Travis Vought, and shared by Veter
 
 **Ohio Bingo & Senior Centers:** https://guide.vethomeguard.org/bingo.html — find games and activities by ZIP code. This directory is part of this repository, with direct links in the guide’s main navigation and homepage.
 
-**Guided assistance beta:** https://guide.vethomeguard.org/assistant/ — an optional, browser-only, source-linked navigator for 13 states with referral drafts, accessibility preparation checklists and printable handoffs. It does not submit benefit applications, send messages, save cases or decide eligibility.
+**Guided assistance beta:** https://guide.vethomeguard.org/assistant/ — an optional, browser-only, source-linked navigator for the 20 states with full county editions, with referral drafts, accessibility preparation checklists and printable handoffs. It does not submit benefit applications, send messages, save cases or decide eligibility.
 
 **Pennsylvania guide:** https://guide.vethomeguard.org/pa.html
 
@@ -46,7 +46,7 @@ Invite retailers to run a voluntary roundup, top-up or donation campaign for Vet
 
 ## Starter editions
 
-The guide now covers all 50 states and the District of Columbia. Thirteen states have full county editions; the other 37 states and D.C. are **starter editions** (added November 2, 2026), listed in `data/starter-states.json`. Each lists the state veterans agency, with its phone checked on the agency’s own website (each record says whether the page was read in full or matched through search results), plus national routes to local aging help (Eldercare Locator), the long-term-care ombudsman and free Medicare counseling (SHIP). Every county uses these statewide contacts until county research is added. Starter states are labeled as such in the guide and are not yet part of the guided-assistance beta.
+The guide now covers all 50 states and the District of Columbia. Twenty states have full county editions (Ohio, Pennsylvania, New York, Michigan, Kentucky, Utah, Indiana, West Virginia, Texas, Florida, California, Virginia, North Carolina, Georgia, Arizona, Washington, Tennessee, South Carolina, Illinois and Missouri: 1,779 counties and equivalents). The other 30 states and D.C. are **starter editions** (added November 2, 2026), listed in `data/starter-states.json`. Each lists the state veterans agency, with its phone checked on the agency’s own website (each record says whether the page was read in full or matched through search results), plus national routes to local aging help (Eldercare Locator), the long-term-care ombudsman and free Medicare counseling (SHIP). Every county uses these statewide contacts until county research is added. Starter states are labeled as such in the guide and are not yet part of the guided-assistance beta.
 
 To add or update a starter state, edit `data/starter-states.json`, then run `python3 scripts/make_starter_states.py`, `python3 scripts/make_qr.py` and `python3 scripts/build_public.py`. To upgrade a starter state to a full county edition, remove it from that file and follow [Adding a state](docs/ADDING-A-STATE.md).
 
@@ -58,7 +58,7 @@ The main guide uses one interface. Changing the state updates county contacts, r
 
 ## Coverage and verification
 
-All thirteen state editions are published referral backbones, not complete inventories of local services. Ohio local research is strongest in the four pilot counties; Pennsylvania, New York, Michigan, Kentucky, Utah, Indiana, West Virginia, Texas, Florida, California, Virginia and North Carolina are initial referral editions. The state picker updates the shared interface from separate datasets; depth of local coverage varies.
+All twenty full state editions are published referral backbones, not complete inventories of local services. Ohio local research is strongest in the four pilot counties; the other nineteen are initial referral editions. The state picker updates the shared interface from separate datasets; depth of local coverage varies.
 
 The guide displays county coverage and calculated verification totals in an expandable section near the state picker. Every resource card shows its source status without requiring an expansion. Search-excerpt, imported and recheck records carry a visible verification notice, including in printed resource lists. A published source review does not mean an agency confirmed its current intake or availability.
 
@@ -94,13 +94,13 @@ Kentucky has KDVA regional benefits representatives, aging contacts, district om
 
 Utah is the sixth state: all 29 counties have regional veterans referrals, matched aging agencies and long-term-care ombudsmen. Its 66 resources include 33 shared federal/national records, 10 Utah programs, 12 aging contacts and 11 ombudsman regions. Veterans, aging and ombudsman county boundaries are maintained separately, including Uintah County’s separate aging route. Published sources were reviewed October 14, 2026; contacts are not telephone-confirmed. Local providers and activity listings remain incomplete. [Open Utah](https://guide.vethomeguard.org/?state=UT), [sharing kit](https://guide.vethomeguard.org/share-ut.html), and [coverage and evidence](docs/UTAH.md).
 
-Canonical Utah data lives in `data/public/ut-programs.json`, `data/public/ut-regional-referrals.json` and `data/public/utah-county-veterans-offices.json`. The standard build generates the combined data, shared adapter, redirect and sharing kit. Unified DOM and browser checks include all thirteen states and all 1,208 counties and equivalents.
+Canonical Utah data lives in `data/public/ut-programs.json`, `data/public/ut-regional-referrals.json` and `data/public/utah-county-veterans-offices.json`. The standard build generates the combined data, shared adapter, redirect and sharing kit. `tests/states.cjs` checks every registered state and every one of its counties and equivalents.
 
 ## Bingo and urgent support
 
 The [Ohio Bingo & Senior Centers section](https://guide.vethomeguard.org/bingo.html) includes all 717 state-listed Type I entries and 114 senior centers in 81 counties (15 researched in detail, 47 from the Ohio Association of Senior Centers member directory, 52 from Area Agency on Aging and county sources). Games with published schedules and senior centers are shown first; license-only entries are one click away. Search by ZIP/distance, activity, published bingo day (Today, Tomorrow, or a weekday) or time of day, and print a one-page facility flyer with a QR code. Specific dates, closures and expired offers are handled separately from license authorization days. Seventy-five entries now have published schedule details after seven October research passes. See [bingo evidence and expansion](docs/BINGO.md).
 
-All thirteen editions have a prominent urgent-help section, crisis and mental-health resources, and expanded homelessness pathways: the VA national call center, SSVF community providers, HUD-VASH and VA Community Resource and Referral Centers. Local shelter beds, individual provider intake and availability are not comprehensively mapped.
+All twenty full editions have a prominent urgent-help section, crisis and mental-health resources, and expanded homelessness pathways: the VA national call center, SSVF community providers, HUD-VASH and VA Community Resource and Referral Centers. Local shelter beds, individual provider intake and availability are not comprehensively mapped.
 
 ## Corrections from users
 
@@ -144,7 +144,9 @@ West Virginia adds all 55 counties, 13 state programs, four aging agencies and s
 
 ## Maintenance and next research
 
-See the [maintenance process](docs/MAINTENANCE.md), [verification queue](docs/VERIFICATION-QUEUE.md) and [distribution plan](docs/DISSEMINATION.md). Source review is not telephone confirmation. No outreach was sent as part of this update.
+See the [roadmap](docs/ROADMAP.md) for what the guide still needs, and the [maintenance process](docs/MAINTENANCE.md), [verification queue](docs/VERIFICATION-QUEUE.md) and [distribution plan](docs/DISSEMINATION.md). Source review is not telephone confirmation. No outreach was sent as part of this update.
+
+A [monthly link check](.github/workflows/link-check.yml) requests every link the guide publishes (each state's resources and veterans office contacts, and the family guide; about 1,700 links). When a link is broken or now goes to a different website, it opens one issue, "Guide links to review", naming each link and the records that use it, and closes the issue when a later run is clean. Sites that refuse robots are counted and never listed, so nobody is asked to open links by hand. Run it yourself with `python3 scripts/check_links.py` (add `--state TX` for one state, `--list` to see the links without requesting them); `python3 tests/link_check.py` checks the sorting rules against a local server. It checks web addresses only. It cannot tell whether a phone number still works.
 
 ## Repository layout
 

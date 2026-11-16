@@ -1,0 +1,64 @@
+name: Monthly link check
+# Requests every link the guide publishes once a month: each state's resources and veterans office
+# contacts, and the family guide. When a link is broken, or now goes to a different website, it opens
+# one issue naming the links (or updates the one already open), so a dead end is found here before a
+# veteran finds it. Sites that refuse robots are counted, never listed: nobody is asked to open them by hand.
+on:
+  schedule:
+    - cron: '23 9 5 * *'   # the 5th of each month, about 5:23 a.m. Eastern
+  workflow_dispatch:
+  # A change to the checker itself is tried once on its pull request. It reports and opens nothing.
+  pull_request:
+    paths:
+      - scripts/linkcheck.py
+      - scripts/check_links.py
+      - .github/workflows/link-check.yml
+permissions:
+  contents: read
+  issues: write
+concurrency:
+  group: link-check-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  links:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v6
+      - id: check
+        name: Request every published link
+        run: |
+          set +e
+          python3 scripts/check_links.py > report.md
+          code=$?
+          set -e
+          # 10 means the check finished and found links for a person to look at. Anything else non-zero is a crash.
+          if [ "$code" -eq 10 ]; then
+            echo "found=1" >> "$GITHUB_OUTPUT"
+          elif [ "$code" -ne 0 ]; then
+            cat report.md
+            exit "$code"
+          fi
+      - name: Show the report
+        run: |
+          cat report.md
+          cat report.md >> "$GITHUB_STEP_SUMMARY"
+      # A run on a pull request, or one started by hand on another branch, is a trial: it reports above and opens nothing.
+      - name: Open, update or close the tracking issue
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FOUND: ${{ steps.check.outputs.found }}
+        run: |
+          title="Guide links to review (automated monthly check)"
+          number=$(gh issue list --state open --search "$title in:title" --json number,title --jq ".[] | select(.title == \"$title\") | .number" | head -n1)
+          if [ "$FOUND" = "1" ]; then
+            if [ -n "$number" ]; then
+              gh issue edit "$number" --body-file report.md
+            else
+              gh issue create --title "$title" --body-file report.md
+            fi
+          elif [ -n "$number" ]; then
+            gh issue comment "$number" --body "This month's check found no broken or moved links."
+            gh issue close "$number"
+          fi
