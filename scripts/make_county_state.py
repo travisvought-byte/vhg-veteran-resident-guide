@@ -298,6 +298,12 @@ def adapter(sheet):
         (', MO', f', {code}'),
         ('Missouri', name),
     ]
+    # A state whose veterans contacts are not county offices (Oklahoma's service-officer teams) lists exact wording swaps
+    # for the template's county-office phrases; they run first, against the template's own text.
+    for old, new in a.get('extra_swaps', []):
+        if old not in text:
+            raise SystemExit(f'adapter template no longer contains: {old[:60]}')
+        text = text.replace(old, new)
     for old, new in pairs:
         if old not in text:
             raise SystemExit(f'adapter template no longer contains: {old[:60]}')
@@ -319,7 +325,7 @@ def registry_entry(sheet):
         'offices': f'data/public/{slug}-county-veterans-offices.json', 'resources': f'data/public/{slug}-resources.json',
         'statewide_area_names': [], 'coverage_scope': sheet['coverage_scope'], 'coverage_note': sheet['coverage_note'],
         'share_description': sheet['share_description'],
-        'share_replacements': [['Updated October 8, 2026', 'Updated ' + sheet['month_label']]],
+        'share_replacements': [['Updated October 8, 2026', 'Updated ' + sheet['month_label']]] + sheet.get('share_replacements', []),
     }
 
 

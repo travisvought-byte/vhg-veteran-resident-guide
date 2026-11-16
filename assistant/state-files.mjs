@@ -25,7 +25,8 @@ export const STATES=Object.freeze({
   "AL": "Alabama",
   "MD": "Maryland",
   "WI": "Wisconsin",
-  "MN": "Minnesota"
+  "MN": "Minnesota",
+  "OK": "Oklahoma"
 });
 export const STATE_FILES=Object.freeze({
   "OH": [
@@ -127,6 +128,10 @@ export const STATE_FILES=Object.freeze({
   "MN": [
     "data/public/minnesota-resources.json",
     "data/public/minnesota-county-veterans-offices.json"
+  ],
+  "OK": [
+    "data/public/oklahoma-resources.json",
+    "data/public/oklahoma-county-veterans-offices.json"
   ]
 });
 export const localityLabel=row=>row?(["independent_city","statewide"].includes(row.county_type)?row.county:row.county+" County"):"";
