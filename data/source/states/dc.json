@@ -1,0 +1,346 @@
+{
+ "about": "Research sheet for the District of Columbia edition. Every contact below was read on the date in reviewed_on from the page named beside it; scripts/make_county_state.py turns it into the edition files.",
+ "code": "DC",
+ "name": "District of Columbia",
+ "slug": "district-of-columbia",
+ "counties": 1,
+ "reviewed_on": "2026-11-16",
+ "month_label": "November 16, 2026",
+ "template_date": "November 4, 2026",
+ "phones_sentence": "The veterans office phone, address and hours come from the Mayor’s Office of Veterans Affairs page.",
+ "senior_line_id": "dc-adrc",
+ "agency": {
+  "url": "https://communityaffairs.dc.gov/mova"
+ },
+ "offices": {
+  "source_url": "https://communityaffairs.dc.gov/mova",
+  "source_title": "District of Columbia: Mayor’s Office of Veterans Affairs",
+  "review_method": "full_official_page_text",
+  "note": "MOVA’s District Veteran Service Officers help with VA claims, pension, survivor benefits and District veterans programs at no charge.",
+  "selection": "Office address, phone and hours as printed on the MOVA page (read in full); staff names omitted. The page’s footer also shows 1350 Pennsylvania Avenue NW, Suite 332; the card uses the address under “Contact Us”.",
+  "list": [
+   {
+    "county": "District of Columbia",
+    "county_type": "statewide",
+    "organization": "Mayor’s Office of Veterans Affairs (MOVA)",
+    "phone": "202-724-5454",
+    "address": "One Judiciary Square, 441 4th St NW, Suite 707 North, Washington, DC 20001",
+    "hours": "Monday to Friday, 9 a.m. to 5 p.m.",
+    "office_type": "state_field_office",
+    "note": "District Veteran Service Officers help with federal VA claims and benefits; MOVA also takes requests through its online intake form."
+   }
+  ]
+ },
+ "aging": {
+  "source_url": "https://dacl.dc.gov/agency/department-aging-and-community-living-0",
+  "source_title": "DC Department of Aging and Community Living: Agency contact",
+  "source_scope": "500 K Street NE; phone (202) 724-5626; TTY 711; office hours Monday to Friday, 9:30 a.m. to 4:30 p.m.; Adult Protective Services (202) 541-3950; search excerpt.",
+  "review": "excerpt",
+  "review_method": "official_search_excerpt",
+  "region_word": "",
+  "agency_label": "DC Department of Aging and Community Living",
+  "description": "The DC Department of Aging and Community Living (DACL) is the District’s aging agency and Aging and Disability Resource Center: information and help for residents 60 and older, adults with disabilities and caregivers, including senior centers, meals, transportation, in-home support and legal services.",
+  "next_step_extra": "TTY users dial 711. Office hours are weekdays 9:30 a.m. to 4:30 p.m.",
+  "regions": [
+   {
+    "id": "dc-dacl",
+    "label": "District of Columbia",
+    "name": "DC Department of Aging and Community Living (DACL)",
+    "phone": "202-724-5626",
+    "counties": [
+     "District of Columbia"
+    ],
+    "notes": [
+     "Office: 500 K Street NE, Washington, DC 20002."
+    ]
+   }
+  ]
+ },
+ "ombudsman": {
+  "state_phone": "202-434-2190",
+  "regions": [
+   {
+    "id": "dc-omb",
+    "name": "Office of the D.C. Long-Term Care Ombudsman (Legal Counsel for the Elderly)",
+    "phone": "202-434-2190",
+    "counties": [
+     "District of Columbia"
+    ],
+    "source_url": "https://www.aarp.org/legal-counsel-for-elderly/what-we-do/info-2017/dc-long-term-care-ombudsman.html",
+    "source_title": "Legal Counsel for the Elderly: The Office of the D.C. Long-Term Care Ombudsman",
+    "source_scope": "Phone 202-434-2190 and email; replies within 24 hours or the next business day; serves residents of nursing homes, assisted living and community residence facilities and people on the EPD Medicaid waiver at home; read in full; page updated July 15, 2024. The Attorney General’s elder justice brochure (https://oag.dc.gov/sites/default/files/2024-03/EJS-brochure-updated-08292023-.pdf; updated August 2023; search excerpt) lists 202-434-2140 instead.",
+    "review": "full",
+    "review_method": "full_official_page_text",
+    "counties_from_source": true,
+    "notes": [
+     "Email DCOmbuds@aarp.org. The Attorney General’s 2023 elder justice brochure lists 202-434-2140; the program’s own page gives 202-434-2190."
+    ]
+   }
+  ]
+ },
+ "cils": {
+  "source_url": "https://ilru.org/projects/cil-net/cil-center-and-association-directory-results/DC",
+  "source_title": "ILRU: Directory of Centers for Independent Living, District of Columbia results",
+  "scope": "Each office’s phones; read in full. Addresses come from ILRU’s map directory (https://www.ilru.org/cil-directory/dc; search excerpt). The directory lists the District as “Washington” county.",
+  "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living",
+  "list": [
+   {
+    "id": "dc-cil-dccil",
+    "name": "DC Center for Independent Living",
+    "organization": "The DC Center for Independent Living (DCCIL)",
+    "url": "https://dccil.org/",
+    "phone": "202-388-0033",
+    "counties": [
+     "District of Columbia"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "Main office: 2600 12th Street NE, Washington, DC 20018; TTY 202-388-0277.",
+     "Other offices: 2901 14th St NW, 202-280-6899; Anacostia, 2443 Good Hope Road SE, 202-889-5802."
+    ]
+   }
+  ]
+ },
+ "programs": [
+  {
+   "id": "dc-claims",
+   "name": "DC veterans: Mayor’s Office of Veterans Affairs for claims help",
+   "organization": "District of Columbia, Mayor’s Office of Veterans Affairs (MOVA)",
+   "url": "https://communityaffairs.dc.gov/mova",
+   "needs": [
+    "general_navigation",
+    "benefits_and_funding"
+   ],
+   "description": "Free help with federal VA claims and benefits from MOVA’s District Veteran Service Officers, plus outreach, community resources and District veteran programs for veterans and their families.",
+   "next_step": "Call MOVA at 202-724-5454 (weekdays 9 a.m. to 5 p.m.) or use its online intake form.",
+   "constraints": [
+    "Call ahead; the office is in One Judiciary Square."
+   ],
+   "phone": "202-724-5454",
+   "phone_label": "Mayor’s Office of Veterans Affairs (202-724-5454)",
+   "phone_source": "https://communityaffairs.dc.gov/mova",
+   "review": "full",
+   "sources": [
+    {
+     "url": "https://communityaffairs.dc.gov/mova",
+     "title": "District of Columbia: Mayor’s Office of Veterans Affairs",
+     "scope": "Services, District Veteran Service Officers, address, phone and hours; read in full."
+    },
+    {
+     "url": "https://communityaffairs.dc.gov/page/veteran-claims-assistance",
+     "title": "MOVA: Veteran Claims Assistance",
+     "scope": "Claims help through MOVA’s District Veterans Service Officer; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "dc-adrc",
+   "name": "DC Department of Aging and Community Living (Aging and Disability Resource Center)",
+   "organization": "DC Department of Aging and Community Living (DACL)",
+   "url": "https://dacl.dc.gov/agency/department-aging-and-community-living-0",
+   "needs": [
+    "general_navigation",
+    "help_at_home",
+    "equipment_home_accessibility"
+   ],
+   "description": "The District’s aging agency and Aging and Disability Resource Center: senior centers, meals, transportation, in-home support, caregiver help and legal services for residents 60 and older and adults with disabilities. Military service is not required.",
+   "next_step": "Call DACL at 202-724-5626 (TTY 711), weekdays 9:30 a.m. to 4:30 p.m.",
+   "constraints": [
+    "Each program has its own eligibility and waitlist."
+   ],
+   "phone": "202-724-5626",
+   "phone_label": "DC Department of Aging and Community Living (202-724-5626)",
+   "phone_source": "https://dacl.dc.gov/agency/department-aging-and-community-living-0",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://dacl.dc.gov/agency/department-aging-and-community-living-0",
+     "title": "DC Department of Aging and Community Living: Agency contact",
+     "scope": "Address, phone, TTY, office hours and the Adult Protective Services line; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "dc-ship",
+   "name": "Medicare counseling (DC SHIP)",
+   "organization": "DC Department of Aging and Community Living, State Health Insurance Assistance Program (SHIP)",
+   "url": "https://dacl.dc.gov/node/1437146",
+   "needs": [
+    "benefits_and_funding"
+   ],
+   "description": "Free, unbiased health insurance counseling for Medicare beneficiaries, families and caregivers in the District from DACL’s SHIP counselors.",
+   "next_step": "Call the SHIP Helpline at 202-727-8370 or email ship.dacl@dc.gov. For Medicare itself, call 800-MEDICARE (800-633-4227).",
+   "constraints": [
+    "The helpline keeps limited weekday hours; leave a message if no one answers."
+   ],
+   "phone": "202-727-8370",
+   "phone_label": "DC SHIP Helpline (202-727-8370)",
+   "phone_source": "https://dacl.dc.gov/node/1437146",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://dacl.dc.gov/node/1437146",
+     "title": "DACL: Health Insurance Counseling (DC SHIP)",
+     "scope": "Free health insurance information and counseling for Medicare beneficiaries; phone (202) 727-8370; search excerpt."
+    },
+    {
+     "url": "https://dacl.dc.gov/sites/default/files/dc/sites/dacl/service_content/attachments/About_SHIP_Fact_Sheet_2026_vF.pdf",
+     "title": "DACL: About SHIP fact sheet (2026)",
+     "scope": "SHIP Helpline (202) 727-8370, email ship.dacl@dc.gov, helpline hours; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "dc-ombudsman",
+   "name": "DC Long-Term Care Ombudsman and adult abuse reporting",
+   "organization": "Legal Counsel for the Elderly, Office of the D.C. Long-Term Care Ombudsman; DACL Adult Protective Services",
+   "url": "https://www.aarp.org/legal-counsel-for-elderly/what-we-do/info-2017/dc-long-term-care-ombudsman.html",
+   "needs": [
+    "resident_rights",
+    "general_navigation"
+   ],
+   "description": "Advocacy for residents of nursing homes, assisted living and community residence facilities, and for people receiving EPD waiver services at home. Adult Protective Services takes reports of abuse, neglect, self-neglect or exploitation of vulnerable adults, 24 hours a day.",
+   "next_step": "Call the ombudsman at 202-434-2190 or email DCOmbuds@aarp.org. To report abuse, call Adult Protective Services at 202-541-3950, 24 hours a day. In an emergency, call 911.",
+   "constraints": [
+    "The ombudsman acts with the resident’s permission and is not a licensing agency."
+   ],
+   "phone": "202-434-2190",
+   "phone_label": "DC Long-Term Care Ombudsman (202-434-2190)",
+   "phone_source": "https://www.aarp.org/legal-counsel-for-elderly/what-we-do/info-2017/dc-long-term-care-ombudsman.html",
+   "review": "full",
+   "sources": [
+    {
+     "url": "https://www.aarp.org/legal-counsel-for-elderly/what-we-do/info-2017/dc-long-term-care-ombudsman.html",
+     "title": "Legal Counsel for the Elderly: The Office of the D.C. Long-Term Care Ombudsman",
+     "scope": "Phone, email, response time and who the program serves; read in full."
+    },
+    {
+     "url": "https://oag.dc.gov/sites/default/files/2024-03/EJS-brochure-updated-08292023-.pdf",
+     "title": "DC Office of the Attorney General: Elder Justice brochure (updated August 2023)",
+     "scope": "Report abuse by calling 911 or the Adult Protective Services 24-hour hotline, (202) 541-3950; Legal Counsel for the Elderly (202) 434-2120; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "dc-legal-programs",
+   "name": "Free legal help for older District residents",
+   "organization": "Legal Counsel for the Elderly",
+   "url": "https://oag.dc.gov/sites/default/files/2024-03/EJS-brochure-updated-08292023-.pdf",
+   "role": "legal_aid",
+   "needs": [
+    "resident_rights",
+    "general_navigation",
+    "housing"
+   ],
+   "description": "Legal Counsel for the Elderly provides free legal help to older District residents. DACL also lists legal services for seniors among its programs.",
+   "next_step": "Call Legal Counsel for the Elderly at 202-434-2120, or ask DACL (202-724-5626) about legal services for seniors.",
+   "constraints": [
+    "Legal aid screens by age, income and case type."
+   ],
+   "phone": "202-434-2120",
+   "phone_label": "Legal Counsel for the Elderly (202-434-2120)",
+   "phone_source": "https://oag.dc.gov/sites/default/files/2024-03/EJS-brochure-updated-08292023-.pdf",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://oag.dc.gov/sites/default/files/2024-03/EJS-brochure-updated-08292023-.pdf",
+     "title": "DC Office of the Attorney General: Elder Justice brochure (updated August 2023)",
+     "scope": "Legal Counsel for the Elderly (AARP), (202) 434-2120; search excerpt."
+    },
+    {
+     "url": "https://www.aarp.org/legal-counsel-for-elderly/what-we-do/info-2017/senior-medicare-patrol.html",
+     "title": "Legal Counsel for the Elderly: Senior Medicare Patrol",
+     "scope": "Legal Counsel for the Elderly: 202-434-2120; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "dc-vahealth-systems",
+   "name": "VA health care in the District",
+   "organization": "U.S. Department of Veterans Affairs, VA Washington DC Healthcare System",
+   "url": "https://www.va.gov/washington-dc-health-care/contact-us/",
+   "role": "va_health_system",
+   "needs": [
+    "veteran_services",
+    "care_facilities"
+   ],
+   "description": "District veterans are served by the Washington DC VA Medical Center, 50 Irving Street NW (202-745-8000), and its community clinics.",
+   "next_step": "Call 202-745-8000 for appointments; after hours, ask the operator for the administrator on duty. Not enrolled yet? Ask MOVA for help applying.",
+   "constraints": [
+    "If a service you need is not offered near you, ask about travel benefits and community care."
+   ],
+   "phone": "202-745-8000",
+   "phone_label": "Washington DC VA Medical Center (202-745-8000)",
+   "phone_source": "https://www.va.gov/washington-dc-health-care/contact-us/",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://www.va.gov/washington-dc-health-care/contact-us/",
+     "title": "VA Washington DC health care: Contact us",
+     "scope": "Washington DC VA Medical Center, 50 Irving Street NW; local 202-745-8000; search excerpt."
+    }
+   ]
+  }
+ ],
+ "adapter": {
+  "badge_county": "Mayor’s Office of Veterans Affairs",
+  "badge_state": "Mayor’s Office of Veterans Affairs",
+  "badge_statewide": "District line",
+  "published_in": "Published on the Mayor’s Office of Veterans Affairs page",
+  "agency_link": "DC Mayor’s Office of Veterans Affairs",
+  "officers_can": "District Veteran Service Officers can",
+  "abuse_phone": "202-541-3950",
+  "abuse_label": "DC Adult Protective Services, 24 hours a day",
+  "aging_term": "Department of Aging and Community Living",
+  "extra_swaps": [
+   [
+    "Choose a county for its County Veterans Service Office, matched Area Agency on Aging, regional ombudsman",
+    "Choose the District for its veterans office, the Department of Aging and Community Living, the long-term care ombudsman"
+   ],
+   [
+    "Choose a county above for the county veterans office.",
+    "Choose the District above for its veterans office."
+   ]
+  ],
+  "post_swaps": [
+   [
+    "+' County'",
+    "+''"
+   ],
+   [
+    "?'':' County'",
+    "?'':''"
+   ],
+   [
+    "Choose your District of Columbia county",
+    "Choose the District of Columbia"
+   ],
+   [
+    "Choose a District of Columbia county for veterans",
+    "Choose the District of Columbia for veterans"
+   ],
+   [
+    "Choose a county above for its Area Agency on Aging.",
+    "Choose the District above for its Area Agency on Aging."
+   ],
+   [
+    "c.county+'')+', District of Columbia'",
+    "c.county+'')"
+   ]
+  ]
+ },
+ "share_replacements": [
+  [
+   "county veterans offices, benefits and care referrals",
+   "the District veterans office, benefits and care referrals"
+  ],
+  [
+   "County veterans offices",
+   "The District veterans office"
+  ]
+ ],
+ "coverage_scope": "Referral edition. The District shows the Mayor’s Office of Veterans Affairs, the Department of Aging and Community Living, the long-term care ombudsman and the DC Center for Independent Living.",
+ "coverage_note": "The veterans office comes from the Mayor’s Office of Veterans Affairs page. Aging help comes from the Department of Aging and Community Living. Centers for Independent Living come from the ILRU national directory. Reviewed November 16, 2026. Contacts are not telephone-confirmed.",
+ "share_description": "the District veterans office, aging and disability help and long-term care ombudsman help in Washington, DC"
+}
