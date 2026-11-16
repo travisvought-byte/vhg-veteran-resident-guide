@@ -195,6 +195,13 @@ Schedules taken from older calendars, newsletters or news stories carry a `sched
 
 ## Standalone site: bingo.vethomeguard.org
 
+> **Moved November 16, 2026.** The finder now lives at **https://www.findbingo.org/ohio/**
+> (`bingo-site/findbingo/ohio/`, served by Cloudflare). bingo.vethomeguard.org and the guide's
+> `bingo.html` only forward there. New QR codes are `assets/findbingo-ohio-qr.svg` and
+> `assets/findbingo-ohio-submit-qr.svg`; the older `assets/bingo-site-*.svg` codes are on printed
+> material and keep working through the forward. See docs/FINDBINGO.md, "Ohio: one finder, one front
+> door". The notes below describe the earlier setup.
+
 November 10, 2026. The finder is also published on its own at **https://bingo.vethomeguard.org/**, the address used for advertising and partner outreach.
 
 - `scripts/bingo_site.py` builds `bingo-site/` during `python3 scripts/build_public.py`, from the same page and records as `bingo.html`. Do not edit `bingo-site/` by hand; `--check` fails if it drifts.

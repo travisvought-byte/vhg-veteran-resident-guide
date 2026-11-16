@@ -4,7 +4,7 @@ A free public guide created and maintained by Travis Vought, and shared by Veter
 
 **Live guide:** https://guide.vethomeguard.org/
 
-**Ohio Bingo & Senior Centers:** https://guide.vethomeguard.org/bingo.html — find games and activities by ZIP code. This directory is part of this repository, with direct links in the guide’s main navigation and homepage.
+**Ohio Bingo & Senior Centers:** https://www.findbingo.org/ohio/ — find games and activities by ZIP code. This directory is part of this repository, with direct links in the guide’s main navigation and homepage.
 
 **Guided assistance beta:** https://guide.vethomeguard.org/assistant/ — an optional, browser-only, source-linked navigator for the 20 states with full county editions, with referral drafts, accessibility preparation checklists and printable handoffs. It does not submit benefit applications, send messages, save cases or decide eligibility.
 

@@ -1,8 +1,8 @@
 # FindBingo.org
 
 FindBingo.org is the multi-state bingo finder. Players type a ZIP code (or pick a state) and see
-bingo near them, closest first. It covers Michigan and Indiana with state data, links Ohio to its own
-finder at findbingo.org/ohio/, and tells Kentucky, West Virginia, Pennsylvania and Florida players plainly
+bingo near them, closest first. It covers Michigan and Indiana with state data, serves the Ohio Bingo
+Finder at findbingo.org/ohio/, and tells Kentucky, West Virginia, Pennsylvania and Florida players plainly
 that no public list exists yet, with a free way for halls to send game times.
 
 Started November 15, 2026, at Travis's direction: one national finder, neighboring states first.
@@ -22,20 +22,17 @@ Started November 15, 2026, at Travis's direction: one national finder, neighbori
 
 `findbingo-site/index.html` is the whole page; it loads `data.json` and `zips.json` from beside
 itself. The build writes the same three files to `bingo-site/findbingo/`. The Ohio-Bingo repository
-mirrors `bingo-site/` every three hours, and **Cloudflare Pages serves findbingo.org from the
-Ohio-Bingo repository** with the build output directory set to `findbingo` (no build command), so
-list updates reach findbingo.org within a few hours of a merge. A preview copy also runs on the Wix
+mirrors `bingo-site/` every three hours, and **Cloudflare serves findbingo.org from the `findbingo`
+folder of the Ohio-Bingo repository** (see "The domain" below), so list updates reach findbingo.org
+within a few hours of a merge. A preview copy also runs on the Wix
 site **Find Bingo** (site ID `9b3c0c21-b49d-45fa-9cb7-26a1a440afdf`); it reads the lists from
 https://guide.vethomeguard.org/findbingo-site/. Upload `index.html` to Wix again
 only when the page itself changes. Because the Wix page reads the lists from `main`, a page change
 that needs new data (a new state, for example) shows only after its pull request merges; until then
 the page hides state buttons the loaded data does not have.
 
-Ohio data is not copied into the findbingo lists. The Ohio finder is generated as its own page at
-findbingo.org/ohio/ from the same page that bingo.vethomeguard.org serves (`scripts/bingo_site.py`,
-through `standalone_finder`), with shared files loaded from bingo.vethomeguard.org. bingo.vethomeguard.org
-is unchanged and still live. Ohio searches on findbingo.org hand off to /ohio/ with the same ZIP code and
-distance.
+Ohio data is not copied into the national page. Ohio searches hand off to https://www.findbingo.org/ohio/
+with the same ZIP code and distance, so Ohio has one source of truth.
 
 ## Sources and how they were read (November 15, 2026)
 
@@ -97,10 +94,32 @@ U.S. Census Geocoder match for the bingo hall at 228 N 20th St.
 
 ## The domain
 
-findbingo.org is on Cloudflare. In the Cloudflare Pages project connected to the Ohio-Bingo
-repository: production branch `main`, no build command, build output directory `findbingo`, and the
-custom domains `findbingo.org` and `www.findbingo.org` added under **Custom domains** (Cloudflare
-creates the DNS records; do not add them by hand first).
+findbingo.org is registered and hosted on Cloudflare (set up November 16, 2026). The Cloudflare
+project is the Worker **ohio-bingo** (static assets only), connected to the Ohio-Bingo repository:
+production branch `main`, no build command, root directory `/`, and the deploy command
+
+    npx wrangler deploy --name ohio-bingo --assets ./findbingo --compatibility-date 2026-11-13
+
+so only the `findbingo` folder is published (the national page, and the Ohio finder in `ohio/`). `findbingo.org` and `www.findbingo.org` are attached
+under the Worker's **Domains** tab (Cloudflare creates the DNS records; do not add them by hand).
+
+## Ohio: one finder, one front door
+
+Travis's direction (November 16, 2026): findbingo.org holds every finder, state by state, and
+ohiobingo.org is the Ohio front door where Veteran Home Guardians operates.
+
+- The Ohio Bingo Finder is served at https://www.findbingo.org/ohio/ from `bingo-site/findbingo/ohio/`
+  (built by `scripts/bingo_site.py`). `_redirects` forwards /oh, /OH and /Ohio to it. No rule may match
+  `/ohio/` itself, or the forward would loop.
+- https://www.ohiobingo.org/ (Wix) is for halls, claims, Ohio law and partnering with Veteran Home
+  Guardians. Its "Find a Game" links go to findbingo.org/ohio/.
+- bingo.vethomeguard.org is retired. GitHub Pages still answers there from the root of the Ohio-Bingo
+  repository, but every page is a forwarding page that keeps the ZIP search and #anchor, so printed
+  posters and QR codes still work. Do not remove the `CNAME` file or the DNS record.
+- The guide's `bingo.html` is the build source and test fixture. On guide.vethomeguard.org it forwards
+  to findbingo.org/ohio/ and names it as canonical; it is not in the guide's sitemap.
+- Other states are plain directories. Partnerships there are meant for local organizations in each
+  state, not Veteran Home Guardians.
 
 ## Related work
 
