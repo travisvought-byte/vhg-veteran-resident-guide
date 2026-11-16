@@ -165,6 +165,10 @@ centroids. Do not edit these files by hand; run `python3 scripts/build_public.py
 
 Lists updated {_date_label(generated_on)}.
 '''
+    # Page views only, on the same counter as the Ohio finder at findbingo.org/ohio/. The code from
+    # assets/analytics.js is written into the page, so index.html stays the whole page with no script files.
+    assert page.count('</body>') == 1
+    page = page.replace('</body>', '<script>' + (root / 'assets/analytics.js').read_text().strip() + '</script></body>', 1)
     site = {
         'index.html': page,
         'data.json': data_json + '\n',

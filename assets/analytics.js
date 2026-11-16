@@ -14,7 +14,11 @@
     if (typeof getData !== 'function' || typeof counter.count !== 'function') return;
     counter.get_data = function (vars) {
       var data = getData(vars);
-      data.p = location.pathname.replace(/\/index\.html$/, '/');
+      // The same counter runs on findbingo.org (and the retired bingo.vethomeguard.org). Pages away from
+      // the guide's own address carry their site name, so findbingo.org's home never reads as the guide's.
+      var host = location.hostname.replace(/^www\./, '');
+      var site = /(^|\.)(findbingo\.org|bingo\.vethomeguard\.org)$/.test(host) ? '/' + host : '';
+      data.p = site + location.pathname.replace(/\/index\.html$/, '/');
       data.q = '';
       // Retain referral attribution without query strings or fragments.
       try {
