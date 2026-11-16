@@ -6,6 +6,8 @@ Established October 18, 2026. Every state follows the same standard: each county
 
 A state without county research can start as a starter edition: one statewide locality that routes to the state veterans agency and national aging, ombudsman and Medicare counseling locators. Add it to `data/starter-states.json` and run `scripts/make_starter_states.py`; the script writes the files below and the registry entry (`"starter": true`). When county research is ready, remove the state from that file and build a full edition as described here.
 
+**Fastest path to a full edition.** Record the research in one sheet, `data/source/states/<code>.json` (`co.json` is the worked example: every county's veterans office, the aging and ombudsman regions, the Centers for Independent Living, the statewide cards and the adapter wording, each with the page it came from). Then run `python3 scripts/make_county_state.py <CODE> --check` to find gaps and `python3 scripts/make_county_state.py <CODE>` to write the data files, edition, adapter and registry entry from the Missouri pattern. Finish with `scripts/make_starter_states.py`, `scripts/build_public.py` and the checks in step 4, and document the sources in `docs/<STATE>.md`. The steps below describe what the script writes, for states that need hand changes.
+
 ## What a state consists of
 
 | File | Contents |
