@@ -1,190 +1,226 @@
 {
- "ops": [
-  {
-   "op": "clear_data"
-  },
-  {
-   "op": "replace",
-   "old": "Ohio",
-   "new": "Kansas"
-  },
-  {
-   "op": "replace",
-   "old": "All 88",
-   "new": "All"
-  },
-  {
-   "op": "replace",
-   "old": "all 88",
-   "new": "all"
-  },
-  {
-   "op": "replace",
-   "old": "<option value=\"OH\">Kansas</option>",
-   "new": "<option value=\"OH\">Ohio</option>"
-  },
-  {
-   "op": "replace",
-   "old": "const STATE='OH';",
-   "new": "const STATE='KS';"
-  },
-  {
-   "op": "replace",
-   "old": "county veterans office",
-   "new": "state veterans agency"
-  },
-  {
-   "op": "replace",
-   "old": "county office",
-   "new": "state veterans agency"
-  },
-  {
-   "op": "replace",
-   "old": "Statewide edition · Updated October 8, 2026",
-   "new": "Kansas starter edition · Updated November 2, 2026"
-  },
-  {
-   "op": "replace",
-   "old": "Kansas’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
-   "new": "Ask the local aging agency or state Medicaid agency about waiver assessment and written approval; VA and other funders have their own processes."
-  },
-  {
-   "op": "replace",
-   "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
-   "new": "https://eldercare.acl.gov/home"
-  },
-  {
-   "op": "replace",
-   "old": "Kansas home modification authorization and provider rules",
-   "new": "Find local aging and disability help (Eldercare Locator)"
-  },
-  {
-   "op": "replace",
-   "old": "href=\"share.html\"",
-   "new": "href=\"share-ks.html\""
-  },
-  {
-   "op": "replace",
-   "old": "href=\"prototype-data.json\"",
-   "new": "href=\"data/public/kansas-resources.json\""
-  },
-  {
-   "op": "replace",
-   "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
-   "new": "href=\"data/public/kansas-county-veterans-offices.json\""
-  },
-  {
-   "op": "declare",
-   "name": "priority",
-   "value": [
-    "ks-claims",
-    "ks-aging",
-    "ks-ship",
-    "ks-ombudsman",
-    "r02-aid-attendance-housebound",
-    "r02-va-pension",
-    "r02-survivors-pension"
-   ]
-  },
-  {
-   "op": "declare",
-   "name": "routes",
-   "value": {
-    "benefits": [
-     "ks-claims",
-     "ks-ship",
-     "r02-va-pension",
-     "r02-aid-attendance-housebound",
-     "r02-disability-increase",
-     "r02-pension-medicaid-rule",
-     "r02-survivors-pension",
-     "r02-dic",
-     "va-accredited-help"
-    ],
-    "survivors": [
-     "ks-claims",
-     "r02-survivors-pension",
-     "r02-dic",
-     "r02-aid-attendance-housebound",
-     "r02-va-burial",
-     "va-accredited-help",
-     "nara-discharge-records"
-    ],
-    "care": [
-     "ks-aging",
-     "r02-va-health-enrollment",
-     "va-location-finder",
-     "r02-va-cnh",
-     "r02-va-clc",
-     "r02-general-caregiver",
-     "r02-family-caregiver",
-     "r02-hospice",
-     "r02-palliative"
-    ],
-    "rights": [
-     "ks-ombudsman",
-     "ks-aging"
-    ],
-    "local": [
-     "ks-aging",
-     "ks-claims"
-    ],
-    "housing": [
-     "va-housing-help",
-     "ks-ssvf-14-ks-479",
-     "ks-ssvf-20-ks-443",
-     "ks-ssvf-26-zz-110",
-     "va-location-finder",
-     "va-accredited-help",
-     "nara-discharge-records"
-    ]
-   }
-  },
-  {
-   "op": "declare",
-   "name": "seniorTopics",
-   "value": {
-    "daily": [
-     "ks-aging"
-    ],
-    "accessibility": [
-     "ks-aging"
-    ],
-    "vision": [
-     "ks-aging"
-    ],
-    "hearing": [
-     "ks-aging"
-    ],
-    "memory": [
-     "alz-dementia-support",
-     "ks-aging"
-    ],
-    "costs": [
-     "ks-ship",
-     "ks-aging"
-    ],
-    "rights": [
-     "ks-ombudsman",
-     "ks-aging"
-    ]
-   }
-  },
-  {
-   "op": "line",
-   "prefix": "routes.accessibility=",
-   "new": "routes.accessibility=['va-hisa','va-sah','va-sha','va-tra','ks-aging','va-location-finder'];"
-  },
-  {
-   "op": "line",
-   "prefix": "routes.seniors=",
-   "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
-  },
-  {
-   "op": "adapter"
-  },
-  {
-   "op": "embed_data"
-  }
- ]
+  "ops": [
+    {
+      "op": "clear_data"
+    },
+    {
+      "op": "replace",
+      "old": "Ohio",
+      "new": "Kansas"
+    },
+    {
+      "op": "replace",
+      "old": "All 88",
+      "new": "All 105"
+    },
+    {
+      "op": "replace",
+      "old": "all 88",
+      "new": "all 105"
+    },
+    {
+      "op": "replace",
+      "old": "<option value=\"OH\">Kansas</option>",
+      "new": "<option value=\"OH\">Ohio</option>"
+    },
+    {
+      "op": "replace",
+      "old": "const STATE='OH';",
+      "new": "const STATE='KS';"
+    },
+    {
+      "op": "replace",
+      "old": "Statewide edition · Updated October 8, 2026",
+      "new": "Kansas edition · Updated November 16, 2026"
+    },
+    {
+      "op": "replace",
+      "old": "Most phones come from Kansas AMVETS’ 2025–2026 directory.",
+      "new": "Kansas has no county veterans offices. Field office phones, addresses, counties and itinerant schedules come from each office’s page on the Kansas Office of Veterans Services website. Call before you go."
+    },
+    {
+      "op": "replace",
+      "old": "Kansas’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
+      "new": "Ask the local aging agency or state Medicaid agency about waiver assessment and written approval; VA and other funders have their own processes."
+    },
+    {
+      "op": "replace",
+      "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
+      "new": "https://eldercare.acl.gov/home"
+    },
+    {
+      "op": "replace",
+      "old": "Kansas home modification authorization and provider rules",
+      "new": "Find local aging and disability help (Eldercare Locator)"
+    },
+    {
+      "op": "replace",
+      "old": "href=\"share.html\"",
+      "new": "href=\"share-ks.html\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"prototype-data.json\"",
+      "new": "href=\"data/public/kansas-resources.json\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
+      "new": "href=\"data/public/kansas-county-veterans-offices.json\""
+    },
+    {
+      "op": "declare",
+      "name": "priority",
+      "value": [
+        "ks-claims",
+        "ks-adrc",
+        "ks-ship",
+        "ks-ombudsman",
+        "ks-legal-programs",
+        "r02-aid-attendance-housebound",
+        "r02-va-pension",
+        "r02-survivors-pension",
+        "r02-va-health-enrollment",
+        "va-accredited-help"
+      ]
+    },
+    {
+      "op": "declare",
+      "name": "routes",
+      "value": {
+        "benefits": [
+          "ks-claims",
+          "ks-ship",
+          "r02-va-pension",
+          "r02-aid-attendance-housebound",
+          "r02-disability-increase",
+          "r02-pension-medicaid-rule",
+          "r02-survivors-pension",
+          "r02-dic",
+          "va-accredited-help",
+          "ks-adrc"
+        ],
+        "survivors": [
+          "ks-claims",
+          "r02-survivors-pension",
+          "r02-dic",
+          "r02-aid-attendance-housebound",
+          "r02-va-burial",
+          "va-accredited-help",
+          "nara-discharge-records"
+        ],
+        "care": [
+          "r02-va-health-enrollment",
+          "va-location-finder",
+          "r02-va-cnh",
+          "r02-va-clc",
+          "r02-general-caregiver",
+          "r02-family-caregiver",
+          "r02-hospice",
+          "r02-palliative",
+          "ks-adrc",
+          "ks-cil-link",
+          "ks-cil-rcil",
+          "ks-cil-ilrc",
+          "ks-cil-skil",
+          "ks-cil-independence",
+          "ks-cil-three-rivers",
+          "ks-cil-independent-connection",
+          "ks-cil-beyond-barriers",
+          "ks-vahealth-systems"
+        ],
+        "rights": [
+          "ks-ombudsman",
+          "ks-legal-programs"
+        ],
+        "local": [
+          "ks-claims",
+          "ks-adrc",
+          "ks-cil-link",
+          "ks-cil-rcil",
+          "ks-cil-ilrc",
+          "ks-cil-skil",
+          "ks-cil-independence",
+          "ks-cil-three-rivers",
+          "ks-cil-independent-connection",
+          "ks-cil-beyond-barriers",
+          "ks-legal-programs",
+          "ks-vahealth-systems"
+        ],
+        "housing": [
+          "va-housing-help",
+          "ks-ssvf-14-ks-479",
+          "ks-ssvf-20-ks-443",
+          "ks-ssvf-26-zz-110",
+          "va-location-finder",
+          "va-accredited-help",
+          "nara-discharge-records",
+          "ks-legal-programs"
+        ]
+      }
+    },
+    {
+      "op": "declare",
+      "name": "seniorTopics",
+      "value": {
+        "daily": [
+          "ks-adrc",
+          "ks-cil-link",
+          "ks-cil-rcil",
+          "ks-cil-ilrc",
+          "ks-cil-skil",
+          "ks-cil-independence",
+          "ks-cil-three-rivers",
+          "ks-cil-independent-connection",
+          "ks-cil-beyond-barriers"
+        ],
+        "accessibility": [
+          "ks-adrc",
+          "ks-cil-link",
+          "ks-cil-rcil",
+          "ks-cil-ilrc",
+          "ks-cil-skil",
+          "ks-cil-independence",
+          "ks-cil-three-rivers",
+          "ks-cil-independent-connection",
+          "ks-cil-beyond-barriers"
+        ],
+        "vision": [
+          "ks-adrc"
+        ],
+        "hearing": [
+          "ks-adrc"
+        ],
+        "memory": [
+          "alz-dementia-support",
+          "ks-adrc"
+        ],
+        "costs": [
+          "ks-ship",
+          "ks-adrc",
+          "ks-legal-programs"
+        ],
+        "rights": [
+          "ks-ombudsman",
+          "ks-legal-programs"
+        ]
+      }
+    },
+    {
+      "op": "line",
+      "prefix": "routes.accessibility=",
+      "new": "routes.accessibility=['va-hisa','va-sah','va-sha','va-tra','ks-adrc','ks-cil-link','ks-cil-rcil','ks-cil-ilrc','ks-cil-skil','ks-cil-independence','ks-cil-three-rivers','ks-cil-independent-connection','ks-cil-beyond-barriers','va-location-finder',...DATA.filter(x=>x.regional_role==='aging_agency').map(x=>x.program_id)];"
+    },
+    {
+      "op": "line",
+      "prefix": "routes.seniors=",
+      "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
+    },
+    {
+      "op": "adapter"
+    },
+    {
+      "op": "embed_data"
+    }
+  ]
 }
