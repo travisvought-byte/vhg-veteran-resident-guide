@@ -6,3 +6,7 @@ Every file in this folder is **generated**. Do not edit it here. The source of t
 [vhg-veteran-resident-guide](https://github.com/travisvought-byte/vhg-veteran-resident-guide):
 `scripts/bingo_site.py` builds `bingo-site/` from the same records as the guide's `bingo.html`
 (`python3 scripts/build_public.py`). The Ohio-Bingo repository mirrors `bingo-site/` and serves it with GitHub Pages.
+
+`findbingo/` is FindBingo.org (https://www.findbingo.org/), the multi-state finder, built by
+`scripts/findbingo_site.py` in the same guide repository. Cloudflare Pages serves it from this
+repository with the build output directory set to `findbingo` and no build command.

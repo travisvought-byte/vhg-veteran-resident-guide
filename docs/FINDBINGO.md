@@ -20,10 +20,13 @@ Started November 15, 2026, at Travis's direction: one national finder, neighbori
 | Generated site | `findbingo-site/index.html`, `data.json`, `zips.json` |
 | Tests | `tests/findbingo.cjs` (part of `npm test`) |
 
-`findbingo-site/index.html` is the whole page. It is uploaded to the Wix site **Find Bingo**
-(site ID `9b3c0c21-b49d-45fa-9cb7-26a1a440afdf`), which is where www.findbingo.org connects. The
-page loads `data.json` and `zips.json` from https://guide.vethomeguard.org/findbingo-site/, so list
-updates go live on findbingo.org as soon as a pull request merges. Upload `index.html` to Wix again
+`findbingo-site/index.html` is the whole page; it loads `data.json` and `zips.json` from beside
+itself. The build writes the same three files to `bingo-site/findbingo/`. The Ohio-Bingo repository
+mirrors `bingo-site/` every three hours, and **Cloudflare Pages serves findbingo.org from the
+Ohio-Bingo repository** with the build output directory set to `findbingo` (no build command), so
+list updates reach findbingo.org within a few hours of a merge. A preview copy also runs on the Wix
+site **Find Bingo** (site ID `9b3c0c21-b49d-45fa-9cb7-26a1a440afdf`); it reads the lists from
+https://guide.vethomeguard.org/findbingo-site/. Upload `index.html` to Wix again
 only when the page itself changes. Because the Wix page reads the lists from `main`, a page change
 that needs new data (a new state, for example) shows only after its pull request merges; until then
 the page hides state buttons the loaded data does not have.
@@ -89,13 +92,12 @@ U.S. Census Geocoder match for the bingo hall at 228 N 20th St.
 2. Update the JSON files and each record's `reviewed_on`.
 3. Run `python3 scripts/build_public.py` and `node tests/findbingo.cjs`, then open a pull request.
 
-## Connecting the domain (Travis)
+## The domain
 
-In Wix, open the **Find Bingo** site dashboard
-(https://manage.wix.com/dashboard/9b3c0c21-b49d-45fa-9cb7-26a1a440afdf), choose a Premium plan that
-allows a custom domain, then connect `findbingo.org` under Settings → Domains. If the domain was
-bought through Wix it can be assigned directly; if it was bought elsewhere, Wix shows the DNS records
-to add at that registrar.
+findbingo.org is on Cloudflare. In the Cloudflare Pages project connected to the Ohio-Bingo
+repository: production branch `main`, no build command, build output directory `findbingo`, and the
+custom domains `findbingo.org` and `www.findbingo.org` added under **Custom domains** (Cloudflare
+creates the DNS records; do not add them by hand first).
 
 ## Related work
 
