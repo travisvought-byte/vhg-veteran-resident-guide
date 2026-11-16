@@ -688,6 +688,36 @@
     ]
   },
   {
+    "code": "NV",
+    "name": "Nevada",
+    "page": "nv.html",
+    "share_page": "share-nv.html",
+    "qr": "assets/guide-qr-nv.svg",
+    "counties": 17,
+    "programs": "data/public/nv-programs.json",
+    "referrals": "data/public/nv-regional-referrals.json",
+    "offices": "data/public/nevada-county-veterans-offices.json",
+    "resources": "data/public/nevada-resources.json",
+    "statewide_area_names": [],
+    "coverage_scope": "Referral edition. All 17 counties have a Nevada Department of Veterans Services route (seven counties have an office; the other ten use the department’s statewide lines), a Nevada Care Connection Resource Center, the statewide long-term care ombudsman and a Center for Independent Living.",
+    "coverage_note": "Veterans offices come from the Nevada Department of Veterans Services’ veterans service officer page; ten counties have no office and show its statewide lines. Nevada has no Area Agencies on Aging; each county shows its Nevada Care Connection Resource Center from an October 2024 county-board presentation. Centers for Independent Living come from the ILRU national directory.",
+    "share_description": "State veterans service officers, Nevada Care Connection Resource Centers and long-term care ombudsman help across Nevada",
+    "share_replacements": [
+      [
+        "Updated October 8, 2026",
+        "Updated November 16, 2026"
+      ],
+      [
+        "county veterans offices, benefits and care referrals",
+        "state veterans service offices, benefits and care referrals"
+      ],
+      [
+        "County veterans offices",
+        "state veterans service offices"
+      ]
+    ]
+  },
+  {
     "code": "AK",
     "name": "Alaska",
     "starter": true,
@@ -964,26 +994,6 @@
     ],
     "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
     "coverage_note": "Starter edition. Every county uses the Nebraska Department of Veterans’ Affairs and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
-    "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
-    "share_replacements": []
-  },
-  {
-    "code": "NV",
-    "name": "Nevada",
-    "starter": true,
-    "page": "nv.html",
-    "share_page": "share-nv.html",
-    "qr": "assets/guide-qr-nv.svg",
-    "counties": 1,
-    "programs": "data/public/nv-programs.json",
-    "referrals": "data/public/nv-regional-referrals.json",
-    "offices": "data/public/nevada-county-veterans-offices.json",
-    "resources": "data/public/nevada-resources.json",
-    "statewide_area_names": [
-      "All Nevada counties"
-    ],
-    "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
-    "coverage_note": "Starter edition. Every county uses the Nevada Department of Veterans Services and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
     "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
     "share_replacements": []
   },

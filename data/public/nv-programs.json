@@ -1,208 +1,541 @@
 [
- {
-  "program_id": "nv-claims",
-  "name": "Nevada veterans: accredited claims help",
-  "official_url": "https://veterans.nv.gov/veterans-service-officers/",
-  "organization": "Nevada Department of Veterans Services",
-  "service_area": [
-   "All Nevada counties"
-  ],
-  "state": "NV",
-  "needs_supported": [
-   "general_navigation",
-   "benefits_and_funding"
-  ],
-  "description": "Free help with VA claims, applications and appeals for veterans and families.",
-  "next_step": "Call the state veterans agency; ask for a benefits review and the office that serves your county.",
-  "constraints": [],
-  "public_contact": {
-   "phone": "702-224-6025"
+  {
+    "program_id": "nv-claims",
+    "name": "Nevada veterans: state veterans service officers for claims help",
+    "official_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+    "organization": "Nevada Department of Veterans Services",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "NV",
+    "needs_supported": [
+      "general_navigation",
+      "benefits_and_funding"
+    ],
+    "description": "Free help with VA claims, appeals, pension and survivor benefits from the Nevada Department of Veterans Services’ accredited veterans service officers, in offices in Reno, Fallon, Elko, Winnemucca, Pahrump, North Las Vegas and Mesquite.",
+    "next_step": "Call 775-321-4880 (northern Nevada offices) or 702-224-6025 (Las Vegas), or use Ask a VSO on the department’s website.",
+    "constraints": [
+      "The department says intake appointments are taking about 30 to 90 days to schedule, depending on location.",
+      "Most rural counties have no office; call or use Ask a VSO."
+    ],
+    "public_contact": {
+      "phone": "775-321-4880",
+      "phone_label": "NDVS veterans service officers (775-321-4880)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers"
+    },
+    "source_evidence": [
+      {
+        "url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+        "title": "Nevada Department of Veterans Services: Veterans Service Officers",
+        "reviewed_on": "2026-11-16",
+        "scope": "Office addresses and phones, and the 30-to-90-day intake wait; read in full. The page was last modified July 7, 2026."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "nv-adrc",
+    "name": "Nevada Care Connection: aging and disability resource centers",
+    "official_url": "https://adsd.nv.gov/Programs/Seniors/ADRC/ADRCProgram",
+    "organization": "Nevada Aging and Disability Services Division, Nevada Care Connection",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "NV",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Nevada Care Connection Resource Centers give one-on-one help to older adults, people with disabilities, caregivers and families: exploring options, planning for care and connecting with services. Military service is not required.",
+    "next_step": "Dial 2-1-1 and ask for your local Nevada Care Connection Resource Center, or choose a county above for its center.",
+    "constraints": [
+      "Each program has its own eligibility and waitlist."
+    ],
+    "public_contact": {
+      "phone": "211",
+      "phone_label": "Nevada 2-1-1 (ask for Nevada Care Connection)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://adsd.nv.gov/uploadedFiles/adsdnvgov/content/Boards/NCPWADHHSI/Meetings/2022/ADSD _Brochure_PDF_Version_03.23.2022.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://adsd.nv.gov/Programs/Seniors/ADRC/ADRCProgram",
+        "title": "Nevada Aging and Disability Services Division: Nevada Care Connection – Resource Centers",
+        "reviewed_on": "2026-11-16",
+        "scope": "Four resource centers and what they do; read in full. The page lists no phones."
+      },
+      {
+        "url": "https://adsd.nv.gov/uploadedFiles/adsdnvgov/content/Boards/NCPWADHHSI/Meetings/2022/ADSD _Brochure_PDF_Version_03.23.2022.pdf",
+        "title": "Nevada Aging and Disability Services Division brochure (March 2022)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Nevada Care Connection: phone 2-1-1, ask for your local resource center; search excerpt."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_page_text",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://veterans.nv.gov/veterans-service-officers/"
+  {
+    "program_id": "nv-ship",
+    "name": "Medicare counseling (Medicare Assistance Program) for Nevada",
+    "official_url": "https://www.washoecounty.gov/seniorsrv/senior_services_advisory_board/2024/files/10-02-24_NVCC_+_MAP_-_AHN_Overview_In-Service.pdf",
+    "organization": "Nevada Aging and Disability Services Division, Medicare Assistance Program (MAP)",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "NV",
+    "needs_supported": [
+      "benefits_and_funding"
+    ],
+    "description": "Free Medicare counseling from Nevada’s State Health Insurance Assistance Program, the Medicare Assistance Program: plan choices, enrollment, costs and help paying for Medicare.",
+    "next_step": "Call 800-307-4444. For Medicare itself, call 800-MEDICARE (800-633-4227).",
+    "constraints": [
+      "Have your Medicare card and drug list ready."
+    ],
+    "public_contact": {
+      "phone": "800-307-4444",
+      "phone_label": "Nevada Medicare Assistance Program (800-307-4444)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.washoecounty.gov/seniorsrv/senior_services_advisory_board/2024/files/10-02-24_NVCC_+_MAP_-_AHN_Overview_In-Service.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.washoecounty.gov/seniorsrv/senior_services_advisory_board/2024/files/10-02-24_NVCC_+_MAP_-_AHN_Overview_In-Service.pdf",
+        "title": "Washoe County Senior Services Advisory Board: Nevada Care Connection overview (October 2, 2024)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Medicare Assistance Program statewide line (800) 307-4444; read in full."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://veterans.nv.gov/veterans-service-officers/",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ]
- },
- {
-  "program_id": "nv-ship",
-  "name": "Medicare counseling (SHIP) for Nevada",
-  "official_url": "https://www.shiphelp.org/",
-  "organization": "SHIP Technical Assistance Center",
-  "service_area": [
-   "All Nevada counties"
-  ],
-  "state": "NV",
-  "needs_supported": [
-   "benefits_and_funding"
-  ],
-  "description": "Free, unbiased Medicare counseling from the State Health Insurance Assistance Program.",
-  "next_step": "Call or use the locator to reach the Nevada SHIP and ask for a counseling appointment.",
-  "constraints": [],
-  "public_contact": {
-   "phone": "877-839-2675"
+  {
+    "program_id": "nv-ombudsman",
+    "name": "Nevada Long-Term Care Ombudsman and adult abuse reporting",
+    "official_url": "https://adsd.nv.gov/programs/seniors/ltcombudsman/ltcombudsprog",
+    "organization": "Nevada Aging and Disability Services Division, Long Term Care Ombudsman Program",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "NV",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "description": "Advocacy for residents of nursing homes and residential facilities for groups and individuals.",
+    "next_step": "Call the ombudsman helpline at 888-282-1155. To report abuse, neglect or exploitation of a vulnerable adult, call Adult Protective Services at 702-486-6930 in Las Vegas and Clark County or 888-729-0571 elsewhere in Nevada. In an emergency, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing agency."
+    ],
+    "public_contact": {
+      "phone": "888-282-1155",
+      "phone_label": "Nevada Long-Term Care Ombudsman helpline (888-282-1155)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://adsd.nv.gov/programs/seniors/ltcombudsman/ltcombudsprog"
+    },
+    "source_evidence": [
+      {
+        "url": "https://adsd.nv.gov/programs/seniors/ltcombudsman/ltcombudsprog",
+        "title": "Nevada Aging and Disability Services Division: Long Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-16",
+        "scope": "Helpline 1-888-282-1155 and the facility types served; read in full."
+      },
+      {
+        "url": "https://adsd.nv.gov/uploadedFiles/adsdnvgov/content/Programs/Seniors/EPS/20ADSD001_APS-Brochure_07.pdf",
+        "title": "Nevada Aging and Disability Services Division: Adult Protective Services brochure",
+        "reviewed_on": "2026-11-16",
+        "scope": "Report abuse of vulnerable adults 18 and older: Las Vegas/Clark County (702) 486-6930; statewide/all other areas (888) 729-0571; search excerpt."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "nv-legal-programs",
+    "name": "Free legal help for Nevada veterans and older adults",
+    "official_url": "https://nvbar.org/wp-content/uploads/Legal-Resources-Brochure.2025.BL_.v1.pdf",
+    "organization": "Nevada Legal Services; Legal Aid Center of Southern Nevada; Volunteer Attorneys for Rural Nevadans",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "NV",
+    "resource_role": "legal_aid",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation",
+      "housing"
+    ],
+    "description": "Nevada Legal Services serves every county and runs a Senior Legal Helpline. The Legal Aid Center of Southern Nevada (Clark County) offers all its services to veterans and works with the Attorney General’s Office of Military Legal Assistance. Volunteer Attorneys for Rural Nevadans covers the rural counties, and the Southern Nevada Senior Law Program serves Clark County residents 60 and older.",
+    "next_step": "Call the Senior Legal Helpline at 877-693-2163. In Clark County, call the Legal Aid Center of Southern Nevada at 702-386-1070. In rural counties, call Volunteer Attorneys for Rural Nevadans at 866-448-8276. For a lawyer referral, call the State Bar of Nevada at 800-789-5747.",
+    "constraints": [
+      "Legal aid screens by income, case type and county."
+    ],
+    "public_contact": {
+      "phone": "877-693-2163",
+      "phone_label": "Nevada Legal Services Senior Legal Helpline (877-693-2163)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://nvbar.org/wp-content/uploads/Legal-Resources-Brochure.2025.BL_.v1.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://nvbar.org/wp-content/uploads/Legal-Resources-Brochure.2025.BL_.v1.pdf",
+        "title": "State Bar of Nevada: Nevada Legal Resources Directory 2025",
+        "reviewed_on": "2026-11-16",
+        "scope": "Nevada Legal Services (all counties) and its Senior Legal Helpline; Legal Aid Center of Southern Nevada, VARN, Northern Nevada Legal Aid and the Southern Nevada Senior Law Program with the counties each serves; lawyer referral; read in full."
+      },
+      {
+        "url": "https://lacsn.org/practice-areas/military-veterans",
+        "title": "Legal Aid Center of Southern Nevada: Military & Veterans",
+        "reviewed_on": "2026-11-16",
+        "scope": "All program services open to veterans; partnership with the Nevada Attorney General Office of Military Legal Assistance; search excerpt."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.shiphelp.org/?p=317"
+  {
+    "program_id": "nv-vahealth-systems",
+    "name": "VA health care systems serving Nevada",
+    "official_url": "https://www.va.gov/find-locations/?facilityType=health",
+    "organization": "U.S. Department of Veterans Affairs",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "NV",
+    "resource_role": "va_health_system",
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "Nevada veterans are served mainly by the VA Southern Nevada Healthcare System (North Las Vegas VA Medical Center, 6900 North Pecos Road; 702-791-9000) and the VA Sierra Nevada Health Care System (975 Kirman Avenue, Reno; 775-786-7200). Northeastern Nevada, including Elko and Ely, is served by the VA Salt Lake City Health Care System’s clinics.",
+    "next_step": "Use VA’s facility locator with your ZIP code to find the closest clinic. Not enrolled yet? Ask an NDVS veterans service officer for help applying.",
+    "constraints": [
+      "Which system serves you depends on where you live; VA’s locator shows the right clinic."
+    ],
+    "public_contact": {
+      "phone": "702-791-9000",
+      "phone_label": "VA Southern Nevada Healthcare System (702-791-9000)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.va.gov/southern-nevada-health-care/contact-us/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.va.gov/southern-nevada-health-care/contact-us/",
+        "title": "VA Southern Nevada health care: Contact us",
+        "reviewed_on": "2026-11-16",
+        "scope": "North Las Vegas VA Medical Center, local 702-791-9000; search excerpt."
+      },
+      {
+        "url": "https://www.va.gov/sierra-nevada-health-care/contact-us/",
+        "title": "VA Sierra Nevada health care: Contact us",
+        "reviewed_on": "2026-11-16",
+        "scope": "975 Kirman Avenue, Reno; phone 775-786-7200; search excerpt."
+      },
+      {
+        "url": "https://www.rosen.senate.gov/wp-content/uploads/2022/11/2022-Veterans-Resource-Guide.pdf",
+        "title": "U.S. Senator Jacky Rosen: 2022 Veterans Resource Guide",
+        "reviewed_on": "2026-11-16",
+        "scope": "Northeastern Nevada (Elko and Ely VA clinics) under the VA Salt Lake City Health Care System; search excerpt."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.shiphelp.org/?p=317",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ]
- },
- {
-  "program_id": "nv-ssvf-20-nv-056",
-  "name": "United States Veterans Initiative: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "United States Veterans Initiative",
-  "service_area": [
-   "All Nevada counties"
-  ],
-  "state": "NV",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-NV-056): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Clark County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 702-219-3244.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "702-218-3832",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "nv-cil-nncil",
+    "name": "Northern Nevada Center for Independent Living (Sparks)",
+    "organization": "Northern Nevada Center for Independent Living (NNCIL)",
+    "official_url": "https://www.nncil.org/",
+    "service_area": [
+      "Carson City",
+      "Churchill",
+      "Douglas",
+      "Elko",
+      "Esmeralda",
+      "Eureka",
+      "Humboldt",
+      "Lander",
+      "Lincoln",
+      "Lyon",
+      "Mineral",
+      "Nye",
+      "Pershing",
+      "Storey",
+      "Washoe",
+      "White Pine"
+    ],
+    "state": "NV",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 999 Pyramid Way, Sparks, NV 89431. TTY: 775-353-3599."
+    ],
+    "public_contact": {
+      "phone": "775-353-3599",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/nv",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/nv"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/nv",
+        "title": "ILRU: Nevada Center for Independent Living directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each center’s office, phones, website and counties served; search excerpt."
+      },
+      {
+        "url": "https://ilru.org/projects/cil-net/cil-center-and-association-directory-results/NV",
+        "title": "ILRU: Directory of Centers for Independent Living, Nevada results",
+        "reviewed_on": "2026-11-16",
+        "scope": "Counties served: every county except Clark; search excerpt."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "nv-cil-sncil",
+    "name": "Southern Nevada Center for Independent Living (Las Vegas)",
+    "organization": "Southern Nevada Center for Independent Living (SNCIL)",
+    "official_url": "https://sncil.org/",
+    "service_area": [
+      "Clark"
+    ],
+    "state": "NV",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 2950 South Rainbow Boulevard, Suite 220, Las Vegas, NV 89146; toll-free 800-870-7003.",
+      "North Las Vegas office: 4200 E. Bonanza Road, North Las Vegas, NV 89110; 702-649-3822, toll-free 855-649-3800."
+    ],
+    "public_contact": {
+      "phone": "702-889-4216",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/nv",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/nv"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/nv",
+        "title": "ILRU: Nevada Center for Independent Living directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each center’s office, phones, website and counties served; search excerpt."
+      },
+      {
+        "url": "https://ilru.org/projects/cil-net/cil-center-and-association-directory-results/NV",
+        "title": "ILRU: Directory of Centers for Independent Living, Nevada results",
+        "reviewed_on": "2026-11-16",
+        "scope": "Counties served: Clark, for both offices; search excerpt."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "nv-ssvf-20-nv-056",
+    "name": "United States Veterans Initiative: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "United States Veterans Initiative",
+    "service_area": [
+      "Clark"
+    ],
+    "state": "NV",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-NV-056): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 702-219-3244.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "702-218-3832",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 180",
+        "sheet": "Contacts",
+        "row": 180,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 180",
-    "sheet": "Contacts",
-    "row": 180,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "nv-ssvf-20-nv-118",
-  "name": "The Salvation Army: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "The Salvation Army",
-  "service_area": [
-   "All Nevada counties"
-  ],
-  "state": "NV",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-NV-118): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Clark County, Nye County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 702-245-8203.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "702-420-5039",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "nv-ssvf-20-nv-118",
+    "name": "The Salvation Army: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "The Salvation Army",
+    "service_area": [
+      "Clark",
+      "Nye"
+    ],
+    "state": "NV",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-NV-118): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 702-245-8203.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "702-420-5039",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 181",
+        "sheet": "Contacts",
+        "row": 181,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
-  },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
-  },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 181",
-    "sheet": "Contacts",
-    "row": 181,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "nv-ssvf-25-zz-158",
-  "name": "Nation's Finest: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Nation's Finest",
-  "service_area": [
-   "All Nevada counties"
-  ],
-  "state": "NV",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 25-ZZ-158): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Carson City, Churchill County, Clark County, Douglas County, Elko County, Eureka County, Humboldt County, Lander County, Lyon County, Mineral County, Pershing County, Storey County and 2 more.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 928-227-3590.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "928-350-8335",
-   "phone_label": "VA-listed SSVF intake"
-  },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
-  },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
-  },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 225",
-    "sheet": "Contacts",
-    "row": 225,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- }
+  {
+    "program_id": "nv-ssvf-25-zz-158",
+    "name": "Nation's Finest: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Nation's Finest",
+    "service_area": [
+      "Carson City",
+      "Churchill",
+      "Clark",
+      "Douglas",
+      "Elko",
+      "Eureka",
+      "Humboldt",
+      "Lander",
+      "Lyon",
+      "Mineral",
+      "Pershing",
+      "Storey",
+      "Washoe",
+      "White Pine"
+    ],
+    "state": "NV",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 25-ZZ-158): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 928-227-3590.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "928-350-8335",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 225",
+        "sheet": "Contacts",
+        "row": 225,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
+  }
 ]

@@ -1,80 +1,203 @@
 [
- {
-  "program_id": "nv-aging",
-  "name": "Local aging help in Nevada (Eldercare Locator)",
-  "official_url": "https://eldercare.acl.gov/home",
-  "organization": "U.S. Administration for Community Living",
-  "service_area": [
-   "All Nevada counties"
-  ],
-  "state": "NV",
-  "needs_supported": [
-   "general_navigation",
-   "help_at_home"
-  ],
-  "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-  "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
-  "constraints": [
-   "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "nv-nvcc-ahn",
+    "name": "Access to Healthcare Network (Nevada Care Connection Resource Center)",
+    "organization": "Access to Healthcare Network (Nevada Care Connection Resource Center)",
+    "official_url": "https://www.washoecounty.gov/seniorsrv/senior_services_advisory_board/2024/files/10-02-24_NVCC_+_MAP_-_AHN_Overview_In-Service.pdf",
+    "state": "NV",
+    "service_area": [
+      "Carson City",
+      "Churchill",
+      "Douglas",
+      "Elko",
+      "Eureka",
+      "Humboldt",
+      "Lander",
+      "Mineral",
+      "Pershing",
+      "Storey",
+      "Washoe",
+      "White Pine"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Nevada Care Connection Resource Center for this county: one-on-one help for older adults, people with disabilities and caregivers to explore options, plan for care and connect with services such as meals, help at home and caregiver support. Nevada has no Area Agencies on Aging; these centers are the local starting point.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also dial 2-1-1 and ask for your local Nevada Care Connection Resource Center. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Email: NVCC@AHNNV.org."
+    ],
+    "public_contact": {
+      "phone": "877-861-1893",
+      "phone_label": "Nevada Care Connection Resource Center (northern Nevada)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.washoecounty.gov/seniorsrv/senior_services_advisory_board/2024/files/10-02-24_NVCC_+_MAP_-_AHN_Overview_In-Service.pdf",
+      "phone_source_url": "https://www.washoecounty.gov/seniorsrv/senior_services_advisory_board/2024/files/10-02-24_NVCC_+_MAP_-_AHN_Overview_In-Service.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.washoecounty.gov/seniorsrv/senior_services_advisory_board/2024/files/10-02-24_NVCC_+_MAP_-_AHN_Overview_In-Service.pdf",
+        "title": "Washoe County Senior Services Advisory Board: Nevada Care Connection overview (October 2, 2024)",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Nevada Care Connection Resource Center partners, their phones and the counties each serves, and the Medicare Assistance Program line; read in full."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "nv-nvcc-lyon",
+    "name": "Lyon County Human Services (Nevada Care Connection Resource Center)",
+    "organization": "Lyon County Human Services (Nevada Care Connection Resource Center)",
+    "official_url": "https://www.washoecounty.gov/seniorsrv/senior_services_advisory_board/2024/files/10-02-24_NVCC_+_MAP_-_AHN_Overview_In-Service.pdf",
+    "state": "NV",
+    "service_area": [
+      "Lyon"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Nevada Care Connection Resource Center for this county: one-on-one help for older adults, people with disabilities and caregivers to explore options, plan for care and connect with services such as meals, help at home and caregiver support. Nevada has no Area Agencies on Aging; these centers are the local starting point.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also dial 2-1-1 and ask for your local Nevada Care Connection Resource Center. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "The resource center list also names Access to Healthcare Network (877-861-1893) for Lyon County."
+    ],
+    "public_contact": {
+      "phone": "775-577-5009",
+      "phone_label": "Nevada Care Connection Resource Center (Lyon County)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.washoecounty.gov/seniorsrv/senior_services_advisory_board/2024/files/10-02-24_NVCC_+_MAP_-_AHN_Overview_In-Service.pdf",
+      "phone_source_url": "https://www.washoecounty.gov/seniorsrv/senior_services_advisory_board/2024/files/10-02-24_NVCC_+_MAP_-_AHN_Overview_In-Service.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.washoecounty.gov/seniorsrv/senior_services_advisory_board/2024/files/10-02-24_NVCC_+_MAP_-_AHN_Overview_In-Service.pdf",
+        "title": "Washoe County Senior Services Advisory Board: Nevada Care Connection overview (October 2, 2024)",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Nevada Care Connection Resource Center partners, their phones and the counties each serves, and the Medicare Assistance Program line; read in full."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.acl.gov/contact"
+  {
+    "program_id": "nv-nvcc-jfsa",
+    "name": "Jewish Family Service Agency (Nevada Care Connection Resource Center)",
+    "organization": "Jewish Family Service Agency (Nevada Care Connection Resource Center)",
+    "official_url": "https://www.washoecounty.gov/seniorsrv/senior_services_advisory_board/2024/files/10-02-24_NVCC_+_MAP_-_AHN_Overview_In-Service.pdf",
+    "state": "NV",
+    "service_area": [
+      "Clark",
+      "Esmeralda",
+      "Lincoln",
+      "Nye"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Nevada Care Connection Resource Center for this county: one-on-one help for older adults, people with disabilities and caregivers to explore options, plan for care and connect with services such as meals, help at home and caregiver support. Nevada has no Area Agencies on Aging; these centers are the local starting point.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also dial 2-1-1 and ask for your local Nevada Care Connection Resource Center. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program."
+    ],
+    "public_contact": {
+      "phone": "702-732-0304",
+      "phone_label": "Nevada Care Connection Resource Center (southern Nevada)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.washoecounty.gov/seniorsrv/senior_services_advisory_board/2024/files/10-02-24_NVCC_+_MAP_-_AHN_Overview_In-Service.pdf",
+      "phone_source_url": "https://www.washoecounty.gov/seniorsrv/senior_services_advisory_board/2024/files/10-02-24_NVCC_+_MAP_-_AHN_Overview_In-Service.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.washoecounty.gov/seniorsrv/senior_services_advisory_board/2024/files/10-02-24_NVCC_+_MAP_-_AHN_Overview_In-Service.pdf",
+        "title": "Washoe County Senior Services Advisory Board: Nevada Care Connection overview (October 2, 2024)",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Nevada Care Connection Resource Center partners, their phones and the counties each serves, and the Medicare Assistance Program line; read in full."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.acl.gov/contact",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "aging_agency"
- },
- {
-  "program_id": "nv-ombudsman",
-  "name": "Nevada long-term-care ombudsman",
-  "official_url": "https://theconsumervoice.org/get_help",
-  "organization": "National Long-Term Care Ombudsman Resource Center",
-  "service_area": [
-   "All Nevada counties"
-  ],
-  "state": "NV",
-  "needs_supported": [
-   "resident_rights",
-   "general_navigation"
-  ],
-  "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-  "next_step": "Use the locator to find the Nevada program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
-  "constraints": [
-   "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
-  },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
-  },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
-  },
-  "source_evidence": [
-   {
-    "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "ombudsman"
- }
+  {
+    "program_id": "nv-omb-state",
+    "name": "Nevada Long-Term Care Ombudsman Program",
+    "organization": "Nevada Long-Term Care Ombudsman Program",
+    "official_url": "https://adsd.nv.gov/programs/seniors/ltcombudsman/ltcombudsprog",
+    "state": "NV",
+    "service_area": [
+      "Carson City",
+      "Churchill",
+      "Clark",
+      "Douglas",
+      "Elko",
+      "Esmeralda",
+      "Eureka",
+      "Humboldt",
+      "Lander",
+      "Lincoln",
+      "Lyon",
+      "Mineral",
+      "Nye",
+      "Pershing",
+      "Storey",
+      "Washoe",
+      "White Pine"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "The program serves residents of nursing homes and residential facilities for groups and individuals."
+    ],
+    "public_contact": {
+      "phone": "888-282-1155",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://adsd.nv.gov/programs/seniors/ltcombudsman/ltcombudsprog",
+      "phone_source_url": "https://adsd.nv.gov/programs/seniors/ltcombudsman/ltcombudsprog"
+    },
+    "source_evidence": [
+      {
+        "url": "https://adsd.nv.gov/programs/seniors/ltcombudsman/ltcombudsprog",
+        "title": "Nevada Aging and Disability Services Division: Long Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-16",
+        "scope": "Helpline 1-888-282-1155, the complaint form and the facility types served; read in full. The program is statewide, so every county shows it."
+      }
+    ]
+  }
 ]
