@@ -108,6 +108,7 @@ def build_regional(sheet):
     low, aging, omb = code.lower(), sheet['aging'], sheet['ombudsman']
     out = []
     word = aging.get('region_word', 'Region')  # '' when the state's agencies are known by name, not number
+    place = sheet.get('locality_word', 'county')  # 'parish' in Louisiana
     agency = aging.get('agency_label', 'Area Agency on Aging')  # states whose local aging contact has another name set this
     aging_status = STATUS[aging.get('review', 'full')]
     for r in aging['regions']:
@@ -118,7 +119,7 @@ def build_regional(sheet):
             'program_id': r['id'], 'name': r['name'], 'organization': f"{r['name']} ({word} {r['label']})" if word else r['name'],
             'official_url': src, 'state': code, 'service_area': r['counties'],
             'needs_supported': ['general_navigation', 'help_at_home'], 'regional_role': 'aging_agency',
-            'description': aging.get('description') or f'The {agency} for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.',
+            'description': aging.get('description') or f'The {agency} for this {place}: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.',
             'next_step': 'Call and describe what is hard right now. Ask for information and assistance. ' + aging['next_step_extra'] + ' Military service is not required.',
             'constraints': ['Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.'] + r.get('notes', []),
             'public_contact': {'phone': r['phone'], 'phone_label': f"{agency}, {word} {r['label']}" if word else f"{agency} ({r['label']})"},
@@ -131,18 +132,21 @@ def build_regional(sheet):
     for r in omb['regions']:
         src = r['source_url']
         full = r.get('review', 'full') == 'full'
+        # A region whose own source names its counties (Louisiana's ombudsman list) does not lean on the aging list for them.
+        area_src = src if r.get('counties_from_source') else aging['source_url']
         out.append({
             'program_id': r['id'], 'name': r['name'], 'organization': r['name'], 'official_url': src, 'state': code,
             'service_area': r['counties'], 'needs_supported': ['resident_rights', 'general_navigation'], 'regional_role': 'ombudsman',
-            'description': 'The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.',
-            'next_step': 'Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.',
+            'description': f'The regional long-term care ombudsman for this {place}: advocacy for residents of nursing homes, assisted living and residential care facilities.',
+            'next_step': f'Call the regional ombudsman program. Give the facility name and {place}. For immediate danger, call 911.',
             'constraints': ['The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.'] + r.get('notes', []),
             'public_contact': {'phone': r['phone'], 'phone_label': 'Regional ombudsman program'},
             'verification': verification(STATUS['full' if full else 'excerpt'], reviewed),
             'evidence': {'review_method': r['review_method'], 'direct_agency_confirmation': False,
-                         'service_area_source_url': aging['source_url'], 'phone_source_url': src},
-            'source_evidence': [source(src, r['source_title'], r['source_scope'], reviewed),
-                                source(aging['source_url'], aging['source_title'], 'Counties in each aging region.', reviewed)]
+                         'service_area_source_url': area_src, 'phone_source_url': src},
+            'source_evidence': [source(src, r['source_title'], r['source_scope'], reviewed)]
+                               + ([] if r.get('counties_from_source') else
+                                  [source(aging['source_url'], aging['source_title'], 'Counties in each aging region.', reviewed)])
                                + [source(s['url'], s['title'], s['scope'], reviewed) for s in r.get('extra_sources', [])],
         })
     return out
@@ -150,6 +154,7 @@ def build_regional(sheet):
 
 def build_programs(sheet):
     code, name, reviewed = sheet['code'], sheet['name'], sheet['reviewed_on']
+    place = sheet.get('locality_word', 'county')
     out = []
     for p in sheet['programs']:
         full = p.get('review', 'excerpt') == 'full'
@@ -181,7 +186,7 @@ def build_programs(sheet):
             'service_area': c['counties'], 'state': code, 'resource_role': 'independent_living',
             'needs_supported': ['help_at_home', 'general_navigation', 'equipment_home_accessibility'],
             'description': 'A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.',
-            'next_step': 'Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.',
+            'next_step': f'Call with your {place} and goals. Ask about intake, home access, independent living skills or help leaving a facility.',
             'constraints': ['A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.'] + c.get('notes', []),
             'public_contact': {'phone': c['phone'], 'phone_label': c.get('phone_label', cils.get('phone_label', 'Local phone listed in the ILRU national directory'))},
             'verification': verification(STATUS['full' if full else 'excerpt'], reviewed),
@@ -208,10 +213,10 @@ def build_programs(sheet):
             'organization': row['organization'], 'service_area': counties, 'state': code, 'resource_role': 'housing_provider',
             'needs_supported': ['housing', 'veteran_services'],
             'description': f"VA-funded Supportive Services for Veteran Families (SSVF, grant {row['fain']}): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
-            'next_step': 'Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.'
+            'next_step': f'Call SSVF intake with your {place} and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.'
                          + (f" A second intake number is listed: {phones[1]}." if len(phones) > 1 else ''),
             'constraints': ['Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.',
-                            'County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling.'],
+                            f'{place.capitalize()} and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling.'],
             'public_contact': {'phone': phones[0], 'phone_label': 'VA-listed SSVF intake'},
             'verification': verification(STATUS['full'], ssvf['reviewed_on']),
             'evidence': {'review_method': 'full_official_spreadsheet', 'direct_agency_confirmation': False, 'service_area_source_url': ssvf['source_url']},
@@ -276,6 +281,11 @@ def edition(sheet, programs, regional):
         elif op['op'] == 'line' and op['prefix'] == 'routes.accessibility=':
             ids_js = ','.join(f"'{i}'" for i in ['va-hisa', 'va-sah', 'va-sha', 'va-tra', senior, *cils, 'va-location-finder'])
             op['new'] = f"routes.accessibility=[{ids_js},...DATA.filter(x=>x.regional_role==='aging_agency').map(x=>x.program_id)];"
+    # Wording swaps on the shared page text (Louisiana's parishes) run before the adapter and the data are added.
+    extra = [{'op': 'replace', 'old': old, 'new': new} for old, new in sheet.get('page_replacements', [])]
+    if extra:
+        at = next(i for i, op in enumerate(ops) if op['op'] == 'adapter')
+        ops[at:at] = extra
     return {'ops': ops}
 
 
@@ -310,6 +320,11 @@ def adapter(sheet):
     for old, new in pairs:
         if old not in text:
             raise SystemExit(f'adapter template no longer contains: {old[:60]}')
+        text = text.replace(old, new)
+    # Swaps that must see the finished text (Louisiana's parish wording) run after the standard ones.
+    for old, new in a.get('post_swaps', []):
+        if old not in text:
+            raise SystemExit(f'adapter text no longer contains: {old[:60]}')
         text = text.replace(old, new)
     if a.get('aging_term'):  # states whose local aging contact is not called an Area Agency on Aging
         text = text.replace('Area Agency on Aging', a['aging_term'])

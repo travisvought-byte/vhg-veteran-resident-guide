@@ -1,208 +1,755 @@
 [
- {
-  "program_id": "la-claims",
-  "name": "Louisiana veterans: accredited claims help",
-  "official_url": "https://www.vetaffairs.la.gov/benefits/",
-  "organization": "Louisiana Department of Veterans Affairs",
-  "service_area": [
-   "All Louisiana parishes"
-  ],
-  "state": "LA",
-  "needs_supported": [
-   "general_navigation",
-   "benefits_and_funding"
-  ],
-  "description": "Free help with VA claims, applications and appeals for veterans and families.",
-  "next_step": "Call the state veterans agency; ask for a benefits review and the office that serves your county.",
-  "constraints": [],
-  "public_contact": {
-   "phone": "225-219-5000"
+  {
+    "program_id": "la-claims",
+    "name": "Louisiana veterans: parish veterans service offices for claims help",
+    "official_url": "https://vetaffairs.la.gov/locations",
+    "organization": "Louisiana Department of Veterans Affairs",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "LA",
+    "needs_supported": [
+      "general_navigation",
+      "benefits_and_funding"
+    ],
+    "description": "Free help with VA claims, appeals, pension and survivor benefits from Louisiana Department of Veterans Affairs staff. Every parish is served by a department office.",
+    "next_step": "Choose your parish for its office and open days, or call the department at 225-219-5000 (Monday–Friday 8:00 a.m.–4:00 p.m.).",
+    "constraints": [
+      "Many parish offices are open only one to three days a week; check the days and call before you go."
+    ],
+    "public_contact": {
+      "phone": "225-219-5000",
+      "phone_label": "Louisiana Department of Veterans Affairs (225-219-5000)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://vetaffairs.la.gov/locations/headquarters"
+    },
+    "source_evidence": [
+      {
+        "url": "https://vetaffairs.la.gov/locations",
+        "title": "Louisiana Department of Veterans Affairs: Locations",
+        "reviewed_on": "2026-11-16",
+        "scope": "Lists the parish veterans service offices and itinerant points; links to each office page."
+      },
+      {
+        "url": "https://vetaffairs.la.gov/locations/headquarters",
+        "title": "Louisiana Department of Veterans Affairs: Headquarters",
+        "reviewed_on": "2026-11-16",
+        "scope": "Address, phone 225-219-5000 and hours; read in full."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "la-adrc",
+    "name": "Louisiana Answers: aging and disability information line",
+    "official_url": "https://goea.la.gov/agency-directory/aging-and-disability-resource-centers",
+    "organization": "Governor’s Office of Elderly Affairs, Aging and Disability Resource Centers",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "LA",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Louisiana’s Aging and Disability Resource Centers help older adults and adults with disabilities find long-term care options, prescription assistance and local services. The statewide information, referral and assistance line connects you to the center for your parish. Military service is not required.",
+    "next_step": "Call 877-340-9100, or choose a parish above for its Area Agency on Aging.",
+    "constraints": [
+      "Each program has its own eligibility and waitlist.",
+      "Give your parish so the call reaches the right center."
+    ],
+    "public_contact": {
+      "phone": "877-340-9100",
+      "phone_label": "Louisiana Answers (877-340-9100)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://laddc.org/wp-content/uploads/2026/04/DD-Council-Report-April-2026.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://laddc.org/wp-content/uploads/2026/04/DD-Council-Report-April-2026.pdf",
+        "title": "Governor’s Office of Elderly Affairs report to the Louisiana Developmental Disabilities Council (April 2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Nine Aging and Disability Resource Centers, housed in an Area Agency on Aging or council on aging; statewide information, referral and assistance line 877-340-9100; search excerpt."
+      },
+      {
+        "url": "https://goea.la.gov/agency-directory/aging-and-disability-resource-centers",
+        "title": "Governor’s Office of Elderly Affairs: Aging and Disability Resource Centers directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Centers and the parishes each serves; search excerpt."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_page_text",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.vetaffairs.la.gov/benefits/"
+  {
+    "program_id": "la-ship",
+    "name": "Medicare counseling (SHIIP) for Louisiana",
+    "official_url": "https://ldi.la.gov/consumers/senior-health-shiip",
+    "organization": "Louisiana Department of Insurance, Senior Health Insurance Information Program (SHIIP)",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "LA",
+    "needs_supported": [
+      "benefits_and_funding"
+    ],
+    "description": "Free, confidential Medicare counseling from the Department of Insurance’s Senior Health Insurance Information Program and its partner counselors around the state: plan choices, enrollment, costs and help paying for Medicare. The department also calls it LaSHIP.",
+    "next_step": "Call 800-259-5300 and ask for a SHIIP counselor, or use the department’s page to find help near you. For Medicare itself, call 800-MEDICARE (800-633-4227).",
+    "constraints": [
+      "Have your Medicare card and drug list ready."
+    ],
+    "public_contact": {
+      "phone": "800-259-5300",
+      "phone_label": "Louisiana Department of Insurance, SHIIP (800-259-5300)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ldi.la.gov/docs/default-source/documents/shiip/guide-to-navigating-medicare.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ldi.la.gov/consumers/senior-health-shiip",
+        "title": "Louisiana Department of Insurance: Senior Health Insurance Information Program",
+        "reviewed_on": "2026-11-16",
+        "scope": "Program description and a link to find help near you; read in full. The page prints no phone number."
+      },
+      {
+        "url": "https://www.ldi.la.gov/docs/default-source/documents/shiip/guide-to-navigating-medicare.pdf",
+        "title": "Louisiana Department of Insurance: Guide to Navigating Medicare",
+        "reviewed_on": "2026-11-16",
+        "scope": "Phone 1-800-259-5300 and LDI.LA.GOV/LaSHIP; search excerpt."
+      },
+      {
+        "url": "https://www.cms.gov/about-cms/contact/directory/senior-health-insurance-information-program-shiip/1562086",
+        "title": "Centers for Medicare & Medicaid Services: SHIIP contact directory entry",
+        "reviewed_on": "2026-11-16",
+        "scope": "Louisiana SHIIP toll-free (800) 259-5300; search excerpt."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.vetaffairs.la.gov/benefits/",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ]
- },
- {
-  "program_id": "la-ship",
-  "name": "Medicare counseling (SHIP) for Louisiana",
-  "official_url": "https://www.shiphelp.org/",
-  "organization": "SHIP Technical Assistance Center",
-  "service_area": [
-   "All Louisiana parishes"
-  ],
-  "state": "LA",
-  "needs_supported": [
-   "benefits_and_funding"
-  ],
-  "description": "Free, unbiased Medicare counseling from the State Health Insurance Assistance Program.",
-  "next_step": "Call or use the locator to reach the Louisiana SHIP and ask for a counseling appointment.",
-  "constraints": [],
-  "public_contact": {
-   "phone": "877-839-2675"
+  {
+    "program_id": "la-ombudsman",
+    "name": "Louisiana Long-Term Care Ombudsman and elder abuse reporting",
+    "official_url": "https://goea.louisiana.gov/services/louisiana-ombudsman-program",
+    "organization": "Governor’s Office of Elderly Affairs, Long-Term Care Ombudsman Program",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "LA",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "description": "Independent advocacy for residents of nursing homes and assisted living, through seven regional programs and the state office.",
+    "next_step": "Call the state ombudsman office at 866-632-0922, or choose a parish above for its regional ombudsman. To report abuse, neglect or exploitation of someone 60 or older, call Elderly Protective Services at 833-577-6532 (after hours: 844-945-2377). For adults 18 to 59, call Adult Protective Services at 800-898-4910. In an emergency, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing agency."
+    ],
+    "public_contact": {
+      "phone": "866-632-0922",
+      "phone_label": "Louisiana State Long-Term Care Ombudsman (866-632-0922)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://goea.louisiana.gov/media/gkmfvrto/ombudsman-flyer-and-contact-list-2026.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.louisiana.gov/media/gkmfvrto/ombudsman-flyer-and-contact-list-2026.pdf",
+        "title": "Governor’s Office of Elderly Affairs: Long-Term Care Ombudsman flyer and contact list (Rev. 06/2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "State office 866-632-0922 and the seven regional programs with their parishes; read in full."
+      },
+      {
+        "url": "https://ldh.la.gov/office-of-aging-and-adult-services",
+        "title": "Louisiana Department of Health: Office of Aging and Adult Services",
+        "reviewed_on": "2026-11-16",
+        "scope": "Adult Protective Services hotline 800-898-4910 (ages 18–59); Elderly Protective Services hotline 833-577-6532 (60 and older); search excerpt."
+      },
+      {
+        "url": "https://goea.louisiana.gov/services/elderly-protective-services/",
+        "title": "Governor’s Office of Elderly Affairs: Elderly Protective Services",
+        "reviewed_on": "2026-11-16",
+        "scope": "After-hours reporting line 1-844-945-2377; search excerpt."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "la-legal-programs",
+    "name": "Free legal help for Louisiana veterans and older adults",
+    "official_url": "https://slls.org/en/get-help",
+    "organization": "Southeast Louisiana Legal Services; Acadiana Legal Service Corporation",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "LA",
+    "resource_role": "legal_aid",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation",
+      "housing"
+    ],
+    "description": "Louisiana’s legal aid programs give free civil legal help to people with low incomes. Southeast Louisiana Legal Services serves 22 parishes in the southeast and helps veterans with discharge upgrades, VA benefits and VA overpayments. Acadiana Legal Service Corporation serves 42 parishes in north, central and southwest Louisiana.",
+    "next_step": "In southeast Louisiana, call Southeast Louisiana Legal Services at 844-244-7871 or apply online. Elsewhere, call Acadiana Legal Service Corporation at 866-275-2572. The Louisiana State Bar Association’s Find Legal Help portal lists other free and reduced-fee options.",
+    "constraints": [
+      "Legal aid screens by income, case type and parish.",
+      "Neither program handles criminal cases."
+    ],
+    "public_contact": {
+      "phone": "844-244-7871",
+      "phone_label": "Southeast Louisiana Legal Services (844-244-7871)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://slls.org/?p=18"
+    },
+    "source_evidence": [
+      {
+        "url": "https://slls.org/?p=18",
+        "title": "Southeast Louisiana Legal Services: Contact us",
+        "reviewed_on": "2026-11-16",
+        "scope": "Call 1-844-244-7871 or a local office; search excerpt."
+      },
+      {
+        "url": "https://slls.org/en/get-help",
+        "title": "Southeast Louisiana Legal Services: Get help",
+        "reviewed_on": "2026-11-16",
+        "scope": "Free civil legal help for low-income people in southeast Louisiana, including veterans’ discharge upgrades, VA benefits and overpayments; no criminal cases; search excerpt."
+      },
+      {
+        "url": "https://slls.org/free-civil-legal-help-available-for-low-income-residents-impacted-by-the-covid-19-pandemic/",
+        "title": "Southeast Louisiana Legal Services: news release",
+        "reviewed_on": "2026-11-16",
+        "scope": "Serves 22 parishes across southeast Louisiana; search excerpt."
+      },
+      {
+        "url": "https://www.womenslaw.org/find-help/la/finding-lawyer/legal-assistance",
+        "title": "WomensLaw.org: Louisiana legal assistance directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Acadiana Legal Service Corporation, (866) 275-2572, free civil legal services across 42 Louisiana parishes; directory listing, search excerpt."
+      },
+      {
+        "url": "https://www.fifthcircuit.org/pdf/LegalAssistanceResourceGuide2024.pdf",
+        "title": "Louisiana Fifth Circuit Court of Appeal: Legal Assistance Resource Guide (2024)",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Louisiana State Bar Association’s Find Legal Help portal and its free and reduced-fee directories; read in full."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.shiphelp.org/?p=317"
+  {
+    "program_id": "la-vahealth-systems",
+    "name": "VA health care systems serving Louisiana",
+    "official_url": "https://www.va.gov/find-locations/?facilityType=health",
+    "organization": "U.S. Department of Veterans Affairs",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "LA",
+    "resource_role": "va_health_system",
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "Louisiana veterans are served mainly by the Southeast Louisiana Veterans Health Care System (New Orleans VA Medical Center, 2400 Canal Street; 800-935-8387), the Alexandria VA Health Care System (2495 Shreveport Highway, Pineville; 318-473-0010) and the Overton Brooks VA Medical Center in Shreveport (510 East Stoner Avenue; 318-990-5547), with clinics across the state.",
+    "next_step": "Use VA’s facility locator with your ZIP code to find the closest clinic. Not enrolled yet? Ask your parish veterans service office for help applying.",
+    "constraints": [
+      "Which system serves you depends on where you live; VA’s locator shows the right clinic."
+    ],
+    "public_contact": {
+      "phone": "800-935-8387",
+      "phone_label": "Southeast Louisiana Veterans Health Care System (800-935-8387)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://va.gov/southeast-louisiana-health-care/locations/new-orleans-va-medical-center"
+    },
+    "source_evidence": [
+      {
+        "url": "https://va.gov/southeast-louisiana-health-care/locations/new-orleans-va-medical-center",
+        "title": "VA Southeast Louisiana health care: New Orleans VA Medical Center",
+        "reviewed_on": "2026-11-16",
+        "scope": "To make a new appointment, call 800-935-8387; search excerpt."
+      },
+      {
+        "url": "https://www.va.gov/alexandria-health-care/contact-us/",
+        "title": "VA Alexandria health care: Contact us",
+        "reviewed_on": "2026-11-16",
+        "scope": "Alexandria VA Medical Center, 2495 Shreveport Highway, Pineville; local 318-473-0010; search excerpt."
+      },
+      {
+        "url": "https://www.va.gov/shreveport-health-care/contact-us/",
+        "title": "VA Shreveport health care: Contact us",
+        "reviewed_on": "2026-11-16",
+        "scope": "Overton Brooks VA Medical Center, 510 E. Stoner Ave.; local 318-990-5547; search excerpt."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.shiphelp.org/?p=317",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ]
- },
- {
-  "program_id": "la-ssvf-12-la-038",
-  "name": "Volunteers of America Southeast Louisiana, Inc.: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Volunteers of America Southeast Louisiana, Inc.",
-  "service_area": [
-   "All Louisiana parishes"
-  ],
-  "state": "LA",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 12-LA-038): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Acadia Parish, Allen Parish, Ascension Parish, Assumption Parish, Avoyelles Parish, Beauregard Parish, Bienville Parish, Bossier Parish, Caddo Parish, Calcasieu Parish, Caldwell Parish, Cameron Parish and 52 more.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "504-483-3558",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "la-cil-nhilc",
+    "name": "New Horizons Independent Living Center (Shreveport, Monroe, Alexandria)",
+    "organization": "New Horizons Independent Living Center (NHILC)",
+    "official_url": "https://www.ilru.org/cil-directory/la",
+    "service_area": [
+      "Avoyelles",
+      "Bienville",
+      "Bossier",
+      "Caddo",
+      "Catahoula",
+      "Claiborne",
+      "Concordia",
+      "De Soto",
+      "East Carroll",
+      "Franklin",
+      "Grant",
+      "Jackson",
+      "LaSalle",
+      "Lincoln",
+      "Madison",
+      "Morehouse",
+      "Natchitoches",
+      "Ouachita",
+      "Rapides",
+      "Red River",
+      "Richland",
+      "Sabine",
+      "Tensas",
+      "Union",
+      "Vernon",
+      "Webster",
+      "West Carroll",
+      "Winn"
+    ],
+    "state": "LA",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your parish and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Main office: 1701 North Market Street, Shreveport, LA 71107; toll-free 877-219-7327.",
+      "Branch offices: Monroe, 1401 Hudson Lane, Suite 200 (318-323-4374, toll-free 800-428-5505); Alexandria, 3717 Government Street, Suite 7 (318-484-3596, toll-free 888-361-3596).",
+      "The card links to the national directory because no secure (https) website address for this center appears in the sources read."
+    ],
+    "public_contact": {
+      "phone": "318-671-8131",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/la",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/la"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/la",
+        "title": "ILRU: Louisiana Center for Independent Living directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each center’s offices, phones, website and parishes served; read in full. The directory is undated."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "la-cil-noril",
+    "name": "New Orleans Resources for Independent Living (Kenner and Baton Rouge)",
+    "organization": "New Orleans Resources for Independent Living (NORIL)",
+    "official_url": "https://www.noril.org/",
+    "service_area": [
+      "Ascension",
+      "Assumption",
+      "East Baton Rouge",
+      "East Feliciana",
+      "Iberville",
+      "Jefferson",
+      "Lafourche",
+      "Livingston",
+      "Orleans",
+      "Plaquemines",
+      "Pointe Coupee",
+      "St. Bernard",
+      "St. Charles",
+      "St. Helena",
+      "St. James",
+      "St. John the Baptist",
+      "St. Martin",
+      "St. Tammany",
+      "Tangipahoa",
+      "Terrebonne",
+      "Washington",
+      "West Baton Rouge",
+      "West Feliciana"
+    ],
+    "state": "LA",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your parish and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Main office: 2001 21st Street, Kenner, LA 70062; toll-free 877-505-2260.",
+      "Baton Rouge office (Resources for Independent Living): 3233 South Sherwood Forest Boulevard, Suite 101A, Baton Rouge, LA 70816; 225-753-4772.",
+      "In St. Martin Parish the directory lists lower St. Martin only."
+    ],
+    "public_contact": {
+      "phone": "504-522-1955",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/la",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/la"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/la",
+        "title": "ILRU: Louisiana Center for Independent Living directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each center’s offices, phones, website and parishes served; read in full. The directory is undated."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "la-cil-slic",
+    "name": "Southwest Louisiana Independence Center (Lake Charles, Lafayette, Leesville)",
+    "organization": "Southwest Louisiana Independence Center (SLIC)",
+    "official_url": "https://www.ilru.org/cil-directory/la",
+    "service_area": [
+      "Acadia",
+      "Allen",
+      "Avoyelles",
+      "Beauregard",
+      "Calcasieu",
+      "Cameron",
+      "Evangeline",
+      "Iberia",
+      "Jefferson Davis",
+      "Lafayette",
+      "St. Landry",
+      "St. Martin",
+      "Vermilion",
+      "Vernon"
+    ],
+    "state": "LA",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your parish and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Main office: 4320 Lake Street, Lake Charles, LA 70605; toll-free 833-600-5766.",
+      "Offices also in Lafayette (216A La Rue France; 337-269-0027, toll-free 888-516-5009) and Leesville (1104 South Third Street; 337-238-1972, toll-free 866-372-7542).",
+      "The national directory lists “Jefferson” among this center’s parishes; the Louisiana Department of Health lists Jefferson Davis, so the card is shown there. Jefferson Parish is served by NORIL.",
+      "The card links to the national directory because no secure (https) website address for this center appears in the sources read."
+    ],
+    "public_contact": {
+      "phone": "337-477-7194",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/la",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/la"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/la",
+        "title": "ILRU: Louisiana Center for Independent Living directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each center’s offices, phones, website and parishes served; read in full. The directory is undated."
+      },
+      {
+        "url": "https://ldh.la.gov/directory/detail/4430",
+        "title": "Louisiana Department of Health directory: Southwest LA Independence Center",
+        "reviewed_on": "2026-11-16",
+        "scope": "Parishes served include Allen, Beauregard, Calcasieu, Cameron and Jefferson Davis; search excerpt."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 13",
-    "sheet": "Contacts",
-    "row": 13,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "la-ssvf-14-la-205",
-  "name": "Hope Center, Inc.: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Hope Center, Inc.",
-  "service_area": [
-   "All Louisiana parishes"
-  ],
-  "state": "LA",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 14-LA-205): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Jefferson Parish, Orleans Parish, Plaquemines Parish, St. Bernard Parish, St. Tammany Parish, Tangipahoa Parish.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "504-363-4034",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "la-ssvf-12-la-038",
+    "name": "Volunteers of America Southeast Louisiana, Inc.: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Volunteers of America Southeast Louisiana, Inc.",
+    "service_area": [
+      "Acadia",
+      "Allen",
+      "Ascension",
+      "Assumption",
+      "Avoyelles",
+      "Beauregard",
+      "Bienville",
+      "Bossier",
+      "Caddo",
+      "Calcasieu",
+      "Caldwell",
+      "Cameron",
+      "Catahoula",
+      "Claiborne",
+      "Concordia",
+      "De Soto",
+      "East Baton Rouge",
+      "East Carroll",
+      "East Feliciana",
+      "Evangeline",
+      "Franklin",
+      "Grant",
+      "Iberia",
+      "Iberville",
+      "Jackson",
+      "Jefferson Davis",
+      "Jefferson",
+      "Lafayette",
+      "Lafourche",
+      "LaSalle",
+      "Lincoln",
+      "Livingston",
+      "Madison",
+      "Morehouse",
+      "Natchitoches",
+      "Orleans",
+      "Ouachita",
+      "Plaquemines",
+      "Pointe Coupee",
+      "Rapides",
+      "Red River",
+      "Richland",
+      "Sabine",
+      "St. Bernard",
+      "St. Charles",
+      "St. Helena",
+      "St. James",
+      "St. John the Baptist",
+      "St. Landry",
+      "St. Martin",
+      "St. Mary",
+      "St. Tammany",
+      "Tangipahoa",
+      "Tensas",
+      "Terrebonne",
+      "Union",
+      "Vermilion",
+      "Vernon",
+      "Washington",
+      "Webster",
+      "West Baton Rouge",
+      "West Carroll",
+      "West Feliciana",
+      "Winn"
+    ],
+    "state": "LA",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 12-LA-038): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your parish and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "Parish and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "504-483-3558",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 13",
+        "sheet": "Contacts",
+        "row": 13,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "la-ssvf-14-la-205",
+    "name": "Hope Center, Inc.: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Hope Center, Inc.",
+    "service_area": [
+      "Jefferson",
+      "Orleans",
+      "Plaquemines",
+      "St. Bernard",
+      "St. Tammany",
+      "Tangipahoa"
+    ],
+    "state": "LA",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 14-LA-205): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your parish and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "Parish and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "504-363-4034",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 62",
+        "sheet": "Contacts",
+        "row": 62,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
-  },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 62",
-    "sheet": "Contacts",
-    "row": 62,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "la-ssvf-20-la-208",
-  "name": "Start Corporation: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Start Corporation",
-  "service_area": [
-   "All Louisiana parishes"
-  ],
-  "state": "LA",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-LA-208): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Allen Parish, Ascension Parish, Assumption Parish, Beauregard Parish, Calcasieu Parish, Cameron Parish, East Baton Rouge Parish, East Feliciana Parish, Iberville Parish, Jefferson Davis Parish, Jefferson Parish, Lafayette Parish and 15 more.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 985-352-2859.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "504-584-8760",
-   "phone_label": "VA-listed SSVF intake"
-  },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
-  },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
-  },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 174",
-    "sheet": "Contacts",
-    "row": 174,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- }
+  {
+    "program_id": "la-ssvf-20-la-208",
+    "name": "Start Corporation: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Start Corporation",
+    "service_area": [
+      "Allen",
+      "Ascension",
+      "Assumption",
+      "Beauregard",
+      "Calcasieu",
+      "Cameron",
+      "East Baton Rouge",
+      "East Feliciana",
+      "Iberville",
+      "Jefferson Davis",
+      "Jefferson",
+      "Lafayette",
+      "Lafourche",
+      "Livingston",
+      "Natchitoches",
+      "Orleans",
+      "Plaquemines",
+      "Pointe Coupee",
+      "Sabine",
+      "St. Bernard",
+      "St. Charles",
+      "St. James",
+      "St. John the Baptist",
+      "St. Mary",
+      "Terrebonne",
+      "West Baton Rouge",
+      "West Feliciana"
+    ],
+    "state": "LA",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-LA-208): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your parish and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 985-352-2859.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "Parish and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "504-584-8760",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 174",
+        "sheet": "Contacts",
+        "row": 174,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
+  }
 ]

@@ -1,190 +1,241 @@
 {
- "ops": [
-  {
-   "op": "clear_data"
-  },
-  {
-   "op": "replace",
-   "old": "Ohio",
-   "new": "Louisiana"
-  },
-  {
-   "op": "replace",
-   "old": "All 88",
-   "new": "All"
-  },
-  {
-   "op": "replace",
-   "old": "all 88",
-   "new": "all"
-  },
-  {
-   "op": "replace",
-   "old": "<option value=\"OH\">Louisiana</option>",
-   "new": "<option value=\"OH\">Ohio</option>"
-  },
-  {
-   "op": "replace",
-   "old": "const STATE='OH';",
-   "new": "const STATE='LA';"
-  },
-  {
-   "op": "replace",
-   "old": "county veterans office",
-   "new": "state veterans agency"
-  },
-  {
-   "op": "replace",
-   "old": "county office",
-   "new": "state veterans agency"
-  },
-  {
-   "op": "replace",
-   "old": "Statewide edition · Updated October 8, 2026",
-   "new": "Louisiana starter edition · Updated November 2, 2026"
-  },
-  {
-   "op": "replace",
-   "old": "Louisiana’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
-   "new": "Ask the local aging agency or state Medicaid agency about waiver assessment and written approval; VA and other funders have their own processes."
-  },
-  {
-   "op": "replace",
-   "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
-   "new": "https://eldercare.acl.gov/home"
-  },
-  {
-   "op": "replace",
-   "old": "Louisiana home modification authorization and provider rules",
-   "new": "Find local aging and disability help (Eldercare Locator)"
-  },
-  {
-   "op": "replace",
-   "old": "href=\"share.html\"",
-   "new": "href=\"share-la.html\""
-  },
-  {
-   "op": "replace",
-   "old": "href=\"prototype-data.json\"",
-   "new": "href=\"data/public/louisiana-resources.json\""
-  },
-  {
-   "op": "replace",
-   "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
-   "new": "href=\"data/public/louisiana-county-veterans-offices.json\""
-  },
-  {
-   "op": "declare",
-   "name": "priority",
-   "value": [
-    "la-claims",
-    "la-aging",
-    "la-ship",
-    "la-ombudsman",
-    "r02-aid-attendance-housebound",
-    "r02-va-pension",
-    "r02-survivors-pension"
-   ]
-  },
-  {
-   "op": "declare",
-   "name": "routes",
-   "value": {
-    "benefits": [
-     "la-claims",
-     "la-ship",
-     "r02-va-pension",
-     "r02-aid-attendance-housebound",
-     "r02-disability-increase",
-     "r02-pension-medicaid-rule",
-     "r02-survivors-pension",
-     "r02-dic",
-     "va-accredited-help"
-    ],
-    "survivors": [
-     "la-claims",
-     "r02-survivors-pension",
-     "r02-dic",
-     "r02-aid-attendance-housebound",
-     "r02-va-burial",
-     "va-accredited-help",
-     "nara-discharge-records"
-    ],
-    "care": [
-     "la-aging",
-     "r02-va-health-enrollment",
-     "va-location-finder",
-     "r02-va-cnh",
-     "r02-va-clc",
-     "r02-general-caregiver",
-     "r02-family-caregiver",
-     "r02-hospice",
-     "r02-palliative"
-    ],
-    "rights": [
-     "la-ombudsman",
-     "la-aging"
-    ],
-    "local": [
-     "la-aging",
-     "la-claims"
-    ],
-    "housing": [
-     "va-housing-help",
-     "la-ssvf-12-la-038",
-     "la-ssvf-14-la-205",
-     "la-ssvf-20-la-208",
-     "va-location-finder",
-     "va-accredited-help",
-     "nara-discharge-records"
-    ]
-   }
-  },
-  {
-   "op": "declare",
-   "name": "seniorTopics",
-   "value": {
-    "daily": [
-     "la-aging"
-    ],
-    "accessibility": [
-     "la-aging"
-    ],
-    "vision": [
-     "la-aging"
-    ],
-    "hearing": [
-     "la-aging"
-    ],
-    "memory": [
-     "alz-dementia-support",
-     "la-aging"
-    ],
-    "costs": [
-     "la-ship",
-     "la-aging"
-    ],
-    "rights": [
-     "la-ombudsman",
-     "la-aging"
-    ]
-   }
-  },
-  {
-   "op": "line",
-   "prefix": "routes.accessibility=",
-   "new": "routes.accessibility=['va-hisa','va-sah','va-sha','va-tra','la-aging','va-location-finder'];"
-  },
-  {
-   "op": "line",
-   "prefix": "routes.seniors=",
-   "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
-  },
-  {
-   "op": "adapter"
-  },
-  {
-   "op": "embed_data"
-  }
- ]
+  "ops": [
+    {
+      "op": "clear_data"
+    },
+    {
+      "op": "replace",
+      "old": "Ohio",
+      "new": "Louisiana"
+    },
+    {
+      "op": "replace",
+      "old": "All 88",
+      "new": "All 64"
+    },
+    {
+      "op": "replace",
+      "old": "all 88",
+      "new": "all 64"
+    },
+    {
+      "op": "replace",
+      "old": "<option value=\"OH\">Louisiana</option>",
+      "new": "<option value=\"OH\">Ohio</option>"
+    },
+    {
+      "op": "replace",
+      "old": "const STATE='OH';",
+      "new": "const STATE='LA';"
+    },
+    {
+      "op": "replace",
+      "old": "Statewide edition · Updated October 8, 2026",
+      "new": "Louisiana edition · Updated November 16, 2026"
+    },
+    {
+      "op": "replace",
+      "old": "Most phones come from Louisiana AMVETS’ 2025–2026 directory.",
+      "new": "Parish veterans office phones, addresses and open days come from each office’s page on the Louisiana Department of Veterans Affairs website. Many offices are open only certain days; call before you go."
+    },
+    {
+      "op": "replace",
+      "old": "Louisiana’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
+      "new": "Ask the local aging agency or state Medicaid agency about waiver assessment and written approval; VA and other funders have their own processes."
+    },
+    {
+      "op": "replace",
+      "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
+      "new": "https://eldercare.acl.gov/home"
+    },
+    {
+      "op": "replace",
+      "old": "Louisiana home modification authorization and provider rules",
+      "new": "Find local aging and disability help (Eldercare Locator)"
+    },
+    {
+      "op": "replace",
+      "old": "href=\"share.html\"",
+      "new": "href=\"share-la.html\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"prototype-data.json\"",
+      "new": "href=\"data/public/louisiana-resources.json\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
+      "new": "href=\"data/public/louisiana-county-veterans-offices.json\""
+    },
+    {
+      "op": "declare",
+      "name": "priority",
+      "value": [
+        "la-claims",
+        "la-adrc",
+        "la-ship",
+        "la-ombudsman",
+        "la-legal-programs",
+        "r02-aid-attendance-housebound",
+        "r02-va-pension",
+        "r02-survivors-pension",
+        "r02-va-health-enrollment",
+        "va-accredited-help"
+      ]
+    },
+    {
+      "op": "declare",
+      "name": "routes",
+      "value": {
+        "benefits": [
+          "la-claims",
+          "la-ship",
+          "r02-va-pension",
+          "r02-aid-attendance-housebound",
+          "r02-disability-increase",
+          "r02-pension-medicaid-rule",
+          "r02-survivors-pension",
+          "r02-dic",
+          "va-accredited-help",
+          "la-adrc"
+        ],
+        "survivors": [
+          "la-claims",
+          "r02-survivors-pension",
+          "r02-dic",
+          "r02-aid-attendance-housebound",
+          "r02-va-burial",
+          "va-accredited-help",
+          "nara-discharge-records"
+        ],
+        "care": [
+          "r02-va-health-enrollment",
+          "va-location-finder",
+          "r02-va-cnh",
+          "r02-va-clc",
+          "r02-general-caregiver",
+          "r02-family-caregiver",
+          "r02-hospice",
+          "r02-palliative",
+          "la-adrc",
+          "la-cil-nhilc",
+          "la-cil-noril",
+          "la-cil-slic",
+          "la-vahealth-systems"
+        ],
+        "rights": [
+          "la-ombudsman",
+          "la-legal-programs"
+        ],
+        "local": [
+          "la-claims",
+          "la-adrc",
+          "la-cil-nhilc",
+          "la-cil-noril",
+          "la-cil-slic",
+          "la-legal-programs",
+          "la-vahealth-systems"
+        ],
+        "housing": [
+          "va-housing-help",
+          "la-ssvf-12-la-038",
+          "la-ssvf-14-la-205",
+          "la-ssvf-20-la-208",
+          "va-location-finder",
+          "va-accredited-help",
+          "nara-discharge-records",
+          "la-legal-programs"
+        ]
+      }
+    },
+    {
+      "op": "declare",
+      "name": "seniorTopics",
+      "value": {
+        "daily": [
+          "la-adrc",
+          "la-cil-nhilc",
+          "la-cil-noril",
+          "la-cil-slic"
+        ],
+        "accessibility": [
+          "la-adrc",
+          "la-cil-nhilc",
+          "la-cil-noril",
+          "la-cil-slic"
+        ],
+        "vision": [
+          "la-adrc"
+        ],
+        "hearing": [
+          "la-adrc"
+        ],
+        "memory": [
+          "alz-dementia-support",
+          "la-adrc"
+        ],
+        "costs": [
+          "la-ship",
+          "la-adrc",
+          "la-legal-programs"
+        ],
+        "rights": [
+          "la-ombudsman",
+          "la-legal-programs"
+        ]
+      }
+    },
+    {
+      "op": "line",
+      "prefix": "routes.accessibility=",
+      "new": "routes.accessibility=['va-hisa','va-sah','va-sha','va-tra','la-adrc','la-cil-nhilc','la-cil-noril','la-cil-slic','va-location-finder',...DATA.filter(x=>x.regional_role==='aging_agency').map(x=>x.program_id)];"
+    },
+    {
+      "op": "line",
+      "prefix": "routes.seniors=",
+      "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
+    },
+    {
+      "op": "replace",
+      "old": "Print a county handoff sheet",
+      "new": "Print a parish handoff sheet"
+    },
+    {
+      "op": "replace",
+      "old": "Offer a county office referral.",
+      "new": "Offer a parish office referral."
+    },
+    {
+      "op": "replace",
+      "old": "Choose a county and confirm participation",
+      "new": "Choose a parish and confirm participation"
+    },
+    {
+      "op": "replace",
+      "old": "County directory in progress:",
+      "new": "Parish directory in progress:"
+    },
+    {
+      "op": "replace",
+      "old": "ask the county office for help. Discuss private",
+      "new": "ask the parish office for help. Discuss private"
+    },
+    {
+      "op": "replace",
+      "old": "A county veterans office can help with the referral",
+      "new": "A parish veterans service office can help with the referral"
+    },
+    {
+      "op": "replace",
+      "old": "number, county, town, official source",
+      "new": "number, parish, town, official source"
+    },
+    {
+      "op": "adapter"
+    },
+    {
+      "op": "embed_data"
+    }
+  ]
 }
