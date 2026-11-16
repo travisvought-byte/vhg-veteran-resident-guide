@@ -76,7 +76,7 @@ def pile(url):
 
 assert pile(base + '/ok') == 'ok' and pile(base + '/same-site') == 'ok'
 assert pile(base + '/gone') == 'broken', 'a missing page on a working site is broken'
-assert pile(base + '/error') == 'broken', 'a page that keeps failing is broken'
+assert pile(base + '/error') == 'unchecked', 'a server error may be a firewall turning the robot away, so it is not called broken'
 assert pile(away + '/veterans/contact') == 'unchecked' and pile(away + '/') == 'unchecked', 'a site that turns robots away everywhere is not called broken'
 assert pile(base + '/refused') == 'unchecked'
 assert pile(base + '/loop') == 'unchecked', 'a redirect that never settles is a robot trap, not a dead page'
@@ -84,6 +84,18 @@ assert pile(base + '/parked') == 'broken' and pile(base + '/gambling') == 'broke
 assert pile(base + '/soft404') == 'broken', 'a page that loads but says not found is broken'
 moved = linkcheck.Checker().check(base + '/moved')
 assert moved[0] == 'moved' and 'localhost' in moved[1]
+assert moved[1] == f'now lands on http://localhost:{other.server_port}/ ("Another organization")', 'the new address is spelled out so it can be pasted into the record'
+# Failures before any answer: only a dead name or a bad certificate is called broken.
+import ssl
+cert = lambda text: ssl.SSLCertVerificationError(1, text)
+assert linkcheck.sort_failure(cert('certificate verify failed: certificate has expired'), 'certificate verify failed: certificate has expired')[0] == 'broken'
+assert linkcheck.sort_failure(cert("Hostname mismatch, certificate is not valid for 'www.example.org'"), "Hostname mismatch, certificate is not valid for 'www.example.org'")[0] == 'broken'
+assert linkcheck.sort_failure(cert('unable to get local issuer certificate'), 'unable to get local issuer certificate')[0] == 'unchecked'
+for text in ('[Errno 104] Connection reset by peer', 'Remote end closed connection without response', '[Errno 101] Network is unreachable',
+             '[Errno 113] No route to host', '[SSL: TLSV1_UNRECOGNIZED_NAME] tlsv1 unrecognized name', 'EOF occurred in violation of protocol', 'timed out'):
+    assert linkcheck.sort_failure(OSError(text), text)[0] == 'unchecked', text
+assert linkcheck.sort_failure(OSError('x'), '[Errno -2] Name or service not known') is None, 'a name that does not resolve gets one more try before it is called broken'
+assert linkcheck.NO_SUCH_SITE.search('[Errno -2] Name or service not known') and linkcheck.NO_SUCH_SITE.search('Temporary failure in name resolution')
 assert linkcheck.site_of('https://dvs.ohio.gov/') == linkcheck.site_of('https://aging.ohio.gov/x') == 'ohio.gov'
 assert linkcheck.site_of('https://health.state.mn.us/') == 'state.mn.us'
 assert linkcheck.site_of('https://www.va.gov/') != linkcheck.site_of('https://www.cms.gov/')

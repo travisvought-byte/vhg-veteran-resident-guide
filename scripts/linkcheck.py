@@ -4,9 +4,11 @@
 A robot cannot settle every link, so each result goes into one of four piles:
 
   ok        the page loaded on the site that was listed
-  broken    the page is gone, the address fails, or the page looks parked or taken over
+  broken    the page is gone (404 or 410), no website answers at the address, its security certificate
+            has expired or does not match, or the page looks parked or taken over
   moved     the address now sends visitors to a different website
-  unchecked the site refused the robot, or turned it away at its front page too
+  unchecked the site refused the robot, cut the connection, answered with a server error, or turned
+            the robot away at its front page too: a robot cannot tell these from a working page
 
 Only "broken" and "moved" are listed link by link, because those are the ones a visitor would hit.
 "unchecked" is counted by site and nobody is asked to open those by hand: many government sites
@@ -14,6 +16,7 @@ refuse every robot, and this guide corrects contacts when someone reports a prob
 
     python3 scripts/linkcheck.py --probe URL [URL ...]   show how single addresses are sorted
 """
+import html
 import re
 import ssl
 import sys
@@ -34,6 +37,29 @@ TAKEN_OVER = re.compile(
 # A page that loads but says it is missing.
 NOT_FOUND = re.compile(r'page (was |is )?not found|page (can.?t|cannot|could not) be found|\b404\b.*not found|no posts found', re.I)
 TITLE = re.compile(r'<title[^>]*>(.*?)</title>', re.I | re.S)
+# The connection ended before any page came back. Firewalls do this to robots, so it proves nothing.
+CUT_OFF = re.compile(r'connection reset|remote end closed|network is unreachable|no route to host|connection refused|'
+                     r'unexpected_eof|eof occurred|unrecognized_name|handshake|wrong_version|alert', re.I)
+# The name itself no longer leads anywhere.
+NO_SUCH_SITE = re.compile(r'name or service not known|nodename nor servname|no address associated|name resolution', re.I)
+
+
+def sort_failure(reason, text):
+    """A request that failed before any answer came back: (pile, why), or None when it is worth one more try."""
+    if 'timed out' in text:
+        return 'unchecked', 'timed out'
+    if isinstance(reason, ssl.SSLCertVerificationError):
+        if 'unable to get local issuer' in text:
+            # The server left out part of its certificate chain. Browsers fetch the missing piece.
+            return 'unchecked', 'incomplete certificate chain (browsers usually accept it)'
+        if 'expired' in text:
+            return 'broken', 'the site\'s security certificate has expired, so browsers show a warning'
+        if 'mismatch' in text.lower() or 'not valid for' in text:
+            return 'broken', 'the security certificate does not match this address, so browsers show a warning'
+        return 'broken', 'security certificate problem: ' + text
+    if CUT_OFF.search(text) and not NO_SUCH_SITE.search(text):
+        return 'unchecked', 'the connection was cut off before a page came back'
+    return None
 
 
 def site_of(url_or_host):
@@ -81,12 +107,13 @@ class Checker:
         for _ in range(2):
             try:
                 status, final, title = _get(url)
+                title = html.unescape(title)
                 if title and TAKEN_OVER.search(title):
                     return 'broken', f'the page looks parked or taken over: "{title}"', final
                 if title and NOT_FOUND.search(title):
                     return 'broken', f'the page loads but says it is missing: "{title}"', final
                 if site_of(final) != site_of(url):
-                    return 'moved', f'now lands on {urllib.parse.urlsplit(final).hostname}' + (f': "{title}"' if title else ''), final
+                    return 'moved', f'now lands on {final}' + (f' ("{title}")' if title else ''), final
                 return 'ok', str(status), final
             except urllib.error.HTTPError as exc:
                 if exc.code in REFUSED:
@@ -101,19 +128,24 @@ class Checker:
                         return 'unchecked', f'the site turned the robot away at its front page too ({last})', url
                     return 'broken', last, url
             except urllib.error.URLError as exc:
-                reason = exc.reason
-                last = str(reason)[:110]
-                if 'timed out' in last:
-                    return 'unchecked', 'timed out', url
-                if isinstance(reason, ssl.SSLCertVerificationError) and 'unable to get local issuer' in last:
-                    # The server left out part of its certificate chain. Browsers fetch the missing piece.
-                    return 'unchecked', 'incomplete certificate chain (browsers usually accept it)', url
+                last = str(exc.reason)[:110]
+                sorted_as = sort_failure(exc.reason, last)
+                if sorted_as:
+                    return sorted_as + (url,)
             except TimeoutError:
                 return 'unchecked', 'timed out', url
-            except Exception as exc:  # report it; a person decides what it means
+            except Exception as exc:  # anything else: try once more, then leave it for a person
                 last = str(exc)[:110]
+                sorted_as = sort_failure(exc, last)
+                if sorted_as:
+                    return sorted_as + (url,)
             time.sleep(2)
-        return 'broken', last, url
+        if NO_SUCH_SITE.search(last):
+            return 'broken', 'no website answers at this address', url
+        if last.startswith('HTTP 5'):
+            # A server error can be a real outage or a firewall's way of turning a robot away.
+            return 'unchecked', f'the server answered with an error ({last})', url
+        return 'unchecked', 'could not be requested: ' + last, url
 
     def check_all(self, urls, workers=4):
         def work(u):
