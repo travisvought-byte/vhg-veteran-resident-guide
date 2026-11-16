@@ -2,8 +2,8 @@
 
 FindBingo.org is the multi-state bingo finder. Players type a ZIP code (or pick a state) and see
 bingo near them, closest first. It covers Michigan and Indiana with state data, sends Ohio players
-to the Ohio Bingo Finder, and tells Kentucky, West Virginia and Pennsylvania players plainly that no
-public list exists yet, with a free way for halls to send game times.
+to the Ohio Bingo Finder, and tells Kentucky, West Virginia, Pennsylvania and Florida players plainly
+that no public list exists yet, with a free way for halls to send game times.
 
 Started November 15, 2026, at Travis's direction: one national finder, neighboring states first.
 
@@ -39,9 +39,12 @@ The page's own lookup (a POST to `/api-proxy/CG-FindABingo-Reverse-Proxy` with a
 read for every county in its list. Each row gives the licensed organization, location, day and
 licensed begin and end time. Rows were grouped by street address into venues; each session keeps
 its organization. The page tells players that hours come from the license list and to call ahead
-for the first game time. The state lookup stopped answering partway through; the counties it had
-not returned yet are listed in `pending_counties` in `bingo-states.json`, and the page names them
-and links the state lookup. To finish them, read those counties the same way, add their venues and
+for the first game time. The state lookup refuses some requests: it throttles bursts, and it returns
+"Unable to process your request" for Clinton County every time (also when searched by city), so a
+county that fails should be retried later rather than stopping the whole run. Counties not loaded
+yet are listed in `pending_counties` in `bingo-states.json`, and the page names them and links the
+state lookup. Two typos in the state list are fixed in the data with a note on the record (a
+Manistique hall listed with Mason's ZIP code, and a street number written "1o1"). To finish them, read those counties the same way, add their venues and
 remove them from `pending_counties` (the build refuses a county that is both listed and pending).
 
 **Indiana.** The Indiana Gaming Commission's
@@ -53,6 +56,14 @@ times or phone numbers, so these listings say so, offer a phone lookup and direc
 behind a "Show them too" button wherever halls with game days are nearby. Licenses past their
 expiration date drop off automatically.
 
+**Florida.** Florida does not license bingo statewide: section 849.0931 lets charitable, nonprofit
+and veterans' organizations (and some homeowners' and mobile home park associations) run bingo, sets
+limits (two days a week, $250 jackpots, players 18 and older) and names no state license. Some
+counties license it locally (Pinellas through Consumer Protection, Marion through its County
+Administrator), but neither publishes a list. Florida therefore gets the "no list yet" card for now.
+Building a Florida list means hall-by-hall research from organizer pages and dated city calendars
+(Jacksonville's senior centers, for example, post monthly calendars with bingo days and times).
+
 **Kentucky, West Virginia, Pennsylvania.** No public statewide list of games or halls was found:
 Kentucky's Office of Charitable Gaming (now part of Kentucky Horse Racing & Gaming) publishes county
 totals only; West Virginia's Tax Division links no licensee list; Pennsylvania bingo licenses are
@@ -60,7 +71,7 @@ issued by each county treasurer. These states get an honest "no list yet" card, 
 an email link for halls to send game times.
 
 **ZIP codes.** The guide's GeoNames/Midwire centroids (CC BY 3.0, attributed in the footer), limited
-to the six states' ZIP prefixes. ZIP 49037 (Battle Creek) is missing there; its point comes from the
+to the covered states' ZIP prefixes (Florida's military 340 prefix excluded). ZIP 49037 (Battle Creek) is missing there; its point comes from the
 U.S. Census Geocoder match for the bingo hall at 228 N 20th St.
 
 ## Refreshing the lists
