@@ -1,8 +1,8 @@
 # FindBingo.org
 
 FindBingo.org is the multi-state bingo finder. Players type a ZIP code (or pick a state) and see
-bingo near them, closest first. It covers Michigan and Indiana with state data, sends Ohio players
-to the Ohio Bingo Finder, and tells Kentucky, West Virginia, Pennsylvania and Florida players plainly
+bingo near them, closest first. It covers Michigan and Indiana with state data, serves the Ohio Bingo
+Finder at findbingo.org/ohio/, and tells Kentucky, West Virginia, Pennsylvania and Florida players plainly
 that no public list exists yet, with a free way for halls to send game times.
 
 Started November 15, 2026, at Travis's direction: one national finder, neighboring states first.

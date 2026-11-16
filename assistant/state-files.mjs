@@ -35,7 +35,14 @@ export const STATES=Object.freeze({
   "NE": "Nebraska",
   "NM": "New Mexico",
   "MS": "Mississippi",
-  "ID": "Idaho"
+  "ID": "Idaho",
+  "SD": "South Dakota",
+  "NH": "New Hampshire",
+  "ME": "Maine",
+  "HI": "Hawaii",
+  "DE": "Delaware",
+  "RI": "Rhode Island",
+  "VT": "Vermont"
 });
 export const STATE_FILES=Object.freeze({
   "OH": [
@@ -177,6 +184,34 @@ export const STATE_FILES=Object.freeze({
   "ID": [
     "data/public/idaho-resources.json",
     "data/public/idaho-county-veterans-offices.json"
+  ],
+  "SD": [
+    "data/public/south-dakota-resources.json",
+    "data/public/south-dakota-county-veterans-offices.json"
+  ],
+  "NH": [
+    "data/public/new-hampshire-resources.json",
+    "data/public/new-hampshire-county-veterans-offices.json"
+  ],
+  "ME": [
+    "data/public/maine-resources.json",
+    "data/public/maine-county-veterans-offices.json"
+  ],
+  "HI": [
+    "data/public/hawaii-resources.json",
+    "data/public/hawaii-county-veterans-offices.json"
+  ],
+  "DE": [
+    "data/public/delaware-resources.json",
+    "data/public/delaware-county-veterans-offices.json"
+  ],
+  "RI": [
+    "data/public/rhode-island-resources.json",
+    "data/public/rhode-island-county-veterans-offices.json"
+  ],
+  "VT": [
+    "data/public/vermont-resources.json",
+    "data/public/vermont-county-veterans-offices.json"
   ]
 });
 export const localityLabel=row=>row?(["independent_city","statewide"].includes(row.county_type)?row.county:row.county+(row.county_type==="parish"?" Parish":" County")):"";

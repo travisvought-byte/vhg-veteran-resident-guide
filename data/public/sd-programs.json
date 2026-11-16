@@ -1,208 +1,1065 @@
 [
- {
-  "program_id": "sd-claims",
-  "name": "South Dakota veterans: accredited claims help",
-  "official_url": "https://vetaffairs.sd.gov/",
-  "organization": "South Dakota Department of Veterans Affairs",
-  "service_area": [
-   "All South Dakota counties"
-  ],
-  "state": "SD",
-  "needs_supported": [
-   "general_navigation",
-   "benefits_and_funding"
-  ],
-  "description": "Free help with VA claims, applications and appeals for veterans and families.",
-  "next_step": "Call the state veterans agency; ask for a benefits review and the office that serves your county.",
-  "constraints": [],
-  "public_contact": {
-   "phone": "605-773-3269"
+  {
+    "program_id": "sd-claims",
+    "name": "South Dakota veterans: county and tribal veterans service officers for claims help",
+    "official_url": "https://vetaffairs.sd.gov/",
+    "organization": "South Dakota Department of Veterans Affairs",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "SD",
+    "needs_supported": [
+      "general_navigation",
+      "benefits_and_funding"
+    ],
+    "description": "Free help with VA claims, appeals, pension and survivor benefits from county and tribal veterans service officers, trained by the South Dakota Department of Veterans Affairs. The department’s state veterans service officers and claims office work from the VA Regional Office in Sioux Falls.",
+    "next_step": "Choose a county above for its county veterans service officer. Or call the department at 605-773-3269, or its state veterans service officers and claims office at 605-333-6869.",
+    "constraints": [
+      "Many rural county offices are open only a few days a month; check the hours on the county card and call ahead."
+    ],
+    "public_contact": {
+      "phone": "605-773-3269",
+      "phone_label": "South Dakota Department of Veterans Affairs (605-773-3269)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://vetaffairs.sd.gov/veteransserviceofficers/VSO Publications/2026 VSO Directory.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://vetaffairs.sd.gov/veteransserviceofficers/VSO Publications/2026 VSO Directory.pdf",
+        "title": "South Dakota Department of Veterans Affairs: 2026 Veterans Service Officers Directory (updated September 15, 2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "County veterans service offices with address, phone and hours; tribal veterans service offices; the department and claims office lines; read in full."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "sd-adrc",
+    "name": "Dakota at Home: South Dakota’s Aging and Disability Resource Center",
+    "official_url": "https://dakotaathome.sd.gov/search/84901553-f7f9-557c-a9a6-5c3d6640cc78",
+    "organization": "South Dakota Department of Human Services, Division of Long Term Services and Supports",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "SD",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Dakota at Home is the statewide starting point for older adults, adults with disabilities and caregivers: information, referral and intake for help at home, meals, caregiver support, assisted living and other long-term services. Military service is not required.",
+    "next_step": "Call Dakota at Home at 833-663-9673 and press 1 for Long Term Services and Supports (8 a.m. to 5 p.m. Central Time, Monday to Friday).",
+    "constraints": [
+      "Services are for adults 60 and older and adults 18 and older with a disability who meet program eligibility."
+    ],
+    "public_contact": {
+      "phone": "833-663-9673",
+      "phone_label": "Dakota at Home (833-663-9673)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://dakotaathome.sd.gov/search/84901553-f7f9-557c-a9a6-5c3d6640cc78"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dakotaathome.sd.gov/search/84901553-f7f9-557c-a9a6-5c3d6640cc78",
+        "title": "Dakota at Home: Long Term Services and Supports, South Dakota Department of Human Services",
+        "reviewed_on": "2026-11-16",
+        "scope": "Phone, hours, eligibility and services, including SHIINE, the ombudsman program and Adult Protective Services; read in full. Last updated September 15, 2026."
+      },
+      {
+        "url": "https://dhs.sd.gov/content/dam/digital/united-states/south-dakota/sdo/pdf/long-term-services-and-supports/Path-To-Services.pdf",
+        "title": "South Dakota Department of Human Services: Path to Services",
+        "reviewed_on": "2026-11-16",
+        "scope": "Contact 833-663-9673 or dakotaathome@state.sd.us; search excerpt."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_page_text",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://vetaffairs.sd.gov/"
+  {
+    "program_id": "sd-ship",
+    "name": "Medicare counseling (SHIINE) for South Dakota",
+    "official_url": "https://dss.sd.gov/formsandpubs/docs/MEDELGBLTY/MedicareSavingsProgramBrochureEntire.pdf",
+    "organization": "Senior Health Information and Insurance Education (SHIINE)",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "SD",
+    "needs_supported": [
+      "benefits_and_funding"
+    ],
+    "description": "Free Medicare counseling from South Dakota’s State Health Insurance Assistance Program, SHIINE: Medicare questions, supplement and drug plans, long-term care insurance and help applying for the Medicare Savings Program.",
+    "next_step": "Call SHIINE: eastern South Dakota 800-536-8197, central 877-331-4834, western 877-286-9072. For Medicare itself, call 800-MEDICARE (800-633-4227).",
+    "constraints": [
+      "Have your Medicare card and drug list ready."
+    ],
+    "public_contact": {
+      "phone": "800-536-8197",
+      "phone_label": "SHIINE, eastern South Dakota (800-536-8197)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://dss.sd.gov/formsandpubs/docs/MEDELGBLTY/MedicareSavingsProgramBrochureEntire.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dss.sd.gov/formsandpubs/docs/MEDELGBLTY/MedicareSavingsProgramBrochureEntire.pdf",
+        "title": "South Dakota Department of Social Services: Medicare Savings Program brochure",
+        "reviewed_on": "2026-11-16",
+        "scope": "SHIINE regional lines: eastern 1.800.536.8197, western 1.877.286.9072, central 1.877.331.4834; search excerpt."
+      },
+      {
+        "url": "https://www.cms.gov/about-cms/contact/directory/senior-health-information-insurance-education-shiine/1562206",
+        "title": "CMS: Senior Health Information & Insurance Education (SHIINE)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Toll-free (800) 536-8197; search excerpt."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://vetaffairs.sd.gov/",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ]
- },
- {
-  "program_id": "sd-ship",
-  "name": "Medicare counseling (SHIP) for South Dakota",
-  "official_url": "https://www.shiphelp.org/",
-  "organization": "SHIP Technical Assistance Center",
-  "service_area": [
-   "All South Dakota counties"
-  ],
-  "state": "SD",
-  "needs_supported": [
-   "benefits_and_funding"
-  ],
-  "description": "Free, unbiased Medicare counseling from the State Health Insurance Assistance Program.",
-  "next_step": "Call or use the locator to reach the South Dakota SHIP and ask for a counseling appointment.",
-  "constraints": [],
-  "public_contact": {
-   "phone": "877-839-2675"
+  {
+    "program_id": "sd-ombudsman",
+    "name": "South Dakota Long Term Care Ombudsman and adult abuse reporting",
+    "official_url": "https://dakotaathome.sd.gov/search/84901553-f7f9-557c-a9a6-5c3d6640cc78",
+    "organization": "South Dakota Department of Human Services, Long Term Care Ombudsman Program",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "SD",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "description": "Advocacy for residents of nursing homes, assisted living centers and community living homes. Ombudsman and elder abuse reports both go through Dakota at Home.",
+    "next_step": "Call Dakota at Home at 833-663-9673 during business hours for the ombudsman or to report abuse, neglect or exploitation of an older or disabled adult. After hours, call local law enforcement. In an emergency, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing agency."
+    ],
+    "public_contact": {
+      "phone": "833-663-9673",
+      "phone_label": "Dakota at Home: ombudsman and abuse reports (833-663-9673)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://dakotaathome.sd.gov/search/84901553-f7f9-557c-a9a6-5c3d6640cc78"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dakotaathome.sd.gov/search/84901553-f7f9-557c-a9a6-5c3d6640cc78",
+        "title": "Dakota at Home: Long Term Services and Supports, South Dakota Department of Human Services",
+        "reviewed_on": "2026-11-16",
+        "scope": "Elder abuse and ombudsman reports at 833-663-9673 during business hours; after hours, local law enforcement; read in full. Last updated September 15, 2026."
+      },
+      {
+        "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/9.2023ombuds_rack_card.pdf",
+        "title": "South Dakota Long Term Care Ombudsman Program rack card",
+        "reviewed_on": "2026-11-16",
+        "scope": "Program phone 1-833-663-9673; search excerpt."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "sd-legal-programs",
+    "name": "Free legal help for South Dakota veterans and older adults",
+    "official_url": "https://sdlawhelp.org/node/9/our-offices",
+    "organization": "East River Legal Services; Dakota Plains Legal Services; Access to Justice, Inc.",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "SD",
+    "resource_role": "legal_aid",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation",
+      "housing"
+    ],
+    "description": "East River Legal Services covers the 33 eastern counties from Sioux Falls. Dakota Plains Legal Services covers the western counties and the tribal nations from offices in Eagle Butte, Fort Thompson, Fort Yates, Mission, Pine Ridge, Rapid City and Sisseton. Access to Justice, the State Bar’s program, offers free and reduced-fee help statewide.",
+    "next_step": "Apply online at sdlawhelp.org. Eastern counties: East River Legal Services, 605-336-9230 (phone applications Tuesdays, 9 a.m. to noon Central). Western counties: Dakota Plains Legal Services, Rapid City 605-342-7171 or Mission 605-856-4444. Statewide: Access to Justice, 855-287-3510.",
+    "constraints": [
+      "Legal aid screens by income, case type and county."
+    ],
+    "public_contact": {
+      "phone": "605-336-9230",
+      "phone_label": "East River Legal Services (605-336-9230)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://sdlawhelp.org/node/9/our-offices"
+    },
+    "source_evidence": [
+      {
+        "url": "https://sdlawhelp.org/node/9/our-offices",
+        "title": "SD Law Help: Our Offices",
+        "reviewed_on": "2026-11-16",
+        "scope": "East River Legal Services, the Dakota Plains Legal Services offices and Access to Justice, with phones and the counties and reservations each serves; read in full. The page is undated."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.shiphelp.org/?p=317"
+  {
+    "program_id": "sd-vahealth-systems",
+    "name": "VA health care systems serving South Dakota",
+    "official_url": "https://www.va.gov/find-locations/?facilityType=health",
+    "organization": "U.S. Department of Veterans Affairs",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "SD",
+    "resource_role": "va_health_system",
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "South Dakota veterans are served by the Sioux Falls VA Health Care System (2501 W. 22nd Street, Sioux Falls; 605-336-3230) and the VA Black Hills Health Care System (Fort Meade VA Medical Center, 605-347-2511, toll-free 800-743-1070; Hot Springs VA Medical Center, 605-745-2000, toll-free 800-764-5370).",
+    "next_step": "Use VA’s facility locator with your ZIP code to find the closest clinic. Not enrolled yet? Ask your county veterans service officer for help applying.",
+    "constraints": [
+      "Which system serves you depends on where you live; VA’s locator shows the right clinic."
+    ],
+    "public_contact": {
+      "phone": "605-336-3230",
+      "phone_label": "Sioux Falls VA Health Care System (605-336-3230)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.va.gov/Directory/Guide/state_PTSD.cfm?STATE=SD"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.va.gov/Directory/Guide/state_PTSD.cfm?STATE=SD",
+        "title": "VA PTSD program locator: South Dakota",
+        "reviewed_on": "2026-11-16",
+        "scope": "Sioux Falls VA Health Care System, 2501 W. 22nd Street, phone 605-336-3230; search excerpt."
+      },
+      {
+        "url": "https://www.va.gov/black-hills-health-care/contact-us/",
+        "title": "VA Black Hills health care: Contact us",
+        "reviewed_on": "2026-11-16",
+        "scope": "Fort Meade VA Medical Center 605-347-2511 (toll-free 800-743-1070); Hot Springs VA Medical Center 605-745-2000 (toll-free 800-764-5370); search excerpt."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.shiphelp.org/?p=317",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ]
- },
- {
-  "program_id": "sd-ssvf-20-sd-136",
-  "name": "Cornerstone Rescue Mission: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Cornerstone Rescue Mission",
-  "service_area": [
-   "All South Dakota counties"
-  ],
-  "state": "SD",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-SD-136): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Aurora County, Beadle County, Bennett County, Bon Homme County, Brookings County, Brown County, Brule County, Buffalo County, Butte County, Campbell County, Charles Mix County, Clark County and 55 more.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 605-718-8712.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "605-484-9209",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "sd-cil-ilc-aberdeen",
+    "name": "Independent Living Choices (Aberdeen)",
+    "organization": "Independent Living Choices",
+    "official_url": "https://www.ilcchoices.org/",
+    "service_area": [
+      "Brown",
+      "Day",
+      "Edmunds",
+      "Marshall",
+      "McPherson"
+    ],
+    "state": "SD",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 110 Sixth Avenue Southeast, Aberdeen, SD 57401. Toll-free: 800-406-2649."
+    ],
+    "public_contact": {
+      "phone": "605-626-2976",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/sd",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/sd"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/sd",
+        "title": "ILRU: South Dakota CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each office’s address, phones, website and counties served; read in full. The directory is undated. It prints “Duel” for Deuel and “Fall River Jones” for Fall River and Jones, and lists the Martin office for “Lakota, Oglala, Pine Ridge”, shown here as Oglala Lakota County."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "sd-cil-ilc-brookings",
+    "name": "Independent Living Choices (Brookings)",
+    "organization": "Independent Living Choices",
+    "official_url": "https://www.ilcchoices.org/",
+    "service_area": [
+      "Brookings",
+      "Kingsbury",
+      "Lake",
+      "Miner"
+    ],
+    "state": "SD",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 748 22nd Ave S, Brookings, SD 57006. Toll-free: 800-947-3770."
+    ],
+    "public_contact": {
+      "phone": "605-692-5550",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/sd",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/sd"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/sd",
+        "title": "ILRU: South Dakota CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each office’s address, phones, website and counties served; read in full. The directory is undated. It prints “Duel” for Deuel and “Fall River Jones” for Fall River and Jones, and lists the Martin office for “Lakota, Oglala, Pine Ridge”, shown here as Oglala Lakota County."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "sd-cil-ilc-huron",
+    "name": "Independent Living Choices (Huron)",
+    "organization": "Independent Living Choices",
+    "official_url": "https://www.ilcchoices.org/",
+    "service_area": [
+      "Beadle",
+      "Faulk",
+      "Hand",
+      "Hyde",
+      "Spink"
+    ],
+    "state": "SD",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 351 Wisconsin Avenue Southwest, Ste 105, Huron, SD 57350. Toll-free: 800-406-2649."
+    ],
+    "public_contact": {
+      "phone": "605-353-6710",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/sd",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/sd"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/sd",
+        "title": "ILRU: South Dakota CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each office’s address, phones, website and counties served; read in full. The directory is undated. It prints “Duel” for Deuel and “Fall River Jones” for Fall River and Jones, and lists the Martin office for “Lakota, Oglala, Pine Ridge”, shown here as Oglala Lakota County."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 189",
-    "sheet": "Contacts",
-    "row": 189,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "sd-ssvf-26-sd-475",
-  "name": "SER-JOBS FOR PROGRESS NATIONAL INC: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "SER-JOBS FOR PROGRESS NATIONAL INC",
-  "service_area": [
-   "All South Dakota counties"
-  ],
-  "state": "SD",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 26-SD-475): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Buffalo County, Lyman County, Oglala Lakota County, Todd County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "916-224-8049",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "sd-cil-ilc-martin",
+    "name": "Independent Living Choices (Martin)",
+    "organization": "Independent Living Choices",
+    "official_url": "https://www.ilcchoices.org/",
+    "service_area": [
+      "Bennett",
+      "Jackson",
+      "Oglala Lakota",
+      "Todd"
+    ],
+    "state": "SD",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 316 Main Street, Ste. F, Martin, SD 57551. Toll-free: 800-947-3770. Also serves the Pine Ridge and Rosebud tribal nations."
+    ],
+    "public_contact": {
+      "phone": "605-685-1421",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/sd",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/sd"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/sd",
+        "title": "ILRU: South Dakota CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each office’s address, phones, website and counties served; read in full. The directory is undated. It prints “Duel” for Deuel and “Fall River Jones” for Fall River and Jones, and lists the Martin office for “Lakota, Oglala, Pine Ridge”, shown here as Oglala Lakota County."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "sd-cil-ilc-mitchell",
+    "name": "Independent Living Choices (Mitchell)",
+    "organization": "Independent Living Choices",
+    "official_url": "https://www.ilcchoices.org/",
+    "service_area": [
+      "Aurora",
+      "Brule",
+      "Buffalo",
+      "Davison",
+      "Hanson",
+      "Jerauld",
+      "Sanborn"
+    ],
+    "state": "SD",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 417 North Main Street, Ste 101, Mitchell, SD 57301. Toll-free: 800-947-3770."
+    ],
+    "public_contact": {
+      "phone": "605-995-8141",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/sd",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/sd"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/sd",
+        "title": "ILRU: South Dakota CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each office’s address, phones, website and counties served; read in full. The directory is undated. It prints “Duel” for Deuel and “Fall River Jones” for Fall River and Jones, and lists the Martin office for “Lakota, Oglala, Pine Ridge”, shown here as Oglala Lakota County."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "sd-cil-ilc-mobridge",
+    "name": "Independent Living Choices (Mobridge)",
+    "organization": "Independent Living Choices",
+    "official_url": "https://www.ilcchoices.org/",
+    "service_area": [
+      "Campbell",
+      "Corson",
+      "Dewey",
+      "Potter",
+      "Walworth",
+      "Ziebach"
+    ],
+    "state": "SD",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 415 14th Avenue E, Ste B, Mobridge, SD 57601. Toll-free: 800-947-3770. Also serves the Cheyenne River tribal nation."
+    ],
+    "public_contact": {
+      "phone": "605-824-7325",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/sd",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/sd"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/sd",
+        "title": "ILRU: South Dakota CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each office’s address, phones, website and counties served; read in full. The directory is undated. It prints “Duel” for Deuel and “Fall River Jones” for Fall River and Jones, and lists the Martin office for “Lakota, Oglala, Pine Ridge”, shown here as Oglala Lakota County."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 233",
-    "sheet": "Contacts",
-    "row": 233,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "sd-ssvf-26-zz-478",
-  "name": "Ponca Tribe of Nebraska: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Ponca Tribe of Nebraska",
-  "service_area": [
-   "All South Dakota counties"
-  ],
-  "state": "SD",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 26-ZZ-478): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Charles Mix County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 531-248-3030.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "402-438-9222",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "sd-cil-ilc-watertown",
+    "name": "Independent Living Choices (Watertown)",
+    "organization": "Independent Living Choices",
+    "official_url": "https://www.ilcchoices.org/",
+    "service_area": [
+      "Clark",
+      "Codington",
+      "Deuel",
+      "Grant",
+      "Hamlin",
+      "Roberts"
+    ],
+    "state": "SD",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 312 Ninth Avenue Southeast, Suite C, Watertown, SD 57201. Also serves the Sisseton-Wahpeton tribal nation."
+    ],
+    "public_contact": {
+      "phone": "605-882-5249",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/sd",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/sd"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/sd",
+        "title": "ILRU: South Dakota CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each office’s address, phones, website and counties served; read in full. The directory is undated. It prints “Duel” for Deuel and “Fall River Jones” for Fall River and Jones, and lists the Martin office for “Lakota, Oglala, Pine Ridge”, shown here as Oglala Lakota County."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "sd-cil-ilc-yankton",
+    "name": "Independent Living Choices (Yankton)",
+    "organization": "Independent Living Choices",
+    "official_url": "https://www.ilcchoices.org/",
+    "service_area": [
+      "Bon Homme",
+      "Clay",
+      "Hutchinson",
+      "Union",
+      "Yankton"
+    ],
+    "state": "SD",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 610 West 23rd Street, Suite 11, Yankton, SD 57078. Toll-free: 800-947-3770."
+    ],
+    "public_contact": {
+      "phone": "605-668-2940",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/sd",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/sd"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/sd",
+        "title": "ILRU: South Dakota CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each office’s address, phones, website and counties served; read in full. The directory is undated. It prints “Duel” for Deuel and “Fall River Jones” for Fall River and Jones, and lists the Martin office for “Lakota, Oglala, Pine Ridge”, shown here as Oglala Lakota County."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "sd-cil-ilc-sioux-falls",
+    "name": "Independent Living Choices (Sioux Falls)",
+    "organization": "Independent Living Choices",
+    "official_url": "https://www.ilcchoices.org/",
+    "service_area": [
+      "Lincoln",
+      "McCook",
+      "Moody",
+      "Minnehaha",
+      "Turner"
+    ],
+    "state": "SD",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 4107 South Carnegie Circle, Sioux Falls, SD 57106. Also serves the Flandreau Santee tribal nation."
+    ],
+    "public_contact": {
+      "phone": "605-362-3550",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/sd",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/sd"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/sd",
+        "title": "ILRU: South Dakota CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each office’s address, phones, website and counties served; read in full. The directory is undated. It prints “Duel” for Deuel and “Fall River Jones” for Fall River and Jones, and lists the Martin office for “Lakota, Oglala, Pine Ridge”, shown here as Oglala Lakota County."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 236",
-    "sheet": "Contacts",
-    "row": 236,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- }
+  {
+    "program_id": "sd-cil-wril-rapid-city",
+    "name": "Western Resources for Independent Living (Rapid City)",
+    "organization": "Western Resources for Independent Living",
+    "official_url": "https://wril.org/",
+    "service_area": [
+      "Butte",
+      "Custer",
+      "Fall River",
+      "Jones",
+      "Haakon",
+      "Harding",
+      "Hughes",
+      "Jackson",
+      "Lawrence",
+      "Lyman",
+      "Meade",
+      "Mellette",
+      "Perkins",
+      "Pennington",
+      "Stanley",
+      "Sully",
+      "Tripp"
+    ],
+    "state": "SD",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 529 Kansas City, Suite 203, Rapid City, SD 57701. Toll-free: 888-434-4943."
+    ],
+    "public_contact": {
+      "phone": "605-718-1930",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/sd",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/sd"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/sd",
+        "title": "ILRU: South Dakota CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each office’s address, phones, website and counties served; read in full. The directory is undated. It prints “Duel” for Deuel and “Fall River Jones” for Fall River and Jones, and lists the Martin office for “Lakota, Oglala, Pine Ridge”, shown here as Oglala Lakota County."
+      }
+    ]
+  },
+  {
+    "program_id": "sd-cil-wril-pierre",
+    "name": "Western Resources for Independent Living (Pierre)",
+    "organization": "Western Resources for Independent Living",
+    "official_url": "https://wril.org/",
+    "service_area": [
+      "Hughes",
+      "Jones",
+      "Lyman",
+      "Mellette",
+      "Stanley",
+      "Sully",
+      "Tripp"
+    ],
+    "state": "SD",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 740 East Sioux Avenue, Suite 106, Pierre, SD 57501. Toll-free: 888-434-4943."
+    ],
+    "public_contact": {
+      "phone": "605-494-1005",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/sd",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/sd"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/sd",
+        "title": "ILRU: South Dakota CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each office’s address, phones, website and counties served; read in full. The directory is undated. It prints “Duel” for Deuel and “Fall River Jones” for Fall River and Jones, and lists the Martin office for “Lakota, Oglala, Pine Ridge”, shown here as Oglala Lakota County."
+      }
+    ]
+  },
+  {
+    "program_id": "sd-cil-wril-spearfish",
+    "name": "Western Resources for Independent Living (Spearfish)",
+    "organization": "Western Resources for Independent Living",
+    "official_url": "https://wril.org/",
+    "service_area": [
+      "Butte",
+      "Harding",
+      "Lawrence",
+      "Meade",
+      "Perkins"
+    ],
+    "state": "SD",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 430 Oriole Drive, Suite C, Spearfish, SD 57783."
+    ],
+    "public_contact": {
+      "phone": "605-559-0500",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/sd",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/sd"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/sd",
+        "title": "ILRU: South Dakota CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each office’s address, phones, website and counties served; read in full. The directory is undated. It prints “Duel” for Deuel and “Fall River Jones” for Fall River and Jones, and lists the Martin office for “Lakota, Oglala, Pine Ridge”, shown here as Oglala Lakota County."
+      }
+    ]
+  },
+  {
+    "program_id": "sd-ssvf-20-sd-136",
+    "name": "Cornerstone Rescue Mission: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Cornerstone Rescue Mission",
+    "service_area": [
+      "Aurora",
+      "Beadle",
+      "Bennett",
+      "Bon Homme",
+      "Brookings",
+      "Brown",
+      "Brule",
+      "Buffalo",
+      "Butte",
+      "Campbell",
+      "Charles Mix",
+      "Clark",
+      "Clay",
+      "Codington",
+      "Corson",
+      "Custer",
+      "Davison",
+      "Day",
+      "Deuel",
+      "Dewey",
+      "Douglas",
+      "Edmunds",
+      "Fall River",
+      "Faulk",
+      "Grant",
+      "Gregory",
+      "Haakon",
+      "Hamlin",
+      "Hand",
+      "Hanson",
+      "Harding",
+      "Hughes",
+      "Hutchinson",
+      "Hyde",
+      "Jackson",
+      "Jerauld",
+      "Jones",
+      "Kingsbury",
+      "Lake",
+      "Lawrence",
+      "Lincoln",
+      "Lyman",
+      "Marshall",
+      "McCook",
+      "McPherson",
+      "Meade",
+      "Mellette",
+      "Miner",
+      "Minnehaha",
+      "Moody",
+      "Oglala Lakota",
+      "Pennington",
+      "Perkins",
+      "Potter",
+      "Roberts",
+      "Sanborn",
+      "Oglala Lakota",
+      "Spink",
+      "Stanley",
+      "Sully",
+      "Todd",
+      "Tripp",
+      "Turner",
+      "Union",
+      "Walworth",
+      "Yankton",
+      "Ziebach"
+    ],
+    "state": "SD",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-SD-136): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 605-718-8712.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "605-484-9209",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 189",
+        "sheet": "Contacts",
+        "row": 189,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
+  },
+  {
+    "program_id": "sd-ssvf-26-sd-475",
+    "name": "SER-JOBS FOR PROGRESS NATIONAL INC: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "SER-JOBS FOR PROGRESS NATIONAL INC",
+    "service_area": [
+      "Buffalo",
+      "Lyman",
+      "Oglala Lakota",
+      "Todd"
+    ],
+    "state": "SD",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 26-SD-475): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "916-224-8049",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 233",
+        "sheet": "Contacts",
+        "row": 233,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
+  },
+  {
+    "program_id": "sd-ssvf-26-zz-478",
+    "name": "Ponca Tribe of Nebraska: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Ponca Tribe of Nebraska",
+    "service_area": [
+      "Charles Mix"
+    ],
+    "state": "SD",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 26-ZZ-478): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 531-248-3030.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "402-438-9222",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 236",
+        "sheet": "Contacts",
+        "row": 236,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
+  }
 ]

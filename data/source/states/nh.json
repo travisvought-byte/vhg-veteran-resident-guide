@@ -1,0 +1,642 @@
+{
+ "about": "Research sheet for the New Hampshire county edition. Every contact below was read on the date in reviewed_on from the page named beside it; scripts/make_county_state.py turns it into the edition files.",
+ "code": "NH",
+ "name": "New Hampshire",
+ "slug": "new-hampshire",
+ "counties": 10,
+ "reviewed_on": "2026-11-16",
+ "month_label": "November 16, 2026",
+ "template_date": "November 4, 2026",
+ "phones_sentence": "Veterans contacts come from the NH Division of Veterans Services’ VSOs and Sites page. Every visitation site is by appointment through the Division, 603-624-9230.",
+ "senior_line_id": "nh-adrc",
+ "agency": {
+  "url": "https://dmavs.nh.gov/veterans-services"
+ },
+ "offices": {
+  "source_url": "https://dmavs.nh.gov/veterans-services/vsos-and-sites",
+  "source_title": "NH Department of Military Affairs and Veterans Services: VSOs and Sites",
+  "review_method": "full_official_page_text",
+  "note": "NH Division of Veterans Services officers are state employees who represent veterans and their dependents throughout the VA claim process at no charge.",
+  "selection": "Main office and visitation sites as printed on the Division’s VSOs and Sites page; each site is listed under the county it is in (the “Berlin” site is in Gorham, Coos County; Hooksett is in Merrimack County). Belknap and Strafford have no site, and Sullivan’s is on hold; those three show the Division’s statewide card.",
+  "list": [
+   {
+    "county": "Belknap",
+    "organization": "NH Division of Veterans Services",
+    "phone": "603-624-9230",
+    "other_phones": [
+     "800-622-9230"
+    ],
+    "source_url": "https://dmavs.nh.gov/veterans-services/vsos-and-sites",
+    "source_title": "NH Department of Military Affairs and Veterans Services: VSOs and Sites",
+    "address": "No visitation site in Belknap County. Main office: 275 Chestnut Street, Room 517, Manchester, NH 03101-2411.",
+    "office_type": "statewide",
+    "note": "Call the Division for a phone appointment or an appointment at the nearest visitation site."
+   },
+   {
+    "county": "Carroll",
+    "organization": "NH Division of Veterans Services",
+    "phone": "603-624-9230",
+    "other_phones": [
+     "800-622-9230"
+    ],
+    "source_url": "https://dmavs.nh.gov/veterans-services/vsos-and-sites",
+    "source_title": "NH Department of Military Affairs and Veterans Services: VSOs and Sites",
+    "address": "Main office: 275 Chestnut Street, Room 517, Manchester, NH 03101-2411. Visitation sites in Carroll County are listed below.",
+    "office_type": "state_field_office",
+    "other_offices": [
+     {
+      "address": "North Conway: Gibson Center for Senior Services, 14 Grove Street",
+      "schedule": "By appointment only; book through the Division at 603-624-9230",
+      "phone": "603-624-9230"
+     }
+    ]
+   },
+   {
+    "county": "Cheshire",
+    "organization": "NH Division of Veterans Services",
+    "phone": "603-624-9230",
+    "other_phones": [
+     "800-622-9230"
+    ],
+    "source_url": "https://dmavs.nh.gov/veterans-services/vsos-and-sites",
+    "source_title": "NH Department of Military Affairs and Veterans Services: VSOs and Sites",
+    "address": "Main office: 275 Chestnut Street, Room 517, Manchester, NH 03101-2411. Visitation sites in Cheshire County are listed below.",
+    "office_type": "state_field_office",
+    "other_offices": [
+     {
+      "address": "Keene: NH Employment Security, 149 Emerald Street",
+      "schedule": "By appointment only; book through the Division at 603-624-9230",
+      "phone": "603-624-9230"
+     },
+     {
+      "address": "Keene: Vet Center (The Curran Building), 640 Marlboro Road",
+      "schedule": "By appointment only; book through the Division at 603-624-9230",
+      "phone": "603-624-9230"
+     }
+    ]
+   },
+   {
+    "county": "Coos",
+    "organization": "NH Division of Veterans Services",
+    "phone": "603-624-9230",
+    "other_phones": [
+     "800-622-9230"
+    ],
+    "source_url": "https://dmavs.nh.gov/veterans-services/vsos-and-sites",
+    "source_title": "NH Department of Military Affairs and Veterans Services: VSOs and Sites",
+    "address": "Main office: 275 Chestnut Street, Room 517, Manchester, NH 03101-2411. Visitation sites in Coos County are listed below.",
+    "office_type": "state_field_office",
+    "other_offices": [
+     {
+      "address": "Berlin area: Vet Center, 515 Main Street #2, Gorham",
+      "schedule": "By appointment only; book through the Division at 603-624-9230",
+      "phone": "603-624-9230"
+     }
+    ]
+   },
+   {
+    "county": "Grafton",
+    "organization": "NH Division of Veterans Services",
+    "phone": "603-624-9230",
+    "other_phones": [
+     "800-622-9230"
+    ],
+    "source_url": "https://dmavs.nh.gov/veterans-services/vsos-and-sites",
+    "source_title": "NH Department of Military Affairs and Veterans Services: VSOs and Sites",
+    "address": "Main office: 275 Chestnut Street, Room 517, Manchester, NH 03101-2411. Visitation sites in Grafton County are listed below.",
+    "office_type": "state_field_office",
+    "other_offices": [
+     {
+      "address": "Littleton: VFW Post 816, 600 Cottage Street",
+      "schedule": "By appointment only; book through the Division at 603-624-9230",
+      "phone": "603-624-9230"
+     }
+    ]
+   },
+   {
+    "county": "Hillsborough",
+    "organization": "NH Division of Veterans Services",
+    "phone": "603-624-9230",
+    "other_phones": [
+     "800-622-9230"
+    ],
+    "source_url": "https://dmavs.nh.gov/veterans-services/vsos-and-sites",
+    "source_title": "NH Department of Military Affairs and Veterans Services: VSOs and Sites",
+    "address": "275 Chestnut Street, Room 517, Manchester, NH 03101-2411",
+    "office_type": "state_field_office",
+    "other_offices": [
+     {
+      "address": "Manchester: VA Medical Center, 718 Smyth Road",
+      "schedule": "By appointment only; book through the Division at 603-624-9230",
+      "phone": "603-624-9230"
+     },
+     {
+      "address": "Nashua: Readiness Center (Armory), 154 Daniel Webster Highway",
+      "schedule": "By appointment only; book through the Division at 603-624-9230",
+      "phone": "603-624-9230"
+     }
+    ]
+   },
+   {
+    "county": "Merrimack",
+    "organization": "NH Division of Veterans Services",
+    "phone": "603-624-9230",
+    "other_phones": [
+     "800-622-9230"
+    ],
+    "source_url": "https://dmavs.nh.gov/veterans-services/vsos-and-sites",
+    "source_title": "NH Department of Military Affairs and Veterans Services: VSOs and Sites",
+    "address": "Main office: 275 Chestnut Street, Room 517, Manchester, NH 03101-2411. Visitation sites in Merrimack County are listed below.",
+    "office_type": "state_field_office",
+    "other_offices": [
+     {
+      "address": "Concord: Readiness Center (Armory), 4 Pembroke Road, Building C",
+      "schedule": "By appointment only; book through the Division at 603-624-9230",
+      "phone": "603-624-9230"
+     },
+     {
+      "address": "Hooksett: Vet Center, 1461 Hooksett Road, Suite B7",
+      "schedule": "By appointment only; book through the Division at 603-624-9230",
+      "phone": "603-624-9230"
+     }
+    ]
+   },
+   {
+    "county": "Rockingham",
+    "organization": "NH Division of Veterans Services",
+    "phone": "603-624-9230",
+    "other_phones": [
+     "800-622-9230"
+    ],
+    "source_url": "https://dmavs.nh.gov/veterans-services/vsos-and-sites",
+    "source_title": "NH Department of Military Affairs and Veterans Services: VSOs and Sites",
+    "address": "Main office: 275 Chestnut Street, Room 517, Manchester, NH 03101-2411. Visitation sites in Rockingham County are listed below.",
+    "office_type": "state_field_office",
+    "other_offices": [
+     {
+      "address": "Portsmouth: Readiness Center (Armory), 803 McGee Drive",
+      "schedule": "By appointment only; book through the Division at 603-624-9230",
+      "phone": "603-624-9230"
+     }
+    ]
+   },
+   {
+    "county": "Strafford",
+    "organization": "NH Division of Veterans Services",
+    "phone": "603-624-9230",
+    "other_phones": [
+     "800-622-9230"
+    ],
+    "source_url": "https://dmavs.nh.gov/veterans-services/vsos-and-sites",
+    "source_title": "NH Department of Military Affairs and Veterans Services: VSOs and Sites",
+    "address": "No visitation site in Strafford County. Main office: 275 Chestnut Street, Room 517, Manchester, NH 03101-2411.",
+    "office_type": "statewide",
+    "note": "Call the Division for a phone appointment or an appointment at the nearest visitation site."
+   },
+   {
+    "county": "Sullivan",
+    "organization": "NH Division of Veterans Services",
+    "phone": "603-624-9230",
+    "other_phones": [
+     "800-622-9230"
+    ],
+    "source_url": "https://dmavs.nh.gov/veterans-services/vsos-and-sites",
+    "source_title": "NH Department of Military Affairs and Veterans Services: VSOs and Sites",
+    "address": "The Claremont visitation site is temporarily on hold. Main office: 275 Chestnut Street, Room 517, Manchester, NH 03101-2411.",
+    "office_type": "statewide",
+    "note": "Call the Division for a phone appointment or an appointment at the nearest visitation site.",
+    "other_offices": [
+     {
+      "address": "Claremont: NH Employment Security, 404 Washington Street (temporarily on hold)",
+      "schedule": "By appointment only; book through the Division at 603-624-9230",
+      "phone": "603-624-9230"
+     }
+    ]
+   }
+  ]
+ },
+ "aging": {
+  "source_url": "https://nhfv.org/?p=31156",
+  "source_title": "New Hampshire Family Voices: Aging and Disability Resource Centers",
+  "source_scope": "Each county’s Aging and Disability Resource Center offices and phones; read in full. The Carroll, Cheshire and Hillsborough (Manchester) numbers match the NH Department of Health and Human Services’ own location pages (https://www.dhhs.nh.gov/node/100796, https://www.dhhs.nh.gov/node/100751, https://www.dhhs.nh.gov/node/100776); search excerpts.",
+  "review": "full",
+  "review_method": "full_page_text",
+  "region_word": "",
+  "agency_label": "Aging and Disability Resource Center",
+  "description": "The county’s Aging and Disability Resource Center (formerly ServiceLink): free, confidential help for older adults, adults with disabilities and caregivers to find services at home, plan long-term care and get Medicare counseling. There are no financial eligibility requirements.",
+  "next_step_extra": "You can also call the statewide line, 866-634-9412, and ask for your local center.",
+  "regions": [
+   {
+    "id": "nh-adrc-belknap",
+    "label": "Belknap County",
+    "name": "Aging and Disability Resource Center, Belknap County",
+    "phone": "603-528-6945",
+    "counties": [
+     "Belknap"
+    ],
+    "notes": [
+     "Office: 67 Water St., Laconia."
+    ]
+   },
+   {
+    "id": "nh-adrc-carroll",
+    "label": "Carroll County",
+    "name": "Aging and Disability Resource Center, Carroll County",
+    "phone": "603-323-2043",
+    "counties": [
+     "Carroll"
+    ],
+    "notes": [
+     "Office: 448 White Mountain Highway, Tamworth."
+    ]
+   },
+   {
+    "id": "nh-adrc-cheshire",
+    "label": "Cheshire County",
+    "name": "Aging and Disability Resource Center, Cheshire County",
+    "phone": "603-357-1922",
+    "counties": [
+     "Cheshire"
+    ],
+    "notes": [
+     "Office: 105 Castle St., Keene."
+    ]
+   },
+   {
+    "id": "nh-adrc-coos",
+    "label": "Coos County",
+    "name": "Aging and Disability Resource Center, Coos County",
+    "phone": "603-752-6407",
+    "counties": [
+     "Coos"
+    ],
+    "notes": [
+     "Office: 610 Sullivan St., Suite 6, Berlin."
+    ]
+   },
+   {
+    "id": "nh-adrc-grafton",
+    "label": "Grafton County",
+    "name": "Aging and Disability Resource Center, Grafton County",
+    "phone": "603-444-4498",
+    "counties": [
+     "Grafton"
+    ],
+    "notes": [
+     "Littleton office: 262 Cottage St., Suite G-25, Mt. Eustis Commons. Lebanon office: 10 Campbell St., 603-448-1558."
+    ]
+   },
+   {
+    "id": "nh-adrc-hillsborough",
+    "label": "Hillsborough County",
+    "name": "Aging and Disability Resource Center, Hillsborough County",
+    "phone": "603-644-2240",
+    "counties": [
+     "Hillsborough"
+    ],
+    "notes": [
+     "Manchester office: 555 Auburn St. Nashua office: 70 Temple St., 603-598-4709."
+    ]
+   },
+   {
+    "id": "nh-adrc-merrimack",
+    "label": "Merrimack County",
+    "name": "Aging and Disability Resource Center, Merrimack County",
+    "phone": "603-228-6625",
+    "counties": [
+     "Merrimack"
+    ],
+    "notes": [
+     "Office: 2 Industrial Park Drive, Concord."
+    ]
+   },
+   {
+    "id": "nh-adrc-rockingham",
+    "label": "Rockingham County",
+    "name": "Aging and Disability Resource Center, Rockingham County",
+    "phone": "603-334-6594",
+    "counties": [
+     "Rockingham"
+    ],
+    "notes": [
+     "Stratham office: 72 Portsmouth Ave., Suite 113. Atkinson office: 8 Commerce Drive, Unit 802, 603-893-9769."
+    ]
+   },
+   {
+    "id": "nh-adrc-strafford",
+    "label": "Strafford County",
+    "name": "Aging and Disability Resource Center, Strafford County",
+    "phone": "603-332-7398",
+    "counties": [
+     "Strafford"
+    ],
+    "notes": [
+     "Office: Community Partners, 25 Old Dover Rd., Rochester."
+    ]
+   },
+   {
+    "id": "nh-adrc-sullivan",
+    "label": "Sullivan County",
+    "name": "Aging and Disability Resource Center, Sullivan County",
+    "phone": "603-542-5177",
+    "counties": [
+     "Sullivan"
+    ],
+    "notes": [
+     "Office: 224 Elm St., Claremont."
+    ]
+   }
+  ]
+ },
+ "ombudsman": {
+  "state_phone": "800-442-5640",
+  "regions": [
+   {
+    "id": "nh-omb-state",
+    "name": "NH Office of the Long-Term Care Ombudsman",
+    "phone": "800-442-5640",
+    "counties": [
+     "Belknap",
+     "Carroll",
+     "Cheshire",
+     "Coos",
+     "Grafton",
+     "Hillsborough",
+     "Merrimack",
+     "Rockingham",
+     "Strafford",
+     "Sullivan"
+    ],
+    "source_url": "https://www.dhhs.nh.gov/report-concern/adult-abuse",
+    "source_title": "NH Department of Health and Human Services: Adult Abuse",
+    "source_scope": "For nursing or assisted living facilities, contact the Long Term Care Ombudsman at (800) 442-5640 or (603) 271-4375; read in full. The office is statewide, so every county shows it.",
+    "review": "full",
+    "review_method": "full_official_page_text",
+    "counties_from_source": true,
+    "notes": [
+     "Also: 603-271-4375."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://www.gencourt.state.nh.us/rules/State_Agencies/omb400.html",
+      "title": "NH Code of Administrative Rules, Chapter Omb 400: Office of the Long-Term Care Ombudsman",
+      "scope": "Office address (Brown Building, 129 Pleasant Street, Concord) and phones (603) 271-4375 or 1 (800) 442-5640; search excerpt."
+     }
+    ]
+   }
+  ]
+ },
+ "cils": {
+  "source_url": "https://www.ilru.org/cil-directory/nh",
+  "source_title": "ILRU: New Hampshire CIL Directory",
+  "scope": "Granite State Independent Living’s seven offices, phones and counties served (statewide); read in full. The directory is undated.",
+  "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living",
+  "list": [
+   {
+    "id": "nh-cil-gsil",
+    "name": "Granite State Independent Living",
+    "organization": "Granite State Independent Living (GSIL)",
+    "url": "https://www.gsil.org/",
+    "phone": "603-228-9680",
+    "counties": [
+     "Belknap",
+     "Carroll",
+     "Cheshire",
+     "Coos",
+     "Grafton",
+     "Hillsborough",
+     "Merrimack",
+     "Rockingham",
+     "Strafford",
+     "Sullivan"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "New Hampshire’s Center for Independent Living serves the whole state. Toll-free: 800-826-3700.",
+     "Offices: 21 Chenell Drive, Concord; 750 Central Avenue, Dover; 105 Castle Street, Keene; 76 Main Street, Littleton; 60 Rogers Street, Manchester (603-518-4600); 14 Celina Avenue, Nashua."
+    ]
+   }
+  ]
+ },
+ "programs": [
+  {
+   "id": "nh-claims",
+   "name": "New Hampshire veterans: state veterans service officers for claims help",
+   "organization": "NH Division of Veterans Services",
+   "url": "https://dmavs.nh.gov/veterans-services",
+   "needs": [
+    "general_navigation",
+    "benefits_and_funding"
+   ],
+   "description": "Free help with VA claims, appeals, pension and survivor benefits from the NH Division of Veterans Services’ veterans service officers, who represent veterans and their dependents throughout the VA claim process. They work from Manchester and meet veterans by appointment at visitation sites around the state.",
+   "next_step": "Call the Division at 603-624-9230 (800-622-9230 toll-free in New Hampshire) to book a phone appointment or a visit at the site nearest you.",
+   "constraints": [
+    "All visitation sites are by appointment only; the Division books them."
+   ],
+   "phone": "603-624-9230",
+   "phone_label": "NH Division of Veterans Services (603-624-9230)",
+   "phone_source": "https://dmavs.nh.gov/veterans-services/vsos-and-sites",
+   "review": "full",
+   "sources": [
+    {
+     "url": "https://dmavs.nh.gov/veterans-services/vsos-and-sites",
+     "title": "NH Department of Military Affairs and Veterans Services: VSOs and Sites",
+     "scope": "Main office, phones and the eleven visitation sites, all booked through (603) 624-9230; read in full. The page is undated."
+    },
+    {
+     "url": "https://www.dmavs.nh.gov:443/sites/g/files/ehbemt401/files/inline-documents/sonh/dvs-pamphlet-may-2024.pdf",
+     "title": "NH Division of Veterans Services pamphlet (May 2024)",
+     "scope": "Role of the veterans service officer; 603-624-9230 or 800-622-9230 (NH only); search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "nh-adrc",
+   "name": "New Hampshire Aging and Disability Resource Centers (formerly ServiceLink)",
+   "organization": "NH Department of Health and Human Services, Aging and Disability Resource Centers",
+   "url": "https://nhfv.org/?p=31156",
+   "needs": [
+    "general_navigation",
+    "help_at_home",
+    "equipment_home_accessibility"
+   ],
+   "description": "A statewide network of Aging and Disability Resource Centers, formerly called ServiceLink, helping older adults, adults with disabilities and family caregivers find services that let them stay independent at home. They are also the entry point for home and community-based care and New Hampshire’s Medicare counseling program. Military service is not required.",
+   "next_step": "Choose a county above for its center, or call the statewide line at 866-634-9412.",
+   "constraints": [
+    "Services are free and confidential, with no financial eligibility requirement; individual programs have their own rules."
+   ],
+   "phone": "866-634-9412",
+   "phone_label": "NH Aging and Disability Resource Centers, statewide (866-634-9412)",
+   "phone_source": "https://www.chesternh.org/node/803",
+   "review": "full",
+   "sources": [
+    {
+     "url": "https://www.chesternh.org/node/803",
+     "title": "Town of Chester, NH: ServiceLink Resource Center",
+     "scope": "Statewide toll-free (866) 634-9412; entry point for home and community-based care and the SHIP Medicare program; read in full."
+    },
+    {
+     "url": "https://nhfv.org/?p=31156",
+     "title": "New Hampshire Family Voices: Aging and Disability Resource Centers",
+     "scope": "County offices and phones; read in full."
+    }
+   ]
+  },
+  {
+   "id": "nh-ship",
+   "name": "Medicare counseling (NH SHIP) for New Hampshire",
+   "organization": "NH SHIP, through the Aging and Disability Resource Centers",
+   "url": "https://www.cms.gov/about-cms/contact/directory/nh-ship-servicelink-resource-center/1562141",
+   "needs": [
+    "benefits_and_funding"
+   ],
+   "description": "Free Medicare counseling from New Hampshire’s State Health Insurance Assistance Program, run through the Aging and Disability Resource Centers: plan choices, enrollment, costs and help paying for Medicare.",
+   "next_step": "Call 866-634-9412 and ask for Medicare counseling, or call your county’s center. For Medicare itself, call 800-MEDICARE (800-633-4227).",
+   "constraints": [
+    "Have your Medicare card and drug list ready."
+   ],
+   "phone": "866-634-9412",
+   "phone_label": "NH SHIP (866-634-9412)",
+   "phone_source": "https://www.cms.gov/about-cms/contact/directory/nh-ship-servicelink-resource-center/1562141",
+   "review": "full",
+   "sources": [
+    {
+     "url": "https://www.cms.gov/about-cms/contact/directory/nh-ship-servicelink-resource-center/1562141",
+     "title": "CMS: NH SHIP - ServiceLink Resource Center",
+     "scope": "Toll-free (866) 634-9412; read in full."
+    }
+   ]
+  },
+  {
+   "id": "nh-ombudsman",
+   "name": "NH Long-Term Care Ombudsman and adult abuse reporting",
+   "organization": "NH Office of the Long-Term Care Ombudsman; Bureau of Elderly and Adult Services",
+   "url": "https://www.dhhs.nh.gov/report-concern/adult-abuse",
+   "needs": [
+    "resident_rights",
+    "general_navigation"
+   ],
+   "description": "Advocacy for residents of nursing and assisted living facilities. Reports of abuse in those facilities go to the ombudsman; other reports of abuse, neglect or exploitation of a vulnerable adult go to Adult Protective Services at the Bureau of Elderly and Adult Services.",
+   "next_step": "For a nursing or assisted living facility, call the ombudsman at 800-442-5640 or 603-271-4375. To report abuse of a vulnerable adult elsewhere, call 800-949-0470 or 603-271-7014 (8 a.m. to 4:30 p.m., Monday to Friday). After hours, weekends and holidays, call 911 or local police.",
+   "constraints": [
+    "The ombudsman acts with the resident’s permission and is not a licensing agency."
+   ],
+   "phone": "800-442-5640",
+   "phone_label": "NH Long-Term Care Ombudsman (800-442-5640)",
+   "phone_source": "https://www.dhhs.nh.gov/report-concern/adult-abuse",
+   "review": "full",
+   "sources": [
+    {
+     "url": "https://www.dhhs.nh.gov/report-concern/adult-abuse",
+     "title": "NH Department of Health and Human Services: Adult Abuse",
+     "scope": "Adult Protective Services, ombudsman and after-hours numbers; read in full. The page is undated."
+    }
+   ]
+  },
+  {
+   "id": "nh-legal-programs",
+   "name": "Free legal help for New Hampshire veterans and older adults",
+   "organization": "603 Legal Aid; New Hampshire Legal Assistance",
+   "url": "https://www.nh-cls.org/wp-content/uploads/2024/10/2024-Annual-Report-by-spread.pdf",
+   "role": "legal_aid",
+   "needs": [
+    "resident_rights",
+    "general_navigation",
+    "housing"
+   ],
+   "description": "603 Legal Aid is the single point of entry for free civil legal help for eligible New Hampshire residents. New Hampshire Legal Assistance runs the Senior Citizens Law Project for people 60 and older.",
+   "next_step": "Apply at 603legalaid.org or call 603-224-3333. If you are 60 or older, call the Senior Citizens Law Project at 888-353-9944.",
+   "constraints": [
+    "Legal aid screens by income and case type."
+   ],
+   "phone": "603-224-3333",
+   "phone_label": "603 Legal Aid (603-224-3333)",
+   "phone_source": "https://www.nh-cls.org/wp-content/uploads/2024/10/2024-Annual-Report-by-spread.pdf",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://www.nh-cls.org/wp-content/uploads/2024/10/2024-Annual-Report-by-spread.pdf",
+     "title": "NH Campaign for Legal Services: Annual Report",
+     "scope": "To apply for legal assistance: 603legalaid.org or 1-603-224-3333; search excerpt."
+    },
+    {
+     "url": "https://womenslaw.org/find-help/nh/finding-lawyer/legal-assistance",
+     "title": "WomensLaw.org: New Hampshire legal assistance",
+     "scope": "New Hampshire Legal Assistance offices; Senior Law Project 1-888-353-9944; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "nh-vahealth-systems",
+   "name": "VA health care systems serving New Hampshire",
+   "organization": "U.S. Department of Veterans Affairs",
+   "url": "https://www.va.gov/find-locations/?facilityType=health",
+   "role": "va_health_system",
+   "needs": [
+    "veteran_services",
+    "care_facilities"
+   ],
+   "description": "New Hampshire veterans are served by VA Manchester (Manchester VA Medical Center, 718 Smyth Road; 603-624-4366, toll-free 800-892-8384) and VA White River Junction in Vermont (802-295-9363, toll-free 866-687-8387), which serves Vermont and four neighboring New Hampshire counties and has clinics in Keene and Littleton.",
+   "next_step": "Use VA’s facility locator with your ZIP code to find the closest clinic. Not enrolled yet? Ask a Division of Veterans Services officer for help applying.",
+   "constraints": [
+    "Which system serves you depends on where you live; VA’s locator shows the right clinic."
+   ],
+   "phone": "603-624-4366",
+   "phone_label": "Manchester VA Medical Center (603-624-4366)",
+   "phone_source": "https://www.va.gov/manchester-health-care/contact-us/",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://www.va.gov/manchester-health-care/contact-us/",
+     "title": "VA Manchester health care: Contact us",
+     "scope": "Manchester VA Medical Center, 718 Smyth Road; local 603-624-4366, toll-free 800-892-8384; search excerpt."
+    },
+    {
+     "url": "https://www.va.gov/white-river-junction-health-care/status/",
+     "title": "VA White River Junction health care: Operating status",
+     "scope": "Telephone care 802-295-9363 or 866-687-8387; search excerpt."
+    },
+    {
+     "url": "https://brainline.org/node/21944",
+     "title": "BrainLine: White River Junction VA Medical Center",
+     "scope": "Serves Vermont and the four contiguous New Hampshire counties; clinics include Keene and Littleton; search excerpt."
+    }
+   ]
+  }
+ ],
+ "adapter": {
+  "badge_county": "NH Division of Veterans Services",
+  "badge_state": "NH Division of Veterans Services",
+  "badge_statewide": "NH statewide line (no site in this county)",
+  "published_in": "Published on the NH Division of Veterans Services VSOs and Sites page",
+  "agency_link": "NH Division of Veterans Services",
+  "officers_can": "NH Division of Veterans Services officers can",
+  "abuse_phone": "800-949-0470",
+  "abuse_label": "Adult Protective Services, 8 a.m. to 4:30 p.m. weekdays; for a nursing or assisted living facility, call the ombudsman above",
+  "aging_term": "Aging and Disability Resource Center",
+  "extra_swaps": [
+   [
+    "Choose a county for its County Veterans Service Office, matched Area Agency on Aging",
+    "Choose a county for its state veterans service contacts, matched Area Agency on Aging"
+   ],
+   [
+    "Choose a county above for the county veterans office.",
+    "Choose a county above for its state veterans service contacts."
+   ]
+  ]
+ },
+ "share_replacements": [
+  [
+   "county veterans offices, benefits and care referrals",
+   "state veterans service officers, benefits and care referrals"
+  ],
+  [
+   "County veterans offices",
+   "state veterans service officers"
+  ]
+ ],
+ "coverage_scope": "Referral edition. All 10 counties have the NH Division of Veterans Services (seven with an open visitation site; Belknap, Strafford and Sullivan use the Division’s line), an Aging and Disability Resource Center, the statewide long-term care ombudsman and Granite State Independent Living.",
+ "coverage_note": "Veterans contacts come from the NH Division of Veterans Services’ VSOs and Sites page. Aging and Disability Resource Centers come from New Hampshire Family Voices’ list, checked against the state’s own location pages. The ombudsman and abuse lines come from the NH Department of Health and Human Services. Reviewed November 16, 2026. Contacts are not telephone-confirmed.",
+ "share_description": "state veterans service officers, Aging and Disability Resource Centers and long-term care ombudsman help across New Hampshire"
+}

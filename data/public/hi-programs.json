@@ -1,208 +1,490 @@
 [
- {
-  "program_id": "hi-claims",
-  "name": "Hawaii veterans: accredited claims help",
-  "official_url": "https://dod.hawaii.gov/ovs/",
-  "organization": "Hawai‘i Office of Veterans’ Services",
-  "service_area": [
-   "All Hawaii counties"
-  ],
-  "state": "HI",
-  "needs_supported": [
-   "general_navigation",
-   "benefits_and_funding"
-  ],
-  "description": "Free help with VA claims, applications and appeals for veterans and families.",
-  "next_step": "Call the state veterans agency; ask for a benefits review and the office that serves your county.",
-  "constraints": [],
-  "public_contact": {
-   "phone": "808-433-0420"
+  {
+    "program_id": "hi-claims",
+    "name": "Hawai‘i veterans: Office of Veterans’ Services for claims help",
+    "official_url": "https://dod.hawaii.gov/ovs/",
+    "organization": "Hawaii Department of Defense, Office of Veterans’ Services",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "HI",
+    "needs_supported": [
+      "general_navigation",
+      "benefits_and_funding"
+    ],
+    "description": "Free help with VA claims, pension, survivor benefits and state veterans benefits from the Office of Veterans’ Services’ veterans services counselors, with offices on O‘ahu (Tripler and Kapolei), Kaua‘i, Hawai‘i Island (Hilo and Kona) and Maui.",
+    "next_step": "Call your island’s office (choose a county above) or the O‘ahu office at 808-433-0420.",
+    "constraints": [
+      "Most offices see veterans by appointment only; the Tripler and Kapolei offices take walk-ins on set mornings."
+    ],
+    "public_contact": {
+      "phone": "808-433-0420",
+      "phone_label": "Office of Veterans’ Services, O‘ahu (808-433-0420)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://dod.hawaii.gov/ovs/contact/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dod.hawaii.gov/ovs/contact/",
+        "title": "Hawaii Department of Defense, Office of Veterans’ Services: Contact",
+        "reviewed_on": "2026-11-16",
+        "scope": "Every office’s address, phone, hours and walk-in or appointment rules; read in full. The page is undated."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "hi-adrc",
+    "name": "Hawai‘i Aging and Disability Resource Centers (county offices on aging)",
+    "official_url": "https://health.hawaii.gov/eoa/?p=88",
+    "organization": "Hawaii Executive Office on Aging and the four county Area Agencies on Aging",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "HI",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Each county’s office on aging runs its Aging and Disability Resource Center: information on aging, health and disability services, caregiver support, Kupuna Care, legal assistance and transportation. The state Executive Office on Aging coordinates them. Military service is not required.",
+    "next_step": "Choose a county above for its office on aging, or call the statewide Aging and Disability Resource Center line, 808-643-2372.",
+    "constraints": [
+      "Each program has its own eligibility and waitlist."
+    ],
+    "public_contact": {
+      "phone": "808-643-2372",
+      "phone_label": "Hawai‘i Aging and Disability Resource Center (808-643-2372)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://generations808.com/?p=18446"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.hawaii.gov/eoa/?p=88",
+        "title": "Hawaii Executive Office on Aging: Aging Network",
+        "reviewed_on": "2026-11-16",
+        "scope": "The four Area Agencies on Aging and their phones; read in full."
+      },
+      {
+        "url": "https://generations808.com/?p=18446",
+        "title": "Generations Magazine: ADRC Hawaii",
+        "reviewed_on": "2026-11-16",
+        "scope": "The state Executive Office on Aging and the four county agencies; call 643-ADRC (643-2372); search excerpt."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_page_text",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://dod.hawaii.gov/ovs/"
+  {
+    "program_id": "hi-ship",
+    "name": "Medicare counseling (Hawai‘i SHIP)",
+    "official_url": "https://governorige.hawaii.gov/?p=42525",
+    "organization": "Hawaii Executive Office on Aging, State Health Insurance Assistance Program (SHIP)",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "HI",
+    "needs_supported": [
+      "benefits_and_funding"
+    ],
+    "description": "Free, one-on-one Medicare counseling from Hawai‘i’s State Health Insurance Assistance Program: plan choices, enrollment, costs and help paying for Medicare, by phone, video or in person.",
+    "next_step": "Call the Hawai‘i SHIP Helpline at 808-586-7299 or toll-free 888-875-9229, or book at hawaiiship.org. For Medicare itself, call 800-MEDICARE (800-633-4227).",
+    "constraints": [
+      "Counseling is by appointment. Have your Medicare card and drug list ready."
+    ],
+    "public_contact": {
+      "phone": "808-586-7299",
+      "phone_label": "Hawai‘i SHIP Helpline (808-586-7299)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://governorige.hawaii.gov/?p=42525"
+    },
+    "source_evidence": [
+      {
+        "url": "https://governorige.hawaii.gov/?p=42525",
+        "title": "Office of the Governor: Hawaii SHIP counseling appointments",
+        "reviewed_on": "2026-11-16",
+        "scope": "Call the Hawaii SHIP Helpline at 808-586-7299 or toll-free 1-888-875-9229; search excerpt."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://dod.hawaii.gov/ovs/",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ]
- },
- {
-  "program_id": "hi-ship",
-  "name": "Medicare counseling (SHIP) for Hawaii",
-  "official_url": "https://www.shiphelp.org/",
-  "organization": "SHIP Technical Assistance Center",
-  "service_area": [
-   "All Hawaii counties"
-  ],
-  "state": "HI",
-  "needs_supported": [
-   "benefits_and_funding"
-  ],
-  "description": "Free, unbiased Medicare counseling from the State Health Insurance Assistance Program.",
-  "next_step": "Call or use the locator to reach the Hawaii SHIP and ask for a counseling appointment.",
-  "constraints": [],
-  "public_contact": {
-   "phone": "877-839-2675"
+  {
+    "program_id": "hi-ombudsman",
+    "name": "Hawai‘i Long-Term Care Ombudsman and adult abuse reporting",
+    "official_url": "https://health.hawaii.gov/eoa/",
+    "organization": "Hawaii Executive Office on Aging, Long-Term Care Ombudsman Program; Department of Human Services, Adult Protective Services",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "HI",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "description": "Advocacy for residents of nursing homes, care homes, assisted living and other long-term care settings. Adult Protective Services takes reports of abuse, neglect or financial exploitation of vulnerable adults.",
+    "next_step": "Call the ombudsman at 808-586-7268. To report abuse of a vulnerable adult, call Adult Protective Services at 808-832-5115 (7:45 a.m. to 4:30 p.m. weekdays; leave a message after hours) or report online at apsreport.hawaii.gov. In an emergency, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing agency."
+    ],
+    "public_contact": {
+      "phone": "808-586-7268",
+      "phone_label": "Hawai‘i Long-Term Care Ombudsman (808-586-7268)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://health.hawaii.gov/eoa/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.hawaii.gov/eoa/",
+        "title": "Hawaii Executive Office on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "Long-Term Care Ombudsman 586-7268 (O‘ahu); search excerpt."
+      },
+      {
+        "url": "https://humanservices.hawaii.gov/ssd/files/2026/06/APS-Brochure-6-2026-FINAL-FORMATTED.pdf",
+        "title": "Hawaii Department of Human Services: Adult Protective Services brochure (June 2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Statewide reporting line (808) 832-5115, hours, after-hours messages and the online form; read in full."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "hi-legal-programs",
+    "name": "Free legal help for Hawai‘i kūpuna",
+    "official_url": "https://files.constantcontact.com/bf4c96d8201/512a557b-37fc-4bd2-bd01-38fa7c99ce2b.pdf",
+    "organization": "Legal Aid Society of Hawai‘i, Kupuna Legal Aid Services",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "HI",
+    "resource_role": "legal_aid",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation",
+      "housing"
+    ],
+    "description": "The Legal Aid Society of Hawai‘i offers free legal help to people 60 and older through its Senior Legal Hotline, covering elder law, consumer, housing and public benefits matters, and general civil legal intake for people with low and moderate incomes on all islands.",
+    "next_step": "If you are 60 or older, call the Senior Legal Hotline: O‘ahu 808-536-0011, neighbor islands 888-536-0011. General intake: O‘ahu 808-536-4302, neighbor islands 888-499-4302 (weekdays 9 to 11:30 a.m. and 1 to 3:30 p.m.).",
+    "constraints": [
+      "Legal aid screens by age, income and case type."
+    ],
+    "public_contact": {
+      "phone": "808-536-0011",
+      "phone_label": "Legal Aid Society of Hawai‘i Senior Legal Hotline (808-536-0011)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://files.constantcontact.com/bf4c96d8201/512a557b-37fc-4bd2-bd01-38fa7c99ce2b.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://files.constantcontact.com/bf4c96d8201/512a557b-37fc-4bd2-bd01-38fa7c99ce2b.pdf",
+        "title": "Legal Aid Society of Hawai‘i: Kupuna Legal Aid Services flyer",
+        "reviewed_on": "2026-11-16",
+        "scope": "Senior Legal Hotline O‘ahu 536-0011, neighbor islands 1-888-536-0011; general intake 536-4302 and 1-888-499-4302; search excerpt."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.shiphelp.org/?p=317"
+  {
+    "program_id": "hi-vahealth-systems",
+    "name": "VA health care in Hawai‘i",
+    "official_url": "https://www.va.gov/pacific-islands-health-care/",
+    "organization": "U.S. Department of Veterans Affairs, VA Pacific Islands Health Care System",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "HI",
+    "resource_role": "va_health_system",
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "Hawai‘i veterans are served by the VA Pacific Islands Health Care System: the Spark M. Matsunaga VA Medical Center (459 Patterson Road, Honolulu; 808-433-0600, toll-free 800-214-1306) and clinics on each island.",
+    "next_step": "Call 808-433-0600 or 800-214-1306 for appointments or the 24/7 VA Health Connect line, or use VA’s facility locator. Not enrolled yet? Ask an Office of Veterans’ Services counselor for help applying.",
+    "constraints": [
+      "Neighbor-island veterans may need to fly to O‘ahu for some specialty care; ask about travel and community care."
+    ],
+    "public_contact": {
+      "phone": "808-433-0600",
+      "phone_label": "VA Pacific Islands Health Care System (808-433-0600)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.va.gov/pacific-islands-health-care/contact-us/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.va.gov/pacific-islands-health-care/contact-us/",
+        "title": "VA Pacific Islands health care: Contact us",
+        "reviewed_on": "2026-11-16",
+        "scope": "Spark M. Matsunaga VA Medical Center, 459 Patterson Road; local 808-433-0600, toll-free 800-214-1306; search excerpt."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.shiphelp.org/?p=317",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ]
- },
- {
-  "program_id": "hi-ssvf-18-hi-190",
-  "name": "United States Veterans Initiative: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "United States Veterans Initiative",
-  "service_area": [
-   "All Hawaii counties"
-  ],
-  "state": "HI",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 18-HI-190): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Hawaii County, Honolulu County, Kalawao County, Kauai County, Maui County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 808-953-9358.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "808-208-0361",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "hi-cil-access-to-independence",
+    "name": "Access to Independence (Honolulu)",
+    "organization": "Access to Independence",
+    "official_url": "https://accesstoindependence.org/honolulu",
+    "service_area": [
+      "Honolulu"
+    ],
+    "state": "HI",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 200 North Vineyard Blvd., Suite 508, Box 4, Honolulu, HI 96817. Toll-free: 800-976-2776."
+    ],
+    "public_contact": {
+      "phone": "808-369-9521",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/HI",
+      "service_area_source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/HI"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/HI",
+        "title": "ILRU: Directory of Centers for Independent Living, Hawaii results",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each center’s address, phones, website and counties served; read in full. The directory is undated."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "hi-cil-aloha",
+    "name": "Aloha Independent Living Hawaii",
+    "organization": "Aloha Independent Living Hawaii",
+    "official_url": "https://alohailhawaii.org/",
+    "service_area": [
+      "Hawaii",
+      "Honolulu",
+      "Kauai",
+      "Maui"
+    ],
+    "state": "HI",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Mailing address: P.O. Box 283, Pearl City, HI 96782."
+    ],
+    "public_contact": {
+      "phone": "800-385-2454",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/HI",
+      "service_area_source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/HI"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/HI",
+        "title": "ILRU: Directory of Centers for Independent Living, Hawaii results",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each center’s address, phones, website and counties served; read in full. The directory is undated."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "hi-ssvf-18-hi-190",
+    "name": "United States Veterans Initiative: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "United States Veterans Initiative",
+    "service_area": [
+      "Hawaii",
+      "Honolulu",
+      "Kalawao",
+      "Kauai",
+      "Maui"
+    ],
+    "state": "HI",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 18-HI-190): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 808-953-9358.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "808-208-0361",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 131",
+        "sheet": "Contacts",
+        "row": 131,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 131",
-    "sheet": "Contacts",
-    "row": 131,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "hi-ssvf-18-hi-374",
-  "name": "Catholic Charities Hawaii: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Catholic Charities Hawaii",
-  "service_area": [
-   "All Hawaii counties"
-  ],
-  "state": "HI",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 18-HI-374): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Honolulu County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "808-527-4986",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "hi-ssvf-18-hi-374",
+    "name": "Catholic Charities Hawaii: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Catholic Charities Hawaii",
+    "service_area": [
+      "Honolulu"
+    ],
+    "state": "HI",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 18-HI-374): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "808-527-4986",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 132",
+        "sheet": "Contacts",
+        "row": 132,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
-  },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
-  },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 132",
-    "sheet": "Contacts",
-    "row": 132,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "hi-ssvf-26-hi-472",
-  "name": "Catholic Charities Hawaii: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Catholic Charities Hawaii",
-  "service_area": [
-   "All Hawaii counties"
-  ],
-  "state": "HI",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 26-HI-472): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Hawaii County, Kalawao County, Kauai County, Maui County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "808-527-4986",
-   "phone_label": "VA-listed SSVF intake"
-  },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
-  },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
-  },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 228",
-    "sheet": "Contacts",
-    "row": 228,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- }
+  {
+    "program_id": "hi-ssvf-26-hi-472",
+    "name": "Catholic Charities Hawaii: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Catholic Charities Hawaii",
+    "service_area": [
+      "Hawaii",
+      "Kalawao",
+      "Kauai",
+      "Maui"
+    ],
+    "state": "HI",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 26-HI-472): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "808-527-4986",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 228",
+        "sheet": "Contacts",
+        "row": 228,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
+  }
 ]

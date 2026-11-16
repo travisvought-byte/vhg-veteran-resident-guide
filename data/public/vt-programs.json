@@ -1,163 +1,449 @@
 [
- {
-  "program_id": "vt-claims",
-  "name": "Vermont veterans: accredited claims help",
-  "official_url": "https://veterans.vermont.gov/",
-  "organization": "Vermont Office of Veterans Affairs",
-  "service_area": [
-   "All Vermont counties"
-  ],
-  "state": "VT",
-  "needs_supported": [
-   "general_navigation",
-   "benefits_and_funding"
-  ],
-  "description": "Free help with VA claims, applications and appeals for veterans and families.",
-  "next_step": "Call the state veterans agency; ask for a benefits review and the office that serves your county.",
-  "constraints": [],
-  "public_contact": {
-   "phone": "802-828-3379"
+  {
+    "program_id": "vt-claims",
+    "name": "Vermont veterans: Office of Veterans Affairs for claims help",
+    "official_url": "https://veterans.vermont.gov/node/83",
+    "organization": "Vermont Office of Veterans Affairs",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "VT",
+    "needs_supported": [
+      "general_navigation",
+      "benefits_and_funding"
+    ],
+    "description": "Free help applying for VA benefits from the Office of Veterans Affairs’ Veteran Service Officers in Montpelier, who serve the whole state. Certified service officers from the American Legion, VFW and DAV also help any veteran apply; membership is not required.",
+    "next_step": "Call 802-828-3379 or, within Vermont, 888-666-9844 (weekdays 7:30 a.m. to 4 p.m.). Or call a service officer: American Legion 802-296-5166, VFW 802-296-5168, DAV 802-296-5167.",
+    "constraints": [
+      "Call before visiting; the office serves the whole state from Montpelier."
+    ],
+    "public_contact": {
+      "phone": "802-828-3379",
+      "phone_label": "Vermont Office of Veterans Affairs (802-828-3379)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://veterans.vermont.gov/node/83"
+    },
+    "source_evidence": [
+      {
+        "url": "https://veterans.vermont.gov/node/83",
+        "title": "Vermont Office of Veterans Affairs: Contact Information for Organizations that Help Veterans and Their Families",
+        "reviewed_on": "2026-11-16",
+        "scope": "Office address, main and toll-free lines, hours, and the certified Veteran Service Officers of the American Legion, VFW and DAV; read in full."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "vt-adrc",
+    "name": "Vermont Area Agencies on Aging and the Senior HelpLine",
+    "official_url": "https://dcf.vermont.gov/contacts/partners/aaa",
+    "organization": "Vermont’s five Area Agencies on Aging",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "VT",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Vermont’s five Area Agencies on Aging give information and help to people 60 and older and their families: help at home, meals, caregiver support, health insurance counseling and more. One statewide HelpLine reaches all five. Military service is not required.",
+    "next_step": "Call the Senior HelpLine at 1-800-642-5119, or choose a county above for its Area Agency on Aging.",
+    "constraints": [
+      "Each program has its own eligibility and waitlist."
+    ],
+    "public_contact": {
+      "phone": "800-642-5119",
+      "phone_label": "Vermont Senior HelpLine (800-642-5119)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://dcf.vermont.gov/contacts/partners/aaa"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dcf.vermont.gov/contacts/partners/aaa",
+        "title": "Vermont Department for Children and Families: Area Agencies on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "The five agencies’ service areas and the statewide line, 1-800-642-5119; read in full."
+      },
+      {
+        "url": "https://asd.vermont.gov/sites/asd/files/documents/Older%20American%20Act%202023%20Snapshot%20with%20AAA%20Map.pdf",
+        "title": "Vermont Department of Disabilities, Aging and Independent Living: Older Americans Act snapshot with Area Agency on Aging map",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each agency’s phone and service area; read in full. Dated February 15, 2019."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_page_text",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://veterans.vermont.gov/"
+  {
+    "program_id": "vt-ship",
+    "name": "Medicare counseling (Vermont SHIP)",
+    "official_url": "https://ddsd.vermont.gov/node/131",
+    "organization": "Vermont State Health Insurance Assistance Program, through the Area Agencies on Aging",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "VT",
+    "needs_supported": [
+      "benefits_and_funding"
+    ],
+    "description": "Free, confidential Medicare counseling from certified counselors at Vermont’s five Area Agencies on Aging: plan choices, Part D, Medigap and help paying for Medicare. The Senior HelpLine connects you to a counselor near you.",
+    "next_step": "Call the Senior HelpLine at 1-800-642-5119 and ask for a SHIP counselor. For Medicare itself, call 800-MEDICARE (800-633-4227).",
+    "constraints": [
+      "Counseling is by appointment. Have your Medicare card and drug list ready."
+    ],
+    "public_contact": {
+      "phone": "800-642-5119",
+      "phone_label": "Vermont SHIP through the Senior HelpLine (800-642-5119)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://ddsd.vermont.gov/node/131"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ddsd.vermont.gov/node/131",
+        "title": "Vermont Developmental Disabilities Services Division: resources",
+        "reviewed_on": "2026-11-16",
+        "scope": "SHIP (800-642-5119) is reached through the Senior HelpLine and the Area Agencies on Aging; search excerpt."
+      },
+      {
+        "url": "https://www.cms.gov/about-cms/contact/directory/vermont-state-health-insurance-assistance-program/1562221",
+        "title": "CMS contacts directory: Vermont State Health Insurance Assistance Program",
+        "reviewed_on": "2026-11-16",
+        "scope": "Toll-free (800) 642-5119; Vermont Association of Area Agencies on Aging; search excerpt."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://veterans.vermont.gov/",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ]
- },
- {
-  "program_id": "vt-ship",
-  "name": "Medicare counseling (SHIP) for Vermont",
-  "official_url": "https://www.shiphelp.org/",
-  "organization": "SHIP Technical Assistance Center",
-  "service_area": [
-   "All Vermont counties"
-  ],
-  "state": "VT",
-  "needs_supported": [
-   "benefits_and_funding"
-  ],
-  "description": "Free, unbiased Medicare counseling from the State Health Insurance Assistance Program.",
-  "next_step": "Call or use the locator to reach the Vermont SHIP and ask for a counseling appointment.",
-  "constraints": [],
-  "public_contact": {
-   "phone": "877-839-2675"
+  {
+    "program_id": "vt-ombudsman",
+    "name": "Vermont Long-Term Care Ombudsman and adult abuse reporting",
+    "official_url": "https://vtlegalaid.org/legal-projects/long-term-care-ombudsman",
+    "organization": "Vermont Legal Aid, Long-Term Care Ombudsman Project; Department of Disabilities, Aging and Independent Living, Adult Protective Services",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "VT",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "description": "Advocacy for people in licensed long-term care facilities and people getting care at home through Choices for Care. Adult Protective Services takes reports of abuse, neglect or exploitation of vulnerable adults.",
+    "next_step": "Call the ombudsman at 1-800-889-2047, extension 3, or use the online form. To report abuse, call your local or state police and Adult Protective Services at 1-800-564-1612. In an emergency, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing agency."
+    ],
+    "public_contact": {
+      "phone": "800-889-2047",
+      "phone_label": "Vermont Long-Term Care Ombudsman (800-889-2047, ext. 3)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://vtlegalaid.org/legal-projects/long-term-care-ombudsman"
+    },
+    "source_evidence": [
+      {
+        "url": "https://vtlegalaid.org/legal-projects/long-term-care-ombudsman",
+        "title": "Vermont Legal Aid: Vermont Long-Term Care Ombudsman Project",
+        "reviewed_on": "2026-11-16",
+        "scope": "Phone and extension, online form, response time and who the program serves; read in full."
+      },
+      {
+        "url": "https://ago.vermont.gov/elder-protection-initiative",
+        "title": "Vermont Attorney General: Elder Protection Initiative",
+        "reviewed_on": "2026-11-16",
+        "scope": "Report abuse, neglect or exploitation to local or state police and to Adult Protective Services at 1-800-564-1612; search excerpt."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "vt-legal-programs",
+    "name": "Free legal help for older Vermonters",
+    "official_url": "https://www.vtlegalaid.org/sites/vtlegalaid/files/publications/vla-elder-law-project-brochure_for-web.pdf",
+    "organization": "Vermont Legal Aid, Elder Law Project; Legal Services Vermont",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "VT",
+    "resource_role": "legal_aid",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation",
+      "housing"
+    ],
+    "description": "Vermont Legal Aid’s Elder Law Project gives free civil legal help to Vermonters 60 and older: abuse and financial exploitation, housing and benefits, and individual rights and advance planning. Legal Services Vermont runs the statewide helpline.",
+    "next_step": "Call the statewide legal helpline at 1-800-889-2047, or ask for help online at vtlawhelp.org.",
+    "constraints": [
+      "Offices have limited in-person hours; call or use the online form first."
+    ],
+    "public_contact": {
+      "phone": "800-889-2047",
+      "phone_label": "Vermont legal helpline (800-889-2047)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.vtlawhelp.org/node/1709/printable/print"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.vtlegalaid.org/sites/vtlegalaid/files/publications/vla-elder-law-project-brochure_for-web.pdf",
+        "title": "Vermont Legal Aid: Elder Law Project brochure",
+        "reviewed_on": "2026-11-16",
+        "scope": "Full range of civil legal services to Vermonters 60 and over, including abuse and financial exploitation, housing and benefits, and advance planning; helpline 1-800-889-2047; search excerpt."
+      },
+      {
+        "url": "https://www.vtlawhelp.org/node/1709/printable/print",
+        "title": "Vermont Law Help: Locations and Contact Information",
+        "reviewed_on": "2026-11-16",
+        "scope": "Statewide helpline 1-800-889-2047; limited in-person office hours; search excerpt."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.shiphelp.org/?p=317"
+  {
+    "program_id": "vt-vahealth-systems",
+    "name": "VA health care in Vermont",
+    "official_url": "https://www.va.gov/white-river-junction-health-care/status/",
+    "organization": "U.S. Department of Veterans Affairs, VA White River Junction Healthcare System",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "VT",
+    "resource_role": "va_health_system",
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "Vermont veterans are served by the VA White River Junction Healthcare System: the White River Junction VA Medical Center (163 Veterans Drive, White River Junction; 802-295-9363, toll-free 866-687-8387) and its outpatient clinics.",
+    "next_step": "Call 802-295-9363 or 866-687-8387 for appointments or the 24-hour nurse line. Not enrolled yet? Ask a Veteran Service Officer for help applying.",
+    "constraints": [
+      "If a service you need is not offered near you, ask about travel benefits and community care."
+    ],
+    "public_contact": {
+      "phone": "802-295-9363",
+      "phone_label": "White River Junction VA Medical Center (802-295-9363)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.va.gov/white-river-junction-health-care/status/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.va.gov/white-river-junction-health-care/status/",
+        "title": "VA White River Junction health care: Operating status",
+        "reviewed_on": "2026-11-16",
+        "scope": "24-hour nurse, appointment changes and telephone care: 802-295-9363 or 866-687-8387; search excerpt."
+      },
+      {
+        "url": "https://www.va.gov/white-river-junction-health-care/work-with-us/jobs-and-careers/",
+        "title": "VA White River Junction health care: Jobs and careers",
+        "reviewed_on": "2026-11-16",
+        "scope": "White River Junction VA Medical Center street address, 163 Veterans Drive; search excerpt."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.shiphelp.org/?p=317",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ]
- },
- {
-  "program_id": "vt-ssvf-12-zz-041",
-  "name": "Veterans Inc.: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Veterans Inc.",
-  "service_area": [
-   "All Vermont counties"
-  ],
-  "state": "VT",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 12-ZZ-041): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Addison County, Bennington County, Caledonia County, Chittenden County, Essex County, Franklin County, Grand Isle County, Lamoille County, Orange County, Orleans County, Rutland County, Washington County and 2 more.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 508-791-1213.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "800-482-2565",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "vt-cil-vcil",
+    "name": "Vermont Center for Independent Living",
+    "organization": "Vermont Center for Independent Living (VCIL)",
+    "official_url": "https://vcil.org/",
+    "service_area": [
+      "Addison",
+      "Bennington",
+      "Caledonia",
+      "Chittenden",
+      "Essex",
+      "Franklin",
+      "Grand Isle",
+      "Lamoille",
+      "Orange",
+      "Orleans",
+      "Rutland",
+      "Washington",
+      "Windham",
+      "Windsor"
+    ],
+    "state": "VT",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Main office: 11 East State Street, Montpelier, VT 05602. Toll-free 800-639-1522; Relay 711.",
+      "Other offices: Burlington 802-861-2896; Morrisville 802-888-2180; Bennington 802-447-0574; Brattleboro 802-254-6851; Newport 802-334-9000 (call for an appointment); Rutland 802-779-9021."
+    ],
+    "public_contact": {
+      "phone": "802-229-0501",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/VT",
+      "service_area_source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/VT"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/VT",
+        "title": "ILRU: Directory of Centers for Independent Living, Vermont results",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each office’s address, phones, website and counties served; read in full. The directory is undated."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "vt-ssvf-12-zz-041",
+    "name": "Veterans Inc.: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Veterans Inc.",
+    "service_area": [
+      "Addison",
+      "Bennington",
+      "Caledonia",
+      "Chittenden",
+      "Essex",
+      "Franklin",
+      "Grand Isle",
+      "Lamoille",
+      "Orange",
+      "Orleans",
+      "Rutland",
+      "Washington",
+      "Windham",
+      "Windsor"
+    ],
+    "state": "VT",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 12-ZZ-041): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 508-791-1213.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "800-482-2565",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 27",
+        "sheet": "Contacts",
+        "row": 27,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
-  },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 27",
-    "sheet": "Contacts",
-    "row": 27,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "vt-ssvf-13-zz-145",
-  "name": "University of Vermont and State Agricultural College: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "University of Vermont and State Agricultural College",
-  "service_area": [
-   "All Vermont counties"
-  ],
-  "state": "VT",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 13-ZZ-145): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Addison County, Bennington County, Caledonia County, Chittenden County, Essex County, Franklin County, Grand Isle County, Lamoille County, Orange County, Orleans County, Rutland County, Washington County and 2 more.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 844-820-3232.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "802-656-3232",
-   "phone_label": "VA-listed SSVF intake"
-  },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
-  },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
-  },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 46",
-    "sheet": "Contacts",
-    "row": 46,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- }
+  {
+    "program_id": "vt-ssvf-13-zz-145",
+    "name": "University of Vermont and State Agricultural College: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "University of Vermont and State Agricultural College",
+    "service_area": [
+      "Addison",
+      "Bennington",
+      "Caledonia",
+      "Chittenden",
+      "Essex",
+      "Franklin",
+      "Grand Isle",
+      "Lamoille",
+      "Orange",
+      "Orleans",
+      "Rutland",
+      "Washington",
+      "Windham",
+      "Windsor"
+    ],
+    "state": "VT",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 13-ZZ-145): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 844-820-3232.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "802-656-3232",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 46",
+        "sheet": "Contacts",
+        "row": 46,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
+  }
 ]
