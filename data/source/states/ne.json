@@ -1,0 +1,1374 @@
+{
+ "about": "Research sheet for the Nebraska county edition. Every contact below was read on the date in reviewed_on from the page named beside it; scripts/make_county_state.py turns it into the edition files.",
+ "code": "NE",
+ "name": "Nebraska",
+ "slug": "nebraska",
+ "counties": 93,
+ "reviewed_on": "2026-11-16",
+ "month_label": "November 16, 2026",
+ "template_date": "November 4, 2026",
+ "phones_sentence": "County veterans service office phones, locations and hours come from the Nebraska Department of Veterans’ Affairs directory, last updated October 1, 2024. Many offices keep part-week hours; call before you go.",
+ "senior_line_id": "ne-adrc",
+ "agency": {
+  "url": "https://veterans.nebraska.gov/cvso"
+ },
+ "offices": {
+  "source_url": "https://veterans.nebraska.gov/sites/default/files/CVSODirectory.pdf",
+  "source_title": "Nebraska Department of Veterans’ Affairs: County Veterans Service Office Listing (updated 10/01/2024)",
+  "review_method": "full_official_pdf",
+  "note": "County veterans service officers can help with VA claims, pension, survivor benefits and Nebraska Veterans Aid at no charge.",
+  "selection": "Office phone (or the officer’s cell where that is the only number), office location, mailing address and hours as printed in the directory; officers’ names, emails, fax numbers, websites and home phone numbers omitted. Where one officer serves several counties, each county shows the listing printed for it.",
+  "list": [
+   {
+    "county": "Adams",
+    "phone": "402-461-7162",
+    "address": "300 N. Joseph Avenue, Hastings (mailing: PO Box 613, Hastings, NE 68901)",
+    "hours": "Monday–Friday 9 a.m.–5 p.m."
+   },
+   {
+    "county": "Antelope",
+    "phone": "402-887-4936",
+    "address": "Courthouse, 501 Main Street, Neligh, NE 68756",
+    "hours": "Monday–Wednesday 8 a.m.–4 p.m."
+   },
+   {
+    "county": "Arthur",
+    "phone": "308-289-2341",
+    "address": "Courthouse, Room 205, 511 N. Spruce Street, Ogallala, NE 69153",
+    "hours": "Monday–Thursday 8 a.m.–4 p.m. (closed noon–1 p.m.); Friday 8 a.m.–noon",
+    "note": "This service officer also serves Keith and Garden counties. The listed number is the officer’s cell phone."
+   },
+   {
+    "county": "Banner",
+    "phone": "308-436-6643",
+    "address": "Administrative Building, 1825 10th Street, Gering, NE 69341",
+    "hours": "Monday–Friday 8 a.m.–4:30 p.m., open over the lunch hour",
+    "note": "This service officer also serves Scotts Bluff and Kimball counties."
+   },
+   {
+    "county": "Blaine",
+    "phone": "308-872-2071",
+    "address": "Courthouse, West Annex, 431 S. 10th, Broken Bow, NE 68822",
+    "hours": "Monday–Friday 9 a.m.–5 p.m.",
+    "note": "This service officer also serves Custer and Loup counties."
+   },
+   {
+    "county": "Boone",
+    "phone": "402-395-2905",
+    "address": "222 S. 4th Street, Albion, NE 68620",
+    "hours": "Tuesday–Thursday 8 a.m.–4:30 p.m. (closed noon–12:30 p.m.)",
+    "note": "This service officer also serves Greeley County."
+   },
+   {
+    "county": "Box Butte",
+    "phone": "308-762-4154",
+    "address": "524 Box Butte Avenue, Suite D, Alliance, NE 69301",
+    "hours": "Monday–Friday 8 a.m.–4 p.m. (closed noon–1 p.m.)",
+    "note": "This service officer also serves Grant County."
+   },
+   {
+    "county": "Boyd",
+    "phone": "402-336-1200",
+    "address": "Courthouse Annex, 128 N. 6th Street, Suite 5, O’Neill, NE 68763",
+    "hours": "Monday–Friday 8 a.m.–5 p.m.",
+    "note": "This service officer also serves Holt and Wheeler counties."
+   },
+   {
+    "county": "Brown",
+    "phone": "402-387-0233",
+    "address": "148 W. 4th Street, Suite 3, Ainsworth, NE 69210",
+    "hours": "Monday–Friday 8 a.m.–5 p.m. (closed noon–1 p.m.)",
+    "note": "This service officer also serves Keya Paha and Rock counties."
+   },
+   {
+    "county": "Buffalo",
+    "phone": "308-236-1253",
+    "address": "Courthouse, 1512 Central Avenue, Kearney (mailing: PO Box 1270, Kearney, NE 68848)",
+    "hours": "Monday–Friday 8 a.m.–5 p.m."
+   },
+   {
+    "county": "Burt",
+    "phone": "402-374-2920",
+    "address": "Courthouse, 111 N. 13th Street, Suite 4, Tekamah, NE 68061",
+    "hours": "Wednesday–Friday 8 a.m.–4:30 p.m.",
+    "note": "This service officer also serves Thurston County."
+   },
+   {
+    "county": "Butler",
+    "phone": "402-367-7472",
+    "address": "Courthouse, 451 5th Street, David City, NE 68632",
+    "hours": "Monday–Friday 9 a.m.–2 p.m."
+   },
+   {
+    "county": "Cass",
+    "phone": "402-296-9368",
+    "address": "Courthouse, 346 Main Street, Room 102, Plattsmouth, NE 68048",
+    "hours": "Monday–Friday 8 a.m.–5 p.m. (closed noon–1 p.m.)"
+   },
+   {
+    "county": "Cedar",
+    "phone": "402-254-7473",
+    "address": "Courthouse, 103 S. Broadway, Hartington (mailing: PO Box 246, Hartington, NE 68739)",
+    "hours": "Tuesday 8 a.m.–5 p.m.; Wednesday 8 a.m.–noon; Thursday 8 a.m.–5 p.m."
+   },
+   {
+    "county": "Chase",
+    "phone": "308-882-5017",
+    "address": "490 East 5th Street, Imperial (mailing: PO Box 626, Imperial, NE 69033)",
+    "hours": "Monday–Friday 8 a.m.–3 p.m. (closed noon–1 p.m.)"
+   },
+   {
+    "county": "Cherry",
+    "phone": "402-376-2680",
+    "address": "202 N. Main Street, Suite 2, Valentine, NE 69201",
+    "hours": "Monday–Thursday 8 a.m.–4:30 p.m. (closed noon–1 p.m.); Friday 8 a.m.–noon"
+   },
+   {
+    "county": "Cheyenne",
+    "phone": "308-254-3300",
+    "address": "Courthouse, 1000 10th Avenue, Sidney, NE 69162",
+    "hours": "Monday–Thursday 8 a.m.–5 p.m. (closed noon–1 p.m.); Friday 8 a.m.–noon"
+   },
+   {
+    "county": "Clay",
+    "phone": "402-762-3508",
+    "address": "Elementary school building, southeast corner, 111 W. Fairfield, Clay Center, NE 68933",
+    "hours": "Tuesday and Thursday 8:30 a.m.–5 p.m. (closed noon–12:30 p.m.)",
+    "note": "This service officer also serves Hamilton County."
+   },
+   {
+    "county": "Colfax",
+    "phone": "402-352-8521",
+    "address": "411 E. 11th Street, Schuyler, NE 68661 (the directory gives this as a mailing address)",
+    "hours": "Tuesday and Thursday 1–4:30 p.m.",
+    "note": "This service officer also serves Platte County."
+   },
+   {
+    "county": "Cuming",
+    "phone": "402-372-6012",
+    "address": "Courthouse, 200 S. Lincoln Street, Room 54, West Point, NE 68788",
+    "hours": "Monday–Friday 8:30 a.m.–4:30 p.m."
+   },
+   {
+    "county": "Custer",
+    "phone": "308-872-2071",
+    "address": "Courthouse, West Annex, 431 S. 10th, Broken Bow, NE 68822",
+    "hours": "Monday–Friday 9 a.m.–5 p.m.",
+    "note": "This service officer also serves Blaine and Loup counties."
+   },
+   {
+    "county": "Dakota",
+    "phone": "402-987-2120",
+    "address": "Courthouse, 1601 Broadway, Dakota City (mailing: PO Box 336, Dakota City, NE 68731)",
+    "hours": "Monday–Friday 8 a.m.–3:30 p.m. (closed noon–12:30 p.m.)",
+    "note": "This service officer also serves Dixon County."
+   },
+   {
+    "county": "Dawes",
+    "phone": "308-432-0119",
+    "address": "342 Main Street, Chadron, NE 69337",
+    "hours": "Monday–Friday 8:30 a.m.–4:30 p.m. (closed noon–1 p.m.)",
+    "note": "This service officer also serves Sioux County."
+   },
+   {
+    "county": "Dawson",
+    "phone": "308-324-3041",
+    "address": "Courthouse, ground floor, 700 N. Washington Street, Room V, Lexington, NE 68850",
+    "hours": "Monday–Friday 8 a.m.–5 p.m. (closed noon–1 p.m.)",
+    "other_phones": [
+     "844-387-8387"
+    ],
+    "note": "This service officer also serves Frontier County."
+   },
+   {
+    "county": "Deuel",
+    "phone": "308-874-2705",
+    "address": "171 Vincent Avenue, Chappell (mailing: PO Box 327, Chappell, NE 69129)",
+    "hours": "Thursday only, 8 a.m.–4 p.m. (closed noon–1 p.m.)"
+   },
+   {
+    "county": "Dixon",
+    "phone": "402-755-5625",
+    "address": "Courthouse, 1st floor, Ponca (mailing: PO Box 546, Ponca, NE 68770)",
+    "hours": "First and third Thursdays, 9 a.m.–3 p.m.",
+    "note": "This service officer also serves Dakota County."
+   },
+   {
+    "county": "Dodge",
+    "phone": "402-727-2719",
+    "address": "Courthouse, 435 N. Park Avenue, Room 203, Fremont, NE 68025",
+    "hours": "Monday–Friday 8:30 a.m.–4:30 p.m."
+   },
+   {
+    "county": "Douglas",
+    "phone": "402-444-7180",
+    "address": "1111 S. 41st Street, Suite 110, Omaha, NE 68105",
+    "hours": "Monday–Friday 8 a.m.–4:30 p.m. (closed noon–1 p.m.)"
+   },
+   {
+    "county": "Dundy",
+    "phone": "308-423-2584",
+    "address": "621 Chief Street, Benkelman (mailing: PO Box 734, Benkelman, NE 69021)",
+    "hours": "Wednesday only, 9 a.m.–3 p.m. (closed noon–1 p.m.)"
+   },
+   {
+    "county": "Fillmore",
+    "phone": "402-759-3219",
+    "address": "1320 G Street, Geneva, NE 68361",
+    "hours": "Monday–Friday 8 a.m.–5 p.m.",
+    "note": "This service officer also serves York County."
+   },
+   {
+    "county": "Franklin",
+    "phone": "308-425-3202",
+    "address": "405 15th Avenue, Franklin (mailing: PO Box 146, Franklin, NE 68939)",
+    "hours": "Wednesday only, 8:30 a.m.–4:30 p.m."
+   },
+   {
+    "county": "Frontier",
+    "phone": "308-324-3041",
+    "address": "Courthouse, ground floor, 700 N. Washington Street, Room V, Lexington, NE 68850",
+    "hours": "Monday–Friday 8 a.m.–5 p.m. (closed noon–1 p.m.)",
+    "other_phones": [
+     "844-387-8387"
+    ],
+    "note": "This service officer also serves Dawson County."
+   },
+   {
+    "county": "Furnas",
+    "phone": "308-345-2385",
+    "address": "322 Norris Avenue, Suite 3, McCook, NE 69001",
+    "hours": "Monday–Friday 8 a.m.–3 p.m.",
+    "note": "This service officer also serves Red Willow County."
+   },
+   {
+    "county": "Gage",
+    "phone": "402-223-1342",
+    "address": "619 N. 7th Street, Beatrice, NE 68310",
+    "hours": "Monday–Friday 8 a.m.–5 p.m. (closed noon–1 p.m.)"
+   },
+   {
+    "county": "Garden",
+    "phone": "308-289-2341",
+    "address": "Garden County Annex, 619 Main Street, Oshkosh (mailing: PO Box 350, Oshkosh, NE 69154)",
+    "hours": "First and third Tuesdays only, 10 a.m.–2 p.m.",
+    "note": "This service officer also serves Keith and Arthur counties. The listed number is the officer’s cell phone."
+   },
+   {
+    "county": "Garfield",
+    "phone": "308-214-0076",
+    "address": "1237 G Street, Burwell (mailing: PO Box 122, Burwell, NE 68823)",
+    "hours": "Wednesday only, 8 a.m.–5 p.m. (closed noon–1 p.m.), or by appointment",
+    "note": "The listed number is the officer’s cell phone."
+   },
+   {
+    "county": "Gosper",
+    "phone": "308-785-8028",
+    "address": "Courthouse, 507 Smith Avenue, 1st floor, Elwood (mailing: PO Box 52, Elwood, NE 68937)",
+    "hours": "First, second and third Tuesdays, 9 a.m.–3 p.m. (closed noon–1 p.m.), or by appointment"
+   },
+   {
+    "county": "Grant",
+    "phone": "308-762-4154",
+    "address": "Box Butte County office, 524 Box Butte Avenue, Suite D, Alliance, NE 69301",
+    "hours": "Monday–Friday 8 a.m.–4 p.m. (closed noon–1 p.m.)",
+    "note": "This service officer also serves Box Butte County."
+   },
+   {
+    "county": "Greeley",
+    "phone": "402-395-2905",
+    "address": "Boone County office, 222 S. 4th Street, Albion, NE 68620",
+    "hours": "Tuesday–Thursday 8 a.m.–4:30 p.m. (closed noon–12:30 p.m.)",
+    "note": "This service officer also serves Boone County."
+   },
+   {
+    "county": "Hall",
+    "phone": "308-385-5065",
+    "address": "131 S. Locust Street, Grand Island, NE 68801",
+    "hours": "Monday–Friday 8:30 a.m.–5 p.m.",
+    "note": "This service officer also serves Howard, Nance and Sherman counties."
+   },
+   {
+    "county": "Hamilton",
+    "phone": "402-694-4477",
+    "address": "Courthouse, 1111 13th Street, Suite 1, Aurora, NE 68818",
+    "hours": "Monday, Wednesday and Friday 8 a.m.–5 p.m. (closed noon–1 p.m.)",
+    "note": "This service officer also serves Clay County."
+   },
+   {
+    "county": "Harlan",
+    "phone": "308-920-5009",
+    "address": "Courthouse, Alma (mailing: PO Box 728, Alma, NE 68920)",
+    "hours": "Tuesday only, 8:30 a.m.–4:30 p.m."
+   },
+   {
+    "county": "Hayes",
+    "phone": "308-883-7279",
+    "address": "Courthouse, Hayes Center (mailing: PO Box 370, Hayes Center, NE 69032)",
+    "hours": "By appointment only",
+    "other_phones": [
+     "308-286-3366"
+    ],
+    "note": "The directory asks callers to use the cell phone, listed first; the courthouse number is listed second."
+   },
+   {
+    "county": "Hitchcock",
+    "phone": "308-334-5300",
+    "address": "Courthouse, 229 E. D Street, Trenton (mailing: PO Box 248, Trenton, NE 69044)",
+    "hours": "Tuesday–Thursday 8 a.m.–noon and 1–4 p.m."
+   },
+   {
+    "county": "Holt",
+    "phone": "402-336-1200",
+    "address": "Courthouse Annex, 128 N. 6th Street, Suite 5, O’Neill, NE 68763",
+    "hours": "Monday–Friday 8 a.m.–5 p.m. (closed noon–1 p.m.)",
+    "note": "This service officer also serves Boyd and Wheeler counties."
+   },
+   {
+    "county": "Hooker",
+    "phone": "308-546-7557",
+    "address": "Courthouse, 303 NW First Street, Mullen (mailing: PO Box 184, Mullen, NE 69152)",
+    "hours": "By appointment",
+    "note": "The listed number is the officer’s cell phone."
+   },
+   {
+    "county": "Howard",
+    "phone": "308-385-5065",
+    "address": "Hall County office, 131 S. Locust Street, Grand Island, NE 68801",
+    "hours": "Monday–Friday 8:30 a.m.–5 p.m.",
+    "note": "This service officer also serves Hall, Nance and Sherman counties."
+   },
+   {
+    "county": "Jefferson",
+    "phone": "402-729-6839",
+    "address": "Courthouse, lower level, 411 4th Street, Fairbury, NE 68352",
+    "hours": "Monday–Friday 8 a.m.–3 p.m. (closed noon–1 p.m.)"
+   },
+   {
+    "county": "Johnson",
+    "phone": "402-335-6306",
+    "address": "351 Broadway, Tecumseh (mailing: PO Box 217, Tecumseh, NE 68450)",
+    "hours": "Monday–Friday 9 a.m.–1 p.m."
+   },
+   {
+    "county": "Kearney",
+    "phone": "308-832-1747",
+    "address": "528 N. Minden Avenue, Minden (mailing: PO Box 172, Minden, NE 68959)",
+    "hours": "Monday–Friday 8:30 a.m.–5 p.m. (closed noon–1 p.m.)"
+   },
+   {
+    "county": "Keith",
+    "phone": "308-289-2341",
+    "address": "Courthouse, Room 205, 511 N. Spruce Street, Ogallala, NE 69153",
+    "hours": "Monday–Thursday 8 a.m.–4 p.m. (closed noon–1 p.m.); Friday 8 a.m.–noon",
+    "note": "This service officer also serves Arthur and Garden counties. The listed number is the officer’s cell phone."
+   },
+   {
+    "county": "Keya Paha",
+    "phone": "402-387-0233",
+    "address": "Brown County office, 148 W. 4th Street, Suite 3, Ainsworth, NE 69210",
+    "hours": "Monday–Friday 8 a.m.–5 p.m. (closed noon–1 p.m.)",
+    "note": "This service officer also serves Brown and Rock counties."
+   },
+   {
+    "county": "Kimball",
+    "phone": "308-235-3141",
+    "address": "Courthouse, 1st floor, 114 E. 3rd Street, Kimball, NE 69145",
+    "hours": "Monday–Friday 8 a.m.–5 p.m. (closed noon–1 p.m.)",
+    "note": "This service officer also serves Scotts Bluff and Banner counties."
+   },
+   {
+    "county": "Knox",
+    "phone": "402-288-5617",
+    "address": "209 Lovell Street, Annex Building 2, Center (mailing: PO Box 205, Center, NE 68724)",
+    "hours": "Monday–Friday 8:30 a.m.–4:30 p.m."
+   },
+   {
+    "county": "Lancaster",
+    "phone": "402-441-7361",
+    "address": "600 South 70th Street, Building 2, Suite 200, Lincoln, NE 68510",
+    "hours": "Monday–Friday 8 a.m.–4 p.m. (closed noon–1 p.m.)"
+   },
+   {
+    "county": "Lincoln",
+    "phone": "308-534-4350",
+    "address": "311 N. Vine Street, Suite 2, North Platte, NE 69101",
+    "hours": "Monday–Friday 9 a.m.–5 p.m. (closed noon–1 p.m.)",
+    "note": "The directory lists extension 4268."
+   },
+   {
+    "county": "Logan",
+    "phone": "308-636-6157",
+    "address": "Courthouse, 317 Main Street, Stapleton (mailing: PO Box 8, Stapleton, NE 69163)",
+    "hours": "Wednesday only, 1–4 p.m.",
+    "note": "This service officer also serves Thomas and McPherson counties."
+   },
+   {
+    "county": "Loup",
+    "phone": "308-872-2071",
+    "address": "Custer County office, 431 S. 10th, Broken Bow, NE 68822",
+    "hours": "Monday–Friday 9 a.m.–5 p.m.",
+    "note": "This service officer also serves Blaine and Custer counties."
+   },
+   {
+    "county": "Madison",
+    "phone": "402-370-3578",
+    "address": "1305 S. 13th Street, Suite 200, Norfolk, NE 68701",
+    "hours": "Monday–Friday 8:30 a.m.–5 p.m. (closed noon–1 p.m.)"
+   },
+   {
+    "county": "McPherson",
+    "phone": "308-636-6157",
+    "address": "Courthouse, 200 Anderson Street, Tryon, NE 69167",
+    "hours": "Tuesday only, 8–11 a.m.",
+    "note": "This service officer also serves Logan and Thomas counties."
+   },
+   {
+    "county": "Merrick",
+    "phone": "308-946-2466",
+    "address": "Courthouse, 1510 18th Street, Central City (mailing: PO Box 27, Central City, NE 68826)",
+    "hours": "Tuesday only, 8 a.m.–4:30 p.m., or by appointment"
+   },
+   {
+    "county": "Morrill",
+    "phone": "308-262-0787",
+    "address": "606 L Street, Bridgeport (mailing: PO Box 536, Bridgeport, NE 69336)",
+    "hours": "Monday–Thursday 7:30 a.m.–3:30 p.m.; Friday 7:30 a.m.–2 p.m.; open during the lunch hour"
+   },
+   {
+    "county": "Nance",
+    "phone": "308-385-5065",
+    "address": "Hall County office, 131 S. Locust Street, Grand Island, NE 68801",
+    "hours": "Monday–Friday 8:30 a.m.–5 p.m.",
+    "note": "This service officer also serves Hall, Howard and Sherman counties."
+   },
+   {
+    "county": "Nemaha",
+    "phone": "402-274-3419",
+    "address": "601 J Street, Auburn, NE 68305",
+    "hours": "Tuesday–Friday 8:30 a.m.–4:30 p.m."
+   },
+   {
+    "county": "Nuckolls",
+    "phone": "402-225-3971",
+    "address": "Courthouse, Nelson (mailing: PO Box 382, Nelson, NE 68961)",
+    "hours": "Monday and Tuesday 8 a.m.–4 p.m."
+   },
+   {
+    "county": "Otoe",
+    "phone": "402-873-9540",
+    "address": "1021 Central Avenue, Room 205, Nebraska City, NE 68410",
+    "hours": "Monday–Friday 8 a.m.–4 p.m. (closed noon–1 p.m.)"
+   },
+   {
+    "county": "Pawnee",
+    "phone": "402-852-2777",
+    "address": "Courthouse, 1st floor, Pawnee City (mailing: PO Box 113, Pawnee City, NE 68420)",
+    "hours": "Monday–Friday 8 a.m.–noon"
+   },
+   {
+    "county": "Perkins",
+    "phone": "308-352-7590",
+    "address": "Courthouse, Grant (mailing: PO Box 475, Grant, NE 69140)",
+    "hours": "Tuesday–Thursday 8 a.m.–4 p.m. (closed noon–1 p.m.)",
+    "other_phones": [
+     "308-352-7594"
+    ],
+    "note": "The second number is the courthouse receptionist."
+   },
+   {
+    "county": "Phelps",
+    "phone": "308-995-4166",
+    "address": "Courthouse, 715 5th Avenue, Holdrege, NE 68949",
+    "hours": "Monday–Friday 9 a.m.–5 p.m. (closed noon–1 p.m.)"
+   },
+   {
+    "county": "Pierce",
+    "phone": "402-329-6345",
+    "address": "Courthouse, Room 6, 111 W. Court Street, Pierce, NE 68767",
+    "hours": "Monday–Friday 8:30 a.m.–4:30 p.m."
+   },
+   {
+    "county": "Platte",
+    "phone": "402-563-4914",
+    "address": "Courthouse, 3rd floor, 2610 14th Street, Columbus, NE 68601",
+    "hours": "Monday–Friday 8 a.m.–5 p.m. (closed noon–1 p.m.)",
+    "note": "This service officer also serves Colfax County."
+   },
+   {
+    "county": "Polk",
+    "phone": "402-747-2130",
+    "address": "Courthouse, Osceola (mailing: PO Box 603, Osceola, NE 68651)",
+    "hours": "Wednesday only, 9 a.m.–noon"
+   },
+   {
+    "county": "Red Willow",
+    "phone": "308-345-2385",
+    "address": "322 Norris Avenue, Suite 3, McCook, NE 69001",
+    "hours": "Monday–Friday 8 a.m.–3 p.m.",
+    "note": "This service officer also serves Furnas County. The Red Willow listing prints no phone; the number is the one the Furnas County listing gives for the same McCook office."
+   },
+   {
+    "county": "Richardson",
+    "phone": "402-245-3722",
+    "address": "Courthouse, 1700 Stone Street, Room 101, Falls City, NE 68355",
+    "hours": "Monday–Friday 8:30 a.m.–5 p.m. (closed noon–1 p.m.)"
+   },
+   {
+    "county": "Rock",
+    "phone": "402-387-0233",
+    "address": "Brown County office, 148 W. 4th Street, Suite 3, Ainsworth, NE 69210",
+    "hours": "Monday–Friday 8 a.m.–5 p.m. (closed noon–1 p.m.)",
+    "note": "This service officer also serves Brown and Keya Paha counties."
+   },
+   {
+    "county": "Saline",
+    "phone": "402-821-2990",
+    "address": "Courthouse, Room 100, 215 S. Court Street, Wilber (mailing: PO Box 865, Wilber, NE 68465)",
+    "hours": "Monday–Friday 8 a.m.–5 p.m. (closed noon–1 p.m.)"
+   },
+   {
+    "county": "Sarpy",
+    "phone": "402-593-2203",
+    "address": "1102 East 1st Street, Suite 5, Papillion, NE 68046",
+    "hours": "Monday–Friday 8 a.m.–4:30 p.m.; closed Wednesday 11:30 a.m.–1 p.m."
+   },
+   {
+    "county": "Saunders",
+    "phone": "402-443-8137",
+    "address": "426 N. Broadway, Wahoo, NE 68066",
+    "hours": "Monday–Friday 8 a.m.–5 p.m. (closed noon–1 p.m.)"
+   },
+   {
+    "county": "Scotts Bluff",
+    "phone": "308-436-6643",
+    "address": "Administrative Building, 1825 10th Street, Gering, NE 69341",
+    "hours": "Monday–Friday 8 a.m.–4:30 p.m., open over the lunch hour",
+    "note": "This service officer also serves Banner and Kimball counties."
+   },
+   {
+    "county": "Seward",
+    "phone": "402-643-4105",
+    "address": "320 S. 14th Street, Seward, NE 68434",
+    "hours": "Monday–Friday 8 a.m.–5 p.m."
+   },
+   {
+    "county": "Sheridan",
+    "phone": "308-327-5658",
+    "address": "111 N. Main Street, Rushville (mailing: PO Box 527, Rushville, NE 69360)",
+    "hours": "Monday–Friday 8:30 a.m.–4:30 p.m. (closed noon–1 p.m.)"
+   },
+   {
+    "county": "Sherman",
+    "phone": "308-385-5065",
+    "address": "Hall County office, 131 S. Locust Street, Grand Island, NE 68801",
+    "hours": "Monday–Friday 8:30 a.m.–5 p.m.",
+    "note": "This service officer also serves Hall, Howard and Nance counties."
+   },
+   {
+    "county": "Sioux",
+    "phone": "605-891-9556",
+    "address": "Sioux County Courthouse, 325 Main Street, Harrison (mailing: PO Box 158, Harrison, NE 69346)",
+    "hours": "By appointment",
+    "note": "This service officer also serves Dawes County. The listed number is the officer’s cell phone."
+   },
+   {
+    "county": "Stanton",
+    "phone": "402-439-2196",
+    "address": "Courthouse, 804 Ivy Street, Stanton (mailing: PO Box 723, Stanton, NE 68779)",
+    "hours": "Tuesday–Thursday 8:30 a.m.–4:30 p.m., or by appointment"
+   },
+   {
+    "county": "Thayer",
+    "phone": "402-768-7223",
+    "address": "Courthouse basement, 225 N. 4th Street, Room 102, Hebron, NE 68370",
+    "hours": "Wednesday and Thursday 7:30 a.m.–4 p.m. (closed noon–12:30 p.m.)"
+   },
+   {
+    "county": "Thomas",
+    "phone": "308-636-6157",
+    "address": "Courthouse, 503 Main Street, Thedford (mailing: PO Box 226, Thedford, NE 69166)",
+    "hours": "Tuesday only, 1–4 p.m.",
+    "note": "This service officer also serves Logan and McPherson counties."
+   },
+   {
+    "county": "Thurston",
+    "phone": "402-385-3119",
+    "address": "Courthouse, 106 S. 6th Street, Pender (mailing: PO Box 516, Pender, NE 68047)",
+    "hours": "Tuesdays, 8:30 a.m.–5 p.m.",
+    "note": "This service officer also serves Burt County."
+   },
+   {
+    "county": "Valley",
+    "phone": "308-728-5470",
+    "address": "129 S. 15th Street, Suite 105, Ord, NE 68862",
+    "hours": "Wednesday and Thursday 9 a.m.–4 p.m."
+   },
+   {
+    "county": "Washington",
+    "phone": "402-426-6838",
+    "address": "Courthouse, main floor, 1555 Colfax Street, Blair, NE 68008",
+    "hours": "Monday–Friday 8:30 a.m.–4:30 p.m."
+   },
+   {
+    "county": "Wayne",
+    "phone": "402-375-2764",
+    "address": "Courthouse, 510 Pearl Street, Wayne, NE 68787",
+    "hours": "Monday–Friday 8 a.m.–4:30 p.m."
+   },
+   {
+    "county": "Webster",
+    "phone": "402-746-2493",
+    "address": "Courthouse, 621 N. Cedar Street, Red Cloud, NE 68970",
+    "hours": "Monday and Wednesday 8 a.m.–4 p.m. (closed noon–1 p.m.)"
+   },
+   {
+    "county": "Wheeler",
+    "phone": "402-336-1200",
+    "address": "Holt County office, 128 N. 6th Street, Suite 5, O’Neill, NE 68763",
+    "hours": "Monday–Friday 8 a.m.–5 p.m.",
+    "note": "This service officer also serves Holt and Boyd counties."
+   },
+   {
+    "county": "York",
+    "phone": "402-362-4047",
+    "address": "Courthouse, Room 110, 510 N. Lincoln Avenue, York (mailing: PO Box 505, York, NE 68467)",
+    "hours": "Monday–Friday 8 a.m.–5 p.m.",
+    "note": "This service officer also serves Fillmore County."
+   }
+  ]
+ },
+ "aging": {
+  "source_url": "https://nebraskajudicial.gov/programs-services/office-public-guardian/resources-private-guardians-and-conservators/opg-aging-adult-resources",
+  "source_title": "Nebraska Judicial Branch, Office of Public Guardian: Aging & Adult Resources",
+  "source_scope": "The eight Area Agencies on Aging and the counties each serves; read in full. The page is undated. It omits Thomas County, which the DHHS Area Agencies on Aging directory map places with West Central Nebraska: https://dhhs.ne.gov/Chronic%20Disease%20Prevention%20%20Control/NE%20Area%20Agencies%20on%20Aging%20Directory%20Map.pdf",
+  "review": "full",
+  "review_method": "full_official_page_text",
+  "region_word": "",
+  "next_step_extra": "The statewide Aging and Disability Resource Center line, 844-843-6364, also connects you to aging and disability help.",
+  "regions": [
+   {
+    "id": "ne-aaa-enoa",
+    "label": "Eastern Nebraska",
+    "name": "Eastern Nebraska Office on Aging (ENOA)",
+    "phone": "402-444-6536",
+    "counties": [
+     "Cass",
+     "Dodge",
+     "Douglas",
+     "Sarpy",
+     "Washington"
+    ],
+    "notes": [
+     "Toll-free: 888-554-2711. Office: 4780 S. 131st Street, Omaha."
+    ],
+    "phone_source": {
+     "url": "https://dhhs.ne.gov/Pages/Aging.aspx",
+     "title": "Nebraska DHHS State Unit on Aging: Area Agencies on Aging",
+     "scope": "Each agency’s city, phones and office address; read in full."
+    }
+   },
+   {
+    "id": "ne-aaa-aging-partners",
+    "label": "Lincoln area",
+    "name": "Aging Partners (Lincoln Area Agency on Aging)",
+    "phone": "402-441-7070",
+    "counties": [
+     "Butler",
+     "Fillmore",
+     "Lancaster",
+     "Polk",
+     "Saline",
+     "Saunders",
+     "Seward",
+     "York"
+    ],
+    "notes": [
+     "Toll-free: 800-247-0938. Office: 600 S. 70th Street, Building 2, Lincoln."
+    ],
+    "phone_source": {
+     "url": "https://dhhs.ne.gov/Pages/Aging.aspx",
+     "title": "Nebraska DHHS State Unit on Aging: Area Agencies on Aging",
+     "scope": "Each agency’s city, phones and office address; read in full."
+    }
+   },
+   {
+    "id": "ne-aaa-northeast",
+    "label": "Northeast Nebraska",
+    "name": "Northeast Nebraska Area Agency on Aging (NENAAA)",
+    "phone": "402-370-3454",
+    "counties": [
+     "Antelope",
+     "Boone",
+     "Boyd",
+     "Brown",
+     "Burt",
+     "Cedar",
+     "Cherry",
+     "Colfax",
+     "Cuming",
+     "Dakota",
+     "Dixon",
+     "Holt",
+     "Keya Paha",
+     "Knox",
+     "Madison",
+     "Nance",
+     "Pierce",
+     "Platte",
+     "Rock",
+     "Stanton",
+     "Thurston",
+     "Wayne"
+    ],
+    "notes": [
+     "Toll-free: 800-672-8368. Office: 110 N. 37th Street, Unit 101, Norfolk."
+    ],
+    "phone_source": {
+     "url": "https://dhhs.ne.gov/Pages/Aging.aspx",
+     "title": "Nebraska DHHS State Unit on Aging: Area Agencies on Aging",
+     "scope": "Each agency’s city, phones and office address; read in full."
+    }
+   },
+   {
+    "id": "ne-aaa-south-central",
+    "label": "South Central Nebraska",
+    "name": "South Central Nebraska Area Agency on Aging (SCNAAA)",
+    "phone": "308-234-1851",
+    "counties": [
+     "Blaine",
+     "Buffalo",
+     "Custer",
+     "Franklin",
+     "Furnas",
+     "Garfield",
+     "Greeley",
+     "Harlan",
+     "Kearney",
+     "Loup",
+     "Phelps",
+     "Sherman",
+     "Valley",
+     "Wheeler"
+    ],
+    "notes": [
+     "Toll-free: 800-658-4320. Office: 620 E. 25th Street, Suite 12, Kearney."
+    ],
+    "phone_source": {
+     "url": "https://dhhs.ne.gov/Pages/Aging.aspx",
+     "title": "Nebraska DHHS State Unit on Aging: Area Agencies on Aging",
+     "scope": "Each agency’s city, phones and office address; read in full."
+    }
+   },
+   {
+    "id": "ne-aaa-midland",
+    "label": "Midland",
+    "name": "Midland Area Agency on Aging (MAAA)",
+    "phone": "402-463-4565",
+    "counties": [
+     "Adams",
+     "Clay",
+     "Hall",
+     "Hamilton",
+     "Howard",
+     "Merrick",
+     "Nuckolls",
+     "Webster"
+    ],
+    "notes": [
+     "Toll-free: 800-955-9714. Office: 2727 W. 2nd Street, Suite 440, Hastings."
+    ],
+    "phone_source": {
+     "url": "https://dhhs.ne.gov/Pages/Aging.aspx",
+     "title": "Nebraska DHHS State Unit on Aging: Area Agencies on Aging",
+     "scope": "Each agency’s city, phones and office address; read in full."
+    }
+   },
+   {
+    "id": "ne-aaa-blue-rivers",
+    "label": "Blue Rivers",
+    "name": "Blue Rivers Area Agency on Aging (BRAAA)",
+    "phone": "402-223-1376",
+    "counties": [
+     "Gage",
+     "Jefferson",
+     "Johnson",
+     "Nemaha",
+     "Otoe",
+     "Pawnee",
+     "Richardson",
+     "Thayer"
+    ],
+    "notes": [
+     "Toll-free: 888-989-9417. Office: 103 Eastside Boulevard, Beatrice."
+    ],
+    "phone_source": {
+     "url": "https://dhhs.ne.gov/Pages/Aging.aspx",
+     "title": "Nebraska DHHS State Unit on Aging: Area Agencies on Aging",
+     "scope": "Each agency’s city, phones and office address; read in full."
+    }
+   },
+   {
+    "id": "ne-aaa-west-central",
+    "label": "West Central Nebraska",
+    "name": "West Central Nebraska Area Agency on Aging (WCNAAA)",
+    "phone": "308-535-8195",
+    "counties": [
+     "Arthur",
+     "Chase",
+     "Dawson",
+     "Dundy",
+     "Frontier",
+     "Gosper",
+     "Grant",
+     "Hayes",
+     "Hitchcock",
+     "Hooker",
+     "Keith",
+     "Lincoln",
+     "Logan",
+     "McPherson",
+     "Perkins",
+     "Red Willow",
+     "Thomas"
+    ],
+    "notes": [
+     "Toll-free: 800-662-2961. Office: 115 N. Vine Street, North Platte."
+    ],
+    "phone_source": {
+     "url": "https://dhhs.ne.gov/Pages/Aging.aspx",
+     "title": "Nebraska DHHS State Unit on Aging: Area Agencies on Aging",
+     "scope": "Each agency’s city, phones and office address; read in full."
+    }
+   },
+   {
+    "id": "ne-aaa-western",
+    "label": "Western Nebraska",
+    "name": "Aging Office of Western Nebraska (AOWN)",
+    "phone": "308-635-0851",
+    "counties": [
+     "Banner",
+     "Box Butte",
+     "Cheyenne",
+     "Dawes",
+     "Deuel",
+     "Garden",
+     "Kimball",
+     "Morrill",
+     "Scotts Bluff",
+     "Sheridan",
+     "Sioux"
+    ],
+    "notes": [
+     "Toll-free: 800-682-5140. Office: 1437 10th Street, Gering."
+    ],
+    "phone_source": {
+     "url": "https://dhhs.ne.gov/Pages/Aging.aspx",
+     "title": "Nebraska DHHS State Unit on Aging: Area Agencies on Aging",
+     "scope": "Each agency’s city, phones and office address; read in full."
+    }
+   }
+  ]
+ },
+ "ombudsman": {
+  "state_phone": "402-802-5541",
+  "regions": [
+   {
+    "id": "ne-omb-state",
+    "name": "Nebraska Office of the State Long-Term Care Ombudsman",
+    "phone": "402-802-5541",
+    "counties": [
+     "Adams",
+     "Antelope",
+     "Arthur",
+     "Banner",
+     "Blaine",
+     "Boone",
+     "Box Butte",
+     "Boyd",
+     "Brown",
+     "Buffalo",
+     "Burt",
+     "Butler",
+     "Cass",
+     "Cedar",
+     "Chase",
+     "Cherry",
+     "Cheyenne",
+     "Clay",
+     "Colfax",
+     "Cuming",
+     "Custer",
+     "Dakota",
+     "Dawes",
+     "Dawson",
+     "Deuel",
+     "Dixon",
+     "Dodge",
+     "Douglas",
+     "Dundy",
+     "Fillmore",
+     "Franklin",
+     "Frontier",
+     "Furnas",
+     "Gage",
+     "Garden",
+     "Garfield",
+     "Gosper",
+     "Grant",
+     "Greeley",
+     "Hall",
+     "Hamilton",
+     "Harlan",
+     "Hayes",
+     "Hitchcock",
+     "Holt",
+     "Hooker",
+     "Howard",
+     "Jefferson",
+     "Johnson",
+     "Kearney",
+     "Keith",
+     "Keya Paha",
+     "Kimball",
+     "Knox",
+     "Lancaster",
+     "Lincoln",
+     "Logan",
+     "Loup",
+     "Madison",
+     "McPherson",
+     "Merrick",
+     "Morrill",
+     "Nance",
+     "Nemaha",
+     "Nuckolls",
+     "Otoe",
+     "Pawnee",
+     "Perkins",
+     "Phelps",
+     "Pierce",
+     "Platte",
+     "Polk",
+     "Red Willow",
+     "Richardson",
+     "Rock",
+     "Saline",
+     "Sarpy",
+     "Saunders",
+     "Scotts Bluff",
+     "Seward",
+     "Sheridan",
+     "Sherman",
+     "Sioux",
+     "Stanton",
+     "Thayer",
+     "Thomas",
+     "Thurston",
+     "Valley",
+     "Washington",
+     "Wayne",
+     "Webster",
+     "Wheeler",
+     "York"
+    ],
+    "source_url": "https://dhhs.ne.gov/Documents/Ombudsman-Contacts-Map.pdf",
+    "source_title": "Nebraska Long-Term Care Ombudsman Program: contacts map (MAP-93, Rev. 10/2026)",
+    "source_scope": "State office phone (402) 802-5541 and the regional ombudsmen for the Western, Central, Mid-Central, Northeast, Southeast and Eastern regions; read in full. The county-to-region boundaries are drawn on the map and are not in its text.",
+    "review": "full",
+    "review_method": "full_official_pdf",
+    "counties_from_source": true,
+    "notes": [
+     "The state office connects you with the regional ombudsman for the facility’s county."
+    ]
+   }
+  ]
+ },
+ "cils": {
+  "source_url": "https://www.ilru.org/cil-directory/ne",
+  "source_title": "ILRU: Nebraska CIL Directory",
+  "scope": "Each center’s offices, phones, website and counties served; read in full. The directory is undated.",
+  "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living",
+  "list": [
+   {
+    "id": "ne-cil-independence-rising",
+    "name": "Independence Rising (central and western Nebraska)",
+    "organization": "Independence Rising",
+    "url": "https://irnebraska.org/",
+    "phone": "308-382-9255",
+    "counties": [
+     "Adams",
+     "Arthur",
+     "Banner",
+     "Blaine",
+     "Box Butte",
+     "Buffalo",
+     "Chase",
+     "Cheyenne",
+     "Clay",
+     "Custer",
+     "Dawes",
+     "Dawson",
+     "Deuel",
+     "Dundy",
+     "Franklin",
+     "Frontier",
+     "Furnas",
+     "Garden",
+     "Garfield",
+     "Gosper",
+     "Grant",
+     "Greeley",
+     "Hall",
+     "Hamilton",
+     "Harlan",
+     "Hayes",
+     "Hitchcock",
+     "Hooker",
+     "Howard",
+     "Kearney",
+     "Keith",
+     "Kimball",
+     "Lincoln",
+     "Logan",
+     "Loup",
+     "McPherson",
+     "Merrick",
+     "Morrill",
+     "Nuckolls",
+     "Perkins",
+     "Phelps",
+     "Red Willow",
+     "Scotts Bluff",
+     "Sheridan",
+     "Sherman",
+     "Sioux",
+     "Thomas",
+     "Valley",
+     "Webster",
+     "Wheeler"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "The phone is the Grand Island office (3335 West Capital Avenue). Other offices: Scottsbluff 308-633-7025; North Platte 308-221-6073; Kearney 308-708-2392; Gothenburg 308-537-4332; McCook and Maxwell 308-258-1914."
+    ]
+   },
+   {
+    "id": "ne-cil-lhd-lincoln",
+    "name": "League of Human Dignity: Lincoln Center for Independent Living",
+    "organization": "League of Human Dignity",
+    "url": "https://leagueofhumandignity.com/",
+    "phone": "402-441-7871",
+    "counties": [
+     "Butler",
+     "Cass",
+     "Dodge",
+     "Fillmore",
+     "Gage",
+     "Jefferson",
+     "Johnson",
+     "Lancaster",
+     "Nemaha",
+     "Otoe",
+     "Pawnee",
+     "Polk",
+     "Richardson",
+     "Saline",
+     "Saunders",
+     "Seward",
+     "Thayer",
+     "Washington",
+     "York"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "Office: 1701 P Street, Lincoln, NE 68508; toll-free 888-508-4758."
+    ]
+   },
+   {
+    "id": "ne-cil-lhd-norfolk",
+    "name": "League of Human Dignity: Norfolk Center for Independent Living",
+    "organization": "League of Human Dignity",
+    "url": "https://leagueofhumandignity.com/",
+    "phone": "402-371-4475",
+    "counties": [
+     "Antelope",
+     "Boone",
+     "Boyd",
+     "Brown",
+     "Burt",
+     "Cedar",
+     "Cherry",
+     "Colfax",
+     "Cuming",
+     "Dakota",
+     "Dixon",
+     "Holt",
+     "Keya Paha",
+     "Knox",
+     "Madison",
+     "Nance",
+     "Pierce",
+     "Platte",
+     "Rock",
+     "Stanton",
+     "Thurston",
+     "Wayne"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "Office: 400 Elm Street, Norfolk, NE 68701."
+    ]
+   },
+   {
+    "id": "ne-cil-lhd-omaha",
+    "name": "League of Human Dignity: Omaha Center for Independent Living",
+    "organization": "League of Human Dignity",
+    "url": "https://leagueofhumandignity.com/",
+    "phone": "402-595-1256",
+    "counties": [
+     "Douglas",
+     "Sarpy"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "Office: 1301 S. 75th Street, Omaha, NE 68124; toll-free 800-843-5784."
+    ]
+   }
+  ]
+ },
+ "programs": [
+  {
+   "id": "ne-claims",
+   "name": "Nebraska veterans: county veterans service officers for claims help",
+   "organization": "County veterans service officers; Nebraska Department of Veterans’ Affairs",
+   "url": "https://veterans.nebraska.gov/cvso",
+   "needs": [
+    "general_navigation",
+    "benefits_and_funding"
+   ],
+   "description": "Free help with VA claims, pension and survivor benefits, Nebraska Veterans Aid applications and other benefits from county veterans service officers. Every county has one; some officers serve two to four neighboring counties and keep part-week hours. The Nebraska Department of Veterans’ Affairs’ State Service Office in Lincoln also files claims.",
+   "next_step": "Choose your county for its service officer, address and hours, and call before you go. The NDVA State Service Office is at 402-420-4021.",
+   "constraints": [
+    "Many rural offices are open one to three days a week; check the hours on the county card."
+   ],
+   "phone": "402-420-4021",
+   "phone_label": "NDVA State Service Office (402-420-4021)",
+   "phone_source": "https://veterans.nebraska.gov/staff",
+   "review": "full",
+   "sources": [
+    {
+     "url": "https://veterans.nebraska.gov/sites/default/files/CVSODirectory.pdf",
+     "title": "Nebraska Department of Veterans’ Affairs: County Veterans Service Office Listing (updated 10/01/2024)",
+     "scope": "Each county’s service officer phone, office location, mailing address, hours and shared counties; read in full."
+    },
+    {
+     "url": "https://veterans.nebraska.gov/cvso",
+     "title": "Nebraska Department of Veterans’ Affairs: County Veterans Service Offices",
+     "scope": "What county veterans service officers do and the link to the directory; search excerpt."
+    },
+    {
+     "url": "https://veterans.nebraska.gov/staff",
+     "title": "Nebraska Department of Veterans’ Affairs: staff directory",
+     "scope": "State Service Office, 3800 Village Drive, Lincoln; phone (402) 420-4021; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "ne-adrc",
+   "name": "Nebraska Aging and Disability Resource Center",
+   "organization": "Nebraska DHHS State Unit on Aging and the Area Agencies on Aging",
+   "url": "https://dhhs.ne.gov/Pages/Aging-and-Disability-Resource-Center.aspx",
+   "needs": [
+    "general_navigation",
+    "help_at_home",
+    "equipment_home_accessibility"
+   ],
+   "description": "Nebraska’s Aging and Disability Resource Centers give information, referrals and help with community services and long-term care options to people 60 and older, people with disabilities of any age, and their families and caregivers. The Area Agencies on Aging run the local centers. Military service is not required.",
+   "next_step": "Call 844-843-6364, or choose a county above for its Area Agency on Aging.",
+   "constraints": [
+    "Each program has its own eligibility and waitlist."
+   ],
+   "phone": "844-843-6364",
+   "phone_label": "Nebraska Aging and Disability Resource Center (844-843-6364)",
+   "phone_source": "https://dhhs.ne.gov/Pages/Aging-and-Disability-Resource-Center.aspx",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://dhhs.ne.gov/Pages/Aging-and-Disability-Resource-Center.aspx",
+     "title": "Nebraska DHHS: Aging and Disability Resource Center",
+     "scope": "Local ADRCs and the toll-free line (844) 843-6364; search excerpt."
+    },
+    {
+     "url": "https://nebraskalegislature.gov/FloorDocs/108/PDF/Agencies/Health_and_Human_Services__Department_of/615_20241211-111250.pdf",
+     "title": "Nebraska DHHS: Aging and Disability Resource Centers report for 2024 (December 2024)",
+     "scope": "The Area Agencies on Aging that run the ADRC sites and the toll-free number 1-844-843-6364; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "ne-ship",
+   "name": "Medicare counseling (Nebraska SHIP) for Nebraska",
+   "organization": "Nebraska Department of Insurance, State Health Insurance Assistance Program (SHIP) and Senior Medicare Patrol (SMP)",
+   "url": "https://doi.nebraska.gov/sites/default/files/doc/SHIP%20and%20SMP%20Brochure%20Jan%202025%20edit.pdf",
+   "needs": [
+    "benefits_and_funding"
+   ],
+   "description": "Free Medicare counseling from Nebraska SHIP, a division of the Nebraska Department of Insurance that does not sell insurance or endorse any company: plan choices, enrollment, costs and help paying for Medicare. Its Senior Medicare Patrol helps people report Medicare fraud and errors.",
+   "next_step": "Call 800-234-7119 to reach a counselor or arrange a meeting. For Medicare itself, call 800-MEDICARE (800-633-4227).",
+   "constraints": [
+    "Have your Medicare card and drug list ready."
+   ],
+   "phone": "800-234-7119",
+   "phone_label": "Nebraska SHIP (800-234-7119)",
+   "phone_source": "https://doi.nebraska.gov/sites/default/files/doc/SHIP%20and%20SMP%20Brochure%20Jan%202025%20edit.pdf",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://doi.nebraska.gov/sites/default/files/doc/SHIP%20and%20SMP%20Brochure%20Jan%202025%20edit.pdf",
+     "title": "Nebraska Department of Insurance: SHIP & SMP brochure (January 2025)",
+     "scope": "SHIP and SMP are a division of the Department of Insurance that does not sell insurance; 1-800-234-7119; search excerpt."
+    },
+    {
+     "url": "https://www.cms.gov/contacts/nebraska-ship/general-beneficiary-contact/1562131",
+     "title": "Centers for Medicare & Medicaid Services: Nebraska SHIP contact directory entry",
+     "scope": "Toll-free (800) 234-7119; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "ne-ombudsman",
+   "name": "Nebraska Long-Term Care Ombudsman and abuse reporting",
+   "organization": "Nebraska Office of the State Long-Term Care Ombudsman",
+   "url": "https://dhhs.ne.gov/Documents/Ombudsman-Contacts-Map.pdf",
+   "needs": [
+    "resident_rights",
+    "general_navigation"
+   ],
+   "description": "Independent advocacy for residents of nursing homes and assisted living, through regional ombudsmen and the state office in Lincoln.",
+   "next_step": "Call the state ombudsman office at 402-802-5541. To report abuse or neglect of a vulnerable adult, call 800-652-1999. In an emergency, call 911.",
+   "constraints": [
+    "The ombudsman acts with the resident’s permission and is not a licensing agency."
+   ],
+   "phone": "402-802-5541",
+   "phone_label": "Nebraska Long-Term Care Ombudsman (402-802-5541)",
+   "phone_source": "https://dhhs.ne.gov/Documents/Ombudsman-Contacts-Map.pdf",
+   "review": "full",
+   "method": "full_official_pdf",
+   "sources": [
+    {
+     "url": "https://dhhs.ne.gov/Documents/Ombudsman-Contacts-Map.pdf",
+     "title": "Nebraska Long-Term Care Ombudsman Program: contacts map (MAP-93, Rev. 10/2026)",
+     "scope": "State office (402) 802-5541 and the regional ombudsmen; read in full."
+    },
+    {
+     "url": "https://dhhs.ne.gov/Pages/Aging.aspx",
+     "title": "Nebraska DHHS State Unit on Aging",
+     "scope": "Report abuse or neglect of a child or vulnerable adult: (800) 652-1999; read in full."
+    }
+   ]
+  },
+  {
+   "id": "ne-legal-programs",
+   "name": "Free legal help for Nebraska veterans and older adults",
+   "organization": "Legal Aid of Nebraska",
+   "url": "https://veterans.nebraska.gov/region-5-community-support-services-statewide-services",
+   "role": "legal_aid",
+   "needs": [
+    "resident_rights",
+    "general_navigation",
+    "housing"
+   ],
+   "description": "Legal Aid of Nebraska gives free civil legal help to people with low incomes across the state through its AccessLine. Its Elder AccessLine gives Nebraskans 60 and older free legal advice and help, working with the Area Agencies on Aging.",
+   "next_step": "Call the Legal Aid of Nebraska AccessLine at 877-250-2016. If you are 60 or older, call the Elder AccessLine at 800-527-7249 (402-827-5656 in Omaha).",
+   "constraints": [
+    "The general AccessLine screens by income and case type."
+   ],
+   "phone": "877-250-2016",
+   "phone_label": "Legal Aid of Nebraska AccessLine (877-250-2016)",
+   "phone_source": "https://veterans.nebraska.gov/region-5-community-support-services-statewide-services",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://veterans.nebraska.gov/region-5-community-support-services-statewide-services",
+     "title": "Nebraska Department of Veterans’ Affairs: Region 5, Community Support Services (statewide services)",
+     "scope": "Legal Aid of Nebraska, 1-877-250-2016, free civil legal services for low-income Nebraskans; search excerpt."
+    },
+    {
+     "url": "https://veterans.nebraska.gov/node/817",
+     "title": "Nebraska Department of Veterans’ Affairs: community resource directory listing",
+     "scope": "Legal Aid of Nebraska Elder AccessLine 1-800-527-7249; search excerpt."
+    },
+    {
+     "url": "https://enoa.org/resources/legal-resources.html",
+     "title": "Eastern Nebraska Office on Aging: Legal resources",
+     "scope": "Limited legal advice for Nebraskans over 60 through the toll-free ElderAccessLine; 402-827-5656 or 1-800-527-7249; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "ne-vahealth-systems",
+   "name": "VA health care systems serving Nebraska",
+   "organization": "U.S. Department of Veterans Affairs",
+   "url": "https://www.va.gov/find-locations/?facilityType=health",
+   "role": "va_health_system",
+   "needs": [
+    "veteran_services",
+    "care_facilities"
+   ],
+   "description": "Most Nebraska veterans are served by the VA Nebraska-Western Iowa Health Care System (Omaha VA Medical Center, 4101 Woolworth Avenue; 402-346-8800), with clinics including Lincoln and Grand Island. In the Panhandle, the Scottsbluff clinic is run by the VA Black Hills Health Care System in Hot Springs, South Dakota, and the Sidney clinic by the Cheyenne VA Medical Center.",
+   "next_step": "Use VA’s facility locator with your ZIP code to find the closest clinic. Not enrolled yet? Ask your county veterans service officer for help applying.",
+   "constraints": [
+    "Which system serves you depends on where you live; VA’s locator shows the right clinic."
+   ],
+   "phone": "402-346-8800",
+   "phone_label": "VA Nebraska-Western Iowa Health Care System (402-346-8800)",
+   "phone_source": "https://www.va.gov/nebraska-western-iowa-health-care/contact-us/",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://www.va.gov/nebraska-western-iowa-health-care/contact-us/",
+     "title": "VA Nebraska-Western Iowa health care: Contact us",
+     "scope": "Omaha VA Medical Center, 4101 Woolworth Avenue; local 402-346-8800; search excerpt."
+    },
+    {
+     "url": "https://www.va.gov/nebraska-western-iowa-health-care/make-an-appointment/",
+     "title": "VA Nebraska-Western Iowa health care: Make an appointment",
+     "scope": "Primary care call centers for Omaha, Lincoln and Grand Island; search excerpt."
+    },
+    {
+     "url": "https://scottsbluffcountyne.gov/?p=1053",
+     "title": "Scotts Bluff County Veterans Service Office",
+     "scope": "The Hot Springs, SD VA Medical Center has an outpatient clinic in Scottsbluff; veterans must be enrolled at Hot Springs; search excerpt."
+    },
+    {
+     "url": "https://www.va.gov/cheyenne-health-care/about-us/mission-and-vision/",
+     "title": "VA Cheyenne health care: Mission and vision",
+     "scope": "Serves veterans in southeastern Wyoming, northeastern Colorado and southwestern Nebraska; search excerpt."
+    },
+    {
+     "url": "https://veterans.nebraska.gov/behavioral-health-region/health-region-1",
+     "title": "Nebraska Department of Veterans’ Affairs: Health Region 1 resources",
+     "scope": "Sidney VA Outpatient Clinic (Cheyenne VA Medical Center), 1116 10th Avenue; search excerpt."
+    }
+   ]
+  }
+ ],
+ "adapter": {
+  "badge_county": "County veterans service office",
+  "badge_state": "State veterans line",
+  "badge_statewide": "Nebraska statewide line",
+  "published_in": "Published in the Nebraska Department of Veterans’ Affairs county veterans service office listing",
+  "agency_link": "Nebraska Department of Veterans’ Affairs county veterans service offices",
+  "officers_can": "County Veterans Service Officers can",
+  "abuse_phone": "800-652-1999",
+  "abuse_label": "Nebraska abuse and neglect hotline, for children and vulnerable adults"
+ },
+ "coverage_scope": "Referral edition. All 93 counties have a county veterans service officer (some officers serve two to four counties), an Area Agency on Aging (eight agencies), the state long-term care ombudsman and a Center for Independent Living.",
+ "coverage_note": "County veterans service office phones, locations and hours come from the Nebraska Department of Veterans’ Affairs directory updated October 1, 2024. Area Agencies on Aging come from the Nebraska Judicial Branch’s Office of Public Guardian list, with phones from the DHHS State Unit on Aging. The long-term care ombudsman line comes from the state ombudsman’s contact map. Independent living centers come from the ILRU national directory. Reviewed November 16, 2026. Contacts are not telephone-confirmed.",
+ "share_description": "county veterans service offices, Area Agencies on Aging and long-term care ombudsman help across Nebraska"
+}

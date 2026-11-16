@@ -31,7 +31,8 @@ export const STATES=Object.freeze({
   "OR": "Oregon",
   "LA": "Louisiana",
   "NV": "Nevada",
-  "KS": "Kansas"
+  "KS": "Kansas",
+  "NE": "Nebraska"
 });
 export const STATE_FILES=Object.freeze({
   "OH": [
@@ -157,6 +158,10 @@ export const STATE_FILES=Object.freeze({
   "KS": [
     "data/public/kansas-resources.json",
     "data/public/kansas-county-veterans-offices.json"
+  ],
+  "NE": [
+    "data/public/nebraska-resources.json",
+    "data/public/nebraska-county-veterans-offices.json"
   ]
 });
 export const localityLabel=row=>row?(["independent_city","statewide"].includes(row.county_type)?row.county:row.county+(row.county_type==="parish"?" Parish":" County")):"";
