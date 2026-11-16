@@ -1,16 +1,602 @@
 [
- {
-  "state": "MD",
-  "county": "All Maryland counties",
-  "county_type": "statewide",
-  "phone": "410-260-3838",
-  "organization": "Maryland Department of Veterans and Military Families",
-  "office_type": "statewide",
-  "source_url": "https://veterans.maryland.gov/",
-  "source_title": "Maryland Department of Veterans and Military Families — official contact page",
-  "reviewed_on": "2026-11-02",
-  "contact_status": "official_website",
-  "review_method": "full_official_page_text",
-  "note": "Main line. Ask for a veterans service officer and the office that serves your county."
- }
+  {
+    "state": "MD",
+    "county": "Allegany",
+    "county_type": "county",
+    "phone": "301-729-4676",
+    "organization": "DVMF Service Office, Cumberland",
+    "office_type": "state_field_office",
+    "address": "Cumberland Motor Vehicle Administration Service Center, 13300 Winchester Road SW, Cumberland, MD 21502",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+    "source_title": "Maryland Department of Veterans and Military Families: How To Apply For Benefits (service offices)",
+    "reviewed_on": "2026-11-15",
+    "contact_status": "official_website",
+    "note": "The department’s list prints no county coverage; this office is located in Allegany County. For help with another county, call the statewide service line, 800-446-4926 ext. 6450. Department benefits specialists can help with VA claims, pension and survivor benefits. Offices are open by appointment only; call the office first.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+      "selection": "Office address, phone and hours as printed on the department’s service office list. The list prints no county coverage, so each county shows a department office located in it; counties without one show the statewide service line and the nearest listed offices, as described in docs/MARYLAND.md. Staff names and emails omitted."
+    }
+  },
+  {
+    "state": "MD",
+    "county": "Anne Arundel",
+    "county_type": "county",
+    "phone": "410-573-4786",
+    "organization": "DVMF Service Office, Annapolis",
+    "office_type": "state_field_office",
+    "other_phones": [
+      "410-573-4787"
+    ],
+    "address": "Annapolis Motor Vehicle Administration Service Center, 160 Harry S. Truman Parkway, Annapolis, MD 21401",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "other_offices": [
+      {
+        "address": "Glen Burnie office: Glen Burnie Motor Vehicle Administration Service Center, Building A, Ground Floor, 6601 Ritchie Highway, Glen Burnie, MD 21062",
+        "schedule": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+        "phone": "410-424-3039"
+      }
+    ],
+    "source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+    "source_title": "Maryland Department of Veterans and Military Families: How To Apply For Benefits (service offices)",
+    "reviewed_on": "2026-11-15",
+    "contact_status": "official_website",
+    "note": "A second Anne Arundel County office is in Glen Burnie. The department’s list prints no county coverage; this office is located in Anne Arundel County. For help with another county, call the statewide service line, 800-446-4926 ext. 6450. Department benefits specialists can help with VA claims, pension and survivor benefits. Offices are open by appointment only; call the office first.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+      "selection": "Office address, phone and hours as printed on the department’s service office list. The list prints no county coverage, so each county shows a department office located in it; counties without one show the statewide service line and the nearest listed offices, as described in docs/MARYLAND.md. Staff names and emails omitted."
+    }
+  },
+  {
+    "state": "MD",
+    "county": "Baltimore",
+    "county_type": "county",
+    "phone": "410-804-6053",
+    "organization": "DVMF Service Office, Rosedale",
+    "office_type": "state_field_office",
+    "address": "VA Eastern Baltimore County Community Based Outpatient Clinic, Franklin Square Professional Center, 5235 King Avenue, Suite 200, Rosedale, MD 21237",
+    "hours": "Wednesdays 9:00 a.m.–1:00 p.m., excluding federal holidays",
+    "other_offices": [
+      {
+        "address": "Baltimore regional office office: 31 Hopkins Plaza, Room 3020, Baltimore, MD 21201",
+        "schedule": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+        "phone": "800-446-4926 ext. 6450"
+      }
+    ],
+    "source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+    "source_title": "Maryland Department of Veterans and Military Families: How To Apply For Benefits (service offices)",
+    "reviewed_on": "2026-11-15",
+    "contact_status": "official_website",
+    "note": "This office is open one day a week; the Baltimore regional office, in Baltimore City, is listed as the other office. The department’s list prints no county coverage; this office is located in Baltimore County. For help with another county, call the statewide service line, 800-446-4926 ext. 6450. Department benefits specialists can help with VA claims, pension and survivor benefits. Offices are open by appointment only; call the office first.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+      "selection": "Office address, phone and hours as printed on the department’s service office list. The list prints no county coverage, so each county shows a department office located in it; counties without one show the statewide service line and the nearest listed offices, as described in docs/MARYLAND.md. Staff names and emails omitted."
+    }
+  },
+  {
+    "state": "MD",
+    "county": "Baltimore City",
+    "county_type": "independent_city",
+    "phone": "800-446-4926 ext. 6450",
+    "organization": "DVMF Baltimore Regional Office",
+    "office_type": "state_field_office",
+    "address": "31 Hopkins Plaza, Room 3020, Baltimore, MD 21201",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+    "source_title": "Maryland Department of Veterans and Military Families: How To Apply For Benefits (service offices)",
+    "reviewed_on": "2026-11-15",
+    "contact_status": "official_website",
+    "note": "The department’s list prints no county coverage; this office is located in Baltimore City. For help with another county, call the statewide service line, 800-446-4926 ext. 6450. Department benefits specialists can help with VA claims, pension and survivor benefits. Offices are open by appointment only; call the office first.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+      "selection": "Office address, phone and hours as printed on the department’s service office list. The list prints no county coverage, so each county shows a department office located in it; counties without one show the statewide service line and the nearest listed offices, as described in docs/MARYLAND.md. Staff names and emails omitted."
+    }
+  },
+  {
+    "state": "MD",
+    "county": "Calvert",
+    "county_type": "county",
+    "phone": "800-446-4926 ext. 6450",
+    "organization": "DVMF Service and Benefits Program (statewide line)",
+    "office_type": "state_field_office",
+    "address": "31 Hopkins Plaza, Room 3020, Baltimore, MD 21201",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "other_offices": [
+      {
+        "address": "Charlotte Hall office: 29449 Charlotte Hall Road, Building 3, Room 105, Charlotte Hall, MD 20622",
+        "schedule": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+        "phone": "240-249-0474"
+      },
+      {
+        "address": "Waldorf office: Maryland Motor Vehicle Administration, 11 Industrial Park Drive, Waldorf, MD 20602",
+        "schedule": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+        "phone": "301-632-5784"
+      },
+      {
+        "address": "Annapolis office: Annapolis Motor Vehicle Administration Service Center, 160 Harry S. Truman Parkway, Annapolis, MD 21401",
+        "schedule": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+        "phone": "410-573-4786"
+      }
+    ],
+    "source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+    "source_title": "Maryland Department of Veterans and Military Families: How To Apply For Benefits (service offices)",
+    "reviewed_on": "2026-11-15",
+    "contact_status": "official_website",
+    "note": "No DVMF service office is located in Calvert County, and the department’s list prints no county coverage. Call the statewide service line, which is answered by the Baltimore regional office, and ask which office serves Calvert County. Nearby offices are listed here (St. Mary’s, Charles and Anne Arundel Counties). Department benefits specialists can help with VA claims, pension and survivor benefits. Offices are open by appointment only; call the office first.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+      "selection": "Office address, phone and hours as printed on the department’s service office list. The list prints no county coverage, so each county shows a department office located in it; counties without one show the statewide service line and the nearest listed offices, as described in docs/MARYLAND.md. Staff names and emails omitted."
+    }
+  },
+  {
+    "state": "MD",
+    "county": "Caroline",
+    "county_type": "county",
+    "phone": "800-446-4926 ext. 6450",
+    "organization": "DVMF Service and Benefits Program (statewide line)",
+    "office_type": "state_field_office",
+    "address": "31 Hopkins Plaza, Room 3020, Baltimore, MD 21201",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "other_offices": [
+      {
+        "address": "Easton office: 11 South Harrison Street, Easton, MD 21601",
+        "schedule": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+        "phone": "410-690-7181"
+      },
+      {
+        "address": "Salisbury office: Maryland Motor Vehicle Administration, Salisbury Branch, 251 Tilghman Road, Salisbury, MD 21804",
+        "schedule": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+        "phone": "410-219-7256"
+      }
+    ],
+    "source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+    "source_title": "Maryland Department of Veterans and Military Families: How To Apply For Benefits (service offices)",
+    "reviewed_on": "2026-11-15",
+    "contact_status": "official_website",
+    "note": "No DVMF service office is located in Caroline County, and the department’s list prints no county coverage. Call the statewide service line, which is answered by the Baltimore regional office, and ask which office serves Caroline County. Nearby offices are listed here (Talbot and Wicomico Counties). Department benefits specialists can help with VA claims, pension and survivor benefits. Offices are open by appointment only; call the office first.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+      "selection": "Office address, phone and hours as printed on the department’s service office list. The list prints no county coverage, so each county shows a department office located in it; counties without one show the statewide service line and the nearest listed offices, as described in docs/MARYLAND.md. Staff names and emails omitted."
+    }
+  },
+  {
+    "state": "MD",
+    "county": "Carroll",
+    "county_type": "county",
+    "phone": "410-386-3800",
+    "organization": "Carroll County Veterans Services Program",
+    "office_type": "county",
+    "address": "Carroll County Veterans Services Program, 125 Stoner Avenue, Westminster, MD 21157",
+    "hours": "Call for information on hours",
+    "source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+    "source_title": "Maryland Department of Veterans and Military Families: How To Apply For Benefits (service offices)",
+    "reviewed_on": "2026-11-15",
+    "contact_status": "official_website",
+    "note": "The department’s list shows this local program, which it says is supported by the department but is not a department service office. Department benefits specialists can help with VA claims, pension and survivor benefits. Offices are open by appointment only; call the office first.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+      "selection": "Office address, phone and hours as printed on the department’s service office list. The list prints no county coverage, so each county shows a department office located in it; counties without one show the statewide service line and the nearest listed offices, as described in docs/MARYLAND.md. Staff names and emails omitted."
+    }
+  },
+  {
+    "state": "MD",
+    "county": "Cecil",
+    "county_type": "county",
+    "phone": "667-225-6870",
+    "organization": "DVMF Service Office, Elkton",
+    "office_type": "state_field_office",
+    "address": "105 Chesapeake Boulevard, Suite A, Elkton, MD 21921",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+    "source_title": "Maryland Department of Veterans and Military Families: How To Apply For Benefits (service offices)",
+    "reviewed_on": "2026-11-15",
+    "contact_status": "official_website",
+    "note": "The department’s list prints no county coverage; this office is located in Cecil County. For help with another county, call the statewide service line, 800-446-4926 ext. 6450. Department benefits specialists can help with VA claims, pension and survivor benefits. Offices are open by appointment only; call the office first.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+      "selection": "Office address, phone and hours as printed on the department’s service office list. The list prints no county coverage, so each county shows a department office located in it; counties without one show the statewide service line and the nearest listed offices, as described in docs/MARYLAND.md. Staff names and emails omitted."
+    }
+  },
+  {
+    "state": "MD",
+    "county": "Charles",
+    "county_type": "county",
+    "phone": "301-632-5784",
+    "organization": "DVMF Service Office, Waldorf",
+    "office_type": "state_field_office",
+    "address": "Maryland Motor Vehicle Administration, 11 Industrial Park Drive, Waldorf, MD 20602",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+    "source_title": "Maryland Department of Veterans and Military Families: How To Apply For Benefits (service offices)",
+    "reviewed_on": "2026-11-15",
+    "contact_status": "official_website",
+    "note": "The department’s list prints no county coverage; this office is located in Charles County. For help with another county, call the statewide service line, 800-446-4926 ext. 6450. Department benefits specialists can help with VA claims, pension and survivor benefits. Offices are open by appointment only; call the office first.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+      "selection": "Office address, phone and hours as printed on the department’s service office list. The list prints no county coverage, so each county shows a department office located in it; counties without one show the statewide service line and the nearest listed offices, as described in docs/MARYLAND.md. Staff names and emails omitted."
+    }
+  },
+  {
+    "state": "MD",
+    "county": "Dorchester",
+    "county_type": "county",
+    "phone": "800-446-4926 ext. 6450",
+    "organization": "DVMF Service and Benefits Program (statewide line)",
+    "office_type": "state_field_office",
+    "address": "31 Hopkins Plaza, Room 3020, Baltimore, MD 21201",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "other_offices": [
+      {
+        "address": "Easton office: 11 South Harrison Street, Easton, MD 21601",
+        "schedule": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+        "phone": "410-690-7181"
+      },
+      {
+        "address": "Salisbury office: Maryland Motor Vehicle Administration, Salisbury Branch, 251 Tilghman Road, Salisbury, MD 21804",
+        "schedule": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+        "phone": "410-219-7256"
+      }
+    ],
+    "source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+    "source_title": "Maryland Department of Veterans and Military Families: How To Apply For Benefits (service offices)",
+    "reviewed_on": "2026-11-15",
+    "contact_status": "official_website",
+    "note": "No DVMF service office is located in Dorchester County, and the department’s list prints no county coverage. Call the statewide service line, which is answered by the Baltimore regional office, and ask which office serves Dorchester County. Nearby offices are listed here (Talbot and Wicomico Counties). Department benefits specialists can help with VA claims, pension and survivor benefits. Offices are open by appointment only; call the office first.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+      "selection": "Office address, phone and hours as printed on the department’s service office list. The list prints no county coverage, so each county shows a department office located in it; counties without one show the statewide service line and the nearest listed offices, as described in docs/MARYLAND.md. Staff names and emails omitted."
+    }
+  },
+  {
+    "state": "MD",
+    "county": "Frederick",
+    "county_type": "county",
+    "phone": "240-651-8896",
+    "organization": "DVMF Service Office, Frederick",
+    "office_type": "state_field_office",
+    "address": "Veterans Service Center, 1750 Monocacy Boulevard, Frederick, MD 21701",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+    "source_title": "Maryland Department of Veterans and Military Families: How To Apply For Benefits (service offices)",
+    "reviewed_on": "2026-11-15",
+    "contact_status": "official_website",
+    "note": "The department’s list prints no county coverage; this office is located in Frederick County. For help with another county, call the statewide service line, 800-446-4926 ext. 6450. Department benefits specialists can help with VA claims, pension and survivor benefits. Offices are open by appointment only; call the office first.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+      "selection": "Office address, phone and hours as printed on the department’s service office list. The list prints no county coverage, so each county shows a department office located in it; counties without one show the statewide service line and the nearest listed offices, as described in docs/MARYLAND.md. Staff names and emails omitted."
+    }
+  },
+  {
+    "state": "MD",
+    "county": "Garrett",
+    "county_type": "county",
+    "phone": "800-446-4926 ext. 6450",
+    "organization": "DVMF Service and Benefits Program (statewide line)",
+    "office_type": "state_field_office",
+    "address": "31 Hopkins Plaza, Room 3020, Baltimore, MD 21201",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "other_offices": [
+      {
+        "address": "Cumberland office: Cumberland Motor Vehicle Administration Service Center, 13300 Winchester Road SW, Cumberland, MD 21502",
+        "schedule": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+        "phone": "301-729-4676"
+      }
+    ],
+    "source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+    "source_title": "Maryland Department of Veterans and Military Families: How To Apply For Benefits (service offices)",
+    "reviewed_on": "2026-11-15",
+    "contact_status": "official_website",
+    "note": "No DVMF service office is located in Garrett County, and the department’s list prints no county coverage. Call the statewide service line, which is answered by the Baltimore regional office, and ask which office serves Garrett County. Nearby offices are listed here (Allegany County). Department benefits specialists can help with VA claims, pension and survivor benefits. Offices are open by appointment only; call the office first.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+      "selection": "Office address, phone and hours as printed on the department’s service office list. The list prints no county coverage, so each county shows a department office located in it; counties without one show the statewide service line and the nearest listed offices, as described in docs/MARYLAND.md. Staff names and emails omitted."
+    }
+  },
+  {
+    "state": "MD",
+    "county": "Harford",
+    "county_type": "county",
+    "phone": "410-638-6501",
+    "organization": "DVMF Service Office, Bel Air",
+    "office_type": "state_field_office",
+    "address": "Bel Air Service Center, Motor Vehicle Administration, 501 W. Macphail Road, Bel Air, MD 21014",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+    "source_title": "Maryland Department of Veterans and Military Families: How To Apply For Benefits (service offices)",
+    "reviewed_on": "2026-11-15",
+    "contact_status": "official_website",
+    "note": "The department’s list prints no county coverage; this office is located in Harford County. For help with another county, call the statewide service line, 800-446-4926 ext. 6450. Department benefits specialists can help with VA claims, pension and survivor benefits. Offices are open by appointment only; call the office first.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+      "selection": "Office address, phone and hours as printed on the department’s service office list. The list prints no county coverage, so each county shows a department office located in it; counties without one show the statewide service line and the nearest listed offices, as described in docs/MARYLAND.md. Staff names and emails omitted."
+    }
+  },
+  {
+    "state": "MD",
+    "county": "Howard",
+    "county_type": "county",
+    "phone": "410-313-0229",
+    "organization": "DVMF Service Office, Laurel",
+    "office_type": "state_field_office",
+    "address": "Howard County Multi-Service Center, 9900 Washington Boulevard, Suite I, Laurel, MD 20723",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+    "source_title": "Maryland Department of Veterans and Military Families: How To Apply For Benefits (service offices)",
+    "reviewed_on": "2026-11-15",
+    "contact_status": "official_website",
+    "note": "The department’s list prints no county coverage; this office is located in Howard County. For help with another county, call the statewide service line, 800-446-4926 ext. 6450. Department benefits specialists can help with VA claims, pension and survivor benefits. Offices are open by appointment only; call the office first.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+      "selection": "Office address, phone and hours as printed on the department’s service office list. The list prints no county coverage, so each county shows a department office located in it; counties without one show the statewide service line and the nearest listed offices, as described in docs/MARYLAND.md. Staff names and emails omitted."
+    }
+  },
+  {
+    "state": "MD",
+    "county": "Kent",
+    "county_type": "county",
+    "phone": "800-446-4926 ext. 6450",
+    "organization": "DVMF Service and Benefits Program (statewide line)",
+    "office_type": "state_field_office",
+    "address": "31 Hopkins Plaza, Room 3020, Baltimore, MD 21201",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "other_offices": [
+      {
+        "address": "Elkton office: 105 Chesapeake Boulevard, Suite A, Elkton, MD 21921",
+        "schedule": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+        "phone": "667-225-6870"
+      }
+    ],
+    "source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+    "source_title": "Maryland Department of Veterans and Military Families: How To Apply For Benefits (service offices)",
+    "reviewed_on": "2026-11-15",
+    "contact_status": "official_website",
+    "note": "No DVMF service office is located in Kent County, and the department’s list prints no county coverage. Call the statewide service line, which is answered by the Baltimore regional office, and ask which office serves Kent County. Nearby offices are listed here (Cecil County). Department benefits specialists can help with VA claims, pension and survivor benefits. Offices are open by appointment only; call the office first.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+      "selection": "Office address, phone and hours as printed on the department’s service office list. The list prints no county coverage, so each county shows a department office located in it; counties without one show the statewide service line and the nearest listed offices, as described in docs/MARYLAND.md. Staff names and emails omitted."
+    }
+  },
+  {
+    "state": "MD",
+    "county": "Montgomery",
+    "county_type": "county",
+    "phone": "301-987-8412",
+    "organization": "DVMF Service Office, Gaithersburg",
+    "office_type": "state_field_office",
+    "other_phones": [
+      "301-987-8413"
+    ],
+    "address": "Gaithersburg Motor Vehicle Administration Service Center, 15 Metropolitan Grove Road, Gaithersburg, MD 20878",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+    "source_title": "Maryland Department of Veterans and Military Families: How To Apply For Benefits (service offices)",
+    "reviewed_on": "2026-11-15",
+    "contact_status": "official_website",
+    "note": "The department’s list prints no county coverage; this office is located in Montgomery County. For help with another county, call the statewide service line, 800-446-4926 ext. 6450. Department benefits specialists can help with VA claims, pension and survivor benefits. Offices are open by appointment only; call the office first.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+      "selection": "Office address, phone and hours as printed on the department’s service office list. The list prints no county coverage, so each county shows a department office located in it; counties without one show the statewide service line and the nearest listed offices, as described in docs/MARYLAND.md. Staff names and emails omitted."
+    }
+  },
+  {
+    "state": "MD",
+    "county": "Prince George's",
+    "county_type": "county",
+    "phone": "301-248-0463",
+    "organization": "DVMF Service Office, Camp Springs",
+    "office_type": "state_field_office",
+    "address": "Prince George’s County Senior Center, 6420 Allentown Road, Room 39A, Camp Springs, MD 20748",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+    "source_title": "Maryland Department of Veterans and Military Families: How To Apply For Benefits (service offices)",
+    "reviewed_on": "2026-11-15",
+    "contact_status": "official_website",
+    "note": "The department’s list prints no county coverage; this office is located in Prince George’s County. For help with another county, call the statewide service line, 800-446-4926 ext. 6450. Department benefits specialists can help with VA claims, pension and survivor benefits. Offices are open by appointment only; call the office first.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+      "selection": "Office address, phone and hours as printed on the department’s service office list. The list prints no county coverage, so each county shows a department office located in it; counties without one show the statewide service line and the nearest listed offices, as described in docs/MARYLAND.md. Staff names and emails omitted."
+    }
+  },
+  {
+    "state": "MD",
+    "county": "Queen Anne's",
+    "county_type": "county",
+    "phone": "800-446-4926 ext. 6450",
+    "organization": "DVMF Service and Benefits Program (statewide line)",
+    "office_type": "state_field_office",
+    "address": "31 Hopkins Plaza, Room 3020, Baltimore, MD 21201",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "other_offices": [
+      {
+        "address": "Easton office: 11 South Harrison Street, Easton, MD 21601",
+        "schedule": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+        "phone": "410-690-7181"
+      }
+    ],
+    "source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+    "source_title": "Maryland Department of Veterans and Military Families: How To Apply For Benefits (service offices)",
+    "reviewed_on": "2026-11-15",
+    "contact_status": "official_website",
+    "note": "No DVMF service office is located in Queen Anne’s County, and the department’s list prints no county coverage. Call the statewide service line, which is answered by the Baltimore regional office, and ask which office serves Queen Anne’s County. Nearby offices are listed here (Talbot County). Department benefits specialists can help with VA claims, pension and survivor benefits. Offices are open by appointment only; call the office first.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+      "selection": "Office address, phone and hours as printed on the department’s service office list. The list prints no county coverage, so each county shows a department office located in it; counties without one show the statewide service line and the nearest listed offices, as described in docs/MARYLAND.md. Staff names and emails omitted."
+    }
+  },
+  {
+    "state": "MD",
+    "county": "Somerset",
+    "county_type": "county",
+    "phone": "800-446-4926 ext. 6450",
+    "organization": "DVMF Service and Benefits Program (statewide line)",
+    "office_type": "state_field_office",
+    "address": "31 Hopkins Plaza, Room 3020, Baltimore, MD 21201",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "other_offices": [
+      {
+        "address": "Salisbury office: Maryland Motor Vehicle Administration, Salisbury Branch, 251 Tilghman Road, Salisbury, MD 21804",
+        "schedule": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+        "phone": "410-219-7256"
+      }
+    ],
+    "source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+    "source_title": "Maryland Department of Veterans and Military Families: How To Apply For Benefits (service offices)",
+    "reviewed_on": "2026-11-15",
+    "contact_status": "official_website",
+    "note": "No DVMF service office is located in Somerset County, and the department’s list prints no county coverage. Call the statewide service line, which is answered by the Baltimore regional office, and ask which office serves Somerset County. Nearby offices are listed here (Wicomico County). Department benefits specialists can help with VA claims, pension and survivor benefits. Offices are open by appointment only; call the office first.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+      "selection": "Office address, phone and hours as printed on the department’s service office list. The list prints no county coverage, so each county shows a department office located in it; counties without one show the statewide service line and the nearest listed offices, as described in docs/MARYLAND.md. Staff names and emails omitted."
+    }
+  },
+  {
+    "state": "MD",
+    "county": "St. Mary's",
+    "county_type": "county",
+    "phone": "240-249-0474",
+    "organization": "DVMF Service Office, Charlotte Hall",
+    "office_type": "state_field_office",
+    "address": "29449 Charlotte Hall Road, Building 3, Room 105, Charlotte Hall, MD 20622",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+    "source_title": "Maryland Department of Veterans and Military Families: How To Apply For Benefits (service offices)",
+    "reviewed_on": "2026-11-15",
+    "contact_status": "official_website",
+    "note": "The department’s list prints no county coverage; this office is located in St. Mary’s County. For help with another county, call the statewide service line, 800-446-4926 ext. 6450. Department benefits specialists can help with VA claims, pension and survivor benefits. Offices are open by appointment only; call the office first.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+      "selection": "Office address, phone and hours as printed on the department’s service office list. The list prints no county coverage, so each county shows a department office located in it; counties without one show the statewide service line and the nearest listed offices, as described in docs/MARYLAND.md. Staff names and emails omitted."
+    }
+  },
+  {
+    "state": "MD",
+    "county": "Talbot",
+    "county_type": "county",
+    "phone": "410-690-7181",
+    "organization": "DVMF Service Office, Easton",
+    "office_type": "state_field_office",
+    "address": "11 South Harrison Street, Easton, MD 21601",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+    "source_title": "Maryland Department of Veterans and Military Families: How To Apply For Benefits (service offices)",
+    "reviewed_on": "2026-11-15",
+    "contact_status": "official_website",
+    "note": "The department’s list prints no county coverage; this office is located in Talbot County. For help with another county, call the statewide service line, 800-446-4926 ext. 6450. Department benefits specialists can help with VA claims, pension and survivor benefits. Offices are open by appointment only; call the office first.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+      "selection": "Office address, phone and hours as printed on the department’s service office list. The list prints no county coverage, so each county shows a department office located in it; counties without one show the statewide service line and the nearest listed offices, as described in docs/MARYLAND.md. Staff names and emails omitted."
+    }
+  },
+  {
+    "state": "MD",
+    "county": "Washington",
+    "county_type": "county",
+    "phone": "240-527-6894",
+    "organization": "DVMF Service Office, Hagerstown",
+    "office_type": "state_field_office",
+    "address": "Maryland Motor Vehicle Administration Service Center, 18306 Col. Henry K. Douglas Drive, Hagerstown, MD 21740",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+    "source_title": "Maryland Department of Veterans and Military Families: How To Apply For Benefits (service offices)",
+    "reviewed_on": "2026-11-15",
+    "contact_status": "official_website",
+    "note": "The department’s list prints no county coverage; this office is located in Washington County. For help with another county, call the statewide service line, 800-446-4926 ext. 6450. Department benefits specialists can help with VA claims, pension and survivor benefits. Offices are open by appointment only; call the office first.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+      "selection": "Office address, phone and hours as printed on the department’s service office list. The list prints no county coverage, so each county shows a department office located in it; counties without one show the statewide service line and the nearest listed offices, as described in docs/MARYLAND.md. Staff names and emails omitted."
+    }
+  },
+  {
+    "state": "MD",
+    "county": "Wicomico",
+    "county_type": "county",
+    "phone": "410-219-7256",
+    "organization": "DVMF Service Office, Salisbury",
+    "office_type": "state_field_office",
+    "address": "Maryland Motor Vehicle Administration, Salisbury Branch, 251 Tilghman Road, Salisbury, MD 21804",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+    "source_title": "Maryland Department of Veterans and Military Families: How To Apply For Benefits (service offices)",
+    "reviewed_on": "2026-11-15",
+    "contact_status": "official_website",
+    "note": "The department’s list prints no county coverage; this office is located in Wicomico County. For help with another county, call the statewide service line, 800-446-4926 ext. 6450. Department benefits specialists can help with VA claims, pension and survivor benefits. Offices are open by appointment only; call the office first.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+      "selection": "Office address, phone and hours as printed on the department’s service office list. The list prints no county coverage, so each county shows a department office located in it; counties without one show the statewide service line and the nearest listed offices, as described in docs/MARYLAND.md. Staff names and emails omitted."
+    }
+  },
+  {
+    "state": "MD",
+    "county": "Worcester",
+    "county_type": "county",
+    "phone": "800-446-4926 ext. 6450",
+    "organization": "DVMF Service and Benefits Program (statewide line)",
+    "office_type": "state_field_office",
+    "address": "31 Hopkins Plaza, Room 3020, Baltimore, MD 21201",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+    "other_offices": [
+      {
+        "address": "Salisbury office: Maryland Motor Vehicle Administration, Salisbury Branch, 251 Tilghman Road, Salisbury, MD 21804",
+        "schedule": "Monday–Friday 8:00 a.m.–4:00 p.m., by appointment only",
+        "phone": "410-219-7256"
+      }
+    ],
+    "source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+    "source_title": "Maryland Department of Veterans and Military Families: How To Apply For Benefits (service offices)",
+    "reviewed_on": "2026-11-15",
+    "contact_status": "official_website",
+    "note": "No DVMF service office is located in Worcester County, and the department’s list prints no county coverage. Call the statewide service line, which is answered by the Baltimore regional office, and ask which office serves Worcester County. Nearby offices are listed here (Wicomico County). Department benefits specialists can help with VA claims, pension and survivor benefits. Offices are open by appointment only; call the office first.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.maryland.gov/Benefits/HowToApplyForBenefits",
+      "selection": "Office address, phone and hours as printed on the department’s service office list. The list prints no county coverage, so each county shows a department office located in it; counties without one show the statewide service line and the nearest listed offices, as described in docs/MARYLAND.md. Staff names and emails omitted."
+    }
+  }
 ]

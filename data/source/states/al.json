@@ -1,0 +1,1387 @@
+{
+  "about": "Research sheet for the Alabama county edition. Every contact below was read on the date in reviewed_on from the page named beside it; scripts/make_county_state.py turns it into the edition files.",
+  "code": "AL",
+  "name": "Alabama",
+  "slug": "alabama",
+  "counties": 67,
+  "reviewed_on": "2026-11-15",
+  "month_label": "November 15, 2026",
+  "template_date": "November 4, 2026",
+  "phones_sentence": "Veterans Service Office phones, addresses and hours come from the Alabama Department of Veterans Affairs office list. Call for hours and appointments.",
+  "senior_line_id": "al-adrc",
+  "agency": {
+    "url": "https://va.alabama.gov/service-officer"
+  },
+  "offices": {
+    "source_url": "https://va.alabama.gov/service-officer",
+    "source_title": "Alabama Department of Veterans Affairs: Veterans Service Offices",
+    "note": "Veterans Service Officers can help with VA claims, pension and survivor benefits. Call for hours and appointments.",
+    "selection": "Office, phone, address, hours and county coverage as printed on the department’s office list. Staff names and emails omitted. Where the list groups counties under one office, each county shows that office; duplicate or differing entries were resolved as described in docs/ALABAMA.md.",
+    "list": [
+      {
+        "county": "Autauga",
+        "phone": "334-358-6746",
+        "address": "218 North Court Street, Prattville, AL 36067",
+        "hours": "Monday–Friday 8:00 a.m.–4:30 p.m."
+      },
+      {
+        "county": "Baldwin",
+        "phone": "251-937-0218",
+        "address": "201 East Section Avenue, Foley, AL 36535",
+        "hours": "Tuesday–Thursday 8:00 a.m.–4:00 p.m.; Monday and Friday by appointment only"
+      },
+      {
+        "county": "Barbour",
+        "phone": "334-619-1511",
+        "address": "405 East Barbour Street, Eufaula, AL 36027",
+        "hours": "Monday 8:00 a.m.–3:00 p.m."
+      },
+      {
+        "county": "Bibb",
+        "phone": "205-926-3116",
+        "address": "35 Court Square East, Suite 105, Centreville, AL 35042",
+        "hours": "Monday, Tuesday, Thursday and Friday 7:30 a.m.–4:30 p.m."
+      },
+      {
+        "county": "Blount",
+        "phone": "205-274-2287",
+        "address": "Community Services Building, 1004 2nd Avenue East, Room 13, Oneonta, AL 35121",
+        "hours": "Wednesday 8:30 a.m.–3:00 p.m."
+      },
+      {
+        "county": "Bullock",
+        "phone": "334-832-1392",
+        "address": "Alabama Veterans Resource Center, 100 Dexter Avenue, Montgomery, AL 36104",
+        "hours": "Monday–Friday 8:00 a.m.–5:00 p.m. (department newsletter, March 2026)",
+        "note": "Bullock County is served from the Montgomery office, which the state list shows serving Montgomery and Bullock Counties. The state’s list shows shorter Friday hours; call ahead."
+      },
+      {
+        "county": "Butler",
+        "phone": "334-382-3231",
+        "address": "201 South Conecuh Street, Suite 102, Greenville, AL 36037",
+        "hours": "Monday–Wednesday 8:00 a.m.–4:00 p.m.; Friday by appointment only"
+      },
+      {
+        "county": "Calhoun",
+        "phone": "256-241-2950",
+        "address": "Ken Joiner Administration Building, 1702 Noble Street, Suite 109, Anniston, AL 36201",
+        "hours": "Monday–Friday 8:00 a.m.–4:30 p.m."
+      },
+      {
+        "county": "Chambers",
+        "phone": "334-755-5729",
+        "address": "Chambers County Courthouse Annex, 610 South Gilmer Avenue, Lanett, AL 36863",
+        "hours": "Monday–Friday 8:30 a.m.–4:30 p.m."
+      },
+      {
+        "county": "Cherokee",
+        "phone": "256-927-6462",
+        "address": "260 Cedar Bluff Road, Centre, AL 35960",
+        "hours": "Thursday 9:00 a.m.–3:30 p.m."
+      },
+      {
+        "county": "Chilton",
+        "phone": "205-990-3109",
+        "address": "53 Robert Threlkeld Parkway, Room B 700, Clanton, AL 35045",
+        "hours": "Monday–Friday 8:00 a.m.–4:30 p.m."
+      },
+      {
+        "county": "Choctaw",
+        "phone": "205-459-2111",
+        "address": "Choctaw County Courthouse, 117 South Mulberry Street, Suite 2, Butler, AL 36904",
+        "hours": "Monday, Wednesday and Friday 8:00 a.m.–4:30 p.m."
+      },
+      {
+        "county": "Clarke",
+        "phone": "251-275-3374",
+        "address": "Clarke County Commission, 120 Court Street, Grove Hill, AL 36451",
+        "hours": "Monday–Wednesday 9:00 a.m.–4:00 p.m.",
+        "note": "The Grove Hill office is shown on the state list for both Clarke and Washington Counties."
+      },
+      {
+        "county": "Clay",
+        "phone": "256-252-8509",
+        "address": "41771 Highway 77 North, Suite 1, Ashland, AL 36251",
+        "hours": "Tuesday and Thursday 8:00 a.m.–4:30 p.m."
+      },
+      {
+        "county": "Cleburne",
+        "phone": "256-463-3871",
+        "address": "The Mountain Center, 6751 Highway 78, Heflin, AL 36264",
+        "hours": "Tuesday and Thursday 7:30 a.m.–4:30 p.m."
+      },
+      {
+        "county": "Coffee",
+        "phone": "334-894-5858",
+        "address": "Coffee County Complex, 1065 East McKinnon Street, New Brockton, AL 36351",
+        "hours": "Monday–Thursday 8:00 a.m.–4:00 p.m.; Friday by appointment only"
+      },
+      {
+        "county": "Colbert",
+        "phone": "256-386-8668",
+        "address": "Colbert County Courthouse, 201 North Main Street, Tuscumbia, AL",
+        "hours": "Tuesday and Thursday 8:00 a.m.–5:00 p.m.",
+        "other_offices": [
+          {
+            "address": "312 South Court Street, Florence, AL 35630",
+            "schedule": "Monday–Friday 8:00 a.m.–5:00 p.m.",
+            "phone": "256-760-5845"
+          }
+        ],
+        "note": "The Tuscumbia and Florence offices both serve Colbert and Lauderdale Counties; the state list shows one officer for both."
+      },
+      {
+        "county": "Conecuh",
+        "phone": "251-578-7036",
+        "address": "County Courthouse, 111 Court Street, Suite 108, Evergreen, AL 36401",
+        "hours": "Wednesday 8:30 a.m.–3:30 p.m."
+      },
+      {
+        "county": "Coosa",
+        "phone": "256-234-5246",
+        "address": "395 Lee Street, Room 145, Alexander City, AL 35010",
+        "hours": "Monday–Friday 8:00 a.m.–5:00 p.m.",
+        "other_offices": [
+          {
+            "address": "22132 Highway 9, Goodwater, AL 35072",
+            "schedule": "Tuesday 8:00 a.m.–4:00 p.m. (itinerant service)",
+            "phone": "256-839-6301 ext. 5"
+          }
+        ],
+        "note": "Coosa County is served from the Alexander City office, with itinerant service at Goodwater."
+      },
+      {
+        "county": "Covington",
+        "phone": "334-428-2687",
+        "address": "County Health Department building, 23989 Highway 55, Andalusia, AL 36420",
+        "hours": "Monday–Thursday 8:30 a.m.–4:30 p.m.; Friday by appointment only",
+        "note": "The county office moved to the County Health Department building in April 2026, per the department’s announcement; the office list still printed the old street number."
+      },
+      {
+        "county": "Crenshaw",
+        "phone": "334-335-6568",
+        "address": "29 South Glenwood Avenue, Luverne, AL 36049",
+        "hours": "Thursday 8:00 a.m.–4:00 p.m."
+      },
+      {
+        "county": "Cullman",
+        "phone": "256-775-4662",
+        "address": "Cullman County Courthouse, 500 2nd Avenue SW, Room 107, Cullman, AL 35055",
+        "hours": "Monday–Friday 7:30 a.m.–4:00 p.m."
+      },
+      {
+        "county": "Dale",
+        "phone": "334-774-5550",
+        "address": "County Ag Plex Building, 202 Highway 123 South, Suite F, Ozark, AL 36360",
+        "hours": "Monday–Thursday 8:00 a.m.–4:00 p.m.; Friday by appointment only"
+      },
+      {
+        "county": "Dallas",
+        "phone": "334-874-2533",
+        "address": "Dallas County Courthouse, Room 132, 105 Lauderdale Street, Selma, AL 36702",
+        "hours": "Monday–Friday 8:30 a.m.–5:00 p.m."
+      },
+      {
+        "county": "DeKalb",
+        "phone": "256-845-8572",
+        "address": "500 Grand Avenue SW, Fort Payne, AL 35967",
+        "hours": "Monday–Friday 8:00 a.m.–4:00 p.m."
+      },
+      {
+        "county": "Elmore",
+        "phone": "334-567-1156 ext. 5016",
+        "address": "Elmore County Courthouse, 100 East Commerce Street, Wetumpka, AL 36092",
+        "hours": "Monday–Friday 8:00 a.m.–4:30 p.m."
+      },
+      {
+        "county": "Escambia",
+        "phone": "251-368-4223 ext. 115",
+        "address": "Satellite Building, 8600 Highway 31 East, Atmore, AL 36502",
+        "hours": "Monday and Tuesday 8:00 a.m.–4:00 p.m.; Friday walk-ins 8:00 a.m.–12:00 p.m., appointments 1:00–4:00 p.m."
+      },
+      {
+        "county": "Etowah",
+        "phone": "256-549-5458",
+        "address": "800 Forrest Avenue, Suite 202, Gadsden, AL 35901",
+        "hours": "Monday–Friday 8:00 a.m.–4:30 p.m."
+      },
+      {
+        "county": "Fayette",
+        "phone": "205-932-6262",
+        "address": "Fayette County Courthouse Annex, 103 First Avenue NW, Fayette, AL 35555",
+        "hours": "Monday, Thursday and Friday 8:00 a.m.–4:00 p.m."
+      },
+      {
+        "county": "Franklin",
+        "phone": "256-332-8845",
+        "address": "Franklin County Courthouse, 410 Jackson Avenue, Russellville, AL 35653",
+        "hours": "Thursday 9:00 a.m.–3:30 p.m."
+      },
+      {
+        "county": "Geneva",
+        "phone": "334-684-5657",
+        "address": "Geneva County Courthouse, 200 North Commerce Street, Geneva, AL 36340",
+        "hours": "Monday–Thursday 8:30 a.m.–4:30 p.m.; Friday by appointment only"
+      },
+      {
+        "county": "Greene",
+        "phone": "205-372-6977",
+        "address": "William McKinley Branch Courthouse, 20 South Commerce Street, Eutaw, AL 35462",
+        "hours": "First Wednesday of the month 8:30 a.m.–3:30 p.m."
+      },
+      {
+        "county": "Hale",
+        "phone": "205-926-3116",
+        "address": "35 Court Square East, Suite 105, Centreville, AL 35042",
+        "hours": "Monday, Tuesday, Thursday and Friday 7:30 a.m.–4:30 p.m.",
+        "note": "Hale County is served from the Centreville office, which the state list shows serving Bibb and Hale Counties."
+      },
+      {
+        "county": "Henry",
+        "phone": "334-575-5092",
+        "address": "101 North Doswell Street, Abbeville, AL 36310",
+        "hours": "Tuesday 8:00 a.m.–4:00 p.m."
+      },
+      {
+        "county": "Houston",
+        "phone": "334-677-4749",
+        "address": "1685 Ross Clark Circle, Dothan, AL 36301",
+        "hours": "Monday–Friday 8:00 a.m.–4:00 p.m.",
+        "note": "The state list also marks Friday as by appointment only; call ahead."
+      },
+      {
+        "county": "Jackson",
+        "phone": "256-259-1411",
+        "address": "Jackson County Courthouse, 102 East Laurel Street, Suite 33, Scottsboro, AL 35768",
+        "hours": "Monday–Friday 8:00 a.m.–4:30 p.m."
+      },
+      {
+        "county": "Jefferson",
+        "phone": "205-521-7305",
+        "address": "2121 Reverend Abraham Woods Jr. Boulevard, Suite 720, Birmingham, AL 35203",
+        "hours": "Monday–Friday 8:00 a.m.–4:00 p.m.",
+        "other_offices": [
+          {
+            "address": "Courthouse, Room 313, 1801 3rd Avenue North, Bessemer, AL 35020",
+            "schedule": "Wednesday 8:30 a.m.–3:30 p.m. (itinerant service)",
+            "phone": "205-481-4117"
+          }
+        ]
+      },
+      {
+        "county": "Lamar",
+        "phone": "205-695-0023",
+        "address": "44725 Highway 17, Vernon, AL 35592",
+        "hours": "Wednesday 9:00 a.m.–3:00 p.m."
+      },
+      {
+        "county": "Lauderdale",
+        "phone": "256-760-5845",
+        "address": "312 South Court Street, Florence, AL 35630",
+        "hours": "Monday–Friday 8:00 a.m.–5:00 p.m.",
+        "other_offices": [
+          {
+            "address": "Colbert County Courthouse, 201 North Main Street, Tuscumbia, AL",
+            "schedule": "Tuesday and Thursday 8:00 a.m.–5:00 p.m.",
+            "phone": "256-386-8668"
+          }
+        ],
+        "note": "The Florence and Tuscumbia offices both serve Colbert and Lauderdale Counties; the state list shows one officer for both."
+      },
+      {
+        "county": "Lawrence",
+        "phone": "256-410-4969",
+        "address": "Lawrence County Annex 3, 12001 State Highway 157, Moulton, AL 35650",
+        "hours": "Tuesday and Thursday 9:00 a.m.–3:30 p.m."
+      },
+      {
+        "county": "Lee",
+        "phone": "334-737-3626",
+        "address": "205 South 10th Street, Opelika, AL 36801",
+        "hours": "Monday–Friday 7:30 a.m.–4:30 p.m."
+      },
+      {
+        "county": "Limestone",
+        "phone": "256-233-6459",
+        "address": "Limestone County Market Building, 1109 West Market Street, Suite B, Athens, AL 35611",
+        "hours": "Monday–Friday 8:00 a.m.–4:30 p.m."
+      },
+      {
+        "county": "Lowndes",
+        "phone": "334-358-6746",
+        "address": "218 North Court Street, Prattville, AL 36067",
+        "hours": "Monday–Friday 8:00 a.m.–4:30 p.m.",
+        "note": "Lowndes County is served from the Prattville office, which the state list shows serving Autauga and Lowndes Counties."
+      },
+      {
+        "county": "Macon",
+        "phone": "334-727-0550 ext. 53470",
+        "address": "Central Alabama Health Care System, Building 2, Room 109, 2400 Hospital Road, Tuskegee, AL 36083",
+        "hours": "Monday–Thursday 8:00 a.m.–4:00 p.m.; Friday by appointment only",
+        "note": "This office is inside the Central Alabama Veterans Health Care System campus at Tuskegee."
+      },
+      {
+        "county": "Madison",
+        "phone": "256-532-1662",
+        "address": "819 Cook Avenue NW, Suite 137, Huntsville, AL 35801",
+        "hours": "Monday–Friday 8:00 a.m.–4:30 p.m."
+      },
+      {
+        "county": "Marengo",
+        "phone": "334-295-2243",
+        "address": "101 East Coats Avenue, Room 123, Linden, AL 36748",
+        "hours": "Monday–Friday 8:00 a.m.–4:30 p.m."
+      },
+      {
+        "county": "Marion",
+        "phone": "205-921-3161",
+        "address": "Marion County Courthouse, 132 Military Street South, Room 110, Hamilton, AL 35570",
+        "hours": "Monday–Wednesday and Friday 8:00 a.m.–4:30 p.m."
+      },
+      {
+        "county": "Marshall",
+        "phone": "256-571-7761",
+        "address": "Marshall County Courthouse, 424 Blount Avenue, Suite 34, Guntersville, AL 35976",
+        "hours": "Monday–Friday 8:00 a.m.–4:30 p.m."
+      },
+      {
+        "county": "Mobile",
+        "phone": "251-574-8578",
+        "address": "1150 Government Street, Room 107, Mobile, AL 36604",
+        "hours": "Monday, Tuesday and Thursday 8:00 a.m.–4:00 p.m.; Wednesday and Friday by appointment only"
+      },
+      {
+        "county": "Monroe",
+        "phone": "251-575-9832",
+        "address": "65 North Alabama Avenue, Monroeville, AL 36461",
+        "hours": "Wednesday and Thursday 8:30 a.m.–4:00 p.m."
+      },
+      {
+        "county": "Montgomery",
+        "phone": "334-832-1392",
+        "address": "Alabama Veterans Resource Center, 100 Dexter Avenue, Montgomery, AL 36104",
+        "hours": "Monday–Friday 8:00 a.m.–5:00 p.m. (department newsletter, March 2026)",
+        "other_offices": [
+          {
+            "address": "Alabama National Guard Joint Force Headquarters, 1720 Congressman W. L. Dickinson Drive, Montgomery, AL 36109",
+            "schedule": "Monday–Thursday 8:00 a.m.–4:00 p.m.; Friday by appointment only",
+            "phone": "334-242-0038"
+          }
+        ],
+        "note": "The state’s office list shows shorter Friday hours for this office; call ahead. A second Montgomery County office is at the National Guard headquarters."
+      },
+      {
+        "county": "Morgan",
+        "phone": "256-351-4635",
+        "address": "Morgan County Courthouse, 302 Lee Street NE, 1st Floor, Decatur, AL 35601",
+        "hours": "Monday–Friday 8:00 a.m.–4:30 p.m."
+      },
+      {
+        "county": "Perry",
+        "phone": "334-874-2533",
+        "address": "Dallas County Courthouse, Room 132, 105 Lauderdale Street, Selma, AL 36702",
+        "hours": "Monday–Friday 8:30 a.m.–5:00 p.m.",
+        "note": "Perry County is served from the Selma office, which the state list shows serving Dallas and Perry Counties."
+      },
+      {
+        "county": "Pickens",
+        "phone": "205-464-8360",
+        "address": "Service Center Building, Room 302-B, Highway 17 North, Carrollton, AL 35447",
+        "hours": "First Tuesday of the month 9:00 a.m.–3:00 p.m.",
+        "other_phones": [
+          "205-464-8361"
+        ],
+        "note": "The state list prints the same phone numbers for Pickens and Tuscaloosa Counties."
+      },
+      {
+        "county": "Pike",
+        "phone": "334-566-1780",
+        "address": "Pike County Courthouse, 120 West Church Street, Troy, AL 36081",
+        "hours": "Monday–Thursday 8:00 a.m.–4:00 p.m.; Friday by appointment only"
+      },
+      {
+        "county": "Randolph",
+        "phone": "256-357-4775",
+        "address": "Randolph County Courthouse, One Main Street, Room 203, Wedowee, AL 36278",
+        "hours": "Monday, Wednesday and Friday 8:00 a.m.–4:30 p.m."
+      },
+      {
+        "county": "Russell",
+        "phone": "334-298-7767",
+        "address": "1000 Broad Street, Phenix City, AL 36867",
+        "hours": "Monday–Thursday 8:30 a.m.–4:30 p.m. Eastern time; Friday by appointment only"
+      },
+      {
+        "county": "Shelby",
+        "phone": "205-669-3835",
+        "address": "202 West College Street, Columbiana, AL 35051",
+        "hours": "Monday–Friday 8:00 a.m.–3:30 p.m.",
+        "note": "The state list also shows an Alabaster office (205-624-3162) as temporarily closed."
+      },
+      {
+        "county": "St. Clair",
+        "phone": "205-338-7315",
+        "address": "St. Clair County Courthouse, 1815 Cogswell Avenue, Suite 132, Pell City, AL 35125",
+        "hours": "Monday–Friday 7:30 a.m.–4:30 p.m."
+      },
+      {
+        "county": "Sumter",
+        "phone": "205-652-9482",
+        "address": "106 Hospital Drive, Livingston, AL 35470",
+        "hours": "Tuesday and Thursday 9:00 a.m.–3:30 p.m."
+      },
+      {
+        "county": "Talladega",
+        "phone": "256-761-2117",
+        "address": "County Office Complex, 132 North Court Street, Talladega, AL 35160",
+        "hours": "Monday–Friday 8:00 a.m.–4:30 p.m."
+      },
+      {
+        "county": "Tallapoosa",
+        "phone": "256-234-5246",
+        "address": "395 Lee Street, Room 145, Alexander City, AL 35010",
+        "hours": "Monday–Friday 8:00 a.m.–5:00 p.m.",
+        "note": "Tallapoosa County is served from the Alexander City office, which the state list also shows for Coosa County."
+      },
+      {
+        "county": "Tuscaloosa",
+        "phone": "205-464-8360",
+        "address": "Tuscaloosa County Courthouse Annex, 2501 7th Street, Suite 300, Tuscaloosa, AL 35401",
+        "hours": "Monday–Friday 7:30 a.m.–4:30 p.m.",
+        "other_phones": [
+          "205-464-8361",
+          "205-464-8362"
+        ]
+      },
+      {
+        "county": "Walker",
+        "phone": "205-384-7277",
+        "address": "Walker County Courthouse, 1803 3rd Avenue South, Room 106, Jasper, AL 35502",
+        "hours": "Monday–Friday 8:00 a.m.–4:30 p.m."
+      },
+      {
+        "county": "Washington",
+        "phone": "251-847-3966",
+        "address": "Washington County Library, 14102 St. Stephens Avenue, Chatom, AL 36518",
+        "hours": "Thursday and Friday 9:00 a.m.–4:00 p.m.; Friday by appointment only",
+        "other_offices": [
+          {
+            "address": "Clarke County Commission, 120 Court Street, Grove Hill, AL 36451",
+            "schedule": "Monday–Wednesday 9:00 a.m.–4:00 p.m.",
+            "phone": "251-275-3374"
+          }
+        ],
+        "note": "The state list also shows Washington County served from the Grove Hill office (Clarke County)."
+      },
+      {
+        "county": "Wilcox",
+        "phone": "334-295-2243",
+        "address": "101 East Coats Avenue, Room 123, Linden, AL 36748",
+        "hours": "Monday–Friday 8:00 a.m.–4:30 p.m.",
+        "note": "Wilcox County is served from the Linden office, which the state list shows serving Marengo and Wilcox Counties."
+      },
+      {
+        "county": "Winston",
+        "phone": "205-489-2444",
+        "address": "25125 Highway 195, Double Springs, AL 35553",
+        "hours": "Monday, Wednesday and Friday 8:00 a.m.–4:30 p.m."
+      }
+    ]
+  },
+  "aging": {
+    "source_url": "https://alabamaageline.gov/?p=2206",
+    "source_title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+    "source_scope": "Counties, agency names, main phones, street addresses and websites for all 13 Area Agencies on Aging; read in full.",
+    "review_method": "full_official_page_text",
+    "region_word": "",
+    "next_step_extra": "Alabama’s statewide AGELINE, 800-243-5463, also connects you to the agency for your county.",
+    "regions": [
+      {
+        "id": "al-aaa-nacolg",
+        "label": "NACOLG",
+        "name": "Northwest Alabama Council of Local Governments",
+        "phone": "256-389-0500",
+        "counties": [
+          "Colbert",
+          "Franklin",
+          "Lauderdale",
+          "Marion",
+          "Winston"
+        ],
+        "notes": [
+          "Toll-free: 800-838-5845."
+        ]
+      },
+      {
+        "id": "al-aaa-narcog",
+        "label": "NARCOG",
+        "name": "North Central Alabama Regional Council of Governments",
+        "phone": "256-355-4515",
+        "counties": [
+          "Cullman",
+          "Lawrence",
+          "Morgan"
+        ]
+      },
+      {
+        "id": "al-aaa-tarcog",
+        "label": "TARCOG",
+        "name": "Top of Alabama Regional Council of Governments",
+        "phone": "256-830-0818",
+        "counties": [
+          "DeKalb",
+          "Jackson",
+          "Limestone",
+          "Madison",
+          "Marshall"
+        ]
+      },
+      {
+        "id": "al-aaa-earpdc",
+        "label": "EARPDC",
+        "name": "East Alabama Regional Planning and Development Commission",
+        "phone": "256-237-6741",
+        "counties": [
+          "Calhoun",
+          "Chambers",
+          "Cherokee",
+          "Clay",
+          "Cleburne",
+          "Coosa",
+          "Etowah",
+          "Randolph",
+          "Talladega",
+          "Tallapoosa"
+        ],
+        "notes": [
+          "Toll-free: 800-239-6741."
+        ]
+      },
+      {
+        "id": "al-aaa-lrcog",
+        "label": "LRCOG",
+        "name": "Lee-Russell Council of Governments",
+        "phone": "334-749-5264",
+        "counties": [
+          "Lee",
+          "Russell"
+        ]
+      },
+      {
+        "id": "al-aaa-sarcoa",
+        "label": "SARCOA",
+        "name": "Southern Alabama Regional Council on Aging",
+        "phone": "334-793-6843",
+        "counties": [
+          "Barbour",
+          "Coffee",
+          "Covington",
+          "Dale",
+          "Geneva",
+          "Henry",
+          "Houston"
+        ],
+        "notes": [
+          "Toll-free: 800-239-3507."
+        ]
+      },
+      {
+        "id": "al-aaa-caac",
+        "label": "CAAC",
+        "name": "Central Alabama Aging Consortium",
+        "phone": "334-240-4666",
+        "counties": [
+          "Autauga",
+          "Elmore",
+          "Montgomery"
+        ],
+        "notes": [
+          "Toll-free: 800-264-4680."
+        ]
+      },
+      {
+        "id": "al-aaa-uwaaa",
+        "label": "UWAAA",
+        "name": "United Way Area Agency on Aging of Jefferson County",
+        "phone": "205-458-3330",
+        "counties": [
+          "Jefferson"
+        ],
+        "notes": [
+          "The state’s list marks this agency’s Jefferson County service as Older Americans Act services only."
+        ]
+      },
+      {
+        "id": "al-aaa-m4a",
+        "label": "M4A",
+        "name": "Middle Alabama Area Agency on Aging",
+        "phone": "205-670-5770",
+        "counties": [
+          "Blount",
+          "Chilton",
+          "Shelby",
+          "St. Clair",
+          "Walker"
+        ],
+        "notes": [
+          "Toll-free: 866-570-2998."
+        ]
+      },
+      {
+        "id": "al-aaa-warc",
+        "label": "WARC",
+        "name": "West Alabama Regional Commission",
+        "phone": "205-333-2990",
+        "counties": [
+          "Bibb",
+          "Fayette",
+          "Greene",
+          "Hale",
+          "Lamar",
+          "Pickens",
+          "Tuscaloosa"
+        ],
+        "notes": [
+          "Toll-free: 800-432-5030."
+        ]
+      },
+      {
+        "id": "al-aaa-scadc",
+        "label": "SCADC",
+        "name": "South Central Alabama Development Commission",
+        "phone": "334-244-6903",
+        "counties": [
+          "Bullock",
+          "Butler",
+          "Crenshaw",
+          "Lowndes",
+          "Macon",
+          "Pike"
+        ]
+      },
+      {
+        "id": "al-aaa-atrc",
+        "label": "ATRC",
+        "name": "Alabama Tombigbee Regional Commission",
+        "phone": "334-682-5206",
+        "counties": [
+          "Choctaw",
+          "Clarke",
+          "Conecuh",
+          "Dallas",
+          "Marengo",
+          "Monroe",
+          "Perry",
+          "Sumter",
+          "Washington",
+          "Wilcox"
+        ],
+        "notes": [
+          "Toll-free: 888-617-0500."
+        ]
+      },
+      {
+        "id": "al-aaa-sarpc",
+        "label": "SARPC",
+        "name": "South Alabama Regional Planning Commission",
+        "phone": "251-433-6541",
+        "counties": [
+          "Baldwin",
+          "Escambia",
+          "Mobile"
+        ],
+        "notes": [
+          "Its senior directories list 251-706-4680 for the Area Agency on Aging."
+        ]
+      }
+    ]
+  },
+  "ombudsman": {
+    "state_phone": "334-242-5753",
+    "regions": [
+      {
+        "id": "al-omb-nacolg",
+        "name": "Regional long-term care ombudsman, Northwest Alabama Council of Local Governments",
+        "phone": "256-389-0500",
+        "counties": [
+          "Colbert",
+          "Franklin",
+          "Lauderdale",
+          "Marion",
+          "Winston"
+        ],
+        "source_url": "https://alabamaageline.gov/?p=2206",
+        "source_title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "source_scope": "The phone shown is the Area Agency on Aging main line that hosts this region’s ombudsman program; the state’s ombudsman page does not list regional numbers.",
+        "review": "full",
+        "review_method": "full_official_page_text",
+        "extra_sources": [
+          {
+            "url": "https://theconsumervoice.org/get_help/state_resources/al",
+            "title": "National Consumer Voice for Quality Long-Term Care: Alabama state and regional ombudsman programs",
+            "scope": "Names the host agency, phone and counties of each of the 13 regional ombudsman programs. An association directory, undated, read in full; the state ombudsman page lists no regional contacts."
+          },
+          {
+            "url": "https://nacolg.org/s/Ombudsmanbrochure.pdf",
+            "title": "Northwest Alabama Council of Local Governments: long-term care ombudsman brochure",
+            "scope": "Ombudsman phone 256-389-0530; search excerpt."
+          }
+        ],
+        "notes": [
+          "Ask for the regional long-term care ombudsman. If no one answers, call the state ombudsman office at 334-242-5753.",
+          "The National Consumer Voice directory lists 256-389-0530 for this region’s ombudsman program, and the agency’s own ombudsman brochure prints the same number."
+        ]
+      },
+      {
+        "id": "al-omb-narcog",
+        "name": "Regional long-term care ombudsman, North Central Alabama Regional Council of Governments",
+        "phone": "256-355-4515",
+        "counties": [
+          "Cullman",
+          "Lawrence",
+          "Morgan"
+        ],
+        "source_url": "https://alabamaageline.gov/?p=2206",
+        "source_title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "source_scope": "The phone shown is the Area Agency on Aging main line that hosts this region’s ombudsman program; the state’s ombudsman page does not list regional numbers.",
+        "review": "full",
+        "review_method": "full_official_page_text",
+        "extra_sources": [
+          {
+            "url": "https://theconsumervoice.org/get_help/state_resources/al",
+            "title": "National Consumer Voice for Quality Long-Term Care: Alabama state and regional ombudsman programs",
+            "scope": "Names the host agency, phone and counties of each of the 13 regional ombudsman programs. An association directory, undated, read in full; the state ombudsman page lists no regional contacts."
+          }
+        ],
+        "notes": [
+          "Ask for the regional long-term care ombudsman. If no one answers, call the state ombudsman office at 334-242-5753."
+        ]
+      },
+      {
+        "id": "al-omb-tarcog",
+        "name": "Regional long-term care ombudsman, Top of Alabama Regional Council of Governments",
+        "phone": "256-830-0818",
+        "counties": [
+          "DeKalb",
+          "Jackson",
+          "Limestone",
+          "Madison",
+          "Marshall"
+        ],
+        "source_url": "https://alabamaageline.gov/?p=2206",
+        "source_title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "source_scope": "The phone shown is the Area Agency on Aging main line that hosts this region’s ombudsman program; the state’s ombudsman page does not list regional numbers.",
+        "review": "full",
+        "review_method": "full_official_page_text",
+        "extra_sources": [
+          {
+            "url": "https://theconsumervoice.org/get_help/state_resources/al",
+            "title": "National Consumer Voice for Quality Long-Term Care: Alabama state and regional ombudsman programs",
+            "scope": "Names the host agency, phone and counties of each of the 13 regional ombudsman programs. An association directory, undated, read in full; the state ombudsman page lists no regional contacts."
+          }
+        ],
+        "notes": [
+          "Ask for the regional long-term care ombudsman. If no one answers, call the state ombudsman office at 334-242-5753."
+        ]
+      },
+      {
+        "id": "al-omb-earpdc",
+        "name": "Regional long-term care ombudsman, East Alabama Regional Planning and Development Commission",
+        "phone": "256-237-6741",
+        "counties": [
+          "Calhoun",
+          "Chambers",
+          "Cherokee",
+          "Clay",
+          "Cleburne",
+          "Coosa",
+          "Etowah",
+          "Randolph",
+          "Talladega",
+          "Tallapoosa"
+        ],
+        "source_url": "https://alabamaageline.gov/?p=2206",
+        "source_title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "source_scope": "The phone shown is the Area Agency on Aging main line that hosts this region’s ombudsman program; the state’s ombudsman page does not list regional numbers.",
+        "review": "full",
+        "review_method": "full_official_page_text",
+        "extra_sources": [
+          {
+            "url": "https://theconsumervoice.org/get_help/state_resources/al",
+            "title": "National Consumer Voice for Quality Long-Term Care: Alabama state and regional ombudsman programs",
+            "scope": "Names the host agency, phone and counties of each of the 13 regional ombudsman programs. An association directory, undated, read in full; the state ombudsman page lists no regional contacts."
+          }
+        ],
+        "notes": [
+          "Ask for the regional long-term care ombudsman. If no one answers, call the state ombudsman office at 334-242-5753."
+        ]
+      },
+      {
+        "id": "al-omb-lrcog",
+        "name": "Regional long-term care ombudsman, Lee-Russell Council of Governments",
+        "phone": "334-749-5264",
+        "counties": [
+          "Lee",
+          "Russell"
+        ],
+        "source_url": "https://alabamaageline.gov/?p=2206",
+        "source_title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "source_scope": "The phone shown is the Area Agency on Aging main line that hosts this region’s ombudsman program; the state’s ombudsman page does not list regional numbers.",
+        "review": "full",
+        "review_method": "full_official_page_text",
+        "extra_sources": [
+          {
+            "url": "https://theconsumervoice.org/get_help/state_resources/al",
+            "title": "National Consumer Voice for Quality Long-Term Care: Alabama state and regional ombudsman programs",
+            "scope": "Names the host agency, phone and counties of each of the 13 regional ombudsman programs. An association directory, undated, read in full; the state ombudsman page lists no regional contacts."
+          }
+        ],
+        "notes": [
+          "Ask for the regional long-term care ombudsman. If no one answers, call the state ombudsman office at 334-242-5753."
+        ]
+      },
+      {
+        "id": "al-omb-sarcoa",
+        "name": "Regional long-term care ombudsman, Southern Alabama Regional Council on Aging",
+        "phone": "334-793-6843",
+        "counties": [
+          "Barbour",
+          "Coffee",
+          "Covington",
+          "Dale",
+          "Geneva",
+          "Henry",
+          "Houston"
+        ],
+        "source_url": "https://alabamaageline.gov/?p=2206",
+        "source_title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "source_scope": "The phone shown is the Area Agency on Aging main line that hosts this region’s ombudsman program; the state’s ombudsman page does not list regional numbers.",
+        "review": "full",
+        "review_method": "full_official_page_text",
+        "extra_sources": [
+          {
+            "url": "https://theconsumervoice.org/get_help/state_resources/al",
+            "title": "National Consumer Voice for Quality Long-Term Care: Alabama state and regional ombudsman programs",
+            "scope": "Names the host agency, phone and counties of each of the 13 regional ombudsman programs. An association directory, undated, read in full; the state ombudsman page lists no regional contacts."
+          }
+        ],
+        "notes": [
+          "Ask for the regional long-term care ombudsman. If no one answers, call the state ombudsman office at 334-242-5753."
+        ]
+      },
+      {
+        "id": "al-omb-caac",
+        "name": "Regional long-term care ombudsman, Central Alabama Aging Consortium",
+        "phone": "334-240-4666",
+        "counties": [
+          "Autauga",
+          "Elmore",
+          "Montgomery"
+        ],
+        "source_url": "https://alabamaageline.gov/?p=2206",
+        "source_title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "source_scope": "The phone shown is the Area Agency on Aging main line that hosts this region’s ombudsman program; the state’s ombudsman page does not list regional numbers.",
+        "review": "full",
+        "review_method": "full_official_page_text",
+        "extra_sources": [
+          {
+            "url": "https://theconsumervoice.org/get_help/state_resources/al",
+            "title": "National Consumer Voice for Quality Long-Term Care: Alabama state and regional ombudsman programs",
+            "scope": "Names the host agency, phone and counties of each of the 13 regional ombudsman programs. An association directory, undated, read in full; the state ombudsman page lists no regional contacts."
+          }
+        ],
+        "notes": [
+          "Ask for the regional long-term care ombudsman. If no one answers, call the state ombudsman office at 334-242-5753."
+        ]
+      },
+      {
+        "id": "al-omb-uwaaa",
+        "name": "Regional long-term care ombudsman, United Way Area Agency on Aging of Jefferson County",
+        "phone": "205-458-3330",
+        "counties": [
+          "Jefferson"
+        ],
+        "source_url": "https://alabamaageline.gov/?p=2206",
+        "source_title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "source_scope": "The phone shown is the Area Agency on Aging main line that hosts this region’s ombudsman program; the state’s ombudsman page does not list regional numbers.",
+        "review": "full",
+        "review_method": "full_official_page_text",
+        "extra_sources": [
+          {
+            "url": "https://theconsumervoice.org/get_help/state_resources/al",
+            "title": "National Consumer Voice for Quality Long-Term Care: Alabama state and regional ombudsman programs",
+            "scope": "Names the host agency, phone and counties of each of the 13 regional ombudsman programs. An association directory, undated, read in full; the state ombudsman page lists no regional contacts."
+          }
+        ],
+        "notes": [
+          "Ask for the regional long-term care ombudsman. If no one answers, call the state ombudsman office at 334-242-5753."
+        ]
+      },
+      {
+        "id": "al-omb-m4a",
+        "name": "Regional long-term care ombudsman, Middle Alabama Area Agency on Aging",
+        "phone": "205-670-5770",
+        "counties": [
+          "Blount",
+          "Chilton",
+          "Shelby",
+          "St. Clair",
+          "Walker"
+        ],
+        "source_url": "https://alabamaageline.gov/?p=2206",
+        "source_title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "source_scope": "The phone shown is the Area Agency on Aging main line that hosts this region’s ombudsman program; the state’s ombudsman page does not list regional numbers.",
+        "review": "full",
+        "review_method": "full_official_page_text",
+        "extra_sources": [
+          {
+            "url": "https://theconsumervoice.org/get_help/state_resources/al",
+            "title": "National Consumer Voice for Quality Long-Term Care: Alabama state and regional ombudsman programs",
+            "scope": "Names the host agency, phone and counties of each of the 13 regional ombudsman programs. An association directory, undated, read in full; the state ombudsman page lists no regional contacts."
+          }
+        ],
+        "notes": [
+          "Ask for the regional long-term care ombudsman. If no one answers, call the state ombudsman office at 334-242-5753."
+        ]
+      },
+      {
+        "id": "al-omb-warc",
+        "name": "Regional long-term care ombudsman, West Alabama Regional Commission",
+        "phone": "205-333-2990",
+        "counties": [
+          "Bibb",
+          "Fayette",
+          "Greene",
+          "Hale",
+          "Lamar",
+          "Pickens",
+          "Tuscaloosa"
+        ],
+        "source_url": "https://alabamaageline.gov/?p=2206",
+        "source_title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "source_scope": "The phone shown is the Area Agency on Aging main line that hosts this region’s ombudsman program; the state’s ombudsman page does not list regional numbers.",
+        "review": "full",
+        "review_method": "full_official_page_text",
+        "extra_sources": [
+          {
+            "url": "https://theconsumervoice.org/get_help/state_resources/al",
+            "title": "National Consumer Voice for Quality Long-Term Care: Alabama state and regional ombudsman programs",
+            "scope": "Names the host agency, phone and counties of each of the 13 regional ombudsman programs. An association directory, undated, read in full; the state ombudsman page lists no regional contacts."
+          }
+        ],
+        "notes": [
+          "Ask for the regional long-term care ombudsman. If no one answers, call the state ombudsman office at 334-242-5753."
+        ]
+      },
+      {
+        "id": "al-omb-scadc",
+        "name": "Regional long-term care ombudsman, South Central Alabama Development Commission",
+        "phone": "334-244-6903",
+        "counties": [
+          "Bullock",
+          "Butler",
+          "Crenshaw",
+          "Lowndes",
+          "Macon",
+          "Pike"
+        ],
+        "source_url": "https://alabamaageline.gov/?p=2206",
+        "source_title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "source_scope": "The phone shown is the Area Agency on Aging main line that hosts this region’s ombudsman program; the state’s ombudsman page does not list regional numbers.",
+        "review": "full",
+        "review_method": "full_official_page_text",
+        "extra_sources": [
+          {
+            "url": "https://theconsumervoice.org/get_help/state_resources/al",
+            "title": "National Consumer Voice for Quality Long-Term Care: Alabama state and regional ombudsman programs",
+            "scope": "Names the host agency, phone and counties of each of the 13 regional ombudsman programs. An association directory, undated, read in full; the state ombudsman page lists no regional contacts."
+          }
+        ],
+        "notes": [
+          "Ask for the regional long-term care ombudsman. If no one answers, call the state ombudsman office at 334-242-5753."
+        ]
+      },
+      {
+        "id": "al-omb-atrc",
+        "name": "Regional long-term care ombudsman, Alabama Tombigbee Regional Commission",
+        "phone": "334-682-5206",
+        "counties": [
+          "Choctaw",
+          "Clarke",
+          "Conecuh",
+          "Dallas",
+          "Marengo",
+          "Monroe",
+          "Perry",
+          "Sumter",
+          "Washington",
+          "Wilcox"
+        ],
+        "source_url": "https://alabamaageline.gov/?p=2206",
+        "source_title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "source_scope": "The phone shown is the Area Agency on Aging main line that hosts this region’s ombudsman program; the state’s ombudsman page does not list regional numbers.",
+        "review": "full",
+        "review_method": "full_official_page_text",
+        "extra_sources": [
+          {
+            "url": "https://theconsumervoice.org/get_help/state_resources/al",
+            "title": "National Consumer Voice for Quality Long-Term Care: Alabama state and regional ombudsman programs",
+            "scope": "Names the host agency, phone and counties of each of the 13 regional ombudsman programs. An association directory, undated, read in full; the state ombudsman page lists no regional contacts."
+          }
+        ],
+        "notes": [
+          "Ask for the regional long-term care ombudsman. If no one answers, call the state ombudsman office at 334-242-5753.",
+          "The National Consumer Voice directory lists 334-682-4234 or 888-617-0500 for this region’s ombudsman program."
+        ]
+      },
+      {
+        "id": "al-omb-sarpc",
+        "name": "Regional long-term care ombudsman, South Alabama Regional Planning Commission",
+        "phone": "251-433-6541",
+        "counties": [
+          "Baldwin",
+          "Escambia",
+          "Mobile"
+        ],
+        "source_url": "https://alabamaageline.gov/?p=2206",
+        "source_title": "Alabama Department of Senior Services: Area Agencies on Aging and Aging & Disability Resource Centers",
+        "source_scope": "The phone shown is the Area Agency on Aging main line that hosts this region’s ombudsman program; the state’s ombudsman page does not list regional numbers.",
+        "review": "full",
+        "review_method": "full_official_page_text",
+        "extra_sources": [
+          {
+            "url": "https://theconsumervoice.org/get_help/state_resources/al",
+            "title": "National Consumer Voice for Quality Long-Term Care: Alabama state and regional ombudsman programs",
+            "scope": "Names the host agency, phone and counties of each of the 13 regional ombudsman programs. An association directory, undated, read in full; the state ombudsman page lists no regional contacts."
+          }
+        ],
+        "notes": [
+          "Ask for the regional long-term care ombudsman. If no one answers, call the state ombudsman office at 334-242-5753."
+        ]
+      }
+    ]
+  },
+  "cils": {
+    "source_url": "https://drradvocates.org/alabama-centers-for-independent-living/",
+    "source_title": "Disability Rights & Resources: Alabama Centers for Independent Living",
+    "scope": "Address, phone, website and counties served for the state’s Centers for Independent Living as printed by a member center; read in full.",
+    "phone_label": "Phone listed on the Disability Rights & Resources directory of Alabama centers",
+    "list": [
+      {
+        "id": "al-cil-drr",
+        "name": "Disability Rights & Resources (Birmingham)",
+        "organization": "Disability Rights & Resources",
+        "url": "https://www.drradvocates.org/",
+        "phone": "205-251-2223",
+        "counties": [
+          "Bibb",
+          "Blount",
+          "Calhoun",
+          "Cherokee",
+          "Clay",
+          "Cleburne",
+          "Etowah",
+          "Fayette",
+          "Greene",
+          "Hale",
+          "Jefferson",
+          "Lamar",
+          "Perry",
+          "Pickens",
+          "Randolph",
+          "Shelby",
+          "St. Clair",
+          "Talladega",
+          "Tuscaloosa",
+          "Walker"
+        ],
+        "method": "full_association_directory_page",
+        "review": "full",
+        "notes": [
+          "The center’s office is at 1418 6th Avenue North, Birmingham, AL 35203."
+        ]
+      },
+      {
+        "id": "al-cil-drn",
+        "name": "Disability Resource Network (Huntsville)",
+        "organization": "Disability Resource Network",
+        "url": "https://www.drn256.org/",
+        "phone": "256-403-0033",
+        "counties": [
+          "Colbert",
+          "Cullman",
+          "DeKalb",
+          "Franklin",
+          "Jackson",
+          "Lauderdale",
+          "Lawrence",
+          "Limestone",
+          "Madison",
+          "Marion",
+          "Marshall",
+          "Morgan",
+          "Winston"
+        ],
+        "method": "full_association_directory_page",
+        "review": "full",
+        "notes": [
+          "The center’s office is at 415-E Church Street NW, Suite 11, Huntsville, AL 35801."
+        ]
+      },
+      {
+        "id": "al-cil-irr",
+        "name": "Independent Rights & Resources (Montgomery)",
+        "organization": "Independent Rights & Resources",
+        "url": "https://www.independentrandr.org/",
+        "phone": "334-240-2520",
+        "counties": [
+          "Autauga",
+          "Barbour",
+          "Bullock",
+          "Chambers",
+          "Chilton",
+          "Coosa",
+          "Dale",
+          "Dallas",
+          "Elmore",
+          "Henry",
+          "Houston",
+          "Lee",
+          "Lowndes",
+          "Macon",
+          "Montgomery",
+          "Pike",
+          "Russell",
+          "Tallapoosa"
+        ],
+        "method": "full_association_directory_page",
+        "review": "full",
+        "notes": [
+          "The center’s office is at 345 Molton Street, Montgomery, AL 36104."
+        ]
+      },
+      {
+        "id": "al-cil-ilcm",
+        "name": "Independent Living Center of Mobile",
+        "organization": "Independent Living Center of Mobile",
+        "url": "https://ilcmobile.org/",
+        "phone": "251-460-0301",
+        "phone_label": "Phone listed in the ILRU national directory",
+        "source_url": "https://www.ilru.org/node/103",
+        "source_title": "ILRU national directory of Centers for Independent Living: Independent Living Center of Mobile",
+        "scope": "Street address, phone, website and the 16 counties served; read in full. A peer directory lists an older address (5301 Moffett Road).",
+        "counties": [
+          "Baldwin",
+          "Butler",
+          "Choctaw",
+          "Clarke",
+          "Coffee",
+          "Conecuh",
+          "Covington",
+          "Crenshaw",
+          "Escambia",
+          "Geneva",
+          "Marengo",
+          "Mobile",
+          "Monroe",
+          "Sumter",
+          "Washington",
+          "Wilcox"
+        ],
+        "method": "full_association_directory_page",
+        "review": "full",
+        "notes": [
+          "The center’s office is at 6750 Howell’s Ferry Road, Mobile, AL 36618."
+        ]
+      }
+    ]
+  },
+  "programs": [
+    {
+      "id": "al-claims",
+      "name": "Alabama veterans: accredited claims help",
+      "organization": "Alabama Department of Veterans Affairs",
+      "url": "https://va.alabama.gov/service-officer",
+      "needs": [
+        "general_navigation",
+        "benefits_and_funding"
+      ],
+      "description": "Free help with VA claims, applications and appeals for veterans and families.",
+      "next_step": "Choose your county for its Veterans Service Office, or call the Alabama Department of Veterans Affairs at 334-242-5077.",
+      "phone": "334-242-5077",
+      "phone_source": "https://va.alabama.gov/wp-content/uploads/2026/09/AL-Laws-Affecting-Veterans-2026.pdf",
+      "review": "excerpt",
+      "reviewed": "2026-11-02",
+      "sources": [
+        {
+          "url": "https://va.alabama.gov/wp-content/uploads/2026/09/AL-Laws-Affecting-Veterans-2026.pdf",
+          "title": "Official published source",
+          "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+        }
+      ]
+    },
+    {
+      "id": "al-adrc",
+      "name": "Alabama AGELINE (Aging and Disability Resource Centers)",
+      "organization": "Alabama Department of Senior Services",
+      "url": "https://alabamaageline.gov/adrc",
+      "needs": [
+        "general_navigation",
+        "help_at_home",
+        "equipment_home_accessibility"
+      ],
+      "description": "A statewide line that connects you to the Area Agency on Aging and Aging and Disability Resource Center for your county: meals, in-home services, transportation, caregiver support and senior legal assistance. Military service is not required.",
+      "next_step": "Call 800-243-5463 (1-800-AGE-LINE) from anywhere in Alabama. Choose a county above for the direct number of its Area Agency on Aging.",
+      "constraints": [
+        "Each program has its own eligibility and waitlist."
+      ],
+      "phone": "800-243-5463",
+      "phone_label": "Alabama AGELINE (toll-free)",
+      "phone_source": "https://alabamaageline.gov/?p=4126",
+      "review": "excerpt",
+      "sources": [
+        {
+          "url": "https://alabamaageline.gov/?p=4126",
+          "title": "Alabama Department of Senior Services: Area Agencies on Aging are Aging and Disability Resource Centers",
+          "scope": "Statewide 1-800-AGELINE number and that all 13 agencies are certified ADRCs covering all 67 counties; search excerpt."
+        }
+      ]
+    },
+    {
+      "id": "al-ship",
+      "name": "Medicare counseling (SHIP) for Alabama",
+      "organization": "Alabama State Health Insurance Assistance Program (SHIP), Department of Senior Services",
+      "url": "https://alabamaageline.gov/ship/",
+      "needs": [
+        "benefits_and_funding"
+      ],
+      "description": "Free, unbiased Medicare counseling from the State Health Insurance Assistance Program. Counselors do not sell insurance.",
+      "next_step": "Call 800-243-5463 and ask for Medicare counseling, or ask your Area Agency on Aging for the local SHIP counselor.",
+      "phone": "800-243-5463",
+      "phone_label": "Alabama SHIP (toll-free, 1-800-AGE-LINE)",
+      "phone_source": "https://alabamaageline.gov/ship/",
+      "review": "full",
+      "sources": [
+        {
+          "url": "https://alabamaageline.gov/ship/",
+          "title": "Alabama Department of Senior Services: SHIP",
+          "scope": "SHIP phone numbers, who it helps and how to reach a local counselor; read in full."
+        }
+      ]
+    },
+    {
+      "id": "al-ombudsman",
+      "name": "Alabama Long-Term Care Ombudsman Program",
+      "organization": "Alabama Office of the State Long-Term Care Ombudsman, Department of Senior Services",
+      "url": "https://alabamaageline.gov/?p=676",
+      "needs": [
+        "resident_rights",
+        "general_navigation"
+      ],
+      "description": "Statewide advocacy for residents of nursing homes, assisted living and other long-term care facilities, delivered through 13 regional ombudsman programs.",
+      "next_step": "Choose your county for its regional ombudsman, or call the state ombudsman office at 334-242-5753. To report suspected abuse, neglect or exploitation of an adult, call the Adult Abuse Hotline at 800-458-7214. For immediate danger, call 911.",
+      "constraints": [
+        "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+      ],
+      "phone": "334-242-5753",
+      "phone_label": "State Long-Term Care Ombudsman office",
+      "phone_source": "https://alabamaageline.gov/?p=676",
+      "review": "full",
+      "sources": [
+        {
+          "url": "https://alabamaageline.gov/?p=676",
+          "title": "Alabama Department of Senior Services: Office of the State Long-Term Care Ombudsman Program",
+          "scope": "State ombudsman office phone and address; the page lists no regional ombudsmen; read in full."
+        },
+        {
+          "url": "https://dhr.alabama.gov/adult-protective-services/",
+          "title": "Alabama Department of Human Resources: Adult Protective Services",
+          "scope": "Adult Abuse Hotline 1-800-458-7214 for reporting suspected mistreatment of adults; search excerpt."
+        }
+      ]
+    },
+    {
+      "id": "al-legal-programs",
+      "name": "Legal Services Alabama",
+      "organization": "Legal Services Alabama",
+      "url": "https://legalservicesalabama.org/veterans-services",
+      "role": "legal_aid",
+      "needs": [
+        "resident_rights",
+        "general_navigation",
+        "housing"
+      ],
+      "description": "Free civil legal help for people with low income and for adults 60 and older. A VA-funded program helps veterans who are homeless or at risk of homelessness. Not criminal defense.",
+      "next_step": "Call the intake line (English 866-456-4995; Spanish 888-835-3505) or apply at legalservicesalabama.org. Have your county and the legal problem ready, and say if you are a veteran.",
+      "constraints": [
+        "Applicants are screened; income, case type and capacity limits apply. The veterans program serves veterans who are homeless or at risk of homelessness. Phone lines are open Monday–Friday, 8:30 a.m.–4:30 p.m."
+      ],
+      "phone": "866-456-4995",
+      "phone_label": "Legal Services Alabama intake line (English)",
+      "phone_source": "https://legalservicesalabama.org/es/veterans-services/",
+      "review": "full",
+      "sources": [
+        {
+          "url": "https://legalservicesalabama.org/es/veterans-services/",
+          "title": "Legal Services Alabama: veterans services",
+          "scope": "Intake phones, hours and the veterans program’s eligibility; read in full."
+        },
+        {
+          "url": "https://legalservicesalabama.org/elder-law",
+          "title": "Legal Services Alabama: older adults",
+          "scope": "People 60 and older may qualify for free legal help; search excerpt."
+        }
+      ]
+    },
+    {
+      "id": "al-vahealth-systems",
+      "name": "VA medical centers serving Alabama",
+      "organization": "U.S. Department of Veterans Affairs",
+      "url": "https://www.va.gov/find-locations/?facilityType=health",
+      "role": "va_health_system",
+      "needs": [
+        "veteran_services",
+        "care_facilities"
+      ],
+      "description": "Birmingham VA Health Care System: Birmingham VA Medical Center (205-933-8101). Central Alabama Veterans Health Care System: Montgomery campus (334-272-4670) and Tuskegee campus (334-727-0550). Tuscaloosa VA Medical Center (205-554-2000). Community clinics are listed in VA’s facility locator.",
+      "next_step": "Use VA’s facility locator with your ZIP code to find the closest clinic and its medical center. Not enrolled yet? Ask your Veterans Service Officer for help applying.",
+      "constraints": [
+        "VA does not publish county lists for these systems in the pages read, so this card does not assign counties. Your VA care team may be at a different clinic or system; follow what VA tells you."
+      ],
+      "phone": "205-933-8101",
+      "phone_label": "Birmingham VA Medical Center",
+      "phone_source": "https://www.va.gov/directory/guide/state_SUD.cfm?STATE=AL",
+      "review": "excerpt",
+      "sources": [
+        {
+          "url": "https://www.va.gov/directory/guide/state_SUD.cfm?STATE=AL",
+          "title": "VA facility directory: Alabama",
+          "scope": "Main phones for the Birmingham, Central Alabama (Tuskegee) and Tuscaloosa VA medical centers; search excerpt."
+        },
+        {
+          "url": "https://www.va.gov/central-alabama-health-care/contact-us/",
+          "title": "VA Central Alabama Health Care: contact us",
+          "scope": "Montgomery and Tuskegee campus phones and the toll-free number; read in full."
+        },
+        {
+          "url": "https://www.va.gov/tuscaloosa-health-care/contact-us/",
+          "title": "VA Tuscaloosa Health Care: contact us",
+          "scope": "Tuscaloosa medical center main phone; search excerpt."
+        }
+      ]
+    }
+  ],
+  "adapter": {
+    "badge_county": "Veterans Service Office",
+    "badge_state": "State office",
+    "badge_statewide": "Alabama statewide line",
+    "published_in": "Published on the Alabama Department of Veterans Affairs office list",
+    "agency_link": "Alabama Department of Veterans Affairs office list",
+    "officers_can": "Veterans Service Officers can",
+    "abuse_phone": "800-458-7214",
+    "abuse_label": "Adult Abuse Hotline, 24 hours a day, 7 days a week"
+  },
+  "coverage_scope": "Referral edition. All 67 counties have a Veterans Service Office (some shared), a matched Area Agency on Aging and a regional long-term-care ombudsman.",
+  "coverage_note": "Veterans Service Office addresses, phones and hours come from the Alabama Department of Veterans Affairs office list; where the list groups counties under one office, each county shows that office, and the Montgomery hours and Covington address follow the department’s 2026 announcements. Area Agencies on Aging, their counties and phones come from the Alabama Department of Senior Services. Regional ombudsman cards show the Area Agency on Aging main line that hosts the program; the state ombudsman page lists no regional numbers, and the National Consumer Voice directory (undated) names the host agencies. Centers for Independent Living and their counties come from a member-center directory and the ILRU national directory. Reviewed November 15, 2026. Contacts are not telephone-confirmed.",
+  "share_description": "County Veterans Service Offices, county-matched Area Agencies on Aging and regional long-term-care ombudsmen across Alabama"
+}
