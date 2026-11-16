@@ -3,12 +3,15 @@
 index.html is the whole page (markup, styles and script). The same file is uploaded to the Wix site
 that serves www.findbingo.org. It loads data.json and zips.json from this folder on the guide's
 GitHub Pages site, so merged list updates reach findbingo.org without a new upload. Ohio keeps its
-own finder (bingo.vethomeguard.org); this page links to it rather than copying Ohio data.
+own finder page at findbingo.org/ohio/, generated from the same page as bingo.vethomeguard.org (which is unchanged).
 """
 import json
 import re
 from datetime import date
 from html import escape
+
+from bingo_edition import make_bingo
+from bingo_site import SITE as OHIO_SITE, standalone_finder
 
 ORDER = ['MI', 'IN', 'OH', 'KY', 'WV', 'PA', 'FL']
 # First three ZIP digits for each covered state (USPS prefix ranges).
@@ -20,6 +23,27 @@ REPO_RAW = 'https://raw.githubusercontent.com/travisvought-byte/vhg-veteran-resi
 # Where the page looks for data.json and zips.json, in order: beside the page (the guide's copy),
 # then GitHub Pages, then the raw file on main.
 DATA_SOURCES = ['', 'https://guide.vethomeguard.org/findbingo-site/', REPO_RAW + 'main/findbingo-site/']
+
+
+OHIO_OWN_URL = 'https://www.findbingo.org/ohio/'
+
+
+def ohio_copy(finder_page):
+    """The Ohio finder at findbingo.org/ohio/: the same page as bingo.vethomeguard.org, with its shared
+    files loaded from there and FindBingo's own address for canonical and sharing tags."""
+    page = _replace(finder_page, f'<link rel="canonical" href="{OHIO_SITE}/">', f'<link rel="canonical" href="{OHIO_OWN_URL}">', 1)
+    page = _replace(page, f'<meta property="og:url" content="{OHIO_SITE}/">', f'<meta property="og:url" content="{OHIO_OWN_URL}">', 1)
+    # Relative files (logo, analytics, partner and instant pages) stay on the Ohio site, so /ohio/ needs no copies.
+    page = re.sub(r'"assets/', f'"{OHIO_SITE}/assets/', page)
+    for name in ('partners.html', 'instant.html', 'poster.html', 'distributions.html'):
+        page = page.replace(f'href="{name}"', f'href="{OHIO_SITE}/{name}"')
+    page = _replace(page, '</footer>', '<p><a href="https://www.findbingo.org/">Bingo in other states: FindBingo.org</a></p></footer>', 1)
+    return page
+
+
+def _replace(page, old, new, count):
+    assert page.count(old) == count, old
+    return page.replace(old, new)
 
 
 def _state_of_zip(z):
@@ -146,7 +170,8 @@ centroids. Do not edit these files by hand; run `python3 scripts/build_public.py
 - `data.json` (the lists) and `zips.json` (ZIP code points for the covered states) are loaded by the
   page from https://guide.vethomeguard.org/findbingo-site/, so list updates reach findbingo.org as soon
   as a pull request merges.
-- Ohio games stay on the Ohio Bingo Finder at https://bingo.vethomeguard.org/.
+- Ohio games are on the Ohio finder at https://www.findbingo.org/ohio/, generated from the same page as
+  https://bingo.vethomeguard.org/ (which is unchanged). Its data comes from the same records.
 
 Lists updated {_date_label(generated_on)}.
 '''
@@ -155,10 +180,13 @@ Lists updated {_date_label(generated_on)}.
         'data.json': data_json + '\n',
         'zips.json': json.dumps(zips, separators=(',', ':')) + '\n',
     }
+    ohio = ohio_copy(standalone_finder(make_bingo(root)))
     # The same three files also go into bingo-site/findbingo/, which the Ohio-Bingo repository mirrors;
     # Cloudflare Pages serves www.findbingo.org from that folder.
     return {
         **{'findbingo-site/' + name: text for name, text in site.items()},
         **{'bingo-site/findbingo/' + name: text for name, text in site.items()},
+        'findbingo-site/ohio/index.html': ohio,
+        'bingo-site/findbingo/ohio/index.html': ohio,
         'findbingo-site/README.md': readme,
     }
