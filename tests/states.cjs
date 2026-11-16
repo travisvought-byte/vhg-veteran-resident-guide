@@ -66,7 +66,7 @@ for(const s of registry){
  for(const county of counties){
   change('county',county);
   const row=countyRows.find(c=>c.county===county);
-  assert(d.getElementById('county-panel').textContent.includes(['independent_city','statewide'].includes(row.county_type)?county:county+(row.county_type==='parish'?' Parish':' County')),s.code+' '+county+' county panel');
+  assert(d.getElementById('county-panel').textContent.includes(['independent_city','statewide','borough','census_area','city_and_county'].includes(row.county_type)?county:county+(row.county_type==='parish'?' Parish':' County')),s.code+' '+county+' county panel');
   const shown=new Set([...d.querySelectorAll('#results article[id^="resource-"]')].map(a=>a.id.slice(9)));
   for(const r of limited)if(!r.service_area.includes(county))assert(!shown.has(r.program_id),s.code+' '+county+': '+r.program_id+' is limited to '+r.service_area.slice(0,4).join(', ')+' but appears here');
  }

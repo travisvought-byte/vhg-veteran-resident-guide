@@ -27,7 +27,7 @@ const registry=JSON.parse(fs.readFileSync(path.join(__dirname,'..','states/regis
   page=await browser.newPage();const first=JSON.parse(fs.readFileSync(path.join(__dirname,'..',s.offices),'utf8'))[0],county=first.county;
   await page.goto(base+'?state='+s.code+'&county='+encodeURIComponent(county));await ready(page,s.code);
   assert.equal(await page.locator('#county').inputValue(),county,s.code+' deep-linked county');
-  assert((await page.locator('#county-panel').textContent()).includes(['statewide','independent_city'].includes(first.county_type)?county:county+(first.county_type==='parish'?' Parish':' County')),s.code+' county panel');await page.close();
+  assert((await page.locator('#county-panel').textContent()).includes(['statewide','independent_city','borough','census_area','city_and_county'].includes(first.county_type)?county:county+(first.county_type==='parish'?' Parish':' County')),s.code+' county panel');await page.close();
  }
 
  // A failed download keeps the current state, explains the problem and allows a retry.

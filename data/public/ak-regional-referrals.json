@@ -1,80 +1,358 @@
 [
- {
-  "program_id": "ak-aging",
-  "name": "Local aging help in Alaska (Eldercare Locator)",
-  "official_url": "https://eldercare.acl.gov/home",
-  "organization": "U.S. Administration for Community Living",
-  "service_area": [
-   "All Alaska boroughs and census areas"
-  ],
-  "state": "AK",
-  "needs_supported": [
-   "general_navigation",
-   "help_at_home"
-  ],
-  "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-  "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
-  "constraints": [
-   "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "ak-adrc-anchorage",
+    "name": "Municipality of Anchorage ADRC",
+    "organization": "Municipality of Anchorage ADRC",
+    "official_url": "https://health.alaska.gov/dsds/pages/adrc/default.aspx",
+    "state": "AK",
+    "service_area": [
+      "Anchorage Municipality"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Alaska’s Aging and Disability Resource Centers connect seniors, people with disabilities and caregivers with long-term services and supports, regardless of age or income, through regional offices. Specialists pre-screen in person, at home, by phone or by video.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide ADRC number, 1-855-565-2017, also reaches a specialist. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 825 L Street, Suite 200, Anchorage."
+    ],
+    "public_contact": {
+      "phone": "907-343-7770",
+      "phone_label": "Aging and Disability Resource Center (Anchorage)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.alaska.gov/dsds/pages/adrc/default.aspx",
+      "phone_source_url": "https://health.alaska.gov/dsds/pages/adrc/default.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.alaska.gov/dsds/pages/adrc/default.aspx",
+        "title": "Alaska Division of Senior and Disabilities Services: Aging and Disability Resource Centers",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each regional ADRC’s service area, agency, address and phone, and the statewide number 1-855-565-2017; read in full; undated. Borough and census area assignments follow the page’s service-area names; see each card."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "ak-adrc-matsu",
+    "name": "LINKS Resource Center ADRC (Wasilla)",
+    "organization": "LINKS Resource Center ADRC (Wasilla)",
+    "official_url": "https://health.alaska.gov/dsds/pages/adrc/default.aspx",
+    "state": "AK",
+    "service_area": [
+      "Matanuska-Susitna Borough"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Alaska’s Aging and Disability Resource Centers connect seniors, people with disabilities and caregivers with long-term services and supports, regardless of age or income, through regional offices. Specialists pre-screen in person, at home, by phone or by video.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide ADRC number, 1-855-565-2017, also reaches a specialist. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 777 N Crusey Ave, Suite 101, Wasilla."
+    ],
+    "public_contact": {
+      "phone": "907-373-3632",
+      "phone_label": "Aging and Disability Resource Center (Mat-Su Borough)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.alaska.gov/dsds/pages/adrc/default.aspx",
+      "phone_source_url": "https://health.alaska.gov/dsds/pages/adrc/default.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.alaska.gov/dsds/pages/adrc/default.aspx",
+        "title": "Alaska Division of Senior and Disabilities Services: Aging and Disability Resource Centers",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each regional ADRC’s service area, agency, address and phone, and the statewide number 1-855-565-2017; read in full; undated. Borough and census area assignments follow the page’s service-area names; see each card."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.acl.gov/contact"
+  {
+    "program_id": "ak-adrc-gulf",
+    "name": "Independent Living Center ADRC (Soldotna)",
+    "organization": "Independent Living Center ADRC (Soldotna)",
+    "official_url": "https://health.alaska.gov/dsds/pages/adrc/default.aspx",
+    "state": "AK",
+    "service_area": [
+      "Chugach Census Area",
+      "Copper River Census Area",
+      "Kenai Peninsula Borough",
+      "Kodiak Island Borough"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Alaska’s Aging and Disability Resource Centers connect seniors, people with disabilities and caregivers with long-term services and supports, regardless of age or income, through regional offices. Specialists pre-screen in person, at home, by phone or by video.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide ADRC number, 1-855-565-2017, also reaches a specialist. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-770-7911.",
+      "The state lists Valdez-Cordova, which became the Chugach and Copper River census areas in 2019; both are shown here."
+    ],
+    "public_contact": {
+      "phone": "907-262-6333",
+      "phone_label": "Aging and Disability Resource Center (Kenai Peninsula, Kodiak Island and Valdez-Cordova)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.alaska.gov/dsds/pages/adrc/default.aspx",
+      "phone_source_url": "https://health.alaska.gov/dsds/pages/adrc/default.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.alaska.gov/dsds/pages/adrc/default.aspx",
+        "title": "Alaska Division of Senior and Disabilities Services: Aging and Disability Resource Centers",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each regional ADRC’s service area, agency, address and phone, and the statewide number 1-855-565-2017; read in full; undated. Borough and census area assignments follow the page’s service-area names; see each card."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.acl.gov/contact",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "aging_agency"
- },
- {
-  "program_id": "ak-ombudsman",
-  "name": "Alaska long-term-care ombudsman",
-  "official_url": "https://theconsumervoice.org/get_help",
-  "organization": "National Long-Term Care Ombudsman Resource Center",
-  "service_area": [
-   "All Alaska boroughs and census areas"
-  ],
-  "state": "AK",
-  "needs_supported": [
-   "resident_rights",
-   "general_navigation"
-  ],
-  "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-  "next_step": "Use the locator to find the Alaska program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
-  "constraints": [
-   "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "ak-adrc-southeast",
+    "name": "Southeast Alaska Independent Living (SAIL) ADRC",
+    "organization": "Southeast Alaska Independent Living (SAIL) ADRC",
+    "official_url": "https://health.alaska.gov/dsds/pages/adrc/default.aspx",
+    "state": "AK",
+    "service_area": [
+      "Haines Borough",
+      "Hoonah-Angoon Census Area",
+      "Juneau City and Borough",
+      "Ketchikan Gateway Borough",
+      "Petersburg Borough",
+      "Prince of Wales-Hyder Census Area",
+      "Sitka City and Borough",
+      "Skagway Municipality",
+      "Wrangell City and Borough",
+      "Yakutat City and Borough"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Alaska’s Aging and Disability Resource Centers connect seniors, people with disabilities and caregivers with long-term services and supports, regardless of age or income, through regional offices. Specialists pre-screen in person, at home, by phone or by video.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide ADRC number, 1-855-565-2017, also reaches a specialist. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Main office: 8711 Teal Street, Suite 300, Juneau.",
+      "The state lists “Southeast Alaska”; the edition assigns its ten boroughs and census areas."
+    ],
+    "public_contact": {
+      "phone": "800-478-7245",
+      "phone_label": "Aging and Disability Resource Center (Southeast Alaska)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.alaska.gov/dsds/pages/adrc/default.aspx",
+      "phone_source_url": "https://health.alaska.gov/dsds/pages/adrc/default.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.alaska.gov/dsds/pages/adrc/default.aspx",
+        "title": "Alaska Division of Senior and Disabilities Services: Aging and Disability Resource Centers",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each regional ADRC’s service area, agency, address and phone, and the statewide number 1-855-565-2017; read in full; undated. Borough and census area assignments follow the page’s service-area names; see each card."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "ak-adrc-north",
+    "name": "ADRC North (Fairbanks Senior Center)",
+    "organization": "ADRC North (Fairbanks Senior Center)",
+    "official_url": "https://health.alaska.gov/dsds/pages/adrc/default.aspx",
+    "state": "AK",
+    "service_area": [
+      "Denali Borough",
+      "Fairbanks North Star Borough",
+      "North Slope Borough",
+      "Southeast Fairbanks Census Area",
+      "Yukon-Koyukuk Census Area"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Alaska’s Aging and Disability Resource Centers connect seniors, people with disabilities and caregivers with long-term services and supports, regardless of age or income, through regional offices. Specialists pre-screen in person, at home, by phone or by video.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide ADRC number, 1-855-565-2017, also reaches a specialist. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 1424 Moore Street, Fairbanks."
+    ],
+    "public_contact": {
+      "phone": "907-452-2551",
+      "phone_label": "Aging and Disability Resource Center (Interior and North Slope)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.alaska.gov/dsds/pages/adrc/default.aspx",
+      "phone_source_url": "https://health.alaska.gov/dsds/pages/adrc/default.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.alaska.gov/dsds/pages/adrc/default.aspx",
+        "title": "Alaska Division of Senior and Disabilities Services: Aging and Disability Resource Centers",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each regional ADRC’s service area, agency, address and phone, and the statewide number 1-855-565-2017; read in full; undated. Borough and census area assignments follow the page’s service-area names; see each card."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
+  {
+    "program_id": "ak-adrc-west",
+    "name": "Bristol Bay Native Association ADRC (Dillingham)",
+    "organization": "Bristol Bay Native Association ADRC (Dillingham)",
+    "official_url": "https://health.alaska.gov/dsds/pages/adrc/default.aspx",
+    "state": "AK",
+    "service_area": [
+      "Aleutians East Borough",
+      "Aleutians West Census Area",
+      "Bethel Census Area",
+      "Bristol Bay Borough",
+      "Dillingham Census Area",
+      "Kusilvak Census Area",
+      "Lake and Peninsula Borough",
+      "Nome Census Area",
+      "Northwest Arctic Borough"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Alaska’s Aging and Disability Resource Centers connect seniors, people with disabilities and caregivers with long-term services and supports, regardless of age or income, through regional offices. Specialists pre-screen in person, at home, by phone or by video.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide ADRC number, 1-855-565-2017, also reaches a specialist. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Local: 907-842-4139. The state lists Western Alaska, the Aleutian Islands, Lake and Peninsula, Bristol Bay, Dillingham, Bethel, Kusilvak, Nome and Northwest Arctic."
+    ],
+    "public_contact": {
+      "phone": "800-478-4139",
+      "phone_label": "Aging and Disability Resource Center (Western Alaska)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://health.alaska.gov/dsds/pages/adrc/default.aspx",
+      "phone_source_url": "https://health.alaska.gov/dsds/pages/adrc/default.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://health.alaska.gov/dsds/pages/adrc/default.aspx",
+        "title": "Alaska Division of Senior and Disabilities Services: Aging and Disability Resource Centers",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each regional ADRC’s service area, agency, address and phone, and the statewide number 1-855-565-2017; read in full; undated. Borough and census area assignments follow the page’s service-area names; see each card."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "ombudsman"
- }
+  {
+    "program_id": "ak-omb-state",
+    "name": "Alaska Office of the Long Term Care Ombudsman",
+    "organization": "Alaska Office of the Long Term Care Ombudsman",
+    "official_url": "https://www.akleg.gov/basis/get_documents.asp?docid=635",
+    "state": "AK",
+    "service_area": [
+      "Aleutians East Borough",
+      "Aleutians West Census Area",
+      "Anchorage Municipality",
+      "Bethel Census Area",
+      "Bristol Bay Borough",
+      "Chugach Census Area",
+      "Copper River Census Area",
+      "Denali Borough",
+      "Dillingham Census Area",
+      "Fairbanks North Star Borough",
+      "Haines Borough",
+      "Hoonah-Angoon Census Area",
+      "Juneau City and Borough",
+      "Kenai Peninsula Borough",
+      "Ketchikan Gateway Borough",
+      "Kodiak Island Borough",
+      "Kusilvak Census Area",
+      "Lake and Peninsula Borough",
+      "Matanuska-Susitna Borough",
+      "Nome Census Area",
+      "North Slope Borough",
+      "Northwest Arctic Borough",
+      "Petersburg Borough",
+      "Prince of Wales-Hyder Census Area",
+      "Sitka City and Borough",
+      "Skagway Municipality",
+      "Southeast Fairbanks Census Area",
+      "Wrangell City and Borough",
+      "Yakutat City and Borough",
+      "Yukon-Koyukuk Census Area"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this borough or census area: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and borough or census area. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Toll-free: 800-730-6393. Email akoltco@alaska.gov."
+    ],
+    "public_contact": {
+      "phone": "907-334-4480",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.akleg.gov/basis/get_documents.asp?docid=635",
+      "phone_source_url": "https://www.akleg.gov/basis/get_documents.asp?docid=635"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.akleg.gov/basis/get_documents.asp?docid=635",
+        "title": "Alaska Long Term Care Ombudsman brochure (Alaska Legislature document library)",
+        "reviewed_on": "2026-11-16",
+        "scope": "3745 Community Park Loop, Suite 200, Anchorage; (907) 334-4480 or (800) 730-6393 toll free; akoltco@alaska.gov; search excerpt. The Alaska Commission on Aging lists the same toll-free line (https://aging.alaska.gov; search excerpt). The program is statewide, so every borough and census area shows it."
+      }
+    ]
+  }
 ]

@@ -207,10 +207,17 @@ def build_programs(sheet):
     for row in ssvf['records']:
         if code not in row['states']:
             continue
-        # Independent cities keep their name ('Baltimore city' becomes 'Baltimore City'); other suffixes are dropped.
-        counties = [c['name'][:-5] + ' City' if c['name'].endswith(' city') else re.sub(r' (County|Parish|Borough|Municipality|Census Area)$', '', c['name'])
-                    for c in row['counties'] if c['state'] == code]
-        counties = [spelled.get(plain(c), c) for c in counties]
+        # A name the edition uses whole ('Anchorage Municipality', 'Juneau City and Borough') is kept as it is. Otherwise independent
+        # cities keep their name ('Baltimore city' becomes 'Baltimore City') and other suffixes are dropped.
+        names = [c['name'] for c in row['counties'] if c['state'] == code]
+        names = [n if plain(n) in spelled else n[:-5] + ' City' if n.endswith(' city')
+                 else re.sub(r' (County|Parish|Borough|Municipality|Census Area)$', '', n) for n in names]
+        # A rename may point to several current names (Alaska's Valdez-Cordova Census Area is now Chugach and Copper River).
+        counties = []
+        for n in names:
+            for c in (lambda v: v if isinstance(v, list) else [v])(spelled.get(plain(n), n)):
+                if c not in counties:
+                    counties.append(c)
         phones = row['intake_phones']
         if not phones:  # a card without a phone number would not help anyone; the omission is documented per state
             continue

@@ -1,0 +1,877 @@
+{
+ "about": "Research sheet for the Alaska borough and census area edition. Every contact below was read on the date in reviewed_on from the page named beside it; scripts/make_county_state.py turns it into the edition files.",
+ "code": "AK",
+ "name": "Alaska",
+ "slug": "alaska",
+ "counties": 30,
+ "reviewed_on": "2026-11-16",
+ "month_label": "November 16, 2026",
+ "template_date": "November 4, 2026",
+ "locality_word": "borough or census area",
+ "phones_sentence": "Veteran Service Officer phones come from the Office of Veterans Affairs. Boroughs and census areas without a listed service officer show the office’s statewide line.",
+ "senior_line_id": "ak-adrc",
+ "agency": {
+  "url": "https://veterans.alaska.gov/vso/"
+ },
+ "ssvf_renamed_counties": {
+  "Petersburg Census Area": "Petersburg Borough",
+  "Prince of Wales-Outer Ket": "Prince of Wales-Hyder Census Area",
+  "Skagway-Hoonah-Angoon Census Area": [
+   "Skagway Municipality",
+   "Hoonah-Angoon Census Area"
+  ],
+  "Valdez-Cordova Census Area": [
+   "Chugach Census Area",
+   "Copper River Census Area"
+  ],
+  "Wade Hampton Census Area": "Kusilvak Census Area",
+  "Wrangell-Petersburg Census Area": [
+   "Wrangell City and Borough",
+   "Petersburg Borough"
+  ]
+ },
+ "offices": {
+  "source_url": "https://veterans.alaska.gov/vso/",
+  "source_title": "Alaska Office of Veterans Affairs: Veteran Service Officers",
+  "review_method": "full_official_page_text",
+  "note": "Veteran Service Officers give free benefit counseling and claims help; you do not need to belong to their organization.",
+  "selection": "Alaska has no county or borough veterans offices. The Office of Veterans Affairs page (read in full) lists service officers by location with phones but no street addresses. Each location is shown for the borough it sits in (Craig / Ketchikan Gateway for both Ketchikan Gateway Borough and Prince of Wales-Hyder Census Area); the other 22 boroughs and census areas show the office’s statewide line.",
+  "list": [
+   {
+    "county": "Aleutians East Borough",
+    "county_type": "borough",
+    "organization": "Alaska Office of Veterans Affairs (statewide line)",
+    "phone": "907-334-0874",
+    "other_phones": [
+     "888-248-3682 (toll-free)"
+    ],
+    "address": "4600 DeBarr Rd, Suite 180, Anchorage, AK 99508",
+    "office_type": "statewide",
+    "note": "The Office of Veterans Affairs lists no service officer here. Call the office, or a service officer in Anchorage, Wasilla, Juneau, Fairbanks, Soldotna, Kodiak and Craig / Ketchikan Gateway. The office also keeps a list of Alaska Tribal Veteran Representatives by community."
+   },
+   {
+    "county": "Aleutians West Census Area",
+    "county_type": "census_area",
+    "organization": "Alaska Office of Veterans Affairs (statewide line)",
+    "phone": "907-334-0874",
+    "other_phones": [
+     "888-248-3682 (toll-free)"
+    ],
+    "address": "4600 DeBarr Rd, Suite 180, Anchorage, AK 99508",
+    "office_type": "statewide",
+    "note": "The Office of Veterans Affairs lists no service officer here. Call the office, or a service officer in Anchorage, Wasilla, Juneau, Fairbanks, Soldotna, Kodiak and Craig / Ketchikan Gateway. The office also keeps a list of Alaska Tribal Veteran Representatives by community."
+   },
+   {
+    "county": "Anchorage Municipality",
+    "county_type": "borough",
+    "organization": "Veteran Service Officers listed for Anchorage (Veterans of Foreign Wars)",
+    "phone": "907-257-4801",
+    "address": "Anchorage, AK (the state lists phones only; call for the office location)",
+    "office_type": "state_field_office",
+    "note": "The Office of Veterans Affairs lists this service officer for Anchorage. Also listed there: American Legion 907-257-4802; Disabled American Veterans 907-257-4803; Vietnam Veterans of America 907-257-4760. State Office of Veterans Affairs: 907-334-0874 or 888-248-3682.",
+    "other_phones": [
+     "907-257-4802 (American Legion)",
+     "907-257-4803 (Disabled American Veterans)",
+     "907-257-4760 (Vietnam Veterans of America)"
+    ]
+   },
+   {
+    "county": "Bethel Census Area",
+    "county_type": "census_area",
+    "organization": "Alaska Office of Veterans Affairs (statewide line)",
+    "phone": "907-334-0874",
+    "other_phones": [
+     "888-248-3682 (toll-free)"
+    ],
+    "address": "4600 DeBarr Rd, Suite 180, Anchorage, AK 99508",
+    "office_type": "statewide",
+    "note": "The Office of Veterans Affairs lists no service officer here. Call the office, or a service officer in Anchorage, Wasilla, Juneau, Fairbanks, Soldotna, Kodiak and Craig / Ketchikan Gateway. The office also keeps a list of Alaska Tribal Veteran Representatives by community."
+   },
+   {
+    "county": "Bristol Bay Borough",
+    "county_type": "borough",
+    "organization": "Alaska Office of Veterans Affairs (statewide line)",
+    "phone": "907-334-0874",
+    "other_phones": [
+     "888-248-3682 (toll-free)"
+    ],
+    "address": "4600 DeBarr Rd, Suite 180, Anchorage, AK 99508",
+    "office_type": "statewide",
+    "note": "The Office of Veterans Affairs lists no service officer here. Call the office, or a service officer in Anchorage, Wasilla, Juneau, Fairbanks, Soldotna, Kodiak and Craig / Ketchikan Gateway. The office also keeps a list of Alaska Tribal Veteran Representatives by community."
+   },
+   {
+    "county": "Chugach Census Area",
+    "county_type": "census_area",
+    "organization": "Alaska Office of Veterans Affairs (statewide line)",
+    "phone": "907-334-0874",
+    "other_phones": [
+     "888-248-3682 (toll-free)"
+    ],
+    "address": "4600 DeBarr Rd, Suite 180, Anchorage, AK 99508",
+    "office_type": "statewide",
+    "note": "The Office of Veterans Affairs lists no service officer here. Call the office, or a service officer in Anchorage, Wasilla, Juneau, Fairbanks, Soldotna, Kodiak and Craig / Ketchikan Gateway. The office also keeps a list of Alaska Tribal Veteran Representatives by community."
+   },
+   {
+    "county": "Copper River Census Area",
+    "county_type": "census_area",
+    "organization": "Alaska Office of Veterans Affairs (statewide line)",
+    "phone": "907-334-0874",
+    "other_phones": [
+     "888-248-3682 (toll-free)"
+    ],
+    "address": "4600 DeBarr Rd, Suite 180, Anchorage, AK 99508",
+    "office_type": "statewide",
+    "note": "The Office of Veterans Affairs lists no service officer here. Call the office, or a service officer in Anchorage, Wasilla, Juneau, Fairbanks, Soldotna, Kodiak and Craig / Ketchikan Gateway. The office also keeps a list of Alaska Tribal Veteran Representatives by community."
+   },
+   {
+    "county": "Denali Borough",
+    "county_type": "borough",
+    "organization": "Alaska Office of Veterans Affairs (statewide line)",
+    "phone": "907-334-0874",
+    "other_phones": [
+     "888-248-3682 (toll-free)"
+    ],
+    "address": "4600 DeBarr Rd, Suite 180, Anchorage, AK 99508",
+    "office_type": "statewide",
+    "note": "The Office of Veterans Affairs lists no service officer here. Call the office, or a service officer in Anchorage, Wasilla, Juneau, Fairbanks, Soldotna, Kodiak and Craig / Ketchikan Gateway. The office also keeps a list of Alaska Tribal Veteran Representatives by community."
+   },
+   {
+    "county": "Dillingham Census Area",
+    "county_type": "census_area",
+    "organization": "Alaska Office of Veterans Affairs (statewide line)",
+    "phone": "907-334-0874",
+    "other_phones": [
+     "888-248-3682 (toll-free)"
+    ],
+    "address": "4600 DeBarr Rd, Suite 180, Anchorage, AK 99508",
+    "office_type": "statewide",
+    "note": "The Office of Veterans Affairs lists no service officer here. Call the office, or a service officer in Anchorage, Wasilla, Juneau, Fairbanks, Soldotna, Kodiak and Craig / Ketchikan Gateway. The office also keeps a list of Alaska Tribal Veteran Representatives by community."
+   },
+   {
+    "county": "Fairbanks North Star Borough",
+    "county_type": "borough",
+    "organization": "Veteran Service Officers listed for Fairbanks (Disabled American Veterans)",
+    "phone": "907-353-2203",
+    "address": "Fairbanks, AK (the state lists phones only; call for the office location)",
+    "office_type": "state_field_office",
+    "note": "The Office of Veterans Affairs lists this service officer for Fairbanks. Also listed there: Veterans of Foreign Wars 907-651-9337; American Legion 907-456-4238. State Office of Veterans Affairs: 907-334-0874 or 888-248-3682.",
+    "other_phones": [
+     "907-651-9337 (Veterans of Foreign Wars)",
+     "907-456-4238 (American Legion)"
+    ]
+   },
+   {
+    "county": "Haines Borough",
+    "county_type": "borough",
+    "organization": "Alaska Office of Veterans Affairs (statewide line)",
+    "phone": "907-334-0874",
+    "other_phones": [
+     "888-248-3682 (toll-free)"
+    ],
+    "address": "4600 DeBarr Rd, Suite 180, Anchorage, AK 99508",
+    "office_type": "statewide",
+    "note": "The Office of Veterans Affairs lists no service officer here. Call the office, or a service officer in Anchorage, Wasilla, Juneau, Fairbanks, Soldotna, Kodiak and Craig / Ketchikan Gateway. The office also keeps a list of Alaska Tribal Veteran Representatives by community."
+   },
+   {
+    "county": "Hoonah-Angoon Census Area",
+    "county_type": "census_area",
+    "organization": "Alaska Office of Veterans Affairs (statewide line)",
+    "phone": "907-334-0874",
+    "other_phones": [
+     "888-248-3682 (toll-free)"
+    ],
+    "address": "4600 DeBarr Rd, Suite 180, Anchorage, AK 99508",
+    "office_type": "statewide",
+    "note": "The Office of Veterans Affairs lists no service officer here. Call the office, or a service officer in Anchorage, Wasilla, Juneau, Fairbanks, Soldotna, Kodiak and Craig / Ketchikan Gateway. The office also keeps a list of Alaska Tribal Veteran Representatives by community."
+   },
+   {
+    "county": "Juneau City and Borough",
+    "county_type": "city_and_county",
+    "organization": "Veteran Service Officers listed for Juneau (Vietnam Veterans of America)",
+    "phone": "907-465-4211",
+    "address": "Juneau, AK (the state lists phones only; call for the office location)",
+    "office_type": "state_field_office",
+    "note": "The Office of Veterans Affairs lists this service officer for Juneau. State Office of Veterans Affairs: 907-334-0874 or 888-248-3682."
+   },
+   {
+    "county": "Kenai Peninsula Borough",
+    "county_type": "borough",
+    "organization": "Veteran Service Officers listed for Soldotna (American Legion)",
+    "phone": "907-260-7640",
+    "address": "Soldotna, AK (the state lists phones only; call for the office location)",
+    "office_type": "state_field_office",
+    "note": "The Office of Veterans Affairs lists this service officer for Soldotna. State Office of Veterans Affairs: 907-334-0874 or 888-248-3682."
+   },
+   {
+    "county": "Ketchikan Gateway Borough",
+    "county_type": "borough",
+    "organization": "Veteran Service Officers listed for Craig / Ketchikan Gateway (Vietnam Veterans of America)",
+    "phone": "907-257-4760",
+    "address": "Craig / Ketchikan Gateway, AK (the state lists phones only; call for the office location)",
+    "office_type": "state_field_office",
+    "note": "The Office of Veterans Affairs lists this service officer for Craig / Ketchikan Gateway. State Office of Veterans Affairs: 907-334-0874 or 888-248-3682."
+   },
+   {
+    "county": "Kodiak Island Borough",
+    "county_type": "borough",
+    "organization": "Veteran Service Officers listed for Kodiak (Vietnam Veterans of America)",
+    "phone": "907-512-0688",
+    "address": "Kodiak, AK (the state lists phones only; call for the office location)",
+    "office_type": "state_field_office",
+    "note": "The Office of Veterans Affairs lists this service officer for Kodiak. State Office of Veterans Affairs: 907-334-0874 or 888-248-3682."
+   },
+   {
+    "county": "Kusilvak Census Area",
+    "county_type": "census_area",
+    "organization": "Alaska Office of Veterans Affairs (statewide line)",
+    "phone": "907-334-0874",
+    "other_phones": [
+     "888-248-3682 (toll-free)"
+    ],
+    "address": "4600 DeBarr Rd, Suite 180, Anchorage, AK 99508",
+    "office_type": "statewide",
+    "note": "The Office of Veterans Affairs lists no service officer here. Call the office, or a service officer in Anchorage, Wasilla, Juneau, Fairbanks, Soldotna, Kodiak and Craig / Ketchikan Gateway. The office also keeps a list of Alaska Tribal Veteran Representatives by community."
+   },
+   {
+    "county": "Lake and Peninsula Borough",
+    "county_type": "borough",
+    "organization": "Alaska Office of Veterans Affairs (statewide line)",
+    "phone": "907-334-0874",
+    "other_phones": [
+     "888-248-3682 (toll-free)"
+    ],
+    "address": "4600 DeBarr Rd, Suite 180, Anchorage, AK 99508",
+    "office_type": "statewide",
+    "note": "The Office of Veterans Affairs lists no service officer here. Call the office, or a service officer in Anchorage, Wasilla, Juneau, Fairbanks, Soldotna, Kodiak and Craig / Ketchikan Gateway. The office also keeps a list of Alaska Tribal Veteran Representatives by community."
+   },
+   {
+    "county": "Matanuska-Susitna Borough",
+    "county_type": "borough",
+    "organization": "Veteran Service Officers listed for Wasilla (Disabled American Veterans)",
+    "phone": "907-433-1065",
+    "address": "Wasilla, AK (the state lists phones only; call for the office location)",
+    "office_type": "state_field_office",
+    "note": "The Office of Veterans Affairs lists this service officer for Wasilla. Also listed there: Veterans of Foreign Wars 907-373-7600; Vietnam Veterans of America 907-707-7105. State Office of Veterans Affairs: 907-334-0874 or 888-248-3682.",
+    "other_phones": [
+     "907-373-7600 (Veterans of Foreign Wars)",
+     "907-707-7105 (Vietnam Veterans of America)"
+    ]
+   },
+   {
+    "county": "Nome Census Area",
+    "county_type": "census_area",
+    "organization": "Alaska Office of Veterans Affairs (statewide line)",
+    "phone": "907-334-0874",
+    "other_phones": [
+     "888-248-3682 (toll-free)"
+    ],
+    "address": "4600 DeBarr Rd, Suite 180, Anchorage, AK 99508",
+    "office_type": "statewide",
+    "note": "The Office of Veterans Affairs lists no service officer here. Call the office, or a service officer in Anchorage, Wasilla, Juneau, Fairbanks, Soldotna, Kodiak and Craig / Ketchikan Gateway. The office also keeps a list of Alaska Tribal Veteran Representatives by community."
+   },
+   {
+    "county": "North Slope Borough",
+    "county_type": "borough",
+    "organization": "Alaska Office of Veterans Affairs (statewide line)",
+    "phone": "907-334-0874",
+    "other_phones": [
+     "888-248-3682 (toll-free)"
+    ],
+    "address": "4600 DeBarr Rd, Suite 180, Anchorage, AK 99508",
+    "office_type": "statewide",
+    "note": "The Office of Veterans Affairs lists no service officer here. Call the office, or a service officer in Anchorage, Wasilla, Juneau, Fairbanks, Soldotna, Kodiak and Craig / Ketchikan Gateway. The office also keeps a list of Alaska Tribal Veteran Representatives by community."
+   },
+   {
+    "county": "Northwest Arctic Borough",
+    "county_type": "borough",
+    "organization": "Alaska Office of Veterans Affairs (statewide line)",
+    "phone": "907-334-0874",
+    "other_phones": [
+     "888-248-3682 (toll-free)"
+    ],
+    "address": "4600 DeBarr Rd, Suite 180, Anchorage, AK 99508",
+    "office_type": "statewide",
+    "note": "The Office of Veterans Affairs lists no service officer here. Call the office, or a service officer in Anchorage, Wasilla, Juneau, Fairbanks, Soldotna, Kodiak and Craig / Ketchikan Gateway. The office also keeps a list of Alaska Tribal Veteran Representatives by community."
+   },
+   {
+    "county": "Petersburg Borough",
+    "county_type": "borough",
+    "organization": "Alaska Office of Veterans Affairs (statewide line)",
+    "phone": "907-334-0874",
+    "other_phones": [
+     "888-248-3682 (toll-free)"
+    ],
+    "address": "4600 DeBarr Rd, Suite 180, Anchorage, AK 99508",
+    "office_type": "statewide",
+    "note": "The Office of Veterans Affairs lists no service officer here. Call the office, or a service officer in Anchorage, Wasilla, Juneau, Fairbanks, Soldotna, Kodiak and Craig / Ketchikan Gateway. The office also keeps a list of Alaska Tribal Veteran Representatives by community."
+   },
+   {
+    "county": "Prince of Wales-Hyder Census Area",
+    "county_type": "census_area",
+    "organization": "Veteran Service Officers listed for Craig / Ketchikan Gateway (Vietnam Veterans of America)",
+    "phone": "907-257-4760",
+    "address": "Craig / Ketchikan Gateway, AK (the state lists phones only; call for the office location)",
+    "office_type": "state_field_office",
+    "note": "The Office of Veterans Affairs lists this service officer for Craig / Ketchikan Gateway. State Office of Veterans Affairs: 907-334-0874 or 888-248-3682."
+   },
+   {
+    "county": "Sitka City and Borough",
+    "county_type": "city_and_county",
+    "organization": "Alaska Office of Veterans Affairs (statewide line)",
+    "phone": "907-334-0874",
+    "other_phones": [
+     "888-248-3682 (toll-free)"
+    ],
+    "address": "4600 DeBarr Rd, Suite 180, Anchorage, AK 99508",
+    "office_type": "statewide",
+    "note": "The Office of Veterans Affairs lists no service officer here. Call the office, or a service officer in Anchorage, Wasilla, Juneau, Fairbanks, Soldotna, Kodiak and Craig / Ketchikan Gateway. The office also keeps a list of Alaska Tribal Veteran Representatives by community."
+   },
+   {
+    "county": "Skagway Municipality",
+    "county_type": "borough",
+    "organization": "Alaska Office of Veterans Affairs (statewide line)",
+    "phone": "907-334-0874",
+    "other_phones": [
+     "888-248-3682 (toll-free)"
+    ],
+    "address": "4600 DeBarr Rd, Suite 180, Anchorage, AK 99508",
+    "office_type": "statewide",
+    "note": "The Office of Veterans Affairs lists no service officer here. Call the office, or a service officer in Anchorage, Wasilla, Juneau, Fairbanks, Soldotna, Kodiak and Craig / Ketchikan Gateway. The office also keeps a list of Alaska Tribal Veteran Representatives by community."
+   },
+   {
+    "county": "Southeast Fairbanks Census Area",
+    "county_type": "census_area",
+    "organization": "Alaska Office of Veterans Affairs (statewide line)",
+    "phone": "907-334-0874",
+    "other_phones": [
+     "888-248-3682 (toll-free)"
+    ],
+    "address": "4600 DeBarr Rd, Suite 180, Anchorage, AK 99508",
+    "office_type": "statewide",
+    "note": "The Office of Veterans Affairs lists no service officer here. Call the office, or a service officer in Anchorage, Wasilla, Juneau, Fairbanks, Soldotna, Kodiak and Craig / Ketchikan Gateway. The office also keeps a list of Alaska Tribal Veteran Representatives by community."
+   },
+   {
+    "county": "Wrangell City and Borough",
+    "county_type": "city_and_county",
+    "organization": "Alaska Office of Veterans Affairs (statewide line)",
+    "phone": "907-334-0874",
+    "other_phones": [
+     "888-248-3682 (toll-free)"
+    ],
+    "address": "4600 DeBarr Rd, Suite 180, Anchorage, AK 99508",
+    "office_type": "statewide",
+    "note": "The Office of Veterans Affairs lists no service officer here. Call the office, or a service officer in Anchorage, Wasilla, Juneau, Fairbanks, Soldotna, Kodiak and Craig / Ketchikan Gateway. The office also keeps a list of Alaska Tribal Veteran Representatives by community."
+   },
+   {
+    "county": "Yakutat City and Borough",
+    "county_type": "city_and_county",
+    "organization": "Alaska Office of Veterans Affairs (statewide line)",
+    "phone": "907-334-0874",
+    "other_phones": [
+     "888-248-3682 (toll-free)"
+    ],
+    "address": "4600 DeBarr Rd, Suite 180, Anchorage, AK 99508",
+    "office_type": "statewide",
+    "note": "The Office of Veterans Affairs lists no service officer here. Call the office, or a service officer in Anchorage, Wasilla, Juneau, Fairbanks, Soldotna, Kodiak and Craig / Ketchikan Gateway. The office also keeps a list of Alaska Tribal Veteran Representatives by community."
+   },
+   {
+    "county": "Yukon-Koyukuk Census Area",
+    "county_type": "census_area",
+    "organization": "Alaska Office of Veterans Affairs (statewide line)",
+    "phone": "907-334-0874",
+    "other_phones": [
+     "888-248-3682 (toll-free)"
+    ],
+    "address": "4600 DeBarr Rd, Suite 180, Anchorage, AK 99508",
+    "office_type": "statewide",
+    "note": "The Office of Veterans Affairs lists no service officer here. Call the office, or a service officer in Anchorage, Wasilla, Juneau, Fairbanks, Soldotna, Kodiak and Craig / Ketchikan Gateway. The office also keeps a list of Alaska Tribal Veteran Representatives by community."
+   }
+  ]
+ },
+ "aging": {
+  "source_url": "https://health.alaska.gov/dsds/pages/adrc/default.aspx",
+  "source_title": "Alaska Division of Senior and Disabilities Services: Aging and Disability Resource Centers",
+  "source_scope": "Each regional ADRC’s service area, agency, address and phone, and the statewide number 1-855-565-2017; read in full; undated. Borough and census area assignments follow the page’s service-area names; see each card.",
+  "review": "full",
+  "review_method": "full_official_page_text",
+  "region_word": "",
+  "agency_label": "Aging and Disability Resource Center",
+  "description": "Alaska’s Aging and Disability Resource Centers connect seniors, people with disabilities and caregivers with long-term services and supports, regardless of age or income, through regional offices. Specialists pre-screen in person, at home, by phone or by video.",
+  "next_step_extra": "The statewide ADRC number, 1-855-565-2017, also reaches a specialist.",
+  "regions": [
+   {
+    "id": "ak-adrc-anchorage",
+    "label": "Anchorage",
+    "name": "Municipality of Anchorage ADRC",
+    "phone": "907-343-7770",
+    "counties": [
+     "Anchorage Municipality"
+    ],
+    "notes": [
+     "Office: 825 L Street, Suite 200, Anchorage."
+    ]
+   },
+   {
+    "id": "ak-adrc-matsu",
+    "label": "Mat-Su Borough",
+    "name": "LINKS Resource Center ADRC (Wasilla)",
+    "phone": "907-373-3632",
+    "counties": [
+     "Matanuska-Susitna Borough"
+    ],
+    "notes": [
+     "Office: 777 N Crusey Ave, Suite 101, Wasilla."
+    ]
+   },
+   {
+    "id": "ak-adrc-gulf",
+    "label": "Kenai Peninsula, Kodiak Island and Valdez-Cordova",
+    "name": "Independent Living Center ADRC (Soldotna)",
+    "phone": "907-262-6333",
+    "counties": [
+     "Chugach Census Area",
+     "Copper River Census Area",
+     "Kenai Peninsula Borough",
+     "Kodiak Island Borough"
+    ],
+    "notes": [
+     "Toll-free: 800-770-7911.",
+     "The state lists Valdez-Cordova, which became the Chugach and Copper River census areas in 2019; both are shown here."
+    ]
+   },
+   {
+    "id": "ak-adrc-southeast",
+    "label": "Southeast Alaska",
+    "name": "Southeast Alaska Independent Living (SAIL) ADRC",
+    "phone": "800-478-7245",
+    "counties": [
+     "Haines Borough",
+     "Hoonah-Angoon Census Area",
+     "Juneau City and Borough",
+     "Ketchikan Gateway Borough",
+     "Petersburg Borough",
+     "Prince of Wales-Hyder Census Area",
+     "Sitka City and Borough",
+     "Skagway Municipality",
+     "Wrangell City and Borough",
+     "Yakutat City and Borough"
+    ],
+    "notes": [
+     "Main office: 8711 Teal Street, Suite 300, Juneau.",
+     "The state lists “Southeast Alaska”; the edition assigns its ten boroughs and census areas."
+    ]
+   },
+   {
+    "id": "ak-adrc-north",
+    "label": "Interior and North Slope",
+    "name": "ADRC North (Fairbanks Senior Center)",
+    "phone": "907-452-2551",
+    "counties": [
+     "Denali Borough",
+     "Fairbanks North Star Borough",
+     "North Slope Borough",
+     "Southeast Fairbanks Census Area",
+     "Yukon-Koyukuk Census Area"
+    ],
+    "notes": [
+     "Office: 1424 Moore Street, Fairbanks."
+    ]
+   },
+   {
+    "id": "ak-adrc-west",
+    "label": "Western Alaska",
+    "name": "Bristol Bay Native Association ADRC (Dillingham)",
+    "phone": "800-478-4139",
+    "counties": [
+     "Aleutians East Borough",
+     "Aleutians West Census Area",
+     "Bethel Census Area",
+     "Bristol Bay Borough",
+     "Dillingham Census Area",
+     "Kusilvak Census Area",
+     "Lake and Peninsula Borough",
+     "Nome Census Area",
+     "Northwest Arctic Borough"
+    ],
+    "notes": [
+     "Local: 907-842-4139. The state lists Western Alaska, the Aleutian Islands, Lake and Peninsula, Bristol Bay, Dillingham, Bethel, Kusilvak, Nome and Northwest Arctic."
+    ]
+   }
+  ]
+ },
+ "ombudsman": {
+  "state_phone": "907-334-4480",
+  "regions": [
+   {
+    "id": "ak-omb-state",
+    "name": "Alaska Office of the Long Term Care Ombudsman",
+    "phone": "907-334-4480",
+    "counties": [
+     "Aleutians East Borough",
+     "Aleutians West Census Area",
+     "Anchorage Municipality",
+     "Bethel Census Area",
+     "Bristol Bay Borough",
+     "Chugach Census Area",
+     "Copper River Census Area",
+     "Denali Borough",
+     "Dillingham Census Area",
+     "Fairbanks North Star Borough",
+     "Haines Borough",
+     "Hoonah-Angoon Census Area",
+     "Juneau City and Borough",
+     "Kenai Peninsula Borough",
+     "Ketchikan Gateway Borough",
+     "Kodiak Island Borough",
+     "Kusilvak Census Area",
+     "Lake and Peninsula Borough",
+     "Matanuska-Susitna Borough",
+     "Nome Census Area",
+     "North Slope Borough",
+     "Northwest Arctic Borough",
+     "Petersburg Borough",
+     "Prince of Wales-Hyder Census Area",
+     "Sitka City and Borough",
+     "Skagway Municipality",
+     "Southeast Fairbanks Census Area",
+     "Wrangell City and Borough",
+     "Yakutat City and Borough",
+     "Yukon-Koyukuk Census Area"
+    ],
+    "source_url": "https://www.akleg.gov/basis/get_documents.asp?docid=635",
+    "source_title": "Alaska Long Term Care Ombudsman brochure (Alaska Legislature document library)",
+    "source_scope": "3745 Community Park Loop, Suite 200, Anchorage; (907) 334-4480 or (800) 730-6393 toll free; akoltco@alaska.gov; search excerpt. The Alaska Commission on Aging lists the same toll-free line (https://aging.alaska.gov; search excerpt). The program is statewide, so every borough and census area shows it.",
+    "review": "excerpt",
+    "review_method": "official_search_excerpt",
+    "counties_from_source": true,
+    "notes": [
+     "Toll-free: 800-730-6393. Email akoltco@alaska.gov."
+    ]
+   }
+  ]
+ },
+ "cils": {
+  "source_url": "https://www.ilru.org/cil-directory/ak",
+  "source_title": "ILRU: Directory of Centers for Independent Living, Alaska",
+  "scope": "Each office’s phones and the areas it serves; read in full; undated. The directory uses older names (Wade Hampton for Kusilvak, Valdez-Cordova for Chugach and Copper River, Prince of Wales-Outer Ketchikan) and “All of Southeast Alaska” for SAIL; the edition maps them to today’s boroughs and census areas.",
+  "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living",
+  "list": [
+   {
+    "id": "ak-cil-access",
+    "name": "Access Alaska",
+    "organization": "Access Alaska",
+    "url": "https://www.accessalaska.org/",
+    "phone": "907-479-7940",
+    "counties": [
+     "Aleutians East Borough",
+     "Aleutians West Census Area",
+     "Anchorage Municipality",
+     "Bethel Census Area",
+     "Bristol Bay Borough",
+     "Denali Borough",
+     "Dillingham Census Area",
+     "Fairbanks North Star Borough",
+     "Kusilvak Census Area",
+     "Lake and Peninsula Borough",
+     "Matanuska-Susitna Borough",
+     "North Slope Borough",
+     "Southeast Fairbanks Census Area",
+     "Yukon-Koyukuk Census Area"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "Main office: Fairbanks; toll-free 800-770-4488. Anchorage office 907-248-4777; Mat-Su (Wasilla) 907-357-2588."
+    ]
+   },
+   {
+    "id": "ak-cil-arctic",
+    "name": "Arctic Access",
+    "organization": "Arctic Access",
+    "url": "https://www.ilru.org/cil-directory/ak",
+    "phone": "907-387-0688",
+    "counties": [
+     "Nome Census Area",
+     "Northwest Arctic Borough"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "Office: Kotzebue. The directory lists no website."
+    ]
+   },
+   {
+    "id": "ak-cil-ilc",
+    "name": "Independent Living Center",
+    "organization": "Independent Living Center (Kenai Peninsula)",
+    "url": "https://www.peninsulailc.org/",
+    "phone": "907-262-6333",
+    "counties": [
+     "Chugach Census Area",
+     "Copper River Census Area",
+     "Kenai Peninsula Borough",
+     "Kodiak Island Borough"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "Soldotna office; toll-free 800-770-7911. Homer 907-235-7911; Seward 907-224-8711; Kodiak 907-486-0493."
+    ]
+   },
+   {
+    "id": "ak-cil-sail",
+    "name": "Southeast Alaska Independent Living (SAIL)",
+    "organization": "Southeast Alaska Independent Living",
+    "url": "https://www.sailinc.org/",
+    "phone": "800-478-7245",
+    "counties": [
+     "Haines Borough",
+     "Hoonah-Angoon Census Area",
+     "Juneau City and Borough",
+     "Ketchikan Gateway Borough",
+     "Petersburg Borough",
+     "Prince of Wales-Hyder Census Area",
+     "Sitka City and Borough",
+     "Skagway Municipality",
+     "Wrangell City and Borough",
+     "Yakutat City and Borough"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "Main office: Juneau. Ketchikan 888-452-7245; Sitka 888-500-7245; Haines 888-471-1332; Klawock 800-487-1035."
+    ]
+   }
+  ]
+ },
+ "programs": [
+  {
+   "id": "ak-claims",
+   "name": "Alaska veterans: Office of Veterans Affairs and Veteran Service Officers",
+   "organization": "Alaska Department of Military and Veterans Affairs, Office of Veterans Affairs",
+   "url": "https://veterans.alaska.gov/vso/",
+   "needs": [
+    "general_navigation",
+    "benefits_and_funding"
+   ],
+   "description": "The Office of Veterans Affairs works with four veterans organizations (Veterans of Foreign Wars, American Legion, Disabled American Veterans and Vietnam Veterans of America) to provide Veteran Service Officers for free benefit counseling and claims help, in Anchorage, Wasilla, Juneau, Fairbanks, Soldotna, Kodiak and Craig / Ketchikan Gateway.",
+   "next_step": "Choose a borough or census area above for its service officer, or call the Office of Veterans Affairs at 907-334-0874 or 888-248-3682.",
+   "constraints": [
+    "The state lists service officers by phone only; call before visiting."
+   ],
+   "phone": "907-334-0874",
+   "phone_label": "Alaska Office of Veterans Affairs (907-334-0874)",
+   "phone_source": "https://veterans.alaska.gov/vso/",
+   "review": "full",
+   "sources": [
+    {
+     "url": "https://veterans.alaska.gov/vso/",
+     "title": "Alaska Office of Veterans Affairs: Veteran Service Officers",
+     "scope": "Service officers by location with phones, the Office of Veterans Affairs address and phones, and the Tribal Veteran Representatives list; read in full."
+    },
+    {
+     "url": "https://veterans.alaska.gov/media/cwoco4wn/veterans-benefits-2025-web.pdf",
+     "title": "Alaska Office of Veterans Affairs: Veterans Benefits 2025",
+     "scope": "The same service officer locations and the office’s address and phones; read in full."
+    }
+   ]
+  },
+  {
+   "id": "ak-adrc",
+   "name": "Alaska Aging and Disability Resource Centers",
+   "organization": "Alaska Division of Senior and Disabilities Services and regional ADRC partners",
+   "url": "https://health.alaska.gov/dsds/pages/adrc/default.aspx",
+   "needs": [
+    "general_navigation",
+    "help_at_home",
+    "equipment_home_accessibility"
+   ],
+   "description": "Regional Aging and Disability Resource Centers connect seniors, people with disabilities and caregivers with long-term services and supports, regardless of age or income. Military service is not required.",
+   "next_step": "Call 1-855-565-2017, or choose a borough or census area above for its regional ADRC.",
+   "constraints": [
+    "Each program has its own eligibility and waitlist."
+   ],
+   "phone": "855-565-2017",
+   "phone_label": "Alaska ADRC statewide (855-565-2017)",
+   "phone_source": "https://health.alaska.gov/dsds/pages/adrc/default.aspx",
+   "review": "full",
+   "sources": [
+    {
+     "url": "https://health.alaska.gov/dsds/pages/adrc/default.aspx",
+     "title": "Alaska Division of Senior and Disabilities Services: Aging and Disability Resource Centers",
+     "scope": "Statewide number and regional offices; read in full."
+    }
+   ]
+  },
+  {
+   "id": "ak-ship",
+   "name": "Medicare counseling (Alaska Medicare Information Office, SHIP)",
+   "organization": "Alaska Division of Senior and Disabilities Services, Medicare Information Office (SHIP)",
+   "url": "https://uaa.alaska.edu/academics/college-of-health/nrc-alaska-native-elders/_documents/Resource%20Guide_5-2024.pdf",
+   "needs": [
+    "benefits_and_funding"
+   ],
+   "description": "Free Medicare counseling from Alaska’s State Health Insurance Assistance Program, the Medicare Information Office.",
+   "next_step": "Call 1-800-478-6065 (toll-free within Alaska) or 907-269-3680. The Anchorage office is by appointment only. For Medicare itself, call 800-MEDICARE (800-633-4227).",
+   "constraints": [
+    "Counseling is by appointment. Have your Medicare card and drug list ready."
+   ],
+   "phone": "800-478-6065",
+   "phone_label": "Alaska Medicare Information Office (800-478-6065)",
+   "phone_source": "https://uaa.alaska.edu/academics/college-of-health/nrc-alaska-native-elders/_documents/Resource%20Guide_5-2024.pdf",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://uaa.alaska.edu/academics/college-of-health/nrc-alaska-native-elders/_documents/Resource%20Guide_5-2024.pdf",
+     "title": "University of Alaska Anchorage: Alaska Resource Guide (April 2024)",
+     "scope": "Medicare Information Office, Anchorage office by appointment only; (907) 269-3680, toll-free within Alaska 1-800-478-6065; search excerpt."
+    },
+    {
+     "url": "https://local.aarp.org/news/family-caregiver-resources-for-alaska-ak-2021-02-01.html",
+     "title": "AARP: Family caregiver resources for Alaska",
+     "scope": "Medicare Information Office and SHIP, 800-478-6065 or 907-269-3680; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "ak-ombudsman",
+   "name": "Alaska Long Term Care Ombudsman and adult abuse reporting",
+   "organization": "Alaska Office of the Long Term Care Ombudsman; Division of Senior and Disabilities Services, Adult Protective Services",
+   "url": "https://www.akleg.gov/basis/get_documents.asp?docid=635",
+   "needs": [
+    "resident_rights",
+    "general_navigation"
+   ],
+   "description": "Advocacy for older Alaskans in nursing homes and assisted living, including discharge concerns and complaints. Adult Protective Services takes reports of harm to vulnerable adults.",
+   "next_step": "Call the ombudsman at 907-334-4480 or 800-730-6393. To report harm to a vulnerable adult, call Adult Protective Services at 1-800-478-9996 (in Alaska) or 907-269-3666, or report online. In an emergency, call 911.",
+   "constraints": [
+    "The ombudsman acts with the resident’s permission and is not a licensing agency."
+   ],
+   "phone": "907-334-4480",
+   "phone_label": "Alaska Long Term Care Ombudsman (907-334-4480)",
+   "phone_source": "https://www.akleg.gov/basis/get_documents.asp?docid=635",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://www.akleg.gov/basis/get_documents.asp?docid=635",
+     "title": "Alaska Long Term Care Ombudsman brochure",
+     "scope": "Office address, phones and email; search excerpt."
+    },
+    {
+     "url": "https://health.alaska.gov/dsds/Pages/aps",
+     "title": "Alaska DSDS: Adult Protective Services",
+     "scope": "Report suspected abuse of a vulnerable adult at 1-800-478-9996; 907-269-3666; search excerpt."
+    },
+    {
+     "url": "https://health.alaska.gov/en/services/aps-report-harm/",
+     "title": "Alaska Department of Health: Report harm to Adult Protective Services",
+     "scope": "Online report form; call 1-800-478-9996 in Alaska or 907-269-3666; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "ak-legal-programs",
+   "name": "Free legal help for older Alaskans",
+   "organization": "Alaska Legal Services Corporation, Elder Law Project",
+   "url": "https://www.alsc-law.org/?p=51",
+   "role": "legal_aid",
+   "needs": [
+    "resident_rights",
+    "general_navigation",
+    "housing"
+   ],
+   "description": "Alaska Legal Services Corporation’s Elder Law Project gives free civil legal help to Alaskans 60 and older, without regard to income, with priority for seniors in social or economic need. ALSC serves every community through statewide offices.",
+   "next_step": "Apply online at alsc-law.org or call the statewide intake line, 1-888-478-2572.",
+   "constraints": [
+    "Intake can take up to two business days; if the line is busy, apply online or call the nearest ALSC office."
+   ],
+   "phone": "888-478-2572",
+   "phone_label": "Alaska Legal Services Corporation intake (888-478-2572)",
+   "phone_source": "https://www.alsc-law.org/apply-for-services/",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://www.alsc-law.org/?p=51",
+     "title": "Alaska Legal Services Corporation: Elder Law Project",
+     "scope": "Legal aid for Alaskans 60 and older without regard to income, priority for social or economic need; search excerpt."
+    },
+    {
+     "url": "https://www.alsc-law.org/apply-for-services/",
+     "title": "Alaska Legal Services Corporation: Apply for help",
+     "scope": "Apply online or call toll-free 1-888-478-2572; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "ak-vahealth-systems",
+   "name": "VA health care in Alaska",
+   "organization": "U.S. Department of Veterans Affairs, VA Alaska Healthcare System",
+   "url": "https://www.va.gov/alaska-health-care/contact-us/",
+   "role": "va_health_system",
+   "needs": [
+    "veteran_services",
+    "care_facilities"
+   ],
+   "description": "Alaska veterans are served by the VA Alaska Healthcare System: the Anchorage VA Medical Center (1201 North Muldoon Road) and clinics in Fairbanks, Kenai, Mat-Su and Juneau. VA also pays for some care from tribal and community providers.",
+   "next_step": "Call 888-353-7574 for appointments; after hours, ask the operator for the administrator on duty. Not enrolled yet? Ask a Veteran Service Officer for help applying.",
+   "constraints": [
+    "If a service you need is not offered near you, ask about travel benefits and community care."
+   ],
+   "phone": "888-353-7574",
+   "phone_label": "VA Alaska Healthcare System (888-353-7574)",
+   "phone_source": "https://www.va.gov/alaska-health-care/contact-us/",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://www.va.gov/alaska-health-care/contact-us/",
+     "title": "VA Alaska health care: Contact us",
+     "scope": "Anchorage VA Medical Center, 1201 North Muldoon Road; toll-free 888-353-7574; search excerpt."
+    }
+   ]
+  }
+ ],
+ "adapter": {
+  "badge_county": "Veteran Service Officer",
+  "badge_state": "Veteran Service Officer",
+  "badge_statewide": "Alaska statewide line",
+  "published_in": "Published by the Alaska Office of Veterans Affairs",
+  "agency_link": "Alaska Office of Veterans Affairs",
+  "officers_can": "Veteran Service Officers can",
+  "abuse_phone": "800-478-9996",
+  "abuse_label": "Adult Protective Services (toll-free in Alaska; 907-269-3666 from elsewhere)",
+  "aging_term": "Aging and Disability Resource Center",
+  "extra_swaps": [
+   [
+    "Choose a county for its County Veterans Service Office, matched Area Agency on Aging, regional ombudsman",
+    "Choose a borough or census area for its Veteran Service Officer, matched Aging and Disability Resource Center, the statewide ombudsman"
+   ],
+   [
+    "Choose a county above for the county veterans office.",
+    "Choose a borough or census area above for its Veteran Service Officer."
+   ]
+  ],
+  "post_swaps": [
+   [
+    "+' County'",
+    "+''"
+   ],
+   [
+    "?'':' County'",
+    "?'':''"
+   ]
+  ]
+ },
+ "share_replacements": [
+  [
+   "county veterans offices, benefits and care referrals",
+   "Veteran Service Officers, benefits and care referrals"
+  ],
+  [
+   "County veterans offices",
+   "Veteran Service Officers"
+  ]
+ ],
+ "coverage_scope": "Referral edition. All 30 boroughs and census areas show a Veteran Service Officer (8) or the Office of Veterans Affairs line, their regional Aging and Disability Resource Center, the statewide long-term care ombudsman and a Center for Independent Living.",
+ "coverage_note": "Veteran Service Officers come from the Office of Veterans Affairs. ADRCs come from the Division of Senior and Disabilities Services. Centers for Independent Living come from the ILRU national directory. Reviewed November 16, 2026. Contacts are not telephone-confirmed.",
+ "share_description": "Veteran Service Officers, aging and disability resource centers and long-term care ombudsman help across Alaska"
+}
