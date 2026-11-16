@@ -1,0 +1,1159 @@
+{
+ "about": "Research sheet for the New Jersey county edition. Every contact below was read on the date in reviewed_on from the page named beside it; scripts/make_county_state.py turns it into the edition files.",
+ "code": "NJ",
+ "name": "New Jersey",
+ "slug": "new-jersey",
+ "counties": 21,
+ "reviewed_on": "2026-11-16",
+ "month_label": "November 16, 2026",
+ "template_date": "November 4, 2026",
+ "phones_sentence": "Service office phones, addresses and hours come from the New Jersey Department of Veterans Affairs Veterans Service Offices page. Call before you go.",
+ "senior_line_id": "nj-adrc",
+ "agency": {
+  "url": "https://nj.gov/dva/veterans/services/vso/"
+ },
+ "offices": {
+  "source_url": "https://nj.gov/dva/veterans/services/vso/",
+  "source_title": "New Jersey Department of Veterans Affairs: Veterans Service Offices",
+  "review_method": "full_official_page_text",
+  "note": "State Veterans Service Officers help with VA claims, pension, survivor benefits and state veterans benefits at no charge. The toll-free line, 844-671-1019, also reaches a service officer.",
+  "selection": "Office address, phones and hours as printed on the department’s Veterans Service Offices page, one office per county; officers’ names, email addresses and fax numbers omitted. Counties with more than one office list the others.",
+  "list": [
+   {
+    "county": "Atlantic",
+    "phone": "609-671-3505",
+    "address": "Atlantic City Armory, 1008 Absecon Boulevard, Atlantic City, NJ 08401",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m.; closed alternate Fridays",
+    "organization": "NJ DVA Veterans Service Office, Atlantic County",
+    "office_type": "state_field_office",
+    "other_phones": [
+     "609-671-3506"
+    ]
+   },
+   {
+    "county": "Bergen",
+    "phone": "609-671-3511",
+    "address": "125 State Street, Suite 109, Hackensack, NJ 07601",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m.; closed alternate Fridays",
+    "organization": "NJ DVA Veterans Service Office, Bergen County",
+    "office_type": "state_field_office"
+   },
+   {
+    "county": "Burlington",
+    "phone": "609-671-3515",
+    "address": "Workers’ Compensation Court, 555 High Street, Suite 6A, Mount Holly, NJ 08060",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m.; closed alternate Fridays",
+    "organization": "NJ DVA Veterans Service Office, Burlington County",
+    "office_type": "state_field_office",
+    "other_phones": [
+     "609-671-3516"
+    ],
+    "other_offices": [
+     {
+      "address": "Bordentown office: Joint Military & Family Assistance Center, 1048 US Highway 206, Bordentown, NJ 08505",
+      "schedule": "Wednesday only, 8:30 a.m.–3:30 p.m.",
+      "phone": "609-671-2005"
+     }
+    ],
+    "note": "A second Burlington County office in Bordentown is open Wednesdays only."
+   },
+   {
+    "county": "Camden",
+    "phone": "609-671-3520",
+    "address": "Governor James J. Florio Center for Public Service Building, 200 Federal Street, Suite 146, Camden, NJ 08103",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m.; closed alternate Fridays",
+    "organization": "NJ DVA Veterans Service Office, Camden County",
+    "office_type": "state_field_office",
+    "other_phones": [
+     "609-671-3521"
+    ]
+   },
+   {
+    "county": "Cape May",
+    "phone": "609-671-3525",
+    "address": "Cape May Armory, 600 Garden State Parkway, Cape May Court House, NJ 08210",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m.; closed alternate Fridays",
+    "organization": "NJ DVA Veterans Service Office, Cape May County",
+    "office_type": "state_field_office",
+    "other_phones": [
+     "609-671-3526"
+    ]
+   },
+   {
+    "county": "Cumberland",
+    "phone": "609-671-3530",
+    "address": "NJ Veterans Memorial Home, 524 Northwest Boulevard, Vineland, NJ 08360",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m.; closed alternate Fridays",
+    "organization": "NJ DVA Veterans Service Office, Cumberland County",
+    "office_type": "state_field_office",
+    "other_phones": [
+     "609-671-3531"
+    ]
+   },
+   {
+    "county": "Essex",
+    "phone": "609-671-3536",
+    "address": "VA Newark Regional Office, 20 Washington Place, Floor 4, Room 439, Newark, NJ 07102",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m.; closed alternate Fridays",
+    "organization": "NJ DVA Veterans Service Office, Essex County",
+    "office_type": "state_field_office",
+    "other_offices": [
+     {
+      "address": "Newark Liaison Office: VA Newark Regional Office, 20 Washington Place, Room 439, Newark, NJ 07102",
+      "schedule": "Tuesday and Thursday, 8:00 a.m.–4:00 p.m.",
+      "phone": "973-297-3230"
+     },
+     {
+      "address": "Newark City Hall: 920 Broad Street, Room B-3, Newark, NJ 07102",
+      "schedule": "Monday–Thursday 9:00 a.m.–4:00 p.m.",
+      "phone": "973-424-1968"
+     },
+     {
+      "address": "East Orange VA Medical Center: 385 Tremont Avenue, Room 3-206, East Orange, NJ 07018",
+      "schedule": "Monday, Wednesday and Friday, 8:00 a.m.–4:00 p.m.; closed alternate Fridays",
+      "phone": "973-676-1000 ext. 202377"
+     }
+    ],
+    "note": "Essex County has three more state service officer locations with shorter hours."
+   },
+   {
+    "county": "Gloucester",
+    "phone": "609-671-3540",
+    "address": "Woodbury Armory, 658 North Evergreen Avenue, Woodbury, NJ 08096",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m.; closed alternate Fridays",
+    "organization": "NJ DVA Veterans Service Office, Gloucester County",
+    "office_type": "state_field_office",
+    "other_phones": [
+     "609-671-3542"
+    ]
+   },
+   {
+    "county": "Hudson",
+    "phone": "609-671-3546",
+    "address": "Jersey City Armory, 678 Montgomery Street, 2nd Floor, Jersey City, NJ 07306",
+    "hours": "Monday–Friday 8:30 a.m.–4:00 p.m.",
+    "organization": "NJ DVA Veterans Service Office, Hudson County",
+    "office_type": "state_field_office"
+   },
+   {
+    "county": "Hunterdon",
+    "phone": "609-671-3551",
+    "address": "Veterans Haven North, 200 Sanatorium Road, Glen Gardner, NJ 08826",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m.; closed alternate Fridays",
+    "organization": "NJ DVA Veterans Service Office, Hunterdon County",
+    "office_type": "state_field_office"
+   },
+   {
+    "county": "Mercer",
+    "phone": "609-671-3555",
+    "address": "Lawrenceville Armory, 151 Eggerts Crossing Road, Room 136, Lawrenceville, NJ 08648",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m.; closed alternate Fridays",
+    "organization": "NJ DVA Veterans Service Office, Mercer County",
+    "office_type": "state_field_office",
+    "other_phones": [
+     "609-671-3556"
+    ]
+   },
+   {
+    "county": "Middlesex",
+    "phone": "609-671-3561",
+    "address": "Woodbridge Armory, 625 Main Street, Woodbridge, NJ 07095",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m.; closed alternate Fridays",
+    "organization": "NJ DVA Veterans Service Office, Middlesex County",
+    "office_type": "state_field_office"
+   },
+   {
+    "county": "Monmouth",
+    "phone": "609-671-3566",
+    "address": "630 Bangs Avenue, Suite 320, Asbury Park, NJ 07712",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m.; closed alternate Fridays",
+    "organization": "NJ DVA Veterans Service Office, Monmouth County",
+    "office_type": "state_field_office"
+   },
+   {
+    "county": "Morris",
+    "phone": "609-671-3571",
+    "address": "Dover Armory, 479 West Clinton Street, Dover, NJ 07801",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m.; closed alternate Fridays",
+    "organization": "NJ DVA Veterans Service Office, Morris County",
+    "office_type": "state_field_office",
+    "note": "The department’s page prints the same phone number for the Morris and Sussex offices."
+   },
+   {
+    "county": "Ocean",
+    "phone": "609-671-3576",
+    "address": "Toms River VA Clinic, 1055 Hooper Avenue, Toms River, NJ 08754",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m.; closed alternate Fridays",
+    "organization": "NJ DVA Veterans Service Office, Ocean County",
+    "office_type": "state_field_office"
+   },
+   {
+    "county": "Passaic",
+    "phone": "609-671-3581",
+    "address": "Passaic County Administration Building, 401 Grand Street, Paterson, NJ 07505",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m.; closed alternate Fridays",
+    "organization": "NJ DVA Veterans Service Office, Passaic County",
+    "office_type": "state_field_office"
+   },
+   {
+    "county": "Salem",
+    "phone": "609-671-3585",
+    "address": "90 Market Street, Salem, NJ 08079",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m.; closed alternate Fridays",
+    "organization": "NJ DVA Veterans Service Office, Salem County",
+    "office_type": "state_field_office",
+    "other_phones": [
+     "609-671-3586"
+    ]
+   },
+   {
+    "county": "Somerset",
+    "phone": "609-671-3591",
+    "address": "Somerset Armory, 1060 Hamilton Street, Somerset, NJ 08873",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m.; closed alternate Fridays",
+    "organization": "NJ DVA Veterans Service Office, Somerset County",
+    "office_type": "state_field_office"
+   },
+   {
+    "county": "Sussex",
+    "phone": "609-671-3571",
+    "address": "Catholic Charities Building, 48 Wyker Road, Franklin, NJ 07416",
+    "hours": "Monday, Wednesday and Thursday, 8:00 a.m.–4:00 p.m.",
+    "organization": "NJ DVA Veterans Service Office, Sussex County",
+    "office_type": "state_field_office",
+    "note": "The department’s page prints the same phone number for the Sussex and Morris offices."
+   },
+   {
+    "county": "Union",
+    "phone": "609-671-3596",
+    "address": "Township of Union Senior Center, 652 Rahway Avenue, Union, NJ 07083",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m.; closed alternate Fridays",
+    "organization": "NJ DVA Veterans Service Office, Union County",
+    "office_type": "state_field_office"
+   },
+   {
+    "county": "Warren",
+    "phone": "609-671-3599",
+    "address": "Port Murray Armory, 550 NJ Route 57, Port Murray, NJ 07865",
+    "hours": "Monday–Friday 8:00 a.m.–4:00 p.m.; closed alternate Fridays",
+    "organization": "NJ DVA Veterans Service Office, Warren County",
+    "office_type": "state_field_office"
+   }
+  ]
+ },
+ "aging": {
+  "source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+  "source_title": "New Jersey Department of Human Services, Division of Aging Services: County Offices on Aging",
+  "source_scope": "Office name, phone, email and address of the county office on aging (Area Agency on Aging and Aging and Disability Resource Connection) in each of the 21 counties, read in full. The page’s metadata is dated August 11, 2026.",
+  "review": "full",
+  "review_method": "full_official_page_text",
+  "region_word": "",
+  "next_step_extra": "The statewide line, 877-222-3737, also connects you to the office for your county.",
+  "regions": [
+   {
+    "id": "nj-aaa-atlantic",
+    "label": "Atlantic",
+    "name": "Atlantic County Office on Aging",
+    "phone": "888-426-9243",
+    "counties": [
+     "Atlantic"
+    ],
+    "notes": [
+     "Local: 609-645-5965.",
+     "Office: Shoreview Building, Office 217, 101 South Shore Road, Northfield, NJ 08225."
+    ]
+   },
+   {
+    "id": "nj-aaa-bergen",
+    "label": "Bergen",
+    "name": "Bergen County Division of Senior Services",
+    "phone": "201-336-7400",
+    "counties": [
+     "Bergen"
+    ],
+    "notes": [
+     "Office: One Bergen County Plaza, 2nd Floor, Hackensack, NJ 07601."
+    ]
+   },
+   {
+    "id": "nj-aaa-burlington",
+    "label": "Burlington",
+    "name": "Burlington County Office on Aging",
+    "phone": "609-265-5069",
+    "counties": [
+     "Burlington"
+    ],
+    "notes": [
+     "Office: Human Services Facility, 795 Woodlane Road, Westampton, NJ 08060."
+    ]
+   },
+   {
+    "id": "nj-aaa-camden",
+    "label": "Camden",
+    "name": "Camden County Division of Senior & Disabled Services",
+    "phone": "856-858-3220",
+    "counties": [
+     "Camden"
+    ],
+    "notes": [
+     "Office: 512 Lakeland Avenue, 4th Floor, Blackwood, NJ 08012."
+    ]
+   },
+   {
+    "id": "nj-aaa-cape-may",
+    "label": "Cape May",
+    "name": "Cape May County Department of Aging and Disability Services",
+    "phone": "609-886-2784",
+    "counties": [
+     "Cape May"
+    ],
+    "notes": [
+     "Also 609-886-2785.",
+     "Office: 3801 Route 9 South, Unit 4, Rio Grande, NJ 08242."
+    ]
+   },
+   {
+    "id": "nj-aaa-cumberland",
+    "label": "Cumberland",
+    "name": "Cumberland County Office on Aging and Disabled",
+    "phone": "856-453-2220",
+    "counties": [
+     "Cumberland"
+    ],
+    "notes": [
+     "Office: Administration Building, 800 East Commerce Street, Bridgeton, NJ 08302."
+    ]
+   },
+   {
+    "id": "nj-aaa-essex",
+    "label": "Essex",
+    "name": "Essex County Division of Senior Services",
+    "phone": "973-395-8375",
+    "counties": [
+     "Essex"
+    ],
+    "notes": [
+     "Office: 465 Dr. Martin Luther King, Jr. Boulevard, Room 102, Newark, NJ 07102."
+    ]
+   },
+   {
+    "id": "nj-aaa-gloucester",
+    "label": "Gloucester",
+    "name": "Gloucester County Division of Senior Services",
+    "phone": "856-384-6900",
+    "counties": [
+     "Gloucester"
+    ],
+    "notes": [
+     "Office: 115 Budd Boulevard, West Deptford, NJ 08096."
+    ]
+   },
+   {
+    "id": "nj-aaa-hudson",
+    "label": "Hudson",
+    "name": "Hudson County Division on Aging",
+    "phone": "201-369-4313",
+    "counties": [
+     "Hudson"
+    ],
+    "notes": [
+     "Office: 830 Bergen Avenue, Suite 3B, Jersey City, NJ 07306."
+    ]
+   },
+   {
+    "id": "nj-aaa-hunterdon",
+    "label": "Hunterdon",
+    "name": "Hunterdon County Division of Senior, Disabilities and Veterans’ Services",
+    "phone": "908-788-1361",
+    "counties": [
+     "Hunterdon"
+    ],
+    "notes": [
+     "Also 908-788-1362 and 908-788-1363.",
+     "Office: 4 Gauntt Place, Building 1, Flemington, NJ 08822."
+    ]
+   },
+   {
+    "id": "nj-aaa-mercer",
+    "label": "Mercer",
+    "name": "Mercer County Office on Aging",
+    "phone": "609-989-6661",
+    "counties": [
+     "Mercer"
+    ],
+    "notes": [
+     "Also 609-989-6662.",
+     "Office: 2210 Hamilton Avenue, Hamilton, NJ 08619."
+    ]
+   },
+   {
+    "id": "nj-aaa-middlesex",
+    "label": "Middlesex",
+    "name": "Middlesex County Office of Aging and Disabled Services",
+    "phone": "732-745-3295",
+    "counties": [
+     "Middlesex"
+    ],
+    "notes": [
+     "Office: 75 Bayard Street, 5th Floor, New Brunswick, NJ 08901."
+    ]
+   },
+   {
+    "id": "nj-aaa-monmouth",
+    "label": "Monmouth",
+    "name": "Monmouth County Division of Aging, Disabilities and Veterans Services",
+    "phone": "732-431-7450",
+    "counties": [
+     "Monmouth"
+    ],
+    "notes": [
+     "Office: 3000 Kozloski Road, Freehold, NJ 07728."
+    ]
+   },
+   {
+    "id": "nj-aaa-morris",
+    "label": "Morris",
+    "name": "Morris County Division on Aging, Disabilities and Community Programming",
+    "phone": "973-285-6848",
+    "counties": [
+     "Morris"
+    ],
+    "notes": [
+     "Office: 340 West Hanover Avenue, Morris Township, NJ 07960."
+    ]
+   },
+   {
+    "id": "nj-aaa-ocean",
+    "label": "Ocean",
+    "name": "Ocean County Office of Senior Services",
+    "phone": "732-929-2091",
+    "counties": [
+     "Ocean"
+    ],
+    "notes": [
+     "Office: 1005 Hooper Avenue, Toms River, NJ 08754."
+    ]
+   },
+   {
+    "id": "nj-aaa-passaic",
+    "label": "Passaic",
+    "name": "Passaic County Department of Senior Services, Disabilities and Veterans’ Affairs",
+    "phone": "973-569-4060",
+    "counties": [
+     "Passaic"
+    ],
+    "notes": [
+     "Office: 930 Riverview Drive, Suite 200, Totowa, NJ 07512."
+    ]
+   },
+   {
+    "id": "nj-aaa-salem",
+    "label": "Salem",
+    "name": "Salem County Office on Aging",
+    "phone": "856-339-8622",
+    "counties": [
+     "Salem"
+    ],
+    "notes": [
+     "Office: 110 Fifth Street, Suite 900, Salem, NJ 08079."
+    ]
+   },
+   {
+    "id": "nj-aaa-somerset",
+    "label": "Somerset",
+    "name": "Somerset County Office on Aging and Disability Services",
+    "phone": "908-704-6346",
+    "counties": [
+     "Somerset"
+    ],
+    "notes": [
+     "Office: 27 Warren Street, 1st Floor, Somerville, NJ 08876."
+    ]
+   },
+   {
+    "id": "nj-aaa-sussex",
+    "label": "Sussex",
+    "name": "Sussex County Division of Senior Services",
+    "phone": "973-579-0555",
+    "counties": [
+     "Sussex"
+    ],
+    "notes": [
+     "Office: Sussex County Administration Building, 1 Spring Street, 2nd Floor, Newton, NJ 07860."
+    ]
+   },
+   {
+    "id": "nj-aaa-union",
+    "label": "Union",
+    "name": "Union County Division on Aging",
+    "phone": "908-527-4870",
+    "counties": [
+     "Union"
+    ],
+    "notes": [
+     "Toll-free: 888-280-8226.",
+     "Office: Administration Building, 10 Elizabethtown Plaza, 4th Floor, Elizabeth, NJ 07207."
+    ]
+   },
+   {
+    "id": "nj-aaa-warren",
+    "label": "Warren",
+    "name": "Warren County Division of Aging & Disability Services",
+    "phone": "908-475-6591",
+    "counties": [
+     "Warren"
+    ],
+    "notes": [
+     "Office: 1 Shotwell Drive, Belvidere, NJ 07823."
+    ]
+   }
+  ]
+ },
+ "ombudsman": {
+  "state_phone": "877-582-6995",
+  "regions": [
+   {
+    "id": "nj-omb-state",
+    "name": "New Jersey Long-Term Care Ombudsman",
+    "phone": "877-582-6995",
+    "counties": [
+     "Atlantic",
+     "Bergen",
+     "Burlington",
+     "Camden",
+     "Cape May",
+     "Cumberland",
+     "Essex",
+     "Gloucester",
+     "Hudson",
+     "Hunterdon",
+     "Mercer",
+     "Middlesex",
+     "Monmouth",
+     "Morris",
+     "Ocean",
+     "Passaic",
+     "Salem",
+     "Somerset",
+     "Sussex",
+     "Union",
+     "Warren"
+    ],
+    "source_url": "https://www.nj.gov/ooie/contact.shtml",
+    "source_title": "New Jersey Long-Term Care Ombudsman: Contact Us",
+    "source_scope": "Complaint line 1-877-582-6995, fax, online form, email and mailing address; the Department of Health complaint line for licensed facilities; search excerpt of a page last updated May 9, 2025. The office is statewide, so every county shows it.",
+    "review": "excerpt",
+    "review_method": "official_search_excerpt",
+    "extra_sources": [
+     {
+      "url": "https://www.nj.gov/ooie/ltco-brochure.shtml",
+      "title": "New Jersey Long-Term Care Ombudsman: brochure",
+      "scope": "To make a complaint about a long-term care facility, call the intake line 1-877-582-6995 and press option 1, file online or email; search excerpt."
+     }
+    ],
+    "notes": [
+     "Press option 1 to make a complaint, or email ombudsman@ltco.nj.gov.",
+     "Complaints about care in a facility licensed by the New Jersey Department of Health can also go to the department at 800-792-9770."
+    ]
+   }
+  ]
+ },
+ "cils": {
+  "source_url": "https://www.nj.gov/humanservices/dds/resources/centersforlivingindex.shtml",
+  "source_title": "New Jersey Department of Human Services, Division of Disability Services: Centers for Independent Living",
+  "scope": "The Center for Independent Living listed under each of the 21 counties, with address, phone and website, read in full. The page’s metadata is dated October 5, 2026.",
+  "phone_label": "Phone listed by the New Jersey Division of Disability Services",
+  "list": [
+   {
+    "id": "nj-cil-aci",
+    "name": "Alliance Center for Independence (Edison)",
+    "organization": "Alliance Center for Independence",
+    "url": "https://www.adacil.org",
+    "phone": "732-738-4388",
+    "counties": [
+     "Middlesex",
+     "Somerset",
+     "Union"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "The center’s office is at 629 Amboy Avenue, 1st Floor, Suite 104, Edison, NJ 08837. TTY: 732-738-9644."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://www.ilru.org/cil-directory/nj",
+      "title": "ILRU: New Jersey CIL Directory",
+      "scope": "Center websites, accessible (TTY) phones and counties served, read in full; the directory carries no update date."
+     }
+    ]
+   },
+   {
+    "id": "nj-cil-atlantic",
+    "name": "Atlantic Center for Independent Living (Galloway)",
+    "organization": "Atlantic Center for Independent Living",
+    "url": "https://atlanticcenterforindependentliving.com/",
+    "phone": "609-748-2253",
+    "counties": [
+     "Atlantic"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "The center’s office is at 160 South Pitney Road, Units 3 & 4, Galloway Township, NJ 08205."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://www.ilru.org/cil-directory/nj",
+      "title": "ILRU: New Jersey CIL Directory",
+      "scope": "Center websites, accessible (TTY) phones and counties served, read in full; the directory carries no update date."
+     }
+    ]
+   },
+   {
+    "id": "nj-cil-camden-city",
+    "name": "Camden City Independent Living Center (Camden)",
+    "organization": "Camden City Independent Living Center",
+    "url": "https://www.camdenilc.org/",
+    "phone": "856-966-0800",
+    "counties": [
+     "Camden"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "The national directory lists this center as serving the city of Camden; the Center for Independent Living of South Jersey serves the rest of the county.",
+     "The state lists the office at Virtua Camden, 1000 Atlantic Avenue, Suite 135, Camden, NJ 08104; the national directory prints Suite 105."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://www.ilru.org/cil-directory/nj",
+      "title": "ILRU: New Jersey CIL Directory",
+      "scope": "Center websites, accessible (TTY) phones and counties served, read in full; the directory carries no update date."
+     }
+    ]
+   },
+   {
+    "id": "nj-cil-cil-sj",
+    "name": "Center for Independent Living of South Jersey (Westville)",
+    "organization": "Center for Independent Living of South Jersey, Inc.",
+    "url": "https://www.cil-sj.com/",
+    "phone": "856-853-6490",
+    "counties": [
+     "Camden",
+     "Gloucester"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "The center’s office is at 1150 Delsea Drive, Suites 1 & 2, Westville, NJ 08093. TTY: 856-853-7602."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://www.ilru.org/cil-directory/nj",
+      "title": "ILRU: New Jersey CIL Directory",
+      "scope": "Center websites, accessible (TTY) phones and counties served, read in full; the directory carries no update date."
+     }
+    ]
+   },
+   {
+    "id": "nj-cil-dawn",
+    "name": "DAWN Center for Independent Living (Denville)",
+    "organization": "DAWN Center for Independent Living",
+    "url": "https://dawncil.org/",
+    "phone": "973-625-1940",
+    "counties": [
+     "Morris",
+     "Sussex",
+     "Warren"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "The center’s office is at 66 Ford Road, Suite 121, Denville, NJ 07834. Toll-free: 888-383-3296.",
+     "A second office is at 254B Mountain Avenue, Suite 301, Hackettstown, NJ 07840."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://www.ilru.org/cil-directory/nj",
+      "title": "ILRU: New Jersey CIL Directory",
+      "scope": "Center websites, accessible (TTY) phones and counties served, read in full; the directory carries no update date."
+     }
+    ]
+   },
+   {
+    "id": "nj-cil-dial",
+    "name": "DIAL Center for Independent Living (Clifton)",
+    "organization": "DIAL, Inc.",
+    "url": "https://www.nj.gov/humanservices/dds/resources/centersforlivingindex.shtml",
+    "phone": "973-470-8090",
+    "counties": [
+     "Essex",
+     "Passaic"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "The center’s office is at 2 Prospect Village Plaza, First Floor, Clifton, NJ 07013. Toll-free: 866-277-1733. TTY: 973-470-2521.",
+     "The card links to the state’s list of centers because the directories print only an insecure (http) website address for this center."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://www.ilru.org/cil-directory/nj",
+      "title": "ILRU: New Jersey CIL Directory",
+      "scope": "Center websites, accessible (TTY) phones and counties served, read in full; the directory carries no update date."
+     }
+    ]
+   },
+   {
+    "id": "nj-cil-hip-bergen",
+    "name": "Heightened Independence & Progress (Hackensack)",
+    "organization": "Heightened Independence & Progress (hip)",
+    "url": "https://www.hipcil.org",
+    "phone": "201-996-9100",
+    "counties": [
+     "Bergen"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "The center’s office is at 131 Main Street, Suite 120, Hackensack, NJ 07601. TTY: 201-996-9424."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://www.ilru.org/cil-directory/nj",
+      "title": "ILRU: New Jersey CIL Directory",
+      "scope": "Center websites, accessible (TTY) phones and counties served, read in full; the directory carries no update date."
+     }
+    ]
+   },
+   {
+    "id": "nj-cil-hip-hudson",
+    "name": "Heightened Independence & Progress – Hudson (Jersey City)",
+    "organization": "Heightened Independence & Progress (hip)",
+    "url": "https://www.hipcil.org",
+    "phone": "201-533-4407",
+    "counties": [
+     "Hudson"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "The office is at 35 Journal Square, Jersey City, NJ 07306: the state prints Suite 602 and the national directory Suite 703. TTY: 201-533-4409."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://www.ilru.org/cil-directory/nj",
+      "title": "ILRU: New Jersey CIL Directory",
+      "scope": "Center websites, accessible (TTY) phones and counties served, read in full; the directory carries no update date."
+     }
+    ]
+   },
+   {
+    "id": "nj-cil-moceans-monmouth",
+    "name": "MOCEANS Center for Independent Living (Long Branch)",
+    "organization": "MOCEANS Center for Independent Living",
+    "url": "https://www.moceanscil.org/",
+    "phone": "732-571-4884",
+    "counties": [
+     "Monmouth"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "The state lists the Long Branch office at 213 Broadway, Room 102; the national directory prints 279 Broadway, Suite 201, and also lists an office in Holmdel."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://www.ilru.org/cil-directory/nj",
+      "title": "ILRU: New Jersey CIL Directory",
+      "scope": "Center websites, accessible (TTY) phones and counties served, read in full; the directory carries no update date."
+     }
+    ]
+   },
+   {
+    "id": "nj-cil-moceans-ocean",
+    "name": "MOCEANS Center for Independent Living (Toms River)",
+    "organization": "MOCEANS Center for Independent Living",
+    "url": "https://www.moceanscil.org/",
+    "phone": "732-505-2310",
+    "counties": [
+     "Ocean"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "The office is at 1027 Hooper Avenue, Building 6, Floor 3, Toms River, NJ 08753. TTY: 732-505-2319."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://www.ilru.org/cil-directory/nj",
+      "title": "ILRU: New Jersey CIL Directory",
+      "scope": "Center websites, accessible (TTY) phones and counties served, read in full; the directory carries no update date."
+     }
+    ]
+   },
+   {
+    "id": "nj-cil-pcil-mercer",
+    "name": "Progressive Center for Independent Living (Hamilton)",
+    "organization": "Progressive Center for Independent Living (PCIL)",
+    "url": "https://www.nj.gov/humanservices/dds/resources/centersforlivingindex.shtml",
+    "phone": "609-581-4500",
+    "counties": [
+     "Mercer"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "The state lists the Mercer County branch at 3635 Quakerbridge Road, Suite 40, Hamilton, NJ 08619; the national directory prints 3525 Quakerbridge Road, Suite 904. Toll-free: 877-917-4500. TTY: 609-581-4550.",
+     "The card links to the state’s list of centers because the directories print only an insecure (http) website address for this center."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://www.ilru.org/cil-directory/nj",
+      "title": "ILRU: New Jersey CIL Directory",
+      "scope": "Center websites, accessible (TTY) phones and counties served, read in full; the directory carries no update date."
+     }
+    ]
+   },
+   {
+    "id": "nj-cil-pcil-hunterdon",
+    "name": "Progressive Center for Independent Living – Hunterdon (Lebanon)",
+    "organization": "Progressive Center for Independent Living (PCIL)",
+    "url": "https://www.nj.gov/humanservices/dds/resources/centersforlivingindex.shtml",
+    "phone": "908-782-1055",
+    "counties": [
+     "Hunterdon"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "The Hunterdon County branch is at 1220 Route 31 North, Suite 14, Lebanon, NJ 08833.",
+     "The card links to the state’s list of centers because the directories print only an insecure (http) website address for this center."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://www.ilru.org/cil-directory/nj",
+      "title": "ILRU: New Jersey CIL Directory",
+      "scope": "Center websites, accessible (TTY) phones and counties served, read in full; the directory carries no update date."
+     }
+    ]
+   },
+   {
+    "id": "nj-cil-ril-burlington",
+    "name": "Resources for Independent Living – Burlington",
+    "organization": "Resources for Independent Living",
+    "url": "https://rilnj.org/",
+    "phone": "609-747-7745",
+    "counties": [
+     "Burlington",
+     "Cape May"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "The office is at 351 High Street, Suite 103, Burlington, NJ 08016. TTY: 609-747-1875.",
+     "The state lists this Burlington office for Cape May County as well; the national directory names no center for Cape May."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://www.ilru.org/cil-directory/nj",
+      "title": "ILRU: New Jersey CIL Directory",
+      "scope": "Center websites, accessible (TTY) phones and counties served, read in full; the directory carries no update date."
+     }
+    ]
+   },
+   {
+    "id": "nj-cil-ril-cumberland",
+    "name": "Resources for Independent Living – Cumberland (Vineland)",
+    "organization": "Resources for Independent Living",
+    "url": "https://rilnj.org/",
+    "phone": "856-825-0255",
+    "counties": [
+     "Cumberland"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "The office is at 614 East Landis Avenue, 1st Floor, Vineland, NJ 08360. Toll-free: 877-935-2199. TTY: 856-825-0252."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://www.ilru.org/cil-directory/nj",
+      "title": "ILRU: New Jersey CIL Directory",
+      "scope": "Center websites, accessible (TTY) phones and counties served, read in full; the directory carries no update date."
+     }
+    ]
+   },
+   {
+    "id": "nj-cil-ril-salem",
+    "name": "Resources for Independent Living – Salem (Pennsville)",
+    "organization": "Resources for Independent Living",
+    "url": "https://rilnj.org/",
+    "phone": "856-678-9400",
+    "counties": [
+     "Salem"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "The office is at 193 North Broadway, Pennsville, NJ 08070."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://www.ilru.org/cil-directory/nj",
+      "title": "ILRU: New Jersey CIL Directory",
+      "scope": "Center websites, accessible (TTY) phones and counties served, read in full; the directory carries no update date."
+     }
+    ]
+   }
+  ]
+ },
+ "programs": [
+  {
+   "id": "nj-claims",
+   "name": "New Jersey veterans: state service officers for claims help",
+   "organization": "New Jersey Department of Veterans Affairs, Veterans Service Offices",
+   "url": "https://nj.gov/dva/veterans/services/vso/",
+   "needs": [
+    "general_navigation",
+    "benefits_and_funding"
+   ],
+   "description": "Free help from the New Jersey Department of Veterans Affairs’ accredited Veterans Service Officers with VA claims, appeals, pension and survivor benefits, plus state veterans benefits. The department runs a Veterans Service Office in every county.",
+   "next_step": "Choose your county for its service office, or call 844-671-1019 to be connected to the office for your county. For questions about state veterans benefits, call the NJ Veterans Benefits Hotline at 888-865-8387.",
+   "constraints": [
+    "Most offices close on alternate Fridays, and a few keep shorter hours; call before you go."
+   ],
+   "phone": "844-671-1019",
+   "phone_label": "NJ DVA Veterans Service Offices line (844-671-1019)",
+   "phone_source": "https://nj.gov/dva/veterans/services/vso/",
+   "review": "full",
+   "sources": [
+    {
+     "url": "https://nj.gov/dva/veterans/services/vso/",
+     "title": "New Jersey Department of Veterans Affairs: Veterans Service Offices",
+     "scope": "Office address, phones and hours for each county’s Veterans Service Office and the toll-free line, read in full; the page was last updated November 10, 2026."
+    },
+    {
+     "url": "https://nj.gov/dva/contact-us",
+     "title": "New Jersey Department of Veterans Affairs: Contact Us",
+     "scope": "Main number 609-530-6892 and Benefits Hotline 888-8NJ-VETS (888-865-8387); search excerpt."
+    },
+    {
+     "url": "https://www.nj.gov/dva/veterans/benefits-resources",
+     "title": "New Jersey Department of Veterans Affairs: Benefits & Resources",
+     "scope": "NJ Veterans Benefits Hotline 888-865-8387 and NJ Vet2Vet Helpline 866-838-7654; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "nj-adrc",
+   "name": "New Jersey Aging and Disability Resource Connection",
+   "organization": "New Jersey Department of Human Services, Division of Aging Services",
+   "url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+   "needs": [
+    "general_navigation",
+    "help_at_home",
+    "equipment_home_accessibility"
+   ],
+   "description": "New Jersey’s statewide aging line. It connects older adults, people with disabilities and caregivers to the county office on aging for information, meals, in-home help, transportation and caregiver support. Military service is not required.",
+   "next_step": "Call 877-222-3737, or choose a county above for its office on aging.",
+   "constraints": [
+    "Each program has its own eligibility and waitlist.",
+    "Give your county so the call reaches the right office."
+   ],
+   "phone": "877-222-3737",
+   "phone_label": "NJ Aging and Disability Resource Connection (877-222-3737)",
+   "phone_source": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+   "review": "full",
+   "sources": [
+    {
+     "url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+     "title": "New Jersey Division of Aging Services: County Offices on Aging",
+     "scope": "Statewide ADRC/AAA toll-free number 1-877-222-3737 and the 21 county offices, read in full."
+    },
+    {
+     "url": "https://www.nj.gov/humanservices/doas/contact",
+     "title": "New Jersey Division of Aging Services: Contact Us",
+     "scope": "For access to aging services in your county: 1-877-222-3737; NJ Save line 1-800-792-9745; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "nj-ship",
+   "name": "Medicare counseling (SHIP) for New Jersey",
+   "organization": "New Jersey Department of Human Services, State Health Insurance Assistance Program",
+   "url": "https://www.nj.gov/humanservices/doas/services/q-z/ship/index.shtml",
+   "needs": [
+    "benefits_and_funding"
+   ],
+   "description": "Free, unbiased help from trained SHIP counselors with Medicare choices, claims, Medigap, Medicare Advantage, Part D and help paying Medicare costs. Counseling sites operate in all 21 counties.",
+   "next_step": "Call the SHIP line at 800-792-8820, or call your county office on aging to set up an appointment. For Medicare itself, call 800-MEDICARE (800-633-4227).",
+   "constraints": [
+    "Counselors do not sell or recommend plans. Have your Medicare card and drug list ready."
+   ],
+   "phone": "800-792-8820",
+   "phone_label": "New Jersey SHIP (800-792-8820)",
+   "phone_source": "https://www.nj.gov/humanservices/doas/services/q-z/ship/index.shtml",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://www.nj.gov/humanservices/doas/services/q-z/ship/index.shtml",
+     "title": "New Jersey Division of Aging Services: State Health Insurance Assistance Program (SHIP)",
+     "scope": "Program description and phone 1-800-792-8820; search excerpt."
+    },
+    {
+     "url": "https://nj.gov/humanservices/doas/services/q-z/ship/",
+     "title": "New Jersey Division of Aging Services: SHIP (counseling sites)",
+     "scope": "Counseling sites in all 21 counties; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "nj-ombudsman",
+   "name": "New Jersey Long-Term Care Ombudsman and adult abuse reporting",
+   "organization": "New Jersey Office of the Long-Term Care Ombudsman",
+   "url": "https://www.nj.gov/ooie/contact.shtml",
+   "needs": [
+    "resident_rights",
+    "general_navigation"
+   ],
+   "description": "Advocacy for residents of nursing homes, assisted living and other long-term care facilities. The office investigates complaints about care, rights, abuse, neglect and exploitation, and callers may stay anonymous.",
+   "next_step": "Call 877-582-6995 and press option 1, or email ombudsman@ltco.nj.gov. To report suspected abuse, neglect or exploitation of an adult living in the community, call Adult Protective Services at 855-TELL-APS (855-835-5277). In an emergency, call 911.",
+   "constraints": [
+    "The ombudsman is not a first responder or a licensing agency; complaints about licensed facilities can also go to the New Jersey Department of Health at 800-792-9770."
+   ],
+   "phone": "877-582-6995",
+   "phone_label": "New Jersey Long-Term Care Ombudsman (877-582-6995)",
+   "phone_source": "https://www.nj.gov/ooie/contact.shtml",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://www.nj.gov/ooie/contact.shtml",
+     "title": "New Jersey Long-Term Care Ombudsman: Contact Us",
+     "scope": "Complaint line 1-877-582-6995, email, and the Department of Health complaint line 1-800-792-9770; search excerpt."
+    },
+    {
+     "url": "https://www.nj.gov/ooie/ltco-brochure.shtml",
+     "title": "New Jersey Long-Term Care Ombudsman: brochure",
+     "scope": "Intake line option 1 for complaints; search excerpt."
+    },
+    {
+     "url": "https://nj.gov/humanservices/doas/documents/APS_HOSPITAL_FLYER_V1.pdf",
+     "title": "New Jersey Division of Aging Services: Adult Protective Services flyer",
+     "scope": "To make a report, call (855) TELL-APS or visit APS.NJ.GOV; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "nj-legal-programs",
+   "name": "Free legal help for New Jersey veterans and older adults",
+   "organization": "Legal Services of New Jersey; Volunteer Lawyers for Justice Veterans Legal Program",
+   "url": "https://www.lsnj.org/getlegalhelp",
+   "role": "legal_aid",
+   "needs": [
+    "resident_rights",
+    "general_navigation",
+    "housing"
+   ],
+   "description": "Legal Services of New Jersey runs the statewide LSNJLAW Hotline, which gives free civil legal advice and referrals to low-income residents in all 21 counties, with special programs for older adults. Volunteer Lawyers for Justice’s Veterans Legal Program gives free civil legal help to veterans across the state.",
+   "next_step": "Call the LSNJLAW Hotline at 888-576-5529 (Monday–Friday, 8:00 a.m.–5:30 p.m.) or apply online. Veterans can also call Volunteer Lawyers for Justice at 973-645-1955.",
+   "constraints": [
+    "Legal Services handles civil, non-criminal matters and screens by income.",
+    "Volunteer programs cannot promise a lawyer for every case."
+   ],
+   "phone": "888-576-5529",
+   "phone_label": "LSNJLAW Hotline (888-576-5529)",
+   "phone_source": "https://www.lsnj.org/getlegalhelp",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://www.lsnj.org/getlegalhelp",
+     "title": "Legal Services of New Jersey: Get Legal Help",
+     "scope": "LSNJLAW Hotline 1-888-576-5529, open 8:00 a.m. to 5:30 p.m. Monday through Friday; free civil legal help for low-income people in all 21 counties; search excerpt."
+    },
+    {
+     "url": "https://vljnj.squarespace.com/vlp",
+     "title": "Volunteer Lawyers for Justice: Veterans Legal Program",
+     "scope": "The Veterans Legal Program serves veterans throughout New Jersey; search excerpt."
+    },
+    {
+     "url": "https://www.va.gov/new-jersey-health-care/events/49746/",
+     "title": "VA New Jersey health care: Veterans Legal Program (event listing)",
+     "scope": "Volunteer Lawyers for Justice provides free legal services to veterans with civil legal issues; call 973-645-1955; search excerpt of a 2022 listing."
+    }
+   ]
+  },
+  {
+   "id": "nj-vahealth-systems",
+   "name": "VA health care systems serving New Jersey",
+   "organization": "U.S. Department of Veterans Affairs",
+   "url": "https://www.va.gov/find-locations/?facilityType=health",
+   "role": "va_health_system",
+   "needs": [
+    "veteran_services",
+    "care_facilities"
+   ],
+   "description": "Most New Jersey veterans are served by the VA New Jersey Health Care System (East Orange VA Medical Center, 385 Tremont Avenue, 973-676-1000; Lyons VA Medical Center, 151 Knollcroft Road, 908-647-0180) and its clinics. South Jersey is also served by the Philadelphia VA Medical Center (215-823-5800) and the Wilmington VA Medical Center (302-994-2511 or 800-461-8262), which runs clinics in Atlantic, Cape May and Cumberland counties.",
+   "next_step": "Use VA’s facility locator with your ZIP code to find the closest clinic and its medical center. Not enrolled yet? Ask your county’s Veterans Service Office for help applying.",
+   "constraints": [
+    "Which system serves you depends on where you live; VA’s locator shows the right clinic."
+   ],
+   "phone": "973-676-1000",
+   "phone_label": "East Orange VA Medical Center main line (973-676-1000)",
+   "phone_source": "https://www.va.gov/new-jersey-health-care/contact-us/",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://www.va.gov/new-jersey-health-care/contact-us/",
+     "title": "VA New Jersey health care: Contact us",
+     "scope": "East Orange and Lyons medical center addresses and main phones; search excerpt."
+    },
+    {
+     "url": "https://www.va.gov/philadelphia-health-care/contact-us/",
+     "title": "VA Philadelphia health care: Contact us",
+     "scope": "Main phone 215-823-5800; search excerpt."
+    },
+    {
+     "url": "https://www.va.gov/wilmington-health-care/contact-us/",
+     "title": "VA Wilmington health care: Contact us",
+     "scope": "Main phone 302-994-2511 and 800-461-8262; search excerpt."
+    },
+    {
+     "url": "https://www.nj.gov/oag/vdp/resources.html",
+     "title": "New Jersey Office of the Attorney General: Veterans Diversion Program resources",
+     "scope": "Burlington, Camden and Gloucester counties work with the Philadelphia VA Medical Center; Atlantic, Cape May, Cumberland and Salem with the Wilmington VA Medical Center; search excerpt."
+    }
+   ]
+  }
+ ],
+ "adapter": {
+  "badge_county": "NJ DVA Veterans Service Office",
+  "badge_state": "NJ DVA Veterans Service Office",
+  "badge_statewide": "New Jersey statewide line",
+  "published_in": "Published on the New Jersey Department of Veterans Affairs Veterans Service Offices page",
+  "agency_link": "New Jersey Department of Veterans Affairs Veterans Service Offices",
+  "officers_can": "New Jersey Department of Veterans Affairs Veterans Service Officers can",
+  "abuse_phone": "855-835-5277",
+  "abuse_label": "New Jersey Adult Protective Services, statewide number",
+  "extra_swaps": [
+   [
+    "Choose a county for its County Veterans Service Office, matched Area Agency on Aging",
+    "Choose a county for its state Veterans Service Office, matched Area Agency on Aging"
+   ],
+   [
+    "Choose a county above for the county veterans office.",
+    "Choose a county above for its state Veterans Service Office."
+   ]
+  ]
+ },
+ "coverage_scope": "Referral edition. All 21 counties have a New Jersey Department of Veterans Affairs Veterans Service Office, a matched county office on aging, the statewide long-term care ombudsman and a Center for Independent Living.",
+ "coverage_note": "Veterans Service Offices come from the New Jersey Department of Veterans Affairs office page (updated November 10, 2026); the offices are run by the state, not the counties. County offices on aging come from the Division of Aging Services list; Centers for Independent Living from the Division of Disability Services list, checked against the ILRU national directory. The ombudsman is a single statewide office.",
+ "share_replacements": [
+  [
+   "county veterans offices, benefits and care referrals",
+   "state veterans service offices, benefits and care referrals"
+  ]
+ ],
+ "share_description": "State veterans service offices, county offices on aging and long-term care ombudsman help across New Jersey"
+}

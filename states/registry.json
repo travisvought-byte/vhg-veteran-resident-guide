@@ -594,6 +594,32 @@
     ]
   },
   {
+    "code": "NJ",
+    "name": "New Jersey",
+    "page": "nj.html",
+    "share_page": "share-nj.html",
+    "qr": "assets/guide-qr-nj.svg",
+    "counties": 21,
+    "programs": "data/public/nj-programs.json",
+    "referrals": "data/public/nj-regional-referrals.json",
+    "offices": "data/public/new-jersey-county-veterans-offices.json",
+    "resources": "data/public/new-jersey-resources.json",
+    "statewide_area_names": [],
+    "coverage_scope": "Referral edition. All 21 counties have a New Jersey Department of Veterans Affairs Veterans Service Office, a matched county office on aging, the statewide long-term care ombudsman and a Center for Independent Living.",
+    "coverage_note": "Veterans Service Offices come from the New Jersey Department of Veterans Affairs office page (updated November 10, 2026); the offices are run by the state, not the counties. County offices on aging come from the Division of Aging Services list; Centers for Independent Living from the Division of Disability Services list, checked against the ILRU national directory. The ombudsman is a single statewide office.",
+    "share_description": "State veterans service offices, county offices on aging and long-term care ombudsman help across New Jersey",
+    "share_replacements": [
+      [
+        "Updated October 8, 2026",
+        "Updated November 16, 2026"
+      ],
+      [
+        "county veterans offices, benefits and care referrals",
+        "state veterans service offices, benefits and care referrals"
+      ]
+    ]
+  },
+  {
     "code": "AK",
     "name": "Alaska",
     "starter": true,
@@ -930,26 +956,6 @@
     ],
     "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
     "coverage_note": "Starter edition. Every county uses the New Hampshire Division of Veterans Services and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
-    "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
-    "share_replacements": []
-  },
-  {
-    "code": "NJ",
-    "name": "New Jersey",
-    "starter": true,
-    "page": "nj.html",
-    "share_page": "share-nj.html",
-    "qr": "assets/guide-qr-nj.svg",
-    "counties": 1,
-    "programs": "data/public/nj-programs.json",
-    "referrals": "data/public/nj-regional-referrals.json",
-    "offices": "data/public/new-jersey-county-veterans-offices.json",
-    "resources": "data/public/new-jersey-resources.json",
-    "statewide_area_names": [
-      "All New Jersey counties"
-    ],
-    "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
-    "coverage_note": "Starter edition. Every county uses the New Jersey Department of Military and Veterans Affairs and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
     "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
     "share_replacements": []
   },

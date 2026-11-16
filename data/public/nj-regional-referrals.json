@@ -1,80 +1,986 @@
 [
- {
-  "program_id": "nj-aging",
-  "name": "Local aging help in New Jersey (Eldercare Locator)",
-  "official_url": "https://eldercare.acl.gov/home",
-  "organization": "U.S. Administration for Community Living",
-  "service_area": [
-   "All New Jersey counties"
-  ],
-  "state": "NJ",
-  "needs_supported": [
-   "general_navigation",
-   "help_at_home"
-  ],
-  "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-  "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
-  "constraints": [
-   "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "nj-aaa-atlantic",
+    "name": "Atlantic County Office on Aging",
+    "organization": "Atlantic County Office on Aging",
+    "official_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+    "state": "NJ",
+    "service_area": [
+      "Atlantic"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide line, 877-222-3737, also connects you to the office for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Local: 609-645-5965.",
+      "Office: Shoreview Building, Office 217, 101 South Shore Road, Northfield, NJ 08225."
+    ],
+    "public_contact": {
+      "phone": "888-426-9243",
+      "phone_label": "Area Agency on Aging (Atlantic)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+      "phone_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+        "title": "New Jersey Department of Human Services, Division of Aging Services: County Offices on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "Office name, phone, email and address of the county office on aging (Area Agency on Aging and Aging and Disability Resource Connection) in each of the 21 counties, read in full. The page’s metadata is dated August 11, 2026."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "nj-aaa-bergen",
+    "name": "Bergen County Division of Senior Services",
+    "organization": "Bergen County Division of Senior Services",
+    "official_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+    "state": "NJ",
+    "service_area": [
+      "Bergen"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide line, 877-222-3737, also connects you to the office for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: One Bergen County Plaza, 2nd Floor, Hackensack, NJ 07601."
+    ],
+    "public_contact": {
+      "phone": "201-336-7400",
+      "phone_label": "Area Agency on Aging (Bergen)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+      "phone_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+        "title": "New Jersey Department of Human Services, Division of Aging Services: County Offices on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "Office name, phone, email and address of the county office on aging (Area Agency on Aging and Aging and Disability Resource Connection) in each of the 21 counties, read in full. The page’s metadata is dated August 11, 2026."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.acl.gov/contact"
+  {
+    "program_id": "nj-aaa-burlington",
+    "name": "Burlington County Office on Aging",
+    "organization": "Burlington County Office on Aging",
+    "official_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+    "state": "NJ",
+    "service_area": [
+      "Burlington"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide line, 877-222-3737, also connects you to the office for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: Human Services Facility, 795 Woodlane Road, Westampton, NJ 08060."
+    ],
+    "public_contact": {
+      "phone": "609-265-5069",
+      "phone_label": "Area Agency on Aging (Burlington)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+      "phone_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+        "title": "New Jersey Department of Human Services, Division of Aging Services: County Offices on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "Office name, phone, email and address of the county office on aging (Area Agency on Aging and Aging and Disability Resource Connection) in each of the 21 counties, read in full. The page’s metadata is dated August 11, 2026."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.acl.gov/contact",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "aging_agency"
- },
- {
-  "program_id": "nj-ombudsman",
-  "name": "New Jersey long-term-care ombudsman",
-  "official_url": "https://theconsumervoice.org/get_help",
-  "organization": "National Long-Term Care Ombudsman Resource Center",
-  "service_area": [
-   "All New Jersey counties"
-  ],
-  "state": "NJ",
-  "needs_supported": [
-   "resident_rights",
-   "general_navigation"
-  ],
-  "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-  "next_step": "Use the locator to find the New Jersey program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
-  "constraints": [
-   "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "nj-aaa-camden",
+    "name": "Camden County Division of Senior & Disabled Services",
+    "organization": "Camden County Division of Senior & Disabled Services",
+    "official_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+    "state": "NJ",
+    "service_area": [
+      "Camden"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide line, 877-222-3737, also connects you to the office for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 512 Lakeland Avenue, 4th Floor, Blackwood, NJ 08012."
+    ],
+    "public_contact": {
+      "phone": "856-858-3220",
+      "phone_label": "Area Agency on Aging (Camden)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+      "phone_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+        "title": "New Jersey Department of Human Services, Division of Aging Services: County Offices on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "Office name, phone, email and address of the county office on aging (Area Agency on Aging and Aging and Disability Resource Connection) in each of the 21 counties, read in full. The page’s metadata is dated August 11, 2026."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "nj-aaa-cape-may",
+    "name": "Cape May County Department of Aging and Disability Services",
+    "organization": "Cape May County Department of Aging and Disability Services",
+    "official_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+    "state": "NJ",
+    "service_area": [
+      "Cape May"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide line, 877-222-3737, also connects you to the office for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Also 609-886-2785.",
+      "Office: 3801 Route 9 South, Unit 4, Rio Grande, NJ 08242."
+    ],
+    "public_contact": {
+      "phone": "609-886-2784",
+      "phone_label": "Area Agency on Aging (Cape May)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+      "phone_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+        "title": "New Jersey Department of Human Services, Division of Aging Services: County Offices on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "Office name, phone, email and address of the county office on aging (Area Agency on Aging and Aging and Disability Resource Connection) in each of the 21 counties, read in full. The page’s metadata is dated August 11, 2026."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
+  {
+    "program_id": "nj-aaa-cumberland",
+    "name": "Cumberland County Office on Aging and Disabled",
+    "organization": "Cumberland County Office on Aging and Disabled",
+    "official_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+    "state": "NJ",
+    "service_area": [
+      "Cumberland"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide line, 877-222-3737, also connects you to the office for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: Administration Building, 800 East Commerce Street, Bridgeton, NJ 08302."
+    ],
+    "public_contact": {
+      "phone": "856-453-2220",
+      "phone_label": "Area Agency on Aging (Cumberland)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+      "phone_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+        "title": "New Jersey Department of Human Services, Division of Aging Services: County Offices on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "Office name, phone, email and address of the county office on aging (Area Agency on Aging and Aging and Disability Resource Connection) in each of the 21 counties, read in full. The page’s metadata is dated August 11, 2026."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "ombudsman"
- }
+  {
+    "program_id": "nj-aaa-essex",
+    "name": "Essex County Division of Senior Services",
+    "organization": "Essex County Division of Senior Services",
+    "official_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+    "state": "NJ",
+    "service_area": [
+      "Essex"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide line, 877-222-3737, also connects you to the office for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 465 Dr. Martin Luther King, Jr. Boulevard, Room 102, Newark, NJ 07102."
+    ],
+    "public_contact": {
+      "phone": "973-395-8375",
+      "phone_label": "Area Agency on Aging (Essex)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+      "phone_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+        "title": "New Jersey Department of Human Services, Division of Aging Services: County Offices on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "Office name, phone, email and address of the county office on aging (Area Agency on Aging and Aging and Disability Resource Connection) in each of the 21 counties, read in full. The page’s metadata is dated August 11, 2026."
+      }
+    ]
+  },
+  {
+    "program_id": "nj-aaa-gloucester",
+    "name": "Gloucester County Division of Senior Services",
+    "organization": "Gloucester County Division of Senior Services",
+    "official_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+    "state": "NJ",
+    "service_area": [
+      "Gloucester"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide line, 877-222-3737, also connects you to the office for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 115 Budd Boulevard, West Deptford, NJ 08096."
+    ],
+    "public_contact": {
+      "phone": "856-384-6900",
+      "phone_label": "Area Agency on Aging (Gloucester)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+      "phone_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+        "title": "New Jersey Department of Human Services, Division of Aging Services: County Offices on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "Office name, phone, email and address of the county office on aging (Area Agency on Aging and Aging and Disability Resource Connection) in each of the 21 counties, read in full. The page’s metadata is dated August 11, 2026."
+      }
+    ]
+  },
+  {
+    "program_id": "nj-aaa-hudson",
+    "name": "Hudson County Division on Aging",
+    "organization": "Hudson County Division on Aging",
+    "official_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+    "state": "NJ",
+    "service_area": [
+      "Hudson"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide line, 877-222-3737, also connects you to the office for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 830 Bergen Avenue, Suite 3B, Jersey City, NJ 07306."
+    ],
+    "public_contact": {
+      "phone": "201-369-4313",
+      "phone_label": "Area Agency on Aging (Hudson)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+      "phone_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+        "title": "New Jersey Department of Human Services, Division of Aging Services: County Offices on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "Office name, phone, email and address of the county office on aging (Area Agency on Aging and Aging and Disability Resource Connection) in each of the 21 counties, read in full. The page’s metadata is dated August 11, 2026."
+      }
+    ]
+  },
+  {
+    "program_id": "nj-aaa-hunterdon",
+    "name": "Hunterdon County Division of Senior, Disabilities and Veterans’ Services",
+    "organization": "Hunterdon County Division of Senior, Disabilities and Veterans’ Services",
+    "official_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+    "state": "NJ",
+    "service_area": [
+      "Hunterdon"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide line, 877-222-3737, also connects you to the office for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Also 908-788-1362 and 908-788-1363.",
+      "Office: 4 Gauntt Place, Building 1, Flemington, NJ 08822."
+    ],
+    "public_contact": {
+      "phone": "908-788-1361",
+      "phone_label": "Area Agency on Aging (Hunterdon)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+      "phone_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+        "title": "New Jersey Department of Human Services, Division of Aging Services: County Offices on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "Office name, phone, email and address of the county office on aging (Area Agency on Aging and Aging and Disability Resource Connection) in each of the 21 counties, read in full. The page’s metadata is dated August 11, 2026."
+      }
+    ]
+  },
+  {
+    "program_id": "nj-aaa-mercer",
+    "name": "Mercer County Office on Aging",
+    "organization": "Mercer County Office on Aging",
+    "official_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+    "state": "NJ",
+    "service_area": [
+      "Mercer"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide line, 877-222-3737, also connects you to the office for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Also 609-989-6662.",
+      "Office: 2210 Hamilton Avenue, Hamilton, NJ 08619."
+    ],
+    "public_contact": {
+      "phone": "609-989-6661",
+      "phone_label": "Area Agency on Aging (Mercer)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+      "phone_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+        "title": "New Jersey Department of Human Services, Division of Aging Services: County Offices on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "Office name, phone, email and address of the county office on aging (Area Agency on Aging and Aging and Disability Resource Connection) in each of the 21 counties, read in full. The page’s metadata is dated August 11, 2026."
+      }
+    ]
+  },
+  {
+    "program_id": "nj-aaa-middlesex",
+    "name": "Middlesex County Office of Aging and Disabled Services",
+    "organization": "Middlesex County Office of Aging and Disabled Services",
+    "official_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+    "state": "NJ",
+    "service_area": [
+      "Middlesex"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide line, 877-222-3737, also connects you to the office for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 75 Bayard Street, 5th Floor, New Brunswick, NJ 08901."
+    ],
+    "public_contact": {
+      "phone": "732-745-3295",
+      "phone_label": "Area Agency on Aging (Middlesex)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+      "phone_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+        "title": "New Jersey Department of Human Services, Division of Aging Services: County Offices on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "Office name, phone, email and address of the county office on aging (Area Agency on Aging and Aging and Disability Resource Connection) in each of the 21 counties, read in full. The page’s metadata is dated August 11, 2026."
+      }
+    ]
+  },
+  {
+    "program_id": "nj-aaa-monmouth",
+    "name": "Monmouth County Division of Aging, Disabilities and Veterans Services",
+    "organization": "Monmouth County Division of Aging, Disabilities and Veterans Services",
+    "official_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+    "state": "NJ",
+    "service_area": [
+      "Monmouth"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide line, 877-222-3737, also connects you to the office for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 3000 Kozloski Road, Freehold, NJ 07728."
+    ],
+    "public_contact": {
+      "phone": "732-431-7450",
+      "phone_label": "Area Agency on Aging (Monmouth)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+      "phone_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+        "title": "New Jersey Department of Human Services, Division of Aging Services: County Offices on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "Office name, phone, email and address of the county office on aging (Area Agency on Aging and Aging and Disability Resource Connection) in each of the 21 counties, read in full. The page’s metadata is dated August 11, 2026."
+      }
+    ]
+  },
+  {
+    "program_id": "nj-aaa-morris",
+    "name": "Morris County Division on Aging, Disabilities and Community Programming",
+    "organization": "Morris County Division on Aging, Disabilities and Community Programming",
+    "official_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+    "state": "NJ",
+    "service_area": [
+      "Morris"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide line, 877-222-3737, also connects you to the office for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 340 West Hanover Avenue, Morris Township, NJ 07960."
+    ],
+    "public_contact": {
+      "phone": "973-285-6848",
+      "phone_label": "Area Agency on Aging (Morris)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+      "phone_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+        "title": "New Jersey Department of Human Services, Division of Aging Services: County Offices on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "Office name, phone, email and address of the county office on aging (Area Agency on Aging and Aging and Disability Resource Connection) in each of the 21 counties, read in full. The page’s metadata is dated August 11, 2026."
+      }
+    ]
+  },
+  {
+    "program_id": "nj-aaa-ocean",
+    "name": "Ocean County Office of Senior Services",
+    "organization": "Ocean County Office of Senior Services",
+    "official_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+    "state": "NJ",
+    "service_area": [
+      "Ocean"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide line, 877-222-3737, also connects you to the office for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 1005 Hooper Avenue, Toms River, NJ 08754."
+    ],
+    "public_contact": {
+      "phone": "732-929-2091",
+      "phone_label": "Area Agency on Aging (Ocean)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+      "phone_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+        "title": "New Jersey Department of Human Services, Division of Aging Services: County Offices on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "Office name, phone, email and address of the county office on aging (Area Agency on Aging and Aging and Disability Resource Connection) in each of the 21 counties, read in full. The page’s metadata is dated August 11, 2026."
+      }
+    ]
+  },
+  {
+    "program_id": "nj-aaa-passaic",
+    "name": "Passaic County Department of Senior Services, Disabilities and Veterans’ Affairs",
+    "organization": "Passaic County Department of Senior Services, Disabilities and Veterans’ Affairs",
+    "official_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+    "state": "NJ",
+    "service_area": [
+      "Passaic"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide line, 877-222-3737, also connects you to the office for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 930 Riverview Drive, Suite 200, Totowa, NJ 07512."
+    ],
+    "public_contact": {
+      "phone": "973-569-4060",
+      "phone_label": "Area Agency on Aging (Passaic)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+      "phone_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+        "title": "New Jersey Department of Human Services, Division of Aging Services: County Offices on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "Office name, phone, email and address of the county office on aging (Area Agency on Aging and Aging and Disability Resource Connection) in each of the 21 counties, read in full. The page’s metadata is dated August 11, 2026."
+      }
+    ]
+  },
+  {
+    "program_id": "nj-aaa-salem",
+    "name": "Salem County Office on Aging",
+    "organization": "Salem County Office on Aging",
+    "official_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+    "state": "NJ",
+    "service_area": [
+      "Salem"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide line, 877-222-3737, also connects you to the office for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 110 Fifth Street, Suite 900, Salem, NJ 08079."
+    ],
+    "public_contact": {
+      "phone": "856-339-8622",
+      "phone_label": "Area Agency on Aging (Salem)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+      "phone_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+        "title": "New Jersey Department of Human Services, Division of Aging Services: County Offices on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "Office name, phone, email and address of the county office on aging (Area Agency on Aging and Aging and Disability Resource Connection) in each of the 21 counties, read in full. The page’s metadata is dated August 11, 2026."
+      }
+    ]
+  },
+  {
+    "program_id": "nj-aaa-somerset",
+    "name": "Somerset County Office on Aging and Disability Services",
+    "organization": "Somerset County Office on Aging and Disability Services",
+    "official_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+    "state": "NJ",
+    "service_area": [
+      "Somerset"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide line, 877-222-3737, also connects you to the office for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 27 Warren Street, 1st Floor, Somerville, NJ 08876."
+    ],
+    "public_contact": {
+      "phone": "908-704-6346",
+      "phone_label": "Area Agency on Aging (Somerset)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+      "phone_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+        "title": "New Jersey Department of Human Services, Division of Aging Services: County Offices on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "Office name, phone, email and address of the county office on aging (Area Agency on Aging and Aging and Disability Resource Connection) in each of the 21 counties, read in full. The page’s metadata is dated August 11, 2026."
+      }
+    ]
+  },
+  {
+    "program_id": "nj-aaa-sussex",
+    "name": "Sussex County Division of Senior Services",
+    "organization": "Sussex County Division of Senior Services",
+    "official_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+    "state": "NJ",
+    "service_area": [
+      "Sussex"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide line, 877-222-3737, also connects you to the office for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: Sussex County Administration Building, 1 Spring Street, 2nd Floor, Newton, NJ 07860."
+    ],
+    "public_contact": {
+      "phone": "973-579-0555",
+      "phone_label": "Area Agency on Aging (Sussex)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+      "phone_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+        "title": "New Jersey Department of Human Services, Division of Aging Services: County Offices on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "Office name, phone, email and address of the county office on aging (Area Agency on Aging and Aging and Disability Resource Connection) in each of the 21 counties, read in full. The page’s metadata is dated August 11, 2026."
+      }
+    ]
+  },
+  {
+    "program_id": "nj-aaa-union",
+    "name": "Union County Division on Aging",
+    "organization": "Union County Division on Aging",
+    "official_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+    "state": "NJ",
+    "service_area": [
+      "Union"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide line, 877-222-3737, also connects you to the office for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 888-280-8226.",
+      "Office: Administration Building, 10 Elizabethtown Plaza, 4th Floor, Elizabeth, NJ 07207."
+    ],
+    "public_contact": {
+      "phone": "908-527-4870",
+      "phone_label": "Area Agency on Aging (Union)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+      "phone_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+        "title": "New Jersey Department of Human Services, Division of Aging Services: County Offices on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "Office name, phone, email and address of the county office on aging (Area Agency on Aging and Aging and Disability Resource Connection) in each of the 21 counties, read in full. The page’s metadata is dated August 11, 2026."
+      }
+    ]
+  },
+  {
+    "program_id": "nj-aaa-warren",
+    "name": "Warren County Division of Aging & Disability Services",
+    "organization": "Warren County Division of Aging & Disability Services",
+    "official_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+    "state": "NJ",
+    "service_area": [
+      "Warren"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide line, 877-222-3737, also connects you to the office for your county. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 1 Shotwell Drive, Belvidere, NJ 07823."
+    ],
+    "public_contact": {
+      "phone": "908-475-6591",
+      "phone_label": "Area Agency on Aging (Warren)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+      "phone_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+        "title": "New Jersey Department of Human Services, Division of Aging Services: County Offices on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "Office name, phone, email and address of the county office on aging (Area Agency on Aging and Aging and Disability Resource Connection) in each of the 21 counties, read in full. The page’s metadata is dated August 11, 2026."
+      }
+    ]
+  },
+  {
+    "program_id": "nj-omb-state",
+    "name": "New Jersey Long-Term Care Ombudsman",
+    "organization": "New Jersey Long-Term Care Ombudsman",
+    "official_url": "https://www.nj.gov/ooie/contact.shtml",
+    "state": "NJ",
+    "service_area": [
+      "Atlantic",
+      "Bergen",
+      "Burlington",
+      "Camden",
+      "Cape May",
+      "Cumberland",
+      "Essex",
+      "Gloucester",
+      "Hudson",
+      "Hunterdon",
+      "Mercer",
+      "Middlesex",
+      "Monmouth",
+      "Morris",
+      "Ocean",
+      "Passaic",
+      "Salem",
+      "Somerset",
+      "Sussex",
+      "Union",
+      "Warren"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Press option 1 to make a complaint, or email ombudsman@ltco.nj.gov.",
+      "Complaints about care in a facility licensed by the New Jersey Department of Health can also go to the department at 800-792-9770."
+    ],
+    "public_contact": {
+      "phone": "877-582-6995",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+      "phone_source_url": "https://www.nj.gov/ooie/contact.shtml"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.nj.gov/ooie/contact.shtml",
+        "title": "New Jersey Long-Term Care Ombudsman: Contact Us",
+        "reviewed_on": "2026-11-16",
+        "scope": "Complaint line 1-877-582-6995, fax, online form, email and mailing address; the Department of Health complaint line for licensed facilities; search excerpt of a page last updated May 9, 2025. The office is statewide, so every county shows it."
+      },
+      {
+        "url": "https://www.nj.gov/humanservices/doas/assistance/county-offices",
+        "title": "New Jersey Department of Human Services, Division of Aging Services: County Offices on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "Counties in each aging region."
+      },
+      {
+        "url": "https://www.nj.gov/ooie/ltco-brochure.shtml",
+        "title": "New Jersey Long-Term Care Ombudsman: brochure",
+        "reviewed_on": "2026-11-16",
+        "scope": "To make a complaint about a long-term care facility, call the intake line 1-877-582-6995 and press option 1, file online or email; search excerpt."
+      }
+    ]
+  }
 ]
