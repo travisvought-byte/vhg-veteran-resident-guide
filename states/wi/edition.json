@@ -1,191 +1,227 @@
 {
- "ops": [
-  {
-   "op": "clear_data"
-  },
-  {
-   "op": "replace",
-   "old": "Ohio",
-   "new": "Wisconsin"
-  },
-  {
-   "op": "replace",
-   "old": "All 88",
-   "new": "All"
-  },
-  {
-   "op": "replace",
-   "old": "all 88",
-   "new": "all"
-  },
-  {
-   "op": "replace",
-   "old": "<option value=\"OH\">Wisconsin</option>",
-   "new": "<option value=\"OH\">Ohio</option>"
-  },
-  {
-   "op": "replace",
-   "old": "const STATE='OH';",
-   "new": "const STATE='WI';"
-  },
-  {
-   "op": "replace",
-   "old": "county veterans office",
-   "new": "state veterans agency"
-  },
-  {
-   "op": "replace",
-   "old": "county office",
-   "new": "state veterans agency"
-  },
-  {
-   "op": "replace",
-   "old": "Statewide edition · Updated October 8, 2026",
-   "new": "Wisconsin starter edition · Updated November 2, 2026"
-  },
-  {
-   "op": "replace",
-   "old": "Wisconsin’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
-   "new": "Ask the local aging agency or state Medicaid agency about waiver assessment and written approval; VA and other funders have their own processes."
-  },
-  {
-   "op": "replace",
-   "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
-   "new": "https://eldercare.acl.gov/home"
-  },
-  {
-   "op": "replace",
-   "old": "Wisconsin home modification authorization and provider rules",
-   "new": "Find local aging and disability help (Eldercare Locator)"
-  },
-  {
-   "op": "replace",
-   "old": "href=\"share.html\"",
-   "new": "href=\"share-wi.html\""
-  },
-  {
-   "op": "replace",
-   "old": "href=\"prototype-data.json\"",
-   "new": "href=\"data/public/wisconsin-resources.json\""
-  },
-  {
-   "op": "replace",
-   "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
-   "new": "href=\"data/public/wisconsin-county-veterans-offices.json\""
-  },
-  {
-   "op": "declare",
-   "name": "priority",
-   "value": [
-    "wi-claims",
-    "wi-aging",
-    "wi-ship",
-    "wi-ombudsman",
-    "r02-aid-attendance-housebound",
-    "r02-va-pension",
-    "r02-survivors-pension"
-   ]
-  },
-  {
-   "op": "declare",
-   "name": "routes",
-   "value": {
-    "benefits": [
-     "wi-claims",
-     "wi-ship",
-     "r02-va-pension",
-     "r02-aid-attendance-housebound",
-     "r02-disability-increase",
-     "r02-pension-medicaid-rule",
-     "r02-survivors-pension",
-     "r02-dic",
-     "va-accredited-help"
-    ],
-    "survivors": [
-     "wi-claims",
-     "r02-survivors-pension",
-     "r02-dic",
-     "r02-aid-attendance-housebound",
-     "r02-va-burial",
-     "va-accredited-help",
-     "nara-discharge-records"
-    ],
-    "care": [
-     "wi-aging",
-     "r02-va-health-enrollment",
-     "va-location-finder",
-     "r02-va-cnh",
-     "r02-va-clc",
-     "r02-general-caregiver",
-     "r02-family-caregiver",
-     "r02-hospice",
-     "r02-palliative"
-    ],
-    "rights": [
-     "wi-ombudsman",
-     "wi-aging"
-    ],
-    "local": [
-     "wi-aging",
-     "wi-claims"
-    ],
-    "housing": [
-     "va-housing-help",
-     "wi-ssvf-13-wi-151",
-     "wi-ssvf-14-wi-302",
-     "wi-ssvf-14-zz-308",
-     "wi-ssvf-18-wi-080",
-     "va-location-finder",
-     "va-accredited-help",
-     "nara-discharge-records"
-    ]
-   }
-  },
-  {
-   "op": "declare",
-   "name": "seniorTopics",
-   "value": {
-    "daily": [
-     "wi-aging"
-    ],
-    "accessibility": [
-     "wi-aging"
-    ],
-    "vision": [
-     "wi-aging"
-    ],
-    "hearing": [
-     "wi-aging"
-    ],
-    "memory": [
-     "alz-dementia-support",
-     "wi-aging"
-    ],
-    "costs": [
-     "wi-ship",
-     "wi-aging"
-    ],
-    "rights": [
-     "wi-ombudsman",
-     "wi-aging"
-    ]
-   }
-  },
-  {
-   "op": "line",
-   "prefix": "routes.accessibility=",
-   "new": "routes.accessibility=['va-hisa','va-sah','va-sha','va-tra','wi-aging','va-location-finder'];"
-  },
-  {
-   "op": "line",
-   "prefix": "routes.seniors=",
-   "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
-  },
-  {
-   "op": "adapter"
-  },
-  {
-   "op": "embed_data"
-  }
- ]
+  "ops": [
+    {
+      "op": "clear_data"
+    },
+    {
+      "op": "replace",
+      "old": "Ohio",
+      "new": "Wisconsin"
+    },
+    {
+      "op": "replace",
+      "old": "All 88",
+      "new": "All 72"
+    },
+    {
+      "op": "replace",
+      "old": "all 88",
+      "new": "all 72"
+    },
+    {
+      "op": "replace",
+      "old": "<option value=\"OH\">Wisconsin</option>",
+      "new": "<option value=\"OH\">Ohio</option>"
+    },
+    {
+      "op": "replace",
+      "old": "const STATE='OH';",
+      "new": "const STATE='WI';"
+    },
+    {
+      "op": "replace",
+      "old": "Statewide edition · Updated October 8, 2026",
+      "new": "Wisconsin edition · Updated November 15, 2026"
+    },
+    {
+      "op": "replace",
+      "old": "Most phones come from Wisconsin AMVETS’ 2025–2026 directory.",
+      "new": "County veterans service office phones and addresses come from the County Veterans Service Officers Association of Wisconsin. The association’s list prints no office hours; call before you go."
+    },
+    {
+      "op": "replace",
+      "old": "Wisconsin’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
+      "new": "Ask the local aging agency or state Medicaid agency about waiver assessment and written approval; VA and other funders have their own processes."
+    },
+    {
+      "op": "replace",
+      "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
+      "new": "https://eldercare.acl.gov/home"
+    },
+    {
+      "op": "replace",
+      "old": "Wisconsin home modification authorization and provider rules",
+      "new": "Find local aging and disability help (Eldercare Locator)"
+    },
+    {
+      "op": "replace",
+      "old": "href=\"share.html\"",
+      "new": "href=\"share-wi.html\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"prototype-data.json\"",
+      "new": "href=\"data/public/wisconsin-resources.json\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
+      "new": "href=\"data/public/wisconsin-county-veterans-offices.json\""
+    },
+    {
+      "op": "declare",
+      "name": "priority",
+      "value": [
+        "wi-claims",
+        "wi-adrc",
+        "wi-ship",
+        "wi-ombudsman",
+        "wi-legal-programs",
+        "r02-aid-attendance-housebound",
+        "r02-va-pension",
+        "r02-survivors-pension",
+        "r02-va-health-enrollment",
+        "va-accredited-help"
+      ]
+    },
+    {
+      "op": "declare",
+      "name": "routes",
+      "value": {
+        "benefits": [
+          "wi-claims",
+          "wi-ship",
+          "r02-va-pension",
+          "r02-aid-attendance-housebound",
+          "r02-disability-increase",
+          "r02-pension-medicaid-rule",
+          "r02-survivors-pension",
+          "r02-dic",
+          "va-accredited-help",
+          "wi-adrc"
+        ],
+        "survivors": [
+          "wi-claims",
+          "r02-survivors-pension",
+          "r02-dic",
+          "r02-aid-attendance-housebound",
+          "r02-va-burial",
+          "va-accredited-help",
+          "nara-discharge-records"
+        ],
+        "care": [
+          "r02-va-health-enrollment",
+          "va-location-finder",
+          "r02-va-cnh",
+          "r02-va-clc",
+          "r02-general-caregiver",
+          "r02-family-caregiver",
+          "r02-hospice",
+          "r02-palliative",
+          "wi-adrc",
+          "wi-cil-indigo",
+          "wi-cil-compass",
+          "wi-cil-milc",
+          "wi-cil-ilr",
+          "wi-cil-options",
+          "wi-cil-access",
+          "wi-cil-ifirst",
+          "wi-cil-sai",
+          "wi-vahealth-systems"
+        ],
+        "rights": [
+          "wi-ombudsman",
+          "wi-legal-programs"
+        ],
+        "local": [
+          "wi-claims",
+          "wi-adrc",
+          "wi-cil-indigo",
+          "wi-cil-compass",
+          "wi-cil-milc",
+          "wi-cil-ilr",
+          "wi-cil-options",
+          "wi-cil-access",
+          "wi-cil-ifirst",
+          "wi-cil-sai",
+          "wi-legal-programs",
+          "wi-vahealth-systems"
+        ],
+        "housing": [
+          "va-housing-help",
+          "wi-ssvf-13-wi-151",
+          "wi-ssvf-14-wi-302",
+          "wi-ssvf-14-zz-308",
+          "wi-ssvf-18-wi-080",
+          "va-location-finder",
+          "va-accredited-help",
+          "nara-discharge-records",
+          "wi-legal-programs"
+        ]
+      }
+    },
+    {
+      "op": "declare",
+      "name": "seniorTopics",
+      "value": {
+        "daily": [
+          "wi-adrc",
+          "wi-cil-indigo",
+          "wi-cil-compass",
+          "wi-cil-milc",
+          "wi-cil-ilr",
+          "wi-cil-options",
+          "wi-cil-access",
+          "wi-cil-ifirst",
+          "wi-cil-sai"
+        ],
+        "accessibility": [
+          "wi-adrc",
+          "wi-cil-indigo",
+          "wi-cil-compass",
+          "wi-cil-milc",
+          "wi-cil-ilr",
+          "wi-cil-options",
+          "wi-cil-access",
+          "wi-cil-ifirst",
+          "wi-cil-sai"
+        ],
+        "vision": [
+          "wi-adrc"
+        ],
+        "hearing": [
+          "wi-adrc"
+        ],
+        "memory": [
+          "alz-dementia-support",
+          "wi-adrc"
+        ],
+        "costs": [
+          "wi-ship",
+          "wi-adrc",
+          "wi-legal-programs"
+        ],
+        "rights": [
+          "wi-ombudsman",
+          "wi-legal-programs"
+        ]
+      }
+    },
+    {
+      "op": "line",
+      "prefix": "routes.accessibility=",
+      "new": "routes.accessibility=['va-hisa','va-sah','va-sha','va-tra','wi-adrc','wi-cil-indigo','wi-cil-compass','wi-cil-milc','wi-cil-ilr','wi-cil-options','wi-cil-access','wi-cil-ifirst','wi-cil-sai','va-location-finder',...DATA.filter(x=>x.regional_role==='aging_agency').map(x=>x.program_id)];"
+    },
+    {
+      "op": "line",
+      "prefix": "routes.seniors=",
+      "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
+    },
+    {
+      "op": "adapter"
+    },
+    {
+      "op": "embed_data"
+    }
+  ]
 }

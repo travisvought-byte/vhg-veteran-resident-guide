@@ -105,17 +105,19 @@ def build_regional(sheet):
     low, aging, omb = code.lower(), sheet['aging'], sheet['ombudsman']
     out = []
     word = aging.get('region_word', 'Region')  # '' when the state's agencies are known by name, not number
+    agency = aging.get('agency_label', 'Area Agency on Aging')  # states whose local aging contact has another name set this
+    aging_status = STATUS[aging.get('review', 'full')]
     for r in aging['regions']:
         src = r.get('source_url') or aging['source_url']
         out.append({
             'program_id': r['id'], 'name': r['name'], 'organization': f"{r['name']} ({word} {r['label']})" if word else r['name'],
             'official_url': src, 'state': code, 'service_area': r['counties'],
             'needs_supported': ['general_navigation', 'help_at_home'], 'regional_role': 'aging_agency',
-            'description': 'The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.',
+            'description': aging.get('description') or f'The {agency} for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.',
             'next_step': 'Call and describe what is hard right now. Ask for information and assistance. ' + aging['next_step_extra'] + ' Military service is not required.',
             'constraints': ['Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.'] + r.get('notes', []),
-            'public_contact': {'phone': r['phone'], 'phone_label': f"Area Agency on Aging, {word} {r['label']}" if word else f"Area Agency on Aging ({r['label']})"},
-            'verification': verification(STATUS['full'], reviewed),
+            'public_contact': {'phone': r['phone'], 'phone_label': f"{agency}, {word} {r['label']}" if word else f"{agency} ({r['label']})"},
+            'verification': verification(aging_status, reviewed),
             'evidence': {'review_method': aging['review_method'], 'direct_agency_confirmation': False,
                          'service_area_source_url': src, 'phone_source_url': src},
             'source_evidence': [source(src, aging['source_title'], aging['source_scope'], reviewed)],
@@ -297,6 +299,8 @@ def adapter(sheet):
         if old not in text:
             raise SystemExit(f'adapter template no longer contains: {old[:60]}')
         text = text.replace(old, new)
+    if a.get('aging_term'):  # states whose local aging contact is not called an Area Agency on Aging
+        text = text.replace('Area Agency on Aging', a['aging_term'])
     leftovers = [w for w in ('MVC', 'Missouri', 'mo-', "St. Louis") if w in text]
     if leftovers:
         raise SystemExit(f'adapter still has template wording: {leftovers}')

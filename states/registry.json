@@ -524,6 +524,28 @@
     ]
   },
   {
+    "code": "WI",
+    "name": "Wisconsin",
+    "page": "wi.html",
+    "share_page": "share-wi.html",
+    "qr": "assets/guide-qr-wi.svg",
+    "counties": 72,
+    "programs": "data/public/wi-programs.json",
+    "referrals": "data/public/wi-regional-referrals.json",
+    "offices": "data/public/wisconsin-county-veterans-offices.json",
+    "resources": "data/public/wisconsin-resources.json",
+    "statewide_area_names": [],
+    "coverage_scope": "Referral edition. All 72 counties have a county veterans service office, an Aging and Disability Resource Center and a long-term care ombudsman line. Ombudsmen are assigned by county, but the state publishes one statewide line, so every county shows it.",
+    "coverage_note": "County veterans service office addresses and phones come from the County Veterans Service Officers Association of Wisconsin list, which prints no hours. Aging and Disability Resource Centers come from the state health department’s listing, read as search excerpts of a paginated page. The long-term care ombudsman line comes from the Board on Aging and Long Term Care. Independent Living Centers come from the state health department’s center list. Reviewed November 15, 2026. Contacts are not telephone-confirmed.",
+    "share_description": "County veterans service offices, Aging and Disability Resource Centers and long-term care ombudsman help across Wisconsin",
+    "share_replacements": [
+      [
+        "Updated October 8, 2026",
+        "Updated November 15, 2026"
+      ]
+    ]
+  },
+  {
     "code": "AK",
     "name": "Alaska",
     "starter": true,
@@ -1040,26 +1062,6 @@
     ],
     "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
     "coverage_note": "Starter edition. Every county uses the Vermont Office of Veterans Affairs and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
-    "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
-    "share_replacements": []
-  },
-  {
-    "code": "WI",
-    "name": "Wisconsin",
-    "starter": true,
-    "page": "wi.html",
-    "share_page": "share-wi.html",
-    "qr": "assets/guide-qr-wi.svg",
-    "counties": 1,
-    "programs": "data/public/wi-programs.json",
-    "referrals": "data/public/wi-regional-referrals.json",
-    "offices": "data/public/wisconsin-county-veterans-offices.json",
-    "resources": "data/public/wisconsin-resources.json",
-    "statewide_area_names": [
-      "All Wisconsin counties"
-    ],
-    "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
-    "coverage_note": "Starter edition. Every county uses the Wisconsin Department of Veterans Affairs and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
     "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
     "share_replacements": []
   },

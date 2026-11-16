@@ -1,253 +1,1030 @@
 [
- {
-  "program_id": "wi-claims",
-  "name": "Wisconsin veterans: accredited claims help",
-  "official_url": "https://dva.wi.gov/resources/",
-  "organization": "Wisconsin Department of Veterans Affairs",
-  "service_area": [
-   "All Wisconsin counties"
-  ],
-  "state": "WI",
-  "needs_supported": [
-   "general_navigation",
-   "benefits_and_funding"
-  ],
-  "description": "Free help with VA claims, applications and appeals for veterans and families.",
-  "next_step": "Call the state veterans agency; ask for a benefits review and the office that serves your county.",
-  "constraints": [],
-  "public_contact": {
-   "phone": "800-947-8387"
+  {
+    "program_id": "wi-claims",
+    "name": "Wisconsin veterans: accredited claims help",
+    "official_url": "https://dva.wi.gov/support/find-my-cvso-tvso/",
+    "organization": "Wisconsin Department of Veterans Affairs and County Veterans Service Offices",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "WI",
+    "needs_supported": [
+      "general_navigation",
+      "benefits_and_funding"
+    ],
+    "description": "Free help from your County Veterans Service Officer and the Wisconsin Department of Veterans Affairs Claims Assistance Office with VA claims, appeals, pension and survivor benefits, plus state benefits.",
+    "next_step": "Choose your county for its Veterans Service Office, or call the Wisconsin Veterans Benefits and Resource Center at 1-800-WIS-VETS (800-947-8387). For a state claims officer, call the Claims Assistance Office at 833-494-7256.",
+    "constraints": [
+      "The association’s office list prints no hours; call first.",
+      "Wisconsin has Tribal Veterans Service Officers for 11 tribal nations, listed by the state department; they are not shown on county cards."
+    ],
+    "public_contact": {
+      "phone": "800-947-8387",
+      "phone_label": "Wisconsin Veterans Benefits and Resource Center (1-800-WIS-VETS)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://dva.wi.gov/Pages/benefitsClaims/StateFederalResources.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://wicvso.org/locate-your-cvso-tvso/",
+        "title": "County Veterans Service Officers Association of Wisconsin: Locate your CVSO/TVSO",
+        "reviewed_on": "2026-11-15",
+        "scope": "Name, address and phone of the veterans service office in every county; read in full."
+      },
+      {
+        "url": "https://dva.wi.gov/Pages/benefitsClaims/StateFederalResources.aspx",
+        "title": "Wisconsin Department of Veterans Affairs: Local, State and Federal Resources",
+        "reviewed_on": "2026-11-15",
+        "scope": "The department’s Claims Assistance Office acts as accredited representative; Veterans Benefits and Resource Center 1-800-WIS-VETS; search excerpt."
+      },
+      {
+        "url": "https://dva.wi.gov/wp-content/uploads/2025/03/WDVA_Programs_Benefits_Services_2025.pdf",
+        "title": "Wisconsin Department of Veterans Affairs: Programs, Benefits and Services (2025)",
+        "reviewed_on": "2026-11-15",
+        "scope": "Claims Assistance Office phone 833-494-7256; search excerpt."
+      },
+      {
+        "url": "https://dva.wi.gov/community-legacy/tribal-veterans/tribal-veterans-service-offices/",
+        "title": "Wisconsin Department of Veterans Affairs: Tribal Veterans Service Offices",
+        "reviewed_on": "2026-11-15",
+        "scope": "Tribal Veterans Service Officers for the state’s tribal nations; search excerpt."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "wi-adrc",
+    "name": "Aging and Disability Resource Centers (statewide)",
+    "official_url": "https://www.dhs.wisconsin.gov/adrc/contacts.htm",
+    "organization": "Wisconsin Department of Health Services",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "WI",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "A physical center in every county where older adults, adults with disabilities and caregivers can get information, assistance and support. Most Tribal nations have a Tribal aging and disability resource specialist. Military service is not required.",
+    "next_step": "Call 844-WIS-ADRC (844-947-2372) to be connected to your local center, or choose a county above for its direct number.",
+    "constraints": [
+      "Each program has its own eligibility and waitlist."
+    ],
+    "public_contact": {
+      "phone": "844-947-2372",
+      "phone_label": "Wisconsin ADRC statewide line (844-WIS-ADRC)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.dhs.wisconsin.gov/adrc/contacts.htm"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.dhs.wisconsin.gov/adrc/contacts.htm",
+        "title": "Wisconsin Department of Health Services: ADRC contact information",
+        "reviewed_on": "2026-11-15",
+        "scope": "Names, phones and service areas of the state’s ADRCs and Tribal ADRS; statewide line 844-947-2372; search excerpts of the paginated list."
+      },
+      {
+        "url": "https://dhs.wisconsin.gov/publications/p02356.pdf",
+        "title": "Wisconsin Department of Health Services: ADRCs in Wisconsin by county (map, 2026)",
+        "reviewed_on": "2026-11-15",
+        "scope": "49 single-county centers and 8 multi-county regions; names the counties in each region; search excerpt."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://dva.wi.gov/resources/"
+  {
+    "program_id": "wi-ship",
+    "name": "Medicare counseling (SHIP) for Wisconsin",
+    "official_url": "https://www.dhs.wisconsin.gov/benefit-specialists/medicare-counseling.htm",
+    "organization": "Wisconsin Board on Aging and Long Term Care, Medigap Helpline",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "WI",
+    "needs_supported": [
+      "benefits_and_funding"
+    ],
+    "description": "Free, unbiased counseling on Medicare, Medigap, Medicare Advantage, employer coverage and long-term care insurance. The Medigap Helpline is Wisconsin’s statewide State Health Insurance Assistance Program (SHIP) helpline; a separate Part D and prescription drug helpline answers questions for residents age 60 and over.",
+    "next_step": "Call the Medigap Helpline at 800-242-1060. For Medicare Part D and prescription drug questions, call 855-677-2783.",
+    "constraints": [
+      "The helpline is a telephone service; for hands-on help with enrollment and appeals, ask your ADRC for a local benefit specialist."
+    ],
+    "public_contact": {
+      "phone": "800-242-1060",
+      "phone_label": "Wisconsin Medigap Helpline (SHIP)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.dhs.wisconsin.gov/es/node/255"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.dhs.wisconsin.gov/es/node/255",
+        "title": "Wisconsin Department of Health Services: SHIP, Medicare Counseling for Wisconsin Residents",
+        "reviewed_on": "2026-11-15",
+        "scope": "Medigap Helpline 800-242-1060 and Part D helpline 855-677-2783; search excerpt."
+      },
+      {
+        "url": "https://longtermcare.wi.gov/Pages/Medigap/Medigap.aspx",
+        "title": "Wisconsin Board on Aging and Long Term Care: Medigap Helpline",
+        "reviewed_on": "2026-11-15",
+        "scope": "The Medigap Helpline is the state’s only statewide SHIP helpline; search excerpt."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://dva.wi.gov/resources/",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ]
- },
- {
-  "program_id": "wi-ship",
-  "name": "Medicare counseling (SHIP) for Wisconsin",
-  "official_url": "https://www.shiphelp.org/",
-  "organization": "SHIP Technical Assistance Center",
-  "service_area": [
-   "All Wisconsin counties"
-  ],
-  "state": "WI",
-  "needs_supported": [
-   "benefits_and_funding"
-  ],
-  "description": "Free, unbiased Medicare counseling from the State Health Insurance Assistance Program.",
-  "next_step": "Call or use the locator to reach the Wisconsin SHIP and ask for a counseling appointment.",
-  "constraints": [],
-  "public_contact": {
-   "phone": "877-839-2675"
+  {
+    "program_id": "wi-ombudsman",
+    "name": "Wisconsin Long-Term Care Ombudsman Program",
+    "official_url": "https://boaltc.wi.gov/Pages/Ombudsman.aspx",
+    "organization": "Wisconsin Board on Aging and Long Term Care",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "WI",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "description": "Statewide advocacy for residents age 60 and older of nursing homes and assisted living, delivered by regional ombudsmen assigned by county. Volunteer ombudsmen visit facilities in some counties.",
+    "next_step": "Call 800-815-0015 and give the county and facility name. To report suspected abuse of an elder age 60 or over, call the Wisconsin Elder Abuse Hotline at 833-586-0107 or your county elder-adult-at-risk agency. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "For residents ages 18–59, a separate ombudsman program is run by Disability Rights Wisconsin, 800-928-8778."
+    ],
+    "public_contact": {
+      "phone": "800-815-0015",
+      "phone_label": "Wisconsin Board on Aging and Long Term Care ombudsman line"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://boaltc.wi.gov/Pages/Ombudsman.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://boaltc.wi.gov/Pages/Ombudsman.aspx",
+        "title": "Wisconsin Board on Aging and Long Term Care: Ombudsman Program",
+        "reviewed_on": "2026-11-15",
+        "scope": "Statewide ombudsman line and how ombudsmen are assigned; search excerpt."
+      },
+      {
+        "url": "https://dhs.wisconsin.gov/publications/p03455.pdf",
+        "title": "Wisconsin Department of Health Services: Adult Protective Services reporting",
+        "reviewed_on": "2026-11-15",
+        "scope": "Elder Abuse Hotline 833-586-0107 for age 60 and over; county helpline for ages 18–59; search excerpt."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "wi-legal-programs",
+    "name": "Free legal help in Wisconsin",
+    "official_url": "https://www.wislawhelp.org/",
+    "organization": "Legal Action of Wisconsin; Judicare Legal Aid",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "WI",
+    "resource_role": "legal_aid",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation",
+      "housing"
+    ],
+    "description": "Free civil legal help for people with low income. Legal Action of Wisconsin serves the southern 39 counties and has staff who work with veterans; Judicare Legal Aid serves the 33 northern counties. Neither handles criminal defense.",
+    "next_step": "In the southern counties, call Legal Action of Wisconsin’s intake line at 855-947-2529 and say you are a veteran. In the 33 northern counties, call Judicare Legal Aid at 800-472-1638.",
+    "constraints": [
+      "Applicants are screened; income, case type and capacity limits apply.",
+      "Which agency serves your county depends on where you live; if the first agency cannot help, ask it for the other."
+    ],
+    "public_contact": {
+      "phone": "855-947-2529",
+      "phone_label": "Legal Action of Wisconsin intake line (southern 39 counties)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.dwd.wisconsin.gov/dwd/publications/ui/legalhelp.htm"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.dwd.wisconsin.gov/dwd/publications/ui/legalhelp.htm",
+        "title": "Wisconsin Department of Workforce Development: free legal help",
+        "reviewed_on": "2026-11-15",
+        "scope": "Legal Action of Wisconsin intake line 855-947-2529 and Judicare Legal Aid 800-472-1638; search excerpt."
+      },
+      {
+        "url": "https://www.womenslaw.org/find-help/wi/finding-lawyer/legal-assistance",
+        "title": "WomensLaw: Wisconsin legal assistance",
+        "reviewed_on": "2026-11-15",
+        "scope": "Legal Action of Wisconsin serves the southern 39 counties; Judicare serves the 33 northern counties; an advocacy directory, search excerpt."
+      },
+      {
+        "url": "https://wislawhelp.org/taxonomy/term/840",
+        "title": "Wisconsin Law Help: legal resources",
+        "reviewed_on": "2026-11-15",
+        "scope": "Legal Action of Wisconsin has staff who work with veterans; search excerpt."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.shiphelp.org/?p=317"
+  {
+    "program_id": "wi-vahealth-systems",
+    "name": "VA medical centers serving Wisconsin",
+    "official_url": "https://www.va.gov/find-locations/?facilityType=health",
+    "organization": "U.S. Department of Veterans Affairs",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "WI",
+    "resource_role": "va_health_system",
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "Wisconsin is mostly in VA’s Great Lakes network (VISN 12): Clement J. Zablocki VA Medical Center in Milwaukee (414-384-2000), Tomah VA Medical Center (608-372-3971), William S. Middleton Memorial Veterans Hospital in Madison (608-256-1901) and the Oscar G. Johnson VA Medical Center in Iron Mountain, Michigan. The northwest corner is in VISN 23, served from VA Minneapolis. Community clinics are listed in VA’s facility locator.",
+    "next_step": "Use VA’s facility locator with your ZIP code to find the closest clinic and its medical center. Not enrolled yet? Ask your county veterans service officer for help applying.",
+    "constraints": [
+      "The state’s page names regions rather than counties, so this card does not assign counties. Your VA care team may be at a different clinic or system; follow what VA tells you."
+    ],
+    "public_contact": {
+      "phone": "414-384-2000",
+      "phone_label": "Clement J. Zablocki VA Medical Center, Milwaukee"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.va.gov/Directory/Guide/state_PTSD.cfm?STATE=WI"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dva.wi.gov/support/federal-va/",
+        "title": "Wisconsin Department of Veterans Affairs: WDVA vs. VA",
+        "reviewed_on": "2026-11-15",
+        "scope": "Lists the medical centers serving Wisconsin and the VA networks (VISN 12 and VISN 23); search excerpt."
+      },
+      {
+        "url": "https://www.va.gov/Directory/Guide/state_PTSD.cfm?STATE=WI",
+        "title": "U.S. Department of Veterans Affairs: facility directory, Wisconsin",
+        "reviewed_on": "2026-11-15",
+        "scope": "Addresses and main phones for the Zablocki, Tomah and Middleton medical centers; search excerpt."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.shiphelp.org/?p=317",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ]
- },
- {
-  "program_id": "wi-ssvf-13-wi-151",
-  "name": "Community Action Coalition for South Central Wisconsin, Inc.: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Community Action Coalition for South Central Wisconsin, Inc.",
-  "service_area": [
-   "All Wisconsin counties"
-  ],
-  "state": "WI",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 13-WI-151): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Dane County, Jefferson County, Waukesha County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "608-237-1255",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "wi-cil-indigo",
+    "name": "indiGO (Superior)",
+    "organization": "indiGO",
+    "official_url": "https://indigowi.org/",
+    "service_area": [
+      "Ashland",
+      "Bayfield",
+      "Burnett",
+      "Douglas",
+      "Iron",
+      "Price",
+      "Sawyer",
+      "Washburn"
+    ],
+    "state": "WI",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "The center’s office is at 2911 Tower Ave., Suite 9, Superior, WI 54880.",
+      "Toll-free: 800-924-1220."
+    ],
+    "public_contact": {
+      "phone": "715-392-9118",
+      "phone_label": "Local phone listed by the Wisconsin Department of Health Services"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://dhs.wisconsin.gov/publications/p02357.pdf",
+      "service_area_source_url": "https://dhs.wisconsin.gov/publications/p02357.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dhs.wisconsin.gov/publications/p02357.pdf",
+        "title": "Wisconsin Department of Health Services: Independent Living Centers Serving Wisconsin",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address, phone, website and counties of each of the eight Independent Living Centers; read in full."
+      },
+      {
+        "url": "https://dhs.wisconsin.gov/disabilities/physical/ilcs-contact.htm",
+        "title": "Wisconsin Department of Health Services: Find an Independent Living Center",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties and tribes each of the eight centers serves; read in full. Prints no addresses or phones."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "wi-cil-compass",
+    "name": "Compass IL (Menomonie)",
+    "organization": "Compass IL",
+    "official_url": "https://compassil.org/",
+    "service_area": [
+      "Barron",
+      "Chippewa",
+      "Clark",
+      "Dunn",
+      "Eau Claire",
+      "Pepin",
+      "Pierce",
+      "Polk",
+      "Rusk",
+      "St. Croix"
+    ],
+    "state": "WI",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "The center’s office is at 2920 Schneider Ave. SE, Menomonie, WI 54751.",
+      "Toll-free: 800-228-3287.",
+      "Earlier state listings call this center the Center for Independent Living for Western Wisconsin."
+    ],
+    "public_contact": {
+      "phone": "715-233-1070",
+      "phone_label": "Local phone listed by the Wisconsin Department of Health Services"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://dhs.wisconsin.gov/publications/p02357.pdf",
+      "service_area_source_url": "https://dhs.wisconsin.gov/publications/p02357.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dhs.wisconsin.gov/publications/p02357.pdf",
+        "title": "Wisconsin Department of Health Services: Independent Living Centers Serving Wisconsin",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address, phone, website and counties of each of the eight Independent Living Centers; read in full."
+      },
+      {
+        "url": "https://dhs.wisconsin.gov/disabilities/physical/ilcs-contact.htm",
+        "title": "Wisconsin Department of Health Services: Find an Independent Living Center",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties and tribes each of the eight centers serves; read in full. Prints no addresses or phones."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "wi-cil-milc",
+    "name": "Midstate Independent Living Choices (Stevens Point)",
+    "organization": "Midstate Independent Living Choices",
+    "official_url": "https://milc-inc.org/",
+    "service_area": [
+      "Adams",
+      "Florence",
+      "Forest",
+      "Langlade",
+      "Lincoln",
+      "Marathon",
+      "Oneida",
+      "Portage",
+      "Taylor",
+      "Vilas",
+      "Wood"
+    ],
+    "state": "WI",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "The center’s office is at 1101 Brilowski Road, Suite D, Stevens Point, WI 54482; an older state listing shows 3262 Church Street.",
+      "Toll-free: 800-382-8484."
+    ],
+    "public_contact": {
+      "phone": "715-344-4210",
+      "phone_label": "Local phone listed by the Wisconsin Department of Health Services"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://dhs.wisconsin.gov/publications/p02357.pdf",
+      "service_area_source_url": "https://dhs.wisconsin.gov/publications/p02357.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dhs.wisconsin.gov/publications/p02357.pdf",
+        "title": "Wisconsin Department of Health Services: Independent Living Centers Serving Wisconsin",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address, phone, website and counties of each of the eight Independent Living Centers; read in full."
+      },
+      {
+        "url": "https://dhs.wisconsin.gov/disabilities/physical/ilcs-contact.htm",
+        "title": "Wisconsin Department of Health Services: Find an Independent Living Center",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties and tribes each of the eight centers serves; read in full. Prints no addresses or phones."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 44",
-    "sheet": "Contacts",
-    "row": 44,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "wi-ssvf-14-wi-302",
-  "name": "Indianhead Community Action Agency: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Indianhead Community Action Agency",
-  "service_area": [
-   "All Wisconsin counties"
-  ],
-  "state": "WI",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 14-WI-302): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Ashland County, Barron County, Bayfield County, Burnett County, Clark County, Douglas County, Florence County, Forest County, Iron County, Langlade County, Marinette County, Menominee County and 8 more.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "715-532-1500",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "wi-cil-ilr",
+    "name": "Independent Living Resources (La Crosse)",
+    "organization": "Independent Living Resources, Inc.",
+    "official_url": "https://www.ilresources.org/",
+    "service_area": [
+      "Buffalo",
+      "Crawford",
+      "Grant",
+      "Iowa",
+      "Jackson",
+      "Juneau",
+      "La Crosse",
+      "Lafayette",
+      "Monroe",
+      "Richland",
+      "Sauk",
+      "Trempealeau",
+      "Vernon"
+    ],
+    "state": "WI",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "The center’s office is at 4439 Mormon Coulee Road, La Crosse, WI 54601.",
+      "Toll-free: 888-474-5745. TTY: 608-787-1148."
+    ],
+    "public_contact": {
+      "phone": "608-787-1111",
+      "phone_label": "Local phone listed by the Wisconsin Department of Health Services"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://dhs.wisconsin.gov/publications/p02357.pdf",
+      "service_area_source_url": "https://dhs.wisconsin.gov/publications/p02357.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dhs.wisconsin.gov/publications/p02357.pdf",
+        "title": "Wisconsin Department of Health Services: Independent Living Centers Serving Wisconsin",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address, phone, website and counties of each of the eight Independent Living Centers; read in full."
+      },
+      {
+        "url": "https://dhs.wisconsin.gov/disabilities/physical/ilcs-contact.htm",
+        "title": "Wisconsin Department of Health Services: Find an Independent Living Center",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties and tribes each of the eight centers serves; read in full. Prints no addresses or phones."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "wi-cil-options",
+    "name": "Options for Independent Living (Green Bay)",
+    "organization": "Options for Independent Living, Inc.",
+    "official_url": "https://optionsil.org/",
+    "service_area": [
+      "Brown",
+      "Calumet",
+      "Door",
+      "Fond du Lac",
+      "Green Lake",
+      "Kewaunee",
+      "Manitowoc",
+      "Marinette",
+      "Marquette",
+      "Menominee",
+      "Oconto",
+      "Outagamie",
+      "Shawano",
+      "Sheboygan",
+      "Waupaca",
+      "Waushara",
+      "Winnebago"
+    ],
+    "state": "WI",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "The center’s office is at 555 Country Club Road, Green Bay, WI 54313.",
+      "Toll-free: 888-465-1515. TTY: 920-490-0600."
+    ],
+    "public_contact": {
+      "phone": "920-490-0500",
+      "phone_label": "Local phone listed by the Wisconsin Department of Health Services"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://dhs.wisconsin.gov/publications/p02357.pdf",
+      "service_area_source_url": "https://dhs.wisconsin.gov/publications/p02357.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dhs.wisconsin.gov/publications/p02357.pdf",
+        "title": "Wisconsin Department of Health Services: Independent Living Centers Serving Wisconsin",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address, phone, website and counties of each of the eight Independent Living Centers; read in full."
+      },
+      {
+        "url": "https://dhs.wisconsin.gov/disabilities/physical/ilcs-contact.htm",
+        "title": "Wisconsin Department of Health Services: Find an Independent Living Center",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties and tribes each of the eight centers serves; read in full. Prints no addresses or phones."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "wi-cil-access",
+    "name": "Access to Independence (Madison)",
+    "organization": "Access to Independence, Inc.",
+    "official_url": "https://www.accesstoind.org/",
+    "service_area": [
+      "Columbia",
+      "Dane",
+      "Dodge",
+      "Green"
+    ],
+    "state": "WI",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "The center’s office is at 3810 Milwaukee St., Madison, WI 53714.",
+      "Toll-free: 800-362-9877. Video phone: 608-234-4484."
+    ],
+    "public_contact": {
+      "phone": "608-242-8484",
+      "phone_label": "Local phone listed by the Wisconsin Department of Health Services"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://dhs.wisconsin.gov/publications/p02357.pdf",
+      "service_area_source_url": "https://dhs.wisconsin.gov/publications/p02357.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dhs.wisconsin.gov/publications/p02357.pdf",
+        "title": "Wisconsin Department of Health Services: Independent Living Centers Serving Wisconsin",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address, phone, website and counties of each of the eight Independent Living Centers; read in full."
+      },
+      {
+        "url": "https://dhs.wisconsin.gov/disabilities/physical/ilcs-contact.htm",
+        "title": "Wisconsin Department of Health Services: Find an Independent Living Center",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties and tribes each of the eight centers serves; read in full. Prints no addresses or phones."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 101",
-    "sheet": "Contacts",
-    "row": 101,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "wi-ssvf-14-zz-308",
-  "name": "Transitional Living Services: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Transitional Living Services",
-  "service_area": [
-   "All Wisconsin counties"
-  ],
-  "state": "WI",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 14-ZZ-308): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Kenosha County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "224-634-0029",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "wi-cil-ifirst",
+    "name": "IndependenceFirst (Milwaukee)",
+    "organization": "IndependenceFirst",
+    "official_url": "https://www.independencefirst.org/",
+    "service_area": [
+      "Milwaukee",
+      "Ozaukee",
+      "Washington",
+      "Waukesha"
+    ],
+    "state": "WI",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "The center’s office is at 540 South 1st St., Milwaukee, WI 53204.",
+      "Toll-free: 877-463-3778."
+    ],
+    "public_contact": {
+      "phone": "414-291-7520",
+      "phone_label": "Local phone listed by the Wisconsin Department of Health Services"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://dhs.wisconsin.gov/publications/p02357.pdf",
+      "service_area_source_url": "https://dhs.wisconsin.gov/publications/p02357.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dhs.wisconsin.gov/publications/p02357.pdf",
+        "title": "Wisconsin Department of Health Services: Independent Living Centers Serving Wisconsin",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address, phone, website and counties of each of the eight Independent Living Centers; read in full."
+      },
+      {
+        "url": "https://dhs.wisconsin.gov/disabilities/physical/ilcs-contact.htm",
+        "title": "Wisconsin Department of Health Services: Find an Independent Living Center",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties and tribes each of the eight centers serves; read in full. Prints no addresses or phones."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "wi-cil-sai",
+    "name": "Society’s Assets (Racine)",
+    "organization": "Society’s Assets, Inc.",
+    "official_url": "https://societysassets.org/",
+    "service_area": [
+      "Jefferson",
+      "Kenosha",
+      "Racine",
+      "Rock",
+      "Walworth"
+    ],
+    "state": "WI",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "The center’s office is at 5200 Washington Ave., Suite 225, Racine, WI 53406.",
+      "Toll-free: 800-378-9128."
+    ],
+    "public_contact": {
+      "phone": "262-637-9128",
+      "phone_label": "Local phone listed by the Wisconsin Department of Health Services"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-15"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://dhs.wisconsin.gov/publications/p02357.pdf",
+      "service_area_source_url": "https://dhs.wisconsin.gov/publications/p02357.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dhs.wisconsin.gov/publications/p02357.pdf",
+        "title": "Wisconsin Department of Health Services: Independent Living Centers Serving Wisconsin",
+        "reviewed_on": "2026-11-15",
+        "scope": "Address, phone, website and counties of each of the eight Independent Living Centers; read in full."
+      },
+      {
+        "url": "https://dhs.wisconsin.gov/disabilities/physical/ilcs-contact.htm",
+        "title": "Wisconsin Department of Health Services: Find an Independent Living Center",
+        "reviewed_on": "2026-11-15",
+        "scope": "Counties and tribes each of the eight centers serves; read in full. Prints no addresses or phones."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "wi-ssvf-13-wi-151",
+    "name": "Community Action Coalition for South Central Wisconsin, Inc.: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Community Action Coalition for South Central Wisconsin, Inc.",
+    "service_area": [
+      "Dane",
+      "Jefferson",
+      "Waukesha"
+    ],
+    "state": "WI",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 13-WI-151): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "608-237-1255",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 44",
+        "sheet": "Contacts",
+        "row": 44,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 107",
-    "sheet": "Contacts",
-    "row": 107,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "wi-ssvf-18-wi-080",
-  "name": "Center for Veterans Issues, Ltd.: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Center for Veterans Issues, Ltd.",
-  "service_area": [
-   "All Wisconsin counties"
-  ],
-  "state": "WI",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 18-WI-080): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Adams County, Barron County, Brown County, Buffalo County, Calumet County, Chippewa County, Clark County, Columbia County, Crawford County, Dodge County, Door County, Dunn County and 43 more.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 414-431-2346.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "414-345-4269",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "wi-ssvf-14-wi-302",
+    "name": "Indianhead Community Action Agency: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Indianhead Community Action Agency",
+    "service_area": [
+      "Ashland",
+      "Barron",
+      "Bayfield",
+      "Burnett",
+      "Clark",
+      "Douglas",
+      "Florence",
+      "Forest",
+      "Iron",
+      "Langlade",
+      "Marinette",
+      "Menominee",
+      "Oconto",
+      "Oneida",
+      "Price",
+      "Rusk",
+      "Sawyer",
+      "Taylor",
+      "Vilas",
+      "Washburn"
+    ],
+    "state": "WI",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 14-WI-302): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "715-532-1500",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 101",
+        "sheet": "Contacts",
+        "row": 101,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "wi-ssvf-14-zz-308",
+    "name": "Transitional Living Services: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Transitional Living Services",
+    "service_area": [
+      "Kenosha"
+    ],
+    "state": "WI",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 14-ZZ-308): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "224-634-0029",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 107",
+        "sheet": "Contacts",
+        "row": 107,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
-  },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 138",
-    "sheet": "Contacts",
-    "row": 138,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- }
+  {
+    "program_id": "wi-ssvf-18-wi-080",
+    "name": "Center for Veterans Issues, Ltd.: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Center for Veterans Issues, Ltd.",
+    "service_area": [
+      "Adams",
+      "Barron",
+      "Brown",
+      "Buffalo",
+      "Calumet",
+      "Chippewa",
+      "Clark",
+      "Columbia",
+      "Crawford",
+      "Dodge",
+      "Door",
+      "Dunn",
+      "Eau Claire",
+      "Fond du Lac",
+      "Grant",
+      "Green",
+      "Green Lake",
+      "Iowa",
+      "Jackson",
+      "Juneau",
+      "Kenosha",
+      "Kewaunee",
+      "La Crosse",
+      "Lafayette",
+      "Lincoln",
+      "Manitowoc",
+      "Marathon",
+      "Marquette",
+      "Milwaukee",
+      "Monroe",
+      "Oconto",
+      "Outagamie",
+      "Ozaukee",
+      "Pepin",
+      "Pierce",
+      "Polk",
+      "Portage",
+      "Racine",
+      "Richland",
+      "Rock",
+      "Rusk",
+      "Sauk",
+      "Shawano",
+      "Sheboygan",
+      "St. Croix",
+      "Taylor",
+      "Trempealeau",
+      "Vernon",
+      "Walworth",
+      "Washington",
+      "Waukesha",
+      "Waupaca",
+      "Waushara",
+      "Winnebago",
+      "Wood"
+    ],
+    "state": "WI",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 18-WI-080): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 414-431-2346.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "414-345-4269",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 138",
+        "sheet": "Contacts",
+        "row": 138,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
+  }
 ]
