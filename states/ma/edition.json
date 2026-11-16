@@ -1,193 +1,241 @@
 {
- "ops": [
-  {
-   "op": "clear_data"
-  },
-  {
-   "op": "replace",
-   "old": "Ohio",
-   "new": "Massachusetts"
-  },
-  {
-   "op": "replace",
-   "old": "All 88",
-   "new": "All"
-  },
-  {
-   "op": "replace",
-   "old": "all 88",
-   "new": "all"
-  },
-  {
-   "op": "replace",
-   "old": "<option value=\"OH\">Massachusetts</option>",
-   "new": "<option value=\"OH\">Ohio</option>"
-  },
-  {
-   "op": "replace",
-   "old": "const STATE='OH';",
-   "new": "const STATE='MA';"
-  },
-  {
-   "op": "replace",
-   "old": "county veterans office",
-   "new": "state veterans agency"
-  },
-  {
-   "op": "replace",
-   "old": "county office",
-   "new": "state veterans agency"
-  },
-  {
-   "op": "replace",
-   "old": "Statewide edition · Updated October 8, 2026",
-   "new": "Massachusetts starter edition · Updated November 2, 2026"
-  },
-  {
-   "op": "replace",
-   "old": "Massachusetts’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
-   "new": "Ask the local aging agency or state Medicaid agency about waiver assessment and written approval; VA and other funders have their own processes."
-  },
-  {
-   "op": "replace",
-   "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
-   "new": "https://eldercare.acl.gov/home"
-  },
-  {
-   "op": "replace",
-   "old": "Massachusetts home modification authorization and provider rules",
-   "new": "Find local aging and disability help (Eldercare Locator)"
-  },
-  {
-   "op": "replace",
-   "old": "href=\"share.html\"",
-   "new": "href=\"share-ma.html\""
-  },
-  {
-   "op": "replace",
-   "old": "href=\"prototype-data.json\"",
-   "new": "href=\"data/public/massachusetts-resources.json\""
-  },
-  {
-   "op": "replace",
-   "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
-   "new": "href=\"data/public/massachusetts-county-veterans-offices.json\""
-  },
-  {
-   "op": "declare",
-   "name": "priority",
-   "value": [
-    "ma-claims",
-    "ma-aging",
-    "ma-ship",
-    "ma-ombudsman",
-    "r02-aid-attendance-housebound",
-    "r02-va-pension",
-    "r02-survivors-pension"
-   ]
-  },
-  {
-   "op": "declare",
-   "name": "routes",
-   "value": {
-    "benefits": [
-     "ma-claims",
-     "ma-ship",
-     "r02-va-pension",
-     "r02-aid-attendance-housebound",
-     "r02-disability-increase",
-     "r02-pension-medicaid-rule",
-     "r02-survivors-pension",
-     "r02-dic",
-     "va-accredited-help"
-    ],
-    "survivors": [
-     "ma-claims",
-     "r02-survivors-pension",
-     "r02-dic",
-     "r02-aid-attendance-housebound",
-     "r02-va-burial",
-     "va-accredited-help",
-     "nara-discharge-records"
-    ],
-    "care": [
-     "ma-aging",
-     "r02-va-health-enrollment",
-     "va-location-finder",
-     "r02-va-cnh",
-     "r02-va-clc",
-     "r02-general-caregiver",
-     "r02-family-caregiver",
-     "r02-hospice",
-     "r02-palliative"
-    ],
-    "rights": [
-     "ma-ombudsman",
-     "ma-aging"
-    ],
-    "local": [
-     "ma-aging",
-     "ma-claims"
-    ],
-    "housing": [
-     "va-housing-help",
-     "ma-ssvf-12-ma-040",
-     "ma-ssvf-12-zz-041",
-     "ma-ssvf-16-zz-058",
-     "ma-ssvf-20-ma-211",
-     "ma-ssvf-24-ma-460",
-     "ma-ssvf-26-ma-477",
-     "va-location-finder",
-     "va-accredited-help",
-     "nara-discharge-records"
-    ]
-   }
-  },
-  {
-   "op": "declare",
-   "name": "seniorTopics",
-   "value": {
-    "daily": [
-     "ma-aging"
-    ],
-    "accessibility": [
-     "ma-aging"
-    ],
-    "vision": [
-     "ma-aging"
-    ],
-    "hearing": [
-     "ma-aging"
-    ],
-    "memory": [
-     "alz-dementia-support",
-     "ma-aging"
-    ],
-    "costs": [
-     "ma-ship",
-     "ma-aging"
-    ],
-    "rights": [
-     "ma-ombudsman",
-     "ma-aging"
-    ]
-   }
-  },
-  {
-   "op": "line",
-   "prefix": "routes.accessibility=",
-   "new": "routes.accessibility=['va-hisa','va-sah','va-sha','va-tra','ma-aging','va-location-finder'];"
-  },
-  {
-   "op": "line",
-   "prefix": "routes.seniors=",
-   "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
-  },
-  {
-   "op": "adapter"
-  },
-  {
-   "op": "embed_data"
-  }
- ]
+  "ops": [
+    {
+      "op": "clear_data"
+    },
+    {
+      "op": "replace",
+      "old": "Ohio",
+      "new": "Massachusetts"
+    },
+    {
+      "op": "replace",
+      "old": "All 88",
+      "new": "All 14"
+    },
+    {
+      "op": "replace",
+      "old": "all 88",
+      "new": "all 14"
+    },
+    {
+      "op": "replace",
+      "old": "<option value=\"OH\">Massachusetts</option>",
+      "new": "<option value=\"OH\">Ohio</option>"
+    },
+    {
+      "op": "replace",
+      "old": "const STATE='OH';",
+      "new": "const STATE='MA';"
+    },
+    {
+      "op": "replace",
+      "old": "Statewide edition · Updated October 8, 2026",
+      "new": "Massachusetts edition · Updated November 16, 2026"
+    },
+    {
+      "op": "replace",
+      "old": "Most phones come from Massachusetts AMVETS’ 2025–2026 directory.",
+      "new": "Massachusetts has no county veterans offices: every city and town has its own Veterans Service Officer. Each county card gives the state’s route to find yours."
+    },
+    {
+      "op": "replace",
+      "old": "Massachusetts’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
+      "new": "Ask the local aging agency or state Medicaid agency about waiver assessment and written approval; VA and other funders have their own processes."
+    },
+    {
+      "op": "replace",
+      "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
+      "new": "https://eldercare.acl.gov/home"
+    },
+    {
+      "op": "replace",
+      "old": "Massachusetts home modification authorization and provider rules",
+      "new": "Find local aging and disability help (Eldercare Locator)"
+    },
+    {
+      "op": "replace",
+      "old": "href=\"share.html\"",
+      "new": "href=\"share-ma.html\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"prototype-data.json\"",
+      "new": "href=\"data/public/massachusetts-resources.json\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
+      "new": "href=\"data/public/massachusetts-county-veterans-offices.json\""
+    },
+    {
+      "op": "declare",
+      "name": "priority",
+      "value": [
+        "ma-claims",
+        "ma-adrc",
+        "ma-ship",
+        "ma-ombudsman",
+        "ma-legal-programs",
+        "r02-aid-attendance-housebound",
+        "r02-va-pension",
+        "r02-survivors-pension",
+        "r02-va-health-enrollment",
+        "va-accredited-help"
+      ]
+    },
+    {
+      "op": "declare",
+      "name": "routes",
+      "value": {
+        "benefits": [
+          "ma-claims",
+          "ma-ship",
+          "r02-va-pension",
+          "r02-aid-attendance-housebound",
+          "r02-disability-increase",
+          "r02-pension-medicaid-rule",
+          "r02-survivors-pension",
+          "r02-dic",
+          "va-accredited-help",
+          "ma-adrc"
+        ],
+        "survivors": [
+          "ma-claims",
+          "r02-survivors-pension",
+          "r02-dic",
+          "r02-aid-attendance-housebound",
+          "r02-va-burial",
+          "va-accredited-help",
+          "nara-discharge-records"
+        ],
+        "care": [
+          "r02-va-health-enrollment",
+          "va-location-finder",
+          "r02-va-cnh",
+          "r02-va-clc",
+          "r02-general-caregiver",
+          "r02-family-caregiver",
+          "r02-hospice",
+          "r02-palliative",
+          "ma-adrc",
+          "ma-cil-adlib",
+          "ma-cil-bcil",
+          "ma-cil-cord",
+          "ma-cil-drc",
+          "ma-cil-ia",
+          "ma-cil-mwcil",
+          "ma-cil-milcb",
+          "ma-cil-nilp",
+          "ma-cil-scil",
+          "ma-cil-stavros",
+          "ma-cil-yaa",
+          "ma-vahealth-systems"
+        ],
+        "rights": [
+          "ma-ombudsman",
+          "ma-legal-programs"
+        ],
+        "local": [
+          "ma-claims",
+          "ma-adrc",
+          "ma-cil-adlib",
+          "ma-cil-bcil",
+          "ma-cil-cord",
+          "ma-cil-drc",
+          "ma-cil-ia",
+          "ma-cil-mwcil",
+          "ma-cil-milcb",
+          "ma-cil-nilp",
+          "ma-cil-scil",
+          "ma-cil-stavros",
+          "ma-cil-yaa",
+          "ma-legal-programs",
+          "ma-vahealth-systems"
+        ],
+        "housing": [
+          "va-housing-help",
+          "ma-ssvf-12-ma-040",
+          "ma-ssvf-12-zz-041",
+          "ma-ssvf-16-zz-058",
+          "ma-ssvf-20-ma-211",
+          "ma-ssvf-24-ma-460",
+          "ma-ssvf-26-ma-477",
+          "va-location-finder",
+          "va-accredited-help",
+          "nara-discharge-records",
+          "ma-legal-programs"
+        ]
+      }
+    },
+    {
+      "op": "declare",
+      "name": "seniorTopics",
+      "value": {
+        "daily": [
+          "ma-adrc",
+          "ma-cil-adlib",
+          "ma-cil-bcil",
+          "ma-cil-cord",
+          "ma-cil-drc",
+          "ma-cil-ia",
+          "ma-cil-mwcil",
+          "ma-cil-milcb",
+          "ma-cil-nilp",
+          "ma-cil-scil",
+          "ma-cil-stavros",
+          "ma-cil-yaa"
+        ],
+        "accessibility": [
+          "ma-adrc",
+          "ma-cil-adlib",
+          "ma-cil-bcil",
+          "ma-cil-cord",
+          "ma-cil-drc",
+          "ma-cil-ia",
+          "ma-cil-mwcil",
+          "ma-cil-milcb",
+          "ma-cil-nilp",
+          "ma-cil-scil",
+          "ma-cil-stavros",
+          "ma-cil-yaa"
+        ],
+        "vision": [
+          "ma-adrc"
+        ],
+        "hearing": [
+          "ma-adrc"
+        ],
+        "memory": [
+          "alz-dementia-support",
+          "ma-adrc"
+        ],
+        "costs": [
+          "ma-ship",
+          "ma-adrc",
+          "ma-legal-programs"
+        ],
+        "rights": [
+          "ma-ombudsman",
+          "ma-legal-programs"
+        ]
+      }
+    },
+    {
+      "op": "line",
+      "prefix": "routes.accessibility=",
+      "new": "routes.accessibility=['va-hisa','va-sah','va-sha','va-tra','ma-adrc','ma-cil-adlib','ma-cil-bcil','ma-cil-cord','ma-cil-drc','ma-cil-ia','ma-cil-mwcil','ma-cil-milcb','ma-cil-nilp','ma-cil-scil','ma-cil-stavros','ma-cil-yaa','va-location-finder',...DATA.filter(x=>x.regional_role==='aging_agency').map(x=>x.program_id)];"
+    },
+    {
+      "op": "line",
+      "prefix": "routes.seniors=",
+      "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
+    },
+    {
+      "op": "adapter"
+    },
+    {
+      "op": "embed_data"
+    }
+  ]
 }
