@@ -101,7 +101,7 @@ production branch `main`, no build command, root directory `/`, and the deploy c
     npx wrangler deploy --name ohio-bingo --assets ./findbingo --compatibility-date 2026-11-13
 
 so only the `findbingo` folder is published (the national page, and the Ohio finder in `ohio/`). `findbingo.org` and `www.findbingo.org` are attached
-under the Worker's **Domains** tab (Cloudflare creates the DNS records; do not add them by hand).
+under the Worker's **Domains** tab, and Cloudflare creates the DNS records for them.
 
 ## Ohio: one finder, one front door
 
@@ -109,13 +109,14 @@ Travis's direction (November 16, 2026): findbingo.org holds every finder, state 
 ohiobingo.org is the Ohio front door where Veteran Home Guardians operates.
 
 - The Ohio Bingo Finder is served at https://www.findbingo.org/ohio/ from `bingo-site/findbingo/ohio/`
-  (built by `scripts/bingo_site.py`). `_redirects` forwards /oh, /OH and /Ohio to it. No rule may match
-  `/ohio/` itself, or the forward would loop.
+  (built by `scripts/bingo_site.py`). `_redirects` forwards /oh, /OH and /Ohio to it. No rule matches
+  `/ohio/` itself, because that would loop.
 - https://www.ohiobingo.org/ (Wix) is for halls, claims, Ohio law and partnering with Veteran Home
   Guardians. Its "Find a Game" links go to findbingo.org/ohio/.
 - bingo.vethomeguard.org is retired. GitHub Pages still answers there from the root of the Ohio-Bingo
   repository, but every page is a forwarding page that keeps the ZIP search and #anchor, so printed
-  posters and QR codes still work. Do not remove the `CNAME` file or the DNS record.
+  posters and QR codes still work. The `CNAME` file and the DNS record are what keep those forwards
+  answering.
 - The guide's `bingo.html` is the build source and test fixture. On guide.vethomeguard.org it forwards
   to findbingo.org/ohio/ and names it as canonical; it is not in the guide's sitemap.
 - Other states are plain directories. Partnerships there are meant for local organizations in each
