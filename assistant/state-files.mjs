@@ -45,7 +45,8 @@ export const STATES=Object.freeze({
   "VT": "Vermont",
   "WY": "Wyoming",
   "DC": "District of Columbia",
-  "MT": "Montana"
+  "MT": "Montana",
+  "AK": "Alaska"
 });
 export const STATE_FILES=Object.freeze({
   "OH": [
@@ -227,6 +228,10 @@ export const STATE_FILES=Object.freeze({
   "MT": [
     "data/public/montana-resources.json",
     "data/public/montana-county-veterans-offices.json"
+  ],
+  "AK": [
+    "data/public/alaska-resources.json",
+    "data/public/alaska-county-veterans-offices.json"
   ]
 });
-export const localityLabel=row=>row?(["independent_city","statewide"].includes(row.county_type)?row.county:row.county+(row.county_type==="parish"?" Parish":" County")):"";
+export const localityLabel=row=>row?(["independent_city","statewide","borough","census_area","city_and_county"].includes(row.county_type)?row.county:row.county+(row.county_type==="parish"?" Parish":" County")):"";
