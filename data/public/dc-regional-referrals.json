@@ -1,80 +1,88 @@
 [
- {
-  "program_id": "dc-aging",
-  "name": "Local aging help in District of Columbia (Eldercare Locator)",
-  "official_url": "https://eldercare.acl.gov/home",
-  "organization": "U.S. Administration for Community Living",
-  "service_area": [
-   "District of Columbia"
-  ],
-  "state": "DC",
-  "needs_supported": [
-   "general_navigation",
-   "help_at_home"
-  ],
-  "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-  "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
-  "constraints": [
-   "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "dc-dacl",
+    "name": "DC Department of Aging and Community Living (DACL)",
+    "organization": "DC Department of Aging and Community Living (DACL)",
+    "official_url": "https://dacl.dc.gov/agency/department-aging-and-community-living-0",
+    "state": "DC",
+    "service_area": [
+      "District of Columbia"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The DC Department of Aging and Community Living (DACL) is the District’s aging agency and Aging and Disability Resource Center: information and help for residents 60 and older, adults with disabilities and caregivers, including senior centers, meals, transportation, in-home support and legal services.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. TTY users dial 711. Office hours are weekdays 9:30 a.m. to 4:30 p.m. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 500 K Street NE, Washington, DC 20002."
+    ],
+    "public_contact": {
+      "phone": "202-724-5626",
+      "phone_label": "DC Department of Aging and Community Living (District of Columbia)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://dacl.dc.gov/agency/department-aging-and-community-living-0",
+      "phone_source_url": "https://dacl.dc.gov/agency/department-aging-and-community-living-0"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dacl.dc.gov/agency/department-aging-and-community-living-0",
+        "title": "DC Department of Aging and Community Living: Agency contact",
+        "reviewed_on": "2026-11-16",
+        "scope": "500 K Street NE; phone (202) 724-5626; TTY 711; office hours Monday to Friday, 9:30 a.m. to 4:30 p.m.; Adult Protective Services (202) 541-3950; search excerpt."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
-  },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.acl.gov/contact"
-  },
-  "source_evidence": [
-   {
-    "url": "https://www.acl.gov/contact",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "aging_agency"
- },
- {
-  "program_id": "dc-ombudsman",
-  "name": "District of Columbia long-term-care ombudsman",
-  "official_url": "https://theconsumervoice.org/get_help",
-  "organization": "National Long-Term Care Ombudsman Resource Center",
-  "service_area": [
-   "District of Columbia"
-  ],
-  "state": "DC",
-  "needs_supported": [
-   "resident_rights",
-   "general_navigation"
-  ],
-  "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-  "next_step": "Use the locator to find the District of Columbia program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
-  "constraints": [
-   "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
-  },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
-  },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
-  },
-  "source_evidence": [
-   {
-    "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "ombudsman"
- }
+  {
+    "program_id": "dc-omb",
+    "name": "Office of the D.C. Long-Term Care Ombudsman (Legal Counsel for the Elderly)",
+    "organization": "Office of the D.C. Long-Term Care Ombudsman (Legal Counsel for the Elderly)",
+    "official_url": "https://www.aarp.org/legal-counsel-for-elderly/what-we-do/info-2017/dc-long-term-care-ombudsman.html",
+    "state": "DC",
+    "service_area": [
+      "District of Columbia"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Email DCOmbuds@aarp.org. The Attorney General’s 2023 elder justice brochure lists 202-434-2140; the program’s own page gives 202-434-2190."
+    ],
+    "public_contact": {
+      "phone": "202-434-2190",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.aarp.org/legal-counsel-for-elderly/what-we-do/info-2017/dc-long-term-care-ombudsman.html",
+      "phone_source_url": "https://www.aarp.org/legal-counsel-for-elderly/what-we-do/info-2017/dc-long-term-care-ombudsman.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.aarp.org/legal-counsel-for-elderly/what-we-do/info-2017/dc-long-term-care-ombudsman.html",
+        "title": "Legal Counsel for the Elderly: The Office of the D.C. Long-Term Care Ombudsman",
+        "reviewed_on": "2026-11-16",
+        "scope": "Phone 202-434-2190 and email; replies within 24 hours or the next business day; serves residents of nursing homes, assisted living and community residence facilities and people on the EPD Medicaid waiver at home; read in full; page updated July 15, 2024. The Attorney General’s elder justice brochure (https://oag.dc.gov/sites/default/files/2024-03/EJS-brochure-updated-08292023-.pdf; updated August 2023; search excerpt) lists 202-434-2140 instead."
+      }
+    ]
+  }
 ]

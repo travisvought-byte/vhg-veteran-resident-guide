@@ -85,7 +85,9 @@ for(const s of registry){
  assert(!/\b1 counties\b/.test(coverage),s.code+' coverage sentence');
  if(single){
   assert(digits(d.getElementById('county-panel').textContent).includes(digits(rows[0].phone)),s.code+' statewide veterans phone shows without choosing a county');
-  assert(coverage.includes('statewide referral routes'),s.code+' starter coverage sentence');
+  // A starter edition says its local offices are not listed yet; a full edition with one locality (D.C.) names it instead.
+  if(s.starter)assert(coverage.includes('statewide referral routes'),s.code+' starter coverage sentence');
+  else assert(coverage.includes('referral routes for '+rows[0].county)&&!coverage.includes('not listed yet'),s.code+' single-locality coverage sentence');
  }
  // The footer date is the newest review of this state's own veterans office contacts.
  const dates=rows.map(c=>c.reviewed_on).filter(v=>/^\d{4}-\d{2}-\d{2}$/.test(v||'')).sort();
