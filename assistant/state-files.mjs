@@ -47,7 +47,8 @@ export const STATES=Object.freeze({
   "DC": "District of Columbia",
   "MT": "Montana",
   "AK": "Alaska",
-  "ND": "North Dakota"
+  "ND": "North Dakota",
+  "IA": "Iowa"
 });
 export const STATE_FILES=Object.freeze({
   "OH": [
@@ -237,6 +238,10 @@ export const STATE_FILES=Object.freeze({
   "ND": [
     "data/public/north-dakota-resources.json",
     "data/public/north-dakota-county-veterans-offices.json"
+  ],
+  "IA": [
+    "data/public/iowa-resources.json",
+    "data/public/iowa-county-veterans-offices.json"
   ]
 });
 export const localityLabel=row=>row?(["independent_city","statewide","borough","census_area","city_and_county"].includes(row.county_type)?row.county:row.county+(row.county_type==="parish"?" Parish":" County")):"";

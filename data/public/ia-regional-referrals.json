@@ -1,80 +1,495 @@
 [
- {
-  "program_id": "ia-aging",
-  "name": "Local aging help in Iowa (Eldercare Locator)",
-  "official_url": "https://eldercare.acl.gov/home",
-  "organization": "U.S. Administration for Community Living",
-  "service_area": [
-   "All Iowa counties"
-  ],
-  "state": "IA",
-  "needs_supported": [
-   "general_navigation",
-   "help_at_home"
-  ],
-  "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-  "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
-  "constraints": [
-   "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "ia-aaa-elderbridge",
+    "name": "Elderbridge Agency on Aging",
+    "organization": "Elderbridge Agency on Aging (area Area 1)",
+    "official_url": "https://hhs.iowa.gov/media/13553/download",
+    "state": "IA",
+    "service_area": [
+      "Audubon",
+      "Buena Vista",
+      "Calhoun",
+      "Carroll",
+      "Cerro Gordo",
+      "Clay",
+      "Crawford",
+      "Dickinson",
+      "Emmet",
+      "Floyd",
+      "Franklin",
+      "Greene",
+      "Guthrie",
+      "Hamilton",
+      "Hancock",
+      "Humboldt",
+      "Kossuth",
+      "Lyon",
+      "Mitchell",
+      "O'Brien",
+      "Osceola",
+      "Palo Alto",
+      "Pocahontas",
+      "Sac",
+      "Sioux",
+      "Webster",
+      "Winnebago",
+      "Worth",
+      "Wright"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Iowa’s six Area Agencies on Aging help adults 60 and older, people with disabilities and caregivers find help at home, meals, caregiver support, elder abuse prevention and options counseling.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. LifeLong Links, 866-468-7887, also connects callers to their Area Agency on Aging. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Offices in Mason City, Carroll, Fort Dodge and Spencer."
+    ],
+    "public_contact": {
+      "phone": "800-243-0678",
+      "phone_label": "Area Agency on Aging, area Area 1"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://hhs.iowa.gov/media/13553/download",
+      "phone_source_url": "https://hhs.iowa.gov/media/13553/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://hhs.iowa.gov/media/13553/download",
+        "title": "Iowa HHS: SFY 2025 Area Agency on Aging Plan Update Synopsis (Iowa Commission on Aging, June 10, 2025)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each Area Agency on Aging’s counties, toll-free phone and offices; read in full. Prepared for the Iowa Commission on Aging meeting of June 10, 2025. LifeLong Links, 866-468-7887, connects callers to the right Area Agency on Aging (Iowa Attorney General, https://www.iowaattorneygeneral.gov/for-consumers/for-older-iowans/report-prevent-elder-abuse; search excerpt)."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "ia-aaa-nei3a",
+    "name": "Northeast Iowa Area Agency on Aging",
+    "organization": "Northeast Iowa Area Agency on Aging (area Area 2)",
+    "official_url": "https://hhs.iowa.gov/media/13553/download",
+    "state": "IA",
+    "service_area": [
+      "Allamakee",
+      "Black Hawk",
+      "Bremer",
+      "Buchanan",
+      "Butler",
+      "Chickasaw",
+      "Clayton",
+      "Delaware",
+      "Dubuque",
+      "Fayette",
+      "Grundy",
+      "Hardin",
+      "Howard",
+      "Jackson",
+      "Marshall",
+      "Poweshiek",
+      "Tama",
+      "Winneshiek"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Iowa’s six Area Agencies on Aging help adults 60 and older, people with disabilities and caregivers find help at home, meals, caregiver support, elder abuse prevention and options counseling.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. LifeLong Links, 866-468-7887, also connects callers to their Area Agency on Aging. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Offices in Waterloo, Dubuque and Decorah."
+    ],
+    "public_contact": {
+      "phone": "800-779-8707",
+      "phone_label": "Area Agency on Aging, area Area 2"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://hhs.iowa.gov/media/13553/download",
+      "phone_source_url": "https://hhs.iowa.gov/media/13553/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://hhs.iowa.gov/media/13553/download",
+        "title": "Iowa HHS: SFY 2025 Area Agency on Aging Plan Update Synopsis (Iowa Commission on Aging, June 10, 2025)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each Area Agency on Aging’s counties, toll-free phone and offices; read in full. Prepared for the Iowa Commission on Aging meeting of June 10, 2025. LifeLong Links, 866-468-7887, connects callers to the right Area Agency on Aging (Iowa Attorney General, https://www.iowaattorneygeneral.gov/for-consumers/for-older-iowans/report-prevent-elder-abuse; search excerpt)."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.acl.gov/contact"
+  {
+    "program_id": "ia-aaa-arci",
+    "name": "Aging Resources of Central Iowa",
+    "organization": "Aging Resources of Central Iowa (area Area 3)",
+    "official_url": "https://hhs.iowa.gov/media/13553/download",
+    "state": "IA",
+    "service_area": [
+      "Boone",
+      "Dallas",
+      "Jasper",
+      "Madison",
+      "Marion",
+      "Polk",
+      "Story",
+      "Warren"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Iowa’s six Area Agencies on Aging help adults 60 and older, people with disabilities and caregivers find help at home, meals, caregiver support, elder abuse prevention and options counseling.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. LifeLong Links, 866-468-7887, also connects callers to their Area Agency on Aging. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: Grand Avenue, Des Moines."
+    ],
+    "public_contact": {
+      "phone": "800-747-5352",
+      "phone_label": "Area Agency on Aging, area Area 3"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://hhs.iowa.gov/media/13553/download",
+      "phone_source_url": "https://hhs.iowa.gov/media/13553/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://hhs.iowa.gov/media/13553/download",
+        "title": "Iowa HHS: SFY 2025 Area Agency on Aging Plan Update Synopsis (Iowa Commission on Aging, June 10, 2025)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each Area Agency on Aging’s counties, toll-free phone and offices; read in full. Prepared for the Iowa Commission on Aging meeting of June 10, 2025. LifeLong Links, 866-468-7887, connects callers to the right Area Agency on Aging (Iowa Attorney General, https://www.iowaattorneygeneral.gov/for-consumers/for-older-iowans/report-prevent-elder-abuse; search excerpt)."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.acl.gov/contact",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "aging_agency"
- },
- {
-  "program_id": "ia-ombudsman",
-  "name": "Iowa long-term-care ombudsman",
-  "official_url": "https://theconsumervoice.org/get_help",
-  "organization": "National Long-Term Care Ombudsman Resource Center",
-  "service_area": [
-   "All Iowa counties"
-  ],
-  "state": "IA",
-  "needs_supported": [
-   "resident_rights",
-   "general_navigation"
-  ],
-  "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-  "next_step": "Use the locator to find the Iowa program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
-  "constraints": [
-   "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "ia-aaa-heritage",
+    "name": "Heritage Area Agency on Aging",
+    "organization": "Heritage Area Agency on Aging (area Area 4)",
+    "official_url": "https://hhs.iowa.gov/media/13553/download",
+    "state": "IA",
+    "service_area": [
+      "Benton",
+      "Cedar",
+      "Iowa",
+      "Johnson",
+      "Jones",
+      "Linn",
+      "Washington"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Iowa’s six Area Agencies on Aging help adults 60 and older, people with disabilities and caregivers find help at home, meals, caregiver support, elder abuse prevention and options counseling.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. LifeLong Links, 866-468-7887, also connects callers to their Area Agency on Aging. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 6301 Kirkwood Blvd. SW, Cedar Rapids."
+    ],
+    "public_contact": {
+      "phone": "800-332-5934",
+      "phone_label": "Area Agency on Aging, area Area 4"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://hhs.iowa.gov/media/13553/download",
+      "phone_source_url": "https://hhs.iowa.gov/media/13553/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://hhs.iowa.gov/media/13553/download",
+        "title": "Iowa HHS: SFY 2025 Area Agency on Aging Plan Update Synopsis (Iowa Commission on Aging, June 10, 2025)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each Area Agency on Aging’s counties, toll-free phone and offices; read in full. Prepared for the Iowa Commission on Aging meeting of June 10, 2025. LifeLong Links, 866-468-7887, connects callers to the right Area Agency on Aging (Iowa Attorney General, https://www.iowaattorneygeneral.gov/for-consumers/for-older-iowans/report-prevent-elder-abuse; search excerpt)."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "ia-aaa-milestones",
+    "name": "Milestones Area Agency on Aging",
+    "organization": "Milestones Area Agency on Aging (area Area 5)",
+    "official_url": "https://hhs.iowa.gov/media/13553/download",
+    "state": "IA",
+    "service_area": [
+      "Appanoose",
+      "Clinton",
+      "Davis",
+      "Des Moines",
+      "Henry",
+      "Jefferson",
+      "Keokuk",
+      "Lee",
+      "Louisa",
+      "Lucas",
+      "Mahaska",
+      "Monroe",
+      "Muscatine",
+      "Scott",
+      "Van Buren",
+      "Wapello",
+      "Wayne"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Iowa’s six Area Agencies on Aging help adults 60 and older, people with disabilities and caregivers find help at home, meals, caregiver support, elder abuse prevention and options counseling.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. LifeLong Links, 866-468-7887, also connects callers to their Area Agency on Aging. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Offices in Davenport, Ottumwa and Burlington."
+    ],
+    "public_contact": {
+      "phone": "855-410-6222",
+      "phone_label": "Area Agency on Aging, area Area 5"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://hhs.iowa.gov/media/13553/download",
+      "phone_source_url": "https://hhs.iowa.gov/media/13553/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://hhs.iowa.gov/media/13553/download",
+        "title": "Iowa HHS: SFY 2025 Area Agency on Aging Plan Update Synopsis (Iowa Commission on Aging, June 10, 2025)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each Area Agency on Aging’s counties, toll-free phone and offices; read in full. Prepared for the Iowa Commission on Aging meeting of June 10, 2025. LifeLong Links, 866-468-7887, connects callers to the right Area Agency on Aging (Iowa Attorney General, https://www.iowaattorneygeneral.gov/for-consumers/for-older-iowans/report-prevent-elder-abuse; search excerpt)."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
+  {
+    "program_id": "ia-aaa-connections",
+    "name": "Connections Area Agency on Aging",
+    "organization": "Connections Area Agency on Aging (area Area 6)",
+    "official_url": "https://hhs.iowa.gov/media/13553/download",
+    "state": "IA",
+    "service_area": [
+      "Adair",
+      "Adams",
+      "Cass",
+      "Cherokee",
+      "Clarke",
+      "Decatur",
+      "Fremont",
+      "Harrison",
+      "Ida",
+      "Mills",
+      "Monona",
+      "Montgomery",
+      "Page",
+      "Plymouth",
+      "Pottawattamie",
+      "Ringgold",
+      "Shelby",
+      "Taylor",
+      "Union",
+      "Woodbury"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Iowa’s six Area Agencies on Aging help adults 60 and older, people with disabilities and caregivers find help at home, meals, caregiver support, elder abuse prevention and options counseling.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. LifeLong Links, 866-468-7887, also connects callers to their Area Agency on Aging. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Offices in Council Bluffs, Creston and Sioux City.",
+      "The synopsis prints “ADS” in this list; Ida County is the one county otherwise unassigned."
+    ],
+    "public_contact": {
+      "phone": "800-432-9209",
+      "phone_label": "Area Agency on Aging, area Area 6"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://hhs.iowa.gov/media/13553/download",
+      "phone_source_url": "https://hhs.iowa.gov/media/13553/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://hhs.iowa.gov/media/13553/download",
+        "title": "Iowa HHS: SFY 2025 Area Agency on Aging Plan Update Synopsis (Iowa Commission on Aging, June 10, 2025)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each Area Agency on Aging’s counties, toll-free phone and offices; read in full. Prepared for the Iowa Commission on Aging meeting of June 10, 2025. LifeLong Links, 866-468-7887, connects callers to the right Area Agency on Aging (Iowa Attorney General, https://www.iowaattorneygeneral.gov/for-consumers/for-older-iowans/report-prevent-elder-abuse; search excerpt)."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "ombudsman"
- }
+  {
+    "program_id": "ia-omb-state",
+    "name": "Iowa Office of the State Long-Term Care Ombudsman",
+    "organization": "Iowa Office of the State Long-Term Care Ombudsman",
+    "official_url": "https://hhs.iowa.gov/health-prevention/aging-services/ltcombudsman",
+    "state": "IA",
+    "service_area": [
+      "Adair",
+      "Adams",
+      "Allamakee",
+      "Appanoose",
+      "Audubon",
+      "Benton",
+      "Black Hawk",
+      "Boone",
+      "Bremer",
+      "Buchanan",
+      "Buena Vista",
+      "Butler",
+      "Calhoun",
+      "Carroll",
+      "Cass",
+      "Cedar",
+      "Cerro Gordo",
+      "Cherokee",
+      "Chickasaw",
+      "Clarke",
+      "Clay",
+      "Clayton",
+      "Clinton",
+      "Crawford",
+      "Dallas",
+      "Davis",
+      "Decatur",
+      "Delaware",
+      "Des Moines",
+      "Dickinson",
+      "Dubuque",
+      "Emmet",
+      "Fayette",
+      "Floyd",
+      "Franklin",
+      "Fremont",
+      "Greene",
+      "Grundy",
+      "Guthrie",
+      "Hamilton",
+      "Hancock",
+      "Hardin",
+      "Harrison",
+      "Henry",
+      "Howard",
+      "Humboldt",
+      "Ida",
+      "Iowa",
+      "Jackson",
+      "Jasper",
+      "Jefferson",
+      "Johnson",
+      "Jones",
+      "Keokuk",
+      "Kossuth",
+      "Lee",
+      "Linn",
+      "Louisa",
+      "Lucas",
+      "Lyon",
+      "Madison",
+      "Mahaska",
+      "Marion",
+      "Marshall",
+      "Mills",
+      "Mitchell",
+      "Monona",
+      "Monroe",
+      "Montgomery",
+      "Muscatine",
+      "O'Brien",
+      "Osceola",
+      "Page",
+      "Palo Alto",
+      "Plymouth",
+      "Pocahontas",
+      "Polk",
+      "Pottawattamie",
+      "Poweshiek",
+      "Ringgold",
+      "Sac",
+      "Scott",
+      "Shelby",
+      "Sioux",
+      "Story",
+      "Tama",
+      "Taylor",
+      "Union",
+      "Van Buren",
+      "Wapello",
+      "Warren",
+      "Washington",
+      "Wayne",
+      "Webster",
+      "Winnebago",
+      "Winneshiek",
+      "Woodbury",
+      "Worth",
+      "Wright"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "The same toll-free number reaches your local long-term care ombudsman."
+    ],
+    "public_contact": {
+      "phone": "866-236-1430",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://hhs.iowa.gov/health-prevention/aging-services/ltcombudsman",
+      "phone_source_url": "https://hhs.iowa.gov/health-prevention/aging-services/ltcombudsman"
+    },
+    "source_evidence": [
+      {
+        "url": "https://hhs.iowa.gov/health-prevention/aging-services/ltcombudsman",
+        "title": "Iowa HHS: Office of the State Long-Term Care Ombudsman",
+        "reviewed_on": "2026-11-16",
+        "scope": "Toll-free 866-236-1430 for the state office and local ombudsmen; 321 E. 12th St., 2nd Floor, Des Moines; read in full. Last updated September 30, 2026. Local ombudsmen are shown only on a map image, so every county shows the toll-free line."
+      }
+    ]
+  }
 ]
