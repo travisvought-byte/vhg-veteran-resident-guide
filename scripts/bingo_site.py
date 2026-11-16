@@ -10,6 +10,7 @@ printed posters and QR codes keep working.
 import json
 import re
 from instant_bingo import instant_page
+from findbingo_site import STATE_PAGES
 from html import escape
 
 SITE = 'https://www.findbingo.org/ohio'
@@ -265,6 +266,8 @@ def make_bingo_site(root, finder_page):
         'bingo-site/findbingo/robots.txt': f'User-agent: *\nAllow: /\n\nSitemap: {national}/sitemap.xml\n',
         'bingo-site/findbingo/sitemap.xml': ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                                              + f'  <url><loc>{national}/</loc></url>\n'
+                                             # One page per state, built by findbingo_site.py.
+                                             + ''.join(f'  <url><loc>{national}/{p}</loc></url>\n' for p in STATE_PAGES)
                                              + ''.join(f'  <url><loc>{SITE}/{p}</loc></url>\n' for p in ('',) + PAGES)
                                              + '</urlset>\n'),
         # Served by GitHub Pages at the retired address: every old page forwards to its new home.

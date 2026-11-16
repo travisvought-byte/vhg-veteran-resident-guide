@@ -19,7 +19,7 @@ Started November 15, 2026, at Travis's direction: one national finder, neighbori
 | ZIP code points the centroid file lacks | `data/public/zip-points-supplement.json` |
 | Page template | `templates/findbingo/index.html` |
 | Generator and validation | `scripts/findbingo_site.py` (run by `scripts/build_public.py`) |
-| Generated site | `findbingo-site/index.html`, `data.json`, `zips.json` |
+| Generated site | `findbingo-site/index.html`, `data.json`, `zips.json`, and one page per state (`michigan/index.html` and so on) |
 | Tests | `tests/findbingo.cjs` (part of `npm test`) |
 
 `findbingo-site/index.html` is the whole page; it loads `data.json` and `zips.json` from beside
@@ -32,6 +32,20 @@ https://guide.vethomeguard.org/findbingo-site/. Upload `index.html` to Wix again
 only when the page itself changes. Because the Wix page reads the lists from `main`, a page change
 that needs new data (a new state, for example) shows only after its pull request merges; until then
 the page hides state buttons the loaded data does not have.
+
+**State pages (added November 16, 2026).** The finder draws its lists with JavaScript, so search engines
+saw one page with no listings. Each covered state (except Ohio, whose page is the Ohio finder at /ohio/) now
+also has a plain page, for example https://www.findbingo.org/michigan/, with its own title, description,
+canonical address and heading, a ZIP search box that opens the finder, and every listing written out as
+HTML by county with "Jump to your county" links. Indiana's page lists licenses current on the lists' date.
+The home page's state buttons link to these pages (with the lists loaded, the finder still shows the state
+in place), they are in `sitemap.xml`, and short addresses such as findbingo.org/mi or /FL forward to them
+(`_redirects`). The home page carries WebSite markup naming Veteran Home Guardians as publisher; state
+pages carry breadcrumb markup. There is no Event markup, because the lists hold weekly schedules, not
+dated events.
+
+**No counts.** Travis's rule (November 16, 2026): never state how many halls, places, groups or counties
+are listed, anywhere on the site. `tests/findbingo.cjs` checks the state pages and the finder's wording.
 
 Ohio data is not copied into the national page. Ohio searches hand off to https://www.findbingo.org/ohio/
 with the same ZIP code and distance, so Ohio has one source of truth.

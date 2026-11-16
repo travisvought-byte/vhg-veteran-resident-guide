@@ -68,7 +68,7 @@ footer{max-width:1120px;margin:0 auto;padding:10px 18px 40px;font-size:16px}foot
 <p id="change-search" hidden><a href="#zip-form">Change ZIP code or distance</a></p>
 <p id="more-note"></p>
 <div id="results"></div>
-<noscript><p class="empty">This finder needs JavaScript. You can <a href="https://guide.vethomeguard.org/findbingo-site/data.json">read the bingo list as data</a>, or <a href="https://www.ohiobingo.org/">use Ohio Bingo</a>.</p></noscript>
+<noscript><p class="empty">The ZIP code search needs JavaScript. You can still pick your state above to see its whole bingo list, by county.</p></noscript>
 <section class="panel" id="run-a-game" aria-labelledby="run-title"><h2 id="run-title">Run a bingo game? Get it listed free</h2>
 <p>Send us the name of your hall, the address, the days and the time the first game starts. A phone number for players helps too. Listing is free, and we never sell or share your information.</p>
 <div class="big-actions"><a class="solid" href="mailto:travis@vethomeguard.org?subject=Bingo%20game%20times%20for%20FindBingo.org&amp;body=Hall%20or%20group%20name%3A%0AAddress%3A%0ADays%20and%20first%20game%20time%3A%0APhone%20for%20players%3A%0AWebsite%20or%20Facebook%20page%3A%0A">Email your game times</a></div>
@@ -77,7 +77,8 @@ footer{max-width:1120px;margin:0 auto;padding:10px 18px 40px;font-size:16px}foot
 <p>Game days and hours can change, especially around holidays. Call ahead before you go, and ask about parking, steps and seating if that matters for you.</p></section>
 </main>
 <footer><p>FindBingo.org is a free community resource from <a href="https://www.vethomeguard.org/">Veteran Home Guardians</a>. Listings are free and never depend on donations or advertising.</p>
-<p class="noprint">Questions or corrections: <a href="mailto:travis@vethomeguard.org?subject=FindBingo.org">travis@vethomeguard.org</a> · <a href="https://www.ohiobingo.org/">Ohio Bingo</a> · <a href="https://guide.vethomeguard.org/findbingo-site/data.json">Download the bingo data</a></p>
+<p class="noprint">Need help getting to the game? <a href="https://mobilitytalk.org/states/">Mobility Talk</a> lists mobility and disability resources in every state.</p>
+<p class="noprint">Questions or corrections: <a href="mailto:travis@vethomeguard.org?subject=FindBingo.org">travis@vethomeguard.org</a> · <a href="https://www.ohiobingo.org/">Ohio Bingo</a> · <a href="https://guide.vethomeguard.org/findbingo-site/data.json">Download the bingo data</a> · Made by <a href="https://travisvought.com/">Travis Vought</a></p>
 <p class="noprint">ZIP code locations: <a href="https://www.geonames.org/">GeoNames</a> / <a href="https://github.com/midwire/free_zipcode_data">Midwire</a> (<a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>). Lists updated __UPDATED__.</p></footer>
 <script>
 // The lists load from the guide's GitHub Pages site, so merged updates reach every copy of this page.
@@ -148,19 +149,19 @@ function render(){const today=todayISO(),day=$('day').value,radius=Number($('rad
   const v=withDistance(venues,origin,radius),l=withDistance(licensed,origin,radius),showL=showMore||!v.length;more=v.length?l.length:0;
   const helpCodes=Object.keys(near).filter(c=>c==='OH'||(STATES[c]&&['none','starter'].includes(STATES[c].coverage))).sort((a,b)=>near[a]-near[b]);
   const help=helpCodes.length?group(helpCodes.length===1&&helpCodes[0]==='OH'?'Ohio bingo':'More bingo help for this area',helpCodes.map(c=>c==='OH'?ohioCard(activeZip,radius):noListCard(c))):'';
-  const found=group('Bingo with game days ('+v.length+')',v.map(x=>venueCard(x,today,day)))+(showL?group('Licensed for bingo, game days not posted ('+l.length+')',l.map(x=>licensedCard(x,today))):'');
+  const found=group('Bingo with game days',v.map(x=>venueCard(x,today,day)))+(showL?group('Licensed for bingo, game days not posted',l.map(x=>licensedCard(x,today))):'');
   count=v.length||l.length?'Bingo within '+radius+' miles of '+activeZip+' · closest first':near.OH!=null?'Bingo near '+activeZip+' is on the Ohio bingo finder':'No bingo games listed yet within '+radius+' miles of '+activeZip+(day?' on that day':'')+'.';
   const homeFirst=home&&helpCodes[0]===home&&(STATES[home].coverage!=='starter'||!v.length);
   html=(near.MI!=null?pendingNote('MI'):'')+((homeFirst?help+found:found+help)||'<p class="empty">Try a larger distance'+(day?' or any day':'')+'. Or <a href="#run-a-game">tell us about a game</a> near you.</p>');
  }else if(activeState){const s=STATES[activeState];fillCounties(activeState);const inCounty=r=>!county||r.county===county;
-  if(['times','starter'].includes(s.coverage)){const v=venues.filter(x=>x.state===activeState&&inCounty(x)).sort((a,b)=>a.county.localeCompare(b.county)||a.city.localeCompare(b.city)||a.name.localeCompare(b.name));const what=s.coverage==='times'?(v.length===1?'hall':'halls'):(v.length===1?'place':'places');count=v.length+' '+s.name+' bingo '+what+' with game days'+(county?' in '+county+' County':'')+(day?' on that day':'');html=pendingNote(activeState)+(group(s.name+' bingo',v.map(x=>venueCard(x,today,day)))||'<p class="empty">No games match. Try any day or all counties.</p>')+(s.coverage==='starter'?group('Help grow this list',[noListCard(activeState)]):'')}
-  else if(activeState==='IN'){const l=licensed.filter(x=>x.state==='IN'&&inCounty(x)).sort((a,b)=>a.county.localeCompare(b.county)||a.city.localeCompare(b.city)||a.name.localeCompare(b.name));count=l.length+' Indiana '+(l.length===1?'group':'groups')+' licensed for bingo'+(county?' in '+county+' County':'');html='<p class="note">'+esc(s.license_note)+'</p>'+group('Indiana bingo licenses',l.map(x=>licensedCard(x,today)))}
+  if(['times','starter'].includes(s.coverage)){const v=venues.filter(x=>x.state===activeState&&inCounty(x)).sort((a,b)=>a.county.localeCompare(b.county)||a.city.localeCompare(b.city)||a.name.localeCompare(b.name));count=s.name+' bingo '+(s.coverage==='times'?'halls':'places')+' with game days'+(county?' in '+county+' County':'')+(day?' on that day':'');html=pendingNote(activeState)+(group(s.name+' bingo',v.map(x=>venueCard(x,today,day)))||'<p class="empty">No games match. Try any day or all counties.</p>')+(s.coverage==='starter'?group('Help grow this list',[noListCard(activeState)]):'')}
+  else if(activeState==='IN'){const l=licensed.filter(x=>x.state==='IN'&&inCounty(x)).sort((a,b)=>a.county.localeCompare(b.county)||a.city.localeCompare(b.city)||a.name.localeCompare(b.name));count='Indiana groups licensed for bingo'+(county?' in '+county+' County':'');html='<p class="note">'+esc(s.license_note)+'</p>'+group('Indiana bingo licenses',l.map(x=>licensedCard(x,today)))}
   else if(activeState==='OH'){count='Ohio has its own bingo finder';html=group('Ohio bingo',[ohioCard('',25)])}
   else{count=s.name+': no game list yet';html=group(s.name,[noListCard(activeState)])}
  }else{count='Type your ZIP code above, or pick a state.';}
  if(!activeState||activeZip)$('county-wrap').hidden=true;
  $('count').textContent=count;$('results').innerHTML=html;
- $('more-note').innerHTML=activeZip&&more?(showMore?'<button type="button" data-more="0">Hide groups without game days</button>':'Plus '+more+' more '+(more===1?'group':'groups')+' licensed for bingo nearby that '+(more===1?'hasn&rsquo;t':'haven&rsquo;t')+' posted game days. <button type="button" data-more="1">Show them too</button>'):'';
+ $('more-note').innerHTML=activeZip&&more?(showMore?'<button type="button" data-more="0">Hide groups without game days</button>':'Some groups licensed for bingo nearby haven&rsquo;t posted game days. <button type="button" data-more="1">Show them too</button>'):'';
  const u=new URL(location.href);u.search='';if(activeZip){u.searchParams.set('zip',activeZip);u.searchParams.set('radius',String(radius))}else if(activeState){u.searchParams.set('state',activeState);if(county)u.searchParams.set('county',county)}if(day)u.searchParams.set('day',day);if(showMore)u.searchParams.set('all','1');try{history.replaceState(null,'',u)}catch(e){}}
 function zipMessage(zip){return /^[0-9]{5}$/.test(zip)?'We could not find ZIP code '+zip+' in the states we cover so far: '+DATA.states.map(x=>x.name).join(', ')+'. Please check the five numbers.':'Please type the five numbers of your ZIP code, for example 48161.'}
 function setStatus(msg,bad){const s=$('zip-status');s.textContent=msg;s.classList.toggle('bad',!!bad)}
