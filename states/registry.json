@@ -1218,6 +1218,36 @@
     ]
   },
   {
+    "code": "CT",
+    "name": "Connecticut",
+    "page": "ct.html",
+    "share_page": "share-ct.html",
+    "qr": "assets/guide-qr-ct.svg",
+    "counties": 8,
+    "programs": "data/public/ct-programs.json",
+    "referrals": "data/public/ct-regional-referrals.json",
+    "offices": "data/public/connecticut-county-veterans-offices.json",
+    "resources": "data/public/connecticut-resources.json",
+    "statewide_area_names": [],
+    "coverage_scope": "Referral edition. All eight counties show the state veterans district office and Area Agency on Aging that serve most of their towns, with town exceptions named, the statewide long-term care ombudsman and at least one Center for Independent Living.",
+    "coverage_note": "District offices come from the Connecticut Department of Veterans Affairs. Area Agencies on Aging come from the Department of Aging and Disability Services. Centers for Independent Living come from the ILRU national directory. Reviewed November 16, 2026. Contacts are not telephone-confirmed.",
+    "share_description": "state veterans district offices, Area Agencies on Aging and long-term care ombudsman help across Connecticut",
+    "share_replacements": [
+      [
+        "Updated October 8, 2026",
+        "Updated November 16, 2026"
+      ],
+      [
+        "county veterans offices, benefits and care referrals",
+        "state veterans district offices, benefits and care referrals"
+      ],
+      [
+        "County veterans offices",
+        "State veterans district offices"
+      ]
+    ]
+  },
+  {
     "code": "AR",
     "name": "Arkansas",
     "starter": true,
@@ -1234,26 +1264,6 @@
     ],
     "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
     "coverage_note": "Starter edition. Every county uses the Arkansas Department of Veterans Affairs and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
-    "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
-    "share_replacements": []
-  },
-  {
-    "code": "CT",
-    "name": "Connecticut",
-    "starter": true,
-    "page": "ct.html",
-    "share_page": "share-ct.html",
-    "qr": "assets/guide-qr-ct.svg",
-    "counties": 1,
-    "programs": "data/public/ct-programs.json",
-    "referrals": "data/public/ct-regional-referrals.json",
-    "offices": "data/public/connecticut-county-veterans-offices.json",
-    "resources": "data/public/connecticut-resources.json",
-    "statewide_area_names": [
-      "All Connecticut counties"
-    ],
-    "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
-    "coverage_note": "Starter edition. Every county uses the Connecticut Department of Veterans Affairs, Office of Advocacy and Assistance and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
     "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
     "share_replacements": []
   },
