@@ -19,6 +19,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 # A state's "review" field says how its veterans contact was checked: "page" means the agency's own
 # page was opened and read; anything else means it was matched through search excerpts of that page.
+# A state's own "reviewed_on" is the day its veterans agency page was last read; without one the file's date applies.
 STATUS = {'page': 'official_source_reviewed'}
 METHOD = {'page': 'full_official_page_text'}
 
@@ -164,7 +165,7 @@ def main():
         programs = [
             record(ids[0], s, name + ' veterans: accredited claims help', s['agency'], s['url'], s['phone'],
                    ['general_navigation', 'benefits_and_funding'], 'Free help with VA claims, applications and appeals for veterans and families.',
-                   'Call the state veterans agency; ask for a benefits review and the office that serves your county.', reviewed, s['url'], area=area, review=s.get('review')),
+                   'Call the state veterans agency; ask for a benefits review and the office that serves your county.', s.get('reviewed_on', reviewed), s['url'], area=area, review=s.get('review')),
             record(ids[1], s, 'Medicare counseling (SHIP) for ' + name, nat['ship']['organization'], nat['ship']['url'], nat['ship']['phone'],
                    ['benefits_and_funding'], 'Free, unbiased Medicare counseling from the State Health Insurance Assistance Program.',
                    'Call or use the locator to reach the ' + name + ' SHIP and ask for a counseling appointment.', reviewed, nat['ship']['source'], area=area)]
