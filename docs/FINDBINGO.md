@@ -1,8 +1,8 @@
 # FindBingo.org
 
 FindBingo.org is the multi-state bingo finder. Players type a ZIP code (or pick a state) and see
-bingo near them, closest first. It covers Michigan and Indiana with state data, sends Ohio players
-to the Ohio Bingo Finder, and tells Kentucky, West Virginia, Pennsylvania and Florida players plainly
+bingo near them, closest first. It covers Michigan and Indiana with state data, links Ohio to its own
+finder at findbingo.org/ohio/, and tells Kentucky, West Virginia, Pennsylvania and Florida players plainly
 that no public list exists yet, with a free way for halls to send game times.
 
 Started November 15, 2026, at Travis's direction: one national finder, neighboring states first.
@@ -31,8 +31,11 @@ only when the page itself changes. Because the Wix page reads the lists from `ma
 that needs new data (a new state, for example) shows only after its pull request merges; until then
 the page hides state buttons the loaded data does not have.
 
-Ohio data is not copied here. Ohio searches hand off to https://bingo.vethomeguard.org/ with the
-same ZIP code and distance, so Ohio has one source of truth.
+Ohio data is not copied into the findbingo lists. The Ohio finder is generated as its own page at
+findbingo.org/ohio/ from the same page that bingo.vethomeguard.org serves (`scripts/bingo_site.py`,
+through `standalone_finder`), with shared files loaded from bingo.vethomeguard.org. bingo.vethomeguard.org
+is unchanged and still live. Ohio searches on findbingo.org hand off to /ohio/ with the same ZIP code and
+distance.
 
 ## Sources and how they were read (November 15, 2026)
 

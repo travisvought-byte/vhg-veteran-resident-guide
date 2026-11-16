@@ -121,7 +121,7 @@ assert(p.cards.length > 0 && p.cards.every(id => data.venues.find(v => v.id === 
 // Ohio ZIP: hand off to the Ohio Bingo Finder first, then nearby Michigan games.
 p = await open('?zip=43604&radius=25');
 assert.equal(p.groups[0], 'Ohio bingo');
-assert.equal(p.d.querySelector('#state-OH a.solid').href, 'https://bingo.vethomeguard.org/?zip=43604&radius=25#count');
+assert.equal(p.d.querySelector('#state-OH a.solid').href, 'https://www.findbingo.org/ohio/?zip=43604&radius=25#count');
 assert(p.cards.some(id => id.startsWith('mi-')), 'Toledo searches include Monroe County, Michigan');
 p = await open('?zip=43334');
 assert.equal(p.count, 'Bingo near 43334 is on the Ohio bingo finder');
@@ -198,7 +198,7 @@ p = await open('?state=IN');
 assert.equal(p.count, data.licensed.length + ' Indiana groups licensed for bingo');
 p = await open('?state=OH');
 assert.deepEqual(p.cards, ['state-OH']);
-assert.equal(p.d.querySelector('#state-OH a.solid').href, 'https://bingo.vethomeguard.org/');
+assert.equal(p.d.querySelector('#state-OH a.solid').href, 'https://www.findbingo.org/ohio/');
 p = await open('?state=WV');
 assert.deepEqual(p.cards, ['state-WV']);
 

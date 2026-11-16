@@ -10,6 +10,7 @@ centroids. Do not edit these files by hand; run `python3 scripts/build_public.py
 - `data.json` (the lists) and `zips.json` (ZIP code points for the covered states) are loaded by the
   page from https://guide.vethomeguard.org/findbingo-site/, so list updates reach findbingo.org as soon
   as a pull request merges.
-- Ohio games stay on the Ohio Bingo Finder at https://bingo.vethomeguard.org/.
+- Ohio games are on the Ohio finder at https://www.findbingo.org/ohio/, generated from the same page as
+  https://bingo.vethomeguard.org/ (which is unchanged). Its data comes from the same records.
 
 Lists updated November 15, 2026.
