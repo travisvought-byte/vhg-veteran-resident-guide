@@ -39,7 +39,8 @@ export const STATES=Object.freeze({
   "SD": "South Dakota",
   "NH": "New Hampshire",
   "ME": "Maine",
-  "HI": "Hawaii"
+  "HI": "Hawaii",
+  "DE": "Delaware"
 });
 export const STATE_FILES=Object.freeze({
   "OH": [
@@ -197,6 +198,10 @@ export const STATE_FILES=Object.freeze({
   "HI": [
     "data/public/hawaii-resources.json",
     "data/public/hawaii-county-veterans-offices.json"
+  ],
+  "DE": [
+    "data/public/delaware-resources.json",
+    "data/public/delaware-county-veterans-offices.json"
   ]
 });
 export const localityLabel=row=>row?(["independent_city","statewide"].includes(row.county_type)?row.county:row.county+(row.county_type==="parish"?" Parish":" County")):"";

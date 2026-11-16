@@ -964,6 +964,36 @@
     ]
   },
   {
+    "code": "DE",
+    "name": "Delaware",
+    "page": "de.html",
+    "share_page": "share-de.html",
+    "qr": "assets/guide-qr-de.svg",
+    "counties": 3,
+    "programs": "data/public/de-programs.json",
+    "referrals": "data/public/de-regional-referrals.json",
+    "offices": "data/public/delaware-county-veterans-offices.json",
+    "resources": "data/public/delaware-resources.json",
+    "statewide_area_names": [],
+    "coverage_scope": "Referral edition. All three counties show the Office of Veterans Services in Dover, the statewide Aging & Disability Resource Center, the statewide long-term care ombudsman and at least one Center for Independent Living.",
+    "coverage_note": "Veterans offices come from the Office of Veterans Services contact page. Aging help comes from the Division of Services for Aging and Adults with Physical Disabilities. Centers for Independent Living come from the ILRU national directory. Reviewed November 16, 2026. Contacts are not telephone-confirmed.",
+    "share_description": "state veterans offices, aging and disability help and long-term care ombudsman help across Delaware",
+    "share_replacements": [
+      [
+        "Updated October 8, 2026",
+        "Updated November 16, 2026"
+      ],
+      [
+        "county veterans offices, benefits and care referrals",
+        "state veterans offices, benefits and care referrals"
+      ],
+      [
+        "County veterans offices",
+        "state veterans offices"
+      ]
+    ]
+  },
+  {
     "code": "AK",
     "name": "Alaska",
     "starter": true,
@@ -1020,26 +1050,6 @@
     ],
     "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
     "coverage_note": "Starter edition. Every county uses the Connecticut Department of Veterans Affairs, Office of Advocacy and Assistance and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
-    "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
-    "share_replacements": []
-  },
-  {
-    "code": "DE",
-    "name": "Delaware",
-    "starter": true,
-    "page": "de.html",
-    "share_page": "share-de.html",
-    "qr": "assets/guide-qr-de.svg",
-    "counties": 1,
-    "programs": "data/public/de-programs.json",
-    "referrals": "data/public/de-regional-referrals.json",
-    "offices": "data/public/delaware-county-veterans-offices.json",
-    "resources": "data/public/delaware-resources.json",
-    "statewide_area_names": [
-      "All Delaware counties"
-    ],
-    "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
-    "coverage_note": "Starter edition. Every county uses the Delaware Office of Veterans Services and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
     "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
     "share_replacements": []
   },

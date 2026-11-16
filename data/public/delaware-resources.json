@@ -937,72 +937,396 @@
   },
   {
     "program_id": "de-claims",
-    "name": "Delaware veterans: accredited claims help",
-    "official_url": "https://vets.delaware.gov/contact-information/",
-    "organization": "Delaware Office of Veterans Services",
+    "name": "Delaware veterans: Office of Veterans Services for claims help",
+    "official_url": "https://vets.delaware.gov/contact",
+    "organization": "Delaware Department of State, Office of Veterans Services",
     "service_area": [
-      "All Delaware counties"
+      "statewide"
     ],
     "state": "DE",
     "needs_supported": [
       "general_navigation",
       "benefits_and_funding"
     ],
-    "description": "Free help with VA claims, applications and appeals for veterans and families.",
-    "next_step": "Call the state veterans agency; ask for a benefits review and the office that serves your county.",
-    "constraints": [],
+    "description": "Free help with VA claims, pension, survivor benefits and state veterans benefits from the Office of Veterans Services’ Veteran Service Officers. They work from the Dover headquarters and serve veterans in all three counties.",
+    "next_step": "Call 302-739-2792 or email dcva.vso@delaware.gov to reach a Veteran Service Officer.",
+    "constraints": [
+      "There is one service office for the state, in Dover; call before visiting."
+    ],
     "public_contact": {
-      "phone": "302-739-2792"
+      "phone": "302-739-2792",
+      "phone_label": "Delaware Office of Veterans Services (302-739-2792)"
     },
     "verification": {
-      "record_status": "official_search_extract_only",
-      "last_reviewed_on": "2026-11-02"
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
     },
     "evidence": {
-      "review_method": "official_search_excerpt",
+      "review_method": "full_official_page_text",
       "direct_agency_confirmation": false,
-      "phone_source_url": "https://vets.delaware.gov/contact-information/"
+      "phone_source_url": "https://vets.delaware.gov/contact"
     },
     "source_evidence": [
       {
-        "url": "https://vets.delaware.gov/contact-information/",
-        "title": "Official published source",
-        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+        "url": "https://vets.delaware.gov/contact",
+        "title": "Delaware Office of Veterans Services: Contact",
+        "reviewed_on": "2026-11-16",
+        "scope": "Office of Veterans Services address, phone and email; Veteran Service Officers reached through the Dover headquarters, serving all three counties; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "de-adrc",
+    "name": "Delaware Aging & Disability Resource Center",
+    "official_url": "https://dhss.delaware.gov/dsaapd/division-of-services-for-aging-and-adults-with-physical-disabilities/adrc/",
+    "organization": "Delaware Health and Social Services, Division of Services for Aging and Adults with Physical Disabilities",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "DE",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "One statewide line for information, referrals and guidance on aging, disability and caregiving services: help at home, meals, caregiver support, assistive devices and long-term care options. Military service is not required.",
+    "next_step": "Call 1-800-223-9074 (TDD only 302-424-7141) or email DelawareADRC@delaware.gov.",
+    "constraints": [
+      "Each program has its own eligibility and waitlist."
+    ],
+    "public_contact": {
+      "phone": "800-223-9074",
+      "phone_label": "Delaware Aging & Disability Resource Center (800-223-9074)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://dhss.delaware.gov/dsaapd/contact"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dhss.delaware.gov/dsaapd/contact",
+        "title": "Delaware Division of Services for Aging and Adults with Physical Disabilities: Contact",
+        "reviewed_on": "2026-11-16",
+        "scope": "ADRC phone, TDD line and email; read in full."
+      },
+      {
+        "url": "https://dhss.delaware.gov/dsaapd/division-of-services-for-aging-and-adults-with-physical-disabilities/adrc/",
+        "title": "Delaware DSAAPD: Aging and Disabilities Resource Center",
+        "reviewed_on": "2026-11-16",
+        "scope": "Operated by the division; serves people across the state whatever their income or where they live; search excerpt."
       }
     ]
   },
   {
     "program_id": "de-ship",
-    "name": "Medicare counseling (SHIP) for Delaware",
-    "official_url": "https://www.shiphelp.org/",
-    "organization": "SHIP Technical Assistance Center",
+    "name": "Medicare counseling (Delaware Medicare Assistance Bureau, SHIP)",
+    "official_url": "https://insurance.delaware.gov/consumer/dmab",
+    "organization": "Delaware Department of Insurance, Delaware Medicare Assistance Bureau (DMAB)",
     "service_area": [
-      "All Delaware counties"
+      "statewide"
     ],
     "state": "DE",
     "needs_supported": [
       "benefits_and_funding"
     ],
-    "description": "Free, unbiased Medicare counseling from the State Health Insurance Assistance Program.",
-    "next_step": "Call or use the locator to reach the Delaware SHIP and ask for a counseling appointment.",
-    "constraints": [],
+    "description": "Free health insurance counseling for people with Medicare, including those under 65, from trained volunteers: Medicare, Medicaid, Medigap, Part D and long-term care insurance questions. DMAB is Delaware’s State Health Insurance Assistance Program.",
+    "next_step": "Call 1-800-336-9500 or 302-674-7364 to set up a free counseling session at a site near you. For Medicare itself, call 800-MEDICARE (800-633-4227).",
+    "constraints": [
+      "Counseling is by appointment. Have your Medicare card and drug list ready."
+    ],
     "public_contact": {
-      "phone": "877-839-2675"
+      "phone": "800-336-9500",
+      "phone_label": "Delaware Medicare Assistance Bureau (800-336-9500)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://insurance.delaware.gov/consumer/dmab"
+    },
+    "source_evidence": [
+      {
+        "url": "https://insurance.delaware.gov/consumer/dmab",
+        "title": "Delaware Department of Insurance: Delaware Medicare Assistance Bureau",
+        "reviewed_on": "2026-11-16",
+        "scope": "Phones 1-800-336-9500 and 302-674-7364; free counseling with a trained volunteer at a site near you; read in full. Page modified November 6, 2026."
+      },
+      {
+        "url": "https://www.cms.gov/about-cms/contact/directory/delaware-medicare-assistance-bureau/1560871",
+        "title": "CMS contacts directory: Delaware Medicare Assistance Bureau",
+        "reviewed_on": "2026-11-16",
+        "scope": "Office at 1351 West North St., Suite 101, Dover; hours 8 a.m. to 4:30 p.m.; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "de-ombudsman",
+    "name": "Delaware Long-Term Care Ombudsman and adult abuse reporting",
+    "official_url": "https://dhss.delaware.gov/office-of-the-secretary/long-term-care-ombudsman-program/",
+    "organization": "Delaware Health and Social Services: Long-Term Care Ombudsman Program; Division of Services for Aging and Adults with Physical Disabilities, Adult Protective Services",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "DE",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "description": "Advocacy for residents of nursing facilities, assisted living and board and care homes, and for people receiving home and community-based services. Adult Protective Services takes reports of abuse, neglect or exploitation of older adults and adults with disabilities.",
+    "next_step": "Call the ombudsman hotline at 1-855-773-1002 (you can stay anonymous). To report abuse of an adult, call Adult Protective Services at 1-888-277-4302 (Delaware Relay: 711). For a nursing home or assisted living resident, you can also call the Division of Health Care Quality, 1-877-453-0012, 24/7. If someone is in immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing agency."
+    ],
+    "public_contact": {
+      "phone": "855-773-1002",
+      "phone_label": "Delaware Long-Term Care Ombudsman hotline (855-773-1002)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://dhss.delaware.gov/office-of-the-secretary/long-term-care-ombudsman-program/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dhss.delaware.gov/office-of-the-secretary/long-term-care-ombudsman-program/",
+        "title": "Delaware Health and Social Services: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-16",
+        "scope": "Hotline, email, who the program serves and how to file a complaint, including anonymously; read in full."
+      },
+      {
+        "url": "https://dhss.delaware.gov/dsaapd/contact",
+        "title": "Delaware Division of Services for Aging and Adults with Physical Disabilities: Contact",
+        "reviewed_on": "2026-11-16",
+        "scope": "Adult Protective Services 1-888-277-4302 (Relay 711); Division of Health Care Quality 1-877-453-0012, 24/7, for nursing home or assisted living residents; read in full."
+      },
+      {
+        "url": "https://dhss.delaware.gov/dsaapd/division-of-services-for-aging-and-adults-with-physical-disabilities/adult-protective-services/",
+        "title": "Delaware DSAAPD: Adult Protective Services",
+        "reviewed_on": "2026-11-16",
+        "scope": "If someone is in immediate danger, call 911; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "de-legal-programs",
+    "name": "Free legal help for older Delawareans",
+    "official_url": "https://www.declasi.org/?p=455",
+    "organization": "Community Legal Aid Society, Inc. (CLASI), Elder Law Program",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "DE",
+    "resource_role": "legal_aid",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation",
+      "housing"
+    ],
+    "description": "CLASI’s Elder Law Program gives free legal help to Delaware residents 60 and older, with no income test: powers of attorney, advance directives, fraud and financial exploitation, and consumer, housing and benefits problems. CLASI also serves people with low incomes and people with disabilities through its county offices.",
+    "next_step": "If you are 60 or older, call the Elder Law Program at 302-575-0666. Or contact your county office: New Castle 302-575-0660 (Wilmington), Kent 302-674-8500 (Dover), Sussex 302-856-0038 (Georgetown); weekdays, by phone or in person.",
+    "constraints": [
+      "The Elder Law Program does not do simple wills. CLASI does not take criminal or personal injury cases."
+    ],
+    "public_contact": {
+      "phone": "302-575-0666",
+      "phone_label": "CLASI Elder Law Program (302-575-0666)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.declasi.org/?p=455"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.declasi.org/?p=455",
+        "title": "Community Legal Aid Society, Inc.: Contact Us",
+        "reviewed_on": "2026-11-16",
+        "scope": "Office addresses, phones and hours for New Castle, Kent and Sussex counties and the Elder Law Program line; read in full."
+      },
+      {
+        "url": "https://declasi.org/?p=40",
+        "title": "Community Legal Aid Society, Inc.: Elder Law Program",
+        "reviewed_on": "2026-11-16",
+        "scope": "Anyone 60 or older is eligible; no financial eligibility requirements; no simple wills; search excerpt."
+      },
+      {
+        "url": "https://www.declasi.org/?p=529",
+        "title": "Community Legal Aid Society, Inc.: Elder Law",
+        "reviewed_on": "2026-11-16",
+        "scope": "Free legal help for residents 60 and older, including powers of attorney, advance health care directives, and fraud or financial abuse and exploitation; search excerpt."
+      },
+      {
+        "url": "https://dhss.delaware.gov/dsaapd/division-of-services-for-aging-and-adults-with-physical-disabilities/legal-services/",
+        "title": "Delaware DSAAPD: Legal Services",
+        "reviewed_on": "2026-11-16",
+        "scope": "Legal help for residents 60 and older with powers of attorney, advance directives, and consumer, housing and benefits issues; provided by CLASI’s Elder Law Program; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "de-vahealth-systems",
+    "name": "VA health care in Delaware",
+    "official_url": "https://www.va.gov/wilmington-health-care/contact-us/",
+    "organization": "U.S. Department of Veterans Affairs, VA Wilmington Healthcare System",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "DE",
+    "resource_role": "va_health_system",
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "Delaware veterans are served by the VA Wilmington Healthcare System: the Wilmington VA Medical Center (1601 Kirkwood Highway, Wilmington; 302-994-2511) and community clinics in Kent and Sussex counties. Vet Centers in Wilmington (302-994-1660) and Georgetown (302-225-9110) offer readjustment counseling.",
+    "next_step": "For primary care appointments, call 800-461-8262 and select 2, or 302-994-2511. Not enrolled yet? Ask a Veteran Service Officer for help applying.",
+    "constraints": [
+      "If a service you need is not offered near you, ask about travel benefits and community care."
+    ],
+    "public_contact": {
+      "phone": "302-994-2511",
+      "phone_label": "Wilmington VA Medical Center (302-994-2511)"
     },
     "verification": {
       "record_status": "official_search_extract_only",
-      "last_reviewed_on": "2026-11-02"
+      "last_reviewed_on": "2026-11-16"
     },
     "evidence": {
       "review_method": "official_search_excerpt",
       "direct_agency_confirmation": false,
-      "phone_source_url": "https://www.shiphelp.org/?p=317"
+      "phone_source_url": "https://www.va.gov/wilmington-health-care/contact-us/"
     },
     "source_evidence": [
       {
-        "url": "https://www.shiphelp.org/?p=317",
-        "title": "Official published source",
-        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+        "url": "https://www.va.gov/wilmington-health-care/contact-us/",
+        "title": "VA Wilmington health care: Contact us",
+        "reviewed_on": "2026-11-16",
+        "scope": "Wilmington VA Medical Center, 1601 Kirkwood Highway; local 302-994-2511; search excerpt."
+      },
+      {
+        "url": "https://www.va.gov/wilmington-health-care/make-an-appointment/",
+        "title": "VA Wilmington health care: Make an appointment",
+        "reviewed_on": "2026-11-16",
+        "scope": "Primary care call center toll-free 800-461-8262, select 2; direct 302-994-2511; search excerpt."
+      },
+      {
+        "url": "https://vets.delaware.gov/health-resources",
+        "title": "Delaware Office of Veterans Services: Health Resources",
+        "reviewed_on": "2026-11-16",
+        "scope": "Wilmington Vet Center 302-994-1660 and Sussex County Vet Center (Georgetown) 302-225-9110; search excerpt."
+      },
+      {
+        "url": "https://vets.delaware.gov/tag/benefits/?p=75",
+        "title": "Delaware Office of Veterans Services: Benefits",
+        "reviewed_on": "2026-11-16",
+        "scope": "Kent County (Dover) and Sussex County (Georgetown) community based outpatient clinics, reached through 800-461-8262; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "de-cil-independent-resources",
+    "name": "Independent Resources, Inc.",
+    "organization": "Independent Resources, Inc.",
+    "official_url": "https://iri-delaware.org/",
+    "service_area": [
+      "Kent",
+      "New Castle",
+      "Sussex"
+    ],
+    "state": "DE",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Wilmington office: Two Fox Point Centre, 6 Denny Road, Suite 101, Wilmington, DE 19809; accessible line 302-765-0194.",
+      "Dover office: 154 South Governors Avenue, Dover, DE 19904; 302-735-4599, accessible line 302-450-1699.",
+      "Milford office: 302-536-1387, accessible line 302-504-4754. The directory prints two street addresses for it (1609-A Middleford Road and 10 N Church Street, Milford, DE 19963); call before visiting."
+    ],
+    "public_contact": {
+      "phone": "302-765-0191",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/de",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/de"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/de",
+        "title": "ILRU: Directory of Centers for Independent Living, Delaware",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each center’s offices, addresses, phones, website and counties served; read in full. The directory is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "de-cil-freedom-center",
+    "name": "The Freedom Center for Independent Living",
+    "organization": "The Freedom Center for Independent Living, Inc.",
+    "official_url": "https://fcilde.org/",
+    "service_area": [
+      "New Castle"
+    ],
+    "state": "DE",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 105 Sleepy Hollow Drive, Suite A, Middletown, DE 19709. Toll-free: 844-277-0700."
+    ],
+    "public_contact": {
+      "phone": "302-376-4399",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/de",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/de"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/de",
+        "title": "ILRU: Directory of Centers for Independent Living, Delaware",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each center’s offices, addresses, phones, website and counties served; read in full. The directory is undated."
       }
     ]
   },
@@ -1012,7 +1336,9 @@
     "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
     "organization": "Soldier On, Inc.",
     "service_area": [
-      "All Delaware counties"
+      "Kent",
+      "New Castle",
+      "Sussex"
     ],
     "state": "DE",
     "resource_role": "housing_provider",
@@ -1020,7 +1346,7 @@
       "housing",
       "veteran_services"
     ],
-    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 16-ZZ-058): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Kent County, New Castle County, Sussex County.",
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 16-ZZ-058): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
     "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
     "constraints": [
       "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
@@ -1057,7 +1383,9 @@
     "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
     "organization": "Veterans Multi-Service Center, Inc.",
     "service_area": [
-      "All Delaware counties"
+      "Kent",
+      "New Castle",
+      "Sussex"
     ],
     "state": "DE",
     "resource_role": "housing_provider",
@@ -1065,7 +1393,7 @@
       "housing",
       "veteran_services"
     ],
-    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 23-ZZ-278): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Kent County, New Castle County, Sussex County.",
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 23-ZZ-278): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
     "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 610-384-8387.",
     "constraints": [
       "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
@@ -1097,81 +1425,93 @@
     ]
   },
   {
-    "program_id": "de-aging",
-    "name": "Local aging help in Delaware (Eldercare Locator)",
-    "official_url": "https://eldercare.acl.gov/home",
-    "organization": "U.S. Administration for Community Living",
-    "service_area": [
-      "All Delaware counties"
-    ],
+    "program_id": "de-adrc-state",
+    "name": "Delaware Aging & Disability Resource Center",
+    "organization": "Delaware Aging & Disability Resource Center",
+    "official_url": "https://dhss.delaware.gov/dsaapd/contact",
     "state": "DE",
+    "service_area": [
+      "Kent",
+      "New Castle",
+      "Sussex"
+    ],
     "needs_supported": [
       "general_navigation",
       "help_at_home"
     ],
-    "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-    "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
+    "regional_role": "aging_agency",
+    "description": "The Delaware Aging & Disability Resource Center, run statewide by the Division of Services for Aging and Adults with Physical Disabilities: free information, referral and guidance on help at home, meals, caregiving, assistive devices, long-term care and other services for older adults, adults with physical disabilities and caregivers.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. TDD users can call 302-424-7141. You can also email DelawareADRC@delaware.gov. Military service is not required.",
     "constraints": [
-      "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Statewide; one number for all three counties."
     ],
     "public_contact": {
-      "phone": "800-677-1116"
+      "phone": "800-223-9074",
+      "phone_label": "Delaware Aging & Disability Resource Center (Delaware)"
     },
     "verification": {
-      "record_status": "official_search_extract_only",
-      "last_reviewed_on": "2026-11-02"
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
     },
     "evidence": {
-      "review_method": "official_search_excerpt",
+      "review_method": "full_official_page_text",
       "direct_agency_confirmation": false,
-      "phone_source_url": "https://www.acl.gov/contact"
+      "service_area_source_url": "https://dhss.delaware.gov/dsaapd/contact",
+      "phone_source_url": "https://dhss.delaware.gov/dsaapd/contact"
     },
     "source_evidence": [
       {
-        "url": "https://www.acl.gov/contact",
-        "title": "Official published source",
-        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+        "url": "https://dhss.delaware.gov/dsaapd/contact",
+        "title": "Delaware Division of Services for Aging and Adults with Physical Disabilities: Contact",
+        "reviewed_on": "2026-11-16",
+        "scope": "Delaware Aging & Disability Resource Center, 1-800-223-9074 (TDD only 302-424-7141): the single point of contact for information, referrals and guidance on aging, disability and caregiving services; read in full. The page is undated. The division’s ADRC page says the ADRC serves people across the state, whatever their income or where they live in Delaware (https://dhss.delaware.gov/dsaapd/division-of-services-for-aging-and-adults-with-physical-disabilities/adrc/; search excerpt)."
       }
-    ],
-    "regional_role": "aging_agency"
+    ]
   },
   {
-    "program_id": "de-ombudsman",
-    "name": "Delaware long-term-care ombudsman",
-    "official_url": "https://theconsumervoice.org/get_help",
-    "organization": "National Long-Term Care Ombudsman Resource Center",
-    "service_area": [
-      "All Delaware counties"
-    ],
+    "program_id": "de-omb-state",
+    "name": "Delaware Long-Term Care Ombudsman Program",
+    "organization": "Delaware Long-Term Care Ombudsman Program",
+    "official_url": "https://dhss.delaware.gov/office-of-the-secretary/long-term-care-ombudsman-program/",
     "state": "DE",
+    "service_area": [
+      "Kent",
+      "New Castle",
+      "Sussex"
+    ],
     "needs_supported": [
       "resident_rights",
       "general_navigation"
     ],
-    "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-    "next_step": "Use the locator to find the Delaware program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
     "constraints": [
-      "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Serves residents of nursing facilities, assisted living and board and care homes, and people receiving home and community-based services."
     ],
     "public_contact": {
-      "phone": "800-677-1116"
+      "phone": "855-773-1002",
+      "phone_label": "Regional ombudsman program"
     },
     "verification": {
-      "record_status": "official_search_extract_only",
-      "last_reviewed_on": "2026-11-02"
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
     },
     "evidence": {
-      "review_method": "official_search_excerpt",
+      "review_method": "full_official_page_text",
       "direct_agency_confirmation": false,
-      "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
+      "service_area_source_url": "https://dhss.delaware.gov/office-of-the-secretary/long-term-care-ombudsman-program/",
+      "phone_source_url": "https://dhss.delaware.gov/office-of-the-secretary/long-term-care-ombudsman-program/"
     },
     "source_evidence": [
       {
-        "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-        "title": "Official published source",
-        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+        "url": "https://dhss.delaware.gov/office-of-the-secretary/long-term-care-ombudsman-program/",
+        "title": "Delaware Health and Social Services: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-16",
+        "scope": "Hotline 1-855-773-1002 for anonymous complaints about a long-term care facility and for complaints about home and community-based service providers; online complaints require your name; read in full. The program is statewide, so every county shows it."
       }
-    ],
-    "regional_role": "ombudsman"
+    ]
   }
 ]
