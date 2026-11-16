@@ -49,7 +49,8 @@ export const STATES=Object.freeze({
   "AK": "Alaska",
   "ND": "North Dakota",
   "IA": "Iowa",
-  "CT": "Connecticut"
+  "CT": "Connecticut",
+  "MA": "Massachusetts"
 });
 export const STATE_FILES=Object.freeze({
   "OH": [
@@ -247,6 +248,10 @@ export const STATE_FILES=Object.freeze({
   "CT": [
     "data/public/connecticut-resources.json",
     "data/public/connecticut-county-veterans-offices.json"
+  ],
+  "MA": [
+    "data/public/massachusetts-resources.json",
+    "data/public/massachusetts-county-veterans-offices.json"
   ]
 });
 export const localityLabel=row=>row?(["independent_city","statewide","borough","census_area","city_and_county"].includes(row.county_type)?row.county:row.county+(row.county_type==="parish"?" Parish":" County")):"";

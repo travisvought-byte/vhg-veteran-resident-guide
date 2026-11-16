@@ -1,80 +1,114 @@
 [
- {
-  "program_id": "ma-aging",
-  "name": "Local aging help in Massachusetts (Eldercare Locator)",
-  "official_url": "https://eldercare.acl.gov/home",
-  "organization": "U.S. Administration for Community Living",
-  "service_area": [
-   "All Massachusetts counties"
-  ],
-  "state": "MA",
-  "needs_supported": [
-   "general_navigation",
-   "help_at_home"
-  ],
-  "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-  "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
-  "constraints": [
-   "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "ma-massoptions",
+    "name": "MassOptions (Executive Office of Aging & Independence)",
+    "organization": "MassOptions (Executive Office of Aging & Independence)",
+    "official_url": "https://www.mass.gov/aging-support-for-older-adults-in-massachusetts",
+    "state": "MA",
+    "service_area": [
+      "Barnstable",
+      "Berkshire",
+      "Bristol",
+      "Dukes",
+      "Essex",
+      "Franklin",
+      "Hampden",
+      "Hampshire",
+      "Middlesex",
+      "Nantucket",
+      "Norfolk",
+      "Plymouth",
+      "Suffolk",
+      "Worcester"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "MassOptions is Massachusetts’ free statewide line for older adults, people with disabilities and caregivers. It connects callers to their local Aging Services Access Point and Area Agency on Aging for home care, meals, caregiver support and options counseling.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. Ask MassOptions for the elder services agency that serves your city or town. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Statewide; MassOptions refers you to the elder services agency for your city or town."
+    ],
+    "public_contact": {
+      "phone": "800-243-4636",
+      "phone_label": "MassOptions (Massachusetts)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.mass.gov/aging-support-for-older-adults-in-massachusetts",
+      "phone_source_url": "https://www.mass.gov/aging-support-for-older-adults-in-massachusetts"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.mass.gov/aging-support-for-older-adults-in-massachusetts",
+        "title": "Executive Office of Aging & Independence: Aging Support for Older Adults in Massachusetts",
+        "reviewed_on": "2026-11-16",
+        "scope": "Call MassOptions at 1-800-243-4636 to get connected to local services; search excerpt. Massachusetts organizes aging services by city and town through Area Agencies on Aging and Aging Services Access Points; MassOptions refers callers to their local elder services agency (https://www.mass.gov/info-details/services; search excerpt). Every county shows the statewide line."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
-  },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.acl.gov/contact"
-  },
-  "source_evidence": [
-   {
-    "url": "https://www.acl.gov/contact",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "aging_agency"
- },
- {
-  "program_id": "ma-ombudsman",
-  "name": "Massachusetts long-term-care ombudsman",
-  "official_url": "https://theconsumervoice.org/get_help",
-  "organization": "National Long-Term Care Ombudsman Resource Center",
-  "service_area": [
-   "All Massachusetts counties"
-  ],
-  "state": "MA",
-  "needs_supported": [
-   "resident_rights",
-   "general_navigation"
-  ],
-  "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-  "next_step": "Use the locator to find the Massachusetts program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
-  "constraints": [
-   "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
-  },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
-  },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
-  },
-  "source_evidence": [
-   {
-    "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "ombudsman"
- }
+  {
+    "program_id": "ma-omb-state",
+    "name": "Massachusetts Long-Term Care Ombudsman Program",
+    "organization": "Massachusetts Long-Term Care Ombudsman Program",
+    "official_url": "https://www.mass.gov/info-details/ombudsman-programs",
+    "state": "MA",
+    "service_area": [
+      "Barnstable",
+      "Berkshire",
+      "Bristol",
+      "Dukes",
+      "Essex",
+      "Franklin",
+      "Hampden",
+      "Hampshire",
+      "Middlesex",
+      "Nantucket",
+      "Norfolk",
+      "Plymouth",
+      "Suffolk",
+      "Worcester"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "The state line connects you to the local ombudsman program for the facility’s city or town."
+    ],
+    "public_contact": {
+      "phone": "617-222-7495",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://www.mass.gov/info-details/ombudsman-programs",
+      "phone_source_url": "https://www.mass.gov/info-details/ombudsman-programs"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.mass.gov/info-details/ombudsman-programs",
+        "title": "Executive Office of Aging & Independence: Ombudsman Programs",
+        "reviewed_on": "2026-11-16",
+        "scope": "Long-Term Care Ombudsman support is free for residents of nursing homes, rest homes and assisted living; call (617) 222-7495 to connect with your local ombudsman; search excerpt. Local programs are listed by city and town (https://www.mass.gov/info-details/find-an-ombudsman-representative-for-a-nursing-or-rest-home), so every county shows the state line."
+      }
+    ]
+  }
 ]
