@@ -2,8 +2,10 @@
 
 FindBingo.org is the multi-state bingo finder. Players type a ZIP code (or pick a state) and see
 bingo near them, closest first. It covers Michigan and Indiana with state data, serves the Ohio Bingo
-Finder at findbingo.org/ohio/, and tells Kentucky, West Virginia, Pennsylvania and Florida players plainly
-that no public list exists yet, with a free way for halls to send game times.
+Finder at findbingo.org/ohio/, lists organizer-published games in Pennsylvania, New York, Florida
+and Utah ("starter" states), and tells Kentucky and West Virginia players plainly that no public list
+exists yet. Every listing has a "Report a change" email link, and every state has a free way for halls
+to send game times.
 
 Started November 15, 2026, at Travis's direction: one national finder, neighboring states first.
 
@@ -76,11 +78,33 @@ to month. To refresh, read the newest month's calendars the same way. Next candi
 centers and posts in the Tampa Bay, Orlando, Southwest and Southeast Florida areas, from organizer
 pages or dated calendars only.
 
-**Kentucky, West Virginia, Pennsylvania.** No public statewide list of games or halls was found:
+**Pennsylvania, New York, Utah (starter states, added November 16, 2026).** These came from the research
+in the closed pull request #116 (branch `codex/bingo-multistate`, `data/bingo/venues.json`). Each
+organizer's own page was read again on November 16, 2026 before listing; only places whose page gave a
+regular day were kept. Files: `data/public/pennsylvania-bingo.json`, `new-york-bingo.json`,
+`utah-bingo.json`, in the same shape as Florida's.
+
+- Pennsylvania: bingo is licensed by each county treasurer, so there is no state list. Four listings
+  (two American Legion posts, two fire companies).
+- New York: a group gets a bingo identification number from the State Gaming Commission's Division of
+  Charitable Gaming and its license from the city, town or village clerk; no public list of games was
+  found. Three listings. Gates Center Bingo's page gives no phone, so its card offers a phone lookup
+  (a phone is optional for starter listings).
+- Utah: state law prohibits gambling (Utah Code 76-9-1402), so only free bingo is listed: three
+  Washington County Council on Aging senior centers.
+- "1st and 3rd Thursday" style schedules use the session `label`; the card says so in its note. The day
+  filter still treats them as weekly.
+- Left out for now: Irishtown Fire Company (a single December date), and both Washington State venues
+  from that research (no regular day published). Their source pages could not be read on November 16.
+
+Travis's rule for these lists (November 16, 2026): use the best information available and make it easy
+for people to send corrections. Listings are not held back for phone confirmation.
+
+**Kentucky, West Virginia, Pennsylvania (no state list).** No public statewide list of games or halls was found:
 Kentucky's Office of Charitable Gaming (now part of Kentucky Horse Racing & Gaming) publishes county
 totals only; West Virginia's Tax Division links no licensee list; Pennsylvania bingo licenses are
-issued by each county treasurer. These states get an honest "no list yet" card, the regulator, and
-an email link for halls to send game times.
+issued by each county treasurer. Kentucky and West Virginia get an honest "no list yet" card, the
+regulator, and an email link for halls to send game times; Pennsylvania now has a starter list (above).
 
 **ZIP codes.** The guide's GeoNames/Midwire centroids (CC BY 3.0, attributed in the footer), limited
 to the covered states' ZIP prefixes (Florida's military 340 prefix excluded). ZIP 49037 (Battle Creek) is missing there; its point comes from the

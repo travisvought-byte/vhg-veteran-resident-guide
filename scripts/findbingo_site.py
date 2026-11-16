@@ -1,4 +1,4 @@
-"""Build FindBingo.org (findbingo-site/): bingo near you in Michigan, Indiana and neighboring states.
+"""Build FindBingo.org (findbingo-site/): bingo near you, state by state.
 
 index.html is the whole page (markup, styles and script). The build also writes it to
 bingo-site/findbingo/, which the Ohio-Bingo repository mirrors and Cloudflare serves at
@@ -11,9 +11,11 @@ import re
 from datetime import date
 from html import escape
 
-ORDER = ['MI', 'IN', 'OH', 'KY', 'WV', 'PA', 'FL']
+ORDER = ['MI', 'IN', 'OH', 'KY', 'WV', 'PA', 'NY', 'FL', 'UT']
+# One file of organizer-published schedules per starter state (coverage "starter").
+STARTER_FILES = {'PA': 'pennsylvania-bingo.json', 'NY': 'new-york-bingo.json', 'FL': 'florida-bingo.json', 'UT': 'utah-bingo.json'}
 # First three ZIP digits for each covered state (USPS prefix ranges).
-PREFIXES = {'PA': (150, 196), 'WV': (247, 268), 'FL': (320, 349), 'KY': (400, 427), 'OH': (430, 459), 'IN': (460, 479), 'MI': (480, 499)}
+PREFIXES = {'NY': (100, 149), 'PA': (150, 196), 'WV': (247, 268), 'FL': (320, 349), 'KY': (400, 427), 'OH': (430, 459), 'IN': (460, 479), 'MI': (480, 499), 'UT': (840, 847)}
 COVERAGE = {'times', 'licenses', 'starter', 'ohio_finder', 'none'}
 PHONE = re.compile(r'\d{3}-\d{3}-\d{4}')
 TIME = re.compile(r'(?:[01]\d|2[0-3]):[0-5]\d')
@@ -56,6 +58,7 @@ def validate(states, venues, licensed, zips):
     pending = {c for s in states for c in s.get('pending_counties', [])}
     assert not pending & {v['county'] for v in venues}, 'a county with listings is no longer pending'
     with_venues = {s['code'] for s in states if s['coverage'] in ('times', 'starter')}
+    assert {s['code'] for s in states if s['coverage'] == 'starter'} == set(STARTER_FILES), 'each starter state has its schedule file'
     ids = set()
     for v in venues:
         code = v['state']
@@ -74,7 +77,8 @@ def validate(states, venues, licensed, zips):
         assert all(type(n) is str and n for n in v.get('notes', [])), v['id']
         if code != 'MI':
             # Published-schedule listings carry their own source, phone and how far to trust the days.
-            assert v['kind'] in ('hall', 'senior_center') and PHONE.fullmatch(v['phone']), v['id']
+            # A phone is listed when the source gives one; without it the card offers a phone lookup instead.
+            assert v['kind'] in ('hall', 'senior_center') and ('phone' not in v or PHONE.fullmatch(v['phone'])), v['id']
             assert v['source_url'].startswith('https://') and v['source_label'] and v['schedule_note'], v['id']
         assert date.fromisoformat(v['reviewed_on']) and v['sources'] and all(x['url'].startswith('https://') for x in v['sources'])
     for r in licensed:
@@ -105,7 +109,11 @@ def _date_label(iso):
 def make_findbingo(root):
     states = json.loads((root / 'data/public/bingo-states.json').read_text())
     venues = json.loads((root / 'data/public/michigan-weekly-bingo.json').read_text())
-    venues += json.loads((root / 'data/public/florida-bingo.json').read_text())
+    for code in ORDER:
+        if code in STARTER_FILES:
+            rows = json.loads((root / 'data/public' / STARTER_FILES[code]).read_text())
+            assert rows and all(v['state'] == code for v in rows), STARTER_FILES[code]
+            venues += rows
     licensed = json.loads((root / 'data/public/indiana-bingo-licenses.json').read_text())
     all_zips = json.loads((root / 'data/public/us-zip-centroids.json').read_text())
     for extra in json.loads((root / 'data/public/zip-points-supplement.json').read_text()):
