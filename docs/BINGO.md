@@ -262,3 +262,28 @@ Law check, November 12, 2026: HB 344 (136th GA; 501(c)(3) electronic instant bin
 
 - **On ohiobingo.org:** heading order on the contact and map pages, and low-contrast gold labels on the sample game sheet and map, fixed on the Wix site. The map's region buttons and county links were also enlarged to 44px.
 - **In this repo:** a missing main landmark on the poster and on both printable flyers. The flyer container now takes the main role in flyer mode. A rescan is clean.
+
+## November 15, 2026 (evening): halls 30–60 miles from Marengo
+
+The Facebook pass continued to recurring licenses 30–60 miles out. Twelve new schedules:
+
+| Hall | Schedule |
+|---|---|
+| Holy Trinity, Bucyrus | Thursday 6:30 p.m. (parish page, May 2025) |
+| Coshocton Moose #935 | Monday and Wednesday 6 p.m. (lodge's weekly schedule, November 2026) |
+| Geneva Hills Bingo at the Lancaster Moose | Monday and Friday: doors 5 p.m., early bird and speed ball 6:30 p.m., bingo 7 p.m. Open to the public, 18+ with ID; packet prices recorded. |
+| West Salem Legion #499 | Wednesday: doors 5 p.m., bingo 6:30 p.m. (January 2026) |
+| Zanesville Legion #29 | Wednesday and Friday, 7 p.m., public welcome, 18+ (October 2026 community thread with the post's flyer) |
+| Wooster K of C #789 | Thursday: doors 4 p.m., instant 4:30 p.m., games 6:30 p.m., $20 admission (October 2026) |
+| Bellefontaine Masons #209 | Thursday: doors 4:30 p.m., early bird 6:15 p.m., regular 7 p.m. (players' April 2025 comments) |
+| Logan County Friendly Senior Center | Friday: doors 4:30 p.m., tickets 5 p.m., bingo 7 p.m., open to the public. The center's own website; no `schedule_source`. |
+| Pantry Plus, Fostoria | Wednesday: doors 4 p.m., bingo 6 p.m. (the pantry's undated bingo page) |
+| Seneca County Commission on Aging, Tiffin | Monday: doors 5 p.m., bingo 6:30 p.m. (Christmas Bingo flyer for December 7, 2026) |
+| Duncan Falls VFD | Monday: doors 5 p.m., bingo 6:30 p.m. (October–November 2026) |
+| MCABA, Marion | One dated event, Tuesday, November 17, 2026, at Cooper's Bowl: doors 4 p.m., first ball 6 p.m. Expires after that date. The state licensing notice stays on the card. |
+
+- **Northmor update:** the boosters' own bingo page shows closures on October 13 and November 3, 2026 ("unforeseen circumstances"), with no reopening post by November 15. The schedule text now says so and asks people to call. The phone is now the bingo line (419-560-4257); the Hope Cabins number moved to the notes.
+- **No usable schedule found:** Loudonville Eagles Auxiliary, the Omega Community Enrichment Foundation (OCEF) halls in Columbus, Ashland Legion #88, Friends For Life Animal Haven and Lithopolis Legion #677 (only music bingo found). Also Hardin County Humane Society, Our Lady of Consolation in Carey (Thursday bingo confirmed, but no times or address match) and Lancaster VFW #1516.
+- **Not reached in this pass:** Teays Valley Boosters, West Muskingum Boosters, Muskingum County Senior Services, Wooster Elks, Junction City firemen, Bellevue Elks (bingo ended; a community center may restart it), Circleville Legion #134 (only euchre found) and New Lexington Legion #188 and Eagles #2070.
+
+**ohiobingo.org advocacy page:** added one line under "Rules operators ask about". The electronic instant bingo rules (OAC Chapter 109:1-7) list a five-year review date of December 23, 2026. Veterans and fraternal groups report that changes are being drafted. The line points to the Register of Ohio for proposed rules and hearings. It takes no position.
