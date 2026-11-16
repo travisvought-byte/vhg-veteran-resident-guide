@@ -642,6 +642,52 @@
     ]
   },
   {
+    "code": "LA",
+    "name": "Louisiana",
+    "page": "la.html",
+    "share_page": "share-la.html",
+    "qr": "assets/guide-qr-la.svg",
+    "counties": 64,
+    "programs": "data/public/la-programs.json",
+    "referrals": "data/public/la-regional-referrals.json",
+    "offices": "data/public/louisiana-county-veterans-offices.json",
+    "resources": "data/public/louisiana-resources.json",
+    "statewide_area_names": [],
+    "coverage_scope": "Referral edition. All 64 parishes have a Louisiana Department of Veterans Affairs veterans service office, a matched Area Agency on Aging and a regional long-term care ombudsman; 62 parishes are served by a Center for Independent Living.",
+    "coverage_note": "Parish veterans offices, with their open days, come from each office’s page on the Louisiana Department of Veterans Affairs website. Area Agencies on Aging come from the Governor’s Office of Elderly Affairs directory, and regional ombudsman programs from its June 2026 contact list. Centers for Independent Living come from the ILRU national directory; Caldwell and St. Mary parishes have no center listed.",
+    "share_description": "Parish veterans service offices, Area Agencies on Aging and long-term care ombudsman help across Louisiana",
+    "share_replacements": [
+      [
+        "Updated October 8, 2026",
+        "Updated November 16, 2026"
+      ],
+      [
+        "county veterans offices, benefits and care referrals",
+        "parish veterans service offices, benefits and care referrals"
+      ],
+      [
+        "Louisiana counties",
+        "Louisiana parishes"
+      ],
+      [
+        "Louisiana’s 64 counties",
+        "Louisiana’s 64 parishes"
+      ],
+      [
+        "Choose your county",
+        "Choose your parish"
+      ],
+      [
+        "County veterans offices",
+        "parish veterans service offices"
+      ],
+      [
+        "For a county-specific link, choose the county",
+        "For a parish-specific link, choose the parish"
+      ]
+    ]
+  },
+  {
     "code": "AK",
     "name": "Alaska",
     "starter": true,
@@ -818,26 +864,6 @@
     ],
     "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
     "coverage_note": "Starter edition. Every county uses the Kansas Office of Veterans Services and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
-    "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
-    "share_replacements": []
-  },
-  {
-    "code": "LA",
-    "name": "Louisiana",
-    "starter": true,
-    "page": "la.html",
-    "share_page": "share-la.html",
-    "qr": "assets/guide-qr-la.svg",
-    "counties": 1,
-    "programs": "data/public/la-programs.json",
-    "referrals": "data/public/la-regional-referrals.json",
-    "offices": "data/public/louisiana-county-veterans-offices.json",
-    "resources": "data/public/louisiana-resources.json",
-    "statewide_area_names": [
-      "All Louisiana parishes"
-    ],
-    "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
-    "coverage_note": "Starter edition. Every county uses the Louisiana Department of Veterans Affairs and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
     "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
     "share_replacements": []
   },

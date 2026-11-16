@@ -25,11 +25,11 @@ function setState(state,initial=false){
  for(const [id,markup] of Object.entries(config.markup)){const wrapper=document.createElement('div');wrapper.innerHTML=markup;const replacement=wrapper.firstElementChild;$(id).replaceWith(replacement)}
  // Keep state-specific instructions available without making the first screen an explanation of the data model.
  const pending=DATA.filter(x=>x.verification.record_status!=='official_source_reviewed').length;
- $('coverage-detail').innerHTML='<p>'+esc(config.name)+(single?': statewide referral routes. Local offices are not listed yet.':': referral routes for '+COUNTIES.length+(state==='VA'?' counties and independent cities.':' counties.')+' Local service coverage is still growing.')+'</p><p>'+pending+' resource records need further source checks. Check the status on each listing and confirm availability with the agency.</p>';
+ $('coverage-detail').innerHTML='<p>'+esc(config.name)+(single?': statewide referral routes. Local offices are not listed yet.':': referral routes for '+COUNTIES.length+(state==='VA'?' counties and independent cities.':state==='LA'?' parishes.':' counties.')+' Local service coverage is still growing.')+'</p><p>'+pending+' resource records need further source checks. Check the status on each listing and confirm availability with the agency.</p>';
  if(config.coverageNote)$('coverage-detail').innerHTML+='<p>'+esc(config.coverageNote)+'</p>';
- document.querySelector('label[for="county"]').textContent=(state==='VA'?'County or independent city in ':'County in ')+config.name;
- $('aid-open').hidden=state!=='OH';document.querySelectorAll('.ohio-only').forEach(e=>{e.hidden=state!=='OH'});document.querySelector('.office-directory summary').textContent='Browse '+config.name+(state==='VA'?' county and city contacts':' county contacts');
- $('office-search').placeholder='Search '+config.name+(state==='VA'?' counties or independent cities':' counties');
+ document.querySelector('label[for="county"]').textContent=(state==='VA'?'County or independent city in ':state==='LA'?'Parish in ':'County in ')+config.name;
+ $('aid-open').hidden=state!=='OH';document.querySelectorAll('.ohio-only').forEach(e=>{e.hidden=state!=='OH'});document.querySelector('.office-directory summary').textContent='Browse '+config.name+(state==='VA'?' county and city contacts':state==='LA'?' parish contacts':' county contacts');
+ $('office-search').placeholder='Search '+config.name+(state==='VA'?' counties or independent cities':state==='LA'?' parishes':' counties');
  document.title=config.name+' | Veteran Resident Resource Guide';
  // The footer date comes from the records, so it cannot go stale: the newest review of this state's veterans office contacts.
  // (Program records are left out because federal ones are shared by every state and would date them all alike.)

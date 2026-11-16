@@ -1,80 +1,1855 @@
 [
- {
-  "program_id": "la-aging",
-  "name": "Local aging help in Louisiana (Eldercare Locator)",
-  "official_url": "https://eldercare.acl.gov/home",
-  "organization": "U.S. Administration for Community Living",
-  "service_area": [
-   "All Louisiana parishes"
-  ],
-  "state": "LA",
-  "needs_supported": [
-   "general_navigation",
-   "help_at_home"
-  ],
-  "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-  "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
-  "constraints": [
-   "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "la-aaa-cenla",
+    "name": "Cenla Area Agency on Aging",
+    "organization": "Cenla Area Agency on Aging",
+    "official_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+    "state": "LA",
+    "service_area": [
+      "Allen",
+      "Avoyelles",
+      "Catahoula",
+      "Concordia",
+      "East Carroll",
+      "Franklin",
+      "Grant",
+      "Jackson",
+      "LaSalle",
+      "Madison",
+      "Rapides",
+      "Richland",
+      "Tensas",
+      "Union",
+      "Winn"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this parish: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Louisiana Answers line, 877-340-9100, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 1423 Peterman Drive, Alexandria, LA 71301.",
+      "Your parish also has a council on aging for senior centers, meals and transportation; ask the agency to connect you."
+    ],
+    "public_contact": {
+      "phone": "318-484-2260",
+      "phone_label": "Area Agency on Aging (Central and northeast Louisiana)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+      "phone_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+        "title": "Governor’s Office of Elderly Affairs: Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agencies on Aging, their offices, phones and the parishes each serves; read in full. The directory is undated."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "la-aaa-capital",
+    "name": "Capital Area Agency on Aging",
+    "organization": "Capital Area Agency on Aging",
+    "official_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+    "state": "LA",
+    "service_area": [
+      "Ascension",
+      "Assumption",
+      "East Feliciana",
+      "Iberville",
+      "Pointe Coupee",
+      "St. Helena",
+      "Tangipahoa",
+      "Washington",
+      "West Baton Rouge",
+      "West Feliciana"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this parish: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Louisiana Answers line, 877-340-9100, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-833-9883. Office: 2051 Silverside Drive, Suite 208, Baton Rouge, LA 70808.",
+      "Your parish also has a council on aging for senior centers, meals and transportation; ask the agency to connect you."
+    ],
+    "public_contact": {
+      "phone": "225-922-2525",
+      "phone_label": "Area Agency on Aging (Capital area)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+      "phone_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+        "title": "Governor’s Office of Elderly Affairs: Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agencies on Aging, their offices, phones and the parishes each serves; read in full. The directory is undated."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.acl.gov/contact"
+  {
+    "program_id": "la-aaa-cajun",
+    "name": "Cajun Area Agency on Aging",
+    "organization": "Cajun Area Agency on Aging",
+    "official_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+    "state": "LA",
+    "service_area": [
+      "Acadia",
+      "Evangeline",
+      "Iberia",
+      "Lafayette",
+      "St. Landry",
+      "St. Martin",
+      "St. Mary",
+      "Vermilion"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this parish: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Louisiana Answers line, 877-340-9100, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-738-2256. Office: 110 Toledo Drive, Lafayette, LA 70506.",
+      "Your parish also has a council on aging for senior centers, meals and transportation; ask the agency to connect you."
+    ],
+    "public_contact": {
+      "phone": "337-572-8940",
+      "phone_label": "Area Agency on Aging (Acadiana)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+      "phone_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+        "title": "Governor’s Office of Elderly Affairs: Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agencies on Aging, their offices, phones and the parishes each serves; read in full. The directory is undated."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.acl.gov/contact",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "aging_agency"
- },
- {
-  "program_id": "la-ombudsman",
-  "name": "Louisiana long-term-care ombudsman",
-  "official_url": "https://theconsumervoice.org/get_help",
-  "organization": "National Long-Term Care Ombudsman Resource Center",
-  "service_area": [
-   "All Louisiana parishes"
-  ],
-  "state": "LA",
-  "needs_supported": [
-   "resident_rights",
-   "general_navigation"
-  ],
-  "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-  "next_step": "Use the locator to find the Louisiana program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
-  "constraints": [
-   "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "la-aaa-beauregard",
+    "name": "Beauregard Council on Aging",
+    "organization": "Beauregard Council on Aging",
+    "official_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+    "state": "LA",
+    "service_area": [
+      "Beauregard"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this parish: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Louisiana Answers line, 877-340-9100, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 104 W. Port Street, DeRidder, LA 70634."
+    ],
+    "public_contact": {
+      "phone": "337-463-6578",
+      "phone_label": "Area Agency on Aging (Beauregard)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+      "phone_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+        "title": "Governor’s Office of Elderly Affairs: Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agencies on Aging, their offices, phones and the parishes each serves; read in full. The directory is undated."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "la-aaa-bienville",
+    "name": "Bienville Council on Aging",
+    "organization": "Bienville Council on Aging",
+    "official_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+    "state": "LA",
+    "service_area": [
+      "Bienville"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this parish: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Louisiana Answers line, 877-340-9100, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 2705 Beech Street, Arcadia, LA 71001."
+    ],
+    "public_contact": {
+      "phone": "318-263-8936",
+      "phone_label": "Area Agency on Aging (Bienville)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+      "phone_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+        "title": "Governor’s Office of Elderly Affairs: Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agencies on Aging, their offices, phones and the parishes each serves; read in full. The directory is undated."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
+  {
+    "program_id": "la-aaa-bossier",
+    "name": "Bossier Council on Aging",
+    "organization": "Bossier Council on Aging",
+    "official_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+    "state": "LA",
+    "service_area": [
+      "Bossier"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this parish: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Louisiana Answers line, 877-340-9100, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 706 Bearkat Drive, Bossier City, LA 71111."
+    ],
+    "public_contact": {
+      "phone": "318-741-8302",
+      "phone_label": "Area Agency on Aging (Bossier)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+      "phone_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+        "title": "Governor’s Office of Elderly Affairs: Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agencies on Aging, their offices, phones and the parishes each serves; read in full. The directory is undated."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "ombudsman"
- }
+  {
+    "program_id": "la-aaa-caddo",
+    "name": "Caddo Council on Aging",
+    "organization": "Caddo Council on Aging",
+    "official_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+    "state": "LA",
+    "service_area": [
+      "Caddo"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this parish: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Louisiana Answers line, 877-340-9100, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-256-3003. Office: 6005 Financial Plaza, Suite 202, Shreveport, LA 71129. It is also the Aging and Disability Resource Center for nine northwest parishes."
+    ],
+    "public_contact": {
+      "phone": "318-676-7900",
+      "phone_label": "Area Agency on Aging (Caddo)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+      "phone_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+        "title": "Governor’s Office of Elderly Affairs: Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agencies on Aging, their offices, phones and the parishes each serves; read in full. The directory is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "la-aaa-calcasieu",
+    "name": "Calcasieu Council on Aging",
+    "organization": "Calcasieu Council on Aging",
+    "official_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+    "state": "LA",
+    "service_area": [
+      "Calcasieu"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this parish: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Louisiana Answers line, 877-340-9100, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 3950 Gerstner Memorial Boulevard, Lake Charles, LA 70607. It is also the Aging and Disability Resource Center for five southwest parishes."
+    ],
+    "public_contact": {
+      "phone": "337-474-2583",
+      "phone_label": "Area Agency on Aging (Calcasieu)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+      "phone_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+        "title": "Governor’s Office of Elderly Affairs: Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agencies on Aging, their offices, phones and the parishes each serves; read in full. The directory is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "la-aaa-caldwell",
+    "name": "Caldwell Council on Aging",
+    "organization": "Caldwell Council on Aging",
+    "official_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+    "state": "LA",
+    "service_area": [
+      "Caldwell"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this parish: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Louisiana Answers line, 877-340-9100, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 307 Main Street, Columbia, LA 71418."
+    ],
+    "public_contact": {
+      "phone": "318-649-2584",
+      "phone_label": "Area Agency on Aging (Caldwell)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+      "phone_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+        "title": "Governor’s Office of Elderly Affairs: Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agencies on Aging, their offices, phones and the parishes each serves; read in full. The directory is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "la-aaa-cameron",
+    "name": "Cameron Council on Aging",
+    "organization": "Cameron Council on Aging",
+    "official_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+    "state": "LA",
+    "service_area": [
+      "Cameron"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this parish: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Louisiana Answers line, 877-340-9100, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Also listed: 337-905-6000. Office: 965 Highway 384, Lake Charles, LA 70607."
+    ],
+    "public_contact": {
+      "phone": "337-598-5158",
+      "phone_label": "Area Agency on Aging (Cameron)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+      "phone_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+        "title": "Governor’s Office of Elderly Affairs: Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agencies on Aging, their offices, phones and the parishes each serves; read in full. The directory is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "la-aaa-claiborne",
+    "name": "Claiborne Council on Aging",
+    "organization": "Claiborne Council on Aging",
+    "official_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+    "state": "LA",
+    "service_area": [
+      "Claiborne"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this parish: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Louisiana Answers line, 877-340-9100, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 608 E. 4th Street, Homer, LA 71040."
+    ],
+    "public_contact": {
+      "phone": "318-927-6922",
+      "phone_label": "Area Agency on Aging (Claiborne)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+      "phone_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+        "title": "Governor’s Office of Elderly Affairs: Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agencies on Aging, their offices, phones and the parishes each serves; read in full. The directory is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "la-aaa-desoto",
+    "name": "DeSoto Council on Aging",
+    "organization": "DeSoto Council on Aging",
+    "official_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+    "state": "LA",
+    "service_area": [
+      "De Soto"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this parish: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Louisiana Answers line, 877-340-9100, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 404 Polk Street, Mansfield, LA 71052."
+    ],
+    "public_contact": {
+      "phone": "318-872-3700",
+      "phone_label": "Area Agency on Aging (De Soto)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+      "phone_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+        "title": "Governor’s Office of Elderly Affairs: Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agencies on Aging, their offices, phones and the parishes each serves; read in full. The directory is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "la-aaa-ebr",
+    "name": "East Baton Rouge Council on Aging",
+    "organization": "East Baton Rouge Council on Aging",
+    "official_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+    "state": "LA",
+    "service_area": [
+      "East Baton Rouge"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this parish: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Louisiana Answers line, 877-340-9100, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 965 North 18th Street, Baton Rouge, LA 70802."
+    ],
+    "public_contact": {
+      "phone": "225-923-8000",
+      "phone_label": "Area Agency on Aging (East Baton Rouge)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+      "phone_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+        "title": "Governor’s Office of Elderly Affairs: Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agencies on Aging, their offices, phones and the parishes each serves; read in full. The directory is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "la-aaa-jefferson",
+    "name": "Jefferson Council on Aging",
+    "organization": "Jefferson Council on Aging",
+    "official_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+    "state": "LA",
+    "service_area": [
+      "Jefferson"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this parish: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Louisiana Answers line, 877-340-9100, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 6620 Riverside Drive, Suite 216, Metairie, LA 70003. It is also the Aging and Disability Resource Center for Jefferson, St. Charles, St. James and St. John parishes."
+    ],
+    "public_contact": {
+      "phone": "504-888-5880",
+      "phone_label": "Area Agency on Aging (Jefferson)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+      "phone_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+        "title": "Governor’s Office of Elderly Affairs: Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agencies on Aging, their offices, phones and the parishes each serves; read in full. The directory is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "la-aaa-jeff-davis",
+    "name": "Jefferson Davis Council on Aging",
+    "organization": "Jefferson Davis Council on Aging",
+    "official_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+    "state": "LA",
+    "service_area": [
+      "Jefferson Davis"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this parish: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Louisiana Answers line, 877-340-9100, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 210 South State Street, Jennings, LA 70546."
+    ],
+    "public_contact": {
+      "phone": "337-824-5504",
+      "phone_label": "Area Agency on Aging (Jefferson Davis)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+      "phone_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+        "title": "Governor’s Office of Elderly Affairs: Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agencies on Aging, their offices, phones and the parishes each serves; read in full. The directory is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "la-aaa-lafourche",
+    "name": "Lafourche Council on Aging",
+    "organization": "Lafourche Council on Aging",
+    "official_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+    "state": "LA",
+    "service_area": [
+      "Lafourche"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this parish: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Louisiana Answers line, 877-340-9100, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Also listed: 985-532-0458, 985-532-0459, 985-532-0460. Office: 4314 Highway 1, Raceland, LA 70394."
+    ],
+    "public_contact": {
+      "phone": "985-532-0457",
+      "phone_label": "Area Agency on Aging (Lafourche)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+      "phone_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+        "title": "Governor’s Office of Elderly Affairs: Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agencies on Aging, their offices, phones and the parishes each serves; read in full. The directory is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "la-aaa-lincoln",
+    "name": "Lincoln Council on Aging",
+    "organization": "Lincoln Council on Aging",
+    "official_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+    "state": "LA",
+    "service_area": [
+      "Lincoln"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this parish: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Louisiana Answers line, 877-340-9100, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 1000 Saratoga Street, Ruston, LA 71270."
+    ],
+    "public_contact": {
+      "phone": "318-255-5070",
+      "phone_label": "Area Agency on Aging (Lincoln)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+      "phone_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+        "title": "Governor’s Office of Elderly Affairs: Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agencies on Aging, their offices, phones and the parishes each serves; read in full. The directory is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "la-aaa-livingston",
+    "name": "Livingston Council on Aging",
+    "organization": "Livingston Council on Aging",
+    "official_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+    "state": "LA",
+    "service_area": [
+      "Livingston"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this parish: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Louisiana Answers line, 877-340-9100, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 949 Government Drive, Denham Springs, LA 70726."
+    ],
+    "public_contact": {
+      "phone": "225-664-9343",
+      "phone_label": "Area Agency on Aging (Livingston)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+      "phone_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+        "title": "Governor’s Office of Elderly Affairs: Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agencies on Aging, their offices, phones and the parishes each serves; read in full. The directory is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "la-aaa-morehouse",
+    "name": "Morehouse Council on Aging",
+    "organization": "Morehouse Council on Aging",
+    "official_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+    "state": "LA",
+    "service_area": [
+      "Morehouse"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this parish: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Louisiana Answers line, 877-340-9100, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-256-3006. Office: 200 Elm Street, Bastrop, LA 71220."
+    ],
+    "public_contact": {
+      "phone": "318-283-0845",
+      "phone_label": "Area Agency on Aging (Morehouse)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+      "phone_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+        "title": "Governor’s Office of Elderly Affairs: Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agencies on Aging, their offices, phones and the parishes each serves; read in full. The directory is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "la-aaa-natchitoches",
+    "name": "Natchitoches Council on Aging",
+    "organization": "Natchitoches Council on Aging",
+    "official_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+    "state": "LA",
+    "service_area": [
+      "Natchitoches"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this parish: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Louisiana Answers line, 877-340-9100, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 1016 Keyser Avenue, Natchitoches, LA 71457."
+    ],
+    "public_contact": {
+      "phone": "318-357-3250",
+      "phone_label": "Area Agency on Aging (Natchitoches)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+      "phone_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+        "title": "Governor’s Office of Elderly Affairs: Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agencies on Aging, their offices, phones and the parishes each serves; read in full. The directory is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "la-aaa-orleans",
+    "name": "New Orleans Council on Aging",
+    "organization": "New Orleans Council on Aging",
+    "official_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+    "state": "LA",
+    "service_area": [
+      "Orleans"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this parish: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Louisiana Answers line, 877-340-9100, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 2475 Canal Street, Suite 400, New Orleans, LA 70119. It is also the Aging and Disability Resource Center for Orleans, Plaquemines and St. Bernard parishes."
+    ],
+    "public_contact": {
+      "phone": "504-821-4121",
+      "phone_label": "Area Agency on Aging (Orleans)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+      "phone_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+        "title": "Governor’s Office of Elderly Affairs: Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agencies on Aging, their offices, phones and the parishes each serves; read in full. The directory is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "la-aaa-ouachita",
+    "name": "Ouachita Council on Aging",
+    "organization": "Ouachita Council on Aging",
+    "official_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+    "state": "LA",
+    "service_area": [
+      "Ouachita"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this parish: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Louisiana Answers line, 877-340-9100, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 2407 Ferrand Street, Monroe, LA 71201."
+    ],
+    "public_contact": {
+      "phone": "318-387-0535",
+      "phone_label": "Area Agency on Aging (Ouachita)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+      "phone_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+        "title": "Governor’s Office of Elderly Affairs: Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agencies on Aging, their offices, phones and the parishes each serves; read in full. The directory is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "la-aaa-plaquemines",
+    "name": "Plaquemines Council on Aging",
+    "organization": "Plaquemines Council on Aging",
+    "official_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+    "state": "LA",
+    "service_area": [
+      "Plaquemines"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this parish: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Louisiana Answers line, 877-340-9100, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 278 Civic Drive, Port Sulphur, LA 70083."
+    ],
+    "public_contact": {
+      "phone": "504-934-3695",
+      "phone_label": "Area Agency on Aging (Plaquemines)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+      "phone_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+        "title": "Governor’s Office of Elderly Affairs: Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agencies on Aging, their offices, phones and the parishes each serves; read in full. The directory is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "la-aaa-red-river",
+    "name": "Red River Council on Aging",
+    "organization": "Red River Council on Aging",
+    "official_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+    "state": "LA",
+    "service_area": [
+      "Red River"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this parish: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Louisiana Answers line, 877-340-9100, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 1825 Front Street, Coushatta, LA 71019."
+    ],
+    "public_contact": {
+      "phone": "318-932-5721",
+      "phone_label": "Area Agency on Aging (Red River)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+      "phone_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+        "title": "Governor’s Office of Elderly Affairs: Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agencies on Aging, their offices, phones and the parishes each serves; read in full. The directory is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "la-aaa-sabine",
+    "name": "Sabine Council on Aging",
+    "organization": "Sabine Council on Aging",
+    "official_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+    "state": "LA",
+    "service_area": [
+      "Sabine"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this parish: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Louisiana Answers line, 877-340-9100, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 200 Legacy Drive, Many, LA 71449."
+    ],
+    "public_contact": {
+      "phone": "318-256-4140",
+      "phone_label": "Area Agency on Aging (Sabine)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+      "phone_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+        "title": "Governor’s Office of Elderly Affairs: Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agencies on Aging, their offices, phones and the parishes each serves; read in full. The directory is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "la-aaa-st-bernard",
+    "name": "St. Bernard Council on Aging",
+    "organization": "St. Bernard Council on Aging",
+    "official_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+    "state": "LA",
+    "service_area": [
+      "St. Bernard"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this parish: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Louisiana Answers line, 877-340-9100, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 8201 A West Judge Perez Drive, Chalmette, LA 70043."
+    ],
+    "public_contact": {
+      "phone": "504-278-7335",
+      "phone_label": "Area Agency on Aging (St. Bernard)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+      "phone_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+        "title": "Governor’s Office of Elderly Affairs: Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agencies on Aging, their offices, phones and the parishes each serves; read in full. The directory is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "la-aaa-st-charles",
+    "name": "St. Charles Council on Aging",
+    "organization": "St. Charles Council on Aging",
+    "official_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+    "state": "LA",
+    "service_area": [
+      "St. Charles"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this parish: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Louisiana Answers line, 877-340-9100, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 282 Judge Edward Dufresne Parkway, Luling, LA 70070."
+    ],
+    "public_contact": {
+      "phone": "985-783-6685",
+      "phone_label": "Area Agency on Aging (St. Charles)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+      "phone_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+        "title": "Governor’s Office of Elderly Affairs: Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agencies on Aging, their offices, phones and the parishes each serves; read in full. The directory is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "la-aaa-st-james",
+    "name": "St. James Parish Agency on Aging",
+    "organization": "St. James Parish Agency on Aging",
+    "official_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+    "state": "LA",
+    "service_area": [
+      "St. James"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this parish: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Louisiana Answers line, 877-340-9100, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 1579 Lutcher Avenue, Lutcher, LA 70071."
+    ],
+    "public_contact": {
+      "phone": "225-562-2305",
+      "phone_label": "Area Agency on Aging (St. James)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+      "phone_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+        "title": "Governor’s Office of Elderly Affairs: Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agencies on Aging, their offices, phones and the parishes each serves; read in full. The directory is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "la-aaa-st-john",
+    "name": "St. John Council on Aging",
+    "organization": "St. John Council on Aging",
+    "official_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+    "state": "LA",
+    "service_area": [
+      "St. John the Baptist"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this parish: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Louisiana Answers line, 877-340-9100, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 214 Regala Park Road, Reserve, LA 70084."
+    ],
+    "public_contact": {
+      "phone": "985-479-0272",
+      "phone_label": "Area Agency on Aging (St. John the Baptist)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+      "phone_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+        "title": "Governor’s Office of Elderly Affairs: Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agencies on Aging, their offices, phones and the parishes each serves; read in full. The directory is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "la-aaa-st-tammany",
+    "name": "St. Tammany Council on Aging",
+    "organization": "St. Tammany Council on Aging",
+    "official_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+    "state": "LA",
+    "service_area": [
+      "St. Tammany"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this parish: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Louisiana Answers line, 877-340-9100, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 72060 Ramos Drive, Covington, LA 70433."
+    ],
+    "public_contact": {
+      "phone": "985-892-0377",
+      "phone_label": "Area Agency on Aging (St. Tammany)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+      "phone_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+        "title": "Governor’s Office of Elderly Affairs: Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agencies on Aging, their offices, phones and the parishes each serves; read in full. The directory is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "la-aaa-terrebonne",
+    "name": "Terrebonne Council on Aging",
+    "organization": "Terrebonne Council on Aging",
+    "official_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+    "state": "LA",
+    "service_area": [
+      "Terrebonne"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this parish: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Louisiana Answers line, 877-340-9100, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 995 W. Tunnel Boulevard, Houma, LA 70360. It is also the Aging and Disability Resource Center for Lafourche and Terrebonne parishes."
+    ],
+    "public_contact": {
+      "phone": "985-868-8411",
+      "phone_label": "Area Agency on Aging (Terrebonne)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+      "phone_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+        "title": "Governor’s Office of Elderly Affairs: Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agencies on Aging, their offices, phones and the parishes each serves; read in full. The directory is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "la-aaa-vernon",
+    "name": "Vernon Council on Aging",
+    "organization": "Vernon Council on Aging",
+    "official_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+    "state": "LA",
+    "service_area": [
+      "Vernon"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this parish: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Louisiana Answers line, 877-340-9100, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 200 North Third Street, Leesville, LA 71446."
+    ],
+    "public_contact": {
+      "phone": "337-239-4361",
+      "phone_label": "Area Agency on Aging (Vernon)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+      "phone_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+        "title": "Governor’s Office of Elderly Affairs: Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agencies on Aging, their offices, phones and the parishes each serves; read in full. The directory is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "la-aaa-webster",
+    "name": "Webster Council on Aging",
+    "organization": "Webster Council on Aging",
+    "official_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+    "state": "LA",
+    "service_area": [
+      "Webster"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this parish: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Louisiana Answers line, 877-340-9100, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 1482 Sheppard Street, Minden, LA 71055."
+    ],
+    "public_contact": {
+      "phone": "318-371-3056",
+      "phone_label": "Area Agency on Aging (Webster)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+      "phone_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+        "title": "Governor’s Office of Elderly Affairs: Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agencies on Aging, their offices, phones and the parishes each serves; read in full. The directory is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "la-aaa-west-carroll",
+    "name": "West Carroll Council on Aging",
+    "organization": "West Carroll Council on Aging",
+    "official_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+    "state": "LA",
+    "service_area": [
+      "West Carroll"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this parish: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Louisiana Answers line, 877-340-9100, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 207 Martin Way, Oak Grove, LA 71263."
+    ],
+    "public_contact": {
+      "phone": "318-428-4217",
+      "phone_label": "Area Agency on Aging (West Carroll)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+      "phone_source_url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.la.gov/agency-directory/area-agencies-on-aging-directory",
+        "title": "Governor’s Office of Elderly Affairs: Area Agencies on Aging directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agencies on Aging, their offices, phones and the parishes each serves; read in full. The directory is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "la-omb-alexandria",
+    "name": "Alexandria Region Long-Term Care Ombudsman (Cenla Area Agency on Aging)",
+    "organization": "Alexandria Region Long-Term Care Ombudsman (Cenla Area Agency on Aging)",
+    "official_url": "https://goea.louisiana.gov/media/gkmfvrto/ombudsman-flyer-and-contact-list-2026.pdf",
+    "state": "LA",
+    "service_area": [
+      "Avoyelles",
+      "Catahoula",
+      "Concordia",
+      "Grant",
+      "LaSalle",
+      "Natchitoches",
+      "Rapides",
+      "Sabine",
+      "Winn"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this parish: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and parish. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Toll-free: 800-454-9573. The state ombudsman office: 866-632-0922."
+    ],
+    "public_contact": {
+      "phone": "318-484-2260",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.louisiana.gov/media/gkmfvrto/ombudsman-flyer-and-contact-list-2026.pdf",
+      "phone_source_url": "https://goea.louisiana.gov/media/gkmfvrto/ombudsman-flyer-and-contact-list-2026.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.louisiana.gov/media/gkmfvrto/ombudsman-flyer-and-contact-list-2026.pdf",
+        "title": "Governor’s Office of Elderly Affairs: Long-Term Care Ombudsman flyer and contact list (Rev. 06/2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each regional program’s host agency, phones and parishes, and the state office line 866-632-0922; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "la-omb-baton-rouge",
+    "name": "Baton Rouge Region Long-Term Care Ombudsman (Capital Area Agency on Aging)",
+    "organization": "Baton Rouge Region Long-Term Care Ombudsman (Capital Area Agency on Aging)",
+    "official_url": "https://goea.louisiana.gov/media/gkmfvrto/ombudsman-flyer-and-contact-list-2026.pdf",
+    "state": "LA",
+    "service_area": [
+      "Ascension",
+      "Assumption",
+      "East Baton Rouge",
+      "East Feliciana",
+      "Iberville",
+      "Lafourche",
+      "Livingston",
+      "Pointe Coupee",
+      "St. Charles",
+      "St. Helena",
+      "St. James",
+      "St. John the Baptist",
+      "Tangipahoa",
+      "Terrebonne",
+      "Washington",
+      "West Baton Rouge",
+      "West Feliciana"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this parish: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and parish. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Toll-free: 800-833-9883. The state ombudsman office: 866-632-0922."
+    ],
+    "public_contact": {
+      "phone": "225-229-7586",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.louisiana.gov/media/gkmfvrto/ombudsman-flyer-and-contact-list-2026.pdf",
+      "phone_source_url": "https://goea.louisiana.gov/media/gkmfvrto/ombudsman-flyer-and-contact-list-2026.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.louisiana.gov/media/gkmfvrto/ombudsman-flyer-and-contact-list-2026.pdf",
+        "title": "Governor’s Office of Elderly Affairs: Long-Term Care Ombudsman flyer and contact list (Rev. 06/2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each regional program’s host agency, phones and parishes, and the state office line 866-632-0922; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "la-omb-lafayette",
+    "name": "Lafayette Region Long-Term Care Ombudsman (Cajun Area Agency on Aging)",
+    "organization": "Lafayette Region Long-Term Care Ombudsman (Cajun Area Agency on Aging)",
+    "official_url": "https://goea.louisiana.gov/media/gkmfvrto/ombudsman-flyer-and-contact-list-2026.pdf",
+    "state": "LA",
+    "service_area": [
+      "Acadia",
+      "Evangeline",
+      "Iberia",
+      "Lafayette",
+      "St. Landry",
+      "St. Martin",
+      "St. Mary",
+      "Vermilion"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this parish: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and parish. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Toll-free: 800-738-2256. The state ombudsman office: 866-632-0922."
+    ],
+    "public_contact": {
+      "phone": "337-572-8940",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.louisiana.gov/media/gkmfvrto/ombudsman-flyer-and-contact-list-2026.pdf",
+      "phone_source_url": "https://goea.louisiana.gov/media/gkmfvrto/ombudsman-flyer-and-contact-list-2026.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.louisiana.gov/media/gkmfvrto/ombudsman-flyer-and-contact-list-2026.pdf",
+        "title": "Governor’s Office of Elderly Affairs: Long-Term Care Ombudsman flyer and contact list (Rev. 06/2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each regional program’s host agency, phones and parishes, and the state office line 866-632-0922; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "la-omb-lake-charles",
+    "name": "Lake Charles Region Long-Term Care Ombudsman (Calcasieu Council on Aging)",
+    "organization": "Lake Charles Region Long-Term Care Ombudsman (Calcasieu Council on Aging)",
+    "official_url": "https://goea.louisiana.gov/media/gkmfvrto/ombudsman-flyer-and-contact-list-2026.pdf",
+    "state": "LA",
+    "service_area": [
+      "Allen",
+      "Beauregard",
+      "Calcasieu",
+      "Cameron",
+      "Jefferson Davis",
+      "Vernon"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this parish: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and parish. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Toll-free: 800-223-5872. The state ombudsman office: 866-632-0922."
+    ],
+    "public_contact": {
+      "phone": "337-312-1059",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.louisiana.gov/media/gkmfvrto/ombudsman-flyer-and-contact-list-2026.pdf",
+      "phone_source_url": "https://goea.louisiana.gov/media/gkmfvrto/ombudsman-flyer-and-contact-list-2026.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.louisiana.gov/media/gkmfvrto/ombudsman-flyer-and-contact-list-2026.pdf",
+        "title": "Governor’s Office of Elderly Affairs: Long-Term Care Ombudsman flyer and contact list (Rev. 06/2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each regional program’s host agency, phones and parishes, and the state office line 866-632-0922; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "la-omb-monroe",
+    "name": "Monroe Region Long-Term Care Ombudsman (Cenla Area Agency on Aging)",
+    "organization": "Monroe Region Long-Term Care Ombudsman (Cenla Area Agency on Aging)",
+    "official_url": "https://goea.louisiana.gov/media/gkmfvrto/ombudsman-flyer-and-contact-list-2026.pdf",
+    "state": "LA",
+    "service_area": [
+      "Caldwell",
+      "East Carroll",
+      "Franklin",
+      "Jackson",
+      "Lincoln",
+      "Madison",
+      "Morehouse",
+      "Ouachita",
+      "Richland",
+      "Tensas",
+      "Union",
+      "West Carroll"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this parish: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and parish. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Toll-free: 800-454-9573. The state ombudsman office: 866-632-0922."
+    ],
+    "public_contact": {
+      "phone": "318-362-4288",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.louisiana.gov/media/gkmfvrto/ombudsman-flyer-and-contact-list-2026.pdf",
+      "phone_source_url": "https://goea.louisiana.gov/media/gkmfvrto/ombudsman-flyer-and-contact-list-2026.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.louisiana.gov/media/gkmfvrto/ombudsman-flyer-and-contact-list-2026.pdf",
+        "title": "Governor’s Office of Elderly Affairs: Long-Term Care Ombudsman flyer and contact list (Rev. 06/2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each regional program’s host agency, phones and parishes, and the state office line 866-632-0922; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "la-omb-new-orleans",
+    "name": "New Orleans Region Long-Term Care Ombudsman (Capital Area Agency on Aging)",
+    "organization": "New Orleans Region Long-Term Care Ombudsman (Capital Area Agency on Aging)",
+    "official_url": "https://goea.louisiana.gov/media/gkmfvrto/ombudsman-flyer-and-contact-list-2026.pdf",
+    "state": "LA",
+    "service_area": [
+      "Jefferson",
+      "Orleans",
+      "Plaquemines",
+      "St. Bernard",
+      "St. Tammany"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this parish: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and parish. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Toll-free: 800-833-9883. The state ombudsman office: 866-632-0922."
+    ],
+    "public_contact": {
+      "phone": "504-909-0672",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.louisiana.gov/media/gkmfvrto/ombudsman-flyer-and-contact-list-2026.pdf",
+      "phone_source_url": "https://goea.louisiana.gov/media/gkmfvrto/ombudsman-flyer-and-contact-list-2026.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.louisiana.gov/media/gkmfvrto/ombudsman-flyer-and-contact-list-2026.pdf",
+        "title": "Governor’s Office of Elderly Affairs: Long-Term Care Ombudsman flyer and contact list (Rev. 06/2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each regional program’s host agency, phones and parishes, and the state office line 866-632-0922; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "la-omb-shreveport",
+    "name": "Shreveport Region Long-Term Care Ombudsman (Caddo Council on Aging)",
+    "organization": "Shreveport Region Long-Term Care Ombudsman (Caddo Council on Aging)",
+    "official_url": "https://goea.louisiana.gov/media/gkmfvrto/ombudsman-flyer-and-contact-list-2026.pdf",
+    "state": "LA",
+    "service_area": [
+      "Bienville",
+      "Bossier",
+      "Caddo",
+      "Claiborne",
+      "De Soto",
+      "Red River",
+      "Webster"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this parish: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and parish. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Toll-free: 800-256-3003. The state ombudsman office: 866-632-0922."
+    ],
+    "public_contact": {
+      "phone": "318-676-7900",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://goea.louisiana.gov/media/gkmfvrto/ombudsman-flyer-and-contact-list-2026.pdf",
+      "phone_source_url": "https://goea.louisiana.gov/media/gkmfvrto/ombudsman-flyer-and-contact-list-2026.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://goea.louisiana.gov/media/gkmfvrto/ombudsman-flyer-and-contact-list-2026.pdf",
+        "title": "Governor’s Office of Elderly Affairs: Long-Term Care Ombudsman flyer and contact list (Rev. 06/2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each regional program’s host agency, phones and parishes, and the state office line 866-632-0922; read in full."
+      }
+    ]
+  }
 ]
