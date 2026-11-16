@@ -14,9 +14,14 @@ Only "broken" and "moved" are listed link by link, because those are the ones a 
 "unchecked" is counted by site and nobody is asked to open those by hand: many government sites
 refuse every robot, and this guide corrects contacts when someone reports a problem.
 
+A few sites answer a robot as if a good page were missing. When a person has opened such a link in a
+browser and it is fine, add it to data/link-checks.json with the date. The check then leaves it alone
+until that date is older than max_age_days, so the monthly issue lists only what is new.
+
     python3 scripts/linkcheck.py --probe URL [URL ...]   show how single addresses are sorted
 """
 import html
+import json
 import re
 import ssl
 import sys
@@ -25,6 +30,10 @@ import urllib.error
 import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
+from datetime import date
+from pathlib import Path
+
+LEDGER = Path(__file__).resolve().parents[1] / 'data' / 'link-checks.json'
 
 UA = 'Mozilla/5.0 (compatible; Veteran Resource Guide link check; +https://guide.vethomeguard.org/)'
 HEADERS = {'User-Agent': UA, 'Accept': 'text/html,application/xhtml+xml,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.9'}
@@ -167,16 +176,41 @@ def spread(urls):
     return out
 
 
-def report(results, used, fix_hint='', limit=150):
+def load_ledger():
+    if not LEDGER.exists():
+        return {'max_age_days': 180, 'opened_in_browser': {}}
+    return json.loads(LEDGER.read_text(encoding='utf-8'))
+
+
+def confirmed(url, ledger, today=None):
+    """Has a person opened this link in a browser recently and found it working?"""
+    entry = ledger.get('opened_in_browser', {}).get(url)
+    if not entry:
+        return False
+    try:
+        age = ((today or date.today()) - date.fromisoformat(entry['opened'])).days
+    except (KeyError, ValueError):
+        return False
+    return 0 <= age <= ledger.get('max_age_days', 180)
+
+
+def report(results, used, fix_hint='', limit=150, ledger=None, today=None):
     """results: {url: (pile, why, final)}; used: {url: {who uses it}}. Returns (markdown, needs_a_person).
 
     At most `limit` links are named in each list, so the report always fits in one GitHub issue.
+    A link a person has opened recently (the ledger) is counted and not listed.
     """
+    ledger = ledger or {}
     piles = {'broken': [], 'moved': [], 'unchecked': []}
+    quiet = 0
     for url in sorted(results):
         pile, why, _ = results[url]
-        if pile != 'ok':
-            piles[pile].append((url, why))
+        if pile == 'ok':
+            continue
+        if pile in ('broken', 'moved') and confirmed(url, ledger, today):
+            quiet += 1
+            continue
+        piles[pile].append((url, why))
 
     def who(url):
         ids = sorted(used.get(url, []))
@@ -186,13 +220,13 @@ def report(results, used, fix_hint='', limit=150):
         named = [f'- {u} ({why}), used by {who(u)}' for u, why in piles[pile][:limit]]
         return named + ([f'- and {len(piles[pile]) - limit} more'] if len(piles[pile]) > limit else [])
 
-    ok = len(results) - sum(len(v) for v in piles.values())
-    out = [f'Checked {len(results)} links: {ok} loaded, {len(piles["broken"])} broken, {len(piles["moved"])} moved to another website, '
+    ok = len(results) - sum(len(v) for v in piles.values()) - quiet
+    out = [f'Checked {len(results)} links: {ok} loaded, {len(piles["broken"])} look broken, {len(piles["moved"])} moved to another website, '
            f'{len(piles["unchecked"])} on sites that turn robots away.\n']
     if piles['broken']:
-        out.append('## Links that are broken\n')
-        out.append('A visitor who follows one of these reaches a dead end. Open it to be sure, then correct the listing.'
-                   + (f' {fix_hint}' if fix_hint else '') + '\n')
+        out.append('## Links that look broken\n')
+        out.append('Open each one to be sure. If it is a dead end, correct the listing.' + (f' {fix_hint}' if fix_hint else '')
+                   + ' If it loads in a browser, add it to `data/link-checks.json` with today\'s date and it will not be listed again until that date is old.\n')
         out += rows('broken')
         out.append('')
     if piles['moved']:
@@ -203,6 +237,9 @@ def report(results, used, fix_hint='', limit=150):
         out.append('')
     if not piles['broken'] and not piles['moved']:
         out.append('No broken or moved links were found.\n')
+    if quiet:
+        out.append(f'{quiet} link{"s" if quiet != 1 else ""} a robot cannot load {"were" if quiet != 1 else "was"} opened by a person in the last '
+                   f'{ledger.get("max_age_days", 180)} days and {"are" if quiet != 1 else "is"} not listed.\n')
     if piles['unchecked']:
         by_site = {}
         for u, _ in piles['unchecked']:

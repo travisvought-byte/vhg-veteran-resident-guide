@@ -1,0 +1,14 @@
+{
+ "about": "Links a robot cannot load that a person has opened in a browser and found working. The monthly link check (scripts/check_links.py) leaves a link listed here alone until its date is older than max_age_days.",
+ "max_age_days": 180,
+ "opened_in_browser": {
+  "https://dma.mt.gov/MVAD/": {
+   "opened": "2026-11-15",
+   "note": "Answers 404 to the robot. Loads in a browser and shows the Montana Veterans Affairs Division phone, 406-324-3742."
+  },
+  "https://dmavs.nh.gov/veterans-services": {
+   "opened": "2026-11-15",
+   "note": "The robot cannot find the site. Loads in a browser and shows the Division of Veterans Services phone, 603-624-9230."
+  }
+ }
+}

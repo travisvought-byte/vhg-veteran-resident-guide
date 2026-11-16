@@ -119,7 +119,7 @@ used = {u: {'OH:example'} for u in results}
 used['https://dead.example/x'] = {'TX:tx-one', 'TX:tx-two', 'shared:r02-va-pension'}
 text, needs = linkcheck.report(results, used, fix_hint='Fix the record.')
 assert needs
-assert text.startswith('Checked 5 links: 1 loaded, 1 broken, 1 moved to another website, 2 on sites that turn robots away.'), text
+assert text.startswith('Checked 5 links: 1 loaded, 1 look broken, 1 moved to another website, 2 on sites that turn robots away.'), text
 assert '- https://dead.example/x (HTTP 404), used by `TX:tx-one`, `TX:tx-two`, `shared:r02-va-pension`' in text
 assert '- https://old.example/ (now lands on new.example), used by `OH:example`' in text
 assert 'ohio.gov (2)' in text and 'https://quiet.ohio.gov/a' not in text, 'unchecked links are counted by site, never listed'
@@ -129,6 +129,17 @@ long_report, _ = linkcheck.report(many, {u: {'TX:tx-' + str(i) for i in range(9)
 assert '- and 250 more' in long_report and len(long_report) < 60000, 'a very long list still fits in one GitHub issue'
 quiet, needs = linkcheck.report({k: results[k] for k in ('https://ok.example/', 'https://quiet.ohio.gov/a')}, used)
 assert not needs and 'No broken or moved links were found.' in quiet, 'sites that refuse robots never raise an issue on their own'
+
+# A link a person opened recently is counted and not listed; an old confirmation runs out.
+from datetime import date
+day = date(2026, 11, 15)
+ledger = {'max_age_days': 180, 'opened_in_browser': {'https://dead.example/x': {'opened': '2026-11-01'}}}
+text, needs = linkcheck.report(results, used, ledger=ledger, today=day)
+assert needs and 'https://dead.example/x' not in text and 'https://old.example/' in text
+assert '1 link a robot cannot load was opened by a person in the last 180 days and is not listed.' in text
+assert text.startswith('Checked 5 links: 1 loaded, 0 look broken, 1 moved'), text
+assert linkcheck.confirmed('https://dead.example/x', ledger, date(2027, 6, 1)) is False, 'a confirmation runs out'
+assert linkcheck.confirmed('https://old.example/', ledger, day) is False
 
 # 4. The real data: every state and the family guide are covered, and shared federal records are named once.
 links = check_links.collect()
@@ -143,4 +154,10 @@ assert all(u.startswith('https://') or u.startswith('http://') for u in links)
 texas = check_links.collect('TX')
 assert texas and all(w.startswith(('TX:', 'shared:')) for names in texas.values() for w in names)
 assert len(texas) < len(links)
+# The committed list of hand-opened links is well formed and names only links still in use.
+committed = linkcheck.load_ledger()
+assert isinstance(committed['max_age_days'], int)
+for url, entry in committed['opened_in_browser'].items():
+    date.fromisoformat(entry['opened'])
+    assert url in links, url + ' is in data/link-checks.json but no record uses it any more'
 print('PASS: link check sorting, polite ordering, report wording and coverage of ' + str(len(registry)) + ' states plus the family guide (' + str(len(links)) + ' links).')
