@@ -71,3 +71,39 @@ for(const s of registry){
  }
 }
 console.log('PASS: county panels and county-limited resources for every registered county.');
+
+// 4. A state with one statewide entry shows its contacts as soon as the state is chosen; every other state waits for a county.
+const digits=v=>String(v||'').replace(/\D/g,'');
+for(const s of registry){
+ change('edition-state',s.code);
+ const rows=JSON.parse(read(s.offices)),single=rows.length===1,picker=d.getElementById('county');
+ assert.equal(picker.value,single?rows[0].county:'',s.code+' county starts '+(single?'on its one statewide entry':'unchosen'));
+ assert.equal(picker.parentElement.hidden,single,s.code+' county picker is '+(single?'put away':'shown'));
+ assert.equal(d.querySelector('.office-directory').hidden,single,s.code+' county directory');
+ const coverage=d.getElementById('coverage-detail').textContent;
+ assert(!/\b1 counties\b/.test(coverage),s.code+' coverage sentence');
+ if(single){
+  assert(digits(d.getElementById('county-panel').textContent).includes(digits(rows[0].phone)),s.code+' statewide veterans phone shows without choosing a county');
+  assert(coverage.includes('statewide referral routes'),s.code+' starter coverage sentence');
+ }
+ // The footer date is the newest review date in this state's own records.
+ const dates=[...JSON.parse(read(s.resources)).map(r=>r.verification.last_reviewed_on),...rows.map(c=>c.reviewed_on)].filter(v=>/^\d{4}-\d{2}-\d{2}$/.test(v||'')).sort();
+ const newest=new Date(dates.at(-1)+'T12:00:00').toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
+ assert.equal(d.getElementById('edition-updated').textContent,'Most recent source review for '+s.name+': '+newest+'.',s.code+' footer review date');
+}
+assert(registry.some(s=>s.starter)&&registry.filter(s=>s.starter).every(s=>s.counties===1),'starter editions have one statewide entry');
+console.log('PASS: single-entry states show their statewide contacts at once, county states wait for a county, and every footer date comes from the records.');
+
+// 5. Phone header: the first four links stay in view and the rest open from one real button.
+const toggle=d.getElementById('jump-toggle'),more=d.getElementById('jump-more');
+assert(/<button type="button" class="jump jump-toggle" id="jump-toggle" aria-expanded="false" aria-controls="jump-more" hidden>/.test(read('index.html')),'the button stays hidden until the page script runs');
+assert.equal(toggle.hidden,false,'the page script shows the button');
+assert.equal(toggle.nextElementSibling,more,'the folded links follow their button');
+assert.deepEqual([...d.querySelectorAll('header .brand-copy > a.jump')].map(a=>a.textContent),['Find a county veterans office','Find resources','Bingo & Senior Centers','I’m helping someone'],'links that stay in view');
+assert.equal(more.querySelectorAll('a.jump').length,6,'folded links');
+toggle.click();assert.equal(toggle.getAttribute('aria-expanded'),'true');assert.equal(toggle.textContent,'Fewer guides');
+toggle.click();assert.equal(toggle.getAttribute('aria-expanded'),'false');assert.equal(toggle.textContent,'More guides');
+const css=read('assets/unified.css');
+assert(css.includes('header .jump-toggle:not([hidden])[aria-expanded=false]+.jump-more{display:none}'),'links fold only when the button is available');
+assert(css.includes('.jump-more{display:contents}.jump-toggle{display:none}'),'wider screens show every link and no button');
+console.log('PASS: phone header keeps four links in view and opens the rest from one button.');

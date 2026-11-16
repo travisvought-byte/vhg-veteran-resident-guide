@@ -15,18 +15,25 @@ function setState(state,initial=false){
  if(!Object.hasOwn(routeNames,route))route='priority';
  $('edition-state').value=state;$('county').innerHTML='<option value="">Choose a county or city…</option>';$('county').value='';
  COUNTIES.forEach(c=>{const o=document.createElement('option');o.value=c.county;o.textContent=localityLabel(c);$('county').append(o)});
+ // A starter edition has one statewide entry. Choose it and put the one-choice picker away, so its contacts show without an extra step.
+ const single=COUNTIES.length===1;
+ if(single)$('county').value=COUNTIES[0].county;
+ $('county').parentElement.hidden=single;$('county-start').classList.toggle('single-area',single);document.querySelector('.office-directory').hidden=single;
  $('need').innerHTML='<option value="">All resource types</option>';
  [...new Set(DATA.flatMap(x=>x.needs_supported||[]))].sort().forEach(n=>{const o=document.createElement('option');o.value=n;o.textContent=types[n]||n.replaceAll('_',' ');$('need').append(o)});
  ['search','need','status','office-search'].forEach(id=>$(id).value='');
  for(const [id,markup] of Object.entries(config.markup)){const wrapper=document.createElement('div');wrapper.innerHTML=markup;const replacement=wrapper.firstElementChild;$(id).replaceWith(replacement)}
  // Keep state-specific instructions available without making the first screen an explanation of the data model.
  const pending=DATA.filter(x=>x.verification.record_status!=='official_source_reviewed').length;
- $('coverage-detail').innerHTML='<p>'+esc(config.name)+': referral routes for '+COUNTIES.length+(state==='VA'?' counties and independent cities.':' counties.')+' Local service coverage is still growing.</p><p>'+pending+' resource records need further source checks. Check the status on each listing and confirm availability with the agency.</p>';
+ $('coverage-detail').innerHTML='<p>'+esc(config.name)+(single?': statewide referral routes. Local offices are not listed yet.':': referral routes for '+COUNTIES.length+(state==='VA'?' counties and independent cities.':' counties.')+' Local service coverage is still growing.')+'</p><p>'+pending+' resource records need further source checks. Check the status on each listing and confirm availability with the agency.</p>';
  if(config.coverageNote)$('coverage-detail').innerHTML+='<p>'+esc(config.coverageNote)+'</p>';
  document.querySelector('label[for="county"]').textContent=(state==='VA'?'County or independent city in ':'County in ')+config.name;
  $('aid-open').hidden=state!=='OH';document.querySelectorAll('.ohio-only').forEach(e=>{e.hidden=state!=='OH'});document.querySelector('.office-directory summary').textContent='Browse '+config.name+(state==='VA'?' county and city contacts':' county contacts');
  $('office-search').placeholder='Search '+config.name+(state==='VA'?' counties or independent cities':' counties');
  document.title=config.name+' | Veteran Resident Resource Guide';
+ // The footer date comes from the records, so it cannot go stale: the newest source review in this state.
+ const reviewed=[...DATA.map(x=>x.verification?.last_reviewed_on),...COUNTIES.map(c=>c.reviewed_on)].filter(v=>/^\d{4}-\d{2}-\d{2}$/.test(v||'')).sort().at(-1);
+ $('edition-updated').textContent=reviewed?'Most recent source review for '+config.name+': '+new Date(reviewed+'T12:00:00').toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'})+'.':'';
  document.querySelectorAll('[data-advocacy-route]').forEach(a=>a.href='disability-advocacy.html?state='+state);document.querySelectorAll('[data-family-route]').forEach(a=>a.href=(state==='OH'?'https://www.ohiomom.org/family-guide.html':'family-guide.html')+'?state='+state);
  document.querySelectorAll('a[href^="share"]').forEach(a=>a.href=config.sharePage);
  document.querySelectorAll('.footer-links a').forEach(a=>{if(a.textContent==='County contact data')a.href=config.files.offices;if(a.textContent==='Resource data')a.href=config.files.resources});
@@ -141,6 +148,8 @@ $('edition-state').addEventListener('change',()=>setState($('edition-state').val
 $('reset').onclick=()=>{$('senior-topic').value='';['search','need','status'].forEach(id=>$(id).value='');if(!['seniors','community'].includes(route))route='priority';render()};
 $('share').onclick=async()=>{try{await navigator.clipboard.writeText(shareURL().href);$('share-status').textContent='Link copied.'}catch{$('share-status').textContent='Copy the page address to share this view.'}};
 $('print-results').onclick=()=>{clearPrintMode();window.print()};
+// Phones: the header's extra links open from one button (assets/unified.css keeps them all visible on wider screens).
+const moreGuides=$('jump-toggle');moreGuides.hidden=false;moreGuides.onclick=()=>{const open=moreGuides.getAttribute('aria-expanded')!=='true';moreGuides.setAttribute('aria-expanded',String(open));moreGuides.textContent=open?'Fewer guides':'More guides'};
 $('helper-open').onclick=openHelper;$('helper-header').onclick=e=>{e.preventDefault();openHelper()};
 ['helper-person','helper-need'].forEach(id=>$(id).addEventListener('change',()=>{helperShowingResults=false;$('helper-status').textContent='';render()}));
 $('helper-close').onclick=()=>{helperActive=false;helperShowingResults=false;route='priority';render();$('directory').scrollIntoView({behavior:'smooth'})};
