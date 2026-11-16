@@ -27,8 +27,8 @@ assert(!/\b\d+ (halls|venues|locations|counties)\b/i.test(static_.querySelector(
 
 // Run the page on Monday, November 16, 2026 at 10 a.m. Data requests are answered from this folder.
 const sources = JSON.parse(html.match(/const DATA_SOURCES=(\[.*?\]);/)[1]);
-assert.deepEqual(sources.slice(0, 3), ['', 'https://guide.vethomeguard.org/findbingo-site/', 'https://raw.githubusercontent.com/travisvought-byte/vhg-veteran-resident-guide/main/findbingo-site/']);
-async function open(query, {served = ['https://www.findbingo.org/'], requests = []} = {}) {
+assert.deepEqual(sources, ['', 'https://guide.vethomeguard.org/findbingo-site/', 'https://raw.githubusercontent.com/travisvought-byte/vhg-veteran-resident-guide/main/findbingo-site/']);
+async function open(query, {served = ['https://www.findbingo.org/'], requests = [], served_data = data} = {}) {
   const dom = new JSDOM(html, {url: 'https://www.findbingo.org/' + query, runScripts: 'dangerously', beforeParse(w) {
     const RealDate = w.Date;
     w.Date = class extends RealDate { constructor(...a) { super(...(a.length ? a : [2026, 10, 16, 10, 0])) } static now() { return new RealDate(2026, 10, 16, 10, 0).getTime() } };
@@ -39,7 +39,7 @@ async function open(query, {served = ['https://www.findbingo.org/'], requests = 
       requests.push(abs);
       const base = served.find(b => abs === b + 'data.json' || abs === b + 'zips.json');
       if (!base) return Promise.resolve({ok: false, status: 404, json: () => Promise.reject(new Error('404'))});
-      return Promise.resolve({ok: true, status: 200, json: () => Promise.resolve(JSON.parse(JSON.stringify(abs.endsWith('data.json') ? data : zips)))});
+      return Promise.resolve({ok: true, status: 200, json: () => Promise.resolve(JSON.parse(JSON.stringify(abs.endsWith('data.json') ? served_data : zips)))});
     };
   }});
   assert.equal(dom.window.document.getElementById('count').textContent, 'Loading the bingo list…');
@@ -58,6 +58,12 @@ p = await open('?zip=48066', {served: []});
 assert.equal(p.ok, false);
 assert.equal(p.count, 'Sorry, the bingo list did not load.');
 assert.match(p.d.getElementById('results').textContent, /check your internet connection/);
+// A page newer than the published lists hides the states the lists do not have yet.
+p = await open('', {served_data: {...data, states: data.states.filter(s => s.code !== 'FL')}});
+assert.equal(p.d.querySelector('#state-buttons a[data-state="FL"]').hidden, true);
+assert.equal(p.d.querySelector('#state-buttons a[data-state="MI"]').hidden, false);
+p = await open('?state=FL', {served_data: {...data, states: data.states.filter(s => s.code !== 'FL')}});
+assert.equal(p.count, 'Type your ZIP code above, or pick a state.');
 const w0 = (await open('')).w;
 assert.equal(w0.timeRange('16:00', '23:00'), '4 to 11 p.m.');
 assert.equal(w0.timeRange('09:00', '15:00'), '9 a.m. to 3 p.m.');

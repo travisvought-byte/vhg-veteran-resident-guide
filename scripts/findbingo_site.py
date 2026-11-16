@@ -16,10 +16,9 @@ PREFIXES = {'PA': (150, 196), 'WV': (247, 268), 'FL': (320, 349), 'KY': (400, 42
 COVERAGE = {'times', 'licenses', 'ohio_finder', 'none'}
 TIME = re.compile(r'(?:[01]\d|2[0-3]):[0-5]\d')
 REPO_RAW = 'https://raw.githubusercontent.com/travisvought-byte/vhg-veteran-resident-guide/'
-# Where the page looks for data.json and zips.json, in order. The branch entry serves the Wix copy
-# until this folder reaches main; it can be dropped after that merge.
-DATA_SOURCES = ['', 'https://guide.vethomeguard.org/findbingo-site/', REPO_RAW + 'main/findbingo-site/',
-                REPO_RAW + 'claude/findbingo-national/findbingo-site/']
+# Where the page looks for data.json and zips.json, in order: beside the page (the guide's copy),
+# then GitHub Pages, then the raw file on main.
+DATA_SOURCES = ['', 'https://guide.vethomeguard.org/findbingo-site/', REPO_RAW + 'main/findbingo-site/']
 
 
 def _state_of_zip(z):

@@ -163,7 +163,7 @@ function zipMessage(zip){return /^[0-9]{5}$/.test(zip)?'We could not find ZIP co
 function setStatus(msg,bad){const s=$('zip-status');s.textContent=msg;s.classList.toggle('bad',!!bad)}
 function applyZip(){const zip=$('zip').value.trim();if(!zip){activeZip='';setStatus('Miles are approximate, as the crow flies.');render();return false}if(!/^[0-9]{5}$/.test(zip)||!ZIPS[zip]){activeZip='';setStatus(zipMessage(zip),true);render();return false}activeZip=zip;activeState='';setStatus('Miles are approximate, as the crow flies.');render();return true}
 $('zip-form').addEventListener('submit',e=>{e.preventDefault();if(!DATA){setStatus('Still loading the bingo list. Please try again in a moment.');return}if(applyZip())$('count').scrollIntoView?.({behavior:'smooth',block:'start'})});
-$('state-buttons').addEventListener('click',e=>{const a=e.target.closest('a[data-state]');if(!a||!DATA)return;e.preventDefault();activeState=a.dataset.state;activeZip='';$('zip').value='';$('county').value='';showMore=false;setStatus('Miles are approximate, as the crow flies.');render();$('count').scrollIntoView?.({block:'start'})});
+$('state-buttons').addEventListener('click',e=>{const a=e.target.closest('a[data-state]');if(!a||!DATA||!STATES[a.dataset.state])return;e.preventDefault();activeState=a.dataset.state;activeZip='';$('zip').value='';$('county').value='';showMore=false;setStatus('Miles are approximate, as the crow flies.');render();$('count').scrollIntoView?.({block:'start'})});
 $('radius').addEventListener('change',()=>{if(activeZip)render()});$('day').addEventListener('change',()=>{if(DATA)render()});$('county').addEventListener('change',()=>{if(DATA)render()});
 $('more-note').addEventListener('click',e=>{const b=e.target.closest('button[data-more]');if(!b)return;showMore=b.dataset.more==='1';render()});
 $('print').addEventListener('click',()=>window.print());
@@ -171,7 +171,7 @@ $('change-search').addEventListener('click',e=>{if(!e.target.closest('a'))return
 function getJSON(u){return fetch(u,{cache:'no-cache'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()})}
 function validData(d,z){return !!(d&&typeof d.generated_on==='string'&&Array.isArray(d.states)&&Array.isArray(d.venues)&&Array.isArray(d.licensed)&&z&&typeof z==='object'&&!Array.isArray(z))}
 async function loadData(){for(const base of DATA_SOURCES){try{const [d,z]=await Promise.all([getJSON(base+'data.json'),getJSON(base+'zips.json')]);if(validData(d,z)){DATA=d;ZIPS=z;return true}}catch(e){}}return false}
-function start(){index();const params=new URLSearchParams(location.search);
+function start(){index();document.querySelectorAll('#state-buttons a').forEach(a=>{a.hidden=!STATES[a.dataset.state]});const params=new URLSearchParams(location.search);
  if(['10','25','50','100'].includes(params.get('radius')))$('radius').value=params.get('radius');
  if(['today','tomorrow','0','1','2','3','4','5','6'].includes(params.get('day')))$('day').value=params.get('day');
  showMore=params.get('all')==='1';

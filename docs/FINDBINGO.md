@@ -24,9 +24,9 @@ Started November 15, 2026, at Travis's direction: one national finder, neighbori
 (site ID `9b3c0c21-b49d-45fa-9cb7-26a1a440afdf`), which is where www.findbingo.org connects. The
 page loads `data.json` and `zips.json` from https://guide.vethomeguard.org/findbingo-site/, so list
 updates go live on findbingo.org as soon as a pull request merges. Upload `index.html` to Wix again
-only when the page itself changes. Until this folder is on `main`, the page reads the same files from
-the `claude/findbingo-national` branch; that fallback can be removed from `DATA_SOURCES` in
-`scripts/findbingo_site.py` after the merge.
+only when the page itself changes. Because the Wix page reads the lists from `main`, a page change
+that needs new data (a new state, for example) shows only after its pull request merges; until then
+the page hides state buttons the loaded data does not have.
 
 Ohio data is not copied here. Ohio searches hand off to https://bingo.vethomeguard.org/ with the
 same ZIP code and distance, so Ohio has one source of truth.
