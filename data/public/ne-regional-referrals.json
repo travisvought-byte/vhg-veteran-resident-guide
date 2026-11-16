@@ -1,80 +1,614 @@
 [
- {
-  "program_id": "ne-aging",
-  "name": "Local aging help in Nebraska (Eldercare Locator)",
-  "official_url": "https://eldercare.acl.gov/home",
-  "organization": "U.S. Administration for Community Living",
-  "service_area": [
-   "All Nebraska counties"
-  ],
-  "state": "NE",
-  "needs_supported": [
-   "general_navigation",
-   "help_at_home"
-  ],
-  "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-  "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
-  "constraints": [
-   "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "ne-aaa-enoa",
+    "name": "Eastern Nebraska Office on Aging (ENOA)",
+    "organization": "Eastern Nebraska Office on Aging (ENOA)",
+    "official_url": "https://nebraskajudicial.gov/programs-services/office-public-guardian/resources-private-guardians-and-conservators/opg-aging-adult-resources",
+    "state": "NE",
+    "service_area": [
+      "Cass",
+      "Dodge",
+      "Douglas",
+      "Sarpy",
+      "Washington"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Center line, 844-843-6364, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 888-554-2711. Office: 4780 S. 131st Street, Omaha."
+    ],
+    "public_contact": {
+      "phone": "402-444-6536",
+      "phone_label": "Area Agency on Aging (Eastern Nebraska)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://nebraskajudicial.gov/programs-services/office-public-guardian/resources-private-guardians-and-conservators/opg-aging-adult-resources",
+      "phone_source_url": "https://dhhs.ne.gov/Pages/Aging.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://nebraskajudicial.gov/programs-services/office-public-guardian/resources-private-guardians-and-conservators/opg-aging-adult-resources",
+        "title": "Nebraska Judicial Branch, Office of Public Guardian: Aging & Adult Resources",
+        "reviewed_on": "2026-11-16",
+        "scope": "The eight Area Agencies on Aging and the counties each serves; read in full. The page is undated. It omits Thomas County, which the DHHS Area Agencies on Aging directory map places with West Central Nebraska: https://dhhs.ne.gov/Chronic%20Disease%20Prevention%20%20Control/NE%20Area%20Agencies%20on%20Aging%20Directory%20Map.pdf"
+      },
+      {
+        "url": "https://dhhs.ne.gov/Pages/Aging.aspx",
+        "title": "Nebraska DHHS State Unit on Aging: Area Agencies on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each agency’s city, phones and office address; read in full."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "ne-aaa-aging-partners",
+    "name": "Aging Partners (Lincoln Area Agency on Aging)",
+    "organization": "Aging Partners (Lincoln Area Agency on Aging)",
+    "official_url": "https://nebraskajudicial.gov/programs-services/office-public-guardian/resources-private-guardians-and-conservators/opg-aging-adult-resources",
+    "state": "NE",
+    "service_area": [
+      "Butler",
+      "Fillmore",
+      "Lancaster",
+      "Polk",
+      "Saline",
+      "Saunders",
+      "Seward",
+      "York"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Center line, 844-843-6364, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-247-0938. Office: 600 S. 70th Street, Building 2, Lincoln."
+    ],
+    "public_contact": {
+      "phone": "402-441-7070",
+      "phone_label": "Area Agency on Aging (Lincoln area)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://nebraskajudicial.gov/programs-services/office-public-guardian/resources-private-guardians-and-conservators/opg-aging-adult-resources",
+      "phone_source_url": "https://dhhs.ne.gov/Pages/Aging.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://nebraskajudicial.gov/programs-services/office-public-guardian/resources-private-guardians-and-conservators/opg-aging-adult-resources",
+        "title": "Nebraska Judicial Branch, Office of Public Guardian: Aging & Adult Resources",
+        "reviewed_on": "2026-11-16",
+        "scope": "The eight Area Agencies on Aging and the counties each serves; read in full. The page is undated. It omits Thomas County, which the DHHS Area Agencies on Aging directory map places with West Central Nebraska: https://dhhs.ne.gov/Chronic%20Disease%20Prevention%20%20Control/NE%20Area%20Agencies%20on%20Aging%20Directory%20Map.pdf"
+      },
+      {
+        "url": "https://dhhs.ne.gov/Pages/Aging.aspx",
+        "title": "Nebraska DHHS State Unit on Aging: Area Agencies on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each agency’s city, phones and office address; read in full."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.acl.gov/contact"
+  {
+    "program_id": "ne-aaa-northeast",
+    "name": "Northeast Nebraska Area Agency on Aging (NENAAA)",
+    "organization": "Northeast Nebraska Area Agency on Aging (NENAAA)",
+    "official_url": "https://nebraskajudicial.gov/programs-services/office-public-guardian/resources-private-guardians-and-conservators/opg-aging-adult-resources",
+    "state": "NE",
+    "service_area": [
+      "Antelope",
+      "Boone",
+      "Boyd",
+      "Brown",
+      "Burt",
+      "Cedar",
+      "Cherry",
+      "Colfax",
+      "Cuming",
+      "Dakota",
+      "Dixon",
+      "Holt",
+      "Keya Paha",
+      "Knox",
+      "Madison",
+      "Nance",
+      "Pierce",
+      "Platte",
+      "Rock",
+      "Stanton",
+      "Thurston",
+      "Wayne"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Center line, 844-843-6364, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-672-8368. Office: 110 N. 37th Street, Unit 101, Norfolk."
+    ],
+    "public_contact": {
+      "phone": "402-370-3454",
+      "phone_label": "Area Agency on Aging (Northeast Nebraska)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://nebraskajudicial.gov/programs-services/office-public-guardian/resources-private-guardians-and-conservators/opg-aging-adult-resources",
+      "phone_source_url": "https://dhhs.ne.gov/Pages/Aging.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://nebraskajudicial.gov/programs-services/office-public-guardian/resources-private-guardians-and-conservators/opg-aging-adult-resources",
+        "title": "Nebraska Judicial Branch, Office of Public Guardian: Aging & Adult Resources",
+        "reviewed_on": "2026-11-16",
+        "scope": "The eight Area Agencies on Aging and the counties each serves; read in full. The page is undated. It omits Thomas County, which the DHHS Area Agencies on Aging directory map places with West Central Nebraska: https://dhhs.ne.gov/Chronic%20Disease%20Prevention%20%20Control/NE%20Area%20Agencies%20on%20Aging%20Directory%20Map.pdf"
+      },
+      {
+        "url": "https://dhhs.ne.gov/Pages/Aging.aspx",
+        "title": "Nebraska DHHS State Unit on Aging: Area Agencies on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each agency’s city, phones and office address; read in full."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.acl.gov/contact",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "aging_agency"
- },
- {
-  "program_id": "ne-ombudsman",
-  "name": "Nebraska long-term-care ombudsman",
-  "official_url": "https://theconsumervoice.org/get_help",
-  "organization": "National Long-Term Care Ombudsman Resource Center",
-  "service_area": [
-   "All Nebraska counties"
-  ],
-  "state": "NE",
-  "needs_supported": [
-   "resident_rights",
-   "general_navigation"
-  ],
-  "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-  "next_step": "Use the locator to find the Nebraska program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
-  "constraints": [
-   "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "ne-aaa-south-central",
+    "name": "South Central Nebraska Area Agency on Aging (SCNAAA)",
+    "organization": "South Central Nebraska Area Agency on Aging (SCNAAA)",
+    "official_url": "https://nebraskajudicial.gov/programs-services/office-public-guardian/resources-private-guardians-and-conservators/opg-aging-adult-resources",
+    "state": "NE",
+    "service_area": [
+      "Blaine",
+      "Buffalo",
+      "Custer",
+      "Franklin",
+      "Furnas",
+      "Garfield",
+      "Greeley",
+      "Harlan",
+      "Kearney",
+      "Loup",
+      "Phelps",
+      "Sherman",
+      "Valley",
+      "Wheeler"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Center line, 844-843-6364, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-658-4320. Office: 620 E. 25th Street, Suite 12, Kearney."
+    ],
+    "public_contact": {
+      "phone": "308-234-1851",
+      "phone_label": "Area Agency on Aging (South Central Nebraska)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://nebraskajudicial.gov/programs-services/office-public-guardian/resources-private-guardians-and-conservators/opg-aging-adult-resources",
+      "phone_source_url": "https://dhhs.ne.gov/Pages/Aging.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://nebraskajudicial.gov/programs-services/office-public-guardian/resources-private-guardians-and-conservators/opg-aging-adult-resources",
+        "title": "Nebraska Judicial Branch, Office of Public Guardian: Aging & Adult Resources",
+        "reviewed_on": "2026-11-16",
+        "scope": "The eight Area Agencies on Aging and the counties each serves; read in full. The page is undated. It omits Thomas County, which the DHHS Area Agencies on Aging directory map places with West Central Nebraska: https://dhhs.ne.gov/Chronic%20Disease%20Prevention%20%20Control/NE%20Area%20Agencies%20on%20Aging%20Directory%20Map.pdf"
+      },
+      {
+        "url": "https://dhhs.ne.gov/Pages/Aging.aspx",
+        "title": "Nebraska DHHS State Unit on Aging: Area Agencies on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each agency’s city, phones and office address; read in full."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "ne-aaa-midland",
+    "name": "Midland Area Agency on Aging (MAAA)",
+    "organization": "Midland Area Agency on Aging (MAAA)",
+    "official_url": "https://nebraskajudicial.gov/programs-services/office-public-guardian/resources-private-guardians-and-conservators/opg-aging-adult-resources",
+    "state": "NE",
+    "service_area": [
+      "Adams",
+      "Clay",
+      "Hall",
+      "Hamilton",
+      "Howard",
+      "Merrick",
+      "Nuckolls",
+      "Webster"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Center line, 844-843-6364, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-955-9714. Office: 2727 W. 2nd Street, Suite 440, Hastings."
+    ],
+    "public_contact": {
+      "phone": "402-463-4565",
+      "phone_label": "Area Agency on Aging (Midland)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://nebraskajudicial.gov/programs-services/office-public-guardian/resources-private-guardians-and-conservators/opg-aging-adult-resources",
+      "phone_source_url": "https://dhhs.ne.gov/Pages/Aging.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://nebraskajudicial.gov/programs-services/office-public-guardian/resources-private-guardians-and-conservators/opg-aging-adult-resources",
+        "title": "Nebraska Judicial Branch, Office of Public Guardian: Aging & Adult Resources",
+        "reviewed_on": "2026-11-16",
+        "scope": "The eight Area Agencies on Aging and the counties each serves; read in full. The page is undated. It omits Thomas County, which the DHHS Area Agencies on Aging directory map places with West Central Nebraska: https://dhhs.ne.gov/Chronic%20Disease%20Prevention%20%20Control/NE%20Area%20Agencies%20on%20Aging%20Directory%20Map.pdf"
+      },
+      {
+        "url": "https://dhhs.ne.gov/Pages/Aging.aspx",
+        "title": "Nebraska DHHS State Unit on Aging: Area Agencies on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each agency’s city, phones and office address; read in full."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
+  {
+    "program_id": "ne-aaa-blue-rivers",
+    "name": "Blue Rivers Area Agency on Aging (BRAAA)",
+    "organization": "Blue Rivers Area Agency on Aging (BRAAA)",
+    "official_url": "https://nebraskajudicial.gov/programs-services/office-public-guardian/resources-private-guardians-and-conservators/opg-aging-adult-resources",
+    "state": "NE",
+    "service_area": [
+      "Gage",
+      "Jefferson",
+      "Johnson",
+      "Nemaha",
+      "Otoe",
+      "Pawnee",
+      "Richardson",
+      "Thayer"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Center line, 844-843-6364, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 888-989-9417. Office: 103 Eastside Boulevard, Beatrice."
+    ],
+    "public_contact": {
+      "phone": "402-223-1376",
+      "phone_label": "Area Agency on Aging (Blue Rivers)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://nebraskajudicial.gov/programs-services/office-public-guardian/resources-private-guardians-and-conservators/opg-aging-adult-resources",
+      "phone_source_url": "https://dhhs.ne.gov/Pages/Aging.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://nebraskajudicial.gov/programs-services/office-public-guardian/resources-private-guardians-and-conservators/opg-aging-adult-resources",
+        "title": "Nebraska Judicial Branch, Office of Public Guardian: Aging & Adult Resources",
+        "reviewed_on": "2026-11-16",
+        "scope": "The eight Area Agencies on Aging and the counties each serves; read in full. The page is undated. It omits Thomas County, which the DHHS Area Agencies on Aging directory map places with West Central Nebraska: https://dhhs.ne.gov/Chronic%20Disease%20Prevention%20%20Control/NE%20Area%20Agencies%20on%20Aging%20Directory%20Map.pdf"
+      },
+      {
+        "url": "https://dhhs.ne.gov/Pages/Aging.aspx",
+        "title": "Nebraska DHHS State Unit on Aging: Area Agencies on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each agency’s city, phones and office address; read in full."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "ombudsman"
- }
+  {
+    "program_id": "ne-aaa-west-central",
+    "name": "West Central Nebraska Area Agency on Aging (WCNAAA)",
+    "organization": "West Central Nebraska Area Agency on Aging (WCNAAA)",
+    "official_url": "https://nebraskajudicial.gov/programs-services/office-public-guardian/resources-private-guardians-and-conservators/opg-aging-adult-resources",
+    "state": "NE",
+    "service_area": [
+      "Arthur",
+      "Chase",
+      "Dawson",
+      "Dundy",
+      "Frontier",
+      "Gosper",
+      "Grant",
+      "Hayes",
+      "Hitchcock",
+      "Hooker",
+      "Keith",
+      "Lincoln",
+      "Logan",
+      "McPherson",
+      "Perkins",
+      "Red Willow",
+      "Thomas"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Center line, 844-843-6364, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-662-2961. Office: 115 N. Vine Street, North Platte."
+    ],
+    "public_contact": {
+      "phone": "308-535-8195",
+      "phone_label": "Area Agency on Aging (West Central Nebraska)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://nebraskajudicial.gov/programs-services/office-public-guardian/resources-private-guardians-and-conservators/opg-aging-adult-resources",
+      "phone_source_url": "https://dhhs.ne.gov/Pages/Aging.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://nebraskajudicial.gov/programs-services/office-public-guardian/resources-private-guardians-and-conservators/opg-aging-adult-resources",
+        "title": "Nebraska Judicial Branch, Office of Public Guardian: Aging & Adult Resources",
+        "reviewed_on": "2026-11-16",
+        "scope": "The eight Area Agencies on Aging and the counties each serves; read in full. The page is undated. It omits Thomas County, which the DHHS Area Agencies on Aging directory map places with West Central Nebraska: https://dhhs.ne.gov/Chronic%20Disease%20Prevention%20%20Control/NE%20Area%20Agencies%20on%20Aging%20Directory%20Map.pdf"
+      },
+      {
+        "url": "https://dhhs.ne.gov/Pages/Aging.aspx",
+        "title": "Nebraska DHHS State Unit on Aging: Area Agencies on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each agency’s city, phones and office address; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "ne-aaa-western",
+    "name": "Aging Office of Western Nebraska (AOWN)",
+    "organization": "Aging Office of Western Nebraska (AOWN)",
+    "official_url": "https://nebraskajudicial.gov/programs-services/office-public-guardian/resources-private-guardians-and-conservators/opg-aging-adult-resources",
+    "state": "NE",
+    "service_area": [
+      "Banner",
+      "Box Butte",
+      "Cheyenne",
+      "Dawes",
+      "Deuel",
+      "Garden",
+      "Kimball",
+      "Morrill",
+      "Scotts Bluff",
+      "Sheridan",
+      "Sioux"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. The statewide Aging and Disability Resource Center line, 844-843-6364, also connects you to aging and disability help. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-682-5140. Office: 1437 10th Street, Gering."
+    ],
+    "public_contact": {
+      "phone": "308-635-0851",
+      "phone_label": "Area Agency on Aging (Western Nebraska)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://nebraskajudicial.gov/programs-services/office-public-guardian/resources-private-guardians-and-conservators/opg-aging-adult-resources",
+      "phone_source_url": "https://dhhs.ne.gov/Pages/Aging.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://nebraskajudicial.gov/programs-services/office-public-guardian/resources-private-guardians-and-conservators/opg-aging-adult-resources",
+        "title": "Nebraska Judicial Branch, Office of Public Guardian: Aging & Adult Resources",
+        "reviewed_on": "2026-11-16",
+        "scope": "The eight Area Agencies on Aging and the counties each serves; read in full. The page is undated. It omits Thomas County, which the DHHS Area Agencies on Aging directory map places with West Central Nebraska: https://dhhs.ne.gov/Chronic%20Disease%20Prevention%20%20Control/NE%20Area%20Agencies%20on%20Aging%20Directory%20Map.pdf"
+      },
+      {
+        "url": "https://dhhs.ne.gov/Pages/Aging.aspx",
+        "title": "Nebraska DHHS State Unit on Aging: Area Agencies on Aging",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each agency’s city, phones and office address; read in full."
+      }
+    ]
+  },
+  {
+    "program_id": "ne-omb-state",
+    "name": "Nebraska Office of the State Long-Term Care Ombudsman",
+    "organization": "Nebraska Office of the State Long-Term Care Ombudsman",
+    "official_url": "https://dhhs.ne.gov/Documents/Ombudsman-Contacts-Map.pdf",
+    "state": "NE",
+    "service_area": [
+      "Adams",
+      "Antelope",
+      "Arthur",
+      "Banner",
+      "Blaine",
+      "Boone",
+      "Box Butte",
+      "Boyd",
+      "Brown",
+      "Buffalo",
+      "Burt",
+      "Butler",
+      "Cass",
+      "Cedar",
+      "Chase",
+      "Cherry",
+      "Cheyenne",
+      "Clay",
+      "Colfax",
+      "Cuming",
+      "Custer",
+      "Dakota",
+      "Dawes",
+      "Dawson",
+      "Deuel",
+      "Dixon",
+      "Dodge",
+      "Douglas",
+      "Dundy",
+      "Fillmore",
+      "Franklin",
+      "Frontier",
+      "Furnas",
+      "Gage",
+      "Garden",
+      "Garfield",
+      "Gosper",
+      "Grant",
+      "Greeley",
+      "Hall",
+      "Hamilton",
+      "Harlan",
+      "Hayes",
+      "Hitchcock",
+      "Holt",
+      "Hooker",
+      "Howard",
+      "Jefferson",
+      "Johnson",
+      "Kearney",
+      "Keith",
+      "Keya Paha",
+      "Kimball",
+      "Knox",
+      "Lancaster",
+      "Lincoln",
+      "Logan",
+      "Loup",
+      "Madison",
+      "McPherson",
+      "Merrick",
+      "Morrill",
+      "Nance",
+      "Nemaha",
+      "Nuckolls",
+      "Otoe",
+      "Pawnee",
+      "Perkins",
+      "Phelps",
+      "Pierce",
+      "Platte",
+      "Polk",
+      "Red Willow",
+      "Richardson",
+      "Rock",
+      "Saline",
+      "Sarpy",
+      "Saunders",
+      "Scotts Bluff",
+      "Seward",
+      "Sheridan",
+      "Sherman",
+      "Sioux",
+      "Stanton",
+      "Thayer",
+      "Thomas",
+      "Thurston",
+      "Valley",
+      "Washington",
+      "Wayne",
+      "Webster",
+      "Wheeler",
+      "York"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "The state office connects you with the regional ombudsman for the facility’s county."
+    ],
+    "public_contact": {
+      "phone": "402-802-5541",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://dhhs.ne.gov/Documents/Ombudsman-Contacts-Map.pdf",
+      "phone_source_url": "https://dhhs.ne.gov/Documents/Ombudsman-Contacts-Map.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dhhs.ne.gov/Documents/Ombudsman-Contacts-Map.pdf",
+        "title": "Nebraska Long-Term Care Ombudsman Program: contacts map (MAP-93, Rev. 10/2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "State office phone (402) 802-5541 and the regional ombudsmen for the Western, Central, Mid-Central, Northeast, Southeast and Eastern regions; read in full. The county-to-region boundaries are drawn on the map and are not in its text."
+      }
+    ]
+  }
 ]

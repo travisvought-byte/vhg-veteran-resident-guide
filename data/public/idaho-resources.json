@@ -937,72 +937,860 @@
   },
   {
     "program_id": "id-claims",
-    "name": "Idaho veterans: accredited claims help",
-    "official_url": "https://veterans.idaho.gov/",
-    "organization": "Idaho Division of Veterans Services",
+    "name": "Idaho veterans: Office of Veterans Advocacy for claims help",
+    "official_url": "https://veterans.idaho.gov/advocacy/",
+    "organization": "Idaho Division of Veterans Services, Office of Veterans Advocacy",
     "service_area": [
-      "All Idaho counties"
+      "statewide"
     ],
     "state": "ID",
     "needs_supported": [
       "general_navigation",
       "benefits_and_funding"
     ],
-    "description": "Free help with VA claims, applications and appeals for veterans and families.",
-    "next_step": "Call the state veterans agency; ask for a benefits review and the office that serves your county.",
-    "constraints": [],
+    "description": "Free help with VA claims, appeals, pension and survivor benefits from the Idaho Division of Veterans Services’ accredited state service officers, in offices in Boise, Caldwell, Mountain Home, Twin Falls, Pocatello, Lewiston and Post Falls.",
+    "next_step": "Call the office nearest you, or the Central Support Office at 208-780-1300, to make an appointment with a veterans service officer.",
+    "constraints": [
+      "Offices are open Monday to Friday, 8 a.m. to 4:30 p.m.; messages can be left 24 hours a day.",
+      "Most counties have no state office; many have a county veterans service officer at the courthouse."
+    ],
     "public_contact": {
-      "phone": "208-780-1300"
+      "phone": "208-780-1300",
+      "phone_label": "Idaho Division of Veterans Services Central Support Office (208-780-1300)"
     },
     "verification": {
       "record_status": "official_source_reviewed",
-      "last_reviewed_on": "2026-11-02"
+      "last_reviewed_on": "2026-11-16"
     },
     "evidence": {
       "review_method": "full_official_page_text",
       "direct_agency_confirmation": false,
-      "phone_source_url": "https://veterans.idaho.gov/"
+      "phone_source_url": "https://veterans.idaho.gov/advocacy/"
     },
     "source_evidence": [
       {
-        "url": "https://veterans.idaho.gov/",
-        "title": "Official published source",
-        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+        "url": "https://veterans.idaho.gov/advocacy/",
+        "title": "Idaho Division of Veterans Services: Office of Veterans Advocacy",
+        "reviewed_on": "2026-11-16",
+        "scope": "The seven Office of Veterans Advocacy offices, their addresses and phones, office hours and the Central Support Office line; read in full. Last updated May 7, 2026."
+      },
+      {
+        "url": "https://veterans.idaho.gov/advocacy/service-officers/",
+        "title": "Idaho Division of Veterans Services: Service Officers",
+        "reviewed_on": "2026-11-16",
+        "scope": "Service officers by office and their phones; read in full. Last updated May 15, 2026."
+      }
+    ]
+  },
+  {
+    "program_id": "id-adrc",
+    "name": "Idaho Area Agencies on Aging and Aging and Disability Resource Center",
+    "official_url": "https://aging.idaho.gov/contact",
+    "organization": "Idaho Commission on Aging and the six Area Agencies on Aging",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "ID",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Idaho’s six Area Agencies on Aging, coordinated by the Idaho Commission on Aging, are the local starting point for older adults, people with disabilities and caregivers: information and assistance, meals, help at home, caregiver support, legal assistance and adult protection. Military service is not required.",
+    "next_step": "Choose a county above for its Area Agency on Aging, call the Idaho Commission on Aging at 877-471-2777, or dial 2-1-1.",
+    "constraints": [
+      "Each program has its own eligibility and waitlist."
+    ],
+    "public_contact": {
+      "phone": "877-471-2777",
+      "phone_label": "Idaho Commission on Aging (877-471-2777)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.idaho.gov/contact"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.idaho.gov/contact",
+        "title": "Idaho Commission on Aging: Contact Us",
+        "reviewed_on": "2026-11-16",
+        "scope": "Commission phones, the 2-1-1 assistance line and the six Area Agencies on Aging with their counties and phones; read in full. Last updated July 20, 2026."
+      },
+      {
+        "url": "https://aging.idaho.gov/?p=374",
+        "title": "Idaho Commission on Aging: Aging and Disability Resource Center",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Aging and Disability Resource Center helps people find local information and services for seniors and people with disabilities; search excerpt."
       }
     ]
   },
   {
     "program_id": "id-ship",
-    "name": "Medicare counseling (SHIP) for Idaho",
-    "official_url": "https://www.shiphelp.org/",
-    "organization": "SHIP Technical Assistance Center",
+    "name": "Medicare counseling (SHIBA) for Idaho",
+    "official_url": "https://doi.idaho.gov/SHIBA",
+    "organization": "Idaho Department of Insurance, Senior Health Insurance Benefits Advisors (SHIBA)",
     "service_area": [
-      "All Idaho counties"
+      "statewide"
     ],
     "state": "ID",
     "needs_supported": [
       "benefits_and_funding"
     ],
-    "description": "Free, unbiased Medicare counseling from the State Health Insurance Assistance Program.",
-    "next_step": "Call or use the locator to reach the Idaho SHIP and ask for a counseling appointment.",
-    "constraints": [],
+    "description": "Free, unbiased Medicare counseling from Idaho’s State Health Insurance Assistance Program, SHIBA: plan choices, enrollment, costs and help with Medicare complaints, in person, by phone or by email.",
+    "next_step": "Call the SHIBA Medicare Help Line at 800-247-4422 or use the Ask SHIBA form. For Medicare itself, call 800-MEDICARE (800-633-4227).",
+    "constraints": [
+      "SHIBA does not sell insurance or recommend specific plans. Have your Medicare card and drug list ready."
+    ],
     "public_contact": {
-      "phone": "877-839-2675"
+      "phone": "800-247-4422",
+      "phone_label": "Idaho SHIBA Medicare Help Line (800-247-4422)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://doi.idaho.gov/SHIBA"
+    },
+    "source_evidence": [
+      {
+        "url": "https://doi.idaho.gov/SHIBA",
+        "title": "Idaho Department of Insurance: SHIBA",
+        "reviewed_on": "2026-11-16",
+        "scope": "Medicare Help Line 1-800-247-4422 and how to reach a counselor; read in full. Last updated September 25, 2026."
+      },
+      {
+        "url": "https://doi.idaho.gov/wp-content/uploads/NewsReleases/2025-09-19-Medicare-enrollment-begins-Oct-15.pdf",
+        "title": "Idaho Department of Insurance news release, September 19, 2025",
+        "reviewed_on": "2026-11-16",
+        "scope": "To connect with a SHIBA counselor, call 1-800-247-4422; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "id-ombudsman",
+    "name": "Idaho Long-Term Care Ombudsman and adult abuse reporting",
+    "official_url": "https://aging.idaho.gov/ombudsman-program/",
+    "organization": "Idaho Commission on Aging, Long-Term Care Ombudsman Program",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "ID",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "description": "Advocacy for residents of skilled nursing and assisted living facilities. Idaho’s local ombudsmen and Adult Protective Services both work through the six Area Agencies on Aging.",
+    "next_step": "Call the Area Agency on Aging for the county (choose a county above) and ask for the long-term care ombudsman, or call the State Ombudsman at the Idaho Commission on Aging, 877-471-2777. To report abuse, neglect or exploitation of a vulnerable adult, call the same Area Agency on Aging. In an emergency, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing agency."
+    ],
+    "public_contact": {
+      "phone": "877-471-2777",
+      "phone_label": "Idaho Commission on Aging, State Ombudsman (877-471-2777)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://aging.idaho.gov/ombudsman-program/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.idaho.gov/ombudsman-program/",
+        "title": "Idaho Commission on Aging: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-16",
+        "scope": "Contact the State Ombudsman at the Commission on Aging or a local ombudsman at an Area Agency on Aging; Commission phones; read in full. Last updated October 20, 2026."
+      },
+      {
+        "url": "https://aging.idaho.gov/adult-protective-services/",
+        "title": "Idaho Commission on Aging: Adult Protective Services",
+        "reviewed_on": "2026-11-16",
+        "scope": "Report suspected abuse, neglect or exploitation of a vulnerable adult to the local Area Agency on Aging; call 911 in an emergency; read in full. Last updated October 20, 2026."
+      }
+    ]
+  },
+  {
+    "program_id": "id-legal-programs",
+    "name": "Free legal help for Idaho older adults",
+    "official_url": "https://idaholegalaid.org/Legal-Advice-Line",
+    "organization": "Idaho Legal Aid Services",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "ID",
+    "resource_role": "legal_aid",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation",
+      "housing"
+    ],
+    "description": "Idaho Legal Aid Services gives free civil legal help to Idahoans 60 and older and to people with low incomes, including a Senior and Public Benefits Legal Advice Line. The Area Agencies on Aging also arrange legal assistance for older adults.",
+    "next_step": "Call 208-746-7541 for the Legal Advice Lines (phone intake Monday to Wednesday, 10 a.m. to 1:30 p.m. Mountain Time), or apply online. For questions about a lawyer, the Idaho State Bar is at 208-334-4500.",
+    "constraints": [
+      "Legal aid screens by age, income, assets and case type. It does not handle criminal cases."
+    ],
+    "public_contact": {
+      "phone": "208-746-7541",
+      "phone_label": "Idaho Legal Aid Services Legal Advice Lines (208-746-7541)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://idaholegalaid.org/Legal-Advice-Line"
+    },
+    "source_evidence": [
+      {
+        "url": "https://idaholegalaid.org/Legal-Advice-Line",
+        "title": "Idaho Legal Aid Services: Legal Advice Line",
+        "reviewed_on": "2026-11-16",
+        "scope": "Senior and Public Benefits Legal Advice Line: phone, intake hours and who qualifies; read in full. The page is undated."
+      },
+      {
+        "url": "https://www.idaholegalaid.org/node/2040",
+        "title": "Idaho Legal Aid Services: Your Lawyer",
+        "reviewed_on": "2026-11-16",
+        "scope": "Seniors 60 and older can get free legal advice through the Senior Legal Hotline at 208-746-7541; search excerpt."
+      },
+      {
+        "url": "https://idaholegalaid.org/taxonomy/term/2458",
+        "title": "Idaho Legal Aid Services: Emergency Help",
+        "reviewed_on": "2026-11-16",
+        "scope": "Questions about a lawyer: Idaho State Bar, 208-334-4500; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "id-vahealth-systems",
+    "name": "VA health care systems serving Idaho",
+    "official_url": "https://www.va.gov/find-locations/?facilityType=health",
+    "organization": "U.S. Department of Veterans Affairs",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "ID",
+    "resource_role": "va_health_system",
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "Idaho veterans are served by four VA health care systems: VA Boise (Boise VA Medical Center, 500 West Fort Street; 208-422-1000 or toll-free 866-437-5093); VA Spokane, which serves northern Idaho; VA Walla Walla, whose Lewiston VA Clinic is at 1630 23rd Avenue, Building 2; and VA Salt Lake City, whose clinics include Pocatello.",
+    "next_step": "Use VA’s facility locator with your ZIP code to find the closest clinic. Not enrolled yet? Ask an Office of Veterans Advocacy service officer for help applying.",
+    "constraints": [
+      "Which system serves you depends on where you live; VA’s locator shows the right clinic."
+    ],
+    "public_contact": {
+      "phone": "208-422-1000",
+      "phone_label": "VA Boise Healthcare System (208-422-1000)"
     },
     "verification": {
       "record_status": "official_search_extract_only",
-      "last_reviewed_on": "2026-11-02"
+      "last_reviewed_on": "2026-11-16"
     },
     "evidence": {
       "review_method": "official_search_excerpt",
       "direct_agency_confirmation": false,
-      "phone_source_url": "https://www.shiphelp.org/?p=317"
+      "phone_source_url": "https://www.va.gov/boise-health-care/contact-us/"
     },
     "source_evidence": [
       {
-        "url": "https://www.shiphelp.org/?p=317",
-        "title": "Official published source",
-        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+        "url": "https://www.va.gov/boise-health-care/contact-us/",
+        "title": "VA Boise health care: Contact us",
+        "reviewed_on": "2026-11-16",
+        "scope": "Boise VA Medical Center, 500 West Fort Street; local 208-422-1000, toll-free 866-437-5093; search excerpt."
+      },
+      {
+        "url": "https://www.va.gov/spokane-health-care/about-us/history/",
+        "title": "VA Spokane health care: History",
+        "reviewed_on": "2026-11-16",
+        "scope": "The VA Spokane Health Care System serves veterans in eastern Washington and northern Idaho; search excerpt."
+      },
+      {
+        "url": "https://www.va.gov/walla-walla-health-care/locations/lewiston-va-clinic/",
+        "title": "VA Walla Walla health care: Lewiston VA Clinic",
+        "reviewed_on": "2026-11-16",
+        "scope": "Lewiston VA Clinic, 1630 23rd Avenue, Building 2, Lewiston; search excerpt."
+      },
+      {
+        "url": "https://www.va.gov/salt-lake-city-health-care/locations/pocatello-va-clinic/",
+        "title": "VA Salt Lake City health care: Pocatello VA Clinic",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Pocatello VA Clinic is part of VA Salt Lake City health care; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "id-cil-dac-moscow",
+    "name": "Disability Action Center NW (Moscow)",
+    "organization": "Disability Action Center NW",
+    "official_url": "https://dacnw.org/",
+    "service_area": [
+      "Idaho",
+      "Lewis",
+      "Nez Perce",
+      "Clearwater",
+      "Latah",
+      "Benewah",
+      "Shoshone",
+      "Kootenai",
+      "Bonner",
+      "Boundary"
+    ],
+    "state": "ID",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 505 N. Main Street, Moscow, ID 83843. Toll-free: 800-475-0070. Voice/TTY: 208-883-0523."
+    ],
+    "public_contact": {
+      "phone": "208-883-0523",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/id",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/id"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/id",
+        "title": "ILRU: Idaho CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each office’s phones, website and counties served; read in full. The directory is undated."
+      },
+      {
+        "url": "https://silc.idaho.gov/idaho-centers-for-independent-living/",
+        "title": "Idaho State Independent Living Council: Idaho Centers for Independent Living",
+        "reviewed_on": "2026-11-16",
+        "scope": "Current office addresses and phones for each center; read in full. Last updated September 28, 2026. The page names towns served, not counties."
+      }
+    ]
+  },
+  {
+    "program_id": "id-cil-dac-post-falls",
+    "name": "Disability Action Center NW (Post Falls)",
+    "organization": "Disability Action Center NW",
+    "official_url": "https://dacnw.org/",
+    "service_area": [
+      "Benewah",
+      "Bonner",
+      "Boundary",
+      "Kootenai",
+      "Shoshone"
+    ],
+    "state": "ID",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 3726 E Mullan Avenue, Post Falls, ID 83854. Toll-free: 800-475-0070."
+    ],
+    "public_contact": {
+      "phone": "208-457-3891",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/id",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/id"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/id",
+        "title": "ILRU: Idaho CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each office’s phones, website and counties served; read in full. The directory is undated."
+      },
+      {
+        "url": "https://silc.idaho.gov/idaho-centers-for-independent-living/",
+        "title": "Idaho State Independent Living Council: Idaho Centers for Independent Living",
+        "reviewed_on": "2026-11-16",
+        "scope": "Current office addresses and phones for each center; read in full. Last updated September 28, 2026. The page names towns served, not counties."
+      }
+    ]
+  },
+  {
+    "program_id": "id-cil-dac-lewiston",
+    "name": "Disability Action Center NW (Lewiston)",
+    "organization": "Disability Action Center NW",
+    "official_url": "https://dacnw.org/",
+    "service_area": [
+      "Clearwater",
+      "Latah",
+      "Nez Perce"
+    ],
+    "state": "ID",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 330 5th Street, Lewiston, ID 83501. Toll-free: 800-475-0070. Voice/TDD: 208-746-9033."
+    ],
+    "public_contact": {
+      "phone": "208-746-9033",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/id",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/id"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/id",
+        "title": "ILRU: Idaho CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each office’s phones, website and counties served; read in full. The directory is undated."
+      },
+      {
+        "url": "https://silc.idaho.gov/idaho-centers-for-independent-living/",
+        "title": "Idaho State Independent Living Council: Idaho Centers for Independent Living",
+        "reviewed_on": "2026-11-16",
+        "scope": "Current office addresses and phones for each center; read in full. Last updated September 28, 2026. The page names towns served, not counties."
+      }
+    ]
+  },
+  {
+    "program_id": "id-cil-linc-boise",
+    "name": "Living Independence Network Corporation (LINC), Boise",
+    "organization": "Living Independence Network Corporation (LINC)",
+    "official_url": "https://www.lincidaho.org/",
+    "service_area": [
+      "Ada",
+      "Adams",
+      "Boise",
+      "Canyon",
+      "Elmore",
+      "Gem",
+      "Owyhee",
+      "Payette",
+      "Valley",
+      "Washington"
+    ],
+    "state": "ID",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 1878 W Overland Rd, Boise, ID 83705. Voice/TTY: 208-336-3335."
+    ],
+    "public_contact": {
+      "phone": "208-336-3335",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/id",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/id"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/id",
+        "title": "ILRU: Idaho CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each office’s phones, website and counties served; read in full. The directory is undated."
+      },
+      {
+        "url": "https://silc.idaho.gov/idaho-centers-for-independent-living/",
+        "title": "Idaho State Independent Living Council: Idaho Centers for Independent Living",
+        "reviewed_on": "2026-11-16",
+        "scope": "Current office addresses and phones for each center; read in full. Last updated September 28, 2026. The page names towns served, not counties."
+      }
+    ]
+  },
+  {
+    "program_id": "id-cil-linc-caldwell",
+    "name": "Living Independence Network Corporation (LINC), Caldwell",
+    "organization": "Living Independence Network Corporation (LINC)",
+    "official_url": "https://www.lincidaho.org/",
+    "service_area": [
+      "Adams",
+      "Canyon",
+      "Gem",
+      "Owyhee",
+      "Payette",
+      "Valley",
+      "Washington"
+    ],
+    "state": "ID",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 703 S. Kimball Avenue, Caldwell, ID 83607."
+    ],
+    "public_contact": {
+      "phone": "208-454-5511",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/id",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/id"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/id",
+        "title": "ILRU: Idaho CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each office’s phones, website and counties served; read in full. The directory is undated."
+      },
+      {
+        "url": "https://silc.idaho.gov/idaho-centers-for-independent-living/",
+        "title": "Idaho State Independent Living Council: Idaho Centers for Independent Living",
+        "reviewed_on": "2026-11-16",
+        "scope": "Current office addresses and phones for each center; read in full. Last updated September 28, 2026. The page names towns served, not counties."
+      }
+    ]
+  },
+  {
+    "program_id": "id-cil-linc-twin-falls",
+    "name": "Living Independence Network Corporation (LINC), Twin Falls",
+    "organization": "Living Independence Network Corporation (LINC)",
+    "official_url": "https://www.lincidaho.org/",
+    "service_area": [
+      "Blaine",
+      "Camas",
+      "Elmore",
+      "Gooding",
+      "Jerome",
+      "Lincoln",
+      "Twin Falls"
+    ],
+    "state": "ID",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 150 Main Avenue South, Suite 101, Twin Falls, ID 83301. Voice/TDD: 208-733-1712."
+    ],
+    "public_contact": {
+      "phone": "208-733-1712",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/id",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/id"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/id",
+        "title": "ILRU: Idaho CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each office’s phones, website and counties served; read in full. The directory is undated."
+      },
+      {
+        "url": "https://silc.idaho.gov/idaho-centers-for-independent-living/",
+        "title": "Idaho State Independent Living Council: Idaho Centers for Independent Living",
+        "reviewed_on": "2026-11-16",
+        "scope": "Current office addresses and phones for each center; read in full. Last updated September 28, 2026. The page names towns served, not counties."
+      }
+    ]
+  },
+  {
+    "program_id": "id-cil-life-pocatello",
+    "name": "LIFE, A Center for Independent Living (Pocatello)",
+    "organization": "LIFE, A Center for Independent Living",
+    "official_url": "https://www.idlife.org/",
+    "service_area": [
+      "Bannock",
+      "Bear Lake",
+      "Bingham",
+      "Bonneville",
+      "Caribou",
+      "Cassia",
+      "Custer",
+      "Franklin",
+      "Fremont",
+      "Jefferson",
+      "Lemhi",
+      "Madison",
+      "Minidoka",
+      "Oneida",
+      "Power"
+    ],
+    "state": "ID",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 640 Pershing Avenue, Pocatello, ID 83201. Toll-free: 800-631-2747. Voice/TTY: 208-232-2747."
+    ],
+    "public_contact": {
+      "phone": "208-232-2747",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/id",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/id"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/id",
+        "title": "ILRU: Idaho CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each office’s phones, website and counties served; read in full. The directory is undated."
+      },
+      {
+        "url": "https://silc.idaho.gov/idaho-centers-for-independent-living/",
+        "title": "Idaho State Independent Living Council: Idaho Centers for Independent Living",
+        "reviewed_on": "2026-11-16",
+        "scope": "Current office addresses and phones for each center; read in full. Last updated September 28, 2026. The page names towns served, not counties."
+      }
+    ]
+  },
+  {
+    "program_id": "id-cil-life-blackfoot",
+    "name": "LIFE, A Center for Independent Living (Blackfoot)",
+    "organization": "LIFE, A Center for Independent Living",
+    "official_url": "https://www.idlife.org/",
+    "service_area": [
+      "Bingham",
+      "Power"
+    ],
+    "state": "ID",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 207 South Broadway, Suite A, Blackfoot, ID 83221. Voice/TTY: 208-785-9648."
+    ],
+    "public_contact": {
+      "phone": "208-785-9648",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/id",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/id"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/id",
+        "title": "ILRU: Idaho CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each office’s phones, website and counties served; read in full. The directory is undated."
+      },
+      {
+        "url": "https://silc.idaho.gov/idaho-centers-for-independent-living/",
+        "title": "Idaho State Independent Living Council: Idaho Centers for Independent Living",
+        "reviewed_on": "2026-11-16",
+        "scope": "Current office addresses and phones for each center; read in full. Last updated September 28, 2026. The page names towns served, not counties."
+      }
+    ]
+  },
+  {
+    "program_id": "id-cil-life-burley",
+    "name": "LIFE, A Center for Independent Living (Burley)",
+    "organization": "LIFE, A Center for Independent Living",
+    "official_url": "https://www.idlife.org/",
+    "service_area": [
+      "Blaine",
+      "Cassia",
+      "Minidoka"
+    ],
+    "state": "ID",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 2311 Park Avenue, Suite 7, Burley, ID 83318. Voice/TTY: 208-678-7705."
+    ],
+    "public_contact": {
+      "phone": "208-678-7705",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/id",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/id"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/id",
+        "title": "ILRU: Idaho CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each office’s phones, website and counties served; read in full. The directory is undated."
+      },
+      {
+        "url": "https://silc.idaho.gov/idaho-centers-for-independent-living/",
+        "title": "Idaho State Independent Living Council: Idaho Centers for Independent Living",
+        "reviewed_on": "2026-11-16",
+        "scope": "Current office addresses and phones for each center; read in full. Last updated September 28, 2026. The page names towns served, not counties."
+      }
+    ]
+  },
+  {
+    "program_id": "id-cil-life-idaho-falls",
+    "name": "LIFE, A Center for Independent Living (Idaho Falls)",
+    "organization": "LIFE, A Center for Independent Living",
+    "official_url": "https://www.idlife.org/",
+    "service_area": [
+      "Bonneville",
+      "Butte",
+      "Clark",
+      "Custer",
+      "Fremont",
+      "Jefferson",
+      "Lemhi",
+      "Madison",
+      "Teton"
+    ],
+    "state": "ID",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 985 Capital Avenue, Idaho Falls, ID 83402. Voice/TTY: 208-529-8610."
+    ],
+    "public_contact": {
+      "phone": "208-529-8610",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/id",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/id"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/id",
+        "title": "ILRU: Idaho CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each office’s phones, website and counties served; read in full. The directory is undated."
+      },
+      {
+        "url": "https://silc.idaho.gov/idaho-centers-for-independent-living/",
+        "title": "Idaho State Independent Living Council: Idaho Centers for Independent Living",
+        "reviewed_on": "2026-11-16",
+        "scope": "Current office addresses and phones for each center; read in full. Last updated September 28, 2026. The page names towns served, not counties."
       }
     ]
   },
@@ -1012,7 +1800,10 @@
     "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
     "organization": "El-Ada, Inc.",
     "service_area": [
-      "All Idaho counties"
+      "Ada",
+      "Canyon",
+      "Elmore",
+      "Owyhee"
     ],
     "state": "ID",
     "resource_role": "housing_provider",
@@ -1020,7 +1811,7 @@
       "housing",
       "veteran_services"
     ],
-    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 12-ID-032): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Ada County, Canyon County, Elmore County, Owyhee County.",
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 12-ID-032): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
     "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 208-854-9878.",
     "constraints": [
       "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
@@ -1057,7 +1848,21 @@
     "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
     "organization": "Homeless Veterans Fellowship",
     "service_area": [
-      "All Idaho counties"
+      "Bannock",
+      "Bear Lake",
+      "Bingham",
+      "Blaine",
+      "Camas",
+      "Caribou",
+      "Cassia",
+      "Franklin",
+      "Gooding",
+      "Jerome",
+      "Lincoln",
+      "Minidoka",
+      "Oneida",
+      "Power",
+      "Twin Falls"
     ],
     "state": "ID",
     "resource_role": "housing_provider",
@@ -1065,7 +1870,7 @@
       "housing",
       "veteran_services"
     ],
-    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 19-ZZ-317): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Bannock County, Bear Lake County, Bingham County, Blaine County, Camas County, Caribou County, Cassia County, Franklin County, Gooding County, Jerome County, Lincoln County, Minidoka County and 3 more.",
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 19-ZZ-317): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
     "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
     "constraints": [
       "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
@@ -1097,57 +1902,17 @@
     ]
   },
   {
-    "program_id": "id-ssvf-20-zz-147",
-    "name": "Blue Mountain Action Council: veteran housing help (SSVF)",
-    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-    "organization": "Blue Mountain Action Council",
-    "service_area": [
-      "All Idaho counties"
-    ],
-    "state": "ID",
-    "resource_role": "housing_provider",
-    "needs_supported": [
-      "housing",
-      "veteran_services"
-    ],
-    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-ZZ-147): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Clearwater County, Idaho County, Lewis County, Nez Perce County.",
-    "next_step": "Ask VA’s National Call Center for Homeless Veterans (877-424-3838) to connect you with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-    "constraints": [
-      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-    ],
-    "public_contact": {
-      "phone": null,
-      "phone_label": "VA-listed SSVF intake"
-    },
-    "verification": {
-      "record_status": "official_source_reviewed",
-      "last_reviewed_on": "2026-11-02"
-    },
-    "evidence": {
-      "review_method": "full_official_spreadsheet",
-      "direct_agency_confirmation": false,
-      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
-    },
-    "source_evidence": [
-      {
-        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-        "title": "VA SSVF provider intake list (FY26)",
-        "reviewed_on": "2026-11-02",
-        "scope": "County coverage and SSVF intake; Contacts worksheet row 197",
-        "sheet": "Contacts",
-        "row": 197,
-        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-      }
-    ]
-  },
-  {
     "program_id": "id-ssvf-20-zz-301",
     "name": "Goodwill Industries Of The Inland Northwest: veteran housing help (SSVF)",
     "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
     "organization": "Goodwill Industries Of The Inland Northwest",
     "service_area": [
-      "All Idaho counties"
+      "Benewah",
+      "Bonner",
+      "Boundary",
+      "Kootenai",
+      "Latah",
+      "Shoshone"
     ],
     "state": "ID",
     "resource_role": "housing_provider",
@@ -1155,7 +1920,7 @@
       "housing",
       "veteran_services"
     ],
-    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-ZZ-301): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Benewah County, Bonner County, Boundary County, Kootenai County, Latah County, Shoshone County.",
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-ZZ-301): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
     "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
     "constraints": [
       "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
@@ -1187,81 +1952,663 @@
     ]
   },
   {
-    "program_id": "id-aging",
-    "name": "Local aging help in Idaho (Eldercare Locator)",
-    "official_url": "https://eldercare.acl.gov/home",
-    "organization": "U.S. Administration for Community Living",
-    "service_area": [
-      "All Idaho counties"
-    ],
+    "program_id": "id-aaa-1",
+    "name": "North Idaho Area Agency on Aging (Area 1)",
+    "organization": "North Idaho Area Agency on Aging (Area 1)",
+    "official_url": "https://aging.idaho.gov/contact",
     "state": "ID",
+    "service_area": [
+      "Benewah",
+      "Boundary",
+      "Bonner",
+      "Kootenai",
+      "Shoshone"
+    ],
     "needs_supported": [
       "general_navigation",
       "help_at_home"
     ],
-    "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-    "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the Idaho Commission on Aging at 877-471-2777 or dial 2-1-1. Military service is not required.",
     "constraints": [
-      "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-786-5536."
     ],
     "public_contact": {
-      "phone": "800-677-1116"
+      "phone": "208-667-3179",
+      "phone_label": "Area Agency on Aging (Area 1)"
     },
     "verification": {
-      "record_status": "official_search_extract_only",
-      "last_reviewed_on": "2026-11-02"
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
     },
     "evidence": {
-      "review_method": "official_search_excerpt",
+      "review_method": "full_official_page_text",
       "direct_agency_confirmation": false,
-      "phone_source_url": "https://www.acl.gov/contact"
+      "service_area_source_url": "https://aging.idaho.gov/contact",
+      "phone_source_url": "https://aging.idaho.gov/contact"
     },
     "source_evidence": [
       {
-        "url": "https://www.acl.gov/contact",
-        "title": "Official published source",
-        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+        "url": "https://aging.idaho.gov/contact",
+        "title": "Idaho Commission on Aging: Contact Us",
+        "reviewed_on": "2026-11-16",
+        "scope": "The six Area Agencies on Aging, the counties each supports and their local and toll-free phones; read in full. The page was last updated July 20, 2026."
       }
-    ],
-    "regional_role": "aging_agency"
+    ]
   },
   {
-    "program_id": "id-ombudsman",
-    "name": "Idaho long-term-care ombudsman",
-    "official_url": "https://theconsumervoice.org/get_help",
-    "organization": "National Long-Term Care Ombudsman Resource Center",
-    "service_area": [
-      "All Idaho counties"
-    ],
+    "program_id": "id-aaa-2",
+    "name": "North Central Idaho Area Agency on Aging (Area 2)",
+    "organization": "North Central Idaho Area Agency on Aging (Area 2)",
+    "official_url": "https://aging.idaho.gov/contact",
     "state": "ID",
+    "service_area": [
+      "Clearwater",
+      "Idaho",
+      "Latah",
+      "Lewis",
+      "Nez Perce"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the Idaho Commission on Aging at 877-471-2777 or dial 2-1-1. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-877-3206."
+    ],
+    "public_contact": {
+      "phone": "208-743-5580",
+      "phone_label": "Area Agency on Aging (Area 2)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.idaho.gov/contact",
+      "phone_source_url": "https://aging.idaho.gov/contact"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.idaho.gov/contact",
+        "title": "Idaho Commission on Aging: Contact Us",
+        "reviewed_on": "2026-11-16",
+        "scope": "The six Area Agencies on Aging, the counties each supports and their local and toll-free phones; read in full. The page was last updated July 20, 2026."
+      }
+    ]
+  },
+  {
+    "program_id": "id-aaa-3",
+    "name": "Southwest Idaho Area Agency on Aging (Area 3)",
+    "organization": "Southwest Idaho Area Agency on Aging (Area 3)",
+    "official_url": "https://aging.idaho.gov/contact",
+    "state": "ID",
+    "service_area": [
+      "Ada",
+      "Adams",
+      "Boise",
+      "Canyon",
+      "Elmore",
+      "Gem",
+      "Owyhee",
+      "Payette",
+      "Valley",
+      "Washington"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the Idaho Commission on Aging at 877-471-2777 or dial 2-1-1. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 844-850-2883."
+    ],
+    "public_contact": {
+      "phone": "208-898-7060",
+      "phone_label": "Area Agency on Aging (Area 3)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.idaho.gov/contact",
+      "phone_source_url": "https://aging.idaho.gov/contact"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.idaho.gov/contact",
+        "title": "Idaho Commission on Aging: Contact Us",
+        "reviewed_on": "2026-11-16",
+        "scope": "The six Area Agencies on Aging, the counties each supports and their local and toll-free phones; read in full. The page was last updated July 20, 2026."
+      }
+    ]
+  },
+  {
+    "program_id": "id-aaa-4",
+    "name": "South Central Idaho Area Agency on Aging (Area 4)",
+    "organization": "South Central Idaho Area Agency on Aging (Area 4)",
+    "official_url": "https://aging.idaho.gov/contact",
+    "state": "ID",
+    "service_area": [
+      "Blaine",
+      "Camas",
+      "Cassia",
+      "Gooding",
+      "Jerome",
+      "Lincoln",
+      "Minidoka",
+      "Twin Falls"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the Idaho Commission on Aging at 877-471-2777 or dial 2-1-1. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-574-8656."
+    ],
+    "public_contact": {
+      "phone": "208-736-2122",
+      "phone_label": "Area Agency on Aging (Area 4)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.idaho.gov/contact",
+      "phone_source_url": "https://aging.idaho.gov/contact"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.idaho.gov/contact",
+        "title": "Idaho Commission on Aging: Contact Us",
+        "reviewed_on": "2026-11-16",
+        "scope": "The six Area Agencies on Aging, the counties each supports and their local and toll-free phones; read in full. The page was last updated July 20, 2026."
+      }
+    ]
+  },
+  {
+    "program_id": "id-aaa-5",
+    "name": "Southeast Idaho Area Agency on Aging (Area 5)",
+    "organization": "Southeast Idaho Area Agency on Aging (Area 5)",
+    "official_url": "https://aging.idaho.gov/contact",
+    "state": "ID",
+    "service_area": [
+      "Bannock",
+      "Bear Lake",
+      "Bingham",
+      "Caribou",
+      "Franklin",
+      "Oneida",
+      "Power"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the Idaho Commission on Aging at 877-471-2777 or dial 2-1-1. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-526-8129."
+    ],
+    "public_contact": {
+      "phone": "208-233-4032",
+      "phone_label": "Area Agency on Aging (Area 5)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.idaho.gov/contact",
+      "phone_source_url": "https://aging.idaho.gov/contact"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.idaho.gov/contact",
+        "title": "Idaho Commission on Aging: Contact Us",
+        "reviewed_on": "2026-11-16",
+        "scope": "The six Area Agencies on Aging, the counties each supports and their local and toll-free phones; read in full. The page was last updated July 20, 2026."
+      }
+    ]
+  },
+  {
+    "program_id": "id-aaa-6",
+    "name": "Eastern Idaho Area Agency on Aging (Area 6)",
+    "organization": "Eastern Idaho Area Agency on Aging (Area 6)",
+    "official_url": "https://aging.idaho.gov/contact",
+    "state": "ID",
+    "service_area": [
+      "Bonneville",
+      "Butte",
+      "Clark",
+      "Custer",
+      "Fremont",
+      "Jefferson",
+      "Lemhi",
+      "Madison",
+      "Teton"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Area Agency on Aging for this county: information and assistance, home-delivered and congregate meals, in-home services, transportation, caregiver support and senior legal assistance.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. You can also call the Idaho Commission on Aging at 877-471-2777 or dial 2-1-1. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Toll-free: 800-632-4813."
+    ],
+    "public_contact": {
+      "phone": "208-522-5391",
+      "phone_label": "Area Agency on Aging (Area 6)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.idaho.gov/contact",
+      "phone_source_url": "https://aging.idaho.gov/contact"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.idaho.gov/contact",
+        "title": "Idaho Commission on Aging: Contact Us",
+        "reviewed_on": "2026-11-16",
+        "scope": "The six Area Agencies on Aging, the counties each supports and their local and toll-free phones; read in full. The page was last updated July 20, 2026."
+      }
+    ]
+  },
+  {
+    "program_id": "id-omb-1",
+    "name": "Long-Term Care Ombudsman, North Idaho Area Agency on Aging (Area 1)",
+    "organization": "Long-Term Care Ombudsman, North Idaho Area Agency on Aging (Area 1)",
+    "official_url": "https://aging.idaho.gov/contact",
+    "state": "ID",
+    "service_area": [
+      "Benewah",
+      "Boundary",
+      "Bonner",
+      "Kootenai",
+      "Shoshone"
+    ],
     "needs_supported": [
       "resident_rights",
       "general_navigation"
     ],
-    "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-    "next_step": "Use the locator to find the Idaho program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
     "constraints": [
-      "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
     ],
     "public_contact": {
-      "phone": "800-677-1116"
+      "phone": "208-667-3179",
+      "phone_label": "Regional ombudsman program"
     },
     "verification": {
-      "record_status": "official_search_extract_only",
-      "last_reviewed_on": "2026-11-02"
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
     },
     "evidence": {
-      "review_method": "official_search_excerpt",
+      "review_method": "full_official_page_text",
       "direct_agency_confirmation": false,
-      "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
+      "service_area_source_url": "https://aging.idaho.gov/contact",
+      "phone_source_url": "https://aging.idaho.gov/contact"
     },
     "source_evidence": [
       {
-        "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-        "title": "Official published source",
-        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+        "url": "https://aging.idaho.gov/contact",
+        "title": "Idaho Commission on Aging: Contact Us",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agency on Aging’s phones and the counties it supports; read in full. The Commission’s ombudsman page says local ombudsmen work at the Area Agencies on Aging."
+      },
+      {
+        "url": "https://aging.idaho.gov/ombudsman-program/",
+        "title": "Idaho Commission on Aging: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-16",
+        "scope": "Contact the State Ombudsman at the Commission on Aging or a local ombudsman at an Area Agency on Aging; read in full. Last updated October 20, 2026."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/id",
+        "title": "National Consumer Voice for Quality Long-Term Care: Idaho ombudsman contacts",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each regional ombudsman program, its phones and the counties it serves; read in full. The page is undated."
       }
+    ]
+  },
+  {
+    "program_id": "id-omb-2",
+    "name": "Long-Term Care Ombudsman, North Central Idaho Area Agency on Aging (Area 2)",
+    "organization": "Long-Term Care Ombudsman, North Central Idaho Area Agency on Aging (Area 2)",
+    "official_url": "https://aging.idaho.gov/contact",
+    "state": "ID",
+    "service_area": [
+      "Clearwater",
+      "Idaho",
+      "Latah",
+      "Lewis",
+      "Nez Perce"
     ],
-    "regional_role": "ombudsman"
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "208-743-5580",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.idaho.gov/contact",
+      "phone_source_url": "https://aging.idaho.gov/contact"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.idaho.gov/contact",
+        "title": "Idaho Commission on Aging: Contact Us",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agency on Aging’s phones and the counties it supports; read in full. The Commission’s ombudsman page says local ombudsmen work at the Area Agencies on Aging."
+      },
+      {
+        "url": "https://aging.idaho.gov/ombudsman-program/",
+        "title": "Idaho Commission on Aging: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-16",
+        "scope": "Contact the State Ombudsman at the Commission on Aging or a local ombudsman at an Area Agency on Aging; read in full. Last updated October 20, 2026."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/id",
+        "title": "National Consumer Voice for Quality Long-Term Care: Idaho ombudsman contacts",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each regional ombudsman program, its phones and the counties it serves; read in full. The page is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "id-omb-3",
+    "name": "Long-Term Care Ombudsman, Southwest Idaho Area Agency on Aging (Area 3)",
+    "organization": "Long-Term Care Ombudsman, Southwest Idaho Area Agency on Aging (Area 3)",
+    "official_url": "https://aging.idaho.gov/contact",
+    "state": "ID",
+    "service_area": [
+      "Ada",
+      "Adams",
+      "Boise",
+      "Canyon",
+      "Elmore",
+      "Gem",
+      "Owyhee",
+      "Payette",
+      "Valley",
+      "Washington"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "208-898-7060",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.idaho.gov/contact",
+      "phone_source_url": "https://aging.idaho.gov/contact"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.idaho.gov/contact",
+        "title": "Idaho Commission on Aging: Contact Us",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agency on Aging’s phones and the counties it supports; read in full. The Commission’s ombudsman page says local ombudsmen work at the Area Agencies on Aging."
+      },
+      {
+        "url": "https://aging.idaho.gov/ombudsman-program/",
+        "title": "Idaho Commission on Aging: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-16",
+        "scope": "Contact the State Ombudsman at the Commission on Aging or a local ombudsman at an Area Agency on Aging; read in full. Last updated October 20, 2026."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/id",
+        "title": "National Consumer Voice for Quality Long-Term Care: Idaho ombudsman contacts",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each regional ombudsman program, its phones and the counties it serves; read in full. The page is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "id-omb-4",
+    "name": "Long-Term Care Ombudsman, South Central Idaho Area Agency on Aging (Area 4)",
+    "organization": "Long-Term Care Ombudsman, South Central Idaho Area Agency on Aging (Area 4)",
+    "official_url": "https://aging.idaho.gov/contact",
+    "state": "ID",
+    "service_area": [
+      "Blaine",
+      "Camas",
+      "Cassia",
+      "Gooding",
+      "Jerome",
+      "Lincoln",
+      "Minidoka",
+      "Twin Falls"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ombudsman direct line: 208-933-2397."
+    ],
+    "public_contact": {
+      "phone": "208-736-2122",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.idaho.gov/contact",
+      "phone_source_url": "https://aging.idaho.gov/contact"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.idaho.gov/contact",
+        "title": "Idaho Commission on Aging: Contact Us",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agency on Aging’s phones and the counties it supports; read in full. The Commission’s ombudsman page says local ombudsmen work at the Area Agencies on Aging."
+      },
+      {
+        "url": "https://aging.idaho.gov/ombudsman-program/",
+        "title": "Idaho Commission on Aging: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-16",
+        "scope": "Contact the State Ombudsman at the Commission on Aging or a local ombudsman at an Area Agency on Aging; read in full. Last updated October 20, 2026."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/id",
+        "title": "National Consumer Voice for Quality Long-Term Care: Idaho ombudsman contacts",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each regional ombudsman program, its phones and the counties it serves; read in full. The page is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "id-omb-5",
+    "name": "Long-Term Care Ombudsman, Southeast Idaho Area Agency on Aging (Area 5)",
+    "organization": "Long-Term Care Ombudsman, Southeast Idaho Area Agency on Aging (Area 5)",
+    "official_url": "https://aging.idaho.gov/contact",
+    "state": "ID",
+    "service_area": [
+      "Bannock",
+      "Bear Lake",
+      "Bingham",
+      "Caribou",
+      "Franklin",
+      "Oneida",
+      "Power"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Ombudsman extension: 804."
+    ],
+    "public_contact": {
+      "phone": "208-233-4032",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.idaho.gov/contact",
+      "phone_source_url": "https://aging.idaho.gov/contact"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.idaho.gov/contact",
+        "title": "Idaho Commission on Aging: Contact Us",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agency on Aging’s phones and the counties it supports; read in full. The Commission’s ombudsman page says local ombudsmen work at the Area Agencies on Aging."
+      },
+      {
+        "url": "https://aging.idaho.gov/ombudsman-program/",
+        "title": "Idaho Commission on Aging: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-16",
+        "scope": "Contact the State Ombudsman at the Commission on Aging or a local ombudsman at an Area Agency on Aging; read in full. Last updated October 20, 2026."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/id",
+        "title": "National Consumer Voice for Quality Long-Term Care: Idaho ombudsman contacts",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each regional ombudsman program, its phones and the counties it serves; read in full. The page is undated."
+      }
+    ]
+  },
+  {
+    "program_id": "id-omb-6",
+    "name": "Long-Term Care Ombudsman, Eastern Idaho Area Agency on Aging (Area 6)",
+    "organization": "Long-Term Care Ombudsman, Eastern Idaho Area Agency on Aging (Area 6)",
+    "official_url": "https://aging.idaho.gov/contact",
+    "state": "ID",
+    "service_area": [
+      "Bonneville",
+      "Butte",
+      "Clark",
+      "Custer",
+      "Fremont",
+      "Jefferson",
+      "Lemhi",
+      "Madison",
+      "Teton"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency."
+    ],
+    "public_contact": {
+      "phone": "208-522-5391",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://aging.idaho.gov/contact",
+      "phone_source_url": "https://aging.idaho.gov/contact"
+    },
+    "source_evidence": [
+      {
+        "url": "https://aging.idaho.gov/contact",
+        "title": "Idaho Commission on Aging: Contact Us",
+        "reviewed_on": "2026-11-16",
+        "scope": "The Area Agency on Aging’s phones and the counties it supports; read in full. The Commission’s ombudsman page says local ombudsmen work at the Area Agencies on Aging."
+      },
+      {
+        "url": "https://aging.idaho.gov/ombudsman-program/",
+        "title": "Idaho Commission on Aging: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-16",
+        "scope": "Contact the State Ombudsman at the Commission on Aging or a local ombudsman at an Area Agency on Aging; read in full. Last updated October 20, 2026."
+      },
+      {
+        "url": "https://theconsumervoice.org/get_help/state_resources/id",
+        "title": "National Consumer Voice for Quality Long-Term Care: Idaho ombudsman contacts",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each regional ombudsman program, its phones and the counties it serves; read in full. The page is undated."
+      }
+    ]
   }
 ]

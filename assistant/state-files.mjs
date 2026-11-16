@@ -29,7 +29,13 @@ export const STATES=Object.freeze({
   "OK": "Oklahoma",
   "NJ": "New Jersey",
   "OR": "Oregon",
-  "LA": "Louisiana"
+  "LA": "Louisiana",
+  "NV": "Nevada",
+  "KS": "Kansas",
+  "NE": "Nebraska",
+  "NM": "New Mexico",
+  "MS": "Mississippi",
+  "ID": "Idaho"
 });
 export const STATE_FILES=Object.freeze({
   "OH": [
@@ -147,6 +153,30 @@ export const STATE_FILES=Object.freeze({
   "LA": [
     "data/public/louisiana-resources.json",
     "data/public/louisiana-county-veterans-offices.json"
+  ],
+  "NV": [
+    "data/public/nevada-resources.json",
+    "data/public/nevada-county-veterans-offices.json"
+  ],
+  "KS": [
+    "data/public/kansas-resources.json",
+    "data/public/kansas-county-veterans-offices.json"
+  ],
+  "NE": [
+    "data/public/nebraska-resources.json",
+    "data/public/nebraska-county-veterans-offices.json"
+  ],
+  "NM": [
+    "data/public/new-mexico-resources.json",
+    "data/public/new-mexico-county-veterans-offices.json"
+  ],
+  "MS": [
+    "data/public/mississippi-resources.json",
+    "data/public/mississippi-county-veterans-offices.json"
+  ],
+  "ID": [
+    "data/public/idaho-resources.json",
+    "data/public/idaho-county-veterans-offices.json"
   ]
 });
 export const localityLabel=row=>row?(["independent_city","statewide"].includes(row.county_type)?row.county:row.county+(row.county_type==="parish"?" Parish":" County")):"";

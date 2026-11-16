@@ -1,0 +1,992 @@
+{
+ "about": "Research sheet for the New Mexico county edition. Every contact below was read on the date in reviewed_on from the page named beside it; scripts/make_county_state.py turns it into the edition files.",
+ "code": "NM",
+ "name": "New Mexico",
+ "slug": "new-mexico",
+ "counties": 33,
+ "reviewed_on": "2026-11-16",
+ "month_label": "November 16, 2026",
+ "template_date": "November 4, 2026",
+ "phones_sentence": "New Mexico has no county veterans offices. Field office phones, addresses and the counties each office serves come from the New Mexico Department of Veterans’ Services field offices page. Call before you go.",
+ "senior_line_id": "nm-adrc",
+ "agency": {
+  "url": "https://www.nmdvs.org/?p=3991"
+ },
+ "offices": {
+  "source_url": "https://www.nmdvs.org/?p=3991",
+  "source_title": "New Mexico Department of Veterans’ Services: Field Offices",
+  "review_method": "full_official_page_text",
+  "note": "New Mexico Department of Veterans’ Services veteran service officers help with VA claims, pension, survivor benefits and state benefits at no charge. Call to schedule before you go.",
+  "selection": "Field office address, phones and counties served as printed on the department’s field offices page; staff names and emails omitted. Where several offices list a county, the card shows the office in or nearest the county and lists the others.",
+  "list": [
+   {
+    "county": "Bernalillo",
+    "phone": "505-527-2302",
+    "address": "4801 Indian School Road NE, Building 2, Suite 2, Albuquerque, NM 87110",
+    "organization": "New Mexico Department of Veterans’ Services, Albuquerque Field Office (Indian School Road)",
+    "office_type": "state_field_office",
+    "other_phones": [
+     "505-618-0499",
+     "505-525-3331"
+    ],
+    "other_offices": [
+     {
+      "address": "Albuquerque Field Office (Gold Avenue), 500 Gold Avenue SW, Albuquerque, NM 87102",
+      "schedule": "Also lists this county; call for an appointment",
+      "phone": "505-479-0672"
+     },
+     {
+      "address": "Albuquerque Field Office (San Pedro Drive), 1501 San Pedro Drive SE, Albuquerque, NM 87108",
+      "schedule": "Also lists this county; call for an appointment",
+      "phone": "505-623-1729"
+     }
+    ]
+   },
+   {
+    "county": "Catron",
+    "phone": "505-521-8132",
+    "address": "551 Washington Avenue, Grants, NM 87020",
+    "organization": "New Mexico Department of Veterans’ Services, Grants Field Office",
+    "office_type": "state_field_office",
+    "other_offices": [
+     {
+      "address": "Gallup Field Office, 908 E. Buena Vista Avenue, Gallup, NM 87301",
+      "schedule": "Also lists this county; call for an appointment",
+      "phone": "505-389-8731"
+     },
+     {
+      "address": "Albuquerque Field Office (Indian School Road), 4801 Indian School Road NE, Building 2, Suite 2, Albuquerque, NM 87110",
+      "schedule": "Also lists this county; call for an appointment",
+      "phone": "505-527-2302"
+     },
+     {
+      "address": "Belen Field Office, 719 S. Main Street, Belen, NM 87002",
+      "schedule": "Also lists this county; call for an appointment",
+      "phone": "505-537-9339"
+     }
+    ]
+   },
+   {
+    "county": "Chaves",
+    "phone": "575-988-5900",
+    "address": "1600 S.E. Main Street, Suite A, Roswell, NM 88201",
+    "organization": "New Mexico Department of Veterans’ Services, Roswell Field Office",
+    "office_type": "state_field_office",
+    "other_phones": [
+     "575-416-2284"
+    ],
+    "other_offices": [
+     {
+      "address": "Hobbs Field Office, 2120 N. Alto Street, Hobbs, NM 88240",
+      "schedule": "Also lists this county; call for an appointment",
+      "phone": "575-241-0714"
+     }
+    ]
+   },
+   {
+    "county": "Cibola",
+    "phone": "505-521-8132",
+    "address": "551 Washington Avenue, Grants, NM 87020",
+    "organization": "New Mexico Department of Veterans’ Services, Grants Field Office",
+    "office_type": "state_field_office",
+    "other_offices": [
+     {
+      "address": "Gallup Field Office, 908 E. Buena Vista Avenue, Gallup, NM 87301",
+      "schedule": "Also lists this county; call for an appointment",
+      "phone": "505-389-8731"
+     }
+    ]
+   },
+   {
+    "county": "Colfax",
+    "phone": "505-331-8838",
+    "address": "917 Douglas Avenue, Las Vegas, NM 87701",
+    "organization": "New Mexico Department of Veterans’ Services, Las Vegas Field Office",
+    "office_type": "state_field_office",
+    "other_phones": [
+     "575-781-0614"
+    ]
+   },
+   {
+    "county": "Curry",
+    "phone": "575-825-9602",
+    "address": "904 W. 6th Street, Clovis, NM 88101",
+    "organization": "New Mexico Department of Veterans’ Services, Clovis Field Office",
+    "office_type": "state_field_office",
+    "other_phones": [
+     "505-537-1445"
+    ]
+   },
+   {
+    "county": "De Baca",
+    "phone": "575-825-9602",
+    "address": "904 W. 6th Street, Clovis, NM 88101",
+    "organization": "New Mexico Department of Veterans’ Services, Clovis Field Office",
+    "office_type": "state_field_office",
+    "other_phones": [
+     "505-537-1445"
+    ]
+   },
+   {
+    "county": "Doña Ana",
+    "phone": "575-644-6869",
+    "address": "2024 E. Griggs Avenue, Las Cruces, NM",
+    "organization": "New Mexico Department of Veterans’ Services, Las Cruces Field Office",
+    "office_type": "state_field_office",
+    "other_phones": [
+     "505-361-5298",
+     "505-216-8782"
+    ]
+   },
+   {
+    "county": "Eddy",
+    "phone": "575-988-5900",
+    "address": "1600 S.E. Main Street, Suite A, Roswell, NM 88201",
+    "organization": "New Mexico Department of Veterans’ Services, Roswell Field Office",
+    "office_type": "state_field_office",
+    "other_phones": [
+     "575-416-2284"
+    ],
+    "other_offices": [
+     {
+      "address": "Clovis Field Office, 904 W. 6th Street, Clovis, NM 88101",
+      "schedule": "Also lists this county; call for an appointment",
+      "phone": "575-825-9602"
+     },
+     {
+      "address": "Hobbs Field Office, 2120 N. Alto Street, Hobbs, NM 88240",
+      "schedule": "Also lists this county; call for an appointment",
+      "phone": "575-241-0714"
+     }
+    ]
+   },
+   {
+    "county": "Grant",
+    "phone": "575-313-5627",
+    "address": "Western New Mexico University campus, Juan Chacon Building, Room 138-A, Silver City, NM",
+    "organization": "New Mexico Department of Veterans’ Services, Silver City Field Office",
+    "office_type": "state_field_office",
+    "other_offices": [
+     {
+      "address": "Las Cruces Field Office, 2024 E. Griggs Avenue, Las Cruces, NM",
+      "schedule": "Also lists this county; call for an appointment",
+      "phone": "575-644-6869"
+     }
+    ]
+   },
+   {
+    "county": "Guadalupe",
+    "phone": "505-331-8838",
+    "address": "917 Douglas Avenue, Las Vegas, NM 87701",
+    "organization": "New Mexico Department of Veterans’ Services, Las Vegas Field Office",
+    "office_type": "state_field_office",
+    "other_phones": [
+     "575-781-0614"
+    ]
+   },
+   {
+    "county": "Harding",
+    "phone": "505-331-8838",
+    "address": "917 Douglas Avenue, Las Vegas, NM 87701",
+    "organization": "New Mexico Department of Veterans’ Services, Las Vegas Field Office",
+    "office_type": "state_field_office",
+    "other_phones": [
+     "575-781-0614"
+    ]
+   },
+   {
+    "county": "Hidalgo",
+    "phone": "575-313-5627",
+    "address": "Western New Mexico University campus, Juan Chacon Building, Room 138-A, Silver City, NM",
+    "organization": "New Mexico Department of Veterans’ Services, Silver City Field Office",
+    "office_type": "state_field_office"
+   },
+   {
+    "county": "Lea",
+    "phone": "575-241-0714",
+    "address": "2120 N. Alto Street, Hobbs, NM 88240",
+    "organization": "New Mexico Department of Veterans’ Services, Hobbs Field Office",
+    "office_type": "state_field_office",
+    "other_offices": [
+     {
+      "address": "Roswell Field Office, 1600 S.E. Main Street, Suite A, Roswell, NM 88201",
+      "schedule": "Also lists this county; call for an appointment",
+      "phone": "575-988-5900"
+     }
+    ]
+   },
+   {
+    "county": "Lincoln",
+    "phone": "575-937-5620",
+    "address": "411 10th Street, #107, Alamogordo, NM 88310",
+    "organization": "New Mexico Department of Veterans’ Services, Alamogordo Field Office",
+    "office_type": "state_field_office",
+    "other_phones": [
+     "505-546-8367"
+    ]
+   },
+   {
+    "county": "Los Alamos",
+    "phone": "505-218-3125",
+    "address": "Bataan Memorial Building, 407 Galisteo Street, Room 134, Santa Fe, NM 87501",
+    "organization": "New Mexico Department of Veterans’ Services, Santa Fe Field Office",
+    "office_type": "state_field_office",
+    "other_offices": [
+     {
+      "address": "Bernalillo Field Office, 1500 Idalia Road, Building D, Room 2041, Bernalillo, NM 87004",
+      "schedule": "Also lists this county; call for an appointment",
+      "phone": "505-221-7190"
+     },
+     {
+      "address": "Taos Field Office, 145 Roy Road, Taos, NM 87571",
+      "schedule": "Also lists this county; call for an appointment",
+      "phone": "505-709-5263"
+     }
+    ]
+   },
+   {
+    "county": "Luna",
+    "phone": "575-313-5627",
+    "address": "Western New Mexico University campus, Juan Chacon Building, Room 138-A, Silver City, NM",
+    "organization": "New Mexico Department of Veterans’ Services, Silver City Field Office",
+    "office_type": "state_field_office"
+   },
+   {
+    "county": "McKinley",
+    "phone": "505-389-8731",
+    "address": "908 E. Buena Vista Avenue, Gallup, NM 87301",
+    "organization": "New Mexico Department of Veterans’ Services, Gallup Field Office",
+    "office_type": "state_field_office",
+    "other_offices": [
+     {
+      "address": "Grants Field Office, 551 Washington Avenue, Grants, NM 87020",
+      "schedule": "Also lists this county; call for an appointment",
+      "phone": "505-521-8132"
+     }
+    ]
+   },
+   {
+    "county": "Mora",
+    "phone": "505-331-8838",
+    "address": "917 Douglas Avenue, Las Vegas, NM 87701",
+    "organization": "New Mexico Department of Veterans’ Services, Las Vegas Field Office",
+    "office_type": "state_field_office",
+    "other_phones": [
+     "575-781-0614"
+    ]
+   },
+   {
+    "county": "Otero",
+    "phone": "575-937-5620",
+    "address": "411 10th Street, #107, Alamogordo, NM 88310",
+    "organization": "New Mexico Department of Veterans’ Services, Alamogordo Field Office",
+    "office_type": "state_field_office",
+    "other_phones": [
+     "505-546-8367"
+    ]
+   },
+   {
+    "county": "Quay",
+    "phone": "575-825-9602",
+    "address": "904 W. 6th Street, Clovis, NM 88101",
+    "organization": "New Mexico Department of Veterans’ Services, Clovis Field Office",
+    "office_type": "state_field_office",
+    "other_phones": [
+     "505-537-1445"
+    ]
+   },
+   {
+    "county": "Rio Arriba",
+    "phone": "505-218-3125",
+    "address": "Bataan Memorial Building, 407 Galisteo Street, Room 134, Santa Fe, NM 87501",
+    "organization": "New Mexico Department of Veterans’ Services, Santa Fe Field Office",
+    "office_type": "state_field_office",
+    "other_offices": [
+     {
+      "address": "Farmington Field Office, 1800 E. 30th Street, Suite C, Farmington, NM 87401",
+      "schedule": "Also lists this county; call for an appointment",
+      "phone": "505-916-4835"
+     },
+     {
+      "address": "Taos Field Office, 145 Roy Road, Taos, NM 87571",
+      "schedule": "Also lists this county; call for an appointment",
+      "phone": "505-709-5263"
+     }
+    ]
+   },
+   {
+    "county": "Roosevelt",
+    "phone": "575-825-9602",
+    "address": "904 W. 6th Street, Clovis, NM 88101",
+    "organization": "New Mexico Department of Veterans’ Services, Clovis Field Office",
+    "office_type": "state_field_office",
+    "other_phones": [
+     "505-537-1445"
+    ]
+   },
+   {
+    "county": "San Juan",
+    "phone": "505-916-4835",
+    "address": "1800 E. 30th Street, Suite C, Farmington, NM 87401",
+    "organization": "New Mexico Department of Veterans’ Services, Farmington Field Office",
+    "office_type": "state_field_office",
+    "other_phones": [
+     "505-327-2861"
+    ]
+   },
+   {
+    "county": "San Miguel",
+    "phone": "505-331-8838",
+    "address": "917 Douglas Avenue, Las Vegas, NM 87701",
+    "organization": "New Mexico Department of Veterans’ Services, Las Vegas Field Office",
+    "office_type": "state_field_office",
+    "other_phones": [
+     "575-781-0614"
+    ]
+   },
+   {
+    "county": "Sandoval",
+    "phone": "505-221-7190",
+    "address": "1500 Idalia Road, Building D, Room 2041, Bernalillo, NM 87004",
+    "organization": "New Mexico Department of Veterans’ Services, Bernalillo Field Office",
+    "office_type": "state_field_office",
+    "other_offices": [
+     {
+      "address": "Farmington Field Office, 1800 E. 30th Street, Suite C, Farmington, NM 87401",
+      "schedule": "Also lists this county; call for an appointment",
+      "phone": "505-916-4835"
+     }
+    ]
+   },
+   {
+    "county": "Santa Fe",
+    "phone": "505-218-3125",
+    "address": "Bataan Memorial Building, 407 Galisteo Street, Room 134, Santa Fe, NM 87501",
+    "organization": "New Mexico Department of Veterans’ Services, Santa Fe Field Office",
+    "office_type": "state_field_office",
+    "other_offices": [
+     {
+      "address": "Taos Field Office, 145 Roy Road, Taos, NM 87571",
+      "schedule": "Also lists this county; call for an appointment",
+      "phone": "505-709-5263"
+     }
+    ]
+   },
+   {
+    "county": "Sierra",
+    "phone": "575-644-6869",
+    "address": "2024 E. Griggs Avenue, Las Cruces, NM",
+    "organization": "New Mexico Department of Veterans’ Services, Las Cruces Field Office",
+    "office_type": "state_field_office",
+    "other_phones": [
+     "505-361-5298",
+     "505-216-8782"
+    ]
+   },
+   {
+    "county": "Socorro",
+    "phone": "505-537-9339",
+    "address": "719 S. Main Street, Belen, NM 87002",
+    "organization": "New Mexico Department of Veterans’ Services, Belen Field Office",
+    "office_type": "state_field_office",
+    "other_offices": [
+     {
+      "address": "Albuquerque Field Office (Indian School Road), 4801 Indian School Road NE, Building 2, Suite 2, Albuquerque, NM 87110",
+      "schedule": "Also lists this county; call for an appointment",
+      "phone": "505-527-2302"
+     }
+    ]
+   },
+   {
+    "county": "Taos",
+    "phone": "505-709-5263",
+    "address": "145 Roy Road, Taos, NM 87571",
+    "organization": "New Mexico Department of Veterans’ Services, Taos Field Office",
+    "office_type": "state_field_office",
+    "other_offices": [
+     {
+      "address": "Santa Fe Field Office, Bataan Memorial Building, 407 Galisteo Street, Room 134, Santa Fe, NM 87501",
+      "schedule": "Also lists this county; call for an appointment",
+      "phone": "505-218-3125"
+     }
+    ]
+   },
+   {
+    "county": "Torrance",
+    "phone": "866-433-8387",
+    "other_phones": [
+     "505-383-2400"
+    ],
+    "address": "No field office lists Torrance County. Department offices: Albuquerque, Santa Fe and Belen.",
+    "organization": "New Mexico Department of Veterans’ Services (statewide line)",
+    "office_type": "statewide",
+    "note": "The department’s field offices page assigns no office to Torrance County. Call the department’s toll-free line to be matched with a veteran service officer.",
+    "source_url": "https://www.nmdvs.org/?p=3913",
+    "source_title": "New Mexico Department of Veterans’ Services: State Benefits",
+    "review_method": "official_search_excerpt",
+    "selection": "Toll-free line 1-866-433-8387 from the department’s State Benefits page and Albuquerque line (505) 383-2400 from its July 2025 agency summary to the legislature (https://www.nmlegis.gov/(X(1)S(wad0muqmvxzdjjhkdu1eiys5))/handouts/MVAC%20071525%20Item%204%20NMDVS%20Agency%20Summary.pdf), both search excerpts. The field offices page (https://www.nmdvs.org/?p=3991) lists no office for Torrance County."
+   },
+   {
+    "county": "Union",
+    "phone": "505-331-8838",
+    "address": "917 Douglas Avenue, Las Vegas, NM 87701",
+    "organization": "New Mexico Department of Veterans’ Services, Las Vegas Field Office",
+    "office_type": "state_field_office",
+    "other_phones": [
+     "575-781-0614"
+    ]
+   },
+   {
+    "county": "Valencia",
+    "phone": "505-537-9339",
+    "address": "719 S. Main Street, Belen, NM 87002",
+    "organization": "New Mexico Department of Veterans’ Services, Belen Field Office",
+    "office_type": "state_field_office",
+    "other_offices": [
+     {
+      "address": "Albuquerque Field Office (Indian School Road), 4801 Indian School Road NE, Building 2, Suite 2, Albuquerque, NM 87110",
+      "schedule": "Also lists this county; call for an appointment",
+      "phone": "505-527-2302"
+     }
+    ]
+   }
+  ]
+ },
+ "aging": {
+  "source_url": "https://www.gcd.nm.gov/?p=395",
+  "source_title": "New Mexico Governor’s Commission on Disability: Elderly resources",
+  "source_scope": "The Non-Metro Area Agency on Aging funds senior programs in every New Mexico county except Bernalillo, which the Albuquerque Area Agency on Aging serves; phones 505-395-2668 and 1-866-699-4927; search excerpt.",
+  "review": "excerpt",
+  "review_method": "official_search_excerpt",
+  "region_word": "",
+  "next_step_extra": "The Aging and Disability Resource Center, 800-432-2080, also connects you to aging and disability help.",
+  "regions": [
+   {
+    "id": "nm-aaa-albuquerque",
+    "label": "Bernalillo County",
+    "name": "City of Albuquerque/Bernalillo County Area Agency on Aging",
+    "phone": "505-764-6400",
+    "counties": [
+     "Bernalillo"
+    ],
+    "source_url": "https://www.cabq.gov/family/services/senior-services",
+    "notes": [
+     "Call the Department of Senior Affairs’ Senior Information and Assistance line, which takes requests for Area Agency on Aging services."
+    ]
+   },
+   {
+    "id": "nm-aaa-non-metro",
+    "label": "all counties but Bernalillo",
+    "name": "Non-Metro Area Agency on Aging",
+    "phone": "866-699-4927",
+    "counties": [
+     "Catron",
+     "Chaves",
+     "Cibola",
+     "Colfax",
+     "Curry",
+     "De Baca",
+     "Doña Ana",
+     "Eddy",
+     "Grant",
+     "Guadalupe",
+     "Harding",
+     "Hidalgo",
+     "Lea",
+     "Lincoln",
+     "Los Alamos",
+     "Luna",
+     "McKinley",
+     "Mora",
+     "Otero",
+     "Quay",
+     "Rio Arriba",
+     "Roosevelt",
+     "San Juan",
+     "San Miguel",
+     "Sandoval",
+     "Santa Fe",
+     "Sierra",
+     "Socorro",
+     "Taos",
+     "Torrance",
+     "Union",
+     "Valencia"
+    ],
+    "notes": [
+     "Also listed: 505-395-2668.",
+     "Tribal elders may also be served by the Indian Area Agency on Aging or the Navajo Area Agency on Aging; the Aging and Disability Resource Center can connect you."
+    ]
+   }
+  ]
+ },
+ "ombudsman": {
+  "state_phone": "866-451-2901",
+  "regions": [
+   {
+    "id": "nm-omb-state",
+    "name": "New Mexico Long-Term Care Ombudsman Program",
+    "phone": "866-451-2901",
+    "counties": [
+     "Bernalillo",
+     "Catron",
+     "Chaves",
+     "Cibola",
+     "Colfax",
+     "Curry",
+     "De Baca",
+     "Doña Ana",
+     "Eddy",
+     "Grant",
+     "Guadalupe",
+     "Harding",
+     "Hidalgo",
+     "Lea",
+     "Lincoln",
+     "Los Alamos",
+     "Luna",
+     "McKinley",
+     "Mora",
+     "Otero",
+     "Quay",
+     "Rio Arriba",
+     "Roosevelt",
+     "San Juan",
+     "San Miguel",
+     "Sandoval",
+     "Santa Fe",
+     "Sierra",
+     "Socorro",
+     "Taos",
+     "Torrance",
+     "Union",
+     "Valencia"
+    ],
+    "source_url": "https://www.aging.nm.gov/contact-us",
+    "source_title": "New Mexico Aging and Long-Term Services Department: Contact us",
+    "source_scope": "Long-Term Care Ombudsman Program, 866-451-2901, toll-free and statewide; search excerpt.",
+    "review": "excerpt",
+    "review_method": "official_search_excerpt",
+    "counties_from_source": true,
+    "notes": [
+     "The statewide line connects you with the ombudsman for the facility’s area."
+    ]
+   }
+  ]
+ },
+ "cils": {
+  "source_url": "https://www.ilrcnm.org/new-mexicans-with-disabilities-unmet-needs-survey",
+  "source_title": "Independent Living Resource Center: New Mexicans with Disabilities Unmet Needs Survey (New Mexico SILC)",
+  "scope": "The five New Mexico Centers for Independent Living and the counties each serves; search excerpt.",
+  "phone_label": "Phone listed for the center",
+  "list": [
+   {
+    "id": "nm-cil-choices",
+    "name": "Choices Center for Independent Living (Roswell)",
+    "organization": "Choices Center for Independent Living",
+    "url": "https://www.ilru.org/cil-directory/nm",
+    "phone": "575-627-6727",
+    "counties": [
+     "Chaves",
+     "Eddy",
+     "Lea"
+    ],
+    "method": "official_search_excerpt",
+    "review": "excerpt",
+    "notes": [
+     "Office: 110 W. Country Club Road, Suite 4, Roswell, NM 88201.",
+     "The card links to the national directory because no secure (https) website address for this center appears in the sources read."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://www.dvr.state.nm.us/wp-content/uploads/2025/01/NMSPIL25-27.pdf",
+      "title": "New Mexico State Plan for Independent Living, 2025–2027",
+      "scope": "The five centers and their counties; Roosevelt, Quay, Curry, Catron and Hidalgo have no center; search excerpt."
+     }
+    ]
+   },
+   {
+    "id": "nm-cil-ilrc",
+    "name": "Independent Living Resource Center (Albuquerque)",
+    "organization": "Independent Living Resource Center (ILRC)",
+    "url": "https://www.ilrcnm.org/",
+    "phone": "505-266-5022",
+    "counties": [
+     "Bernalillo",
+     "Cibola",
+     "De Baca",
+     "Guadalupe",
+     "Lincoln",
+     "Otero",
+     "Sandoval",
+     "Socorro",
+     "Torrance",
+     "Valencia"
+    ],
+    "method": "official_search_excerpt",
+    "review": "excerpt",
+    "notes": [
+     "The center also has offices in Alamogordo, Moriarty and Socorro."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://www.dvr.state.nm.us/wp-content/uploads/2025/01/NMSPIL25-27.pdf",
+      "title": "New Mexico State Plan for Independent Living, 2025–2027",
+      "scope": "The five centers and their counties; Roosevelt, Quay, Curry, Catron and Hidalgo have no center; search excerpt."
+     },
+     {
+      "url": "https://www.ilru.org/cil-directory/nm",
+      "title": "ILRU: New Mexico CIL Directory",
+      "scope": "ILRC phone (505) 266-5022 and branch offices; search excerpt."
+     }
+    ]
+   },
+   {
+    "id": "nm-cil-new-vistas",
+    "name": "New Vistas (Santa Fe and Las Vegas)",
+    "organization": "New Vistas",
+    "url": "https://newvistas.org/",
+    "phone": "505-471-1001",
+    "counties": [
+     "Colfax",
+     "Harding",
+     "Los Alamos",
+     "Mora",
+     "Rio Arriba",
+     "San Miguel",
+     "Santa Fe",
+     "Taos",
+     "Union"
+    ],
+    "method": "official_search_excerpt",
+    "review": "excerpt",
+    "notes": [
+     "Office: 1205 Parkway Drive, Suite A, Santa Fe. Las Vegas office: 505-425-5044."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://www.dvr.state.nm.us/wp-content/uploads/2025/01/NMSPIL25-27.pdf",
+      "title": "New Mexico State Plan for Independent Living, 2025–2027",
+      "scope": "The five centers and their counties; Roosevelt, Quay, Curry, Catron and Hidalgo have no center; search excerpt."
+     },
+     {
+      "url": "https://www.ilru.org/cil-directory/nm",
+      "title": "ILRU: New Mexico CIL Directory",
+      "scope": "New Vistas phones (505) 471-1001 and (505) 425-5044; search excerpt."
+     }
+    ]
+   },
+   {
+    "id": "nm-cil-sjci",
+    "name": "San Juan Center for Independence (Farmington and Gallup)",
+    "organization": "San Juan Center for Independence (SJCI)",
+    "url": "https://www.ilru.org/cil-directory/nm",
+    "phone": "505-566-5827",
+    "counties": [
+     "McKinley",
+     "San Juan"
+    ],
+    "method": "official_search_excerpt",
+    "review": "excerpt",
+    "notes": [
+     "Office: 1240 San Juan Boulevard, Farmington, NM 87401; toll-free 877-484-4500. Gallup office: 505-726-2709.",
+     "The card links to the national directory because no secure (https) website address for this center appears in the sources read."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://www.dvr.state.nm.us/wp-content/uploads/2025/01/NMSPIL25-27.pdf",
+      "title": "New Mexico State Plan for Independent Living, 2025–2027",
+      "scope": "The five centers and their counties; Roosevelt, Quay, Curry, Catron and Hidalgo have no center; search excerpt."
+     },
+     {
+      "url": "https://www.ilru.org/node/748",
+      "title": "ILRU: San Juan Center for Independence",
+      "scope": "Phone (505) 566-5827, toll-free (877) 484-4500, counties McKinley and San Juan; search excerpt."
+     }
+    ]
+   },
+   {
+    "id": "nm-cil-ability-center",
+    "name": "The Ability Center (Las Cruces)",
+    "organization": "The Ability Center for Independent Living",
+    "url": "https://www.ilru.org/cil-directory/nm",
+    "phone": "575-526-5016",
+    "counties": [
+     "Doña Ana",
+     "Grant",
+     "Luna",
+     "Sierra"
+    ],
+    "method": "official_search_excerpt",
+    "review": "excerpt",
+    "notes": [
+     "Toll-free: 800-376-4372.",
+     "The card links to the national directory because no secure (https) website address for this center appears in the sources read."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://www.dvr.state.nm.us/wp-content/uploads/2025/01/NMSPIL25-27.pdf",
+      "title": "New Mexico State Plan for Independent Living, 2025–2027",
+      "scope": "The five centers and their counties; Roosevelt, Quay, Curry, Catron and Hidalgo have no center; search excerpt."
+     }
+    ]
+   }
+  ]
+ },
+ "programs": [
+  {
+   "id": "nm-claims",
+   "name": "New Mexico veterans: state field offices for claims help",
+   "organization": "New Mexico Department of Veterans’ Services",
+   "url": "https://www.nmdvs.org/?p=3991",
+   "needs": [
+    "general_navigation",
+    "benefits_and_funding"
+   ],
+   "description": "Free help with VA claims, pension and survivor benefits and New Mexico state benefits from New Mexico Department of Veterans’ Services veteran service officers. New Mexico has no county veterans offices: 17 field offices, from Farmington to Las Cruces and Clovis, each serve a set of counties.",
+   "next_step": "Choose your county for its field office, or call the department’s toll-free line, 866-433-8387.",
+   "constraints": [
+    "Call to schedule before you travel; the field offices page prints no office hours.",
+    "Torrance County is not assigned to an office on the department’s page; call the toll-free line."
+   ],
+   "phone": "866-433-8387",
+   "phone_label": "New Mexico Department of Veterans’ Services (866-433-8387)",
+   "phone_source": "https://www.nmdvs.org/?p=3913",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://www.nmdvs.org/?p=3991",
+     "title": "New Mexico Department of Veterans’ Services: Field Offices",
+     "scope": "Each field office’s address, phones and counties served; read in full. The page is undated."
+    },
+    {
+     "url": "https://www.nmdvs.org/?p=3913",
+     "title": "New Mexico Department of Veterans’ Services: State Benefits",
+     "scope": "Benefits main office, 407 Galisteo Street, Santa Fe; 1-866-433-8387; search excerpt."
+    },
+    {
+     "url": "https://www.nmlegis.gov/(X(1)S(wad0muqmvxzdjjhkdu1eiys5))/handouts/MVAC%20071525%20Item%204%20NMDVS%20Agency%20Summary.pdf",
+     "title": "New Mexico Department of Veterans’ Services: agency summary to the legislature (July 2025)",
+     "scope": "Toll-free 1 (866) 433-8387, Albuquerque (505) 383-2400, Santa Fe (505) 827-6300; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "nm-adrc",
+   "name": "New Mexico Aging and Disability Resource Center",
+   "organization": "New Mexico Aging and Long-Term Services Department, Aging and Disability Resource Center (ADRC)",
+   "url": "https://www.aging.nm.gov/about/contact",
+   "needs": [
+    "general_navigation",
+    "help_at_home",
+    "equipment_home_accessibility"
+   ],
+   "description": "The state Aging and Disability Resource Center helps older adults, adults with disabilities and caregivers find in-home services, Medicaid home and community-based services, benefits counseling and caregiver support. Military service is not required.",
+   "next_step": "Call 800-432-2080, Monday–Friday 7:45 a.m.–5 p.m. Mountain time, or choose a county above for its Area Agency on Aging.",
+   "constraints": [
+    "Each program has its own eligibility and waitlist."
+   ],
+   "phone": "800-432-2080",
+   "phone_label": "New Mexico Aging and Disability Resource Center (800-432-2080)",
+   "phone_source": "https://www.aging.nm.gov/about/contact",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://www.aging.nm.gov/about/contact",
+     "title": "New Mexico Aging and Long-Term Services Department: Contact",
+     "scope": "ADRC 1-800-432-2080, Monday–Friday 7:45am–5pm MT; search excerpt."
+    },
+    {
+     "url": "https://www.gcd.nm.gov/?p=395",
+     "title": "New Mexico Governor’s Commission on Disability: Elderly resources",
+     "scope": "What the ADRC offers: information and referral, benefits counseling, Medicaid home and community-based services and caregiving; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "nm-ship",
+   "name": "Medicare counseling (SHIP) for New Mexico",
+   "organization": "New Mexico Aging and Long-Term Services Department, State Health Insurance Assistance Program (SHIP)",
+   "url": "https://www.aging.nm.gov/about/contact",
+   "needs": [
+    "benefits_and_funding"
+   ],
+   "description": "Free Medicare counseling from the Aging and Long-Term Services Department’s State Health Insurance Assistance Program counselors: plan choices, enrollment, costs and help paying for Medicare.",
+   "next_step": "Call 800-432-2080 to reach a SHIP counselor or reserve an appointment. For Medicare itself, call 800-MEDICARE (800-633-4227).",
+   "constraints": [
+    "Have your Medicare card and drug list ready."
+   ],
+   "phone": "800-432-2080",
+   "phone_label": "New Mexico SHIP, through the ADRC (800-432-2080)",
+   "phone_source": "https://www.aging.nm.gov/about/contact",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://www.aging.nm.gov/about/contact",
+     "title": "New Mexico Aging and Long-Term Services Department: Contact",
+     "scope": "Reserve an appointment with a SHIP counselor or call 800-432-2080; search excerpt."
+    },
+    {
+     "url": "https://aging.nm.gov/about/locations",
+     "title": "New Mexico Aging and Long-Term Services Department: Locations",
+     "scope": "SHIP team office locations; call 1-800-432-2080; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "nm-ombudsman",
+   "name": "New Mexico Long-Term Care Ombudsman and adult abuse reporting",
+   "organization": "New Mexico Aging and Long-Term Services Department, Long-Term Care Ombudsman Program",
+   "url": "https://www.aging.nm.gov/contact-us",
+   "needs": [
+    "resident_rights",
+    "general_navigation"
+   ],
+   "description": "Independent advocacy for residents of nursing homes and other long-term care facilities.",
+   "next_step": "Call the Long-Term Care Ombudsman Program at 866-451-2901. To report abuse, neglect or exploitation of an adult, call Adult Protective Services at 866-654-3219, 24 hours a day. In an emergency, call 911.",
+   "constraints": [
+    "The ombudsman acts with the resident’s permission and is not a licensing agency."
+   ],
+   "phone": "866-451-2901",
+   "phone_label": "New Mexico Long-Term Care Ombudsman (866-451-2901)",
+   "phone_source": "https://www.aging.nm.gov/contact-us",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://www.aging.nm.gov/contact-us",
+     "title": "New Mexico Aging and Long-Term Services Department: Contact us",
+     "scope": "Long-Term Care Ombudsman Program 866-451-2901, toll-free and statewide; search excerpt."
+    },
+    {
+     "url": "https://aging.nm.gov/protecting-adults",
+     "title": "New Mexico Aging and Long-Term Services Department: Protecting Adults",
+     "scope": "APS Statewide Intake toll-free 866-654-3219; search excerpt."
+    },
+    {
+     "url": "https://www.aging.nm.gov/?p=977",
+     "title": "New Mexico Aging and Long-Term Services Department: Locations",
+     "scope": "APS 24/7 toll-free number 866-654-3219; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "nm-legal-programs",
+   "name": "Free legal help for New Mexico veterans and older adults",
+   "organization": "Legal Resources for the Elderly Program (State Bar Foundation); New Mexico Legal Aid; Senior Citizens’ Law Office",
+   "url": "https://www.sbnm.org/LREP/",
+   "role": "legal_aid",
+   "needs": [
+    "resident_rights",
+    "general_navigation",
+    "housing"
+   ],
+   "description": "The Legal Resources for the Elderly Program is a free statewide legal helpline for New Mexicans 55 and older, with no income limits, run by the State Bar Foundation with the Aging and Long-Term Services Department. New Mexico Legal Aid gives free civil legal help to people with low incomes. In Bernalillo County and nearby, the Senior Citizens’ Law Office also helps older adults.",
+   "next_step": "If you are 55 or older, call the Legal Resources for the Elderly Program at 800-876-6657 (505-797-6005 in Albuquerque). For other civil legal help, call New Mexico Legal Aid’s statewide intake line, 833-545-4357. In the Albuquerque area, the Senior Citizens’ Law Office is at 505-265-2300.",
+   "constraints": [
+    "No help with criminal cases.",
+    "New Mexico Legal Aid screens by income and case type."
+   ],
+   "phone": "800-876-6657",
+   "phone_label": "Legal Resources for the Elderly Program (800-876-6657)",
+   "phone_source": "https://www.sbnm.org/LREP/",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://www.sbnm.org/LREP/",
+     "title": "State Bar of New Mexico: Legal Resources for the Elderly Program",
+     "scope": "Free statewide helpline for residents 55 and older with no income restrictions; 505-797-6005 or 1-800-876-6657; search excerpt."
+    },
+    {
+     "url": "https://sbnm.org/CivilLegalServiceProviders_And_OtherResources",
+     "title": "State Bar of New Mexico: Civil Legal Service Providers and Other Resources",
+     "scope": "Legal Resources for the Elderly Program; New Mexico Legal Aid 833-545-4357; search excerpt."
+    },
+    {
+     "url": "https://www.cabq.gov/family/services/senior-services",
+     "title": "City of Albuquerque: Area Agency on Aging",
+     "scope": "Legal services: Senior Citizen’s Law Office, 505-265-2300; search excerpt."
+    },
+    {
+     "url": "https://lawlibrary.nmcourts.gov/wp-content/uploads/sites/34/2024/03/New-Mexico-Civil-Legal-Service-Providers_Flyer.pdf",
+     "title": "New Mexico Supreme Court Law Library: Civil Legal Service Providers flyer (2024)",
+     "scope": "Senior Citizens’ Law Office, central New Mexico, including Torrance, Valencia and Sandoval counties with income restrictions; 505-265-2300; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "nm-vahealth-systems",
+   "name": "VA health care systems serving New Mexico",
+   "organization": "U.S. Department of Veterans Affairs",
+   "url": "https://www.va.gov/find-locations/?facilityType=health",
+   "role": "va_health_system",
+   "needs": [
+    "veteran_services",
+    "care_facilities"
+   ],
+   "description": "Most New Mexico veterans are served by VA New Mexico health care (Raymond G. Murphy VA Medical Center, 1501 San Pedro Drive SE, Albuquerque; 505-265-1711 or 800-465-8262) and its clinics. In Doña Ana County, the Las Cruces clinic is run by VA El Paso; in the east, the Clovis clinic is run by VA Amarillo and the Hobbs clinic by VA West Texas.",
+   "next_step": "Use VA’s facility locator with your ZIP code to find the closest clinic. Not enrolled yet? Ask your field office’s veteran service officer for help applying.",
+   "constraints": [
+    "Which system serves you depends on where you live; VA’s locator shows the right clinic."
+   ],
+   "phone": "505-265-1711",
+   "phone_label": "VA New Mexico health care (505-265-1711)",
+   "phone_source": "https://www.va.gov/new-mexico-health-care/contact-us/",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://www.va.gov/new-mexico-health-care/contact-us/",
+     "title": "VA New Mexico health care: Contact us",
+     "scope": "Main phone local 505-265-1711, toll-free 800-465-8262; search excerpt."
+    },
+    {
+     "url": "https://www.va.gov/el-paso-health-care/health-services/",
+     "title": "VA El Paso health care: Health services",
+     "scope": "Serves veterans in southwest Texas and Doña Ana County, New Mexico, including the Las Cruces VA Clinic; search excerpt."
+    },
+    {
+     "url": "https://www.va.gov/amarillo-health-care/about-us/",
+     "title": "VA Amarillo health care: About us",
+     "scope": "Community-based outpatient clinic in Clovis, New Mexico; search excerpt."
+    },
+    {
+     "url": "https://www.va.gov/west-texas-health-care/locations/hobbs-va-clinic/",
+     "title": "VA West Texas health care: Hobbs VA Clinic",
+     "scope": "The Hobbs clinic is part of VA West Texas health care; search excerpt."
+    }
+   ]
+  }
+ ],
+ "adapter": {
+  "badge_county": "NMDVS field office",
+  "badge_state": "NMDVS field office",
+  "badge_statewide": "NMDVS statewide line",
+  "published_in": "Published on the New Mexico Department of Veterans’ Services field offices page",
+  "agency_link": "New Mexico Department of Veterans’ Services field offices",
+  "officers_can": "New Mexico Department of Veterans’ Services veteran service officers can",
+  "abuse_phone": "866-654-3219",
+  "abuse_label": "Adult Protective Services statewide intake, 24 hours a day",
+  "extra_swaps": [
+   [
+    "Choose a county for its County Veterans Service Office, matched Area Agency on Aging",
+    "Choose a county for its New Mexico Department of Veterans’ Services field office, matched Area Agency on Aging"
+   ],
+   [
+    "Choose a county above for the county veterans office.",
+    "Choose a county above for its state field office."
+   ]
+  ]
+ },
+ "share_replacements": [
+  [
+   "county veterans offices, benefits and care referrals",
+   "state veterans field offices, benefits and care referrals"
+  ],
+  [
+   "County veterans offices",
+   "State veterans field offices"
+  ]
+ ],
+ "coverage_scope": "Referral edition. New Mexico has no county veterans offices: 32 of the 33 counties show the New Mexico Department of Veterans’ Services field office that serves them (17 offices), with any other offices that list the county; Torrance County, which no office lists, shows the department’s toll-free line. Every county also shows an Area Agency on Aging and the statewide long-term care ombudsman line. Five Centers for Independent Living serve 28 counties; Catron, Curry, Hidalgo, Quay and Roosevelt have none.",
+ "coverage_note": "Field offices and their counties come from the New Mexico Department of Veterans’ Services field offices page. Area Agencies on Aging, the long-term care ombudsman line and Centers for Independent Living come from state and center pages read as search excerpts. Reviewed November 16, 2026. Contacts are not telephone-confirmed.",
+ "share_description": "state veterans field offices, Area Agencies on Aging and long-term care ombudsman help across New Mexico"
+}

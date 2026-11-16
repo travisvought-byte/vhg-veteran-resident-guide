@@ -17,6 +17,7 @@ import copy
 import json
 import re
 import sys
+import unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -198,12 +199,16 @@ def build_programs(sheet):
         })
     # VA housing help (SSVF) from the FY26 intake list already in the repository.
     ssvf = read('data/public/ssvf-intake-fy26.json')
+    # VA's workbook drops accents ('Dona Ana'); match its names to the edition's own spelling ('Doña Ana').
+    plain = lambda s: unicodedata.normalize('NFKD', s).encode('ascii', 'ignore').decode()
+    spelled = {plain(o['county']): o['county'] for o in sheet['offices']['list']}
     for row in ssvf['records']:
         if code not in row['states']:
             continue
         # Independent cities keep their name ('Baltimore city' becomes 'Baltimore City'); other suffixes are dropped.
         counties = [c['name'][:-5] + ' City' if c['name'].endswith(' city') else re.sub(r' (County|Parish|Borough|Municipality|Census Area)$', '', c['name'])
                     for c in row['counties'] if c['state'] == code]
+        counties = [spelled.get(plain(c), c) for c in counties]
         phones = row['intake_phones']
         if not phones:  # a card without a phone number would not help anyone; the omission is documented per state
             continue

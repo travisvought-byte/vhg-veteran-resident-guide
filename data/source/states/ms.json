@@ -1,0 +1,1182 @@
+{
+ "about": "Research sheet for the Mississippi county edition. Every contact below was read on the date in reviewed_on from the page named beside it; scripts/make_county_state.py turns it into the edition files.",
+ "code": "MS",
+ "name": "Mississippi",
+ "slug": "mississippi",
+ "counties": 82,
+ "reviewed_on": "2026-11-16",
+ "month_label": "November 16, 2026",
+ "template_date": "November 4, 2026",
+ "phones_sentence": "County veterans service officer phones and addresses come from Mississippi Veterans Affairs’ Service Officers page. Call before you go.",
+ "senior_line_id": "ms-adrc",
+ "agency": {
+  "url": "https://www.msva.ms.gov/serviceofficers"
+ },
+ "offices": {
+  "source_url": "https://www.msva.ms.gov/serviceofficers",
+  "source_title": "Mississippi Veterans Affairs: Service Officers",
+  "review_method": "full_official_page_text",
+  "note": "County veterans service officers can help with VA claims, pension and survivor benefits at no charge.",
+  "selection": "Office address (with mailing address where different) and phones as printed on the department’s Service Officers page; officers’ names and emails omitted. A county with several locations shows the others as other offices. Three counties with no phone printed show the department’s main office number and say so.",
+  "list": [
+   {
+    "county": "Adams",
+    "phone": "601-304-7800",
+    "address": "307 Market Street, Natchez, MS 39120"
+   },
+   {
+    "county": "Alcorn",
+    "phone": "662-286-7744",
+    "address": "Courthouse, P.O. Box 158, Corinth, MS 38835"
+   },
+   {
+    "county": "Amite",
+    "phone": "601-657-4197",
+    "address": "185 Irene Street, P.O. Box 103, Liberty, MS 39645"
+   },
+   {
+    "county": "Attala",
+    "phone": "662-289-6045",
+    "address": "715 Fairground Road, P.O. Box 421, Kosciusko, MS 39090"
+   },
+   {
+    "county": "Benton",
+    "phone": "662-224-6325",
+    "address": "Benton County Courthouse, P.O. Box 218, Ashland, MS 38603"
+   },
+   {
+    "county": "Bolivar",
+    "phone": "662-843-2471",
+    "address": "113 South Davis Street (Hwy 61), P.O. Box 4067, Cleveland, MS 38732"
+   },
+   {
+    "county": "Calhoun",
+    "phone": "662-628-1933",
+    "address": "American Legion, 496 Veterans Avenue, P.O. Box 60, Calhoun City, MS 38916"
+   },
+   {
+    "county": "Carroll",
+    "phone": "662-237-9274",
+    "address": "Courthouse, Carrollton (mailing: P.O. Box 60, Carrollton, MS 38917)",
+    "other_phones": [
+     "662-464-5476"
+    ],
+    "note": "The first number is for Carrollton and the second for Vaiden."
+   },
+   {
+    "county": "Chickasaw",
+    "phone": "662-456-3652",
+    "address": "665 North Jefferson Street, Houston, MS 38851",
+    "other_phones": [
+     "662-542-3575"
+    ],
+    "other_offices": [
+     {
+      "address": "793 Hwy 245 South, Okolona, MS 38860",
+      "schedule": "Another location listed for this county; call before you go"
+     }
+    ]
+   },
+   {
+    "county": "Choctaw",
+    "phone": "662-285-7719",
+    "address": "583 West Main Street, P.O. Box 250, Ackerman, MS 39735"
+   },
+   {
+    "county": "Claiborne",
+    "phone": "601-437-1105",
+    "address": "Multipurpose Building, 1703 Bridewell Lane, P.O. Box 689, Port Gibson, MS 39150"
+   },
+   {
+    "county": "Clarke",
+    "phone": "601-776-2461",
+    "address": "100 East Church Street, P.O. Box 616, Quitman, MS 39355"
+   },
+   {
+    "county": "Clay",
+    "phone": "662-494-1554",
+    "address": "Justice Court Building, 218 West Broad Street, P.O. Box 1203, West Point, MS 39773"
+   },
+   {
+    "county": "Coahoma",
+    "phone": "662-624-5201",
+    "address": "504 2nd Street, P.O. Box 1221, Clarksdale, MS 38614"
+   },
+   {
+    "county": "Copiah",
+    "phone": "601-894-4101",
+    "address": "Chancery Clerk Office, 122 South Lowe Street, P.O. Box 507, Hazlehurst, MS 39083"
+   },
+   {
+    "county": "Covington",
+    "phone": "601-765-4004",
+    "address": "502 South Arrington Avenue, P.O. Box 1679, Collins, MS 39428"
+   },
+   {
+    "county": "DeSoto",
+    "phone": "662-404-6598",
+    "address": "Maxwell Building, Suite B, 6595 Hwy 305 N, Olive Branch, MS 38654"
+   },
+   {
+    "county": "Forrest",
+    "phone": "601-583-4521",
+    "address": "1200 Corinne Street, Hattiesburg, MS 39403"
+   },
+   {
+    "county": "Franklin",
+    "phone": "601-384-2763",
+    "address": "38 Walnut Street, P.O. Box 297, Meadville, MS 39653"
+   },
+   {
+    "county": "George",
+    "phone": "601-247-2117",
+    "address": "Courthouse, 1st floor, 355 Cox Street, Lucedale, MS 39452"
+   },
+   {
+    "county": "Greene",
+    "phone": "601-394-2442",
+    "address": "313 Lafayette Avenue, P.O. Box 1244, Leakesville, MS 39451"
+   },
+   {
+    "county": "Grenada",
+    "phone": "662-226-1821",
+    "address": "Courthouse, first floor, Grenada (mailing: 2231 McSwine Road, Grenada, MS 38901)"
+   },
+   {
+    "county": "Hancock",
+    "phone": "228-467-2100",
+    "address": "854 Hwy 90, Suite 1, Bay St. Louis, MS 39520"
+   },
+   {
+    "county": "Harrison",
+    "phone": "228-435-8271",
+    "address": "Courthouse, 1st floor, 730 Martin Luther King Blvd., Biloxi (mailing: P.O. Box 413, Biloxi, MS 39533)"
+   },
+   {
+    "county": "Hinds",
+    "phone": "601-968-5408",
+    "address": "316 South President Street, Jackson, MS 39205"
+   },
+   {
+    "county": "Holmes",
+    "phone": "662-834-3134",
+    "address": "16979 Hwy 17, Lexington (mailing: P.O. Box 219, Lexington, MS 39095)"
+   },
+   {
+    "county": "Humphreys",
+    "phone": "662-247-0143",
+    "address": "Courthouse, P.O. Box 234, Belzoni, MS"
+   },
+   {
+    "county": "Issaquena",
+    "phone": "662-403-0241",
+    "address": "5490 Glen Allen Road (mailing: P.O. Box 343, Glen Allen, MS 38774)",
+    "other_phones": [
+     "662-347-9410"
+    ]
+   },
+   {
+    "county": "Itawamba",
+    "phone": "662-862-2841",
+    "address": "507 Legion Drive, Fulton (mailing: 201 W. Main Street, Fulton, MS 38843)"
+   },
+   {
+    "county": "Jackson",
+    "phone": "228-769-3075",
+    "address": "4111 Amonett Street, Pascagoula, MS 39568"
+   },
+   {
+    "county": "Jasper",
+    "phone": "601-764-2871",
+    "address": "37 E West 8th Avenue, Bay Springs (mailing: P.O. Box 191, Bay Springs, MS 39422)"
+   },
+   {
+    "county": "Jefferson",
+    "phone": "601-786-3021",
+    "address": "1483 Main Street, Fayette (mailing: P.O. Box 145, Fayette, MS 39069)"
+   },
+   {
+    "county": "Jefferson Davis",
+    "phone": "601-792-5939",
+    "address": "Courthouse, Prentiss (mailing: P.O. Box 2121, Prentiss, MS 39474)",
+    "other_offices": [
+     {
+      "address": "Wellness Center, Bassfield, MS",
+      "schedule": "Another location listed for this county; call before you go"
+     }
+    ]
+   },
+   {
+    "county": "Jones",
+    "phone": "601-428-0467",
+    "address": "695 County Home Road, Suite 1, Ellisville, MS 39347"
+   },
+   {
+    "county": "Kemper",
+    "phone": "601-743-2247",
+    "address": "39 Bell Street, DeKalb (mailing: P.O. Box 252, DeKalb, MS 39328)"
+   },
+   {
+    "county": "Lafayette",
+    "phone": "662-236-3111",
+    "address": "1301 Monroe Avenue, Suite 107, Oxford, MS 38655"
+   },
+   {
+    "county": "Lamar",
+    "phone": "601-794-4218",
+    "address": "12 Veterans Drive, Purvis, MS 39475",
+    "other_offices": [
+     {
+      "address": "Oak Grove Senior Center, 5874 West 4th Street, Hattiesburg, MS 39402",
+      "schedule": "Another location listed for this county; call before you go",
+      "phone": "601-336-5019"
+     },
+     {
+      "address": "19 Center Lane, Sumrall, MS 39482",
+      "schedule": "Another location listed for this county; call before you go",
+      "phone": "601-758-0015"
+     }
+    ]
+   },
+   {
+    "county": "Lauderdale",
+    "phone": "601-482-9811",
+    "address": "1827 23rd Avenue, Meridian, MS 39302"
+   },
+   {
+    "county": "Lawrence",
+    "phone": "601-587-3006",
+    "address": "County Office Building, Monticello (mailing: P.O. Box 1160, Monticello, MS 39654)"
+   },
+   {
+    "county": "Leake",
+    "phone": "601-267-7200",
+    "address": "101 Court Square, Room 102, Carthage, MS 39051"
+   },
+   {
+    "county": "Lee",
+    "phone": "662-432-2099",
+    "address": "300 West Main Street, Tupelo (mailing: P.O. Box 1785, Tupelo, MS 38802)"
+   },
+   {
+    "county": "Leflore",
+    "phone": "662-453-3157",
+    "address": "310 West Market Street, Greenwood (mailing: P.O. Box 250, Greenwood, MS 38935)"
+   },
+   {
+    "county": "Lincoln",
+    "phone": "601-835-3470",
+    "address": "Courthouse, Room 202, 301 South First Street, Brookhaven, MS 39601"
+   },
+   {
+    "county": "Lowndes",
+    "phone": "662-327-2005",
+    "address": "17 Airline Road, Columbus, MS 39702",
+    "other_phones": [
+     "662-329-5777"
+    ]
+   },
+   {
+    "county": "Madison",
+    "phone": "601-855-5689",
+    "address": "125 W. North Street, Canton (mailing: P.O. Box 608, Canton, MS 39046)"
+   },
+   {
+    "county": "Marion",
+    "phone": "601-736-0740",
+    "address": "124 McGeehee Drive, Columbia, MS 39429"
+   },
+   {
+    "county": "Marshall",
+    "phone": "662-252-5508",
+    "address": "543 J M Ash Drive, Holly Springs (mailing: P.O. Box 219, Holly Springs, MS 38635)"
+   },
+   {
+    "county": "Monroe",
+    "phone": "662-436-9191",
+    "address": "American Legion Post 26, 523 Hwy 145 N, Aberdeen (mailing: P.O. Box 813, Aberdeen, MS 39730)",
+    "other_offices": [
+     {
+      "address": "Government Complex Building, 1619 Hwy 25 North, Amory, MS 38821",
+      "schedule": "Another location listed for this county; call before you go",
+      "phone": "662-256-3841"
+     }
+    ]
+   },
+   {
+    "county": "Montgomery",
+    "phone": "662-283-1618",
+    "address": "Courthouse, 618 Summit Street, Winona (mailing: P.O. Box 401, Winona, MS 38967)"
+   },
+   {
+    "county": "Neshoba",
+    "phone": "601-656-4531",
+    "address": "11901 Hwy 15 North, Philadelphia, MS 39350",
+    "other_offices": [
+     {
+      "address": "Mississippi Band of Choctaw Indians, 124 Industrial Road, Choctaw, MS 39350",
+      "schedule": "Another location listed for this county; call before you go",
+      "phone": "601-650-1737"
+     }
+    ]
+   },
+   {
+    "county": "Newton",
+    "phone": "601-635-2178",
+    "address": "14712 Hwy 15, Decatur (mailing: P.O. Box 665, Decatur, MS 39327)"
+   },
+   {
+    "county": "Noxubee",
+    "phone": "662-726-5423",
+    "address": "158 Dr. Martin Luther King Jr. Drive, Macon (mailing: P.O. Box 348, Macon, MS 39341)"
+   },
+   {
+    "county": "Oktibbeha",
+    "phone": "662-323-6155",
+    "address": "Courthouse, 2nd floor, 101 East Main Street, Starkville, MS 39759"
+   },
+   {
+    "county": "Panola",
+    "phone": "662-563-5757",
+    "address": "National Guard Armory, 705 Keating Road, Batesville, MS 39606"
+   },
+   {
+    "county": "Pearl River",
+    "phone": "601-403-2558",
+    "address": "153 Savannah Millard Road, Poplarville (mailing: P.O. Box 569, Poplarville, MS 39470)"
+   },
+   {
+    "county": "Perry",
+    "phone": "601-964-8214",
+    "address": "Perry County Courthouse, 103 South Main Street, New Augusta, MS 39462"
+   },
+   {
+    "county": "Pike",
+    "phone": "601-684-9966",
+    "address": "1002 Warren Krout Road, McComb (mailing: P.O. Box 1111, McComb, MS 39649)"
+   },
+   {
+    "county": "Pontotoc",
+    "phone": "662-489-3907",
+    "address": "311 Center Ridge Drive, Pontotoc, MS 38863"
+   },
+   {
+    "county": "Prentiss",
+    "phone": "662-728-5532",
+    "address": "100 West Loveless Road, Booneville (mailing: P.O. Box 477, Booneville, MS 38829)"
+   },
+   {
+    "county": "Quitman",
+    "phone": "662-645-3818",
+    "address": "1054 Charlie Pride Hwy, Marks (mailing: 1516 Lee Drive, Clarksdale, MS 38614)"
+   },
+   {
+    "county": "Rankin",
+    "phone": "601-824-2652",
+    "address": "211 East Government Street, Suite A, Brandon, MS 39042"
+   },
+   {
+    "county": "Scott",
+    "phone": "601-469-4477",
+    "address": "100 East Main Street, Forest (mailing: P.O. Box 630, Forest, MS 39074)"
+   },
+   {
+    "county": "Sharkey",
+    "phone": "662-527-1999",
+    "address": "301 East China Street, Rolling Fork (mailing: P.O. Box 218, Rolling Fork, MS 39159)",
+    "other_phones": [
+     "662-873-2755"
+    ]
+   },
+   {
+    "county": "Simpson",
+    "phone": "601-847-1354",
+    "address": "Old Courthouse, 2nd floor, Mendenhall (mailing: 113 Traci Drive, Mendenhall, MS 39114)"
+   },
+   {
+    "county": "Smith",
+    "phone": "601-782-9222",
+    "address": "County Office Building, Raleigh (mailing: P.O. Box 252, Raleigh, MS 39153)"
+   },
+   {
+    "county": "Stone",
+    "phone": "601-928-7509",
+    "address": "217 North Parker Street, Wiggins, MS 39577"
+   },
+   {
+    "county": "Sunflower",
+    "phone": "601-576-4850",
+    "address": "Courthouse, 1st floor, Indianola (mailing: 302 Camellia Lane, Indianola, MS 38751)",
+    "note": "The department’s page prints no phone for this county’s office; the number is Mississippi Veterans Affairs’ main office in Jackson, which can put you in touch with the county service officer."
+   },
+   {
+    "county": "Tallahatchie",
+    "phone": "662-647-5305",
+    "address": "137 Main Street, Glendora (mailing: P.O. Box 137, Glendora, MS 38928)",
+    "other_offices": [
+     {
+      "address": "301 North Market Street, Charleston, MS 38921",
+      "schedule": "Another location listed for this county; call before you go"
+     }
+    ]
+   },
+   {
+    "county": "Tate",
+    "phone": "662-301-8364",
+    "address": "107 Court Street, Senatobia, MS 38668"
+   },
+   {
+    "county": "Tippah",
+    "phone": "662-837-9214",
+    "address": "107 North Main Street, Ripley, MS 38663"
+   },
+   {
+    "county": "Tishomingo",
+    "phone": "662-423-7053",
+    "address": "1008 Battleground Drive, Room 211, Iuka, MS 38852"
+   },
+   {
+    "county": "Tunica",
+    "phone": "662-357-1471",
+    "address": "Hwy 61 South, Tunica (mailing: P.O. Box 639, Tunica, MS 38676)"
+   },
+   {
+    "county": "Union",
+    "phone": "662-534-1982",
+    "address": "Courthouse, 116 East Bankhead Street, New Albany (mailing: P.O. Box 547, New Albany, MS 38652)"
+   },
+   {
+    "county": "Walthall",
+    "phone": "601-576-4850",
+    "address": "908 Armory Road, Tylertown, MS 39667",
+    "note": "The department’s page prints no phone for this county’s office; the number is Mississippi Veterans Affairs’ main office in Jackson, which can put you in touch with the county service officer."
+   },
+   {
+    "county": "Warren",
+    "phone": "601-636-1627",
+    "address": "1009 Cherry Street, Vicksburg (mailing: P.O. Box 351, Vicksburg, MS 39181)"
+   },
+   {
+    "county": "Washington",
+    "phone": "662-335-6196",
+    "address": "240 South Theobald Street, Greenville, MS 38702"
+   },
+   {
+    "county": "Wayne",
+    "phone": "601-735-4258",
+    "address": "609 Azalea Drive, Waynesboro, MS 39367"
+   },
+   {
+    "county": "Webster",
+    "phone": "662-258-3051",
+    "address": "1842 Veterans Memorial Blvd., Eupora (mailing: 1234 MS Hwy 182, Eupora, MS 39744)"
+   },
+   {
+    "county": "Wilkinson",
+    "phone": "601-576-4850",
+    "address": "Woodville Courthouse, 525 Main Street, Woodville (mailing: P.O. Box 1619, Woodville, MS 39669)",
+    "other_offices": [
+     {
+      "address": "Centreville Town Hall, 1 Municipal Drive, Centreville, MS",
+      "schedule": "Another location listed for this county; call before you go"
+     }
+    ],
+    "note": "The department’s page prints no phone for this county’s office; the number is Mississippi Veterans Affairs’ main office in Jackson, which can put you in touch with the county service officer."
+   },
+   {
+    "county": "Winston",
+    "phone": "662-773-9555",
+    "address": "5595 Old Robinson Road, Louisville, MS 39339"
+   },
+   {
+    "county": "Yalobusha",
+    "phone": "662-934-8145",
+    "address": "306 Railroad Street, Water Valley, MS 38965"
+   },
+   {
+    "county": "Yazoo",
+    "phone": "662-746-1008",
+    "address": "212 East Broadway, Yazoo City (mailing: P.O. Box 1631, Yazoo City, MS 39194)"
+   }
+  ]
+ },
+ "aging": {
+  "source_url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
+  "source_title": "Mississippi Department of Human Services: State Plan on Aging, FFY 2023 update (approved September 27, 2022)",
+  "source_scope": "Contact page listing the ten Area Agencies on Aging, their phones and the counties each serves, with the statewide Adult Protective Services and MAC/SHIP lines; read in full. Central Mississippi’s seven counties are confirmed by its fiscal year 2027 request for proposals: https://cmpdd.org/?p=2177",
+  "review": "full",
+  "review_method": "full_official_pdf",
+  "region_word": "",
+  "next_step_extra": "The Mississippi Access to Care line, 844-822-4622, also connects you to aging and disability help.",
+  "regions": [
+   {
+    "id": "ms-aaa-central",
+    "label": "Central Mississippi",
+    "name": "Central Mississippi Area Agency on Aging",
+    "phone": "601-981-1516",
+    "counties": [
+     "Copiah",
+     "Hinds",
+     "Madison",
+     "Rankin",
+     "Simpson",
+     "Warren",
+     "Yazoo"
+    ],
+    "notes": [
+     "Toll-free: 888-995-9925."
+    ]
+   },
+   {
+    "id": "ms-aaa-east-central",
+    "label": "East Central",
+    "name": "East Central Area Agency on Aging",
+    "phone": "601-683-2401",
+    "counties": [
+     "Clarke",
+     "Jasper",
+     "Kemper",
+     "Lauderdale",
+     "Leake",
+     "Neshoba",
+     "Newton",
+     "Scott",
+     "Smith"
+    ],
+    "notes": [
+     "Toll-free: 800-264-2007."
+    ]
+   },
+   {
+    "id": "ms-aaa-golden-triangle",
+    "label": "Golden Triangle",
+    "name": "Golden Triangle Area Agency on Aging",
+    "phone": "662-324-4650",
+    "counties": [
+     "Choctaw",
+     "Clay",
+     "Lowndes",
+     "Noxubee",
+     "Oktibbeha",
+     "Webster",
+     "Winston"
+    ],
+    "notes": [
+     "Also listed: 662-332-2636. Toll-free: 888-324-9000."
+    ]
+   },
+   {
+    "id": "ms-aaa-north-central",
+    "label": "North Central",
+    "name": "North Central Area Agency on Aging",
+    "phone": "662-283-2675",
+    "counties": [
+     "Attala",
+     "Carroll",
+     "Grenada",
+     "Holmes",
+     "Leflore",
+     "Montgomery",
+     "Yalobusha"
+    ],
+    "notes": [
+     "Also listed: 662-283-2771. Toll-free: 888-427-0714."
+    ]
+   },
+   {
+    "id": "ms-aaa-north-delta",
+    "label": "North Delta",
+    "name": "North Delta Area Agency on Aging",
+    "phone": "662-561-4100",
+    "counties": [
+     "Coahoma",
+     "DeSoto",
+     "Panola",
+     "Quitman",
+     "Tallahatchie",
+     "Tate",
+     "Tunica"
+    ],
+    "notes": [
+     "Toll-free: 800-844-2433."
+    ]
+   },
+   {
+    "id": "ms-aaa-northeast",
+    "label": "Northeast Mississippi",
+    "name": "Northeast Mississippi Area Agency on Aging",
+    "phone": "662-728-7038",
+    "counties": [
+     "Alcorn",
+     "Benton",
+     "Marshall",
+     "Prentiss",
+     "Tippah",
+     "Tishomingo"
+    ],
+    "notes": [
+     "Toll-free: 800-745-6961."
+    ]
+   },
+   {
+    "id": "ms-aaa-south-delta",
+    "label": "South Delta",
+    "name": "South Delta Area Agency on Aging",
+    "phone": "662-378-3831",
+    "counties": [
+     "Bolivar",
+     "Humphreys",
+     "Issaquena",
+     "Sharkey",
+     "Sunflower",
+     "Washington"
+    ],
+    "notes": [
+     "Toll-free: 800-898-3055."
+    ]
+   },
+   {
+    "id": "ms-aaa-southern",
+    "label": "Southern Mississippi",
+    "name": "Southern Mississippi Area Agency on Aging",
+    "phone": "228-868-2326",
+    "counties": [
+     "Covington",
+     "Forrest",
+     "George",
+     "Greene",
+     "Hancock",
+     "Harrison",
+     "Jackson",
+     "Jefferson Davis",
+     "Jones",
+     "Lamar",
+     "Marion",
+     "Pearl River",
+     "Perry",
+     "Stone",
+     "Wayne"
+    ],
+    "notes": [
+     "Toll-free: 800-444-8014."
+    ]
+   },
+   {
+    "id": "ms-aaa-southwest",
+    "label": "Southwest Mississippi",
+    "name": "Southwest Mississippi Area Agency on Aging",
+    "phone": "601-446-6044",
+    "counties": [
+     "Adams",
+     "Amite",
+     "Claiborne",
+     "Franklin",
+     "Jefferson",
+     "Lawrence",
+     "Lincoln",
+     "Pike",
+     "Walthall",
+     "Wilkinson"
+    ],
+    "notes": [
+     "Toll-free: 800-338-2049."
+    ]
+   },
+   {
+    "id": "ms-aaa-three-rivers",
+    "label": "Three Rivers",
+    "name": "Three Rivers Area Agency on Aging",
+    "phone": "662-489-2415",
+    "counties": [
+     "Calhoun",
+     "Chickasaw",
+     "Itawamba",
+     "Lafayette",
+     "Lee",
+     "Monroe",
+     "Pontotoc",
+     "Union"
+    ],
+    "notes": [
+     "Also listed: 662-489-6911. Toll-free: 877-489-6911."
+    ]
+   }
+  ]
+ },
+ "ombudsman": {
+  "state_phone": "888-844-0041",
+  "regions": [
+   {
+    "id": "ms-omb-state",
+    "name": "Mississippi Long-Term Care Ombudsman Program",
+    "phone": "888-844-0041",
+    "counties": [
+     "Adams",
+     "Alcorn",
+     "Amite",
+     "Attala",
+     "Benton",
+     "Bolivar",
+     "Calhoun",
+     "Carroll",
+     "Chickasaw",
+     "Choctaw",
+     "Claiborne",
+     "Clarke",
+     "Clay",
+     "Coahoma",
+     "Copiah",
+     "Covington",
+     "DeSoto",
+     "Forrest",
+     "Franklin",
+     "George",
+     "Greene",
+     "Grenada",
+     "Hancock",
+     "Harrison",
+     "Hinds",
+     "Holmes",
+     "Humphreys",
+     "Issaquena",
+     "Itawamba",
+     "Jackson",
+     "Jasper",
+     "Jefferson",
+     "Jefferson Davis",
+     "Jones",
+     "Kemper",
+     "Lafayette",
+     "Lamar",
+     "Lauderdale",
+     "Lawrence",
+     "Leake",
+     "Lee",
+     "Leflore",
+     "Lincoln",
+     "Lowndes",
+     "Madison",
+     "Marion",
+     "Marshall",
+     "Monroe",
+     "Montgomery",
+     "Neshoba",
+     "Newton",
+     "Noxubee",
+     "Oktibbeha",
+     "Panola",
+     "Pearl River",
+     "Perry",
+     "Pike",
+     "Pontotoc",
+     "Prentiss",
+     "Quitman",
+     "Rankin",
+     "Scott",
+     "Sharkey",
+     "Simpson",
+     "Smith",
+     "Stone",
+     "Sunflower",
+     "Tallahatchie",
+     "Tate",
+     "Tippah",
+     "Tishomingo",
+     "Tunica",
+     "Union",
+     "Walthall",
+     "Warren",
+     "Washington",
+     "Wayne",
+     "Webster",
+     "Wilkinson",
+     "Winston",
+     "Yalobusha",
+     "Yazoo"
+    ],
+    "source_url": "https://www.mdhs.ms.gov/ombudsman/",
+    "source_title": "Mississippi Department of Human Services: Long-Term Care Ombudsman",
+    "source_scope": "Statewide Long-Term Care Ombudsman help line, 1-888-844-0041, and the facility types served; read in full. The page was last modified April 8, 2026.",
+    "review": "full",
+    "review_method": "full_official_page_text",
+    "counties_from_source": true,
+    "notes": [
+     "Mississippi’s ten local ombudsman programs are housed in the Planning and Development Districts with the Area Agencies on Aging; the help line connects you with yours."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://regulations.justia.com/states/mississippi/title-18/part-26/part-i/section-18-26-1-a",
+      "title": "Mississippi Administrative Code, Title 18, Part 26: Long-Term Care Ombudsman Program",
+      "scope": "Ten local ombudsman programs in the ten Planning and Development Districts; search excerpt."
+     }
+    ]
+   }
+  ]
+ },
+ "cils": {
+  "source_url": "https://www.ilru.org/cil-directory/ms",
+  "source_title": "ILRU: Mississippi CIL Directory",
+  "scope": "Each LIFE of Mississippi office’s address, phone, website and counties served; read in full. The directory is undated.",
+  "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living",
+  "list": [
+   {
+    "id": "ms-cil-life-jackson",
+    "name": "LIFE of Mississippi (Jackson)",
+    "organization": "Living Independence for Everyone (LIFE) of Mississippi",
+    "url": "https://www.lifeofms.com/",
+    "phone": "601-969-4009",
+    "counties": [
+     "Hinds",
+     "Issaquena",
+     "Kemper",
+     "Lauderdale",
+     "Leake",
+     "Madison",
+     "Neshoba",
+     "Newton",
+     "Pearl River",
+     "Rankin",
+     "Scott",
+     "Sharkey",
+     "Warren",
+     "Winston",
+     "Yazoo"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "Office: 1304 Vine Street, Jackson, MS 39202; toll-free 800-748-9398."
+    ]
+   },
+   {
+    "id": "ms-cil-life-mccomb",
+    "name": "LIFE of Central Mississippi (McComb)",
+    "organization": "Living Independence for Everyone (LIFE) of Mississippi",
+    "url": "https://www.lifeofms.com/",
+    "phone": "601-684-3079",
+    "counties": [
+     "Adams",
+     "Amite",
+     "Claiborne",
+     "Copiah",
+     "Franklin",
+     "Jefferson",
+     "Lawrence",
+     "Lincoln",
+     "Pike",
+     "Simpson",
+     "Walthall",
+     "Wilkinson"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "Office: 915-A South Locust Street, McComb, MS 39648."
+    ]
+   },
+   {
+    "id": "ms-cil-life-biloxi",
+    "name": "LIFE of Mississippi (Biloxi)",
+    "organization": "Living Independence for Everyone (LIFE) of Mississippi",
+    "url": "https://www.lifeofms.com/",
+    "phone": "228-388-2401",
+    "counties": [
+     "George",
+     "Jackson",
+     "Harrison",
+     "Hancock",
+     "Stone"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "Office: 2030 Pass Road, Suite C, Biloxi."
+    ]
+   },
+   {
+    "id": "ms-cil-life-tupelo",
+    "name": "LIFE of North Mississippi (Tupelo)",
+    "organization": "Living Independence for Everyone (LIFE) of Mississippi",
+    "url": "https://www.lifeofms.com/",
+    "phone": "662-844-6633",
+    "counties": [
+     "Alcorn",
+     "Benton",
+     "Chickasaw",
+     "Clay",
+     "DeSoto",
+     "Itawamba",
+     "Lafayette",
+     "Lee",
+     "Lowndes",
+     "Marshall",
+     "Monroe",
+     "Noxubee",
+     "Oktibbeha",
+     "Tippah",
+     "Tishomingo",
+     "Pontotoc",
+     "Prentiss",
+     "Tate"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "Office: 1051 Cliff Gookin Blvd., Tupelo, MS 38801."
+    ]
+   },
+   {
+    "id": "ms-cil-life-delta",
+    "name": "LIFE of Mississippi (Delta office, Indianola)",
+    "organization": "Living Independence for Everyone (LIFE) of Mississippi",
+    "url": "https://www.lifeofms.com/",
+    "phone": "662-453-9940",
+    "counties": [
+     "Attala",
+     "Bolivar",
+     "Carroll",
+     "Coahoma",
+     "Grenada",
+     "Holmes",
+     "Humphreys",
+     "Leflore",
+     "Montgomery",
+     "Sunflower",
+     "Panola",
+     "Quitman",
+     "Tallahatchie",
+     "Tunica",
+     "Yalobusha",
+     "Washington"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "Office: 410 Hwy 82 East, Suite C, Indianola, MS 38751. The directory files it as “Greenwood”."
+    ]
+   },
+   {
+    "id": "ms-cil-life-hattiesburg",
+    "name": "LIFE of South Mississippi (Hattiesburg)",
+    "organization": "Living Independence for Everyone (LIFE) of Mississippi",
+    "url": "https://www.lifeofms.com/",
+    "phone": "601-583-2108",
+    "counties": [
+     "Jefferson Davis",
+     "Covington",
+     "Jones",
+     "Wayne",
+     "Marion",
+     "Lamar",
+     "Forrest",
+     "Perry",
+     "Greene",
+     "Smith",
+     "Jasper",
+     "Clarke"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "Office: 710 Katie Avenue, Hattiesburg, MS 39401."
+    ]
+   }
+  ]
+ },
+ "programs": [
+  {
+   "id": "ms-claims",
+   "name": "Mississippi veterans: county veterans service officers for claims help",
+   "organization": "County veterans service officers; Mississippi Veterans Affairs",
+   "url": "https://www.msva.ms.gov/serviceofficers",
+   "needs": [
+    "general_navigation",
+    "benefits_and_funding"
+   ],
+   "description": "Free help with VA claims, pension and survivor benefits from county veterans service officers, who are certified each year by the Mississippi State Veterans Affairs Board. Every county has one. Mississippi Veterans Affairs’ Veterans Benefits Specialists also work from offices across the state and at the Jackson VA Medical Center.",
+   "next_step": "Choose your county for its service officer. Mississippi Veterans Affairs’ main office in Jackson is at 601-576-4850.",
+   "constraints": [
+    "Call before you go; many county offices are staffed part of the week."
+   ],
+   "phone": "601-576-4850",
+   "phone_label": "Mississippi Veterans Affairs main office (601-576-4850)",
+   "phone_source": "https://www.msva.ms.gov/serviceofficers",
+   "review": "full",
+   "sources": [
+    {
+     "url": "https://www.msva.ms.gov/serviceofficers",
+     "title": "Mississippi Veterans Affairs: Service Officers",
+     "scope": "Main office, Veterans Benefits Specialist offices and the 82 county service officers with address and phone; read in full."
+    }
+   ]
+  },
+  {
+   "id": "ms-adrc",
+   "name": "Mississippi Access to Care (MAC) Centers",
+   "organization": "Mississippi Department of Human Services, Division of Aging and Adult Services",
+   "url": "https://mdhs.ms.gov/aging/",
+   "needs": [
+    "general_navigation",
+    "help_at_home",
+    "equipment_home_accessibility"
+   ],
+   "description": "Mississippi Access to Care Centers are a free source of objective information about programs and services for older adults, people with disabilities and caregivers, including long-term care options and Medicaid waiver screening. Military service is not required.",
+   "next_step": "Call 844-822-4622, or choose a county above for its Area Agency on Aging.",
+   "constraints": [
+    "Each program has its own eligibility and waitlist."
+   ],
+   "phone": "844-822-4622",
+   "phone_label": "Mississippi Access to Care (844-822-4622)",
+   "phone_source": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
+   "review": "full",
+   "method": "full_official_pdf",
+   "sources": [
+    {
+     "url": "https://mdhs.ms.gov/aging/",
+     "title": "Mississippi Department of Human Services: Division of Aging & Adult Services",
+     "scope": "MAC Centers and the number (844) 822-4622; search excerpt."
+    },
+    {
+     "url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
+     "title": "Mississippi Department of Human Services: State Plan on Aging, FFY 2023 update",
+     "scope": "Mississippi Access to Care/SHIP 844-822-4622; read in full."
+    }
+   ]
+  },
+  {
+   "id": "ms-ship",
+   "name": "Medicare counseling (SHIP) for Mississippi",
+   "organization": "Mississippi Department of Human Services, State Health Insurance Assistance Program (SHIP)",
+   "url": "https://www.mdhs.ms.gov/?p=22918",
+   "needs": [
+    "benefits_and_funding"
+   ],
+   "description": "Free, unbiased Medicare counseling from Mississippi’s State Health Insurance Assistance Program, run by the Division of Aging and Adult Services with the Area Agencies on Aging and the MAC network: plan choices, enrollment, costs and help paying for Medicare.",
+   "next_step": "Call 844-822-4622. For Medicare itself, call 800-MEDICARE (800-633-4227).",
+   "constraints": [
+    "Have your Medicare card and drug list ready."
+   ],
+   "phone": "844-822-4622",
+   "phone_label": "Mississippi SHIP (844-822-4622)",
+   "phone_source": "https://www.mdhs.ms.gov/?p=22918",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://www.mdhs.ms.gov/?p=22918",
+     "title": "Mississippi Department of Human Services: SHIP provides free and unbiased Medicare guidance",
+     "scope": "SHIP run with the Area Agencies on Aging and the MAC network; call 1-844-822-4622; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "ms-ombudsman",
+   "name": "Mississippi Long-Term Care Ombudsman and adult abuse reporting",
+   "organization": "Mississippi Department of Human Services, Office of the State Long-Term Care Ombudsman",
+   "url": "https://www.mdhs.ms.gov/ombudsman/",
+   "needs": [
+    "resident_rights",
+    "general_navigation"
+   ],
+   "description": "Independent advocacy for residents of nursing homes and assisted living, through local ombudsmen at the Area Agencies on Aging.",
+   "next_step": "Call the ombudsman help line at 888-844-0041. To report abuse, neglect or exploitation of a vulnerable adult at home, call the 24-hour Adult Protective Services hotline, 844-437-6282. In an emergency, call 911.",
+   "constraints": [
+    "The ombudsman acts with the resident’s permission and is not a licensing agency."
+   ],
+   "phone": "888-844-0041",
+   "phone_label": "Mississippi Long-Term Care Ombudsman (888-844-0041)",
+   "phone_source": "https://www.mdhs.ms.gov/ombudsman/",
+   "review": "full",
+   "sources": [
+    {
+     "url": "https://www.mdhs.ms.gov/ombudsman/",
+     "title": "Mississippi Department of Human Services: Long-Term Care Ombudsman",
+     "scope": "Statewide help line 1-888-844-0041; read in full."
+    },
+    {
+     "url": "https://www.mdhs.ms.gov/wp-content/uploads/2024/01/01MDHS_AAS_State-Plan_22-FFY-2023.pdf",
+     "title": "Mississippi Department of Human Services: State Plan on Aging, FFY 2023 update",
+     "scope": "24-Hour Adult Protective Services Hotline 844-437-6282; read in full."
+    }
+   ]
+  },
+  {
+   "id": "ms-legal-programs",
+   "name": "Free legal help for Mississippi veterans and older adults",
+   "organization": "Mississippi Center for Legal Services; North Mississippi Rural Legal Services",
+   "url": "https://www.mdhs.ms.gov/wp-content/uploads/2025/11/LEGAL-ASSISTANCE-HELP-GUIDE.pdf",
+   "role": "legal_aid",
+   "needs": [
+    "resident_rights",
+    "general_navigation",
+    "housing"
+   ],
+   "description": "Mississippi’s legal services programs give free civil legal help to people with low incomes and, through the Area Agencies on Aging, to older adults. Mississippi Center for Legal Services serves central, east-central and south Mississippi; North Mississippi Rural Legal Services serves the north and the Delta. In the southwest counties, older adults are referred to a contracted law firm in Tylertown.",
+   "next_step": "Call 800-498-1804. In the north and the Delta, North Mississippi Rural Legal Services’ Oxford office is at 662-234-8731; in the Jackson area, Mississippi Center for Legal Services is at 601-948-6752.",
+   "constraints": [
+    "Legal aid screens by income and case type; no criminal cases."
+   ],
+   "phone": "800-498-1804",
+   "phone_label": "Mississippi legal services (800-498-1804)",
+   "phone_source": "https://www.mdhs.ms.gov/wp-content/uploads/2025/11/LEGAL-ASSISTANCE-HELP-GUIDE.pdf",
+   "review": "full",
+   "method": "full_official_pdf",
+   "sources": [
+    {
+     "url": "https://www.mdhs.ms.gov/wp-content/uploads/2025/11/LEGAL-ASSISTANCE-HELP-GUIDE.pdf",
+     "title": "Mississippi Department of Human Services: Legal Assistance Help Guide (undated)",
+     "scope": "Each legal provider’s office, phones and the counties it serves for older adults; read in full."
+    }
+   ]
+  },
+  {
+   "id": "ms-vahealth-systems",
+   "name": "VA health care systems serving Mississippi",
+   "organization": "U.S. Department of Veterans Affairs",
+   "url": "https://www.va.gov/find-locations/?facilityType=health",
+   "role": "va_health_system",
+   "needs": [
+    "veteran_services",
+    "care_facilities"
+   ],
+   "description": "Mississippi veterans are served mainly by VA Jackson health care (G.V. (Sonny) Montgomery VA Medical Center, 1500 E. Woodrow Wilson Avenue, Jackson; 601-362-4471, with clinics in Columbus, Greenville, Hattiesburg, Kosciusko, McComb, Meridian and Natchez) and the VA Gulf Coast Veterans Health Care System (400 Veterans Avenue, Biloxi; 228-523-5000).",
+   "next_step": "Use VA’s facility locator with your ZIP code to find the closest clinic; northern counties may be closer to another system. Not enrolled yet? Ask your county veterans service officer for help applying.",
+   "constraints": [
+    "Which system serves you depends on where you live; VA’s locator shows the right clinic."
+   ],
+   "phone": "601-362-4471",
+   "phone_label": "G.V. (Sonny) Montgomery VA Medical Center (601-362-4471)",
+   "phone_source": "https://www.va.gov/DIRECTORY/GUIDE/state_PTSD.cfm?STATE=MS",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://www.va.gov/DIRECTORY/GUIDE/state_PTSD.cfm?STATE=MS",
+     "title": "VA PTSD program locator: Mississippi",
+     "scope": "G.V. (Sonny) Montgomery VA Medical Center, 1500 E. Woodrow Wilson Avenue, Jackson; 601-362-4471; search excerpt."
+    },
+    {
+     "url": "https://www.va.gov/jackson-health-care/stories/jackson-vas-office-of-community-care-launches-new-customer-service-line-for-veterans-and-their-families/",
+     "title": "VA Jackson health care: Community Care customer service line",
+     "scope": "The Columbus, Greenville, Hattiesburg, Kosciusko, McComb, Meridian and Natchez VA clinics are part of the VA Jackson Health Care System; search excerpt."
+    },
+    {
+     "url": "https://www.va.gov/Directory/Guide/state_SUD.cfm?STATE=MS",
+     "title": "VA substance use disorder program locator: Mississippi",
+     "scope": "Gulf Coast Veterans Health Care System, 400 Veterans Avenue, Biloxi; 228-523-5000; search excerpt."
+    }
+   ]
+  }
+ ],
+ "adapter": {
+  "badge_county": "County veterans service officer",
+  "badge_state": "State veterans line",
+  "badge_statewide": "Mississippi statewide line",
+  "published_in": "Published on Mississippi Veterans Affairs’ Service Officers page",
+  "agency_link": "Mississippi Veterans Affairs service officers",
+  "officers_can": "County Veterans Service Officers can",
+  "abuse_phone": "844-437-6282",
+  "abuse_label": "Mississippi Adult Protective Services, 24 hours a day"
+ },
+ "coverage_scope": "Referral edition. All 82 counties have a county veterans service officer, an Area Agency on Aging (ten agencies) and the statewide long-term care ombudsman line. Six LIFE of Mississippi independent living offices cover 78 counties; Calhoun, Choctaw, Union and Webster are not listed by any office in the national directory.",
+ "coverage_note": "County veterans service officers come from Mississippi Veterans Affairs’ Service Officers page. Area Agencies on Aging come from the Mississippi Department of Human Services’ State Plan on Aging. The long-term care ombudsman help line comes from the department’s ombudsman page. Independent living offices come from the ILRU national directory. Reviewed November 16, 2026. Contacts are not telephone-confirmed.",
+ "share_description": "county veterans service officers, Area Agencies on Aging and long-term care ombudsman help across Mississippi"
+}

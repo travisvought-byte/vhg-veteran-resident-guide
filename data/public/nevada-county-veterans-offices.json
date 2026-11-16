@@ -1,17 +1,385 @@
 [
- {
-  "state": "NV",
-  "county": "All Nevada counties",
-  "county_type": "statewide",
-  "phone": "702-224-6025",
-  "organization": "Nevada Department of Veterans Services",
-  "office_type": "statewide",
-  "source_url": "https://veterans.nv.gov/veterans-service-officers/",
-  "source_title": "Nevada Department of Veterans Services — official contact page",
-  "reviewed_on": "2026-11-02",
-  "contact_status": "official_website",
-  "review_method": "full_official_page_text",
-  "note": "Las Vegas Veterans Advocacy Support Team. Northern Nevada: 775-321-4880. Appointments currently take about 30 to 90 days to schedule.",
-  "local_url": "https://veterans.nv.gov/veterans-service-officers/"
- }
+  {
+    "state": "NV",
+    "county": "Carson City",
+    "county_type": "independent_city",
+    "phone": "775-321-4880",
+    "organization": "Nevada Department of Veterans Services (no office in this county)",
+    "office_type": "statewide",
+    "other_phones": [
+      "702-224-6025"
+    ],
+    "address": "No NDVS office in this county. Offices: Reno, Fallon, Elko, Winnemucca, Pahrump, North Las Vegas and Mesquite.",
+    "source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+    "source_title": "Nevada Department of Veterans Services: Veterans Service Officers",
+    "reviewed_on": "2026-11-16",
+    "contact_status": "official_website",
+    "note": "The department lists no office in this county. Call a veterans service officer at 775-321-4880, the number it lists for its Reno, Fallon, Elko and Winnemucca offices, or 702-224-6025 (Las Vegas), or use Ask a VSO on its website. Nevada Department of Veterans Services veterans service officers are accredited by VA and help with claims, pension, survivor benefits and appeals at no charge. The department says intake appointments are taking about 30 to 90 days to schedule.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+      "selection": "Office address and phones as printed on the department’s veterans service officer page; fax numbers omitted. A county without an office shows the department’s statewide card."
+    }
+  },
+  {
+    "state": "NV",
+    "county": "Churchill",
+    "county_type": "county",
+    "phone": "775-321-4880",
+    "organization": "NDVS Veterans Advocacy and Support Team, Fallon",
+    "office_type": "state_field_office",
+    "address": "952 S. Maine Street, Fallon, NV 89406 (in the William Pennington Life Center)",
+    "source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+    "source_title": "Nevada Department of Veterans Services: Veterans Service Officers",
+    "reviewed_on": "2026-11-16",
+    "contact_status": "official_website",
+    "note": "Nevada Department of Veterans Services veterans service officers are accredited by VA and help with claims, pension, survivor benefits and appeals at no charge. The department says intake appointments are taking about 30 to 90 days to schedule.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+      "selection": "Office address and phones as printed on the department’s veterans service officer page; fax numbers omitted. A county without an office shows the department’s statewide card."
+    }
+  },
+  {
+    "state": "NV",
+    "county": "Clark",
+    "county_type": "county",
+    "phone": "702-224-6025",
+    "organization": "NDVS Veterans Advocacy and Support Team, Las Vegas",
+    "office_type": "state_field_office",
+    "address": "6900 N. Pecos Road, Room 1C238, North Las Vegas, NV 89086 (at the VA Medical Center)",
+    "other_offices": [
+      {
+        "address": "Mesquite office: 840 E. Hafen Lane, Mesquite, NV 89027 (inside the Mesquite Vet Center)",
+        "schedule": "Days and hours not listed; call first",
+        "phone": "702-346-2735"
+      }
+    ],
+    "source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+    "source_title": "Nevada Department of Veterans Services: Veterans Service Officers",
+    "reviewed_on": "2026-11-16",
+    "contact_status": "official_website",
+    "note": "The department also lists this office through the VA Medical Center line, 702-791-9000, extension 46025. Nevada Department of Veterans Services veterans service officers are accredited by VA and help with claims, pension, survivor benefits and appeals at no charge. The department says intake appointments are taking about 30 to 90 days to schedule.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+      "selection": "Office address and phones as printed on the department’s veterans service officer page; fax numbers omitted. A county without an office shows the department’s statewide card."
+    }
+  },
+  {
+    "state": "NV",
+    "county": "Douglas",
+    "county_type": "county",
+    "phone": "775-321-4880",
+    "organization": "Nevada Department of Veterans Services (no office in this county)",
+    "office_type": "statewide",
+    "other_phones": [
+      "702-224-6025"
+    ],
+    "address": "No NDVS office in this county. Offices: Reno, Fallon, Elko, Winnemucca, Pahrump, North Las Vegas and Mesquite.",
+    "source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+    "source_title": "Nevada Department of Veterans Services: Veterans Service Officers",
+    "reviewed_on": "2026-11-16",
+    "contact_status": "official_website",
+    "note": "The department lists no office in this county. Call a veterans service officer at 775-321-4880, the number it lists for its Reno, Fallon, Elko and Winnemucca offices, or 702-224-6025 (Las Vegas), or use Ask a VSO on its website. Nevada Department of Veterans Services veterans service officers are accredited by VA and help with claims, pension, survivor benefits and appeals at no charge. The department says intake appointments are taking about 30 to 90 days to schedule.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+      "selection": "Office address and phones as printed on the department’s veterans service officer page; fax numbers omitted. A county without an office shows the department’s statewide card."
+    }
+  },
+  {
+    "state": "NV",
+    "county": "Elko",
+    "county_type": "county",
+    "phone": "775-321-4880",
+    "organization": "NDVS Veterans Advocacy and Support Team, Elko",
+    "office_type": "state_field_office",
+    "other_phones": [
+      "775-777-1000"
+    ],
+    "address": "1500 College Parkway, McMullen Hall, Room 114, Elko, NV 89801",
+    "source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+    "source_title": "Nevada Department of Veterans Services: Veterans Service Officers",
+    "reviewed_on": "2026-11-16",
+    "contact_status": "official_website",
+    "note": "The department’s page lists both numbers for this office. Nevada Department of Veterans Services veterans service officers are accredited by VA and help with claims, pension, survivor benefits and appeals at no charge. The department says intake appointments are taking about 30 to 90 days to schedule.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+      "selection": "Office address and phones as printed on the department’s veterans service officer page; fax numbers omitted. A county without an office shows the department’s statewide card."
+    }
+  },
+  {
+    "state": "NV",
+    "county": "Esmeralda",
+    "county_type": "county",
+    "phone": "775-751-6372",
+    "organization": "NDVS Veterans Advocacy and Support Team, Pahrump (serving Esmeralda County)",
+    "office_type": "state_field_office",
+    "address": "250 Highway 160, Suite 6, Pahrump, NV 89060",
+    "source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+    "source_title": "Nevada Department of Veterans Services: Veterans Service Officers",
+    "reviewed_on": "2026-11-16",
+    "contact_status": "official_website",
+    "note": "There is no office in Esmeralda County. Nye County’s veterans services page says the Pahrump office serves Nye and Esmeralda counties. Nevada Department of Veterans Services veterans service officers are accredited by VA and help with claims, pension, survivor benefits and appeals at no charge. The department says intake appointments are taking about 30 to 90 days to schedule.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+      "selection": "Office address and phones as printed on the department’s veterans service officer page; fax numbers omitted. A county without an office shows the department’s statewide card."
+    }
+  },
+  {
+    "state": "NV",
+    "county": "Eureka",
+    "county_type": "county",
+    "phone": "775-321-4880",
+    "organization": "Nevada Department of Veterans Services (no office in this county)",
+    "office_type": "statewide",
+    "other_phones": [
+      "702-224-6025"
+    ],
+    "address": "No NDVS office in this county. Offices: Reno, Fallon, Elko, Winnemucca, Pahrump, North Las Vegas and Mesquite.",
+    "source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+    "source_title": "Nevada Department of Veterans Services: Veterans Service Officers",
+    "reviewed_on": "2026-11-16",
+    "contact_status": "official_website",
+    "note": "The department lists no office in this county. Call a veterans service officer at 775-321-4880, the number it lists for its Reno, Fallon, Elko and Winnemucca offices, or 702-224-6025 (Las Vegas), or use Ask a VSO on its website. Nevada Department of Veterans Services veterans service officers are accredited by VA and help with claims, pension, survivor benefits and appeals at no charge. The department says intake appointments are taking about 30 to 90 days to schedule.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+      "selection": "Office address and phones as printed on the department’s veterans service officer page; fax numbers omitted. A county without an office shows the department’s statewide card."
+    }
+  },
+  {
+    "state": "NV",
+    "county": "Humboldt",
+    "county_type": "county",
+    "phone": "775-321-4880",
+    "organization": "NDVS veterans service office, Winnemucca",
+    "office_type": "state_field_office",
+    "other_phones": [
+      "775-399-2300"
+    ],
+    "address": "475 W. Haskell Street, Suite 38, Winnemucca, NV 89445",
+    "source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+    "source_title": "Nevada Department of Veterans Services: Veterans Service Officers",
+    "reviewed_on": "2026-11-16",
+    "contact_status": "official_website",
+    "note": "The department’s page lists both numbers for this office. Nevada Department of Veterans Services veterans service officers are accredited by VA and help with claims, pension, survivor benefits and appeals at no charge. The department says intake appointments are taking about 30 to 90 days to schedule.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+      "selection": "Office address and phones as printed on the department’s veterans service officer page; fax numbers omitted. A county without an office shows the department’s statewide card."
+    }
+  },
+  {
+    "state": "NV",
+    "county": "Lander",
+    "county_type": "county",
+    "phone": "775-321-4880",
+    "organization": "Nevada Department of Veterans Services (no office in this county)",
+    "office_type": "statewide",
+    "other_phones": [
+      "702-224-6025"
+    ],
+    "address": "No NDVS office in this county. Offices: Reno, Fallon, Elko, Winnemucca, Pahrump, North Las Vegas and Mesquite.",
+    "source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+    "source_title": "Nevada Department of Veterans Services: Veterans Service Officers",
+    "reviewed_on": "2026-11-16",
+    "contact_status": "official_website",
+    "note": "The department lists no office in this county. Call a veterans service officer at 775-321-4880, the number it lists for its Reno, Fallon, Elko and Winnemucca offices, or 702-224-6025 (Las Vegas), or use Ask a VSO on its website. Nevada Department of Veterans Services veterans service officers are accredited by VA and help with claims, pension, survivor benefits and appeals at no charge. The department says intake appointments are taking about 30 to 90 days to schedule.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+      "selection": "Office address and phones as printed on the department’s veterans service officer page; fax numbers omitted. A county without an office shows the department’s statewide card."
+    }
+  },
+  {
+    "state": "NV",
+    "county": "Lincoln",
+    "county_type": "county",
+    "phone": "775-321-4880",
+    "organization": "Nevada Department of Veterans Services (no office in this county)",
+    "office_type": "statewide",
+    "other_phones": [
+      "702-224-6025"
+    ],
+    "address": "No NDVS office in this county. Offices: Reno, Fallon, Elko, Winnemucca, Pahrump, North Las Vegas and Mesquite.",
+    "source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+    "source_title": "Nevada Department of Veterans Services: Veterans Service Officers",
+    "reviewed_on": "2026-11-16",
+    "contact_status": "official_website",
+    "note": "The department lists no office in this county. Call a veterans service officer at 775-321-4880, the number it lists for its Reno, Fallon, Elko and Winnemucca offices, or 702-224-6025 (Las Vegas), or use Ask a VSO on its website. Nevada Department of Veterans Services veterans service officers are accredited by VA and help with claims, pension, survivor benefits and appeals at no charge. The department says intake appointments are taking about 30 to 90 days to schedule.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+      "selection": "Office address and phones as printed on the department’s veterans service officer page; fax numbers omitted. A county without an office shows the department’s statewide card."
+    }
+  },
+  {
+    "state": "NV",
+    "county": "Lyon",
+    "county_type": "county",
+    "phone": "775-321-4880",
+    "organization": "Nevada Department of Veterans Services (no office in this county)",
+    "office_type": "statewide",
+    "other_phones": [
+      "702-224-6025"
+    ],
+    "address": "No NDVS office in this county. Offices: Reno, Fallon, Elko, Winnemucca, Pahrump, North Las Vegas and Mesquite.",
+    "source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+    "source_title": "Nevada Department of Veterans Services: Veterans Service Officers",
+    "reviewed_on": "2026-11-16",
+    "contact_status": "official_website",
+    "note": "The department lists no office in this county. Call a veterans service officer at 775-321-4880, the number it lists for its Reno, Fallon, Elko and Winnemucca offices, or 702-224-6025 (Las Vegas), or use Ask a VSO on its website. Nevada Department of Veterans Services veterans service officers are accredited by VA and help with claims, pension, survivor benefits and appeals at no charge. The department says intake appointments are taking about 30 to 90 days to schedule.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+      "selection": "Office address and phones as printed on the department’s veterans service officer page; fax numbers omitted. A county without an office shows the department’s statewide card."
+    }
+  },
+  {
+    "state": "NV",
+    "county": "Mineral",
+    "county_type": "county",
+    "phone": "775-321-4880",
+    "organization": "Nevada Department of Veterans Services (no office in this county)",
+    "office_type": "statewide",
+    "other_phones": [
+      "702-224-6025"
+    ],
+    "address": "No NDVS office in this county. Offices: Reno, Fallon, Elko, Winnemucca, Pahrump, North Las Vegas and Mesquite.",
+    "source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+    "source_title": "Nevada Department of Veterans Services: Veterans Service Officers",
+    "reviewed_on": "2026-11-16",
+    "contact_status": "official_website",
+    "note": "The department lists no office in this county. Call a veterans service officer at 775-321-4880, the number it lists for its Reno, Fallon, Elko and Winnemucca offices, or 702-224-6025 (Las Vegas), or use Ask a VSO on its website. Nevada Department of Veterans Services veterans service officers are accredited by VA and help with claims, pension, survivor benefits and appeals at no charge. The department says intake appointments are taking about 30 to 90 days to schedule.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+      "selection": "Office address and phones as printed on the department’s veterans service officer page; fax numbers omitted. A county without an office shows the department’s statewide card."
+    }
+  },
+  {
+    "state": "NV",
+    "county": "Nye",
+    "county_type": "county",
+    "phone": "775-751-6372",
+    "organization": "NDVS Veterans Advocacy and Support Team, Pahrump",
+    "office_type": "state_field_office",
+    "address": "250 Highway 160, Suite 6, Pahrump, NV 89060",
+    "source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+    "source_title": "Nevada Department of Veterans Services: Veterans Service Officers",
+    "reviewed_on": "2026-11-16",
+    "contact_status": "official_website",
+    "note": "Nye County’s veterans services page says this office serves Nye and Esmeralda counties and does outreach in Amargosa, Beatty and Tonopah. Nevada Department of Veterans Services veterans service officers are accredited by VA and help with claims, pension, survivor benefits and appeals at no charge. The department says intake appointments are taking about 30 to 90 days to schedule.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+      "selection": "Office address and phones as printed on the department’s veterans service officer page; fax numbers omitted. A county without an office shows the department’s statewide card."
+    }
+  },
+  {
+    "state": "NV",
+    "county": "Pershing",
+    "county_type": "county",
+    "phone": "775-321-4880",
+    "organization": "Nevada Department of Veterans Services (no office in this county)",
+    "office_type": "statewide",
+    "other_phones": [
+      "702-224-6025"
+    ],
+    "address": "No NDVS office in this county. Offices: Reno, Fallon, Elko, Winnemucca, Pahrump, North Las Vegas and Mesquite.",
+    "source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+    "source_title": "Nevada Department of Veterans Services: Veterans Service Officers",
+    "reviewed_on": "2026-11-16",
+    "contact_status": "official_website",
+    "note": "The department lists no office in this county. Call a veterans service officer at 775-321-4880, the number it lists for its Reno, Fallon, Elko and Winnemucca offices, or 702-224-6025 (Las Vegas), or use Ask a VSO on its website. Nevada Department of Veterans Services veterans service officers are accredited by VA and help with claims, pension, survivor benefits and appeals at no charge. The department says intake appointments are taking about 30 to 90 days to schedule.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+      "selection": "Office address and phones as printed on the department’s veterans service officer page; fax numbers omitted. A county without an office shows the department’s statewide card."
+    }
+  },
+  {
+    "state": "NV",
+    "county": "Storey",
+    "county_type": "county",
+    "phone": "775-321-4880",
+    "organization": "Nevada Department of Veterans Services (no office in this county)",
+    "office_type": "statewide",
+    "other_phones": [
+      "702-224-6025"
+    ],
+    "address": "No NDVS office in this county. Offices: Reno, Fallon, Elko, Winnemucca, Pahrump, North Las Vegas and Mesquite.",
+    "source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+    "source_title": "Nevada Department of Veterans Services: Veterans Service Officers",
+    "reviewed_on": "2026-11-16",
+    "contact_status": "official_website",
+    "note": "The department lists no office in this county. Call a veterans service officer at 775-321-4880, the number it lists for its Reno, Fallon, Elko and Winnemucca offices, or 702-224-6025 (Las Vegas), or use Ask a VSO on its website. Nevada Department of Veterans Services veterans service officers are accredited by VA and help with claims, pension, survivor benefits and appeals at no charge. The department says intake appointments are taking about 30 to 90 days to schedule.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+      "selection": "Office address and phones as printed on the department’s veterans service officer page; fax numbers omitted. A county without an office shows the department’s statewide card."
+    }
+  },
+  {
+    "state": "NV",
+    "county": "Washoe",
+    "county_type": "county",
+    "phone": "775-321-4880",
+    "organization": "NDVS Veterans Advocacy and Support Team, Reno",
+    "office_type": "state_field_office",
+    "address": "5460 Reno Corporate Drive, Suite 131, Reno, NV 89511 (in the VA Reno Regional Office)",
+    "source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+    "source_title": "Nevada Department of Veterans Services: Veterans Service Officers",
+    "reviewed_on": "2026-11-16",
+    "contact_status": "official_website",
+    "note": "Nevada Department of Veterans Services veterans service officers are accredited by VA and help with claims, pension, survivor benefits and appeals at no charge. The department says intake appointments are taking about 30 to 90 days to schedule.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+      "selection": "Office address and phones as printed on the department’s veterans service officer page; fax numbers omitted. A county without an office shows the department’s statewide card."
+    }
+  },
+  {
+    "state": "NV",
+    "county": "White Pine",
+    "county_type": "county",
+    "phone": "775-321-4880",
+    "organization": "Nevada Department of Veterans Services (no office in this county)",
+    "office_type": "statewide",
+    "other_phones": [
+      "702-224-6025"
+    ],
+    "address": "No NDVS office in this county. Offices: Reno, Fallon, Elko, Winnemucca, Pahrump, North Las Vegas and Mesquite.",
+    "source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+    "source_title": "Nevada Department of Veterans Services: Veterans Service Officers",
+    "reviewed_on": "2026-11-16",
+    "contact_status": "official_website",
+    "note": "The department lists no office in this county. Call a veterans service officer at 775-321-4880, the number it lists for its Reno, Fallon, Elko and Winnemucca offices, or 702-224-6025 (Las Vegas), or use Ask a VSO on its website. Nevada Department of Veterans Services veterans service officers are accredited by VA and help with claims, pension, survivor benefits and appeals at no charge. The department says intake appointments are taking about 30 to 90 days to schedule.",
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "county_list_source_url": "https://veterans.nv.gov/benefits-and-services/veterans-service-officers",
+      "selection": "Office address and phones as printed on the department’s veterans service officer page; fax numbers omitted. A county without an office shows the department’s statewide card."
+    }
+  }
 ]
