@@ -1,80 +1,92 @@
 [
- {
-  "program_id": "de-aging",
-  "name": "Local aging help in Delaware (Eldercare Locator)",
-  "official_url": "https://eldercare.acl.gov/home",
-  "organization": "U.S. Administration for Community Living",
-  "service_area": [
-   "All Delaware counties"
-  ],
-  "state": "DE",
-  "needs_supported": [
-   "general_navigation",
-   "help_at_home"
-  ],
-  "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-  "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
-  "constraints": [
-   "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
+  {
+    "program_id": "de-adrc-state",
+    "name": "Delaware Aging & Disability Resource Center",
+    "organization": "Delaware Aging & Disability Resource Center",
+    "official_url": "https://dhss.delaware.gov/dsaapd/contact",
+    "state": "DE",
+    "service_area": [
+      "Kent",
+      "New Castle",
+      "Sussex"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "The Delaware Aging & Disability Resource Center, run statewide by the Division of Services for Aging and Adults with Physical Disabilities: free information, referral and guidance on help at home, meals, caregiving, assistive devices, long-term care and other services for older adults, adults with physical disabilities and caregivers.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. TDD users can call 302-424-7141. You can also email DelawareADRC@delaware.gov. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Statewide; one number for all three counties."
+    ],
+    "public_contact": {
+      "phone": "800-223-9074",
+      "phone_label": "Delaware Aging & Disability Resource Center (Delaware)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://dhss.delaware.gov/dsaapd/contact",
+      "phone_source_url": "https://dhss.delaware.gov/dsaapd/contact"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dhss.delaware.gov/dsaapd/contact",
+        "title": "Delaware Division of Services for Aging and Adults with Physical Disabilities: Contact",
+        "reviewed_on": "2026-11-16",
+        "scope": "Delaware Aging & Disability Resource Center, 1-800-223-9074 (TDD only 302-424-7141): the single point of contact for information, referrals and guidance on aging, disability and caregiving services; read in full. The page is undated. The division’s ADRC page says the ADRC serves people across the state, whatever their income or where they live in Delaware (https://dhss.delaware.gov/dsaapd/division-of-services-for-aging-and-adults-with-physical-disabilities/adrc/; search excerpt)."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
-  },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.acl.gov/contact"
-  },
-  "source_evidence": [
-   {
-    "url": "https://www.acl.gov/contact",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "aging_agency"
- },
- {
-  "program_id": "de-ombudsman",
-  "name": "Delaware long-term-care ombudsman",
-  "official_url": "https://theconsumervoice.org/get_help",
-  "organization": "National Long-Term Care Ombudsman Resource Center",
-  "service_area": [
-   "All Delaware counties"
-  ],
-  "state": "DE",
-  "needs_supported": [
-   "resident_rights",
-   "general_navigation"
-  ],
-  "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-  "next_step": "Use the locator to find the Delaware program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
-  "constraints": [
-   "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
-  ],
-  "public_contact": {
-   "phone": "800-677-1116"
-  },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
-  },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
-  },
-  "source_evidence": [
-   {
-    "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ],
-  "regional_role": "ombudsman"
- }
+  {
+    "program_id": "de-omb-state",
+    "name": "Delaware Long-Term Care Ombudsman Program",
+    "organization": "Delaware Long-Term Care Ombudsman Program",
+    "official_url": "https://dhss.delaware.gov/office-of-the-secretary/long-term-care-ombudsman-program/",
+    "state": "DE",
+    "service_area": [
+      "Kent",
+      "New Castle",
+      "Sussex"
+    ],
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "Serves residents of nursing facilities, assisted living and board and care homes, and people receiving home and community-based services."
+    ],
+    "public_contact": {
+      "phone": "855-773-1002",
+      "phone_label": "Regional ombudsman program"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://dhss.delaware.gov/office-of-the-secretary/long-term-care-ombudsman-program/",
+      "phone_source_url": "https://dhss.delaware.gov/office-of-the-secretary/long-term-care-ombudsman-program/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://dhss.delaware.gov/office-of-the-secretary/long-term-care-ombudsman-program/",
+        "title": "Delaware Health and Social Services: Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-16",
+        "scope": "Hotline 1-855-773-1002 for anonymous complaints about a long-term care facility and for complaints about home and community-based service providers; online complaints require your name; read in full. The program is statewide, so every county shows it."
+      }
+    ]
+  }
 ]
