@@ -937,72 +937,542 @@
   },
   {
     "program_id": "ia-claims",
-    "name": "Iowa veterans: accredited claims help",
-    "official_url": "https://dva.iowa.gov/",
+    "name": "Iowa veterans: County Veteran Service Officers for claims help",
+    "official_url": "https://dva.iowa.gov/find-veteran-services",
     "organization": "Iowa Department of Veterans Affairs",
     "service_area": [
-      "All Iowa counties"
+      "statewide"
     ],
     "state": "IA",
     "needs_supported": [
       "general_navigation",
       "benefits_and_funding"
     ],
-    "description": "Free help with VA claims, applications and appeals for veterans and families.",
-    "next_step": "Call the state veterans agency; ask for a benefits review and the office that serves your county.",
-    "constraints": [],
+    "description": "Free help with VA claims, appeals, pension and survivor benefits from the accredited County Veteran Service Officer in each of Iowa’s 99 county veterans affairs offices. County commissions of veteran affairs may also offer local emergency help. The Iowa Department of Veterans Affairs runs the Iowa Veterans Benefits Office at Camp Dodge.",
+    "next_step": "Choose a county above for its veterans affairs office. Or call the Iowa Department of Veterans Affairs at 515-252-4698 or 800-838-4692.",
+    "constraints": [
+      "Many rural offices keep limited hours; call ahead."
+    ],
     "public_contact": {
-      "phone": "641-752-1501"
+      "phone": "515-252-4698",
+      "phone_label": "Iowa Department of Veterans Affairs (515-252-4698)"
     },
     "verification": {
-      "record_status": "official_source_reviewed",
-      "last_reviewed_on": "2026-11-02"
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
     },
     "evidence": {
-      "review_method": "full_official_page_text",
+      "review_method": "official_search_excerpt",
       "direct_agency_confirmation": false,
-      "phone_source_url": "https://dva.iowa.gov/"
+      "phone_source_url": "https://www.legis.iowa.gov/docs/iac/chapter/08-05-2026.801.1.pdf"
     },
     "source_evidence": [
       {
-        "url": "https://dva.iowa.gov/",
-        "title": "Official published source",
-        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+        "url": "https://dva.iowa.gov/find-veteran-services",
+        "title": "Iowa Department of Veterans Affairs: County, State & Federal Locations Map",
+        "reviewed_on": "2026-11-16",
+        "scope": "All 99 county veterans affairs offices with addresses, linking to each office page; read in full (first page of the list)."
+      },
+      {
+        "url": "https://www.legis.iowa.gov/docs/iac/chapter/08-05-2026.801.1.pdf",
+        "title": "Iowa Administrative Code 801—1 (August 5, 2026)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Department at Camp Dodge, Johnston; 515.252.4698 or 1.800.838.4692; search excerpt."
+      },
+      {
+        "url": "https://dva.iowa.gov/benefits/state-benefits",
+        "title": "Iowa Department of Veterans Affairs: State Benefits",
+        "reviewed_on": "2026-11-16",
+        "scope": "99 county veterans services offices with accredited officers; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "ia-adrc",
+    "name": "LifeLong Links and Iowa’s Area Agencies on Aging",
+    "official_url": "https://hhs.iowa.gov/media/13553/download",
+    "organization": "Iowa Department of Health and Human Services and the six Area Agencies on Aging",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "IA",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "LifeLong Links is Iowa’s statewide aging and disability resource line; it connects older adults, people with disabilities and caregivers to their local Area Agency on Aging and long-term services. Military service is not required.",
+    "next_step": "Call LifeLong Links at 866-468-7887, or choose a county above for its Area Agency on Aging.",
+    "constraints": [
+      "Each program has its own eligibility and waitlist."
+    ],
+    "public_contact": {
+      "phone": "866-468-7887",
+      "phone_label": "LifeLong Links (866-468-7887)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.iowaattorneygeneral.gov/for-consumers/for-older-iowans/report-prevent-elder-abuse"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.iowaattorneygeneral.gov/for-consumers/for-older-iowans/report-prevent-elder-abuse",
+        "title": "Iowa Attorney General: Reporting & Preventing Elder Abuse",
+        "reviewed_on": "2026-11-16",
+        "scope": "LifeLong Links 1-866-468-7887 connects you to the right Area Agency on Aging; search excerpt."
+      },
+      {
+        "url": "https://hhs.iowa.gov/dependent_adult_abuse",
+        "title": "Iowa HHS: Dependent Adult Abuse",
+        "reviewed_on": "2026-11-16",
+        "scope": "LifeLong Links at 1-866-468-7887 for information and referral on long-term independent living; search excerpt."
+      },
+      {
+        "url": "https://hhs.iowa.gov/media/13553/download",
+        "title": "Iowa HHS: SFY 2025 Area Agency on Aging Plan Update Synopsis (Iowa Commission on Aging, June 10, 2025)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Area Agencies on Aging, counties served and phones; read in full."
       }
     ]
   },
   {
     "program_id": "ia-ship",
-    "name": "Medicare counseling (SHIP) for Iowa",
-    "official_url": "https://www.shiphelp.org/",
-    "organization": "SHIP Technical Assistance Center",
+    "name": "Medicare counseling (SHIIP) for Iowa",
+    "official_url": "https://www.cms.gov/contacts/senior-health-insurance-information-program-shiip/general-beneficiary-contact/1562071",
+    "organization": "Iowa Insurance Division, Senior Health Insurance Information Program (SHIIP)",
     "service_area": [
-      "All Iowa counties"
+      "statewide"
     ],
     "state": "IA",
     "needs_supported": [
       "benefits_and_funding"
     ],
-    "description": "Free, unbiased Medicare counseling from the State Health Insurance Assistance Program.",
-    "next_step": "Call or use the locator to reach the Iowa SHIP and ask for a counseling appointment.",
-    "constraints": [],
+    "description": "Free, unbiased Medicare counseling from Iowa’s State Health Insurance Assistance Program, SHIIP, with trained volunteer counselors at local sites.",
+    "next_step": "Call SHIIP at 800-351-4664 (TTY 800-735-2942) to reach a counselor near you. For Medicare itself, call 800-MEDICARE (800-633-4227).",
+    "constraints": [
+      "Counselor availability is limited during open enrollment; call early."
+    ],
     "public_contact": {
-      "phone": "877-839-2675"
+      "phone": "800-351-4664",
+      "phone_label": "Iowa SHIIP (800-351-4664)"
     },
     "verification": {
       "record_status": "official_search_extract_only",
-      "last_reviewed_on": "2026-11-02"
+      "last_reviewed_on": "2026-11-16"
     },
     "evidence": {
       "review_method": "official_search_excerpt",
       "direct_agency_confirmation": false,
-      "phone_source_url": "https://www.shiphelp.org/?p=317"
+      "phone_source_url": "https://www.cms.gov/contacts/senior-health-insurance-information-program-shiip/general-beneficiary-contact/1562071"
     },
     "source_evidence": [
       {
-        "url": "https://www.shiphelp.org/?p=317",
-        "title": "Official published source",
-        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+        "url": "https://www.cms.gov/contacts/senior-health-insurance-information-program-shiip/general-beneficiary-contact/1562071",
+        "title": "CMS: Senior Health Insurance Information Program (SHIIP), Iowa",
+        "reviewed_on": "2026-11-16",
+        "scope": "Iowa Insurance Division; toll-free (800) 351-4664, TDD (800) 735-2942; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "ia-ombudsman",
+    "name": "Iowa Long-Term Care Ombudsman and dependent adult abuse reporting",
+    "official_url": "https://hhs.iowa.gov/health-prevention/aging-services/ltcombudsman",
+    "organization": "Iowa HHS: Office of the State Long-Term Care Ombudsman; Dependent Adult Abuse Program",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "IA",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "description": "Free, confidential advocacy for people living in nursing facilities, assisted living, residential care and elder group homes. Iowa HHS takes reports of abuse, neglect or exploitation of dependent adults living in the community, 24 hours a day.",
+    "next_step": "Call the ombudsman at 866-236-1430. To report dependent adult abuse in the community, call 800-362-2178 (24/7). For abuse in a licensed facility, call the Department of Inspections, Appeals and Licensing at 877-686-0027. In an emergency, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing agency."
+    ],
+    "public_contact": {
+      "phone": "866-236-1430",
+      "phone_label": "Iowa Long-Term Care Ombudsman (866-236-1430)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://hhs.iowa.gov/health-prevention/aging-services/ltcombudsman"
+    },
+    "source_evidence": [
+      {
+        "url": "https://hhs.iowa.gov/health-prevention/aging-services/ltcombudsman",
+        "title": "Iowa HHS: Office of the State Long-Term Care Ombudsman",
+        "reviewed_on": "2026-11-16",
+        "scope": "Toll-free 866-236-1430 and mailing address; read in full. Updated September 30, 2026."
+      },
+      {
+        "url": "https://hhs.iowa.gov/programs/programs-and-services/adult-protective-services",
+        "title": "Iowa HHS: Adult Protective Services",
+        "reviewed_on": "2026-11-16",
+        "scope": "Report dependent adult abuse at 1-800-362-2178, 24/7; facility abuse 1-877-686-0027; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "ia-legal-programs",
+    "name": "Free legal help for older Iowans",
+    "official_url": "https://iowa.freelegalanswers.org/OtherHelp",
+    "organization": "Iowa Legal Aid, Legal Hotline for Older Iowans",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "IA",
+    "resource_role": "legal_aid",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation",
+      "housing"
+    ],
+    "description": "The Legal Hotline for Older Iowans gives free civil legal help to Iowans 60 and older. Iowa Legal Aid helps low-income Iowans of any age.",
+    "next_step": "Age 60 and older: call the Legal Hotline for Older Iowans at 800-992-8161 (515-282-8161 in Des Moines). Under 60: Iowa Legal Aid, 800-532-1503.",
+    "constraints": [
+      "The hotline handles civil matters only."
+    ],
+    "public_contact": {
+      "phone": "800-992-8161",
+      "phone_label": "Legal Hotline for Older Iowans (800-992-8161)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://iowa.freelegalanswers.org/OtherHelp"
+    },
+    "source_evidence": [
+      {
+        "url": "https://iowa.freelegalanswers.org/OtherHelp",
+        "title": "Iowa Free Legal Answers: Other places to find legal help",
+        "reviewed_on": "2026-11-16",
+        "scope": "Legal Hotline for Older Iowans, free legal services to Iowans 60 and over; (800) 992-8161 or (515) 282-8161; search excerpt."
+      },
+      {
+        "url": "https://www.peopleslawiowa.org/index.php?cID=482",
+        "title": "Iowa Legal Aid People’s Law Library: Support organizations for older persons",
+        "reviewed_on": "2026-11-16",
+        "scope": "Iowa Legal Aid 800-532-1503; 60 or older 800-992-8161; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "ia-vahealth-systems",
+    "name": "VA health care systems serving Iowa",
+    "official_url": "https://www.va.gov/central-iowa-health-care/contact-us/",
+    "organization": "U.S. Department of Veterans Affairs",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "IA",
+    "resource_role": "va_health_system",
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "Iowa veterans are served by the VA Central Iowa Health Care System (Des Moines VA Medical Center, 3600 30th Street; 515-699-5999, toll-free 800-294-8387) and the Iowa City VA Health Care System (601 Highway 6 West; 319-338-0581, toll-free 800-637-0128). Some western and northwestern counties are closer to VA systems in Omaha and Sioux Falls.",
+    "next_step": "Call the system nearest you, or use VA’s facility locator with your ZIP code. Not enrolled yet? Ask your county veterans affairs office for help applying.",
+    "constraints": [
+      "Which system serves you depends on where you live; VA’s locator shows the right clinic."
+    ],
+    "public_contact": {
+      "phone": "800-294-8387",
+      "phone_label": "VA Central Iowa Health Care System (800-294-8387)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.va.gov/central-iowa-health-care/make-an-appointment/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.va.gov/central-iowa-health-care/contact-us/",
+        "title": "VA Central Iowa health care: Contact us",
+        "reviewed_on": "2026-11-16",
+        "scope": "Des Moines VA Medical Center, 3600 30th Street; local 515-699-5999; search excerpt."
+      },
+      {
+        "url": "https://www.va.gov/central-iowa-health-care/make-an-appointment/",
+        "title": "VA Central Iowa health care: Make an appointment",
+        "reviewed_on": "2026-11-16",
+        "scope": "Primary care call center toll-free 800-294-8387; search excerpt."
+      },
+      {
+        "url": "https://www.va.gov/iowa-city-health-care/contact-us/",
+        "title": "VA Iowa City health care: Contact us",
+        "reviewed_on": "2026-11-16",
+        "scope": "Local 319-338-0581, toll-free 800-637-0128; 601 Highway 6 West; search excerpt."
+      },
+      {
+        "url": "https://dva.iowa.gov/benefits/state-benefits",
+        "title": "Iowa Department of Veterans Affairs: State Benefits",
+        "reviewed_on": "2026-11-16",
+        "scope": "VA health systems in Des Moines and Iowa City, and two on the borders in Omaha and Sioux Falls; search excerpt."
+      }
+    ]
+  },
+  {
+    "program_id": "ia-cil-a2i",
+    "name": "Access 2 Independence (A2I)",
+    "organization": "Access 2 Independence (A2I)",
+    "official_url": "https://access2independence.org/",
+    "service_area": [
+      "Benton",
+      "Cedar",
+      "Henry",
+      "Iowa",
+      "Johnson",
+      "Jones",
+      "Linn",
+      "Washington"
+    ],
+    "state": "IA",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Main office: 1556 South First Avenue, Suite B, Iowa City. Toll-free: 866-338-4544. Cedar Rapids office: 601 2nd Ave SE."
+    ],
+    "public_contact": {
+      "phone": "319-338-3870",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/IA",
+      "service_area_source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/IA"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/IA",
+        "title": "ILRU: Directory of Centers for Independent Living, Iowa",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each center’s address, phones, website and counties served; read in full; undated. Disabilities Resource Center of Siouxland also serves Dakota County, Nebraska, and Union County, South Dakota."
+      }
+    ]
+  },
+  {
+    "program_id": "ia-cil-cicil",
+    "name": "Central Iowa Center for Independent Living (CICIL)",
+    "organization": "Central Iowa Center for Independent Living (CICIL)",
+    "official_url": "https://www.cicil.org/",
+    "service_area": [
+      "Boone",
+      "Dallas",
+      "Jasper",
+      "Madison",
+      "Polk",
+      "Story",
+      "Warren"
+    ],
+    "state": "IA",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 100 East Euclid Avenue, Suite 105, Des Moines."
+    ],
+    "public_contact": {
+      "phone": "515-243-1742",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/IA",
+      "service_area_source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/IA"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/IA",
+        "title": "ILRU: Directory of Centers for Independent Living, Iowa",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each center’s address, phones, website and counties served; read in full; undated. Disabilities Resource Center of Siouxland also serves Dakota County, Nebraska, and Union County, South Dakota."
+      }
+    ]
+  },
+  {
+    "program_id": "ia-cil-drc-siouxland",
+    "name": "Disabilities Resource Center of Siouxland",
+    "organization": "Disabilities Resource Center of Siouxland",
+    "official_url": "https://www.drcsiouxland.org/",
+    "service_area": [
+      "Cherokee",
+      "Plymouth",
+      "Woodbury"
+    ],
+    "state": "IA",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 705 Douglas, Suite 400, Sioux City."
+    ],
+    "public_contact": {
+      "phone": "712-255-1065",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/IA",
+      "service_area_source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/IA"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/IA",
+        "title": "ILRU: Directory of Centers for Independent Living, Iowa",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each center’s address, phones, website and counties served; read in full; undated. Disabilities Resource Center of Siouxland also serves Dakota County, Nebraska, and Union County, South Dakota."
+      }
+    ]
+  },
+  {
+    "program_id": "ia-cil-scicil",
+    "name": "South Central Iowa Center for Independent Living (SCICIL)",
+    "organization": "South Central Iowa Center for Independent Living (SCICIL)",
+    "official_url": "https://scicil.org/?i=1",
+    "service_area": [
+      "Appanoose",
+      "Mahaska",
+      "Monroe"
+    ],
+    "state": "IA",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 109 North 3rd Street, Oskaloosa. Toll-free: 800-651-7911."
+    ],
+    "public_contact": {
+      "phone": "641-672-1867",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/IA",
+      "service_area_source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/IA"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/IA",
+        "title": "ILRU: Directory of Centers for Independent Living, Iowa",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each center’s address, phones, website and counties served; read in full; undated. Disabilities Resource Center of Siouxland also serves Dakota County, Nebraska, and Union County, South Dakota."
+      }
+    ]
+  },
+  {
+    "program_id": "ia-cil-swicil",
+    "name": "Southwest Iowa Center for Independent Living (SWICIL)",
+    "organization": "Southwest Iowa Center for Independent Living (SWICIL)",
+    "official_url": "https://leagueofhumandignity.com/#2",
+    "service_area": [
+      "Cass",
+      "Fremont",
+      "Harrison",
+      "Mills",
+      "Montgomery",
+      "Page",
+      "Pottawattamie",
+      "Shelby"
+    ],
+    "state": "IA",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: 1520 Avenue M, Council Bluffs. Toll-free: 800-843-5774."
+    ],
+    "public_contact": {
+      "phone": "712-323-6863",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/IA",
+      "service_area_source_url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/IA"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory-results/IA",
+        "title": "ILRU: Directory of Centers for Independent Living, Iowa",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each center’s address, phones, website and counties served; read in full; undated. Disabilities Resource Center of Siouxland also serves Dakota County, Nebraska, and Union County, South Dakota."
       }
     ]
   },
@@ -1012,7 +1482,9 @@
     "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
     "organization": "Humility Homes and Services, Inc.",
     "service_area": [
-      "All Iowa counties"
+      "Clinton",
+      "Muscatine",
+      "Scott"
     ],
     "state": "IA",
     "resource_role": "housing_provider",
@@ -1020,7 +1492,7 @@
       "housing",
       "veteran_services"
     ],
-    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 12-ZZ-031): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Clinton County, Muscatine County, Scott County.",
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 12-ZZ-031): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
     "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
     "constraints": [
       "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
@@ -1057,7 +1529,12 @@
     "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
     "organization": "Primary Health Care, Inc.",
     "service_area": [
-      "All Iowa counties"
+      "Dallas",
+      "Jasper",
+      "Marshall",
+      "Polk",
+      "Story",
+      "Warren"
     ],
     "state": "IA",
     "resource_role": "housing_provider",
@@ -1065,7 +1542,7 @@
       "housing",
       "veteran_services"
     ],
-    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 13-IA-103): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Dallas County, Jasper County, Marshall County, Polk County, Story County, Warren County.",
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 13-IA-103): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
     "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
     "constraints": [
       "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
@@ -1102,7 +1579,49 @@
     "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
     "organization": "Family Alliance For Veterans of America, Inc.",
     "service_area": [
-      "All Iowa counties"
+      "Allamakee",
+      "Boone",
+      "Bremer",
+      "Buena Vista",
+      "Butler",
+      "Calhoun",
+      "Carroll",
+      "Cerro Gordo",
+      "Cherokee",
+      "Chickasaw",
+      "Clay",
+      "Clayton",
+      "Crawford",
+      "Dickinson",
+      "Emmet",
+      "Fayette",
+      "Floyd",
+      "Franklin",
+      "Greene",
+      "Grundy",
+      "Hamilton",
+      "Hancock",
+      "Hardin",
+      "Howard",
+      "Humboldt",
+      "Ida",
+      "Kossuth",
+      "Lyon",
+      "Mitchell",
+      "Monona",
+      "O'Brien",
+      "Osceola",
+      "Palo Alto",
+      "Plymouth",
+      "Pocahontas",
+      "Sac",
+      "Sioux",
+      "Webster",
+      "Winnebago",
+      "Winneshiek",
+      "Woodbury",
+      "Worth",
+      "Wright"
     ],
     "state": "IA",
     "resource_role": "housing_provider",
@@ -1110,7 +1629,7 @@
       "housing",
       "veteran_services"
     ],
-    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 14-IA-191): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Allamakee County, Boone County, Bremer County, Buena Vista County, Butler County, Calhoun County, Carroll County, Cerro Gordo County, Cherokee County, Chickasaw County, Clay County, Clayton County and 31 more.",
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 14-IA-191): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
     "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
     "constraints": [
       "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
@@ -1147,7 +1666,18 @@
     "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
     "organization": "Hawkeye Area Community Action Program, Inc.",
     "service_area": [
-      "All Iowa counties"
+      "Benton",
+      "Black Hawk",
+      "Buchanan",
+      "Cedar",
+      "Delaware",
+      "Dubuque",
+      "Iowa",
+      "Jackson",
+      "Johnson",
+      "Jones",
+      "Linn",
+      "Washington"
     ],
     "state": "IA",
     "resource_role": "housing_provider",
@@ -1155,7 +1685,7 @@
       "housing",
       "veteran_services"
     ],
-    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 15-IA-192): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Benton County, Black Hawk County, Buchanan County, Cedar County, Delaware County, Dubuque County, Iowa County, Jackson County, Johnson County, Jones County, Linn County, Washington County.",
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 15-IA-192): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
     "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 319-739-0012.",
     "constraints": [
       "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
@@ -1192,7 +1722,7 @@
     "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
     "organization": "Blue Valley Community Action, Inc.",
     "service_area": [
-      "All Iowa counties"
+      "Pottawattamie"
     ],
     "state": "IA",
     "resource_role": "housing_provider",
@@ -1200,7 +1730,7 @@
       "housing",
       "veteran_services"
     ],
-    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 18-ZZ-239): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Pottawattamie County.",
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 18-ZZ-239): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
     "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 402-341-0469.",
     "constraints": [
       "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
@@ -1237,7 +1767,13 @@
     "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
     "organization": "The Salvation Army",
     "service_area": [
-      "All Iowa counties"
+      "Des Moines",
+      "Henry",
+      "Jefferson",
+      "Keokuk",
+      "Lee",
+      "Louisa",
+      "Van Buren"
     ],
     "state": "IA",
     "resource_role": "housing_provider",
@@ -1245,7 +1781,7 @@
       "housing",
       "veteran_services"
     ],
-    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 23-ZZ-104): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Des Moines County, Henry County, Jefferson County, Keokuk County, Lee County, Louisa County, Van Buren County.",
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 23-ZZ-104): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
     "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 309-218-2525.",
     "constraints": [
       "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
@@ -1282,7 +1818,8 @@
     "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
     "organization": "Ponca Tribe of Nebraska",
     "service_area": [
-      "All Iowa counties"
+      "Pottawattamie",
+      "Woodbury"
     ],
     "state": "IA",
     "resource_role": "housing_provider",
@@ -1290,7 +1827,7 @@
       "housing",
       "veteran_services"
     ],
-    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 26-ZZ-478): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Pottawattamie County, Woodbury County.",
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 26-ZZ-478): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
     "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 531-248-3030.",
     "constraints": [
       "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
@@ -1322,81 +1859,496 @@
     ]
   },
   {
-    "program_id": "ia-aging",
-    "name": "Local aging help in Iowa (Eldercare Locator)",
-    "official_url": "https://eldercare.acl.gov/home",
-    "organization": "U.S. Administration for Community Living",
-    "service_area": [
-      "All Iowa counties"
-    ],
+    "program_id": "ia-aaa-elderbridge",
+    "name": "Elderbridge Agency on Aging",
+    "organization": "Elderbridge Agency on Aging (area Area 1)",
+    "official_url": "https://hhs.iowa.gov/media/13553/download",
     "state": "IA",
+    "service_area": [
+      "Audubon",
+      "Buena Vista",
+      "Calhoun",
+      "Carroll",
+      "Cerro Gordo",
+      "Clay",
+      "Crawford",
+      "Dickinson",
+      "Emmet",
+      "Floyd",
+      "Franklin",
+      "Greene",
+      "Guthrie",
+      "Hamilton",
+      "Hancock",
+      "Humboldt",
+      "Kossuth",
+      "Lyon",
+      "Mitchell",
+      "O'Brien",
+      "Osceola",
+      "Palo Alto",
+      "Pocahontas",
+      "Sac",
+      "Sioux",
+      "Webster",
+      "Winnebago",
+      "Worth",
+      "Wright"
+    ],
     "needs_supported": [
       "general_navigation",
       "help_at_home"
     ],
-    "description": "A national public service that connects older adults and caregivers to their local aging agency and services.",
-    "next_step": "Give the ZIP code; ask for the local aging agency, meals, transportation, caregiver support and home services.",
+    "regional_role": "aging_agency",
+    "description": "Iowa’s six Area Agencies on Aging help adults 60 and older, people with disabilities and caregivers find help at home, meals, caregiver support, elder abuse prevention and options counseling.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. LifeLong Links, 866-468-7887, also connects callers to their Area Agency on Aging. Military service is not required.",
     "constraints": [
-      "A national referral line, not a local intake office. Confirm services and eligibility with the local agency."
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Offices in Mason City, Carroll, Fort Dodge and Spencer."
     ],
     "public_contact": {
-      "phone": "800-677-1116"
+      "phone": "800-243-0678",
+      "phone_label": "Area Agency on Aging, area Area 1"
     },
     "verification": {
-      "record_status": "official_search_extract_only",
-      "last_reviewed_on": "2026-11-02"
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
     },
     "evidence": {
-      "review_method": "official_search_excerpt",
+      "review_method": "full_official_pdf",
       "direct_agency_confirmation": false,
-      "phone_source_url": "https://www.acl.gov/contact"
+      "service_area_source_url": "https://hhs.iowa.gov/media/13553/download",
+      "phone_source_url": "https://hhs.iowa.gov/media/13553/download"
     },
     "source_evidence": [
       {
-        "url": "https://www.acl.gov/contact",
-        "title": "Official published source",
-        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+        "url": "https://hhs.iowa.gov/media/13553/download",
+        "title": "Iowa HHS: SFY 2025 Area Agency on Aging Plan Update Synopsis (Iowa Commission on Aging, June 10, 2025)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each Area Agency on Aging’s counties, toll-free phone and offices; read in full. Prepared for the Iowa Commission on Aging meeting of June 10, 2025. LifeLong Links, 866-468-7887, connects callers to the right Area Agency on Aging (Iowa Attorney General, https://www.iowaattorneygeneral.gov/for-consumers/for-older-iowans/report-prevent-elder-abuse; search excerpt)."
       }
-    ],
-    "regional_role": "aging_agency"
+    ]
   },
   {
-    "program_id": "ia-ombudsman",
-    "name": "Iowa long-term-care ombudsman",
-    "official_url": "https://theconsumervoice.org/get_help",
-    "organization": "National Long-Term Care Ombudsman Resource Center",
-    "service_area": [
-      "All Iowa counties"
-    ],
+    "program_id": "ia-aaa-nei3a",
+    "name": "Northeast Iowa Area Agency on Aging",
+    "organization": "Northeast Iowa Area Agency on Aging (area Area 2)",
+    "official_url": "https://hhs.iowa.gov/media/13553/download",
     "state": "IA",
+    "service_area": [
+      "Allamakee",
+      "Black Hawk",
+      "Bremer",
+      "Buchanan",
+      "Butler",
+      "Chickasaw",
+      "Clayton",
+      "Delaware",
+      "Dubuque",
+      "Fayette",
+      "Grundy",
+      "Hardin",
+      "Howard",
+      "Jackson",
+      "Marshall",
+      "Poweshiek",
+      "Tama",
+      "Winneshiek"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Iowa’s six Area Agencies on Aging help adults 60 and older, people with disabilities and caregivers find help at home, meals, caregiver support, elder abuse prevention and options counseling.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. LifeLong Links, 866-468-7887, also connects callers to their Area Agency on Aging. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Offices in Waterloo, Dubuque and Decorah."
+    ],
+    "public_contact": {
+      "phone": "800-779-8707",
+      "phone_label": "Area Agency on Aging, area Area 2"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://hhs.iowa.gov/media/13553/download",
+      "phone_source_url": "https://hhs.iowa.gov/media/13553/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://hhs.iowa.gov/media/13553/download",
+        "title": "Iowa HHS: SFY 2025 Area Agency on Aging Plan Update Synopsis (Iowa Commission on Aging, June 10, 2025)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each Area Agency on Aging’s counties, toll-free phone and offices; read in full. Prepared for the Iowa Commission on Aging meeting of June 10, 2025. LifeLong Links, 866-468-7887, connects callers to the right Area Agency on Aging (Iowa Attorney General, https://www.iowaattorneygeneral.gov/for-consumers/for-older-iowans/report-prevent-elder-abuse; search excerpt)."
+      }
+    ]
+  },
+  {
+    "program_id": "ia-aaa-arci",
+    "name": "Aging Resources of Central Iowa",
+    "organization": "Aging Resources of Central Iowa (area Area 3)",
+    "official_url": "https://hhs.iowa.gov/media/13553/download",
+    "state": "IA",
+    "service_area": [
+      "Boone",
+      "Dallas",
+      "Jasper",
+      "Madison",
+      "Marion",
+      "Polk",
+      "Story",
+      "Warren"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Iowa’s six Area Agencies on Aging help adults 60 and older, people with disabilities and caregivers find help at home, meals, caregiver support, elder abuse prevention and options counseling.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. LifeLong Links, 866-468-7887, also connects callers to their Area Agency on Aging. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: Grand Avenue, Des Moines."
+    ],
+    "public_contact": {
+      "phone": "800-747-5352",
+      "phone_label": "Area Agency on Aging, area Area 3"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://hhs.iowa.gov/media/13553/download",
+      "phone_source_url": "https://hhs.iowa.gov/media/13553/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://hhs.iowa.gov/media/13553/download",
+        "title": "Iowa HHS: SFY 2025 Area Agency on Aging Plan Update Synopsis (Iowa Commission on Aging, June 10, 2025)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each Area Agency on Aging’s counties, toll-free phone and offices; read in full. Prepared for the Iowa Commission on Aging meeting of June 10, 2025. LifeLong Links, 866-468-7887, connects callers to the right Area Agency on Aging (Iowa Attorney General, https://www.iowaattorneygeneral.gov/for-consumers/for-older-iowans/report-prevent-elder-abuse; search excerpt)."
+      }
+    ]
+  },
+  {
+    "program_id": "ia-aaa-heritage",
+    "name": "Heritage Area Agency on Aging",
+    "organization": "Heritage Area Agency on Aging (area Area 4)",
+    "official_url": "https://hhs.iowa.gov/media/13553/download",
+    "state": "IA",
+    "service_area": [
+      "Benton",
+      "Cedar",
+      "Iowa",
+      "Johnson",
+      "Jones",
+      "Linn",
+      "Washington"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Iowa’s six Area Agencies on Aging help adults 60 and older, people with disabilities and caregivers find help at home, meals, caregiver support, elder abuse prevention and options counseling.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. LifeLong Links, 866-468-7887, also connects callers to their Area Agency on Aging. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Office: 6301 Kirkwood Blvd. SW, Cedar Rapids."
+    ],
+    "public_contact": {
+      "phone": "800-332-5934",
+      "phone_label": "Area Agency on Aging, area Area 4"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://hhs.iowa.gov/media/13553/download",
+      "phone_source_url": "https://hhs.iowa.gov/media/13553/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://hhs.iowa.gov/media/13553/download",
+        "title": "Iowa HHS: SFY 2025 Area Agency on Aging Plan Update Synopsis (Iowa Commission on Aging, June 10, 2025)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each Area Agency on Aging’s counties, toll-free phone and offices; read in full. Prepared for the Iowa Commission on Aging meeting of June 10, 2025. LifeLong Links, 866-468-7887, connects callers to the right Area Agency on Aging (Iowa Attorney General, https://www.iowaattorneygeneral.gov/for-consumers/for-older-iowans/report-prevent-elder-abuse; search excerpt)."
+      }
+    ]
+  },
+  {
+    "program_id": "ia-aaa-milestones",
+    "name": "Milestones Area Agency on Aging",
+    "organization": "Milestones Area Agency on Aging (area Area 5)",
+    "official_url": "https://hhs.iowa.gov/media/13553/download",
+    "state": "IA",
+    "service_area": [
+      "Appanoose",
+      "Clinton",
+      "Davis",
+      "Des Moines",
+      "Henry",
+      "Jefferson",
+      "Keokuk",
+      "Lee",
+      "Louisa",
+      "Lucas",
+      "Mahaska",
+      "Monroe",
+      "Muscatine",
+      "Scott",
+      "Van Buren",
+      "Wapello",
+      "Wayne"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Iowa’s six Area Agencies on Aging help adults 60 and older, people with disabilities and caregivers find help at home, meals, caregiver support, elder abuse prevention and options counseling.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. LifeLong Links, 866-468-7887, also connects callers to their Area Agency on Aging. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Offices in Davenport, Ottumwa and Burlington."
+    ],
+    "public_contact": {
+      "phone": "855-410-6222",
+      "phone_label": "Area Agency on Aging, area Area 5"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://hhs.iowa.gov/media/13553/download",
+      "phone_source_url": "https://hhs.iowa.gov/media/13553/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://hhs.iowa.gov/media/13553/download",
+        "title": "Iowa HHS: SFY 2025 Area Agency on Aging Plan Update Synopsis (Iowa Commission on Aging, June 10, 2025)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each Area Agency on Aging’s counties, toll-free phone and offices; read in full. Prepared for the Iowa Commission on Aging meeting of June 10, 2025. LifeLong Links, 866-468-7887, connects callers to the right Area Agency on Aging (Iowa Attorney General, https://www.iowaattorneygeneral.gov/for-consumers/for-older-iowans/report-prevent-elder-abuse; search excerpt)."
+      }
+    ]
+  },
+  {
+    "program_id": "ia-aaa-connections",
+    "name": "Connections Area Agency on Aging",
+    "organization": "Connections Area Agency on Aging (area Area 6)",
+    "official_url": "https://hhs.iowa.gov/media/13553/download",
+    "state": "IA",
+    "service_area": [
+      "Adair",
+      "Adams",
+      "Cass",
+      "Cherokee",
+      "Clarke",
+      "Decatur",
+      "Fremont",
+      "Harrison",
+      "Ida",
+      "Mills",
+      "Monona",
+      "Montgomery",
+      "Page",
+      "Plymouth",
+      "Pottawattamie",
+      "Ringgold",
+      "Shelby",
+      "Taylor",
+      "Union",
+      "Woodbury"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home"
+    ],
+    "regional_role": "aging_agency",
+    "description": "Iowa’s six Area Agencies on Aging help adults 60 and older, people with disabilities and caregivers find help at home, meals, caregiver support, elder abuse prevention and options counseling.",
+    "next_step": "Call and describe what is hard right now. Ask for information and assistance. LifeLong Links, 866-468-7887, also connects callers to their Area Agency on Aging. Military service is not required.",
+    "constraints": [
+      "Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.",
+      "Offices in Council Bluffs, Creston and Sioux City.",
+      "The synopsis prints “ADS” in this list; Ida County is the one county otherwise unassigned."
+    ],
+    "public_contact": {
+      "phone": "800-432-9209",
+      "phone_label": "Area Agency on Aging, area Area 6"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://hhs.iowa.gov/media/13553/download",
+      "phone_source_url": "https://hhs.iowa.gov/media/13553/download"
+    },
+    "source_evidence": [
+      {
+        "url": "https://hhs.iowa.gov/media/13553/download",
+        "title": "Iowa HHS: SFY 2025 Area Agency on Aging Plan Update Synopsis (Iowa Commission on Aging, June 10, 2025)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each Area Agency on Aging’s counties, toll-free phone and offices; read in full. Prepared for the Iowa Commission on Aging meeting of June 10, 2025. LifeLong Links, 866-468-7887, connects callers to the right Area Agency on Aging (Iowa Attorney General, https://www.iowaattorneygeneral.gov/for-consumers/for-older-iowans/report-prevent-elder-abuse; search excerpt)."
+      }
+    ]
+  },
+  {
+    "program_id": "ia-omb-state",
+    "name": "Iowa Office of the State Long-Term Care Ombudsman",
+    "organization": "Iowa Office of the State Long-Term Care Ombudsman",
+    "official_url": "https://hhs.iowa.gov/health-prevention/aging-services/ltcombudsman",
+    "state": "IA",
+    "service_area": [
+      "Adair",
+      "Adams",
+      "Allamakee",
+      "Appanoose",
+      "Audubon",
+      "Benton",
+      "Black Hawk",
+      "Boone",
+      "Bremer",
+      "Buchanan",
+      "Buena Vista",
+      "Butler",
+      "Calhoun",
+      "Carroll",
+      "Cass",
+      "Cedar",
+      "Cerro Gordo",
+      "Cherokee",
+      "Chickasaw",
+      "Clarke",
+      "Clay",
+      "Clayton",
+      "Clinton",
+      "Crawford",
+      "Dallas",
+      "Davis",
+      "Decatur",
+      "Delaware",
+      "Des Moines",
+      "Dickinson",
+      "Dubuque",
+      "Emmet",
+      "Fayette",
+      "Floyd",
+      "Franklin",
+      "Fremont",
+      "Greene",
+      "Grundy",
+      "Guthrie",
+      "Hamilton",
+      "Hancock",
+      "Hardin",
+      "Harrison",
+      "Henry",
+      "Howard",
+      "Humboldt",
+      "Ida",
+      "Iowa",
+      "Jackson",
+      "Jasper",
+      "Jefferson",
+      "Johnson",
+      "Jones",
+      "Keokuk",
+      "Kossuth",
+      "Lee",
+      "Linn",
+      "Louisa",
+      "Lucas",
+      "Lyon",
+      "Madison",
+      "Mahaska",
+      "Marion",
+      "Marshall",
+      "Mills",
+      "Mitchell",
+      "Monona",
+      "Monroe",
+      "Montgomery",
+      "Muscatine",
+      "O'Brien",
+      "Osceola",
+      "Page",
+      "Palo Alto",
+      "Plymouth",
+      "Pocahontas",
+      "Polk",
+      "Pottawattamie",
+      "Poweshiek",
+      "Ringgold",
+      "Sac",
+      "Scott",
+      "Shelby",
+      "Sioux",
+      "Story",
+      "Tama",
+      "Taylor",
+      "Union",
+      "Van Buren",
+      "Wapello",
+      "Warren",
+      "Washington",
+      "Wayne",
+      "Webster",
+      "Winnebago",
+      "Winneshiek",
+      "Woodbury",
+      "Worth",
+      "Wright"
+    ],
     "needs_supported": [
       "resident_rights",
       "general_navigation"
     ],
-    "description": "Ombudsmen advocate for residents of nursing homes and assisted living facilities.",
-    "next_step": "Use the locator to find the Iowa program, or ask the Eldercare Locator for the ombudsman nearest the facility.",
+    "regional_role": "ombudsman",
+    "description": "The regional long-term care ombudsman for this county: advocacy for residents of nursing homes, assisted living and residential care facilities.",
+    "next_step": "Call the regional ombudsman program. Give the facility name and county. For immediate danger, call 911.",
     "constraints": [
-      "Routes to the state program through a national locator; local ombudsman offices are not yet listed."
+      "The ombudsman acts with the resident’s permission and is not a licensing or enforcement agency.",
+      "The same toll-free number reaches your local long-term care ombudsman."
     ],
     "public_contact": {
-      "phone": "800-677-1116"
+      "phone": "866-236-1430",
+      "phone_label": "Regional ombudsman program"
     },
     "verification": {
-      "record_status": "official_search_extract_only",
-      "last_reviewed_on": "2026-11-02"
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
     },
     "evidence": {
-      "review_method": "official_search_excerpt",
+      "review_method": "full_official_page_text",
       "direct_agency_confirmation": false,
-      "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf"
+      "service_area_source_url": "https://hhs.iowa.gov/health-prevention/aging-services/ltcombudsman",
+      "phone_source_url": "https://hhs.iowa.gov/health-prevention/aging-services/ltcombudsman"
     },
     "source_evidence": [
       {
-        "url": "https://ltcombudsman.org/wp-content/uploads/2026/04/ltcop-postcard-2.pdf",
-        "title": "Official published source",
-        "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
+        "url": "https://hhs.iowa.gov/health-prevention/aging-services/ltcombudsman",
+        "title": "Iowa HHS: Office of the State Long-Term Care Ombudsman",
+        "reviewed_on": "2026-11-16",
+        "scope": "Toll-free 866-236-1430 for the state office and local ombudsmen; 321 E. 12th St., 2nd Floor, Des Moines; read in full. Last updated September 30, 2026. Local ombudsmen are shown only on a map image, so every county shows the toll-free line."
       }
-    ],
-    "regional_role": "ombudsman"
+    ]
   }
 ]
