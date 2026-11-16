@@ -14,11 +14,12 @@ for (const v of data.venues) {
   assert.deepEqual(order, [...order].sort((a, b) => a - b), 'sessions run Monday to Sunday: ' + v.id);
 }
 assert(zips['49037'], 'Census point fills the ZIP missing from the centroid file');
-assert(!zips['10001'] && zips['43334'] && zips['48161'] && zips['46733'] && zips['40601'] && zips['25301'] && zips['15222']);
+assert(!zips['10001'] && zips['43334'] && zips['48161'] && zips['46733'] && zips['40601'] && zips['25301'] && zips['15222'] && zips['33701'] && zips['32208']);
+assert(!Object.keys(zips).some(z => z.startsWith('340')), 'military ZIP codes are not Florida');
 
 const static_ = new JSDOM(html).window.document;
 assert.equal(static_.querySelector('link[rel=canonical]').href, 'https://www.findbingo.org/');
-assert.deepEqual([...static_.querySelectorAll('#state-buttons a')].map(a => a.dataset.state), ['MI', 'IN', 'OH', 'KY', 'WV', 'PA']);
+assert.deepEqual([...static_.querySelectorAll('#state-buttons a')].map(a => a.dataset.state), ['MI', 'IN', 'OH', 'KY', 'WV', 'PA', 'FL']);
 assert.equal(static_.querySelectorAll('script[src]').length, 0, 'no outside scripts');
 assert.deepEqual([...static_.querySelectorAll('#about-states h3')].map(h => h.textContent), states.map(s => s.name));
 assert(static_.querySelector('footer a[href="https://creativecommons.org/licenses/by/3.0/"]'), 'ZIP data attribution');
@@ -64,7 +65,7 @@ assert.equal(w0.timeRange('12:00', '16:00'), 'noon to 4 p.m.');
 assert.equal(w0.timeRange('16:00', '00:00'), '4 p.m. to midnight');
 assert.equal(w0.timeRange('21:31', '02:00'), '9:31 p.m. to 2 a.m.');
 assert.equal(w0.timeRange('10:30', '14:30'), '10:30 a.m. to 2:30 p.m.');
-assert.equal(w0.stateOfZip('48161') + w0.stateOfZip('46733') + w0.stateOfZip('43334') + w0.stateOfZip('40601') + w0.stateOfZip('25301') + w0.stateOfZip('15222') + w0.stateOfZip('10001'), 'MIINOHKYWVPA');
+assert.equal(w0.stateOfZip('48161') + w0.stateOfZip('46733') + w0.stateOfZip('43334') + w0.stateOfZip('40601') + w0.stateOfZip('25301') + w0.stateOfZip('15222') + w0.stateOfZip('33701') + w0.stateOfZip('34001') + w0.stateOfZip('10001'), 'MIINOHKYWVPAFL');
 const fake = {sessions: [{day: 1, start: '09:00', end: '11:00'}, {day: 3, start: '16:00', end: '00:00'}]};
 assert.equal(w0.nextGame(fake, '', '2026-11-16', 600), '2026-11-16', 'still on this morning');
 assert.equal(w0.nextGame(fake, '', '2026-11-16', 700), '2026-11-18', 'this morning is over, so Wednesday');
@@ -133,13 +134,21 @@ assert(!p.d.getElementById('pending-MI'), 'the Michigan note stays with Michigan
 assert.equal(p.cards[0], 'state-KY');
 assert.match(p.d.getElementById('state-KY').textContent, /Office of Charitable Gaming/);
 assert(p.d.querySelector('#state-KY a[href^="mailto:travis@vethomeguard.org?subject=Bingo%20game%20times%20in%20Kentucky"]'));
+// Florida: no state list, so the Florida card leads with how to send game times.
+p = await open('?zip=33701');
+assert.equal(p.count, 'No bingo games listed yet within 25 miles of 33701.');
+assert.equal(p.cards[0], 'state-FL');
+assert.match(p.d.getElementById('state-FL').textContent, /does not license bingo statewide/);
+assert.equal(p.d.querySelector('#state-FL a[target]').href, 'https://www.flsenate.gov/Laws/Statutes/2025/849.0931');
+p = await open('?state=FL');
+assert.deepEqual(p.cards, ['state-FL']);
 p = await open('?zip=15222&radius=50');
 assert.equal(p.cards[0], 'state-PA');
 assert(p.cards.includes('state-OH') && p.cards.includes('state-WV'), 'Pittsburgh is near Ohio and West Virginia');
 
 // ZIP mistakes get plain-language help.
 p = await open('?zip=12345');
-assert.match(p.status, /We could not find ZIP code 12345 in Michigan, Indiana, Ohio, Kentucky, West Virginia or Pennsylvania/);
+assert.match(p.status, /We could not find ZIP code 12345 in Michigan, Indiana, Ohio, Kentucky, West Virginia, Pennsylvania or Florida/);
 assert.equal(p.cards.length, 0);
 p = await open('?zip=4816');
 assert.match(p.status, /Please type the five numbers of your ZIP code/);

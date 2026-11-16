@@ -10,9 +10,9 @@ import re
 from datetime import date
 from html import escape
 
-ORDER = ['MI', 'IN', 'OH', 'KY', 'WV', 'PA']
+ORDER = ['MI', 'IN', 'OH', 'KY', 'WV', 'PA', 'FL']
 # First three ZIP digits for each covered state (USPS prefix ranges).
-PREFIXES = {'PA': (150, 196), 'WV': (247, 268), 'KY': (400, 427), 'OH': (430, 459), 'IN': (460, 479), 'MI': (480, 499)}
+PREFIXES = {'PA': (150, 196), 'WV': (247, 268), 'FL': (320, 349), 'KY': (400, 427), 'OH': (430, 459), 'IN': (460, 479), 'MI': (480, 499)}
 COVERAGE = {'times', 'licenses', 'ohio_finder', 'none'}
 TIME = re.compile(r'(?:[01]\d|2[0-3]):[0-5]\d')
 REPO_RAW = 'https://raw.githubusercontent.com/travisvought-byte/vhg-veteran-resident-guide/'
@@ -24,6 +24,8 @@ DATA_SOURCES = ['', 'https://guide.vethomeguard.org/findbingo-site/', REPO_RAW +
 
 def _state_of_zip(z):
     p = int(z[:3])
+    if p == 340:  # military mail (APO/FPO AA), not Florida
+        return ''
     return next((s for s, (lo, hi) in PREFIXES.items() if lo <= p <= hi), '')
 
 
