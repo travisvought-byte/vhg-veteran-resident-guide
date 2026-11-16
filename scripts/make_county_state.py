@@ -112,6 +112,8 @@ def build_regional(sheet):
     aging_status = STATUS[aging.get('review', 'full')]
     for r in aging['regions']:
         src = r.get('source_url') or aging['source_url']
+        # A region may take its phone from another page than the one that names its counties (Oregon); that page is cited too.
+        phone_src = r.get('phone_source')
         out.append({
             'program_id': r['id'], 'name': r['name'], 'organization': f"{r['name']} ({word} {r['label']})" if word else r['name'],
             'official_url': src, 'state': code, 'service_area': r['counties'],
@@ -120,10 +122,11 @@ def build_regional(sheet):
             'next_step': 'Call and describe what is hard right now. Ask for information and assistance. ' + aging['next_step_extra'] + ' Military service is not required.',
             'constraints': ['Many services focus on people age 60 and older and adults with disabilities; eligibility and waitlists vary by program.'] + r.get('notes', []),
             'public_contact': {'phone': r['phone'], 'phone_label': f"{agency}, {word} {r['label']}" if word else f"{agency} ({r['label']})"},
-            'verification': verification(aging_status, reviewed),
-            'evidence': {'review_method': aging['review_method'], 'direct_agency_confirmation': False,
-                         'service_area_source_url': src, 'phone_source_url': src},
-            'source_evidence': [source(src, aging['source_title'], aging['source_scope'], reviewed)],
+            'verification': verification(STATUS[r['review']] if r.get('review') else aging_status, reviewed),
+            'evidence': {'review_method': r.get('review_method', aging['review_method']), 'direct_agency_confirmation': False,
+                         'service_area_source_url': src, 'phone_source_url': phone_src['url'] if phone_src else src},
+            'source_evidence': [source(src, aging['source_title'], aging['source_scope'], reviewed)]
+                               + ([source(phone_src['url'], phone_src['title'], phone_src['scope'], reviewed)] if phone_src else []),
         })
     for r in omb['regions']:
         src = r['source_url']

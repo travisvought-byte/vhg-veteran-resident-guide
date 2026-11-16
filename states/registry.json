@@ -620,6 +620,28 @@
     ]
   },
   {
+    "code": "OR",
+    "name": "Oregon",
+    "page": "or.html",
+    "share_page": "share-or.html",
+    "qr": "assets/guide-qr-or.svg",
+    "counties": 36,
+    "programs": "data/public/or-programs.json",
+    "referrals": "data/public/or-regional-referrals.json",
+    "offices": "data/public/oregon-county-veterans-offices.json",
+    "resources": "data/public/oregon-resources.json",
+    "statewide_area_names": [],
+    "coverage_scope": "Referral edition. All 36 counties have a county veterans service office, a matched Area Agency on Aging and the statewide long-term care ombudsman; 25 counties are served by a Center for Independent Living.",
+    "coverage_note": "County veterans offices come from the Oregon Department of Veterans’ Affairs county pages. Area Agencies on Aging and their counties come from the Department of Human Services’ June 2026 overview, with each agency’s phone from its own or a state page. Centers for Independent Living come from the state’s 2024 directory; 11 counties have no center.",
+    "share_description": "County veterans offices, Area Agencies on Aging and long-term care ombudsman help across Oregon",
+    "share_replacements": [
+      [
+        "Updated October 8, 2026",
+        "Updated November 16, 2026"
+      ]
+    ]
+  },
+  {
     "code": "AK",
     "name": "Alaska",
     "starter": true,
@@ -996,26 +1018,6 @@
     ],
     "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
     "coverage_note": "Starter edition. Every county uses the North Dakota Department of Veterans Affairs and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
-    "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
-    "share_replacements": []
-  },
-  {
-    "code": "OR",
-    "name": "Oregon",
-    "starter": true,
-    "page": "or.html",
-    "share_page": "share-or.html",
-    "qr": "assets/guide-qr-or.svg",
-    "counties": 1,
-    "programs": "data/public/or-programs.json",
-    "referrals": "data/public/or-regional-referrals.json",
-    "offices": "data/public/oregon-county-veterans-offices.json",
-    "resources": "data/public/oregon-resources.json",
-    "statewide_area_names": [
-      "All Oregon counties"
-    ],
-    "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
-    "coverage_note": "Starter edition. Every county uses the Oregon Department of Veterans’ Affairs and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
     "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
     "share_replacements": []
   },

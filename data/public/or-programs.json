@@ -1,433 +1,1035 @@
 [
- {
-  "program_id": "or-claims",
-  "name": "Oregon veterans: accredited claims help",
-  "official_url": "https://www.oregon.gov/ODVA/Pages/default.aspx",
-  "organization": "Oregon Department of Veterans’ Affairs",
-  "service_area": [
-   "All Oregon counties"
-  ],
-  "state": "OR",
-  "needs_supported": [
-   "general_navigation",
-   "benefits_and_funding"
-  ],
-  "description": "Free help with VA claims, applications and appeals for veterans and families.",
-  "next_step": "Call the state veterans agency; ask for a benefits review and the office that serves your county.",
-  "constraints": [],
-  "public_contact": {
-   "phone": "800-692-9666"
+  {
+    "program_id": "or-claims",
+    "name": "Oregon veterans: county veteran service officers for claims help",
+    "official_url": "https://www.oregon.gov/odva/Services/Pages/County-Services.aspx",
+    "organization": "County veteran services offices and the Oregon Department of Veterans’ Affairs",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "OR",
+    "needs_supported": [
+      "general_navigation",
+      "benefits_and_funding"
+    ],
+    "description": "Free help with VA claims, appeals, pension and survivor benefits from county veteran service officers, who are trained and certified by the Oregon Department of Veterans’ Affairs. Every county has an office.",
+    "next_step": "Choose your county for its office, or call the Oregon Department of Veterans’ Affairs at 800-692-9666 (503-373-2085).",
+    "constraints": [
+      "Many offices work by appointment and some are open only certain days; call before you go."
+    ],
+    "public_contact": {
+      "phone": "800-692-9666",
+      "phone_label": "Oregon Department of Veterans’ Affairs (800-692-9666)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Marion.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.oregon.gov/odva/Services/Pages/County-Services.aspx",
+        "title": "Oregon Department of Veterans’ Affairs: County Services Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Links to the 36 county pages; read in full."
+      },
+      {
+        "url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Marion.aspx",
+        "title": "Oregon Department of Veterans’ Affairs: Veteran Services in Marion County",
+        "reviewed_on": "2026-11-16",
+        "scope": "Department contact 800-692-9666 or 503-373-2085 and the Marion County office; read in full."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "or-adrc",
+    "name": "Aging and Disability Resource Connection of Oregon",
+    "official_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/pages/contacts.aspx",
+    "organization": "Oregon Department of Human Services, Aging and People with Disabilities",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "OR",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Oregon’s statewide aging and disability line. Trained staff talk through your situation and connect you to the local Area Agency on Aging for meals, in-home help, caregiver support and long-term care options. Military service is not required.",
+    "next_step": "Call 855-673-2372 (855-ORE-ADRC), or choose a county above for its Area Agency on Aging.",
+    "constraints": [
+      "Each program has its own eligibility and waitlist.",
+      "Give your county so the call reaches the right agency."
+    ],
+    "public_contact": {
+      "phone": "855-673-2372",
+      "phone_label": "ADRC of Oregon (855-673-2372)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/pages/contacts.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/pages/contacts.aspx",
+        "title": "Oregon Department of Human Services: Aging and disability contacts",
+        "reviewed_on": "2026-11-16",
+        "scope": "Statewide ADRC number 855-673-2372; search excerpt."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_page_text",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.oregon.gov/ODVA/Pages/default.aspx"
+  {
+    "program_id": "or-ship",
+    "name": "Medicare counseling (SHIBA) for Oregon",
+    "official_url": "https://shiba.oregon.gov/get-help",
+    "organization": "Oregon Department of Human Services, Senior Health Insurance Benefits Assistance (SHIBA)",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "OR",
+    "needs_supported": [
+      "benefits_and_funding"
+    ],
+    "description": "Free Medicare counseling from SHIBA’s certified volunteer counselors: plan choices, enrollment, costs and help paying for Medicare.",
+    "next_step": "Call SHIBA at 800-722-4134. For Medicare itself, call 800-MEDICARE (800-633-4227).",
+    "constraints": [
+      "Have your Medicare card and drug list ready."
+    ],
+    "public_contact": {
+      "phone": "800-722-4134",
+      "phone_label": "Oregon SHIBA (800-722-4134)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://shiba.oregon.gov/get-help"
+    },
+    "source_evidence": [
+      {
+        "url": "https://shiba.oregon.gov/get-help",
+        "title": "Oregon SHIBA: Get help",
+        "reviewed_on": "2026-11-16",
+        "scope": "Statewide phone 800-722-4134 and counseling sites; search excerpt."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.oregon.gov/ODVA/Pages/default.aspx",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ]
- },
- {
-  "program_id": "or-ship",
-  "name": "Medicare counseling (SHIP) for Oregon",
-  "official_url": "https://www.shiphelp.org/",
-  "organization": "SHIP Technical Assistance Center",
-  "service_area": [
-   "All Oregon counties"
-  ],
-  "state": "OR",
-  "needs_supported": [
-   "benefits_and_funding"
-  ],
-  "description": "Free, unbiased Medicare counseling from the State Health Insurance Assistance Program.",
-  "next_step": "Call or use the locator to reach the Oregon SHIP and ask for a counseling appointment.",
-  "constraints": [],
-  "public_contact": {
-   "phone": "877-839-2675"
+  {
+    "program_id": "or-ombudsman",
+    "name": "Oregon Long-Term Care Ombudsman and adult abuse reporting",
+    "official_url": "https://sos.oregon.gov/blue-book/government/pages/long-term-care.aspx",
+    "organization": "Oregon Office of the Long-Term Care Ombudsman",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "OR",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "description": "Independent advocacy for residents of nursing homes, assisted living, residential care and adult foster homes.",
+    "next_step": "Call the ombudsman at 800-522-2602 (503-378-6533). To report suspected abuse, neglect or financial exploitation of an older adult or an adult with a disability, call the Oregon SAFEline at 855-503-SAFE (855-503-7233), 24 hours a day. In an emergency, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing agency."
+    ],
+    "public_contact": {
+      "phone": "800-522-2602",
+      "phone_label": "Oregon Long-Term Care Ombudsman (800-522-2602)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://sos.oregon.gov/blue-book/government/pages/long-term-care.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://sos.oregon.gov/blue-book/government/pages/long-term-care.aspx",
+        "title": "Oregon Blue Book: Office of the Long-Term Care Ombudsman",
+        "reviewed_on": "2026-11-16",
+        "scope": "Telephone 503-378-6533 and toll-free 1-800-522-2602; search excerpt."
+      },
+      {
+        "url": "https://www.oregon.gov/odhs/report-abuse/",
+        "title": "Oregon Department of Human Services: How to report abuse or neglect",
+        "reviewed_on": "2026-11-16",
+        "scope": "Call 855-503-SAFE (7233) about an older person or vulnerable adult; open 24 hours a day; search excerpt."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "or-legal-programs",
+    "name": "Free legal help for Oregon veterans and older adults",
+    "official_url": "https://oregon.gov/odhs/providers-partners/community-services-supports/Pages/legal-assistance.aspx",
+    "organization": "Legal Aid Services of Oregon and Oregon Law Center; Oregon State Bar",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "OR",
+    "resource_role": "legal_aid",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation",
+      "housing"
+    ],
+    "description": "Oregon’s legal aid programs run a statewide Public Benefits Hotline for low-income Oregonians with problems getting or keeping benefits. Area Agencies on Aging fund some legal help for people 60 and older. The Oregon State Bar’s Military Assistance Panel connects deployed service members and their families with volunteer lawyers.",
+    "next_step": "Call the Public Benefits Hotline at 800-520-5292 (Monday and Thursday 1–4 p.m.; Tuesday and Wednesday 9 a.m.–noon). Ask your Area Agency on Aging about senior legal help. For the Military Assistance Panel or a lawyer referral, call the Oregon State Bar at 503-684-3763 or 800-452-7636.",
+    "constraints": [
+      "Legal aid screens by income and case type.",
+      "The Military Assistance Panel is for service members around deployment and their families."
+    ],
+    "public_contact": {
+      "phone": "800-520-5292",
+      "phone_label": "Oregon Public Benefits Hotline (800-520-5292)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://oregon.gov/odhs/providers-partners/community-services-supports/Pages/legal-assistance.aspx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://oregon.gov/odhs/providers-partners/community-services-supports/Pages/legal-assistance.aspx",
+        "title": "Oregon Department of Human Services: Legal assistance",
+        "reviewed_on": "2026-11-16",
+        "scope": "Area Agencies on Aging fund legal help for people 60 and older; Oregon Law Center offices and the statewide public benefits hotline, 800-520-5292, with its hours; search excerpt."
+      },
+      {
+        "url": "https://www.osbar.org/public/ris",
+        "title": "Oregon State Bar: Programs to help you find the right lawyer",
+        "reviewed_on": "2026-11-16",
+        "scope": "Lawyer Referral Service and Military Assistance Panel, 503-684-3763 or 800-452-7636; search excerpt."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.shiphelp.org/?p=317"
+  {
+    "program_id": "or-vahealth-systems",
+    "name": "VA health care systems serving Oregon",
+    "official_url": "https://www.va.gov/find-locations/?facilityType=health",
+    "organization": "U.S. Department of Veterans Affairs",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "OR",
+    "resource_role": "va_health_system",
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "Oregon veterans are served mainly by the VA Portland Health Care System (Portland VA Medical Center, 3710 SW U.S. Veterans Hospital Road, 503-220-8262 or 800-949-1004), the Roseburg VA Health Care System (913 NW Garden Valley Boulevard, Roseburg, 541-440-1000) and the VA Southern Oregon Rehabilitation Center and Clinics in White City (541-826-2111), with clinics across the state.",
+    "next_step": "Use VA’s facility locator with your ZIP code to find the closest clinic. Not enrolled yet? Ask your county veteran service officer for help applying.",
+    "constraints": [
+      "Which system serves you depends on where you live; VA’s locator shows the right clinic."
+    ],
+    "public_contact": {
+      "phone": "503-220-8262",
+      "phone_label": "VA Portland Health Care System main line (503-220-8262)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.va.gov/portland-health-care/contact-us/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.va.gov/portland-health-care/contact-us/",
+        "title": "VA Portland health care: Contact us",
+        "reviewed_on": "2026-11-16",
+        "scope": "Main phone 503-220-8262 and toll-free 800-949-1004; search excerpt."
+      },
+      {
+        "url": "https://www.va.gov/directory/guide/state_SUD.cfm?STATE=OR",
+        "title": "VA facility directory: Oregon",
+        "reviewed_on": "2026-11-16",
+        "scope": "Roseburg VA Health Care System, 541-440-1000; VA Southern Oregon Rehabilitation Center, White City, 541-826-2111; search excerpt."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.shiphelp.org/?p=317",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ]
- },
- {
-  "program_id": "or-ssvf-13-or-125",
-  "name": "Community Action Team, Inc.: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Community Action Team, Inc.",
-  "service_area": [
-   "All Oregon counties"
-  ],
-  "state": "OR",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 13-OR-125): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Clatsop County, Columbia County, Tillamook County, Washington County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "503-397-3511",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "or-cil-abilitree",
+    "name": "Abilitree (Bend)",
+    "organization": "Abilitree",
+    "official_url": "https://www.abilitree.org/",
+    "service_area": [
+      "Crook",
+      "Deschutes",
+      "Jefferson"
+    ],
+    "state": "OR",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "The center’s office is at 2680 NE Twin Knolls Drive, Suite 150, Bend, OR 97701. Voice/TTY: 541-388-8103."
+    ],
+    "public_contact": {
+      "phone": "541-388-8103",
+      "phone_label": "Phone listed in the state’s directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf",
+      "service_area_source_url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf",
+        "title": "Oregon Department of Human Services: Oregon Centers for Independent Living directory (2024)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each center’s address, phones, website and counties served; read in full. The directory is marked 2024."
+      },
+      {
+        "url": "https://www.ilru.org/cil-directory/or",
+        "title": "ILRU: Oregon CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Center websites and counties served; search excerpt."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "or-cil-eocil",
+    "name": "Eastern Oregon Center for Independent Living (Ontario)",
+    "organization": "Eastern Oregon Center for Independent Living (EOCIL)",
+    "official_url": "https://eocil.org/",
+    "service_area": [
+      "Baker",
+      "Gilliam",
+      "Grant",
+      "Harney",
+      "Malheur",
+      "Morrow",
+      "Umatilla",
+      "Union",
+      "Wallowa",
+      "Wheeler"
+    ],
+    "state": "OR",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Main office: 1021 SW 5th Avenue, Ontario, OR 97914. Toll-free: 844-489-3119.",
+      "Branch offices: Pendleton, 322 SW 3rd Street (541-276-1037, toll-free 844-711-1037); Burns, 51 West Washington Street (541-370-2810 ext. 401)."
+    ],
+    "public_contact": {
+      "phone": "541-889-3119",
+      "phone_label": "Phone listed in the state’s directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf",
+      "service_area_source_url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf",
+        "title": "Oregon Department of Human Services: Oregon Centers for Independent Living directory (2024)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each center’s address, phones, website and counties served; read in full. The directory is marked 2024."
+      },
+      {
+        "url": "https://www.ilru.org/cil-directory/or",
+        "title": "ILRU: Oregon CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Center websites and counties served; search excerpt."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "or-cil-eocil-the-dalles",
+    "name": "Eastern Oregon Center for Independent Living – The Dalles",
+    "organization": "Eastern Oregon Center for Independent Living (EOCIL)",
+    "official_url": "https://eocil.org/",
+    "service_area": [
+      "Hood River",
+      "Sherman",
+      "Wasco"
+    ],
+    "state": "OR",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "Office: Columbia Gorge Community College, 400 East Scenic Drive, Building 2, 3rd floor, Suite 2.382, The Dalles, OR 97058. Toll-free: 844-370-2810.",
+      "The state’s directory marks this office as outside the state-funded service areas; the national directory lists it for Hood River, Sherman and Wasco counties."
+    ],
+    "public_contact": {
+      "phone": "541-370-2810",
+      "phone_label": "Phone listed in the state’s directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf",
+      "service_area_source_url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf",
+        "title": "Oregon Department of Human Services: Oregon Centers for Independent Living directory (2024)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each center’s address, phones, website and counties served; read in full. The directory is marked 2024."
+      },
+      {
+        "url": "https://www.ilru.org/cil-directory/or",
+        "title": "ILRU: Oregon CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Center websites and counties served; search excerpt."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 40",
-    "sheet": "Contacts",
-    "row": 40,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "or-ssvf-13-or-126",
-  "name": "Central Oregon Veteran & Community Outreach, Inc: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Central Oregon Veteran & Community Outreach, Inc",
-  "service_area": [
-   "All Oregon counties"
-  ],
-  "state": "OR",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 13-OR-126): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Crook County, Deschutes County, Jefferson County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "541-383-2793",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "or-cil-hasl",
+    "name": "Handicap Awareness & Support League (Grants Pass)",
+    "organization": "Handicap Awareness & Support League (HASL)",
+    "official_url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf",
+    "service_area": [
+      "Jackson",
+      "Josephine"
+    ],
+    "state": "OR",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "The center’s office is at 305 NE E Street, Grants Pass, OR 97526.",
+      "The card links to the state’s directory because no secure (https) website address for this center appears in the sources read."
+    ],
+    "public_contact": {
+      "phone": "541-479-4275",
+      "phone_label": "Phone listed in the state’s directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf",
+      "service_area_source_url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf",
+        "title": "Oregon Department of Human Services: Oregon Centers for Independent Living directory (2024)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each center’s address, phones, website and counties served; read in full. The directory is marked 2024."
+      },
+      {
+        "url": "https://www.ilru.org/cil-directory/or",
+        "title": "ILRU: Oregon CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Center websites and counties served; search excerpt."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "or-cil-ilr",
+    "name": "Independent Living Resources (Portland)",
+    "organization": "Independent Living Resources (ILR)",
+    "official_url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf",
+    "service_area": [
+      "Clackamas",
+      "Multnomah",
+      "Washington"
+    ],
+    "state": "OR",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "The center’s office is at 1839 NE Couch Street, Portland, OR 97232. TTY: 503-232-8408.",
+      "The card links to the state’s directory because no secure (https) website address for this center appears in the sources read."
+    ],
+    "public_contact": {
+      "phone": "503-232-7411",
+      "phone_label": "Phone listed in the state’s directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf",
+      "service_area_source_url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf",
+        "title": "Oregon Department of Human Services: Oregon Centers for Independent Living directory (2024)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each center’s address, phones, website and counties served; read in full. The directory is marked 2024."
+      },
+      {
+        "url": "https://www.ilru.org/cil-directory/or",
+        "title": "ILRU: Oregon CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Center websites and counties served; search excerpt."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "or-cil-lila",
+    "name": "Lane Independent Living Alliance (Eugene)",
+    "organization": "Lane Independent Living Alliance (LILA)",
+    "official_url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf",
+    "service_area": [
+      "Lane"
+    ],
+    "state": "OR",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "The center’s office is at 20 E. 13th Avenue, Eugene, OR 97401.",
+      "The card links to the state’s directory because no secure (https) website address for this center appears in the sources read."
+    ],
+    "public_contact": {
+      "phone": "541-607-7020",
+      "phone_label": "Phone listed in the state’s directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf",
+      "service_area_source_url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf",
+        "title": "Oregon Department of Human Services: Oregon Centers for Independent Living directory (2024)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each center’s address, phones, website and counties served; read in full. The directory is marked 2024."
+      },
+      {
+        "url": "https://www.ilru.org/cil-directory/or",
+        "title": "ILRU: Oregon CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Center websites and counties served; search excerpt."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 41",
-    "sheet": "Contacts",
-    "row": 41,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "or-ssvf-18-or-066",
-  "name": "St. Vincent de Paul Society of Lane County, Inc.: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "St. Vincent de Paul Society of Lane County, Inc.",
-  "service_area": [
-   "All Oregon counties"
-  ],
-  "state": "OR",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 18-OR-066): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Lane County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 458-319-0107.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "541-554-1299",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "or-cil-spokes",
+    "name": "SPOKES Unlimited (Klamath Falls)",
+    "organization": "SPOKES Unlimited",
+    "official_url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf",
+    "service_area": [
+      "Klamath",
+      "Lake"
+    ],
+    "state": "OR",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "The center’s office is at 1006 Main Street, Klamath Falls, OR 97601.",
+      "The card links to the state’s directory because no secure (https) website address for this center appears in the sources read."
+    ],
+    "public_contact": {
+      "phone": "541-883-7547",
+      "phone_label": "Phone listed in the state’s directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf",
+      "service_area_source_url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf",
+        "title": "Oregon Department of Human Services: Oregon Centers for Independent Living directory (2024)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each center’s address, phones, website and counties served; read in full. The directory is marked 2024."
+      },
+      {
+        "url": "https://www.ilru.org/cil-directory/or",
+        "title": "ILRU: Oregon CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Center websites and counties served; search excerpt."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "or-cil-uvdn",
+    "name": "Umpqua Valley disAbilities Network (Roseburg)",
+    "organization": "Umpqua Valley disAbilities Network (UVDN)",
+    "official_url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf",
+    "service_area": [
+      "Douglas"
+    ],
+    "state": "OR",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "The center’s office is at 736 SE Jackson Street, Roseburg, OR 97470. TTY: 541-440-2882.",
+      "The card links to the state’s directory because no secure (https) website address for this center appears in the sources read."
+    ],
+    "public_contact": {
+      "phone": "541-672-6336",
+      "phone_label": "Phone listed in the state’s directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-16"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf",
+      "service_area_source_url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf",
+        "title": "Oregon Department of Human Services: Oregon Centers for Independent Living directory (2024)",
+        "reviewed_on": "2026-11-16",
+        "scope": "Each center’s address, phones, website and counties served; read in full. The directory is marked 2024."
+      },
+      {
+        "url": "https://www.ilru.org/cil-directory/or",
+        "title": "ILRU: Oregon CIL Directory",
+        "reviewed_on": "2026-11-16",
+        "scope": "Center websites and counties served; search excerpt."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "or-ssvf-13-or-125",
+    "name": "Community Action Team, Inc.: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Community Action Team, Inc.",
+    "service_area": [
+      "Clatsop",
+      "Columbia",
+      "Tillamook",
+      "Washington"
+    ],
+    "state": "OR",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 13-OR-125): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "503-397-3511",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 40",
+        "sheet": "Contacts",
+        "row": 40,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 134",
-    "sheet": "Contacts",
-    "row": 134,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "or-ssvf-19-or-128",
-  "name": "Access: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Access",
-  "service_area": [
-   "All Oregon counties"
-  ],
-  "state": "OR",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 19-OR-128): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Coos County, Curry County, Douglas County, Jackson County, Josephine County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 541-774-4322.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "458-488-1340",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "or-ssvf-13-or-126",
+    "name": "Central Oregon Veteran & Community Outreach, Inc: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Central Oregon Veteran & Community Outreach, Inc",
+    "service_area": [
+      "Crook",
+      "Deschutes",
+      "Jefferson"
+    ],
+    "state": "OR",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 13-OR-126): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "541-383-2793",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 41",
+        "sheet": "Contacts",
+        "row": 41,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "or-ssvf-18-or-066",
+    "name": "St. Vincent de Paul Society of Lane County, Inc.: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "St. Vincent de Paul Society of Lane County, Inc.",
+    "service_area": [
+      "Lane"
+    ],
+    "state": "OR",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 18-OR-066): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 458-319-0107.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "541-554-1299",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 134",
+        "sheet": "Contacts",
+        "row": 134,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "or-ssvf-19-or-128",
+    "name": "Access: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Access",
+    "service_area": [
+      "Coos",
+      "Curry",
+      "Douglas",
+      "Jackson",
+      "Josephine"
+    ],
+    "state": "OR",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 19-OR-128): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 541-774-4322.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "458-488-1340",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 150",
+        "sheet": "Contacts",
+        "row": 150,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 150",
-    "sheet": "Contacts",
-    "row": 150,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "or-ssvf-19-zz-127",
-  "name": "Transition Projects, Inc.: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Transition Projects, Inc.",
-  "service_area": [
-   "All Oregon counties"
-  ],
-  "state": "OR",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 19-ZZ-127): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Clackamas County, Multnomah County, Washington County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 503-710-5021.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "855-425-5544",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "or-ssvf-19-zz-127",
+    "name": "Transition Projects, Inc.: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Transition Projects, Inc.",
+    "service_area": [
+      "Clackamas",
+      "Multnomah",
+      "Washington"
+    ],
+    "state": "OR",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 19-ZZ-127): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 503-710-5021.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "855-425-5544",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 157",
+        "sheet": "Contacts",
+        "row": 157,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "or-ssvf-20-or-272",
+    "name": "Easter Seals Oregon: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Easter Seals Oregon",
+    "service_area": [
+      "Marion",
+      "Multnomah",
+      "Polk"
+    ],
+    "state": "OR",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-OR-272): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 971-304-7140.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "971-317-9660",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 186",
+        "sheet": "Contacts",
+        "row": 186,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
-  },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 157",
-    "sheet": "Contacts",
-    "row": 157,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "or-ssvf-20-or-272",
-  "name": "Easter Seals Oregon: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Easter Seals Oregon",
-  "service_area": [
-   "All Oregon counties"
-  ],
-  "state": "OR",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-OR-272): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Marion County, Multnomah County, Polk County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 971-304-7140.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "971-317-9660",
-   "phone_label": "VA-listed SSVF intake"
-  },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
-  },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
-  },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 186",
-    "sheet": "Contacts",
-    "row": 186,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "or-ssvf-20-or-430",
-  "name": "Community Action Partnership Of Oregon: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Community Action Partnership Of Oregon",
-  "service_area": [
-   "All Oregon counties"
-  ],
-  "state": "OR",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-OR-430): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Baker County, Benton County, Grant County, Harney County, Hood River County, Klamath County, Lake County, Lincoln County, Linn County, Malheur County, Sherman County, Wasco County and 1 more.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "971-612-9772",
-   "phone_label": "VA-listed SSVF intake"
-  },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
-  },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
-  },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 187",
-    "sheet": "Contacts",
-    "row": 187,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "or-ssvf-20-zz-147",
-  "name": "Blue Mountain Action Council: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Blue Mountain Action Council",
-  "service_area": [
-   "All Oregon counties"
-  ],
-  "state": "OR",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-ZZ-147): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Morrow County, Umatilla County, Union County, Wallowa County.",
-  "next_step": "Ask VA’s National Call Center for Homeless Veterans (877-424-3838) to connect you with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": null,
-   "phone_label": "VA-listed SSVF intake"
-  },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
-  },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
-  },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 197",
-    "sheet": "Contacts",
-    "row": 197,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- }
+  {
+    "program_id": "or-ssvf-20-or-430",
+    "name": "Community Action Partnership Of Oregon: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Community Action Partnership Of Oregon",
+    "service_area": [
+      "Baker",
+      "Benton",
+      "Grant",
+      "Harney",
+      "Hood River",
+      "Klamath",
+      "Lake",
+      "Lincoln",
+      "Linn",
+      "Malheur",
+      "Sherman",
+      "Wasco",
+      "Yamhill"
+    ],
+    "state": "OR",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-OR-430): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "971-612-9772",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 187",
+        "sheet": "Contacts",
+        "row": 187,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
+  }
 ]

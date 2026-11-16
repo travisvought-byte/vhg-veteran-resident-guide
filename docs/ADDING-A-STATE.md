@@ -8,6 +8,8 @@ A state without county research can start as a starter edition: one statewide lo
 
 **Fastest path to a full edition.** Record the research in one sheet, `data/source/states/<code>.json` (`co.json` is the worked example: every county's veterans office, the aging and ombudsman regions, the Centers for Independent Living, the statewide cards and the adapter wording, each with the page it came from). Then run `python3 scripts/make_county_state.py <CODE> --check` to find gaps and `python3 scripts/make_county_state.py <CODE>` to write the data files, edition, adapter and registry entry from the Missouri pattern. Finish with `scripts/make_starter_states.py`, `scripts/build_public.py` and the checks in step 4, and document the sources in `docs/<STATE>.md`. The steps below describe what the script writes, for states that need hand changes.
 
+Optional sheet settings for states that do not fit the county-office pattern: `adapter.extra_swaps` (exact `[old, new]` wording swaps for the template's county-office phrases, used where veterans contacts are state teams or state offices, as in Oklahoma and New Jersey), `share_replacements` (wording swaps for the sharing kit), and, on an aging region, `phone_source` (`url`, `title`, `scope`) with `review` and `review_method`, for a state whose agency map prints no phones, so each phone is cited to the page it came from (Oregon).
+
 ## What a state consists of
 
 | File | Contents |

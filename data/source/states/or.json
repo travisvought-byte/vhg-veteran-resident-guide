@@ -1,0 +1,1282 @@
+{
+ "about": "Research sheet for the Oregon county edition. Every contact below was read on the date in reviewed_on from the page named beside it; scripts/make_county_state.py turns it into the edition files.",
+ "code": "OR",
+ "name": "Oregon",
+ "slug": "oregon",
+ "counties": 36,
+ "reviewed_on": "2026-11-16",
+ "month_label": "November 16, 2026",
+ "template_date": "November 4, 2026",
+ "phones_sentence": "County veterans office phones, addresses and hours come from the Oregon Department of Veterans’ Affairs county pages. Many offices work by appointment; call before you go.",
+ "senior_line_id": "or-adrc",
+ "agency": {
+  "url": "https://www.oregon.gov/odva/Services/Pages/County-Services.aspx"
+ },
+ "offices": {
+  "source_url": "https://www.oregon.gov/odva/Services/Pages/County-Services.aspx",
+  "source_title": "Oregon Department of Veterans’ Affairs: County Services Directory",
+  "review_method": "full_official_page_text",
+  "note": "County veteran service officers are trained and certified by the Oregon Department of Veterans’ Affairs and help with VA claims, pension, survivor benefits and appeals at no charge. The department’s line, 800-692-9666, can also help.",
+  "selection": "Office address, phones and hours as printed on the county’s page in the department’s directory; officers’ names, email addresses and fax numbers omitted. Counties with more than one office list the others.",
+  "list": [
+   {
+    "county": "Baker",
+    "phone": "541-523-8223",
+    "address": "Baker County Health Department Building, 2200 4th Street, Baker City, OR 97814",
+    "organization": "Baker County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Baker.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Baker County",
+    "hours": "Monday–Friday 8:00 a.m.–5:00 p.m., closed noon–1:00 p.m.",
+    "note": "Appointments are preferred; walk-ins are welcome."
+   },
+   {
+    "county": "Benton",
+    "phone": "541-368-7100",
+    "address": "1121 NW 9th Street, Corvallis, OR 97330",
+    "organization": "Benton County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Benton.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Benton County",
+    "hours": "Monday–Friday 8:00 a.m.–5:00 p.m., closed noon–1:00 p.m.; appointments 8:00 a.m.–4:00 p.m."
+   },
+   {
+    "county": "Clackamas",
+    "phone": "503-650-5631",
+    "address": "2051 Kaen Road, Suite 280 (2nd floor), Oregon City, OR 97045",
+    "organization": "Clackamas County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Clackamas.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Clackamas County",
+    "hours": "Monday–Thursday 7:00 a.m.–5:00 p.m., closed noon–1:00 p.m.; closed Fridays"
+   },
+   {
+    "county": "Clatsop",
+    "phone": "971-308-1045",
+    "address": "364 9th Street, Astoria, OR 97103",
+    "organization": "Clatsop County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Clatsop.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Clatsop County",
+    "hours": "Monday–Friday 9:00 a.m.–4:00 p.m.",
+    "note": "The department’s page lists this as the office’s mailing address."
+   },
+   {
+    "county": "Columbia",
+    "phone": "503-366-6580",
+    "address": "125 N. 17th Street, St. Helens, OR 97051",
+    "organization": "Columbia County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://oregon.gov/odva/services/pages/counties/columbia.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Columbia County",
+    "hours": "Monday–Friday 8:30 a.m.–5:00 p.m.",
+    "note": "Call for an appointment.",
+    "review_method": "official_search_excerpt"
+   },
+   {
+    "county": "Coos",
+    "phone": "541-551-0222",
+    "address": "1611 Virginia Avenue, Suite 125B, North Bend, OR 97459",
+    "organization": "Coos County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Coos.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Coos County",
+    "hours": "Monday–Thursday 8:00 a.m.–5:00 p.m.; closed Fridays",
+    "note": "Appointments and walk-ins. The Coquille Indian Tribe also has a Tribal veterans service officer in Coos Bay, 541-260-3735."
+   },
+   {
+    "county": "Crook",
+    "phone": "541-447-5304",
+    "address": "422 NW Beaver Street, Prineville, OR 97754",
+    "organization": "Crook County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Crook.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Crook County",
+    "hours": "Monday–Friday 8:00 a.m.–5:00 p.m."
+   },
+   {
+    "county": "Curry",
+    "phone": "541-247-3205",
+    "address": "517 Railroad Street, Brookings, OR 97415",
+    "organization": "Curry County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Curry.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Curry County",
+    "hours": "Monday–Friday 8:00 a.m.–5:00 p.m.",
+    "other_offices": [
+     {
+      "address": "Gold Beach: Curry County Annex Building, 94235 Moore Street #112, Gold Beach, OR 97444",
+      "schedule": "First Wednesday of each month, by appointment",
+      "phone": "541-247-3205"
+     },
+     {
+      "address": "Port Orford: North Curry Service Center, 1403 Oregon Street, Port Orford, OR 97465",
+      "schedule": "Second Wednesday of each month, by appointment",
+      "phone": "541-247-3205"
+     }
+    ],
+    "note": "The county also holds monthly appointment days in Gold Beach and Port Orford."
+   },
+   {
+    "county": "Deschutes",
+    "phone": "541-385-3214",
+    "address": "Mike Maier Building, 1130 NW Harriman Street, Bend, OR 97701",
+    "organization": "Deschutes County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Deschutes.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Deschutes County",
+    "hours": "Monday–Friday 8:00 a.m.–noon and 1:00–3:30 p.m.",
+    "other_offices": [
+     {
+      "address": "La Pine: South County Service Center, 51340 Highway 97, La Pine, OR 97739",
+      "schedule": "First and third Tuesday of each month, 9:00 a.m.–2:00 p.m.; appointment preferred (call 541-385-3214, option 1)",
+      "phone": "541-385-3214"
+     },
+     {
+      "address": "Redmond: Kingwood Building, 236 NW Kingwood Avenue, Redmond, OR 97756",
+      "schedule": "Hours not listed; call first",
+      "phone": "541-385-3214"
+     }
+    ],
+    "note": "The county also has offices in La Pine and Redmond."
+   },
+   {
+    "county": "Douglas",
+    "phone": "541-440-4219",
+    "address": "Douglas County Courthouse, 1036 SE Douglas Avenue, Rooms 7/8, Roseburg, OR 97470",
+    "organization": "Douglas County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Douglas.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Douglas County",
+    "note": "The department’s page says to call for hours. The Cow Creek Band of Umpqua Tribe of Indians also has a Tribal veterans service officer in Roseburg, 541-677-5513."
+   },
+   {
+    "county": "Gilliam",
+    "phone": "541-705-0051",
+    "address": "Gilliam County Courthouse, 212 S. Oregon Street, Condon, OR 97823",
+    "organization": "Gilliam County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Gilliam.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Gilliam County",
+    "hours": "Thursdays 8:00 a.m.–5:00 p.m.",
+    "other_phones": [
+     "541-351-9552"
+    ],
+    "note": "The same service officer also serves Sherman County."
+   },
+   {
+    "county": "Grant",
+    "phone": "541-620-8057",
+    "address": "530 E. Main Street, Suite 5, John Day, OR 97845",
+    "organization": "Grant County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Grant.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Grant County",
+    "hours": "Monday–Friday 9:00 a.m.–5:00 p.m.; Fridays by appointment only"
+   },
+   {
+    "county": "Harney",
+    "phone": "541-573-1342",
+    "address": "17 S. Alder Street, Burns, OR 97720",
+    "organization": "Harney County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Harney.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Harney County",
+    "hours": "Monday–Thursday 8:30 a.m.–noon and 1:00–4:30 p.m., by appointment; closed Fridays for outreach"
+   },
+   {
+    "county": "Hood River",
+    "phone": "541-387-7148",
+    "address": "1109 June Street, Hood River, OR 97031",
+    "organization": "Hood River County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/HoodRiver.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Hood River County",
+    "hours": "Monday–Thursday 8:00 a.m.–4:30 p.m., closed 12:30–1:00 p.m."
+   },
+   {
+    "county": "Jackson",
+    "phone": "541-774-8214",
+    "address": "140 S. Holly Street, Medford, OR 97501",
+    "organization": "Jackson County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Jackson.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Jackson County",
+    "hours": "Monday–Friday 8:00 a.m.–noon and 1:00–5:00 p.m., by appointment only"
+   },
+   {
+    "county": "Jefferson",
+    "phone": "541-475-5228",
+    "address": "860 SW Madison Street, Madras, OR 97741",
+    "organization": "Jefferson County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Jefferson.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Jefferson County",
+    "hours": "Monday–Wednesday 9:00 a.m.–12:30 p.m. and 1:30–5:00 p.m., by appointment; closed Thursdays and Fridays",
+    "note": "Outreach at Crooked River Ranch on the first Tuesday of the month, by appointment. The Confederated Tribes of Warm Springs also have a Tribal veterans service officer, 541-588-0619."
+   },
+   {
+    "county": "Josephine",
+    "phone": "541-474-5454",
+    "address": "500 NW 6th Street, Dept. 15, Grants Pass, OR 97527",
+    "organization": "Josephine County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Josephine.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Josephine County",
+    "hours": "Monday–Thursday 9:00 a.m.–4:00 p.m., closed noon–1:00 p.m.; closed Fridays",
+    "note": "Ask the office about outreach and in-home visits."
+   },
+   {
+    "county": "Klamath",
+    "phone": "541-883-4274",
+    "address": "3328 Vandenberg Road (lower level), Klamath Falls, OR 97603",
+    "organization": "Klamath County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Klamath.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Klamath County",
+    "hours": "Monday–Thursday 6:00 a.m.–6:00 p.m., by appointment only"
+   },
+   {
+    "county": "Lake",
+    "phone": "541-947-6043",
+    "address": "County Courthouse, 513 Center Street, Lakeview, OR 97630",
+    "organization": "Lake County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Lake.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Lake County",
+    "hours": "Monday, Tuesday and Thursday 8:00 a.m.–4:00 p.m., closed noon–1:00 p.m.; Wednesdays in Christmas Valley; Fridays by appointment",
+    "other_offices": [
+     {
+      "address": "Christmas Valley: North Lake Annex, 87127 Christmas Valley Highway, Christmas Valley, OR 97641",
+      "schedule": "Mondays 9:30 a.m.–2:00 p.m., or as needed",
+      "phone": "541-576-2115 ext. 2"
+     }
+    ],
+    "note": "The officer also serves Paisley, Adel and Plush."
+   },
+   {
+    "county": "Lane",
+    "phone": "541-682-4191",
+    "address": "151 W 7th Avenue, Suite 460, Eugene, OR 97401",
+    "organization": "Lane County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Lane.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Lane County",
+    "hours": "Monday–Friday 8:00 a.m.–5:00 p.m., closed noon–1:00 p.m.",
+    "other_offices": [
+     {
+      "address": "Cottage Grove: American Legion Post 32, 826 W. Main Street, Cottage Grove, OR 97424",
+      "schedule": "Third Wednesday of each month; appointment required",
+      "phone": "541-682-4191"
+     },
+     {
+      "address": "Florence: DAV Post 23, 1715 21st Street, Florence, OR 97439",
+      "schedule": "First and third Thursdays; appointment required",
+      "phone": "541-682-4191"
+     }
+    ],
+    "note": "Call for an appointment. The county also meets veterans in Cottage Grove and Florence by appointment."
+   },
+   {
+    "county": "Lincoln",
+    "phone": "541-265-0570",
+    "address": "1231 SE Bay Boulevard, Suite A, Newport, OR 97365",
+    "organization": "Lincoln County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Lincoln.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Lincoln County",
+    "hours": "Monday–Friday 9:00 a.m.–5:00 p.m."
+   },
+   {
+    "county": "Linn",
+    "phone": "541-967-3882",
+    "address": "505 SW Ellsworth Street, Albany, OR 97321",
+    "organization": "Linn County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Linn.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Linn County",
+    "hours": "Monday–Friday 8:30 a.m.–5:00 p.m., closed noon–1:00 p.m.",
+    "other_phones": [
+     "800-319-3882"
+    ]
+   },
+   {
+    "county": "Malheur",
+    "phone": "541-889-6649",
+    "address": "316 NE Goodfellow Street, Suite 4, Ontario, OR 97914",
+    "organization": "Malheur County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Malheur.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Malheur County",
+    "hours": "Monday–Thursday 8:30 a.m.–5:00 p.m.; Fridays by appointment",
+    "other_offices": [
+     {
+      "address": "Vale: Vale Senior Center, 182 Cottage Street South, Vale, OR 97918",
+      "schedule": "First Wednesday of each month, 11:00 a.m.–1:00 p.m.",
+      "phone": "541-889-6649"
+     }
+    ]
+   },
+   {
+    "county": "Marion",
+    "phone": "971-707-4400",
+    "address": "780 Commercial Street SE, Suite 302, Salem, OR 97301",
+    "organization": "Marion County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Marion.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Marion County",
+    "hours": "Walk-in Monday–Wednesday 9:00–11:00 a.m. and 1:00–4:00 p.m.; Thursday and Friday front desk only; closed noon–1:00 p.m. and the last day of the month",
+    "note": "Marion County handles claims for its residents directly."
+   },
+   {
+    "county": "Morrow",
+    "phone": "541-922-6420",
+    "address": "215 NE Main Avenue, Irrigon, OR 97844",
+    "organization": "Morrow County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Morrow.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Morrow County",
+    "hours": "Irrigon: Monday–Friday, hours vary; Heppner: by appointment only",
+    "note": "Make an appointment; the office closes for lunch and on holidays."
+   },
+   {
+    "county": "Multnomah",
+    "phone": "503-988-8387",
+    "address": "Five Oak Building, 209 SW 4th Avenue, Portland, OR 97204 (mail to Suite 510)",
+    "organization": "Multnomah County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Multnomah.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Multnomah County",
+    "hours": "Monday–Friday 8:00 a.m.–5:00 p.m.; last appointment 3:30 p.m.",
+    "other_offices": [
+     {
+      "address": "Portland VA Medical Center: Main Building, 3rd floor Chaplain/Social Work Office, Room 3B-100",
+      "schedule": "By appointment only",
+      "phone": "503-988-8387"
+     }
+    ],
+    "note": "A second office at the Portland VA Medical Center is by appointment only."
+   },
+   {
+    "county": "Polk",
+    "phone": "503-751-1644",
+    "address": "1407 Monmouth Independence Highway, Monmouth, OR 97361",
+    "organization": "Polk County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Polk.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Polk County",
+    "hours": "Monday–Friday 8:00 a.m.–5:00 p.m., closed noon–1:00 p.m.",
+    "note": "Call for an appointment. The Confederated Tribes of Grand Ronde also have a Tribal veterans service officer, 503-879-1484."
+   },
+   {
+    "county": "Sherman",
+    "phone": "541-565-3408",
+    "address": "300 Dewey Street, Moro, OR 97039",
+    "organization": "Sherman County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Sherman.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Sherman County",
+    "hours": "Wednesdays 8:00 a.m.–5:00 p.m.; Mondays outreach and home visits by appointment",
+    "other_phones": [
+     "541-705-0051"
+    ],
+    "note": "The same service officer also serves Gilliam County."
+   },
+   {
+    "county": "Tillamook",
+    "phone": "503-842-4358",
+    "address": "Tillamook County Justice Court, 201 Laurel Avenue, Basement Level, Room 12, Tillamook, OR 97141",
+    "organization": "Tillamook County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Tillamook.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Tillamook County",
+    "hours": "Monday–Friday 8:00 a.m.–5:00 p.m."
+   },
+   {
+    "county": "Umatilla",
+    "phone": "541-278-6363",
+    "address": "125 SE Court Avenue, Suite 7, Pendleton, OR",
+    "organization": "Umatilla County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Umatilla.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Umatilla County",
+    "hours": "Monday–Thursday 8:00 a.m.–6:00 p.m.; Friday 8:00 a.m.–noon",
+    "other_offices": [
+     {
+      "address": "Hermiston: 915 SE Columbia Drive, Hermiston, OR 97838",
+      "schedule": "Monday, Tuesday and Thursday 8:00 a.m.–6:00 p.m.; Wednesday 9:00 a.m.–4:00 p.m.; Friday 8:00 a.m.–noon",
+      "phone": "541-278-6363"
+     },
+     {
+      "address": "Milton-Freewater: 418 N. Main Street, Milton-Freewater, OR 97862",
+      "schedule": "Wednesdays 9:00 a.m.–4:00 p.m., closed noon–1:00 p.m.",
+      "phone": "541-278-6363"
+     }
+    ],
+    "note": "The county also has offices in Hermiston and Milton-Freewater."
+   },
+   {
+    "county": "Union",
+    "phone": "541-962-8842",
+    "address": "2301 Cove Avenue, La Grande, OR 97850",
+    "organization": "Union County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Union.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Union County",
+    "hours": "Monday–Friday 8:00 a.m.–5:00 p.m., by appointment only"
+   },
+   {
+    "county": "Wallowa",
+    "phone": "541-426-0539",
+    "address": "107 SW 1st Street, Suite 103, Enterprise, OR 97828",
+    "organization": "Wallowa County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Wallowa.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Wallowa County",
+    "hours": "Monday–Wednesday 7:00 a.m.–5:00 p.m.; Thursday 7:00 a.m.–4:30 p.m."
+   },
+   {
+    "county": "Wasco",
+    "phone": "541-506-2502",
+    "address": "401 E. 3rd Street, Suite 200, The Dalles, OR 97058",
+    "organization": "Wasco County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Wasco.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Wasco County",
+    "hours": "Monday–Wednesday 9:00 a.m.–5:00 p.m., walk-ins welcome, closed noon–1:00 p.m.; Thursday–Friday by appointment only",
+    "review_method": "official_search_excerpt"
+   },
+   {
+    "county": "Washington",
+    "phone": "503-846-3060",
+    "address": "5240 NE Elam Young Parkway, Suite 300, Hillsboro, OR 97124",
+    "organization": "Washington County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://oregon.gov/ODVA/Services/Pages/Counties/Washington.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Washington County",
+    "hours": "Monday–Friday 8:00 a.m.–5:00 p.m.",
+    "note": "Appointments are available from 7:30 a.m. to 4:30 p.m.; ask the scheduler.",
+    "review_method": "official_search_excerpt"
+   },
+   {
+    "county": "Wheeler",
+    "phone": "541-705-0051",
+    "address": "Family Services Building, 401 4th Street, Fossil, OR 97830",
+    "organization": "Wheeler County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://www.oregon.gov/odva/Services/Pages/Counties/Wheeler.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Wheeler County",
+    "hours": "Tuesdays 8:00 a.m.–5:00 p.m.",
+    "note": "Call for an appointment. The phone number is from Wheeler County’s veterans services page.",
+    "review_method": "official_search_excerpt"
+   },
+   {
+    "county": "Yamhill",
+    "phone": "503-434-7503",
+    "address": "400 NE Baker Street, McMinnville, OR 97128",
+    "organization": "Yamhill County Veterans Service Office",
+    "office_type": "county",
+    "source_url": "https://www.oregon.gov/odva/services/pages/counties/yamhill.aspx",
+    "source_title": "Oregon Department of Veterans’ Affairs: Veteran Services in Yamhill County",
+    "hours": "Monday–Friday 8:00 a.m.–5:00 p.m.",
+    "note": "The phone number and hours are from Yamhill County’s directory.",
+    "review_method": "official_search_excerpt"
+   }
+  ]
+ },
+ "aging": {
+  "source_url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/aaa-overview.pdf",
+  "source_title": "Oregon Department of Human Services: Area Agencies on Aging overview (June 9, 2026)",
+  "source_scope": "The sixteen Area Agencies on Aging, their type and the counties each serves; read in full. The overview prints no phone numbers.",
+  "review": "full",
+  "review_method": "full_official_pdf",
+  "region_word": "",
+  "next_step_extra": "The statewide Aging and Disability Resource Connection, 855-673-2372, also connects you to the agency for your county.",
+  "regions": [
+   {
+    "id": "or-aaa-cat",
+    "label": "Columbia",
+    "name": "Community Action Team (Columbia County Area Agency on Aging)",
+    "phone": "855-673-2372",
+    "counties": [
+     "Columbia"
+    ],
+    "notes": [
+     "Community Action Team in St. Helens is the county’s Area Agency on Aging; the statewide ADRC line connects you to it."
+    ],
+    "phone_source": {
+     "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/pages/contacts.aspx",
+     "title": "Oregon Department of Human Services: Aging and disability contacts",
+     "scope": "Statewide Aging and Disability Resource Connection number 855-673-2372; search excerpt. No current agency phone was found on an official page, so the card uses the statewide line."
+    },
+    "review": "excerpt",
+    "review_method": "official_search_excerpt"
+   },
+   {
+    "id": "or-aaa-scbec",
+    "label": "Coos and Curry",
+    "name": "South Coast Business Employment Corporation (Area Agency on Aging)",
+    "phone": "541-269-2013",
+    "counties": [
+     "Coos",
+     "Curry"
+    ],
+    "notes": [
+     "Toll-free: 800-974-4054. Office: 800 N. Bayshore Drive, Coos Bay, OR 97420."
+    ],
+    "phone_source": {
+     "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/scbec-area-plan.pdf",
+     "title": "South Coast Business: Area Agency on Aging Area Plan 2025–2029",
+     "scope": "Agency phone 541-269-2013, toll-free 800-974-4054 and address; search excerpt."
+    },
+    "review": "excerpt",
+    "review_method": "official_search_excerpt"
+   },
+   {
+    "id": "or-aaa-cocoa",
+    "label": "Central Oregon",
+    "name": "Council on Aging of Central Oregon",
+    "phone": "541-678-5483",
+    "counties": [
+     "Crook",
+     "Deschutes",
+     "Jefferson"
+    ],
+    "notes": [
+     "Office: 373 NE Greenwood Avenue, Bend, OR 97701."
+    ],
+    "phone_source": {
+     "url": "https://SHIBA.Oregon.gov/Documents/2023-guide-pickup-locations.pdf",
+     "title": "Oregon SHIBA: 2023 Medicare guide pickup locations",
+     "scope": "Council on Aging of Central Oregon, 373 NE Greenwood, Bend, 541-678-5483; search excerpt."
+    },
+    "review": "excerpt",
+    "review_method": "official_search_excerpt"
+   },
+   {
+    "id": "or-aaa-klccoa",
+    "label": "Klamath and Lake",
+    "name": "Klamath and Lake Counties Council on Aging",
+    "phone": "541-205-5400",
+    "counties": [
+     "Klamath",
+     "Lake"
+    ],
+    "notes": [
+     "Office: 404 Main Street, Suite 6, Klamath Falls, OR 97601."
+    ],
+    "phone_source": {
+     "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/klccoa-area-plan.pdf",
+     "title": "Klamath and Lake Counties Council on Aging: Area Plan 2025–2029",
+     "scope": "Office location and phone 541-205-5400; search excerpt."
+    },
+    "review": "excerpt",
+    "review_method": "official_search_excerpt"
+   },
+   {
+    "id": "or-aaa-capeco",
+    "label": "East Central Oregon",
+    "name": "Community Action Program of East Central Oregon (CAPECO) Area Agency on Aging",
+    "phone": "541-276-1926",
+    "counties": [
+     "Gilliam",
+     "Hood River",
+     "Morrow",
+     "Sherman",
+     "Umatilla",
+     "Wasco",
+     "Wheeler"
+    ],
+    "notes": [
+     "Office: 211 SE Byers Avenue, Pendleton, OR 97801. The agency also has offices in Hermiston and The Dalles."
+    ],
+    "phone_source": {
+     "url": "https://umatillacounty.gov/departments/public-health/news-and-resources/community-resource-guide",
+     "title": "Umatilla County: Community resource guide",
+     "scope": "CAPECO Area Agency on Aging, 211 SE Byers Ave, Pendleton, 541-276-1926; search excerpt. CAPECO’s 2025–2029 area plan prints the address but no phone."
+    },
+    "review": "excerpt",
+    "review_method": "official_search_excerpt"
+   },
+   {
+    "id": "or-aaa-ccno",
+    "label": "Northeast Oregon",
+    "name": "Community Connection of Northeast Oregon (Area Agency on Aging)",
+    "phone": "541-963-3186",
+    "counties": [
+     "Baker",
+     "Grant",
+     "Union",
+     "Wallowa"
+    ],
+    "notes": [
+     "Administrative office: 2802 Adams Avenue, La Grande, OR 97850."
+    ],
+    "phone_source": {
+     "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/ccno-area-plan.pdf",
+     "title": "Community Connection of Northeast Oregon: 2025–2029 Area Plan",
+     "scope": "Administrative office address and phone (541) 963-3186; search excerpt."
+    },
+    "review": "excerpt",
+    "review_method": "official_search_excerpt"
+   },
+   {
+    "id": "or-aaa-harney",
+    "label": "Harney",
+    "name": "Harney County Senior and Community Services Center",
+    "phone": "541-573-6024",
+    "counties": [
+     "Harney"
+    ],
+    "notes": [
+     "Office: 17 S. Alder Street, Burns, OR 97720."
+    ],
+    "phone_source": {
+     "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/family-caregiver-coordinators-2018.pdf",
+     "title": "Oregon Department of Human Services: Family Caregiver Support Program coordinators (2018)",
+     "scope": "Harney County Senior & Community Services, 17 South Alder St, Burns, 541-573-6024; search excerpt of a 2018 list."
+    },
+    "review": "excerpt",
+    "review_method": "official_search_excerpt"
+   },
+   {
+    "id": "or-aaa-mcoacs",
+    "label": "Malheur",
+    "name": "Malheur Council on Aging and Community Services",
+    "phone": "541-889-7651",
+    "counties": [
+     "Malheur"
+    ],
+    "notes": [
+     "Office: 842 SE 1st Avenue, Ontario, OR 97914."
+    ],
+    "phone_source": {
+     "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/family-caregiver-coordinators-2018.pdf",
+     "title": "Oregon Department of Human Services: Family Caregiver Support Program coordinators (2018)",
+     "scope": "Malheur Council on Aging staff at 541-889-7651, 842 SE 1st Ave, Ontario; search excerpt of a 2018 list."
+    },
+    "review": "excerpt",
+    "review_method": "official_search_excerpt"
+   },
+   {
+    "id": "or-aaa-clackamas",
+    "label": "Clackamas",
+    "name": "Clackamas County Social Services (Area Agency on Aging)",
+    "phone": "503-650-5622",
+    "counties": [
+     "Clackamas"
+    ],
+    "notes": [
+     "This is the county’s Aging and Disability Resource Connection line. Office: 2051 Kaen Road #135, Oregon City, OR 97045; main line 503-655-8640."
+    ],
+    "phone_source": {
+     "url": "https://www.clackamas.us/socialservices",
+     "title": "Clackamas County Social Services",
+     "scope": "Aging and Disability Resource Connection 503-650-5622; Social Services 503-655-8640, 2051 Kaen Road #135; search excerpt."
+    },
+    "review": "excerpt",
+    "review_method": "official_search_excerpt"
+   },
+   {
+    "id": "or-aaa-washington",
+    "label": "Washington",
+    "name": "Washington County Disability, Aging and Veteran Services",
+    "phone": "503-846-3060",
+    "counties": [
+     "Washington"
+    ],
+    "notes": [
+     "Office: 5240 NE Elam Young Parkway, Suite 300, Hillsboro, OR 97124."
+    ],
+    "phone_source": {
+     "url": "https://washingtoncountyor.gov/DAVS",
+     "title": "Washington County: Disability, Aging and Veteran Services",
+     "scope": "Phone 503-846-3060 and office; search excerpt."
+    },
+    "review": "excerpt",
+    "review_method": "official_search_excerpt"
+   },
+   {
+    "id": "or-aaa-nwsds",
+    "label": "Northwest",
+    "name": "NorthWest Senior and Disability Services",
+    "phone": "503-304-3420",
+    "counties": [
+     "Clatsop",
+     "Marion",
+     "Polk",
+     "Tillamook",
+     "Yamhill"
+    ],
+    "notes": [
+     "Toll-free: 866-206-4799. Main office: 3410 Cherry Avenue NE, Salem, OR 97303 (503-304-3400). Offices also in Tillamook (503-842-2770) and Warrenton (503-861-4200)."
+    ],
+    "phone_source": {
+     "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/nwsds-area-plan.pdf",
+     "title": "NorthWest Senior and Disability Services: 2025–2029 Area Plan",
+     "scope": "For all service areas: 503-304-3420, toll-free 1-866-206-4799; Salem, Tillamook and Warrenton offices; search excerpt."
+    },
+    "review": "excerpt",
+    "review_method": "official_search_excerpt"
+   },
+   {
+    "id": "or-aaa-multnomah",
+    "label": "Multnomah",
+    "name": "Multnomah County Aging, Disability and Veterans Services",
+    "phone": "503-988-3646",
+    "counties": [
+     "Multnomah"
+    ],
+    "notes": [
+     "This is the 24-hour Aging and Disability Resource Connection Helpline."
+    ],
+    "phone_source": {
+     "url": "https://multco.us/info/aging-disability-and-veterans-services-locations",
+     "title": "Multnomah County: Aging, Disability and Veterans Services locations",
+     "scope": "ADRC Helpline (503) 988-3646 at the central office; search excerpt."
+    },
+    "review": "excerpt",
+    "review_method": "official_search_excerpt"
+   },
+   {
+    "id": "or-aaa-ocwcog",
+    "label": "Linn, Benton and Lincoln",
+    "name": "Oregon Cascades West Council of Governments Senior and Disability Services",
+    "phone": "541-967-8630",
+    "counties": [
+     "Benton",
+     "Lincoln",
+     "Linn"
+    ],
+    "notes": [
+     "Benton and Linn counties: 541-967-8630 or 800-638-0510. Lincoln County: 541-336-2289 or 800-282-6194."
+    ],
+    "phone_source": {
+     "url": "https://www.ocwcog.org/?p=326",
+     "title": "Oregon Cascades West Council of Governments: Long-Term Supports and Services",
+     "scope": "Benton and Linn 800-638-0510 or 541-967-8630; Lincoln 800-282-6194 or 541-336-2289; search excerpt."
+    },
+    "review": "excerpt",
+    "review_method": "official_search_excerpt"
+   },
+   {
+    "id": "or-aaa-lcog",
+    "label": "Lane",
+    "name": "Lane Council of Governments Senior and Disability Services",
+    "phone": "541-682-3353",
+    "counties": [
+     "Lane"
+    ],
+    "notes": [
+     "This is the Aging and Disability Resource Connection line. Main office: 1015 Willamette Street, Eugene, OR 97401 (541-682-4038)."
+    ],
+    "phone_source": {
+     "url": "https://www.oregon.gov/odhs/providers-partners/seniors-disabilities/Documents/lcog-phone-list.pdf",
+     "title": "Lane Council of Governments Senior and Disability Services: contact list (January 14, 2026)",
+     "scope": "Main number 541-682-4038, ADRC 541-682-3353 and office locations; search excerpt."
+    },
+    "review": "excerpt",
+    "review_method": "official_search_excerpt"
+   },
+   {
+    "id": "or-aaa-douglas",
+    "label": "Douglas",
+    "name": "Douglas County Senior Services Division",
+    "phone": "541-440-3677",
+    "counties": [
+     "Douglas"
+    ],
+    "notes": [
+     "Office in Roseburg."
+    ],
+    "phone_source": {
+     "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/dcsds-area-plan.pdf",
+     "title": "Douglas County Senior Services: Area Agency on Aging Plan 2025–2029",
+     "scope": "Main phone number 541-440-3677; search excerpt."
+    },
+    "review": "excerpt",
+    "review_method": "official_search_excerpt"
+   },
+   {
+    "id": "or-aaa-rvcog",
+    "label": "Rogue Valley",
+    "name": "Rogue Valley Council of Governments Senior and Disability Services",
+    "phone": "541-664-6674",
+    "counties": [
+     "Jackson",
+     "Josephine"
+    ],
+    "notes": [
+     "Office: 155 N. 1st Street, Central Point, OR 97502."
+    ],
+    "phone_source": {
+     "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/Documents/rvcog-area-plan.pdf",
+     "title": "Rogue Valley Council of Governments: Area Agency on Aging Area Plan",
+     "scope": "Area Agency on Aging for Jackson and Josephine counties, (541) 664-6674; search excerpt."
+    },
+    "review": "excerpt",
+    "review_method": "official_search_excerpt"
+   }
+  ]
+ },
+ "ombudsman": {
+  "state_phone": "800-522-2602",
+  "regions": [
+   {
+    "id": "or-omb-state",
+    "name": "Oregon Office of the Long-Term Care Ombudsman",
+    "phone": "800-522-2602",
+    "counties": [
+     "Baker",
+     "Benton",
+     "Clackamas",
+     "Clatsop",
+     "Columbia",
+     "Coos",
+     "Crook",
+     "Curry",
+     "Deschutes",
+     "Douglas",
+     "Gilliam",
+     "Grant",
+     "Harney",
+     "Hood River",
+     "Jackson",
+     "Jefferson",
+     "Josephine",
+     "Klamath",
+     "Lake",
+     "Lane",
+     "Lincoln",
+     "Linn",
+     "Malheur",
+     "Marion",
+     "Morrow",
+     "Multnomah",
+     "Polk",
+     "Sherman",
+     "Tillamook",
+     "Umatilla",
+     "Union",
+     "Wallowa",
+     "Wasco",
+     "Washington",
+     "Wheeler",
+     "Yamhill"
+    ],
+    "source_url": "https://sos.oregon.gov/blue-book/government/pages/long-term-care.aspx",
+    "source_title": "Oregon Blue Book: Office of the Long-Term Care Ombudsman",
+    "source_scope": "Address, telephone 503-378-6533, toll-free 1-800-522-2602 and email; search excerpt. The office is statewide, so every county shows it.",
+    "review": "excerpt",
+    "review_method": "official_search_excerpt",
+    "notes": [
+     "The office serves residents of nursing homes, assisted living, residential care and adult foster homes. Local: 503-378-6533."
+    ]
+   }
+  ]
+ },
+ "cils": {
+  "source_url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf",
+  "source_title": "Oregon Department of Human Services: Oregon Centers for Independent Living directory (2024)",
+  "scope": "Each center’s address, phones, website and counties served; read in full. The directory is marked 2024.",
+  "phone_label": "Phone listed in the state’s directory of Centers for Independent Living",
+  "list": [
+   {
+    "id": "or-cil-abilitree",
+    "name": "Abilitree (Bend)",
+    "organization": "Abilitree",
+    "url": "https://www.abilitree.org/",
+    "phone": "541-388-8103",
+    "counties": [
+     "Crook",
+     "Deschutes",
+     "Jefferson"
+    ],
+    "method": "full_official_pdf",
+    "review": "full",
+    "notes": [
+     "The center’s office is at 2680 NE Twin Knolls Drive, Suite 150, Bend, OR 97701. Voice/TTY: 541-388-8103."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://www.ilru.org/cil-directory/or",
+      "title": "ILRU: Oregon CIL Directory",
+      "scope": "Center websites and counties served; search excerpt."
+     }
+    ]
+   },
+   {
+    "id": "or-cil-eocil",
+    "name": "Eastern Oregon Center for Independent Living (Ontario)",
+    "organization": "Eastern Oregon Center for Independent Living (EOCIL)",
+    "url": "https://eocil.org/",
+    "phone": "541-889-3119",
+    "counties": [
+     "Baker",
+     "Gilliam",
+     "Grant",
+     "Harney",
+     "Malheur",
+     "Morrow",
+     "Umatilla",
+     "Union",
+     "Wallowa",
+     "Wheeler"
+    ],
+    "method": "full_official_pdf",
+    "review": "full",
+    "notes": [
+     "Main office: 1021 SW 5th Avenue, Ontario, OR 97914. Toll-free: 844-489-3119.",
+     "Branch offices: Pendleton, 322 SW 3rd Street (541-276-1037, toll-free 844-711-1037); Burns, 51 West Washington Street (541-370-2810 ext. 401)."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://www.ilru.org/cil-directory/or",
+      "title": "ILRU: Oregon CIL Directory",
+      "scope": "Center websites and counties served; search excerpt."
+     }
+    ]
+   },
+   {
+    "id": "or-cil-eocil-the-dalles",
+    "name": "Eastern Oregon Center for Independent Living – The Dalles",
+    "organization": "Eastern Oregon Center for Independent Living (EOCIL)",
+    "url": "https://eocil.org/",
+    "phone": "541-370-2810",
+    "counties": [
+     "Hood River",
+     "Sherman",
+     "Wasco"
+    ],
+    "method": "full_official_pdf",
+    "review": "full",
+    "notes": [
+     "Office: Columbia Gorge Community College, 400 East Scenic Drive, Building 2, 3rd floor, Suite 2.382, The Dalles, OR 97058. Toll-free: 844-370-2810.",
+     "The state’s directory marks this office as outside the state-funded service areas; the national directory lists it for Hood River, Sherman and Wasco counties."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://www.ilru.org/cil-directory/or",
+      "title": "ILRU: Oregon CIL Directory",
+      "scope": "Center websites and counties served; search excerpt."
+     }
+    ]
+   },
+   {
+    "id": "or-cil-hasl",
+    "name": "Handicap Awareness & Support League (Grants Pass)",
+    "organization": "Handicap Awareness & Support League (HASL)",
+    "url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf",
+    "phone": "541-479-4275",
+    "counties": [
+     "Jackson",
+     "Josephine"
+    ],
+    "method": "full_official_pdf",
+    "review": "full",
+    "notes": [
+     "The center’s office is at 305 NE E Street, Grants Pass, OR 97526.",
+     "The card links to the state’s directory because no secure (https) website address for this center appears in the sources read."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://www.ilru.org/cil-directory/or",
+      "title": "ILRU: Oregon CIL Directory",
+      "scope": "Center websites and counties served; search excerpt."
+     }
+    ]
+   },
+   {
+    "id": "or-cil-ilr",
+    "name": "Independent Living Resources (Portland)",
+    "organization": "Independent Living Resources (ILR)",
+    "url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf",
+    "phone": "503-232-7411",
+    "counties": [
+     "Clackamas",
+     "Multnomah",
+     "Washington"
+    ],
+    "method": "full_official_pdf",
+    "review": "full",
+    "notes": [
+     "The center’s office is at 1839 NE Couch Street, Portland, OR 97232. TTY: 503-232-8408.",
+     "The card links to the state’s directory because no secure (https) website address for this center appears in the sources read."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://www.ilru.org/cil-directory/or",
+      "title": "ILRU: Oregon CIL Directory",
+      "scope": "Center websites and counties served; search excerpt."
+     }
+    ]
+   },
+   {
+    "id": "or-cil-lila",
+    "name": "Lane Independent Living Alliance (Eugene)",
+    "organization": "Lane Independent Living Alliance (LILA)",
+    "url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf",
+    "phone": "541-607-7020",
+    "counties": [
+     "Lane"
+    ],
+    "method": "full_official_pdf",
+    "review": "full",
+    "notes": [
+     "The center’s office is at 20 E. 13th Avenue, Eugene, OR 97401.",
+     "The card links to the state’s directory because no secure (https) website address for this center appears in the sources read."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://www.ilru.org/cil-directory/or",
+      "title": "ILRU: Oregon CIL Directory",
+      "scope": "Center websites and counties served; search excerpt."
+     }
+    ]
+   },
+   {
+    "id": "or-cil-spokes",
+    "name": "SPOKES Unlimited (Klamath Falls)",
+    "organization": "SPOKES Unlimited",
+    "url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf",
+    "phone": "541-883-7547",
+    "counties": [
+     "Klamath",
+     "Lake"
+    ],
+    "method": "full_official_pdf",
+    "review": "full",
+    "notes": [
+     "The center’s office is at 1006 Main Street, Klamath Falls, OR 97601.",
+     "The card links to the state’s directory because no secure (https) website address for this center appears in the sources read."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://www.ilru.org/cil-directory/or",
+      "title": "ILRU: Oregon CIL Directory",
+      "scope": "Center websites and counties served; search excerpt."
+     }
+    ]
+   },
+   {
+    "id": "or-cil-uvdn",
+    "name": "Umpqua Valley disAbilities Network (Roseburg)",
+    "organization": "Umpqua Valley disAbilities Network (UVDN)",
+    "url": "https://www.oregon.gov/odhs/aging-disability-services/Documents/cil-directory.pdf",
+    "phone": "541-672-6336",
+    "counties": [
+     "Douglas"
+    ],
+    "method": "full_official_pdf",
+    "review": "full",
+    "notes": [
+     "The center’s office is at 736 SE Jackson Street, Roseburg, OR 97470. TTY: 541-440-2882.",
+     "The card links to the state’s directory because no secure (https) website address for this center appears in the sources read."
+    ],
+    "extra_sources": [
+     {
+      "url": "https://www.ilru.org/cil-directory/or",
+      "title": "ILRU: Oregon CIL Directory",
+      "scope": "Center websites and counties served; search excerpt."
+     }
+    ]
+   }
+  ]
+ },
+ "programs": [
+  {
+   "id": "or-claims",
+   "name": "Oregon veterans: county veteran service officers for claims help",
+   "organization": "County veteran services offices and the Oregon Department of Veterans’ Affairs",
+   "url": "https://www.oregon.gov/odva/Services/Pages/County-Services.aspx",
+   "needs": [
+    "general_navigation",
+    "benefits_and_funding"
+   ],
+   "description": "Free help with VA claims, appeals, pension and survivor benefits from county veteran service officers, who are trained and certified by the Oregon Department of Veterans’ Affairs. Every county has an office.",
+   "next_step": "Choose your county for its office, or call the Oregon Department of Veterans’ Affairs at 800-692-9666 (503-373-2085).",
+   "constraints": [
+    "Many offices work by appointment and some are open only certain days; call before you go."
+   ],
+   "phone": "800-692-9666",
+   "phone_label": "Oregon Department of Veterans’ Affairs (800-692-9666)",
+   "phone_source": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Marion.aspx",
+   "review": "full",
+   "sources": [
+    {
+     "url": "https://www.oregon.gov/odva/Services/Pages/County-Services.aspx",
+     "title": "Oregon Department of Veterans’ Affairs: County Services Directory",
+     "scope": "Links to the 36 county pages; read in full."
+    },
+    {
+     "url": "https://www.oregon.gov/ODVA/Services/Pages/Counties/Marion.aspx",
+     "title": "Oregon Department of Veterans’ Affairs: Veteran Services in Marion County",
+     "scope": "Department contact 800-692-9666 or 503-373-2085 and the Marion County office; read in full."
+    }
+   ]
+  },
+  {
+   "id": "or-adrc",
+   "name": "Aging and Disability Resource Connection of Oregon",
+   "organization": "Oregon Department of Human Services, Aging and People with Disabilities",
+   "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/pages/contacts.aspx",
+   "needs": [
+    "general_navigation",
+    "help_at_home",
+    "equipment_home_accessibility"
+   ],
+   "description": "Oregon’s statewide aging and disability line. Trained staff talk through your situation and connect you to the local Area Agency on Aging for meals, in-home help, caregiver support and long-term care options. Military service is not required.",
+   "next_step": "Call 855-673-2372 (855-ORE-ADRC), or choose a county above for its Area Agency on Aging.",
+   "constraints": [
+    "Each program has its own eligibility and waitlist.",
+    "Give your county so the call reaches the right agency."
+   ],
+   "phone": "855-673-2372",
+   "phone_label": "ADRC of Oregon (855-673-2372)",
+   "phone_source": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/pages/contacts.aspx",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://www.oregon.gov/odhs/providers-partners/community-services-supports/pages/contacts.aspx",
+     "title": "Oregon Department of Human Services: Aging and disability contacts",
+     "scope": "Statewide ADRC number 855-673-2372; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "or-ship",
+   "name": "Medicare counseling (SHIBA) for Oregon",
+   "organization": "Oregon Department of Human Services, Senior Health Insurance Benefits Assistance (SHIBA)",
+   "url": "https://shiba.oregon.gov/get-help",
+   "needs": [
+    "benefits_and_funding"
+   ],
+   "description": "Free Medicare counseling from SHIBA’s certified volunteer counselors: plan choices, enrollment, costs and help paying for Medicare.",
+   "next_step": "Call SHIBA at 800-722-4134. For Medicare itself, call 800-MEDICARE (800-633-4227).",
+   "constraints": [
+    "Have your Medicare card and drug list ready."
+   ],
+   "phone": "800-722-4134",
+   "phone_label": "Oregon SHIBA (800-722-4134)",
+   "phone_source": "https://shiba.oregon.gov/get-help",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://shiba.oregon.gov/get-help",
+     "title": "Oregon SHIBA: Get help",
+     "scope": "Statewide phone 800-722-4134 and counseling sites; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "or-ombudsman",
+   "name": "Oregon Long-Term Care Ombudsman and adult abuse reporting",
+   "organization": "Oregon Office of the Long-Term Care Ombudsman",
+   "url": "https://sos.oregon.gov/blue-book/government/pages/long-term-care.aspx",
+   "needs": [
+    "resident_rights",
+    "general_navigation"
+   ],
+   "description": "Independent advocacy for residents of nursing homes, assisted living, residential care and adult foster homes.",
+   "next_step": "Call the ombudsman at 800-522-2602 (503-378-6533). To report suspected abuse, neglect or financial exploitation of an older adult or an adult with a disability, call the Oregon SAFEline at 855-503-SAFE (855-503-7233), 24 hours a day. In an emergency, call 911.",
+   "constraints": [
+    "The ombudsman acts with the resident’s permission and is not a licensing agency."
+   ],
+   "phone": "800-522-2602",
+   "phone_label": "Oregon Long-Term Care Ombudsman (800-522-2602)",
+   "phone_source": "https://sos.oregon.gov/blue-book/government/pages/long-term-care.aspx",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://sos.oregon.gov/blue-book/government/pages/long-term-care.aspx",
+     "title": "Oregon Blue Book: Office of the Long-Term Care Ombudsman",
+     "scope": "Telephone 503-378-6533 and toll-free 1-800-522-2602; search excerpt."
+    },
+    {
+     "url": "https://www.oregon.gov/odhs/report-abuse/",
+     "title": "Oregon Department of Human Services: How to report abuse or neglect",
+     "scope": "Call 855-503-SAFE (7233) about an older person or vulnerable adult; open 24 hours a day; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "or-legal-programs",
+   "name": "Free legal help for Oregon veterans and older adults",
+   "organization": "Legal Aid Services of Oregon and Oregon Law Center; Oregon State Bar",
+   "url": "https://oregon.gov/odhs/providers-partners/community-services-supports/Pages/legal-assistance.aspx",
+   "role": "legal_aid",
+   "needs": [
+    "resident_rights",
+    "general_navigation",
+    "housing"
+   ],
+   "description": "Oregon’s legal aid programs run a statewide Public Benefits Hotline for low-income Oregonians with problems getting or keeping benefits. Area Agencies on Aging fund some legal help for people 60 and older. The Oregon State Bar’s Military Assistance Panel connects deployed service members and their families with volunteer lawyers.",
+   "next_step": "Call the Public Benefits Hotline at 800-520-5292 (Monday and Thursday 1–4 p.m.; Tuesday and Wednesday 9 a.m.–noon). Ask your Area Agency on Aging about senior legal help. For the Military Assistance Panel or a lawyer referral, call the Oregon State Bar at 503-684-3763 or 800-452-7636.",
+   "constraints": [
+    "Legal aid screens by income and case type.",
+    "The Military Assistance Panel is for service members around deployment and their families."
+   ],
+   "phone": "800-520-5292",
+   "phone_label": "Oregon Public Benefits Hotline (800-520-5292)",
+   "phone_source": "https://oregon.gov/odhs/providers-partners/community-services-supports/Pages/legal-assistance.aspx",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://oregon.gov/odhs/providers-partners/community-services-supports/Pages/legal-assistance.aspx",
+     "title": "Oregon Department of Human Services: Legal assistance",
+     "scope": "Area Agencies on Aging fund legal help for people 60 and older; Oregon Law Center offices and the statewide public benefits hotline, 800-520-5292, with its hours; search excerpt."
+    },
+    {
+     "url": "https://www.osbar.org/public/ris",
+     "title": "Oregon State Bar: Programs to help you find the right lawyer",
+     "scope": "Lawyer Referral Service and Military Assistance Panel, 503-684-3763 or 800-452-7636; search excerpt."
+    }
+   ]
+  },
+  {
+   "id": "or-vahealth-systems",
+   "name": "VA health care systems serving Oregon",
+   "organization": "U.S. Department of Veterans Affairs",
+   "url": "https://www.va.gov/find-locations/?facilityType=health",
+   "role": "va_health_system",
+   "needs": [
+    "veteran_services",
+    "care_facilities"
+   ],
+   "description": "Oregon veterans are served mainly by the VA Portland Health Care System (Portland VA Medical Center, 3710 SW U.S. Veterans Hospital Road, 503-220-8262 or 800-949-1004), the Roseburg VA Health Care System (913 NW Garden Valley Boulevard, Roseburg, 541-440-1000) and the VA Southern Oregon Rehabilitation Center and Clinics in White City (541-826-2111), with clinics across the state.",
+   "next_step": "Use VA’s facility locator with your ZIP code to find the closest clinic. Not enrolled yet? Ask your county veteran service officer for help applying.",
+   "constraints": [
+    "Which system serves you depends on where you live; VA’s locator shows the right clinic."
+   ],
+   "phone": "503-220-8262",
+   "phone_label": "VA Portland Health Care System main line (503-220-8262)",
+   "phone_source": "https://www.va.gov/portland-health-care/contact-us/",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://www.va.gov/portland-health-care/contact-us/",
+     "title": "VA Portland health care: Contact us",
+     "scope": "Main phone 503-220-8262 and toll-free 800-949-1004; search excerpt."
+    },
+    {
+     "url": "https://www.va.gov/directory/guide/state_SUD.cfm?STATE=OR",
+     "title": "VA facility directory: Oregon",
+     "scope": "Roseburg VA Health Care System, 541-440-1000; VA Southern Oregon Rehabilitation Center, White City, 541-826-2111; search excerpt."
+    }
+   ]
+  }
+ ],
+ "adapter": {
+  "badge_county": "County veterans service office",
+  "badge_state": "County veterans service office",
+  "badge_statewide": "Oregon statewide line",
+  "published_in": "Published on the Oregon Department of Veterans’ Affairs county pages",
+  "agency_link": "Oregon Department of Veterans’ Affairs county services directory",
+  "officers_can": "County veteran service officers can",
+  "abuse_phone": "855-503-7233",
+  "abuse_label": "Oregon SAFEline, 855-503-SAFE, 24 hours a day"
+ },
+ "coverage_scope": "Referral edition. All 36 counties have a county veterans service office, a matched Area Agency on Aging and the statewide long-term care ombudsman; 25 counties are served by a Center for Independent Living.",
+ "coverage_note": "County veterans offices come from the Oregon Department of Veterans’ Affairs county pages. Area Agencies on Aging and their counties come from the Department of Human Services’ June 2026 overview, with each agency’s phone from its own or a state page. Centers for Independent Living come from the state’s 2024 directory; 11 counties have no center.",
+ "share_description": "County veterans offices, Area Agencies on Aging and long-term care ombudsman help across Oregon"
+}
