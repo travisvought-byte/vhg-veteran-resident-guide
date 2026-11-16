@@ -874,6 +874,36 @@
     ]
   },
   {
+    "code": "NH",
+    "name": "New Hampshire",
+    "page": "nh.html",
+    "share_page": "share-nh.html",
+    "qr": "assets/guide-qr-nh.svg",
+    "counties": 10,
+    "programs": "data/public/nh-programs.json",
+    "referrals": "data/public/nh-regional-referrals.json",
+    "offices": "data/public/new-hampshire-county-veterans-offices.json",
+    "resources": "data/public/new-hampshire-resources.json",
+    "statewide_area_names": [],
+    "coverage_scope": "Referral edition. All 10 counties have the NH Division of Veterans Services (seven with an open visitation site; Belknap, Strafford and Sullivan use the Division’s line), an Aging and Disability Resource Center, the statewide long-term care ombudsman and Granite State Independent Living.",
+    "coverage_note": "Veterans contacts come from the NH Division of Veterans Services’ VSOs and Sites page. Aging and Disability Resource Centers come from New Hampshire Family Voices’ list, checked against the state’s own location pages. The ombudsman and abuse lines come from the NH Department of Health and Human Services. Reviewed November 16, 2026. Contacts are not telephone-confirmed.",
+    "share_description": "state veterans service officers, Aging and Disability Resource Centers and long-term care ombudsman help across New Hampshire",
+    "share_replacements": [
+      [
+        "Updated October 8, 2026",
+        "Updated November 16, 2026"
+      ],
+      [
+        "county veterans offices, benefits and care referrals",
+        "state veterans service officers, benefits and care referrals"
+      ],
+      [
+        "County veterans offices",
+        "state veterans service officers"
+      ]
+    ]
+  },
+  {
     "code": "AK",
     "name": "Alaska",
     "starter": true,
@@ -1070,26 +1100,6 @@
     ],
     "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
     "coverage_note": "Starter edition. Every county uses the Montana Veterans Affairs Division and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
-    "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
-    "share_replacements": []
-  },
-  {
-    "code": "NH",
-    "name": "New Hampshire",
-    "starter": true,
-    "page": "nh.html",
-    "share_page": "share-nh.html",
-    "qr": "assets/guide-qr-nh.svg",
-    "counties": 1,
-    "programs": "data/public/nh-programs.json",
-    "referrals": "data/public/nh-regional-referrals.json",
-    "offices": "data/public/new-hampshire-county-veterans-offices.json",
-    "resources": "data/public/new-hampshire-resources.json",
-    "statewide_area_names": [
-      "All New Hampshire counties"
-    ],
-    "coverage_scope": "Starter edition: statewide veterans agency plus national aging, ombudsman and Medicare counseling routes. County offices are not listed yet.",
-    "coverage_note": "Starter edition. Every county uses the New Hampshire Division of Veterans Services and national locators until county research is added. Contacts reviewed 2026-11-02 on official websites; not telephone-confirmed.",
     "share_description": "the statewide veterans agency and national routes to local aging help, the long-term-care ombudsman and Medicare counseling",
     "share_replacements": []
   },
