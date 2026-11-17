@@ -19,7 +19,7 @@ Started November 15, 2026, at Travis's direction: one national finder, neighbori
 | ZIP code points the centroid file lacks | `data/public/zip-points-supplement.json` |
 | Page template | `templates/findbingo/index.html` |
 | Generator and validation | `scripts/findbingo_site.py` (run by `scripts/build_public.py`) |
-| Generated site | `findbingo-site/index.html`, `data.json`, `zips.json` |
+| Generated site | `findbingo-site/index.html`, `data.json`, `zips.json`, and one page per state (`michigan/index.html` and so on) |
 | Tests | `tests/findbingo.cjs` (part of `npm test`) |
 
 `findbingo-site/index.html` is the whole page; it loads `data.json` and `zips.json` from beside
@@ -32,6 +32,20 @@ https://guide.vethomeguard.org/findbingo-site/. Upload `index.html` to Wix again
 only when the page itself changes. Because the Wix page reads the lists from `main`, a page change
 that needs new data (a new state, for example) shows only after its pull request merges; until then
 the page hides state buttons the loaded data does not have.
+
+**State pages (added November 16, 2026).** The finder draws its lists with JavaScript, so search engines
+saw one page with no listings. Each covered state (except Ohio, whose page is the Ohio finder at /ohio/) now
+also has a plain page, for example https://www.findbingo.org/michigan/, with its own title, description,
+canonical address and heading, a ZIP search box that opens the finder, and every listing written out as
+HTML by county with "Jump to your county" links. Indiana's page lists licenses current on the lists' date.
+The home page's state buttons link to these pages (with the lists loaded, the finder still shows the state
+in place), they are in `sitemap.xml`, and short addresses such as findbingo.org/mi or /FL forward to them
+(`_redirects`). The home page carries WebSite markup naming Veteran Home Guardians as publisher; state
+pages carry breadcrumb markup. There is no Event markup, because the lists hold weekly schedules, not
+dated events.
+
+**No counts.** Travis's rule (November 16, 2026): never state how many halls, places, groups or counties
+are listed, anywhere on the site. `tests/findbingo.cjs` checks the state pages and the finder's wording.
 
 Ohio data is not copied into the national page. Ohio searches hand off to https://www.findbingo.org/ohio/
 with the same ZIP code and distance, so Ohio has one source of truth.
@@ -115,6 +129,36 @@ U.S. Census Geocoder match for the bingo hall at 228 N 20th St.
 1. Re-read the Michigan lookup and the Indiana list as above.
 2. Update the JSON files and each record's `reviewed_on`.
 3. Run `python3 scripts/build_public.py` and `node tests/findbingo.cjs`, then open a pull request.
+
+## Every state (added November 17, 2026)
+
+Travis's direction: populate findbingo.org across the whole country. The build is top-down: every
+state and DC has an entry in `data/public/bingo-states.json` (alphabetical by name), so every ZIP code
+works and every state has a page and a free way to send game times. States are then researched in
+batches and moved up:
+
+| coverage | meaning |
+|---|---|
+| `pending` | Not researched yet. Only `code`, `name`, `coverage`, `about`, `reviewed_on`. The card and page ask for game times and claim nothing about the state. The page carries `noindex` and stays out of `sitemap.xml`. |
+| `none` | Researched: regulator named and sourced, no public list of games found. |
+| `starter` | Organizer-published schedules, one file per state (`STARTER_FILES`). |
+| `licenses` | A state list of licensed groups without game days (Indiana). |
+| `times` | A state list with days and hours (Michigan). |
+
+To move a state up: replace its `pending` entry with the researched fields (see Kentucky for `none`,
+Florida for `starter`), add its file to `STARTER_FILES` if it has listings, and run the build. The home
+page shows researched states as buttons and keeps pending ones behind "More states".
+
+Researched so far beyond the first nine (November 17, 2026), all `none`: **Texas** (regulated by the
+Department of Licensing and Regulation since 2025; the state has its own hall finder on txbingo.org,
+which is the best next import because Texas licenses name each game's days and times), **Missouri**
+(Gaming Commission, Charitable Games Division) and **Massachusetts** (beano, State Lottery Commission).
+
+ZIP code to state comes from `data/public/zip-states.json`, built from the state column of the same
+Midwire/GeoNames file as the ZIP centroids (checksum recorded there): `zip3` maps the first three digits
+to a state and `exceptions` lists the few ZIP codes that sit in another state. The file covers the 50
+states and DC only, so territories and military mail are not found. `zips.json` now holds every one of
+those ZIP codes (about 1 MB before compression).
 
 ## The domain
 

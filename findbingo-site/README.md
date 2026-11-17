@@ -7,11 +7,11 @@ centroids. Do not edit these files by hand; run `python3 scripts/build_public.py
 - `index.html` is the whole page. The same files are written to `bingo-site/findbingo/`, which the
   Ohio-Bingo repository mirrors and Cloudflare serves at https://www.findbingo.org/ (see
   docs/FINDBINGO.md).
-- `data.json` (the lists) and `zips.json` (ZIP code points for the covered states) are loaded by the
+- `data.json` (the lists) and `zips.json` (ZIP code points for every state and DC) are loaded by the
   page from https://guide.vethomeguard.org/findbingo-site/, so list updates reach findbingo.org as soon
   as a pull request merges.
 - The Ohio Bingo Finder is served from the same site at https://www.findbingo.org/ohio/
   (`bingo-site/findbingo/ohio/`, built by `scripts/bingo_site.py`). Ohio halls that want to work with
   Veteran Home Guardians go to https://www.ohiobingo.org/.
 
-Lists updated November 16, 2026.
+Lists updated November 17, 2026.

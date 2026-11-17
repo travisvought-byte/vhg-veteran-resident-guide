@@ -12,7 +12,14 @@ for (const f of ['index.html', 'data.json', 'zips.json'])  // the Ohio-Bingo mir
 assert(fs.existsSync(path.join(root, 'bingo-site/findbingo/ohio/index.html')), 'Ohio finder is served at findbingo.org/ohio/');
 const redirects = fs.readFileSync(path.join(root, 'bingo-site/findbingo/_redirects'), 'utf8').trim().split('\n').map(l => l.split(' '));
 assert(redirects.some(r => r[0] === '/oh') && !redirects.some(r => r[0] === '/ohio' || r[0] === '/ohio/'), 'spellings forward; /ohio itself is the finder');
-for (const r of redirects) assert(r.length === 3 && r[0].startsWith('/') && r[1] === '/ohio/' && r[2] === '301', r.join(' '));
+// Short addresses for posters: /mi and /MI open the Michigan page. No rule may match its own target.
+// Every state and DC has an entry, in alphabetical order by name; the address is the name in lower case with hyphens.
+const SLUGS = Object.fromEntries(states.map(s => [s.code, s.name.toLowerCase().replaceAll(' ', '-')]));
+assert.equal(states.length, 51);
+assert.deepEqual(states.map(s => s.name), states.map(s => s.name).sort(), 'states are in alphabetical order');
+assert(SLUGS.DC === 'district-of-columbia' && SLUGS.WV === 'west-virginia');
+for (const r of redirects) assert(r.length === 3 && r[0].startsWith('/') && Object.values(SLUGS).some(s => r[1] === '/' + s + '/') && r[2] === '301' && r[0].toLowerCase() !== r[1], r.join(' '));
+assert(redirects.some(r => r[0] === '/mi' && r[1] === '/michigan/') && redirects.some(r => r[0] === '/FL' && r[1] === '/florida/'));
 assert.equal(data.generated_on, [...states.map(s => s.reviewed_on), ...data.venues.map(v => v.reviewed_on), ...data.licensed.map(r => r.reviewed_on)].sort().pop());
 assert(data.venues.length > 150 && data.licensed.length > 300, 'Michigan venues and Indiana licenses are loaded');
 for (const r of [...data.venues, ...data.licensed]) assert(zips[r.zip], 'every listing can be placed by ZIP: ' + r.id);
@@ -21,14 +28,20 @@ for (const v of data.venues) {
   assert.deepEqual(order, [...order].sort((a, b) => a - b), 'sessions run Monday to Sunday: ' + v.id);
 }
 assert(zips['49037'], 'Census point fills the ZIP missing from the centroid file');
-assert(!zips['90210'] && zips['10001'] && zips['84770'] && zips['43334'] && zips['48161'] && zips['46733'] && zips['40601'] && zips['25301'] && zips['15222'] && zips['33701'] && zips['32208']);
+assert(zips['90210'] && zips['99501'] && zips['96813'] && zips['20001'] && !zips['00601'] && !zips['09001'] && zips['10001'] && zips['84770'] && zips['43334'] && zips['48161'] && zips['46733'] && zips['40601'] && zips['25301'] && zips['15222'] && zips['33701'] && zips['32208']);
 assert(!Object.keys(zips).some(z => z.startsWith('340')), 'military ZIP codes are not Florida');
+assert(data.zip3['902'] === 'CA' && data.zip3['995'] === 'AK' && data.zip3['200'] === 'DC' && !data.zip3['006'] && data.zip_exceptions['06390'] === 'NY', 'ZIP codes map to states from the source file');
+for (const z of Object.keys(zips)) assert(data.zip_exceptions[z] || data.zip3[z.slice(0, 3)], 'every published ZIP has a state: ' + z);
 
 const static_ = new JSDOM(html).window.document;
 assert.equal(static_.querySelector('link[rel=canonical]').href, 'https://www.findbingo.org/');
-assert.deepEqual([...static_.querySelectorAll('#state-buttons a')].map(a => a.dataset.state), ['MI', 'IN', 'OH', 'KY', 'WV', 'PA', 'NY', 'FL', 'UT']);
+// States with a list or state research are the main buttons; the rest sit behind one "more states" control.
+const ready = states.filter(s => s.coverage !== 'pending').map(s => s.code), waiting = states.filter(s => s.coverage === 'pending').map(s => s.code);
+assert.deepEqual([...static_.querySelectorAll('#state-buttons > a')].map(a => a.dataset.state), ready);
+assert.deepEqual([...static_.querySelectorAll('#state-buttons details.more-states a')].map(a => a.dataset.state), waiting);
+for (const c of ['FL', 'IN', 'KY', 'MI', 'NY', 'OH', 'PA', 'UT', 'WV']) assert(ready.includes(c), c + ' keeps its list');
 assert.equal(static_.querySelectorAll('script[src]').length, 0, 'no outside scripts');
-assert.deepEqual([...static_.querySelectorAll('#about-states h3')].map(h => h.textContent), states.map(s => s.name));
+assert.deepEqual([...static_.querySelectorAll('#about-states h3')].map(h => h.textContent), states.filter(s => s.coverage !== 'pending').map(s => s.name).concat('Every other state'), 'sources are given for researched states; the rest are named together');
 assert(static_.querySelector('footer a[href="https://creativecommons.org/licenses/by/3.0/"]'), 'ZIP data attribution');
 assert(!/\b\d+ (halls|venues|locations|counties)\b/i.test(static_.querySelector('header').textContent), 'no headline counts');
 
@@ -78,7 +91,7 @@ assert.equal(w0.timeRange('12:00', '16:00'), 'noon to 4 p.m.');
 assert.equal(w0.timeRange('16:00', '00:00'), '4 p.m. to midnight');
 assert.equal(w0.timeRange('21:31', '02:00'), '9:31 p.m. to 2 a.m.');
 assert.equal(w0.timeRange('10:30', '14:30'), '10:30 a.m. to 2:30 p.m.');
-assert.equal(w0.stateOfZip('48161') + w0.stateOfZip('46733') + w0.stateOfZip('43334') + w0.stateOfZip('40601') + w0.stateOfZip('25301') + w0.stateOfZip('15222') + w0.stateOfZip('33701') + w0.stateOfZip('34001') + w0.stateOfZip('10001') + w0.stateOfZip('84770') + w0.stateOfZip('90210'), 'MIINOHKYWVPAFLNYUT');
+assert.equal(w0.stateOfZip('48161') + w0.stateOfZip('46733') + w0.stateOfZip('43334') + w0.stateOfZip('40601') + w0.stateOfZip('25301') + w0.stateOfZip('15222') + w0.stateOfZip('33701') + w0.stateOfZip('34001') + w0.stateOfZip('10001') + w0.stateOfZip('84770') + w0.stateOfZip('90210') + w0.stateOfZip('06390') + w0.stateOfZip('00601'), 'MIINOHKYWVPAFLNYUTCANY');
 const fake = {sessions: [{day: 1, start: '09:00', end: '11:00'}, {day: 3, start: '16:00', end: '00:00'}]};
 assert.equal(w0.nextGame(fake, '', '2026-11-16', 600), '2026-11-16', 'still on this morning');
 assert.equal(w0.nextGame(fake, '', '2026-11-16', 700), '2026-11-18', 'this morning is over, so Wednesday');
@@ -102,7 +115,7 @@ assert.equal(w0.document.getElementById('count').textContent, 'Type your ZIP cod
 p = await open('?zip=48066&radius=10');
 assert.equal(p.count, 'Bingo within 10 miles of 48066 · closest first');
 assert.equal(p.cards[0], 'mi-rosemack-bingo-roseville');
-assert.match(p.groups[0], /^Bingo with game days \(\d+\)$/);
+assert.equal(p.groups[0], 'Bingo with game days', 'no counts on the site');
 const rosemack = p.d.getElementById('mi-rosemack-bingo-roseville');
 assert.match(rosemack.querySelector('.when').textContent, /Next bingo day: Today/);
 assert.match(rosemack.querySelector('.sessions').textContent, /Monday, 4:30 to 10 p\.m\. · Gesu School/);
@@ -148,6 +161,7 @@ assert(!p.cards.some(id => id.startsWith('in-')));
 more.click();
 assert(p.d.querySelector('#results article[id^="in-"]'), 'Show them too reveals the Indiana groups');
 assert(p.d.querySelector('#more-note button[data-more="0"]'));
+assert(!/\d/.test(p.d.getElementById('more-note').textContent), 'no counts on the site');
 
 // States without a public list: say so, and invite halls to send game times.
 p = await open('?zip=40601');
@@ -166,7 +180,7 @@ assert.equal(p.d.querySelector('#state-FL a[target]').href, 'https://www.flsenat
 const fl = data.venues.filter(v => v.state === 'FL');
 assert(fl.length >= 5 && fl.every(v => v.kind && v.phone && v.source_url && v.schedule_note));
 p = await open('?state=FL');
-assert.equal(p.count, fl.length + ' Florida bingo places with game days');
+assert.equal(p.count, 'Florida bingo places with game days');
 assert.deepEqual(p.cards, [...fl].sort((a, b) => a.county.localeCompare(b.county) || a.city.localeCompare(b.city) || a.name.localeCompare(b.name)).map(v => v.id).concat('state-FL'));
 p = await open('?zip=32208&radius=10');
 assert.equal(p.count, 'Bingo within 10 miles of 32208 · closest first');
@@ -192,7 +206,7 @@ for (const [code, name, min] of [['PA', 'Pennsylvania', 4], ['NY', 'New York', 3
   const rows = data.venues.filter(v => v.state === code);
   assert(rows.length >= min && rows.every(v => v.kind && v.source_url && v.schedule_note), name + ' starter list');
   p = await open('?state=' + code);
-  assert.equal(p.count, rows.length + ' ' + name + ' bingo places with game days');
+  assert.equal(p.count, name + ' bingo places with game days');
   assert.equal(p.cards[p.cards.length - 1], 'state-' + code, name + ' ends with the way to send game times');
   for (const v of rows) assert(p.d.querySelector('#' + v.id + ' a[href^="mailto:travis@vethomeguard.org?subject=FindBingo.org%20correction"]'), v.id + ' has a report link');
 }
@@ -208,21 +222,40 @@ assert(p.cards.includes('ut-st-george-senior-citizen-center-st-george') && p.car
 assert.match(p.d.getElementById('state-UT').textContent, /free bingo at senior centers/);
 assert.match(p.d.getElementById('ut-st-george-senior-citizen-center-st-george').querySelector('.badge').textContent, /Senior center bingo/);
 
+// A state we have not researched yet: every ZIP code still works, and the card asks for game times
+// without claiming anything about the state.
+p = await open('?zip=30303');
+assert.equal(p.cards[0], 'state-GA');
+assert.match(p.d.getElementById('state-GA').textContent, /We have not built a Georgia bingo list yet/);
+assert(p.d.querySelector('#state-GA a[href^="mailto:travis@vethomeguard.org?subject=Bingo%20game%20times%20in%20Georgia"]'));
+assert(!p.d.querySelector('#state-GA a[target]'), 'no regulator is named for a state we have not researched');
+// A researched state without a loaded list names its regulator, and Texas points to the state's own hall finder.
+p = await open('?zip=75201');
+assert.match(p.d.getElementById('state-TX').textContent, /state runs its own bingo hall finder/);
+assert.equal(p.d.querySelector('#state-TX a[target]').href, 'https://www.txbingo.org/');
+for (const slug of ['texas', 'missouri', 'massachusetts']) assert(fs.readFileSync(path.join(root, 'bingo-site/findbingo/sitemap.xml'), 'utf8').includes(`<loc>https://www.findbingo.org/${slug}/</loc>`), slug + ' is researched, so it is in the sitemap');
+p = await open('?state=AK');
+assert.equal(p.count, 'Alaska: no game list yet');
+const ga = new JSDOM(fs.readFileSync(path.join(site, 'georgia/index.html'), 'utf8')).window.document;
+assert.equal(ga.querySelector('meta[name=robots]').content, 'noindex,follow', 'a page with nothing to say yet stays out of search results');
+assert(ga.querySelector('#run-a-game a[href^="mailto:travis@vethomeguard.org?subject=Bingo%20game%20times%20in%20Georgia"]'));
+assert(!new JSDOM(fs.readFileSync(path.join(site, 'michigan/index.html'), 'utf8')).window.document.querySelector('meta[name=robots]'));
+
 // ZIP mistakes get plain-language help.
-p = await open('?zip=90210');
-assert.match(p.status, /We could not find ZIP code 90210 in the states we cover so far: Michigan, Indiana, Ohio, Kentucky, West Virginia, Pennsylvania, New York, Florida, Utah\./);
+p = await open('?zip=00601');
+assert.match(p.status, /We could not find ZIP code 00601\. Please check the five numbers\./);
 assert.equal(p.cards.length, 0);
 p = await open('?zip=4816');
 assert.match(p.status, /Please type the five numbers of your ZIP code/);
 
 // State and county browsing.
 p = await open('?state=MI&county=Macomb');
-const macomb = data.venues.filter(v => v.county === 'Macomb').length;
-assert.equal(p.count, macomb + ' Michigan bingo halls with game days in Macomb County');
+assert.equal(p.count, 'Michigan bingo halls with game days in Macomb County');
+assert.deepEqual(p.cards.sort(), data.venues.filter(v => v.county === 'Macomb').map(v => v.id).sort());
 assert.equal(p.d.getElementById('county-wrap').hidden, false);
 assert.equal(p.d.querySelector('#state-buttons a[data-state="MI"]').getAttribute('aria-current'), 'true');
 p = await open('?state=IN');
-assert.equal(p.count, data.licensed.length + ' Indiana groups licensed for bingo');
+assert.equal(p.count, 'Indiana groups licensed for bingo');
 p = await open('?state=OH');
 assert.deepEqual(p.cards, ['state-OH']);
 assert.equal(p.d.querySelector('#state-OH a.solid').href, 'https://www.findbingo.org/ohio/');
@@ -232,6 +265,65 @@ assert.deepEqual(p.cards, ['state-WV']);
 // Names are shown as text, never as markup.
 p = await open('?state=MI&county=Ingham');
 assert(p.d.getElementById('results').textContent.includes('F & AM 70'));
+
+// One plain page per state, for search engines and people without JavaScript: a real title, description,
+// canonical address and heading, and the state's listings written out as HTML, by county. Never counts.
+const sitemap = fs.readFileSync(path.join(root, 'bingo-site/findbingo/sitemap.xml'), 'utf8');
+const home = static_;
+const ld = JSON.parse(home.querySelector('script[type="application/ld+json"]').textContent);
+assert.equal(ld['@type'], 'WebSite');
+assert.equal(ld.url, 'https://www.findbingo.org/');
+assert.equal(ld.publisher.name, 'Veteran Home Guardians');
+assert(home.querySelector('footer a[href="https://mobilitytalk.org/states/"]') && home.querySelector('footer a[href="https://travisvought.com/"]'));
+const countWords = /\b\d[\d,]* (bingo )?(halls?|venues?|locations?|places?|counties|groups?|games?|listings?|senior centers?)\b/i;
+for (const s of states) {
+  const slug = SLUGS[s.code];
+  assert.equal(home.querySelector(`#state-buttons a[data-state="${s.code}"]`).getAttribute('href'), slug + '/', 'state buttons link to the state page');
+  assert.equal(sitemap.includes(`<loc>https://www.findbingo.org/${slug}/</loc>`), s.coverage !== 'pending', slug + ' is in the sitemap once it has content');
+  if (s.code === 'OH') continue;  // Ohio's page is the Ohio Bingo Finder
+  const file = path.join(root, 'bingo-site/findbingo', slug, 'index.html'), text = fs.readFileSync(file, 'utf8');
+  assert.equal(text, fs.readFileSync(path.join(site, slug, 'index.html'), 'utf8'), slug + ' copies match');
+  const d = new JSDOM(text).window.document;
+  assert.equal(d.querySelector('link[rel=canonical]').href, `https://www.findbingo.org/${slug}/`);
+  assert(d.title.startsWith(s.name + ' Bingo') && d.title.endsWith('| FindBingo.org'), d.title);
+  assert(d.querySelector('meta[name=description]').content.includes(s.name));
+  assert.equal(d.querySelector('h1').textContent, 'Bingo in ' + s.name);
+  assert.equal(JSON.parse(d.querySelector('script[type="application/ld+json"]').textContent)['@type'], 'BreadcrumbList');
+  assert(text.includes("vhg-guide.goatcounter.com/count"), slug + ' counts page views');
+  assert.equal(d.querySelectorAll('script[src]').length, 0, 'no outside scripts');
+  assert(!countWords.test(d.body.textContent), slug + ': no counts on the site');
+  const form = d.querySelector('form.zip-box');
+  assert.equal(form.getAttribute('action'), '../');
+  assert(form.querySelector('input[name=zip]') && form.querySelector('select[name=radius]'), 'the ZIP search opens the finder');
+  assert.equal(d.querySelectorAll('.state-buttons a').length, states.length - 1, 'links to every other state');
+  for (const a of d.querySelectorAll('a[href^="../"]')) {
+    const target = path.join(root, 'bingo-site/findbingo', slug, a.getAttribute('href'));
+    assert(fs.existsSync(target.endsWith('/') ? path.join(target, 'index.html') : target) || fs.existsSync(path.join(target, 'index.html')), a.getAttribute('href'));
+  }
+  const ids = [...d.querySelectorAll('#listings article')].map(a => a.id);
+  const today = data.generated_on;
+  const expected = s.coverage === 'licenses' ? data.licensed.filter(r => r.state === s.code && r.license_expires >= today) : data.venues.filter(v => v.state === s.code);
+  assert.deepEqual(ids.sort(), expected.map(r => r.id).sort(), slug + ' lists every record');
+  if (['none'].includes(s.coverage)) assert(d.querySelector('#listings .empty'));
+  for (const c of new Set(expected.map(r => r.county))) assert(d.querySelector(`#listings h2`) && [...d.querySelectorAll('#listings h2')].some(h => h.textContent === c + ' County'), c);
+  for (const a of d.querySelectorAll('.counties a')) assert(d.getElementById(a.getAttribute('href').slice(1)), 'county jump ' + a.getAttribute('href'));
+}
+const mi = new JSDOM(fs.readFileSync(path.join(site, 'michigan/index.html'), 'utf8')).window.document;
+const rose = mi.getElementById('mi-rosemack-bingo-roseville');
+assert.match(rose.querySelector('.sessions').textContent, /Monday, 4:30 to 10 p\.m\. · Gesu School/, 'the same time wording as the finder');
+assert.match(rose.querySelector('.note').textContent, /Michigan's weekly bingo license list/);
+assert.equal(rose.querySelector('.big-actions a.outline').href, 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent('20789 E 13 Mile Road, Roseville, MI 48066'));
+assert.match(decodeURIComponent(rose.querySelector('.small-links a').getAttribute('href')), /^mailto:travis@vethomeguard\.org\?subject=FindBingo\.org correction: .*\(mi-rosemack-bingo-roseville\)/);
+if (pending.length) assert.match(mi.getElementById('pending-MI').textContent, new RegExp(pending[pending.length - 1]));
+assert(mi.body.textContent.includes('F & AM 70'), 'names are text');
+const fla = new JSDOM(fs.readFileSync(path.join(site, 'florida/index.html'), 'utf8')).window.document;
+assert.equal(fla.querySelector('#fl-carvill-senior-center-jacksonville .big-actions a.solid').getAttribute('href'), 'tel:9042556650');
+assert.match(fla.querySelector('#fl-charlie-t-joseph-senior-center-jacksonville .sessions').textContent, /Monday, time not posted/);
+const ind = new JSDOM(fs.readFileSync(path.join(site, 'indiana/index.html'), 'utf8')).window.document;
+assert.match(ind.getElementById('in-000114').textContent, /license 000114 \(Annual Activity\), on the state list through October 31, 2027/);
+const ky = new JSDOM(fs.readFileSync(path.join(site, 'kentucky/index.html'), 'utf8')).window.document;
+assert(ky.querySelector('#run-a-game a[href^="mailto:travis@vethomeguard.org?subject=Bingo%20game%20times%20in%20Kentucky"]'));
+assert(ky.querySelector('#about a[href="https://dcg.ky.gov/"]'));
 
 console.log('FindBingo.org checks passed.');
 })().catch(e => { console.error(e); process.exit(1); });
