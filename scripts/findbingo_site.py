@@ -12,12 +12,14 @@ from datetime import date
 from html import escape
 from urllib.parse import quote
 
-ORDER = ['MI', 'IN', 'OH', 'KY', 'WV', 'PA', 'NY', 'FL', 'UT']
+# Every state and DC has an entry in bingo-states.json, in alphabetical order by name. A state we have not
+# researched yet has coverage "pending": a plain "send us your games" card and page, kept out of search
+# engines until it has real content.
+STATES = {'AL': 'Alabama', 'AK': 'Alaska', 'AZ': 'Arizona', 'AR': 'Arkansas', 'CA': 'California', 'CO': 'Colorado', 'CT': 'Connecticut', 'DE': 'Delaware', 'DC': 'District of Columbia', 'FL': 'Florida', 'GA': 'Georgia', 'HI': 'Hawaii', 'ID': 'Idaho', 'IL': 'Illinois', 'IN': 'Indiana', 'IA': 'Iowa', 'KS': 'Kansas', 'KY': 'Kentucky', 'LA': 'Louisiana', 'ME': 'Maine', 'MD': 'Maryland', 'MA': 'Massachusetts', 'MI': 'Michigan', 'MN': 'Minnesota', 'MS': 'Mississippi', 'MO': 'Missouri', 'MT': 'Montana', 'NE': 'Nebraska', 'NV': 'Nevada', 'NH': 'New Hampshire', 'NJ': 'New Jersey', 'NM': 'New Mexico', 'NY': 'New York', 'NC': 'North Carolina', 'ND': 'North Dakota', 'OH': 'Ohio', 'OK': 'Oklahoma', 'OR': 'Oregon', 'PA': 'Pennsylvania', 'RI': 'Rhode Island', 'SC': 'South Carolina', 'SD': 'South Dakota', 'TN': 'Tennessee', 'TX': 'Texas', 'UT': 'Utah', 'VT': 'Vermont', 'VA': 'Virginia', 'WA': 'Washington', 'WV': 'West Virginia', 'WI': 'Wisconsin', 'WY': 'Wyoming'}
+ORDER = list(STATES)
 # One file of organizer-published schedules per starter state (coverage "starter").
 STARTER_FILES = {'PA': 'pennsylvania-bingo.json', 'NY': 'new-york-bingo.json', 'FL': 'florida-bingo.json', 'UT': 'utah-bingo.json'}
-# First three ZIP digits for each covered state (USPS prefix ranges).
-PREFIXES = {'NY': (100, 149), 'PA': (150, 196), 'WV': (247, 268), 'FL': (320, 349), 'KY': (400, 427), 'OH': (430, 459), 'IN': (460, 479), 'MI': (480, 499), 'UT': (840, 847)}
-COVERAGE = {'times', 'licenses', 'starter', 'ohio_finder', 'none'}
+COVERAGE = {'times', 'licenses', 'starter', 'ohio_finder', 'none', 'pending'}
 PHONE = re.compile(r'\d{3}-\d{3}-\d{4}')
 TIME = re.compile(r'(?:[01]\d|2[0-3]):[0-5]\d')
 REPO_RAW = 'https://raw.githubusercontent.com/travisvought-byte/vhg-veteran-resident-guide/'
@@ -30,17 +32,28 @@ DATA_SOURCES = ['', 'https://guide.vethomeguard.org/findbingo-site/', REPO_RAW +
 REDIRECTS = ''.join(f'{src} /ohio/ 301\n' for src in ('/Ohio', '/OHIO', '/oh', '/oh/', '/OH', '/OH/'))
 
 
+ZIP_STATES = {}
+
+
+def _load_zip_states(root):
+    """ZIP code to state, from the state column of the ZIP centroid source (data/public/zip-states.json)."""
+    table = json.loads((root / 'data/public/zip-states.json').read_text())
+    assert set(table['zip3'].values()) == set(STATES) and set(table['exceptions'].values()) <= set(STATES)
+    ZIP_STATES.update(zip3=table['zip3'], exceptions=table['exceptions'])
+
+
 def _state_of_zip(z):
-    p = int(z[:3])
-    if p == 340:  # military mail (APO/FPO AA), not Florida
-        return ''
-    return next((s for s, (lo, hi) in PREFIXES.items() if lo <= p <= hi), '')
+    return ZIP_STATES['exceptions'].get(z) or ZIP_STATES['zip3'].get(z[:3], '')
 
 
 def validate(states, venues, licensed, zips):
     assert [s['code'] for s in states] == ORDER, 'bingo-states.json lists the covered states in order'
     for s in states:
-        assert s['coverage'] in COVERAGE, s['code']
+        assert s['coverage'] in COVERAGE and s['name'] == STATES[s['code']], s['code']
+        if s['coverage'] == 'pending':
+            # Not researched yet: nothing is claimed about the state, so there is nothing to source.
+            assert set(s) == {'code', 'name', 'coverage', 'about', 'reviewed_on'} and s['about'] and date.fromisoformat(s['reviewed_on']), s['code']
+            continue
         for field in ('name', 'about', 'regulator_label', 'regulator_url', 'regulator_note', 'reviewed_on', 'sources'):
             assert s.get(field), (s['code'], field)
         assert s['regulator_url'].startswith('https://')
@@ -108,6 +121,7 @@ def _date_label(iso):
 
 
 def make_findbingo(root):
+    _load_zip_states(root)
     states = json.loads((root / 'data/public/bingo-states.json').read_text())
     venues = json.loads((root / 'data/public/michigan-weekly-bingo.json').read_text())
     for code in ORDER:
@@ -126,6 +140,9 @@ def make_findbingo(root):
     generated_on = max([s['reviewed_on'] for s in states] + [r['reviewed_on'] for r in venues + licensed])
     data = {
         'generated_on': generated_on,
+        # First three ZIP digits to state, plus the few ZIP codes that sit in another state.
+        'zip3': ZIP_STATES['zip3'],
+        'zip_exceptions': ZIP_STATES['exceptions'],
         'states': [_public_state(s) for s in states],
         'venues': [_public_record(v, ('id', 'state', 'kind', 'name', 'organizations', 'address', 'city', 'zip', 'county', 'phone', 'sessions',
                                       'audience', 'hours', 'schedule_note', 'notes', 'source_url', 'source_label', 'reviewed_on')) for v in venues],
@@ -133,9 +150,17 @@ def make_findbingo(root):
     }
     data_json = json.dumps(data, ensure_ascii=False, separators=(',', ':'))
     # Each button links to that state's own page (crawlable); with the lists loaded, the finder shows the state in place.
-    buttons = ''.join(f'<a href="{SLUGS[s["code"]]}/" data-state="{s["code"]}">{escape(s["name"])}</a>' for s in states)
+    def button(s):
+        return f'<a href="{SLUGS[s["code"]]}/" data-state="{s["code"]}">{escape(s["name"])}</a>'
+    # States with a list or state research come first; the rest sit behind one "more states" control so the
+    # page stays simple for people who struggle with websites.
+    buttons = (''.join(button(s) for s in states if s['coverage'] != 'pending')
+               + '<details class="more-states"><summary>More states: send us your games</summary><div>'
+               + ''.join(button(s) for s in states if s['coverage'] == 'pending') + '</div></details>')
     about = ''
     for s in states:
+        if s['coverage'] == 'pending':
+            continue
         pairs = []
         for url, label in ((s.get('list_url'), s.get('list_label')), (s.get('finder_url'), 'Ohio Bingo Finder'), (s['regulator_url'], s['regulator_label'])):
             if url and url not in [u for u, _ in pairs]:
@@ -144,6 +169,10 @@ def make_findbingo(root):
         as_of = f' (list dated {_date_label(s["list_as_of"])})' if s.get('list_as_of') else ''
         about += (f'<h3><a href="{SLUGS[s["code"]]}/">{escape(s["name"])}</a></h3><p>{escape(s["about"])} {escape(s["regulator_note"])}</p>'
                   f'<p class="small">Checked {_date_label(s["reviewed_on"])}{as_of}. Sources: {links}</p>')
+    waiting = [s for s in states if s['coverage'] == 'pending']
+    if waiting:
+        about += ('<h3>Every other state</h3><p>We have not built lists for these states yet. Each has its own page with a free way to send us game times: '
+                  + ', '.join(f'<a href="{SLUGS[s["code"]]}/">{escape(s["name"])}</a>' for s in waiting) + '.</p>')
     page = (root / 'templates/findbingo/index.html').read_text()
     for key, value in (('__SOURCES__', json.dumps(DATA_SOURCES)), ('__STATE_BUTTONS__', buttons), ('__ABOUT__', about),
                        ('__UPDATED__', _date_label(generated_on))):
@@ -158,7 +187,7 @@ centroids. Do not edit these files by hand; run `python3 scripts/build_public.py
 - `index.html` is the whole page. The same files are written to `bingo-site/findbingo/`, which the
   Ohio-Bingo repository mirrors and Cloudflare serves at https://www.findbingo.org/ (see
   docs/FINDBINGO.md).
-- `data.json` (the lists) and `zips.json` (ZIP code points for the covered states) are loaded by the
+- `data.json` (the lists) and `zips.json` (ZIP code points for every state and DC) are loaded by the
   page from https://guide.vethomeguard.org/findbingo-site/, so list updates reach findbingo.org as soon
   as a pull request merges.
 - The Ohio Bingo Finder is served from the same site at https://www.findbingo.org/ohio/
@@ -215,10 +244,17 @@ Lists updated {_date_label(generated_on)}.
 # and its listings written out as HTML, so "bingo in Michigan" searches can land on Michigan's list.
 # Travis's rule (November 16, 2026): never state counts of halls, locations or counties on the site.
 SITE = 'https://www.findbingo.org'
-SLUGS = {'MI': 'michigan', 'IN': 'indiana', 'OH': 'ohio', 'KY': 'kentucky', 'WV': 'west-virginia',
-         'PA': 'pennsylvania', 'NY': 'new-york', 'FL': 'florida', 'UT': 'utah'}
+SLUGS = {code: name.lower().replace(' ', '-') for code, name in STATES.items()}
 # Ohio's page is the Ohio Bingo Finder (built by bingo_site.py); the rest are built here.
 STATE_PAGES = tuple(slug + '/' for code, slug in SLUGS.items() if code != 'OH')
+
+
+def indexed_state_pages(root):
+    """State pages that belong in the sitemap: every state except Ohio (listed with its finder) and pending ones."""
+    states = json.loads((root / 'data/public/bingo-states.json').read_text())
+    return tuple(SLUGS[s['code']] + '/' for s in states if s['code'] != 'OH' and s['coverage'] != 'pending')
+
+
 DAY_NAMES = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 EMAIL = 'travis@vethomeguard.org'
 
@@ -320,6 +356,9 @@ STATE_COPY = {
     'starter': ('{name} Bingo: Where to Play, Days and Times | FindBingo.org',
                 'Free list of bingo games in {name} from places that publish their own schedules, with days, times, phone numbers and directions. Halls can add their games free.',
                 'Bingo in {name} from places that publish their own schedules. Call ahead before you go.'),
+    'pending': ('{name} Bingo: Get Your Game Listed Free | FindBingo.org',
+                'FindBingo.org is building a free list of bingo games in {name}. Halls and players can send game days and times to be listed free.',
+                'We have not built a {name} list yet. Run a game or know of one? Send us the days and times and we will list it free.'),
     'none': ('{name} Bingo: Finding Games and Getting Your Hall Listed | FindBingo.org',
              'How to find bingo in {name}, who licenses it, and how halls can list their game days free on FindBingo.org.',
              'We are building a list of {name} bingo games. Run a game? Send us your days and times and we will list it free.'),
@@ -335,7 +374,8 @@ def _state_page(s, states, rows, style, analytics, generated_on):
         {'@type': 'ListItem', 'position': 2, 'name': f'Bingo in {name}', 'item': url}]}
     rows = sorted(rows, key=lambda r: (r['county'], r['city'], r['name']))
     counties = sorted({r['county'] for r in rows})
-    body = f'<p class="intro">{escape(s["about"])} {escape(s["regulator_note"])}</p>'
+    pending = s['coverage'] == 'pending'
+    body = f'<p class="intro">{escape(s["about"])}' + ('' if pending else ' ' + escape(s["regulator_note"])) + '</p>'
     if s.get('pending_counties'):
         c = s['pending_counties']
         listed = ', '.join(c[:-1]) + ' and ' + c[-1] if len(c) > 1 else c[0]
@@ -357,12 +397,13 @@ def _state_page(s, states, rows, style, analytics, generated_on):
                  'If you know of one, please tell us about it below.</p></div>')
     body += _send_times(s)
     pairs = []
-    for u, label in ((s.get('list_url'), s.get('list_label')), (s['regulator_url'], s['regulator_label'])):
+    for u, label in ((s.get('list_url'), s.get('list_label')), (s.get('regulator_url'), s.get('regulator_label'))):
         if u and u not in [p[0] for p in pairs]:
             pairs.append((u, label))
     as_of = f' (list dated {_date_label(s["list_as_of"])})' if s.get('list_as_of') else ''
     body += (f'<section class="panel" id="about" aria-labelledby="about-title"><h2 id="about-title">Where this list comes from</h2>'
-             f'<p>Checked {_date_label(s["reviewed_on"])}{as_of}. Sources: {" · ".join(_out(u, l) for u, l in pairs)}</p>'
+             + ('<p>Listings come from halls and players who write to us, and from schedules that organizers publish. Each listing will show its own source.</p>' if pending else
+                f'<p>Checked {_date_label(s["reviewed_on"])}{as_of}. Sources: {" · ".join(_out(u, l) for u, l in pairs)}</p>') +
              '<p>Game days and hours can change, especially around holidays. Call ahead before you go, and ask about parking, steps and seating if that matters for you.</p></section>')
     others = ''.join(f'<a href="../{SLUGS[o["code"]]}/">{escape(o["name"])}</a>' for o in states if o['code'] != code)
     zip_form = ('<form class="zip-box" action="../" method="get"><div class="tools">'
@@ -372,7 +413,9 @@ def _state_page(s, states, rows, style, analytics, generated_on):
                 '<p class="small">Shows bingo near you in every state we cover, closest first.</p></form>')
     head = (f'<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">\n'
             f'<title>{escape(title)}</title>\n<meta name="description" content="{escape(description)}">\n<link rel="canonical" href="{url}">\n'
-            f'<meta property="og:type" content="website"><meta property="og:site_name" content="Find Bingo"><meta property="og:title" content="{escape(f"Bingo in {name}")}">'
+            # A page with no listings and no state research stays out of search results until it has something to say.
+            + ('<meta name="robots" content="noindex,follow">\n' if pending else '')
+            + f'<meta property="og:type" content="website"><meta property="og:site_name" content="Find Bingo"><meta property="og:title" content="{escape(f"Bingo in {name}")}">'
             f'<meta property="og:description" content="{escape(description)}"><meta property="og:url" content="{url}"><meta property="og:image" content="{SITE}/ohio/assets/vhg-logo.png">\n'
             + style + '\n' + _json_ld(crumbs) + '\n</head>')
     return (head + '<body id="top"><a class="skip" href="#listings">Skip to the bingo list</a>'

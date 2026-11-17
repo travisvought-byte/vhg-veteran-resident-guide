@@ -13,7 +13,11 @@ assert(fs.existsSync(path.join(root, 'bingo-site/findbingo/ohio/index.html')), '
 const redirects = fs.readFileSync(path.join(root, 'bingo-site/findbingo/_redirects'), 'utf8').trim().split('\n').map(l => l.split(' '));
 assert(redirects.some(r => r[0] === '/oh') && !redirects.some(r => r[0] === '/ohio' || r[0] === '/ohio/'), 'spellings forward; /ohio itself is the finder');
 // Short addresses for posters: /mi and /MI open the Michigan page. No rule may match its own target.
-const SLUGS = {MI: 'michigan', IN: 'indiana', OH: 'ohio', KY: 'kentucky', WV: 'west-virginia', PA: 'pennsylvania', NY: 'new-york', FL: 'florida', UT: 'utah'};
+// Every state and DC has an entry, in alphabetical order by name; the address is the name in lower case with hyphens.
+const SLUGS = Object.fromEntries(states.map(s => [s.code, s.name.toLowerCase().replaceAll(' ', '-')]));
+assert.equal(states.length, 51);
+assert.deepEqual(states.map(s => s.name), states.map(s => s.name).sort(), 'states are in alphabetical order');
+assert(SLUGS.DC === 'district-of-columbia' && SLUGS.WV === 'west-virginia');
 for (const r of redirects) assert(r.length === 3 && r[0].startsWith('/') && Object.values(SLUGS).some(s => r[1] === '/' + s + '/') && r[2] === '301' && r[0].toLowerCase() !== r[1], r.join(' '));
 assert(redirects.some(r => r[0] === '/mi' && r[1] === '/michigan/') && redirects.some(r => r[0] === '/FL' && r[1] === '/florida/'));
 assert.equal(data.generated_on, [...states.map(s => s.reviewed_on), ...data.venues.map(v => v.reviewed_on), ...data.licensed.map(r => r.reviewed_on)].sort().pop());
@@ -24,14 +28,20 @@ for (const v of data.venues) {
   assert.deepEqual(order, [...order].sort((a, b) => a - b), 'sessions run Monday to Sunday: ' + v.id);
 }
 assert(zips['49037'], 'Census point fills the ZIP missing from the centroid file');
-assert(!zips['90210'] && zips['10001'] && zips['84770'] && zips['43334'] && zips['48161'] && zips['46733'] && zips['40601'] && zips['25301'] && zips['15222'] && zips['33701'] && zips['32208']);
+assert(zips['90210'] && zips['99501'] && zips['96813'] && zips['20001'] && !zips['00601'] && !zips['09001'] && zips['10001'] && zips['84770'] && zips['43334'] && zips['48161'] && zips['46733'] && zips['40601'] && zips['25301'] && zips['15222'] && zips['33701'] && zips['32208']);
 assert(!Object.keys(zips).some(z => z.startsWith('340')), 'military ZIP codes are not Florida');
+assert(data.zip3['902'] === 'CA' && data.zip3['995'] === 'AK' && data.zip3['200'] === 'DC' && !data.zip3['006'] && data.zip_exceptions['06390'] === 'NY', 'ZIP codes map to states from the source file');
+for (const z of Object.keys(zips)) assert(data.zip_exceptions[z] || data.zip3[z.slice(0, 3)], 'every published ZIP has a state: ' + z);
 
 const static_ = new JSDOM(html).window.document;
 assert.equal(static_.querySelector('link[rel=canonical]').href, 'https://www.findbingo.org/');
-assert.deepEqual([...static_.querySelectorAll('#state-buttons a')].map(a => a.dataset.state), ['MI', 'IN', 'OH', 'KY', 'WV', 'PA', 'NY', 'FL', 'UT']);
+// States with a list or state research are the main buttons; the rest sit behind one "more states" control.
+const ready = states.filter(s => s.coverage !== 'pending').map(s => s.code), waiting = states.filter(s => s.coverage === 'pending').map(s => s.code);
+assert.deepEqual([...static_.querySelectorAll('#state-buttons > a')].map(a => a.dataset.state), ready);
+assert.deepEqual([...static_.querySelectorAll('#state-buttons details.more-states a')].map(a => a.dataset.state), waiting);
+for (const c of ['FL', 'IN', 'KY', 'MI', 'NY', 'OH', 'PA', 'UT', 'WV']) assert(ready.includes(c), c + ' keeps its list');
 assert.equal(static_.querySelectorAll('script[src]').length, 0, 'no outside scripts');
-assert.deepEqual([...static_.querySelectorAll('#about-states h3')].map(h => h.textContent), states.map(s => s.name));
+assert.deepEqual([...static_.querySelectorAll('#about-states h3')].map(h => h.textContent), states.filter(s => s.coverage !== 'pending').map(s => s.name).concat('Every other state'), 'sources are given for researched states; the rest are named together');
 assert(static_.querySelector('footer a[href="https://creativecommons.org/licenses/by/3.0/"]'), 'ZIP data attribution');
 assert(!/\b\d+ (halls|venues|locations|counties)\b/i.test(static_.querySelector('header').textContent), 'no headline counts');
 
@@ -81,7 +91,7 @@ assert.equal(w0.timeRange('12:00', '16:00'), 'noon to 4 p.m.');
 assert.equal(w0.timeRange('16:00', '00:00'), '4 p.m. to midnight');
 assert.equal(w0.timeRange('21:31', '02:00'), '9:31 p.m. to 2 a.m.');
 assert.equal(w0.timeRange('10:30', '14:30'), '10:30 a.m. to 2:30 p.m.');
-assert.equal(w0.stateOfZip('48161') + w0.stateOfZip('46733') + w0.stateOfZip('43334') + w0.stateOfZip('40601') + w0.stateOfZip('25301') + w0.stateOfZip('15222') + w0.stateOfZip('33701') + w0.stateOfZip('34001') + w0.stateOfZip('10001') + w0.stateOfZip('84770') + w0.stateOfZip('90210'), 'MIINOHKYWVPAFLNYUT');
+assert.equal(w0.stateOfZip('48161') + w0.stateOfZip('46733') + w0.stateOfZip('43334') + w0.stateOfZip('40601') + w0.stateOfZip('25301') + w0.stateOfZip('15222') + w0.stateOfZip('33701') + w0.stateOfZip('34001') + w0.stateOfZip('10001') + w0.stateOfZip('84770') + w0.stateOfZip('90210') + w0.stateOfZip('06390') + w0.stateOfZip('00601'), 'MIINOHKYWVPAFLNYUTCANY');
 const fake = {sessions: [{day: 1, start: '09:00', end: '11:00'}, {day: 3, start: '16:00', end: '00:00'}]};
 assert.equal(w0.nextGame(fake, '', '2026-11-16', 600), '2026-11-16', 'still on this morning');
 assert.equal(w0.nextGame(fake, '', '2026-11-16', 700), '2026-11-18', 'this morning is over, so Wednesday');
@@ -212,9 +222,23 @@ assert(p.cards.includes('ut-st-george-senior-citizen-center-st-george') && p.car
 assert.match(p.d.getElementById('state-UT').textContent, /free bingo at senior centers/);
 assert.match(p.d.getElementById('ut-st-george-senior-citizen-center-st-george').querySelector('.badge').textContent, /Senior center bingo/);
 
+// A state we have not researched yet: every ZIP code still works, and the card asks for game times
+// without claiming anything about the state.
+p = await open('?zip=75201');
+assert.equal(p.cards[0], 'state-TX');
+assert.match(p.d.getElementById('state-TX').textContent, /We have not built a Texas bingo list yet/);
+assert(p.d.querySelector('#state-TX a[href^="mailto:travis@vethomeguard.org?subject=Bingo%20game%20times%20in%20Texas"]'));
+assert(!p.d.querySelector('#state-TX a[target]'), 'no regulator is named for a state we have not researched');
+p = await open('?state=AK');
+assert.equal(p.count, 'Alaska: no game list yet');
+const tx = new JSDOM(fs.readFileSync(path.join(site, 'texas/index.html'), 'utf8')).window.document;
+assert.equal(tx.querySelector('meta[name=robots]').content, 'noindex,follow', 'a page with nothing to say yet stays out of search results');
+assert(tx.querySelector('#run-a-game a[href^="mailto:travis@vethomeguard.org?subject=Bingo%20game%20times%20in%20Texas"]'));
+assert(!new JSDOM(fs.readFileSync(path.join(site, 'michigan/index.html'), 'utf8')).window.document.querySelector('meta[name=robots]'));
+
 // ZIP mistakes get plain-language help.
-p = await open('?zip=90210');
-assert.match(p.status, /We could not find ZIP code 90210 in the states we cover so far: Michigan, Indiana, Ohio, Kentucky, West Virginia, Pennsylvania, New York, Florida, Utah\./);
+p = await open('?zip=00601');
+assert.match(p.status, /We could not find ZIP code 00601\. Please check the five numbers\./);
 assert.equal(p.cards.length, 0);
 p = await open('?zip=4816');
 assert.match(p.status, /Please type the five numbers of your ZIP code/);
@@ -250,7 +274,7 @@ const countWords = /\b\d[\d,]* (bingo )?(halls?|venues?|locations?|places?|count
 for (const s of states) {
   const slug = SLUGS[s.code];
   assert.equal(home.querySelector(`#state-buttons a[data-state="${s.code}"]`).getAttribute('href'), slug + '/', 'state buttons link to the state page');
-  assert(sitemap.includes(`<loc>https://www.findbingo.org/${slug}/</loc>`), slug + ' is in the sitemap');
+  assert.equal(sitemap.includes(`<loc>https://www.findbingo.org/${slug}/</loc>`), s.coverage !== 'pending', slug + ' is in the sitemap once it has content');
   if (s.code === 'OH') continue;  // Ohio's page is the Ohio Bingo Finder
   const file = path.join(root, 'bingo-site/findbingo', slug, 'index.html'), text = fs.readFileSync(file, 'utf8');
   assert.equal(text, fs.readFileSync(path.join(site, slug, 'index.html'), 'utf8'), slug + ' copies match');

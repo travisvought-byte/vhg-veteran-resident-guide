@@ -130,6 +130,31 @@ U.S. Census Geocoder match for the bingo hall at 228 N 20th St.
 2. Update the JSON files and each record's `reviewed_on`.
 3. Run `python3 scripts/build_public.py` and `node tests/findbingo.cjs`, then open a pull request.
 
+## Every state (added November 17, 2026)
+
+Travis's direction: populate findbingo.org across the whole country. The build is top-down: every
+state and DC has an entry in `data/public/bingo-states.json` (alphabetical by name), so every ZIP code
+works and every state has a page and a free way to send game times. States are then researched in
+batches and moved up:
+
+| coverage | meaning |
+|---|---|
+| `pending` | Not researched yet. Only `code`, `name`, `coverage`, `about`, `reviewed_on`. The card and page ask for game times and claim nothing about the state. The page carries `noindex` and stays out of `sitemap.xml`. |
+| `none` | Researched: regulator named and sourced, no public list of games found. |
+| `starter` | Organizer-published schedules, one file per state (`STARTER_FILES`). |
+| `licenses` | A state list of licensed groups without game days (Indiana). |
+| `times` | A state list with days and hours (Michigan). |
+
+To move a state up: replace its `pending` entry with the researched fields (see Kentucky for `none`,
+Florida for `starter`), add its file to `STARTER_FILES` if it has listings, and run the build. The home
+page shows researched states as buttons and keeps pending ones behind "More states".
+
+ZIP code to state comes from `data/public/zip-states.json`, built from the state column of the same
+Midwire/GeoNames file as the ZIP centroids (checksum recorded there): `zip3` maps the first three digits
+to a state and `exceptions` lists the few ZIP codes that sit in another state. The file covers the 50
+states and DC only, so territories and military mail are not found. `zips.json` now holds every one of
+those ZIP codes (about 1 MB before compression).
+
 ## The domain
 
 findbingo.org is registered and hosted on Cloudflare (set up November 16, 2026). The Cloudflare
