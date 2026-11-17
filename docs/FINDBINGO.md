@@ -15,6 +15,7 @@ Started November 15, 2026, at Travis's direction: one national finder, neighbori
 | --- | --- |
 | State facts, regulators and sources | `data/public/bingo-states.json` |
 | Michigan weekly bingo (venues, days, licensed hours) | `data/public/michigan-weekly-bingo.json` |
+| Virginia bingo sessions (halls, days, doors-open and doors-close times) | `data/public/virginia-bingo-sessions.json`, rebuilt by `scripts/import_virginia_bingo.py` |
 | Indiana groups with a current license that allows bingo | `data/public/indiana-bingo-licenses.json` |
 | ZIP code points the centroid file lacks | `data/public/zip-points-supplement.json` |
 | Page template | `templates/findbingo/index.html` |
@@ -126,7 +127,9 @@ U.S. Census Geocoder match for the bingo hall at 228 N 20th St.
 
 ## Refreshing the lists
 
-1. Re-read the Michigan lookup and the Indiana list as above.
+1. Re-read the Michigan lookup and the Indiana list as above. For Virginia, download the state's current
+   directory and run `python3 scripts/import_virginia_bingo.py bingo_events.pdf --reviewed <today> --geocode`,
+   then set Virginia's `list_as_of` in `bingo-states.json` to the listing date the script prints.
 2. Update the JSON files and each record's `reviewed_on`.
 3. Run `python3 scripts/build_public.py` and `node tests/findbingo.cjs`, then open a pull request.
 
@@ -147,7 +150,7 @@ where one is published. The tests refuse a `pending` state, so coverage cannot s
 | `none` | Researched: regulator named and sourced, no list loaded on this site. If the state publishes a list or finder, `list_url` and `list_label` point to it and the state page and the search card lead with that button. |
 | `starter` | Organizer-published schedules, one file per state (`STARTER_FILES`). |
 | `licenses` | A state list of licensed groups without game days (Indiana). |
-| `times` | A state list with days and hours (Michigan). |
+| `times` | A state list with days and hours (Michigan, Virginia), one file per state (`TIMES_FILES`). |
 
 The home page shows a button for each state with a list on the site (`LISTED` in the generator) and keeps
 every other state behind "More states, A to Z". "Where these lists come from" on the home page gives
@@ -167,6 +170,26 @@ How the states fall out (all checked November 17, 2026; each entry's `sources` h
 - **Everywhere else** a state office licenses bingo and is named with its phone number where the
   office publishes one.
 
+### Virginia (loaded November 17, 2026)
+
+Virginia's Office of Charitable and Regulatory Programs (VDACS) publishes a directory of bingo sessions as
+a PDF, "Registered Gaming Activity", grouped by locality: organization, location, address, permit dates,
+the day, and the times the doors open and close. The copy read was generated September 1, 2026
+(`list_as_of`). `scripts/import_virginia_bingo.py` reads it by column position and keeps the weekly
+sessions. It leaves out one-day dated events, cancelled rows and rows that ended before the review date.
+Organizations at one address become one hall, as with Michigan.
+
+- **Hours are door times**, not the first game. The state note and each card say so.
+- **No promised dates.** The directory lists dates each game skips, so every Virginia card shows
+  "Usual bingo days" and tells people to call, instead of a next date.
+- **Social quarters.** Rows the state marks "[Social Quarters]" carry that label and a note that the game
+  may be for members and their guests.
+- **Counties.** The directory has no county. The script asks the U.S. Census Geocoder: the address first,
+  then another hall in the same ZIP code, then the centre of the ZIP code (it prints which halls used a
+  fallback). Independent cities are stored the Census way ("Richmond city") and shown as "City of Richmond".
+- **One correction.** The directory gives ZIP code 23224 for a Castlewood address; Castlewood is 24224.
+  The fix is in `ZIP_FIXES` and explained on the listing.
+
 ### Official lists to import next
 
 These states publish something better than we show today. Import them in this order, best first. Do
@@ -174,7 +197,6 @@ the collection for several states first, then one build and one pull request.
 
 | state | what the state publishes | where |
 |---|---|---|
-| Virginia | Directory of bingo sessions: locality, group, address, days, doors-open and doors-close times. PDF, reissued monthly (September 2026 when read). A `times` list. Skip the one-day dated events; keep the weekly sessions. | `https://www.vdacs.virginia.gov/pdf/bingo_events.pdf` |
 | Texas | Bingo hall locator with days and times. A script-driven lookup, so it needs a browser to read. | `https://bsc.txbingo.org/bsp/faces/bspBingoHallLocator.jsf` |
 | Montana | Places offering live keno or bingo, by county and city (fiscal year 2025 report). No days. | `https://dojmt.gov/wp-content/ftp/gambling/mtR35.pdf` |
 | Idaho | Licensed organizations with county, phone and license number. No days. | `https://www.idaholottery.com/charitable-gaming/licensed-organizations` |
@@ -187,9 +209,9 @@ the collection for several states first, then one build and one pull request.
 | District of Columbia | Calendar of licensed charitable events. | `https://dclottery.com/events?type=8&month=all&year=all` |
 | Alaska, Louisiana, Washington | Permit or license lookups by name; not lists. | see each entry |
 
-Before the first of these can load, the generator needs two small changes: `licenses` is tied to
-Indiana's file and `times` to Michigan's. Give each a per-state file table like `STARTER_FILES`, and let
-the home page script show any `licenses` state the way it shows Indiana.
+A state list with days and hours goes in `TIMES_FILES` (Michigan and Virginia). `licenses` is still
+tied to Indiana's file: before a second list without days can load, give it a per-state file table like
+`STARTER_FILES` and let the home page script show any `licenses` state the way it shows Indiana.
 
 Some state sites turn away automated readers (Minnesota's Gambling Control Board, Montana's Department of
 Justice pages, the Rhode Island State Police, New Jersey Consumer Affairs, Georgia's Secretary of State
