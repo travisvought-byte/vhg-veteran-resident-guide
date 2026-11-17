@@ -18,6 +18,7 @@ Started November 15, 2026, at Travis's direction: one national finder, neighbori
 | Texas bingo halls (halls, phone, licensed days and times) | `data/public/texas-bingo-halls.json`, rebuilt by `scripts/read_texas_locator.py` then `scripts/import_texas_bingo.py` |
 | Virginia bingo sessions (halls, days, doors-open and doors-close times) | `data/public/virginia-bingo-sessions.json`, rebuilt by `scripts/import_virginia_bingo.py` |
 | Indiana groups with a current license that allows bingo | `data/public/indiana-bingo-licenses.json` |
+| Montana places with a live bingo permit | `data/public/montana-bingo-permits.json`, rebuilt by `scripts/import_montana_bingo.py` |
 | ZIP code points the centroid file lacks | `data/public/zip-points-supplement.json` |
 | Page template | `templates/findbingo/index.html` |
 | Generator and validation | `scripts/findbingo_site.py` (run by `scripts/build_public.py`) |
@@ -131,6 +132,8 @@ U.S. Census Geocoder match for the bingo hall at 228 N 20th St.
 1. Re-read the Michigan lookup and the Indiana list as above. For Virginia, download the state's current
    directory and run `python3 scripts/import_virginia_bingo.py bingo_events.pdf --reviewed <today> --geocode`,
    then set Virginia's `list_as_of` in `bingo-states.json` to the listing date the script prints.
+   For Montana, download the current list and run `python3 scripts/import_montana_bingo.py mtR35.pdf --reviewed <today>`,
+   then set `list_as_of` to the date it prints.
    For Texas, run `python3 scripts/read_texas_locator.py texas-locator.json` (needs Python Playwright
    and Chrome), then `python3 scripts/import_texas_bingo.py texas-locator.json --reviewed <today> --geocode`.
 2. Update the JSON files and each record's `reviewed_on`.
@@ -152,7 +155,7 @@ where one is published. The tests refuse a `pending` state, so coverage cannot s
 | `pending` | Not researched. Only `code`, `name`, `coverage`, `about`, `reviewed_on`. Kept in the build for completeness; no state uses it now. Such a page carries `noindex` and stays out of `sitemap.xml`. |
 | `none` | Researched: regulator named and sourced, no list loaded on this site. If the state publishes a list or finder, `list_url` and `list_label` point to it and the state page and the search card lead with that button. |
 | `starter` | Organizer-published schedules, one file per state (`STARTER_FILES`). |
-| `licenses` | A state list of licensed groups without game days (Indiana). |
+| `licenses` | A state list of licensed groups or permitted places without game days (Indiana, Montana), one file per state (`LICENSE_FILES`). |
 | `times` | A state list with days and hours (Michigan, Texas, Virginia), one file per state (`TIMES_FILES`). |
 
 The home page shows a button for each state with a list on the site (`LISTED` in the generator) and keeps
@@ -208,6 +211,16 @@ or for short forms such as VFW, and finds counties with the shared Census helper
 (`scripts/bingo_counties.py`), which Virginia's importer uses too. Hours are licensed times, so Texas
 cards show the next bingo day, as Michigan's do.
 
+### Montana (loaded November 17, 2026)
+
+Montana's Gambling Control Division publishes "Establishments Offering Live Keno and/or Bingo" by county
+and city (fiscal year 2027, dated October 30, 2026). `scripts/import_montana_bingo.py` keeps places whose
+permit covers bingo. It leaves out places whose listed address is a post office box or in another town or
+state: the list then shows a mailing address, not the door to walk in, and the state note on the site
+says so. A live bingo or keno permit is annual and expires June 30 (Montana Code 23-5-407 and the
+division's FAQ), so the fiscal year 2027 permits show as current through June 30, 2027. The list has no
+game days and no phones, so Montana is a `licenses` state like Indiana.
+
 ### Official lists to import next
 
 These states publish something better than we show today. Import them in this order, best first. Do
@@ -215,10 +228,9 @@ the collection for several states first, then one build and one pull request.
 
 | state | what the state publishes | where |
 |---|---|---|
-| Montana | Places offering live keno or bingo, by county and city (fiscal year 2025 report). No days. | `https://dojmt.gov/wp-content/ftp/gambling/mtR35.pdf` |
 | Idaho | Licensed organizations with county, phone and license number. No days. | `https://www.idaholottery.com/charitable-gaming/licensed-organizations` |
-| Kansas | Licensed bingo organizations with address and phone. PDF. No days. | `https://www.ksrevenue.gov/pdf/BingoOrganizations.pdf` |
-| Maine | Charitable gaming organizations (January 16, 2026). PDF. | linked from `https://www.maine.gov/dps/gcu/charitable-gaming` |
+| Kansas | Licensed bingo organizations with address and phone. PDF. No days. **Not loaded:** the file is from July 2022 and Kansas licenses run July to June, so every license on it has lapsed. Load it only when the state posts a current list. | `https://www.ksrevenue.gov/pdf/BingoOrganizations.pdf` |
+| Maine | Charitable gaming organizations (January 16, 2026). PDF. Covers raffles and games of chance too, and many addresses are post office boxes, so it is not a list of places to play. | linked from `https://www.maine.gov/dps/gcu/charitable-gaming` |
 | North Dakota | Licensed gaming organizations and gaming sites. PDFs. Covers all charitable gaming, not only bingo. | `https://attorneygeneral.nd.gov/gaming-licensees/` |
 | New Mexico | Map and contact list of bingo, raffle and pull-tab locations. | `https://www.gcb.nm.gov/bingo-raffle-pull-tab-map-locations-and-info/` |
 | Mississippi | Map of charitable gaming licensees. | linked from `https://www.msgamingcommission.com/charitable_gaming` |
@@ -226,9 +238,9 @@ the collection for several states first, then one build and one pull request.
 | District of Columbia | Calendar of licensed charitable events. | `https://dclottery.com/events?type=8&month=all&year=all` |
 | Alaska, Louisiana, Washington | Permit or license lookups by name; not lists. | see each entry |
 
-A state list with days and hours goes in `TIMES_FILES` (Michigan, Texas and Virginia). `licenses` is still
-tied to Indiana's file: before a second list without days can load, give it a per-state file table like
-`STARTER_FILES` and let the home page script show any `licenses` state the way it shows Indiana.
+A state list with days and hours goes in `TIMES_FILES` (Michigan, Texas and Virginia). A list of
+licensed groups or permitted places without days goes in `LICENSE_FILES` (Indiana and Montana); each
+record needs `license_number`, `license_type` and `license_expires`, and may carry a `phone`.
 
 Some state sites turn away automated readers (Minnesota's Gambling Control Board, Montana's Department of
 Justice pages, the Rhode Island State Police, New Jersey Consumer Affairs, Georgia's Secretary of State

@@ -42,7 +42,7 @@ const listed = states.filter(s => LISTED.includes(s.coverage)), rest = states.fi
 const ready = states.filter(s => s.coverage !== 'pending').map(s => s.code), waiting = states.filter(s => s.coverage === 'pending').map(s => s.code);
 assert.deepEqual([...static_.querySelectorAll('#state-buttons > a')].map(a => a.dataset.state), listed.map(s => s.code));
 assert.deepEqual([...static_.querySelectorAll('#state-buttons details.more-states a')].map(a => a.dataset.state), rest.map(s => s.code));
-for (const c of ['FL', 'IN', 'MI', 'NY', 'OH', 'PA', 'TX', 'UT', 'VA']) assert(listed.some(s => s.code === c), c + ' keeps its list');
+for (const c of ['FL', 'IN', 'MI', 'MT', 'NY', 'OH', 'PA', 'TX', 'UT', 'VA']) assert(listed.some(s => s.code === c), c + ' keeps its list');
 for (const c of ['KY', 'WV']) assert(ready.includes(c), c + ' stays researched');
 assert.deepEqual(waiting, [], 'every state and DC has been researched: each names who licenses or oversees bingo, with a source');
 assert.equal(states.length, 51);
@@ -247,6 +247,20 @@ assert(p.d.querySelector('#state-KS .big-actions a.outline[href^="mailto:travis@
 const txRows = data.venues.filter(v => v.state === 'TX');
 assert.equal(states.find(s => s.code === 'TX').coverage, 'times');
 assert(txRows.length && txRows.every(v => v.sessions.every(x => x.start && x.end) && !v.schedule_note), 'every Texas session has licensed hours');
+// Montana: places with a state permit for live bingo, no game days, and only where the list gives the place's own street address.
+const mtRows = data.licensed.filter(r => r.state === 'MT');
+assert(mtRows.length && mtRows.every(r => r.license_type.includes('bingo') && r.license_expires === '2027-06-30' && !/PO Box/i.test(r.address)));
+assert(!mtRows.some(r => /Page \d/.test(r.name)), 'page footers stay out of names');
+p = await open('?state=MT');
+assert.equal(p.count, 'Montana licensed for bingo');
+assert.match(p.d.querySelector('#results .note').textContent, /mailing address/);
+assert.deepEqual(p.cards, [...mtRows].sort((a, b) => a.county.localeCompare(b.county) || a.city.localeCompare(b.city) || a.name.localeCompare(b.name)).map(r => r.id));
+const blacktail = p.d.getElementById('mt-4040442-008-lgt');
+assert.match(blacktail.textContent, /Blacktail Station/);
+assert.match(blacktail.textContent, /Montana license 4040442-008-LGT \(live bingo permit\), on the state list through Jun 30, 2027/);
+assert.match(blacktail.querySelector('.address').textContent, /26 S Montana St, Dillon, MT 59725 · Beaverhead County$/);
+p = await open('?zip=59725&radius=10');
+assert(p.cards.includes('mt-4040442-008-lgt'), 'with no game days nearby, licensed places show');
 p = await open('?zip=78572&radius=10');
 assert(p.cards.includes('tx-the-bingo-ranch-mission') && !p.cards.includes('state-TX'));
 const ranch = p.d.getElementById('tx-the-bingo-ranch-mission');
