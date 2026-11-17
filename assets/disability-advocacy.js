@@ -30,7 +30,7 @@
   $('start-state').value=s;$('compose-state').value=s;$('scope').querySelector('option[value="state"]').textContent=stateLabel(s);
   document.querySelectorAll('[data-barrier]').forEach(a=>{const u=new URL(a.href);u.searchParams.set('state',s);a.href=u.href;});
   const u=new URL($('start-state-policy').href);u.searchParams.set('state',s);$('start-state-policy').href=u.href;
-  $('start-guide').href='./?state='+s;
+  $('start-guide').href=s==='OH'?'./':s.toLowerCase()+'.html'; // each state's guide has its own page
   const place=s==='DC'?'District of Columbia':names.get(s);
   document.querySelectorAll('[data-state-ask-title]').forEach(h=>h.textContent='Proposed '+place+' request');
   document.querySelectorAll('[data-state-ask]').forEach(p=>{const t=topics.get(p.dataset.stateAsk);if(t)p.textContent=ask(t,'state',s);});

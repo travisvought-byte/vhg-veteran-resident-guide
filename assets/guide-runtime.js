@@ -30,7 +30,10 @@ function setState(state,initial=false){
  document.querySelector('label[for="county"]').textContent=(state==='VA'?'County or independent city in ':state==='LA'?'Parish in ':'County in ')+config.name;
  $('aid-open').hidden=state!=='OH';document.querySelectorAll('.ohio-only').forEach(e=>{e.hidden=state!=='OH'});document.querySelector('.office-directory summary').textContent='Browse '+config.name+(state==='VA'?' county and city contacts':state==='LA'?' parish contacts':' county contacts');
  $('office-search').placeholder='Search '+config.name+(state==='VA'?' counties or independent cities':state==='LA'?' parishes':' counties');
- document.title=config.name+' | Veteran Resident Resource Guide';
+ document.title=config.name+' Veteran Resource Guide | Veteran Home Guardians';
+ // Search engines get one address per state: its own page, with Ohio at the root.
+ const home=new URL(STATE_PAGES[state]||'./',document.querySelector('link[rel=canonical]')?.href||location.href).href;
+ document.querySelector('link[rel=canonical]')?.setAttribute('href',home);document.querySelector('meta[property="og:url"]')?.setAttribute('content',home);
  // The footer date comes from the records, so it cannot go stale: the newest review of this state's veterans office contacts.
  // (Program records are left out because federal ones are shared by every state and would date them all alike.)
  const reviewed=COUNTIES.map(c=>c.reviewed_on).filter(v=>/^\d{4}-\d{2}-\d{2}$/.test(v||'')).sort().at(-1);
@@ -38,7 +41,7 @@ function setState(state,initial=false){
  document.querySelectorAll('[data-advocacy-route]').forEach(a=>a.href='disability-advocacy.html?state='+state);document.querySelectorAll('[data-family-route]').forEach(a=>a.href=(state==='OH'?'https://www.ohiomom.org/family-guide.html':'family-guide.html')+'?state='+state);
  document.querySelectorAll('a[href^="share"]').forEach(a=>a.href=config.sharePage);
  document.querySelectorAll('.footer-links a').forEach(a=>{if(a.textContent==='County contact data')a.href=config.files.offices;if(a.textContent==='Resource data')a.href=config.files.resources});
- document.querySelectorAll('#urgent-help a[href^="?view="]').forEach(a=>{const u=new URL(a.href,location.href);u.searchParams.set('state',state);a.href=u.href});
+ document.querySelectorAll('#urgent-help a[href^="?view="],#urgent-help a[data-view]').forEach(a=>{a.dataset.view??=new URL(a.href,location.href).searchParams.get('view');const u=new URL(STATE_PAGES[state]||'./',location.href);u.searchParams.set('view',a.dataset.view);a.href=u.href});
  bindStateControls();
  document.documentElement.dataset.edition=state;
  if(!initial){render();renderOfficeList()}
@@ -108,9 +111,8 @@ function helperHandoffText(){
   return [title,...details,source?'Source: '+source.getAttribute('href'):null].filter(Boolean).join('\n');
  });
  const questions=tidy(el.querySelector('.call-script p')?.textContent);
- const url=new URL(location.href);
+ const url=new URL(STATE_PAGES[STATE]||'./',location.href);
  url.search='';url.hash='';
- url.searchParams.set('state',STATE);
  url.searchParams.set('county',county);
  url.searchParams.set('help','1');
  return [
@@ -132,7 +134,9 @@ function helperHandoffText(){
 }
 function openHelper(){helperActive=true;helperShowingResults=false;render();$('helper-title').focus({preventScroll:true});$('helper-guide').scrollIntoView({behavior:'smooth'})}
 const params=new URLSearchParams(location.search);
-let initialState=Object.hasOwn(EDITION_FILES,params.get('state'))?params.get('state'):'OH';
+// A state's own page (ky.html) opens that state; an old ?state= link still picks the state and is moved to its page.
+const HOME_STATE=Object.hasOwn(EDITION_FILES,document.documentElement.dataset.homeState)?document.documentElement.dataset.homeState:'OH';
+let initialState=Object.hasOwn(EDITION_FILES,params.get('state'))?params.get('state'):HOME_STATE;
 route=params.get('view')||'priority';
 function startGuide(){
 setState(initialState,true);
@@ -171,4 +175,4 @@ window.addEventListener('afterprint',()=>{clearPrintMode();accessPrintStates.for
 render();renderOfficeList();
 }
 if(Object.hasOwn(EDITIONS,initialState))startGuide();
-else loadEdition(initialState).catch(()=>{initialState='OH'}).then(startGuide);
+else loadEdition(initialState).catch(()=>{initialState=HOME_STATE}).then(startGuide);

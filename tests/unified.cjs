@@ -6,7 +6,7 @@ const editionScripts=fs.readdirSync(root+'/assets/editions').filter(f=>f.endsWit
 function setup(query=''){const dom=new JSDOM(fs.readFileSync(root+'/index.html','utf8'),{url:'https://example.org/'+query,runScripts:'outside-only',pretendToBeVisual:true});dom.window.HTMLElement.prototype.scrollIntoView=function(){};let prints=0;dom.window.print=()=>prints++;dom.window.eval(editionScripts+fs.readFileSync(root+'/assets/guide.js','utf8')+'\nwindow.__testGetRoutes=()=>routes;');const d=dom.window.document;return {dom,d,prints:()=>prints,change(id,value){const n=d.getElementById(id);n.value=value;n.dispatchEvent(new dom.window.Event('change'))},click:id=>d.getElementById(id).click()}}
 const t=setup();const expected={OH:88,PA:67,NY:62,MI:83,KY:120,UT:29,IN:92};
 for(const [state,n] of Object.entries(expected)){
- t.change('edition-state',state);assert.equal(new URL(t.d.querySelector('[data-advocacy-route]').href).searchParams.get('state'),state);assert.equal(t.d.querySelectorAll('#county option').length,n+1);assert.equal(new URL(t.dom.window.location.href).searchParams.get('state'),state);assert.equal(t.dom.window.location.pathname,'/');assert(!t.d.querySelector('header h1').textContent.includes('Ohio'));assert(t.d.querySelector('.office-directory summary').textContent.includes({OH:'Ohio',PA:'Pennsylvania',NY:'New York',MI:'Michigan',KY:'Kentucky',UT:'Utah',IN:'Indiana'}[state]));
+ t.change('edition-state',state);assert.equal(new URL(t.d.querySelector('[data-advocacy-route]').href).searchParams.get('state'),state);assert.equal(t.d.querySelectorAll('#county option').length,n+1);assert(!new URL(t.dom.window.location.href).searchParams.has('state'));assert.equal(t.dom.window.location.pathname,state==='OH'?'/':'/'+state.toLowerCase()+'.html');assert.equal(t.d.querySelector('link[rel=canonical]').href,'https://guide.vethomeguard.org/'+(state==='OH'?'':state.toLowerCase()+'.html'));assert(!t.d.querySelector('header h1').textContent.includes('Ohio'));assert(t.d.querySelector('.office-directory summary').textContent.includes({OH:'Ohio',PA:'Pennsylvania',NY:'New York',MI:'Michigan',KY:'Kentucky',UT:'Utah',IN:'Indiana'}[state]));
  const counties=Array.from(t.d.querySelectorAll('#county option')).slice(1).map(x=>x.value);
  for(const c of counties){t.change('county',c);assert(t.d.getElementById('county-panel').textContent.includes(c+' County'));assert(t.d.querySelectorAll('#results article').length>0)}
  t.click('helper-open');assert(!t.d.getElementById('helper-guide').hidden);
@@ -110,3 +110,30 @@ assert(ut.d.querySelector('a[href="share-ut.html"]'));
 for(const r of utData.filter(x=>x.state==='UT'))assert.equal(r.evidence.direct_agency_confirmation,false);
 ut.dom.window.close();
 console.log('PASS: Utah service-region boundary cases, separate Uintah aging route, non-veteran support, New Choices menu handling and Utah sharing/data links.');
+
+// Each state has its own crawlable page with its own title, description and canonical; old ?state= links still work.
+{
+ const registry=JSON.parse(fs.readFileSync(root+'/states/registry.json','utf8'));
+ const sitemap=fs.readFileSync(root+'/sitemap.xml','utf8');assert(!sitemap.includes('?state='));
+ const titles=new Set(),descriptions=new Set();
+ for(const s of registry.slice(1)){
+  const html=fs.readFileSync(root+'/'+s.page,'utf8'),doc=new JSDOM(html).window.document;
+  assert(sitemap.includes('<loc>https://guide.vethomeguard.org/'+s.page+'</loc>'),s.code+' in sitemap');
+  assert.equal(doc.querySelector('link[rel=canonical]').href,'https://guide.vethomeguard.org/'+s.page);
+  assert.equal(doc.querySelector('meta[property="og:url"]').content,'https://guide.vethomeguard.org/'+s.page);
+  assert.equal(doc.documentElement.dataset.homeState,s.code);
+  assert(doc.title.startsWith(s.name+' '),s.code+' title');assert(doc.querySelector('meta[name=description]').content.includes(s.name),s.code+' description');
+  titles.add(doc.title);descriptions.add(doc.querySelector('meta[name=description]').content);
+  assert(html.includes('<script src="assets/editions/'+s.code.toLowerCase()+'.js?v='),s.code+' preloads its own records');
+ }
+ assert.equal(titles.size,registry.length-1);assert.equal(descriptions.size,registry.length-1);
+ // The state page opens its own state, and keeps that address.
+ const page=(file,query='')=>{const dom=new JSDOM(fs.readFileSync(root+'/'+(file||'index.html'),'utf8'),{url:'https://example.org/'+file+query,runScripts:'outside-only',pretendToBeVisual:true});dom.window.HTMLElement.prototype.scrollIntoView=function(){};dom.window.eval(editionScripts+fs.readFileSync(root+'/assets/guide.js','utf8'));return dom.window};
+ const kyPage=page('ky.html','?county=Christian');assert.equal(kyPage.document.getElementById('edition-state').value,'KY');assert.equal(kyPage.location.pathname,'/ky.html');assert.equal(kyPage.location.search,'?county=Christian');assert(kyPage.document.title.startsWith('Kentucky Veteran Resource Guide'));
+ // A saved ?state= link on the front page opens that state and moves to its page, with the canonical pointing there.
+ const saved=page('','?state=KY&county=Christian&view=seniors');assert.equal(saved.document.getElementById('edition-state').value,'KY');assert.equal(saved.location.pathname,'/ky.html');assert.equal(saved.location.search,'?county=Christian&view=seniors');assert.equal(saved.document.querySelector('link[rel=canonical]').href,'https://guide.vethomeguard.org/ky.html');
+ // Switching to Ohio from a state page goes back to the front page.
+ const back=page('pa.html');back.document.getElementById('edition-state').value='OH';back.document.getElementById('edition-state').dispatchEvent(new back.Event('change'));assert.equal(back.location.pathname,'/');assert.equal(back.document.querySelector('link[rel=canonical]').href,'https://guide.vethomeguard.org/');
+ const urgent=[...kyPage.document.querySelectorAll('#urgent-help a[data-view]')].map(a=>new URL(a.href));assert(urgent.length&&urgent.every(u=>u.pathname==='/ky.html'&&!u.searchParams.has('state')&&u.searchParams.get('view')));
+}
+console.log('state pages: ok');

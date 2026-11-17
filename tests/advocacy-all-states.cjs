@@ -10,7 +10,7 @@ for(const [code,name] of states){
  if($('start-state').value!==code)issues.push([code,'start-state not set']);
  if($('compose-state').value!==code)issues.push([code,'compose-state not set']);
  d.querySelectorAll('.problem-grid a').forEach(a=>{if(!a.href.includes('state='+code))issues.push([code,'problem link',a.href])});
- const g=$('start-guide');if(g&&!g.href.includes(code))issues.push([code,'guide link',g.href]);
+ const g=$('start-guide');if(g&&!(code==='OH'?new URL(g.href).pathname.endsWith('/'):g.href.endsWith('/'+code.toLowerCase()+'.html')))issues.push([code,'guide link',g.href]);
  // topic cards
  d.querySelectorAll('[data-state-ask]').forEach(e=>{const t=e.textContent;if(bad.test(t))issues.push([code,'card bad text',t.slice(0,80)]);if(code!=='OH'&&/\bOhio\b/.test(t))issues.push([code,'card mentions Ohio']);});
  for(const topic of data.topics.map(t=>t.id))for(const scope of ['state','US'])for(const fmt of ['short','letter']){

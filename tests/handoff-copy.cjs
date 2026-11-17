@@ -46,7 +46,8 @@ async function clickCopy(t){
   assert(copy.includes('Need: Benefits or help paying for care'),s.code+' contextualizes need');
   assert(copy.includes('Follow-up:'),s.code+' actionable follow-up fields');
   const url=new URL(copy.split('Guide: ')[1].split('\n')[0]);
-  assert.equal(url.searchParams.get('state'),s.code);
+  assert.equal(url.pathname,'/directory/'+(s.page==='index.html'?'':s.page),s.code+' links to the state page');
+  assert.equal(url.searchParams.has('state'),false);
   assert.equal(url.searchParams.get('county'),county);
   assert.equal(url.searchParams.get('help'),'1');
   assert.equal(url.searchParams.has('q'),false,s.code+' strips search');

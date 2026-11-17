@@ -144,7 +144,7 @@
    row(ddLabel, nodes);
   }
   else row(ddLabel, [link('https://www.oacbdd.org/familyresources', spanish ? fill(d.county_dd_map, {county}) : 'pick ' + county + ' County on the map'), link('tel:8006176733', '800-617-6733')]);
-  row(spanish ? d.veteran_families : 'Veteran families', [link('./?state=OH&county=' + encodeURIComponent(county), spanish ? fill(d.cvso, {county}) : county + ' County veterans service office')]);
+  row(spanish ? d.veteran_families : 'Veteran families', [link('./?county=' + encodeURIComponent(county), spanish ? fill(d.cvso, {county}) : county + ' County veterans service office')]);
   wrap.append(ul);
   box.append(wrap);
  }
@@ -193,8 +193,10 @@
   $('print-context').textContent = where + (stage === 'all' ? '' : ' · ' + stageLabel.get(stage)) + (needs.length ? ' · ' + needs.map(n => needName.get(n)).join(', ') : '');
   $('anchors').hidden = state === 'US';
   if (state !== 'US') renderAnchors(state, county);
-  $('cvso-link').href = './?state=' + state + (ohio && county ? '&county=' + encodeURIComponent(county) : '');
-  $('back-guide').href = './?state=' + state;
+  // Each state's guide has its own page (ky.html); Ohio's is the guide's front page.
+  const guide = state === 'OH' || !states[state] ? './' : state.toLowerCase() + '.html';
+  $('cvso-link').href = guide + (ohio && county ? '?county=' + encodeURIComponent(county) : '');
+  $('back-guide').href = guide;
   updateReports(state);
   if (write) writeParams(state, county, needs);
  }
