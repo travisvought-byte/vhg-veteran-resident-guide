@@ -164,12 +164,18 @@ assert(p.d.querySelector('#more-note button[data-more="0"]'));
 assert(!/\d/.test(p.d.getElementById('more-note').textContent), 'no counts on the site');
 
 // States without a public list: say so, and invite halls to send game times.
-p = await open('?zip=40601');
-assert.equal(p.count, 'No bingo games listed yet within 25 miles of 40601.');
+p = await open('?zip=65101');
+assert.equal(p.count, 'No bingo games listed yet within 25 miles of 65101.');
 assert(!p.d.getElementById('pending-MI'), 'the Michigan note stays with Michigan searches');
-assert.equal(p.cards[0], 'state-KY');
-assert.match(p.d.getElementById('state-KY').textContent, /Office of Charitable Gaming/);
-assert(p.d.querySelector('#state-KY a[href^="mailto:travis@vethomeguard.org?subject=Bingo%20game%20times%20in%20Kentucky"]'));
+assert.equal(p.cards[0], 'state-MO');
+assert.match(p.d.getElementById('state-MO').textContent, /Charitable Games Division/);
+assert(p.d.querySelector('#state-MO a[href^="mailto:travis@vethomeguard.org?subject=Bingo%20game%20times%20in%20Missouri"]'));
+// Kentucky's starter list: Frankfort finds the VFW post's Thursday game, then the way to send more game times.
+p = await open('?zip=40601');
+assert.equal(p.count, 'Bingo within 25 miles of 40601 · closest first');
+assert.equal(p.cards[0], 'ky-vfw-post-4075-frankfort');
+assert.match(p.d.getElementById('ky-vfw-post-4075-frankfort').querySelector('.sessions').textContent, /Thursday, 6:30 p\.m\./);
+assert(p.cards.includes('state-KY') && p.d.querySelector('#state-KY a[href^="mailto:travis@vethomeguard.org?subject=Bingo%20game%20times%20in%20Kentucky"]'));
 // Florida: no state list, so the Florida card leads with how to send game times.
 p = await open('?zip=33701');
 assert.equal(p.count, 'No bingo games listed yet within 25 miles of 33701.');
@@ -201,8 +207,8 @@ assert.equal(p.cards[0], 'pa-collinsburg-volunteer-fire-company-west-newton', 'P
 assert(p.cards.includes('state-PA'), 'and still offer the way to send Pennsylvania game times');
 assert(p.cards.includes('state-OH') && p.cards.includes('state-WV'), 'Pittsburgh is near Ohio and West Virginia');
 
-// Pennsylvania, New York and Utah starter lists: organizer-published schedules, each with its own source.
-for (const [code, name, min] of [['PA', 'Pennsylvania', 4], ['NY', 'New York', 3], ['UT', 'Utah', 3]]) {
+// Pennsylvania, New York, Utah, Kentucky and West Virginia starter lists: organizer-published schedules, each with its own source.
+for (const [code, name, min] of [['PA', 'Pennsylvania', 4], ['NY', 'New York', 3], ['UT', 'Utah', 3], ['KY', 'Kentucky', 4], ['WV', 'West Virginia', 6]]) {
   const rows = data.venues.filter(v => v.state === code);
   assert(rows.length >= min && rows.every(v => v.kind && v.source_url && v.schedule_note), name + ' starter list');
   p = await open('?state=' + code);
@@ -210,6 +216,9 @@ for (const [code, name, min] of [['PA', 'Pennsylvania', 4], ['NY', 'New York', 3
   assert.equal(p.cards[p.cards.length - 1], 'state-' + code, name + ' ends with the way to send game times');
   for (const v of rows) assert(p.d.querySelector('#' + v.id + ' a[href^="mailto:travis@vethomeguard.org?subject=FindBingo.org%20correction"]'), v.id + ' has a report link');
 }
+p = await open('?state=WV');
+assert.match(p.d.getElementById('wv-martin-luther-king-jr-community-center-charleston').querySelector('.sessions').textContent, /Thursday, 1:30 p\.m\. · 3rd Thursday of the month/);
+assert.match(p.d.getElementById('wv-john-henson-senior-center-hurricane').querySelector('.badge').textContent, /Senior center bingo/);
 p = await open('?state=PA');
 assert.match(p.d.getElementById('pa-penbrook-american-legion-post-730-harrisburg').querySelector('.sessions').textContent, /Thursday, 6 p\.m\. · 1st and 3rd Thursday of the month/);
 assert.match(decodeURIComponent(p.d.querySelector('#pa-tylersport-fire-company-tylersport .small-links a').getAttribute('href')), /Bingo days:\nFirst game starts at:\nPhone for players:/, 'the correction email is ready to fill in');
@@ -259,8 +268,8 @@ assert.equal(p.count, 'Indiana groups licensed for bingo');
 p = await open('?state=OH');
 assert.deepEqual(p.cards, ['state-OH']);
 assert.equal(p.d.querySelector('#state-OH a.solid').href, 'https://www.findbingo.org/ohio/');
-p = await open('?state=WV');
-assert.deepEqual(p.cards, ['state-WV']);
+p = await open('?state=MO');
+assert.deepEqual(p.cards, ['state-MO']);
 
 // Names are shown as text, never as markup.
 p = await open('?state=MI&county=Ingham');
