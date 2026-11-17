@@ -9,7 +9,7 @@ Written November 15, 2026, from an audit of vethomeguard.org, guide.vethomeguard
 - **Links.** 1,727 distinct links on 839 websites. Until this month nothing checked them.
 - **Ohio extras.** 924 nursing homes and 817 assisted living facilities, the bingo finder, 88 county boards of DD in the family guide.
 - **Sibling sites.** The bingo finder (ohiobingo.org), the Ohio family guide (ohiomom.org), mobility and disability resources (mobilitytalk.org) and the cannabis directory (ohioweed.org) each own their subject. This guide links to them and does not copy them.
-- **vethomeguard.org.** Eight pages and four forms on a code-based Wix site. Its source is not in a repository yet.
+- **vethomeguard.org.** Eight pages and four forms on a code-based Wix site. Its source is not in a repository yet. The owner's direction on November 17, 2026 (decision D-022) is that this guide becomes vethomeguard.org and covers every veteran; section 0 below is the plan.
 
 ## Done in the November 15 pass
 
@@ -19,6 +19,27 @@ Written November 15, 2026, from an audit of vethomeguard.org, guide.vethomeguard
 | Monthly link check that opens one issue for broken or moved links | Pull request "Monthly link check" (this one) |
 | A page per state that search engines can read, with every county's veterans office and phone | Pull request "A page for every state" |
 | vethomeguard.org home page: search that answers by need, a state picker, links into the right part of the guide | Built and tested; waiting for the owner's go-ahead to publish |
+
+## 0. One site for every veteran
+
+Owner's direction, November 17, 2026 (decision D-022): Vet Home Guard and the veteran guide are one thing. vethomeguard.org is the guide, for all veterans; seniors, caregivers and long-term care are one section of it.
+
+**Done November 17, 2026**
+
+- Thirteen national records, each read on its official page that day, shared by all 51 editions: VA disability compensation, Supplemental Claims, the PACT Act and toxic exposure screening, the Women Veterans Call Center, Vet Centers, military sexual trauma counseling, the GI Bill, Veteran Readiness and Employment, American Job Centers, VA home loans, Veteran ID cards, discharge upgrades and VA Solid Start.
+- Seven needs added to the first screen under "For every veteran": disability pay and claims, VA health care and toxic exposure, counseling and mental health, school and the GI Bill, jobs and training, records and discharge upgrades, and just left the service. Home loans joined the housing view. The older needs sit under "Seniors, caregivers and long-term care" and "Families".
+- The guide is titled Veteran Resource Guide. Link labels on the bingo, facilities, family and advocacy pages still say "Veteran Resident Resource Guide"; change them with the address move, when every page is rebuilt anyway.
+
+**Topics still to research and add** (official sources only, same record format): the other decision review options (Higher-Level Review, Board Appeal), CHAMPVA and other family health benefits, VA dental care, VA life insurance, veteran-owned small business help, federal hiring preference, transition classes before discharge, National Guard and Reserve benefits, Veterans Justice Outreach and veterans treatment courts, and each state's own benefits (property tax relief, tuition, licenses) from its veterans agency.
+
+**One address** (steps 4 and 5 need the owner)
+
+1. Bring the eight vethomeguard.org pages (home, refer, volunteer, partner, sponsor, about, contact, donate), their stylesheet and their Wix form scripts into this repository, and check each form loads from here.
+2. Give the guide the same header, menu and look, so it reads as one site. Rebuild the first screen at the same time; it runs about 29 phone screens today.
+3. Change the published address to `https://www.vethomeguard.org/` in `scripts/state_registry.py` (`BASE_URL`), the sitemap, `robots.txt`, canonical tags and new QR codes.
+4. Point `www.vethomeguard.org` and the bare domain at this site: the A and www CNAME records in the Wix account, and the custom domain in this repository's Pages settings. Email records are not touched. Do this and step 3 together, DNS first, so no link points at a page that is not there yet.
+5. Keep `guide.vethomeguard.org` forwarding, path for path, so printed QR codes and flyers keep working. GitHub Pages serves one custom domain per repository, so this needs a small forwarding repository (the bingo and cannabis subdomains were retired the same way).
+6. Tell Search Console about the change of address and resubmit the sitemap.
 
 ## 1. Be found
 
