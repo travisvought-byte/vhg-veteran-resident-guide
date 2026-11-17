@@ -39,7 +39,7 @@ article{background:#fff;border:1px solid #c9d3cd;border-radius:14px;padding:18px
 .when{background:#eef4f0;border-left:6px solid var(--green);border-radius:8px;padding:10px 14px;margin:10px 0;font-size:19px}.when p{margin:4px 0}
 .sessions{list-style:none;padding:0;margin:6px 0}.sessions li{padding:3px 0;border-bottom:1px dashed #cdd9d1}.sessions li:last-child{border-bottom:0}.sessions .org{font-size:16px;color:#3c4d55}
 .note{font-size:16px;color:#3b2f12;background:#fff6dc;border:1px solid #e2c98a;border-radius:8px;padding:8px 10px;margin:10px 0 4px}
-.big-actions{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 8px}.big-actions a{flex:1 1 180px;display:flex;align-items:center;justify-content:center;min-height:56px;padding:0 14px;border-radius:10px;font-size:19px;font-weight:700;text-decoration:none;text-align:center}
+.big-actions{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 8px}.big-actions a{flex:1 1 180px;display:flex;align-items:center;justify-content:center;min-height:56px;padding:6px 14px;border-radius:10px;font-size:19px;font-weight:700;text-decoration:none;text-align:center}
 .big-actions .solid{background:var(--green);color:#fff}.big-actions .outline{background:#fff;color:var(--green);border:2px solid var(--green)}
 .address{font-size:17px;color:#33444c;margin:6px 0}details.sources{font-size:16px;border-top:1px solid var(--line);margin-top:8px}details.sources summary{min-height:44px;display:flex;align-items:center;cursor:pointer}
 .small-links{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:16px;margin:4px 0 0}.small-links a{display:inline-flex;align-items:center;min-height:44px}
@@ -136,8 +136,11 @@ function licensedCard(r,today){const s=STATES[r.state]||{};
 function ohioCard(zip,radius){const s=STATES.OH||{},u=s.finder_url+(zip?'?zip='+encodeURIComponent(zip)+'&radius='+encodeURIComponent(radius)+'#count':'');
  return '<article class="state-card" id="state-OH"><h3>'+(zip?'Ohio bingo near '+esc(zip):'Ohio bingo')+'</h3><p>'+esc(s.about)+'</p><div class="big-actions"><a class="solid" href="'+esc(u)+'">'+(zip?'Show Ohio games near '+esc(zip):'Open the Ohio bingo finder')+'</a></div><p class="small-links"><a href="https://www.ohiobingo.org/">OhioBingo.org ↗</a></p></article>'}
 function noListCard(code){const s=STATES[code]||{};
- return '<article class="state-card" id="state-'+esc(code)+'"><h3>'+esc(s.name)+'</h3><p>'+esc(s.about)+'</p><p><strong>Run a bingo game in '+esc(s.name)+'?</strong> Send us your days and times and we&rsquo;ll add your game free.</p>'
- +'<div class="big-actions"><a class="solid" href="mailto:travis@vethomeguard.org?subject='+encodeURIComponent('Bingo game times in '+s.name)+'">Email your game times</a></div>'
+ const official=s.coverage==='none'&&s.list_url;
+ return '<article class="state-card" id="state-'+esc(code)+'"><h3>'+esc(s.name)+'</h3><p>'+esc(s.about)+'</p>'
+ +(official?'<div class="big-actions"><a class="solid official" href="'+esc(s.list_url)+'" target="_blank" rel="noopener noreferrer">'+esc(s.list_label)+' ↗</a></div>':'')
+ +'<p><strong>Run a bingo game in '+esc(s.name)+'?</strong> Send us your days and times and we&rsquo;ll add your game free.</p>'
+ +'<div class="big-actions"><a class="'+(official?'outline':'solid')+'" href="mailto:travis@vethomeguard.org?subject='+encodeURIComponent('Bingo game times in '+s.name)+'">Email your game times</a></div>'
  +(s.regulator_url?'<p class="small">'+esc(s.regulator_note)+' <a href="'+esc(s.regulator_url)+'" target="_blank" rel="noopener noreferrer">'+esc(s.regulator_label)+' ↗</a></p>':'')+'</article>'}
 function pendingNote(code){const s=STATES[code];const c=s&&s.pending_counties||[];if(!c.length)return '';const list=c.length>1?c.slice(0,-1).join(', ')+' and '+c[c.length-1]:c[0];return '<p class="note" id="pending-'+esc(code)+'">Our '+esc(s.name)+' list does not include '+esc(list)+(c.length>1?' counties':' County')+' yet. For games there, use <a href="'+esc(s.list_url)+'" target="_blank" rel="noopener noreferrer">the state&rsquo;s own lookup ↗</a>.</p>'}
 function group(title,cards){return cards.length?'<section aria-label="'+esc(title)+'"><h2>'+esc(title)+'</h2><div class="grid">'+cards.join('')+'</div></section>':''}
