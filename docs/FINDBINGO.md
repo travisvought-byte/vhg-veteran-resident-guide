@@ -134,25 +134,67 @@ U.S. Census Geocoder match for the bingo hall at 228 N 20th St.
 
 Travis's direction: populate findbingo.org across the whole country. The build is top-down: every
 state and DC has an entry in `data/public/bingo-states.json` (alphabetical by name), so every ZIP code
-works and every state has a page and a free way to send game times. States are then researched in
-batches and moved up:
+works and every state has a page and a free way to send game times.
+
+**As of November 17, 2026 every state and DC is researched; none is `pending`.** Each entry names who
+licenses or oversees bingo there (or says plainly that licensing is local, or that the state does not
+license bingo), gives at least one official source, and links the state's own list, map or finder
+where one is published. The tests refuse a `pending` state, so coverage cannot slip back.
 
 | coverage | meaning |
 |---|---|
-| `pending` | Not researched yet. Only `code`, `name`, `coverage`, `about`, `reviewed_on`. The card and page ask for game times and claim nothing about the state. The page carries `noindex` and stays out of `sitemap.xml`. |
-| `none` | Researched: regulator named and sourced, no public list of games found. |
+| `pending` | Not researched. Only `code`, `name`, `coverage`, `about`, `reviewed_on`. Kept in the build for completeness; no state uses it now. Such a page carries `noindex` and stays out of `sitemap.xml`. |
+| `none` | Researched: regulator named and sourced, no list loaded on this site. If the state publishes a list or finder, `list_url` and `list_label` point to it and the state page and the search card lead with that button. |
 | `starter` | Organizer-published schedules, one file per state (`STARTER_FILES`). |
 | `licenses` | A state list of licensed groups without game days (Indiana). |
 | `times` | A state list with days and hours (Michigan). |
 
-To move a state up: replace its `pending` entry with the researched fields (see Kentucky for `none`,
-Florida for `starter`), add its file to `STARTER_FILES` if it has listings, and run the build. The home
-page shows researched states as buttons and keeps pending ones behind "More states".
+The home page shows a button for each state with a list on the site (`LISTED` in the generator) and keeps
+every other state behind "More states, A to Z". "Where these lists come from" on the home page gives
+sources for the listed states only; every other state is linked there and sourced on its own page.
 
-Researched so far beyond the first nine (November 17, 2026), all `none`: **Texas** (regulated by the
-Department of Licensing and Regulation since 2025; the state has its own hall finder on txbingo.org,
-which is the best next import because Texas licenses name each game's days and times), **Missouri**
-(Gaming Commission, Charitable Games Division) and **Massachusetts** (beano, State Lottery Commission).
+Two optional fields, `lead` and `description`, replace the standard wording on a state page whose
+situation the standard wording would misstate. Hawaii uses both (the state does not license bingo, so
+only free games are listed) and Tennessee uses `lead` (bingo only at yearly nonprofit events).
+
+How the states fall out (all checked November 17, 2026; each entry's `sources` has the detail):
+
+- **Licensing is local, so there is no state list:** Alabama (local constitutional amendments),
+  California (city and county ordinances), Connecticut (each municipality), Maryland (county by county),
+  South Dakota (notice to the county or city), Vermont (no license; nonprofits may run games of chance).
+  New Jersey and Rhode Island register or approve at the state level and license locally.
+- **Hawaii** does not license bingo. **Tennessee** allows it only at yearly nonprofit events.
+- **Everywhere else** a state office licenses bingo and is named with its phone number where the
+  office publishes one.
+
+### Official lists to import next
+
+These states publish something better than we show today. Import them in this order, best first. Do
+the collection for several states first, then one build and one pull request.
+
+| state | what the state publishes | where |
+|---|---|---|
+| Virginia | Directory of bingo sessions: locality, group, address, days, doors-open and doors-close times. PDF, reissued monthly (September 2026 when read). A `times` list. Skip the one-day dated events; keep the weekly sessions. | `https://www.vdacs.virginia.gov/pdf/bingo_events.pdf` |
+| Texas | Bingo hall locator with days and times. A script-driven lookup, so it needs a browser to read. | `https://bsc.txbingo.org/bsp/faces/bspBingoHallLocator.jsf` |
+| Montana | Places offering live keno or bingo, by county and city (fiscal year 2025 report). No days. | `https://dojmt.gov/wp-content/ftp/gambling/mtR35.pdf` |
+| Idaho | Licensed organizations with county, phone and license number. No days. | `https://www.idaholottery.com/charitable-gaming/licensed-organizations` |
+| Kansas | Licensed bingo organizations with address and phone. PDF. No days. | `https://www.ksrevenue.gov/pdf/BingoOrganizations.pdf` |
+| Maine | Charitable gaming organizations (January 16, 2026). PDF. | linked from `https://www.maine.gov/dps/gcu/charitable-gaming` |
+| North Dakota | Licensed gaming organizations and gaming sites. PDFs. Covers all charitable gaming, not only bingo. | `https://attorneygeneral.nd.gov/gaming-licensees/` |
+| New Mexico | Map and contact list of bingo, raffle and pull-tab locations. | `https://www.gcb.nm.gov/bingo-raffle-pull-tab-map-locations-and-info/` |
+| Mississippi | Map of charitable gaming licensees. | linked from `https://www.msgamingcommission.com/charitable_gaming` |
+| Minnesota | Licensed organizations and the sites where they operate. | `https://mn.gov/gcb/` (Data) |
+| District of Columbia | Calendar of licensed charitable events. | `https://dclottery.com/events?type=8&month=all&year=all` |
+| Alaska, Louisiana, Washington | Permit or license lookups by name; not lists. | see each entry |
+
+Before the first of these can load, the generator needs two small changes: `licenses` is tied to
+Indiana's file and `times` to Michigan's. Give each a per-state file table like `STARTER_FILES`, and let
+the home page script show any `licenses` state the way it shows Indiana.
+
+Some state sites turn away automated readers (Minnesota's Gambling Control Board, Montana's Department of
+Justice pages, the Rhode Island State Police, New Jersey Consumer Affairs, Georgia's Secretary of State
+and California's legislative code site). Read those in an ordinary browser. Do not try to get around the
+block.
 
 ZIP code to state comes from `data/public/zip-states.json`, built from the state column of the same
 Midwire/GeoNames file as the ZIP centroids (checksum recorded there): `zip3` maps the first three digits

@@ -36,12 +36,19 @@ for (const z of Object.keys(zips)) assert(data.zip_exceptions[z] || data.zip3[z.
 const static_ = new JSDOM(html).window.document;
 assert.equal(static_.querySelector('link[rel=canonical]').href, 'https://www.findbingo.org/');
 // States with a list or state research are the main buttons; the rest sit behind one "more states" control.
+// States with a list on the site are one tap away; every other state sits behind one "more states" control.
+const LISTED = ['times', 'licenses', 'starter', 'ohio_finder'];
+const listed = states.filter(s => LISTED.includes(s.coverage)), rest = states.filter(s => !LISTED.includes(s.coverage));
 const ready = states.filter(s => s.coverage !== 'pending').map(s => s.code), waiting = states.filter(s => s.coverage === 'pending').map(s => s.code);
-assert.deepEqual([...static_.querySelectorAll('#state-buttons > a')].map(a => a.dataset.state), ready);
-assert.deepEqual([...static_.querySelectorAll('#state-buttons details.more-states a')].map(a => a.dataset.state), waiting);
-for (const c of ['FL', 'IN', 'KY', 'MI', 'NY', 'OH', 'PA', 'UT', 'WV']) assert(ready.includes(c), c + ' keeps its list');
+assert.deepEqual([...static_.querySelectorAll('#state-buttons > a')].map(a => a.dataset.state), listed.map(s => s.code));
+assert.deepEqual([...static_.querySelectorAll('#state-buttons details.more-states a')].map(a => a.dataset.state), rest.map(s => s.code));
+for (const c of ['FL', 'IN', 'MI', 'NY', 'OH', 'PA', 'UT']) assert(listed.some(s => s.code === c), c + ' keeps its list');
+for (const c of ['KY', 'WV']) assert(ready.includes(c), c + ' stays researched');
+assert.deepEqual(waiting, [], 'every state and DC has been researched: each names who licenses or oversees bingo, with a source');
+assert.equal(states.length, 51);
 assert.equal(static_.querySelectorAll('script[src]').length, 0, 'no outside scripts');
-assert.deepEqual([...static_.querySelectorAll('#about-states h3')].map(h => h.textContent), states.filter(s => s.coverage !== 'pending').map(s => s.name).concat('Every other state'), 'sources are given for researched states; the rest are named together');
+assert.deepEqual([...static_.querySelectorAll('#about-states h3')].map(h => h.textContent), listed.map(s => s.name).concat('Every other state'), 'sources are given on the home page for states with a list; the rest are named together and sourced on their own pages');
+assert.deepEqual([...static_.querySelectorAll('#about-states h3:last-of-type ~ p a')].map(a => a.getAttribute('href')), rest.map(s => SLUGS[s.code] + '/'), 'every other state is linked from the home page');
 assert(static_.querySelector('footer a[href="https://creativecommons.org/licenses/by/3.0/"]'), 'ZIP data attribution');
 assert(!/\b\d+ (halls|venues|locations|counties)\b/i.test(static_.querySelector('header').textContent), 'no headline counts');
 
@@ -222,23 +229,40 @@ assert(p.cards.includes('ut-st-george-senior-citizen-center-st-george') && p.car
 assert.match(p.d.getElementById('state-UT').textContent, /free bingo at senior centers/);
 assert.match(p.d.getElementById('ut-st-george-senior-citizen-center-st-george').querySelector('.badge').textContent, /Senior center bingo/);
 
-// A state we have not researched yet: every ZIP code still works, and the card asks for game times
-// without claiming anything about the state.
+// Every state is researched. A ZIP code in a state without a list on this site names who licenses bingo there
+// and still asks for game times.
 p = await open('?zip=30303');
 assert.equal(p.cards[0], 'state-GA');
-assert.match(p.d.getElementById('state-GA').textContent, /We have not built a Georgia bingo list yet/);
+assert.match(p.d.getElementById('state-GA').textContent, /Secretary of State took over bingo licensing/);
 assert(p.d.querySelector('#state-GA a[href^="mailto:travis@vethomeguard.org?subject=Bingo%20game%20times%20in%20Georgia"]'));
-assert(!p.d.querySelector('#state-GA a[target]'), 'no regulator is named for a state we have not researched');
-// A researched state without a loaded list names its regulator, and Texas points to the state's own hall finder.
+assert.equal(p.d.querySelector('#state-GA a[target]').href, 'https://sos.ga.gov/how-to-guide/how-guide-charity-bingo', 'the regulator is named and linked');
+assert.equal(p.d.querySelector('#state-GA .big-actions a').className, 'solid', 'with no official list to point to, sending game times is the main action');
+// Where the state publishes its own list or finder, the card leads with it. Texas and Virginia publish days and times.
 p = await open('?zip=75201');
 assert.match(p.d.getElementById('state-TX').textContent, /state runs its own bingo hall finder/);
-assert.equal(p.d.querySelector('#state-TX a[target]').href, 'https://www.txbingo.org/');
-for (const slug of ['texas', 'missouri', 'massachusetts']) assert(fs.readFileSync(path.join(root, 'bingo-site/findbingo/sitemap.xml'), 'utf8').includes(`<loc>https://www.findbingo.org/${slug}/</loc>`), slug + ' is researched, so it is in the sitemap');
+assert.equal(p.d.querySelector('#state-TX .big-actions a.official').href, 'https://bsc.txbingo.org/bsp/faces/bspBingoHallLocator.jsf');
+assert.equal(p.d.querySelector('#state-TX p.small a[target]').href, 'https://www.txbingo.org/');
+assert(p.d.querySelector('#state-TX .big-actions a.outline[href^="mailto:travis@vethomeguard.org?subject=Bingo%20game%20times%20in%20Texas"]'));
+p = await open('?zip=23219');
+assert.equal(p.cards[0], 'state-VA');
+assert.equal(p.d.querySelector('#state-VA .big-actions a.official').href, 'https://www.vdacs.virginia.gov/pdf/bingo_events.pdf');
+for (const slug of ['texas', 'missouri', 'massachusetts', 'georgia', 'alaska', 'hawaii']) assert(fs.readFileSync(path.join(root, 'bingo-site/findbingo/sitemap.xml'), 'utf8').includes(`<loc>https://www.findbingo.org/${slug}/</loc>`), slug + ' is researched, so it is in the sitemap');
 p = await open('?state=AK');
 assert.equal(p.count, 'Alaska: no game list yet');
+assert.equal(p.d.querySelector('#state-buttons details.more-states a[data-state="AK"]').getAttribute('aria-current'), 'true');
 const ga = new JSDOM(fs.readFileSync(path.join(site, 'georgia/index.html'), 'utf8')).window.document;
-assert.equal(ga.querySelector('meta[name=robots]').content, 'noindex,follow', 'a page with nothing to say yet stays out of search results');
+assert(!ga.querySelector('meta[name=robots]'), 'a researched page is open to search engines');
 assert(ga.querySelector('#run-a-game a[href^="mailto:travis@vethomeguard.org?subject=Bingo%20game%20times%20in%20Georgia"]'));
+assert(ga.querySelector('#about a[href="https://sos.ga.gov/how-to-guide/how-guide-charity-bingo"]'));
+assert(!ga.getElementById('official-list'), 'no official-list button without an official list');
+const va = new JSDOM(fs.readFileSync(path.join(site, 'virginia/index.html'), 'utf8')).window.document;
+assert.equal(va.querySelector('#official-list a.solid').href, 'https://www.vdacs.virginia.gov/pdf/bingo_events.pdf', 'a state page leads with the official list');
+assert(va.querySelector('#official-list').compareDocumentPosition(va.getElementById('listings')) & 4, 'the official list comes before the empty list');
+// Hawaii does not license bingo and Tennessee allows it only at yearly events, so their pages say so in their own words.
+const hi = new JSDOM(fs.readFileSync(path.join(site, 'hawaii/index.html'), 'utf8')).window.document;
+assert.match(hi.querySelector('.lead').textContent, /^Hawaii does not license bingo\./);
+assert.match(hi.querySelector('meta[name=description]').content, /^Hawaii does not license bingo\./);
+assert.match(new JSDOM(fs.readFileSync(path.join(site, 'tennessee/index.html'), 'utf8')).window.document.querySelector('.lead').textContent, /only at yearly nonprofit fundraising events/);
 assert(!new JSDOM(fs.readFileSync(path.join(site, 'michigan/index.html'), 'utf8')).window.document.querySelector('meta[name=robots]'));
 
 // ZIP mistakes get plain-language help.

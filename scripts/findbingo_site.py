@@ -20,6 +20,9 @@ ORDER = list(STATES)
 # One file of organizer-published schedules per starter state (coverage "starter").
 STARTER_FILES = {'PA': 'pennsylvania-bingo.json', 'NY': 'new-york-bingo.json', 'FL': 'florida-bingo.json', 'UT': 'utah-bingo.json'}
 COVERAGE = {'times', 'licenses', 'starter', 'ohio_finder', 'none', 'pending'}
+# States with a list on this site (or, for Ohio, its own finder). Every other state has a researched page that
+# names who licenses bingo there and links the state's own list or finder where one is published.
+LISTED = {'times', 'licenses', 'starter', 'ohio_finder'}
 PHONE = re.compile(r'\d{3}-\d{3}-\d{4}')
 TIME = re.compile(r'(?:[01]\d|2[0-3]):[0-5]\d')
 REPO_RAW = 'https://raw.githubusercontent.com/travisvought-byte/vhg-veteran-resident-guide/'
@@ -58,8 +61,10 @@ def validate(states, venues, licensed, zips):
             assert s.get(field), (s['code'], field)
         assert s['regulator_url'].startswith('https://')
         assert all(x['url'].startswith('https://') and x['scope'] and date.fromisoformat(x['reviewed_on']) for x in s['sources'])
-        if s['coverage'] in ('times', 'licenses'):
+        if s['coverage'] in ('times', 'licenses') or s.get('list_url') or s.get('list_label'):
             assert s.get('list_url', '').startswith('https://') and s.get('list_label'), s['code']
+        # Optional wording for a state page whose situation the standard wording would misstate (Hawaii, Tennessee).
+        assert all(isinstance(s[k], str) and s[k].strip() for k in ('lead', 'description') if k in s), s['code']
         if s['coverage'] in ('times', 'starter'):
             assert s.get('hours_note'), s['code']
         # Counties the state lookup could not return yet; the page names them and links the state lookup.
@@ -152,14 +157,16 @@ def make_findbingo(root):
     # Each button links to that state's own page (crawlable); with the lists loaded, the finder shows the state in place.
     def button(s):
         return f'<a href="{SLUGS[s["code"]]}/" data-state="{s["code"]}">{escape(s["name"])}</a>'
-    # States with a list or state research come first; the rest sit behind one "more states" control so the
+    # States with a list come first; every other state sits behind one "more states" control so the
     # page stays simple for people who struggle with websites.
-    buttons = (''.join(button(s) for s in states if s['coverage'] != 'pending')
-               + '<details class="more-states"><summary>More states: send us your games</summary><div>'
-               + ''.join(button(s) for s in states if s['coverage'] == 'pending') + '</div></details>')
+    rest = [s for s in states if s['coverage'] not in LISTED]
+    buttons = ''.join(button(s) for s in states if s['coverage'] in LISTED)
+    if rest:
+        buttons += ('<details class="more-states"><summary>More states, A to Z</summary><div>'
+                    + ''.join(button(s) for s in rest) + '</div></details>')
     about = ''
     for s in states:
-        if s['coverage'] == 'pending':
+        if s['coverage'] not in LISTED:
             continue
         pairs = []
         for url, label in ((s.get('list_url'), s.get('list_label')), (s.get('finder_url'), 'Ohio Bingo Finder'), (s['regulator_url'], s['regulator_label'])):
@@ -169,10 +176,18 @@ def make_findbingo(root):
         as_of = f' (list dated {_date_label(s["list_as_of"])})' if s.get('list_as_of') else ''
         about += (f'<h3><a href="{SLUGS[s["code"]]}/">{escape(s["name"])}</a></h3><p>{escape(s["about"])} {escape(s["regulator_note"])}</p>'
                   f'<p class="small">Checked {_date_label(s["reviewed_on"])}{as_of}. Sources: {links}</p>')
+    def named(group):
+        return ', '.join(f'<a href="{SLUGS[s["code"]]}/">{escape(s["name"])}</a>' for s in group)
+    researched = [s for s in states if s['coverage'] == 'none']
     waiting = [s for s in states if s['coverage'] == 'pending']
+    if researched or waiting:
+        about += '<h3>Every other state</h3>'
+    if researched:
+        about += ('<p>Each of these states has its own page. It names who licenses or oversees bingo there, links the state’s own list or finder '
+                  'where there is one, shows its sources, and gives a free way to send us game times: ' + named(researched) + '.</p>')
     if waiting:
-        about += ('<h3>Every other state</h3><p>We have not built lists for these states yet. Each has its own page with a free way to send us game times: '
-                  + ', '.join(f'<a href="{SLUGS[s["code"]]}/">{escape(s["name"])}</a>' for s in waiting) + '.</p>')
+        about += ('<p>We have not built lists for these states yet. Each has its own page with a free way to send us game times: '
+                  + named(waiting) + '.</p>')
     page = (root / 'templates/findbingo/index.html').read_text()
     for key, value in (('__SOURCES__', json.dumps(DATA_SOURCES)), ('__STATE_BUTTONS__', buttons), ('__ABOUT__', about),
                        ('__UPDATED__', _date_label(generated_on))):
@@ -368,6 +383,9 @@ STATE_COPY = {
 def _state_page(s, states, rows, style, analytics, generated_on):
     code, name, slug = s['code'], s['name'], SLUGS[s['code']]
     title, description, lead = (t.format(name=name) for t in STATE_COPY[s['coverage']])
+    if s['coverage'] == 'none' and s.get('list_url'):
+        lead = f'{name}’s official bingo list or lookup is linked below. Run a game? Send us your days and times and we will list it free.'
+    description, lead = s.get('description', description), s.get('lead', lead)
     url = f'{SITE}/{slug}/'
     crumbs = {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
         {'@type': 'ListItem', 'position': 1, 'name': 'Find Bingo', 'item': SITE + '/'},
@@ -383,6 +401,10 @@ def _state_page(s, states, rows, style, analytics, generated_on):
                  f'{"counties" if len(c) > 1 else "County"} yet. For games there, use {_out(s["list_url"], "the state’s own lookup")}.</p>')
     if s['coverage'] == 'licenses':
         body += f'<p class="note">{escape(s["license_note"])}</p>'
+    if s['coverage'] == 'none' and s.get('list_url'):
+        # No list loaded here yet, but the state publishes one: lead with it.
+        body += (f'<div class="big-actions" id="official-list"><a class="solid" href="{escape(s["list_url"])}" target="_blank" '
+                 f'rel="noopener noreferrer">{escape(s["list_label"])} ↗</a></div>')
     if len(counties) > 1:
         body += ('<nav class="counties" aria-labelledby="counties-title"><h2 id="counties-title">Jump to your county</h2><ul>'
                  + ''.join(f'<li><a href="#county-{_slug(c)}">{escape(c)}</a></li>' for c in counties) + '</ul></nav>')
