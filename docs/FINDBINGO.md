@@ -149,6 +149,11 @@ To move a state up: replace its `pending` entry with the researched fields (see 
 Florida for `starter`), add its file to `STARTER_FILES` if it has listings, and run the build. The home
 page shows researched states as buttons and keeps pending ones behind "More states".
 
+Researched so far beyond the first nine (November 17, 2026), all `none`: **Texas** (regulated by the
+Department of Licensing and Regulation since 2025; the state has its own hall finder on txbingo.org,
+which is the best next import because Texas licenses name each game's days and times), **Missouri**
+(Gaming Commission, Charitable Games Division) and **Massachusetts** (beano, State Lottery Commission).
+
 ZIP code to state comes from `data/public/zip-states.json`, built from the state column of the same
 Midwire/GeoNames file as the ZIP centroids (checksum recorded there): `zip3` maps the first three digits
 to a state and `exceptions` lists the few ZIP codes that sit in another state. The file covers the 50

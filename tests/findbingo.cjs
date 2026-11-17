@@ -224,16 +224,21 @@ assert.match(p.d.getElementById('ut-st-george-senior-citizen-center-st-george').
 
 // A state we have not researched yet: every ZIP code still works, and the card asks for game times
 // without claiming anything about the state.
+p = await open('?zip=30303');
+assert.equal(p.cards[0], 'state-GA');
+assert.match(p.d.getElementById('state-GA').textContent, /We have not built a Georgia bingo list yet/);
+assert(p.d.querySelector('#state-GA a[href^="mailto:travis@vethomeguard.org?subject=Bingo%20game%20times%20in%20Georgia"]'));
+assert(!p.d.querySelector('#state-GA a[target]'), 'no regulator is named for a state we have not researched');
+// A researched state without a loaded list names its regulator, and Texas points to the state's own hall finder.
 p = await open('?zip=75201');
-assert.equal(p.cards[0], 'state-TX');
-assert.match(p.d.getElementById('state-TX').textContent, /We have not built a Texas bingo list yet/);
-assert(p.d.querySelector('#state-TX a[href^="mailto:travis@vethomeguard.org?subject=Bingo%20game%20times%20in%20Texas"]'));
-assert(!p.d.querySelector('#state-TX a[target]'), 'no regulator is named for a state we have not researched');
+assert.match(p.d.getElementById('state-TX').textContent, /state runs its own bingo hall finder/);
+assert.equal(p.d.querySelector('#state-TX a[target]').href, 'https://www.txbingo.org/');
+for (const slug of ['texas', 'missouri', 'massachusetts']) assert(fs.readFileSync(path.join(root, 'bingo-site/findbingo/sitemap.xml'), 'utf8').includes(`<loc>https://www.findbingo.org/${slug}/</loc>`), slug + ' is researched, so it is in the sitemap');
 p = await open('?state=AK');
 assert.equal(p.count, 'Alaska: no game list yet');
-const tx = new JSDOM(fs.readFileSync(path.join(site, 'texas/index.html'), 'utf8')).window.document;
-assert.equal(tx.querySelector('meta[name=robots]').content, 'noindex,follow', 'a page with nothing to say yet stays out of search results');
-assert(tx.querySelector('#run-a-game a[href^="mailto:travis@vethomeguard.org?subject=Bingo%20game%20times%20in%20Texas"]'));
+const ga = new JSDOM(fs.readFileSync(path.join(site, 'georgia/index.html'), 'utf8')).window.document;
+assert.equal(ga.querySelector('meta[name=robots]').content, 'noindex,follow', 'a page with nothing to say yet stays out of search results');
+assert(ga.querySelector('#run-a-game a[href^="mailto:travis@vethomeguard.org?subject=Bingo%20game%20times%20in%20Georgia"]'));
 assert(!new JSDOM(fs.readFileSync(path.join(site, 'michigan/index.html'), 'utf8')).window.document.querySelector('meta[name=robots]'));
 
 // ZIP mistakes get plain-language help.
