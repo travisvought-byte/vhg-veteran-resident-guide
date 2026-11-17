@@ -42,7 +42,7 @@ const listed = states.filter(s => LISTED.includes(s.coverage)), rest = states.fi
 const ready = states.filter(s => s.coverage !== 'pending').map(s => s.code), waiting = states.filter(s => s.coverage === 'pending').map(s => s.code);
 assert.deepEqual([...static_.querySelectorAll('#state-buttons > a')].map(a => a.dataset.state), listed.map(s => s.code));
 assert.deepEqual([...static_.querySelectorAll('#state-buttons details.more-states a')].map(a => a.dataset.state), rest.map(s => s.code));
-for (const c of ['FL', 'IN', 'MI', 'MT', 'NM', 'NY', 'OH', 'PA', 'TX', 'UT', 'VA']) assert(listed.some(s => s.code === c), c + ' keeps its list');
+for (const c of ['FL', 'IN', 'MI', 'MS', 'MT', 'NM', 'NY', 'OH', 'PA', 'TX', 'UT', 'VA']) assert(listed.some(s => s.code === c), c + ' keeps its list');
 for (const c of ['KY', 'WV']) assert(ready.includes(c), c + ' stays researched');
 assert.deepEqual(waiting, [], 'every state and DC has been researched: each names who licenses or oversees bingo, with a source');
 assert.equal(states.length, 51);
@@ -274,6 +274,17 @@ assert(!/through/.test(post13.querySelector('details').textContent), 'no end dat
 assert(data.licensed.find(r => r.address.startsWith('29 South Florida')).city === 'Alamogordo', 'the town comes from the list headings');
 const nmPage = new JSDOM(fs.readFileSync(path.join(site, 'new-mexico/index.html'), 'utf8')).window.document;
 assert(!/list dated/.test(nmPage.querySelector('#about').textContent), 'the page has no list date to show');
+// Mississippi: halls on the Gaming Commission's licensee map whose games include bingo and whose license is current.
+const msRows = data.licensed.filter(r => r.state === 'MS');
+assert(msRows.length && msRows.every(r => r.license_type === 'charitable bingo license' && r.license_expires >= '2026-11-17' && !r.phone));
+assert(!msRows.some(r => /Big Dog Bingo/.test(r.name)), 'a license past its end date on the map is not shown');
+p = await open('?state=MS');
+assert.equal(p.count, 'Mississippi halls licensed for bingo');
+assert.match(p.d.querySelector('#results .note').textContent, /passed its end date are not shown/);
+assert.match(p.d.getElementById('ms-23-00047').textContent, /Mississippi license 23-00047 \(charitable bingo license\), on the state list through Mar 31, 2027/);
+assert.match(p.d.getElementById('ms-23-00047').querySelector('.big-actions a.solid').textContent, /Look up phone number/, 'contact phones on the map are not republished');
+p = await open('?zip=38837&radius=10');
+assert(p.cards.some(id => id.startsWith('ms-')), 'the Burnsville ZIP code has a map point');
 p = await open('?zip=78572&radius=10');
 assert(p.cards.includes('tx-the-bingo-ranch-mission') && !p.cards.includes('state-TX'));
 const ranch = p.d.getElementById('tx-the-bingo-ranch-mission');
