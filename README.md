@@ -1,6 +1,6 @@
-# Veteran Resident Resource Guide: all 50 states and the District of Columbia
+# Veteran Resource Guide: all 50 states and the District of Columbia
 
-A free public guide created and maintained by Travis Vought, and shared by Veteran Home Guardians (VHG) for veterans, surviving spouses, seniors, people with disabilities, families and care teams. It helps people find their first contact and prepare a useful referral.
+A free public guide created and maintained by Travis Vought, and shared by Veteran Home Guardians (VHG) for every veteran, and for surviving spouses, seniors, people with disabilities, families and care teams. It helps people find their first contact and prepare a useful referral.
 
 **Live guide:** https://guide.vethomeguard.org/
 

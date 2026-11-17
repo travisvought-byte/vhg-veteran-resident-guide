@@ -12,6 +12,10 @@ function setState(state,initial=false){
  }
  STATE=state;const config=EDITIONS[state];DATA=config.data;COUNTIES=config.counties;
  ({priority,routes,seniorTopics,routeNames}=config.configure());
+ // National records every state shares join the state's own counseling and housing lists, whatever order the state set them in.
+ Object.entries({crisis:['va-vet-centers','va-vet-center-mst','va-women-veterans-call-center'],housing:['va-home-loans']}).forEach(([key,ids])=>{const own=routes[key]||[];routes[key]=[...own,...ids.filter(id=>!own.includes(id)&&DATA.some(x=>x.program_id===id))]});
+ if(routes.crisis.length)routeNames.crisis='Counseling and mental health';
+ routeNames.housing='Housing, home loans and homelessness';
  if(!Object.hasOwn(routeNames,route))route='priority';
  $('edition-state').value=state;$('county').innerHTML='<option value="">Choose a county or city…</option>';$('county').value='';
  COUNTIES.forEach(c=>{const o=document.createElement('option');o.value=c.county;o.textContent=localityLabel(c);$('county').append(o)});
@@ -30,7 +34,7 @@ function setState(state,initial=false){
  document.querySelector('label[for="county"]').textContent=(state==='VA'?'County or independent city in ':state==='LA'?'Parish in ':'County in ')+config.name;
  $('aid-open').hidden=state!=='OH';document.querySelectorAll('.ohio-only').forEach(e=>{e.hidden=state!=='OH'});document.querySelector('.office-directory summary').textContent='Browse '+config.name+(state==='VA'?' county and city contacts':state==='LA'?' parish contacts':' county contacts');
  $('office-search').placeholder='Search '+config.name+(state==='VA'?' counties or independent cities':state==='LA'?' parishes':' counties');
- document.title=config.name+' | Veteran Resident Resource Guide';
+ document.title=config.name+' | Veteran Resource Guide';
  // The footer date comes from the records, so it cannot go stale: the newest review of this state's veterans office contacts.
  // (Program records are left out because federal ones are shared by every state and would date them all alike.)
  const reviewed=COUNTIES.map(c=>c.reviewed_on).filter(v=>/^\d{4}-\d{2}-\d{2}$/.test(v||'')).sort().at(-1);
