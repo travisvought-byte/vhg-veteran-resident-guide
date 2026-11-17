@@ -23,8 +23,8 @@ STARTER_FILES = {'PA': 'pennsylvania-bingo.json', 'NY': 'new-york-bingo.json', '
 # Virginia's directory of sessions.
 TIMES_FILES = {'MI': 'michigan-weekly-bingo.json', 'TX': 'texas-bingo-halls.json', 'VA': 'virginia-bingo-sessions.json'}
 # State lists that name licensed groups or permitted places without game days: Indiana's annual bingo licenses and
-# Montana's live bingo permits.
-LICENSE_FILES = {'IN': 'indiana-bingo-licenses.json', 'MT': 'montana-bingo-permits.json'}
+# Montana's live bingo permits, and New Mexico's groups licensed for bingo, raffles or pull-tabs.
+LICENSE_FILES = {'IN': 'indiana-bingo-licenses.json', 'MT': 'montana-bingo-permits.json', 'NM': 'new-mexico-bingo-licenses.json'}
 COVERAGE = {'times', 'licenses', 'starter', 'ohio_finder', 'none', 'pending'}
 # States with a list on this site (or, for Ohio, its own finder). Every other state has a researched page that
 # names who licenses bingo there and links the state's own list or finder where one is published.
@@ -77,7 +77,8 @@ def validate(states, venues, licensed, zips):
         pending = s.get('pending_counties', [])
         assert pending == sorted(set(pending)) and all(type(c) is str and c for c in pending), s['code']
         if s['coverage'] == 'licenses':
-            assert s.get('license_note') and date.fromisoformat(s['list_as_of']), s['code']
+            # list_as_of only when the list itself carries a date (New Mexico's page does not).
+            assert s.get('license_note') and ('list_as_of' not in s or date.fromisoformat(s['list_as_of'])), s['code']
         if s['coverage'] == 'ohio_finder':
             assert s.get('finder_url', '').startswith('https://'), s['code']
     pending = {c for s in states for c in s.get('pending_counties', [])}
@@ -111,18 +112,20 @@ def validate(states, venues, licensed, zips):
         assert date.fromisoformat(v['reviewed_on']) and v['sources'] and all(x['url'].startswith('https://') for x in v['sources'])
     for r in licensed:
         code = r['state']
-        assert code in LICENSE_FILES and r['id'] not in ids and r['id'] == code.lower() + '-' + _slug(r['license_number']), r['id']
+        # The id follows the license number when the list gives one (New Mexico's does not).
+        assert code in LICENSE_FILES and r['id'] not in ids and re.fullmatch(code.lower() + r'-[a-z0-9-]+', r['id']), r['id']
+        assert 'license_number' not in r or r['id'] == code.lower() + '-' + _slug(r['license_number']), r['id']
         ids.add(r['id'])
         assert _state_of_zip(r['zip']) == code and r['zip'] in zips, r['id']
         assert r['address'].endswith(', ' + code + ' ' + r['zip']) and r['city'] in r['address'] and r['name'] and r['county'], r['id']
         assert r['license_type'] and (code != 'IN' or r['license_type'].startswith('Annual Activity')), r['id']
         assert 'phone' not in r or PHONE.fullmatch(r['phone']), r['id']
-        assert date.fromisoformat(r['license_expires']) and date.fromisoformat(r['reviewed_on']), r['id']
+        assert ('license_expires' not in r or date.fromisoformat(r['license_expires'])) and date.fromisoformat(r['reviewed_on']), r['id']
         assert r['sources'] and all(x['url'].startswith('https://') for x in r['sources'])
 
 
 def _public_state(s):
-    keep = ('code', 'name', 'coverage', 'about', 'hours_note', 'license_note', 'list_label', 'list_url', 'list_as_of',
+    keep = ('code', 'name', 'coverage', 'about', 'hours_note', 'license_note', 'license_badge', 'license_heading', 'list_label', 'list_url', 'list_as_of',
             'finder_url', 'regulator_label', 'regulator_url', 'regulator_note', 'pending_counties', 'reviewed_on')
     return {k: s[k] for k in keep if k in s}
 
@@ -251,7 +254,7 @@ Lists updated {_date_label(generated_on)}.
         if s['code'] == 'OH':
             continue
         if s['coverage'] == 'licenses':
-            rows = [r for r in licensed if r['state'] == s['code'] and r['license_expires'] >= today]
+            rows = [r for r in licensed if r['state'] == s['code'] and r.get('license_expires', today) >= today]
         else:
             rows = [v for v in venues if v['state'] == s['code']]
         pages[SLUGS[s['code']] + '/index.html'] = _state_page(s, states, rows, style, analytics, generated_on)
@@ -370,16 +373,27 @@ def _venue_html(v, s):
 
 
 def _licensed_html(r, s):
-    return (f'<article id="{escape(r["id"])}"><p><span class="badge muted">Licensed for bingo · game days not posted</span></p>'
+    return (f'<article id="{escape(r["id"])}"><p><span class="badge muted">{escape(s.get("license_badge", LICENSE_BADGE))}</span></p>'
             f'<h3>{escape(r["name"])}</h3><p class="where">{escape(r["city"])}</p>'
             + '<div class="big-actions">' + (f'<a class="solid" href="tel:{re.sub(r"[^0-9]", "", r["phone"])}">Call {escape(r["phone"])}</a>' if r.get('phone') else
                                              f'<a class="solid" href="{escape(_maps(r["name"] + " " + r["address"]))}" target="_blank" rel="noopener noreferrer">Look up phone number ↗</a>')
             + f'<a class="outline" href="{escape(_maps(r["address"]))}" target="_blank" rel="noopener noreferrer">Directions ↗</a></div>'
             f'<p class="address">{escape(r["address"])} · {escape(_area(r["county"]))}</p>'
             f'<details class="sources"><summary>Where this comes from · checked {_date_label(r["reviewed_on"])}</summary>'
-            f'<p>{escape(s["name"])} license {escape(r["license_number"])} ({escape(r["license_type"])}), on the state list through {_date_label(r["license_expires"])}.</p>'
+            f'<p>{escape(_license_line(r, s))}</p>'
             f'<p>{_out(s["list_url"], s["list_label"])}</p></details>'
             f'<p class="small-links"><a href="{escape(_report(r))}">Send us their game days</a></p></article>')
+
+
+LICENSE_BADGE = 'Licensed for bingo · game days not posted'
+
+
+def _license_line(r, s):
+    if r.get('license_number'):
+        line = f'{s["name"]} license {r["license_number"]} ({r["license_type"]})'
+    else:
+        line = f'On {s["name"]}’s list, with a {r["license_type"]}'
+    return line + (f', on the state list through {_date_label(r["license_expires"])}.' if r.get('license_expires') else '.')
 
 
 def _send_times(s):

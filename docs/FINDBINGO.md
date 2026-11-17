@@ -19,6 +19,7 @@ Started November 15, 2026, at Travis's direction: one national finder, neighbori
 | Virginia bingo sessions (halls, days, doors-open and doors-close times) | `data/public/virginia-bingo-sessions.json`, rebuilt by `scripts/import_virginia_bingo.py` |
 | Indiana groups with a current license that allows bingo | `data/public/indiana-bingo-licenses.json` |
 | Montana places with a live bingo permit | `data/public/montana-bingo-permits.json`, rebuilt by `scripts/import_montana_bingo.py` |
+| New Mexico groups licensed for bingo, raffles or pull-tabs | `data/public/new-mexico-bingo-licenses.json`, rebuilt by `scripts/import_new_mexico_bingo.py` |
 | ZIP code points the centroid file lacks | `data/public/zip-points-supplement.json` |
 | Page template | `templates/findbingo/index.html` |
 | Generator and validation | `scripts/findbingo_site.py` (run by `scripts/build_public.py`) |
@@ -134,6 +135,7 @@ U.S. Census Geocoder match for the bingo hall at 228 N 20th St.
    then set Virginia's `list_as_of` in `bingo-states.json` to the listing date the script prints.
    For Montana, download the current list and run `python3 scripts/import_montana_bingo.py mtR35.pdf --reviewed <today>`,
    then set `list_as_of` to the date it prints.
+   For New Mexico, run `python3 scripts/import_new_mexico_bingo.py --reviewed <today>` (it downloads the page).
    For Texas, run `python3 scripts/read_texas_locator.py texas-locator.json` (needs Python Playwright
    and Chrome), then `python3 scripts/import_texas_bingo.py texas-locator.json --reviewed <today> --geocode`.
 2. Update the JSON files and each record's `reviewed_on`.
@@ -155,7 +157,7 @@ where one is published. The tests refuse a `pending` state, so coverage cannot s
 | `pending` | Not researched. Only `code`, `name`, `coverage`, `about`, `reviewed_on`. Kept in the build for completeness; no state uses it now. Such a page carries `noindex` and stays out of `sitemap.xml`. |
 | `none` | Researched: regulator named and sourced, no list loaded on this site. If the state publishes a list or finder, `list_url` and `list_label` point to it and the state page and the search card lead with that button. |
 | `starter` | Organizer-published schedules, one file per state (`STARTER_FILES`). |
-| `licenses` | A state list of licensed groups or permitted places without game days (Indiana, Montana), one file per state (`LICENSE_FILES`). |
+| `licenses` | A state list of licensed groups or permitted places without game days (Indiana, Montana, New Mexico), one file per state (`LICENSE_FILES`). |
 | `times` | A state list with days and hours (Michigan, Texas, Virginia), one file per state (`TIMES_FILES`). |
 
 The home page shows a button for each state with a list on the site (`LISTED` in the generator) and keeps
@@ -221,6 +223,15 @@ says so. A live bingo or keno permit is annual and expires June 30 (Montana Code
 division's FAQ), so the fiscal year 2027 permits show as current through June 30, 2027. The list has no
 game days and no phones, so Montana is a `licenses` state like Indiana.
 
+### New Mexico (loaded November 17, 2026)
+
+The Gaming Control Board's "Bingo, Raffle, & Pull-Tab Map Locations and Info" page lists each licensed
+group by town with its address and phone, below the map. It does not say which of bingo, raffles or
+pull-tabs a group holds, and gives no license number, end date or list date. So New Mexico cards say
+"Licensed for bingo, raffles or pull-tabs · call to ask about bingo" (`license_badge`), the results
+heading says the same (`license_heading`), and no end date or list date is shown. The town comes from
+the page's town headings, because one address line misspells Alamogordo.
+
 ### Official lists to import next
 
 These states publish something better than we show today. Import them in this order, best first. Do
@@ -228,19 +239,19 @@ the collection for several states first, then one build and one pull request.
 
 | state | what the state publishes | where |
 |---|---|---|
-| Idaho | Licensed organizations with county, phone and license number. No days. | `https://www.idaholottery.com/charitable-gaming/licensed-organizations` |
+| Idaho | A search box over charitable gaming licenses (bingo and raffles together), read only in a browser. Not a list of places to play. | `https://www.idaholottery.com/charitable-gaming/licensed-organizations` |
 | Kansas | Licensed bingo organizations with address and phone. PDF. No days. **Not loaded:** the file is from July 2022 and Kansas licenses run July to June, so every license on it has lapsed. Load it only when the state posts a current list. | `https://www.ksrevenue.gov/pdf/BingoOrganizations.pdf` |
 | Maine | Charitable gaming organizations (January 16, 2026). PDF. Covers raffles and games of chance too, and many addresses are post office boxes, so it is not a list of places to play. | linked from `https://www.maine.gov/dps/gcu/charitable-gaming` |
 | North Dakota | Licensed gaming organizations and gaming sites. PDFs. Covers all charitable gaming, not only bingo. | `https://attorneygeneral.nd.gov/gaming-licensees/` |
-| New Mexico | Map and contact list of bingo, raffle and pull-tab locations. | `https://www.gcb.nm.gov/bingo-raffle-pull-tab-map-locations-and-info/` |
 | Mississippi | Map of charitable gaming licensees. | linked from `https://www.msgamingcommission.com/charitable_gaming` |
 | Minnesota | Licensed organizations and the sites where they operate. | `https://mn.gov/gcb/` (Data) |
 | District of Columbia | Calendar of licensed charitable events. | `https://dclottery.com/events?type=8&month=all&year=all` |
 | Alaska, Louisiana, Washington | Permit or license lookups by name; not lists. | see each entry |
 
 A state list with days and hours goes in `TIMES_FILES` (Michigan, Texas and Virginia). A list of
-licensed groups or permitted places without days goes in `LICENSE_FILES` (Indiana and Montana); each
-record needs `license_number`, `license_type` and `license_expires`, and may carry a `phone`.
+licensed groups or permitted places without days goes in `LICENSE_FILES` (Indiana, Montana and New
+Mexico); each record needs `license_type` and may carry `license_number`, `license_expires` and `phone`.
+A state may set `license_badge` and `license_heading` when "licensed for bingo" would overstate its list.
 
 Some state sites turn away automated readers (Minnesota's Gambling Control Board, Montana's Department of
 Justice pages, the Rhode Island State Police, New Jersey Consumer Affairs, Georgia's Secretary of State

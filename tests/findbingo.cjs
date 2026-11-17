@@ -42,7 +42,7 @@ const listed = states.filter(s => LISTED.includes(s.coverage)), rest = states.fi
 const ready = states.filter(s => s.coverage !== 'pending').map(s => s.code), waiting = states.filter(s => s.coverage === 'pending').map(s => s.code);
 assert.deepEqual([...static_.querySelectorAll('#state-buttons > a')].map(a => a.dataset.state), listed.map(s => s.code));
 assert.deepEqual([...static_.querySelectorAll('#state-buttons details.more-states a')].map(a => a.dataset.state), rest.map(s => s.code));
-for (const c of ['FL', 'IN', 'MI', 'MT', 'NY', 'OH', 'PA', 'TX', 'UT', 'VA']) assert(listed.some(s => s.code === c), c + ' keeps its list');
+for (const c of ['FL', 'IN', 'MI', 'MT', 'NM', 'NY', 'OH', 'PA', 'TX', 'UT', 'VA']) assert(listed.some(s => s.code === c), c + ' keeps its list');
 for (const c of ['KY', 'WV']) assert(ready.includes(c), c + ' stays researched');
 assert.deepEqual(waiting, [], 'every state and DC has been researched: each names who licenses or oversees bingo, with a source');
 assert.equal(states.length, 51);
@@ -155,7 +155,7 @@ assert.deepEqual(p.cards, ['state-OH']);
 // Indiana ZIP with no posted game days: show the licensed groups right away.
 p = await open('?zip=46733&radius=10');
 assert.equal(p.count, 'Bingo within 10 miles of 46733 · closest first');
-assert(p.groups[0].startsWith('Licensed for bingo, game days not posted'));
+assert(p.groups[0].startsWith('Licensed groups, game days not posted'));
 assert(p.cards.includes('in-000114'));
 assert.match(p.d.getElementById('in-000114').textContent, /Indiana's license list shows this group can hold bingo, but not when/);
 assert.match(p.d.getElementById('in-000114').textContent, /license 000114 \(Annual Activity\), on the state list through Oct 31, 2027/);
@@ -252,7 +252,7 @@ const mtRows = data.licensed.filter(r => r.state === 'MT');
 assert(mtRows.length && mtRows.every(r => r.license_type.includes('bingo') && r.license_expires === '2027-06-30' && !/PO Box/i.test(r.address)));
 assert(!mtRows.some(r => /Page \d/.test(r.name)), 'page footers stay out of names');
 p = await open('?state=MT');
-assert.equal(p.count, 'Montana licensed for bingo');
+assert.equal(p.count, 'Montana places with a live bingo permit');
 assert.match(p.d.querySelector('#results .note').textContent, /mailing address/);
 assert.deepEqual(p.cards, [...mtRows].sort((a, b) => a.county.localeCompare(b.county) || a.city.localeCompare(b.city) || a.name.localeCompare(b.name)).map(r => r.id));
 const blacktail = p.d.getElementById('mt-4040442-008-lgt');
@@ -261,6 +261,19 @@ assert.match(blacktail.textContent, /Montana license 4040442-008-LGT \(live bing
 assert.match(blacktail.querySelector('.address').textContent, /26 S Montana St, Dillon, MT 59725 · Beaverhead County$/);
 p = await open('?zip=59725&radius=10');
 assert(p.cards.includes('mt-4040442-008-lgt'), 'with no game days nearby, licensed places show');
+// New Mexico: the board's list of groups licensed for bingo, raffles or pull-tabs, with phones; it does not say which.
+const nmRows = data.licensed.filter(r => r.state === 'NM');
+assert(nmRows.length && nmRows.every(r => r.phone && !r.license_number && !r.license_expires));
+p = await open('?state=NM');
+assert.equal(p.count, 'New Mexico groups licensed for bingo, raffles or pull-tabs');
+const post13 = p.d.getElementById('nm-american-legion-post-13-albuquerque');
+assert.match(post13.querySelector('.badge').textContent, /Licensed for bingo, raffles or pull-tabs/);
+assert.equal(post13.querySelector('.big-actions a.solid').getAttribute('href'), 'tel:5052431901');
+assert.match(post13.textContent, /On New Mexico’s list, with a bingo, raffle or pull-tab license\./);
+assert(!/through/.test(post13.querySelector('details').textContent), 'no end date is claimed');
+assert(data.licensed.find(r => r.address.startsWith('29 South Florida')).city === 'Alamogordo', 'the town comes from the list headings');
+const nmPage = new JSDOM(fs.readFileSync(path.join(site, 'new-mexico/index.html'), 'utf8')).window.document;
+assert(!/list dated/.test(nmPage.querySelector('#about').textContent), 'the page has no list date to show');
 p = await open('?zip=78572&radius=10');
 assert(p.cards.includes('tx-the-bingo-ranch-mission') && !p.cards.includes('state-TX'));
 const ranch = p.d.getElementById('tx-the-bingo-ranch-mission');
@@ -382,7 +395,7 @@ for (const s of states) {
   }
   const ids = [...d.querySelectorAll('#listings article')].map(a => a.id);
   const today = data.generated_on;
-  const expected = s.coverage === 'licenses' ? data.licensed.filter(r => r.state === s.code && r.license_expires >= today) : data.venues.filter(v => v.state === s.code);
+  const expected = s.coverage === 'licenses' ? data.licensed.filter(r => r.state === s.code && (r.license_expires || today) >= today) : data.venues.filter(v => v.state === s.code);
   assert.deepEqual(ids.sort(), expected.map(r => r.id).sort(), slug + ' lists every record');
   if (['none'].includes(s.coverage)) assert(d.querySelector('#listings .empty'));
   for (const c of new Set(expected.map(r => r.county))) assert(d.querySelector(`#listings h2`) && [...d.querySelectorAll('#listings h2')].some(h => h.textContent === (c.endsWith(' city') ? 'City of ' + c.slice(0, -5) : c + ' County')), c);
