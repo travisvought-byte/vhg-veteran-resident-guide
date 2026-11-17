@@ -905,12 +905,15 @@
  {
   "code": "TX",
   "name": "Texas",
-  "coverage": "none",
-  "about": "Texas licenses charitable bingo statewide, and the state runs its own bingo hall finder. We have not loaded Texas games here yet, so use the state's finder for now.",
-  "reviewed_on": "2026-11-17",
+  "coverage": "times",
+  "about": "Texas licenses charitable bingo statewide, and the state's Bingo Hall Locator lists each licensed hall with its days and times.",
+  "hours_note": "Hours are the licensed bingo times from the Texas Bingo Hall Locator. Call ahead to confirm before you go.",
+  "list_label": "Texas Bingo Hall Locator",
+  "list_url": "https://bsc.txbingo.org/bsp/faces/bspBingoHallLocator.jsf",
   "regulator_label": "Texas charitable bingo (txbingo.org)",
   "regulator_url": "https://www.txbingo.org/",
   "regulator_note": "Texas bingo was regulated by the Texas Lottery Commission until 2025, when the Legislature moved it to the Texas Department of Licensing and Regulation. The bingo line is 800-246-4677.",
+  "reviewed_on": "2026-11-17",
   "sources": [
    {
     "url": "https://guides.sll.texas.gov/gambling/bingo",
@@ -927,9 +930,7 @@
     "scope": "Charitable bingo home page: \"Where can I play?\" opens the state bingo hall locator",
     "reviewed_on": "2026-11-17"
    }
-  ],
-  "list_url": "https://bsc.txbingo.org/bsp/faces/bspBingoHallLocator.jsf",
-  "list_label": "Texas bingo hall locator"
+  ]
  },
  {
   "code": "UT",

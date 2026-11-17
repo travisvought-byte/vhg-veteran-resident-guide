@@ -42,7 +42,7 @@ const listed = states.filter(s => LISTED.includes(s.coverage)), rest = states.fi
 const ready = states.filter(s => s.coverage !== 'pending').map(s => s.code), waiting = states.filter(s => s.coverage === 'pending').map(s => s.code);
 assert.deepEqual([...static_.querySelectorAll('#state-buttons > a')].map(a => a.dataset.state), listed.map(s => s.code));
 assert.deepEqual([...static_.querySelectorAll('#state-buttons details.more-states a')].map(a => a.dataset.state), rest.map(s => s.code));
-for (const c of ['FL', 'IN', 'MI', 'NY', 'OH', 'PA', 'UT', 'VA']) assert(listed.some(s => s.code === c), c + ' keeps its list');
+for (const c of ['FL', 'IN', 'MI', 'NY', 'OH', 'PA', 'TX', 'UT', 'VA']) assert(listed.some(s => s.code === c), c + ' keeps its list');
 for (const c of ['KY', 'WV']) assert(ready.includes(c), c + ' stays researched');
 assert.deepEqual(waiting, [], 'every state and DC has been researched: each names who licenses or oversees bingo, with a source');
 assert.equal(states.length, 51);
@@ -238,11 +238,24 @@ assert(p.d.querySelector('#state-GA a[href^="mailto:travis@vethomeguard.org?subj
 assert.equal(p.d.querySelector('#state-GA a[target]').href, 'https://sos.ga.gov/how-to-guide/how-guide-charity-bingo', 'the regulator is named and linked');
 assert.equal(p.d.querySelector('#state-GA .big-actions a').className, 'solid', 'with no official list to point to, sending game times is the main action');
 // Where the state publishes its own list or finder, the card leads with it.
-p = await open('?zip=75201');
-assert.match(p.d.getElementById('state-TX').textContent, /state runs its own bingo hall finder/);
-assert.equal(p.d.querySelector('#state-TX .big-actions a.official').href, 'https://bsc.txbingo.org/bsp/faces/bspBingoHallLocator.jsf');
-assert.equal(p.d.querySelector('#state-TX p.small a[target]').href, 'https://www.txbingo.org/');
-assert(p.d.querySelector('#state-TX .big-actions a.outline[href^="mailto:travis@vethomeguard.org?subject=Bingo%20game%20times%20in%20Texas"]'));
+p = await open('?zip=67202');
+assert.equal(p.cards[0], 'state-KS');
+assert.equal(p.d.querySelector('#state-KS .big-actions a.official').href, 'https://www.ksrevenue.gov/pdf/BingoOrganizations.pdf');
+assert.equal(p.d.querySelector('#state-KS p.small a[target]').href, 'https://www.ksrevenue.gov/bustaxtypesbingo.html');
+assert(p.d.querySelector('#state-KS .big-actions a.outline[href^="mailto:travis@vethomeguard.org?subject=Bingo%20game%20times%20in%20Kansas"]'));
+// Texas: the state's Bingo Hall Locator, with licensed days and times and the hall's phone.
+const txRows = data.venues.filter(v => v.state === 'TX');
+assert.equal(states.find(s => s.code === 'TX').coverage, 'times');
+assert(txRows.length && txRows.every(v => v.sessions.every(x => x.start && x.end) && !v.schedule_note), 'every Texas session has licensed hours');
+p = await open('?zip=78572&radius=10');
+assert(p.cards.includes('tx-the-bingo-ranch-mission') && !p.cards.includes('state-TX'));
+const ranch = p.d.getElementById('tx-the-bingo-ranch-mission');
+assert.equal(ranch.querySelector('.big-actions a.solid').getAttribute('href'), 'tel:9565190074');
+assert.match(ranch.querySelector('.address').textContent, /Mission, TX 78572 · Hidalgo County$/);
+assert.equal(ranch.querySelector('details a').href, 'https://bsc.txbingo.org/bsp/faces/bspBingoHallLocator.jsf');
+p = await open('?state=TX&county=Dallas');
+assert.equal(p.count, 'Texas bingo halls with game days in Dallas County');
+assert(p.cards.includes('tx-strike-it-rich-bingo-inc-dallas') && p.cards.every(id => txRows.find(v => v.id === id).county === 'Dallas'));
 p = await open('?zip=83702');
 assert.equal(p.cards[0], 'state-ID');
 assert.equal(p.d.querySelector('#state-ID .big-actions a.official').href, 'https://www.idaholottery.com/charitable-gaming/licensed-organizations');
@@ -341,7 +354,10 @@ for (const s of states) {
   assert.equal(JSON.parse(d.querySelector('script[type="application/ld+json"]').textContent)['@type'], 'BreadcrumbList');
   assert(text.includes("vhg-guide.goatcounter.com/count"), slug + ' counts page views');
   assert.equal(d.querySelectorAll('script[src]').length, 0, 'no outside scripts');
-  assert(!countWords.test(d.body.textContent), slug + ': no counts on the site');
+  // Hall and group names can hold numbers ("Elks Lodge 1229 Hall B"), so they are left out of this check.
+  const plain = d.body.cloneNode(true);
+  for (const e of plain.querySelectorAll('#listings article h3, #listings .org, #listings .small, #listings .address')) e.remove();
+  assert(!countWords.test(plain.textContent), slug + ': no counts on the site');
   const form = d.querySelector('form.zip-box');
   assert.equal(form.getAttribute('action'), '../');
   assert(form.querySelector('input[name=zip]') && form.querySelector('select[name=radius]'), 'the ZIP search opens the finder');

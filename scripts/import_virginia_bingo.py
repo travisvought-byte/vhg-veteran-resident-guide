@@ -17,7 +17,10 @@ and the site shows them as "City of Richmond".
 
 Needs poppler's pdftotext. Then run python3 scripts/build_public.py and node tests/findbingo.cjs.
 """
-import argparse, collections, csv, datetime, html, json, pathlib, re, subprocess, sys, tempfile, time, urllib.parse
+import argparse, collections, datetime, html, json, pathlib, re, subprocess, sys, tempfile
+
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from bingo_counties import counties  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 OUT = ROOT / 'data/public/virginia-bingo-sessions.json'
@@ -199,54 +202,6 @@ def venues(orgs, generated, reviewed):
     return out
 
 
-def _curl(*args):
-    return subprocess.run(['curl', '-sS', '-m', '240', *args], capture_output=True, text=True, check=True).stdout
-
-
-def _json(url, tries=4):
-    # The geocoder now and then answers with an error page; ask again before giving up.
-    for attempt in range(tries):
-        try:
-            return json.loads(_curl(url))
-        except (json.JSONDecodeError, subprocess.CalledProcessError):
-            if attempt == tries - 1:
-                raise
-            time.sleep(3 * (attempt + 1))
-
-
-def geocode(need):
-    """County for each (record, street) in need, from the U.S. Census Geocoder. Returns {id: (county, how)}."""
-    names = {}
-    for line in _curl('https://www2.census.gov/geo/docs/reference/codes2020/cou/st51_va_cou2020.txt').split('\n')[1:]:
-        p = line.split('|')
-        if len(p) > 4:
-            names[p[2]] = p[4][:-7] if p[4].endswith(' County') else p[4]
-    with tempfile.NamedTemporaryFile('w', suffix='.csv', newline='') as f:
-        csv.writer(f).writerows([i, street, rec['city'], 'VA', rec['zip']] for i, (rec, street) in enumerate(need))
-        f.flush()
-        rows = {int(r[0]): r for r in csv.reader(_curl('-F', f'addressFile=@{f.name}', '-F', 'benchmark=Public_AR_Current', '-F', 'vintage=Current_Current',
-                                                       'https://geocoding.geo.census.gov/geocoder/geographies/addressbatch').splitlines())}
-    found, by_zip = {}, collections.defaultdict(set)
-    for i, (rec, _) in enumerate(need):
-        r = rows.get(i)
-        if r and r[2] == 'Match' and r[8] == '51':
-            found[rec['id']] = (names[r[9]], 'address')
-            by_zip[rec['zip']].add(names[r[9]])
-    centroids = json.loads((ROOT / 'data/public/us-zip-centroids.json').read_text())
-    for rec, _ in need:
-        if rec['id'] in found:
-            continue
-        if len(by_zip[rec['zip']]) == 1:
-            found[rec['id']] = (next(iter(by_zip[rec['zip']])), 'another hall in the same ZIP code')
-        elif rec['zip'] in centroids:
-            lat, lon = centroids[rec['zip']]
-            q = urllib.parse.urlencode({'x': lon, 'y': lat, 'benchmark': 'Public_AR_Current', 'vintage': 'Current_Current', 'layers': 'Counties', 'format': 'json'})
-            g = _json('https://geocoding.geo.census.gov/geocoder/geographies/coordinates?' + q)['result']['geographies']['Counties'][0]
-            if g['STATE'] == '51':
-                found[rec['id']] = (g['NAME'][:-7] if g['NAME'].endswith(' County') else g['NAME'], 'the centre of the ZIP code')
-    return found
-
-
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split('\n')[0])
     ap.add_argument('pdf')
@@ -260,7 +215,7 @@ def main():
         rec['county'] = known.get(rec['address'])
     need = [(rec, street) for rec, street in built if not rec['county']]
     if need and a.geocode:
-        for rec_id, (county, how) in geocode(need).items():
+        for rec_id, (county, how) in counties(need, 'VA', '51', ROOT).items():
             rec = next(r for r, _ in need if r['id'] == rec_id)
             rec['county'] = county
             if how != 'address':

@@ -15,6 +15,7 @@ Started November 15, 2026, at Travis's direction: one national finder, neighbori
 | --- | --- |
 | State facts, regulators and sources | `data/public/bingo-states.json` |
 | Michigan weekly bingo (venues, days, licensed hours) | `data/public/michigan-weekly-bingo.json` |
+| Texas bingo halls (halls, phone, licensed days and times) | `data/public/texas-bingo-halls.json`, rebuilt by `scripts/read_texas_locator.py` then `scripts/import_texas_bingo.py` |
 | Virginia bingo sessions (halls, days, doors-open and doors-close times) | `data/public/virginia-bingo-sessions.json`, rebuilt by `scripts/import_virginia_bingo.py` |
 | Indiana groups with a current license that allows bingo | `data/public/indiana-bingo-licenses.json` |
 | ZIP code points the centroid file lacks | `data/public/zip-points-supplement.json` |
@@ -130,6 +131,8 @@ U.S. Census Geocoder match for the bingo hall at 228 N 20th St.
 1. Re-read the Michigan lookup and the Indiana list as above. For Virginia, download the state's current
    directory and run `python3 scripts/import_virginia_bingo.py bingo_events.pdf --reviewed <today> --geocode`,
    then set Virginia's `list_as_of` in `bingo-states.json` to the listing date the script prints.
+   For Texas, run `python3 scripts/read_texas_locator.py texas-locator.json` (needs Python Playwright
+   and Chrome), then `python3 scripts/import_texas_bingo.py texas-locator.json --reviewed <today> --geocode`.
 2. Update the JSON files and each record's `reviewed_on`.
 3. Run `python3 scripts/build_public.py` and `node tests/findbingo.cjs`, then open a pull request.
 
@@ -150,7 +153,7 @@ where one is published. The tests refuse a `pending` state, so coverage cannot s
 | `none` | Researched: regulator named and sourced, no list loaded on this site. If the state publishes a list or finder, `list_url` and `list_label` point to it and the state page and the search card lead with that button. |
 | `starter` | Organizer-published schedules, one file per state (`STARTER_FILES`). |
 | `licenses` | A state list of licensed groups without game days (Indiana). |
-| `times` | A state list with days and hours (Michigan, Virginia), one file per state (`TIMES_FILES`). |
+| `times` | A state list with days and hours (Michigan, Texas, Virginia), one file per state (`TIMES_FILES`). |
 
 The home page shows a button for each state with a list on the site (`LISTED` in the generator) and keeps
 every other state behind "More states, A to Z". "Where these lists come from" on the home page gives
@@ -190,6 +193,21 @@ Organizations at one address become one hall, as with Michigan.
 - **One correction.** The directory gives ZIP code 23224 for a Castlewood address; Castlewood is 24224.
   The fix is in `ZIP_FIXES` and explained on the listing.
 
+### Texas (loaded November 17, 2026)
+
+The Texas Department of Licensing and Regulation runs the
+[Bingo Hall Locator](https://bsc.txbingo.org/bsp/faces/bspBingoHallLocator.jsf). Each row is a licensed
+organization with its hall, the hall's phone, the address and the licensed days and times. The page is
+script-driven and shows a screenful of results at a time, so `scripts/read_texas_locator.py` reads it in
+a headless browser: one empty search, then the results table is scrolled to the end. On November 17 it
+read every row but three of those the locator reported; identical rows count once.
+
+`scripts/import_texas_bingo.py` makes one hall per address (the organizations that share it are listed
+with their own times), keeps the hall's phone, writes names in capitals only where the locator does
+or for short forms such as VFW, and finds counties with the shared Census helper
+(`scripts/bingo_counties.py`), which Virginia's importer uses too. Hours are licensed times, so Texas
+cards show the next bingo day, as Michigan's do.
+
 ### Official lists to import next
 
 These states publish something better than we show today. Import them in this order, best first. Do
@@ -197,7 +215,6 @@ the collection for several states first, then one build and one pull request.
 
 | state | what the state publishes | where |
 |---|---|---|
-| Texas | Bingo hall locator with days and times. A script-driven lookup, so it needs a browser to read. | `https://bsc.txbingo.org/bsp/faces/bspBingoHallLocator.jsf` |
 | Montana | Places offering live keno or bingo, by county and city (fiscal year 2025 report). No days. | `https://dojmt.gov/wp-content/ftp/gambling/mtR35.pdf` |
 | Idaho | Licensed organizations with county, phone and license number. No days. | `https://www.idaholottery.com/charitable-gaming/licensed-organizations` |
 | Kansas | Licensed bingo organizations with address and phone. PDF. No days. | `https://www.ksrevenue.gov/pdf/BingoOrganizations.pdf` |
@@ -209,7 +226,7 @@ the collection for several states first, then one build and one pull request.
 | District of Columbia | Calendar of licensed charitable events. | `https://dclottery.com/events?type=8&month=all&year=all` |
 | Alaska, Louisiana, Washington | Permit or license lookups by name; not lists. | see each entry |
 
-A state list with days and hours goes in `TIMES_FILES` (Michigan and Virginia). `licenses` is still
+A state list with days and hours goes in `TIMES_FILES` (Michigan, Texas and Virginia). `licenses` is still
 tied to Indiana's file: before a second list without days can load, give it a per-state file table like
 `STARTER_FILES` and let the home page script show any `licenses` state the way it shows Indiana.
 
