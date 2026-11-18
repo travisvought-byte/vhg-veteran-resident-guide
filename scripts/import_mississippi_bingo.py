@@ -76,7 +76,17 @@ def build(recs, reviewed, modified):
         exp = re.search(r'(\d{1,2}/\d{1,2}/\d{2,4})', lic)
         addr = re.sub(r'\s*,\s*', ', ', (r.get('Physical Address') or '').strip())
         m = re.fullmatch(r'(.+), ([^,]+), ?MS (\d{5})(?:-\d{4})?', addr)
-        name = (r.get('Bingo Hall') or r.get('Charity') or '').strip()
+        hall, charity = (r.get('Bingo Hall') or '').strip(), (r.get('Charity') or '').strip()
+        # Some hall names are only a post's namesake ("Allen B Carter"); then lead with the group.
+        def same_group(a, b):  # the same number and a shared main word: "American Legion 160" and "American Legion Post 160"
+            nums = set(re.findall(r'\d+', a)) & set(re.findall(r'\d+', b))
+            words = {w for w in re.findall(r'[a-z]{4,}', a.lower())} & {w for w in re.findall(r'[a-z]{4,}', b.lower())}
+            return bool(nums and words)
+        if (hall and charity and 'bingo' not in hall.lower() and charity.lower() not in hall.lower() and hall.lower() not in charity.lower()
+                and not same_group(hall, charity)):
+            name = f'{charity} ({hall})'
+        else:
+            name = hall or charity
         if not (num and exp and m and name) or _date(exp.group(1)) < today:
             skipped.append(f'{name or r.get("Charity")} | {addr or "no address"} | {lic or "no license"}')
             continue
