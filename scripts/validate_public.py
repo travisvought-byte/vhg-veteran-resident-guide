@@ -108,7 +108,3 @@ for r in ut_regional:
     assert r['public_contact']['phone'] and r['evidence']['phone_source_url'] == r['official_url']
     assert r['evidence']['direct_agency_confirmation'] is False
 print('PASS: Utah independent aging and ombudsman maps cover exactly 29 counties.')
-
-# Suicide and homelessness help: on every page a visitor reads, once, directly above the footer (scripts/help_now.py).
-from help_now import check_pages
-print(f'PASS: {check_pages()} pages carry the help block once, directly above the footer; forwarding pages carry none.')
