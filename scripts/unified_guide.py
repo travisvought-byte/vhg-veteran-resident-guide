@@ -62,10 +62,11 @@ def unified_outputs(root, editions, states):
     common=common[:common.index('const params=new URLSearchParams')]
     helpers=(root/'assets/guide-runtime.js').read_text()
     unified=base[:base.index('<script>')]
-    unified=re.sub(r'<meta name="description"[^>]*>', lambda _: '<meta name="description" content="Find veteran, senior and disability support in '+state_list(states)+'. County contacts and caregiver handoffs.">', unified)
-    unified=re.sub(r'<title>.*?</title>','<title>Veteran Resident Resource Guide | Veteran Home Guardians</title>',unified)
-    unified=unified.replace('Ohio Veteran Resident<br>Resource Guide','Veteran Resident<br>Resource Guide').replace('Veteran Home Guardians · All 88 Ohio counties','Veteran Home Guardians')
-    unified=unified.replace('Useful contacts for veterans, surviving spouses, families and care-facility staff. Start with a county, then choose the help you need.','Find support for yourself or someone you care for.')
+    unified=re.sub(r'<meta name="description"[^>]*>', lambda _: '<meta name="description" content="Help for every veteran in '+state_list(states)+': claims, VA health care, jobs, school, housing, records and long-term care. County veterans office contacts.">', unified)
+    unified=re.sub(r'<title>.*?</title>','<title>Veteran Resource Guide: help for every veteran | Veteran Home Guardians</title>',unified)
+    assert 'Ohio Veteran<br>Resource Guide' in unified,'guide heading'
+    unified=unified.replace('Ohio Veteran<br>Resource Guide','Veteran<br>Resource Guide').replace('Veteran Home Guardians · All 88 Ohio counties','Veteran Home Guardians')
+    unified=unified.replace('Useful contacts for veterans, surviving spouses, families and care-facility staff. Start with a county, then choose the help you need.','Help for every veteran, in every state. Find support for yourself or someone you care for.')
     unified=re.sub(r'<div class="coverage notice">.*?</div>', '', unified, flags=re.S)
     unified=unified.replace('Browse contacts for all 88 county veterans offices','Browse county contacts')
     unified=unified.replace('Most phones come from Ohio AMVETS’ 2025–2026 directory. Source links and review dates are shown. Call to confirm hours and the current intake process.','Source links and review dates are shown. Confirm hours and intake with the agency.')
@@ -75,7 +76,7 @@ def unified_outputs(root, editions, states):
     unified=unified.replace(updated,'<p><span id="edition-updated"></span> Each listing shows its own review date.</p>')
     unified=unified.replace('<div class="quick-links" aria-label="Common needs">','<div class="quick-links" aria-label="Common needs"><button data-route="aid" id="aid-open" hidden><strong>Veteran and aid organizations</strong><span>Local housing, legal aid, utilities and transport</span></button>')
     unified=unified.replace('assets/share-preview.png','assets/vhg-logo.png')
-    for key,value in {'og:title':'Support for veterans, seniors and families | VHG','twitter:title':'Support for veterans, seniors and families | VHG','og:description':'Find your next contact for benefits, care, housing and support in '+count_words(len(states))+' states. Free to use.','twitter:description':'Find your next contact for benefits, care, housing and support in '+count_words(len(states))+' states. Free to use.','og:image:width':'715','og:image:height':'715','og:image:alt':'Veteran Home Guardians logo'}.items():
+    for key,value in {'og:title':'Help for every veteran, in every state | VHG','twitter:title':'Help for every veteran, in every state | VHG','og:description':'Find your next contact for claims, health care, jobs, school, housing and long-term care in '+count_words(len(states))+' states. Free to use.','twitter:description':'Find your next contact for claims, health care, jobs, school, housing and long-term care in '+count_words(len(states))+' states. Free to use.','og:image:width':'715','og:image:height':'715','og:image:alt':'Veteran Home Guardians logo'}.items():
         unified=re.sub(r'(<meta (?:property|name)="'+re.escape(key)+r'" content=")[^"]*(">)',lambda m:m[1]+value+m[2],unified)
     unified=unified.replace('<a class="jump" href="#staff-guide">Staff handoff guide</a>','<a class="jump" href="#helper-guide" id="helper-header">I’m helping someone</a>')
     unified=unified.replace('<p>Use the edition for the state where help is needed.</p>','').replace('aria-label="State edition"','aria-label="Location"')
@@ -86,7 +87,6 @@ def unified_outputs(root, editions, states):
     unified=unified.replace('<div class="quick-links" aria-label="Common needs">','<div class="quick-links" aria-label="Common needs"><button id="helper-open"><strong>I’m helping someone</strong><span>For family, caregivers and facility staff</span></button>')
     helper=(root/'templates/helper.html').read_text()
     unified=unified.replace('<section id="directory"',helper+'<section id="directory"',1)
-    unified=unified.replace('Housing or missing service records','Housing and homelessness')
     unified=unified.replace('<p>Choose a need to see practical starting points. Your county selection stays in place.</p>','')
     unified=unified.replace('<p id="county-intro">County veterans offices can help you explore benefits and the right referral route. If the resident recently moved into a facility, ask which county should handle the referral.</p>','<p id="county-intro">Choose a county to find local contacts.</p>')
     unified=unified.replace('</head>','<link rel="stylesheet" href="assets/unified.css"></head>')
@@ -133,8 +133,8 @@ def unified_outputs(root, editions, states):
         if page=='index.html':continue
         name=escape(names[state]);url=BASE_URL+page
         place='the District of Columbia' if state=='DC' else name
-        desc='Find veteran, senior and disability support in '+place+': local veterans office contacts, aging and caregiver help, and referral handoffs for families and facility staff.'
-        social='Support for veterans, seniors and families in '+place+' | VHG'
+        desc='Help for every veteran in '+place+': claims, VA health care, jobs, school, housing, records and long-term care, with local veterans office contacts.'
+        social='Help for every veteran in '+place+' | VHG'
         assert unified.count('<html lang="en">')==1,'html tag'
         text=unified.replace('<html lang="en">','<html lang="en" data-home-state="'+state+'">',1)
         text=meta(text,r'(<title>)[^<]*(</title>)',name+' Veteran Resource Guide | Veteran Home Guardians')

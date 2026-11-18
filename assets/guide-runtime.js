@@ -12,6 +12,10 @@ function setState(state,initial=false){
  }
  STATE=state;const config=EDITIONS[state];DATA=config.data;COUNTIES=config.counties;
  ({priority,routes,seniorTopics,routeNames}=config.configure());
+ // National records every state shares join the state's own counseling and housing lists, whatever order the state set them in.
+ Object.entries({crisis:['va-vet-centers','va-vet-center-mst','va-women-veterans-call-center'],housing:['va-home-loans']}).forEach(([key,ids])=>{const own=routes[key]||[];routes[key]=[...own,...ids.filter(id=>!own.includes(id)&&DATA.some(x=>x.program_id===id))]});
+ if(routes.crisis.length)routeNames.crisis='Counseling and mental health';
+ routeNames.housing='Housing, home loans and homelessness';
  if(!Object.hasOwn(routeNames,route))route='priority';
  $('edition-state').value=state;$('county').innerHTML='<option value="">Choose a county or city…</option>';$('county').value='';
  COUNTIES.forEach(c=>{const o=document.createElement('option');o.value=c.county;o.textContent=localityLabel(c);$('county').append(o)});

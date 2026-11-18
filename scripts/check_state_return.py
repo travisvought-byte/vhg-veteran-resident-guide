@@ -23,6 +23,10 @@ FEDERAL_IDS = {
     'nara-discharge-records', 'va-accredited-help', 'va-location-finder', 'va-housing-help', 'va-tra',
     'alz-dementia-support', 'american-legion-post-locator', 'amvets-post-locator', 'vfw-post-locator',
     'crisis-988', 'va-mental-health', 'va-ssvf', 'va-hud-vash', 'va-crrc',
+    'va-disability-compensation', 'va-supplemental-claims', 'va-pact-act', 'va-women-veterans-call-center',
+    'va-vet-centers', 'va-vet-center-mst', 'va-gi-bill', 'va-vre',
+    'dol-american-job-centers', 'va-home-loans', 'va-veteran-id-cards', 'va-discharge-upgrade',
+    'va-solid-start',
 }
 REGISTERED = {'oh', 'pa', 'ny', 'mi', 'ky', 'ut'}
 NEEDS = {

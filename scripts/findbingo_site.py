@@ -20,7 +20,18 @@ ORDER = list(STATES)
 # One file of organizer-published schedules per starter state (coverage "starter").
 STARTER_FILES = {'PA': 'pennsylvania-bingo.json', 'NY': 'new-york-bingo.json', 'FL': 'florida-bingo.json', 'UT': 'utah-bingo.json',
                  'KY': 'kentucky-bingo.json', 'WV': 'west-virginia-bingo.json'}
+# State lists that give each game's day and hours: Michigan's weekly bingo licenses, the Texas hall locator and
+# Virginia's directory of sessions.
+TIMES_FILES = {'MI': 'michigan-weekly-bingo.json', 'TX': 'texas-bingo-halls.json', 'VA': 'virginia-bingo-sessions.json'}
+# State lists that name licensed groups or permitted places without game days: Indiana's annual bingo licenses and
+# Mississippi's licensed bingo halls, Montana's live bingo permits, and New Mexico's groups licensed for bingo, raffles or
+# pull-tabs.
+LICENSE_FILES = {'IN': 'indiana-bingo-licenses.json', 'MS': 'mississippi-bingo-licenses.json', 'MT': 'montana-bingo-permits.json',
+                 'NM': 'new-mexico-bingo-licenses.json'}
 COVERAGE = {'times', 'licenses', 'starter', 'ohio_finder', 'none', 'pending'}
+# States with a list on this site (or, for Ohio, its own finder). Every other state has a researched page that
+# names who licenses bingo there and links the state's own list or finder where one is published.
+LISTED = {'times', 'licenses', 'starter', 'ohio_finder'}
 PHONE = re.compile(r'\d{3}-\d{3}-\d{4}')
 TIME = re.compile(r'(?:[01]\d|2[0-3]):[0-5]\d')
 REPO_RAW = 'https://raw.githubusercontent.com/travisvought-byte/vhg-veteran-resident-guide/'
@@ -59,21 +70,26 @@ def validate(states, venues, licensed, zips):
             assert s.get(field), (s['code'], field)
         assert s['regulator_url'].startswith('https://')
         assert all(x['url'].startswith('https://') and x['scope'] and date.fromisoformat(x['reviewed_on']) for x in s['sources'])
-        if s['coverage'] in ('times', 'licenses'):
+        if s['coverage'] in ('times', 'licenses') or s.get('list_url') or s.get('list_label'):
             assert s.get('list_url', '').startswith('https://') and s.get('list_label'), s['code']
+        # Optional wording for a state page whose situation the standard wording would misstate (Hawaii, Tennessee).
+        assert all(isinstance(s[k], str) and s[k].strip() for k in ('lead', 'description') if k in s), s['code']
         if s['coverage'] in ('times', 'starter'):
             assert s.get('hours_note'), s['code']
         # Counties the state lookup could not return yet; the page names them and links the state lookup.
         pending = s.get('pending_counties', [])
         assert pending == sorted(set(pending)) and all(type(c) is str and c for c in pending), s['code']
         if s['coverage'] == 'licenses':
-            assert s.get('license_note') and date.fromisoformat(s['list_as_of']), s['code']
+            # list_as_of only when the list itself carries a date (New Mexico's page does not).
+            assert s.get('license_note') and ('list_as_of' not in s or date.fromisoformat(s['list_as_of'])), s['code']
         if s['coverage'] == 'ohio_finder':
             assert s.get('finder_url', '').startswith('https://'), s['code']
     pending = {c for s in states for c in s.get('pending_counties', [])}
     assert not pending & {v['county'] for v in venues}, 'a county with listings is no longer pending'
     with_venues = {s['code'] for s in states if s['coverage'] in ('times', 'starter')}
     assert {s['code'] for s in states if s['coverage'] == 'starter'} == set(STARTER_FILES), 'each starter state has its schedule file'
+    assert {s['code'] for s in states if s['coverage'] == 'times'} == set(TIMES_FILES), 'each state list with hours has its file'
+    assert {s['code'] for s in states if s['coverage'] == 'licenses'} == set(LICENSE_FILES), 'each license list has its file'
     ids = set()
     for v in venues:
         code = v['state']
@@ -84,30 +100,35 @@ def validate(states, venues, licensed, zips):
         assert v['name'] and v['county'] and v['organizations'] and v['sessions'], v['id']
         for x in v['sessions']:
             assert type(x['day']) is int and 0 <= x['day'] <= 6, v['id']
-            if code == 'MI':  # the state license list always gives both times
+            if code in TIMES_FILES:  # a state list always gives both times
                 assert TIME.fullmatch(x['start']) and TIME.fullmatch(x['end']), v['id']
             else:  # published schedules give a start time, or none ("time not posted")
                 assert (x['start'] is None or TIME.fullmatch(x['start'])) and 'end' not in x, v['id']
             assert x['organization'] in v['organizations'] and x.get('label', 'x'), v['id']
         assert all(type(n) is str and n for n in v.get('notes', [])), v['id']
-        if code != 'MI':
+        assert 'phone' not in v or PHONE.fullmatch(v['phone']), v['id']
+        if code not in TIMES_FILES:
             # Published-schedule listings carry their own source, phone and how far to trust the days.
             # A phone is listed when the source gives one; without it the card offers a phone lookup instead.
             assert v['kind'] in ('hall', 'senior_center') and ('phone' not in v or PHONE.fullmatch(v['phone'])), v['id']
             assert v['source_url'].startswith('https://') and v['source_label'] and v['schedule_note'], v['id']
         assert date.fromisoformat(v['reviewed_on']) and v['sources'] and all(x['url'].startswith('https://') for x in v['sources'])
     for r in licensed:
-        assert r['id'] not in ids and r['id'] == 'in-' + r['license_number'], r['id']
+        code = r['state']
+        # The id follows the license number when the list gives one (New Mexico's does not).
+        assert code in LICENSE_FILES and r['id'] not in ids and re.fullmatch(code.lower() + r'-[a-z0-9-]+', r['id']), r['id']
+        assert 'license_number' not in r or r['id'] == code.lower() + '-' + _slug(r['license_number']), r['id']
         ids.add(r['id'])
-        assert r['state'] == 'IN' and _state_of_zip(r['zip']) == 'IN' and r['zip'] in zips, r['id']
-        assert r['address'].endswith(', IN ' + r['zip']) and r['name'] and r['county'], r['id']
-        assert r['license_type'].startswith('Annual Activity'), r['id']
-        assert date.fromisoformat(r['license_expires']) and date.fromisoformat(r['reviewed_on']), r['id']
+        assert _state_of_zip(r['zip']) == code and r['zip'] in zips, r['id']
+        assert r['address'].endswith(', ' + code + ' ' + r['zip']) and r['city'] in r['address'] and r['name'] and r['county'], r['id']
+        assert r['license_type'] and (code != 'IN' or r['license_type'].startswith('Annual Activity')), r['id']
+        assert 'phone' not in r or PHONE.fullmatch(r['phone']), r['id']
+        assert ('license_expires' not in r or date.fromisoformat(r['license_expires'])) and date.fromisoformat(r['reviewed_on']), r['id']
         assert r['sources'] and all(x['url'].startswith('https://') for x in r['sources'])
 
 
 def _public_state(s):
-    keep = ('code', 'name', 'coverage', 'about', 'hours_note', 'license_note', 'list_label', 'list_url', 'list_as_of',
+    keep = ('code', 'name', 'coverage', 'about', 'hours_note', 'license_note', 'license_badge', 'license_heading', 'list_label', 'list_url', 'list_as_of',
             'finder_url', 'regulator_label', 'regulator_url', 'regulator_note', 'pending_counties', 'reviewed_on')
     return {k: s[k] for k in keep if k in s}
 
@@ -124,13 +145,22 @@ def _date_label(iso):
 def make_findbingo(root):
     _load_zip_states(root)
     states = json.loads((root / 'data/public/bingo-states.json').read_text())
-    venues = json.loads((root / 'data/public/michigan-weekly-bingo.json').read_text())
+    venues = []
     for code in ORDER:
+        if code in TIMES_FILES:
+            rows = json.loads((root / 'data/public' / TIMES_FILES[code]).read_text())
+            assert rows and all(v['state'] == code for v in rows), TIMES_FILES[code]
+            venues += rows
         if code in STARTER_FILES:
             rows = json.loads((root / 'data/public' / STARTER_FILES[code]).read_text())
             assert rows and all(v['state'] == code for v in rows), STARTER_FILES[code]
             venues += rows
-    licensed = json.loads((root / 'data/public/indiana-bingo-licenses.json').read_text())
+    licensed = []
+    for code in ORDER:
+        if code in LICENSE_FILES:
+            rows = json.loads((root / 'data/public' / LICENSE_FILES[code]).read_text())
+            assert rows and all(r['state'] == code for r in rows), LICENSE_FILES[code]
+            licensed += rows
     all_zips = json.loads((root / 'data/public/us-zip-centroids.json').read_text())
     for extra in json.loads((root / 'data/public/zip-points-supplement.json').read_text()):
         # Census Geocoder points for the few covered ZIP codes that the centroid file lacks.
@@ -147,20 +177,22 @@ def make_findbingo(root):
         'states': [_public_state(s) for s in states],
         'venues': [_public_record(v, ('id', 'state', 'kind', 'name', 'organizations', 'address', 'city', 'zip', 'county', 'phone', 'sessions',
                                       'audience', 'hours', 'schedule_note', 'notes', 'source_url', 'source_label', 'reviewed_on')) for v in venues],
-        'licensed': [_public_record(r, ('id', 'state', 'name', 'address', 'city', 'zip', 'county', 'license_number', 'license_type', 'license_expires', 'reviewed_on')) for r in licensed],
+        'licensed': [_public_record(r, ('id', 'state', 'name', 'address', 'city', 'zip', 'county', 'phone', 'license_number', 'license_type', 'license_expires', 'reviewed_on')) for r in licensed],
     }
     data_json = json.dumps(data, ensure_ascii=False, separators=(',', ':'))
     # Each button links to that state's own page (crawlable); with the lists loaded, the finder shows the state in place.
     def button(s):
         return f'<a href="{SLUGS[s["code"]]}/" data-state="{s["code"]}">{escape(s["name"])}</a>'
-    # States with a list or state research come first; the rest sit behind one "more states" control so the
+    # States with a list come first; every other state sits behind one "more states" control so the
     # page stays simple for people who struggle with websites.
-    buttons = (''.join(button(s) for s in states if s['coverage'] != 'pending')
-               + '<details class="more-states"><summary>More states: send us your games</summary><div>'
-               + ''.join(button(s) for s in states if s['coverage'] == 'pending') + '</div></details>')
+    rest = [s for s in states if s['coverage'] not in LISTED]
+    buttons = ''.join(button(s) for s in states if s['coverage'] in LISTED)
+    if rest:
+        buttons += ('<details class="more-states"><summary>More states, A to Z</summary><div>'
+                    + ''.join(button(s) for s in rest) + '</div></details>')
     about = ''
     for s in states:
-        if s['coverage'] == 'pending':
+        if s['coverage'] not in LISTED:
             continue
         pairs = []
         for url, label in ((s.get('list_url'), s.get('list_label')), (s.get('finder_url'), 'Ohio Bingo Finder'), (s['regulator_url'], s['regulator_label'])):
@@ -170,10 +202,18 @@ def make_findbingo(root):
         as_of = f' (list dated {_date_label(s["list_as_of"])})' if s.get('list_as_of') else ''
         about += (f'<h3><a href="{SLUGS[s["code"]]}/">{escape(s["name"])}</a></h3><p>{escape(s["about"])} {escape(s["regulator_note"])}</p>'
                   f'<p class="small">Checked {_date_label(s["reviewed_on"])}{as_of}. Sources: {links}</p>')
+    def named(group):
+        return ', '.join(f'<a href="{SLUGS[s["code"]]}/">{escape(s["name"])}</a>' for s in group)
+    researched = [s for s in states if s['coverage'] == 'none']
     waiting = [s for s in states if s['coverage'] == 'pending']
+    if researched or waiting:
+        about += '<h3>Every other state</h3>'
+    if researched:
+        about += ('<p>Each of these states has its own page. It names who licenses or oversees bingo there, links the state’s own list or finder '
+                  'where there is one, shows its sources, and gives a free way to send us game times: ' + named(researched) + '.</p>')
     if waiting:
-        about += ('<h3>Every other state</h3><p>We have not built lists for these states yet. Each has its own page with a free way to send us game times: '
-                  + ', '.join(f'<a href="{SLUGS[s["code"]]}/">{escape(s["name"])}</a>' for s in waiting) + '.</p>')
+        about += ('<p>We have not built lists for these states yet. Each has its own page with a free way to send us game times: '
+                  + named(waiting) + '.</p>')
     page = (root / 'templates/findbingo/index.html').read_text()
     for key, value in (('__SOURCES__', json.dumps(DATA_SOURCES)), ('__STATE_BUTTONS__', buttons), ('__ABOUT__', about),
                        ('__UPDATED__', _date_label(generated_on))):
@@ -182,7 +222,9 @@ def make_findbingo(root):
     readme = f'''# FindBingo.org
 
 Generated by `scripts/findbingo_site.py` from `data/public/bingo-states.json`,
-`data/public/michigan-weekly-bingo.json`, `data/public/indiana-bingo-licenses.json` and the ZIP code
+`data/public/michigan-weekly-bingo.json`, `data/public/texas-bingo-halls.json`, `data/public/virginia-bingo-sessions.json`,
+`data/public/indiana-bingo-licenses.json`, `data/public/mississippi-bingo-licenses.json`, `data/public/montana-bingo-permits.json`,
+`data/public/new-mexico-bingo-licenses.json` and the ZIP code
 centroids. Do not edit these files by hand; run `python3 scripts/build_public.py`.
 
 - `index.html` is the whole page. The same files are written to `bingo-site/findbingo/`, which the
@@ -216,7 +258,7 @@ Lists updated {_date_label(generated_on)}.
         if s['code'] == 'OH':
             continue
         if s['coverage'] == 'licenses':
-            rows = [r for r in licensed if r['state'] == s['code'] and r['license_expires'] >= today]
+            rows = [r for r in licensed if r['state'] == s['code'] and r.get('license_expires', today) >= today]
         else:
             rows = [v for v in venues if v['state'] == s['code']]
         pages[SLUGS[s['code']] + '/index.html'] = _state_page(s, states, rows, style, analytics, generated_on)
@@ -281,6 +323,13 @@ def _time_range(a, b=None):
     return x + ' to ' + y
 
 
+def _area(county, short=False):
+    # Virginia's independent cities are not in any county. They are stored the Census way ("Richmond city").
+    if county.endswith(' city'):
+        return 'City of ' + county[:-5]
+    return county if short else county + ' County'
+
+
 def _slug(text):
     return re.sub(r'[^a-z0-9]+', '-', text.lower()).strip('-')
 
@@ -319,7 +368,7 @@ def _venue_html(v, s):
             + f'<div class="when"><p><strong>Bingo days:</strong></p><ul class="sessions">{sessions}</ul>'
             f'<p class="note">{escape(v.get("schedule_note") or s.get("hours_note") or "Call ahead to confirm before you go.")}</p></div>'
             f'<div class="big-actions">{call}<a class="outline" href="{escape(_maps(v["address"]))}" target="_blank" rel="noopener noreferrer">Directions ↗</a></div>'
-            f'<p class="address">{escape(v["address"])} · {escape(v["county"])} County</p>'
+            f'<p class="address">{escape(v["address"])} · {escape(_area(v["county"]))}</p>'
             + (f'<p class="small">{escape(v["hours"])}</p>' if v.get('hours') else '')
             + (f'<p class="small">Bingo here is run by {escape(", ".join(v["organizations"]))}.</p>' if many else '')
             + f'<details class="sources"><summary>Where this comes from · checked {_date_label(v["reviewed_on"])}</summary><p>{source}</p>'
@@ -328,15 +377,27 @@ def _venue_html(v, s):
 
 
 def _licensed_html(r, s):
-    return (f'<article id="{escape(r["id"])}"><p><span class="badge muted">Licensed for bingo · game days not posted</span></p>'
+    return (f'<article id="{escape(r["id"])}"><p><span class="badge muted">{escape(s.get("license_badge", LICENSE_BADGE))}</span></p>'
             f'<h3>{escape(r["name"])}</h3><p class="where">{escape(r["city"])}</p>'
-            f'<div class="big-actions"><a class="solid" href="{escape(_maps(r["name"] + " " + r["address"]))}" target="_blank" rel="noopener noreferrer">Look up phone number ↗</a>'
-            f'<a class="outline" href="{escape(_maps(r["address"]))}" target="_blank" rel="noopener noreferrer">Directions ↗</a></div>'
-            f'<p class="address">{escape(r["address"])} · {escape(r["county"])} County</p>'
+            + '<div class="big-actions">' + (f'<a class="solid" href="tel:{re.sub(r"[^0-9]", "", r["phone"])}">Call {escape(r["phone"])}</a>' if r.get('phone') else
+                                             f'<a class="solid" href="{escape(_maps(r["name"] + " " + r["address"]))}" target="_blank" rel="noopener noreferrer">Look up phone number ↗</a>')
+            + f'<a class="outline" href="{escape(_maps(r["address"]))}" target="_blank" rel="noopener noreferrer">Directions ↗</a></div>'
+            f'<p class="address">{escape(r["address"])} · {escape(_area(r["county"]))}</p>'
             f'<details class="sources"><summary>Where this comes from · checked {_date_label(r["reviewed_on"])}</summary>'
-            f'<p>{escape(s["name"])} license {escape(r["license_number"])} ({escape(r["license_type"])}), on the state list through {_date_label(r["license_expires"])}.</p>'
+            f'<p>{escape(_license_line(r, s))}</p>'
             f'<p>{_out(s["list_url"], s["list_label"])}</p></details>'
             f'<p class="small-links"><a href="{escape(_report(r))}">Send us their game days</a></p></article>')
+
+
+LICENSE_BADGE = 'Licensed for bingo · game days not posted'
+
+
+def _license_line(r, s):
+    if r.get('license_number'):
+        line = f'{s["name"]} license {r["license_number"]} ({r["license_type"]})'
+    else:
+        line = f'On {s["name"]}’s list, with a {r["license_type"]}'
+    return line + (f', on the state list through {_date_label(r["license_expires"])}.' if r.get('license_expires') else '.')
 
 
 def _send_times(s):
@@ -349,11 +410,11 @@ def _send_times(s):
 STATE_COPY = {
     # coverage: (title, description, lead). {name} is the state's name.
     'times': ('{name} Bingo Near You: Weekly Bingo Halls, Days and Times | FindBingo.org',
-              'Free list of weekly bingo in {name}, by county, with game days, licensed hours, directions and a phone lookup. Type your ZIP code to see bingo near you, closest first.',
+              'Free list of weekly bingo in {name}, by county, with game days, hours, directions and a phone lookup. Type your ZIP code to see bingo near you, closest first.',
               'Weekly bingo halls in {name}, by county, with the days and hours. Call ahead before you go.'),
-    'licenses': ('{name} Bingo: Groups Licensed for Bingo, by County | FindBingo.org',
-                 'Free list of {name} groups with a current state license to hold bingo, by county, with directions and a phone lookup. Type your ZIP code to see bingo near you.',
-                 'Groups in {name} with a current license to hold bingo, by county. The state list does not show game days, so call before you go.'),
+    'licenses': ('{name} Bingo: Licensed for Bingo, by County | FindBingo.org',
+                 'Free list of {name} groups and places with a current state license or permit for bingo, by county, with directions and a phone lookup. Type your ZIP code to see bingo near you.',
+                 'Groups and places in {name} with a current state license or permit for bingo, by county. The state list does not show game days, so call before you go.'),
     'starter': ('{name} Bingo: Where to Play, Days and Times | FindBingo.org',
                 'Free list of bingo games in {name} from places that publish their own schedules, with days, times, phone numbers and directions. Halls can add their games free.',
                 'Bingo in {name} from places that publish their own schedules. Call ahead before you go.'),
@@ -369,6 +430,9 @@ STATE_COPY = {
 def _state_page(s, states, rows, style, analytics, generated_on):
     code, name, slug = s['code'], s['name'], SLUGS[s['code']]
     title, description, lead = (t.format(name=name) for t in STATE_COPY[s['coverage']])
+    if s['coverage'] == 'none' and s.get('list_url'):
+        lead = f'{name}’s official bingo list or lookup is linked below. Run a game? Send us your days and times and we will list it free.'
+    description, lead = s.get('description', description), s.get('lead', lead)
     url = f'{SITE}/{slug}/'
     crumbs = {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
         {'@type': 'ListItem', 'position': 1, 'name': 'Find Bingo', 'item': SITE + '/'},
@@ -384,13 +448,17 @@ def _state_page(s, states, rows, style, analytics, generated_on):
                  f'{"counties" if len(c) > 1 else "County"} yet. For games there, use {_out(s["list_url"], "the state’s own lookup")}.</p>')
     if s['coverage'] == 'licenses':
         body += f'<p class="note">{escape(s["license_note"])}</p>'
+    if s['coverage'] == 'none' and s.get('list_url'):
+        # No list loaded here yet, but the state publishes one: lead with it.
+        body += (f'<div class="big-actions" id="official-list"><a class="solid" href="{escape(s["list_url"])}" target="_blank" '
+                 f'rel="noopener noreferrer">{escape(s["list_label"])} ↗</a></div>')
     if len(counties) > 1:
-        body += ('<nav class="counties" aria-labelledby="counties-title"><h2 id="counties-title">Jump to your county</h2><ul>'
-                 + ''.join(f'<li><a href="#county-{_slug(c)}">{escape(c)}</a></li>' for c in counties) + '</ul></nav>')
+        body += (f'<nav class="counties" aria-labelledby="counties-title"><h2 id="counties-title">Jump to your county{" or city" if any(c.endswith(" city") for c in counties) else ""}</h2><ul>'
+                 + ''.join(f'<li><a href="#county-{_slug(c)}">{escape(_area(c, short=True))}</a></li>' for c in counties) + '</ul></nav>')
     if rows:
         card = _licensed_html if s['coverage'] == 'licenses' else _venue_html
         body += '<div id="listings">' + ''.join(
-            f'<section aria-labelledby="county-{_slug(c)}"><h2 id="county-{_slug(c)}">{escape(c)} County</h2><div class="grid">'
+            f'<section aria-labelledby="county-{_slug(c)}"><h2 id="county-{_slug(c)}">{escape(_area(c))}</h2><div class="grid">'
             + ''.join(card(r, s) for r in rows if r['county'] == c) + '</div><p class="top"><a href="#top">Back to the top</a></p></section>'
             for c in counties) + '</div>'
     else:

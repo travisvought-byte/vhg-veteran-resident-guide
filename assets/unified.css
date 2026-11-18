@@ -6,3 +6,5 @@
 .ohio-only[hidden]{display:none!important}
 .single-area .county-picker{grid-template-columns:1fr}
 .jump-more{display:contents}.jump-toggle{display:none}@media(max-width:760px){header .jump-toggle{background:transparent;color:#fff;font-weight:700;cursor:pointer}header .jump-toggle[hidden]{display:none}header .jump-toggle:not([hidden])[aria-expanded=false]+.jump-more{display:none}}
+.quick-links .need-group{grid-column:1/-1;margin:14px 0 0;font-size:19px;color:var(--navy);border-bottom:1px solid var(--line);padding-bottom:4px}
+.quick-links .need-group:first-of-type{margin-top:4px}
