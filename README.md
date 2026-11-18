@@ -102,6 +102,8 @@ The [Ohio Bingo & Senior Centers section](https://guide.vethomeguard.org/bingo.h
 
 All twenty-two full editions have a prominent urgent-help section, crisis and mental-health resources, and expanded homelessness pathways: the VA national call center, SSVF community providers, HUD-VASH and VA Community Resource and Referral Centers. Local shelter beds, individual provider intake and availability are not comprehensively mapped.
 
+**Help on every page (November 17, 2026).** Every page a visitor reads, on the guide and on FindBingo.org and its Ohio finder, ends with one short "Need help now?" block directly above the footer: 988 (call or text; veterans press 1), 211 then 6 for homeless services, HUD's Find Shelter tool, and the National Call Center for Homeless Veterans (877-424-3838). `scripts/help_now.py` holds the wording and the sources it was read from; `scripts/build_public.py` and `scripts/build_flyers_page.py` add it to the pages they build, and `python3 scripts/help_now.py` adds it to the three pages written by hand. Forwarding pages do not carry it, and it does not print, so handoffs, flyers and posters are unchanged. `scripts/validate_public.py` checks every page.
+
 ## Corrections from users
 
 Every listing and county panel has a “Report a problem” link. It opens an email to travis@vethomeguard.org with the state, record ID and county already filled in, plus a reminder not to include resident details. Corrections go to email rather than public GitHub issues so nothing a user writes is published. The sharing kits invite facility staff and partners to use it.

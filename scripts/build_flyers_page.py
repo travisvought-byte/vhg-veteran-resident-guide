@@ -10,6 +10,8 @@ import json
 import sys
 from pathlib import Path
 
+from help_now import add_help
+
 ROOT = Path(__file__).resolve().parent.parent
 
 
@@ -70,7 +72,7 @@ def page():
 
 
 if __name__ == '__main__':
-    out = page()
+    out = add_help(page(), 'flyers.html')  # the same help block every other page carries (scripts/help_now.py)
     target = ROOT / 'flyers.html'
     if '--check' in sys.argv:
         if not target.is_file() or target.read_text() != out:

@@ -42,7 +42,7 @@ for (const page of ['index.html', 'partners.html', 'distributions.html', 'instan
   const d = new JSDOM(read(page)).window.document;
   for (const el of d.querySelectorAll('[href],[src]')) {
     const ref = el.getAttribute('href') || el.getAttribute('src');
-    if (/^(https?:|mailto:|tel:|#|\.\.?\/(\?|#|$))/.test(ref) || ref.startsWith("'")) continue;
+    if (/^(https?:|mailto:|tel:|sms:|#|\.\.?\/(\?|#|$))/.test(ref) || ref.startsWith("'")) continue; // sms: is the "text 988" link in the help block
     assert(fs.existsSync(path.join(site, ref.split(/[?#]/)[0])), page + ' links to missing ' + ref);
   }
 }

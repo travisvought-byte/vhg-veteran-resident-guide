@@ -14,6 +14,7 @@ from unified_guide import unified_outputs
 from build_disability_advocacy import outputs as disability_advocacy_outputs
 from build_mobility_routes import outputs as mobility_route_outputs
 from build_family_guide import outputs as family_guide_outputs
+from help_now import add_help, wants_help
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -107,6 +108,11 @@ def outputs():
     urls += [BASE_URL + s['share_page'] for s in states]
     result['sitemap.xml'] = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join('  <url><loc>' + u.replace('&', '&amp;') + '</loc></url>\n' for u in urls) + '</urlset>\n'
     result['robots.txt'] = 'User-agent: *\nAllow: /\n\nSitemap: ' + BASE_URL + 'sitemap.xml\n'
+    # Suicide and homelessness help directly above the footer of every page a visitor reads (scripts/help_now.py).
+    # Forwarding pages and test fixtures stay as they are.
+    for name, text in list(result.items()):
+        if wants_help(name, text):
+            result[name] = add_help(text, name)
     return result
 
 if __name__ == '__main__':
