@@ -77,6 +77,20 @@ be bought; ads are labeled and never decide which games are listed or their orde
 - Review every ad before it runs and turn down misleading ones (the Advertise page promises this). Remove an
   ad's entry once it ends; an ad picture removed from the list is not deleted from `findbingo-site/ads/` by the build.
 
+## Practice card and bingo class (added November 19, 2026)
+
+Travis's direction: give people a reason to come and look around, and a bingo class for new and older players.
+
+- **Practice card** (home page, `#play`, in `templates/findbingo/index.html`). A just-for-fun 75-ball card:
+  "Call a ball" draws a ball, shows its traditional nickname when it has one ("Legs eleven") or a short cheer,
+  and marks the card unless "Mark my card for me" is turned off. A new card shows a clean bingo joke. Five in a
+  row ends the game and points to the ZIP search. Nothing is stored or sent, it is left off printed lists,
+  and it sits below the search so the search stays first. The header links to it and to the class.
+- **Bingo class** at https://www.findbingo.org/learn/ (`LEARN` in `scripts/findbingo_site.py`): what happens
+  on a bingo night, the card, the kinds of games and what the words mean, the unwritten rules, help for eyes,
+  ears and hands, and what changes from state to state. It speaks in general terms and sends people to their
+  state page and the hall for specifics. Linked from every footer (the Ohio finder's too) and in the sitemap.
+
 ## Sources and how they were read (November 15, 2026)
 
 **Michigan.** The Michigan Lottery's Charitable Gaming Division publishes

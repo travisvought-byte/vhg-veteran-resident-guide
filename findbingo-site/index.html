@@ -52,15 +52,30 @@ footer{max-width:1120px;margin:0 auto;padding:10px 18px 40px;font-size:16px}foot
 .ad-label{margin:0 0 8px;font-size:15px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#454c57}
 .ad-body{display:block;color:var(--ink);text-decoration:none;font-size:19px;overflow-wrap:anywhere}.ad-body img{display:block;max-width:100%;height:auto;max-height:220px;margin:0 0 10px;border-radius:8px}
 .ad-sponsor{display:block;font-size:21px;color:#1d5672;text-decoration:underline;text-underline-offset:3px}.ad-text{display:block;margin-top:4px}
-.info{background:#fff;border:1px solid var(--line);border-radius:14px;padding:6px 22px 18px;margin:18px 0 0;max-width:860px}.info h2{font-size:26px;margin:22px 0 6px}.info p,.info li{max-width:760px}.info li{margin:6px 0}
+.info{background:#fff;border:1px solid var(--line);border-radius:14px;padding:6px 22px 18px;margin:18px 0 0;max-width:860px}.info h2{font-size:26px;margin:22px 0 6px}.info p,.info li{max-width:760px}.info li{margin:6px 0}.info dt{font-size:20px;color:var(--navy);margin:18px 0 2px}.info dd{margin:0;max-width:760px}.info ol{padding-left:28px}
+#play{background:#fffdf6;border:2px solid #e3d6b4}#play h2{margin-bottom:4px}.play-wrap{display:grid;grid-template-columns:minmax(260px,420px) 1fr;gap:24px;align-items:start}
+.ball-box{display:flex;align-items:center;gap:18px;margin:10px 0 6px}.ball{--c:#f3c74f;flex:0 0 auto;width:112px;height:112px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle,#fff 0 54%,var(--c) 55% 100%);border:3px solid rgba(0,0,0,.25);color:var(--navy);font-weight:800;box-shadow:inset -8px -10px 0 rgba(0,0,0,.12),0 4px 10px rgba(0,0,0,.18)}.ball.b-B{--c:#2f6fb5}.ball.b-I{--c:#c8382c}.ball.b-N{--c:#8a8f96}.ball.b-G{--c:#2f8a4d}.ball.b-O{--c:#e08a1e}
+.ball .bl{font-size:22px;line-height:1}.ball .bn{font-size:42px;line-height:1}.ball.idle{--c:#ccc;color:#888}.ball.pop{animation:pop .45s ease-out}@keyframes pop{0%{transform:scale(.5) rotate(-40deg)}70%{transform:scale(1.12)}100%{transform:scale(1)}}
+#call-line{font-size:24px;font-weight:700;color:var(--navy);margin:0}#call-joke{font-size:19px;margin:4px 0 0}
+.play-buttons{display:flex;flex-wrap:wrap;gap:12px;margin:14px 0}.play-buttons button{min-height:58px;padding:0 22px;font-size:21px;font-weight:700;border-radius:10px;cursor:pointer;border:2px solid var(--green);background:#fff;color:var(--green)}.play-buttons button.go{background:var(--green);color:#fff}
+.play-check{display:flex;gap:10px;align-items:center;font-size:19px;margin:6px 0}.play-check input{width:26px;height:26px}
+table.card{border-collapse:separate;border-spacing:5px;width:100%;max-width:420px;table-layout:fixed}table.card th{background:var(--navy);color:#fff;font-size:28px;padding:6px 0;border-radius:8px}
+table.card td{padding:0}table.card td button{width:100%;aspect-ratio:1;font-size:26px;font-weight:700;border:2px solid var(--line);background:#fff;color:var(--ink);border-radius:10px;cursor:pointer;position:relative}
+table.card td button[aria-pressed=true]{background:#d8392b;border-color:#a32518;color:#fff}table.card td button.free{font-size:16px}
+table.card td button.called{border-color:var(--gold);border-width:3px}
+#play-msg{font-size:20px;min-height:1.4em;margin:10px 0 0}#play.win table.card{animation:winpulse 1s ease-in-out 2}@keyframes winpulse{50%{transform:scale(1.03)}}
+#play-win{display:none;margin-top:12px;padding:16px;border-radius:12px;background:#e7f2ea;border:2px solid var(--green)}#play.win #play-win{display:block}#play-win p{font-size:22px;font-weight:700;margin:0 0 10px;color:var(--green)}
+.called{margin:8px 0 0;font-size:17px;color:#454c57}.called summary{cursor:pointer;min-height:40px;display:flex;align-items:center}.called-list{margin:4px 0 0;overflow-wrap:anywhere}.teaser{font-size:19px;margin:10px 0 0}.teaser a{font-weight:700;color:#fff}
+@media(max-width:760px){.play-wrap{grid-template-columns:1fr}.play-wrap>div:last-child{order:-1}.ball{width:92px;height:92px}.ball .bn{font-size:34px}table.card td button{font-size:22px}}
+@media(prefers-reduced-motion:reduce){.ball.pop,#play.win table.card{animation:none}}
 @media(max-width:760px){.tools,.narrow .tools,.grid{grid-template-columns:1fr}header{padding-top:16px}.zip-box{padding:16px}.big-actions a{flex-basis:100%}}
-@media print{.ad-slot,header,.zip-box,.states,.narrow,#change-search,#more-note button,.small-links,.panel,footer .noprint,.skip{display:none!important}body{background:#fff;font-size:12pt}
+@media print{#play,.ad-slot,header,.zip-box,.states,.narrow,#change-search,#more-note button,.small-links,.panel,footer .noprint,.skip{display:none!important}body{background:#fff;font-size:12pt}
  main{padding:0}.grid{display:block}article{break-inside:avoid;margin:0 0 10px;padding:8px 10px;border:1px solid #999}.when{background:none;border:0;padding:0}.big-actions{display:none}#count{font-size:16pt;margin:0 0 8px}details.sources{display:none}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Find Bingo", "alternateName": "FindBingo.org", "url": "https://www.findbingo.org/", "inLanguage": "en-US", "publisher": {"@type": "Organization", "name": "Veteran Home Guardians", "url": "https://www.vethomeguard.org/", "logo": "https://www.findbingo.org/ohio/assets/vhg-logo.png", "email": "travis@vethomeguard.org"}}</script>
 </head><body>
 <a class="skip" href="#count">Skip to the bingo list</a>
-<header><p class="brand">FindBingo.org · free from Veteran Home Guardians</p><h1>Find bingo near you</h1><p class="lead">Type your ZIP code. We&rsquo;ll show bingo games close to you, closest first.</p></header>
+<header><p class="brand">FindBingo.org · free from Veteran Home Guardians</p><h1>Find bingo near you</h1><p class="lead">Type your ZIP code. We&rsquo;ll show bingo games close to you, closest first.</p><p class="teaser">New to bingo? <a href="learn/">Take the free bingo class</a> or <a href="#play">play a practice card</a>.</p></header>
 <main>
 <form id="zip-form" class="zip-box" action="./" method="get"><div class="tools">
 <div><label for="zip">Type your ZIP code</label><input id="zip" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" pattern="[0-9]{5}" placeholder="Example: 48161" aria-describedby="zip-status"></div>
@@ -77,6 +92,19 @@ footer{max-width:1120px;margin:0 auto;padding:10px 18px 40px;font-size:16px}foot
 <p id="more-note"></p>
 <div id="results"></div>
 <noscript><p class="empty">The ZIP code search needs JavaScript. You can still pick your state above to see its whole bingo list, by county.</p></noscript>
+<section class="panel" id="play" aria-labelledby="play-title"><h2 id="play-title">Warm up: play a free practice card</h2>
+<p>Just for fun, no money and nothing to sign up for. Press <strong>Call a ball</strong> and watch your card. Five in a row, across, down or corner to corner, is a bingo.</p>
+<div class="play-wrap"><div>
+<table class="card" id="card" aria-label="Your practice bingo card"><thead><tr><th scope="col">B</th><th scope="col">I</th><th scope="col">N</th><th scope="col">G</th><th scope="col">O</th></tr></thead><tbody id="card-body"></tbody></table>
+<label class="play-check"><input type="checkbox" id="auto-mark" checked> Mark my card for me</label>
+</div><div>
+<div class="ball-box"><div class="ball idle" id="ball" aria-hidden="true"><span class="bl">?</span><span class="bn"></span></div>
+<div><p id="call-line" aria-live="polite">Ready when you are.</p><p id="call-joke"></p></div></div>
+<div class="play-buttons"><button type="button" class="go" id="call-ball">Call a ball</button><button type="button" id="new-card">New card</button></div>
+<p id="play-msg" role="status" aria-live="polite"></p>
+<details class="called"><summary>Numbers called so far</summary><p class="called-list" id="called-list">None yet.</p></details>
+<div id="play-win"><p>BINGO! You&rsquo;d have won that one.</p><a class="primary" href="#zip-form" id="play-find">Now find a real game near you</a></div>
+</div></div></section>
 <section class="panel" id="run-a-game" aria-labelledby="run-title"><h2 id="run-title">Run a bingo game? Get it listed free</h2>
 <p>Send us the name of your hall, the address, the days and the time the first game starts. A phone number for players helps too. Listing is free, and we never sell or share your information.</p>
 <div class="big-actions"><a class="solid" href="mailto:travis@vethomeguard.org?subject=Bingo%20game%20times%20for%20FindBingo.org&amp;body=Hall%20or%20group%20name%3A%0AAddress%3A%0ADays%20and%20first%20game%20time%3A%0APhone%20for%20players%3A%0AWebsite%20or%20Facebook%20page%3A%0A">Email your game times</a></div>
@@ -87,7 +115,7 @@ footer{max-width:1120px;margin:0 auto;padding:10px 18px 40px;font-size:16px}foot
 <footer><p>FindBingo.org is a free community resource from <a href="https://www.vethomeguard.org/">Veteran Home Guardians</a>. Listings are free. Ads, when shown, are labeled and never decide which games are listed.</p>
 <p class="noprint">Need help getting to the game? <a href="https://mobilitytalk.org/states/">Mobility Talk</a> lists mobility and disability resources in every state.</p>
 <p class="noprint">Questions or corrections: <a href="mailto:travis@vethomeguard.org?subject=FindBingo.org">travis@vethomeguard.org</a> · <a href="https://www.ohiobingo.org/">Ohio Bingo</a> · <a href="https://guide.vethomeguard.org/findbingo-site/data.json">Download the bingo data</a> · Made by <a href="https://travisvought.com/">Travis Vought</a></p>
-<p class="noprint"><a href="privacy/">Privacy</a> · <a href="advertise/">Advertise on Find Bingo</a></p>
+<p class="noprint"><a href="learn/">How bingo works: a free bingo class</a> · <a href="privacy/">Privacy</a> · <a href="advertise/">Advertise on Find Bingo</a></p>
 <p class="noprint">ZIP code locations: <a href="https://www.geonames.org/">GeoNames</a> / <a href="https://github.com/midwire/free_zipcode_data">Midwire</a> (<a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>). Lists updated November 19, 2026.</p></footer>
 <script>
 // The lists load from the guide's GitHub Pages site, so merged updates reach every copy of this page.
@@ -200,6 +228,67 @@ function start(){index();document.querySelectorAll('#state-buttons a').forEach(a
 $('count').textContent='Loading the bingo list…';
 window.fbReady=(typeof fetch==='function'?loadData():Promise.resolve(false)).then(ok=>{if(ok){start();return true}
  $('count').textContent='Sorry, the bingo list did not load.';$('results').innerHTML='<p class="empty">Please check your internet connection, then <a href="">reload this page</a>. If it keeps happening, email <a href="mailto:travis@vethomeguard.org?subject=FindBingo.org%20did%20not%20load">travis@vethomeguard.org</a>.</p>';return false});
+</script>
+<script>
+// Practice bingo card: just for fun, nothing is stored or sent.
+(function(){
+const g=id=>document.getElementById(id);if(!g('play'))return;
+const LETTERS='BINGO';
+const NAMES={1:"Kelly's eye",2:'One little duck',3:'Cup of tea',4:'Knock at the door',5:'Man alive',6:'Half a dozen',7:'Lucky seven',8:'Garden gate',9:"Doctor's orders",11:'Legs eleven',12:'One dozen',13:'Unlucky for some',14:"Valentine's Day",15:'Young and keen',16:'Sweet sixteen',18:'Coming of age',19:'Goodbye teens',20:'One score',21:'Key of the door',22:'Two little ducks',24:'Two dozen',25:'Duck and dive',31:'Get up and run',32:'Buckle my shoe',33:'All the threes',39:'Thirty-nine steps',44:'All the fours',45:'Halfway there',50:'Half a century',52:'Deck of cards',55:'Snakes alive',60:'Five dozen',66:'Clickety-click',71:'Bang on the drum',72:'Six dozen',75:'Last one in the cage'};
+const CHEERS=['Eyes down!','Dab it if you have it.','Who has it?','Keep those daubers ready.','Here comes another one.','Steady now.','Somebody is getting close.'];
+const JOKES=['Why was the bingo card so calm? It always has a free space.','What is a bingo caller’s favorite vitamin? B-12.','How do bingo players stay in shape? Plenty of dabbing.','Why did the dauber get a raise? It always hits the mark.','Why don’t bingo players get lost? They follow the numbers.','What did one bingo ball say to the other? Let’s roll.','Why did the bingo player bring a pencil? In case they needed to draw a winner.'];
+let card,marked,called,pool,won;
+const pick=a=>a[Math.floor(Math.random()*a.length)];
+const shuffle=a=>{for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const label=n=>LETTERS[Math.floor((n-1)/15)]+'-'+n;
+function lines(){const L=[];for(let i=0;i<5;i++){L.push([0,1,2,3,4].map(c=>i*5+c));L.push([0,1,2,3,4].map(r=>r*5+i))}L.push([0,6,12,18,24],[4,8,12,16,20]);return L}
+const LINES=lines();
+function newCard(){
+  const cols=[0,1,2,3,4].map(c=>shuffle(Array.from({length:15},(_,i)=>c*15+i+1)).slice(0,5));
+  card=[];for(let r=0;r<5;r++)for(let c=0;c<5;c++)card.push(r===2&&c===2?0:cols[c][r]);
+  marked=card.map(n=>n===0);called=new Set();pool=shuffle(Array.from({length:75},(_,i)=>i+1));won=false;
+  g('play').classList.remove('win');g('ball').className='ball idle';g('ball').querySelector('.bl').textContent='?';g('ball').querySelector('.bn').textContent='';
+  g('call-line').textContent='Ready when you are.';g('call-joke').textContent=pick(JOKES);g('play-msg').textContent='';g('called-list').textContent='None yet.';g('call-ball').disabled=false;
+  draw();
+}
+function draw(){
+  const body=g('card-body');body.innerHTML='';
+  for(let r=0;r<5;r++){const tr=document.createElement('tr');
+    for(let c=0;c<5;c++){const i=r*5+c,n=card[i],td=document.createElement('td'),b=document.createElement('button');
+      b.type='button';b.dataset.i=i;
+      if(n===0){b.textContent='FREE';b.className='free';b.setAttribute('aria-label','Free space');b.disabled=true}
+      else{b.textContent=n;b.setAttribute('aria-label',label(n));if(called.has(n))b.classList.add('called')}
+      b.setAttribute('aria-pressed',marked[i]?'true':'false');td.appendChild(b);tr.appendChild(td)}
+    body.appendChild(tr)}
+}
+function check(){
+  if(won)return;
+  if(LINES.some(l=>l.every(i=>marked[i]))){won=true;g('play').classList.add('win');g('play-msg').textContent='Bingo! Five in a row.';g('call-ball').disabled=true}
+}
+function callBall(){
+  if(won||!pool.length)return;
+  const n=pool.pop();called.add(n);
+  const ball=g('ball');ball.className='ball';void ball.offsetWidth;ball.className='ball pop';
+  ball.className='ball pop b-'+LETTERS[Math.floor((n-1)/15)];ball.querySelector('.bl').textContent=LETTERS[Math.floor((n-1)/15)];ball.querySelector('.bn').textContent=n;
+  g('call-line').textContent=label(n)+(NAMES[n]?' — '+NAMES[n]:'');
+  g('call-joke').textContent=NAMES[n]?'':pick(CHEERS);
+  const i=card.indexOf(n);
+  if(i>=0&&g('auto-mark').checked)marked[i]=true;
+  g('play-msg').textContent=i>=0?(marked[i]?'It’s on your card. Marked!':'It’s on your card. Tap it to mark it.'):'Not on your card this time.';
+  g('called-list').textContent=[...called].map(label).join(', ');
+  draw();check();
+}
+g('card-body').addEventListener('click',e=>{
+  const b=e.target.closest('button');if(!b||b.disabled||won)return;const i=+b.dataset.i,n=card[i];
+  if(!called.has(n)){g('play-msg').textContent=label(n)+' hasn’t been called yet.';return}
+  marked[i]=!marked[i];draw();check();
+  const again=g('card-body').querySelector('button[data-i="'+i+'"]');if(again)again.focus();
+});
+g('call-ball').addEventListener('click',callBall);
+g('new-card').addEventListener('click',newCard);
+g('play-find').addEventListener('click',()=>setTimeout(()=>g('zip')&&g('zip').focus(),300));
+newCard();
+})();
 </script>
 <script>// Page views only. Never send directory filters, ZIPs, searches or form values.
 (function () {
