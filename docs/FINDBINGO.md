@@ -124,7 +124,15 @@ regular day were kept. Files: `data/public/pennsylvania-bingo.json`, `new-york-b
 `utah-bingo.json`, in the same shape as Florida's.
 
 - Pennsylvania: bingo is licensed by each county treasurer, so there is no state list. Four listings
-  (two American Legion posts, two fire companies).
+  (two American Legion posts, two fire companies). Added November 19, 2026, each from the fire company's own
+  bingo page unless noted: Library VFC (Wednesday), Broughton VFD (Monday and Thursday) and Holiday Park VFD
+  (Thursday) around Pittsburgh; Stockdale VFD (Tuesday, from its own bingo-night posts through January 2026);
+  Bushkill Township VFC near Nazareth (Wednesday; the street address is from the fire company's own site
+  footer); and the Carmichaels & Cumberland Township VFC (Tuesday, from a Greene County event page first
+  posted in 2023, which its card says). Library VFC's page gives only a volunteer's personal phone, so its
+  card offers a phone lookup. Left out: games known only from newspaper calendars (Klecknersville Rangers,
+  Northampton Banquet Center, Pitcairn Hose Company, Castle Shannon VFD), a borough page that no longer
+  mentions bingo (Conway VFD), and a 2021 township page (Riverside VFC, Johnstown).
 - New York: a group gets a bingo identification number from the State Gaming Commission's Division of
   Charitable Gaming and its license from the city, town or village clerk; no public list of games was
   found. Three listings. Gates Center Bingo's page gives no phone, so its card offers a phone lookup
