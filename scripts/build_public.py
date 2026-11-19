@@ -14,6 +14,7 @@ from unified_guide import unified_outputs
 from build_disability_advocacy import outputs as disability_advocacy_outputs
 from build_mobility_routes import outputs as mobility_route_outputs
 from build_family_guide import outputs as family_guide_outputs
+from build_guide_privacy import outputs as privacy_outputs
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -93,6 +94,7 @@ def outputs():
     result.update(disability_advocacy_outputs())
     result.update(mobility_route_outputs())
     result.update(family_guide_outputs())
+    result.update(privacy_outputs())
     # Track public landing/sharing pages once, including each state's own guide page.
     for page in ['index.html', 'bingo.html', 'facilities.html'] + [s['page'] for s in states[1:]] + [s['share_page'] for s in states]:
         result[page] = re.sub(r'<script[^>]*data-goatcounter=[^>]*></script>', '', result[page])
@@ -100,7 +102,7 @@ def outputs():
         result[page] = result[page].replace('</body>', '<script defer src="assets/analytics.js"></script></body>')
     # The mobility and advocacy pages are canonical at mobilitytalk.org, so they stay out of this sitemap.
     # Search engines: list the public views, including each state's canonical URL.
-    pages = ['', 'facilities.html', 'family-guide.html', 'flyers.html']
+    pages = ['', 'facilities.html', 'family-guide.html', 'flyers.html', 'privacy.html']
     urls = [BASE_URL + page for page in pages if page == '' or (ROOT / page).is_file() or page in result]
     # Each state's own page (ky.html); Ohio is the root. Old ?state= links still work but are not listed.
     urls += [BASE_URL + s['page'] for s in states[1:]]

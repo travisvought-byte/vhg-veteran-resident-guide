@@ -142,8 +142,12 @@ def _date_label(iso):
     return d.strftime('%B ') + str(d.day) + d.strftime(', %Y')
 
 
-def make_findbingo(root):
+def make_findbingo(root, ads=None):
+    """All Find Bingo files. ads replaces data/findbingo-ads.json (the tests pass a sample ad)."""
     _load_zip_states(root)
+    if ads is None:
+        ads = json.loads((root / ADS_FILE).read_text())
+    validate_ads(ads, root)
     states = json.loads((root / 'data/public/bingo-states.json').read_text())
     venues = []
     for code in ORDER:
@@ -216,7 +220,7 @@ def make_findbingo(root):
                   + named(waiting) + '.</p>')
     page = (root / 'templates/findbingo/index.html').read_text()
     for key, value in (('__SOURCES__', json.dumps(DATA_SOURCES)), ('__STATE_BUTTONS__', buttons), ('__ABOUT__', about),
-                       ('__UPDATED__', _date_label(generated_on))):
+                       ('__UPDATED__', _date_label(generated_on)), ('__AD_HOME__', _ad_html(_ads_for(ads, 'home'), ''))):
         assert page.count(key) == 1, key
         page = page.replace(key, value)
     readme = f'''# FindBingo.org
@@ -261,7 +265,11 @@ Lists updated {_date_label(generated_on)}.
             rows = [r for r in licensed if r['state'] == s['code'] and r.get('license_expires', today) >= today]
         else:
             rows = [v for v in venues if v['state'] == s['code']]
-        pages[SLUGS[s['code']] + '/index.html'] = _state_page(s, states, rows, style, analytics, generated_on)
+        pages[SLUGS[s['code']] + '/index.html'] = _state_page(s, states, rows, style, analytics, generated_on, _ads_for(ads, SLUGS[s['code']]))
+    pages['privacy/index.html'] = _info_page('privacy', *PRIVACY, style, analytics, generated_on)
+    pages['advertise/index.html'] = _info_page('advertise', *ADVERTISE, style, analytics, generated_on)
+    # Ad pictures are served beside the pages, in ads/.
+    pages.update({'ads/' + a['image'].rsplit('/', 1)[1]: (root / a['image']).read_bytes() for a in ads if a.get('image')})
     site = {
         # Google Search Console ownership file for https://www.findbingo.org/ (owner direction, Nov 16, 2026).
         # Keep it: Google rechecks the file, and removing it drops verification.
@@ -427,7 +435,7 @@ STATE_COPY = {
 }
 
 
-def _state_page(s, states, rows, style, analytics, generated_on):
+def _state_page(s, states, rows, style, analytics, generated_on, ads=()):
     code, name, slug = s['code'], s['name'], SLUGS[s['code']]
     title, description, lead = (t.format(name=name) for t in STATE_COPY[s['coverage']])
     if s['coverage'] == 'none' and s.get('list_url'):
@@ -464,6 +472,8 @@ def _state_page(s, states, rows, style, analytics, generated_on):
     else:
         body += (f'<div id="listings"><p class="empty">We have not listed any {escape(name)} games yet. '
                  'If you know of one, please tell us about it below.</p></div>')
+    # At most one ad place per state page: after the listings, never inside them or above them.
+    body += _ad_html(ads, '../')
     body += _send_times(s)
     pairs = []
     for u, label in ((s.get('list_url'), s.get('list_label')), (s.get('regulator_url'), s.get('regulator_label'))):
@@ -499,11 +509,12 @@ def _json_ld(obj):
     return '<script type="application/ld+json">' + json.dumps(obj, ensure_ascii=False).replace('</', '<\\/') + '</script>'
 
 
-def _footer(generated_on):
+def _footer(generated_on, up='../'):
     return ('<footer><p>FindBingo.org is a free community resource from <a href="https://www.vethomeguard.org/">Veteran Home Guardians</a>. '
-            'Listings are free and never depend on donations or advertising.</p>'
+            'Listings are free. Ads, when shown, are labeled and never decide which games are listed.</p>'
             '<p class="noprint">Need help getting to the game? <a href="https://mobilitytalk.org/states/">Mobility Talk</a> lists mobility and disability resources in every state.</p>'
             f'<p class="noprint">Questions or corrections: <a href="mailto:{EMAIL}?subject=FindBingo.org">{EMAIL}</a> · Made by <a href="https://travisvought.com/">Travis Vought</a></p>'
+            f'<p class="noprint"><a href="{up}privacy/">Privacy</a> · <a href="{up}advertise/">Advertise on Find Bingo</a></p>'
             f'<p class="noprint">Lists updated {_date_label(generated_on)}.</p></footer>')
 
 
@@ -515,3 +526,166 @@ STATE_CSS = ('header a{color:#fff}.intro{font-size:20px;max-width:860px}'
              '.counties a{display:inline-flex;align-items:center;min-height:48px;padding:0 14px;border:2px solid var(--green);border-radius:24px;color:var(--green);font-weight:700;text-decoration:none}'
              '#listings>section>h2{font-size:28px;margin:28px 0 10px;scroll-margin-top:12px}.top{font-size:17px;margin:10px 0 0}.top a{display:inline-flex;align-items:center;min-height:44px}'
              '@media print{.counties,.top,#run-a-game{display:none!important}}')
+
+
+# ---- Ads (owner direction, November 19, 2026: Find Bingo may carry advertising) -----------------------
+# data/findbingo-ads.json is a list, empty by default. With no ad running for a place, the page has no ad
+# markup at all. Each ad: slot ("home", "state" for every state page, or "state:michigan" for one state),
+# sponsor, text, url, and optionally image (a file under assets/, served from ads/), alt (needed with an
+# image), start and end (YYYY-MM-DD, Eastern time, both days included). Ads never touch the listings.
+ADS_FILE = 'data/findbingo-ads.json'
+AD_KEYS = {'slot', 'sponsor', 'text', 'url', 'image', 'alt', 'start', 'end'}
+# The Privacy and Advertise pages, linked from every footer and listed in the sitemap.
+INFO_PAGES = ('privacy/', 'advertise/')
+# Dated ads are written hidden; this shows the one whose dates include today, so a page built before an ad
+# starts or after it ends never shows it on the wrong day. Without JavaScript a dated ad stays hidden.
+AD_DATES_SCRIPT = ("<script>(function(){var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date()),"
+                   "g=function(t){return p.find(function(x){return x.type===t}).value},d=g('year')+'-'+g('month')+'-'+g('day');"
+                   "document.querySelectorAll('.ad-slot[data-start],.ad-slot[data-end]').forEach(function(a){"
+                   "a.hidden=!((!a.dataset.start||a.dataset.start<=d)&&(!a.dataset.end||d<=a.dataset.end))})})()</script>")
+
+
+def _ad_window(a):
+    return a.get('start', '0000-01-01'), a.get('end', '9999-12-31')
+
+
+def _ads_for(ads, place):
+    """The ads for one page: 'home', or a state page's slug."""
+    if place == 'home':
+        return [a for a in ads if a['slot'] == 'home']
+    return [a for a in ads if a['slot'] in ('state', 'state:' + place)]
+
+
+def validate_ads(ads, root):
+    assert isinstance(ads, list), ADS_FILE + ' is a list'
+    slots = {'home', 'state'} | {'state:' + slug for code, slug in SLUGS.items() if code != 'OH'}
+    for a in ads:
+        assert isinstance(a, dict) and set(a) <= AD_KEYS, a
+        assert a.get('slot') in slots, ('ad slot', a.get('slot'))
+        assert all(isinstance(a.get(k), str) and a[k].strip() for k in ('sponsor', 'text', 'url')), a
+        assert len(a['text']) <= 200 and len(a['sponsor']) <= 80, ('keep ads short', a['sponsor'])
+        assert a['url'].startswith('https://'), a['url']
+        if 'image' in a:
+            assert a['image'].startswith('assets/') and '..' not in a['image'] and (root / a['image']).is_file(), a['image']
+            assert re.search(r'\.(png|jpe?g|gif|webp|svg)$', a['image']) and a.get('alt', '').strip(), ('image needs alt text', a['image'])
+        else:
+            assert 'alt' not in a, a
+        for k in ('start', 'end'):
+            if k in a:
+                assert date.fromisoformat(a[k]).isoformat() == a[k], a[k]
+        start, end = _ad_window(a)
+        assert start <= end, a
+    # Never two ads in one place at the same time: each page has at most one ad showing.
+    for place in ['home'] + [slug for code, slug in SLUGS.items() if code != 'OH']:
+        here = sorted((_ad_window(a) for a in _ads_for(ads, place)))
+        for (_, end), (start, _) in zip(here, here[1:]):
+            assert end < start, ('two ads would show at once on', place)
+    # Pictures are served from ads/ by file name, so two different files may not share one.
+    pictures = {a['image'] for a in ads if a.get('image')}
+    assert len(pictures) == len({x.rsplit('/', 1)[1] for x in pictures}), 'two ad pictures share a file name'
+
+
+def _ad_html(ads, up):
+    """The ad for one place, or nothing at all when no ad is running there."""
+    out = ''
+    for a in ads:
+        dated = ''.join(f' data-{k}="{a[k]}"' for k in ('start', 'end') if k in a)
+        img = (f'<img src="{escape(up + "ads/" + a["image"].rsplit("/", 1)[1])}" alt="{escape(a["alt"])}" loading="lazy">'
+               if a.get('image') else '')
+        out += (f'<aside class="ad-slot" aria-label="Advertisement"{dated}{" hidden" if dated else ""}><p class="ad-label">Advertisement</p>'
+                f'<a class="ad-body" href="{escape(a["url"])}" target="_blank" rel="sponsored noopener">{img}'
+                f'<span class="ad-sponsor">{escape(a["sponsor"])} ↗</span><span class="ad-text">{escape(a["text"])}</span></a></aside>')
+    if any('start' in a or 'end' in a for a in ads):
+        out += AD_DATES_SCRIPT
+    return out
+
+
+# ---- Privacy and Advertise pages ---------------------------------------------------------------------
+POLICY_DATE = 'November 19, 2026'
+
+
+def _info_page(slug, title, description, heading, lead, body, style, analytics, generated_on):
+    url = f'{SITE}/{slug}/'
+    head = (f'<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">\n'
+            f'<title>{escape(title)}</title>\n<meta name="description" content="{escape(description)}">\n<link rel="canonical" href="{url}">\n'
+            f'<meta property="og:type" content="website"><meta property="og:site_name" content="Find Bingo"><meta property="og:title" content="{escape(heading)}">'
+            f'<meta property="og:description" content="{escape(description)}"><meta property="og:url" content="{url}"><meta property="og:image" content="{SITE}/ohio/assets/vhg-logo.png">\n'
+            + style + '\n</head>')
+    return (head + '<body id="top"><a class="skip" href="#main">Skip to the page</a>'
+            f'<header><p class="brand"><a href="../">FindBingo.org</a> · free from Veteran Home Guardians</p><h1>{escape(heading)}</h1><p class="lead">{escape(lead)}</p></header>'
+            f'<main id="main"><div class="info">{body}</div>'
+            '<p class="small-links"><a href="../">Find bingo near you</a></p></main>'
+            f'{_footer(generated_on)}<script>{analytics}</script></body></html>\n')
+
+
+def _ext(url, label):
+    return f'<a href="{escape(url)}">{escape(label)}</a>'
+
+
+ASK = _mailto('Find Bingo privacy')
+PRIVACY = (
+    'Privacy | FindBingo.org',
+    'How FindBingo.org handles information about your visit: no accounts, no cookies for counting visits, and your ZIP code search stays on your device.',
+    'Privacy',
+    f'How Find Bingo handles information about your visit. Last updated {POLICY_DATE}.',
+    '<h2>The short version</h2>'
+    '<ul><li>There are no accounts and no sign-in. We never ask for your name.</li>'
+    '<li>We count visits without cookies and without keeping personal information.</li>'
+    '<li>Your ZIP code search is worked out on your own phone or computer.</li>'
+    '<li>We do not sell personal information.</li></ul>'
+    '<h2>Counting visits</h2>'
+    '<p>We use ' + _ext('https://www.goatcounter.com/help/privacy', 'GoatCounter') + ' to count page views, so we know which pages people use. '
+    'GoatCounter does not use cookies and does not store personal information. For each page view it records things like the page visited, '
+    'the site that sent you here, your browser, your screen size, and an approximate country worked out from your internet (IP) address. '
+    'It does not store the IP address.</p>'
+    '<p>We leave out everything after the question mark in a page address, so the ZIP code you search for is never counted.</p>'
+    '<h2>Your ZIP code search</h2>'
+    '<p>When you search by ZIP code, the page finds bingo near you on your own device. It downloads the bingo lists and a list '
+    'of ZIP code locations, then works out the distances itself. Ohio’s finder works the same way. The ZIP code is not sent to us or to anyone else to look it up, and we do not keep it.</p>'
+    '<p>Your ZIP code does show in the page address (for example, findbingo.org/?zip=48161), so you can bookmark or share a search. '
+    'If you search from a state page, or open Ohio’s finder with your ZIP code, your browser asks our web host for that address, '
+    'the same way it asks for any web page.</p>'
+    '<h2>Who serves the site</h2>'
+    '<p>findbingo.org is served by Cloudflare. Some files, such as the bingo lists, can also load from GitHub Pages, where the site’s code is kept. '
+    'Like any web host, Cloudflare and GitHub may keep server logs, including IP addresses, for security. '
+    'Read ' + _ext('https://www.cloudflare.com/privacypolicy/', 'Cloudflare’s privacy policy') + ' and '
+    + _ext('https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement', 'GitHub’s privacy statement') + '.</p>'
+    '<h2>Advertising</h2>'
+    '<p>This site may show ads. Every ad is labeled “Advertisement” and kept apart from the game listings. '
+    'If we use an ad network such as Google AdSense, it and its partners may use cookies to show ads based on your visits to this and other sites. '
+    'You can turn off personalized ads at ' + _ext('https://adssettings.google.com', 'adssettings.google.com')
+    + ' and learn more at ' + _ext('https://policies.google.com/technologies/ads', 'policies.google.com/technologies/ads')
+    + ', or opt out of many networks at ' + _ext('https://optout.aboutads.info', 'optout.aboutads.info') + '.</p>'
+    '<p>Ads never change which games are listed or their order. <a href="../advertise/">About advertising on Find Bingo</a></p>'
+    '<h2>Email, calls and directions</h2>'
+    '<p>If you email us game times or a correction, we get your email address and what you write. We use it to update the listings and to reply, '
+    'and we never sell or share it. The call, phone lookup and directions buttons open your phone or Google Maps, which follow their own privacy rules.</p>'
+    '<h2>Children</h2>'
+    '<p>Find Bingo is not directed to children under 13, and we do not knowingly collect information from them.</p>'
+    '<h2>Questions</h2>'
+    '<p>Find Bingo is run by <a href="https://www.vethomeguard.org/">Veteran Home Guardians</a>, an Ohio nonprofit. '
+    f'Questions about privacy: <a href="{escape(ASK)}">{EMAIL}</a>.</p>'
+    f'<p class="small">Last updated {POLICY_DATE}.</p>')
+
+ADVERTISE = (
+    'Advertise on Find Bingo | FindBingo.org',
+    'Reach bingo players, families and activity staff with a labeled ad on FindBingo.org. Ads sit apart from the listings and never change them.',
+    'Advertise on Find Bingo',
+    'Reach people looking for bingo near them: players, their families, and the activity staff who plan outings.',
+    '<h2>Who can advertise</h2>'
+    '<p>Local businesses, senior services, senior living and home care, transportation, bingo suppliers, and community events. '
+    'If your business is a good fit for bingo players and their families, write to us.</p>'
+    '<h2>Ground rules</h2>'
+    '<ul><li>Every ad is labeled “Advertisement.”</li>'
+    '<li>Ads sit apart from the game listings: on the home page below the search results, and on state pages after the listings. Never inside them.</li>'
+    '<li>Ads never add, remove, change or reorder listings. A hall cannot pay for a better listing, and every listing stays free.</li>'
+    '<li>We review every ad before it runs, and we turn down ads that are misleading.</li></ul>'
+    '<h2>Where the money goes</h2>'
+    '<p>Ad income supports <a href="https://www.vethomeguard.org/">Veteran Home Guardians</a>, the Ohio nonprofit that runs Find Bingo '
+    'and visits veterans in nursing homes.</p>'
+    '<h2>Get in touch</h2>'
+    '<p>Tell us your business name, what you would like to advertise, and the states or towns you want to reach.</p>'
+    '<div class="big-actions"><a class="solid" href="'
+    + escape(_mailto('Advertising on Find Bingo', 'Business name:\nWhat we would like to advertise:\nStates or towns:\nWebsite:\nBest way to reach us:\n'))
+    + f'">Email us about an ad</a></div><p class="small">Or write to {EMAIL}. '
+    '<a href="../privacy/">How ads and privacy work on this site</a></p>')

@@ -438,5 +438,115 @@ const ky = new JSDOM(fs.readFileSync(path.join(site, 'kentucky/index.html'), 'ut
 assert(ky.querySelector('#run-a-game a[href^="mailto:travis@vethomeguard.org?subject=Bingo%20game%20times%20in%20Kentucky"]'));
 assert(ky.querySelector('#about a[href="https://dcg.ky.gov/"]'));
 
+// Privacy and Advertise pages (November 19, 2026): one each, linked from every footer and in the sitemap.
+const findbingo = path.join(root, 'bingo-site/findbingo');
+for (const f of ['privacy/index.html', 'advertise/index.html'])
+  assert.equal(fs.readFileSync(path.join(findbingo, f), 'utf8'), fs.readFileSync(path.join(site, f), 'utf8'), f + ' copies match');
+const privacy = new JSDOM(fs.readFileSync(path.join(site, 'privacy/index.html'), 'utf8')).window.document;
+assert.equal(privacy.querySelector('link[rel=canonical]').href, 'https://www.findbingo.org/privacy/');
+assert.equal(privacy.querySelector('h1').textContent, 'Privacy');
+const privacyText = privacy.querySelector('main').textContent;
+for (const words of ['November 19, 2026', 'GoatCounter does not use cookies', 'It does not store the IP address', 'on your own device',
+  'The ZIP code is not sent to us or to anyone else to look it up', 'Cloudflare', 'GitHub', 'This site may show ads. Every ad is labeled “Advertisement” and kept apart from the game listings.',
+  'We do not sell personal information', 'not directed to children under 13'])
+  assert(privacyText.includes(words), 'privacy page says: ' + words);
+assert(!/ads (are|run) (now|on this site)/i.test(privacyText), 'the privacy page does not claim ads are running');
+for (const href of ['https://adssettings.google.com', 'https://policies.google.com/technologies/ads', 'https://optout.aboutads.info',
+  'https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement', '../advertise/'])
+  assert(privacy.querySelector(`main a[href="${href}"]`), 'privacy page links ' + href);
+assert(privacy.querySelector('main a[href^="mailto:travis@vethomeguard.org"]'), 'privacy questions go to the site’s existing contact address');
+// The ZIP search really does run in the browser: the finder fetches only whole files, never a ZIP lookup.
+assert(!/fetch\([^)]*zip=/i.test(html) && /getJSON\(/.test(html), 'no ZIP code is sent to a lookup service');
+const advertise = new JSDOM(fs.readFileSync(path.join(site, 'advertise/index.html'), 'utf8')).window.document;
+const advertiseText = advertise.querySelector('main').textContent;
+for (const words of ['Every ad is labeled “Advertisement.”', 'Never inside them', 'Ads never add, remove, change or reorder listings',
+  'We review every ad before it runs', 'misleading', 'Ad income supports Veteran Home Guardians'])
+  assert(advertiseText.includes(words), 'advertise page says: ' + words);
+assert(!/\$\s?\d/.test(advertiseText), 'no prices on the advertise page');
+assert(advertise.querySelector('main a[href^="mailto:travis@vethomeguard.org?subject=Advertising%20on%20Find%20Bingo"]'));
+assert(sitemap.includes('<loc>https://www.findbingo.org/privacy/</loc>') && sitemap.includes('<loc>https://www.findbingo.org/advertise/</loc>'));
+const allPages = [];
+(function walk(dir) {
+  for (const e of fs.readdirSync(dir, {withFileTypes: true})) {
+    const p = path.join(dir, e.name);
+    if (e.isDirectory()) walk(p); else if (e.name.endsWith('.html') && !e.name.startsWith('google')) allPages.push(p);
+  }
+})(findbingo);
+assert(allPages.length > 50);
+const noAdsPromise = /never depends? on (donations or )?advertising|(do not|don['’]t|never) (sell|show|run|carry|accept) (any )?(ads|advertising)|\bno (ads|advertising)\b|ad-free|without (ads|advertising)/i;
+for (const file of allPages) {
+  const rel = path.relative(findbingo, file), text = fs.readFileSync(file, 'utf8');
+  assert(!noAdsPromise.test(text), rel + ': no promise against ads');
+  // Every page with a footer links Privacy and Advertise (the poster is a print-only page with no footer).
+  const d = new JSDOM(text).window.document;
+  if (!d.querySelector('footer')) { assert.equal(rel, path.join('ohio', 'poster.html'), rel + ' has a footer'); continue; }
+  const up = path.dirname(rel) === '.' ? '' : '../';
+  assert(d.querySelector(`footer a[href="${up}privacy/"]`) && d.querySelector(`footer a[href="${up}advertise/"]`), rel + ': footer links Privacy and Advertise');
+  // With the default (empty) ad list there is no ad markup at all.
+  assert(!d.querySelector('.ad-slot, .ad-label, [rel~="sponsored"]') && !text.includes('class="ad-slot'), rel + ': no ad markup when no ad is running');
+}
+assert.deepEqual(JSON.parse(fs.readFileSync(path.join(root, 'data/findbingo-ads.json'), 'utf8')), [], 'no ads by default');
+assert(/Ads, when shown, are labeled and never decide which games are listed\./.test(home.querySelector('footer').textContent));
+
+// A sample ad, built with the real builder: labeled, rel="sponsored", outside the listings, one place per page.
+const {spawnSync} = require('child_process');
+function buildWith(ads, pages) {
+  const code = 'import json,sys;from pathlib import Path;sys.path.insert(0,"scripts");import findbingo_site as f;'
+    + 'out=f.make_findbingo(Path("."),json.loads(sys.argv[1]));want=json.loads(sys.argv[2]);'
+    + 'print(json.dumps({"files":sorted(out),"pages":{k:out["findbingo-site/"+k] for k in want}}))';
+  const r = spawnSync('python3', ['-c', code, JSON.stringify(ads), JSON.stringify(pages)], {cwd: root, encoding: 'utf8', maxBuffer: 1 << 28});
+  return r.status === 0 ? JSON.parse(r.stdout) : {error: r.stderr};
+}
+const sample = [
+  {slot: 'home', sponsor: 'Sample Senior Rides', text: 'Rides to the bingo hall and back.', url: 'https://example.org/rides', image: 'assets/vhg-logo.png', alt: 'Sample Senior Rides logo'},
+  {slot: 'state:michigan', sponsor: 'Sample Daubers', text: 'Bingo supplies, shipped free.', url: 'https://example.org/daubers'},
+  {slot: 'state:florida', sponsor: 'Sample Diner', text: 'Breakfast before the early bird game.', url: 'https://example.org/diner', start: '2026-12-01', end: '2026-12-31'},
+];
+const built = buildWith(sample, ['index.html', 'michigan/index.html', 'florida/index.html', 'texas/index.html']);
+assert(!built.error, built.error);
+assert(built.files.includes('findbingo-site/ads/vhg-logo.png') && built.files.includes('bingo-site/findbingo/ads/vhg-logo.png'), 'ad pictures are served from ads/');
+function checkAd(d, where) {
+  const ads = d.querySelectorAll('aside.ad-slot');
+  assert.equal(ads.length, 1, where + ': one ad place');
+  const ad = ads[0];
+  assert.equal(ad.getAttribute('aria-label'), 'Advertisement');
+  assert.equal(ad.firstElementChild.className, 'ad-label');
+  assert.equal(ad.firstElementChild.textContent, 'Advertisement', where + ': the label is on top');
+  for (const a of ad.querySelectorAll('a')) assert.deepEqual(a.rel.split(' ').sort(), ['noopener', 'sponsored'], where + ': sponsored link');
+  assert(!ad.closest('article, #results, #listings, .grid, .sessions'), where + ': never inside the listings');
+  assert(!d.querySelector('article .ad-slot, #results .ad-slot, #listings .ad-slot'));
+  return ad;
+}
+let ad = checkAd(new JSDOM(built.pages['index.html']).window.document, 'home');
+const homeDoc = ad.ownerDocument;
+assert(homeDoc.getElementById('results').compareDocumentPosition(ad) & 4, 'home ad comes after the results');
+assert(homeDoc.getElementById('state-buttons').compareDocumentPosition(ad) & 4, 'home ad comes after the state list');
+assert(ad.compareDocumentPosition(homeDoc.getElementById('run-a-game')) & 4, 'home ad sits before the panels below');
+assert.equal(ad.querySelector('img').getAttribute('src'), 'ads/vhg-logo.png');
+assert.equal(ad.querySelector('img').alt, 'Sample Senior Rides logo');
+assert(!ad.hidden && ad.textContent.includes('Sample Senior Rides') && ad.querySelector('a').href === 'https://example.org/rides');
+ad = checkAd(new JSDOM(built.pages['michigan/index.html']).window.document, 'michigan');
+assert(ad.ownerDocument.getElementById('listings').compareDocumentPosition(ad) & 4, 'state ad comes after the listings');
+assert(!(ad.compareDocumentPosition(ad.ownerDocument.querySelector('main form.zip-box')) & 4), 'never above the main content');
+assert(!built.pages['texas/index.html'].includes('class="ad-slot'), 'a state with no ad has no ad markup');
+// A dated ad shows only on its dates (Eastern time), and stays hidden without JavaScript.
+function at(page, when) {
+  return new JSDOM(page, {runScripts: 'dangerously', beforeParse(w) {
+    const RealDate = w.Date;
+    w.Date = class extends RealDate { constructor(...a) { super(...(a.length ? a : when)) } static now() { return new RealDate(...when).getTime() } };
+  }}).window.document.querySelector('aside.ad-slot');
+}
+const flAd = built.pages['florida/index.html'];
+assert(new JSDOM(flAd).window.document.querySelector('aside.ad-slot').hidden, 'hidden without JavaScript');
+assert(at(flAd, [2026, 10, 16, 10, 0]).hidden, 'not shown before it starts');
+assert(!at(flAd, [2026, 11, 5, 10, 0]).hidden, 'shown on its dates');
+assert(at(flAd, [2027, 0, 2, 10, 0]).hidden, 'not shown after it ends');
+// Two ads can never show in one place at once, and a bad ad stops the build.
+assert(buildWith([sample[0], {...sample[0], sponsor: 'Second'}], []).error, 'two home ads at once are refused');
+assert(buildWith([{slot: 'state', sponsor: 'All states', text: 'x', url: 'https://example.org/'}, sample[1]], []).error, 'a state ad and an every-state ad at once are refused');
+assert(buildWith([{...sample[1], url: 'http://example.org/'}], []).error, 'ad links use https');
+assert(buildWith([{...sample[0], alt: ''}], []).error, 'a picture needs alt text');
+assert(buildWith([{...sample[1], slot: 'sidebar'}], []).error, 'only known places');
+
 console.log('FindBingo.org checks passed.');
 })().catch(e => { console.error(e); process.exit(1); });

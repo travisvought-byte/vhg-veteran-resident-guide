@@ -54,6 +54,27 @@ are listed, anywhere on the site. `tests/findbingo.cjs` checks the state pages a
 Ohio data is not copied into the national page. Ohio searches hand off to https://www.findbingo.org/ohio/
 with the same ZIP code and distance, so Ohio has one source of truth.
 
+## Privacy, advertising and ad places (added November 19, 2026)
+
+Travis's direction (November 19, 2026): Find Bingo may carry advertising. Listings stay free and can never
+be bought; ads are labeled and never decide which games are listed or their order.
+
+- **Privacy** is at https://www.findbingo.org/privacy/ and **Advertise** at https://www.findbingo.org/advertise/.
+  Both are built by `scripts/findbingo_site.py` (`PRIVACY`, `ADVERTISE`), linked from every footer (the Ohio
+  finder's too) and listed in `sitemap.xml`. If the site's setup changes (another visit counter, an ad network
+  goes live, the host changes), update the privacy page in the same pull request.
+- **Ads** live in `data/findbingo-ads.json`, an empty list by default. With no ad running, the pages carry no
+  ad markup at all. An ad is an object with `slot` (`home`; `state` for every state page; or `state:michigan`
+  for one state), `sponsor`, `text` (200 characters at most) and an `https://` `url`; optionally `image` (a file
+  under `assets/`, served from `ads/`) with `alt`, and `start` and `end` dates (`YYYY-MM-DD`, Eastern time,
+  both days included). A dated ad is written hidden and shown only on its dates by a small script, so a page
+  built earlier never shows it on the wrong day. The build refuses two ads that could show in one place at once.
+- **Placement.** The home page's ad sits below the search results and state list, before "Run a bingo game?".
+  A state page's ad sits after the listings, before "Run a bingo game in ...". Never inside a list of games or
+  a card, never above the main content. Ads are left out of printed lists.
+- Review every ad before it runs and turn down misleading ones (the Advertise page promises this). Remove an
+  ad's entry once it ends; an ad picture removed from the list is not deleted from `findbingo-site/ads/` by the build.
+
 ## Sources and how they were read (November 15, 2026)
 
 **Michigan.** The Michigan Lottery's Charitable Gaming Division publishes
