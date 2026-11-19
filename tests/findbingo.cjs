@@ -42,7 +42,7 @@ const listed = states.filter(s => LISTED.includes(s.coverage)), rest = states.fi
 const ready = states.filter(s => s.coverage !== 'pending').map(s => s.code), waiting = states.filter(s => s.coverage === 'pending').map(s => s.code);
 assert.deepEqual([...static_.querySelectorAll('#state-buttons > a')].map(a => a.dataset.state), listed.map(s => s.code));
 assert.deepEqual([...static_.querySelectorAll('#state-buttons details.more-states a')].map(a => a.dataset.state), rest.map(s => s.code));
-for (const c of ['FL', 'IN', 'MI', 'MS', 'MT', 'NM', 'NY', 'OH', 'PA', 'TX', 'UT', 'VA']) assert(listed.some(s => s.code === c), c + ' keeps its list');
+for (const c of ['FL', 'IN', 'MI', 'MO', 'MS', 'MT', 'NM', 'NY', 'OH', 'PA', 'TX', 'UT', 'VA']) assert(listed.some(s => s.code === c), c + ' keeps its list');
 for (const c of ['KY', 'WV']) assert(ready.includes(c), c + ' stays researched');
 assert.deepEqual(waiting, [], 'every state and DC has been researched: each names who licenses or oversees bingo, with a source');
 assert.equal(states.length, 51);
@@ -136,7 +136,7 @@ const pending = states.find(s => s.code === 'MI').pending_counties || [];
 if (pending.length) {
   assert.match(p.d.getElementById('pending-MI').textContent, new RegExp(pending[pending.length - 1]));
   assert.equal(p.d.querySelector('#pending-MI a').href, states.find(s => s.code === 'MI').list_url);
-  assert(!data.venues.some(v => pending.includes(v.county)));
+  assert(!data.venues.some(v => v.state === 'MI' && pending.includes(v.county)));
 }
 
 // A day filter keeps only halls with a game that day.
@@ -171,12 +171,25 @@ assert(p.d.querySelector('#more-note button[data-more="0"]'));
 assert(!/\d/.test(p.d.getElementById('more-note').textContent), 'no counts on the site');
 
 // States without a public list: say so, and invite halls to send game times.
-p = await open('?zip=65101');
-assert.equal(p.count, 'No bingo games listed yet within 25 miles of 65101.');
+p = await open('?zip=50309');
+assert.equal(p.count, 'No bingo games listed yet within 25 miles of 50309.');
 assert(!p.d.getElementById('pending-MI'), 'the Michigan note stays with Michigan searches');
-assert.equal(p.cards[0], 'state-MO');
-assert.match(p.d.getElementById('state-MO').textContent, /Charitable Games Division/);
-assert(p.d.querySelector('#state-MO a[href^="mailto:travis@vethomeguard.org?subject=Bingo%20game%20times%20in%20Missouri"]'));
+assert.equal(p.cards[0], 'state-IA');
+assert.match(p.d.getElementById('state-IA').textContent, /Charitable Gambling/);
+assert(p.d.querySelector('#state-IA a[href^="mailto:travis@vethomeguard.org?subject=Bingo%20game%20times%20in%20Iowa"]'));
+// Missouri: the Gaming Commission's Find Local Bingo Games page gives start times only, and which weeks of the month.
+const moRows = data.venues.filter(v => v.state === 'MO');
+assert.equal(states.find(s => s.code === 'MO').coverage, 'times');
+assert(moRows.length && moRows.every(v => v.sessions.every(x => x.start && !('end' in x))), 'Missouri sessions have a start time and no end time');
+assert(moRows.every(v => !!v.schedule_note === v.sessions.some(x => x.label)), 'only halls with monthly games say "usual bingo days"');
+p = await open('?zip=65101');
+assert.equal(p.count, 'Bingo within 25 miles of 65101 · closest first');
+assert(p.cards.includes('mo-basinger-sone-memorial-vfw-post-1003-jefferson-city'));
+assert.match(p.d.getElementById('mo-basinger-sone-memorial-vfw-post-1003-jefferson-city').querySelector('.when').textContent, /Next bingo day:.*Friday, 6:30 p\.m\./s);
+p = await open('?zip=65265');
+const legion = p.d.getElementById('mo-james-bledsoe-post-26-american-legion-mexico');
+assert.match(legion.querySelector('.when').textContent, /Usual bingo days:.*Saturday, 6:30 p\.m\. · First and third Saturday of the month/s);
+assert(!/Next bingo day/.test(legion.textContent), 'no promised date when some games skip weeks');
 // Kentucky's starter list: Frankfort finds the VFW post's Thursday game, then the way to send more game times.
 p = await open('?zip=40601');
 assert.equal(p.count, 'Bingo within 25 miles of 40601 · closest first');
@@ -369,8 +382,10 @@ assert.equal(p.count, 'Indiana groups licensed for bingo');
 p = await open('?state=OH');
 assert.deepEqual(p.cards, ['state-OH']);
 assert.equal(p.d.querySelector('#state-OH a.solid').href, 'https://www.findbingo.org/ohio/');
-p = await open('?state=MO');
-assert.deepEqual(p.cards, ['state-MO']);
+p = await open('?state=IA');
+assert.deepEqual(p.cards, ['state-IA']);
+p = await open('?state=MO&county=Greene');
+assert.deepEqual(p.cards.sort(), data.venues.filter(v => v.state === 'MO' && v.county === 'Greene').map(v => v.id).sort());
 
 // Names are shown as text, never as markup.
 p = await open('?state=MI&county=Ingham');
