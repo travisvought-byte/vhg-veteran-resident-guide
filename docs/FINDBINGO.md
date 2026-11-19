@@ -1,7 +1,8 @@
 # FindBingo.org
 
 FindBingo.org is the multi-state bingo finder. Players type a ZIP code (or pick a state) and see
-bingo near them, closest first. It covers Michigan and Indiana with state data, serves the Ohio Bingo
+bingo near them, closest first. It covers Michigan, Texas, Virginia, Missouri, Indiana, Mississippi, Montana
+and New Mexico with state data, serves the Ohio Bingo
 Finder at findbingo.org/ohio/, and lists organizer-published games in Pennsylvania, New York, Florida,
 Utah, Kentucky and West Virginia ("starter" states). States without a list yet say so plainly. Every
 listing has a "Report a change" email link, and every state has a free way for halls to send game times.
@@ -16,6 +17,7 @@ Started November 15, 2026, at Travis's direction: one national finder, neighbori
 | Michigan weekly bingo (venues, days, licensed hours) | `data/public/michigan-weekly-bingo.json` |
 | Texas bingo halls (halls, phone, licensed days and times) | `data/public/texas-bingo-halls.json`, rebuilt by `scripts/read_texas_locator.py` then `scripts/import_texas_bingo.py` |
 | Virginia bingo sessions (halls, days, doors-open and doors-close times) | `data/public/virginia-bingo-sessions.json`, rebuilt by `scripts/import_virginia_bingo.py` |
+| Missouri bingo games (halls, phone, day, start time, weeks of the month) | `data/public/missouri-bingo-sessions.json`, rebuilt by `scripts/read_missouri_finder.py` then `scripts/import_missouri_bingo.py` |
 | Indiana groups with a current license that allows bingo | `data/public/indiana-bingo-licenses.json` |
 | Mississippi halls licensed for bingo | `data/public/mississippi-bingo-licenses.json`, rebuilt by `scripts/import_mississippi_bingo.py` |
 | Montana places with a live bingo permit | `data/public/montana-bingo-permits.json`, rebuilt by `scripts/import_montana_bingo.py` |
@@ -193,6 +195,8 @@ U.S. Census Geocoder match for the bingo hall at 228 N 20th St.
    For New Mexico, run `python3 scripts/import_new_mexico_bingo.py --reviewed <today>` (it downloads the page).
    For Texas, run `python3 scripts/read_texas_locator.py texas-locator.json` (needs Python Playwright
    and Chrome), then `python3 scripts/import_texas_bingo.py texas-locator.json --reviewed <today> --geocode`.
+   For Missouri, run `python3 scripts/read_missouri_finder.py missouri-finder.json` (needs Python Playwright
+   and Chrome), then `python3 scripts/import_missouri_bingo.py missouri-finder.json --reviewed <today>`.
 2. Update the JSON files and each record's `reviewed_on`.
 3. Run `python3 scripts/build_public.py` and `node tests/findbingo.cjs`, then open a pull request.
 
@@ -213,7 +217,7 @@ where one is published. The tests refuse a `pending` state, so coverage cannot s
 | `none` | Researched: regulator named and sourced, no list loaded on this site. If the state publishes a list or finder, `list_url` and `list_label` point to it and the state page and the search card lead with that button. |
 | `starter` | Organizer-published schedules, one file per state (`STARTER_FILES`). |
 | `licenses` | A state list of licensed groups or permitted places without game days (Indiana, Mississippi, Montana, New Mexico), one file per state (`LICENSE_FILES`). |
-| `times` | A state list with days and hours (Michigan, Texas, Virginia), one file per state (`TIMES_FILES`). |
+| `times` | A state list with days and hours (Michigan, Texas, Virginia, Missouri), one file per state (`TIMES_FILES`). |
 
 The home page shows a button for each state with a list on the site (`LISTED` in the generator) and keeps
 every other state behind "More states, A to Z". "Where these lists come from" on the home page gives
@@ -271,6 +275,30 @@ or for short forms such as VFW, and finds counties with the shared Census helper
 (`scripts/bingo_counties.py`), which Virginia's importer uses too. Hours are licensed times, so Texas
 cards show the next bingo day, as Michigan's do.
 
+### Missouri (loaded November 19, 2026)
+
+The Missouri Gaming Commission's [Find Local Bingo Games](https://www.mgc.dps.mo.gov/BingoWebLocal/frmWebFindLocalBingoGame.aspx)
+page lists each licensed game: the location of play with its street and phone, city, county, start time, the
+weekday, and which weeks of the month it is played ("Every", "1st & 3rd" and so on). Use the `www.` address:
+`mgc.dps.mo.gov` without it fails certificate checks. The page is a script-driven grid ten rows at a time, so
+`scripts/read_missouri_finder.py` reads it in a headless browser, clicking Next to the last page and checking
+the row total the page reports. On November 19 it read every row.
+
+`scripts/import_missouri_bingo.py` makes one hall per street address, keeps the hall's phone, and turns the
+weeks column into a session `label` ("First and third Saturday of the month"). A hall with any such game carries
+a `schedule_note`, so its card shows "Usual bingo days" instead of promising a next date; weekly-only halls show
+the next bingo day, as Texas does.
+
+- **Start times only.** The page gives no end time, so Missouri is in `START_ONLY` in the generator and its
+  sessions have no `end`. The state note says the times are start times.
+- **ZIP codes.** The page gives none. The U.S. Census Geocoder supplies the ZIP code from the street address.
+  Where it cannot match the address (highway corners, county roads, and some town streets), the importer uses
+  the town's ZIP code from the same Midwire/GeoNames file as the site's ZIP points (checksum checked), and the
+  listing says so. A town filed in that file under another post office name goes in `TOWN_ZIPS` with a reason
+  (Shrewsbury: 63119). Halls already in the data file keep their ZIP code on a refresh.
+- **Counties** come from the state page itself ("St. Louis City" is stored the Census way, "St. Louis city").
+  Michigan's pending-county check is per state now, because Missouri also has a Clinton County.
+
 ### Montana (loaded November 17, 2026)
 
 Montana's Gambling Control Division publishes "Establishments Offering Live Keno and/or Bingo" by county
@@ -315,7 +343,8 @@ the collection for several states first, then one build and one pull request.
 | District of Columbia | Calendar of licensed charitable events. | `https://dclottery.com/events?type=8&month=all&year=all` |
 | Alaska, Louisiana, Washington | Permit or license lookups by name; not lists. | see each entry |
 
-A state list with days and hours goes in `TIMES_FILES` (Michigan, Texas and Virginia). A list of
+A state list with days and hours goes in `TIMES_FILES` (Michigan, Texas, Virginia and Missouri); one that gives
+start times only is also in `START_ONLY` (Missouri). A list of
 licensed groups or permitted places without days goes in `LICENSE_FILES` (Indiana, Mississippi,
 Montana and New Mexico); each record needs `license_type` and may carry `license_number`, `license_expires` and `phone`.
 A state may set `license_badge` and `license_heading` when "licensed for bingo" would overstate its list.

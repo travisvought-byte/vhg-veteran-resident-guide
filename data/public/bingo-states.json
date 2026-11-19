@@ -534,17 +534,25 @@
  {
   "code": "MO",
   "name": "Missouri",
-  "coverage": "none",
-  "about": "Missouri licenses bingo statewide through the Missouri Gaming Commission. We haven't found a public list of game days yet, so we're building one with help from halls and players.",
-  "reviewed_on": "2026-11-17",
+  "coverage": "times",
+  "about": "Missouri licenses bingo statewide through the Missouri Gaming Commission, and the Commission's Find Local Bingo Games page lists each game with its day and start time.",
+  "hours_note": "Times are the start times on the Missouri Gaming Commission's list of local bingo games. Some games are played only on certain weeks of the month. Call ahead to confirm before you go.",
+  "list_label": "Missouri Gaming Commission: Find Local Bingo Games",
+  "list_url": "https://www.mgc.dps.mo.gov/BingoWebLocal/frmWebFindLocalBingoGame.aspx",
   "regulator_label": "Missouri Gaming Commission: Charitable Games Division",
-  "regulator_url": "https://mgc.dps.mo.gov/FAQ_SiteLinks/div_CharGames.html",
+  "regulator_url": "https://www.mgc.dps.mo.gov/FAQ_SiteLinks/div_CharGames.html",
   "regulator_note": "Missouri bingo is licensed by the Missouri Gaming Commission's Charitable Games Division. Only licensed religious, charitable, fraternal, veteran and service organizations may run it.",
+  "reviewed_on": "2026-11-19",
   "sources": [
    {
-    "url": "https://mgc.dps.mo.gov/FAQ_SiteLinks/div_CharGames.html",
-    "scope": "Charitable Games Division: licenses bingo and pull-tabs for religious, charitable, fraternal, veteran and service organizations; no list of game days on this page",
-    "reviewed_on": "2026-11-17"
+    "url": "https://www.mgc.dps.mo.gov/FAQ_SiteLinks/div_CharGames.html",
+    "scope": "Charitable Games Division: licenses bingo and pull-tabs for religious, charitable, fraternal, veteran and service organizations; links its Find Local Bingo Games page",
+    "reviewed_on": "2026-11-19"
+   },
+   {
+    "url": "https://www.mgc.dps.mo.gov/BingoWebLocal/frmWebFindLocalBingoGame.aspx",
+    "scope": "Find Local Bingo Games: each licensed game with location of play, phone, city, county, start time, weekday and which weeks of the month (no end time, no ZIP code)",
+    "reviewed_on": "2026-11-19"
    }
   ]
  },
