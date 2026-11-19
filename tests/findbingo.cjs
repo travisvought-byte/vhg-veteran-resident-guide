@@ -223,12 +223,14 @@ assert.match(p.d.getElementById('fl-charlie-t-joseph-senior-center-jacksonville'
 p = await open('?zip=32246&radius=10');
 assert.match(p.d.getElementById('fl-southside-senior-center-jacksonville').querySelector('.sessions').textContent, /Thursday, 10 a\.m\. · Loteria \(Spanish bingo\)/);
 p = await open('?zip=15222&radius=50');
-assert.equal(p.cards[0], 'pa-collinsburg-volunteer-fire-company-west-newton', 'Pittsburgh searches lead with the nearest Pennsylvania game');
+assert(p.cards[0].startsWith('pa-'), 'Pittsburgh searches lead with Pennsylvania games');
+for (const id of ['pa-broughton-volunteer-fire-department-pittsburgh', 'pa-library-volunteer-fire-company-library', 'pa-holiday-park-volunteer-fire-department-plum', 'pa-collinsburg-volunteer-fire-company-west-newton']) assert(p.cards.includes(id), id + ' is within 50 miles of downtown Pittsburgh');
+assert.match(p.d.getElementById('pa-broughton-volunteer-fire-department-pittsburgh').querySelector('.sessions').textContent, /Monday, 7 p\.m\..*Thursday, 7 p\.m\./s);
 assert(p.cards.includes('state-PA'), 'and still offer the way to send Pennsylvania game times');
 assert(p.cards.includes('state-OH') && p.cards.includes('state-WV'), 'Pittsburgh is near Ohio and West Virginia');
 
 // Pennsylvania, New York, Utah, Kentucky and West Virginia starter lists: organizer-published schedules, each with its own source.
-for (const [code, name, min] of [['PA', 'Pennsylvania', 4], ['NY', 'New York', 3], ['UT', 'Utah', 3], ['KY', 'Kentucky', 4], ['WV', 'West Virginia', 6]]) {
+for (const [code, name, min] of [['PA', 'Pennsylvania', 10], ['NY', 'New York', 3], ['UT', 'Utah', 3], ['KY', 'Kentucky', 4], ['WV', 'West Virginia', 6]]) {
   const rows = data.venues.filter(v => v.state === code);
   assert(rows.length >= min && rows.every(v => v.kind && v.source_url && v.schedule_note), name + ' starter list');
   p = await open('?state=' + code);
