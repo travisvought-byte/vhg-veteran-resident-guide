@@ -565,5 +565,39 @@ assert(buildWith([{...sample[1], url: 'http://example.org/'}], []).error, 'ad li
 assert(buildWith([{...sample[0], alt: ''}], []).error, 'a picture needs alt text');
 assert(buildWith([{...sample[1], slot: 'sidebar'}], []).error, 'only known places');
 
+// Practice card (November 19, 2026): a just-for-fun card on the home page, nothing sent or stored.
+{
+  const p = await open('');
+  const d = p.d, cells = [...d.querySelectorAll('#card-body button')];
+  assert.equal(cells.length, 25);
+  assert.equal(cells[12].textContent, 'FREE');
+  const nums = cells.filter((_, i) => i !== 12).map(b => +b.textContent);
+  assert.equal(new Set(nums).size, 24, 'no number twice on a card');
+  cells.forEach((b, i) => { if (i !== 12) { const col = i % 5, n = +b.textContent; assert(n > col * 15 && n <= col * 15 + 15, 'each column holds its own fifteen numbers') } });
+  assert(d.querySelector('header .teaser a[href="#play"]') && d.querySelector('header .teaser a[href="learn/"]'), 'the header invites people to play and to take the class');
+  let calls = 0;
+  while (!d.getElementById('play').classList.contains('win') && calls < 75) { d.getElementById('call-ball').click(); calls++; }
+  assert(d.getElementById('play').classList.contains('win'), 'marking for you reaches a bingo by the last ball');
+  assert.match(d.getElementById('call-line').textContent, /^[BINGO]-\d+/);
+  assert(d.getElementById('call-ball').disabled, 'no more calls after a bingo');
+  assert.equal(d.getElementById('play-find').getAttribute('href'), '#zip-form', 'a win points to the real search');
+  d.getElementById('new-card').click();
+  assert(!d.getElementById('play').classList.contains('win') && !d.getElementById('call-ball').disabled, 'a new card starts fresh');
+  d.getElementById('auto-mark').checked = false;
+  const first = d.querySelector('#card-body button:not(.free)');
+  first.click();
+  assert.match(d.getElementById('play-msg').textContent, /hasn.t been called yet/, 'you can only mark numbers that were called');
+  assert(fs.readFileSync(path.join(site, 'index.html'), 'utf8').includes('@media print{#play,'), 'the practice card stays off printed lists');
+}
+// The bingo class page: linked from every footer, in the sitemap.
+{
+  const learn = fs.readFileSync(path.join(site, 'learn/index.html'), 'utf8');
+  assert.match(learn, /<title>How bingo works: a friendly bingo class \| FindBingo\.org<\/title>/);
+  assert(learn.includes('<link rel="canonical" href="https://www.findbingo.org/learn/">'));
+  for (const term of ['Early birds', 'Coverall, or blackout', 'Progressive jackpot', 'Pull-tabs', 'Shout “Bingo!”', 'What changes from state to state']) assert(learn.includes(term) || learn.toLowerCase().includes(term.toLowerCase()), term);
+  assert(sitemap.includes('<loc>https://www.findbingo.org/learn/</loc>'));
+  for (const f of ['findbingo-site/index.html', 'findbingo-site/michigan/index.html', 'findbingo-site/privacy/index.html', 'bingo-site/findbingo/ohio/index.html']) assert(fs.readFileSync(path.join(root, f), 'utf8').includes('learn/">How bingo works'), f + ' links the bingo class');
+}
+
 console.log('FindBingo.org checks passed.');
 })().catch(e => { console.error(e); process.exit(1); });
