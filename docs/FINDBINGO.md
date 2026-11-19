@@ -167,7 +167,9 @@ sites were used only to find leads.
   Brooke County Senior Center (bingo named but no day) and news or tourism listings without an organizer page.
 - Next leads: Kentucky's Office of Charitable Gaming has published a licensed facility list (a June 2023
   PDF on dcg.ky.gov, with facility name, county, address and city, but no game days). A current copy would
-  give Kentucky a `licenses`-style backbone like Indiana's; check dcg.ky.gov for a newer one.
+  give Kentucky a `licenses`-style backbone like Indiana's. **Checked November 19, 2026:** the listings page
+  still offers only the June 2023 files, and House Bill 904 (effective July 15, 2026) required facilities
+  licensed before that date to transfer their licenses, so the 2023 list is likely out of date. Not loaded.
 
 **ZIP codes.** The guide's GeoNames/Midwire centroids (CC BY 3.0, attributed in the footer), limited
 to the covered states' ZIP prefixes (Florida's military 340 prefix excluded). ZIP 49037 (Battle Creek) is missing there; its point comes from the
@@ -302,8 +304,8 @@ the collection for several states first, then one build and one pull request.
 | Idaho | A search box over charitable gaming licenses (bingo and raffles together), read only in a browser. Not a list of places to play. | `https://www.idaholottery.com/charitable-gaming/licensed-organizations` |
 | Kansas | Licensed bingo organizations with address and phone. PDF. No days. **Not loaded:** the file is from July 2022 and Kansas licenses run July to June, so every license on it has lapsed. Load it only when the state posts a current list. | `https://www.ksrevenue.gov/pdf/BingoOrganizations.pdf` |
 | Maine | Charitable gaming organizations (January 16, 2026). PDF. Covers raffles and games of chance too, and many addresses are post office boxes, so it is not a list of places to play. | linked from `https://www.maine.gov/dps/gcu/charitable-gaming` |
-| North Dakota | Licensed gaming organizations and gaming sites. PDFs. Covers all charitable gaming, not only bingo. | `https://attorneygeneral.nd.gov/gaming-licensees/` |
-| Minnesota | Licensed organizations and the sites where they operate. | `https://mn.gov/gcb/` (Data) |
+| North Dakota | Licensed gaming organizations and gaming sites. PDFs. **Not loaded (checked November 19, 2026):** the sites list (August 2026) is mostly bars and restaurants where organizations sell pull-tabs, with no column for the games played, so it is not a list of places to play bingo. | `https://attorneygeneral.nd.gov/gaming-licensees/` |
+| Minnesota | Licensed organizations and the sites where they operate ("Find Gaming Sites"). **Not loaded:** the site sends automated readers to a captcha page (November 19, 2026). Read it in an ordinary browser, and check whether it says which sites run bingo before loading it. | `https://mn.gov/gcb/data/` |
 | District of Columbia | Calendar of licensed charitable events. | `https://dclottery.com/events?type=8&month=all&year=all` |
 | Alaska, Louisiana, Washington | Permit or license lookups by name; not lists. | see each entry |
 
