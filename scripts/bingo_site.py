@@ -10,7 +10,7 @@ printed posters and QR codes keep working.
 import json
 import re
 from instant_bingo import instant_page
-from findbingo_site import indexed_state_pages
+from findbingo_site import indexed_state_pages, INFO_PAGES
 from html import escape
 
 SITE = 'https://www.findbingo.org/ohio'
@@ -116,7 +116,7 @@ def partners_page(stats):
 <p>A free statewide finder that helps seniors, veterans, families and activity directors find bingo games and senior centers near them. It is built and kept up by {ABOUT_VHG}.</p>
 <p><a class="button" href="./">Open the finder</a></p></header>
 <main>
-<p class="note">Listings are free and always will be. Inclusion never depends on donations, partnership or sponsorship.</p>
+<p class="note">Listings are free and always will be. Inclusion never depends on donations, partnership, sponsorship or advertising.</p>
 <div class="grid">
 <article id="organizers"><h2>Run a bingo game?</h2>
 <p>American Legion and VFW posts, booster clubs, churches, fire departments and other licensed charities: get your game in front of players and the activity staff who plan resident outings.</p>
@@ -132,7 +132,7 @@ def partners_page(stats):
 <article id="sponsors"><h2>Community partner halls</h2>
 <p>Instant bingo halls run by veteran's, fraternal and sporting organizations must give part of their net profit to a qualifying charity. Halls that name Veteran Home Guardians as a recipient, for any share, become Community Partners.</p>
 <p>Partners are recognized on this page and on their listing. We help partners stay current on the distribution rules, send updates on our work, and visit senior veterans in nursing homes in their area.</p>
-<p>We do not sell advertising to halls. Every hall gets the same free listing whether it partners with us or not.</p>
+<p>No hall can pay for a better listing. Every hall gets the same free listing whether it partners with us or not.</p>
 <p><a class="button" href="mailto:{EMAIL}?subject=Ohio%20Bingo%20Finder%3A%20community%20partner">Become a community partner</a><a class="button alt" href="distributions.html">Read the distribution rules</a></p>
 <p><a href="instant.html">See the posts and lodges licensed for instant bingo</a></p></article>
 </div>
@@ -260,6 +260,9 @@ def make_bingo_site(root, finder_page):
         'assets/bingo-submit-qr.svg': (root / 'assets/findbingo-ohio-submit-qr.svg').read_text(),
     }
     national = 'https://www.findbingo.org'
+    # The Ohio finder is part of findbingo.org, so its footers link the site's Privacy and Advertise pages.
+    for name in ('index.html', 'partners.html', 'distributions.html', 'instant.html'):
+        site[name] = _replace(site[name], '</footer>', '<p><a href="../privacy/">Privacy</a> · <a href="../advertise/">Advertise on Find Bingo</a></p></footer>', 1)
     files = {OUT + name: content for name, content in site.items()}
     files.update({
         # Served by Cloudflare at www.findbingo.org: one sitemap for the national page and the Ohio finder.
@@ -268,6 +271,8 @@ def make_bingo_site(root, finder_page):
                                              + f'  <url><loc>{national}/</loc></url>\n'
                                              # One page per state, built by findbingo_site.py.
                                              + ''.join(f'  <url><loc>{national}/{p}</loc></url>\n' for p in indexed_state_pages(root))
+                                             # The Privacy and Advertise pages, linked from every footer.
+                                             + ''.join(f'  <url><loc>{national}/{p}</loc></url>\n' for p in INFO_PAGES)
                                              + ''.join(f'  <url><loc>{SITE}/{p}</loc></url>\n' for p in ('',) + PAGES)
                                              + '</urlset>\n'),
         # Served by GitHub Pages at the retired address: every old page forwards to its new home.

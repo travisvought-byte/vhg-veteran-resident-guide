@@ -2,10 +2,9 @@
 
 FindBingo.org is the multi-state bingo finder. Players type a ZIP code (or pick a state) and see
 bingo near them, closest first. It covers Michigan and Indiana with state data, serves the Ohio Bingo
-Finder at findbingo.org/ohio/, lists organizer-published games in Pennsylvania, New York, Florida
-and Utah ("starter" states), and tells Kentucky and West Virginia players plainly that no public list
-exists yet. Every listing has a "Report a change" email link, and every state has a free way for halls
-to send game times.
+Finder at findbingo.org/ohio/, and lists organizer-published games in Pennsylvania, New York, Florida,
+Utah, Kentucky and West Virginia ("starter" states). States without a list yet say so plainly. Every
+listing has a "Report a change" email link, and every state has a free way for halls to send game times.
 
 Started November 15, 2026, at Travis's direction: one national finder, neighboring states first.
 
@@ -54,6 +53,27 @@ are listed, anywhere on the site. `tests/findbingo.cjs` checks the state pages a
 
 Ohio data is not copied into the national page. Ohio searches hand off to https://www.findbingo.org/ohio/
 with the same ZIP code and distance, so Ohio has one source of truth.
+
+## Privacy, advertising and ad places (added November 19, 2026)
+
+Travis's direction (November 19, 2026): Find Bingo may carry advertising. Listings stay free and can never
+be bought; ads are labeled and never decide which games are listed or their order.
+
+- **Privacy** is at https://www.findbingo.org/privacy/ and **Advertise** at https://www.findbingo.org/advertise/.
+  Both are built by `scripts/findbingo_site.py` (`PRIVACY`, `ADVERTISE`), linked from every footer (the Ohio
+  finder's too) and listed in `sitemap.xml`. If the site's setup changes (another visit counter, an ad network
+  goes live, the host changes), update the privacy page in the same pull request.
+- **Ads** live in `data/findbingo-ads.json`, an empty list by default. With no ad running, the pages carry no
+  ad markup at all. An ad is an object with `slot` (`home`; `state` for every state page; or `state:michigan`
+  for one state), `sponsor`, `text` (200 characters at most) and an `https://` `url`; optionally `image` (a file
+  under `assets/`, served from `ads/`) with `alt`, and `start` and `end` dates (`YYYY-MM-DD`, Eastern time,
+  both days included). A dated ad is written hidden and shown only on its dates by a small script, so a page
+  built earlier never shows it on the wrong day. The build refuses two ads that could show in one place at once.
+- **Placement.** The home page's ad sits below the search results and state list, before "Run a bingo game?".
+  A state page's ad sits after the listings, before "Run a bingo game in ...". Never inside a list of games or
+  a card, never above the main content. Ads are left out of printed lists.
+- Review every ad before it runs and turn down misleading ones (the Advertise page promises this). Remove an
+  ad's entry once it ends; an ad picture removed from the list is not deleted from `findbingo-site/ads/` by the build.
 
 ## Sources and how they were read (November 15, 2026)
 
@@ -119,11 +139,35 @@ regular day were kept. Files: `data/public/pennsylvania-bingo.json`, `new-york-b
 Travis's rule for these lists (November 16, 2026): use the best information available and make it easy
 for people to send corrections. Listings are not held back for phone confirmation.
 
-**Kentucky, West Virginia, Pennsylvania (no state list).** No public statewide list of games or halls was found:
-Kentucky's Office of Charitable Gaming (now part of Kentucky Horse Racing & Gaming) publishes county
-totals only; West Virginia's Tax Division links no licensee list; Pennsylvania bingo licenses are
-issued by each county treasurer. Kentucky and West Virginia get an honest "no list yet" card, the
-regulator, and an email link for halls to send game times; Pennsylvania now has a starter list (above).
+**Kentucky, West Virginia, Pennsylvania (no state list of games).** No public statewide list of games with days
+and times was found: Kentucky's Office of Charitable Gaming (now part of Kentucky Horse Racing & Gaming)
+publishes county totals in its annual report; West Virginia's Tax Division links no licensee list;
+Pennsylvania bingo licenses are issued by each county treasurer. All three are now starter states.
+
+**Kentucky and West Virginia (starter states, added November 17, 2026).** Files:
+`data/public/kentucky-bingo.json` and `west-virginia-bingo.json`, in the same shape as Florida's. Every
+listing came from the organizer's own page, read on November 17, 2026; search results and directory
+sites were used only to find leads.
+
+- Kentucky: American Legion Post 12 (Thursday, at Jackpot Charity Bingo in Richmond; the post's page says
+  bingo is there, not at the post home), Frankfort VFW Post 4075 (Thursday; the page gives no separate bingo
+  address, so the card says to call), Hardin Post 113 in Elizabethtown (Friday and Sunday; the first time is
+  the early bird game, the notes give doors and main game) and the Campbell County Senior & Wellness Center
+  in Highland Heights (Friday, from the county's November 2026 calendar).
+- West Virginia: Dunbar Athletic Boosters (Saturday), the City of Charleston's Martin Luther King Jr.
+  Community Center (senior bingo, 3rd Thursday), the Westside Senior Center in Westover (Wednesday; the
+  street address is the one in the City of Westover page footer, which a Dominion Post senior column also
+  gives for the center), the Putnam County Aging Program's Buffalo, Hometown and John Henson (Hurricane)
+  centers, and the Marion County senior centers in Fairmont and Mannington (North Marion says "most"
+  Mondays and Thursdays).
+- Left out: Middleway Volunteer Fire Company (Saturday bingo, but its site gives only a post office box),
+  Owensboro Catholic Schools at Big Blue Bingo Hall (says "each weekend" without naming the days), the
+  Lafayette Band Association's Lexington games (the page gives two addresses and no ZIP code for the hall),
+  St. Stanislaus (no state on the page), Lexington Parks and Recreation bingo (single dated events), the
+  Brooke County Senior Center (bingo named but no day) and news or tourism listings without an organizer page.
+- Next leads: Kentucky's Office of Charitable Gaming has published a licensed facility list (a June 2023
+  PDF on dcg.ky.gov, with facility name, county, address and city, but no game days). A current copy would
+  give Kentucky a `licenses`-style backbone like Indiana's; check dcg.ky.gov for a newer one.
 
 **ZIP codes.** The guide's GeoNames/Midwire centroids (CC BY 3.0, attributed in the footer), limited
 to the covered states' ZIP prefixes (Florida's military 340 prefix excluded). ZIP 49037 (Battle Creek) is missing there; its point comes from the
@@ -166,6 +210,9 @@ where one is published. The tests refuse a `pending` state, so coverage cannot s
 The home page shows a button for each state with a list on the site (`LISTED` in the generator) and keeps
 every other state behind "More states, A to Z". "Where these lists come from" on the home page gives
 sources for the listed states only; every other state is linked there and sourced on its own page.
+
+Kentucky and West Virginia are `starter` states (November 17, 2026): neither publishes a list of games with
+days and times, so their files hold schedules that halls and organizers publish themselves.
 
 Two optional fields, `lead` and `description`, replace the standard wording on a state page whose
 situation the standard wording would misstate. Hawaii uses both (the state does not license bingo, so

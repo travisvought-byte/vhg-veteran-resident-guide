@@ -57,7 +57,8 @@ assert(partners.querySelector('a[href^="mailto:travis@vethomeguard.org?subject=O
 assert(read('distributions.html').includes('https://codes.ohio.gov/ohio-revised-code/section-2915.101'));
 const sitemap = fs.readFileSync(path.join(old, 'findbingo/sitemap.xml'), 'utf8');
 assert(sitemap.includes('<loc>https://www.findbingo.org/</loc>') && sitemap.includes('<loc>' + HOME + '</loc>') && sitemap.includes('<loc>' + HOME + 'distributions.html</loc>'));
-assert(partners.body.textContent.includes('Inclusion never depends on donations, partnership or sponsorship.'));
+assert(partners.body.textContent.includes('Inclusion never depends on donations, partnership, sponsorship or advertising.'));
+assert(partners.body.textContent.includes('No hall can pay for a better listing.') && !/do not sell advertising/i.test(partners.body.textContent), 'no paid placement, and no promise against ads');
 assert(partners.querySelector('#share-text').textContent.endsWith('ohiobingo.org'));
 const poster = read('poster.html');
 assert(poster.includes('<p class="url">ohiobingo.org</p>') && poster.includes('src="assets/bingo-qr.svg"'));

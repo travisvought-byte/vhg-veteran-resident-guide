@@ -11,8 +11,8 @@ const {chromium}=require(process.env.GUIDE_PLAYWRIGHT|| (process.env.CODEX_PRIMA
  for(const [state,n] of Object.entries(expected)){
   await page.selectOption('#edition-state',state);await page.waitForFunction(s=>document.documentElement.dataset.edition===s,state);
   assert.equal(await page.locator('#county option').count(),n+1);
-  assert(new URL(page.url()).searchParams.get('state')===state);
-  assert(new URL(page.url()).pathname.endsWith('index.html')||new URL(page.url()).pathname.endsWith('/'));
+  assert(!new URL(page.url()).searchParams.has('state'));
+  assert(state==='OH'?new URL(page.url()).pathname.endsWith('/'):new URL(page.url()).pathname.endsWith('/'+state.toLowerCase()+'.html'));
   const counties=await page.locator('#county option').evaluateAll(nodes=>nodes.slice(1).map(n=>n.value));
   for(const county of counties){await page.selectOption('#county',county);assert((await page.locator('#county-panel').textContent()).includes(county+' County'));assert(await page.locator('#results article').count()>0)}
   await page.click('#helper-open');await page.selectOption('#helper-person','veteran');

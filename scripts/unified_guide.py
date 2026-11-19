@@ -1,5 +1,8 @@
 """Build one public interface from the existing source-grounded state adapters."""
 import hashlib,json,re
+from html import escape
+
+BASE_URL='https://guide.vethomeguard.org/'
 
 def section(html, ident):
     start=re.search(r'<section\b[^>]*\bid="'+ident+r'"[^>]*>',html).start()
@@ -50,8 +53,10 @@ def unified_outputs(root, editions, states):
     # name alone is not enough: New York, Ohio and Utah are also county names.
     common=re.sub(r'^const national=.*$',"const national=a=>['statewide','national','federal',...EDITIONS[STATE].statewideNames].includes(a.toLowerCase());",common,flags=re.M)
     common=common.replace("'All Ohio counties'","'All '+EDITIONS[STATE].name+(STATE==='VA'?' counties and independent cities':' counties')")
-    # Use a single canonical URL for every state and preserve public filters only.
-    common=common.replace("u.search='';u.hash='';","u.pathname=u.pathname.replace(/[^/]*$/, '');u.search='';u.hash='';u.searchParams.set('state',STATE);")
+    # Each state's address is its own page (ky.html); Ohio, the default edition, is the site root.
+    # Share links and the address bar keep public filters only.
+    assert common.count("u.search='';u.hash='';")==1,'shareURL'
+    common=common.replace("u.search='';u.hash='';","u.pathname=u.pathname.replace(/[^/]*$/, STATE_PAGES[STATE]);u.search='';u.hash='';")
     common=common.replace("renderCounty();renderAccessibility();renderSeniorGuide();","renderCounty();renderAccessibility();renderSeniorGuide();renderHelper();")
     # Existing state-only details remain inside the adapter, not duplicated public pages.
     common=common[:common.index('const params=new URLSearchParams')]
@@ -110,13 +115,33 @@ def unified_outputs(root, editions, states):
         text='(window.VHG_EDITIONS=window.VHG_EDITIONS||{})['+json.dumps(state)+']='+config+';\n'
         result[path]=text
         files[state]=versioned(path,text)
-    guide=common+'\nconst EDITIONS=window.VHG_EDITIONS=window.VHG_EDITIONS||{};\nconst EDITION_FILES='+json.dumps(files)+';\n'+helpers
+    guide=common+'\nconst EDITIONS=window.VHG_EDITIONS=window.VHG_EDITIONS||{};\nconst EDITION_FILES='+json.dumps(files)+';\nconst STATE_PAGES='+json.dumps({s:('' if p=='index.html' else p) for s,p in pages.items()})+';\n'+helpers
     result['assets/guide.js']=guide
     base=states[0]['code']
     unified=unified.replace('</select></nav>','</select><p id="edition-status" class="small" role="status" aria-live="polite"></p></nav>',1)
-    unified+='\n<script src="'+files[base]+'"></script><script src="'+versioned('assets/guide.js',guide)+'"></script></body></html>\n'
-    result['index.html']=unified
+    def scripts(state):
+        return '\n<script src="'+files[state]+'"></script><script src="'+versioned('assets/guide.js',guide)+'"></script></body></html>\n'
+    result['index.html']=unified+scripts(base)
+    # Every other state gets the same page at its own address, so search engines can list it on its own:
+    # its own title, description and canonical, with that state's records preloaded. Saved ?state= links
+    # on the root keep working; the guide moves them to the state's page (assets/guide-runtime.js).
+    def meta(text,pattern,value):
+        text,n=re.subn(pattern,lambda m:m[1]+value+m[2],text,count=1)
+        assert n==1,pattern
+        return text
     for state,page in pages.items():
         if page=='index.html':continue
-        result[page]='<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+names[state]+' Veteran Resource Guide</title><link rel="canonical" href="https://guide.vethomeguard.org/?state='+state+'"><p><a href="./?state='+state+'">Open the '+names[state]+' guide</a></p><script>const u=new URL("./",location.href);u.search=location.search;u.searchParams.set("state","'+state+'");u.hash=location.hash;location.replace(u.href);</script></html>\n'
+        name=escape(names[state]);url=BASE_URL+page
+        place='the District of Columbia' if state=='DC' else name
+        desc='Help for every veteran in '+place+': claims, VA health care, jobs, school, housing, records and long-term care, with local veterans office contacts.'
+        social='Help for every veteran in '+place+' | VHG'
+        assert unified.count('<html lang="en">')==1,'html tag'
+        text=unified.replace('<html lang="en">','<html lang="en" data-home-state="'+state+'">',1)
+        text=meta(text,r'(<title>)[^<]*(</title>)',name+' Veteran Resource Guide | Veteran Home Guardians')
+        text=meta(text,r'(<meta name="description" content=")[^"]*(">)',desc)
+        text=meta(text,r'(<link rel="canonical" href=")[^"]*(">)',url)
+        text=meta(text,r'(<meta property="og:url" content=")[^"]*(">)',url)
+        for key in ['og:title','twitter:title']:text=meta(text,r'(<meta (?:property|name)="'+key+r'" content=")[^"]*(">)',social)
+        for key in ['og:description','twitter:description']:text=meta(text,r'(<meta (?:property|name)="'+key+r'" content=")[^"]*(">)',desc)
+        result[page]=text+scripts(state)
     return result

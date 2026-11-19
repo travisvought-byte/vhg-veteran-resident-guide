@@ -24,8 +24,9 @@ def main():
         target = ROOT / state['qr']
         if target.exists():
             continue
-        # Point at the canonical single-page address; legacy state pages only redirect there.
-        url = BASE_URL if state.get('base') else BASE_URL + '?state=' + state['code']
+        # Point at the state's own page (ky.html); Ohio's is the front page. Codes printed earlier
+        # with ?state= addresses keep working, so existing QR files are left alone.
+        url = BASE_URL if state.get('base') else BASE_URL + state['page']
         code = qrcode.QRCode(error_correction=qrcode.constants.ERROR_CORRECT_M, border=4,
                              image_factory=qrcode.image.svg.SvgPathImage)
         code.add_data(url)

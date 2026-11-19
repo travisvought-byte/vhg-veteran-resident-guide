@@ -14,6 +14,7 @@ from unified_guide import unified_outputs
 from build_disability_advocacy import outputs as disability_advocacy_outputs
 from build_mobility_routes import outputs as mobility_route_outputs
 from build_family_guide import outputs as family_guide_outputs
+from build_guide_privacy import outputs as privacy_outputs
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -93,16 +94,18 @@ def outputs():
     result.update(disability_advocacy_outputs())
     result.update(mobility_route_outputs())
     result.update(family_guide_outputs())
-    # Track public landing/sharing pages once; state redirects count at destination.
-    for page in ['index.html', 'bingo.html', 'facilities.html'] + [s['share_page'] for s in states]:
+    result.update(privacy_outputs())
+    # Track public landing/sharing pages once, including each state's own guide page.
+    for page in ['index.html', 'bingo.html', 'facilities.html'] + [s['page'] for s in states[1:]] + [s['share_page'] for s in states]:
         result[page] = re.sub(r'<script[^>]*data-goatcounter=[^>]*></script>', '', result[page])
         result[page] = result[page].replace('<script defer src="assets/analytics.js"></script>', '')
         result[page] = result[page].replace('</body>', '<script defer src="assets/analytics.js"></script></body>')
     # The mobility and advocacy pages are canonical at mobilitytalk.org, so they stay out of this sitemap.
     # Search engines: list the public views, including each state's canonical URL.
-    pages = ['', 'facilities.html', 'family-guide.html', 'flyers.html']
+    pages = ['', 'facilities.html', 'family-guide.html', 'flyers.html', 'privacy.html']
     urls = [BASE_URL + page for page in pages if page == '' or (ROOT / page).is_file() or page in result]
-    urls += [BASE_URL + '?state=' + s['code'] for s in states[1:]]
+    # Each state's own page (ky.html); Ohio is the root. Old ?state= links still work but are not listed.
+    urls += [BASE_URL + s['page'] for s in states[1:]]
     # The per-state share pages are public, each with its own title and description.
     urls += [BASE_URL + s['share_page'] for s in states]
     result['sitemap.xml'] = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join('  <url><loc>' + u.replace('&', '&amp;') + '</loc></url>\n' for u in urls) + '</urlset>\n'

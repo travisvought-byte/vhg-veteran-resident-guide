@@ -22,7 +22,7 @@ function renderAccessibility(...args){return EDITIONS[STATE].renderAccessibility
 function seniorTopicIDs(topic){const ids=seniorTopics[topic]||routes.seniors;return [...ids,...(['daily','costs','accessibility','memory'].includes(topic)?regionalIDs('aging_agency'):[]),...(topic==='rights'?regionalIDs('ombudsman'):[])]}
 function renderSeniorGuide(...args){return EDITIONS[STATE].renderSeniorGuide(...args)}
 
-function shareURL(){const u=new URL(location.href);u.pathname=u.pathname.replace(/[^/]*$/, '');u.search='';u.hash='';u.searchParams.set('state',STATE);if($('county').value)u.searchParams.set('county',$('county').value);if(route!=='priority')u.searchParams.set('view',route);if(route==='seniors'&&$('senior-topic').value)u.searchParams.set('topic',$('senior-topic').value);if($('search').value.trim())u.searchParams.set('q',$('search').value.trim());if($('need').value)u.searchParams.set('type',$('need').value);if($('status').value)u.searchParams.set('status',$('status').value);return u}
+function shareURL(){const u=new URL(location.href);u.pathname=u.pathname.replace(/[^/]*$/, STATE_PAGES[STATE]);u.search='';u.hash='';if($('county').value)u.searchParams.set('county',$('county').value);if(route!=='priority')u.searchParams.set('view',route);if(route==='seniors'&&$('senior-topic').value)u.searchParams.set('topic',$('senior-topic').value);if($('search').value.trim())u.searchParams.set('q',$('search').value.trim());if($('need').value)u.searchParams.set('type',$('need').value);if($('status').value)u.searchParams.set('status',$('status').value);return u}
 const FEEDBACK_EMAIL='travis@vethomeguard.org',FEEDBACK_ASK=['','What needs fixing? (wrong phone, office moved, program ended, or something else)','','Your role, optional (facility staff, family member, agency staff):','','Please share public listing information only. Do not include resident names or health details.'];
 function reportHref(subject,lines){return 'mailto:'+FEEDBACK_EMAIL+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(lines.join('\n'))}
 function reportLink(x,county){return '<a class="report" href="'+esc(reportHref('Guide correction: '+STATE+' · '+x.name,['Listing: '+x.name,'Record: '+STATE+' · '+x.program_id,'County viewed: '+(county||'none'),...FEEDBACK_ASK]))+'">Report a problem with this listing</a>'}
@@ -36,6 +36,7 @@ renderCounty();renderAccessibility();renderSeniorGuide();renderHelper();if(count
 
 const EDITIONS=window.VHG_EDITIONS=window.VHG_EDITIONS||{};
 const EDITION_FILES={"OH": "assets/editions/oh.js?v=c4e3d2f08c", "PA": "assets/editions/pa.js?v=e350154b00", "NY": "assets/editions/ny.js?v=1ab12dcd05", "MI": "assets/editions/mi.js?v=2fea1adaba", "KY": "assets/editions/ky.js?v=d8c7c9e1d9", "UT": "assets/editions/ut.js?v=286a070aaf", "IN": "assets/editions/in.js?v=6b9e80614e", "WV": "assets/editions/wv.js?v=b467f7f828", "TX": "assets/editions/tx.js?v=175efc1b0e", "FL": "assets/editions/fl.js?v=9df65762e4", "CA": "assets/editions/ca.js?v=ba71a110fd", "VA": "assets/editions/va.js?v=629d466b19", "NC": "assets/editions/nc.js?v=b2f9b22654", "GA": "assets/editions/ga.js?v=1a2de3033a", "AZ": "assets/editions/az.js?v=48e3af9cf6", "WA": "assets/editions/wa.js?v=6ddb65a3d2", "TN": "assets/editions/tn.js?v=070bda135e", "SC": "assets/editions/sc.js?v=e821b66c2d", "IL": "assets/editions/il.js?v=f6a0847488", "MO": "assets/editions/mo.js?v=33ac523422", "CO": "assets/editions/co.js?v=7cb90fdf6a", "AL": "assets/editions/al.js?v=b340d89c12", "MD": "assets/editions/md.js?v=14a5574827", "WI": "assets/editions/wi.js?v=6b6819704c", "MN": "assets/editions/mn.js?v=3beac0f480", "OK": "assets/editions/ok.js?v=d5d254a786", "NJ": "assets/editions/nj.js?v=8c621432cd", "OR": "assets/editions/or.js?v=21b97675f4", "LA": "assets/editions/la.js?v=e2becdee51", "NV": "assets/editions/nv.js?v=c4e69d110e", "KS": "assets/editions/ks.js?v=e5e6723f02", "NE": "assets/editions/ne.js?v=4836bb9991", "NM": "assets/editions/nm.js?v=298128228b", "MS": "assets/editions/ms.js?v=e45dddbbb9", "ID": "assets/editions/id.js?v=ca1fa9bd8d", "SD": "assets/editions/sd.js?v=219857ed9a", "NH": "assets/editions/nh.js?v=2deb7d43c9", "ME": "assets/editions/me.js?v=008bf1d9fc", "HI": "assets/editions/hi.js?v=40a89afd8f", "DE": "assets/editions/de.js?v=bf13f34576", "RI": "assets/editions/ri.js?v=c796003796", "VT": "assets/editions/vt.js?v=94a3b30a4f", "WY": "assets/editions/wy.js?v=5665902e74", "DC": "assets/editions/dc.js?v=5cd202cb16", "MT": "assets/editions/mt.js?v=2a307cf6cb", "AK": "assets/editions/ak.js?v=80e3a26dfd", "ND": "assets/editions/nd.js?v=af6e9e0dd2", "IA": "assets/editions/ia.js?v=8694461bcb", "CT": "assets/editions/ct.js?v=962571f084", "MA": "assets/editions/ma.js?v=2b2f70793c", "AR": "assets/editions/ar.js?v=dde03dfaed"};
+const STATE_PAGES={"OH": "", "PA": "pa.html", "NY": "ny.html", "MI": "mi.html", "KY": "ky.html", "UT": "ut.html", "IN": "in.html", "WV": "wv.html", "TX": "tx.html", "FL": "fl.html", "CA": "ca.html", "VA": "va.html", "NC": "nc.html", "GA": "ga.html", "AZ": "az.html", "WA": "wa.html", "TN": "tn.html", "SC": "sc.html", "IL": "il.html", "MO": "mo.html", "CO": "co.html", "AL": "al.html", "MD": "md.html", "WI": "wi.html", "MN": "mn.html", "OK": "ok.html", "NJ": "nj.html", "OR": "or.html", "LA": "la.html", "NV": "nv.html", "KS": "ks.html", "NE": "ne.html", "NM": "nm.html", "MS": "ms.html", "ID": "id.html", "SD": "sd.html", "NH": "nh.html", "ME": "me.html", "HI": "hi.html", "DE": "de.html", "RI": "ri.html", "VT": "vt.html", "WY": "wy.html", "DC": "dc.html", "MT": "mt.html", "AK": "ak.html", "ND": "nd.html", "IA": "ia.html", "CT": "ct.html", "MA": "ma.html", "AR": "ar.html"};
 let helperActive=false,helperShowingResults=false,helperRoute='benefits';
 function agingContactsHTML(...args){return EDITIONS[STATE].agingContactsHTML(...args)}
 function countyContactsHTML(...args){return EDITIONS[STATE].countyContactsHTML(...args)}
@@ -72,7 +73,10 @@ function setState(state,initial=false){
  document.querySelector('label[for="county"]').textContent=(state==='VA'?'County or independent city in ':state==='LA'?'Parish in ':'County in ')+config.name;
  $('aid-open').hidden=state!=='OH';document.querySelectorAll('.ohio-only').forEach(e=>{e.hidden=state!=='OH'});document.querySelector('.office-directory summary').textContent='Browse '+config.name+(state==='VA'?' county and city contacts':state==='LA'?' parish contacts':' county contacts');
  $('office-search').placeholder='Search '+config.name+(state==='VA'?' counties or independent cities':state==='LA'?' parishes':' counties');
- document.title=config.name+' | Veteran Resource Guide';
+ document.title=config.name+' Veteran Resource Guide | Veteran Home Guardians';
+ // Search engines get one address per state: its own page, with Ohio at the root.
+ const home=new URL(STATE_PAGES[state]||'./',document.querySelector('link[rel=canonical]')?.href||location.href).href;
+ document.querySelector('link[rel=canonical]')?.setAttribute('href',home);document.querySelector('meta[property="og:url"]')?.setAttribute('content',home);
  // The footer date comes from the records, so it cannot go stale: the newest review of this state's veterans office contacts.
  // (Program records are left out because federal ones are shared by every state and would date them all alike.)
  const reviewed=COUNTIES.map(c=>c.reviewed_on).filter(v=>/^\d{4}-\d{2}-\d{2}$/.test(v||'')).sort().at(-1);
@@ -80,7 +84,7 @@ function setState(state,initial=false){
  document.querySelectorAll('[data-advocacy-route]').forEach(a=>a.href='disability-advocacy.html?state='+state);document.querySelectorAll('[data-family-route]').forEach(a=>a.href=(state==='OH'?'https://www.ohiomom.org/family-guide.html':'family-guide.html')+'?state='+state);
  document.querySelectorAll('a[href^="share"]').forEach(a=>a.href=config.sharePage);
  document.querySelectorAll('.footer-links a').forEach(a=>{if(a.textContent==='County contact data')a.href=config.files.offices;if(a.textContent==='Resource data')a.href=config.files.resources});
- document.querySelectorAll('#urgent-help a[href^="?view="]').forEach(a=>{const u=new URL(a.href,location.href);u.searchParams.set('state',state);a.href=u.href});
+ document.querySelectorAll('#urgent-help a[href^="?view="],#urgent-help a[data-view]').forEach(a=>{a.dataset.view??=new URL(a.href,location.href).searchParams.get('view');const u=new URL(STATE_PAGES[state]||'./',location.href);u.searchParams.set('view',a.dataset.view);a.href=u.href});
  bindStateControls();
  document.documentElement.dataset.edition=state;
  if(!initial){render();renderOfficeList()}
@@ -150,9 +154,8 @@ function helperHandoffText(){
   return [title,...details,source?'Source: '+source.getAttribute('href'):null].filter(Boolean).join('\n');
  });
  const questions=tidy(el.querySelector('.call-script p')?.textContent);
- const url=new URL(location.href);
+ const url=new URL(STATE_PAGES[STATE]||'./',location.href);
  url.search='';url.hash='';
- url.searchParams.set('state',STATE);
  url.searchParams.set('county',county);
  url.searchParams.set('help','1');
  return [
@@ -174,7 +177,9 @@ function helperHandoffText(){
 }
 function openHelper(){helperActive=true;helperShowingResults=false;render();$('helper-title').focus({preventScroll:true});$('helper-guide').scrollIntoView({behavior:'smooth'})}
 const params=new URLSearchParams(location.search);
-let initialState=Object.hasOwn(EDITION_FILES,params.get('state'))?params.get('state'):'OH';
+// A state's own page (ky.html) opens that state; an old ?state= link still picks the state and is moved to its page.
+const HOME_STATE=Object.hasOwn(EDITION_FILES,document.documentElement.dataset.homeState)?document.documentElement.dataset.homeState:'OH';
+let initialState=Object.hasOwn(EDITION_FILES,params.get('state'))?params.get('state'):HOME_STATE;
 route=params.get('view')||'priority';
 function startGuide(){
 setState(initialState,true);
@@ -213,4 +218,4 @@ window.addEventListener('afterprint',()=>{clearPrintMode();accessPrintStates.for
 render();renderOfficeList();
 }
 if(Object.hasOwn(EDITIONS,initialState))startGuide();
-else loadEdition(initialState).catch(()=>{initialState='OH'}).then(startGuide);
+else loadEdition(initialState).catch(()=>{initialState=HOME_STATE}).then(startGuide);
