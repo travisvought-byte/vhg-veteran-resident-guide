@@ -63,6 +63,8 @@ def standalone_finder(page):
     page = _replace(page, f'<a class="back" href="{GUIDE}/?view=community">← Ohio Veteran Resident Resource Guide</a>',
                     '<a class="back" href="https://www.ohiobingo.org/">← Ohio Bingo home</a>', 1)
     page = _replace(page, 'href="facilities.html"', f'href="{GUIDE}/facilities.html"', 1)
+    # The guide's Privacy link goes; the finder's footer links findbingo.org's own Privacy page.
+    page = _replace(page, ' · <a href="privacy.html">Privacy</a>', '', 1)
     page = _replace(page, 'href="data/public/', f'href="{GUIDE}/data/public/')
     page = _replace(page, '<h1>Ohio Bingo &amp; Senior Centers</h1>',
                     '<p class="site-name">Ohio Bingo Finder · findbingo.org/ohio</p><h1>Ohio Bingo &amp; Senior Centers</h1>', 1)
