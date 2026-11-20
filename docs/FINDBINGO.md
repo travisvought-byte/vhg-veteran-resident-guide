@@ -411,3 +411,30 @@ ohiobingo.org is the Ohio front door where Veteran Home Guardians operates.
 Open draft PR #116 (`codex/bingo-multistate`) adds starter pages for Pennsylvania, New York,
 Washington and Utah under bingo.vethomeguard.org/states/. It does not overlap these files. If it is
 merged, its Pennsylvania records can be folded into FindBingo.org so there is one national finder.
+
+## Featured bingo events ($100)
+
+Owner direction, November 20, 2026. A hall or group can have a dated bingo event (a special bingo night, a
+fundraiser, a holiday game) featured for $100. It shows in its own box labeled "Featured events · paid listings":
+
+- on the home page, for ZIP searches within the chosen distance of the event and when its state is picked;
+- on its state's page, above the county list;
+- on the Ohio finder (findbingo.org/ohio/) for Ohio events.
+
+It shows from the day it is added until the day of the event (Eastern time), then hides itself. It never adds
+to, removes or reorders the free listings, and the event's own link is marked `rel="sponsored"`.
+
+To add one, after it is paid: add an entry to `data/findbingo-events.json`, then run
+`python3 scripts/build_public.py`.
+
+```json
+{"id": "oh-marengo-fire-dec", "title": "Fire Department Fundraiser Bingo", "host": "Marengo Volunteer Fire Department",
+ "address": "1 Firehouse Road", "city": "Marengo", "state": "OH", "zip": "43334", "date": "2026-12-05",
+ "start": "18:30", "end": "21:00", "details": "Early bird at 6 p.m. Proceeds buy new turnout gear.",
+ "phone": "419-555-0100", "url": "https://example.org/event", "paid_on": "2026-11-20"}
+```
+
+Required: `id`, `title` (90 characters at most), `host`, `address`, `city`, `state`, `zip` (in that state),
+`date`, `start` (24-hour HH:MM), `details` (200 characters at most) and `paid_on`. Optional: `end`, `phone`
+(555-555-5555 form) and `url` (https). `paid_on` stays in this file and is not published. The event must be run by a
+group allowed to hold bingo where it takes place. `tests/findbingo-events.cjs` checks all of this.

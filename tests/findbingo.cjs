@@ -479,7 +479,9 @@ const advertiseText = advertise.querySelector('main').textContent;
 for (const words of ['Every ad is labeled “Advertisement.”', 'Never inside them', 'Ads never add, remove, change or reorder listings',
   'We review every ad before it runs', 'misleading', 'Ad income supports Veteran Home Guardians'])
   assert(advertiseText.includes(words), 'advertise page says: ' + words);
-assert(!/\$\s?\d/.test(advertiseText), 'no prices on the advertise page');
+// The one price on the page is the featured event's $100 (owner direction, November 20, 2026); ads have no listed price.
+assert.deepEqual(advertiseText.match(/\$\s?\d[\d,]*/g), ['$100', '$100'], 'only the featured event price');
+assert(advertise.getElementById('events').textContent.includes('$100'), 'the price sits with featured events');
 assert(advertise.querySelector('main a[href^="mailto:travis@vethomeguard.org?subject=Advertising%20on%20Find%20Bingo"]'));
 assert(sitemap.includes('<loc>https://www.findbingo.org/privacy/</loc>') && sitemap.includes('<loc>https://www.findbingo.org/advertise/</loc>'));
 const allPages = [];

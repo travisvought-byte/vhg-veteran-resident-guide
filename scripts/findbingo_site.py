@@ -147,8 +147,8 @@ def _date_label(iso):
     return d.strftime('%B ') + str(d.day) + d.strftime(', %Y')
 
 
-def make_findbingo(root, ads=None):
-    """All Find Bingo files. ads replaces data/findbingo-ads.json (the tests pass a sample ad)."""
+def make_findbingo(root, ads=None, events=None):
+    """All Find Bingo files. ads replaces data/findbingo-ads.json and events data/findbingo-events.json (the tests pass samples)."""
     _load_zip_states(root)
     if ads is None:
         ads = json.loads((root / ADS_FILE).read_text())
@@ -177,6 +177,9 @@ def make_findbingo(root, ads=None):
         all_zips[extra['zip']] = [extra['lat'], extra['lon']]
     zips = {z: [round(c[0], 3), round(c[1], 3)] for z, c in sorted(all_zips.items()) if _state_of_zip(z)}
     validate(states, venues, licensed, zips)
+    if events is None:
+        events = load_events(root)
+    validate_events(events, zips)
     generated_on = max([s['reviewed_on'] for s in states] + [r['reviewed_on'] for r in venues + licensed])
     data = {
         'generated_on': generated_on,
@@ -187,6 +190,8 @@ def make_findbingo(root, ads=None):
         'venues': [_public_record(v, ('id', 'state', 'kind', 'name', 'organizations', 'address', 'city', 'zip', 'county', 'phone', 'sessions',
                                       'audience', 'hours', 'schedule_note', 'notes', 'source_url', 'source_label', 'reviewed_on')) for v in venues],
         'licensed': [_public_record(r, ('id', 'state', 'name', 'address', 'city', 'zip', 'county', 'phone', 'license_number', 'license_type', 'license_expires', 'reviewed_on')) for r in licensed],
+        # Paid featured events (owner direction, November 20, 2026), shown in their own labeled box, never in the listings.
+        'events': [_public_record(e, EVENT_PUBLIC) for e in upcoming_events(events, generated_on)],
     }
     data_json = json.dumps(data, ensure_ascii=False, separators=(',', ':'))
     # Each button links to that state's own page (crawlable); with the lists loaded, the finder shows the state in place.
@@ -261,6 +266,8 @@ Lists updated {_date_label(generated_on)}.
     page = page.replace('</head>', _json_ld({'@context': 'https://schema.org', '@type': 'WebSite', 'name': 'Find Bingo',
                                              'alternateName': 'FindBingo.org', 'url': SITE + '/', 'inLanguage': 'en-US',
                                              'publisher': publisher}) + '\n</head>', 1)
+    # Featured events have their own styles on the home page and every state page.
+    page = page.replace('</style>', EVENT_CSS + '</style>', 1)
     style = re.search(r'<style>.*?</style>', page, re.S).group(0).replace('</style>', STATE_CSS + '</style>')
     today = generated_on
     pages = {}
@@ -271,7 +278,8 @@ Lists updated {_date_label(generated_on)}.
             rows = [r for r in licensed if r['state'] == s['code'] and r.get('license_expires', today) >= today]
         else:
             rows = [v for v in venues if v['state'] == s['code']]
-        pages[SLUGS[s['code']] + '/index.html'] = _state_page(s, states, rows, style, analytics, generated_on, _ads_for(ads, SLUGS[s['code']]))
+        pages[SLUGS[s['code']] + '/index.html'] = _state_page(s, states, rows, style, analytics, generated_on, _ads_for(ads, SLUGS[s['code']]),
+                                                              [e for e in upcoming_events(events, generated_on) if e['state'] == s['code']])
     pages['privacy/index.html'] = _info_page('privacy', *PRIVACY, style, analytics, generated_on)
     pages['advertise/index.html'] = _info_page('advertise', *ADVERTISE, style, analytics, generated_on)
     pages['learn/index.html'] = _info_page('learn', *LEARN, style, analytics, generated_on)
@@ -442,7 +450,7 @@ STATE_COPY = {
 }
 
 
-def _state_page(s, states, rows, style, analytics, generated_on, ads=()):
+def _state_page(s, states, rows, style, analytics, generated_on, ads=(), events=()):
     code, name, slug = s['code'], s['name'], SLUGS[s['code']]
     title, description, lead = (t.format(name=name) for t in STATE_COPY[s['coverage']])
     if s['coverage'] == 'none' and s.get('list_url'):
@@ -467,6 +475,8 @@ def _state_page(s, states, rows, style, analytics, generated_on, ads=()):
         # No list loaded here yet, but the state publishes one: lead with it.
         body += (f'<div class="big-actions" id="official-list"><a class="solid" href="{escape(s["list_url"])}" target="_blank" '
                  f'rel="noopener noreferrer">{escape(s["list_label"])} ↗</a></div>')
+    # Paid featured events sit in their own labeled box, above the county list and never inside the listings.
+    body += events_html(events, '../')
     if len(counties) > 1:
         body += (f'<nav class="counties" aria-labelledby="counties-title"><h2 id="counties-title">Jump to your county{" or city" if any(c.endswith(" city") for c in counties) else ""}</h2><ul>'
                  + ''.join(f'<li><a href="#county-{_slug(c)}">{escape(_area(c, short=True))}</a></li>' for c in counties) + '</ul></nav>')
@@ -540,6 +550,79 @@ STATE_CSS = ('header a{color:#fff}.intro{font-size:20px;max-width:860px}'
 # markup at all. Each ad: slot ("home", "state" for every state page, or "state:michigan" for one state),
 # sponsor, text, url, and optionally image (a file under assets/, served from ads/), alt (needed with an
 # image), start and end (YYYY-MM-DD, Eastern time, both days included). Ads never touch the listings.
+# ---- Featured bingo events (paid) -----------------------------------------------------------------------
+# Owner direction, November 20, 2026: a hall or group can have a dated bingo event featured for $100. It shows
+# in its own box labeled "Featured event" for ZIP searches near it, on its state's page (and Ohio's finder),
+# from when it is added until the day of the event. It never adds to, removes or reorders the free listings.
+# Add one to data/findbingo-events.json only after it is paid; record the payment date in paid_on.
+EVENTS_FILE = 'data/findbingo-events.json'
+EVENT_PRICE = 100
+EVENT_KEYS = {'id', 'title', 'host', 'address', 'city', 'state', 'zip', 'date', 'start', 'end', 'details', 'url', 'phone', 'paid_on'}
+EVENT_REQUIRED = ('id', 'title', 'host', 'address', 'city', 'state', 'zip', 'date', 'start', 'details', 'paid_on')
+EVENT_PUBLIC = ('id', 'title', 'host', 'address', 'city', 'state', 'zip', 'date', 'start', 'end', 'details', 'url', 'phone')
+EVENT_CSS = ('.featured-events{background:#fff8e6;border:2px solid #d9b45a;border-radius:14px;padding:8px 20px 16px;margin:18px 0}'
+             '.featured-events[hidden]{display:none}.featured-events h2{font-size:26px;margin:6px 0 10px}'
+             '.featured-events .ad-label{margin:6px 0 0;font-size:15px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#6b5414}'
+             '.featured-events article{background:#fff;border:1px solid #e2c98a;border-radius:12px;padding:14px 16px;margin:0 0 12px}'
+             '.featured-events article[hidden]{display:none}.featured-events h3{font-size:23px;margin:4px 0}.featured-events p{margin:6px 0}')
+# Hides an event once its day has passed (Eastern time), and the box once every event in it has passed.
+EVENT_DATES_SCRIPT = ("<script>(function(){var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date()),"
+                      "g=function(t){return p.find(function(x){return x.type===t}).value},d=g('year')+'-'+g('month')+'-'+g('day');"
+                      "document.querySelectorAll('.featured-events').forEach(function(s){var n=0;s.querySelectorAll('article[data-date]').forEach(function(a){"
+                      "a.hidden=a.dataset.date<d;if(!a.hidden)n++});s.hidden=!n})})()</script>")
+
+
+def load_events(root):
+    return json.loads((root / EVENTS_FILE).read_text())
+
+
+def validate_events(events, zips):
+    assert isinstance(events, list), EVENTS_FILE + ' is a list'
+    ids = set()
+    for e in events:
+        assert isinstance(e, dict) and set(e) <= EVENT_KEYS, ('unknown event field', sorted(set(e) - EVENT_KEYS))
+        assert all(isinstance(e.get(k), str) and e[k].strip() for k in EVENT_REQUIRED), ('event is missing', [k for k in EVENT_REQUIRED if not e.get(k)])
+        assert e['id'] not in ids, ('two events share an id', e['id'])
+        ids.add(e['id'])
+        assert e['state'] in STATES, e['state']
+        assert e['zip'] in zips and _state_of_zip(e['zip']) == e['state'], ('event ZIP must be in its state', e['id'], e['zip'])
+        for k in ('date', 'paid_on'):
+            assert date.fromisoformat(e[k]).isoformat() == e[k], (k, e[k])
+        for k in ('start', 'end'):
+            if k in e:
+                assert TIME.fullmatch(e[k]), (k, e[k])
+        assert len(e['title']) <= 90 and len(e['host']) <= 90 and len(e['details']) <= 200, ('keep events short', e['id'])
+        if 'url' in e:
+            assert e['url'].startswith('https://'), e['url']
+        if 'phone' in e:
+            assert PHONE.fullmatch(e['phone']), e['phone']
+
+
+def upcoming_events(events, today):
+    """Events on or after today, soonest first. The pages also hide past events by the visitor's date."""
+    return sorted((e for e in events if e['date'] >= today), key=lambda e: (e['date'], e['start'], e['title']))
+
+
+def events_html(events, up, heading='Featured bingo events'):
+    """The labeled box of paid featured events for one page, or nothing when there are none."""
+    if not events:
+        return ''
+    cards = ''
+    for e in events:
+        links = [f'<a href="{escape(_maps(e["address"] + ", " + e["city"] + ", " + e["state"] + " " + e["zip"]))}" target="_blank" rel="noopener noreferrer">Directions ↗</a>']
+        if e.get('phone'):
+            links.append(f'<a href="tel:{escape(e["phone"])}">Call {escape(e["phone"])}</a>')
+        if e.get('url'):
+            links.append(f'<a href="{escape(e["url"])}" target="_blank" rel="sponsored noopener">More about this event ↗</a>')
+        cards += (f'<article data-date="{e["date"]}"><h3>{escape(e["title"])}</h3>'
+                  f'<p class="when"><strong>{_date_label(e["date"])}</strong>, {escape(_time_range(e["start"], e.get("end")))}</p>'
+                  f'<p>{escape(e["host"])}<br>{escape(e["address"])}, {escape(e["city"])}</p><p>{escape(e["details"])}</p>'
+                  f'<p>{" · ".join(links)}</p></article>')
+    return (f'<section class="featured-events" aria-label="Featured events"><p class="ad-label">Featured events · paid listings</p>'
+            f'<h2>{escape(heading)}</h2>{cards}<p class="small"><a href="{up}advertise/#events">Feature your bingo event</a></p></section>'
+            + EVENT_DATES_SCRIPT)
+
+
 ADS_FILE = 'data/findbingo-ads.json'
 AD_KEYS = {'slot', 'sponsor', 'text', 'url', 'image', 'alt', 'start', 'end'}
 # The bingo class, Privacy and Advertise pages, linked from every footer and listed in the sitemap.
@@ -760,9 +843,29 @@ ADVERTISE = (
     '<h2>Who can advertise</h2>'
     '<p>Local businesses, senior services, senior living and home care, transportation, bingo suppliers, and community events. '
     'If your business is a good fit for bingo players and their families, write to us.</p>'
+    '<h2 id="events">Feature your bingo event: $' + str(EVENT_PRICE) + '</h2>'
+    '<p>Running a special bingo night, a fundraiser or a holiday game? For $' + str(EVENT_PRICE) + ' we feature it in its own box, labeled “Featured event,” '
+    'for people who search near your hall and on your state’s page, from the day it goes up until the day of the event.</p>'
+    '<ul><li>The event must be run by a group allowed to hold bingo where it takes place.</li>'
+    '<li>A featured event never adds to, removes or reorders the free game listings. Your hall’s weekly games stay listed free either way.</li>'
+    '<li>Send the event name, your hall or group, the address, date and start time, a short description (up to 200 characters), and a link or phone number. '
+    'We confirm the details and send an invoice.</li></ul>'
+    '<div class="big-actions"><a class="solid" href="'
+    + escape(_mailto('Feature a bingo event on Find Bingo', 'Event name:\nHall or group:\nAddress:\nDate and start time:\nShort description:\nLink or phone for players:\n'))
+    + '">Email us about your event</a></div>'
+    '<h2>For bingo halls</h2>'
+    '<p>Every hall’s listing is free, always. Beyond that, choose what fits your hall:</p>'
+    '<ul><li><strong>Community partner.</strong> Halls that must give part of their instant bingo profit to a charity can name Veteran Home Guardians as one of their recipients. '
+    'We ask for a modest share, usually 5 to 10 percent of what you give, not all of it. At minimum, it should cover visits to veterans in nursing homes in your county. '
+    'Anything beyond that helps us reach counties that have no local support. <a href="../ohio/partners.html#sponsors">How partnership works</a></li>'
+    '<li><strong>Featured events,</strong> above.</li>'
+    '<li><strong>A website for your hall.</strong> If you would rather pay for a service than partner, we can build and keep up a simple website for your hall, for a fee.</li>'
+    '<li><strong>Advertising.</strong> Free tips on getting the word out, or paid advertising if you want more.</li></ul>'
+    '<p>Every hall is different, so let’s talk.</p>'
     '<h2>Ground rules</h2>'
-    '<ul><li>Every ad is labeled “Advertisement.”</li>'
-    '<li>Ads sit apart from the game listings: on the home page below the search results, and on state pages after the listings. Never inside them.</li>'
+    '<ul><li>Every ad is labeled “Advertisement.” Every featured event is labeled “Featured event.”</li>'
+    '<li>Ads sit apart from the game listings: on the home page below the search results, and on state pages after the listings. Never inside them. '
+    'Featured events sit in their own box above the results, never inside them.</li>'
     '<li>Ads never add, remove, change or reorder listings. A hall cannot pay for a better listing, and every listing stays free.</li>'
     '<li>We review every ad before it runs, and we turn down ads that are misleading.</li></ul>'
     '<h2>Where the money goes</h2>'

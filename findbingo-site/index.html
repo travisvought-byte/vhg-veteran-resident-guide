@@ -71,7 +71,7 @@ table.card td button.called{border-color:var(--gold);border-width:3px}
 @media(max-width:760px){.tools,.narrow .tools,.grid{grid-template-columns:1fr}header{padding-top:16px}.zip-box{padding:16px}.big-actions a{flex-basis:100%}}
 @media print{#play,.ad-slot,header,.zip-box,.states,.narrow,#change-search,#more-note button,.small-links,.panel,footer .noprint,.skip{display:none!important}body{background:#fff;font-size:12pt}
  main{padding:0}.grid{display:block}article{break-inside:avoid;margin:0 0 10px;padding:8px 10px;border:1px solid #999}.when{background:none;border:0;padding:0}.big-actions{display:none}#count{font-size:16pt;margin:0 0 8px}details.sources{display:none}}
-</style>
+.featured-events{background:#fff8e6;border:2px solid #d9b45a;border-radius:14px;padding:8px 20px 16px;margin:18px 0}.featured-events[hidden]{display:none}.featured-events h2{font-size:26px;margin:6px 0 10px}.featured-events .ad-label{margin:6px 0 0;font-size:15px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#6b5414}.featured-events article{background:#fff;border:1px solid #e2c98a;border-radius:12px;padding:14px 16px;margin:0 0 12px}.featured-events article[hidden]{display:none}.featured-events h3{font-size:23px;margin:4px 0}.featured-events p{margin:6px 0}</style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Find Bingo", "alternateName": "FindBingo.org", "url": "https://www.findbingo.org/", "inLanguage": "en-US", "publisher": {"@type": "Organization", "name": "Veteran Home Guardians", "url": "https://www.vethomeguard.org/", "logo": "https://www.findbingo.org/ohio/assets/vhg-logo.png", "email": "travis@vethomeguard.org"}}</script>
 <link rel="icon" href="favicon.svg" type="image/svg+xml"></head><body>
 <a class="skip" href="#count">Skip to the bingo list</a>
@@ -90,6 +90,7 @@ table.card td button.called{border-color:var(--gold);border-width:3px}
 <p id="count" role="status" aria-live="polite" tabindex="-1"></p>
 <p id="change-search" hidden><a href="#zip-form">Change ZIP code or distance</a></p>
 <p id="more-note"></p>
+<div id="featured"></div>
 <div id="results"></div>
 <noscript><p class="empty">The ZIP code search needs JavaScript. You can still pick your state above to see its whole bingo list, by county.</p></noscript>
 <section class="panel" id="play" aria-labelledby="play-title"><h2 id="play-title">Warm up: play a free practice card</h2>
@@ -181,6 +182,9 @@ function noListCard(code){const s=STATES[code]||{};
  +(s.regulator_url?'<p class="small">'+esc(s.regulator_note)+' <a href="'+esc(s.regulator_url)+'" target="_blank" rel="noopener noreferrer">'+esc(s.regulator_label)+' ↗</a></p>':'')+'</article>'}
 function pendingNote(code){const s=STATES[code];const c=s&&s.pending_counties||[];if(!c.length)return '';const list=c.length>1?c.slice(0,-1).join(', ')+' and '+c[c.length-1]:c[0];return '<p class="note" id="pending-'+esc(code)+'">Our '+esc(s.name)+' list does not include '+esc(list)+(c.length>1?' counties':' County')+' yet. For games there, use <a href="'+esc(s.list_url)+'" target="_blank" rel="noopener noreferrer">the state&rsquo;s own lookup ↗</a>.</p>'}
 function group(title,cards){return cards.length?'<section aria-label="'+esc(title)+'"><h2>'+esc(title)+'</h2><div class="grid">'+cards.join('')+'</div></section>':''}
+function featured(evs,today){if(!evs.length)return '';return '<section class="featured-events" aria-label="Featured events"><p class="ad-label">Featured events · paid listings</p><h2>Featured bingo events'+(activeZip?' near you':'')+'</h2>'+evs.map(e=>'<article data-date="'+esc(e.date)+'"><h3>'+esc(e.title)+'</h3><p class="when"><strong>'+esc(dateLabel(e.date,today))+'</strong>, '+esc(timeRange(e.start,e.end))+'</p>'+'<p>'+esc(e.host)+'<br>'+esc(e.address)+', '+esc(e.city)+'</p><p>'+esc(e.details)+'</p><p><a href="'+esc(mapURL(e.address+', '+e.city+', '+e.state+' '+e.zip))+'" target="_blank" rel="noopener noreferrer">Directions ↗</a>'+(e.phone?' · <a href="tel:'+esc(e.phone)+'">Call '+esc(e.phone)+'</a>':'')+(e.url?' · <a href="'+esc(e.url)+'" target="_blank" rel="sponsored noopener">More about this event ↗</a>':'')+'</p></article>').join('')+'<p class="small"><a href="advertise/#events">Feature your bingo event</a></p></section>'}
+// Paid featured events for this search: near the ZIP code, or in the chosen state; soonest first, past ones left out.
+function eventsFor(today,radius){const all=(DATA.events||[]).filter(e=>e.date>=today);const near=activeZip?all.filter(e=>ZIPS[e.zip]&&ZIPS[activeZip]&&milesBetween(ZIPS[activeZip],ZIPS[e.zip])<=radius):activeState?all.filter(e=>e.state===activeState):[];return near.sort((a,b)=>a.date.localeCompare(b.date)||a.start.localeCompare(b.start))}
 function fillCounties(code){const wrap=$('county-wrap'),sel=$('county'),keep=sel.value;const cov=(STATES[code]||{}).coverage;const rows=['times','starter'].includes(cov)?DATA.venues:cov==='licenses'?DATA.licensed:[];const names=[...new Set(rows.filter(r=>r.state===code).map(r=>r.county))].sort();wrap.hidden=!names.length;sel.innerHTML='<option value="">All counties</option>'+names.map(n=>'<option value="'+esc(n)+'">'+esc(area(n,true))+'</option>').join('');if(names.includes(keep))sel.value=keep}
 function render(){const today=todayISO(),day=$('day').value,radius=Number($('radius').value),county=$('county').value;let html='',count='',more=0;
  const venues=DATA.venues.filter(v=>v.sessions.length&&(!day||nextGame(v,day,today)));const licensed=DATA.licensed.filter(r=>licenseCurrent(r,today));
@@ -200,6 +204,7 @@ function render(){const today=todayISO(),day=$('day').value,radius=Number($('rad
   else if(activeState==='OH'){count='Ohio has its own bingo finder';html=group('Ohio bingo',[ohioCard('',25)])}
   else{count=s.name+': no game list yet';html=group(s.name,[noListCard(activeState)])}
  }else{count='Type your ZIP code above, or pick a state.';}
+ $('featured').innerHTML=featured(eventsFor(today,radius),today);
  if(!activeState||activeZip)$('county-wrap').hidden=true;
  $('count').textContent=count;$('results').innerHTML=html;
  $('more-note').innerHTML=activeZip&&more?(showMore?'<button type="button" data-more="0">Hide groups without game days</button>':'Some groups licensed for bingo nearby haven&rsquo;t posted game days. <button type="button" data-more="1">Show them too</button>'):'';

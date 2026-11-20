@@ -10,7 +10,7 @@ printed posters and QR codes keep working.
 import json
 import re
 from instant_bingo import instant_page
-from findbingo_site import indexed_state_pages, INFO_PAGES
+from findbingo_site import indexed_state_pages, INFO_PAGES, load_events, upcoming_events, events_html, EVENT_CSS
 from html import escape
 
 SITE = 'https://www.findbingo.org/ohio'
@@ -130,9 +130,11 @@ def partners_page(stats):
 <p>Hang the poster, link to the finder from your website or newsletter, and send us your own program schedule so it shows up for people searching nearby.</p>
 <p><a class="button" href="poster.html">Print the poster</a><a class="button alt" href="mailto:{EMAIL}?subject=Ohio%20Bingo%20Finder%3A%20our%20programs">Send your schedule</a></p></article>
 <article id="sponsors"><h2>Community partner halls</h2>
-<p>Instant bingo halls run by veteran's, fraternal and sporting organizations must give part of their net profit to a qualifying charity. Halls that name Veteran Home Guardians as a recipient, for any share, become Community Partners.</p>
+<p>Instant bingo halls run by veteran's, fraternal and sporting organizations must give part of their net profit to a qualifying charity. Halls that name Veteran Home Guardians as one of their recipients become Community Partners.</p>
+<p>We ask for a modest share, usually 5 to 10 percent of what a hall gives, not all of it. At minimum, it should cover visits to veterans in nursing homes in your county. Anything beyond that helps us reach counties that have no local support. Every hall is different, so we work it out together.</p>
 <p>Partners are recognized on this page and on their listing. We help partners stay current on the distribution rules, send updates on our work, and visit senior veterans in nursing homes in their area.</p>
 <p>No hall can pay for a better listing. Every hall gets the same free listing whether it partners with us or not.</p>
+<p>Would rather not partner? We can feature a special bingo event for $100, build and keep up a website for your hall for a fee, or help with advertising. <a href="../advertise/#events">Ways to work with us</a></p>
 <p><a class="button" href="mailto:{EMAIL}?subject=Ohio%20Bingo%20Finder%3A%20community%20partner">Become a community partner</a><a class="button alt" href="distributions.html">Read the distribution rules</a></p>
 <p><a href="instant.html">See the posts and lodges licensed for instant bingo</a></p></article>
 </div>
@@ -181,7 +183,7 @@ def distributions_page():
 <p>The Attorney General posts notices, settlements and orders on its <a href="{AG_ENFORCEMENT}">bingo enforcement page</a>. Problems are usually caught at annual inspections or license renewal.</p></article>
 <article><h2>Questions</h2>
 <p>Ohio Attorney General, Charitable Law Section: <a href="tel:614-466-3181">614-466-3181</a>.</p>
-<p>To name Veteran Home Guardians as a recipient, or to ask how our community partnership works, email <a href="mailto:{EMAIL}?subject=Instant%20bingo%20distribution">{EMAIL}</a>. Every hall&rsquo;s listing stays free either way.</p>
+<p>To name Veteran Home Guardians as a recipient (we ask for a modest share, usually 5 to 10 percent), or to ask how our community partnership works, email <a href="mailto:{EMAIL}?subject=Instant%20bingo%20distribution">{EMAIL}</a>. Every hall&rsquo;s listing stays free either way.</p>
 <p><a class="button" href="partners.html">Community partners</a><a class="button alt" href="./">Open the finder</a></p></article>
 </main>
 <footer><p>Ohio Bingo Finder · A free community resource from Veteran Home Guardians · <a href="mailto:{EMAIL}">{EMAIL}</a> · <a href="{GUIDE}/">Veteran Resident Resource Guide</a></p></footer>'''
@@ -244,10 +246,19 @@ Every file in this folder is **generated**. Do not edit it here. The source of t
 '''
 
 
+def ohio_events(root, page, events=None):
+    """Paid featured Ohio events, in their own labeled box above the finder's results (validated by findbingo_site)."""
+    events = [e for e in upcoming_events(load_events(root) if events is None else events, '0000-01-01') if e['state'] == 'OH']
+    box = events_html(events, '../', 'Featured Ohio bingo events')
+    if not box:
+        return page
+    return _replace(_replace(page, '</style>', EVENT_CSS + '</style>', 1), '<p id="count"', box + '<p id="count"', 1)
+
+
 def make_bingo_site(root, finder_page):
     stats = finder_stats(finder_page)
     site = {
-        'index.html': standalone_finder(finder_page),
+        'index.html': ohio_events(root, standalone_finder(finder_page)),
         'partners.html': partners_page(stats),
         'distributions.html': distributions_page(),
         'instant.html': instant_page(root, LOGO, EMAIL, GUIDE, _shell),
