@@ -45,6 +45,26 @@ DATA_SOURCES = ['', 'https://guide.vethomeguard.org/findbingo-site/', REPO_RAW +
 # The Ohio finder is the folder /ohio/; these catch the other ways people type it. No rule may
 # match /ohio/ itself in any letter case, or the forward would loop.
 REDIRECTS = ''.join(f'{src} /ohio/ 301\n' for src in ('/Ohio', '/OHIO', '/oh', '/oh/', '/OH', '/OH/'))
+# Small line icons (calendar, map pin, phone, directions, search), written once per page and drawn with <use>.
+# They always sit beside words that say the same thing, and screen readers skip them.
+ICONS = ('<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>'
+         '<symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>'
+         '<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.1-7-11.4a7 7 0 0 1 14 0C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.6" r="2.6"/></symbol>'
+         '<symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3.5h3.5l2 5-2.6 1.6a12 12 0 0 0 6 6l1.6-2.6 5 2V19a2 2 0 0 1-2 2A17 17 0 0 1 3 5.5a2 2 0 0 1 2-2z"/></symbol>'
+         '<symbol id="i-route" viewBox="0 0 24 24"><path d="M12 2.5 21.5 12 12 21.5 2.5 12z"/><path d="M9 15v-2.5a2 2 0 0 1 2-2h4.5M13.5 8.5l2 2-2 2"/></symbol>'
+         '<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.4-4.4"/></symbol>'
+         '</defs></svg>')
+# Five bingo balls above each page's heading: decoration only, hidden from screen readers.
+BALLS = '<div class="balls" aria-hidden="true"><i>B</i><i>I</i><i>N</i><i>G</i><i>O</i></div>'
+# State pages are plain HTML: this marks weekly games on the visitor's own weekday with a "Today" tag.
+# Lists with monthly patterns are not marked (their games may not fall this week). Without JavaScript nothing changes.
+TODAY_SCRIPT = ("<script>(function(){var d=new Date().getDay();document.querySelectorAll('ul.sessions[data-weekly] li[data-day=\"'+d+'\"]').forEach(function(li){"
+                "var t=document.createElement('span');t.className='today-tag';t.textContent='Today';li.className='today';"
+                "li.appendChild(document.createTextNode(' '));li.appendChild(t)})})()</script>")
+
+
+def _ic(name):
+    return f'<svg class="ic" aria-hidden="true"><use href="#i-{name}"/></svg>'
 
 
 ZIP_STATES = {}
@@ -229,7 +249,7 @@ def make_findbingo(root, ads=None, events=None):
         about += ('<p>We have not built lists for these states yet. Each has its own page with a free way to send us game times: '
                   + named(waiting) + '.</p>')
     page = (root / 'templates/findbingo/index.html').read_text()
-    for key, value in (('__SOURCES__', json.dumps(DATA_SOURCES)), ('__STATE_BUTTONS__', buttons), ('__ABOUT__', about),
+    for key, value in (('__SOURCES__', json.dumps(DATA_SOURCES)), ('__STATE_BUTTONS__', buttons), ('__ABOUT__', about), ('__ICONS__', ICONS), ('__BALLS__', BALLS),
                        ('__UPDATED__', _date_label(generated_on)), ('__AD_HOME__', _ad_html(_ads_for(ads, 'home'), ''))):
         assert page.count(key) == 1, key
         page = page.replace(key, value)
@@ -377,20 +397,20 @@ def _out(url, label):
 def _venue_html(v, s):
     many = len(v['organizations']) > 1
     sessions = ''.join(
-        f'<li><strong>{DAY_NAMES[x["day"]]}</strong>, {escape(_time_range(x["start"], x.get("end")))}'
+        f'<li data-day="{x["day"]}"><strong>{DAY_NAMES[x["day"]]}</strong>, {escape(_time_range(x["start"], x.get("end")))}'
         + (f' <span class="org">· {escape(x["label"])}</span>' if x.get('label') else '')
         + (f' <span class="org">· {escape(x["organization"])}</span>' if many else '') + '</li>' for x in v['sessions'])
     if v.get('phone'):
-        call = f'<a class="solid" href="tel:{re.sub(r"[^0-9]", "", v["phone"])}">Call {escape(v["phone"])}</a>'
+        call = f'<a class="solid" href="tel:{re.sub(r"[^0-9]", "", v["phone"])}">{_ic("phone")}Call {escape(v["phone"])}</a>'
     else:
-        call = f'<a class="solid" href="{escape(_maps(v["name"] + " " + v["address"]))}" target="_blank" rel="noopener noreferrer">Look up phone number ↗</a>'
+        call = f'<a class="solid" href="{escape(_maps(v["name"] + " " + v["address"]))}" target="_blank" rel="noopener noreferrer">{_ic("search")}Look up phone number ↗</a>'
     source = _out(v['source_url'], v['source_label']) if v.get('source_url') else _out(s['list_url'], s['list_label'])
     return (f'<article id="{escape(v["id"])}"><p><span class="badge">{"Senior center bingo" if v.get("kind") == "senior_center" else "Bingo"}</span></p>'
-            f'<h3>{escape(v["name"])}</h3><p class="where">{escape(v["city"])}</p>'
+            f'<h3>{escape(v["name"])}</h3><p class="where">{_ic("pin")}{escape(v["city"])}</p>'
             + (f'<p class="small">{escape(v["audience"])}</p>' if v.get('audience') else '')
-            + f'<div class="when"><p><strong>Bingo days:</strong></p><ul class="sessions">{sessions}</ul>'
+            + f'<div class="when"><p>{_ic("cal")}<strong>Bingo days:</strong></p><ul class="sessions"{"" if v.get("schedule_note") else " data-weekly"}>{sessions}</ul>'
             f'<p class="note">{escape(v.get("schedule_note") or s.get("hours_note") or "Call ahead to confirm before you go.")}</p></div>'
-            f'<div class="big-actions">{call}<a class="outline" href="{escape(_maps(v["address"]))}" target="_blank" rel="noopener noreferrer">Directions ↗</a></div>'
+            f'<div class="big-actions">{call}<a class="outline" href="{escape(_maps(v["address"]))}" target="_blank" rel="noopener noreferrer">{_ic("route")}Directions ↗</a></div>'
             f'<p class="address">{escape(v["address"])} · {escape(_area(v["county"]))}</p>'
             + (f'<p class="small">{escape(v["hours"])}</p>' if v.get('hours') else '')
             + (f'<p class="small">Bingo here is run by {escape(", ".join(v["organizations"]))}.</p>' if many else '')
@@ -401,10 +421,10 @@ def _venue_html(v, s):
 
 def _licensed_html(r, s):
     return (f'<article id="{escape(r["id"])}"><p><span class="badge muted">{escape(s.get("license_badge", LICENSE_BADGE))}</span></p>'
-            f'<h3>{escape(r["name"])}</h3><p class="where">{escape(r["city"])}</p>'
-            + '<div class="big-actions">' + (f'<a class="solid" href="tel:{re.sub(r"[^0-9]", "", r["phone"])}">Call {escape(r["phone"])}</a>' if r.get('phone') else
-                                             f'<a class="solid" href="{escape(_maps(r["name"] + " " + r["address"]))}" target="_blank" rel="noopener noreferrer">Look up phone number ↗</a>')
-            + f'<a class="outline" href="{escape(_maps(r["address"]))}" target="_blank" rel="noopener noreferrer">Directions ↗</a></div>'
+            f'<h3>{escape(r["name"])}</h3><p class="where">{_ic("pin")}{escape(r["city"])}</p>'
+            + '<div class="big-actions">' + (f'<a class="solid" href="tel:{re.sub(r"[^0-9]", "", r["phone"])}">{_ic("phone")}Call {escape(r["phone"])}</a>' if r.get('phone') else
+                                             f'<a class="solid" href="{escape(_maps(r["name"] + " " + r["address"]))}" target="_blank" rel="noopener noreferrer">{_ic("search")}Look up phone number ↗</a>')
+            + f'<a class="outline" href="{escape(_maps(r["address"]))}" target="_blank" rel="noopener noreferrer">{_ic("route")}Directions ↗</a></div>'
             f'<p class="address">{escape(r["address"])} · {escape(_area(r["county"]))}</p>'
             f'<details class="sources"><summary>Where this comes from · checked {_date_label(r["reviewed_on"])}</summary>'
             f'<p>{escape(_license_line(r, s))}</p>'
@@ -505,7 +525,7 @@ def _state_page(s, states, rows, style, analytics, generated_on, ads=(), events=
     zip_form = ('<form class="zip-box" action="../" method="get"><div class="tools">'
                 '<div><label for="zip">Type your ZIP code</label><input id="zip" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" pattern="[0-9]{5}" placeholder="Your 5-digit ZIP" required></div>'
                 '<div><label for="radius">How far will you go?</label><select id="radius" name="radius"><option value="10">10 miles</option><option value="25" selected>25 miles</option><option value="50">50 miles</option><option value="100">100 miles</option></select></div>'
-                '<div><button class="primary" type="submit">Find bingo near me</button></div></div>'
+                f'<div><button class="primary" type="submit">{_ic("search")}Find bingo near me</button></div></div>'
                 '<p class="small">Shows bingo near you in every state we cover, closest first.</p></form>')
     head = (f'<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">\n'
             f'<title>{escape(title)}</title>\n<meta name="description" content="{escape(description)}">\n<link rel="canonical" href="{url}">\n'
@@ -514,12 +534,13 @@ def _state_page(s, states, rows, style, analytics, generated_on, ads=(), events=
             + f'<meta property="og:type" content="website"><meta property="og:site_name" content="Find Bingo"><meta property="og:title" content="{escape(f"Bingo in {name}")}">'
             f'<meta property="og:description" content="{escape(description)}"><meta property="og:url" content="{url}"><meta property="og:image" content="{SITE}/ohio/assets/vhg-logo.png">\n'
             + style + '\n' + _json_ld(crumbs) + '\n</head>')
-    return (head + '<body id="top"><a class="skip" href="#listings">Skip to the bingo list</a>'
-            f'<header><p class="brand"><a href="../">FindBingo.org</a> · free from Veteran Home Guardians</p><h1>Bingo in {escape(name)}</h1><p class="lead">{escape(lead)}</p></header>'
+    weekly = 'data-weekly' in body
+    return (head + f'<body id="top">{ICONS}<a class="skip" href="#listings">Skip to the bingo list</a>'
+            f'<header>{BALLS}<p class="brand"><a href="../">FindBingo.org</a> · free from Veteran Home Guardians</p><h1>Bingo in {escape(name)}</h1><p class="lead">{escape(lead)}</p></header>'
             f'<main>{zip_form}{body}'
             f'<nav class="states" aria-labelledby="states-title"><h2 id="states-title">Bingo in other states</h2><div class="state-buttons">{others}</div>'
             '<p class="small-links"><a href="../">Search every state by ZIP code</a></p></nav></main>'
-            f'{_footer(generated_on)}<script>{analytics}</script></body></html>\n')
+            f'{_footer(generated_on)}{TODAY_SCRIPT if weekly else ""}<script>{analytics}</script></body></html>\n')
 
 
 def _json_ld(obj):
@@ -538,9 +559,9 @@ def _footer(generated_on, up='../'):
 # Short addresses for posters and word of mouth: findbingo.org/mi and /MI open the Michigan page.
 SHORT_REDIRECTS = ''.join(f'/{c} /{slug}/ 301\n/{c.lower()} /{slug}/ 301\n' for c, slug in SLUGS.items() if c != 'OH')
 STATE_CSS = ('header a{color:#fff}.intro{font-size:20px;max-width:860px}'
-             '.counties{background:#fff;border:1px solid var(--line);border-radius:14px;padding:6px 20px 14px;margin:18px 0}.counties h2{font-size:24px;margin:10px 0 8px}'
+             '.counties{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px 20px 14px;margin:18px 0}.counties h2{font-size:24px;margin:10px 0 8px}'
              '.counties ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}'
-             '.counties a{display:inline-flex;align-items:center;min-height:48px;padding:0 14px;border:2px solid var(--green);border-radius:24px;color:var(--green);font-weight:700;text-decoration:none}'
+             '.counties a{display:inline-flex;align-items:center;min-height:48px;padding:0 14px;border:2px solid var(--accent);border-radius:24px;color:var(--accent);font-weight:700;text-decoration:none}'
              '#listings>section>h2{font-size:28px;margin:28px 0 10px;scroll-margin-top:12px}.top{font-size:17px;margin:10px 0 0}.top a{display:inline-flex;align-items:center;min-height:44px}'
              '@media print{.counties,.top,#run-a-game{display:none!important}}')
 
@@ -702,7 +723,7 @@ def _info_page(slug, title, description, heading, lead, body, style, analytics, 
             f'<meta property="og:description" content="{escape(description)}"><meta property="og:url" content="{url}"><meta property="og:image" content="{SITE}/ohio/assets/vhg-logo.png">\n'
             + style + '\n</head>')
     return (head + '<body id="top"><a class="skip" href="#main">Skip to the page</a>'
-            f'<header><p class="brand"><a href="../">FindBingo.org</a> · free from Veteran Home Guardians</p><h1>{escape(heading)}</h1><p class="lead">{escape(lead)}</p></header>'
+            f'<header>{BALLS}<p class="brand"><a href="../">FindBingo.org</a> · free from Veteran Home Guardians</p><h1>{escape(heading)}</h1><p class="lead">{escape(lead)}</p></header>'
             f'<main id="main"><div class="info">{body}</div>'
             '<p class="small-links"><a href="../">Find bingo near you</a></p></main>'
             f'{_footer(generated_on)}<script>{analytics}</script></body></html>\n')
