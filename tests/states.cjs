@@ -110,4 +110,23 @@ toggle.click();assert.equal(toggle.getAttribute('aria-expanded'),'false');assert
 const css=read('assets/unified.css');
 assert(css.includes('header .jump-toggle:not([hidden])[aria-expanded=false]+.jump-more{display:none}'),'links fold only when the button is available');
 assert(css.includes('.jump-more{display:contents}.jump-toggle{display:none}'),'wider screens show every link and no button');
+// Visual pass (November 20, 2026): an icon beside every need button's words, phone icons, and dark mode.
+{
+  const page=read('index.html');
+  const routes=[...page.matchAll(/<button data-route="([a-z]+)"[^>]*><strong>/g)].map(m=>m[1]);
+  assert(routes.length>=15,'need buttons found');
+  for(const route of routes)
+    assert(css.includes(`.quick-links [data-route=${route}] strong::before{--icon:url("data:image/svg+xml,`),'need icon for '+route);
+  assert(css.includes('.quick-links #helper-open strong::before{--icon:')&&css.includes('a.phone::before{--icon:'),'helper and phone icons');
+  assert(/content:"";display:inline-block;[^}]*background:currentColor;-webkit-mask:var\(--icon\)/.test(css),'icons are empty decoration in the text color');
+  const dark=css.match(/@media screen and \(prefers-color-scheme:dark\)\{([\s\S]*)\}\s*$/);
+  assert(dark,'dark mode follows the device setting, on screen only');
+  const lum=h=>{const n=h.slice(1);const [r,g,b]=[0,2,4].map(i=>parseInt(n.slice(i,i+2),16)/255).map(c=>c<=0.03928?c/12.92:((c+0.055)/1.055)**2.4);return 0.2126*r+0.7152*g+0.0722*b};
+  const ratio=(a,b)=>{const [x,y]=[lum(a),lum(b)].sort((m,n)=>n-m);return (x+0.05)/(y+0.05)};
+  // Text and link colors in dark mode on each dark surface: WCAG AA.
+  for(const fg of ['#e4ecef','#dce9f2','#9fd0ef','#b6c4ca'])for(const bg of ['#10181d','#1a242b','#1d2e27','#2c2614','#0f171c'])
+    assert(ratio(fg,bg)>=4.5,`${fg} on ${bg}`);
+  for(const [fg,bg] of [['#d7eee1','#25372e'],['#f2dfb2','#382d17'],['#ecd28c','#1a242b'],['#ffffff','#2a4a63'],['#ffffff','#0d2333']])assert(ratio(fg,bg)>=4.5,`${fg} on ${bg}`);
+  for(const hex of dark[1].match(/#[0-9a-f]{6}/gi))assert(['#10181d','#0d2333','#dce9f2','#e4ecef','#9fd0ef','#0f171c','#83988f','#1a242b','#b6c4ca','#1d2e27','#93d6b1','#25372e','#d7eee1','#382d17','#f2dfb2','#ecd28c','#2c2614','#2a4a63','#3d4d55'].includes(hex.toLowerCase()),'dark color '+hex+' is one of the checked set');
+}
 console.log('PASS: phone header keeps four links in view and opens the rest from one button.');

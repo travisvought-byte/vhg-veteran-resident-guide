@@ -1,2 +1,34 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><base href="/"><title>Page not found | FindBingo.org</title><meta name="robots" content="noindex"><link rel="icon" href="favicon.svg" type="image/svg+xml"><style>body{font:20px/1.5 system-ui,sans-serif;margin:3rem auto;max-width:34rem;padding:0 1rem;color:#1f2f38}a{color:#183449;font-weight:700}footer{margin-top:2.5rem;font-size:17px}</style></head><body><h1>We could not find that page</h1><p>The link may be old or mistyped.</p><p><a href="./">Find bingo near you</a></p><p><a href="ohio/">Ohio Bingo Finder</a></p><footer><p>FindBingo.org is a free community resource from <a href="https://www.vethomeguard.org/">Veteran Home Guardians</a>. <a href="privacy/">Privacy</a> · <a href="advertise/">Advertise on Find Bingo</a></p></footer></body></html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><base href="/"><title>Page not found | FindBingo.org</title><meta name="robots" content="noindex"><link rel="icon" href="favicon.svg" type="image/svg+xml"><style>body{font:20px/1.5 system-ui,sans-serif;margin:3rem auto;max-width:34rem;padding:0 1rem;color:#1f2f38}a{color:#183449;font-weight:700}footer{margin-top:2.5rem;font-size:17px}@media (prefers-color-scheme:dark){:root{color-scheme:dark}body{background:#10181d;color:#e4ecef}a{color:#9fd0ef}}</style></head><body><h1>We could not find that page</h1><p>The link may be old or mistyped.</p><p><a href="./">Find bingo near you</a></p><p><a href="ohio/">Ohio Bingo Finder</a></p><footer><p>FindBingo.org is a free community resource from <a href="https://www.vethomeguard.org/">Veteran Home Guardians</a>. <a href="privacy/">Privacy</a> · <a href="advertise/">Advertise on Find Bingo</a></p></footer><script>// Page views only. Never send directory filters, ZIPs, searches or form values.
+(function () {
+  'use strict';
+  if (window.vhgAnalyticsLoaded) return;
+  window.vhgAnalyticsLoaded = true;
+  window.goatcounter = {no_onload: true, no_events: true};
+  var script = document.createElement('script');
+  script.async = true;
+  script.src = 'https://gc.zgo.at/count.js';
+  script.dataset.goatcounter = 'https://vhg-guide.goatcounter.com/count';
+  script.onload = function () {
+    var counter = window.goatcounter;
+    var getData = counter.get_data;
+    if (typeof getData !== 'function' || typeof counter.count !== 'function') return;
+    counter.get_data = function (vars) {
+      var data = getData(vars);
+      // The same counter runs on findbingo.org (and the retired bingo.vethomeguard.org). Pages away from
+      // the guide's own address carry their site name, so findbingo.org's home never reads as the guide's.
+      var host = location.hostname.replace(/^www\./, '');
+      var site = /(^|\.)(findbingo\.org|bingo\.vethomeguard\.org)$/.test(host) ? '/' + host : '';
+      data.p = site + location.pathname.replace(/\/index\.html$/, '/');
+      data.q = '';
+      // Retain referral attribution without query strings or fragments.
+      try {
+        var referrer = new URL(document.referrer);
+        data.r = referrer.origin + referrer.pathname;
+      } catch (_) { data.r = ''; }
+      return data;
+    };
+    counter.count();
+  };
+  document.head.appendChild(script);
+}());</script></body></html>

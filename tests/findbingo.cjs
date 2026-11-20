@@ -601,5 +601,65 @@ assert(buildWith([{...sample[1], slot: 'sidebar'}], []).error, 'only known place
   for (const f of ['findbingo-site/index.html', 'findbingo-site/michigan/index.html', 'findbingo-site/privacy/index.html', 'bingo-site/findbingo/ohio/index.html']) assert(fs.readFileSync(path.join(root, f), 'utf8').includes('learn/">How bingo works'), f + ' links the bingo class');
 }
 
+// Visual pass (November 20, 2026): dark mode, small icons beside words, a "Today" tag on weekly games. No counts anywhere.
+{
+  // WCAG contrast of the color tokens, light and dark: text pairs need 4.5:1.
+  const css = html.match(/<style>([\s\S]*?)<\/style>/)[1];
+  const vars = block => Object.fromEntries([...block.matchAll(/--([a-z]+):(#[0-9a-f]{3,6})/gi)].map(m => [m[1], m[2]]));
+  const light = vars(css.match(/:root\{--navy[^}]*\}/)[0]);
+  const dark = {...light, ...vars(css.match(/:root\{color-scheme:dark;[^}]*\}/)[0])};
+  const lum = hex => { const n = hex.length === 4 ? hex.slice(1).split('').map(c => c + c).join('') : hex.slice(1);
+    const [r, g, b] = [0, 2, 4].map(i => parseInt(n.slice(i, i + 2), 16) / 255).map(c => c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4);
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b; };
+  const ratio = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((m, n) => n - m); return (x + 0.05) / (y + 0.05); };
+  for (const [mode, c] of [['light', light], ['dark', dark]]) {
+    for (const [fg, bg] of [['ink', 'paper'], ['ink', 'card'], ['ink', 'today'], ['head', 'card'], ['head', 'paper'], ['accent', 'card'], ['accent', 'paper'], ['link', 'card'], ['link', 'paper']])
+      assert(ratio(c[fg], c[bg]) >= 4.5, `${mode}: ${fg} on ${bg} is ${ratio(c[fg], c[bg]).toFixed(2)}:1`);
+    for (const bg of ['green', 'navy']) assert(ratio('#ffffff', c[bg]) >= 4.5, `${mode}: white on ${bg}`);
+    assert(ratio(c.gold, c.paper) >= 3, `${mode}: focus and today marks stand out`);
+  }
+  assert(ratio('#1d1606', dark.gold) >= 4.5, 'dark: Today tag text');
+  assert(/@media screen and \(prefers-color-scheme:dark\)/.test(css) && /@media\(prefers-reduced-motion:reduce\)/.test(css), 'dark mode and reduced motion');
+  assert(/behavior:window\.matchMedia\?\.\('\(prefers-reduced-motion: reduce\)'\)\?\.matches\?'auto':'smooth'/.test(html), 'no smooth scrolling for people who ask for less motion');
+  // Every Find Bingo page: dark mode, page counter, icons hidden from screen readers and drawn from symbols on the same page,
+  // and no counts of halls, games, places or counties in the page's own words.
+  for (const file of allPages) {
+    const rel = path.relative(findbingo, file), text = fs.readFileSync(file, 'utf8');
+    assert(/goatcounter|assets\/analytics\.js/.test(text), rel + ': counts page views');
+    if (rel.startsWith('ohio' + path.sep)) continue;  // the Ohio finder is built by bingo_site.py with its own styles
+    assert(text.includes('prefers-color-scheme:dark'), rel + ': dark mode');
+    const d = new JSDOM(text).window.document;
+    for (const svg of d.querySelectorAll('svg.ic')) {
+      assert.equal(svg.getAttribute('aria-hidden'), 'true', rel + ': icons are hidden from screen readers');
+      const id = svg.querySelector('use').getAttribute('href');
+      assert(d.querySelector(id), rel + ': icon ' + id + ' is on the page');
+      assert(svg.parentElement.textContent.trim(), rel + ': every icon sits beside words');
+    }
+    const plain = d.body.cloneNode(true);
+    for (const e of plain.querySelectorAll('script, article h3, .org, .small, .address')) e.remove();
+    assert(!countWords.test(plain.textContent), rel + ': no counts on the site');
+  }
+  // The finder (Monday 10 a.m.): today's weekly games carry a "Today" tag in words, not color alone; monthly patterns never do.
+  const p = await open('?zip=48066&radius=10');
+  const today = [...p.d.querySelectorAll('#results .sessions li.today')];
+  assert(today.length && today.every(li => /^Monday,/.test(li.textContent) && li.querySelector('.today-tag').textContent === 'Today'));
+  assert.match(p.d.querySelector('#mi-rosemack-bingo-roseville .sessions li.today').textContent, /Monday, 4:30 to 10 p\.m\. · Gesu School Today$/);
+  assert(!p.d.querySelector('#mi-rosemack-bingo-roseville .sessions li:not(.today) .today-tag'));
+  const buttons = [...p.d.querySelectorAll('#mi-rosemack-bingo-roseville .big-actions a')].map(a => a.textContent);
+  assert(/^(Call \d{3}-\d{3}-\d{4}|Look up phone number ↗)$/.test(buttons[0]) && buttons[1] === 'Directions ↗', 'icons add no words to the buttons');
+  const fl = await open('?zip=32208&radius=10');
+  assert(!fl.d.querySelector('#fl-carvill-senior-center-jacksonville .today-tag'), 'a monthly calendar never says Today');
+  // State pages: the same tag, added by a few lines of script on the visitor's own weekday.
+  const runAt = (file, when) => new JSDOM(fs.readFileSync(path.join(site, file), 'utf8'), {runScripts: 'dangerously', beforeParse(w) {
+    const RealDate = w.Date;
+    w.Date = class extends RealDate { constructor(...a) { super(...(a.length ? a : when)) } static now() { return new RealDate(...when).getTime() } };
+  }}).window.document;
+  const miMon = runAt('michigan/index.html', [2026, 10, 16, 10, 0]);
+  const miToday = [...miMon.querySelectorAll('#listings li.today')];
+  assert(miToday.length && miToday.every(li => li.dataset.day === '1' && li.closest('ul').hasAttribute('data-weekly') && li.querySelector('.today-tag').textContent === 'Today'));
+  assert(!runAt('florida/index.html', [2026, 10, 16, 10, 0]).querySelector('#fl-carvill-senior-center-jacksonville .today-tag'), 'monthly calendars are not marked');
+  assert(!mi.querySelector('.today-tag'), 'without JavaScript the page is unchanged');
+}
+
 console.log('FindBingo.org checks passed.');
 })().catch(e => { console.error(e); process.exit(1); });

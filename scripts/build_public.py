@@ -125,11 +125,15 @@ FINDBINGO_404 = ('<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><
                  # Served at whatever address was not found, so every link resolves from the site root.
                  '<base href="/"><title>Page not found | FindBingo.org</title><meta name="robots" content="noindex">' + findbingo_icon_link('') +
                  '<style>body{font:20px/1.5 system-ui,sans-serif;margin:3rem auto;max-width:34rem;padding:0 1rem;color:#1f2f38}'
-                 'a{color:#183449;font-weight:700}footer{margin-top:2.5rem;font-size:17px}</style></head><body><h1>We could not find that page</h1>'
+                 'a{color:#183449;font-weight:700}footer{margin-top:2.5rem;font-size:17px}'
+                 '@media (prefers-color-scheme:dark){:root{color-scheme:dark}body{background:#10181d;color:#e4ecef}a{color:#9fd0ef}}'
+                 '</style></head><body><h1>We could not find that page</h1>'
                  '<p>The link may be old or mistyped.</p><p><a href="./">Find bingo near you</a></p>'
                  '<p><a href="ohio/">Ohio Bingo Finder</a></p>'
                  '<footer><p>FindBingo.org is a free community resource from <a href="https://www.vethomeguard.org/">Veteran Home Guardians</a>. '
-                 '<a href="privacy/">Privacy</a> · <a href="advertise/">Advertise on Find Bingo</a></p></footer></body></html>\n')
+                 '<a href="privacy/">Privacy</a> · <a href="advertise/">Advertise on Find Bingo</a></p></footer>'
+                 # Page views on the same counter as every other Find Bingo page (assets/analytics.js, written in).
+                 '<script>' + (ROOT / 'assets/analytics.js').read_text().strip() + '</script></body></html>\n')
 
 
 def findbingo_finishing(result):
