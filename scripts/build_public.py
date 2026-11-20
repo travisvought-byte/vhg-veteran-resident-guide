@@ -85,6 +85,7 @@ def outputs():
     assert result['bingo.html'].count(canonical) == 1
     result['bingo.html'] = result['bingo.html'].replace(canonical, forward)
     result.update(make_findbingo(ROOT))
+    result.update(findbingo_finishing(result))
     result['facilities.html'] = make_facilities(ROOT)
     result['index.html'] = result['index.html'].replace('<h3>For posts and community groups</h3>', '<p id="ohio-bingo-link"><a href="' + OHIO_BINGO + '/"><strong>Find Ohio bingo and senior centers</strong></a> - find nearby senior centers, exercise, crafts, games, meals and bingo by ZIP code.</p><h3>For posts and community groups</h3>', 1)
     # Keep state adapter regression fixtures private to tests; the public site has one view.
@@ -111,6 +112,37 @@ def outputs():
     result['sitemap.xml'] = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join('  <url><loc>' + u.replace('&', '&amp;') + '</loc></url>\n' for u in urls) + '</urlset>\n'
     result['robots.txt'] = 'User-agent: *\nAllow: /\n\nSitemap: ' + BASE_URL + 'sitemap.xml\n'
     return result
+
+
+# FindBingo.org (bingo-site/findbingo/, served by Cloudflare): a site icon on every page, so browser tabs,
+# bookmarks and search results do not show a blank icon, and a "page not found" page with a way back.
+FINDBINGO_ICON = ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#c8382c"/>'
+                  '<circle cx="32" cy="32" r="18" fill="#ffffff"/><text x="32" y="41" text-anchor="middle" '
+                  'font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="25" fill="#183449">B</text></svg>\n')
+def findbingo_icon_link(prefix):
+    return f'<link rel="icon" href="{prefix}favicon.svg" type="image/svg+xml">'
+FINDBINGO_404 = ('<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
+                 # Served at whatever address was not found, so every link resolves from the site root.
+                 '<base href="/"><title>Page not found | FindBingo.org</title><meta name="robots" content="noindex">' + findbingo_icon_link('') +
+                 '<style>body{font:20px/1.5 system-ui,sans-serif;margin:3rem auto;max-width:34rem;padding:0 1rem;color:#1f2f38}'
+                 'a{color:#183449;font-weight:700}footer{margin-top:2.5rem;font-size:17px}</style></head><body><h1>We could not find that page</h1>'
+                 '<p>The link may be old or mistyped.</p><p><a href="./">Find bingo near you</a></p>'
+                 '<p><a href="ohio/">Ohio Bingo Finder</a></p>'
+                 '<footer><p>FindBingo.org is a free community resource from <a href="https://www.vethomeguard.org/">Veteran Home Guardians</a>. '
+                 '<a href="privacy/">Privacy</a> · <a href="advertise/">Advertise on Find Bingo</a></p></footer></body></html>\n')
+
+
+def findbingo_finishing(result):
+    # findbingo-site/ is the same site's copy on the guide (the finder's data source); the two stay identical.
+    out = {'bingo-site/findbingo/favicon.svg': FINDBINGO_ICON, 'findbingo-site/favicon.svg': FINDBINGO_ICON,
+           'bingo-site/findbingo/404.html': FINDBINGO_404}
+    for name, text in result.items():
+        base = next((b for b in ('bingo-site/findbingo/', 'findbingo-site/') if name.startswith(b)), None)
+        if (base and name.endswith('.html') and isinstance(text, str)
+                and '</head>' in text and 'favicon.svg' not in text):
+            depth = name[len(base):].count('/')
+            out[name] = text.replace('</head>', findbingo_icon_link('../' * depth) + '</head>', 1)
+    return out
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
