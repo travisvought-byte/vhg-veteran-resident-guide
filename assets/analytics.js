@@ -14,11 +14,13 @@
     if (typeof getData !== 'function' || typeof counter.count !== 'function') return;
     counter.get_data = function (vars) {
       var data = getData(vars);
-      // The same counter runs on findbingo.org (and the retired bingo.vethomeguard.org). Pages away from
-      // the guide's own address carry their site name, so findbingo.org's home never reads as the guide's.
+      // One dashboard counts every site (guide.vethomeguard.org, findbingo.org, ohiobingo.org and the rest).
+      // Paths start with the site name, so each site's home page gets its own row instead of sharing "/".
       var host = location.hostname.replace(/^www\./, '');
-      var site = /(^|\.)(findbingo\.org|bingo\.vethomeguard\.org)$/.test(host) ? '/' + host : '';
-      data.p = site + location.pathname.replace(/\/index\.html$/, '/');
+      var site = '/' + host;
+      // A state switch on a page arrives as an event named state/xx, kept under the same site name.
+      data.p = vars && vars.event && vars.path ? site + '/' + String(vars.path).replace(/^\//, '')
+        : site + location.pathname.replace(/\/index\.html$/, '/');
       data.q = '';
       // Retain referral attribution without query strings or fragments.
       try {
@@ -28,6 +30,14 @@
       return data;
     };
     counter.count();
+    // Which state's guide people read: the page marks the state it shows on <html data-edition>.
+    var root = document.documentElement, shown = root.dataset.edition || '';
+    if (window.MutationObserver) new MutationObserver(function () {
+      var state = root.dataset.edition || '';
+      if (!/^[A-Z]{2}$/.test(state) || state === shown) return;
+      shown = state;
+      counter.count({path: 'state/' + state.toLowerCase(), title: document.title, event: true});
+    }).observe(root, {attributes: true, attributeFilter: ['data-edition']});
   };
   document.head.appendChild(script);
 }());

@@ -14,10 +14,10 @@
     if (typeof getData !== 'function' || typeof counter.count !== 'function') return;
     counter.get_data = function (vars) {
       var data = getData(vars);
-      // The same counter runs on findbingo.org (and the retired bingo.vethomeguard.org). Pages away from
-      // the guide's own address carry their site name, so findbingo.org's home never reads as the guide's.
+      // One dashboard counts every site (guide.vethomeguard.org, findbingo.org, ohiobingo.org and the rest).
+      // Paths start with the site name, so each site's home page gets its own row instead of sharing "/".
       var host = location.hostname.replace(/^www\./, '');
-      var site = /(^|\.)(findbingo\.org|bingo\.vethomeguard\.org)$/.test(host) ? '/' + host : '';
+      var site = '/' + host;
       data.p = site + location.pathname.replace(/\/index\.html$/, '/');
       data.q = '';
       // Retain referral attribution without query strings or fragments.
