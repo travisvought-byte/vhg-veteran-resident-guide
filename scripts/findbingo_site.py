@@ -11,6 +11,7 @@ import re
 from datetime import date
 from html import escape
 from urllib.parse import quote
+import place_map
 
 # Every state and DC has an entry in bingo-states.json, in alphabetical order by name. A state we have not
 # researched yet has coverage "pending": a plain "send us your games" card and page, kept out of search
@@ -68,6 +69,8 @@ def _ic(name):
 
 
 ZIP_STATES = {}
+# ZIP code points (the same ones zips.json carries), for pinning state-page cards on the map.
+ZIP_POINTS = {}
 
 
 def _load_zip_states(root):
@@ -249,7 +252,11 @@ def make_findbingo(root, ads=None, events=None):
         about += ('<p>We have not built lists for these states yet. Each has its own page with a free way to send us game times: '
                   + named(waiting) + '.</p>')
     page = (root / 'templates/findbingo/index.html').read_text()
-    for key, value in (('__SOURCES__', json.dumps(DATA_SOURCES)), ('__STATE_BUTTONS__', buttons), ('__ABOUT__', about), ('__ICONS__', ICONS), ('__BALLS__', BALLS),
+    ZIP_POINTS.clear()
+    ZIP_POINTS.update(zips)
+    for key, value in (('__MAP_BOX__', _map_box('', 'the bingo games listed below')),
+                       ('__LOCATE__', place_map.locate_button('zip', 'zip-form', 'zip-status', 'ZIPS', 'Or use my location')),
+                       ('__SOURCES__', json.dumps(DATA_SOURCES)), ('__STATE_BUTTONS__', buttons), ('__ABOUT__', about), ('__ICONS__', ICONS), ('__BALLS__', BALLS),
                        ('__UPDATED__', _date_label(generated_on)), ('__AD_HOME__', _ad_html(_ads_for(ads, 'home'), ''))):
         assert page.count(key) == 1, key
         page = page.replace(key, value)
@@ -278,7 +285,7 @@ Lists updated {_date_label(generated_on)}.
     # assets/analytics.js is written into the page, so index.html stays the whole page with no script files.
     assert page.count('</body>') == 1
     analytics = (root / 'assets/analytics.js').read_text().strip()
-    page = page.replace('</body>', '<script>' + analytics + '</script></body>', 1)
+    page = page.replace('</body>', place_map.script(root) + '<script>' + analytics + '</script></body>', 1)
     # Tell search engines what the site is and who publishes it. No Event markup: the lists hold weekly
     # schedules, not dated events.
     publisher = {'@type': 'Organization', 'name': 'Veteran Home Guardians', 'url': 'https://www.vethomeguard.org/',
@@ -313,6 +320,8 @@ Lists updated {_date_label(generated_on)}.
         'data.json': data_json + '\n',
         'zips.json': json.dumps(zips, separators=(',', ':')) + '\n',
         **pages,
+        # The map files (Leaflet), served from the site itself; place-map.js loads them only when a list has pins.
+        **place_map.vendor_files(root, 'assets/map/'),
     }
     # The same three files also go into bingo-site/findbingo/, which the Ohio-Bingo repository mirrors;
     # Cloudflare serves www.findbingo.org from that folder (the Ohio finder sits beside them in ohio/).
@@ -405,7 +414,9 @@ def _venue_html(v, s):
     else:
         call = f'<a class="solid" href="{escape(_maps(v["name"] + " " + v["address"]))}" target="_blank" rel="noopener noreferrer">{_ic("search")}Look up phone number ↗</a>'
     source = _out(v['source_url'], v['source_label']) if v.get('source_url') else _out(s['list_url'], s['list_label'])
-    return (f'<article id="{escape(v["id"])}"><p><span class="badge">{"Senior center bingo" if v.get("kind") == "senior_center" else "Bingo"}</span></p>'
+    kind = 'Senior center bingo' if v.get('kind') == 'senior_center' else 'Bingo'
+    days = ', '.join(dict.fromkeys(DAY_NAMES[x['day']] for x in v['sessions']))
+    return (f'<article id="{escape(v["id"])}"{_pin(v, "game", kind + " · " + v["city"] + (" · " + days if days else ""))}><p><span class="badge">{kind}</span></p>'
             f'<h3>{escape(v["name"])}</h3><p class="where">{_ic("pin")}{escape(v["city"])}</p>'
             + (f'<p class="small">{escape(v["audience"])}</p>' if v.get('audience') else '')
             + f'<div class="when"><p>{_ic("cal")}<strong>Bingo days:</strong></p><ul class="sessions"{"" if v.get("schedule_note") else " data-weekly"}>{sessions}</ul>'
@@ -420,7 +431,7 @@ def _venue_html(v, s):
 
 
 def _licensed_html(r, s):
-    return (f'<article id="{escape(r["id"])}"><p><span class="badge muted">{escape(s.get("license_badge", LICENSE_BADGE))}</span></p>'
+    return (f'<article id="{escape(r["id"])}"{_pin(r, "nodays", "Licensed for bingo, game days not posted · " + r["city"])}><p><span class="badge muted">{escape(s.get("license_badge", LICENSE_BADGE))}</span></p>'
             f'<h3>{escape(r["name"])}</h3><p class="where">{_ic("pin")}{escape(r["city"])}</p>'
             + '<div class="big-actions">' + (f'<a class="solid" href="tel:{re.sub(r"[^0-9]", "", r["phone"])}">{_ic("phone")}Call {escape(r["phone"])}</a>' if r.get('phone') else
                                              f'<a class="solid" href="{escape(_maps(r["name"] + " " + r["address"]))}" target="_blank" rel="noopener noreferrer">{_ic("search")}Look up phone number ↗</a>')
@@ -433,6 +444,22 @@ def _licensed_html(r, s):
 
 
 LICENSE_BADGE = 'Licensed for bingo · game days not posted'
+
+
+def _pin(r, kind, sub):
+    """Map pin attributes: the middle of the card's ZIP code (from the ZIP code points), or nothing."""
+    at = ZIP_POINTS.get(r.get('zip'))
+    if not at:
+        return ''
+    return f' data-pm-lat="{at[0]}" data-pm-lon="{at[1]}" data-pm-at="zip" data-pm-kind="{kind}" data-pm-sub="{escape(sub)}"'
+
+
+def _map_box(up, what):
+    """The map above a list. Group dots on the map carry no numbers: the site never states counts."""
+    return place_map.box('results' if not up else 'listings', up + 'assets/map/', title='See them on a map',
+                         label=f'Map of {what}. Every place on the map is also in the list.',
+                         legend=(('game', 'Bingo with game days'), ('nodays', 'Licensed, game days not posted')) + ((('you', 'Your ZIP code'),) if not up else ()),
+                         privacy_href=up + 'privacy/', zip_table='ZIPS' if not up else '', numbers=False, dark=True)
 
 
 def _license_line(r, s):
@@ -502,6 +529,8 @@ def _state_page(s, states, rows, style, analytics, generated_on, ads=(), events=
                  + ''.join(f'<li><a href="#county-{_slug(c)}">{escape(_area(c, short=True))}</a></li>' for c in counties) + '</ul></nav>')
     if rows:
         card = _licensed_html if s['coverage'] == 'licenses' else _venue_html
+        if any(r['zip'] in ZIP_POINTS for r in rows):
+            body += _map_box('../', f'the {name} bingo listed below')
         body += '<div id="listings">' + ''.join(
             f'<section aria-labelledby="county-{_slug(c)}"><h2 id="county-{_slug(c)}">{escape(_area(c))}</h2><div class="grid">'
             + ''.join(card(r, s) for r in rows if r['county'] == c) + '</div><p class="top"><a href="#top">Back to the top</a></p></section>'
@@ -540,7 +569,7 @@ def _state_page(s, states, rows, style, analytics, generated_on, ads=(), events=
             f'<main>{zip_form}{body}'
             f'<nav class="states" aria-labelledby="states-title"><h2 id="states-title">Bingo in other states</h2><div class="state-buttons">{others}</div>'
             '<p class="small-links"><a href="../">Search every state by ZIP code</a></p></nav></main>'
-            f'{_footer(generated_on)}{TODAY_SCRIPT if weekly else ""}<script>{analytics}</script></body></html>\n')
+            f'{_footer(generated_on)}{TODAY_SCRIPT if weekly else ""}{place_map.script() if "pm-box" in body else ""}<script>{analytics}</script></body></html>\n')
 
 
 def _json_ld(obj):
@@ -712,7 +741,7 @@ def _ad_html(ads, up):
 
 
 # ---- Privacy and Advertise pages ---------------------------------------------------------------------
-POLICY_DATE = 'November 19, 2026'
+POLICY_DATE = 'November 21, 2026'
 
 
 def _info_page(slug, title, description, heading, lead, body, style, analytics, generated_on):
@@ -821,6 +850,7 @@ PRIVACY = (
     '<ul><li>There are no accounts and no sign-in. We never ask for your name.</li>'
     '<li>We count visits without cookies and without keeping personal information.</li>'
     '<li>Your ZIP code search is worked out on your own phone or computer.</li>'
+    '<li>The map pictures come from OpenStreetMap, which sees your internet address and the area on the map.</li>'
     '<li>We do not sell personal information.</li></ul>'
     '<h2>Counting visits</h2>'
     '<p>We use ' + _ext('https://www.goatcounter.com/help/privacy', 'GoatCounter') + ' to count page views, so we know which pages people use. '
@@ -834,6 +864,10 @@ PRIVACY = (
     '<p>Your ZIP code does show in the page address (for example, findbingo.org/?zip=48161), so you can bookmark or share a search. '
     'If you search from a state page, or open Ohio’s finder with your ZIP code, your browser asks our web host for that address, '
     'the same way it asks for any web page.</p>'
+    '<h2>The map and “Use my location”</h2>'
+    '<p>' + place_map.TILE_PRIVACY + 'Read ' + _ext(place_map.TILE_PRIVACY_URL, 'the OpenStreetMap Foundation’s privacy policy') + '. '
+    'The map code itself (Leaflet) comes from this site. If you hide the map, your browser remembers that on your device, and the map pictures stop loading.</p>'
+    '<p>' + place_map.LOCATION_PRIVACY + '</p>'
     '<h2>Who serves the site</h2>'
     '<p>findbingo.org is served by Cloudflare. Some files, such as the bingo lists, can also load from GitHub Pages, where the site’s code is kept. '
     'Like any web host, Cloudflare and GitHub may keep server logs, including IP addresses, for security. '

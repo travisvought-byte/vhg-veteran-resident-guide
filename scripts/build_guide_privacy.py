@@ -5,8 +5,9 @@ counted by GoatCounter without cookies (assets/analytics.js drops everything aft
 in the page address, drafts and checklists stay in the browser, and corrections go by email.
 """
 from html import escape
+import place_map
 
-UPDATED = 'November 19, 2026'
+UPDATED = 'November 21, 2026'
 EMAIL = 'travis@vethomeguard.org'
 
 
@@ -33,6 +34,7 @@ def page():
 <ul><li>There are no accounts and no sign-in. We never ask for your name.</li>
 <li>We count visits without cookies and without keeping personal information.</li>
 <li>The state, county and help you choose stay on your own device and in the page address.</li>
+<li>The maps’ pictures come from OpenStreetMap, which sees your internet address and the area on the map.</li>
 <li>We do not sell personal information.</li></ul>
 <h2>Counting visits</h2>
 <p>We use {_a('https://www.goatcounter.com/help/privacy', 'GoatCounter')} to count page views, so we know which pages people use. GoatCounter does not use cookies and does not store personal information. For each page view it records things like the page visited, the site that sent you here, your browser, your screen size, and an approximate country worked out from your internet (IP) address. It does not store the IP address.</p>
@@ -40,6 +42,9 @@ def page():
 <h2>What you choose and type</h2>
 <p>The guide works in your browser. When you pick a state, a county or a kind of help, the page shows it from lists that download with the page; nothing is sent to us. Your choices show in the page address so you can bookmark or share them.</p>
 <p>Letters you write on the advocacy pages, checklists you tick and drafts in the guided assistance stay in your browser. We do not store or send them. You copy, print or send them yourself.</p>
+<h2>Maps and “Use my location”</h2>
+<p>The nursing home and assisted living page shows its list on a map. {escape(place_map.TILE_PRIVACY)}Read {_a(place_map.TILE_PRIVACY_URL, 'the OpenStreetMap Foundation’s privacy policy')}. The map code itself (Leaflet) comes from this site. If you hide the map, your browser remembers that on your device, and the map pictures stop loading.</p>
+<p>{escape(place_map.LOCATION_PRIVACY)}</p>
 <h2>Who hosts the site</h2>
 <p>The guide is hosted on GitHub Pages. GitHub may keep server logs, including IP addresses, for security. Read {_a('https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement', 'GitHub’s privacy statement')}. A few pages show a logo from a partner’s website, which receives an ordinary request for that picture.</p>
 <h2>Advertising</h2>

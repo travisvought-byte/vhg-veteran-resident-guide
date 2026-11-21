@@ -1,6 +1,7 @@
 """Build the self-contained Ohio nursing homes and rehab facilities page from reviewed public records."""
 import json, re
 from bingo_edition import TEMPLATE as _BINGO
+import place_map
 
 STYLE = re.search(r'<style>(.*?)</style>', _BINGO, re.S).group(1)
 
@@ -33,6 +34,17 @@ def make_facilities(root):
             .replace('__RETRIEVED__', source['nursing_homes']['retrieved_on'])
             .replace('__CMS_URL__', source['nursing_homes']['source_url']).replace('__ODH_URL__', source['residential_care']['source_url'])
             .replace('__NH_COUNT__', str(kinds['nursing_home'])).replace('__AL_COUNT__', str(kinds['residential_care'])))
+    # The map beside the list: it shows the facilities the list shows, pinned at the middle of their ZIP codes.
+    box = place_map.box('listings', 'assets/map/', title='See them on a map',
+                        label='Map of the facilities listed below. Every facility on the map is also in the list.',
+                        legend=(('facility', 'Nursing home'), ('assisted', 'Assisted living or residential care'),
+                                ('vhg', 'Veteran Home Guardians visits here'), ('you', 'Your ZIP code')),
+                        privacy_href='privacy.html', zip_table='ZIPS',
+                        extra_hint='The map shows the facilities in the list. To see others, use Show more, or narrow by county, type or ZIP code.')
+    locate = place_map.locate_button('fac-zip', 'fac-nearby', 'fac-status', 'ZIPS', 'Or use my location')
+    for key, value in (('__LOCATE__', locate), ('__MAP_BOX__', box), ('__MAP_SCRIPT__', place_map.script(root))):
+        assert page.count(key) == 1, key
+        page = page.replace(key, value)
     return page
 
 TEMPLATE = r'''<!doctype html>
@@ -45,11 +57,11 @@ TEMPLATE = r'''<!doctype html>
 </style></head><body><a class="skip" href="#listings">Skip to listings</a>
 <header class="page-only"><a href="index.html?view=seniors">&larr; Ohio Veteran Resident Resource Guide</a><p><img src="assets/vhg-logo.png" alt="Veteran Home Guardians" width="64" height="64"></p><h1>Ohio Nursing Homes, Rehab &amp; Assisted Living</h1><p>Find a nursing home, rehabilitation facility or assisted living community by name, county or ZIP code, then see the bingo games, senior centers and activities near it.</p></header>
 <main class="page-only">
-<form id="fac-nearby"><div class="tools"><div><label for="fac-zip">Your ZIP code</label><input id="fac-zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" pattern="[0-9]{5}" placeholder="e.g. 43334"></div><div><label for="fac-radius">Within</label><select id="fac-radius"><option value="10">10 miles</option><option value="25" selected>25 miles</option><option value="50">50 miles</option><option value="all">Any distance</option></select></div><div class="nearby-action"><button type="submit">Find nearby facilities</button></div></div></form><p id="fac-status" class="small" role="status" aria-live="polite">Distances are approximate straight-line miles.</p>
+<form id="fac-nearby"><div class="tools"><div><label for="fac-zip">Your ZIP code</label><input id="fac-zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" pattern="[0-9]{5}" placeholder="e.g. 43334"></div><div><label for="fac-radius">Within</label><select id="fac-radius"><option value="10">10 miles</option><option value="25" selected>25 miles</option><option value="50">50 miles</option><option value="all">Any distance</option></select></div><div class="nearby-action"><button type="submit">Find nearby facilities</button></div></div></form>__LOCATE__<p id="fac-status" class="small" role="status" aria-live="polite">Distances are approximate straight-line miles.</p>
 <p class="notice"><strong>What this list is.</strong> It has all __NH_COUNT__ Medicare- and Medicaid-certified nursing homes in Ohio (federal Provider Data Catalog) and __AL_COUNT__ active, state-licensed residential care or assisted living facilities (Ohio Department of Health), both retrieved __RETRIEVED__. It does not identify memory care units and does not include adult day services. It does not rate or recommend any facility. Confirm services, admission and visiting rules by phone, and check the state&rsquo;s <a href="https://aging.ohio.gov/navigator" target="_blank" rel="noopener noreferrer">Nursing Home Quality Navigator</a> for nursing home quality information.</p>
 <div class="tools"><div><label for="fac-type">Type of facility</label><select id="fac-type"><option value="">Nursing homes and assisted living</option><option value="nursing_home">Nursing homes and rehab</option><option value="residential_care">Assisted living and residential care</option></select></div><div><label for="fac-search">Search by name, town or company</label><input id="fac-search" type="search" placeholder="e.g. Marion, Trilogy, Pointe"></div></div><div class="tools"><div><label for="fac-county">County</label><select id="fac-county"><option value="">All Ohio counties</option>__COUNTIES__</select></div><div><label for="fac-own">Ownership (nursing homes)</label><select id="fac-own"><option value="">Any</option><option>Non profit</option><option>For profit</option><option>Government</option></select></div></div>
 <div class="actions"><button id="fac-reset" type="button">Clear filters</button><button id="fac-print" type="button">Print this list</button></div>
-<p id="fac-count" role="status" aria-live="polite"></p><section id="listings" aria-label="Nursing homes, rehab and assisted living facilities"></section>
+<p id="fac-count" role="status" aria-live="polite"></p>__MAP_BOX__<section id="listings" aria-label="Nursing homes, rehab and assisted living facilities"></section>
 <section class="submission"><h2>Correct or add a facility</h2><p>Spot a wrong phone number, a closed facility or a missing one? Every card has an &ldquo;Update this listing&rdquo; link that opens a prefilled email. Please share public facility information only, never resident or health details.</p><p>Activity or social services staff: <a href="bingo.html?organizer=1">tell us which games your residents attend</a>.</p></section>
 <footer><p>Sources: <a href="__CMS_URL__" target="_blank" rel="noopener noreferrer">CMS Provider Data Catalog, Nursing Home Provider Information</a> and the <a href="__ODH_URL__" target="_blank" rel="noopener noreferrer">Ohio Department of Health Facility Listing</a>, retrieved __RETRIEVED__; public directory fields only. Contact: <a href="mailto:travis@vethomeguard.org?subject=Ohio%20nursing%20home%20listing">travis@vethomeguard.org</a>.</p><p><a href="data/public/ohio-facilities.json">Download facility data</a> &middot; <a href="bingo.html">Ohio Bingo &amp; Senior Centers</a> &middot; <a href="index.html">Return to benefits and support referrals</a> &middot; <a href="privacy.html">Privacy</a></p></footer></main>
 <script>
@@ -65,7 +77,7 @@ function filteredFacilities(county,own,q,type=''){q=q.toLowerCase().trim();retur
 function gamesLink(f){return 'bingo.html?zip='+f.zip+'&radius=25&kind=bingo'}
 function updateEmail(f){const u=new URL('mailto:travis@vethomeguard.org');u.searchParams.set('subject','Facility listing: '+f.name);u.searchParams.set('body',['Facility: '+f.name,'Address: '+f.address,(f.ccn?'CMS number: '+f.ccn:'Ohio license: '+f.license_id),'','What should be corrected or added (public facility information only):',''].join('\n'));return u.href.replaceAll('+','%20')}
 function card(f){const chips=(f.vhg_visiting?'<span class="badge vhg">Veteran Home Guardians visits here</span> ':'')+(f.ohio_veterans_home?'<span class="badge state-home">Ohio Veterans Home</span> ':'')+'<span class="badge">'+(f.facility_type==='residential_care'?'Assisted living / residential care':'Nursing home')+'</span>'+(f.ownership?' <span class="badge">'+esc(f.ownership)+'</span>':'')+(f.chain?' <span class="badge">'+esc(f.chain)+'</span>':'')+(f.campus_nursing_home?' <span class="badge">Same campus as a nursing home</span>':'');
-return '<article id="'+esc(f.id)+'"><div class="chips">'+chips+'</div><h2>'+esc(f.name)+'</h2>'+(Number.isFinite(f.distanceMiles)?'<p class="badge">About '+f.distanceMiles.toFixed(1)+' miles away</p>':'')+'<p>'+esc(f.address)+'<br><strong>'+esc(f.county)+' County</strong></p><p class="facts">'+f.beds+(f.facility_type==='residential_care'?' licensed beds':' certified beds')+'</p><div class="actions">'+(f.phone?'<a href="tel:'+f.phone.replace(/\D/g,'')+'">'+esc(f.phone)+'</a>':'')+'<a href="https://www.google.com/maps/search/?api=1&amp;query='+encodeURIComponent(f.address)+'" target="_blank" rel="noopener noreferrer">Directions &#8599;</a><a href="'+esc(gamesLink(f))+'">Games and activities near here</a><a class="report" href="'+esc(updateEmail(f))+'">Update this listing</a></div></article>'}
+return '<article id="'+esc(f.id)+'"'+(ZIPS[f.zip]?' data-pm-zip="'+esc(f.zip)+'" data-pm-kind="'+(f.vhg_visiting?'vhg':f.facility_type==='residential_care'?'assisted':'facility')+'" data-pm-sub="'+esc((f.facility_type==='residential_care'?'Assisted living / residential care':'Nursing home')+' · '+f.city+(Number.isFinite(f.distanceMiles)?' · About '+f.distanceMiles.toFixed(1)+' miles away':''))+'"':'')+'><div class="chips">'+chips+'</div><h2>'+esc(f.name)+'</h2>'+(Number.isFinite(f.distanceMiles)?'<p class="badge">About '+f.distanceMiles.toFixed(1)+' miles away</p>':'')+'<p>'+esc(f.address)+'<br><strong>'+esc(f.county)+' County</strong></p><p class="facts">'+f.beds+(f.facility_type==='residential_care'?' licensed beds':' certified beds')+'</p><div class="actions">'+(f.phone?'<a href="tel:'+f.phone.replace(/\D/g,'')+'">'+esc(f.phone)+'</a>':'')+'<a href="https://www.google.com/maps/search/?api=1&amp;query='+encodeURIComponent(f.address)+'" target="_blank" rel="noopener noreferrer">Directions &#8599;</a><a href="'+esc(gamesLink(f))+'">Games and activities near here</a><a class="report" href="'+esc(updateEmail(f))+'">Update this listing</a></div></article>'}
 function render(){const county=$('fac-county').value,own=$('fac-own').value,q=$('fac-search').value,type=$('fac-type').value,base=filteredFacilities(county,own,q,type),radius=$('fac-radius').value==='all'?Infinity:Number($('fac-radius').value);
 const rows=activeZip?nearbyFacilities(base,activeZip,radius):[...base].sort((a,b)=>(b.vhg_visiting-a.vhg_visiting)||a.name.localeCompare(b.name));
 $('fac-count').textContent=rows.length+(activeZip?' facilities'+($('fac-radius').value==='all'?'':' within '+$('fac-radius').value+' miles')+' of '+activeZip+' · closest first':' of '+FAC.length+' facilities')+(county?' in '+county+' County':'');
@@ -80,4 +92,4 @@ $('fac-reset').onclick=()=>{['fac-county','fac-own','fac-type','fac-search','fac
 // Printing includes every match, not only the visible page; the page returns to its short view afterwards.
 $('fac-print').onclick=()=>{limit=Infinity;render();window.print();limit=PAGE;render()};
 render();
-</script></body></html>'''
+</script>__MAP_SCRIPT__</body></html>'''
