@@ -83,11 +83,16 @@ Travis's direction: the people who run bingo are the ones who need information a
 pitch has to match each state's own rules on bingo money.
 
 - **State rules.** A state entry in `bingo-states.json` may carry `halls`: `money` (`must_give`, `may_give` or
-  `own`), `money_note`, an optional `ad_note`, and `sources`. Only Ohio is `must_give` (the build checks this):
-  its veteran, fraternal and sporting groups must give part of their instant bingo profit to an outside charity,
-  which is what the Veteran Home Guardians partnership asks a share of. Virginia and Minnesota are `may_give`
-  (a group may give to other causes; we help find a local partner first). Kentucky, Michigan and Texas are
-  `own` (the money stays with the group; we never ask for a share). Research and figures are in
+  `own`), `money_note`, an optional `ad_note`, and `sources`. `must_give`: Ohio (veteran, fraternal and sporting
+  groups must give part of their instant bingo profit to an outside charity, which is what the Veteran Home
+  Guardians partnership asks a share of; the build requires Ohio to stay `must_give`) and Indiana (groups with at
+  least 90% of receipts from gaming must donate 60% to a non-affiliated qualified recipient; outside Ohio the page
+  offers help finding a local partner charity, never the VHG share). `may_give`: Virginia, Minnesota, West Virginia,
+  North Dakota (we help find a local partner first). `own`: Kentucky, Michigan, Texas, Missouri, Pennsylvania, New
+  York, Florida, Mississippi, New Mexico (the money stays with the group; we never ask for a share). Not yet
+  summarized: New Hampshire (no clear rule found on November 21, 2026), Montana (live bingo is run by licensed
+  gambling operators under a yearly permit, a different model) and the states without lists. The halls page groups
+  states from this data, so adding a state's `halls` updates it. Research and figures are in
   `docs/BINGO-OPPORTUNITY.md`. Check a state's rule from its law or regulator before adding it.
 - **State pages.** "Run a bingo game in ..." (`#run-a-game`) keeps the free listing email, then, where the state
   has `halls`, shows "What [state] law says about your bingo money" (`#money-rule`), any ad rule (`#ad-rule`),

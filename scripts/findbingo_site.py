@@ -115,8 +115,9 @@ def validate(states, venues, licensed, zips):
             h = s['halls']
             assert set(h) <= {'money', 'money_note', 'ad_note', 'sources'} and h['money'] in HALL_MONEY and h['money_note'].strip(), s['code']
             assert 'ad_note' not in h or h['ad_note'].strip(), s['code']
-            # Only Ohio's law requires an outside gift, which is what the Veteran Home Guardians partnership asks a share of.
-            assert (h['money'] == 'must_give') == (s['code'] == 'OH'), s['code']
+            # Ohio's required outside gift is what the Veteran Home Guardians partnership asks a share of; its pitch
+            # lives on the Ohio finder. Other states that require a gift get the local-partner offer (HALL_PITCH).
+            assert s['code'] != 'OH' or h['money'] == 'must_give', s['code']
             assert h['sources'] and all(x['url'].startswith('https://') and x['scope'] and date.fromisoformat(x['reviewed_on']) for x in h['sources']), s['code']
     pending = {(s['code'], c) for s in states for c in s.get('pending_counties', [])}
     assert not pending & {(v['state'], v['county']) for v in venues}, 'a county with listings is no longer pending'
@@ -498,6 +499,7 @@ def _hall_offers(up):
 HALL_PITCH = {
     'own': 'In {name} that money stays with your group for its own causes, so we never ask for a share of it. What we offer is help filling seats:',
     'may_give': 'If your group would like a partner cause, we can help you find a local one. Partnering is never required to be listed. What we offer every hall:',
+    'must_give': 'If your group has to give part of its bingo money to another charity, we can help you find a local partner charity. Partnering is never required to be listed. What we offer every hall:',
 }
 
 
@@ -531,6 +533,10 @@ def halls_page(states):
                  + (f'<p><strong>Ads:</strong> {escape(h["ad_note"])}</p>' if h.get('ad_note') else '')
                  + f'<p class="small">Checked {_date_label(max(x["reviewed_on"] for x in h["sources"]))}. Sources: {_rule_links(h)}</p>')
     rest = ', '.join(f'<a href="../{SLUGS[s["code"]]}/#run-a-game">{escape(s["name"])}</a>' for s in states if not s.get('halls') and s['code'] != 'OH')
+
+    def named(money):
+        names = [s['name'] for s in checked if s['halls']['money'] == money]
+        return escape(', '.join(names[:-1]) + ' and ' + names[-1] if len(names) > 1 else names[0])
     body = ('<p>Players come here to find a game. Halls and the groups that run them come here to be found. Every listing is free, and '
             'the help below is shaped to what your state allows.</p>'
             '<h2>What we offer every hall</h2>' + _hall_offers('../')
@@ -539,11 +545,11 @@ def halls_page(states):
             + '">Talk with us about your hall</a></div>'
             '<h2>Partnering with a charity, where your state’s rules allow</h2>'
             '<p>States treat bingo money in three different ways, and we only ask for what fits:</p>'
-            '<ul><li><strong>The law requires a gift to an outside charity</strong> (Ohio’s veteran, fraternal and sporting groups). '
-            'A hall can name Veteran Home Guardians as one of its recipients. We ask for a modest share of that required gift, usually 5 to 10 percent, not all of it. '
-            '<a href="../ohio/partners.html#sponsors">How partnership works in Ohio</a></li>'
-            '<li><strong>The law lets a group give to other causes</strong> (Virginia, Minnesota). If you want a partner cause, we help you find a local one first.</li>'
-            '<li><strong>The money stays with your group</strong> (Kentucky, Michigan, Texas). We never ask for a share. We help you reach players instead.</li></ul>'
+            '<ul><li><strong>The law requires some groups to give to an outside charity</strong> (' + named('must_give') + '). '
+            'In Ohio, where Veteran Home Guardians works, a hall can name us as one of its recipients. We ask for a modest share of that required gift, usually 5 to 10 percent, not all of it. '
+            '<a href="../ohio/partners.html#sponsors">How partnership works in Ohio</a> Elsewhere, we help you find a local partner charity first.</li>'
+            '<li><strong>The law lets a group give to other causes</strong> (' + named('may_give') + '). If you want a partner cause, we help you find a local one first.</li>'
+            '<li><strong>The money stays with your group</strong> (' + named('own') + '). We never ask for a share. We help you reach players instead.</li></ul>'
             '<h2>State rules we have checked</h2><p>Plain-language summaries with their sources. This is not legal advice; your state regulator has the final word.</p>'
             + rows
             + '<h2>Every other state</h2><p>We have not summarized these states’ rules yet. Each state page names who licenses bingo there and how to send us your game times: '
