@@ -77,6 +77,33 @@ be bought; ads are labeled and never decide which games are listed or their orde
 - Review every ad before it runs and turn down misleading ones (the Advertise page promises this). Remove an
   ad's entry once it ends; an ad picture removed from the list is not deleted from `findbingo-site/ads/` by the build.
 
+## Help for halls, state by state (added November 20, 2026)
+
+Travis's direction: the people who run bingo are the ones who need information and advertising, and the
+pitch has to match each state's own rules on bingo money.
+
+- **State rules.** A state entry in `bingo-states.json` may carry `halls`: `money` (`must_give`, `may_give` or
+  `own`), `money_note`, an optional `ad_note`, and `sources`. Only Ohio is `must_give` (the build checks this):
+  its veteran, fraternal and sporting groups must give part of their instant bingo profit to an outside charity,
+  which is what the Veteran Home Guardians partnership asks a share of. Virginia and Minnesota are `may_give`
+  (a group may give to other causes; we help find a local partner first). Kentucky, Michigan and Texas are
+  `own` (the money stays with the group; we never ask for a share). Research and figures are in
+  `docs/BINGO-OPPORTUNITY.md`. Check a state's rule from its law or regulator before adding it.
+- **State pages.** "Run a bingo game in ..." (`#run-a-game`) keeps the free listing email, then, where the state
+  has `halls`, shows "What [state] law says about your bingo money" (`#money-rule`), any ad rule (`#ad-rule`),
+  the sources and a "not legal advice" line, and the offer that fits the rule. A state without `halls` makes no
+  claim about its rules.
+- **https://www.findbingo.org/halls/** (`halls_page` in the generator): what we offer every hall, the three ways
+  states treat bingo money, every checked state's rules with sources, links to every other state's
+  `#run-a-game`, and a line for suppliers and distributors. Linked from every footer (the Ohio finder's too) and
+  in the sitemap.
+- **Hall game sites: $100 a month** (`HALL_SITE_PRICE`, owner direction November 20, 2026). We build a game site
+  for a hall, host it, and post the updates the hall sends by email or text, for one flat monthly fee; the hall
+  can stop any time, and its free listing stays either way. The price appears only on the Advertise page
+  (`#hall-site`); state pages and the halls page describe the service and link there.
+- The Advertise page now names halls and the groups that run games as the first audience, and labels the
+  partnership "Community partner (Ohio)".
+
 ## The map (added November 21, 2026)
 
 Every list on Find Bingo has a map above it, in the style of Nina's Map: the home page after a ZIP code or state search,

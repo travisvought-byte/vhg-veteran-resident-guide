@@ -514,11 +514,27 @@ const advertiseText = advertise.querySelector('main').textContent;
 for (const words of ['Every ad is labeled “Advertisement.”', 'Never inside them', 'Ads never add, remove, change or reorder listings',
   'We review every ad before it runs', 'misleading', 'Ad income supports Veteran Home Guardians'])
   assert(advertiseText.includes(words), 'advertise page says: ' + words);
-// The one price on the page is the featured event's $100 (owner direction, November 20, 2026); ads have no listed price.
-assert.deepEqual(advertiseText.match(/\$\s?\d[\d,]*/g), ['$100', '$100'], 'only the featured event price');
+// Prices on the page: the featured event's $100 and the hall game site's $100 a month (owner direction, November 20, 2026); ads have no listed price.
+assert.deepEqual(advertiseText.match(/\$\s?\d[\d,]*/g), ['$100', '$100', '$100', '$100'], 'only the featured event and hall site prices');
 assert(advertise.getElementById('events').textContent.includes('$100'), 'the price sits with featured events');
+assert(advertise.getElementById('hall-site').textContent.includes('$100 a month') && advertiseText.includes('Your games stay listed free'), 'hall site price, and listings stay free');
 assert(advertise.querySelector('main a[href^="mailto:travis@vethomeguard.org?subject=Advertising%20on%20Find%20Bingo"]'));
 assert(sitemap.includes('<loc>https://www.findbingo.org/privacy/</loc>') && sitemap.includes('<loc>https://www.findbingo.org/advertise/</loc>'));
+// Help for halls (owner direction, November 20, 2026): the pitch follows each state's own rule on bingo money.
+const hallsDoc = new JSDOM(fs.readFileSync(path.join(site, 'halls/index.html'), 'utf8')).window.document;
+const hallsText = hallsDoc.querySelector('main').textContent;
+assert(sitemap.includes('<loc>https://www.findbingo.org/halls/</loc>'), 'halls page is in the sitemap');
+for (const s of states.filter(x => x.halls)) assert(hallsDoc.getElementById('rules-' + s.code.toLowerCase()), 'halls page summarizes ' + s.name);
+assert(hallsText.includes('not legal advice') && hallsText.includes('Bingo suppliers and distributors'));
+assert(!hallsText.includes('$' + 100) && !kyDocText().includes('$' + 100), 'our prices live on the Advertise page; dollar figures elsewhere are legal limits');
+function kyDocText() { return ky.getElementById('run-a-game').textContent; }
+const kyRun = kyDocText();
+assert(kyRun.includes('never ask for a share') && !kyRun.includes('5 to 10') && ky.getElementById('money-rule') && ky.getElementById('ad-rule'),
+  'Kentucky groups keep their money, so no share is asked');
+const gaRun = ga.getElementById('run-a-game');
+assert(!gaRun.querySelector('#money-rule') && !gaRun.textContent.includes('5 to 10') && gaRun.querySelector('a[href="../halls/"]'),
+  'a state whose rules are not summarized makes no claim about them');
+assert(advertiseText.includes('Community partner (Ohio)') && advertise.querySelector('main a[href="../halls/"]'), 'the partnership is offered where the law fits it');
 const allPages = [];
 (function walk(dir) {
   for (const e of fs.readdirSync(dir, {withFileTypes: true})) {
