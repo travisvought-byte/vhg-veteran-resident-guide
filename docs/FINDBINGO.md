@@ -346,6 +346,9 @@ and may be personal, so cards offer a phone lookup. The map was last updated Sep
 
 ### Official lists to import next
 
+Which states to build first, by how much money charitable gaming raises there, is in
+`docs/BINGO-OPPORTUNITY.md` (November 20, 2026).
+
 These states publish something better than we show today. Import them in this order, best first. Do
 the collection for several states first, then one build and one pull request.
 
