@@ -11,11 +11,11 @@
 </style></head><body><a class="skip" href="#listings">Skip to listings</a>
 <header class="page-only"><a href="index.html?view=seniors">&larr; Ohio Veteran Resident Resource Guide</a><p><img src="assets/vhg-logo.png" alt="Veteran Home Guardians" width="64" height="64"></p><h1>Ohio Nursing Homes, Rehab &amp; Assisted Living</h1><p>Find a nursing home, rehabilitation facility or assisted living community by name, county or ZIP code, then see the bingo games, senior centers and activities near it.</p></header>
 <main class="page-only">
-<form id="fac-nearby"><div class="tools"><div><label for="fac-zip">Your ZIP code</label><input id="fac-zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" pattern="[0-9]{5}" placeholder="e.g. 43334"></div><div><label for="fac-radius">Within</label><select id="fac-radius"><option value="10">10 miles</option><option value="25" selected>25 miles</option><option value="50">50 miles</option><option value="all">Any distance</option></select></div><div class="nearby-action"><button type="submit">Find nearby facilities</button></div></div></form><p id="fac-status" class="small" role="status" aria-live="polite">Distances are approximate straight-line miles.</p>
+<form id="fac-nearby"><div class="tools"><div><label for="fac-zip">Your ZIP code</label><input id="fac-zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" pattern="[0-9]{5}" placeholder="e.g. 43334"></div><div><label for="fac-radius">Within</label><select id="fac-radius"><option value="10">10 miles</option><option value="25" selected>25 miles</option><option value="50">50 miles</option><option value="all">Any distance</option></select></div><div class="nearby-action"><button type="submit">Find nearby facilities</button></div></div></form><p class="pm-locate-row"><button type="button" class="pm-locate" data-pm-locate hidden data-pm-zip-input="fac-zip" data-pm-form="fac-nearby" data-pm-status="fac-status" data-pm-zip-table="ZIPS"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>Or use my location</button></p><p id="fac-status" class="small" role="status" aria-live="polite">Distances are approximate straight-line miles.</p>
 <p class="notice"><strong>What this list is.</strong> It has all 924 Medicare- and Medicaid-certified nursing homes in Ohio (federal Provider Data Catalog) and 817 active, state-licensed residential care or assisted living facilities (Ohio Department of Health), both retrieved 2026-10-29. It does not identify memory care units and does not include adult day services. It does not rate or recommend any facility. Confirm services, admission and visiting rules by phone, and check the state&rsquo;s <a href="https://aging.ohio.gov/navigator" target="_blank" rel="noopener noreferrer">Nursing Home Quality Navigator</a> for nursing home quality information.</p>
 <div class="tools"><div><label for="fac-type">Type of facility</label><select id="fac-type"><option value="">Nursing homes and assisted living</option><option value="nursing_home">Nursing homes and rehab</option><option value="residential_care">Assisted living and residential care</option></select></div><div><label for="fac-search">Search by name, town or company</label><input id="fac-search" type="search" placeholder="e.g. Marion, Trilogy, Pointe"></div></div><div class="tools"><div><label for="fac-county">County</label><select id="fac-county"><option value="">All Ohio counties</option><option>Adams</option><option>Allen</option><option>Ashland</option><option>Ashtabula</option><option>Athens</option><option>Auglaize</option><option>Belmont</option><option>Brown</option><option>Butler</option><option>Carroll</option><option>Champaign</option><option>Clark</option><option>Clermont</option><option>Clinton</option><option>Columbiana</option><option>Coshocton</option><option>Crawford</option><option>Cuyahoga</option><option>Darke</option><option>Defiance</option><option>Delaware</option><option>Erie</option><option>Fairfield</option><option>Fayette</option><option>Franklin</option><option>Fulton</option><option>Gallia</option><option>Geauga</option><option>Greene</option><option>Guernsey</option><option>Hamilton</option><option>Hancock</option><option>Hardin</option><option>Harrison</option><option>Henry</option><option>Highland</option><option>Hocking</option><option>Holmes</option><option>Huron</option><option>Jackson</option><option>Jefferson</option><option>Knox</option><option>Lake</option><option>Lawrence</option><option>Licking</option><option>Logan</option><option>Lorain</option><option>Lucas</option><option>Madison</option><option>Mahoning</option><option>Marion</option><option>Medina</option><option>Meigs</option><option>Mercer</option><option>Miami</option><option>Monroe</option><option>Montgomery</option><option>Morgan</option><option>Morrow</option><option>Muskingum</option><option>Noble</option><option>Ottawa</option><option>Paulding</option><option>Perry</option><option>Pickaway</option><option>Pike</option><option>Portage</option><option>Preble</option><option>Putnam</option><option>Richland</option><option>Ross</option><option>Sandusky</option><option>Scioto</option><option>Seneca</option><option>Shelby</option><option>Stark</option><option>Summit</option><option>Trumbull</option><option>Tuscarawas</option><option>Union</option><option>Van Wert</option><option>Vinton</option><option>Warren</option><option>Washington</option><option>Wayne</option><option>Williams</option><option>Wood</option><option>Wyandot</option></select></div><div><label for="fac-own">Ownership (nursing homes)</label><select id="fac-own"><option value="">Any</option><option>Non profit</option><option>For profit</option><option>Government</option></select></div></div>
 <div class="actions"><button id="fac-reset" type="button">Clear filters</button><button id="fac-print" type="button">Print this list</button></div>
-<p id="fac-count" role="status" aria-live="polite"></p><section id="listings" aria-label="Nursing homes, rehab and assisted living facilities"></section>
+<p id="fac-count" role="status" aria-live="polite"></p><section class="pm-box" id="map-box" hidden data-pm-list="listings" data-pm-base="assets/map/" data-pm-zip-table="ZIPS" aria-labelledby="map-title"><div class="pm-head"><h2 id="map-title">See them on a map</h2><button type="button" class="pm-toggle" aria-expanded="true" aria-controls="map-area">Hide the map</button></div><div class="pm-area" id="map-area"><div class="pm-map" role="region" aria-label="Map of the facilities listed below. Every facility on the map is also in the list."></div><ul class="pm-legend"><li><span class="pm-pin pm-k-facility" aria-hidden="true"></span>Nursing home</li><li><span class="pm-pin pm-k-assisted" aria-hidden="true"></span>Assisted living or residential care</li><li><span class="pm-pin pm-k-vhg" aria-hidden="true"></span>Veteran Home Guardians visits here</li><li><span class="pm-you" aria-hidden="true"></span>Your ZIP code</li></ul><p class="pm-hint" data-touch="Tap a pin to call or get directions. Pinch to zoom. To move the map with one finger, tap the map once first. The map shows the facilities in the list. To see others, use Show more, or narrow by county, type or ZIP code." data-awake="Tap or click a pin to call or get directions. Press Tab to move between pins and Enter to open one. The map shows the facilities in the list. To see others, use Show more, or narrow by county, type or ZIP code.">Tap or click a pin to call or get directions. Press Tab to move between pins and Enter to open one. The map shows the facilities in the list. To see others, use Show more, or narrow by county, type or ZIP code.</p><p class="pm-note">Pins sit in the middle of each ZIP code, not at the door, so use the address or the Directions button to get there. The map pictures come from OpenStreetMap, which sees the area you look at. <a href="privacy.html" data-pm-privacy>Privacy</a></p></div></section><section id="listings" aria-label="Nursing homes, rehab and assisted living facilities"></section>
 <section class="submission"><h2>Correct or add a facility</h2><p>Spot a wrong phone number, a closed facility or a missing one? Every card has an &ldquo;Update this listing&rdquo; link that opens a prefilled email. Please share public facility information only, never resident or health details.</p><p>Activity or social services staff: <a href="bingo.html?organizer=1">tell us which games your residents attend</a>.</p></section>
 <footer><p>Sources: <a href="https://data.cms.gov/provider-data/dataset/4pq5-n9py" target="_blank" rel="noopener noreferrer">CMS Provider Data Catalog, Nursing Home Provider Information</a> and the <a href="https://publicapps.odh.ohio.gov/eid/reports/EID_Report_Criteria.aspx" target="_blank" rel="noopener noreferrer">Ohio Department of Health Facility Listing</a>, retrieved 2026-10-29; public directory fields only. Contact: <a href="mailto:travis@vethomeguard.org?subject=Ohio%20nursing%20home%20listing">travis@vethomeguard.org</a>.</p><p><a href="data/public/ohio-facilities.json">Download facility data</a> &middot; <a href="bingo.html">Ohio Bingo &amp; Senior Centers</a> &middot; <a href="index.html">Return to benefits and support referrals</a> &middot; <a href="privacy.html">Privacy</a></p></footer></main>
 <script>
@@ -31,7 +31,7 @@ function filteredFacilities(county,own,q,type=''){q=q.toLowerCase().trim();retur
 function gamesLink(f){return 'bingo.html?zip='+f.zip+'&radius=25&kind=bingo'}
 function updateEmail(f){const u=new URL('mailto:travis@vethomeguard.org');u.searchParams.set('subject','Facility listing: '+f.name);u.searchParams.set('body',['Facility: '+f.name,'Address: '+f.address,(f.ccn?'CMS number: '+f.ccn:'Ohio license: '+f.license_id),'','What should be corrected or added (public facility information only):',''].join('\n'));return u.href.replaceAll('+','%20')}
 function card(f){const chips=(f.vhg_visiting?'<span class="badge vhg">Veteran Home Guardians visits here</span> ':'')+(f.ohio_veterans_home?'<span class="badge state-home">Ohio Veterans Home</span> ':'')+'<span class="badge">'+(f.facility_type==='residential_care'?'Assisted living / residential care':'Nursing home')+'</span>'+(f.ownership?' <span class="badge">'+esc(f.ownership)+'</span>':'')+(f.chain?' <span class="badge">'+esc(f.chain)+'</span>':'')+(f.campus_nursing_home?' <span class="badge">Same campus as a nursing home</span>':'');
-return '<article id="'+esc(f.id)+'"><div class="chips">'+chips+'</div><h2>'+esc(f.name)+'</h2>'+(Number.isFinite(f.distanceMiles)?'<p class="badge">About '+f.distanceMiles.toFixed(1)+' miles away</p>':'')+'<p>'+esc(f.address)+'<br><strong>'+esc(f.county)+' County</strong></p><p class="facts">'+f.beds+(f.facility_type==='residential_care'?' licensed beds':' certified beds')+'</p><div class="actions">'+(f.phone?'<a href="tel:'+f.phone.replace(/\D/g,'')+'">'+esc(f.phone)+'</a>':'')+'<a href="https://www.google.com/maps/search/?api=1&amp;query='+encodeURIComponent(f.address)+'" target="_blank" rel="noopener noreferrer">Directions &#8599;</a><a href="'+esc(gamesLink(f))+'">Games and activities near here</a><a class="report" href="'+esc(updateEmail(f))+'">Update this listing</a></div></article>'}
+return '<article id="'+esc(f.id)+'"'+(ZIPS[f.zip]?' data-pm-zip="'+esc(f.zip)+'" data-pm-kind="'+(f.vhg_visiting?'vhg':f.facility_type==='residential_care'?'assisted':'facility')+'" data-pm-sub="'+esc((f.facility_type==='residential_care'?'Assisted living / residential care':'Nursing home')+' · '+f.city+(Number.isFinite(f.distanceMiles)?' · About '+f.distanceMiles.toFixed(1)+' miles away':''))+'"':'')+'><div class="chips">'+chips+'</div><h2>'+esc(f.name)+'</h2>'+(Number.isFinite(f.distanceMiles)?'<p class="badge">About '+f.distanceMiles.toFixed(1)+' miles away</p>':'')+'<p>'+esc(f.address)+'<br><strong>'+esc(f.county)+' County</strong></p><p class="facts">'+f.beds+(f.facility_type==='residential_care'?' licensed beds':' certified beds')+'</p><div class="actions">'+(f.phone?'<a href="tel:'+f.phone.replace(/\D/g,'')+'">'+esc(f.phone)+'</a>':'')+'<a href="https://www.google.com/maps/search/?api=1&amp;query='+encodeURIComponent(f.address)+'" target="_blank" rel="noopener noreferrer">Directions &#8599;</a><a href="'+esc(gamesLink(f))+'">Games and activities near here</a><a class="report" href="'+esc(updateEmail(f))+'">Update this listing</a></div></article>'}
 function render(){const county=$('fac-county').value,own=$('fac-own').value,q=$('fac-search').value,type=$('fac-type').value,base=filteredFacilities(county,own,q,type),radius=$('fac-radius').value==='all'?Infinity:Number($('fac-radius').value);
 const rows=activeZip?nearbyFacilities(base,activeZip,radius):[...base].sort((a,b)=>(b.vhg_visiting-a.vhg_visiting)||a.name.localeCompare(b.name));
 $('fac-count').textContent=rows.length+(activeZip?' facilities'+($('fac-radius').value==='all'?'':' within '+$('fac-radius').value+' miles')+' of '+activeZip+' · closest first':' of '+FAC.length+' facilities')+(county?' in '+county+' County':'');
@@ -46,4 +46,419 @@ $('fac-reset').onclick=()=>{['fac-county','fac-own','fac-type','fac-search','fac
 // Printing includes every match, not only the visible page; the page returns to its short view afterwards.
 $('fac-print').onclick=()=>{limit=Infinity;render();window.print();limit=PAGE;render()};
 render();
-</script><script defer src="assets/analytics.js"></script></body></html>
+</script><script>/* Place map: shows the places in a page's list on a map you can zoom, in the style of Nina's Map.
+ * The list stays the page: the map only shows what the list shows, and every place on the map is also in the list.
+ * Without JavaScript, or until the map files load, the map box stays hidden and the plain list is the page.
+ *
+ * Markup (written by scripts/place_map.py):
+ *   <section class="pm-box" hidden data-pm-list="results" data-pm-base="(folder of the map files)" ...>
+ *   - data-pm-list: id of the list container. The map follows it as the page redraws the list.
+ *   - data-pm-base: folder with leaflet.js, leaflet.css, leaflet.markercluster.js and markercluster.css (loaded only when needed).
+ *   - data-pm-zip-table: name of the page's ZIP code table ({"43334": [lat, lon]}), for cards marked with data-pm-zip.
+ *   - data-pm-numbers="0": group nearby pins under a plain dot, with no numbers on it.
+ *   - data-pm-dark="1": follow the device's dark mode (only on pages that have one).
+ * Cards: any element in the list with data-pm-zip (or data-pm-lat and data-pm-lon) and an id gets a pin.
+ *   data-pm-at="zip" says a data-pm-lat/lon point is the middle of the card's ZIP code (the pin's box then says so).
+ *   data-pm-kind picks the pin color, data-pm-sub is the line under the name in the pin's box.
+ * "Use my location" buttons: [data-pm-locate] with data-pm-zip-input, data-pm-zip-table and data-pm-form. The location
+ *   stays on the device: the page finds the nearest ZIP code itself and searches it like a typed one.
+ * Map pictures come from OpenStreetMap. Nothing else is sent anywhere, and nothing is stored except whether the map is hidden.
+ */
+(function () {
+  'use strict';
+  if (typeof document === 'undefined' || !document.querySelector || !document.addEventListener) return;
+  if (window.PlaceMap) return;
+
+  var CSS = [
+    '.pm-box{margin:18px 0 10px;background:var(--card,#fff);border:1px solid var(--line,#cfd8d2);border-radius:14px;padding:4px 16px 12px}',
+    '.pm-box[hidden],.pm-area[hidden],[data-pm-locate][hidden]{display:none!important}',
+    '.pm-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 14px}',
+    '.pm-head h2{margin:12px 0 6px;font-size:1.3em;line-height:1.2}',
+    '.pm-toggle,.pm-show,.pm-locate{font:inherit;font-size:17px;font-weight:700;line-height:1.2;min-height:48px;padding:6px 16px;border-radius:10px;cursor:pointer;',
+    'border:2px solid var(--accent,#2f5a45);background:var(--card,#fff);color:var(--accent,#2f5a45)}',
+    '.pm-toggle:hover,.pm-show:hover,.pm-locate:hover{text-decoration:underline}',
+    '.pm-show{min-height:44px;font-size:16px;padding:4px 14px;margin:4px 0}',
+    '.pm-locate{display:inline-flex;align-items:center;gap:8px}',
+    '.pm-map{height:min(62vh,480px);min-height:300px;border-radius:10px;border:1px solid var(--line,#cfd8d2);background:#dfe7e4;z-index:0}',
+    '.pm-map:focus-visible{outline:3px solid #b8862b;outline-offset:2px}',
+    '.pm-hint,.pm-note{font-size:16px;line-height:1.45;margin:8px 0 0}',
+    '.pm-legend{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:4px 20px;font-size:16px}',
+    '.pm-legend li{display:flex;align-items:center;gap:8px;margin:0}',
+    '.pm-pin{display:block;box-sizing:border-box;width:24px;height:24px;border-radius:50%;border:3px solid #fff;box-shadow:0 1px 5px rgba(0,0,0,.5);background:#2f7a4f}',
+    '.pm-legend .pm-pin{display:inline-block;width:18px;height:18px;border-width:2px;flex:none}.pm-legend .pm-you{display:inline-block;width:16px;height:16px;border-width:3px;flex:none}',
+    '.pm-k-game{background:#2f7a4f}.pm-k-nodays{background:#9a6b12}.pm-k-center{background:#1d5f8a}',
+    '.pm-k-facility{background:#183449}.pm-k-assisted{background:#6a4a8c}.pm-k-vhg{background:#b5462a}',
+    '.pm-you{display:block;box-sizing:border-box;width:22px;height:22px;border-radius:50%;background:#d0451b;border:4px solid #fff;box-shadow:0 0 0 3px #d0451b}',
+    '.pm-icon:focus{outline:none}.pm-icon:focus-visible .pm-pin,.pm-icon:focus-visible .pm-you,.pm-cluster:focus-visible span{outline:4px solid #b8862b;outline-offset:2px}',
+    '.pm-cluster span{display:block;box-sizing:border-box;width:38px;height:38px;border-radius:50%;background:#2f5a45;border:4px solid #fff;',
+    'box-shadow:0 0 0 7px rgba(47,90,69,.3),0 1px 6px rgba(0,0,0,.4)}',
+    '.pm-map .marker-cluster{background:rgba(24,52,73,.25);border-radius:50%}',
+    '.pm-map .marker-cluster div{background:rgba(24,52,73,.9);color:#fff;font-weight:700;width:32px;height:32px;margin:4px;border-radius:50%;text-align:center;line-height:32px;font-size:14px}',
+    '.pm-map.leaflet-container{font:16px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}',
+    '.pm-box .pm-map .leaflet-bar a{width:44px;height:44px;line-height:44px;font-size:24px}',
+    '.pm-map .leaflet-popup-content{margin:14px 16px;font-size:17px;line-height:1.4;min-width:210px}',
+    '.pm-map .leaflet-popup-content-wrapper,.pm-map .leaflet-popup-tip{background:var(--card,#fff);color:var(--ink,#1f2f38)}',
+    '.pm-box .pm-map a.leaflet-popup-close-button{width:40px;height:40px;font:28px/38px Tahoma,Verdana,sans-serif;color:var(--ink,#555)}',
+    '.pm-pop strong{display:block;font-size:19px;line-height:1.25;padding-right:22px}',
+    '.pm-pop .pm-sub{display:block;margin-top:4px}.pm-pop .pm-approx{display:block;margin-top:6px;font-size:15px;opacity:.85}',
+    '.pm-acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}',
+    '.pm-box .pm-acts a,.pm-box .pm-acts button{font:inherit;font-size:16px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:4px 12px;',
+    'border-radius:8px;text-decoration:none;cursor:pointer;border:2px solid var(--accent,#2f5a45);background:var(--card,#fff);color:var(--accent,#2f5a45)}',
+    '.pm-box .pm-acts .pm-call{background:var(--green,#2f5a45);border-color:var(--green,#2f5a45);color:#fff}',
+    '@media (max-width:760px){.pm-map{height:54vh;min-height:280px}.pm-box{padding:2px 12px 10px}}',
+    '@media screen and (prefers-color-scheme:dark){.pm-dark .pm-map .leaflet-tile-pane{filter:brightness(.72) contrast(1.12) saturate(.75)}',
+    '.pm-dark .pm-map{background:#22313a}.pm-dark .pm-pin,.pm-dark .pm-cluster span{border-color:#e4ecef}',
+    '.pm-dark .pm-map .leaflet-bar a,.pm-box.pm-dark .pm-map .leaflet-bar a{background:#1a242b;color:#e4ecef;border-color:#3d4d55}.pm-dark .pm-map .leaflet-control-attribution{background:rgba(16,24,29,.85);color:#c3d0d6}',
+    '.pm-box.pm-dark .pm-map .leaflet-control-attribution a{color:#9fd0ef}.pm-box.pm-dark .pm-map a.leaflet-popup-close-button{color:#c3d0d6}}',
+    '@media print{.pm-box,.pm-show,[data-pm-locate]{display:none!important}}'
+  ].join('');
+
+  function addStyle() {
+    if (document.getElementById('pm-style')) return;
+    var s = document.createElement('style');
+    s.id = 'pm-style';
+    s.textContent = CSS;
+    (document.head || document.documentElement).appendChild(s);
+  }
+
+  function store(key, value) {
+    try {
+      if (value === undefined) return window.localStorage.getItem(key);
+      if (value === null) window.localStorage.removeItem(key); else window.localStorage.setItem(key, value);
+    } catch (e) { /* private window or blocked storage: the map just starts shown */ }
+    return null;
+  }
+
+  // The page's ZIP code table, read by name (a top-level const or let is not a window property).
+  function table(name) {
+    if (!/^[A-Za-z_$][\w$]*$/.test(name || '')) return null;
+    try { return Function('return typeof ' + name + '!=="undefined"?' + name + ':null')(); } catch (e) { return null; }
+  }
+
+  function miles(a, b) {
+    var r = Math.PI / 180, la = (b[0] - a[0]) * r, lo = (b[1] - a[1]) * r;
+    var h = Math.sin(la / 2) * Math.sin(la / 2) + Math.cos(a[0] * r) * Math.cos(b[0] * r) * Math.sin(lo / 2) * Math.sin(lo / 2);
+    return 3958.7613 * 2 * Math.atan2(Math.sqrt(h), Math.sqrt(Math.max(0, 1 - h)));
+  }
+
+  function nearestZip(zips, at) {
+    var best = null, bd = Infinity;
+    for (var z in zips) {
+      if (!Object.prototype.hasOwnProperty.call(zips, z)) continue;
+      var c = zips[z];
+      if (!c || Math.abs(c[0] - at[0]) > 3 || Math.abs(c[1] - at[1]) > 4) continue; // only nearby ZIP codes need the exact sum
+      var d = miles(at, c);
+      if (d < bd) { bd = d; best = z; }
+    }
+    return best ? { zip: best, miles: bd } : null;
+  }
+
+  function reduced() {
+    try { return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) { return false; }
+  }
+
+  // Leaflet and the clustering add-on load from this site, only once a list has places to show.
+  var loading = null;
+  function load(base) {
+    if (window.L && window.L.markerClusterGroup) return Promise.resolve();
+    if (loading) return loading;
+    function css(href) {
+      var l = document.createElement('link');
+      l.rel = 'stylesheet'; l.href = href;
+      document.head.appendChild(l);
+    }
+    function js(src) {
+      return new Promise(function (ok, fail) {
+        var s = document.createElement('script');
+        s.src = src; s.onload = ok; s.onerror = fail;
+        document.head.appendChild(s);
+      });
+    }
+    css(base + 'leaflet.css');
+    css(base + 'markercluster.css');
+    loading = js(base + 'leaflet.js').then(function () { return js(base + 'leaflet.markercluster.js'); });
+    loading.catch(function () { loading = null; });
+    return loading;
+  }
+
+  function shown(el) {
+    for (var e = el; e && e.nodeType === 1; e = e.parentElement) {
+      if (e.hidden) return false;
+      try { if (window.getComputedStyle(e).display === 'none') return false; } catch (err) { /* keep looking */ }
+    }
+    return true;
+  }
+
+  function text(el) { return el ? el.textContent.replace(/\s+/g, ' ').trim() : ''; }
+
+  function Box(box) {
+    this.box = box;
+    this.list = document.getElementById(box.getAttribute('data-pm-list'));
+    this.base = box.getAttribute('data-pm-base') || 'assets/map/';
+    this.zipTable = box.getAttribute('data-pm-zip-table') || '';
+    this.numbers = box.getAttribute('data-pm-numbers') !== '0';
+    this.area = box.querySelector('.pm-area');
+    this.mapEl = box.querySelector('.pm-map');
+    this.toggle = box.querySelector('.pm-toggle');
+    this.hint = box.querySelector('.pm-hint');
+    this.key = 'pm-hidden:' + location.pathname;
+    this.map = null; this.cluster = null; this.youLayer = null; this.markers = {}; this.lastKey = null;
+    if (box.getAttribute('data-pm-dark') === '1') box.classList.add('pm-dark');
+    var self = this;
+    if (this.toggle) this.toggle.addEventListener('click', function () { self.setOpen(self.area.hidden); });
+    if (this.list && window.MutationObserver) {
+      var t = null;
+      new MutationObserver(function () { clearTimeout(t); t = setTimeout(function () { self.refresh(); }, 30); })
+        .observe(this.list, { childList: true });
+    }
+    this.list && this.list.addEventListener('click', function (e) {
+      var b = e.target.closest && e.target.closest('.pm-show');
+      if (b) self.showCard(b.getAttribute('data-pm-for'));
+    });
+    this.refresh();
+  }
+
+  Box.prototype.points = function () {
+    var zips = this.zipTable ? table(this.zipTable) : null, out = [];
+    if (!this.list) return out;
+    var cards = this.list.querySelectorAll('[data-pm-zip],[data-pm-lat]');
+    for (var i = 0; i < cards.length; i++) {
+      var c = cards[i], at = null;
+      if (!c.id || (c.closest && c.closest('[hidden]'))) continue;
+      if (c.hasAttribute('data-pm-lat')) at = [Number(c.getAttribute('data-pm-lat')), Number(c.getAttribute('data-pm-lon'))];
+      else if (zips && zips[c.getAttribute('data-pm-zip')]) at = zips[c.getAttribute('data-pm-zip')];
+      if (at && isFinite(at[0]) && isFinite(at[1])) out.push({ card: c, id: c.id, at: at });
+    }
+    return out;
+  };
+
+  Box.prototype.origin = function () {
+    var zips = this.zipTable ? table(this.zipTable) : null;
+    var zip = new URLSearchParams(location.search).get('zip');
+    return zips && zip && zips[zip] ? { zip: zip, at: zips[zip] } : null;
+  };
+
+  Box.prototype.setOpen = function (open) {
+    this.area.hidden = !open;
+    this.toggle.setAttribute('aria-expanded', String(open));
+    this.toggle.textContent = open ? 'Hide the map' : 'Show the map';
+    store(this.key, open ? null : '1');
+    var shows = this.list ? this.list.querySelectorAll('.pm-show') : [];
+    for (var i = 0; i < shows.length; i++) shows[i].hidden = !open;
+    if (open) this.refresh(true);
+  };
+
+  Box.prototype.refresh = function (force) {
+    var self = this, pts = this.points();
+    if (!pts.length) { this.box.hidden = true; return; }
+    if (store(this.key) === '1' && !this.map) {
+      // The visitor hid the map: keep the box with its "Show the map" button, and load nothing.
+      this.box.hidden = false; this.area.hidden = true;
+      this.toggle.setAttribute('aria-expanded', 'false'); this.toggle.textContent = 'Show the map';
+      return;
+    }
+    load(this.base).then(function () {
+      self.box.hidden = false;
+      if (store(self.key) === '1') { self.area.hidden = true; self.toggle.setAttribute('aria-expanded', 'false'); self.toggle.textContent = 'Show the map'; }
+      // A map drawn while its page part is hidden (a printed flyer, say) has no size and cannot place its pins: wait.
+      if (self.area.hidden || !shown(self.mapEl)) return;
+      try { self.draw(self.points(), force); } catch (e) { self.box.hidden = true; /* the list is still the whole page */ }
+    }, function () { /* the map files did not load: the list is still the whole page */ });
+  };
+
+  Box.prototype.build = function () {
+    var L = window.L, self = this, mobile = L.Browser.mobile;
+    // On phones one finger scrolls the page, not the map, until the map is tapped. Pinching always zooms.
+    var map = L.map(this.mapEl, { maxZoom: 15, minZoom: 3, scrollWheelZoom: false, dragging: !mobile, tap: true, worldCopyJump: true })
+      .setView([39.5, -96], 4);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    function wake() {
+      if (!map.scrollWheelZoom.enabled()) map.scrollWheelZoom.enable();
+      if (!map.dragging.enabled()) {
+        map.dragging.enable();
+        if (self.hint && self.hint.getAttribute('data-awake')) self.hint.textContent = self.hint.getAttribute('data-awake');
+      }
+    }
+    map.on('click focus', wake);
+    if (mobile && this.hint && this.hint.getAttribute('data-touch')) this.hint.textContent = this.hint.getAttribute('data-touch');
+    var plain = function () {
+      return L.divIcon({ html: '<span></span>', className: 'pm-cluster', iconSize: [38, 38] });
+    };
+    this.cluster = L.markerClusterGroup({ showCoverageOnHover: false, maxClusterRadius: 42, chunkedLoading: true, spiderfyOnMaxZoom: true,
+      iconCreateFunction: this.numbers ? undefined : plain });
+    map.addLayer(this.cluster);
+    this.youLayer = L.layerGroup().addTo(map);
+    // Every pin and group is a button with a name, so it can be reached with Tab and opened with Enter.
+    map.on('layeradd', function (e) {
+      var icon = e.layer && e.layer._icon;
+      if (!icon) return;
+      if (L.MarkerCluster && e.layer instanceof L.MarkerCluster) {
+        icon.setAttribute('aria-label', 'A group of places close together. Press to zoom in.');
+        icon.setAttribute('title', 'Places close together: press to zoom in');
+      } else if (e.layer.options && e.layer.options.title) {
+        icon.setAttribute('aria-label', e.layer.options.title);
+      }
+    });
+    map.on('popupopen', function (e) {
+      var src = e.popup._source, icon = src && src._icon;
+      if (icon && document.activeElement === icon) {
+        var first = e.popup._contentNode && e.popup._contentNode.querySelector('a,button');
+        if (first) first.focus();
+        e.popup._returnTo = icon;
+      }
+    });
+    map.on('popupclose', function (e) {
+      var back = e.popup._returnTo;
+      e.popup._returnTo = null;
+      if (back && document.body.contains(back) && self.mapEl.contains(document.activeElement)) back.focus();
+    });
+    this.map = map;
+  };
+
+  Box.prototype.popup = function (card) {
+    var self = this, d = document.createElement('div');
+    d.className = 'pm-pop';
+    var name = card.querySelector('h2,h3'), s = document.createElement('strong');
+    s.textContent = text(name);
+    d.appendChild(s);
+    var sub = card.getAttribute('data-pm-sub');
+    if (sub) { var p = document.createElement('span'); p.className = 'pm-sub'; p.textContent = sub; d.appendChild(p); }
+    if (card.hasAttribute('data-pm-zip') || card.getAttribute('data-pm-at') === 'zip') {
+      var n = document.createElement('span'); n.className = 'pm-approx';
+      n.textContent = 'The pin is in the middle of the ZIP code. Use the address to get there.';
+      d.appendChild(n);
+    }
+    var acts = document.createElement('div'); acts.className = 'pm-acts';
+    var tel = card.querySelector('a[href^="tel:"]');
+    if (tel) {
+      var a = document.createElement('a'); a.className = 'pm-call'; a.href = tel.getAttribute('href');
+      a.textContent = /^call/i.test(text(tel)) ? text(tel).replace(/\s*↗$/, '') : 'Call ' + text(tel);
+      acts.appendChild(a);
+    }
+    var links = card.querySelectorAll('a[href]'), dir = null, lookup = null;
+    for (var i = 0; i < links.length; i++) {
+      if (!dir && /directions/i.test(text(links[i]))) dir = links[i];
+      if (!lookup && /look up (the )?phone/i.test(text(links[i]))) lookup = links[i];
+    }
+    if (!tel && lookup) {
+      var q = document.createElement('a'); q.href = lookup.getAttribute('href'); q.target = '_blank'; q.rel = 'noopener noreferrer';
+      q.textContent = 'Look up phone number ↗';
+      acts.appendChild(q);
+    }
+    if (dir) {
+      var g = document.createElement('a'); g.href = dir.getAttribute('href'); g.target = '_blank'; g.rel = 'noopener noreferrer';
+      g.textContent = 'Directions ↗';
+      acts.appendChild(g);
+    }
+    var more = document.createElement('button'); more.type = 'button'; more.textContent = 'See the full listing';
+    more.addEventListener('click', function () {
+      self.map.closePopup();
+      var smooth = !reduced();
+      if (card.scrollIntoView) card.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto', block: 'start' });
+      var h = card.querySelector('h2,h3') || card;
+      if (!h.hasAttribute('tabindex')) h.setAttribute('tabindex', '-1');
+      try { h.focus({ preventScroll: true }); } catch (e) { h.focus(); }
+    });
+    acts.appendChild(more);
+    d.appendChild(acts);
+    return d;
+  };
+
+  Box.prototype.draw = function (pts, force) {
+    var L = window.L, self = this;
+    if (!this.map) this.build();
+    else this.map.invalidateSize();
+    this.cluster.clearLayers();
+    this.youLayer.clearLayers();
+    this.markers = {};
+    var layers = [], bounds = [];
+    pts.forEach(function (p) {
+      var kind = (p.card.getAttribute('data-pm-kind') || 'game').replace(/[^a-z]/g, '');
+      var m = L.marker(p.at, {
+        icon: L.divIcon({ html: '<span class="pm-pin pm-k-' + kind + '"></span>', className: 'pm-icon', iconSize: [24, 24], iconAnchor: [12, 12], popupAnchor: [0, -10] }),
+        title: text(p.card.querySelector('h2,h3')), riseOnHover: true
+      });
+      m.bindPopup(function () { return self.popup(p.card); }, { maxWidth: 300, autoPanPadding: [24, 24] });
+      layers.push(m);
+      self.markers[p.id] = m;
+      bounds.push(p.at);
+      self.addShowButton(p.card);
+    });
+    this.cluster.addLayers(layers);
+    var o = this.origin();
+    if (o) {
+      L.marker(o.at, { icon: L.divIcon({ html: '<span class="pm-you"></span>', className: 'pm-icon', iconSize: [22, 22], iconAnchor: [11, 11] }),
+        title: 'Your ZIP code, ' + o.zip, keyboard: false, zIndexOffset: 1000 })
+        .bindTooltip('Your ZIP code, ' + o.zip).addTo(this.youLayer);
+      bounds.push(o.at);
+    }
+    var key = pts.map(function (p) { return p.id; }).join('|') + '#' + (o ? o.zip : '');
+    if (force || key !== this.lastKey) {
+      this.lastKey = key;
+      if (bounds.length === 1) this.map.setView(bounds[0], 11, { animate: false });
+      else this.map.fitBounds(L.latLngBounds(bounds).pad(0.08), { maxZoom: 12, animate: false });
+    }
+  };
+
+  // A "Show on map" button on each card with a pin, so the map can be reached from the list.
+  Box.prototype.addShowButton = function (card) {
+    if (card.querySelector('.pm-show')) return;
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'pm-show'; b.setAttribute('data-pm-for', card.id);
+    b.textContent = 'Show on the map';
+    var slot = card.querySelector('[data-pm-slot]') || card.querySelector('.small-links') || card.querySelector('.actions');
+    if (slot) slot.appendChild(b); else card.appendChild(b);
+  };
+
+  Box.prototype.showCard = function (id) {
+    var m = this.markers[id], self = this;
+    if (!m || !this.map) return;
+    var smooth = !reduced();
+    if (this.box.scrollIntoView) this.box.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto', block: 'start' });
+    this.cluster.zoomToShowLayer(m, function () {
+      if (m._icon) { try { m._icon.focus({ preventScroll: true }); } catch (e) { m._icon.focus(); } }
+      m.openPopup();
+    });
+  };
+
+  // "Use my location": find the nearest ZIP code on this device and search it like a typed one.
+  function locateButton(btn) {
+    if (!navigator.geolocation) return;
+    btn.hidden = false;
+    btn.addEventListener('click', function () {
+      var input = document.getElementById(btn.getAttribute('data-pm-zip-input'));
+      var form = document.getElementById(btn.getAttribute('data-pm-form'));
+      var status = document.getElementById(btn.getAttribute('data-pm-status'));
+      var say = function (msg) { if (status) status.textContent = msg; };
+      var zips = table(btn.getAttribute('data-pm-zip-table'));
+      var ready = false;
+      if (zips) for (var k in zips) { ready = true; break; }
+      if (!ready || !input || !form) { say('Still loading. Please try again in a moment.'); return; }
+      say('Finding where you are…');
+      btn.disabled = true;
+      navigator.geolocation.getCurrentPosition(function (pos) {
+        btn.disabled = false;
+        var hit = nearestZip(zips, [pos.coords.latitude, pos.coords.longitude]);
+        if (!hit || hit.miles > 60) { say('We could not match your location to a ZIP code we cover. Please type your ZIP code instead.'); return; }
+        input.value = hit.zip;
+        if (form.requestSubmit) form.requestSubmit(); else form.dispatchEvent(new Event('submit', { cancelable: true }));
+      }, function () {
+        btn.disabled = false;
+        say('Your location was not shared. That is fine: type your ZIP code instead.');
+      }, { enableHighAccuracy: false, timeout: 12000, maximumAge: 600000 });
+    });
+  }
+
+  function init() {
+    addStyle();
+    var boxes = document.querySelectorAll('.pm-box[data-pm-list]');
+    for (var i = 0; i < boxes.length; i++) new Box(boxes[i]);
+    var locs = document.querySelectorAll('[data-pm-locate]');
+    for (var j = 0; j < locs.length; j++) locateButton(locs[j]);
+  }
+
+  window.PlaceMap = { nearestZip: nearestZip, miles: miles };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();</script><script defer src="assets/analytics.js"></script></body></html>

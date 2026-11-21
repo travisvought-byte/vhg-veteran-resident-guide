@@ -51,6 +51,32 @@ assert.deepEqual([...static_.querySelectorAll('#about-states h3')].map(h => h.te
 assert.deepEqual([...static_.querySelectorAll('#about-states h3:last-of-type ~ p a')].map(a => a.getAttribute('href')), rest.map(s => SLUGS[s.code] + '/'), 'every other state is linked from the home page');
 assert(static_.querySelector('footer a[href="https://creativecommons.org/licenses/by/3.0/"]'), 'ZIP data attribution');
 assert(!/\b\d+ (halls|venues|locations|counties)\b/i.test(static_.querySelector('header').textContent), 'no headline counts');
+// The map (November 21, 2026): hidden until the list has pins, group dots without numbers, map files from this site, privacy linked.
+const mapBox = static_.getElementById('map-box');
+assert(mapBox && mapBox.hidden && mapBox.dataset.pmList === 'results' && mapBox.dataset.pmBase === 'assets/map/' && mapBox.dataset.pmNumbers === '0', 'home map box');
+assert(!/\d/.test(mapBox.textContent), 'no numbers in the map box');
+assert(mapBox.querySelector('a[href="privacy/"]') && /OpenStreetMap/.test(mapBox.textContent), 'the map names its picture source and links Privacy');
+assert(static_.querySelector('#zip-form [data-pm-locate][hidden]'), 'Use my location stays hidden without JavaScript');
+{
+  const mapScript = [...static_.querySelectorAll('script')].find(s => s.textContent.includes('Place map:')).textContent;
+  assert.deepEqual([...new Set(mapScript.match(/https:\/\/[a-z.]+/g))].sort(), ['https://tile.openstreetmap.org', 'https://www.openstreetmap.org'], 'the map loads its code from this site; only the map pictures come from OpenStreetMap');
+}
+for (const dir of ['findbingo-site', 'bingo-site/findbingo'])
+  for (const f of ['leaflet.js', 'leaflet.css', 'leaflet.markercluster.js', 'markercluster.css'])
+    assert.equal(fs.readFileSync(path.join(root, dir, 'assets/map', f), 'utf8'), fs.readFileSync(path.join(root, 'assets/map', f), 'utf8'), dir + ' serves ' + f);
+// State pages pin each card at the middle of its ZIP code, from zips.json: never a made-up point.
+{
+  const mi = new JSDOM(fs.readFileSync(path.join(site, 'michigan/index.html'), 'utf8')).window.document;
+  const box = mi.getElementById('map-box');
+  assert(box && box.hidden && box.dataset.pmList === 'listings' && box.dataset.pmBase === '../assets/map/' && box.querySelector('a[href="../privacy/"]'), 'Michigan map box');
+  const pinned = [...mi.querySelectorAll('#listings article[data-pm-lat]')];
+  assert(pinned.length, 'Michigan cards have pins');
+  for (const a of pinned) {
+    const v = data.venues.find(x => x.id === a.id);
+    assert.deepEqual([Number(a.dataset.pmLat), Number(a.dataset.pmLon)], zips[v.zip], a.id + ' is pinned at its ZIP code');
+  }
+  assert.equal(pinned.length, mi.querySelectorAll('#listings article').length - [...mi.querySelectorAll('#listings article')].filter(a => !zips[(data.venues.find(x => x.id === a.id) || {}).zip]).length, 'every card with a known ZIP code is pinned');
+}
 
 // Run the page on Monday, November 16, 2026 at 10 a.m. Data requests are answered from this folder.
 const sources = JSON.parse(html.match(/const DATA_SOURCES=(\[.*?\]);/)[1]);
@@ -81,6 +107,11 @@ const requests = [];
 let p = await open('?zip=48066', {served: ['https://guide.vethomeguard.org/findbingo-site/'], requests});
 assert(p.ok && p.cards.length, 'loads from GitHub Pages when the page is hosted elsewhere');
 assert.deepEqual(requests.slice(0, 2), ['https://www.findbingo.org/data.json', 'https://www.findbingo.org/zips.json']);
+for (const a of p.d.querySelectorAll('#results article[id]:not(.state-card)')) {
+  const r = data.venues.concat(data.licensed).find(x => x.id === a.id);
+  assert.equal(a.dataset.pmZip, zips[r.zip] ? r.zip : undefined, a.id + ' carries its ZIP code for the map');
+  assert(!a.dataset.pmSub || !/\b\d+ (halls|games|places|locations|counties)\b/i.test(a.dataset.pmSub), 'no counts in the pin box');
+}
 p = await open('?zip=48066', {served: []});
 assert.equal(p.ok, false);
 assert.equal(p.count, 'Sorry, the bingo list did not load.');
@@ -463,7 +494,7 @@ const privacy = new JSDOM(fs.readFileSync(path.join(site, 'privacy/index.html'),
 assert.equal(privacy.querySelector('link[rel=canonical]').href, 'https://www.findbingo.org/privacy/');
 assert.equal(privacy.querySelector('h1').textContent, 'Privacy');
 const privacyText = privacy.querySelector('main').textContent;
-for (const words of ['November 19, 2026', 'GoatCounter does not use cookies', 'It does not store the IP address', 'on your own device',
+for (const words of ['November 21, 2026', 'GoatCounter does not use cookies', 'It does not store the IP address', 'on your own device',
   'The ZIP code is not sent to us or to anyone else to look it up', 'Cloudflare', 'GitHub', 'This site may show ads. Every ad is labeled “Advertisement” and kept apart from the game listings.',
   'We do not sell personal information', 'not directed to children under 13'])
   assert(privacyText.includes(words), 'privacy page says: ' + words);
@@ -472,6 +503,10 @@ for (const href of ['https://adssettings.google.com', 'https://policies.google.c
   'https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement', '../advertise/'])
   assert(privacy.querySelector(`main a[href="${href}"]`), 'privacy page links ' + href);
 assert(privacy.querySelector('main a[href^="mailto:travis@vethomeguard.org"]'), 'privacy questions go to the site’s existing contact address');
+// Map (November 21, 2026): the privacy page names OpenStreetMap as the source of the map pictures, and what it sees.
+for (const words of ['OpenStreetMap (tile.openstreetmap.org)', 'sees your internet (IP) address', 'Your location is not sent to us or to anyone else'])
+  assert(privacyText.includes(words), 'privacy page says: ' + words);
+assert(privacy.querySelector('main a[href="https://osmfoundation.org/wiki/Privacy_Policy"]'), 'privacy page links OpenStreetMap’s privacy policy');
 // The ZIP search really does run in the browser: the finder fetches only whole files, never a ZIP lookup.
 assert(!/fetch\([^)]*zip=/i.test(html) && /getJSON\(/.test(html), 'no ZIP code is sent to a lookup service');
 const advertise = new JSDOM(fs.readFileSync(path.join(site, 'advertise/index.html'), 'utf8')).window.document;

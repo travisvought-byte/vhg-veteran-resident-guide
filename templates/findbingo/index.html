@@ -100,7 +100,7 @@ __ICONS__<a class="skip" href="#count">Skip to the bingo list</a>
 <div><label for="zip">Type your ZIP code</label><input id="zip" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" pattern="[0-9]{5}" placeholder="Example: 48161" aria-describedby="zip-status"></div>
 <div><label for="radius">How far will you go?</label><select id="radius" name="radius"><option value="10">10 miles</option><option value="25" selected>25 miles</option><option value="50">50 miles</option><option value="100">100 miles</option></select></div>
 <div><button class="primary" type="submit"><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg>Find bingo near me</button></div></div>
-<p id="zip-status" role="status" aria-live="polite">Miles are approximate, as the crow flies.</p></form>
+__LOCATE__<p id="zip-status" role="status" aria-live="polite">Miles are approximate, as the crow flies.</p></form>
 <nav class="states" aria-labelledby="states-title"><h2 id="states-title">Or pick a state</h2><div class="state-buttons" id="state-buttons">__STATE_BUTTONS__</div></nav>
 <section class="narrow" id="narrow" aria-labelledby="narrow-title"><h2 id="narrow-title">Narrow the list (optional)</h2><div class="tools">
 <div><label for="day">Which day?</label><select id="day"><option value="">Any day</option><option value="today">Today</option><option value="tomorrow">Tomorrow</option><option value="1">Monday</option><option value="2">Tuesday</option><option value="3">Wednesday</option><option value="4">Thursday</option><option value="5">Friday</option><option value="6">Saturday</option><option value="0">Sunday</option></select></div>
@@ -110,7 +110,7 @@ __ICONS__<a class="skip" href="#count">Skip to the bingo list</a>
 <p id="change-search" hidden><a href="#zip-form">Change ZIP code or distance</a></p>
 <p id="more-note"></p>
 <div id="featured"></div>
-<div id="results"></div>
+__MAP_BOX__<div id="results"></div>
 <noscript><p class="empty">The ZIP code search needs JavaScript. You can still pick your state above to see its whole bingo list, by county.</p></noscript>
 <section class="panel" id="play" aria-labelledby="play-title"><h2 id="play-title">Warm up: play a free practice card</h2>
 <p>Just for fun, no money and nothing to sign up for. Press <strong>Call a ball</strong> and watch your card. Five in a row, across, down or corner to corner, is a bingo.</p>
@@ -170,9 +170,11 @@ function mapURL(q){return 'https://www.google.com/maps/search/?api=1&query='+enc
 function reportURL(r){return 'mailto:travis@vethomeguard.org?subject='+encodeURIComponent('FindBingo.org correction: '+r.name+' ('+r.id+')')+'&body='+encodeURIComponent('What should change? Fill in only what is different.\n\nBingo days:\nFirst game starts at:\nPhone for players:\nAddress:\nAnything else:\n')}
 // Small line icons drawn from the symbols at the top of the page; always beside words, hidden from screen readers.
 const ic=n=>'<svg class="ic" aria-hidden="true"><use href="#i-'+n+'"/></svg>';
+// Map pins (see the map box): each card is pinned at the middle of its ZIP code, if that ZIP code is known.
+function pin(r,kind,sub){return ZIPS[r.zip]?' data-pm-zip="'+esc(r.zip)+'" data-pm-kind="'+kind+'" data-pm-sub="'+esc(sub+(Number.isFinite(r.distance)?' · '+milesLabel(r.distance):''))+'"':''}
 function sourceLine(s){return s.list_url?'<a href="'+esc(s.list_url)+'" target="_blank" rel="noopener noreferrer">'+esc(s.list_label)+' ↗</a>':''}
 function venueCard(v,today,day){const s=STATES[v.state]||{},next=nextGame(v,day,today),many=v.organizations.length>1,wd=weekday(today);
- return '<article id="'+esc(v.id)+'"><p><span class="badge">'+(v.kind==='senior_center'?'Senior center bingo':'Bingo')+'</span> <span class="badge state">'+esc(s.name||v.state)+'</span></p><h3>'+esc(v.name)+'</h3>'
+ return '<article id="'+esc(v.id)+'"'+pin(v,'game',(v.kind==='senior_center'?'Senior center bingo':'Bingo')+' · '+v.city+(next?' · Next bingo day: '+dateLabel(next,today):''))+'><p><span class="badge">'+(v.kind==='senior_center'?'Senior center bingo':'Bingo')+'</span> <span class="badge state">'+esc(s.name||v.state)+'</span></p><h3>'+esc(v.name)+'</h3>'
  +'<p class="where">'+ic('pin')+(Number.isFinite(v.distance)?'<strong>'+milesLabel(v.distance)+'</strong> · ':'')+esc(v.city)+'</p>'
  +(v.audience?'<p class="small">'+esc(v.audience)+'</p>':'')
  +'<div class="when">'+(v.schedule_note?'<p>'+ic('cal')+'<strong>Usual bingo days:</strong></p>':next?'<p>'+ic('cal')+'<strong>Next bingo day:</strong> '+esc(dateLabel(next,today))+'</p>':'')+'<ul class="sessions">'
@@ -186,7 +188,7 @@ function venueCard(v,today,day){const s=STATES[v.state]||{},next=nextGame(v,day,
  +'<details class="sources"><summary>Where this comes from · checked '+esc(shortDate(v.reviewed_on))+'</summary><p>'+(v.source_url?'<a href="'+esc(v.source_url)+'" target="_blank" rel="noopener noreferrer">'+esc(v.source_label)+' ↗</a>':sourceLine(s))+'</p>'+(v.notes||[]).map(n=>'<p>'+esc(n)+'</p>').join('')+'</details>'
  +'<p class="small-links"><a href="'+esc(reportURL(v))+'">Report a change</a></p></article>'}
 function licensedCard(r,today){const s=STATES[r.state]||{};
- return '<article id="'+esc(r.id)+'"><p><span class="badge muted">'+esc(s.license_badge||'Licensed for bingo · game days not posted')+'</span> <span class="badge state">'+esc(s.name||r.state)+'</span></p><h3>'+esc(r.name)+'</h3>'
+ return '<article id="'+esc(r.id)+'"'+pin(r,'nodays','Licensed for bingo, game days not posted · '+r.city)+'><p><span class="badge muted">'+esc(s.license_badge||'Licensed for bingo · game days not posted')+'</span> <span class="badge state">'+esc(s.name||r.state)+'</span></p><h3>'+esc(r.name)+'</h3>'
  +'<p class="where">'+ic('pin')+(Number.isFinite(r.distance)?'<strong>'+milesLabel(r.distance)+'</strong> · ':'')+esc(r.city)+'</p>'
  +'<p>'+esc(s.license_note||'The state license list does not show game days or times. Call before you go.')+'</p>'
  +'<div class="big-actions">'+(r.phone?'<a class="solid" href="tel:'+esc(r.phone.replace(/[^0-9]/g,''))+'">'+ic('phone')+'Call '+esc(r.phone)+'</a>':'<a class="solid" href="'+esc(mapURL(r.name+' '+r.address))+'" target="_blank" rel="noopener noreferrer">'+ic('search')+'Look up phone number ↗</a>')+'<a class="outline" href="'+esc(mapURL(r.address))+'" target="_blank" rel="noopener noreferrer">'+ic('route')+'Directions ↗</a></div>'
