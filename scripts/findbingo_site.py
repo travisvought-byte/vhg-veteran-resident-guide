@@ -107,6 +107,14 @@ def validate(states, venues, licensed, zips):
             assert s.get('license_note') and ('list_as_of' not in s or date.fromisoformat(s['list_as_of'])), s['code']
         if s['coverage'] == 'ohio_finder':
             assert s.get('finder_url', '').startswith('https://'), s['code']
+        if 'halls' in s:
+            # What the state's law says about the money and the ads (docs/BINGO-OPPORTUNITY.md); every claim sourced.
+            h = s['halls']
+            assert set(h) <= {'money', 'money_note', 'ad_note', 'sources'} and h['money'] in HALL_MONEY and h['money_note'].strip(), s['code']
+            assert 'ad_note' not in h or h['ad_note'].strip(), s['code']
+            # Only Ohio's law requires an outside gift, which is what the Veteran Home Guardians partnership asks a share of.
+            assert (h['money'] == 'must_give') == (s['code'] == 'OH'), s['code']
+            assert h['sources'] and all(x['url'].startswith('https://') and x['scope'] and date.fromisoformat(x['reviewed_on']) for x in h['sources']), s['code']
     pending = {(s['code'], c) for s in states for c in s.get('pending_counties', [])}
     assert not pending & {(v['state'], v['county']) for v in venues}, 'a county with listings is no longer pending'
     with_venues = {s['code'] for s in states if s['coverage'] in ('times', 'starter')}
@@ -303,6 +311,7 @@ Lists updated {_date_label(generated_on)}.
     pages['privacy/index.html'] = _info_page('privacy', *PRIVACY, style, analytics, generated_on)
     pages['advertise/index.html'] = _info_page('advertise', *ADVERTISE, style, analytics, generated_on)
     pages['learn/index.html'] = _info_page('learn', *LEARN, style, analytics, generated_on)
+    pages['halls/index.html'] = _info_page('halls', *halls_page(states), style, analytics, generated_on)
     # Ad pictures are served beside the pages, in ads/.
     pages.update({'ads/' + a['image'].rsplit('/', 1)[1]: (root / a['image']).read_bytes() for a in ads if a.get('image')})
     site = {
@@ -443,11 +452,82 @@ def _license_line(r, s):
     return line + (f', on the state list through {_date_label(r["license_expires"])}.' if r.get('license_expires') else '.')
 
 
-def _send_times(s):
-    return (f'<section class="panel" id="run-a-game" aria-labelledby="run-title"><h2 id="run-title">Run a bingo game in {escape(s["name"])}? Get it listed free</h2>'
+HALL_MONEY = ('must_give', 'may_give', 'own')
+
+
+def _rule_links(h):
+    return ' · '.join(_out(x['url'], x['scope'].split(': ')[0]) for x in h['sources'])
+
+
+def _hall_offers(up):
+    """What Find Bingo offers every hall, in every state. Prices live on the Advertise page only."""
+    return ('<ul><li><strong>Your listing is free, always.</strong> No hall can pay for a better one.</li>'
+            '<li><strong>Help getting the word out.</strong> Free tips, and paid advertising on Find Bingo if you want more.</li>'
+            f'<li><strong>Featured events.</strong> Put a special bingo night in its own box for people searching near you. <a href="{up}advertise/">How featured events work</a></li>'
+            f'<li><strong>A game site for your hall.</strong> We build it, host it and keep it current from the updates you send us, for one flat monthly fee. You get a page to put on flyers, signs and social media. <a href="{up}advertise/">Details</a></li></ul>')
+
+
+# The pitch follows the state's own rule on where bingo money goes (owner direction, November 20, 2026).
+HALL_PITCH = {
+    'own': 'In {name} that money stays with your group for its own causes, so we never ask for a share of it. What we offer is help filling seats:',
+    'may_give': 'If your group would like a partner cause, we can help you find a local one. Partnering is never required to be listed. What we offer every hall:',
+}
+
+
+def _send_times(s, up='../'):
+    name = escape(s['name'])
+    h = s.get('halls')
+    body = (f'<section class="panel" id="run-a-game" aria-labelledby="run-title"><h2 id="run-title">Run a bingo game in {name}? Get it listed free</h2>'
             '<p>Send us the name of your hall, the address, the days and the time the first game starts. A phone number for players helps too. '
             'Listing is free, and we never sell or share your information.</p>'
-            f'<div class="big-actions"><a class="solid" href="{escape(_mailto("Bingo game times in " + s["name"], "Hall or group name:" + chr(10) + "Address:" + chr(10) + "Days and first game time:" + chr(10) + "Phone for players:" + chr(10) + "Website or Facebook page:" + chr(10)))}">Email your game times</a></div></section>')
+            f'<div class="big-actions"><a class="solid" href="{escape(_mailto("Bingo game times in " + s["name"], "Hall or group name:" + chr(10) + "Address:" + chr(10) + "Days and first game time:" + chr(10) + "Phone for players:" + chr(10) + "Website or Facebook page:" + chr(10)))}">Email your game times</a></div>')
+    if h:
+        body += f'<h3>What {name} law says about your bingo money</h3><p id="money-rule">{escape(h["money_note"])}</p>'
+        if h.get('ad_note'):
+            body += f'<h3>Advertising your game in {name}</h3><p id="ad-rule">{escape(h["ad_note"])}</p>'
+        body += f'<p class="small">Checked {_date_label(max(x["reviewed_on"] for x in h["sources"]))}. Sources: {_rule_links(h)}. This is a summary, not legal advice; your regulator has the final word.</p>'
+        body += f'<p>{escape(HALL_PITCH[h["money"]].format(name=s["name"]))}</p>'
+    else:
+        body += '<h3>More help for your hall</h3><p>Beyond the free listing:</p>'
+    body += _hall_offers(up) + f'<p><a href="{up}halls/">Help for bingo halls, state by state</a></p></section>'
+    return body
+
+
+def halls_page(states):
+    """findbingo.org/halls/: the page for the people who run bingo (owner direction, November 20, 2026)."""
+    checked = [s for s in states if s.get('halls')]
+    rows = ''
+    for s in checked:
+        h = s['halls']
+        link = '../ohio/' if s['code'] == 'OH' else f'../{SLUGS[s["code"]]}/#run-a-game'
+        rows += (f'<h3 id="rules-{s["code"].lower()}"><a href="{link}">{escape(s["name"])}</a></h3><p>{escape(h["money_note"])}</p>'
+                 + (f'<p><strong>Ads:</strong> {escape(h["ad_note"])}</p>' if h.get('ad_note') else '')
+                 + f'<p class="small">Checked {_date_label(max(x["reviewed_on"] for x in h["sources"]))}. Sources: {_rule_links(h)}</p>')
+    rest = ', '.join(f'<a href="../{SLUGS[s["code"]]}/#run-a-game">{escape(s["name"])}</a>' for s in states if not s.get('halls') and s['code'] != 'OH')
+    body = ('<p>Players come here to find a game. Halls and the groups that run them come here to be found. Every listing is free, and '
+            'the help below is shaped to what your state allows.</p>'
+            '<h2>What we offer every hall</h2>' + _hall_offers('../')
+            + '<div class="big-actions"><a class="solid" href="'
+            + escape(_mailto('Help for our bingo hall', 'Hall or group name:\nState and town:\nWhat would help most:\nBest way to reach us:\n'))
+            + '">Talk with us about your hall</a></div>'
+            '<h2>Partnering with a charity, where your state’s rules allow</h2>'
+            '<p>States treat bingo money in three different ways, and we only ask for what fits:</p>'
+            '<ul><li><strong>The law requires a gift to an outside charity</strong> (Ohio’s veteran, fraternal and sporting groups). '
+            'A hall can name Veteran Home Guardians as one of its recipients. We ask for a modest share of that required gift, usually 5 to 10 percent, not all of it. '
+            '<a href="../ohio/partners.html#sponsors">How partnership works in Ohio</a></li>'
+            '<li><strong>The law lets a group give to other causes</strong> (Virginia, Minnesota). If you want a partner cause, we help you find a local one first.</li>'
+            '<li><strong>The money stays with your group</strong> (Kentucky, Michigan, Texas). We never ask for a share. We help you reach players instead.</li></ul>'
+            '<h2>State rules we have checked</h2><p>Plain-language summaries with their sources. This is not legal advice; your state regulator has the final word.</p>'
+            + rows
+            + '<h2>Every other state</h2><p>We have not summarized these states’ rules yet. Each state page names who licenses bingo there and how to send us your game times: '
+            + rest + '.</p>'
+            '<h2>Bingo suppliers and distributors</h2><p>Paper, electronics, pull-tabs, daubers, software: if you sell to halls, you can reach them and their players here with a labeled ad. '
+            '<a href="../advertise/">Advertise on Find Bingo</a></p>')
+    return ('Help for Bingo Halls: Free Listings, Advertising and State Rules | FindBingo.org',
+            'For the groups that run bingo: free listings, help reaching players, featured events, and plain-language summaries of each state’s rules on bingo money and advertising.',
+            'Help for bingo halls',
+            'Free listings, help reaching players, and your state’s rules on bingo money and ads, in plain language.',
+            body)
 
 
 STATE_COPY = {
@@ -552,7 +632,7 @@ def _footer(generated_on, up='../'):
             'Listings are free. Ads, when shown, are labeled and never decide which games are listed.</p>'
             '<p class="noprint">Need help getting to the game? <a href="https://mobilitytalk.org/states/">Mobility Talk</a> lists mobility and disability resources in every state.</p>'
             f'<p class="noprint">Questions or corrections: <a href="mailto:{EMAIL}?subject=FindBingo.org">{EMAIL}</a> · Made by <a href="https://travisvought.com/">Travis Vought</a></p>'
-            f'<p class="noprint"><a href="{up}learn/">How bingo works: a free bingo class</a> · <a href="{up}privacy/">Privacy</a> · <a href="{up}advertise/">Advertise on Find Bingo</a></p>'
+            f'<p class="noprint"><a href="{up}learn/">How bingo works: a free bingo class</a> · <a href="{up}privacy/">Privacy</a> · <a href="{up}advertise/">Advertise on Find Bingo</a> · <a href="{up}halls/">For bingo halls</a></p>'
             f'<p class="noprint">Lists updated {_date_label(generated_on)}.</p></footer>')
 
 
@@ -646,8 +726,8 @@ def events_html(events, up, heading='Featured bingo events'):
 
 ADS_FILE = 'data/findbingo-ads.json'
 AD_KEYS = {'slot', 'sponsor', 'text', 'url', 'image', 'alt', 'start', 'end'}
-# The bingo class, Privacy and Advertise pages, linked from every footer and listed in the sitemap.
-INFO_PAGES = ('learn/', 'privacy/', 'advertise/')
+# The bingo class, Privacy, Advertise and halls pages, linked from every footer and listed in the sitemap.
+INFO_PAGES = ('learn/', 'privacy/', 'advertise/', 'halls/')
 # Dated ads are written hidden; this shows the one whose dates include today, so a page built before an ad
 # starts or after it ends never shows it on the wrong day. Without JavaScript a dated ad stays hidden.
 AD_DATES_SCRIPT = ("<script>(function(){var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date()),"
@@ -856,13 +936,16 @@ PRIVACY = (
     f'Questions about privacy: <a href="{escape(ASK)}">{EMAIL}</a>.</p>'
     f'<p class="small">Last updated {POLICY_DATE}.</p>')
 
+# Hall game sites (owner direction, November 20, 2026): built by us, updated from what the hall sends, one flat monthly fee.
+HALL_SITE_PRICE = 100
+
 ADVERTISE = (
     'Advertise on Find Bingo | FindBingo.org',
     'Reach bingo players, families and activity staff with a labeled ad on FindBingo.org. Ads sit apart from the listings and never change them.',
     'Advertise on Find Bingo',
     'Reach people looking for bingo near them: players, their families, and the activity staff who plan outings.',
     '<h2>Who can advertise</h2>'
-    '<p>Local businesses, senior services, senior living and home care, transportation, bingo suppliers, and community events. '
+    '<p>Bingo halls and the groups that run games first of all, then bingo suppliers, local businesses, senior services, senior living and home care, transportation, and community events. '
     'If your business is a good fit for bingo players and their families, write to us.</p>'
     '<h2 id="events">Feature your bingo event: $' + str(EVENT_PRICE) + '</h2>'
     '<p>Running a special bingo night, a fundraiser or a holiday game? For $' + str(EVENT_PRICE) + ' we feature it in its own box, labeled “Featured event,” '
@@ -874,13 +957,23 @@ ADVERTISE = (
     '<div class="big-actions"><a class="solid" href="'
     + escape(_mailto('Feature a bingo event on Find Bingo', 'Event name:\nHall or group:\nAddress:\nDate and start time:\nShort description:\nLink or phone for players:\n'))
     + '">Email us about your event</a></div>'
+    '<h2 id="hall-site">A game site for your hall: $' + str(HALL_SITE_PRICE) + ' a month</h2>'
+    '<p>Want a website for your games that you can put on flyers, signs, Facebook and billboards? We build it for you. '
+    'After that, send us your updates by email or text (new times, specials, holiday closings, flyers) and we post them.</p>'
+    '<ul><li>One flat fee of $' + str(HALL_SITE_PRICE) + ' a month covers the site, its hosting and the updates you send.</li>'
+    '<li>Your games stay listed free on Find Bingo whether or not you have a site with us.</li>'
+    '<li>Stop any time.</li></ul>'
+    '<div class="big-actions"><a class="solid" href="'
+    + escape(_mailto('A game site for our bingo hall', 'Hall or group name:\nState and town:\nWhat should the site show:\nBest way to reach us:\n'))
+    + '">Ask about a site for your hall</a></div>'
     '<h2>For bingo halls</h2>'
     '<p>Every hall’s listing is free, always. Beyond that, choose what fits your hall:</p>'
-    '<ul><li><strong>Community partner.</strong> Halls that must give part of their instant bingo profit to a charity can name Veteran Home Guardians as one of their recipients. '
+    '<ul><li><strong>Community partner (Ohio).</strong> In Ohio, veteran, fraternal and sporting groups must give part of their instant bingo profit to an outside charity, and can name Veteran Home Guardians as one of their recipients. '
     'We ask for a modest share, usually 5 to 10 percent of what you give, not all of it. At minimum, it should cover visits to veterans in nursing homes in your county. '
-    'Anything beyond that helps us reach counties that have no local support. <a href="../ohio/partners.html#sponsors">How partnership works</a></li>'
+    'Anything beyond that helps us reach counties that have no local support. <a href="../ohio/partners.html#sponsors">How partnership works</a> '
+    'Other states treat bingo money differently, and we only offer what fits your state’s rules. <a href="../halls/">Help for halls, state by state</a></li>'
     '<li><strong>Featured events,</strong> above.</li>'
-    '<li><strong>A website for your hall.</strong> If you would rather pay for a service than partner, we can build and keep up a simple website for your hall, for a fee.</li>'
+    '<li><strong>A game site for your hall,</strong> above. Many halls would rather pay for a service than partner, and that is fine.</li>'
     '<li><strong>Advertising.</strong> Free tips on getting the word out, or paid advertising if you want more.</li></ul>'
     '<p>Every hall is different, so let’s talk.</p>'
     '<h2>Ground rules</h2>'

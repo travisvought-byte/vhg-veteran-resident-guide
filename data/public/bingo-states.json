@@ -379,7 +379,29 @@
     "reviewed_on": "2026-11-17"
    }
   ],
-  "hours_note": "Game days come from each place's own published schedule. Call ahead to confirm."
+  "hours_note": "Game days come from each place's own published schedule. Call ahead to confirm.",
+  "halls": {
+   "money": "own",
+   "money_note": "Licensed groups must keep at least 40 percent of their adjusted gross receipts from charitable gaming and spend it on their own charitable purposes.",
+   "ad_note": "An ad for charitable gaming must carry the name of the group running it and its license number, and may not advertise a bingo prize above $5,000 in 24 hours.",
+   "sources": [
+    {
+     "url": "https://dcg.ky.gov/Documents/2024AnnualReport.pdf",
+     "scope": "2024 annual report: licensed groups must retain at least 40% of adjusted gross receipts and devote them to their charitable purposes",
+     "reviewed_on": "2026-11-20"
+    },
+    {
+     "url": "https://apps.legislature.ky.gov/law/Statutes/statute.aspx?id=56641",
+     "scope": "KRS 238.536: amount and use of net receipts retained by the charitable organization",
+     "reviewed_on": "2026-11-20"
+    },
+    {
+     "url": "https://apps.legislature.ky.gov/law/Statutes/statute.aspx?id=58118",
+     "scope": "KRS 238.540(9): a charitable gaming ad must contain the conducting organization’s name and license number, and may not advertise a bingo prize above $5,000 per 24 hours",
+     "reviewed_on": "2026-11-20"
+    }
+   ]
+  }
  },
  {
   "code": "LA",
@@ -485,7 +507,24 @@
     "scope": "Charitable Gaming Division of the Michigan Lottery licenses nonprofit bingo; phone 517-335-5780",
     "reviewed_on": "2026-11-15"
    }
-  ]
+  ],
+  "halls": {
+   "money": "own",
+   "money_note": "The entire net proceeds of a bingo event must go to the licensed group’s own lawful purposes.",
+   "ad_note": "Where the state lets a group advertise bingo, the ad must say what the net proceeds will be used for.",
+   "sources": [
+    {
+     "url": "https://renderpdf.legislature.mi.gov/documents/mcl/pdf/MCL-432-109.pdf",
+     "scope": "MCL 432.109: entire net proceeds devoted exclusively to the lawful purposes of the licensee",
+     "reviewed_on": "2026-11-20"
+    },
+    {
+     "url": "https://ombudsman.legislature.mi.gov/documents/mcl/pdf/MCL-432-110.pdf",
+     "scope": "MCL 432.110: an advertisement must state the purposes for which net proceeds will be used",
+     "reviewed_on": "2026-11-20"
+    }
+   ]
+  }
  },
  {
   "code": "MN",
@@ -507,7 +546,23 @@
     "scope": "Minnesota Statutes chapter 349, lawful gambling, including bingo",
     "reviewed_on": "2026-11-17"
    }
-  ]
+  ],
+  "halls": {
+   "money": "may_give",
+   "money_note": "Gambling profits may be spent only on lawful purposes or allowable expenses that the membership approves. Each year a group must spend at least 30 percent of gross profits on lawful purposes (20 percent where the main business is bingo), and lawful purposes include charitable contributions.",
+   "sources": [
+    {
+     "url": "https://www.revisor.mn.gov/statutes/?id=349.15",
+     "scope": "Minn. Stat. 349.15: gross profits only for lawful purposes or allowable expenses; minimum 30% (20% where the primary business is bingo) on lawful purposes",
+     "reviewed_on": "2026-11-20"
+    },
+    {
+     "url": "https://mn.gov/gcb/publications/reports/",
+     "scope": "Gambling Control Board: lawful purpose expenditures include charitable contributions",
+     "reviewed_on": "2026-11-20"
+    }
+   ]
+  }
  },
  {
   "code": "MS",
@@ -785,7 +840,18 @@
     "scope": "Ohio Attorney General authorized bingo locations",
     "reviewed_on": "2026-11-15"
    }
-  ]
+  ],
+  "halls": {
+   "money": "must_give",
+   "money_note": "Veteran, fraternal and sporting groups must give at least 25 percent of their first $330,000 of instant bingo net profit each year, and at least 50 percent of anything above that, to an outside charity or a government unit. Other charities use all of it for their own purposes.",
+   "sources": [
+    {
+     "url": "https://codes.ohio.gov/ohio-administrative-code/rule-109:1-4-21",
+     "scope": "Ohio Adm.Code 109:1-4-21: at least 25% of the first $330,000 of instant bingo net profit, at least 50% above it, distributed to an outside charitable organization or government unit",
+     "reviewed_on": "2026-11-20"
+    }
+   ]
+  }
  },
  {
   "code": "OK",
@@ -953,7 +1019,18 @@
     "scope": "Charitable bingo home page: \"Where can I play?\" opens the state bingo hall locator",
     "reviewed_on": "2026-11-17"
    }
-  ]
+  ],
+  "halls": {
+   "money": "own",
+   "money_note": "A licensed group must put its net proceeds from bingo toward its own charitable purposes.",
+   "sources": [
+    {
+     "url": "https://statutes.capitol.texas.gov/Docs/OC/htm/OC.2001.htm#2001.454",
+     "scope": "Texas Occupations Code 2001.454: net proceeds devoted to the charitable purposes of the organization",
+     "reviewed_on": "2026-11-20"
+    }
+   ]
+  }
  },
  {
   "code": "UT",
@@ -1019,7 +1096,23 @@
     "scope": "Registered Gaming Activity, September 2026: bingo sessions by locality with addresses, days, and doors-open and doors-close times",
     "reviewed_on": "2026-11-17"
    }
-  ]
+  ],
+  "halls": {
+   "money": "may_give",
+   "money_note": "Groups must use at least 10 percent of their gross receipts (20 percent of electronic gaming adjusted gross receipts) for their religious, charitable, community or educational purposes. Those payments may go to scholarship funds or to religious, charitable, educational or community causes.",
+   "sources": [
+    {
+     "url": "https://law.lis.virginia.gov/admincodefull/title11/agency20/chapter20/partII/article1/",
+     "scope": "11VAC20-20-20: minimum use of proceeds, 10% of gross receipts and 20% of electronic gaming adjusted gross receipts",
+     "reviewed_on": "2026-11-20"
+    },
+    {
+     "url": "https://law.lis.virginia.gov/admincode/title11/agency20/chapter20/section110/",
+     "scope": "11VAC20-20-110: use of proceeds payments may be made for scholarship funds or religious, charitable, educational or community purposes",
+     "reviewed_on": "2026-11-20"
+    }
+   ]
+  }
  },
  {
   "code": "WA",
