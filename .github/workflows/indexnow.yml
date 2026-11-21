@@ -1,0 +1,51 @@
+name: Tell search engines about changed pages
+
+# IndexNow sends Bing (and Yandex, Seznam, Naver) the address of each page that
+# changed, so they pick it up within days instead of whenever they next crawl.
+# No account is needed: the key file 8b2fc164a7c0c35df618ddfb8b091b8e.txt at the site root proves
+# the site is ours. Only pages listed in sitemap.xml are sent.
+
+on:
+  push:
+    branches: [main]
+    paths: ['**.html', 'sitemap.xml']
+  workflow_dispatch:
+    inputs:
+      all:
+        description: Send every page in the sitemap, not only the changed ones
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Give GitHub Pages time to publish this push
+        if: github.event_name == 'push'
+        run: sleep 120
+      - name: Send the changed pages
+        env:
+          BEFORE: ${{ github.event.before }}
+          ALL: ${{ inputs.all }}
+        run: |
+          if [ "$ALL" = "true" ]; then
+            python3 scripts/indexnow.py --host guide.vethomeguard.org --key 8b2fc164a7c0c35df618ddfb8b091b8e --all --wait
+            exit
+          fi
+          if [ -n "$BEFORE" ] && git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
+            base="$BEFORE"
+          else
+            base="HEAD~1"
+          fi
+          mapfile -t files < <(git diff --name-only --diff-filter=AMR "$base" HEAD -- '*.html')
+          python3 scripts/indexnow.py --host guide.vethomeguard.org --key 8b2fc164a7c0c35df618ddfb8b091b8e --wait --changed "${files[@]}"
