@@ -65,6 +65,9 @@ def standalone_finder(page):
     page = _replace(page, 'href="facilities.html"', f'href="{GUIDE}/facilities.html"', 1)
     # The guide's Privacy link goes; the finder's footer links findbingo.org's own Privacy page.
     page = _replace(page, ' · <a href="privacy.html">Privacy</a>', '', 1)
+    # The map box links that Privacy page too, and loads the map files the rest of findbingo.org uses (../assets/map/).
+    page = _replace(page, 'href="privacy.html" data-pm-privacy', 'href="../privacy/" data-pm-privacy', 1)
+    page = _replace(page, 'data-pm-base="assets/map/"', 'data-pm-base="../assets/map/"', 1)
     page = _replace(page, 'href="data/public/', f'href="{GUIDE}/data/public/')
     page = _replace(page, '<h1>Ohio Bingo &amp; Senior Centers</h1>',
                     '<p class="site-name">Ohio Bingo Finder · findbingo.org/ohio</p><h1>Ohio Bingo &amp; Senior Centers</h1>', 1)

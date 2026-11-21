@@ -77,6 +77,27 @@ be bought; ads are labeled and never decide which games are listed or their orde
 - Review every ad before it runs and turn down misleading ones (the Advertise page promises this). Remove an
   ad's entry once it ends; an ad picture removed from the list is not deleted from `findbingo-site/ads/` by the build.
 
+## The map (added November 21, 2026)
+
+Every list on Find Bingo has a map above it, in the style of Nina's Map: the home page after a ZIP code or state search,
+each state page, and the Ohio finder at findbingo.org/ohio/. The same map sits on the guide's nursing home and assisted
+living page (`facilities.html`). Source: `assets/map/place-map.js` (written into each page by `scripts/place_map.py`) and
+Leaflet 1.9.4 with Leaflet.markercluster 1.5.3 in `assets/map/`, served from the site itself, never from a CDN.
+
+- The list stays the page. The map shows exactly the cards in the list and follows it as the list changes; every card with a
+  pin gets a "Show on the map" button, and every pin's box has Call (or the phone lookup), Directions and "See the full listing".
+- No list has street-level coordinates, so each card is pinned at the middle of its ZIP code, using the same ZIP code points
+  as the distance search (`zips.json`). Each pin's box and the note under the map say so. A card whose ZIP code has no point
+  stays in the list without a pin. No coordinates are made up.
+- Find Bingo never states counts: nearby pins gather under a plain dot with no number. (The guide's facilities page shows
+  group numbers, as Nina's Map does.)
+- "Use my location" (beside the ZIP code box) finds the nearest ZIP code on the visitor's device and searches it.
+- Big buttons and text, one-finger page scrolling on phones until the map is tapped, no scroll-wheel zoom until the map is
+  clicked, Tab and Enter on pins and groups, dark mode on findbingo.org, and a "Hide the map" button that is remembered
+  on the device (a hidden map loads nothing). Without JavaScript the map stays hidden and the plain list is the page.
+- Map pictures come from OpenStreetMap (tile.openstreetmap.org), which sees visitors' IP addresses and the area shown; the
+  privacy pages (findbingo.org/privacy/ and the guide's privacy.html) say so. `tests/place-map.cjs` checks the behavior.
+
 ## Practice card and bingo class (added November 19, 2026)
 
 Travis's direction: give people a reason to come and look around, and a bingo class for new and older players.
