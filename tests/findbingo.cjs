@@ -531,6 +531,9 @@ function kyDocText() { return ky.getElementById('run-a-game').textContent; }
 const kyRun = kyDocText();
 assert(kyRun.includes('never ask for a share') && !kyRun.includes('5 to 10') && ky.getElementById('money-rule') && ky.getElementById('ad-rule'),
   'Kentucky groups keep their money, so no share is asked');
+const inRun = new JSDOM(fs.readFileSync(path.join(site, 'indiana/index.html'), 'utf8')).window.document.getElementById('run-a-game').textContent;
+assert(inRun.includes('local partner charity') && !inRun.includes('5 to 10') && !inRun.includes('Veteran Home Guardians as one'),
+  'outside Ohio a required gift gets the local-partner offer, never the Ohio share');
 const gaRun = ga.getElementById('run-a-game');
 assert(!gaRun.querySelector('#money-rule') && !gaRun.textContent.includes('5 to 10') && gaRun.querySelector('a[href="../halls/"]'),
   'a state whose rules are not summarized makes no claim about them');
