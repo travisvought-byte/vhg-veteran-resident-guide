@@ -317,6 +317,8 @@ Lists updated {_date_label(generated_on)}.
         pages[SLUGS[s['code']] + '/index.html'] = _state_page(s, states, rows, style, analytics, generated_on, _ads_for(ads, SLUGS[s['code']]),
                                                               [e for e in upcoming_events(events, generated_on) if e['state'] == s['code']])
     pages['privacy/index.html'] = _info_page('privacy', *PRIVACY, style, analytics, generated_on)
+    pages['about/index.html'] = _info_page('about', *ABOUT, style, analytics, generated_on)
+    pages['terms/index.html'] = _info_page('terms', *TERMS, style, analytics, generated_on)
     pages['advertise/index.html'] = _info_page('advertise', *ADVERTISE, style, analytics, generated_on)
     pages['learn/index.html'] = _info_page('learn', *LEARN, style, analytics, generated_on)
     pages['halls/index.html'] = _info_page('halls', *halls_page(states), style, analytics, generated_on)
@@ -667,7 +669,7 @@ def _footer(generated_on, up='../'):
             'Listings are free. Ads, when shown, are labeled and never decide which games are listed.</p>'
             '<p class="noprint">Need help getting to the game? <a href="https://mobilitytalk.org/states/">Mobility Talk</a> lists mobility and disability resources in every state.</p>'
             f'<p class="noprint">Questions or corrections: <a href="mailto:{EMAIL}?subject=FindBingo.org">{EMAIL}</a> · Made by <a href="https://travisvought.com/">Travis Vought</a></p>'
-            f'<p class="noprint"><a href="{up}learn/">How bingo works: a free bingo class</a> · <a href="{up}privacy/">Privacy</a> · <a href="{up}advertise/">Advertise on Find Bingo</a> · <a href="{up}halls/">For bingo halls</a></p>'
+            f'<p class="noprint"><a href="{up}learn/">How bingo works: a free bingo class</a> · <a href="{up}about/">About and contact</a> · <a href="{up}privacy/">Privacy</a> · <a href="{up}terms/">Terms of use</a> · <a href="{up}advertise/">Advertise on Find Bingo</a> · <a href="{up}halls/">For bingo halls</a></p>'
             f'<p class="noprint">Lists updated {_date_label(generated_on)}.</p></footer>')
 
 
@@ -761,8 +763,8 @@ def events_html(events, up, heading='Featured bingo events'):
 
 ADS_FILE = 'data/findbingo-ads.json'
 AD_KEYS = {'slot', 'sponsor', 'text', 'url', 'image', 'alt', 'start', 'end'}
-# The bingo class, Privacy, Advertise and halls pages, linked from every footer and listed in the sitemap.
-INFO_PAGES = ('learn/', 'privacy/', 'advertise/', 'halls/')
+# The bingo class, About, Privacy, Terms, Advertise and halls pages, linked from every footer and listed in the sitemap.
+INFO_PAGES = ('learn/', 'about/', 'privacy/', 'terms/', 'advertise/', 'halls/')
 # Dated ads are written hidden; this shows the one whose dates include today, so a page built before an ad
 # starts or after it ends never shows it on the wrong day. Without JavaScript a dated ad stays hidden.
 AD_DATES_SCRIPT = ("<script>(function(){var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date()),"
@@ -828,6 +830,7 @@ def _ad_html(ads, up):
 
 # ---- Privacy and Advertise pages ---------------------------------------------------------------------
 POLICY_DATE = 'November 21, 2026'
+TERMS_DATE = 'November 22, 2026'
 
 
 def _info_page(slug, title, description, heading, lead, body, style, analytics, generated_on):
@@ -975,6 +978,59 @@ PRIVACY = (
     '<p>Find Bingo is run by <a href="https://www.vethomeguard.org/">Veteran Home Guardians</a>, an Ohio nonprofit. '
     f'Questions about privacy: <a href="{escape(ASK)}">{EMAIL}</a>.</p>'
     f'<p class="small">Last updated {POLICY_DATE}.</p>')
+
+# About and contact, and Terms of use (November 22, 2026): the pages an ad network's reviewers look for, and that
+# halls and players use to see who runs the site. Plain words; no counts of halls, places or states.
+CONTACT = _mailto('FindBingo.org')
+ABOUT = (
+    'About Find Bingo and how to reach us | FindBingo.org',
+    'Who runs FindBingo.org, where the bingo listings come from, how to send a correction, and how to reach us.',
+    'About Find Bingo',
+    'A free, plain finder for bingo games near you, from Veteran Home Guardians.',
+    '<h2>Who runs it</h2>'
+    '<p>FindBingo.org is run by <a href="https://www.vethomeguard.org/">Veteran Home Guardians</a>, an Ohio nonprofit that places veteran visitors in nursing homes. '
+    'It is made by <a href="https://travisvought.com/">Travis Vought</a>, a Marine Corps veteran who ran and advertised bingo at his local American Legion for three years.</p>'
+    '<h2>Why it exists</h2>'
+    '<p>Bingo brings people out of the house and into a room full of neighbors, and many of the people who play are older. '
+    'Game times are often hard to find online, so this site gathers them in one place and keeps every listing free. '
+    'Halls do not pay to be listed, and an ad never changes which games are listed or their order.</p>'
+    '<h2>Where the listings come from</h2>'
+    '<p>Each state page names where its list comes from: the state agency that licenses bingo, a list the state publishes, '
+    'or the hall’s or group’s own published schedule. Halls and players also send in game times and corrections. '
+    'Listings are not confirmed by phone, and games change, so call the hall before you go.</p>'
+    '<h2>Send a correction or your game times</h2>'
+    '<p>Every listing has a “Report a change” link. Halls can send their game times free, and we post them. '
+    '<a href="../halls/">Help for bingo halls</a></p>'
+    '<h2 id="contact">Contact us</h2>'
+    f'<p>Email <a href="{escape(CONTACT)}">{EMAIL}</a> for questions, corrections, advertising or partnerships. We read every message.</p>'
+    '<p><a href="../privacy/">Privacy</a> · <a href="../terms/">Terms of use</a> · <a href="../advertise/">Advertise on Find Bingo</a></p>')
+
+TERMS = (
+    'Terms of use | FindBingo.org',
+    'The terms for using FindBingo.org: a free bingo directory with no wagering on the site, listings to check with the hall, and labeled ads.',
+    'Terms of use',
+    f'The plain terms for using Find Bingo. Last updated {TERMS_DATE}.',
+    '<h2>What this site is</h2>'
+    '<p>FindBingo.org is a free directory of bingo games, run by Veteran Home Guardians. Using the site means you accept these terms.</p>'
+    '<h2>No gambling on this site</h2>'
+    '<p>Find Bingo does not run games, sell cards, take bets or pay prizes. The practice card is free, just for fun, and wins nothing. '
+    'Real games are run by the halls and groups listed, under their state’s law and their own house rules. '
+    'Follow the age and other rules where you play.</p>'
+    '<h2>Check before you go</h2>'
+    '<p>Listings come from state lists, published schedules and people who write in. We work to keep them right, but games change, '
+    'and we cannot promise any listing is complete or current. Call the hall before you go. If something is wrong, tell us and we fix it.</p>'
+    '<h2>Ads and featured events</h2>'
+    '<p>Ads and featured events are labeled. They are paid for by the advertiser, and we do not vouch for what an advertiser offers. '
+    'An ad never changes which games are listed or their order. <a href="../advertise/">How advertising works here</a></p>'
+    '<h2>Other sites</h2>'
+    '<p>Links to halls, state agencies, maps and other sites go to sites we do not run. They have their own terms and privacy rules.</p>'
+    '<h2>No warranty</h2>'
+    '<p>The site is provided as it is, without any warranty. Veteran Home Guardians is not responsible for a game that was moved, changed or cancelled, '
+    'or for anything that happens at a hall.</p>'
+    '<h2>Your information</h2>'
+    '<p>The <a href="../privacy/">Privacy page</a> says what this site collects and what it does not.</p>'
+    '<h2>Changes and questions</h2>'
+    f'<p>We may update these terms and will change the date at the top when we do. Questions: <a href="{escape(CONTACT)}">{EMAIL}</a>.</p>')
 
 # Hall game sites (owner direction, November 20, 2026): built by us, updated from what the hall sends, one flat monthly fee.
 HALL_SITE_PRICE = 100
