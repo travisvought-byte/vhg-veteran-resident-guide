@@ -18,7 +18,9 @@
       // Paths start with the site name, so each site's home page gets its own row instead of sharing "/".
       var host = location.hostname.replace(/^www\./, '');
       var site = '/' + host;
-      data.p = site + location.pathname.replace(/\/index\.html$/, '/');
+      // A state switch on a page arrives as an event named state/xx, kept under the same site name.
+      data.p = vars && vars.event && vars.path ? site + '/' + String(vars.path).replace(/^\//, '')
+        : site + location.pathname.replace(/\/index\.html$/, '/');
       data.q = '';
       // Retain referral attribution without query strings or fragments.
       try {
@@ -28,6 +30,14 @@
       return data;
     };
     counter.count();
+    // Which state's guide people read: the page marks the state it shows on <html data-edition>.
+    var root = document.documentElement, shown = root.dataset.edition || '';
+    if (window.MutationObserver) new MutationObserver(function () {
+      var state = root.dataset.edition || '';
+      if (!/^[A-Z]{2}$/.test(state) || state === shown) return;
+      shown = state;
+      counter.count({path: 'state/' + state.toLowerCase(), title: document.title, event: true});
+    }).observe(root, {attributes: true, attributeFilter: ['data-edition']});
   };
   document.head.appendChild(script);
 }());

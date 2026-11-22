@@ -278,7 +278,7 @@ def make_bingo_site(root, finder_page):
     national = 'https://www.findbingo.org'
     # The Ohio finder is part of findbingo.org, so its footers link the site's Privacy and Advertise pages.
     for name in ('index.html', 'partners.html', 'distributions.html', 'instant.html'):
-        site[name] = _replace(site[name], '</footer>', '<p><a href="../learn/">How bingo works: a free bingo class</a> · <a href="../privacy/">Privacy</a> · <a href="../advertise/">Advertise on Find Bingo</a> · <a href="../halls/">For bingo halls</a></p></footer>', 1)
+        site[name] = _replace(site[name], '</footer>', '<p><a href="../learn/">How bingo works: a free bingo class</a> · <a href="../about/">About and contact</a> · <a href="../privacy/">Privacy</a> · <a href="../terms/">Terms of use</a> · <a href="../advertise/">Advertise on Find Bingo</a> · <a href="../halls/">For bingo halls</a></p></footer>', 1)
     files = {OUT + name: content for name, content in site.items()}
     files.update({
         # Served by Cloudflare at www.findbingo.org: one sitemap for the national page and the Ohio finder.

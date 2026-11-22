@@ -131,7 +131,7 @@ FINDBINGO_404 = ('<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><
                  '<p>The link may be old or mistyped.</p><p><a href="./">Find bingo near you</a></p>'
                  '<p><a href="ohio/">Ohio Bingo Finder</a></p>'
                  '<footer><p>FindBingo.org is a free community resource from <a href="https://www.vethomeguard.org/">Veteran Home Guardians</a>. '
-                 '<a href="privacy/">Privacy</a> · <a href="advertise/">Advertise on Find Bingo</a></p></footer>'
+                 '<a href="about/">About and contact</a> · <a href="privacy/">Privacy</a> · <a href="terms/">Terms of use</a> · <a href="advertise/">Advertise on Find Bingo</a></p></footer>'
                  # Page views on the same counter as every other Find Bingo page (assets/analytics.js, written in).
                  '<script>' + (ROOT / 'assets/analytics.js').read_text().strip() + '</script></body></html>\n')
 

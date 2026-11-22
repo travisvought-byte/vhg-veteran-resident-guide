@@ -136,7 +136,7 @@ article{border-color:#3d4d55;border-top-color:var(--accent);box-shadow:none}.sta
 <footer><p>FindBingo.org is a free community resource from <a href="https://www.vethomeguard.org/">Veteran Home Guardians</a>. Listings are free. Ads, when shown, are labeled and never decide which games are listed.</p>
 <p class="noprint">Need help getting to the game? <a href="https://mobilitytalk.org/states/">Mobility Talk</a> lists mobility and disability resources in every state.</p>
 <p class="noprint">Questions or corrections: <a href="mailto:travis@vethomeguard.org?subject=FindBingo.org">travis@vethomeguard.org</a> · <a href="https://www.ohiobingo.org/">Ohio Bingo</a> · <a href="https://guide.vethomeguard.org/findbingo-site/data.json">Download the bingo data</a> · Made by <a href="https://travisvought.com/">Travis Vought</a></p>
-<p class="noprint"><a href="learn/">How bingo works: a free bingo class</a> · <a href="privacy/">Privacy</a> · <a href="advertise/">Advertise on Find Bingo</a></p>
+<p class="noprint"><a href="learn/">How bingo works: a free bingo class</a> · <a href="about/">About and contact</a> · <a href="privacy/">Privacy</a> · <a href="terms/">Terms of use</a> · <a href="advertise/">Advertise on Find Bingo</a></p>
 <p class="noprint">ZIP code locations: <a href="https://www.geonames.org/">GeoNames</a> / <a href="https://github.com/midwire/free_zipcode_data">Midwire</a> (<a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>). Lists updated November 21, 2026.</p></footer>
 <script>
 // The lists load from the guide's GitHub Pages site, so merged updates reach every copy of this page.
@@ -755,7 +755,9 @@ newCard();
       // Paths start with the site name, so each site's home page gets its own row instead of sharing "/".
       var host = location.hostname.replace(/^www\./, '');
       var site = '/' + host;
-      data.p = site + location.pathname.replace(/\/index\.html$/, '/');
+      // A state switch on a page arrives as an event named state/xx, kept under the same site name.
+      data.p = vars && vars.event && vars.path ? site + '/' + String(vars.path).replace(/^\//, '')
+        : site + location.pathname.replace(/\/index\.html$/, '/');
       data.q = '';
       // Retain referral attribution without query strings or fragments.
       try {
@@ -765,6 +767,14 @@ newCard();
       return data;
     };
     counter.count();
+    // Which state's guide people read: the page marks the state it shows on <html data-edition>.
+    var root = document.documentElement, shown = root.dataset.edition || '';
+    if (window.MutationObserver) new MutationObserver(function () {
+      var state = root.dataset.edition || '';
+      if (!/^[A-Z]{2}$/.test(state) || state === shown) return;
+      shown = state;
+      counter.count({path: 'state/' + state.toLowerCase(), title: document.title, event: true});
+    }).observe(root, {attributes: true, attributeFilter: ['data-edition']});
   };
   document.head.appendChild(script);
 }());</script></body></html>

@@ -520,6 +520,19 @@ assert(advertise.getElementById('events').textContent.includes('$100'), 'the pri
 assert(advertise.getElementById('hall-site').textContent.includes('$100 a month') && advertiseText.includes('Your games stay listed free'), 'hall site price, and listings stay free');
 assert(advertise.querySelector('main a[href^="mailto:travis@vethomeguard.org?subject=Advertising%20on%20Find%20Bingo"]'));
 assert(sitemap.includes('<loc>https://www.findbingo.org/privacy/</loc>') && sitemap.includes('<loc>https://www.findbingo.org/advertise/</loc>'));
+// About and contact, and Terms of use (November 22, 2026): what an ad network's reviewers look for.
+for (const f of ['about/index.html', 'terms/index.html'])
+  assert.equal(fs.readFileSync(path.join(findbingo, f), 'utf8'), fs.readFileSync(path.join(site, f), 'utf8'), f + ' copies match');
+const aboutDoc = new JSDOM(fs.readFileSync(path.join(site, 'about/index.html'), 'utf8')).window.document;
+assert.equal(aboutDoc.querySelector('link[rel=canonical]').href, 'https://www.findbingo.org/about/');
+assert(aboutDoc.getElementById('contact') && aboutDoc.querySelector('main a[href^="mailto:travis@vethomeguard.org"]'), 'About names a contact address');
+assert(!/\b\d[\d,]* (halls|places|games|states|counties|listings)\b/i.test(aboutDoc.querySelector('main').textContent), 'About states no counts');
+const termsDoc = new JSDOM(fs.readFileSync(path.join(site, 'terms/index.html'), 'utf8')).window.document;
+const termsText = termsDoc.querySelector('main').textContent;
+assert.equal(termsDoc.querySelector('link[rel=canonical]').href, 'https://www.findbingo.org/terms/');
+for (const words of ['does not run games, sell cards, take bets or pay prizes', 'Call the hall before you go', 'Ads and featured events are labeled'])
+  assert(termsText.includes(words), 'terms say: ' + words);
+assert(sitemap.includes('<loc>https://www.findbingo.org/about/</loc>') && sitemap.includes('<loc>https://www.findbingo.org/terms/</loc>'), 'About and Terms are in the sitemap');
 // Help for halls (owner direction, November 20, 2026): the pitch follows each state's own rule on bingo money.
 const hallsDoc = new JSDOM(fs.readFileSync(path.join(site, 'halls/index.html'), 'utf8')).window.document;
 const hallsText = hallsDoc.querySelector('main').textContent;
@@ -555,6 +568,7 @@ for (const file of allPages) {
   if (!d.querySelector('footer')) { assert.equal(rel, path.join('ohio', 'poster.html'), rel + ' has a footer'); continue; }
   const up = path.dirname(rel) === '.' ? '' : '../';
   assert(d.querySelector(`footer a[href="${up}privacy/"]`) && d.querySelector(`footer a[href="${up}advertise/"]`), rel + ': footer links Privacy and Advertise');
+  assert(d.querySelector(`footer a[href="${up}about/"]`) && d.querySelector(`footer a[href="${up}terms/"]`), rel + ': footer links About and Terms');
   // With the default (empty) ad list there is no ad markup at all.
   assert(!d.querySelector('.ad-slot, .ad-label, [rel~="sponsored"]') && !text.includes('class="ad-slot'), rel + ': no ad markup when no ad is running');
 }
