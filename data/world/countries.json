@@ -1,0 +1,1182 @@
+{
+  "about": "Country pages for the Veteran Resource Guide (guide.vethomeguard.org/world/). Every number below was read on the official page named in its source, on the date in checked_on. Sources are government bodies, national public bodies or UN/WHO agencies. A charity appears only where a government page names it, and the government page is cited. A published number is not telephone-confirmed. Edit this file, then run python3 scripts/build_public.py.",
+  "checked_on": "2026-11-22",
+  "review_method": "official page read in full through a fetch tool; no agency was telephoned",
+  "us_abroad": {
+    "fmp": {
+      "name": "VA Foreign Medical Program (FMP)",
+      "url": "https://www.va.gov/health-care/foreign-medical-program/",
+      "covers": "Medically necessary care outside the United States for a VA-rated, service-connected disability, for a condition associated with and held to be aggravating a service-connected disability, or as part of Veteran Readiness and Employment (VR&E). FMP does not cover care or supplies received in or from the U.S. or U.S. territories.",
+      "letter": "Veterans with a VA-rated, service-connected condition can get an FMP benefits letter by signing in to VA.gov and opening Letters from the My VA menu. Providers can use the letter to file claims. If you already paid for care, you can file the claim yourself.",
+      "claims": "Claims can be filed online, by email to HAC.FMP@va.gov, or by mail to VHA Office of Integrated Veteran Care, Foreign Medical Program (FMP), PO Box 200, Spring City, PA 19475.",
+      "hours": "Monday through Friday, 8:05 a.m. to 6:45 p.m. ET",
+      "source_url": "https://www.va.gov/health-care/foreign-medical-program/",
+      "source_title": "VA.gov: Foreign Medical Program",
+      "source_date": "2026-10-08",
+      "claims_source_url": "https://www.va.gov/resources/how-to-file-a-va-foreign-medical-program-claim/",
+      "claims_source_title": "VA.gov: How to file a VA Foreign Medical Program claim",
+      "claims_source_date": "2026-10-29",
+      "checked_on": "2026-11-22",
+      "toll_free": [
+        {
+          "country": "Australia",
+          "display": "1-800-354 965",
+          "tel": "1800354965"
+        },
+        {
+          "country": "Costa Rica",
+          "display": "0800-013-0759",
+          "tel": "08000130759"
+        },
+        {
+          "country": "Germany",
+          "display": "0800-1800-011",
+          "tel": "08001800011"
+        },
+        {
+          "country": "Italy",
+          "display": "800-782-655",
+          "tel": "800782655"
+        },
+        {
+          "country": "Japan",
+          "display": "00531-13-0871",
+          "tel": "00531130871"
+        },
+        {
+          "country": "Mexico",
+          "display": "001-877-345-8179",
+          "tel": "0018773458179"
+        },
+        {
+          "country": "Spain",
+          "display": "900-981-776",
+          "tel": "900981776"
+        },
+        {
+          "country": "United Kingdom",
+          "display": "0800-032-7425",
+          "tel": "08000327425"
+        }
+      ],
+      "us_canada": {
+        "display": "1-877-345-8179",
+        "tel": "+18773458179",
+        "direct_display": "+1 303-331-7590",
+        "direct_tel": "+13033317590",
+        "note": "The current FMP page shows a \"U.S. and Canada\" line, but its number did not appear in the page text we read. These two numbers come from VA's FMP Guide, revised April 5, 2023: 1-877-345-8179 toll-free in the United States and Canada, and 303-331-7590 as the program's direct phone.",
+        "source_url": "https://www.va.gov/COMMUNITYCARE/docs/pubfiles/programguides/FMP_Guide.pdf",
+        "source_title": "VA: Foreign Medical Program Guide (PDF)",
+        "source_date": "2023-04-05",
+        "checked_on": "2026-11-22"
+      }
+    },
+    "vcl": {
+      "name": "Veterans Crisis Line from outside the United States",
+      "chat_url": "https://www.veteranscrisisline.net/get-help-now/chat/",
+      "regions": [
+        {
+          "code": "NORTHCOM",
+          "label": "North America (NORTHCOM)",
+          "display": "Dial 988 then press 1",
+          "tel": "988",
+          "dsn": false
+        },
+        {
+          "code": "PACOM",
+          "label": "Indo-Pacific (PACOM)",
+          "display": "+1 844-702-5493",
+          "tel": "+18447025493",
+          "dsn": true
+        },
+        {
+          "code": "EUCOM",
+          "label": "Europe (EUCOM)",
+          "display": "+1 844-702-5495",
+          "tel": "+18447025495",
+          "dsn": true
+        },
+        {
+          "code": "CENTCOM",
+          "label": "Middle East and Central Asia (CENTCOM)",
+          "display": "+1 855-422-7719",
+          "tel": "+18554227719",
+          "dsn": true
+        },
+        {
+          "code": "AFRICOM",
+          "label": "Africa (AFRICOM)",
+          "display": "+1 888-482-6054",
+          "tel": "+18884826054",
+          "dsn": true
+        },
+        {
+          "code": "SOUTHCOM",
+          "label": "Central and South America and the Caribbean (SOUTHCOM)",
+          "display": "+1 866-989-9599",
+          "tel": "+18669899599",
+          "dsn": true
+        }
+      ],
+      "notes": [
+        "Each number is assigned to a different U.S. Department of Defense area of responsibility. Off base, dial the number with the U.S. country code; on base, dial DSN 988.",
+        "If the number for your region does not work, the Veterans Crisis Line says to try one of the other numbers.",
+        "Off base outside the United States, Canada or Mexico, your carrier may charge international rates even for a toll-free number.",
+        "Online chat works anywhere with an internet connection. Texting 838255 works from abroad only on a U.S. carrier with an international plan that allows texts to U.S. short codes."
+      ],
+      "source_url": "https://www.veteranscrisisline.net/get-help-now/military-crisis-line/",
+      "source_title": "Veterans Crisis Line: Military Crisis Line and calling from overseas",
+      "source_date": null,
+      "checked_on": "2026-11-22"
+    },
+    "benefits": {
+      "name": "VA benefits help for veterans living abroad",
+      "display": "+1 412-395-6272",
+      "tel": "+14123956272",
+      "hours": "Monday through Friday, 8 a.m. to 9 p.m. Eastern",
+      "source_url": "https://benefits.va.gov/persona/veteran-abroad-contact.asp",
+      "source_title": "VA: Veterans Living Abroad Contact Information",
+      "source_date": "2026-10-28",
+      "checked_on": "2026-11-22"
+    },
+    "manila": {
+      "name": "VA Manila Regional Office (Philippines)",
+      "numbers": [
+        {
+          "display": "+63 (2) 8550-3888",
+          "tel": "+63285503888"
+        },
+        {
+          "display": "+63 (2) 8846-7121",
+          "tel": "+63288467121"
+        }
+      ],
+      "note": "VA runs the Manila VA Outpatient Clinic, 1501 Roxas Boulevard, Pasay City, open Monday to Friday, 7:30 a.m. to 4:30 p.m. The clinic and FMP cover care for VA-rated, service-connected disabilities.",
+      "source_url": "https://www.va.gov/manila-health-care/locations/manila-va-clinic/",
+      "source_title": "VA.gov: Manila VA Clinic",
+      "source_date": null,
+      "checked_on": "2026-11-22"
+    }
+  },
+  "region_sources": {
+    "EUCOM": {
+      "url": "https://www.eucom.mil/about/the-region",
+      "title": "U.S. European Command: The region",
+      "checked_on": "2026-11-22"
+    },
+    "CENTCOM": {
+      "url": "https://www.defense.gov/Explore/News/Article/Article/2474125/changing-middle-east-situation-means-changes-for-israel/",
+      "title": "Department of Defense: Israel moves to U.S. Central Command",
+      "checked_on": "2026-11-22"
+    }
+  },
+  "countries": [
+    {
+      "slug": "canada",
+      "name": "Canada",
+      "vcl_region": "NORTHCOM",
+      "vcl_note": "In Canada, 988 reaches Canada's own 9-8-8 Suicide Crisis Helpline, which helps anyone in Canada. To reach the U.S. Veterans Crisis Line itself, use online chat, or try another regional number below.",
+      "fmp_note": "VA's FMP Guide (revised April 5, 2023) says inquiries and claims from veterans living in Canada go to Foreign Countries Operations, Ottawa: toll-free 1-888-996-2242. Confirm this with FMP before you send a claim.",
+      "emergency": {
+        "numbers": [
+          {
+            "display": "9-1-1",
+            "tel": "911",
+            "label": "Ambulance, fire and police"
+          }
+        ],
+        "source_url": "https://www.gov.uk/foreign-travel-advice/canada/getting-help",
+        "source_title": "GOV.UK travel advice: Canada, getting help",
+        "source_date": "2026-11-12",
+        "checked_on": "2026-11-22"
+      },
+      "lines": [
+        {
+          "kind": "agency",
+          "name": "Veterans Affairs Canada",
+          "about": "The federal department for Canadian veterans. Call about benefits, a financial emergency, or if you are homeless or at risk of losing your home.",
+          "numbers": [
+            {
+              "display": "1-866-522-2122",
+              "tel": "18665222122",
+              "label": "Toll-free"
+            },
+            {
+              "display": "1-833-921-0071",
+              "tel": "18339210071",
+              "label": "TDD/TTY"
+            }
+          ],
+          "hours": "Monday to Friday, 8:30 a.m. to 4:30 p.m. local time",
+          "around_the_clock": false,
+          "partial": "Office hours only. This is not a crisis line.",
+          "website": "https://www.veterans.gc.ca/en",
+          "source_url": "https://www.veterans.gc.ca/en/contact-us/emergency",
+          "source_title": "Veterans Affairs Canada: Is this an emergency?",
+          "source_date": "2024-04-15",
+          "checked_on": "2026-11-22"
+        },
+        {
+          "kind": "veterans_line",
+          "name": "VAC Assistance Service",
+          "about": "Talk to a mental health professional. For veterans and their families.",
+          "numbers": [
+            {
+              "display": "1-800-268-7708",
+              "tel": "18002687708",
+              "label": "Toll-free"
+            },
+            {
+              "display": "1-800-567-5803",
+              "tel": "18005675803",
+              "label": "TDD/TTY"
+            }
+          ],
+          "hours": "24 hours a day, 365 days a year",
+          "around_the_clock": true,
+          "partial": null,
+          "website": "https://www.veterans.gc.ca/en/contact-us/emergency",
+          "source_url": "https://www.veterans.gc.ca/en/contact-us/emergency",
+          "source_title": "Veterans Affairs Canada: Is this an emergency?",
+          "source_date": "2024-04-15",
+          "checked_on": "2026-11-22"
+        },
+        {
+          "kind": "crisis_line",
+          "name": "9-8-8: Suicide Crisis Helpline",
+          "about": "Call or text 9-8-8 if you or someone you know is thinking about suicide. Bilingual and available to anyone in Canada.",
+          "numbers": [
+            {
+              "display": "9-8-8",
+              "tel": "988",
+              "label": "Call or text"
+            }
+          ],
+          "hours": "24 hours a day, 7 days a week",
+          "around_the_clock": true,
+          "partial": null,
+          "website": "https://www.canada.ca/en/public-health/services/mental-health-services/mental-health-get-help.html",
+          "source_url": "https://www.canada.ca/en/public-health/services/mental-health-services/mental-health-get-help.html",
+          "source_title": "Government of Canada: Mental health support, get help",
+          "source_date": "2026-01-14",
+          "checked_on": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "slug": "united-kingdom",
+      "name": "United Kingdom",
+      "vcl_region": "EUCOM",
+      "emergency": {
+        "numbers": [
+          {
+            "display": "999",
+            "tel": "999",
+            "label": "If you are in danger or at immediate risk"
+          }
+        ],
+        "source_url": "https://www.gov.uk/guidance/urgent-help-for-veterans",
+        "source_title": "GOV.UK: Urgent help for veterans",
+        "source_date": "2026-11-09",
+        "checked_on": "2026-11-22"
+      },
+      "lines": [
+        {
+          "kind": "agency",
+          "name": "Veterans UK (Ministry of Defence)",
+          "about": "Free support for veterans and their families: a helpline, Veterans Services, armed forces pensions, and injury and bereavement compensation payments. Call or email to ask about benefits or how to apply.",
+          "numbers": [
+            {
+              "display": "0808 1914 218",
+              "tel": "08081914218",
+              "label": "Freephone, UK only"
+            },
+            {
+              "display": "+44 1253 866 043",
+              "tel": "+441253866043",
+              "label": "From overseas"
+            },
+            {
+              "display": "0800 085 3600",
+              "tel": "08000853600",
+              "label": "Armed forces pensions"
+            }
+          ],
+          "email": "veterans-uk@mod.gov.uk",
+          "hours": "Monday to Friday, 8 a.m. to 4 p.m.",
+          "around_the_clock": false,
+          "partial": "Office hours only. This is not a crisis line.",
+          "website": "https://www.gov.uk/government/organisations/veterans-uk",
+          "source_url": "https://www.gov.uk/government/organisations/veterans-uk",
+          "source_title": "GOV.UK: Veterans UK",
+          "source_date": "2026-11-04",
+          "checked_on": "2026-11-22"
+        },
+        {
+          "kind": "veterans_line",
+          "name": "Op COURAGE: NHS veterans mental health service (England)",
+          "about": "The NHS mental health and wellbeing service for veterans and reservists in England. You can contact it yourself.",
+          "numbers": [
+            {
+              "display": "0300 373 3332",
+              "tel": "03003733332",
+              "label": "North of England"
+            },
+            {
+              "display": "0300 323 0137",
+              "tel": "03003230137",
+              "label": "Midlands"
+            },
+            {
+              "display": "0300 034 9991",
+              "tel": "03000349991",
+              "label": "East of England"
+            },
+            {
+              "display": "020 3317 6818",
+              "tel": "02033176818",
+              "label": "London"
+            },
+            {
+              "display": "0300 365 2000 (option 4)",
+              "tel": "03003652000",
+              "label": "South East England"
+            },
+            {
+              "display": "0300 034 9986",
+              "tel": "03000349986",
+              "label": "South West England"
+            }
+          ],
+          "hours": "Not stated on the NHS page",
+          "around_the_clock": false,
+          "partial": "England only, by region. The NHS page gives no hours, so do not rely on it in a crisis.",
+          "website": "https://www.nhs.uk/nhs-services/armed-forces-community/mental-health/veterans-reservists/",
+          "source_url": "https://www.nhs.uk/nhs-services/armed-forces-community/mental-health/veterans-reservists/",
+          "source_title": "NHS: Mental health support for veterans, service leavers and reservists",
+          "source_date": "2024-07-18",
+          "checked_on": "2026-11-22"
+        },
+        {
+          "kind": "veterans_line",
+          "name": "Combat Stress (charity listed by the UK government)",
+          "about": "Veterans' mental health charity named on the UK government's Urgent help for veterans page.",
+          "numbers": [
+            {
+              "display": "0800 138 1619",
+              "tel": "08001381619",
+              "label": "Telephone"
+            }
+          ],
+          "hours": "Not stated on the government page",
+          "around_the_clock": false,
+          "partial": "The government page gives no hours.",
+          "website": "https://www.gov.uk/guidance/urgent-help-for-veterans",
+          "source_url": "https://www.gov.uk/guidance/urgent-help-for-veterans",
+          "source_title": "GOV.UK: Urgent help for veterans",
+          "source_date": "2026-11-09",
+          "checked_on": "2026-11-22"
+        },
+        {
+          "kind": "crisis_line",
+          "name": "Samaritans (listed by the UK government) and NHS 111",
+          "about": "The UK government's Urgent help for veterans page lists Samaritans for anyone struggling, any time, and NHS 111 in England and Scotland for urgent mental health help.",
+          "numbers": [
+            {
+              "display": "116 123",
+              "tel": "116123",
+              "label": "Samaritans, freephone"
+            },
+            {
+              "display": "111",
+              "tel": "111",
+              "label": "NHS 111 (England and Scotland)"
+            }
+          ],
+          "hours": "Samaritans: 24 hours a day, 365 days a year",
+          "around_the_clock": true,
+          "partial": null,
+          "website": "https://www.gov.uk/guidance/urgent-help-for-veterans",
+          "source_url": "https://www.gov.uk/guidance/urgent-help-for-veterans",
+          "source_title": "GOV.UK: Urgent help for veterans",
+          "source_date": "2026-11-09",
+          "checked_on": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "slug": "australia",
+      "name": "Australia",
+      "vcl_region": "PACOM",
+      "emergency": {
+        "numbers": [
+          {
+            "display": "000",
+            "tel": "000",
+            "label": "Triple zero: ambulance, fire and police"
+          }
+        ],
+        "source_url": "https://www.gov.uk/foreign-travel-advice/australia/getting-help",
+        "source_title": "GOV.UK travel advice: Australia, getting help",
+        "source_date": "2026-11-12",
+        "checked_on": "2026-11-22"
+      },
+      "lines": [
+        {
+          "kind": "agency",
+          "name": "Department of Veterans' Affairs (DVA)",
+          "about": "The Australian Government department for veterans. Call 1800 VETERAN and, when prompted, say why you are calling.",
+          "numbers": [
+            {
+              "display": "1800 VETERAN (1800 838 372)",
+              "tel": "1800838372",
+              "label": "General enquiries"
+            }
+          ],
+          "hours": "Not stated on the DVA page",
+          "around_the_clock": false,
+          "partial": "The DVA page gives no hours. This is not a crisis line.",
+          "website": "https://www.dva.gov.au/",
+          "source_url": "https://www.dva.gov.au/about/accessing-information/contacting-us",
+          "source_title": "DVA: Contacting us",
+          "source_date": null,
+          "checked_on": "2026-11-22"
+        },
+        {
+          "kind": "veterans_line",
+          "name": "Open Arms: Veterans & Families Counselling",
+          "about": "Free, confidential counselling for anyone with at least one day of continuous full-time service in the Navy, Army or Air Force, and their immediate families.",
+          "numbers": [
+            {
+              "display": "1800 011 046",
+              "tel": "1800011046",
+              "label": "Free call"
+            }
+          ],
+          "hours": "24 hours a day, 7 days a week",
+          "around_the_clock": true,
+          "partial": null,
+          "website": "https://www.openarms.gov.au/",
+          "source_url": "https://www.openarms.gov.au/get-support/how-get-support",
+          "source_title": "Open Arms (Australian Government): How to get support",
+          "source_date": null,
+          "checked_on": "2026-11-22"
+        },
+        {
+          "kind": "crisis_line",
+          "name": "Lifeline (listed by healthdirect)",
+          "about": "Crisis support and suicide prevention, named by the Australian Government's healthdirect service.",
+          "numbers": [
+            {
+              "display": "13 11 14",
+              "tel": "131114",
+              "label": "Phone"
+            }
+          ],
+          "hours": "24 hours a day, 7 days a week",
+          "around_the_clock": true,
+          "partial": null,
+          "website": "https://www.healthdirect.gov.au/mental-health-helplines",
+          "source_url": "https://www.healthdirect.gov.au/mental-health-helplines",
+          "source_title": "healthdirect (Australian Government): Mental health helplines",
+          "source_date": "2025-11",
+          "checked_on": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "slug": "new-zealand",
+      "name": "New Zealand",
+      "vcl_region": "PACOM",
+      "emergency": {
+        "numbers": [
+          {
+            "display": "111",
+            "tel": "111",
+            "label": "Ambulance, fire and police"
+          }
+        ],
+        "source_url": "https://www.gov.uk/foreign-travel-advice/new-zealand/getting-help",
+        "source_title": "GOV.UK travel advice: New Zealand, getting help",
+        "source_date": "2026-11-12",
+        "checked_on": "2026-11-22"
+      },
+      "lines": [
+        {
+          "kind": "agency",
+          "name": "Veterans' Affairs New Zealand",
+          "about": "The government agency for New Zealand veterans. Call to ask about support or how to apply.",
+          "numbers": [
+            {
+              "display": "0800 483 8372",
+              "tel": "08004838372",
+              "label": "In New Zealand"
+            },
+            {
+              "display": "+64 4 495 2070",
+              "tel": "+6444952070",
+              "label": "From overseas"
+            }
+          ],
+          "hours": "Monday to Friday, 9 a.m. to 3 p.m. (New Zealand time)",
+          "around_the_clock": false,
+          "partial": "Office hours only. This is not a crisis line.",
+          "website": "https://www.veteransaffairs.mil.nz/",
+          "source_url": "https://www.veteransaffairs.mil.nz/contact-us/",
+          "source_title": "Veterans' Affairs New Zealand: Contact us",
+          "source_date": "2023-04-05",
+          "checked_on": "2026-11-22"
+        },
+        {
+          "kind": "veterans_line",
+          "name": "NZDF4U (Defence Force wellbeing support)",
+          "about": "Listed by Veterans' Affairs New Zealand under \"If you need to talk\".",
+          "numbers": [
+            {
+              "display": "0800 693 348",
+              "tel": "0800693348",
+              "label": "Phone"
+            }
+          ],
+          "hours": "Not stated on the Veterans' Affairs page",
+          "around_the_clock": false,
+          "partial": "The Veterans' Affairs page gives no hours, so do not rely on it in a crisis. Use 1737 or 111.",
+          "website": "https://www.veteransaffairs.mil.nz/contact-us/need-urgent-help-now/",
+          "source_url": "https://www.veteransaffairs.mil.nz/contact-us/need-urgent-help-now/",
+          "source_title": "Veterans' Affairs New Zealand: Need urgent help now?",
+          "source_date": "2024-11-20",
+          "checked_on": "2026-11-22"
+        },
+        {
+          "kind": "crisis_line",
+          "name": "1737, Need to talk?",
+          "about": "Call or text 1737 to reach a trained counsellor.",
+          "numbers": [
+            {
+              "display": "1737",
+              "tel": "1737",
+              "label": "Call or text"
+            }
+          ],
+          "hours": "24 hours a day, 7 days a week",
+          "around_the_clock": true,
+          "partial": null,
+          "website": "https://info.health.nz/mental-health/where-to-get-help",
+          "source_url": "https://info.health.nz/mental-health/where-to-get-help",
+          "source_title": "Health New Zealand: Where to get help for mental health",
+          "source_date": null,
+          "checked_on": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "slug": "germany",
+      "name": "Germany",
+      "vcl_region": "EUCOM",
+      "emergency": {
+        "numbers": [
+          {
+            "display": "112",
+            "tel": "112",
+            "label": "Ambulance and fire"
+          },
+          {
+            "display": "110",
+            "tel": "110",
+            "label": "Police"
+          }
+        ],
+        "source_url": "https://www.gov.uk/foreign-travel-advice/germany/getting-help",
+        "source_title": "GOV.UK travel advice: Germany, getting help",
+        "source_date": "2026-10-30",
+        "checked_on": "2026-11-22"
+      },
+      "lines": [
+        {
+          "kind": "agency",
+          "name": "Veteranenbüro der Bundeswehr (Bundeswehr Veterans Office)",
+          "about": "The central contact point for veterans of the German armed forces, focused on care and welfare. It connects each veteran with the right contacts. Fill in its contact form before you call.",
+          "numbers": [
+            {
+              "display": "+49 160 90 363 527",
+              "tel": "+4916090363527",
+              "label": "Hotline"
+            },
+            {
+              "display": "+49 30 2403524 204",
+              "tel": "+49302403524204",
+              "label": "Office"
+            }
+          ],
+          "hours": "Monday to Thursday, 8 a.m. to 4 p.m.; Friday, 8 a.m. to noon",
+          "around_the_clock": false,
+          "partial": "Office hours only. This is not a crisis line.",
+          "address": "Jean-Monnet-Straße 4, 10557 Berlin",
+          "website": "https://www.bundeswehr.de/de/selbstverstaendnis/veteranen",
+          "source_url": "https://www.bundeswehr.de/de/selbstverstaendnis/veteranen",
+          "source_title": "Bundeswehr: Veteranen und Veteraninnen der Bundeswehr",
+          "source_date": "2025-05-02",
+          "checked_on": "2026-11-22"
+        },
+        {
+          "kind": "veterans_line",
+          "name": "Trauma-Hotline der Bundeswehr (PTSD hotline)",
+          "about": "Free trauma line of the German armed forces, also for former members of the Bundeswehr with post-traumatic stress. The same page says benefits for a service-related injury (Wehrdienstbeschädigung) are applied for at the Bundesamt für das Personalmanagement der Bundeswehr.",
+          "numbers": [
+            {
+              "display": "+49 800 588 7957",
+              "tel": "+498005887957",
+              "label": "Free call"
+            }
+          ],
+          "hours": "24 hours a day",
+          "around_the_clock": true,
+          "partial": null,
+          "website": "https://www.bundeswehr.de/de/selbstverstaendnis/betreuung-fuersorge/ptbs-hilfe/hilfe-ptbs-betroffene/ehemalige-soldaten-und-reservisten",
+          "source_url": "https://www.bundeswehr.de/de/selbstverstaendnis/betreuung-fuersorge/ptbs-hilfe/hilfe-ptbs-betroffene/ehemalige-soldaten-und-reservisten",
+          "source_title": "Bundeswehr: PTBS-Hilfe für ehemalige Bundeswehrangehörige",
+          "source_date": "2025-05-22",
+          "checked_on": "2026-11-22"
+        },
+        {
+          "kind": "crisis_line",
+          "name": "TelefonSeelsorge (crisis counselling)",
+          "about": "Telephone and online counselling for anyone, listed by the Federal Ministry of Health's health portal.",
+          "numbers": [
+            {
+              "display": "116 123",
+              "tel": "116123",
+              "label": "Phone"
+            }
+          ],
+          "hours": "24 hours a day, 7 days a week",
+          "around_the_clock": true,
+          "partial": null,
+          "website": "https://gesund.bund.de/en/notfallnummern",
+          "source_url": "https://gesund.bund.de/en/notfallnummern",
+          "source_title": "gesund.bund.de (Federal Ministry of Health): Numbers to call in an emergency",
+          "source_date": "2022-06-08",
+          "checked_on": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "slug": "south-korea",
+      "name": "South Korea",
+      "vcl_region": "PACOM",
+      "emergency": {
+        "numbers": [
+          {
+            "display": "119",
+            "tel": "119",
+            "label": "Ambulance and fire"
+          },
+          {
+            "display": "112",
+            "tel": "112",
+            "label": "Police"
+          }
+        ],
+        "source_url": "https://www.gov.uk/foreign-travel-advice/south-korea/getting-help",
+        "source_title": "GOV.UK travel advice: South Korea, getting help",
+        "source_date": "2026-11-12",
+        "checked_on": "2026-11-22"
+      },
+      "no_veterans_line": "We did not find a veterans-specific crisis or support line on an official Korean source. Use the national 109 line below.",
+      "lines": [
+        {
+          "kind": "agency",
+          "name": "Ministry of Patriots and Veterans Affairs (국가보훈부), veterans counselling center",
+          "about": "The national ministry for Korean veterans and their families. Its counselling center answers general questions about veterans' benefits and passes detailed cases to the right office.",
+          "numbers": [
+            {
+              "display": "1577-0606",
+              "tel": "15770606",
+              "label": "From anywhere in Korea, no area code (paid call)"
+            }
+          ],
+          "hours": "Weekdays, 9 a.m. to 6 p.m.",
+          "around_the_clock": false,
+          "partial": "Office hours only, and a domestic number. This is not a crisis line.",
+          "website": "https://www.mpva.go.kr/english/index.do",
+          "source_url": "https://www.mpva.go.kr/mpva/contents.do?key=36",
+          "source_title": "Ministry of Patriots and Veterans Affairs: 보훈상담센터 (counselling center)",
+          "source_date": null,
+          "checked_on": "2026-11-22"
+        },
+        {
+          "kind": "crisis_line",
+          "name": "109 Suicide Prevention Line (Ministry of Health and Welfare)",
+          "about": "The national suicide prevention line. Since January 2024 it combines eight earlier counselling lines, including 1393.",
+          "numbers": [
+            {
+              "display": "109",
+              "tel": "109",
+              "label": "Phone"
+            }
+          ],
+          "hours": "24 hours a day",
+          "around_the_clock": true,
+          "partial": null,
+          "website": "https://www.korea.kr/news/policyNewsView.do?newsId=148954797",
+          "source_url": "https://www.korea.kr/news/policyNewsView.do?newsId=148954797",
+          "source_title": "Korea.kr (Government of Korea policy news): 109",
+          "source_date": "2025-11-18",
+          "checked_on": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "slug": "israel",
+      "name": "Israel",
+      "vcl_region": "CENTCOM",
+      "emergency": {
+        "numbers": [
+          {
+            "display": "101",
+            "tel": "101",
+            "label": "Ambulance"
+          },
+          {
+            "display": "100",
+            "tel": "100",
+            "label": "Police"
+          },
+          {
+            "display": "102",
+            "tel": "102",
+            "label": "Fire"
+          }
+        ],
+        "source_url": "https://www.gov.uk/foreign-travel-advice/israel/getting-help",
+        "source_title": "GOV.UK travel advice: Israel, getting help",
+        "source_date": "2026-11-18",
+        "checked_on": "2026-11-22"
+      },
+      "lines": [
+        {
+          "kind": "agency",
+          "name": "Ministry of Defense Rehabilitation Department (אגף השיקום)",
+          "about": "Recognition and rehabilitation for disabled veterans of the Israel Defense Forces. Call the service center about a claim or your benefits.",
+          "numbers": [
+            {
+              "display": "*8150",
+              "tel": "*8150",
+              "label": "Service center"
+            },
+            {
+              "display": "03-7776777",
+              "tel": "037776777",
+              "label": "Service center"
+            }
+          ],
+          "hours": "Sunday to Thursday, 8 a.m. to 6 p.m.",
+          "around_the_clock": false,
+          "partial": "Office hours only. This is not a crisis line.",
+          "website": "https://shikum.mod.gov.il/ContactUs",
+          "source_url": "https://shikum.mod.gov.il/ContactUs",
+          "source_title": "Ministry of Defense Rehabilitation Department: Contact us",
+          "source_date": null,
+          "checked_on": "2026-11-22"
+        },
+        {
+          "kind": "veterans_line",
+          "name": "Nefesh Achat (נפש אחת) support line",
+          "about": "For disabled IDF veterans coping with post-traumatic stress, people who have applied for disability recognition, released soldiers coping with post-traumatic stress, and family members of people struggling after their service.",
+          "numbers": [
+            {
+              "display": "*8944",
+              "tel": "*8944",
+              "label": "Phone"
+            }
+          ],
+          "hours": "7 days a week, 24 hours a day, including holidays",
+          "around_the_clock": true,
+          "partial": null,
+          "website": "https://shikum.mod.gov.il/ContactUs/helpline",
+          "source_url": "https://shikum.mod.gov.il/ContactUs/helpline",
+          "source_title": "Ministry of Defense Rehabilitation Department: Nefesh Achat support line",
+          "source_date": null,
+          "checked_on": "2026-11-22"
+        },
+        {
+          "kind": "crisis_line",
+          "name": "ERAN mental health first aid (listed by the Ministry of Health)",
+          "about": "Emotional first aid by trained volunteers, named by the Ministry of Health. Also by WhatsApp.",
+          "numbers": [
+            {
+              "display": "1201",
+              "tel": "1201",
+              "label": "Phone"
+            },
+            {
+              "display": "052-8451201",
+              "tel": "0528451201",
+              "label": "WhatsApp"
+            }
+          ],
+          "hours": "24/7, throughout the year",
+          "around_the_clock": true,
+          "partial": null,
+          "website": "https://me.health.gov.il/en/mental-health/therapy-rehabilitation/crisis-support/first-aid/",
+          "source_url": "https://me.health.gov.il/en/mental-health/therapy-rehabilitation/crisis-support/first-aid/",
+          "source_title": "Ministry of Health: Mental health first aid centers",
+          "source_date": "2026-03-03",
+          "checked_on": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "slug": "france",
+      "name": "France",
+      "vcl_region": "EUCOM",
+      "emergency": {
+        "numbers": [
+          {
+            "display": "112",
+            "tel": "112",
+            "label": "European emergency number"
+          },
+          {
+            "display": "15",
+            "tel": "15",
+            "label": "SAMU (medical)"
+          },
+          {
+            "display": "17",
+            "tel": "17",
+            "label": "Police"
+          },
+          {
+            "display": "18",
+            "tel": "18",
+            "label": "Fire"
+          }
+        ],
+        "source_url": "https://www.masecurite.interieur.gouv.fr/en/practical-sheets/les-numeros-nationaux",
+        "source_title": "Ministry of the Interior (Ma Sécurité): National emergency numbers",
+        "source_date": "2026-08-31",
+        "checked_on": "2026-11-22"
+      },
+      "lines": [
+        {
+          "kind": "agency",
+          "name": "Office national des combattants et des victimes de guerre (ONaCVG)",
+          "about": "A public body of the Ministry of the Armed Forces. It protects the interests of veterans and war victims, issues the combatant's card (carte du combattant) and gives social help. Each département has its own ONaCVG service; the Paris service is shown here.",
+          "numbers": [
+            {
+              "display": "01 44 41 38 10",
+              "tel": "0144413810",
+              "label": "Paris departmental service"
+            }
+          ],
+          "email": "sd75@onacvg.fr",
+          "hours": "Weekday mornings 9 a.m. to noon; also Tuesday and Thursday 1:30 to 4 p.m. (Paris service)",
+          "around_the_clock": false,
+          "partial": "Office hours only, one office per département. This is not a crisis line.",
+          "website": "https://www.onac-vg.fr/",
+          "source_url": "https://lannuaire.service-public.gouv.fr/ile-de-france/paris/d6b6366f-9742-40c2-b3a5-0a56a78a0a06",
+          "source_title": "Service-Public.fr directory: ONaCVG, Paris departmental service",
+          "source_date": "2026-11-04",
+          "checked_on": "2026-11-22"
+        },
+        {
+          "kind": "veterans_line",
+          "name": "Écoute Défense",
+          "about": "Clinical psychologists of the armed forces health service listen and direct you to follow-up care. Anonymous and free. For military personnel and their families; the Ministry of the Armed Forces also lists it for former reservists coping with an injury or illness.",
+          "numbers": [
+            {
+              "display": "08 08 800 321",
+              "tel": "0808800321",
+              "label": "Free from landlines and mobiles"
+            }
+          ],
+          "hours": "24 hours a day, 7 days a week",
+          "around_the_clock": true,
+          "partial": null,
+          "website": "https://www.defense.gouv.fr/sga/soutien-psychologique",
+          "source_url": "https://maison-des-blesses.defense.gouv.fr/militaire-ou-ancien-militaire-de-reserve/suites-ma-blessure-ou-ma-maladie",
+          "source_title": "Ministry of the Armed Forces (Maison numérique des blessés): After my injury or illness",
+          "source_date": "2026-06-02",
+          "checked_on": "2026-11-22"
+        },
+        {
+          "kind": "crisis_line",
+          "name": "3114: national suicide prevention number",
+          "about": "Answered by trained nurses and psychologists. Free and confidential. In immediate danger, call 15 or 112.",
+          "numbers": [
+            {
+              "display": "3114",
+              "tel": "3114",
+              "label": "Phone"
+            }
+          ],
+          "hours": "24 hours a day, 7 days a week",
+          "around_the_clock": true,
+          "partial": null,
+          "website": "https://www.gers.gouv.fr/Actions-de-l-Etat/Solidarite-et-cohesion-sociale/Prevention-du-suicide-3114-le-numero-national",
+          "source_url": "https://www.gers.gouv.fr/Actions-de-l-Etat/Solidarite-et-cohesion-sociale/Prevention-du-suicide-3114-le-numero-national",
+          "source_title": "Services de l'État dans le Gers: 3114, le numéro national",
+          "source_date": "2022-12-28",
+          "checked_on": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "slug": "netherlands",
+      "name": "Netherlands",
+      "vcl_region": "EUCOM",
+      "emergency": {
+        "numbers": [
+          {
+            "display": "112",
+            "tel": "112",
+            "label": "Police, fire and ambulance"
+          }
+        ],
+        "source_url": "https://www.gov.uk/foreign-travel-advice/netherlands/getting-help",
+        "source_title": "GOV.UK travel advice: Netherlands, getting help",
+        "source_date": "2026-11-12",
+        "checked_on": "2026-11-22"
+      },
+      "lines": [
+        {
+          "kind": "agency",
+          "name": "Veteranenloket (Veterans Desk)",
+          "about": "For veterans, war and service victims and their relatives. It provides care and services from the Ministry of Defence, and is the entry point to the national veterans care network (Landelijk Zorgsysteem Veteranen). Military pensions are handled by ABP.",
+          "numbers": [
+            {
+              "display": "088 334 00 00",
+              "tel": "0883340000",
+              "label": "Veteranenloket"
+            },
+            {
+              "display": "045 579 62 55",
+              "tel": "0455796255",
+              "label": "ABP military pensions"
+            }
+          ],
+          "email": "info@veteranenloket.nl",
+          "hours": "Veteranenloket: 24 hours a day, 7 days a week",
+          "around_the_clock": true,
+          "partial": null,
+          "website": "https://www.veteranenloket.nl/",
+          "source_url": "https://www.defensie.nl/contact/veteranen",
+          "source_title": "Ministry of Defence (Defensie): Contact for veterans",
+          "source_date": null,
+          "checked_on": "2026-11-22"
+        },
+        {
+          "kind": "crisis_line",
+          "name": "113 Zelfmoordpreventie (suicide prevention)",
+          "about": "Telephone help line for people with thoughts of suicide, funded by the Dutch government. Anonymous and free.",
+          "numbers": [
+            {
+              "display": "113",
+              "tel": "113",
+              "label": "Phone"
+            },
+            {
+              "display": "0800 0113",
+              "tel": "08000113",
+              "label": "Free phone"
+            }
+          ],
+          "hours": "24 hours a day, 7 days a week",
+          "around_the_clock": true,
+          "partial": null,
+          "website": "https://www.rijksoverheid.nl/themas/familie-zorg-en-gezondheid/geestelijke-gezondheidszorg/zelfmoorden-verminderen",
+          "source_url": "https://www.rijksoverheid.nl/themas/familie-zorg-en-gezondheid/geestelijke-gezondheidszorg/zelfmoorden-verminderen",
+          "source_title": "Rijksoverheid (Government of the Netherlands): Reducing suicides",
+          "source_date": "2026-05-26",
+          "checked_on": "2026-11-22"
+        }
+      ],
+      "veterans_line_note": "The Veteranenloket number above is the veterans support line: the Ministry of Defence lists it as open 24 hours a day, 7 days a week."
+    },
+    {
+      "slug": "thailand",
+      "name": "Thailand",
+      "vcl_region": "PACOM",
+      "emergency": {
+        "numbers": [
+          {
+            "display": "191",
+            "tel": "191",
+            "label": "Police (also listed for ambulance and fire)"
+          },
+          {
+            "display": "1669",
+            "tel": "1669",
+            "label": "Ambulance"
+          },
+          {
+            "display": "199",
+            "tel": "199",
+            "label": "Fire"
+          },
+          {
+            "display": "1155",
+            "tel": "1155",
+            "label": "Tourist police"
+          }
+        ],
+        "source_url": "https://www.gov.uk/foreign-travel-advice/thailand/getting-help",
+        "source_title": "GOV.UK travel advice: Thailand, getting help",
+        "source_date": "2026-11-17",
+        "checked_on": "2026-11-22"
+      },
+      "no_veterans_line": "We did not find a veterans-specific crisis or support line on an official Thai source. Use the 1323 line below.",
+      "lines": [
+        {
+          "kind": "agency",
+          "name": "War Veterans Organization of Thailand (องค์การสงเคราะห์ทหารผ่านศึก)",
+          "about": "Thailand's veterans organization: welfare, medical care through the Veterans General Hospital, jobs, farm settlements, loans and funeral assistance.",
+          "numbers": [
+            {
+              "display": "02-354-8587",
+              "tel": "023548587",
+              "label": "Main office"
+            }
+          ],
+          "email": "saraban.wvo@thaiveterans.mail.go.th",
+          "hours": "Not stated on the organization's page",
+          "around_the_clock": false,
+          "partial": "Hours are not given. This is not a crisis line.",
+          "website": "https://thaiveterans.mod.go.th/en/",
+          "source_url": "https://thaiveterans.mod.go.th/contact/",
+          "source_title": "War Veterans Organization of Thailand: Contact us",
+          "source_date": null,
+          "checked_on": "2026-11-22"
+        },
+        {
+          "kind": "crisis_line",
+          "name": "1323 Mental Health Hotline",
+          "about": "Free counselling for stress, burnout or depression, listed by the Ministry of Public Health. WHO (2024) also names Thailand's Mental Health Hotline 1323.",
+          "numbers": [
+            {
+              "display": "1323",
+              "tel": "1323",
+              "label": "Free call"
+            }
+          ],
+          "hours": "24 hours",
+          "around_the_clock": true,
+          "partial": null,
+          "website": "https://www.who.int/news-room/feature-stories/detail/suicide-prevention-in-thailand--a-whole-of-society-approach",
+          "source_url": "https://ddc.moph.go.th/odpc12/journal_detail.php?publish=10201",
+          "source_title": "Ministry of Public Health, Department of Disease Control: Mental health hotline 1323",
+          "source_date": "2020-06-02",
+          "also_source_url": "https://www.who.int/news-room/feature-stories/detail/suicide-prevention-in-thailand--a-whole-of-society-approach",
+          "also_source_title": "WHO: Suicide prevention in Thailand",
+          "also_source_date": "2024-09-10",
+          "checked_on": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "slug": "denmark",
+      "name": "Denmark",
+      "vcl_region": "EUCOM",
+      "emergency": {
+        "numbers": [
+          {
+            "display": "112",
+            "tel": "112",
+            "label": "Ambulance, fire and police"
+          }
+        ],
+        "source_url": "https://www.gov.uk/foreign-travel-advice/denmark/getting-help",
+        "source_title": "GOV.UK travel advice: Denmark, getting help",
+        "source_date": "2026-11-12",
+        "checked_on": "2026-11-22"
+      },
+      "lines": [
+        {
+          "kind": "agency",
+          "name": "Veterancentret (Danish Veteran Centre)",
+          "about": "One entry point for soldiers, veterans and relatives, part of the Defence Personnel Command under the Ministry of Defence: treatment of psychological after-effects, rehabilitation, work-injury cases and social counselling.",
+          "numbers": [
+            {
+              "display": "+45 72 81 97 00",
+              "tel": "+4572819700",
+              "label": "Main line"
+            }
+          ],
+          "email": "vetc-myn@mil.dk",
+          "hours": "Office: Monday and Tuesday 8 a.m. to 4 p.m.; Wednesday to Friday 8 a.m. to 3 p.m.",
+          "around_the_clock": false,
+          "partial": "Office hours for general matters; outside those hours the same number is the 24-hour line below.",
+          "address": "Garnisonen 1, 4100 Ringsted",
+          "website": "https://www.veterancentret.dk/da/kontakt/",
+          "source_url": "https://www.veterancentret.dk/da/kontakt/",
+          "source_title": "Veterancentret: Kontakt",
+          "source_date": "2026-04-22",
+          "checked_on": "2026-11-22"
+        },
+        {
+          "kind": "veterans_line",
+          "name": "Veterancentret 24-hour line (Døgntelefonen)",
+          "about": "For soldiers, veterans and relatives who need urgent help. Outside office hours a social worker answers. You can stay anonymous.",
+          "numbers": [
+            {
+              "display": "+45 7281 9700",
+              "tel": "+4572819700",
+              "label": "Phone"
+            }
+          ],
+          "hours": "Always open, all year",
+          "around_the_clock": true,
+          "partial": null,
+          "website": "https://www.veterancentret.dk/da/om-veterancentret/dogntelefonen/",
+          "source_url": "https://www.veterancentret.dk/da/om-veterancentret/dogntelefonen/",
+          "source_title": "Veterancentret: Døgntelefonen",
+          "source_date": "2024-02-15",
+          "checked_on": "2026-11-22"
+        },
+        {
+          "kind": "crisis_line",
+          "name": "Livslinien (named by the Danish Health Authority)",
+          "about": "The Danish Health Authority asks everyone who talks about suicide to refer people to Livslinien, by phone or chat at livslinien.dk.",
+          "numbers": [
+            {
+              "display": "70 201 201",
+              "tel": "70201201",
+              "label": "Phone"
+            }
+          ],
+          "hours": "Not stated on the Danish Health Authority page",
+          "around_the_clock": false,
+          "partial": "The government page does not give Livslinien's hours, so we cannot confirm it answers around the clock. In an emergency call 112; veterans can use the 24-hour Veterancentret line above.",
+          "website": "https://www.sst.dk/nyheder/2026/sundhedsstyrelsen-opfordrer-til-at-alle-som-omtaler-selvmord-eller-selvmordstanker-henviser-til-hjaelp",
+          "source_url": "https://www.sst.dk/nyheder/2026/sundhedsstyrelsen-opfordrer-til-at-alle-som-omtaler-selvmord-eller-selvmordstanker-henviser-til-hjaelp",
+          "source_title": "Danish Health Authority (Sundhedsstyrelsen): referring people to help",
+          "source_date": "2026-02-02",
+          "checked_on": "2026-11-22"
+        }
+      ]
+    }
+  ],
+  "not_yet_covered": [
+    {
+      "name": "Philippines",
+      "reason": "The Philippine Veterans Affairs Office's website and other Philippine government pages could not be read when we checked, so we have not published a country page. U.S. veterans there can use the VA Manila numbers above."
+    },
+    {
+      "name": "Japan",
+      "reason": "We did not find a national veterans agency on an official source."
+    },
+    {
+      "name": "Mexico",
+      "reason": "The official pages for military retirees could not be read when we checked."
+    },
+    {
+      "name": "Ireland",
+      "reason": "The new Office of Veterans Affairs (Department of Defence, November 2025) has published no contact details yet."
+    },
+    {
+      "name": "Italy",
+      "reason": "We did not find a national veterans agency on an official source."
+    }
+  ]
+}

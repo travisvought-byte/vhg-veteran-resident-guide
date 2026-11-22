@@ -50,6 +50,12 @@ The guide now covers all 50 states and the District of Columbia. Forty-nine stat
 
 To add or update a starter state, edit `data/starter-states.json`, then run `python3 scripts/make_starter_states.py`, `python3 scripts/make_qr.py` and `python3 scripts/build_public.py`. To upgrade a starter state to a full county edition, remove it from that file and follow [Adding a state](docs/ADDING-A-STATE.md).
 
+## Veterans outside the United States
+
+**Country guides:** https://guide.vethomeguard.org/world/ — linked from the main navigation and the homepage's "Need help now?" box. Eleven countries so far (Canada, United Kingdom, Australia, New Zealand, Germany, South Korea, Israel, France, the Netherlands, Thailand and Denmark). Each country page lists the national emergency number, the official veterans agency, any veterans support line and the national crisis line, and says plainly when a line is not a 24-hour crisis line. Every number names the official page it was read on and the date it was checked; sources are government bodies, national public bodies and WHO/UN agencies, and a charity appears only where a government page names it. Each page also has a block for U.S. veterans living there: the VA Foreign Medical Program and the Veterans Crisis Line's overseas numbers, from va.gov and veteranscrisisline.net.
+
+The data is `data/world/countries.json`; `scripts/build_world.py` (run by `scripts/build_public.py`) writes `world/`. `tests/world.py` checks that every country page has an emergency number and sourced lines. The monthly link check covers these sources too.
+
 ## One guide, any supported state
 
 The main guide uses one interface. Changing the state updates county contacts, resources, senior support and accessibility guidance in place. Each state has its own address with its own title, description and canonical: Ohio is the front page and every other state is its two-letter page, such as `ky.html`. These are the addresses in `sitemap.xml`. Changing the state moves the address bar to that state's page, and older `?state=KY` links still open the right state and move to its page, keeping county and view. State data and source-grounded routing remain separate.
