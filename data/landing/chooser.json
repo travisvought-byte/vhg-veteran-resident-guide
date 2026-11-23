@@ -1,0 +1,76 @@
+{
+ "_about": "The \"I'm here as...\" chooser on the home page and every state page. Each option points at a part of the guide that exists: a view (checked against every state's routes by tests/landing.cjs), an anchor on the page, or a page in this repository. An option with states shows only in those states.",
+ "title": "I'm here as…",
+ "options": [
+  {
+   "id": "veteran",
+   "label": "A veteran",
+   "hint": "Claims, VA health care, jobs, school and housing",
+   "href": "#directory"
+  },
+  {
+   "id": "newvet",
+   "label": "Just out of the service",
+   "hint": "Your first year and where to start",
+   "view": "newvet"
+  },
+  {
+   "id": "spouse",
+   "label": "A spouse or surviving spouse",
+   "hint": "Survivor benefits, pension and burial help",
+   "view": "survivors"
+  },
+  {
+   "id": "family",
+   "label": "An adult child, family member or caregiver",
+   "hint": "The first call to make and what to ask",
+   "help": true
+  },
+  {
+   "id": "staff",
+   "label": "Nursing home or care facility staff",
+   "hint": "A simple referral handoff for residents",
+   "href": "#staff-guide"
+  },
+  {
+   "id": "nursing-family",
+   "label": "Family of a veteran in a nursing home",
+   "hint": "Aid and Attendance, abuse concerns, hospice and burial",
+   "href": "va-pension-aid-attendance.html"
+  },
+  {
+   "id": "choosing",
+   "label": "Choosing a nursing home in Ohio",
+   "hint": "Ohio nursing homes, rehab and assisted living",
+   "href": "facilities.html",
+   "states": [
+    "OH"
+   ]
+  },
+  {
+   "id": "discharge",
+   "label": "Helping a veteran with a bad discharge",
+   "hint": "Upgrades, records, and VA care with bad paper",
+   "href": "bad-paper/"
+  },
+  {
+   "id": "senior",
+   "label": "A senior or person with a disability",
+   "hint": "Daily help at home; no military service needed",
+   "view": "seniors"
+  },
+  {
+   "id": "parent",
+   "label": "A parent of a child with a disability",
+   "hint": "Early intervention, school and benefits",
+   "href": "family-guide.html",
+   "family": true
+  },
+  {
+   "id": "abroad",
+   "label": "A veteran living outside the U.S.",
+   "hint": "Crisis lines and VA help abroad",
+   "href": "world/"
+  }
+ ]
+}

@@ -69,6 +69,7 @@ STYLE = '''<style>
 .card h3{margin-top:0}.numbers{list-style:none;padding:0;margin:8px 0}.numbers li{padding:4px 0}.numbers a[href^="tel:"]{font-size:22px;display:inline-block;min-height:44px;line-height:44px}
 .emergency{background:#fbeceb;border:2px solid #b3261e;border-radius:8px;padding:16px 20px}.emergency h2{color:#7d1a14;margin-top:0}
 .partial{background:#fff1ce;color:#5b4210;border-radius:5px;padding:8px 12px;margin:10px 0}.full{background:#e3efe7;color:#21493a;border-radius:5px;padding:8px 12px;margin:10px 0}
+.hero .jumps a{color:inherit;font-weight:700}.hero .opening{font-size:19px}
 .us-block{background:#e8eeea;border-radius:8px;padding:18px 22px}.us-block h3{margin-top:14px}
 table{border-collapse:collapse;width:100%;background:#fff}th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
 .no-agency{background:#fff;border:1px solid var(--line);border-left:6px solid #5b6770;border-radius:8px;padding:16px 20px}
@@ -78,13 +79,15 @@ table{border-collapse:collapse;width:100%;background:#fff}th,td{text-align:left;
 </style>'''
 
 
-def head(title, desc, url):
+def head(title, desc, url, og_title=None):
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
 <link rel="canonical" href="{e(url)}">
-<meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{e(url)}"><meta property="og:type" content="website">
+<meta property="og:title" content="{e(og_title or title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{e(url)}"><meta property="og:type" content="website">
+<meta property="og:site_name" content="Veteran Home Guardians"><meta property="og:image" content="https://guide.vethomeguard.org/assets/vhg-logo.png"><meta property="og:image:width" content="715"><meta property="og:image:height" content="715"><meta property="og:image:alt" content="Veteran Home Guardians logo">
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="{e(og_title or title)}"><meta name="twitter:description" content="{e(desc)}"><meta name="twitter:image" content="https://guide.vethomeguard.org/assets/vhg-logo.png">
 <link rel="stylesheet" href="../assets/family-guide.css">
 {STYLE}
 <script src="../assets/analytics.js" defer></script></head><body>
@@ -195,13 +198,55 @@ def no_agency_block(c):
             f'<p>{e(na["statement"])}</p>{src}</div></section>')
 
 
+THE = {'United Kingdom', 'Netherlands', 'Philippines', 'Czech Republic', 'Dominican Republic', 'United Arab Emirates', 'Bahamas'}
+
+
+def in_place(c):
+    """A country name as it reads in a sentence: "the Netherlands", "Canada"."""
+    return ('the ' if c['name'] in THE else '') + c['name']
+
+
+def fmp_toll_free(data, c):
+    """Whether VA lists a toll-free Foreign Medical Program line from this country (or its parent)."""
+    fmp = data['us_abroad']['fmp']
+    place = parent_of(data, c) or c
+    return place['slug'] == 'canada' or any(t['country'] == place['name'] for t in fmp['toll_free'])
+
+
+def jump_links(c, agency=True):
+    """The first things a visitor here came for, one tap away; the reference detail follows."""
+    links = ['<a href="#emergency">Emergency number</a>']
+    if agency:
+        links.append('<a href="#agency">' + e(next(x['name'] for x in c['lines'] if x['kind'] == 'agency')) + '</a>')
+    links.append('<a href="#crisis-line">Crisis line</a>')
+    links.append('<a href="#us-veterans">Help for U.S. veterans here</a>')
+    return '<p class="jumps" data-jumps>' + ' · '.join(links) + '</p>'
+
+
+def country_opening(data, c):
+    """Written to the person who lands here: a veteran living in this country, whether they served in its
+    forces or are a U.S. veteran who settled there. Every name in it comes from the country's own data."""
+    name = e(in_place(c))
+    fmp = 'the VA Foreign Medical Program’s toll-free line' if fmp_toll_free(data, c) else 'how to reach the VA Foreign Medical Program'
+    if c.get('no_agency'):
+        first = (f'Living in {name} as a veteran? {e(c["name"])} has no national veterans agency, so this page starts with the emergency number '
+                 'and the national crisis line.')
+    else:
+        agency = e(next(x['name'] for x in c['lines'] if x['kind'] == 'agency'))
+        first = f'Living in {name} as a veteran? Start with the emergency number, then {agency}, the official veterans agency.'
+    return f'<p class="opening">{first} If you are a U.S. veteran here, the Veterans Crisis Line and {fmp} are below.</p>'
+
+
 def country_page(data, c):
     if c.get('no_agency'):
         return no_agency_page(data, c)
     url = BASE + c['slug'] + '.html'
-    title = f'{c["name"]}: help for veterans | Veteran Resource Guide'
-    desc = (f'Emergency number, official veterans agency and crisis lines in {c["name"]}, with the official source for every number. '
-            f'Plus VA Foreign Medical Program and Veterans Crisis Line help for U.S. veterans living in {c["name"]}.')
+    agency = next(x['name'] for x in c['lines'] if x['kind'] == 'agency')
+    title = f'Veterans in {in_place(c)}: {agency} and VA help abroad'
+    if len(title) > 80 or ':' in agency:
+        title = f'Veterans in {in_place(c)}: who to call, and VA help for U.S. veterans'
+    desc = (f'For veterans living in {in_place(c)}: the emergency number, {agency}, crisis lines, and the Veterans Crisis Line '
+            f'and VA Foreign Medical Program for U.S. veterans there.')
     body = ''
     for kind, heading in KINDS:
         cards = ''.join(line_card(x) for x in c['lines'] if x['kind'] == kind)
@@ -211,10 +256,10 @@ def country_page(data, c):
             else:
                 cards = '<p class="full">' + e(c['veterans_line_note']) + '</p>'
         body += f'<section id="{kind.replace("_", "-")}"><h2>{heading}</h2>{cards}</section>'
-    hero = (f'<div class="hero"><p class="eyebrow">VETERANS OUTSIDE THE U.S.</p><h1>{e(c["name"])}</h1>'
-            f'<p>Emergency, veterans and crisis contacts in {e(c["name"])}, each from an official source. Checked {when(c.get("checked_on") or data["checked_on"])}. '
-            f'Published numbers are not telephone-confirmed.</p>{region_links(data, c)}</div></header>')
-    return (head(title, desc, url) + hero + f'<main class="world" id="main" data-country="{e(c["slug"])}">' + emergency_block(c) + body
+    hero = (f'<div class="hero"><p class="eyebrow">VETERANS OUTSIDE THE U.S.</p><h1>Veterans in {e(in_place(c))}</h1>'
+            f'{country_opening(data, c)}{jump_links(c)}<p class="small">Every number comes from an official source. Checked {when(c.get("checked_on") or data["checked_on"])}.</p>'
+            f'{region_links(data, c)}</div></header>')
+    return (head(title, desc, url, f'Help for veterans living in {in_place(c)}') + hero + f'<main class="world" id="main" data-country="{e(c["slug"])}">' + emergency_block(c) + body
             + us_block(data, c) + '</main>' + footer())
 
 
@@ -233,17 +278,17 @@ def us_block(data, c):
 def no_agency_page(data, c):
     """A country with no national veterans agency: the statement, the emergency and crisis numbers, and U.S.-veteran help."""
     url = BASE + c['slug'] + '.html'
-    title = f'{c["name"]}: help for veterans | Veteran Resource Guide'
-    desc = (f'Emergency number and crisis line in {c["name"]}, which has no national veterans agency, with the official source for every number. '
-            f'Plus VA Foreign Medical Program and Veterans Crisis Line help for U.S. veterans living in {c["name"]}.')
+    title = f'Veterans in {in_place(c)}: emergency, crisis line and VA help abroad'
+    desc = (f'For veterans living in {in_place(c)}, which has no national veterans agency: the emergency number, the crisis line, '
+            f'and the Veterans Crisis Line and VA Foreign Medical Program for U.S. veterans there.')
     cards = ''.join(line_card(x) for x in c['lines'] if x['kind'] == 'crisis_line')
     if not cards:
         cards = '<p class="partial" data-partial>' + e(c['no_crisis_line']) + '</p>'
     crisis = f'<section id="crisis-line"><h2>Crisis and mental health lines</h2>{cards}</section>'
-    hero = (f'<div class="hero"><p class="eyebrow">VETERANS OUTSIDE THE U.S.</p><h1>{e(c["name"])}</h1>'
-            f'<p>Emergency and crisis contacts in {e(c["name"])}, and help for U.S. veterans living there, each from an official source. '
-            f'Checked {when(c.get("checked_on") or data["checked_on"])}. Published numbers are not telephone-confirmed.</p>{region_links(data, c)}</div></header>')
-    return (head(title, desc, url) + hero + f'<main class="world" id="main" data-country="{e(c["slug"])}" data-no-agency-page>'
+    hero = (f'<div class="hero"><p class="eyebrow">VETERANS OUTSIDE THE U.S.</p><h1>Veterans in {e(in_place(c))}</h1>'
+            f'{country_opening(data, c)}{jump_links(c, agency=False)}<p class="small">Every number comes from an official source. '
+            f'Checked {when(c.get("checked_on") or data["checked_on"])}.</p>{region_links(data, c)}</div></header>')
+    return (head(title, desc, url, f'Help for veterans living in {in_place(c)}') + hero + f'<main class="world" id="main" data-country="{e(c["slug"])}" data-no-agency-page>'
             + emergency_block(c) + no_agency_block(c) + crisis + us_block(data, c) + '</main>' + footer())
 
 
@@ -268,7 +313,7 @@ def region_page(data, r):
     emergency numbers, local crisis lines, local offices for U.S. veterans, and the VA help, with a link back."""
     parent = parent_of(data, r)
     url = BASE + r['slug'] + '.html'
-    title = f'{r["name"]} ({lower_first(r["kind_label"])}): help for U.S. veterans | Veteran Resource Guide'
+    title = f'U.S. veterans on {r["name"]} ({lower_first(r["kind_label"])}): who to call and VA help'
     desc = (f'Emergency numbers, crisis lines and help for U.S. veterans and military retirees on {r["name"]}, '
             f'a {lower_first(r["kind_label"])}, with the official source for every number.')
     back = f'<a href="{e(parent["slug"])}.html" data-parent-link>{e(parent["name"])}</a>'
@@ -281,10 +326,12 @@ def region_page(data, r):
     local = (f'<section id="us-local"><h2>Offices for U.S. veterans and retirees on {e(r["name"])}</h2>'
              + ''.join(office_card(x) for x in r['us_local']) + '</section>')
     hero = (f'<div class="hero"><p class="eyebrow">VETERANS OUTSIDE THE U.S. · {e(r["kind_label"].upper())}</p><h1>{e(r["name"])}</h1>'
-            f'<p>{e(r["name"])} is a {e(lower_first(r["kind_label"]))}, not a separate country. Emergency and crisis contacts there, and help for U.S. veterans '
-            f'living there, each from an official source. Checked {when(r.get("checked_on") or data["checked_on"])}. '
-            f'Published numbers are not telephone-confirmed.</p><p>Back to {back}.</p></div></header>')
-    return (head(title, desc, url) + hero + f'<main class="world" id="main" data-region="{e(r["slug"])}" data-parent="{e(parent["slug"])}">'
+            f'<p class="opening">Living on {e(r["name"])} as a U.S. veteran or military retiree? Start with the emergency numbers, then the local offices '
+            f'for U.S. veterans and retirees, the Veterans Crisis Line and the VA Foreign Medical Program. {e(r["name"])} is a {e(lower_first(r["kind_label"]))}, not a separate country.</p>'
+            '<p class="jumps" data-jumps><a href="#emergency">Emergency numbers</a> · <a href="#us-local">Offices for U.S. veterans and retirees</a> · '
+            '<a href="#crisis-line">Crisis lines</a> · <a href="#us-veterans">VA help</a></p>'
+            f'<p class="small">Every number comes from an official source. Checked {when(r.get("checked_on") or data["checked_on"])}.</p><p>Back to {back}.</p></div></header>')
+    return (head(title, desc, url, f'Help for U.S. veterans living on {r["name"]}') + hero + f'<main class="world" id="main" data-region="{e(r["slug"])}" data-parent="{e(parent["slug"])}">'
             + emergency_block(r) + place + crisis + local + us_block(data, r) + '</main>' + footer())
 
 
@@ -296,9 +343,9 @@ def checked_range(data):
 
 def index_page(data):
     url = BASE
-    title = 'Veterans outside the U.S.: country guides | Veteran Resource Guide'
-    desc = ('Emergency numbers, official veterans agencies and crisis lines in ' + str(len(data['countries'])) +
-            ' countries, plus the VA Foreign Medical Program and Veterans Crisis Line numbers for U.S. veterans living abroad.')
+    title = 'Veterans living abroad: crisis lines, veterans agencies and VA help by country'
+    desc = ('For veterans living outside the United States: emergency numbers, official veterans agencies and crisis lines country by country, '
+            'plus the Veterans Crisis Line and VA Foreign Medical Program for U.S. veterans abroad.')
     def agency_cell(c):
         if c.get('no_agency'):
             return '<span class="tag" data-no-agency>No national veterans agency</span>'
@@ -360,9 +407,11 @@ def index_page(data):
              'We did not telephone the agencies.</p>'
              f'<h3>Not yet covered</h3><ul>{later}</ul></section>')
     hero = ('<div class="hero"><p class="eyebrow">VETERANS OUTSIDE THE U.S.</p><h1>Veterans outside the United States</h1>'
-            '<p>Emergency numbers, official veterans agencies and crisis lines in other countries, and the VA help U.S. veterans can use while living abroad. '
-            f'Checked {checked_range(data)}.</p></div></header>')
-    return head(title, desc, url) + hero + '<main class="world" id="main">' + countries + us + rules + '</main>' + footer()
+            '<p class="opening">Living abroad, or planning to? Choose the country you live in for its emergency number, veterans agency and crisis line. '
+            'If you are a U.S. veteran overseas, the Veterans Crisis Line numbers by region and the VA Foreign Medical Program are on this page.</p>'
+            '<p class="jumps" data-jumps><a href="#countries">Choose a country</a> · <a href="#us-veterans-abroad">Help for U.S. veterans abroad</a></p>'
+            f'<p class="small">Checked {checked_range(data)}.</p></div></header>')
+    return head(title, desc, url, 'Help for veterans living outside the United States') + hero + '<main class="world" id="main">' + countries + us + rules + '</main>' + footer()
 
 
 def pages():

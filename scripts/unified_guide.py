@@ -1,6 +1,7 @@
 """Build one public interface from the existing source-grounded state adapters."""
 import hashlib,json,re
 from html import escape
+import landing
 
 BASE_URL='https://guide.vethomeguard.org/'
 
@@ -52,6 +53,14 @@ def unified_outputs(root, editions, states):
     statewide={s['code']:[n.lower() for n in s.get('statewide_area_names',[])] for s in states}
     meta={s['code']:{'sharePage':s['share_page'],'files':{'offices':s['offices'],'resources':s['resources']},'coverageNote':s.get('coverage_note')} for s in states}
     base=editions['index.html']
+    # Who arrives on each page and what they came for (data/landing/states.json). Ohio is the site root,
+    # which is also the home page for every state, so it opens with the home landing.
+    landings={}
+    for s in states:
+        if s.get('base'):landings[s['code']]=landing.home(root);continue
+        records=json.loads((root/s['programs']).read_text())+json.loads((root/s['referrals']).read_text())
+        landings[s['code']]=landing.state(s['code'],s['name'],records,root)
+    assert set(landings)-{states[0]['code']}==landing.states_codes(root),'every state has landing text, and only registered states'
     script=re.search(r'<script>(.*?)</script>',base,re.S).group(1)
     configs=[]
     override_names=['officeCard','renderCounty','renderOfficeList','audience','renderAccessibility','renderSeniorGuide']
@@ -65,7 +74,10 @@ def unified_outputs(root, editions, states):
             m=re.search(r'^function '+name+r'\(.*$',js,re.M)
             if m:functions.append(re.sub(r'function (\w+)\(',lambda match: match[1]+':function(',m.group()).replace(' function', ',function').replace('} countyContactsHTML:', '},countyContactsHTML:'))
         markup={k:section(html,k) for k in ['seniors-guide','community-guide','accessibility-guide','staff-guide']}
-        configs.append((state,'{name:'+json.dumps(names[state])+',statewideNames:'+json.dumps(statewide[state])+',sharePage:'+json.dumps(meta[state]['sharePage'])+',files:'+json.dumps(meta[state]['files'])+',coverageNote:'+json.dumps(meta[state]['coverageNote'])+',data:'+data+',counties:'+counties+',markup:'+json.dumps(markup)+',configure:function(){'+init+'return {priority,routes,seniorTopics,routeNames};},'+','.join(functions)+'}'))
+        land=landings[state]
+        # Switching state in place shows that state's own heading and opening (assets/guide-runtime.js).
+        land_js={'title':land['title'],'h1':land['h1'],'eyebrow':land['eyebrow'],'intro':land['intro']}
+        configs.append((state,'{name:'+json.dumps(names[state])+',statewideNames:'+json.dumps(statewide[state])+',sharePage:'+json.dumps(meta[state]['sharePage'])+',files:'+json.dumps(meta[state]['files'])+',coverageNote:'+json.dumps(meta[state]['coverageNote'])+',landing:'+json.dumps(land_js)+',data:'+data+',counties:'+counties+',markup:'+json.dumps(markup)+',configure:function(){'+init+'return {priority,routes,seniorTopics,routeNames};},'+','.join(functions)+'}'))
     # Common rendering and event handling, with only genuinely state-specific routing in adapters.
     common=script[script.index('const $='):]
     begin=common.index('const priority=');end=common.index('const tel=')
@@ -90,8 +102,12 @@ def unified_outputs(root, editions, states):
     unified=re.sub(r'<meta name="description"[^>]*>', lambda _: '<meta name="description" content="Help for every veteran in '+state_list(states)+': claims, VA health care, jobs, school, housing, records and long-term care. County veterans office contacts.">', unified)
     unified=re.sub(r'<title>.*?</title>','<title>Veteran Resource Guide: help for every veteran | Veteran Home Guardians</title>',unified)
     assert 'Ohio Veteran<br>Resource Guide' in unified,'guide heading'
-    unified=unified.replace('Ohio Veteran<br>Resource Guide','Veteran<br>Resource Guide').replace('Veteran Home Guardians · All 88 Ohio counties','Veteran Home Guardians')
-    unified=unified.replace('Useful contacts for veterans, surviving spouses, families and care-facility staff. Start with a county, then choose the help you need.','Help for every veteran, in every state. Find support for yourself or someone you care for.')
+    # The heading, the line above it and the opening paragraph are each page's own (data/landing/states.json).
+    for old_text,new_text in [('<small>Veteran Home Guardians · All 88 Ohio counties</small>','<small id="guide-eyebrow"><!--eyebrow--></small>'),
+                              ('<h1>Ohio Veteran<br>Resource Guide</h1>','<h1 id="guide-title"><!--h1--></h1>'),
+                              ('<p>Useful contacts for veterans, surviving spouses, families and care-facility staff. Start with a county, then choose the help you need.</p>','<p id="guide-intro"><!--intro--></p>')]:
+        assert unified.count(old_text)==1,old_text
+        unified=unified.replace(old_text,new_text)
     unified=re.sub(r'<div class="coverage notice">.*?</div>', '', unified, flags=re.S)
     unified=unified.replace('Browse contacts for all 88 county veterans offices','Browse county contacts')
     unified=unified.replace('Most phones come from Ohio AMVETS’ 2025–2026 directory. Source links and review dates are shown. Call to confirm hours and the current intake process.','Source links and review dates are shown. Confirm hours and intake with the agency.')
@@ -116,7 +132,7 @@ def unified_outputs(root, editions, states):
     unified=unified.replace('<p id="county-intro">County veterans offices can help you explore benefits and the right referral route. If the resident recently moved into a facility, ask which county should handle the referral.</p>','<p id="county-intro">Choose a county to find local contacts.</p>')
     unified=unified.replace('</head>','<link rel="stylesheet" href="assets/unified.css"></head>')
     unified=re.sub(r'<section id="urgent-help".*?</section>', '<section id="urgent-help" class="notice" aria-labelledby="urgent-title"><h2 id="urgent-title">Need help now?</h2><p>Crisis: <a href="tel:988">988</a> (veterans: press 1). Immediate danger: <a href="tel:911">911</a>.<br>Veteran housing help: <a href="tel:8774243838">877-424-3838</a> · 24/7.</p><p><a href="?view=crisis">Mental health support</a> · <a href="?view=housing">Housing resources</a></p><p id="world-link">Outside the United States? <a href="world/">Emergency and crisis numbers in other countries</a>, and VA help for U.S. veterans abroad.</p></section>', unified, flags=re.S)
-    unified=unified.replace('<a class="jump" href="#support-vhg">Support VHG</a>', '<a class="jump" data-advocacy-route href="disability-advocacy.html">Disability rights &amp; advocacy</a><a class="jump" data-family-route href="family-guide.html">Families: autism, ADHD &amp; disabilities</a><a class="jump" href="flyers.html">Printable flyers</a><a class="jump" href="world/">Veterans outside the U.S.</a><a class="jump" href="https://mobilitytalk.org/states/" rel="noopener">Mobility &amp; disability resources in every state</a><a class="jump" href="#support-vhg">Support VHG</a>',1)
+    unified=unified.replace('<a class="jump" href="#support-vhg">Support VHG</a>', '<a class="jump" data-advocacy-route href="disability-advocacy.html">Disability rights &amp; advocacy</a><a class="jump" data-family-route href="family-guide.html">Families: autism, ADHD &amp; disabilities</a><a class="jump" href="flyers.html">Printable flyers</a><a class="jump" href="packets.html">Printable packets</a><a class="jump" href="world/">Veterans outside the U.S.</a><a class="jump" href="https://mobilitytalk.org/states/" rel="noopener">Mobility &amp; disability resources in every state</a><a class="jump" href="#support-vhg">Support VHG</a>',1)
     # On a phone the header keeps its first four links and folds the rest behind "More guides",
     # so the state picker and the crisis numbers fit on the first screen. Wider screens show every link.
     first='<a class="jump" href="assistant/">Guided assistance (beta)</a>'
@@ -146,33 +162,29 @@ def unified_outputs(root, editions, states):
         assert unified.count(part)==1,'opening part'
         unified=unified.replace(part,'')
     assert unified.count('<main>')==1,'main'
-    unified=unified.replace('<main>','<main>'+urgent+'<!--place-map-->'+picker+coverage,1)
+    unified=unified.replace('<main>','<main>'+urgent+'<!--who-start--><!--place-map-->'+picker+coverage,1)
     world_count=len(json.loads((root/'data/world/countries.json').read_text())['countries'])
     def with_map(text,state,open_map):
+        # Right after the crisis numbers: "I'm here as..." routes each visitor to the parts of the guide that fit them.
+        land=landings[state]
+        text=text.replace('<!--who-start-->',landing.chooser(state,root),1)
+        for key,value in (('eyebrow','Veteran Home Guardians · '+escape(land['eyebrow'],quote=False)),('h1',land['h1']),('intro',escape(land['intro'],quote=False))):
+            assert text.count('<!--'+key+'-->')==1,key
+            text=text.replace('<!--'+key+'-->',value)
         return text.replace('<!--place-map-->',place_map(states,state,world_count,open_map),1)
     def scripts(state):
         return '\n<script src="'+files[state]+'"></script><script src="'+versioned('assets/guide.js',guide)+'"></script></body></html>\n'
-    result['index.html']=with_map(unified,base,True)+scripts(base)
+    home=landings[base]
+    result['index.html']=landing.set_head(with_map(unified,base,True),home['title'],home['description'],BASE_URL,home['og_title'])+scripts(base)
     # Every other state gets the same page at its own address, so search engines can list it on its own:
     # its own title, description and canonical, with that state's records preloaded. Saved ?state= links
     # on the root keep working; the guide moves them to the state's page (assets/guide-runtime.js).
-    def meta(text,pattern,value):
-        text,n=re.subn(pattern,lambda m:m[1]+value+m[2],text,count=1)
-        assert n==1,pattern
-        return text
     for state,page in pages.items():
         if page=='index.html':continue
-        name=escape(names[state]);url=BASE_URL+page
-        place='the District of Columbia' if state=='DC' else name
-        desc='Help for every veteran in '+place+': claims, VA health care, jobs, school, housing, records and long-term care, with local veterans office contacts.'
-        social='Help for every veteran in '+place+' | VHG'
+        url=BASE_URL+page;land=landings[state]
         assert unified.count('<html lang="en">')==1,'html tag'
         text=unified.replace('<html lang="en">','<html lang="en" data-home-state="'+state+'">',1)
-        text=meta(text,r'(<title>)[^<]*(</title>)',name+' Veteran Resource Guide | Veteran Home Guardians')
-        text=meta(text,r'(<meta name="description" content=")[^"]*(">)',desc)
-        text=meta(text,r'(<link rel="canonical" href=")[^"]*(">)',url)
-        text=meta(text,r'(<meta property="og:url" content=")[^"]*(">)',url)
-        for key in ['og:title','twitter:title']:text=meta(text,r'(<meta (?:property|name)="'+key+r'" content=")[^"]*(">)',social)
-        for key in ['og:description','twitter:description']:text=meta(text,r'(<meta (?:property|name)="'+key+r'" content=")[^"]*(">)',desc)
-        result[page]=with_map(text,state,False)+scripts(state)
+        # Its own title, description and canonical, and Open Graph tags so a shared link previews as this state.
+        text=landing.set_head(with_map(text,state,False),land['title'],land['description'],url,land['og_title'])
+        result[page]=text+scripts(state)
     return result

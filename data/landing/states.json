@@ -1,0 +1,527 @@
+{
+ "_about": "Landing text for the guide home page and each state page: who arrives there and what they came for. Built into the pages by scripts/landing.py; every program a state intro names is listed under mentions and checked against that state's own records. No counts of listings.",
+ "home": {
+  "title": "Veteran Resource Guide: free help for veterans and families in every state",
+  "h1": "Veteran Resource Guide",
+  "eyebrow": "For veterans, families and care teams in every state",
+  "intro": "Whether you served, love someone who did, or work where veterans live, this guide helps you find the right first call. Choose your state below. Ohio, where Veteran Home Guardians visits veterans in nursing homes, opens first.",
+  "description": "Free help for veterans, surviving spouses, families and care staff in every state: county veterans offices, claims, VA health care, housing and long-term care.",
+  "og_title": "Help for every veteran, in every state | Veteran Home Guardians"
+ },
+ "states": {
+  "PA": {
+   "title_hook": "county veterans affairs and PA Link",
+   "intro": "If you served, or you're helping someone who did, start with your county's director of veterans affairs from the PA DMVA directory. For care at home or in a nursing home, PA Link, PA MEDI Medicare counseling and your local aging agency are here too.",
+   "description": "For Pennsylvania veterans and families: your county director of veterans affairs, PA Link, PA MEDI Medicare counseling, local aging agencies and VA help, all free.",
+   "mentions": [
+    "pa-link",
+    "pa-medi",
+    "pa-aging-directory"
+   ]
+  },
+  "NY": {
+   "title_hook": "county agencies, NYC DVS, NY Connects",
+   "intro": "Start with your county veterans service agency, or NYC Veterans' Services if you live in the five boroughs. NY Connects handles aging and disability questions, and Access to Home for Heroes and the Blind Annuity are listed for veterans who qualify.",
+   "description": "For New York veterans and families: county veterans service agencies and NYC Veterans' Services, NY Connects, Access to Home for Heroes and local aging offices.",
+   "mentions": [
+    "ny-connects",
+    "ny-access-heroes",
+    "ny-blind-annuity",
+    "ny-claims"
+   ]
+  },
+  "MI": {
+   "title_hook": "county veteran counselors and MI Options",
+   "intro": "Your county veteran counselor is the first stop for benefits and claims. MI Options helps with care decisions, and Michigan veteran emergency assistance and Michigan SHIP Medicare counseling are listed below.",
+   "description": "For Michigan veterans and families: county veteran counselors, Michigan veteran emergency assistance, MI Options care counseling, Michigan SHIP and local aging help.",
+   "mentions": [
+    "mi-options",
+    "mi-emergency",
+    "mi-ship",
+    "mi-claims"
+   ]
+  },
+  "KY": {
+   "title_hook": "KDVA benefits representatives and care help",
+   "intro": "Kentucky's veterans help comes from KDVA benefits representatives who cover your county, and each county is matched to its aging contact and district ombudsman. RampUp! KY lends temporary portable ramps, and the state veterans centers are listed for long-term care.",
+   "description": "For Kentucky veterans and families: your KDVA benefits representative, state veterans centers, RampUp! KY ramp loans, aging contacts and district ombudsmen.",
+   "mentions": [
+    "ky-claims",
+    "ky-rampup",
+    "ky-homes",
+    "ky-ombudsman"
+   ]
+  },
+  "UT": {
+   "title_hook": "regional veterans offices and aging help",
+   "intro": "Utah's veterans help is organized by region, so choosing your county points you to the right regional office of the Utah Department of Veterans and Military Affairs, plus your aging agency and long-term-care ombudsman. The New Choices Waiver is here for anyone planning a move home from a care facility.",
+   "description": "For Utah veterans and families: your regional veterans office, accredited claims help, your county's aging agency and ombudsman, and the New Choices Waiver.",
+   "mentions": [
+    "ut-claims",
+    "ut-new-choices",
+    "ut-ombudsman"
+   ]
+  },
+  "IN": {
+   "title_hook": "county veteran service officers and INconnect",
+   "intro": "Find your county veteran service officer from Indiana DVA's locator, then INconnect Alliance for aging and disability help. The Indiana Veterans' Home and INDATA assistive technology loans are listed below.",
+   "description": "For Indiana veterans and families: county veteran service officers, the Indiana Veterans' Home, INconnect Alliance, INDATA equipment loans and local aging agencies.",
+   "mentions": [
+    "in-claims",
+    "in-adrc",
+    "in-homes",
+    "in-at"
+   ]
+  },
+  "WV": {
+   "title_hook": "WVDVA benefits offices and long-term care",
+   "intro": "West Virginia Department of Veterans Assistance benefits offices serve the state by area; choose your county to see the right office and your aging agency. The West Virginia Veterans Nursing Facility and Aged and Disabled Waiver screening are here for long-term care.",
+   "description": "For West Virginia veterans and families: the WVDVA benefits office for your county, the Veterans Nursing Facility, Aged and Disabled Waiver screening and aging help.",
+   "mentions": [
+    "wv-claims",
+    "wv-homes",
+    "wv-waiver"
+   ]
+  },
+  "TX": {
+   "title_hook": "county service officers and TVC",
+   "intro": "Choose your county to find its veterans service officer, or the Texas Veterans Commission where a county lists none. Texas State Veterans Homes, STAR+PLUS screening and HICAP Medicare counseling are listed for care decisions.",
+   "description": "For Texas veterans and families: county veterans service officers, Texas Veterans Commission claims help, Texas State Veterans Homes, STAR+PLUS and aging help.",
+   "mentions": [
+    "tx-claims",
+    "tx-homes",
+    "tx-waiver",
+    "tx-ship"
+   ]
+  },
+  "FL": {
+   "title_hook": "county veteran services and SHINE",
+   "intro": "Every Florida county has its veterans service office listed, matched to its Elder Helpline and long-term-care ombudsman district. Florida State Veterans Homes, SHINE Medicare counseling and the Stetson Veterans Law Institute are here too.",
+   "description": "For Florida veterans and families: county veteran service offices, Florida State Veterans Homes, the Elder Helpline, SHINE Medicare counseling and ombudsman districts.",
+   "mentions": [
+    "fl-homes",
+    "fl-ship",
+    "fl-legal-stetson",
+    "fl-adrc"
+   ]
+  },
+  "CA": {
+   "title_hook": "County Veterans Service Offices and HICAP",
+   "intro": "Find your County Veterans Service Office, then your Area Agency on Aging and HICAP for Medicare questions. Veterans Homes of California and the VA health care system for your part of the state are listed below.",
+   "description": "For California veterans and families: County Veterans Service Offices, Veterans Homes of California, HICAP Medicare counseling, Area Agencies on Aging and VA health care.",
+   "mentions": [
+    "ca-homes",
+    "ca-ship",
+    "ca-vahealth-find",
+    "ca-claims"
+   ]
+  },
+  "VA": {
+   "title_hook": "Virginia DVS offices and VICAP",
+   "intro": "Choose your county or independent city to find the Virginia DVS office that serves it, your Area Agency on Aging and your ombudsman. Virginia's veterans care centers and VICAP Medicare counseling are here for care planning.",
+   "description": "For Virginia veterans and families: the Virginia DVS office for your county or city, state veterans care centers, VICAP Medicare counseling and Area Agencies on Aging.",
+   "mentions": [
+    "va-claims",
+    "va-homes",
+    "va-ship"
+   ]
+  },
+  "NC": {
+   "title_hook": "county officers and SHIIP",
+   "intro": "Your county veterans service officer, or the state's regional office where a county uses one, is the first call. North Carolina's state veterans homes, CAP/DA home services and SHIIP Medicare counseling are listed for care decisions.",
+   "description": "For North Carolina veterans and families: county veterans service officers, state veterans homes, CAP/DA home and community services, SHIIP and aging help.",
+   "mentions": [
+    "nc-claims",
+    "nc-homes",
+    "nc-waiver",
+    "nc-ship"
+   ]
+  },
+  "GA": {
+   "title_hook": "GDVS field offices and the Senior Legal Hotline",
+   "intro": "Georgia Department of Veterans Service field offices each serve a group of counties; choose yours to see its phone, hours and any notices. Your aging agency, the Georgia Senior Legal Hotline and the long-term-care ombudsman are here too.",
+   "description": "For Georgia veterans and families: the GDVS field office for your county, accredited claims help, the Georgia Senior Legal Hotline, aging help and the ombudsman.",
+   "mentions": [
+    "ga-claims",
+    "ga-legal-senior",
+    "ga-ombudsman"
+   ]
+  },
+  "AZ": {
+   "title_hook": "ADVS benefits counselors and aging help",
+   "intro": "Arizona Department of Veterans' Services benefits counselors work statewide, so every county starts with the same ADVS appointment line, then your Area Agency on Aging. Ability360 and other independent living centers are listed for disability support.",
+   "description": "For Arizona veterans and families: the ADVS veteran benefits counselor line, your Area Agency on Aging, the long-term-care ombudsman and independent living centers.",
+   "mentions": [
+    "az-claims",
+    "az-cil-ability360",
+    "az-daas"
+   ]
+  },
+  "WA": {
+   "title_hook": "county veterans programs, WDVA and the ombuds",
+   "intro": "Each county's veterans assistance program is listed from WDVA's county pages, with the WDVA line where a county lists none. Your Area Agency on Aging, the long-term-care ombuds and the CLEAR*Sr legal hotline for older adults are here too.",
+   "description": "For Washington veterans and families: county veterans assistance programs, WDVA claims help, Area Agencies on Aging, the long-term-care ombuds and CLEAR*Sr legal help.",
+   "mentions": [
+    "wa-claims",
+    "wa-ombudsman",
+    "wa-legal-clearsr"
+   ]
+  },
+  "TN": {
+   "title_hook": "county veterans offices and aging help",
+   "intro": "Each county's County Veterans Service Office comes from the TDVS roster, with the TDVS main line where the roster lists no contact. Your Area Agency on Aging and Disability, district ombudsman and the Help4TN legal helpline are listed below.",
+   "description": "For Tennessee veterans and families: County Veterans Service Offices, Area Agencies on Aging and Disability, district ombudsmen and the Help4TN legal helpline.",
+   "mentions": [
+    "tn-claims",
+    "tn-aaad",
+    "tn-legal-help4tn",
+    "tn-ombudsman"
+   ]
+  },
+  "SC": {
+   "title_hook": "county veterans offices and SHIP help",
+   "intro": "Each county's Veterans Affairs Office phone comes from SCDVA, matched to your regional Area Agency on Aging and GetCareSC. Able South Carolina and other independent living centers are listed for disability support.",
+   "description": "For South Carolina veterans and families: County Veterans Affairs Offices, Area Agencies on Aging, GetCareSC, the long-term care ombudsman and independent living centers.",
+   "mentions": [
+    "sc-claims",
+    "sc-doa",
+    "sc-cil-able-columbia"
+   ]
+  },
+  "IL": {
+   "title_hook": "IDVA offices and Veterans Assistance Commissions",
+   "intro": "Find the nearest IDVA Veteran Service Office, or your county's Veterans Assistance Commission where IDVA has none open. The Senior HelpLine, regional ombudsmen and Access Living in Chicago are here too.",
+   "description": "For Illinois veterans and families: IDVA Veteran Service Offices, county Veterans Assistance Commissions, the Senior HelpLine, Area Agencies on Aging and ombudsmen.",
+   "mentions": [
+    "il-claims",
+    "il-senior-helpline",
+    "il-ombudsman",
+    "il-cil-access-living"
+   ]
+  },
+  "MO": {
+   "title_hook": "MVC service offices and aging help",
+   "intro": "Missouri Veterans Commission service offices cover every county; choose yours for the right office, Area Agency on Aging and regional ombudsman. The Missouri Senior Resource Line and Paraquad in St. Louis are listed below.",
+   "description": "For Missouri veterans and families: Missouri Veterans Commission service offices, Area Agencies on Aging, regional ombudsmen and the Missouri Senior Resource Line.",
+   "mentions": [
+    "mo-claims",
+    "mo-senior-resource-line",
+    "mo-cil-paraquad"
+   ]
+  },
+  "CO": {
+   "title_hook": "county veterans offices and ADRC help",
+   "intro": "Your County Veterans Service Office, from the Colorado Division of Veterans Affairs list, is the first call. Aging and Disability Resources for Colorado, regional ombudsmen and independent living centers such as Atlantis Community are here too.",
+   "description": "For Colorado veterans and families: County Veterans Service Offices, Aging and Disability Resources for Colorado, Area Agencies on Aging and regional ombudsmen.",
+   "mentions": [
+    "co-claims",
+    "co-adrc",
+    "co-cil-atlantis"
+   ]
+  },
+  "AL": {
+   "title_hook": "veterans service offices and AGELINE",
+   "intro": "Alabama Department of Veterans Affairs service offices cover every county, with addresses and hours. AGELINE connects you to aging and disability help, and regional ombudsmen handle concerns about care.",
+   "description": "For Alabama veterans and families: Alabama Department of Veterans Affairs service offices, AGELINE aging and disability help, Area Agencies on Aging and ombudsmen.",
+   "mentions": [
+    "al-claims",
+    "al-adrc",
+    "al-ombudsman"
+   ]
+  },
+  "MD": {
+   "title_hook": "state benefits offices and Access Point",
+   "intro": "Maryland Department of Veterans and Military Families benefits offices are listed by location, with the statewide service line where a county has none. Maryland Access Point covers aging and disability help, with local ombudsmen for concerns about care.",
+   "description": "For Maryland veterans and families: state veterans benefits offices, Maryland Access Point, Area Agencies on Aging, local ombudsmen and independent living centers.",
+   "mentions": [
+    "md-claims",
+    "md-adrc",
+    "md-ombudsman"
+   ]
+  },
+  "WI": {
+   "title_hook": "county veterans offices and ADRCs",
+   "intro": "Every Wisconsin county has a County Veterans Service Office, matched to its Aging and Disability Resource Center. Ombudsman help and free legal help are listed for concerns about care and rights.",
+   "description": "For Wisconsin veterans and families: County Veterans Service Offices, Aging and Disability Resource Centers, the long-term care ombudsman and free legal help.",
+   "mentions": [
+    "wi-claims",
+    "wi-adrc",
+    "wi-legal-programs",
+    "wi-ombudsman"
+   ]
+  },
+  "MN": {
+   "title_hook": "county veterans offices and Aging Pathways",
+   "intro": "Find your County Veterans Service Office, then Minnesota Aging Pathways, formerly the Senior LinkAge Line, for care and Medicare questions. Free legal help for Minnesota veterans is listed below.",
+   "description": "For Minnesota veterans and families: County Veterans Service Offices, Minnesota Aging Pathways, Area Agencies on Aging, the ombudsman and free legal help for veterans.",
+   "mentions": [
+    "mn-claims",
+    "mn-adrc",
+    "mn-legal-programs"
+   ]
+  },
+  "OK": {
+   "title_hook": "ODVA service officers and the Aging Info-Line",
+   "intro": "Oklahoma Department of Veterans Affairs service-officer teams cover the state by area; choose your county to find yours. The Aging and Disability Info-Line, the Medicare Assistance Program and free legal help for veterans and older adults are here too.",
+   "description": "For Oklahoma veterans and families: ODVA service officers for your county, the Aging and Disability Info-Line, Medicare Assistance Program and free legal help.",
+   "mentions": [
+    "ok-claims",
+    "ok-adrc",
+    "ok-ship",
+    "ok-legal-programs"
+   ]
+  },
+  "NJ": {
+   "title_hook": "state veterans offices and aging help",
+   "intro": "Veterans Service Offices in New Jersey are run by the state; choose your county to find the nearest one and your county office on aging. Free legal help for veterans and older adults is listed below.",
+   "description": "For New Jersey veterans and families: state Veterans Service Offices, county offices on aging, the long-term care ombudsman and free legal help for veterans.",
+   "mentions": [
+    "nj-claims",
+    "nj-adrc",
+    "nj-legal-programs"
+   ]
+  },
+  "OR": {
+   "title_hook": "county veteran service officers and SHIBA",
+   "intro": "Every Oregon county has a veterans service office, listed from ODVA's county pages and matched to its Area Agency on Aging. SHIBA Medicare counseling and free legal help for veterans and older adults are here too.",
+   "description": "For Oregon veterans and families: county veteran service officers, Area Agencies on Aging, SHIBA Medicare counseling, the ombudsman and free legal help.",
+   "mentions": [
+    "or-claims",
+    "or-ship",
+    "or-legal-programs"
+   ]
+  },
+  "LA": {
+   "title_hook": "parish veterans offices and Louisiana Answers",
+   "intro": "Choose your parish to find its veterans service office and the days it is open, from the Louisiana Department of Veterans Affairs. Louisiana Answers, SHIIP Medicare counseling and regional ombudsmen are listed for care and aging questions.",
+   "description": "For Louisiana veterans and families: parish veterans service offices and their open days, Louisiana Answers, Area Agencies on Aging, SHIIP and ombudsman help.",
+   "mentions": [
+    "la-claims",
+    "la-adrc",
+    "la-ship"
+   ]
+  },
+  "NV": {
+   "title_hook": "NDVS service officers and Nevada Care Connection",
+   "intro": "Nevada Department of Veterans Services officers cover the state, with statewide lines for counties without an office. Nevada has no Area Agencies on Aging, so each county is matched to its Nevada Care Connection Resource Center.",
+   "description": "For Nevada veterans and families: Nevada Department of Veterans Services officers, Nevada Care Connection Resource Centers, Medicare counseling and free legal help.",
+   "mentions": [
+    "nv-claims",
+    "nv-adrc"
+   ]
+  },
+  "KS": {
+   "title_hook": "KOVS field offices and the Kansas ADRC",
+   "intro": "Kansas Office of Veterans Services field offices serve each county, some on an itinerant schedule. The Aging and Disability Resource Center, SHICK Medicare counseling and independent living centers are listed below.",
+   "description": "For Kansas veterans and families: Kansas Office of Veterans Services field offices, the Aging and Disability Resource Center, SHICK and long-term care ombudsman help.",
+   "mentions": [
+    "ks-claims",
+    "ks-adrc",
+    "ks-ship"
+   ]
+  },
+  "NE": {
+   "title_hook": "county veterans offices and Nebraska SHIP",
+   "intro": "Every Nebraska county has a veterans service office, with phones and hours from the Nebraska Department of Veterans' Affairs directory. Your Area Agency on Aging, Nebraska SHIP Medicare counseling and Independence Rising are here too.",
+   "description": "For Nebraska veterans and families: county veterans service offices, Area Agencies on Aging, Nebraska SHIP Medicare counseling and long-term care ombudsman help.",
+   "mentions": [
+    "ne-claims",
+    "ne-ship",
+    "ne-cil-independence-rising"
+   ]
+  },
+  "NM": {
+   "title_hook": "NMDVS field offices and the ADRC",
+   "intro": "New Mexico Department of Veterans' Services field offices each serve nearby counties; choose yours to find the right one. The Aging and Disability Resource Center and the long-term care ombudsman are listed for care questions.",
+   "description": "For New Mexico veterans and families: the NMDVS field office for your county, the Aging and Disability Resource Center, Area Agencies on Aging and ombudsman help.",
+   "mentions": [
+    "nm-claims",
+    "nm-adrc",
+    "nm-ombudsman"
+   ]
+  },
+  "MS": {
+   "title_hook": "county service officers and MAC Centers",
+   "intro": "Each Mississippi county has a veterans service officer, listed from Mississippi Veterans Affairs. MAC Centers handle aging and disability help, and LIFE of Mississippi offices serve people with disabilities around the state.",
+   "description": "For Mississippi veterans and families: county veterans service officers, MAC Centers, Area Agencies on Aging, the long-term care ombudsman and LIFE of Mississippi.",
+   "mentions": [
+    "ms-claims",
+    "ms-adrc",
+    "ms-cil-life-jackson"
+   ]
+  },
+  "ID": {
+   "title_hook": "Office of Veterans Advocacy and SHIBA",
+   "intro": "Idaho's Office of Veterans Advocacy has offices in some counties and statewide lines for the rest. Your Area Agency on Aging, SHIBA Medicare counseling and LINC and Disability Action Center offices are listed below.",
+   "description": "For Idaho veterans and families: the Office of Veterans Advocacy, Area Agencies on Aging, SHIBA Medicare counseling, local ombudsmen and independent living centers.",
+   "mentions": [
+    "id-claims",
+    "id-ship",
+    "id-cil-linc-boise",
+    "id-cil-dac-moscow"
+   ]
+  },
+  "SD": {
+   "title_hook": "county and tribal VSOs and Dakota at Home",
+   "intro": "Your county or tribal veterans service officer is listed from the South Dakota Department of Veterans Affairs directory. South Dakota has no Area Agencies on Aging; aging help, the ombudsman and abuse reports go through Dakota at Home.",
+   "description": "For South Dakota veterans and families: county and tribal veterans service officers, Dakota at Home aging help, SHIINE Medicare counseling and ombudsman help.",
+   "mentions": [
+    "sd-claims",
+    "sd-adrc"
+   ]
+  },
+  "NH": {
+   "title_hook": "state veterans service officers and ADRCs",
+   "intro": "The NH Division of Veterans Services' service officers are your first call for benefits. Aging and Disability Resource Centers, formerly ServiceLink, help with care and NH SHIP Medicare questions.",
+   "description": "For New Hampshire veterans and families: state veterans service officers, Aging and Disability Resource Centers (formerly ServiceLink), NH SHIP and ombudsman help.",
+   "mentions": [
+    "nh-claims",
+    "nh-adrc",
+    "nh-ship"
+   ]
+  },
+  "ME": {
+   "title_hook": "Bureau of Veterans' Services and Maine SHIP",
+   "intro": "Maine Bureau of Veterans' Services field offices cover the state, some with itinerant hours. Your Area Agency on Aging and Maine SHIP help with care and Medicare questions.",
+   "description": "For Maine veterans and families: Bureau of Veterans' Services field offices, Area Agencies on Aging, Maine SHIP Medicare counseling and ombudsman help.",
+   "mentions": [
+    "me-claims",
+    "me-adrc",
+    "me-ship"
+   ]
+  },
+  "HI": {
+   "title_hook": "Office of Veterans' Services and aging help",
+   "intro": "Choose your county to find the Office of Veterans' Services contact that serves it. Your county office on aging is your aging and disability resource center, and free legal help for kūpuna is listed below.",
+   "description": "For Hawaii veterans and families: Office of Veterans' Services contacts by county, county offices on aging, Hawai‘i SHIP and free legal help for kūpuna.",
+   "mentions": [
+    "hi-claims",
+    "hi-adrc",
+    "hi-legal-programs"
+   ]
+  },
+  "DE": {
+   "title_hook": "Office of Veterans Services and the ADRC",
+   "intro": "The Delaware Office of Veterans Services is your first call for benefits, and the Aging & Disability Resource Center handles care at home and disability questions. Independent Resources, Inc. helps people with disabilities live on their own terms.",
+   "description": "For Delaware veterans and families: the Office of Veterans Services, the Aging & Disability Resource Center, Medicare counseling and long-term care ombudsman help.",
+   "mentions": [
+    "de-claims",
+    "de-adrc",
+    "de-cil-independent-resources"
+   ]
+  },
+  "RI": {
+   "title_hook": "Veterans Resource Center and The Point",
+   "intro": "The Office of Veterans Services' Veterans Resource Center is your first call, and The Point is Rhode Island's aging and disability resource center. Free and low-cost legal help for older Rhode Islanders is listed below.",
+   "description": "For Rhode Island veterans and families: the Office of Veterans Services Veterans Resource Center, The Point, Rhode Island SHIP and ombudsman help.",
+   "mentions": [
+    "ri-claims",
+    "ri-adrc",
+    "ri-legal-programs"
+   ]
+  },
+  "VT": {
+   "title_hook": "Office of Veterans Affairs and Senior HelpLine",
+   "intro": "The Vermont Office of Veterans Affairs is your first call wherever you live in the state. Your Area Agency on Aging, the Senior HelpLine, Vermont SHIP and free legal help for older Vermonters are here too.",
+   "description": "For Vermont veterans and families: the Office of Veterans Affairs, Area Agencies on Aging and the Senior HelpLine, Vermont SHIP and ombudsman help.",
+   "mentions": [
+    "vt-claims",
+    "vt-adrc",
+    "vt-ship"
+   ]
+  },
+  "WY": {
+   "title_hook": "Veterans Commission officers and senior centers",
+   "intro": "Wyoming Veterans Commission service officers are your first call for benefits. Each county is matched to its senior centers through the Aging Division, with long-term care ombudsman help for concerns about care.",
+   "description": "For Wyoming veterans and families: Veterans Commission service officers, county senior centers, Medicare counseling and long-term care ombudsman help.",
+   "mentions": [
+    "wy-claims",
+    "wy-adrc",
+    "wy-ombudsman"
+   ]
+  },
+  "DC": {
+   "title_hook": "Mayor's Office of Veterans Affairs",
+   "intro": "The Mayor's Office of Veterans Affairs is your first call, and the Department of Aging and Community Living handles aging and disability help. DC SHIP Medicare counseling and free legal help for older residents are listed below.",
+   "description": "For veterans and families in the District of Columbia: the Mayor's Office of Veterans Affairs, the Department of Aging and Community Living and DC SHIP.",
+   "mentions": [
+    "dc-claims",
+    "dc-adrc",
+    "dc-ship",
+    "dc-legal-programs"
+   ],
+   "eyebrow": "For veterans and families in Washington, DC"
+  },
+  "MT": {
+   "title_hook": "Veterans Affairs Division and Montana SHIP",
+   "intro": "Montana Veterans Affairs Division service officers are your first call for benefits. Your Area Agency on Aging, Montana SHIP and LIFTT independent living services are listed below.",
+   "description": "For Montana veterans and families: Veterans Affairs Division service officers, Area Agencies on Aging, Montana SHIP and long-term care ombudsman help.",
+   "mentions": [
+    "mt-claims",
+    "mt-adrc",
+    "mt-ship",
+    "mt-cil-liftt"
+   ]
+  },
+  "AK": {
+   "title_hook": "Veteran Service Officers and Alaska ADRCs",
+   "intro": "Choose your borough or census area to find its Veteran Service Officer through the Office of Veterans Affairs. Aging and Disability Resource Centers, the Medicare Information Office and Access Alaska are listed below.",
+   "description": "For Alaska veterans and families: Veteran Service Officers by borough, Aging and Disability Resource Centers, the Medicare Information Office and ombudsman help.",
+   "mentions": [
+    "ak-claims",
+    "ak-adrc",
+    "ak-ship",
+    "ak-cil-access"
+   ]
+  },
+  "ND": {
+   "title_hook": "county and tribal VSOs and Resource LINK",
+   "intro": "Your county or tribal veterans service officer comes from the North Dakota Department of Veterans Affairs county pages. North Dakota has no Area Agencies on Aging; aging help, adult protective services and the ombudsman are reached through Aging & Disability Resource LINK.",
+   "description": "For North Dakota veterans and families: county and tribal veterans service officers, Aging & Disability Resource LINK, Medicare counseling and ombudsman help.",
+   "mentions": [
+    "nd-claims",
+    "nd-adrc"
+   ]
+  },
+  "IA": {
+   "title_hook": "county service officers and LifeLong Links",
+   "intro": "Every Iowa county has a County Veteran Service Officer, listed from the Iowa Department of Veterans Affairs county pages. LifeLong Links and your Area Agency on Aging help with care, and SHIIP answers Medicare questions.",
+   "description": "For Iowa veterans and families: County Veteran Service Officers, LifeLong Links, Area Agencies on Aging, SHIIP Medicare counseling and ombudsman help.",
+   "mentions": [
+    "ia-claims",
+    "ia-adrc",
+    "ia-ship"
+   ]
+  },
+  "CT": {
+   "title_hook": "DVA district offices and CHOICES",
+   "intro": "The Connecticut Department of Veterans Affairs' Office of Advocacy and Assistance has district offices around the state; choose your county to find yours. CHOICES handles Medicare and aging questions with your Area Agency on Aging.",
+   "description": "For Connecticut veterans and families: Department of Veterans Affairs district offices, CHOICES, Area Agencies on Aging and long-term care ombudsman help.",
+   "mentions": [
+    "ct-claims",
+    "ct-adrc",
+    "ct-ship"
+   ]
+  },
+  "MA": {
+   "title_hook": "local veterans officers and MassOptions",
+   "intro": "Every Massachusetts city and town has its own Veterans Service Officer, and the Executive Office of Veterans Services helps you find yours. MassOptions and SHINE help with aging, disability and Medicare questions.",
+   "description": "For Massachusetts veterans and families: finding your city or town Veterans Service Officer, MassOptions, SHINE Medicare counseling and ombudsman help.",
+   "mentions": [
+    "ma-claims",
+    "ma-adrc",
+    "ma-ship"
+   ]
+  },
+  "AR": {
+   "title_hook": "county service officers and Choices in Living",
+   "intro": "Choose your county to find its veterans service officer, listed from the Arkansas Department of Veterans Affairs directory. The Choices in Living Resource Center, your Area Agency on Aging and local ombudsmen help with care.",
+   "description": "For Arkansas veterans and families: county veterans service officers, the Choices in Living Resource Center, Area Agencies on Aging and local ombudsmen.",
+   "mentions": [
+    "ar-claims",
+    "ar-adrc",
+    "ar-ombudsman"
+   ]
+  }
+ }
+}

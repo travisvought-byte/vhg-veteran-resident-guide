@@ -55,7 +55,7 @@ def page():
 </style>
 <script src="assets/analytics.js" defer></script></head><body>
 <header><nav aria-label="Main"><a href="./">Veteran Resource Guide</a><a href="family-guide.html">Family Guide</a><a href="disability-advocacy.html">Disability rights &amp; advocacy</a></nav>
-<div class="hero"><p class="eyebrow">FREE TO PRINT AND SHARE</p><h1>Printable flyers</h1><p>Post or hand these out so families can find help. Every flyer has a QR code that opens the guide on a phone.</p></div></header>
+<div class="hero"><p class="eyebrow">FREE TO PRINT AND SHARE</p><h1>Printable flyers</h1><p>Post or hand these out so families can find help. Every flyer has a QR code that opens the guide on a phone.</p><p>For residents and people in custody who do not use the internet: <a href="packets.html">printable resource packets</a> for every Ohio county and every state.</p></div></header>
 <main class="flyers" id="main">
 {cards}
 <section class="tips" aria-labelledby="tips-title"><h2 id="tips-title">Printing tips</h2><ul>
@@ -69,8 +69,14 @@ def page():
 '''
 
 
+def tailored():
+    """The page with its landing title, description, opening and Open Graph tags (data/landing/pages.json)."""
+    import landing
+    return landing.apply_page(page(), 'flyers.html', ROOT)
+
+
 if __name__ == '__main__':
-    out = page()
+    out = tailored()
     target = ROOT / 'flyers.html'
     if '--check' in sys.argv:
         if not target.is_file() or target.read_text() != out:

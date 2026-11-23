@@ -17,10 +17,13 @@ from build_mobility_routes import outputs as mobility_route_outputs
 from build_family_guide import outputs as family_guide_outputs
 from build_guide_privacy import outputs as privacy_outputs
 from build_world import outputs as world_outputs, pages as world_pages
+from build_packets import outputs as packet_outputs
 from build_county_pages import outputs as county_outputs
 from build_va_pages import outputs as va_outputs
 from build_core_care import (outputs as core_care_outputs, pages as core_care_pages,
                              add_cards as core_care_cards, add_facilities_links)
+from build_bad_paper import outputs as bad_paper_outputs, pages as bad_paper_pages
+import landing
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -111,6 +114,8 @@ def outputs():
     result.update(privacy_outputs())
     # Country pages for veterans outside the U.S. (data/world/countries.json); each carries the visit counter.
     result.update(world_outputs())
+    # Printable resource packets (paper handouts) and their download page; PDFs: node scripts/build_packets.cjs.
+    result.update(packet_outputs())
     # One page per county veterans office (counties/<st>/<county>.html), and a link to the state's list from its guide.
     county_pages, county_urls = county_outputs(ROOT)
     result.update(county_pages)
@@ -127,6 +132,13 @@ def outputs():
     for s in states:
         if s['code'] in va_links:
             result[s['page']] = result[s['page']].replace('<section id="county-start"', va_links[s['code']] + '<section id="county-start"', 1)
+    # Other-than-honorable and bad-conduct discharges (templates/bad-paper/); each page carries the visit counter.
+    result.update(bad_paper_outputs())
+    # Each entry page speaks to the person most likely to land on it (data/landing/): the sharing kits to the
+    # people passing the guide on, and facilities, flyers and the rest to their own visitors.
+    for s in states:
+        result[s['share_page']] = landing.share_page(result[s['share_page']], s)
+    result.update(landing.apply_pages(result))
     # Track public landing/sharing pages once, including each state's own guide page.
     for page in ['index.html', 'bingo.html', 'facilities.html'] + [s['page'] for s in states[1:]] + [s['share_page'] for s in states]:
         result[page] = re.sub(r'<script[^>]*data-goatcounter=[^>]*></script>', '', result[page])
@@ -134,7 +146,7 @@ def outputs():
         result[page] = result[page].replace('</body>', '<script defer src="assets/analytics.js"></script></body>')
     # The mobility and advocacy pages are canonical at mobilitytalk.org, so they stay out of this sitemap.
     # Search engines: list the public views, including each state's canonical URL.
-    pages = ['', 'facilities.html', 'family-guide.html', 'flyers.html', 'privacy.html']
+    pages = ['', 'facilities.html', 'family-guide.html', 'flyers.html', 'packets.html', 'privacy.html']
     urls = [BASE_URL + page for page in pages if page == '' or (ROOT / page).is_file() or page in result]
     # Each state's own page (ky.html); Ohio is the root. Old ?state= links still work but are not listed.
     urls += [BASE_URL + s['page'] for s in states[1:]]
@@ -148,6 +160,8 @@ def outputs():
     urls += va_urls
     # Pages for veterans in nursing homes and their families.
     urls += [BASE_URL + page for page in core_care_pages()]
+    # Bad paper: VA options, discharge boards, records and free help for other-than-honorable discharges.
+    urls += [BASE_URL + page for page in bad_paper_pages()]
     result['sitemap.xml'] = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join('  <url><loc>' + u.replace('&', '&amp;') + '</loc></url>\n' for u in urls) + '</urlset>\n'
     result['robots.txt'] = 'User-agent: *\nAllow: /\n\nSitemap: ' + BASE_URL + 'sitemap.xml\n'
     return result

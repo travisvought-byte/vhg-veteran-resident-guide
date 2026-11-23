@@ -1,0 +1,43 @@
+{
+ "note": "Statewide and national lines used by the printable packets (scripts/build_packets.py) that are not already records in prototype-data.json. Every entry names the official page it was read on and the review date. Other packet contacts come from prototype-data.json, data/public/ and data/packets/ohio-county-sources.json.",
+ "reviewed_on": "2026-11-23",
+ "contacts": {
+  "veterans-crisis-line": {
+   "name": "Veterans Crisis Line",
+   "call": "988, then press 1",
+   "text": "838255",
+   "source": {"title": "Veterans Crisis Line", "publisher": "U.S. Department of Veterans Affairs", "url": "https://www.veteranscrisisline.net/", "reviewed_on": "2026-11-23"}
+  },
+  "ohio-aps-hotline": {
+   "name": "Ohio Adult Protective Services hotline",
+   "phone": "855-644-6277",
+   "phone_words": "855-OHIO-APS",
+   "use": "Report abuse, neglect or exploitation of an adult age 60 or older. You can report without giving your name.",
+   "source": {"title": "Ohio Adult Protective Services", "publisher": "Ohio Department of Job and Family Services", "url": "https://aps.jfs.ohio.gov/", "reviewed_on": "2026-11-23"}
+  },
+  "eldercare-locator": {
+   "name": "Eldercare Locator",
+   "phone": "800-677-1116",
+   "use": "Call or text. Trained staff connect older adults and families with local services in any state.",
+   "source": {"title": "Find Help or Report Abuse (Elder Justice Initiative)", "publisher": "U.S. Department of Justice", "url": "https://www.justice.gov/elderjustice/support", "reviewed_on": "2026-11-23"}
+  },
+  "elder-fraud-hotline": {
+   "name": "National Elder Fraud Hotline",
+   "phone": "833-372-8311",
+   "hours": "10 a.m. to 6 p.m. Eastern, Monday to Friday",
+   "use": "Scams and money taken from an older adult.",
+   "source": {"title": "Find Help or Report Abuse (Elder Justice Initiative)", "publisher": "U.S. Department of Justice", "url": "https://www.justice.gov/elderjustice/support", "reviewed_on": "2026-11-23"}
+  },
+  "va-justice-outreach": {
+   "name": "VA Veterans Justice Outreach",
+   "web": "department.va.gov/homeless/veterans-justice-programs",
+   "use": "VA staff who work with veterans in courts and local jails, and with veterans leaving prison (Health Care for Re-entry Veterans).",
+   "source": {"title": "Veterans Justice Outreach Program; Health Care for Re-entry Veterans", "publisher": "U.S. Department of Veterans Affairs", "url": "https://department.va.gov/homeless/veterans-justice-programs/veterans-justice-outreach/", "reviewed_on": "2026-11-23"}
+  },
+  "incarcerated-compensation-rule": {
+   "name": "VA compensation during incarceration",
+   "use": "A veteran held more than 60 days for a felony conviction has VA compensation reduced starting on day 61. Family members may be able to receive part of it (an apportionment). Payments can resume after release.",
+   "source": {"title": "38 CFR 3.665, Incarcerated beneficiaries and fugitive felons: compensation", "publisher": "Electronic Code of Federal Regulations", "url": "https://www.ecfr.gov/current/title-38/chapter-I/part-3/subpart-A/subject-group-ECFR24d035b1eee2d6f/section-3.665", "reviewed_on": "2026-11-23"}
+  }
+ }
+}
