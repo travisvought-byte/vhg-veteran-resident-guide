@@ -126,7 +126,8 @@ def fmp_for(data, country):
     line = next((t for t in fmp['toll_free'] if t['country'] == (parent or country)['name']), None)
     if country['slug'] == 'canada':
         uc = fmp['us_canada']
-        call = (f'<p>Call FMP at {tel(uc)} (U.S. and Canada, toll-free) or {tel({"display": uc["direct_display"], "tel": uc["direct_tel"]})}.</p>'
+        direct = '' if uc['direct_tel'] == uc['tel'] else f' or {tel({"display": uc["direct_display"], "tel": uc["direct_tel"]})}'
+        call = (f'<p>Call FMP at {tel(uc)} (U.S. and Canada, toll-free; TTY: 711) and select 3{direct}.</p>'
                 f'<p class="small">{e(uc["note"])}</p><p class="small">{e(country.get("fmp_note", ""))}</p>'
                 f'<p class="small source">Source: {source(uc)}. Checked {when(uc["checked_on"])}.</p>')
     elif line:
@@ -136,9 +137,10 @@ def fmp_for(data, country):
     else:
         uc = fmp['us_canada']
         call = (f'<p>VA lists no toll-free FMP line for {e(where)}. You can reach FMP online through '
-                '<a href="https://www.va.gov/contact-us/ask-va/" rel="noopener">Ask VA</a>, or call the program’s direct number, '
-                f'{tel({"display": uc["direct_display"], "tel": uc["direct_tel"]})} (international charges apply).</p>'
-                f'<p class="small source">Source for the direct number: {source(uc)}. Checked {when(uc["checked_on"])}.</p>')
+                '<a href="https://www.va.gov/contact-us/ask-va/" rel="noopener">Ask VA</a>, or call the program’s phone line, '
+                f'{tel({"display": uc["direct_display"], "tel": uc["direct_tel"]})}, and select 3. It is a U.S. toll-free number, '
+                'so it may not connect from outside the U.S. and Canada, and international charges may apply.</p>'
+                f'<p class="small source">Source for the phone line: {source(uc)}. Checked {when(uc["checked_on"])}.</p>')
     return (f'<h3>VA health care: the Foreign Medical Program</h3><p>{e(fmp["covers"])}</p><p>{e(fmp["letter"])}</p>{call}')
 
 
@@ -345,7 +347,8 @@ def index_page(data):
           f'<table><thead><tr><th>Country</th><th>FMP toll-free</th></tr></thead><tbody>{fmp_rows}</tbody></table>'
           f'<p class="small source">Sources: {source(fmp)}; <a data-source href="{e(fmp["claims_source_url"])}" rel="noopener">{e(fmp["claims_source_title"])}</a>, '
           f'page dated {when(fmp["claims_source_date"])}. Checked {when(fmp["checked_on"])}.</p>'
-          f'<p>United States and Canada: {tel(uc)}. Direct: {tel({"display": uc["direct_display"], "tel": uc["direct_tel"]})}.</p>'
+          + (f'<p>United States and Canada: {tel(uc)} (TTY: 711), then select 3.</p>' if uc['direct_tel'] == uc['tel'] else
+             f'<p>United States and Canada: {tel(uc)}. Direct: {tel({"display": uc["direct_display"], "tel": uc["direct_tel"]})}.</p>') +
           f'<p class="small">{e(uc["note"])}</p><p class="small source">Source: {source(uc)}. Checked {when(uc["checked_on"])}.</p>'
           f'{benefits_block(data)}'
           f'<h3>{e(m["name"])}</h3><p>{" or ".join(tel(n) for n in m["numbers"])}. {e(m["note"])}</p>'
