@@ -7,7 +7,7 @@ in the page address, drafts and checklists stay in the browser, and corrections 
 from html import escape
 import place_map
 
-UPDATED = 'November 21, 2026'
+UPDATED = 'November 23, 2026'
 EMAIL = 'travis@vethomeguard.org'
 
 

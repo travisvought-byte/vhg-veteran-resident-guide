@@ -142,8 +142,8 @@ console.log('state pages: ok');
  for(const file of ['index.html','pa.html','ky.html']){const d=new JSDOM(fs.readFileSync(path.join(root,file),'utf8')).window.document;assert(d.querySelector('footer a[href="privacy.html"]'),file+' footer links the privacy page')}
  const d=new JSDOM(fs.readFileSync(path.join(root,'privacy.html'),'utf8')).window.document,text=d.querySelector('main').textContent;
  assert.equal(d.querySelector('link[rel=canonical]').href,'https://guide.vethomeguard.org/privacy.html');
- for(const words of ['November 21, 2026','GoatCounter does not use cookies','It does not store the IP address','GitHub Pages','This site may show ads. Every ad is labeled “Advertisement”','We do not sell personal information','not directed to children under 13'])assert(text.includes(words),'guide privacy page says: '+words);
- for(const href of ['https://adssettings.google.com','https://policies.google.com/technologies/ads','https://optout.aboutads.info','https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement'])assert(d.querySelector(`main a[href="${href}"]`),href);
+ for(const words of ['November 23, 2026','GoatCounter does not use cookies','It does not store the IP address','GitHub Pages','The guide does not show ads and has no affiliate links','We do not sell personal information','not directed to children under 13'])assert(text.includes(words),'guide privacy page says: '+words);
+ for(const href of ['https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement'])assert(d.querySelector(`main a[href="${href}"]`),href);
  assert(d.querySelector('main a[href^="mailto:travis@vethomeguard.org"]'));
  assert(fs.readFileSync(path.join(root,'sitemap.xml'),'utf8').includes('<loc>https://guide.vethomeguard.org/privacy.html</loc>'));
 }
