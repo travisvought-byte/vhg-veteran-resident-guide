@@ -16,6 +16,7 @@ from build_mobility_routes import outputs as mobility_route_outputs
 from build_family_guide import outputs as family_guide_outputs
 from build_guide_privacy import outputs as privacy_outputs
 from build_world import outputs as world_outputs, pages as world_pages
+import adsense
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -104,6 +105,12 @@ def outputs():
         result[page] = re.sub(r'<script[^>]*data-goatcounter=[^>]*></script>', '', result[page])
         result[page] = result[page].replace('<script defer src="assets/analytics.js"></script>', '')
         result[page] = result[page].replace('</body>', '<script defer src="assets/analytics.js"></script></body>')
+    # Google AdSense (scripts/adsense.py): non-personalized ads only, on the public guide pages (country pages: build_world.py);
+    # never on privacy, the family guide, flyers, bingo, the mobility and advocacy pages or the assistant.
+    for page in ['index.html', 'facilities.html'] + [s['page'] for s in states[1:]] + [s['share_page'] for s in states]:
+        result[page] = adsense.place(result[page])
+    if adsense.CLIENT:
+        result['ads.txt'] = adsense.ads_txt()
     # The mobility and advocacy pages are canonical at mobilitytalk.org, so they stay out of this sitemap.
     # Search engines: list the public views, including each state's canonical URL.
     pages = ['', 'facilities.html', 'family-guide.html', 'flyers.html', 'privacy.html']
