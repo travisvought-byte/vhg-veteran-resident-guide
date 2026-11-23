@@ -95,3 +95,20 @@ variable `VA_FACILITIES_API_BASE` (Settings, Secrets and variables, Actions, Var
 `https://api.va.gov/services/va_facilities/v1/facilities`; nothing else changes. If the configured host refuses the
 key, the fetcher tries the other host once. Each snapshot records which environment answered. Sandbox data is a
 benchmark: a listing built from it is checked against production or the facility's own page before it is published. Without the secret, the run marks the source as skipped and carries on. No advertising code is added to the guide.
+
+## Publishing VA locations
+
+The VA Facilities API snapshot lands on the monthly `mining/run-<date>` review branch. To publish a batch of states:
+
+```
+git fetch origin mining/run-<date>
+git show FETCH_HEAD:data/mining/snapshots/va-facilities-api/<date>.json > /tmp/va.json
+python3 scripts/mining/va_listings.py --snapshot /tmp/va.json --states AZ,MA,WY   # or --states all
+python3 scripts/build_public.py
+python3 tests/mining.py
+```
+
+`va_listings.py` writes `data/public/va-facilities/<st>.json`: closed and temporarily closed facilities are left out,
+rows are unique by VA facility id (and by name, address and phone), phones already in the state's guide are marked
+`also_in_guide`, and each row cites its VA page and the retrieval date. `build_public.py` then builds `va/<st>/` and
+links it from the state's guide. Rerunning with a newer snapshot replaces a state's file in full.

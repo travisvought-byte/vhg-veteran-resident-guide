@@ -18,6 +18,7 @@ from build_family_guide import outputs as family_guide_outputs
 from build_guide_privacy import outputs as privacy_outputs
 from build_world import outputs as world_outputs, pages as world_pages
 from build_county_pages import outputs as county_outputs
+from build_va_pages import outputs as va_outputs
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -113,6 +114,12 @@ def outputs():
                 f' · one page per {unit}, with its phone and next steps.</p>')
         assert result[s['page']].count('<section id="county-start"') == 1, s['page']
         result[s['page']] = result[s['page']].replace('<section id="county-start"', link + '<section id="county-start"', 1)
+    # One page per state listing its VA locations (va/<st>/), from VA facility data, linked from that state's guide.
+    va_pages, va_urls, va_links = va_outputs(ROOT)
+    result.update(va_pages)
+    for s in states:
+        if s['code'] in va_links:
+            result[s['page']] = result[s['page']].replace('<section id="county-start"', va_links[s['code']] + '<section id="county-start"', 1)
     # Track public landing/sharing pages once, including each state's own guide page.
     for page in ['index.html', 'bingo.html', 'facilities.html'] + [s['page'] for s in states[1:]] + [s['share_page'] for s in states]:
         result[page] = re.sub(r'<script[^>]*data-goatcounter=[^>]*></script>', '', result[page])
@@ -130,6 +137,8 @@ def outputs():
     urls += [BASE_URL + page for page in world_pages()]
     # County veterans office pages: the all-states list, each state's list and every county.
     urls += county_urls
+    # VA locations: the by-state list and each state's page.
+    urls += va_urls
     result['sitemap.xml'] = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join('  <url><loc>' + u.replace('&', '&amp;') + '</loc></url>\n' for u in urls) + '</urlset>\n'
     result['robots.txt'] = 'User-agent: *\nAllow: /\n\nSitemap: ' + BASE_URL + 'sitemap.xml\n'
     return result
