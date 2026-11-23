@@ -63,3 +63,5 @@ Thinnest first. "Local office" counts counties with an office in or for the coun
 41 country pages with 91 local lines, last checked 2026-11-22.
 
 Not yet covered: Philippines, Mexico, Ireland, Italy, Spain, Belgium, Slovakia, Austria, Romania, Georgia, Ghana, Zimbabwe, Fiji, Bangladesh, Nepal, Zambia, Montenegro, Bulgaria, Uruguay, Brazil, Guatemala, Honduras, Dominican Republic, Chile, Ecuador, Mauritius, Saint Lucia, Saint Vincent and the Grenadines, Samoa, Jamaica, Barbados.
+
+VA facility counts used as a benchmark were retrieved 2026-11-23.
