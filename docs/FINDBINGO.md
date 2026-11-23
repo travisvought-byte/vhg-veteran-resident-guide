@@ -334,6 +334,9 @@ U.S. Census Geocoder match for the bingo hall at 228 N 20th St.
 
 ## Refreshing the lists
 
+The data pipeline (`scripts/bingo_pipeline.py`, `docs/BINGO-PIPELINE.md`) shows what is due for a recheck and
+which states are thinnest (`docs/BINGO-COVERAGE.md`), and checks a researched batch before it is merged.
+
 1. Re-read the Michigan lookup and the Indiana list as above. For Virginia, download the state's current
    directory and run `python3 scripts/import_virginia_bingo.py bingo_events.pdf --reviewed <today> --geocode`,
    then set Virginia's `list_as_of` in `bingo-states.json` to the listing date the script prints.
