@@ -3,7 +3,9 @@
 Run by scripts/build_public.py. The canonical data is data/world/countries.json: for each country, the
 national emergency number, the official veterans agency, any veterans support line and the national crisis
 line, each with the official page it was read on and the date it was checked. A line that is not a 24-hour
-crisis line says so on the page. The world index also carries what U.S. veterans living abroad need: the VA
+crisis line says so on the page. A country with no national veterans agency carries "no_agency" instead of an
+agency line: its page states that plainly (with an official source where one exists) in place of the agency
+card, and lists the emergency number, the crisis line and the help for U.S. veterans living there. The world index also carries what U.S. veterans living abroad need: the VA
 Foreign Medical Program and the Veterans Crisis Line's overseas numbers, taken from va.gov and
 veteranscrisisline.net.
 """
@@ -67,6 +69,8 @@ STYLE = '''<style>
 .partial{background:#fff1ce;color:#5b4210;border-radius:5px;padding:8px 12px;margin:10px 0}.full{background:#e3efe7;color:#21493a;border-radius:5px;padding:8px 12px;margin:10px 0}
 .us-block{background:#e8eeea;border-radius:8px;padding:18px 22px}.us-block h3{margin-top:14px}
 table{border-collapse:collapse;width:100%;background:#fff}th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.no-agency{background:#fff;border:1px solid var(--line);border-left:6px solid #5b6770;border-radius:8px;padding:16px 20px}
+.tag{display:inline-block;background:#eef0f2;color:#3a444c;border-radius:4px;padding:1px 7px;font-size:13px;white-space:nowrap}
 .country-list{columns:2;padding-left:20px}.country-list li{margin:6px 0;break-inside:avoid}
 @media(max-width:700px){.country-list{columns:1}th,td{padding:6px}.world{padding:16px 16px}}
 </style>'''
@@ -154,14 +158,21 @@ def line_card(line):
             f'{numbers(line["numbers"])}{status}{hours}{extra}{site}{source_line(line)}</article>')
 
 
+def no_agency_block(c):
+    """In place of the agency card: a plain statement that the country has no national veterans agency."""
+    na = c['no_agency']
+    src = source_line(na) if na.get('source_url') else f'<p class="small source">Checked {when(na["checked_on"])}.</p>'
+    return (f'<section id="no-agency"><h2>No national veterans agency</h2><div class="no-agency" data-no-agency>'
+            f'<p>{e(na["statement"])}</p>{src}</div></section>')
+
+
 def country_page(data, c):
+    if c.get('no_agency'):
+        return no_agency_page(data, c)
     url = BASE + c['slug'] + '.html'
     title = f'{c["name"]}: help for veterans | Veteran Resource Guide'
     desc = (f'Emergency number, official veterans agency and crisis lines in {c["name"]}, with the official source for every number. '
             f'Plus VA Foreign Medical Program and Veterans Crisis Line help for U.S. veterans living in {c["name"]}.')
-    em = c['emergency']
-    emergency = (f'<section id="emergency" class="emergency" aria-labelledby="em-title"><h2 id="em-title">Emergency in {e(c["name"])}</h2>'
-                 f'{numbers(em["numbers"])}<p>Call for immediate danger to life.</p>{source_line(em)}</section>')
     body = ''
     for kind, heading in KINDS:
         cards = ''.join(line_card(x) for x in c['lines'] if x['kind'] == kind)
@@ -171,14 +182,40 @@ def country_page(data, c):
             else:
                 cards = '<p class="full">' + e(c['veterans_line_note']) + '</p>'
         body += f'<section id="{kind.replace("_", "-")}"><h2>{heading}</h2>{cards}</section>'
-    us = (f'<section id="us-veterans" class="us-block"><h2>U.S. veterans living in {e(c["name"])}</h2>'
-          f'{vcl_for(data, c)}{fmp_for(data, c)}{benefits_block(data)}'
-          '<p><a href="./#us-veterans-abroad">All help for U.S. veterans abroad</a></p></section>')
     hero = (f'<div class="hero"><p class="eyebrow">VETERANS OUTSIDE THE U.S.</p><h1>{e(c["name"])}</h1>'
             f'<p>Emergency, veterans and crisis contacts in {e(c["name"])}, each from an official source. Checked {when(c.get("checked_on") or data["checked_on"])}. '
             'Published numbers are not telephone-confirmed.</p></div></header>')
-    return (head(title, desc, url) + hero + f'<main class="world" id="main" data-country="{e(c["slug"])}">' + emergency + body + us
-            + '</main>' + footer())
+    return (head(title, desc, url) + hero + f'<main class="world" id="main" data-country="{e(c["slug"])}">' + emergency_block(c) + body
+            + us_block(data, c) + '</main>' + footer())
+
+
+def emergency_block(c):
+    em = c['emergency']
+    return (f'<section id="emergency" class="emergency" aria-labelledby="em-title"><h2 id="em-title">Emergency in {e(c["name"])}</h2>'
+            f'{numbers(em["numbers"])}<p>Call for immediate danger to life.</p>{source_line(em)}</section>')
+
+
+def us_block(data, c):
+    return (f'<section id="us-veterans" class="us-block"><h2>U.S. veterans living in {e(c["name"])}</h2>'
+            f'{vcl_for(data, c)}{fmp_for(data, c)}{benefits_block(data)}'
+            '<p><a href="./#us-veterans-abroad">All help for U.S. veterans abroad</a></p></section>')
+
+
+def no_agency_page(data, c):
+    """A country with no national veterans agency: the statement, the emergency and crisis numbers, and U.S.-veteran help."""
+    url = BASE + c['slug'] + '.html'
+    title = f'{c["name"]}: help for veterans | Veteran Resource Guide'
+    desc = (f'Emergency number and crisis line in {c["name"]}, which has no national veterans agency, with the official source for every number. '
+            f'Plus VA Foreign Medical Program and Veterans Crisis Line help for U.S. veterans living in {c["name"]}.')
+    cards = ''.join(line_card(x) for x in c['lines'] if x['kind'] == 'crisis_line')
+    if not cards:
+        cards = '<p class="partial" data-partial>' + e(c['no_crisis_line']) + '</p>'
+    crisis = f'<section id="crisis-line"><h2>Crisis and mental health lines</h2>{cards}</section>'
+    hero = (f'<div class="hero"><p class="eyebrow">VETERANS OUTSIDE THE U.S.</p><h1>{e(c["name"])}</h1>'
+            f'<p>Emergency and crisis contacts in {e(c["name"])}, and help for U.S. veterans living there, each from an official source. '
+            f'Checked {when(c.get("checked_on") or data["checked_on"])}. Published numbers are not telephone-confirmed.</p></div></header>')
+    return (head(title, desc, url) + hero + f'<main class="world" id="main" data-country="{e(c["slug"])}" data-no-agency-page>'
+            + emergency_block(c) + no_agency_block(c) + crisis + us_block(data, c) + '</main>' + footer())
 
 
 def checked_range(data):
@@ -192,14 +229,25 @@ def index_page(data):
     title = 'Veterans outside the U.S.: country guides | Veteran Resource Guide'
     desc = ('Emergency numbers, official veterans agencies and crisis lines in ' + str(len(data['countries'])) +
             ' countries, plus the VA Foreign Medical Program and Veterans Crisis Line numbers for U.S. veterans living abroad.')
+    def agency_cell(c):
+        if c.get('no_agency'):
+            return '<span class="tag" data-no-agency>No national veterans agency</span>'
+        return e(next(x['name'] for x in c['lines'] if x['kind'] == 'agency'))
     rows = ''.join(
         f'<tr><td><a href="{e(c["slug"])}.html">{e(c["name"])}</a></td><td>'
         + ', '.join(tel(n) for n in c['emergency']['numbers'][:2]) + '</td><td>'
-        + e(next(x['name'] for x in c['lines'] if x['kind'] == 'agency')) + '</td></tr>'
+        + agency_cell(c) + '</td></tr>'
         for c in data['countries'])
+    none = [c['name'] for c in data['countries'] if c.get('no_agency')]
+    none_note = ''
+    if none:
+        names = ', '.join(none[:-1]) + ' and ' + none[-1] if len(none) > 1 else none[0]
+        none_note = (f'<p>We found no national veterans agency in {e(names)}. Their pages are marked '
+                     '<span class="tag">No national veterans agency</span> below and list the emergency number, the crisis line '
+                     'and the help for U.S. veterans living there.</p>')
     countries = (f'<section id="countries"><h2>Countries covered</h2><p>{len(data["countries"])} countries so far. Each page lists the emergency number, '
                  'the official veterans agency, any veterans support line and the national crisis line, with the official page and the date we checked each number. '
-                 'Where a line is not a 24-hour crisis line, the page says so.</p>'
+                 f'Where a line is not a 24-hour crisis line, the page says so.</p>{none_note}'
                  f'<table><thead><tr><th>Country</th><th>Emergency</th><th>Veterans agency</th></tr></thead><tbody>{rows}</tbody></table></section>')
     a = data['us_abroad']
     vcl, fmp, uc = a['vcl'], a['fmp'], a['fmp']['us_canada']

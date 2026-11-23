@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Country pages (guide.vethomeguard.org/world/): every country page has an emergency number and at least
-one sourced line; every number names an official https source and the date it was checked; a line that is
+one sourced line; a country with an agency shows its agency card, and a country marked as having no national
+veterans agency shows that statement in its place, plus the crisis line and the U.S.-veteran help; every number names an official https source and the date it was checked; a line that is
 not a 24-hour line says so on the page; the pages carry the visit counter, are in the sitemap and are linked
 from the main navigation and the homepage."""
 import json
@@ -14,6 +15,8 @@ from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
 import build_world  # noqa: E402
+
+e = build_world.e
 
 data = json.loads((ROOT / 'data/world/countries.json').read_text(encoding='utf-8'))
 today = date.today()
@@ -32,6 +35,7 @@ class Page(HTMLParser):
     def __init__(self):
         super().__init__()
         self.tels, self.links, self.sections, self.kinds, self.partials, self.sources = [], [], [], [], 0, []
+        self.no_agency = 0
         self.scripts = []
 
     def handle_starttag(self, tag, attrs):
@@ -47,6 +51,8 @@ class Page(HTMLParser):
             self.kinds.append(a['data-kind'])
         if 'data-partial' in a:
             self.partials += 1
+        if 'data-no-agency' in a and tag == 'div':
+            self.no_agency += 1
         if tag == 'script' and a.get('src'):
             self.scripts.append(a['src'])
 
@@ -78,8 +84,22 @@ for c in data['countries']:
     assert em['numbers'] and all(n['display'] and n['tel'] for n in em['numbers']), (c['slug'], 'emergency number')
     checked(em, c['slug'] + ' emergency')
     kinds = [line['kind'] for line in c['lines']]
-    assert 'agency' in kinds and 'crisis_line' in kinds, (c['slug'], kinds)
-    assert 'veterans_line' in kinds or c.get('no_veterans_line') or c.get('veterans_line_note'), (c['slug'], 'veterans line or a note')
+    na = c.get('no_agency')
+    if na:
+        # No national veterans agency: a plain statement in place of the agency card, sourced where it asserts.
+        assert 'agency' not in kinds, (c['slug'], 'a no-agency country cannot also list an agency')
+        assert na.get('statement'), (c['slug'], 'no-agency statement')
+        assert na['statement'].startswith('We found no national veterans agency') or na.get('source_url'), \
+            (c['slug'], 'a statement that asserts there is no agency needs an official source; otherwise say "We found no"')
+        if na.get('source_url'):
+            checked(na, c['slug'] + ' no-agency statement')
+        else:
+            assert date.fromisoformat(na['checked_on']) <= today, (c['slug'], 'no-agency checked date')
+        assert 'crisis_line' in kinds or c.get('no_crisis_line'), (c['slug'], 'crisis line or a note that none was found')
+        assert set(kinds) <= {'crisis_line'}, (c['slug'], 'a no-agency page lists crisis lines only', kinds)
+    else:
+        assert 'agency' in kinds and 'crisis_line' in kinds, (c['slug'], kinds)
+        assert 'veterans_line' in kinds or c.get('no_veterans_line') or c.get('veterans_line_note'), (c['slug'], 'veterans line or a note')
     assert c['vcl_region'] in {r['code'] for r in data['us_abroad']['vcl']['regions']}, c['slug']
     for line in c['lines']:
         where = c['slug'] + ': ' + line['name']
@@ -104,33 +124,73 @@ for c in data['countries']:
     emergency = html[html.index('id="emergency"'):html.index('</section>', html.index('id="emergency"'))]
     assert re.search(r'href="tel:[^"]+"', emergency), (path, 'emergency number')
     assert 'Source: <a data-source href="https://' in emergency, (path, 'emergency source')
-    assert page.kinds.count('agency') >= 1 and page.kinds.count('crisis_line') >= 1, (path, page.kinds)
+    na = c.get('no_agency')
+    if na:
+        assert page.kinds.count('agency') == 0 and page.no_agency == 1, (path, 'no-agency statement in place of the agency card')
+        assert e(na['statement']) in html, (path, 'statement shown')
+        if na.get('source_url'):
+            block = html[html.index('id="no-agency"'):html.index('</section>', html.index('id="no-agency"'))]
+            assert f'<a data-source href="{e(na["source_url"])}"' in block, (path, 'no-agency source shown')
+        assert page.kinds.count('crisis_line') >= 1 or c.get('no_crisis_line'), (path, page.kinds)
+    else:
+        assert page.kinds.count('agency') >= 1 and page.kinds.count('crisis_line') >= 1, (path, 'agency card and crisis line', page.kinds)
+        assert page.no_agency == 0 and 'id="no-agency"' not in html, (path, 'an agency country has no no-agency statement')
     assert len(page.kinds) == len(c['lines']), path
     for line in c['lines']:
         for n in line['numbers']:
             assert f'href="tel:{n["tel"]}"' in html, (path, n['display'])
         assert line['source_url'].replace('&', '&amp;') in html, (path, 'source shown', line['name'])
-    expected_partials = sum(bool(x.get('partial')) for x in c['lines']) + bool(c.get('no_veterans_line'))
+    expected_partials = (sum(bool(x.get('partial')) for x in c['lines']) + bool(c.get('no_veterans_line'))
+                         + bool(na and c.get('no_crisis_line')))
     assert page.partials == expected_partials, (path, 'partial-coverage notes', page.partials, expected_partials)
     assert f'Checked {build_world.when(c.get("checked_on") or data["checked_on"])}' in html
     if c.get('checked_on'):
         assert date.fromisoformat(c['checked_on']) <= today, (path, 'country checked date')
-    assert ['emergency', 'agency', 'veterans-line', 'crisis-line', 'us-veterans'] == page.sections, (path, page.sections)
+    expected_sections = (['emergency', 'no-agency', 'crisis-line', 'us-veterans'] if na
+                         else ['emergency', 'agency', 'veterans-line', 'crisis-line', 'us-veterans'])
+    assert expected_sections == page.sections, (path, page.sections)
     # U.S. veterans living there: the Foreign Medical Program and the Veterans Crisis Line abroad.
     us = html[html.index('id="us-veterans"'):]
     assert 'Foreign Medical Program' in us and 'Veterans Crisis Line' in us and 'veteranscrisisline.net' in us, path
     region = next(r for r in data['us_abroad']['vcl']['regions'] if r['code'] == c['vcl_region'])
     assert region['display'] in us, (path, 'regional crisis number')
+    assert 'VA benefits questions' in us and data['us_abroad']['benefits']['display'] in us, (path, 'VA benefits contact')
+    fmp_line = next((t for t in data['us_abroad']['fmp']['toll_free'] if t['country'] == c['name']), None)
+    if fmp_line:
+        assert f'href="tel:{fmp_line["tel"]}"' in us, (path, 'FMP toll-free line for this country')
     assert f'<link rel="canonical" href="https://guide.vethomeguard.org/world/{c["slug"]}.html">' in html
     assert '../assets/analytics.js' in page.scripts, (path, 'visit counter')
     local_links_resolve(path, page)
-print('PASS: every country page has an emergency number, sourced lines, partial-coverage notes and the U.S. veterans block.')
+print('PASS: every country page has an emergency number, sourced lines, partial-coverage notes and the U.S. veterans block;'
+      f' {sum(bool(c.get("no_agency")) for c in data["countries"])} pages state that there is no national veterans agency.')
+
+# 2b. The builder: a no-agency country with no crisis line found shows that note, and an agency country
+# still renders its agency card (fixtures built from copies of the data, not written to disk).
+import copy  # noqa: E402
+fixture = copy.deepcopy(data)
+sample = copy.deepcopy(next(c for c in data['countries'] if c.get('no_agency')))
+sample.update(slug='fixture', name='Fixture', lines=[], no_crisis_line='We did not find a national crisis line on an official source.')
+html = build_world.country_page(fixture, sample)
+assert 'id="no-agency"' in html and 'data-kind="agency"' not in html and 'We did not find a national crisis line' in html
+assert 'id="us-veterans"' in html and 'Foreign Medical Program' in html
+agency_country = copy.deepcopy(next(c for c in data['countries'] if not c.get('no_agency')))
+html = build_world.country_page(fixture, agency_country)
+assert 'data-kind="agency"' in html and 'id="no-agency"' not in html
+print('PASS: the builder renders the no-agency style and the agency style from fixtures.')
 
 # 3. The world index lists every country and carries the VA numbers for U.S. veterans abroad.
 index = (ROOT / 'world/index.html').read_text(encoding='utf-8')
 page = parse('world/index.html')
-for s in slugs:
-    assert f'href="{s}.html"' in index, s
+for c in data['countries']:
+    row = index[index.index(f'<tr><td><a href="{c["slug"]}.html">'):]
+    row = row[:row.index('</tr>')]
+    if c.get('no_agency'):
+        assert 'No national veterans agency' in row, (c['slug'], 'index marks the no-agency country')
+    else:
+        agency = next(x['name'] for x in c['lines'] if x['kind'] == 'agency')
+        assert e(agency) in row and 'data-no-agency' not in row, (c['slug'], 'index names the agency')
+covered = {c['name'] for c in data['countries']}
+assert not covered & {x['name'] for x in data['not_yet_covered']}, 'a covered country is still listed as not yet covered'
 for r in data['us_abroad']['vcl']['regions']:
     assert r['display'] in index, r['code']
 for t in data['us_abroad']['fmp']['toll_free']:
