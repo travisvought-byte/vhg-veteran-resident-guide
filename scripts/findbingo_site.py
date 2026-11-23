@@ -8,6 +8,7 @@ from the same site at findbingo.org/ohio/; this page links to it rather than cop
 """
 import json
 import re
+from collections import Counter
 from datetime import date
 from html import escape
 from urllib.parse import quote
@@ -99,8 +100,6 @@ def validate(states, venues, licensed, zips):
         assert all(x['url'].startswith('https://') and x['scope'] and date.fromisoformat(x['reviewed_on']) for x in s['sources'])
         if s['coverage'] in ('times', 'licenses') or s.get('list_url') or s.get('list_label'):
             assert s.get('list_url', '').startswith('https://') and s.get('list_label'), s['code']
-        # Optional wording for a state page whose situation the standard wording would misstate (Hawaii, Tennessee).
-        assert all(isinstance(s[k], str) and s[k].strip() for k in ('lead', 'description') if k in s), s['code']
         if s['coverage'] in ('times', 'starter'):
             assert s.get('hours_note'), s['code']
         # Counties the state lookup could not return yet; the page names them and links the state lookup.
@@ -222,6 +221,8 @@ def make_findbingo(root, ads=None, events=None):
         all_zips[extra['zip']] = [extra['lat'], extra['lon']]
     zips = {z: [round(c[0], 3), round(c[1], 3)] for z, c in sorted(all_zips.items()) if _state_of_zip(z)}
     validate(states, venues, licensed, zips)
+    landing = load_landing(root)
+    validate_landing(landing, states)
     if events is None:
         events = load_events(root)
     validate_events(events, zips)
@@ -329,7 +330,7 @@ Lists updated {_date_label(generated_on)}.
             rows = [r for r in licensed if r['state'] == s['code'] and r.get('license_expires', today) >= today]
         else:
             rows = [v for v in venues if v['state'] == s['code']]
-        pages[SLUGS[s['code']] + '/index.html'] = _state_page(s, states, rows, style, analytics, generated_on, _ads_for(ads, SLUGS[s['code']]),
+        pages[SLUGS[s['code']] + '/index.html'] = _state_page(s, states, rows, style, analytics, generated_on, landing, _ads_for(ads, SLUGS[s['code']]),
                                                               [e for e in upcoming_events(events, generated_on) if e['state'] == s['code']])
     pages['privacy/index.html'] = _info_page('privacy', *PRIVACY, style, analytics, generated_on)
     pages['about/index.html'] = _info_page('about', *ABOUT, style, analytics, generated_on)
@@ -585,6 +586,9 @@ def halls_page(states):
     partners = ''
     if with_partner:
         partners = ('<h2 id="partners">Local partners, state by state</h2>'
+                    '<p><strong>Run a charity hoping bingo can help?</strong> Here is how it works. In Ohio, where the law requires veteran, fraternal and sporting '
+                    'groups to give part of their instant bingo profit to an outside charity, halls can name Veteran Home Guardians. In other states we name one local partner, '
+                    'with its agreement, and ask that state’s halls to consider supporting it.</p>'
                     '<p>Outside Ohio we would rather bingo support stay close to home, with the groups already doing the work there. '
                     'In these states we name a local partner and ask halls to consider supporting it, in whatever way their own rules allow. '
                     'It is never a condition of being listed.</p><ul>'
@@ -614,41 +618,84 @@ def halls_page(states):
             + rows
             + '<h2>Every other state</h2><p>We have not summarized these states’ rules yet. Each state page names who licenses bingo there and how to send us your game times: '
             + rest + '.</p>'
-            '<h2>Bingo suppliers and distributors</h2><p>Paper, electronics, pull-tabs, daubers, software: if you sell to halls, you can reach them and their players here with a labeled ad. '
+            '<h2 id="suppliers">Bingo suppliers and distributors</h2><p>Paper, electronics, pull-tabs, daubers, software: if you sell to halls, you can reach them and their players here with a labeled ad. '
             '<a href="../advertise/">Advertise on Find Bingo</a></p>')
-    return ('Help for Bingo Halls: Free Listings, Advertising and State Rules | FindBingo.org',
-            'For the groups that run bingo: free listings, help reaching players, featured events, and plain-language summaries of each state’s rules on bingo money and advertising.',
-            'Help for bingo halls',
-            'Free listings, help reaching players, and your state’s rules on bingo money and ads, in plain language.',
+    # Written to the hall volunteer or manager trying to fill seats (owner direction, November 23, 2026).
+    return ('Fill Your Bingo Hall: Free Listings and Help for Halls | FindBingo.org',
+            'Run bingo for a post, lodge, fire company or parish? List your games free, reach more players, feature a special night, and see your state’s rules.',
+            'Help for bingo halls: fill more seats',
+            'Volunteer or manager trying to fill seats on bingo night? List your games free so people searching near you find them, then see what else can help and what your state’s rules say about bingo money and ads.',
             body)
 
 
-STATE_COPY = {
-    # coverage: (title, description, lead). {name} is the state's name.
-    'times': ('{name} Bingo Near You: Weekly Bingo Halls, Days and Times | FindBingo.org',
-              'Free list of weekly bingo in {name}, by county, with game days, hours, directions and a phone lookup. Type your ZIP code to see bingo near you, closest first.',
-              'Weekly bingo halls in {name}, by county, with the days and hours. Call ahead before you go.'),
-    'licenses': ('{name} Bingo: Licensed for Bingo, by County | FindBingo.org',
-                 'Free list of {name} groups and places with a current state license or permit for bingo, by county, with directions and a phone lookup. Type your ZIP code to see bingo near you.',
-                 'Groups and places in {name} with a current state license or permit for bingo, by county. The state list does not show game days, so call before you go.'),
-    'starter': ('{name} Bingo: Where to Play, Days and Times | FindBingo.org',
-                'Free list of bingo games in {name} from places that publish their own schedules, with days, times, phone numbers and directions. Halls can add their games free.',
-                'Bingo in {name} from places that publish their own schedules. Call ahead before you go.'),
-    'pending': ('{name} Bingo: Get Your Game Listed Free | FindBingo.org',
-                'FindBingo.org is building a free list of bingo games in {name}. Halls and players can send game days and times to be listed free.',
-                'We have not built a {name} list yet. Run a game or know of one? Send us the days and times and we will list it free.'),
-    'none': ('{name} Bingo: Finding Games and Getting Your Hall Listed | FindBingo.org',
-             'How to find bingo in {name}, who licenses it, and how halls can list their game days free on FindBingo.org.',
-             'We are building a list of {name} bingo games. Run a game? Send us your days and times and we will list it free.'),
-}
+# What each state page says to the person who lands on it (owner direction, November 23, 2026: "every landing page should
+# be specific to who's there looking for it"). data/findbingo-landing.json holds a heading, title, description and a short
+# welcome for every state, written to that state's player and its own law. {towns}, {days} and {kinds} are filled from the
+# state's listings, so the words stay true as the lists change. No counts, ever.
+LANDING_FILE = 'data/findbingo-landing.json'
+LANDING_KEYS = ('h1', 'title', 'description', 'welcome')
+LANDING_LIMITS = {'title': 70, 'description': 165, 'welcome': 330, 'h1': 60}
+# The same check tests/findbingo.cjs runs on whole pages: a number followed by a kind of place is a count.
+COUNT_WORDS = re.compile(r'\b\d[\d,]* (bingo )?(halls?|venues?|locations?|places?|counties|groups?|games?|listings?|senior centers?)\b', re.I)
+KIND_WORDS = {'hall': 'halls', 'senior_center': 'senior centers'}
+WEEK = (1, 2, 3, 4, 5, 6, 0)  # Monday first
 
 
-def _state_page(s, states, rows, style, analytics, generated_on, ads=(), events=()):
+def load_landing(root):
+    return json.loads((root / LANDING_FILE).read_text())['states']
+
+
+def _and(words):
+    return ', '.join(words[:-1]) + ' and ' + words[-1] if len(words) > 1 else words[0]
+
+
+def _days_phrase(days):
+    """'every day of the week', 'every day but Saturday', 'Monday through Friday' or 'on Tuesdays and Fridays'."""
+    days = [d for d in WEEK if d in days]
+    if len(days) == 7:
+        return 'every day of the week'
+    at = [WEEK.index(d) for d in days]
+    if len(days) >= 3 and at == list(range(at[0], at[0] + len(at))):
+        return f'{DAY_NAMES[days[0]]} through {DAY_NAMES[days[-1]]}'
+    if len(days) >= 5:
+        return 'every day but ' + _and([DAY_NAMES[d] for d in WEEK if d not in days])
+    return 'on ' + _and([DAY_NAMES[d] + 's' for d in days])
+
+
+def landing_words(s, rows, landing):
+    """The state's heading, title, description and welcome, with {towns}, {days} and {kinds} filled from its own listings."""
+    entry = landing[s['code']]
+    towns = sorted(Counter(r['city'] for r in rows).items(), key=lambda x: (-x[1], x[0]))
+    fill = {'towns': _and([c for c, _ in towns[:3]]) if towns else None,
+            'days': _days_phrase({x['day'] for r in rows for x in r.get('sessions', [])}) if any(r.get('sessions') for r in rows) else None,
+            'kinds': _and(sorted(KIND_WORDS[k] for k in {r['kind'] for r in rows if r.get('kind')})) if any(r.get('kind') for r in rows) else None}
+    out = {}
+    for key in LANDING_KEYS:
+        text = entry[key]
+        for name in re.findall(r'\{(\w+)\}', text):
+            assert key not in ('h1', 'title') and fill.get(name), (s['code'], key, name)
+            text = text.replace('{' + name + '}', fill[name])
+        assert '{' not in text and '}' not in text and len(text) <= LANDING_LIMITS[key], (s['code'], key, len(text))
+        assert not COUNT_WORDS.search(text), (s['code'], key, 'no counts')
+        out[key] = text
+    return out
+
+
+def validate_landing(landing, states):
+    assert set(landing) == {s['code'] for s in states}, 'every state has its landing words'
+    for s in states:
+        e = landing[s['code']]
+        assert set(e) == set(LANDING_KEYS) and all(isinstance(e[k], str) and e[k].strip() == e[k] and e[k] for k in LANDING_KEYS), s['code']
+        assert e['title'].startswith(s['name'] + ' Bingo') and e['title'].endswith(' | FindBingo.org'), s['code']
+        assert s['name'] in e['description'] or s['code'] == 'DC', s['code']
+    for key in LANDING_KEYS:
+        assert len({e[key] for e in landing.values()}) == len(landing), key + ' differs on every state page'
+
+
+def _state_page(s, states, rows, style, analytics, generated_on, landing, ads=(), events=()):
     code, name, slug = s['code'], s['name'], SLUGS[s['code']]
-    title, description, lead = (t.format(name=name) for t in STATE_COPY[s['coverage']])
-    if s['coverage'] == 'none' and s.get('list_url'):
-        lead = f'{name}’s official bingo list or lookup is linked below. Run a game? Send us your days and times and we will list it free.'
-    description, lead = s.get('description', description), s.get('lead', lead)
+    words = landing_words(s, rows, landing)
+    title, description, lead, heading = words['title'], words['description'], words['welcome'], words['h1']
     url = f'{SITE}/{slug}/'
     crumbs = {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
         {'@type': 'ListItem', 'position': 1, 'name': 'Find Bingo', 'item': SITE + '/'},
@@ -656,7 +703,9 @@ def _state_page(s, states, rows, style, analytics, generated_on, ads=(), events=
     rows = sorted(rows, key=lambda r: (r['county'], r['city'], r['name']))
     counties = sorted({r['county'] for r in rows})
     pending = s['coverage'] == 'pending'
-    body = f'<p class="intro">{escape(s["about"])}' + ('' if pending else ' ' + escape(s["regulator_note"])) + '</p>'
+    # The welcome in the header already tells this state's story (data/findbingo-landing.json), so the intro under the
+    # finder names who oversees bingo there rather than repeating it.
+    body = f'<p class="intro">{escape(s["about"] if pending else s["regulator_note"])}</p>'
     if s.get('pending_counties'):
         c = s['pending_counties']
         listed = ', '.join(c[:-1]) + ' and ' + c[-1] if len(c) > 1 else c[0]
@@ -707,12 +756,12 @@ def _state_page(s, states, rows, style, analytics, generated_on, ads=(), events=
             f'<title>{escape(title)}</title>\n<meta name="description" content="{escape(description)}">\n<link rel="canonical" href="{url}">\n'
             # A page with no listings and no state research stays out of search results until it has something to say.
             + ('<meta name="robots" content="noindex,follow">\n' if pending else '')
-            + f'<meta property="og:type" content="website"><meta property="og:site_name" content="Find Bingo"><meta property="og:title" content="{escape(f"Bingo in {name}")}">'
+            + f'<meta property="og:type" content="website"><meta property="og:site_name" content="Find Bingo"><meta property="og:title" content="{escape(title.rsplit(" | ", 1)[0])}">'
             f'<meta property="og:description" content="{escape(description)}"><meta property="og:url" content="{url}"><meta property="og:image" content="{SITE}/ohio/assets/vhg-logo.png">\n'
             + style + '\n' + _json_ld(crumbs) + '\n</head>')
     weekly = 'data-weekly' in body
     return (head + f'<body id="top">{ICONS}<a class="skip" href="#listings">Skip to the bingo list</a>'
-            f'<header>{BALLS}<p class="brand"><a href="../">FindBingo.org</a> · free from Veteran Home Guardians</p><h1>Bingo in {escape(name)}</h1><p class="lead">{escape(lead)}</p></header>'
+            f'<header>{BALLS}<p class="brand"><a href="../">FindBingo.org</a> · free from Veteran Home Guardians</p><h1>{escape(heading)}</h1><p class="lead">{escape(lead)}</p></header>'
             f'<main>{zip_form}{body}'
             f'<nav class="states" aria-labelledby="states-title"><h2 id="states-title">Bingo in other states</h2><div class="state-buttons">{others}</div>'
             '<p class="small-links"><a href="../">Search every state by ZIP code</a></p></nav></main>'
@@ -915,10 +964,11 @@ def _ext(url, label):
 # what the words mean, and the unwritten rules, for people new to bingo, many of them older. General
 # practice only: state law and each hall's house rules decide the details, and the page says so.
 LEARN = (
-    'How bingo works: a friendly bingo class | FindBingo.org',
-    'New to bingo? A plain-English class: what happens on a bingo night, early birds, specials, coverall and the other kinds of games, and the unwritten rules every regular expects.',
-    'Bingo class: how a bingo night works',
-    'A friendly guide for new players and anyone coming back after a long time away. Every hall has its own house rules, so treat this as a starting point and ask the hall.',
+    # Written to the first-timer who is nervous about the unwritten rules (owner direction, November 23, 2026).
+    'How to Play Bingo: A Friendly Class for First-Timers | FindBingo.org',
+    'Nervous about your first bingo night? A plain-English class: buying cards, early birds, coverall, what the words mean, and the unwritten rules regulars expect.',
+    'Your first bingo night, made easy',
+    'Nervous about the unwritten rules? Most first-timers are. Here is what happens on a bingo night, what to buy, what the words mean and the manners regulars expect, so you can walk in and enjoy it. Every hall has its own house rules, so ask at the counter too.',
     '<p><a href="../#play">Want to warm up first? Play a free practice card.</a></p>'
     '<h2>What happens on a bingo night</h2>'
     '<ol><li><strong>Doors open early,</strong> often an hour or two before the first game. People come early to get a seat, buy their cards and have supper from the kitchen.</li>'
@@ -990,10 +1040,10 @@ LEARN = (
 
 ASK = _mailto('Find Bingo privacy')
 PRIVACY = (
-    'Privacy | FindBingo.org',
+    'Privacy: No Accounts, No Sign-In | FindBingo.org',
     'How FindBingo.org handles information about your visit: no accounts, no cookies for counting visits, and your ZIP code search stays on your device.',
     'Privacy',
-    f'How Find Bingo handles information about your visit. Last updated {POLICY_DATE}.',
+    f'Wondering what we keep about you? Very little: there is no account or sign-in, visits are counted without cookies, and your ZIP code search is worked out on your own device. Last updated {POLICY_DATE}.',
     '<h2>The short version</h2>'
     '<ul><li>There are no accounts and no sign-in. We never ask for your name.</li>'
     '<li>We count visits without cookies and without keeping personal information.</li>'
@@ -1042,10 +1092,10 @@ PRIVACY = (
 # halls and players use to see who runs the site. Plain words; no counts of halls, places or states.
 CONTACT = _mailto('FindBingo.org')
 ABOUT = (
-    'About Find Bingo and how to reach us | FindBingo.org',
-    'Who runs FindBingo.org, where the bingo listings come from, how to send a correction, and how to reach us.',
+    'About Find Bingo: Who Runs It and How to Reach Us | FindBingo.org',
+    'Who runs FindBingo.org: Veteran Home Guardians, an Ohio nonprofit, with a Marine veteran who ran his Legion’s bingo. Where listings come from and how to reach us.',
     'About Find Bingo',
-    'A free, plain finder for bingo games near you, from Veteran Home Guardians.',
+    'Wondering who is behind this site? Find Bingo is a free finder from Veteran Home Guardians, an Ohio nonprofit, made by a Marine Corps veteran who ran and advertised bingo at his American Legion for three years.',
     '<h2>Who runs it</h2>'
     '<p>FindBingo.org is run by <a href="https://www.vethomeguard.org/">Veteran Home Guardians</a>, an Ohio nonprofit that places veteran visitors in nursing homes. '
     'It is made by <a href="https://travisvought.com/">Travis Vought</a>, a Marine Corps veteran who ran and advertised bingo at his local American Legion for three years.</p>'
@@ -1065,10 +1115,10 @@ ABOUT = (
     '<p><a href="../privacy/">Privacy</a> · <a href="../terms/">Terms of use</a> · <a href="../advertise/">Advertise on Find Bingo</a></p>')
 
 TERMS = (
-    'Terms of use | FindBingo.org',
+    'Terms of Use: A Free Bingo Directory | FindBingo.org',
     'The terms for using FindBingo.org: a free bingo directory with no wagering on the site, listings to check with the hall, and labeled ads.',
     'Terms of use',
-    f'The plain terms for using Find Bingo. Last updated {TERMS_DATE}.',
+    f'The short of it: Find Bingo is a free directory. It runs no games and takes no bets, so check game details with the hall before you go. Last updated {TERMS_DATE}.',
     '<h2>What this site is</h2>'
     '<p>FindBingo.org is a free directory of bingo games, run by Veteran Home Guardians. Using the site means you accept these terms.</p>'
     '<h2>No gambling on this site</h2>'
@@ -1095,10 +1145,11 @@ TERMS = (
 HALL_SITE_PRICE = 100
 
 ADVERTISE = (
-    'Advertise on Find Bingo | FindBingo.org',
-    'Reach bingo players, families and activity staff with a labeled ad on FindBingo.org. Ads sit apart from the listings and never change them.',
+    # Written to the hall volunteer or manager trying to fill seats, then suppliers and local businesses (November 23, 2026).
+    'Advertise on Find Bingo: Reach Local Bingo Players | FindBingo.org',
+    'Fill seats on bingo night: feature a special game, get a game site for your hall, or place a labeled ad near players. Ads never change the free listings.',
     'Advertise on Find Bingo',
-    'Reach people looking for bingo near them: players, their families, and the activity staff who plan outings.',
+    'Trying to fill seats on bingo night, or reach the players and families who come? Feature your event, get a game site for your hall, or put a labeled ad in front of people searching for bingo near you.',
     '<h2>Who can advertise</h2>'
     '<p>Bingo halls and the groups that run games first of all, then bingo suppliers, local businesses, senior services, senior living and home care, transportation, and community events. '
     'If your business is a good fit for bingo players and their families, write to us.</p>'

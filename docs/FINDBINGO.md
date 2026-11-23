@@ -57,6 +57,36 @@ are listed, anywhere on the site. `tests/findbingo.cjs` checks the state pages a
 Ohio data is not copied into the national page. Ohio searches hand off to https://www.findbingo.org/ohio/
 with the same ZIP code and distance, so Ohio has one source of truth.
 
+## Every page speaks to who lands there (added November 23, 2026)
+
+Travis's direction: "Every landing page should be specific to who's there looking for it, so that we seem tailored to
+everyone." Each page that search or a link can land someone on has its own title, description, heading, Open Graph tags
+and a sentence or two written to that visitor.
+
+- **State pages** read `data/findbingo-landing.json` (`h1`, `title`, `description`, `welcome`) for every state and DC.
+  Each is written to that state's likely player and its own law and lists (Florida talks to a retiree looking for a game
+  this week and gives the two-days-a-week and 18-and-older limits; Texas leads with the state Bingo Hall Locator; Montana
+  says live bingo is run by licensed gambling businesses; states with no list say who to ask). `{towns}` (the most-listed
+  towns, up to three), `{days}` (the weekdays with games, such as "every day of the week" or "Tuesday through Friday") and
+  `{kinds}` ("halls and senior centers") are filled from the state's own listings at build time, so the words stay true as
+  lists change. The welcome is the header's lead; the intro under the ZIP box names who oversees bingo there. The finder
+  (ZIP box) is the first thing in every state page's main content.
+- **Rules the build enforces** (`validate_landing`, `landing_words`): an entry for every state; every field different on
+  every page; titles start with the state's name and "Bingo" and end "| FindBingo.org" (70 characters at most);
+  descriptions 165, welcomes 330; every placeholder filled; and no counts (a number followed by halls, places, games and
+  so on). Adding a state's listings never needs a copy change, but if a welcome names something the list no longer has
+  (Pennsylvania names fire companies, posts and parishes; Washington names Elks and Eagles), update the welcome.
+- **Ohio** (findbingo.org/ohio/) takes its title, description, heading and welcome from the same file's `OH` entry
+  (`scripts/bingo_site.py`); the guide's own `bingo.html` keeps its wording.
+- **Home page:** after the heading, "What brings you here?" offers four big choices that go only to pages that exist:
+  Find a game near me (puts the cursor in the ZIP box), I run a bingo hall (`halls/`), I want to learn to play (`learn/`)
+  and My charity wants bingo support (`halls/#partners`, which opens with a paragraph for charities). Two across on phones.
+- **Other pages:** the bingo class speaks to a first-timer nervous about the unwritten rules; the halls and advertise pages
+  to a hall volunteer or manager trying to fill seats (suppliers and distributors have `halls/#suppliers`); about, privacy
+  and terms answer the question that brings people there. Their words live in `scripts/findbingo_site.py`.
+- `tests/findbingo.cjs` checks the chooser, that every state page's heading, title, description, welcome and og:title are
+  its own, that the finder comes first, and the Ohio, halls, advertise and class wording.
+
 ## Privacy, advertising and ad places (added November 19, 2026)
 
 Travis's direction (November 19, 2026): Find Bingo may carry advertising. Listings stay free and can never
@@ -394,9 +424,8 @@ sources for the listed states only; every other state is linked there and source
 Kentucky and West Virginia are `starter` states (November 17, 2026): neither publishes a list of games with
 days and times, so their files hold schedules that halls and organizers publish themselves.
 
-Two optional fields, `lead` and `description`, replace the standard wording on a state page whose
-situation the standard wording would misstate. Hawaii uses both (the state does not license bingo, so
-only free games are listed) and Tennessee uses `lead` (bingo only at yearly nonprofit events).
+Each state page's heading, title, description and opening come from `data/findbingo-landing.json` (see
+"Every page speaks to who lands there" below), so no state needs special wording in `bingo-states.json`.
 
 How the states fall out (all checked November 17, 2026; each entry's `sources` has the detail):
 

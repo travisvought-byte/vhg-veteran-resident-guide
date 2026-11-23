@@ -81,8 +81,11 @@ for (const dir of ['findbingo-site', 'bingo-site/findbingo'])
 // Run the page on Monday, November 16, 2026 at 10 a.m. Data requests are answered from this folder.
 const sources = JSON.parse(html.match(/const DATA_SOURCES=(\[.*?\]);/)[1]);
 assert.deepEqual(sources, ['', 'https://guide.vethomeguard.org/findbingo-site/', 'https://raw.githubusercontent.com/travisvought-byte/vhg-veteran-resident-guide/main/findbingo-site/']);
+// Each open() loads the whole finder with its lists; close the previous one so a long run stays within memory.
+let lastDom = null;
 async function open(query, {served = ['https://www.findbingo.org/'], requests = [], served_data = data} = {}) {
-  const dom = new JSDOM(html, {url: 'https://www.findbingo.org/' + query, runScripts: 'dangerously', beforeParse(w) {
+  if (lastDom) lastDom.window.close();
+  const dom = lastDom = new JSDOM(html, {url: 'https://www.findbingo.org/' + query, runScripts: 'dangerously', beforeParse(w) {
     const RealDate = w.Date;
     w.Date = class extends RealDate { constructor(...a) { super(...(a.length ? a : [2026, 10, 16, 10, 0])) } static now() { return new RealDate(2026, 10, 16, 10, 0).getTime() } };
     w.HTMLElement.prototype.scrollIntoView = () => {};
@@ -434,6 +437,7 @@ assert.equal(ld.url, 'https://www.findbingo.org/');
 assert.equal(ld.publisher.name, 'Veteran Home Guardians');
 assert(home.querySelector('footer a[href="https://mobilitytalk.org/states/"]') && home.querySelector('footer a[href="https://travisvought.com/"]'));
 const countWords = /\b\d[\d,]* (bingo )?(halls?|venues?|locations?|places?|counties|groups?|games?|listings?|senior centers?)\b/i;
+const seen = {h1: new Set(), title: new Set(), description: new Set(), welcome: new Set(), og: new Set()};
 for (const s of states) {
   const slug = SLUGS[s.code];
   assert.equal(home.querySelector(`#state-buttons a[data-state="${s.code}"]`).getAttribute('href'), slug + '/', 'state buttons link to the state page');
@@ -444,8 +448,16 @@ for (const s of states) {
   const d = new JSDOM(text).window.document;
   assert.equal(d.querySelector('link[rel=canonical]').href, `https://www.findbingo.org/${slug}/`);
   assert(d.title.startsWith(s.name + ' Bingo') && d.title.endsWith('| FindBingo.org'), d.title);
-  assert(d.querySelector('meta[name=description]').content.includes(s.name));
-  assert.equal(d.querySelector('h1').textContent, 'Bingo in ' + s.name);
+  assert(d.querySelector('meta[name=description]').content.includes(s.code === 'DC' ? 'DC' : s.name));
+  // Each page speaks to the person who lands on it: its own heading, title, description and opening (November 23, 2026).
+  const said = {h1: d.querySelector('h1').textContent, title: d.title, description: d.querySelector('meta[name=description]').content,
+                welcome: d.querySelector('header .lead').textContent, og: d.querySelector('meta[property="og:title"]').content};
+  assert(said.h1.includes(s.code === 'DC' ? 'DC' : s.name), said.h1);
+  assert.equal(said.og, said.title.replace(' | FindBingo.org', ''));
+  assert.equal(d.querySelector('meta[property="og:description"]').content, said.description);
+  assert(!/[{}]/.test(Object.values(said).join(' ')), slug + ': every placeholder is filled');
+  for (const [k, v] of Object.entries(said)) { assert(!seen[k].has(v), slug + ': ' + k + ' is its own'); seen[k].add(v) }
+  assert(d.querySelector('main > form.zip-box') === d.querySelector('main').firstElementChild, slug + ': the finder comes first');
   assert.equal(JSON.parse(d.querySelector('script[type="application/ld+json"]').textContent)['@type'], 'BreadcrumbList');
   assert(text.includes("vhg-guide.goatcounter.com/count"), slug + ' counts page views');
   assert.equal(d.querySelectorAll('script[src]').length, 0, 'no outside scripts');
@@ -660,7 +672,12 @@ assert(buildWith([{...sample[1], slot: 'sidebar'}], []).error, 'only known place
   const nums = cells.filter((_, i) => i !== 12).map(b => +b.textContent);
   assert.equal(new Set(nums).size, 24, 'no number twice on a card');
   cells.forEach((b, i) => { if (i !== 12) { const col = i % 5, n = +b.textContent; assert(n > col * 15 && n <= col * 15 + 15, 'each column holds its own fifteen numbers') } });
-  assert(d.querySelector('header .teaser a[href="#play"]') && d.querySelector('header .teaser a[href="learn/"]'), 'the header invites people to play and to take the class');
+  assert(d.querySelector('header .teaser a[href="#play"]') && d.querySelector('header .chooser a[href="learn/"]'), 'the header invites people to play and to take the class');
+  // The home page asks who is there and sends each person to a page that already exists (owner direction, November 23, 2026).
+  assert.deepEqual([...d.querySelectorAll('header .chooser a')].map(a => [a.textContent, a.getAttribute('href')]),
+    [['Find a game near me', '#zip-form'], ['I run a bingo hall', 'halls/'], ['I want to learn to play', 'learn/'], ['My charity wants bingo support', 'halls/#partners']]);
+  d.getElementById('choose-find').click();
+  assert.equal(d.activeElement, d.getElementById('zip'), 'finding a game puts the cursor in the ZIP box');
   let calls = 0;
   while (!d.getElementById('play').classList.contains('win') && calls < 75) { d.getElementById('call-ball').click(); calls++; }
   assert(d.getElementById('play').classList.contains('win'), 'marking for you reaches a bingo by the last ball');
@@ -678,7 +695,22 @@ assert(buildWith([{...sample[1], slot: 'sidebar'}], []).error, 'only known place
 // The bingo class page: linked from every footer, in the sitemap.
 {
   const learn = fs.readFileSync(path.join(site, 'learn/index.html'), 'utf8');
-  assert.match(learn, /<title>How bingo works: a friendly bingo class \| FindBingo\.org<\/title>/);
+  assert.match(learn, /<title>How to Play Bingo: A Friendly Class for First-Timers \| FindBingo\.org<\/title>/);
+  assert(learn.includes('Nervous about the unwritten rules?'), 'the class speaks to a nervous first-timer');
+  // The other entry pages speak to who lands there too: halls trying to fill seats, a charity, suppliers, the Ohio player.
+  const lead = f => new JSDOM(fs.readFileSync(path.join(root, f), 'utf8')).window.document;
+  const halls = lead('findbingo-site/halls/index.html'), adv = lead('findbingo-site/advertise/index.html');
+  assert.match(halls.querySelector('header .lead').textContent, /trying to fill seats on bingo night/);
+  assert.match(halls.getElementById('partners').nextElementSibling.textContent, /^Run a charity hoping bingo can help\?/);
+  assert(halls.getElementById('suppliers'), 'suppliers and distributors have their own place on the halls page');
+  assert.match(adv.querySelector('header .lead').textContent, /^Trying to fill seats on bingo night/);
+  const landing = JSON.parse(fs.readFileSync(path.join(root, 'data/findbingo-landing.json'), 'utf8')).states;
+  const ohio = lead('bingo-site/findbingo/ohio/index.html');
+  assert.equal(ohio.title, landing.OH.title);
+  assert.equal(ohio.querySelector('header .lead').textContent, landing.OH.welcome);
+  assert.equal(ohio.querySelector('meta[name=description]').content, landing.OH.description);
+  const titles = ['', 'learn/', 'about/', 'privacy/', 'terms/', 'advertise/', 'halls/'].map(p => lead('findbingo-site/' + p + 'index.html').title);
+  assert.equal(new Set([...titles, ...Object.values(landing).map(e => e.title)]).size, titles.length + 51, 'every entry page has its own title');
   assert(learn.includes('<link rel="canonical" href="https://www.findbingo.org/learn/">'));
   for (const term of ['Early birds', 'Coverall, or blackout', 'Progressive jackpot', 'Pull-tabs', 'Shout “Bingo!”', 'What changes from state to state']) assert(learn.includes(term) || learn.toLowerCase().includes(term.toLowerCase()), term);
   assert(sitemap.includes('<loc>https://www.findbingo.org/learn/</loc>'));

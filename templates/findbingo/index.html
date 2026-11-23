@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Find Bingo: bingo games near you, by ZIP code | FindBingo.org</title>
-<meta name="description" content="Free and simple: type your ZIP code to find bingo games near you, closest first. Game lists from state bingo offices and local halls, and a free way to list your game in every state.">
+<title>Find Bingo Near Me: Bingo Games by ZIP Code, Closest First | FindBingo.org</title>
+<meta name="description" content="Looking for a bingo game near you? Type your ZIP code and see games closest first, with days and times. Free, simple, and nothing to sign up for.">
 <link rel="canonical" href="https://www.findbingo.org/">
-<meta property="og:type" content="website"><meta property="og:site_name" content="Find Bingo"><meta property="og:title" content="Find Bingo: bingo games near you">
-<meta property="og:description" content="Type your ZIP code to find bingo games near you. Free, from Veteran Home Guardians.">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Find Bingo"><meta property="og:title" content="Find Bingo: bingo games near you, closest first">
+<meta property="og:description" content="Type your ZIP code to find bingo games near you, closest first. Free, from Veteran Home Guardians.">
 <meta property="og:url" content="https://www.findbingo.org/"><meta property="og:image" content="https://www.findbingo.org/ohio/assets/vhg-logo.png">
 <style>
 :root{--navy:#183449;--green:#2f5a45;--paper:#f6f3ec;--line:#cfd8d2;--ink:#1f2f38;--gold:#7a5712;--card:#fff;--head:#183449;--accent:#2f5a45;--link:#1d5672;--today:#fff1c2}
@@ -65,6 +65,7 @@ table.card td button[aria-pressed=true]{background:#d8392b;border-color:#a32518;
 table.card td button.called{border-color:var(--gold);border-width:3px}
 #play-msg{font-size:20px;min-height:1.4em;margin:10px 0 0}#play.win table.card{animation:winpulse 1s ease-in-out 2}@keyframes winpulse{50%{transform:scale(1.03)}}
 #play-win{display:none;margin-top:12px;padding:16px;border-radius:12px;background:#e7f2ea;border:2px solid var(--accent)}#play.win #play-win{display:block}#play-win p{font-size:22px;font-weight:700;margin:0 0 10px;color:var(--accent)}
+.chooser{margin:16px 0 0;max-width:900px}.chooser p{margin:0 0 8px;font-size:19px;font-weight:700}.chooser ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.chooser a{display:flex;align-items:center;justify-content:center;text-align:center;min-height:60px;height:100%;padding:6px 12px;border:2px solid #fff;border-radius:12px;color:#fff;font-size:19px;font-weight:700;line-height:1.25;text-decoration:none}.chooser li:first-child a{background:#fff;color:#183449}.chooser a:hover{text-decoration:underline}@media(max-width:760px){.chooser ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.chooser a{min-height:56px;font-size:17px;padding:6px 8px}}
 .called{margin:8px 0 0;font-size:17px;color:#454c57}.called summary{cursor:pointer;min-height:40px;display:flex;align-items:center}.called-list{margin:4px 0 0;overflow-wrap:anywhere}.teaser{font-size:19px;margin:10px 0 0}.teaser a{font-weight:700;color:#fff}
 @media(max-width:760px){.play-wrap{grid-template-columns:1fr}.play-wrap>div:last-child{order:-1}.ball{width:92px;height:92px}.ball .bn{font-size:34px}table.card td button{font-size:22px}}
 @media(prefers-reduced-motion:reduce){.ball.pop,#play.win table.card{animation:none}}
@@ -94,7 +95,13 @@ article{border-color:#3d4d55;border-top-color:var(--accent);box-shadow:none}.sta
 </style>
 </head><body>
 __ICONS__<a class="skip" href="#count">Skip to the bingo list</a>
-<header>__BALLS__<p class="brand">FindBingo.org · free from Veteran Home Guardians</p><h1>Find bingo near you</h1><p class="lead">Type your ZIP code. We&rsquo;ll show bingo games close to you, closest first.</p><p class="teaser">New to bingo? <a href="learn/">Take the free bingo class</a> or <a href="#play">play a practice card</a>.</p></header>
+<header>__BALLS__<p class="brand">FindBingo.org · free from Veteran Home Guardians</p><h1>Find bingo near you</h1><p class="lead">Type your ZIP code below. We&rsquo;ll show bingo games close to you, closest first.</p>
+<nav class="chooser" aria-labelledby="chooser-title"><p id="chooser-title">What brings you here?</p><ul>
+<li><a href="#zip-form" id="choose-find">Find a game near me</a></li>
+<li><a href="halls/">I run a bingo hall</a></li>
+<li><a href="learn/">I want to learn to play</a></li>
+<li><a href="halls/#partners">My charity wants bingo support</a></li></ul></nav>
+<p class="teaser">Just for fun: <a href="#play">play a free practice card</a>.</p></header>
 <main>
 <form id="zip-form" class="zip-box" action="./" method="get"><div class="tools">
 <div><label for="zip">Type your ZIP code</label><input id="zip" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" pattern="[0-9]{5}" placeholder="Example: 48161" aria-describedby="zip-status"></div>
@@ -241,6 +248,7 @@ $('state-buttons').addEventListener('click',e=>{const a=e.target.closest('a[data
 $('radius').addEventListener('change',()=>{if(activeZip)render()});$('day').addEventListener('change',()=>{if(DATA)render()});$('county').addEventListener('change',()=>{if(DATA)render()});
 $('more-note').addEventListener('click',e=>{const b=e.target.closest('button[data-more]');if(!b)return;showMore=b.dataset.more==='1';render()});
 $('print').addEventListener('click',()=>window.print());
+$('choose-find').addEventListener('click',e=>{e.preventDefault();$('zip-form').scrollIntoView?.({block:'start'});$('zip').focus()});
 $('change-search').addEventListener('click',e=>{if(!e.target.closest('a'))return;e.preventDefault();$('zip-form').scrollIntoView?.({block:'start'});$('zip').focus();$('zip').select?.()});
 function getJSON(u){return fetch(u,{cache:'no-cache'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()})}
 function validData(d,z){return !!(d&&typeof d.generated_on==='string'&&Array.isArray(d.states)&&Array.isArray(d.venues)&&Array.isArray(d.licensed)&&z&&typeof z==='object'&&!Array.isArray(z))}

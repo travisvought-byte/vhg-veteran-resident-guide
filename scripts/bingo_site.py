@@ -10,7 +10,7 @@ printed posters and QR codes keep working.
 import json
 import re
 from instant_bingo import instant_page
-from findbingo_site import indexed_state_pages, INFO_PAGES, load_events, upcoming_events, events_html, EVENT_CSS
+from findbingo_site import indexed_state_pages, INFO_PAGES, load_landing, load_events, upcoming_events, events_html, EVENT_CSS
 from html import escape
 
 SITE = 'https://www.findbingo.org/ohio'
@@ -39,16 +39,24 @@ def finder_stats(page):
             'listed': listed, 'centers': centers, 'timed': timed}
 
 
-def standalone_finder(page):
-    """Turn the guide's bingo page into the Ohio finder at findbingo.org/ohio/."""
-    page = _replace(page, '<title>Ohio Bingo and Senior Centers | Veteran Home Guardians</title>',
-                    '<title>Ohio Bingo Finder: bingo games and senior centers near you | Veteran Home Guardians</title>', 1)
+def standalone_finder(page, words=None):
+    """Turn the guide's bingo page into the Ohio finder at findbingo.org/ohio/.
+
+    words is Ohio's entry in data/findbingo-landing.json: the title, description, heading and welcome written to the
+    Ohio player who lands here (owner direction, November 23, 2026). The guide's own bingo.html keeps its wording."""
+    words = words or {'title': 'Ohio Bingo Finder: bingo games and senior centers near you | Veteran Home Guardians',
+                      'description': 'Free: find bingo games and senior centers near you anywhere in Ohio, by ZIP code, day and time.',
+                      'h1': 'Ohio Bingo & Senior Centers', 'welcome': 'Find bingo games and senior centers near you. It’s free.'}
+    page = _replace(page, '<title>Ohio Bingo and Senior Centers | Veteran Home Guardians</title>', f'<title>{escape(words["title"])}</title>', 1)
+    page = re.sub(r'<meta name="description" content="[^"]*">', lambda m: f'<meta name="description" content="{escape(words["description"])}">', page, count=1)
     page = _replace(page, '<link rel="canonical" href="https://guide.vethomeguard.org/bingo.html">',
                     f'<link rel="canonical" href="{SITE}/">'
                     '<meta property="og:type" content="website"><meta property="og:site_name" content="Ohio Bingo Finder">'
-                    '<meta property="og:title" content="Ohio Bingo Finder">'
-                    '<meta property="og:description" content="Free: find bingo games and senior centers near you anywhere in Ohio, by ZIP code, day and time.">'
+                    f'<meta property="og:title" content="{escape(words["title"].rsplit(" | ", 1)[0])}">'
+                    f'<meta property="og:description" content="{escape(words["description"])}">'
                     f'<meta property="og:url" content="{SITE}/"><meta property="og:image" content="{SITE}/{LOGO}">', 1)
+    page = _replace(page, '<p class="lead">Find bingo games and senior centers near you. It&rsquo;s free.</p></header>',
+                    f'<p class="lead">{escape(words["welcome"])}</p></header>', 1)
     page = page.replace('https://guide.vethomeguard.org/bingo.html', SITE + '/')
     # The finder is now the site root.
     page = _replace(page, 'href="bingo.html?', 'href="./?')
@@ -70,7 +78,7 @@ def standalone_finder(page):
     page = _replace(page, 'data-pm-base="assets/map/"', 'data-pm-base="../assets/map/"', 1)
     page = _replace(page, 'href="data/public/', f'href="{GUIDE}/data/public/')
     page = _replace(page, '<h1>Ohio Bingo &amp; Senior Centers</h1>',
-                    '<p class="site-name">Ohio Bingo Finder · findbingo.org/ohio</p><h1>Ohio Bingo &amp; Senior Centers</h1>', 1)
+                    f'<p class="site-name">Ohio Bingo Finder · findbingo.org/ohio</p><h1>{escape(words["h1"])}</h1>', 1)
     page = _replace(page, '.source-note{', '.site-name{margin:10px 0 0;font-size:16px;letter-spacing:.04em;text-transform:uppercase;opacity:.85}.source-note{', 1)
     page = _replace(page, '</footer>', '<p><a href="partners.html">Partner with the Ohio Bingo Finder</a> · <a href="instant.html">Kinds of bingo</a> · '
                     '<a href="poster.html">Print a poster</a> · <a href="../">Bingo in other states</a> · '
@@ -263,7 +271,7 @@ def ohio_events(root, page, events=None):
 def make_bingo_site(root, finder_page):
     stats = finder_stats(finder_page)
     site = {
-        'index.html': ohio_events(root, standalone_finder(finder_page)),
+        'index.html': ohio_events(root, standalone_finder(finder_page, load_landing(root)['OH'])),
         'partners.html': partners_page(stats),
         'distributions.html': distributions_page(),
         'instant.html': instant_page(root, LOGO, EMAIL, GUIDE, _shell),
