@@ -24,6 +24,7 @@ from build_core_care import (outputs as core_care_outputs, pages as core_care_pa
                              add_cards as core_care_cards, add_facilities_links)
 from build_bad_paper import outputs as bad_paper_outputs, pages as bad_paper_pages
 import landing
+from build_topic_pages import outputs as topic_outputs, pages as topic_pages, add_language_links
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -139,6 +140,10 @@ def outputs():
     for s in states:
         result[s['share_page']] = landing.share_page(result[s['share_page']], s)
     result.update(landing.apply_pages(result))
+    # Help after military sexual trauma, Gold Star and surviving families, and the Ohio essentials in Spanish
+    # (scripts/build_topic_pages.py). The English front page links to the Spanish one, both ways, with hreflang.
+    result.update(topic_outputs())
+    result['index.html'] = add_language_links(result['index.html'])
     # Track public landing/sharing pages once, including each state's own guide page.
     for page in ['index.html', 'bingo.html', 'facilities.html'] + [s['page'] for s in states[1:]] + [s['share_page'] for s in states]:
         result[page] = re.sub(r'<script[^>]*data-goatcounter=[^>]*></script>', '', result[page])
@@ -162,6 +167,8 @@ def outputs():
     urls += [BASE_URL + page for page in core_care_pages()]
     # Bad paper: VA options, discharge boards, records and free help for other-than-honorable discharges.
     urls += [BASE_URL + page for page in bad_paper_pages()]
+    # Help after MST, Gold Star and surviving families, and the guide in Spanish.
+    urls += [BASE_URL + page for page in topic_pages()]
     result['sitemap.xml'] = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join('  <url><loc>' + u.replace('&', '&amp;') + '</loc></url>\n' for u in urls) + '</urlset>\n'
     result['robots.txt'] = 'User-agent: *\nAllow: /\n\nSitemap: ' + BASE_URL + 'sitemap.xml\n'
     return result

@@ -68,6 +68,16 @@ The data is `data/world/countries.json`; `scripts/build_world.py` (run by `scrip
 
 Page text lives in `templates/bad-paper/`; titles, descriptions and sources are in `scripts/build_bad_paper.py` (run by `scripts/build_public.py`). State agencies come from each state's own `<state>-claims` record (Ohio: `ohio-dvs-fallback`). Every state page carries a card that opens the guide on that state; listings that mention discharge upgrades link to it. `tests/bad_paper.py` checks it.
 
+## Help after MST, Gold Star families, and the guide in Spanish
+
+Added November 23, 2026. `scripts/build_topic_pages.py` (run by `scripts/build_public.py`) writes three pages, each listed in the sitemap and linked from the front page's "What help do you need?" list:
+
+- **[Help after military sexual trauma](https://guide.vethomeguard.org/mst.html)** (`mst.html`), written to the survivor: free MST-related VA care (no disability rating or report needed, open to most former service members including many with an other than honorable discharge), Ohio's VA MST coordinator lines and the national list, Vet Center counseling, disability claims and the evidence VA accepts (38 CFR 3.304(f)(5)), liberal consideration for discharge upgrades (linking to the bad paper section rather than repeating it), support for men, and DoD Safe Helpline for those still serving.
+- **[Gold Star and surviving families](https://guide.vethomeguard.org/survivors.html)** (`survivors.html`): TAPS, Military OneSource, each branch's survivor liaison, the Gold Star and Next of Kin lapel buttons (DD Form 3), the Fry Scholarship and DEA, and Ohio survivor benefits first (War Orphans Scholarship, Safety Officers College Memorial Fund, county veterans service offices, homestead exemption, Gold Star plates). DIC and Survivors Pension stay in the front page's surviving-spouse view, which the page links to.
+- **[Guía en español](https://guide.vethomeguard.org/es/)** (`es/index.html`): the Ohio front page's essentials in Spanish, with free VA interpreter help, the county veterans service office, each need linked to its English view, and Ohio contacts. The English front page and the Spanish page point to each other with `hreflang` links, and the front page has a small "Español" link. Program and agency names stay in English with a Spanish gloss; the page ends with a line in Spanish inviting corrections by email.
+
+Every number on these pages was read on the official page named under it on November 23, 2026 (or on the date shown), and is not telephone-confirmed.
+
 ## One guide, any supported state
 
 The main guide uses one interface. Changing the state updates county contacts, resources, senior support and accessibility guidance in place. Each state has its own address with its own title, description and canonical: Ohio is the front page and every other state is its two-letter page, such as `ky.html`. These are the addresses in `sitemap.xml`. Changing the state moves the address bar to that state's page, and older `?state=KY` links still open the right state and move to its page, keeping county and view. State data and source-grounded routing remain separate.
