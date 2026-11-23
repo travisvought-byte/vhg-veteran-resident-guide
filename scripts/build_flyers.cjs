@@ -1,7 +1,7 @@
 // Builds the printable flyers listed in data/flyers.json.
 // For each flyer: flyers/<id>.pdf (exact page size, fonts embedded), flyers/<id>.png (preview),
 // and, when two_up is set, flyers/<id>-2up.pdf (two copies on one landscape letter page, with a cut line).
-// Run after editing a source in flyers/src/:  node scripts/build_flyers.cjs
+// Run after editing a source in flyers/src/:  node scripts/build_flyers.cjs [flyer-id ...]
 // Uses Playwright's Chromium; set PLAYWRIGHT_CHROMIUM_EXECUTABLE to use a locally installed Chrome instead.
 'use strict';
 const fs = require('fs');
@@ -10,7 +10,11 @@ const {chromium} = require('playwright');
 
 const ROOT = path.join(__dirname, '..');
 const OUT = path.join(ROOT, 'flyers');
-const {flyers} = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/flyers.json'), 'utf8'));
+const all = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/flyers.json'), 'utf8')).flyers;
+// Optional ids on the command line rebuild only those flyers (node scripts/build_flyers.cjs va-pension-letter).
+const only = process.argv.slice(2);
+const flyers = only.length ? all.filter(f => only.includes(f.id)) : all;
+if (only.length && flyers.length !== only.length) throw new Error('unknown flyer id in: ' + only.join(', '));
 const PX = 96;
 
 (async () => {

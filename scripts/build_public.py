@@ -19,6 +19,8 @@ from build_guide_privacy import outputs as privacy_outputs
 from build_world import outputs as world_outputs, pages as world_pages
 from build_county_pages import outputs as county_outputs
 from build_va_pages import outputs as va_outputs
+from build_core_care import (outputs as core_care_outputs, pages as core_care_pages,
+                             add_cards as core_care_cards, add_facilities_links)
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -93,11 +95,16 @@ def outputs():
     # The bingo pipeline's normalized CSV and coverage report (docs/BINGO-PIPELINE.md) follow the lists they read.
     result.update({str(p.relative_to(ROOT)): t for p, t in bingo_pipeline_outputs().items()})
     result['facilities.html'] = make_facilities(ROOT)
+    # Links to the pages for veterans in nursing homes and their families (scripts/build_core_care.py).
+    result['facilities.html'] = add_facilities_links(result['facilities.html'])
     result['index.html'] = result['index.html'].replace('<h3>For posts and community groups</h3>', '<p id="ohio-bingo-link"><a href="' + OHIO_BINGO + '/"><strong>Find Ohio bingo and senior centers</strong></a> - find nearby senior centers, exercise, crafts, games, meals and bingo by ZIP code.</p><h3>For posts and community groups</h3>', 1)
     # Keep state adapter regression fixtures private to tests; the public site has one view.
     for page in [s['page'] for s in states]:
         result['tests/fixtures/'+page] = result[page]
     result.update(unified_outputs(ROOT, result, states))
+    # Every state page gets the card for veterans in nursing homes, with that state's APS line.
+    result.update(core_care_cards(result, states))
+    result.update(core_care_outputs(states))
     result.update(disability_advocacy_outputs())
     result.update(mobility_route_outputs())
     result.update(family_guide_outputs())
@@ -139,6 +146,8 @@ def outputs():
     urls += county_urls
     # VA locations: the by-state list and each state's page.
     urls += va_urls
+    # Pages for veterans in nursing homes and their families.
+    urls += [BASE_URL + page for page in core_care_pages()]
     result['sitemap.xml'] = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join('  <url><loc>' + u.replace('&', '&amp;') + '</loc></url>\n' for u in urls) + '</urlset>\n'
     result['robots.txt'] = 'User-agent: *\nAllow: /\n\nSitemap: ' + BASE_URL + 'sitemap.xml\n'
     return result

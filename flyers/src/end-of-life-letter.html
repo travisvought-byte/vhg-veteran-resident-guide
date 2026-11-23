@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Hospice and burial for veterans (one-page sheet)</title>
+<!-- Print source for flyers/end-of-life-letter.pdf, written by scripts/build_core_care.py. Rebuild with: node scripts/build_flyers.cjs end-of-life-letter -->
+<style>
+@font-face{font-family:'Atkinson Hyperlegible';font-weight:400;src:url(fonts/atkinson-hyperlegible-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Atkinson Hyperlegible';font-weight:700;src:url(fonts/atkinson-hyperlegible-latin-700-normal.woff2) format('woff2')}
+@page{size:8.5in 11.0in;margin:0}
+html,body{margin:0;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.sheet{width:816px;height:1056px;box-sizing:border-box;display:flex;flex-direction:column;background:#fff;font-family:'Atkinson Hyperlegible',system-ui,sans-serif;color:#18242c;overflow:hidden}
+.top{background:#183449;color:#fff;padding:30px 48px 24px;display:flex;gap:24px;align-items:center}
+.top .words{flex:1;min-width:0}.tag{display:inline-block;background:#e3c57d;color:#183449;font-size:13px;font-weight:700;letter-spacing:.08em;padding:6px 12px;border-radius:999px}
+.top h1{margin:10px 0 8px;font-size:40px;line-height:1.06}.top p{margin:0;font-size:17px;line-height:1.4;color:#dfe8ec}
+.qr{flex:none;background:#fff;border-radius:10px;padding:8px;text-align:center;color:#183449;font-size:13px;font-weight:700}.qr img{display:block;width:132px;height:132px}
+.body{flex:1;padding:18px 48px 0;display:flex;flex-direction:column;gap:10px}
+.body h2{margin:6px 0 0;font-size:21px;color:#183449}.body p,.body li{font-size:15.5px;line-height:1.4;margin:0}.body ul{margin:0;padding-left:22px}.body li{margin:3px 0}
+.call{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.call div{border:2px solid #183449;border-radius:10px;padding:8px 12px}.call b{display:block;font-size:22px}.call span{font-size:13.5px;line-height:1.3;display:block}
+.note{background:#f3efe3;border-left:5px solid #a07014;padding:8px 12px;border-radius:4px}
+.foot{margin:10px 48px 0;padding:10px 0 20px;border-top:2px solid #183449;font-size:12.5px;line-height:1.4;color:#33434c;display:flex;gap:14px;align-items:center}.foot img{width:56px;height:56px;flex:none}
+</style>
+</head>
+<body>
+<div class="sheet">
+<div class="top"><div class="words"><span class="tag">FOR VETERANS IN CARE AND THEIR FAMILIES</span><h1>Hospice and burial for veterans</h1><p>Comfort care, honor and a resting place: what VA provides, and how families plan ahead.</p></div>
+<div class="qr"><img src="qr-end-of-life-letter.svg" alt="QR code that opens guide.vethomeguard.org/end-of-life-burial.html">Scan for the full page</div></div>
+<div class="body">
+
+<h2>VA hospice and palliative care</h2><ul><li>Enrolled veterans with the clinical need are eligible. <b>No copays for hospice</b>, from VA or a hospice under contract with VA.</li><li>Ask the doctor or VA social worker. Ask hospices whether they take part in We Honor Veterans.</li></ul>
+<h2>Burial benefits (as of November 2026)</h2><ul><li>Service-connected death: up to $2,000. Other deaths on or after October 1, 2026: $1,032 burial and $1,032 plot allowance. Form 21P-530EZ.</li><li><b>Plan ahead:</b> apply for a pre-need eligibility decision (VA Form 40-10007).</li><li><b>No family?</b> VA buries unclaimed veterans with honor and helps with casket, urn and transport costs.</li></ul>
+<h2>Ohio veterans cemeteries</h2><ul><li>Ohio Western Reserve National Cemetery, Seville: 330-335-3069</li><li>Dayton National Cemetery: 937-268-2221</li><li>Ohio Veterans Home Cemetery, Sandusky (state): 419-625-2454</li></ul>
+<div class="call"><div><b>800-535-1117</b><span>National Cemetery Scheduling Office</span></div><div><b>800-827-1000</b><span>VA benefits line (burial allowance)</span></div><div><b>County veterans office</b><span>Burial help for Ohio veterans without means</span></div><div><b>miap.us</b><span>Missing in America Project: unclaimed remains</span></div></div>
+</div>
+<div class="foot"><img src="vhg-logo-print.png" alt="Veteran Home Guardians logo"><div>Full page with sources: <b>guide.vethomeguard.org/end-of-life-burial.html</b>. Facts checked November 23, 2026; agencies change figures, so confirm with them. Free from Veteran Home Guardians, an Ohio 501(c)(3) nonprofit. We are not VA and do not decide eligibility. Danger now: 911. Veterans Crisis Line: 988, press 1.</div></div>
+</div>
+</body>
+</html>
