@@ -94,7 +94,7 @@ def head(title, desc, url):
 
 def footer():
     ask = 'mailto:' + EMAIL + '?subject=Veteran%20Resource%20Guide%20country%20page'
-    return (f'<footer class="world" style="margin:auto;padding:18px 24px"><p>Free from Veteran Home Guardians. Numbers come from official government pages and are not '
+    return (f'<footer class="world" style="margin:auto;padding:18px 24px"><p>Free from <a href="https://www.vethomeguard.org/about.html">Veteran Home Guardians</a>, an independent U.S. 501(c)(3) nonprofit (EIN 33-4637180) that visits isolated veterans and publishes free guides. Numbers come from official government pages and are not '
             f'telephone-confirmed. Report a wrong number: <a href="{ask}">{EMAIL}</a>.</p>'
             '<p><a href="../">Back to the Veteran Resource Guide</a> · <a href="../privacy.html">Privacy</a></p></footer>\n</body></html>\n')
 
