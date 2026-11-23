@@ -51,7 +51,7 @@ table{border-collapse:collapse;width:100%;background:#fff}th,td{text-align:left;
 
 
 def head(title, desc, path, lang='en', alternates=''):
-    url = BASE + path
+    url = BASE + (path[:-len('index.html')] if path.endswith('/index.html') else path)
     return f'''<!doctype html>
 <html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(title)}</title>

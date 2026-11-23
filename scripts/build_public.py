@@ -139,10 +139,10 @@ def outputs():
     # people passing the guide on, and facilities, flyers and the rest to their own visitors.
     for s in states:
         result[s['share_page']] = landing.share_page(result[s['share_page']], s)
-    result.update(landing.apply_pages(result))
     # Help after military sexual trauma, Gold Star and surviving families, and the Ohio essentials in Spanish
     # (scripts/build_topic_pages.py). The English front page links to the Spanish one, both ways, with hreflang.
     result.update(topic_outputs())
+    result.update(landing.apply_pages(result))
     result['index.html'] = add_language_links(result['index.html'])
     # Track public landing/sharing pages once, including each state's own guide page.
     for page in ['index.html', 'bingo.html', 'facilities.html'] + [s['page'] for s in states[1:]] + [s['share_page'] for s in states]:
