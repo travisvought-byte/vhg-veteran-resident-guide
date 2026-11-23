@@ -150,7 +150,7 @@ West Virginia adds all 55 counties, 13 state programs, four aging agencies and s
 
 ## Maintenance and next research
 
-See the [roadmap](docs/ROADMAP.md) for what the guide still needs, and the [maintenance process](docs/MAINTENANCE.md), [verification queue](docs/VERIFICATION-QUEUE.md) and [distribution plan](docs/DISSEMINATION.md). Source review is not telephone confirmation. No outreach was sent as part of this update.
+See the [roadmap](docs/ROADMAP.md) for what the guide still needs, the [resource-mining pipeline](docs/MINING.md) and [coverage report](docs/COVERAGE.md) for where new listings come from and which states are thinnest, and the [maintenance process](docs/MAINTENANCE.md), [verification queue](docs/VERIFICATION-QUEUE.md) and [distribution plan](docs/DISSEMINATION.md). Source review is not telephone confirmation. No outreach was sent as part of this update.
 
 A [monthly link check](.github/workflows/link-check.yml) requests every link the guide publishes (each state's resources and veterans office contacts, and the family guide; about 1,700 links). When a link is broken or now goes to a different website, it opens one issue, "Guide links to review", naming each link and the records that use it, and closes the issue when a later run is clean. Sites that refuse robots are counted and never listed, so nobody is asked to open links by hand. Run it yourself with `python3 scripts/check_links.py` (add `--state TX` for one state, `--list` to see the links without requesting them); `python3 tests/link_check.py` checks the sorting rules against a local server. It checks web addresses only. It cannot tell whether a phone number still works.
 
