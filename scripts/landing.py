@@ -139,6 +139,17 @@ def set_hero(html, h1=None, intro=None):
     return html[:m.start()] + new + html[m.end():]
 
 
+def complete_social(html, url=None):
+    """Keep a page's own title and description; fill in the Open Graph and Twitter tags a shared link needs."""
+    title = re.search(r'<title>(.*?)</title>', html, re.S)[1]
+    desc = re.search(r'<meta name="description" content="([^"]*)"', html)
+    canonical = re.search(r'<link rel="canonical" href="([^"]*)"', html)
+    og_title = re.search(r'<meta property="og:title" content="([^"]*)"', html)
+    unescape = lambda s: __import__('html').unescape(s)
+    return set_head(html, unescape(title), unescape(desc[1]) if desc else '', url or (canonical[1] if canonical else None),
+                    unescape(og_title[1]) if og_title else None)
+
+
 def apply_pages(result, root=ROOT):
     """Tailor the other entry pages from data/landing/pages.json. Pages built elsewhere in this run are
     taken from result; committed pages that no script builds are read from disk."""

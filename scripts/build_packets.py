@@ -638,7 +638,9 @@ def outputs():
     reviewed = max(src['reviewed_on'], extra_reviewed(extra))
     for v in COVERS:
         result[f'{OUT}cover/{v}.html'] = cover(v, extra, reviewed, records)
-    result['packets.html'] = packets_page(counties, states[1:])
+    # Open Graph and Twitter tags so a shared link previews properly (scripts/landing.py); the text stays as written.
+    import landing
+    result['packets.html'] = landing.complete_social(packets_page(counties, states[1:]))
     return result
 
 

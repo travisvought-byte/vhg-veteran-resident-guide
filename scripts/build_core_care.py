@@ -673,6 +673,9 @@ def outputs(states):
         TOPICS[3]['slug']: end_of_life_page(),
         TOPICS[4]['slug']: toxic_page(),
     }
+    # Full Open Graph and Twitter tags for shared links (scripts/landing.py); titles stay as written here.
+    import landing
+    result = {k: landing.complete_social(v) for k, v in result.items()}
     for fid, html in flyers().items():
         result['flyers/src/' + fid + '.html'] = html
     return result

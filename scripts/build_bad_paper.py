@@ -307,7 +307,9 @@ def outputs():
         for k in p['sources']:
             assert k in SOURCES, 'unknown source ' + k
         body = (ROOT / 'templates/bad-paper' / (p['slug'] + '.html')).read_text(encoding='utf-8')
-        result['bad-paper/' + p['slug'] + '.html'] = page_html(p, fill(body, agencies))
+        # Full Open Graph and Twitter tags for shared links (scripts/landing.py); titles stay as written here.
+        import landing
+        result['bad-paper/' + p['slug'] + '.html'] = landing.complete_social(page_html(p, fill(body, agencies)))
     return result
 
 
