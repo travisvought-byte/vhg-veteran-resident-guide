@@ -1,7 +1,7 @@
 # FindBingo.org
 
 FindBingo.org is the multi-state bingo finder. Players type a ZIP code (or pick a state) and see
-bingo near them, closest first. It covers Michigan, Texas, Virginia, Missouri, Indiana, Mississippi, Montana
+bingo near them, closest first. It covers Michigan, Texas, Virginia, Missouri, Indiana, Kansas, Mississippi, Montana
 and New Mexico with state data, serves the Ohio Bingo
 Finder at findbingo.org/ohio/, and lists organizer-published games in Pennsylvania, New York, Florida,
 Utah, Kentucky and West Virginia ("starter" states). States without a list yet say so plainly. Every
@@ -19,6 +19,7 @@ Started November 15, 2026, at Travis's direction: one national finder, neighbori
 | Virginia bingo sessions (halls, days, doors-open and doors-close times) | `data/public/virginia-bingo-sessions.json`, rebuilt by `scripts/import_virginia_bingo.py` |
 | Missouri bingo games (halls, phone, day, start time, weeks of the month) | `data/public/missouri-bingo-sessions.json`, rebuilt by `scripts/read_missouri_finder.py` then `scripts/import_missouri_bingo.py` |
 | Indiana groups with a current license that allows bingo | `data/public/indiana-bingo-licenses.json` |
+| Kansas organizations licensed for bingo | `data/public/kansas-bingo-licenses.json`, rebuilt by `scripts/import_kansas_bingo.py` |
 | Mississippi halls licensed for bingo | `data/public/mississippi-bingo-licenses.json`, rebuilt by `scripts/import_mississippi_bingo.py` |
 | Montana places with a live bingo permit | `data/public/montana-bingo-permits.json`, rebuilt by `scripts/import_montana_bingo.py` |
 | New Mexico groups licensed for bingo, raffles or pull-tabs | `data/public/new-mexico-bingo-licenses.json`, rebuilt by `scripts/import_new_mexico_bingo.py` |
@@ -149,8 +150,8 @@ Leaflet 1.9.4 with Leaflet.markercluster 1.5.3 in `assets/map/`, served from the
 - No list has street-level coordinates, so each card is pinned at the middle of its ZIP code, using the same ZIP code points
   as the distance search (`zips.json`). Each pin's box and the note under the map say so. A card whose ZIP code has no point
   stays in the list without a pin. No coordinates are made up.
-- Find Bingo never states counts: nearby pins gather under a plain dot with no number. (The guide's facilities page shows
-  group numbers, as Nina's Map does.)
+- Nearby pins gather under a group dot that shows how many places it holds, as on the guide's facilities page and Nina's Map
+  (owner direction, November 23, 2026; until then the dots were plain). The page text still never states counts.
 - "Use my location" (beside the ZIP code box) finds the nearest ZIP code on the visitor's device and searches it.
 - Big buttons and text, one-finger page scrolling on phones until the map is tapped, no scroll-wheel zoom until the map is
   clicked, Tab and Enter on pins and groups, dark mode on findbingo.org, and a "Hide the map" button that is remembered
@@ -244,6 +245,17 @@ regular day were kept. Files: `data/public/pennsylvania-bingo.json`, `new-york-b
 Travis's rule for these lists (November 16, 2026): use the best information available and make it easy
 for people to send corrections. Listings are not held back for phone confirmation.
 
+**Pennsylvania, more listings (added November 23, 2026).** No county treasurer checked publishes a list of bingo licensees
+(Allegheny, Montgomery, Berks, Westmoreland, Cumberland, Butler and Monroe were read; each gives only applications and the
+law), so Pennsylvania stays a starter state. Added from each organizer's own page, read November 23: Washington Township VFC
+102 (Apollo, Friday), St. Bartholomew Parish in Crabtree (Sunday; the start time changes with the season, so the card gives
+no single time), Marion VFC 8 and Franklin Fire Company in Chambersburg (Tuesday and Wednesday), West Deer Township VFC No. 3
+(Gibsonia, Saturday), West View VFD at the West View Banquet Hall (Sunday), Our Lady of Hope Parish's St. Valentine Frawley
+Hall (Bethel Park, Tuesday) and St. Gabriel Church Hall (Pittsburgh, first and third Thursday), and Our Lady of Perpetual
+Help Parish's St. Ursula Social Hall (Allison Park, Tuesday). ZIP 17202 had no point; its point is the Census Geocoder match
+for the Marion VFC 8 address. Left out: Saint Mark Parish (Cranberry Township; dated registrations, not a weekly game) and
+pages that would not load (Archangel Gabriel Parish, St. John XXIII Parish, Safety First VFC).
+
 **Kentucky, West Virginia, Pennsylvania (no state list of games).** No public statewide list of games with days
 and times was found: Kentucky's Office of Charitable Gaming (now part of Kentucky Horse Racing & Gaming)
 publishes county totals in its annual report; West Virginia's Tax Division links no licensee list;
@@ -313,7 +325,7 @@ where one is published. The tests refuse a `pending` state, so coverage cannot s
 | `pending` | Not researched. Only `code`, `name`, `coverage`, `about`, `reviewed_on`. Kept in the build for completeness; no state uses it now. Such a page carries `noindex` and stays out of `sitemap.xml`. |
 | `none` | Researched: regulator named and sourced, no list loaded on this site. If the state publishes a list or finder, `list_url` and `list_label` point to it and the state page and the search card lead with that button. |
 | `starter` | Organizer-published schedules, one file per state (`STARTER_FILES`). |
-| `licenses` | A state list of licensed groups or permitted places without game days (Indiana, Mississippi, Montana, New Mexico), one file per state (`LICENSE_FILES`). |
+| `licenses` | A state list of licensed groups or permitted places without game days (Indiana, Kansas, Mississippi, Montana, New Mexico), one file per state (`LICENSE_FILES`). |
 | `times` | A state list with days and hours (Michigan, Texas, Virginia, Missouri), one file per state (`TIMES_FILES`). |
 
 The home page shows a button for each state with a list on the site (`LISTED` in the generator) and keeps
@@ -395,6 +407,20 @@ the next bingo day, as Texas does.
   (Shrewsbury: 63119). Halls already in the data file keep their ZIP code on a refresh.
 - **Counties** come from the state page itself ("St. Louis City" is stored the Census way, "St. Louis city").
   Michigan's pending-county check is per state now, because Missouri also has a Clinton County.
+
+### Kansas (loaded November 23, 2026)
+
+The Department of Revenue's "Bingo Organizations" PDF (https://www.ksrevenue.gov/pdf/BingoOrganizations.pdf, linked from
+https://www.ksrevenue.gov/bustaxtypesbingo.html) gives one block per licensed organization: license number (BNG...), name,
+street, city and ZIP, and phone. It carries no date, county, game days or license end date; the bingo page says the license
+year runs July 1 to June 30, but the list does not say which year, so no end date is shown. `scripts/import_kansas_bingo.py`
+reads `pdftotext` output of the PDF. It leaves out a block whose street is only a post office box, drops a box written beside
+a street (the state's wording stays in `listed_address`), and leaves out a street it cannot read without guessing
+("3381 326 N Kansas Ave") and a block with a Missouri ZIP code. The county comes from the ZIP code's county in the same
+Midwire/GeoNames file as the site's ZIP points (checksum checked). The addresses are the ones the state lists for each
+organization, which may not be where it plays, so the state note says to call. On November 23 the PDF host refused this
+session's downloader, so the list was read through a page reader and checked against the PDF's first page by eye; the next
+refresh should run the importer on a fresh download.
 
 ### Montana (loaded November 17, 2026)
 

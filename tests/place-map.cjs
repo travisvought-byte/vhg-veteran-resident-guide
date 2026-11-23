@@ -1,5 +1,5 @@
 // The map beside the lists (assets/map/place-map.js), run in jsdom with a small stand-in for Leaflet:
-// pins come only from cards with a known ZIP code point, Find Bingo's group dots carry no numbers, every pin's box offers
+// pins come only from cards with a known ZIP code point, Find Bingo's group dots show how many places they hold, every pin's box offers
 // Call, Directions and the full listing, the list gets "Show on the map" buttons, hiding the map is remembered and stops
 // loading it, and "Use my location" picks the nearest ZIP code on the device.
 const assert = require('assert'), fs = require('fs'), path = require('path');
@@ -67,8 +67,7 @@ const settle = () => new Promise(r => setTimeout(r, 120));
   const cluster = p.log.clusters[0];
   assert.equal(cluster.items.length, pinned.length, 'one pin for each card with a ZIP code point');
   assert.deepEqual(cluster.items.map(m => m.at), pinned.map(a => [Number(a.dataset.pmLat), Number(a.dataset.pmLon)]));
-  const dot = cluster.opts.iconCreateFunction({getChildCount: () => 12});
-  assert(dot && !/\d/.test(dot.html), 'Find Bingo groups show a plain dot with no number');
+  assert.equal(cluster.opts.iconCreateFunction, undefined, 'Find Bingo groups show how many places they hold (owner direction, November 23, 2026)');
   assert.equal(p.d.querySelectorAll('#listings .pm-show').length, pinned.length, 'each pinned card has a Show on the map button');
   // The pin's box: the name, the ZIP code note, Call or a phone lookup, Directions and the full listing.
   const first = pinned[0], pop = cluster.items[0].popup();
@@ -153,12 +152,12 @@ const settle = () => new Promise(r => setTimeout(r, 120));
   assert(cards.length, 'Ohio cards near 43334 are pinned');
   for (const a of cards) assert.equal(a.dataset.pmZip, a.querySelector('.address').textContent.match(/OH (\d{5})/)[1], a.id + ' pinned at the ZIP code in its address');
   assert.deepEqual(p.log.clusters[0].items.map(m => m.at), cards.map(a => centroids[a.dataset.pmZip]));
-  assert(!/\d/.test(p.log.clusters[0].opts.iconCreateFunction().html), 'plain group dots on the Ohio finder');
+  assert.equal(p.log.clusters[0].opts.iconCreateFunction, undefined, 'group dots on the Ohio finder show how many places they hold');
   assert(cards.every(a => ['game', 'center', 'nodays'].includes(a.dataset.pmKind)));
-  // The Ohio finder on findbingo.org: map files from findbingo.org/assets/map/, Find Bingo's privacy page, plain group dots.
+  // The Ohio finder on findbingo.org: map files from findbingo.org/assets/map/, Find Bingo's privacy page, numbered group dots.
   const ohio = new JSDOM(read('bingo-site/findbingo/ohio/index.html')).window.document.getElementById('map-box');
   assert.equal(ohio.dataset.pmBase, '../assets/map/');
-  assert.equal(ohio.dataset.pmNumbers, '0');
+  assert.equal(ohio.dataset.pmNumbers, undefined);
   assert(ohio.querySelector('a[href="../privacy/"]'));
-  console.log('PASS place map: pins only at known ZIP code points, plain group dots on Find Bingo, pin boxes with call, directions and the listing, list buttons, keyboard names, remembered hiding, the map following the list, and Use my location.');
+  console.log('PASS place map: pins only at known ZIP code points, numbered group dots on Find Bingo, pin boxes with call, directions and the listing, list buttons, keyboard names, remembered hiding, the map following the list, and Use my location.');
 })().catch(e => { console.error(e); process.exit(1); });

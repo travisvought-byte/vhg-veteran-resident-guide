@@ -42,7 +42,7 @@ const listed = states.filter(s => LISTED.includes(s.coverage)), rest = states.fi
 const ready = states.filter(s => s.coverage !== 'pending').map(s => s.code), waiting = states.filter(s => s.coverage === 'pending').map(s => s.code);
 assert.deepEqual([...static_.querySelectorAll('#state-buttons > a')].map(a => a.dataset.state), listed.map(s => s.code));
 assert.deepEqual([...static_.querySelectorAll('#state-buttons details.more-states a')].map(a => a.dataset.state), rest.map(s => s.code));
-for (const c of ['FL', 'IN', 'MI', 'MO', 'MS', 'MT', 'NM', 'NY', 'OH', 'PA', 'TX', 'UT', 'VA']) assert(listed.some(s => s.code === c), c + ' keeps its list');
+for (const c of ['FL', 'IN', 'KS', 'MI', 'MO', 'MS', 'MT', 'NM', 'NY', 'OH', 'PA', 'TX', 'UT', 'VA']) assert(listed.some(s => s.code === c), c + ' keeps its list');
 for (const c of ['KY', 'WV']) assert(ready.includes(c), c + ' stays researched');
 assert.deepEqual(waiting, [], 'every state and DC has been researched: each names who licenses or oversees bingo, with a source');
 assert.equal(states.length, 51);
@@ -53,7 +53,7 @@ assert(static_.querySelector('footer a[href="https://creativecommons.org/license
 assert(!/\b\d+ (halls|venues|locations|counties)\b/i.test(static_.querySelector('header').textContent), 'no headline counts');
 // The map (November 21, 2026): hidden until the list has pins, group dots without numbers, map files from this site, privacy linked.
 const mapBox = static_.getElementById('map-box');
-assert(mapBox && mapBox.hidden && mapBox.dataset.pmList === 'results' && mapBox.dataset.pmBase === 'assets/map/' && mapBox.dataset.pmNumbers === '0', 'home map box');
+assert(mapBox && mapBox.hidden && mapBox.dataset.pmList === 'results' && mapBox.dataset.pmBase === 'assets/map/' && mapBox.dataset.pmNumbers === undefined, 'home map box (group dots show how many places they hold)');
 assert(!/\d/.test(mapBox.textContent), 'no numbers in the map box');
 assert(mapBox.querySelector('a[href="privacy/"]') && /OpenStreetMap/.test(mapBox.textContent), 'the map names its picture source and links Privacy');
 assert(static_.querySelector('#zip-form [data-pm-locate][hidden]'), 'Use my location stays hidden without JavaScript');
@@ -293,11 +293,24 @@ assert(p.d.querySelector('#state-GA a[href^="mailto:travis@vethomeguard.org?subj
 assert.equal(p.d.querySelector('#state-GA a[target]').href, 'https://sos.ga.gov/how-to-guide/how-guide-charity-bingo', 'the regulator is named and linked');
 assert.equal(p.d.querySelector('#state-GA .big-actions a').className, 'solid', 'with no official list to point to, sending game times is the main action');
 // Where the state publishes its own list or finder, the card leads with it.
-p = await open('?zip=67202');
-assert.equal(p.cards[0], 'state-KS');
-assert.equal(p.d.querySelector('#state-KS .big-actions a.official').href, 'https://www.ksrevenue.gov/pdf/BingoOrganizations.pdf');
-assert.equal(p.d.querySelector('#state-KS p.small a[target]').href, 'https://www.ksrevenue.gov/bustaxtypesbingo.html');
-assert(p.d.querySelector('#state-KS .big-actions a.outline[href^="mailto:travis@vethomeguard.org?subject=Bingo%20game%20times%20in%20Kansas"]'));
+p = await open('?zip=58501');
+assert.equal(p.cards[0], 'state-ND');
+assert.equal(p.d.querySelector('#state-ND .big-actions a.official').href, 'https://attorneygeneral.nd.gov/gaming-licensees/');
+assert(p.d.querySelector('#state-ND .big-actions a.outline[href^="mailto:travis@vethomeguard.org?subject=Bingo%20game%20times%20in%20North%20Dakota"]'));
+// Kansas (added November 23, 2026): the Department of Revenue's list of licensed bingo organizations, with phones,
+// no game days, no post office boxes, and the license number on each card.
+const ksRows = data.licensed.filter(r => r.state === 'KS');
+assert.equal(states.find(s => s.code === 'KS').coverage, 'licenses');
+assert(ksRows.length && ksRows.every(r => /^BNG\d+$/.test(r.license_number) && r.id === 'ks-' + r.license_number.toLowerCase() && !/P\.?O\.? Box/i.test(r.address) && /, KS \d{5}$/.test(r.address)));
+p = await open('?state=KS');
+assert.equal(p.count, 'Kansas organizations licensed for bingo');
+assert.match(p.d.querySelector('#results .note').textContent, /post office box/);
+const ks81 = p.d.getElementById('ks-bng000025');
+assert.match(ks81.textContent, /American Legion Post 81/);
+assert.match(ks81.textContent, /Kansas license BNG000025 \(bingo license\)/);
+assert.match(ks81.querySelector('.address').textContent, /1801 W Central Ave, El Dorado, KS 67042 · Butler County$/);
+p = await open('?zip=67042&radius=10');
+assert(p.cards.includes('ks-bng000025'), 'with no game days nearby, Kansas licensed groups show');
 // Texas: the state's Bingo Hall Locator, with licensed days and times and the hall's phone.
 const txRows = data.venues.filter(v => v.state === 'TX');
 assert.equal(states.find(s => s.code === 'TX').coverage, 'times');
