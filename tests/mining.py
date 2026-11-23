@@ -1,4 +1,5 @@
 """Checks for the resource-mining pipeline (docs/MINING.md). Runs offline."""
+import re
 import sys
 from pathlib import Path
 
@@ -129,6 +130,21 @@ os.environ[va_rule['base_env']] = 'https://example.invalid/override'
 need(fod.va_hosts(va_rule)[0] == 'https://example.invalid/override', 'VA_FACILITIES_API_BASE overrides the host')
 os.environ.pop(va_rule['base_env'], None)
 need(fod.va_hosts(va_rule)[0] == va_rule['url'], 'the registry url is the default host')
+
+# Published VA locations (data/public/va-facilities/<st>.json, from scripts/mining/va_listings.py).
+for path in sorted((c.ROOT / 'data' / 'public' / 'va-facilities').glob('*.json')):
+    va = c.read(path)
+    need(path.stem == va['state'].lower(), f'{path.name}: named for its state')
+    need(va['source']['id'] == 'va-facilities-api' and va['source']['retrieved_on'], f'{path.name}: source and date')
+    need(len({r['id'] for r in va['rows']}) == len(va['rows']), f'{path.name}: facility ids are unique')
+    for r in va['rows']:
+        need(r['state'] == va['state'], f'{path.name} {r["id"]}: in its state')
+        main = re.split(r'\s*(?:x|ext)', r['phone'], flags=re.I)[0]
+        need(len(c.digits(main)) == 10, f'{path.name} {r["id"]}: ten-digit phone, extension allowed')
+        need(r['kind'] in ('health', 'vet_center', 'benefits', 'cemetery'), f'{path.name} {r["id"]}: kind')
+        need(r['source_url'].startswith('https://') and r['retrieved_on'], f'{path.name} {r["id"]}: cited')
+        need('closed' not in (r.get('notice') or '').lower(), f'{path.name} {r["id"]}: no closed facility')
+    need((c.ROOT / 'va' / path.stem / 'index.html').is_file(), f'{path.name}: its page is built')
 
 if problems:
     print('\n'.join(problems))
