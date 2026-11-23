@@ -236,6 +236,12 @@ regular day were kept. Files: `data/public/pennsylvania-bingo.json`, `new-york-b
   (a phone is optional for starter listings).
 - Utah: state law prohibits gambling (Utah Code 76-9-1402), so only free bingo is listed: three
   Washington County Council on Aging senior centers.
+- November 23, 2026, first pipeline batch (`scripts/bingo_pipeline.py merge`): Minnesota 6, Illinois 4, Iowa 5,
+  Oregon 6, Colorado 3, Arizona 8 and New Hampshire 8 listings, mostly senior and community centers plus a few
+  Elks and Legion games, each from the group's or city's own page. Left out: games found only on
+  recreation-registration sites (Denver College View, Commerce City, Glen Ellyn), and Elks lodges whose pages
+  don't say the game is open to the public (Victor CO, Prescott #330, Sierra Vista #2065). Leads and next steps
+  are in `data/bingo-sources/registry.json`.
 - "1st and 3rd Thursday" style schedules use the session `label`; the card says so in its note. The day
   filter still treats them as weekly.
 - Left out for now: Irishtown Fire Company (a single December date), and both Washington State venues
