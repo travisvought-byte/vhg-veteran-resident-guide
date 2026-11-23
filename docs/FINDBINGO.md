@@ -289,6 +289,18 @@ and times was found: Kentucky's Office of Charitable Gaming (now part of Kentuck
 publishes county totals in its annual report; West Virginia's Tax Division links no licensee list;
 Pennsylvania bingo licenses are issued by each county treasurer. All three are now starter states.
 
+**Washington (starter state, added November 23, 2026).** File: `data/public/washington-bingo.json`. The
+Washington State Gambling Commission's licensee lookup (public, on its MyAccount site) can filter by a bingo
+license type and city or county, but gives no addresses or game times, so it is a lead list only. Every listing
+came from the organizer's own page, read November 23, 2026: Olympia and Shoreline Elks (Elks' Washington
+lodge calendar, dated into 2027), Oak Harbor and Kelso-Longview Elks (lodge pages and their November
+2026 calendars), Wenatchee Eagles Aerie #204 (public Sunday bingo) and Mid-City Concerns in Spokane (November and
+December 2026 calendars). Wenatchee's county is Chelan, the county the city sits in. Left out: Bellingham Elks #194 (Tuesday 5 p.m. on the Elks calendar; its ZIP 98229 has no map point yet), Sequim Elks and Port
+Orchard Eagles (no current dated schedule), Burlington Senior Center (newest newsletter August 2026), Yakima's
+Harman Center (its own brochures disagree on the day), Lake Chelan and Burien Eagles (members and invited guests
+only), Manson Grange (season ended November 19) and games published only on Facebook. Washington's partner panel
+(Light Upon Light) is unchanged; partner states now sit with the listed states on the home page.
+
 **Kentucky and West Virginia (starter states, added November 17, 2026).** Files:
 `data/public/kentucky-bingo.json` and `west-virginia-bingo.json`, in the same shape as Florida's. Every
 listing came from the organizer's own page, read on November 17, 2026; search results and directory
