@@ -5,7 +5,9 @@ national emergency number, the official veterans agency, any veterans support li
 line, each with the official page it was read on and the date it was checked. A line that is not a 24-hour
 crisis line says so on the page. A country with no national veterans agency carries "no_agency" instead of an
 agency line: its page states that plainly (with an official source where one exists) in place of the agency
-card, and lists the emergency number, the crisis line and the help for U.S. veterans living there. The world index also carries what U.S. veterans living abroad need: the VA
+card, and lists the emergency number, the crisis line and the help for U.S. veterans living there. A region with its own page
+(under "regions", such as Okinawa, a prefecture of Japan) is not a country: it names its parent country, links to it and back,
+uses the parent's FMP line, and adds local offices for U.S. veterans. The world index also carries what U.S. veterans living abroad need: the VA
 Foreign Medical Program and the Veterans Crisis Line's overseas numbers, taken from va.gov and
 veteranscrisisline.net.
 """
@@ -119,23 +121,48 @@ def vcl_for(data, country):
 
 def fmp_for(data, country):
     fmp = data['us_abroad']['fmp']
-    line = next((t for t in fmp['toll_free'] if t['country'] == country['name']), None)
+    parent = parent_of(data, country)
+    where = f'{parent["name"]}, including {country["name"]}' if parent else country['name']
+    line = next((t for t in fmp['toll_free'] if t['country'] == (parent or country)['name']), None)
     if country['slug'] == 'canada':
         uc = fmp['us_canada']
         call = (f'<p>Call FMP at {tel(uc)} (U.S. and Canada, toll-free) or {tel({"display": uc["direct_display"], "tel": uc["direct_tel"]})}.</p>'
                 f'<p class="small">{e(uc["note"])}</p><p class="small">{e(country.get("fmp_note", ""))}</p>'
                 f'<p class="small source">Source: {source(uc)}. Checked {when(uc["checked_on"])}.</p>')
     elif line:
-        call = (f'<p>Call FMP toll-free from {e(country["name"])}: {tel(line)}. Hours: {e(fmp["hours"])}.</p>'
+        call = (f'<p>Call FMP toll-free from {e(where)}: {tel(line)}. Hours: {e(fmp["hours"])}.</p>'
                 f'<p class="small source">Sources: {source(fmp)}; for the hours, <a data-source href="{e(fmp["claims_source_url"])}" rel="noopener">'
                 f'{e(fmp["claims_source_title"])}</a>, page dated {when(fmp["claims_source_date"])}. Checked {when(fmp["checked_on"])}.</p>')
     else:
         uc = fmp['us_canada']
-        call = (f'<p>VA lists no toll-free FMP line for {e(country["name"])}. You can reach FMP online through '
+        call = (f'<p>VA lists no toll-free FMP line for {e(where)}. You can reach FMP online through '
                 '<a href="https://www.va.gov/contact-us/ask-va/" rel="noopener">Ask VA</a>, or call the program’s direct number, '
                 f'{tel({"display": uc["direct_display"], "tel": uc["direct_tel"]})} (international charges apply).</p>'
                 f'<p class="small source">Source for the direct number: {source(uc)}. Checked {when(uc["checked_on"])}.</p>')
     return (f'<h3>VA health care: the Foreign Medical Program</h3><p>{e(fmp["covers"])}</p><p>{e(fmp["letter"])}</p>{call}')
+
+
+def parent_of(data, item):
+    """The country a region belongs to (Okinawa -> Japan); None for a country."""
+    if not item.get('parent'):
+        return None
+    return next(c for c in data['countries'] if c['slug'] == item['parent'])
+
+
+def regions_of(data, country):
+    return [r for r in data.get('regions', []) if r['parent'] == country['slug']]
+
+
+def lower_first(text):
+    """Prefecture of Japan -> prefecture of Japan (keeps proper nouns)."""
+    return text[:1].lower() + text[1:]
+
+
+def region_links(data, country):
+    """On a country page: links to the pages for its regions (Japan -> Okinawa)."""
+    links = ', '.join(f'<a href="{e(r["slug"])}.html" data-region-link>{e(r["name"])} ({e(lower_first(r["kind_label"]))})</a>'
+                      for r in regions_of(data, country))
+    return f'<p>Has its own page: {links}.</p>' if links else ''
 
 
 def benefits_block(data):
@@ -184,7 +211,7 @@ def country_page(data, c):
         body += f'<section id="{kind.replace("_", "-")}"><h2>{heading}</h2>{cards}</section>'
     hero = (f'<div class="hero"><p class="eyebrow">VETERANS OUTSIDE THE U.S.</p><h1>{e(c["name"])}</h1>'
             f'<p>Emergency, veterans and crisis contacts in {e(c["name"])}, each from an official source. Checked {when(c.get("checked_on") or data["checked_on"])}. '
-            'Published numbers are not telephone-confirmed.</p></div></header>')
+            f'Published numbers are not telephone-confirmed.</p>{region_links(data, c)}</div></header>')
     return (head(title, desc, url) + hero + f'<main class="world" id="main" data-country="{e(c["slug"])}">' + emergency_block(c) + body
             + us_block(data, c) + '</main>' + footer())
 
@@ -192,7 +219,7 @@ def country_page(data, c):
 def emergency_block(c):
     em = c['emergency']
     return (f'<section id="emergency" class="emergency" aria-labelledby="em-title"><h2 id="em-title">Emergency in {e(c["name"])}</h2>'
-            f'{numbers(em["numbers"])}<p>Call for immediate danger to life.</p>{source_line(em)}</section>')
+            f'{numbers(em["numbers"])}<p>Call for immediate danger to life.{" " + e(em["note"]) if em.get("note") else ""}</p>{source_line(em)}</section>')
 
 
 def us_block(data, c):
@@ -213,14 +240,55 @@ def no_agency_page(data, c):
     crisis = f'<section id="crisis-line"><h2>Crisis and mental health lines</h2>{cards}</section>'
     hero = (f'<div class="hero"><p class="eyebrow">VETERANS OUTSIDE THE U.S.</p><h1>{e(c["name"])}</h1>'
             f'<p>Emergency and crisis contacts in {e(c["name"])}, and help for U.S. veterans living there, each from an official source. '
-            f'Checked {when(c.get("checked_on") or data["checked_on"])}. Published numbers are not telephone-confirmed.</p></div></header>')
+            f'Checked {when(c.get("checked_on") or data["checked_on"])}. Published numbers are not telephone-confirmed.</p>{region_links(data, c)}</div></header>')
     return (head(title, desc, url) + hero + f'<main class="world" id="main" data-country="{e(c["slug"])}" data-no-agency-page>'
             + emergency_block(c) + no_agency_block(c) + crisis + us_block(data, c) + '</main>' + footer())
 
 
+def office_card(item):
+    """A local office for U.S. veterans in a region: a consulate, a retiree office, a VA desk."""
+    extra = ''
+    if item.get('address'):
+        extra += f'<p class="small">Address: {e(item["address"])}</p>'
+    if item.get('other_contact'):
+        extra += f'<p class="small">{e(item["other_contact"])}</p>'
+    if item.get('email'):
+        extra += f'<p class="small">Email: <a href="mailto:{e(item["email"])}">{e(item["email"])}</a></p>'
+    if item.get('hours'):
+        extra += f'<p class="small">Hours: {e(item["hours"].rstrip("."))}.</p>'
+    nums = numbers(item['numbers']) if item.get('numbers') else ''
+    return (f'<article class="card" data-office><h3>{e(item["name"])}</h3><p>{e(item["about"])}</p>'
+            f'{nums}{extra}{source_line(item)}</article>')
+
+
+def region_page(data, r):
+    """A part of a country with its own page (Okinawa, a prefecture of Japan): its place in the country, the
+    emergency numbers, local crisis lines, local offices for U.S. veterans, and the VA help, with a link back."""
+    parent = parent_of(data, r)
+    url = BASE + r['slug'] + '.html'
+    title = f'{r["name"]} ({lower_first(r["kind_label"])}): help for U.S. veterans | Veteran Resource Guide'
+    desc = (f'Emergency numbers, crisis lines and help for U.S. veterans and military retirees on {r["name"]}, '
+            f'a {lower_first(r["kind_label"])}, with the official source for every number.')
+    back = f'<a href="{e(parent["slug"])}.html" data-parent-link>{e(parent["name"])}</a>'
+    place = (f'<section id="region"><h2>{e(r["name"])} is part of {e(parent["name"])}</h2><div class="no-agency" data-region>'
+             f'<p>{e(r["intro"])}</p><p>See the {back} page.</p></div></section>')
+    cards = ''.join(line_card(x) for x in r['lines'] if x['kind'] == 'crisis_line')
+    if not cards:
+        cards = '<p class="partial" data-partial>' + e(r['no_crisis_line']) + '</p>'
+    crisis = f'<section id="crisis-line"><h2>Crisis and mental health lines on {e(r["name"])}</h2>{cards}</section>'
+    local = (f'<section id="us-local"><h2>Offices for U.S. veterans and retirees on {e(r["name"])}</h2>'
+             + ''.join(office_card(x) for x in r['us_local']) + '</section>')
+    hero = (f'<div class="hero"><p class="eyebrow">VETERANS OUTSIDE THE U.S. · {e(r["kind_label"].upper())}</p><h1>{e(r["name"])}</h1>'
+            f'<p>{e(r["name"])} is a {e(lower_first(r["kind_label"]))}, not a separate country. Emergency and crisis contacts there, and help for U.S. veterans '
+            f'living there, each from an official source. Checked {when(r.get("checked_on") or data["checked_on"])}. '
+            f'Published numbers are not telephone-confirmed.</p><p>Back to {back}.</p></div></header>')
+    return (head(title, desc, url) + hero + f'<main class="world" id="main" data-region="{e(r["slug"])}" data-parent="{e(parent["slug"])}">'
+            + emergency_block(r) + place + crisis + local + us_block(data, r) + '</main>' + footer())
+
+
 def checked_range(data):
     """The dates the country pages were checked: one date, or the first and the last."""
-    days = sorted({data['checked_on']} | {c['checked_on'] for c in data['countries'] if c.get('checked_on')})
+    days = sorted({data['checked_on']} | {c['checked_on'] for c in data['countries'] + data.get('regions', []) if c.get('checked_on')})
     return when(days[0]) if len(days) == 1 else f'{when(days[0])} to {when(days[-1])}'
 
 
@@ -233,11 +301,23 @@ def index_page(data):
         if c.get('no_agency'):
             return '<span class="tag" data-no-agency>No national veterans agency</span>'
         return e(next(x['name'] for x in c['lines'] if x['kind'] == 'agency'))
+    def region_rows(c):
+        return ''.join(
+            f'<tr data-region-row><td>{e(c["name"])}: <a href="{e(r["slug"])}.html">{e(r["name"])}</a> '
+            f'<span class="tag">{e(r["kind_label"])}</span></td><td>'
+            + ', '.join(tel(n) for n in r['emergency']['numbers'][:2]) + '</td><td>'
+            + f'See <a href="{e(c["slug"])}.html">{e(c["name"])}</a></td></tr>'
+            for r in regions_of(data, c))
     rows = ''.join(
         f'<tr><td><a href="{e(c["slug"])}.html">{e(c["name"])}</a></td><td>'
         + ', '.join(tel(n) for n in c['emergency']['numbers'][:2]) + '</td><td>'
-        + agency_cell(c) + '</td></tr>'
+        + agency_cell(c) + '</td></tr>' + region_rows(c)
         for c in data['countries'])
+    regions = data.get('regions', [])
+    region_note = ''
+    if regions:
+        region_note = ('<p>' + ' '.join(f'{e(r["name"])} has its own page as a {e(lower_first(r["kind_label"]))}; it is listed under '
+                                         f'{e(parent_of(data, r)["name"])} and is not counted as a country.' for r in regions) + '</p>')
     none = [c['name'] for c in data['countries'] if c.get('no_agency')]
     none_note = ''
     if none:
@@ -247,7 +327,7 @@ def index_page(data):
                      'and the help for U.S. veterans living there.</p>')
     countries = (f'<section id="countries"><h2>Countries covered</h2><p>{len(data["countries"])} countries so far. Each page lists the emergency number, '
                  'the official veterans agency, any veterans support line and the national crisis line, with the official page and the date we checked each number. '
-                 f'Where a line is not a 24-hour crisis line, the page says so.</p>{none_note}'
+                 f'Where a line is not a 24-hour crisis line, the page says so.</p>{none_note}{region_note}'
                  f'<table><thead><tr><th>Country</th><th>Emergency</th><th>Veterans agency</th></tr></thead><tbody>{rows}</tbody></table></section>')
     a = data['us_abroad']
     vcl, fmp, uc = a['vcl'], a['fmp'], a['fmp']['us_canada']
@@ -285,7 +365,8 @@ def index_page(data):
 def pages():
     """Published paths (world/index.html first) and the canonical address of each."""
     data = load()
-    return ['world/'] + ['world/' + c['slug'] + '.html' for c in data['countries']]
+    return (['world/'] + ['world/' + c['slug'] + '.html' for c in data['countries']]
+            + ['world/' + r['slug'] + '.html' for r in data.get('regions', [])])
 
 
 def outputs():
@@ -293,6 +374,8 @@ def outputs():
     result = {'world/index.html': index_page(data)}
     for c in data['countries']:
         result['world/' + c['slug'] + '.html'] = country_page(data, c)
+    for r in data.get('regions', []):
+        result['world/' + r['slug'] + '.html'] = region_page(data, r)
     return result
 
 
