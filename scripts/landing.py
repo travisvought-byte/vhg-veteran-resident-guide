@@ -152,15 +152,22 @@ def apply_pages(result, root=ROOT):
             if not (root / path).is_file():
                 continue
             html = (root / path).read_text(encoding='utf-8')
-        for key, limit in (('title', 90), ('description', 170)):
-            assert len(p[key]) <= limit, f'{path}: {key} too long'
-        url = p.get('url', BASE_URL + path)
-        html = set_head(html, p['title'], p['description'], url, p.get('og_title'))
-        if p.get('h1') or p.get('intro'):
-            _check_text(path + ' intro', p.get('intro', 'x'), 360)
-            html = set_hero(html, p.get('h1'), p.get('intro'))
-        out[path] = html
+        out[path] = apply_page(html, path, root)
     return out
+
+
+def apply_page(html, path, root=ROOT):
+    """One page's landing from data/landing/pages.json. Builders that write their own page (such as
+    scripts/build_flyers_page.py) call this too, so their output and the build agree."""
+    p = _load('pages.json', root)['pages'][path]
+    for key, limit in (('title', 90), ('description', 170)):
+        assert len(p[key]) <= limit, f'{path}: {key} too long'
+    url = p.get('url', BASE_URL + path)
+    html = set_head(html, p['title'], p['description'], url, p.get('og_title'))
+    if p.get('h1') or p.get('intro'):
+        _check_text(path + ' intro', p.get('intro', 'x'), 360)
+        html = set_hero(html, p.get('h1'), p.get('intro'))
+    return html
 
 
 def article(word):

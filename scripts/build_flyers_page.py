@@ -69,8 +69,14 @@ def page():
 '''
 
 
+def tailored():
+    """The page with its landing title, description, opening and Open Graph tags (data/landing/pages.json)."""
+    import landing
+    return landing.apply_page(page(), 'flyers.html', ROOT)
+
+
 if __name__ == '__main__':
-    out = page()
+    out = tailored()
     target = ROOT / 'flyers.html'
     if '--check' in sys.argv:
         if not target.is_file() or target.read_text() != out:
