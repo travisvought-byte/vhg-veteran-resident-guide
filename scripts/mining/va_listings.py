@@ -9,7 +9,8 @@ data/public/va-facilities/<st>.json, which scripts/build_va_pages.py turns into 
 
 What goes in:
   - every VA medical center, clinic, Vet Center, benefits office and cemetery whose street address is in the state
-  - left out: facilities VA marks CLOSED or TEMPORARY_CLOSURE, and any row with no phone
+  - left out: facilities VA marks CLOSED or TEMPORARY_CLOSURE, and any row without a U.S. phone (overseas sites)
+  - a website is linked only when it is https; otherwise the row cites VA's facility locator
   - other VA notices (limited services, temporary location, notice) are kept and shown, with "call first"
 
 Dedupe: rows are unique by VA facility id, and a second row with the same name, street address and phone is dropped.
@@ -43,6 +44,11 @@ DAYS = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sun
 def clock(text):
     """'700AM-430PM' -> '7:00 AM-4:30 PM'; anything else is kept as VA wrote it."""
     return re.sub(r'\b(\d{1,2})(\d{2})\s?(AM|PM)\b', lambda m: f'{int(m[1])}:{m[2]} {m[3]}', text, flags=re.I)
+
+
+def main_number(phone):
+    """The main number without an extension or a second line: '843-228-5642/5470' -> '843-228-5642'."""
+    return re.split(r'\s*(?:x|ext|/)', phone or '', flags=re.I)[0]
 
 
 def hours_text(hours):
@@ -79,16 +85,18 @@ def published_phones(code):
 
 def listings(snapshot, code):
     phones = published_phones(code)
-    seen_ids, seen_keys, rows, left_out = set(), set(), [], {'closed': 0, 'no_phone': 0, 'duplicate': 0}
+    seen_ids, seen_keys, rows, left_out = set(), set(), [], {'closed': 0, 'no_us_phone': 0, 'duplicate': 0}
     for f in snapshot['rows']:
         if f.get('state') != code:
             continue
         if f.get('operating_status') in LEFT_OUT:
             left_out['closed'] += 1
             continue
-        if not c.digits(f.get('phone')):
-            left_out['no_phone'] += 1
+        if len(c.digits(main_number(f.get('phone')))) != 10:
+            # No phone, or a number outside the U.S. (VA files some overseas pre-discharge sites under a state).
+            left_out['no_us_phone'] += 1
             continue
+        site = f.get('website') if (f.get('website') or '').startswith('https://') else ''
         key = ((f.get('name') or '').lower(), (f.get('address1') or '').lower(), c.digits(f.get('phone')))
         if f['id'] in seen_ids or key in seen_keys:
             left_out['duplicate'] += 1
@@ -108,13 +116,13 @@ def listings(snapshot, code):
             'phone': f.get('phone'),
             'mental_health_phone': f.get('mental_health_phone') or '',
             'hours': hours_text(f.get('hours')),
-            'website': f.get('website') or '',
+            'website': site,
             'notice': NOTICES.get(f.get('operating_status'), ''),
             'lat': f.get('lat'),
             'long': f.get('long'),
             'also_in_guide': c.digits(f.get('phone')) in phones,
-            'source_url': f.get('website') or LOCATOR,
-            'source_title': 'VA facility page' if f.get('website') else 'VA facility locator',
+            'source_url': site or LOCATOR,
+            'source_title': 'VA facility page' if site else 'VA facility locator',
             'retrieved_on': snapshot['retrieved_on'],
         })
     rows.sort(key=lambda r: (list(KINDS.values()).index(r['kind']) if r['kind'] in KINDS.values() else 9,
