@@ -78,7 +78,7 @@ for key in ('fmp', 'vcl', 'benefits', 'manila'):
 checked(data['us_abroad']['fmp']['us_canada'], 'FMP U.S. and Canada')
 assert len(data['us_abroad']['vcl']['regions']) == 6
 slugs = [c['slug'] for c in data['countries']]
-assert len(slugs) == len(set(slugs)) and 1 <= len(slugs) <= 42, slugs
+assert len(slugs) == len(set(slugs)) and 1 <= len(slugs) <= 43, slugs
 for c in data['countries']:
     em = c['emergency']
     assert em['numbers'] and all(n['display'] and n['tel'] for n in em['numbers']), (c['slug'], 'emergency number')
