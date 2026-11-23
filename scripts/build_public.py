@@ -17,6 +17,7 @@ from build_mobility_routes import outputs as mobility_route_outputs
 from build_family_guide import outputs as family_guide_outputs
 from build_guide_privacy import outputs as privacy_outputs
 from build_world import outputs as world_outputs, pages as world_pages
+from build_county_pages import outputs as county_outputs
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -102,6 +103,16 @@ def outputs():
     result.update(privacy_outputs())
     # Country pages for veterans outside the U.S. (data/world/countries.json); each carries the visit counter.
     result.update(world_outputs())
+    # One page per county veterans office (counties/<st>/<county>.html), and a link to the state's list from its guide.
+    county_pages, county_urls = county_outputs(ROOT)
+    result.update(county_pages)
+    for s in states:
+        unit = {'LA': 'parish', 'DC': 'District'}.get(s['code'], 'county')
+        text = 'The District of Columbia veterans office' if s['code'] == 'DC' else f'Every {s["name"]} {unit} veterans office'
+        link = (f'<p id="county-pages-link"><a href="counties/{s["code"].lower()}/">{text}</a>'
+                f' · one page per {unit}, with its phone and next steps.</p>')
+        assert result[s['page']].count('<section id="county-start"') == 1, s['page']
+        result[s['page']] = result[s['page']].replace('<section id="county-start"', link + '<section id="county-start"', 1)
     # Track public landing/sharing pages once, including each state's own guide page.
     for page in ['index.html', 'bingo.html', 'facilities.html'] + [s['page'] for s in states[1:]] + [s['share_page'] for s in states]:
         result[page] = re.sub(r'<script[^>]*data-goatcounter=[^>]*></script>', '', result[page])
@@ -117,6 +128,8 @@ def outputs():
     urls += [BASE_URL + s['share_page'] for s in states]
     # Veterans outside the U.S.: the world index and one page per country.
     urls += [BASE_URL + page for page in world_pages()]
+    # County veterans office pages: the all-states list, each state's list and every county.
+    urls += county_urls
     result['sitemap.xml'] = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join('  <url><loc>' + u.replace('&', '&amp;') + '</loc></url>\n' for u in urls) + '</urlset>\n'
     result['robots.txt'] = 'User-agent: *\nAllow: /\n\nSitemap: ' + BASE_URL + 'sitemap.xml\n'
     return result
