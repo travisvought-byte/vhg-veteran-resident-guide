@@ -31,6 +31,8 @@ jobs:
         run: python3 scripts/validate_public.py
       - name: Check country pages for veterans outside the U.S.
         run: python3 tests/world.py
+      - name: Bingo pipeline (source registry, normalized CSV, merge checks)
+        run: python3 tests/bingo_pipeline.py
       - name: Check link-check sorting, report wording and coverage
         run: python3 tests/link_check.py
       - uses: actions/setup-node@v4

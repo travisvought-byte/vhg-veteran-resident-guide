@@ -9,6 +9,7 @@ from state_registry import (load_registry, load_counties, state_resources, make_
 from bingo_edition import make_bingo
 from bingo_site import make_bingo_site, SITE as OHIO_BINGO
 from findbingo_site import make_findbingo
+from bingo_pipeline import outputs as bingo_pipeline_outputs
 from facilities_edition import make_facilities
 from unified_guide import unified_outputs
 from build_disability_advocacy import outputs as disability_advocacy_outputs
@@ -87,6 +88,8 @@ def outputs():
     result['bingo.html'] = result['bingo.html'].replace(canonical, forward)
     result.update(make_findbingo(ROOT))
     result.update(findbingo_finishing(result))
+    # The bingo pipeline's normalized CSV and coverage report (docs/BINGO-PIPELINE.md) follow the lists they read.
+    result.update({str(p.relative_to(ROOT)): t for p, t in bingo_pipeline_outputs().items()})
     result['facilities.html'] = make_facilities(ROOT)
     result['index.html'] = result['index.html'].replace('<h3>For posts and community groups</h3>', '<p id="ohio-bingo-link"><a href="' + OHIO_BINGO + '/"><strong>Find Ohio bingo and senior centers</strong></a> - find nearby senior centers, exercise, crafts, games, meals and bingo by ZIP code.</p><h3>For posts and community groups</h3>', 1)
     # Keep state adapter regression fixtures private to tests; the public site has one view.
