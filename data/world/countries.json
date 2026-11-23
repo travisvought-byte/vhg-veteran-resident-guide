@@ -1939,6 +1939,544 @@
         }
       ],
       "checked_on": "2026-11-23"
+    },
+    {
+      "slug": "ukraine",
+      "name": "Ukraine",
+      "vcl_region": "EUCOM",
+      "emergency": {
+        "numbers": [
+          {
+            "display": "103",
+            "tel": "103",
+            "label": "Ambulance"
+          },
+          {
+            "display": "102",
+            "tel": "102",
+            "label": "Police"
+          },
+          {
+            "display": "101",
+            "tel": "101",
+            "label": "Fire"
+          }
+        ],
+        "source_url": "https://www.gov.uk/foreign-travel-advice/ukraine/getting-help",
+        "source_title": "GOV.UK travel advice: Ukraine, getting help",
+        "source_date": "2026-10-02",
+        "checked_on": "2026-11-23"
+      },
+      "lines": [
+        {
+          "kind": "agency",
+          "name": "Ministry of Veterans Affairs of Ukraine: Single Veteran Line",
+          "about": "The Ministry of Veterans Affairs’ single line for advice and support for veterans and their families, run with the Ukrainian Red Cross Society. 1528 is a short number for phones in Ukraine. Calls are free.",
+          "numbers": [
+            {
+              "display": "1528",
+              "tel": "1528",
+              "label": "Single Veteran Line"
+            }
+          ],
+          "email": "control@mva.gov.ua",
+          "address": "Khreschatyk 34, Kyiv",
+          "hours": "Daily, 8 a.m. to 8 p.m.",
+          "around_the_clock": false,
+          "partial": "Daily, 8 a.m. to 8 p.m. only. This is not a crisis line.",
+          "website": "https://mva.gov.ua/en/pro-ministerstvo",
+          "source_url": "https://dn.gov.ua/en/news/1528-iedyna-veteranska-liniia-minveteraniv",
+          "source_title": "Donetsk Regional State Administration: 1528, the Ministry of Veterans Affairs’ single veteran line",
+          "source_date": "2026-07-24",
+          "checked_on": "2026-11-23",
+          "also_source_url": "https://mva.gov.ua/en/pro-ministerstvo",
+          "also_source_title": "Ministry of Veterans Affairs of Ukraine: About the ministry",
+          "also_source_date": null
+        },
+        {
+          "kind": "veterans_line",
+          "name": "Ukrainian Veterans Fund crisis support line (Ministry of Veterans Affairs)",
+          "about": "Psychological support in a crisis and legal advice for veterans, from the Ukrainian Veterans Fund of the Ministry of Veterans Affairs. Calls are free.",
+          "numbers": [
+            {
+              "display": "0 800 33 20 29",
+              "tel": "0800332029",
+              "label": "Phone"
+            }
+          ],
+          "hours": "Around the clock",
+          "around_the_clock": true,
+          "partial": null,
+          "source_url": "https://dn.gov.ua/en/news/kudy-veterany-i-veteranky-mozhut-zvernutysia-u-kryzovii-sytuatsii",
+          "source_title": "Donetsk Regional State Administration: Where veterans can turn in a crisis",
+          "source_date": "2026-01-21",
+          "checked_on": "2026-11-23"
+        },
+        {
+          "kind": "crisis_line",
+          "name": "Lifeline Ukraine: suicide prevention line",
+          "about": "A suicide prevention line, which the Lviv Regional State Administration lists as open around the clock. That government listing dates from March 2023.",
+          "numbers": [
+            {
+              "display": "7333",
+              "tel": "7333",
+              "label": "Phone"
+            }
+          ],
+          "hours": "Around the clock",
+          "around_the_clock": true,
+          "partial": null,
+          "source_url": "https://loda.gov.ua/news/59915",
+          "source_title": "Lviv Regional State Administration: Psychological support hotlines",
+          "source_date": "2023-03-25",
+          "checked_on": "2026-11-23"
+        }
+      ],
+      "checked_on": "2026-11-23"
+    },
+    {
+      "slug": "czechia",
+      "name": "Czechia",
+      "vcl_region": "EUCOM",
+      "emergency": {
+        "numbers": [
+          {
+            "display": "112",
+            "tel": "112",
+            "label": "Ambulance, fire, police"
+          }
+        ],
+        "source_url": "https://www.gov.uk/foreign-travel-advice/czech-republic/getting-help",
+        "source_title": "GOV.UK travel advice: Czech Republic, getting help",
+        "source_date": "2026-08-11",
+        "checked_on": "2026-11-23"
+      },
+      "no_veterans_line": "The Ministry of Defence’s military psychological help line, which war veterans could call, closed on 30 June 2025. We did not find another veterans-specific line on an official Czech source. Use 116 123 below.",
+      "lines": [
+        {
+          "kind": "agency",
+          "name": "Ministry of Defence: War Veterans Department",
+          "about": "The Czech Ministry of Defence department for war veterans. Call the ministry switchboard and ask for the department, or write to it.",
+          "numbers": [
+            {
+              "display": "+420 973 201 111",
+              "tel": "+420973201111",
+              "label": "Ministry of Defence switchboard"
+            }
+          ],
+          "email": "valecniveterani@mo.gov.cz",
+          "address": "Tychonova 221/1, 160 00 Praha 6 - Hradčany",
+          "hours": "Not stated on the ministry page",
+          "around_the_clock": false,
+          "partial": "The ministry page gives no hours. This is a switchboard, not a crisis line.",
+          "source_url": "https://acr.mo.gov.cz/en/ministry-of-defence/legal-division/war-veterans-department-106204/",
+          "source_title": "Czech Ministry of Defence: War Veterans Department",
+          "source_date": "2025-02-13",
+          "checked_on": "2026-11-23"
+        },
+        {
+          "kind": "crisis_line",
+          "name": "Linka první psychické pomoci (first psychological help line)",
+          "about": "The national 116 123 line for adults in a mental health crisis. Calls are free.",
+          "numbers": [
+            {
+              "display": "116 123",
+              "tel": "116123",
+              "label": "Phone"
+            }
+          ],
+          "hours": "Around the clock (nonstop)",
+          "around_the_clock": true,
+          "partial": null,
+          "source_url": "https://portal.gov.cz/informace/116-numbers--harmonised-services-of-social-value-INF-415",
+          "source_title": "Czech Public Administration Portal: 116 numbers, harmonised services of social value",
+          "source_date": null,
+          "checked_on": "2026-11-23"
+        }
+      ],
+      "checked_on": "2026-11-23"
+    },
+    {
+      "slug": "slovenia",
+      "name": "Slovenia",
+      "vcl_region": "EUCOM",
+      "emergency": {
+        "numbers": [
+          {
+            "display": "112",
+            "tel": "112",
+            "label": "Ambulance, fire and mountain rescue"
+          },
+          {
+            "display": "113",
+            "tel": "113",
+            "label": "Police"
+          }
+        ],
+        "source_url": "https://www.gov.uk/foreign-travel-advice/slovenia/getting-help",
+        "source_title": "GOV.UK travel advice: Slovenia, getting help",
+        "source_date": "2026-08-11",
+        "checked_on": "2026-11-23"
+      },
+      "no_veterans_line": "We did not find a veterans-specific crisis or support line on an official Slovenian source. Use 116 123 below.",
+      "lines": [
+        {
+          "kind": "agency",
+          "name": "Ministry of Defence: Directorate for War Veterans and Military Heritage",
+          "about": "The Slovenian Ministry of Defence directorate responsible for war veterans.",
+          "numbers": [
+            {
+              "display": "+386 1 230 59 74",
+              "tel": "+38612305974",
+              "label": "Directorate"
+            },
+            {
+              "display": "+386 1 471 22 11",
+              "tel": "+38614712211",
+              "label": "Ministry of Defence main line"
+            }
+          ],
+          "address": "Vojkova cesta 61, 1000 Ljubljana",
+          "hours": "Not stated on the government page",
+          "around_the_clock": false,
+          "partial": "The government page gives no hours. This is not a crisis line.",
+          "source_url": "https://www.gov.si/en/state-authorities/ministries/ministry-of-defence/about-the-ministry/direktorat-za-vojne-veterane-in-vojasko-dediscino/",
+          "source_title": "Government of Slovenia: Directorate for War Veterans and Military Heritage",
+          "source_date": "2026-08-07",
+          "checked_on": "2026-11-23"
+        },
+        {
+          "kind": "crisis_line",
+          "name": "Samarijan and Sopotnik confidential lines (listed by the National Institute of Public Health)",
+          "about": "The National Institute of Public Health (NIJZ) lists these confidential lines for people in emotional distress. Calls are free.",
+          "numbers": [
+            {
+              "display": "116 123",
+              "tel": "116123",
+              "label": "Phone"
+            }
+          ],
+          "hours": "24 hours a day",
+          "around_the_clock": true,
+          "partial": null,
+          "source_url": "https://nijz.si/wp-content/uploads/2022/06/osnovni_viri_pomoci_za_osebe_v_dusevni_stiski.pdf",
+          "source_title": "National Institute of Public Health (NIJZ): Basic sources of help for people in mental distress (PDF)",
+          "source_date": null,
+          "checked_on": "2026-11-23"
+        },
+        {
+          "kind": "crisis_line",
+          "name": "Klic v duševni stiski (call in mental distress, listed by the National Institute of Public Health)",
+          "about": "A night line for people in mental distress, listed by the National Institute of Public Health (NIJZ).",
+          "numbers": [
+            {
+              "display": "01 520 99 00",
+              "tel": "015209900",
+              "label": "Phone"
+            }
+          ],
+          "hours": "7 p.m. to 7 a.m.",
+          "around_the_clock": false,
+          "partial": "Nights only, 7 p.m. to 7 a.m. At other times, call 116 123.",
+          "source_url": "https://nijz.si/wp-content/uploads/2022/06/osnovni_viri_pomoci_za_osebe_v_dusevni_stiski.pdf",
+          "source_title": "National Institute of Public Health (NIJZ): Basic sources of help for people in mental distress (PDF)",
+          "source_date": null,
+          "checked_on": "2026-11-23"
+        }
+      ],
+      "checked_on": "2026-11-23"
+    },
+    {
+      "slug": "south-africa",
+      "name": "South Africa",
+      "vcl_region": "AFRICOM",
+      "emergency": {
+        "numbers": [
+          {
+            "display": "10177",
+            "tel": "10177",
+            "label": "Ambulance and fire"
+          },
+          {
+            "display": "10111",
+            "tel": "10111",
+            "label": "Police"
+          },
+          {
+            "display": "112",
+            "tel": "112",
+            "label": "All emergencies from mobiles"
+          }
+        ],
+        "source_url": "https://www.gov.uk/foreign-travel-advice/south-africa/getting-help",
+        "source_title": "GOV.UK travel advice: South Africa, getting help",
+        "source_date": "2026-11-05",
+        "checked_on": "2026-11-23"
+      },
+      "no_veterans_line": "We did not find a veterans-specific crisis or support line on an official South African source. Use the suicide crisis line below.",
+      "lines": [
+        {
+          "kind": "agency",
+          "name": "Department of Military Veterans",
+          "about": "South Africa’s national government department for military veterans, in Pretoria.",
+          "numbers": [
+            {
+              "display": "012 765 9300",
+              "tel": "0127659300",
+              "label": "Main line"
+            }
+          ],
+          "address": "328 Festival Street, Arcadia, Pretoria, 0083",
+          "hours": "Not stated in the government directory",
+          "around_the_clock": false,
+          "partial": "The government directory gives no hours. This is not a crisis line.",
+          "source_url": "https://www.gov.za/about-government/contact-directory/departments/military-veterans-department",
+          "source_title": "South African Government: contact directory, Department of Military Veterans",
+          "source_date": null,
+          "checked_on": "2026-11-23"
+        },
+        {
+          "kind": "crisis_line",
+          "name": "SADAG Suicide Crisis Line (named by the South African Government News Agency)",
+          "about": "The South African Depression and Anxiety Group’s suicide crisis line, given by the government news agency. You can also SMS 31393.",
+          "numbers": [
+            {
+              "display": "0800 567 567",
+              "tel": "0800567567",
+              "label": "Phone"
+            }
+          ],
+          "hours": "Not stated in the government article",
+          "around_the_clock": false,
+          "partial": "The government article gives no hours. In immediate danger, call 10177, or 112 from a mobile.",
+          "source_url": "https://www.sanews.gov.za/node/78685",
+          "source_title": "SAnews (South African Government News Agency): Call for investment in psychosocial support as suicide rates increase",
+          "source_date": "2025-12",
+          "checked_on": "2026-11-23"
+        }
+      ],
+      "checked_on": "2026-11-23"
+    },
+    {
+      "slug": "india",
+      "name": "India",
+      "vcl_region": "PACOM",
+      "emergency": {
+        "numbers": [
+          {
+            "display": "112",
+            "tel": "112",
+            "label": "Ambulance, fire, police"
+          }
+        ],
+        "source_url": "https://www.gov.uk/foreign-travel-advice/india/getting-help",
+        "source_title": "GOV.UK travel advice: India, getting help",
+        "source_date": "2026-10-07",
+        "checked_on": "2026-11-23"
+      },
+      "no_veterans_line": "We did not find a veterans-specific crisis or support line on an official Indian source. Use Tele MANAS below.",
+      "lines": [
+        {
+          "kind": "agency",
+          "name": "Department of Ex-Servicemen Welfare (Ministry of Defence)",
+          "about": "The Ministry of Defence department for ex-servicemen and their families. Its Kendriya Sainik Board works with the state and district Sainik Boards. This is the department’s published contact for grievances on Kendriya Sainik Board matters, in New Delhi.",
+          "numbers": [
+            {
+              "display": "011-24014670",
+              "tel": "01124014670",
+              "label": "Grievances on Kendriya Sainik Board matters"
+            }
+          ],
+          "hours": "Not stated on the department page",
+          "around_the_clock": false,
+          "partial": "An office line for grievances; the page gives no hours. This is not a crisis line.",
+          "website": "https://desw.gov.in/",
+          "source_url": "https://desw.gov.in/grievances-redressal-desw",
+          "source_title": "Department of Ex-Servicemen Welfare: Grievances redressal",
+          "source_date": "2026-11-23",
+          "checked_on": "2026-11-23"
+        },
+        {
+          "kind": "crisis_line",
+          "name": "Tele MANAS: national tele-mental health helpline (Ministry of Health and Family Welfare)",
+          "about": "India’s national toll-free mental health helpline, by short code or toll-free number.",
+          "numbers": [
+            {
+              "display": "14416",
+              "tel": "14416",
+              "label": "Short code"
+            },
+            {
+              "display": "1800-89-14416",
+              "tel": "18008914416",
+              "label": "Toll-free"
+            }
+          ],
+          "hours": "24 hours a day, 7 days a week",
+          "around_the_clock": true,
+          "partial": null,
+          "source_url": "https://dghs.mohfw.gov.in/national-mental-health-programme.php",
+          "source_title": "Directorate General of Health Services: National Mental Health Programme",
+          "source_date": null,
+          "checked_on": "2026-11-23",
+          "also_source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2022057",
+          "also_source_title": "Press Information Bureau: Ministry of Health and Family Welfare release on Tele MANAS",
+          "also_source_date": "2024-05-29"
+        }
+      ],
+      "checked_on": "2026-11-23"
+    },
+    {
+      "slug": "malaysia",
+      "name": "Malaysia",
+      "vcl_region": "PACOM",
+      "emergency": {
+        "numbers": [
+          {
+            "display": "999",
+            "tel": "999",
+            "label": "Police and ambulance"
+          },
+          {
+            "display": "994",
+            "tel": "994",
+            "label": "Fire"
+          },
+          {
+            "display": "112",
+            "tel": "112",
+            "label": "Ambulance from a mobile"
+          }
+        ],
+        "source_url": "https://www.gov.uk/foreign-travel-advice/malaysia/getting-help",
+        "source_title": "GOV.UK travel advice: Malaysia, getting help",
+        "source_date": "2026-11-18",
+        "checked_on": "2026-11-23"
+      },
+      "no_veterans_line": "We did not find a veterans-specific crisis or support line on an official Malaysian source. Use Talian HEAL below, or 999.",
+      "lines": [
+        {
+          "kind": "agency",
+          "name": "Department of Veterans Affairs, Malaysian Armed Forces (JHEV)",
+          "about": "Malaysia’s government department for armed forces veterans and their families. It also has state branch offices.",
+          "numbers": [
+            {
+              "display": "03-2050 8000",
+              "tel": "0320508000",
+              "label": "Head office and One Stop Centre"
+            },
+            {
+              "display": "03-2697 6600",
+              "tel": "0326976600",
+              "label": "Call centre"
+            }
+          ],
+          "address": "Level G, Menara TH Perdana, 1001 Jalan Sultan Ismail, 50250 Kuala Lumpur",
+          "hours": "Not stated on the department page",
+          "around_the_clock": false,
+          "partial": "The department page gives no hours. This is not a crisis line.",
+          "website": "https://www.jhev.gov.my/en/faq",
+          "source_url": "https://www.jhev.gov.my/en/faq",
+          "source_title": "Department of Veterans Affairs (JHEV): Frequently asked questions",
+          "source_date": null,
+          "checked_on": "2026-11-23"
+        },
+        {
+          "kind": "crisis_line",
+          "name": "Talian HEAL 15555: mental health crisis helpline",
+          "about": "Malaysia’s mental health crisis helpline (Help with Empathy And Love), listed by the National Security Council.",
+          "numbers": [
+            {
+              "display": "15555",
+              "tel": "15555",
+              "label": "Phone"
+            }
+          ],
+          "hours": "Daily, including public holidays, 8 a.m. to midnight",
+          "around_the_clock": false,
+          "partial": "Not 24 hours: daily, 8 a.m. to midnight. Overnight, call 999.",
+          "source_url": "https://www.mkn.gov.my/web/ms/2024/02/25/talian-bantuan-krisis-kesihatan-mental/",
+          "source_title": "National Security Council (MKN): Mental health crisis helpline",
+          "source_date": "2024-02-25",
+          "checked_on": "2026-11-23"
+        }
+      ],
+      "checked_on": "2026-11-23"
+    },
+    {
+      "slug": "argentina",
+      "name": "Argentina",
+      "vcl_region": "SOUTHCOM",
+      "emergency": {
+        "numbers": [
+          {
+            "display": "107",
+            "tel": "107",
+            "label": "Ambulance"
+          },
+          {
+            "display": "911",
+            "tel": "911",
+            "label": "Police"
+          },
+          {
+            "display": "101",
+            "tel": "101",
+            "label": "Police"
+          },
+          {
+            "display": "100",
+            "tel": "100",
+            "label": "Fire"
+          }
+        ],
+        "source_url": "https://www.gov.uk/foreign-travel-advice/argentina/getting-help",
+        "source_title": "GOV.UK travel advice: Argentina, getting help",
+        "source_date": "2026-05-07",
+        "checked_on": "2026-11-23"
+      },
+      "no_veterans_line": "The veterans line in the card above is an information line for Malvinas war veterans, not a crisis line. We did not find a veterans-specific crisis line on an official source. Use 0800-999-0091 below.",
+      "lines": [
+        {
+          "kind": "agency",
+          "name": "Ministry of Defence: telephone information centre for Malvinas war veterans",
+          "about": "The Ministry of Defence’s free information line (Centro de Información Telefónica al Veterano de Guerra de Malvinas) for veterans of the 1982 Malvinas war.",
+          "numbers": [
+            {
+              "display": "0800-666-4584",
+              "tel": "08006664584",
+              "label": "Information line"
+            }
+          ],
+          "hours": "Monday to Friday, 9 a.m. to 5 p.m.",
+          "around_the_clock": false,
+          "partial": "Weekday office hours only. This is not a crisis line.",
+          "source_url": "https://argentina.gob.ar/defensa/malvinas",
+          "source_title": "Argentine Ministry of Defence: Malvinas",
+          "source_date": "2023-12-13",
+          "checked_on": "2026-11-23"
+        },
+        {
+          "kind": "crisis_line",
+          "name": "National mental health urgent support line (Línea Nacional de Orientación y Apoyo en la Urgencia de Salud Mental)",
+          "about": "A free, confidential national line for mental health emergencies, including suicide risk, published on the Ministry of Health’s pages. It can send emergency services.",
+          "numbers": [
+            {
+              "display": "0800-999-0091",
+              "tel": "08009990091",
+              "label": "Phone"
+            }
+          ],
+          "hours": "24 hours a day, 365 days a year",
+          "around_the_clock": true,
+          "partial": null,
+          "source_url": "https://www.argentina.gob.ar/dispositivo-0800",
+          "source_title": "Argentine Ministry of Health: national mental health 0800 line",
+          "source_date": "2026-09-10",
+          "checked_on": "2026-11-23"
+        }
+      ],
+      "checked_on": "2026-11-23"
     }
   ],
   "not_yet_covered": [
@@ -1969,6 +2507,22 @@
     {
       "name": "Belgium",
       "reason": "We did not find veterans’ contact details on an official page we could read."
+    },
+    {
+      "name": "Slovakia",
+      "reason": "The Ministry of Defence lists regional field workers for war veterans but no central veterans contact on a page we could read, so we have not published a country page yet."
+    },
+    {
+      "name": "Austria",
+      "reason": "We did not find veterans’ contact details on an official page we could read."
+    },
+    {
+      "name": "Romania",
+      "reason": "We did not find veterans’ contact details on an official page we could read."
+    },
+    {
+      "name": "Georgia",
+      "reason": "We did not find contact details for the State Service for Veterans Affairs on an official page we could read."
     }
   ]
 }
