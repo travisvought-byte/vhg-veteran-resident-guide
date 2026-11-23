@@ -23,6 +23,7 @@ from build_va_pages import outputs as va_outputs
 from build_core_care import (outputs as core_care_outputs, pages as core_care_pages,
                              add_cards as core_care_cards, add_facilities_links)
 from build_bad_paper import outputs as bad_paper_outputs, pages as bad_paper_pages
+import landing
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -133,6 +134,11 @@ def outputs():
             result[s['page']] = result[s['page']].replace('<section id="county-start"', va_links[s['code']] + '<section id="county-start"', 1)
     # Other-than-honorable and bad-conduct discharges (templates/bad-paper/); each page carries the visit counter.
     result.update(bad_paper_outputs())
+    # Each entry page speaks to the person most likely to land on it (data/landing/): the sharing kits to the
+    # people passing the guide on, and facilities, flyers and the rest to their own visitors.
+    for s in states:
+        result[s['share_page']] = landing.share_page(result[s['share_page']], s)
+    result.update(landing.apply_pages(result))
     # Track public landing/sharing pages once, including each state's own guide page.
     for page in ['index.html', 'bingo.html', 'facilities.html'] + [s['page'] for s in states[1:]] + [s['share_page'] for s in states]:
         result[page] = re.sub(r'<script[^>]*data-goatcounter=[^>]*></script>', '', result[page])

@@ -34,7 +34,10 @@ function setState(state,initial=false){
  document.querySelector('label[for="county"]').textContent=(state==='VA'?'County or independent city in ':state==='LA'?'Parish in ':'County in ')+config.name;
  $('aid-open').hidden=state!=='OH';document.querySelectorAll('.ohio-only').forEach(e=>{e.hidden=state!=='OH'});document.querySelector('.office-directory summary').textContent='Browse '+config.name+(state==='VA'?' county and city contacts':state==='LA'?' parish contacts':' county contacts');
  $('office-search').placeholder='Search '+config.name+(state==='VA'?' counties or independent cities':state==='LA'?' parishes':' counties');
- document.title=config.name+' Veteran Resource Guide | Veteran Home Guardians';
+ // Each state's own heading and opening (data/landing/states.json); Ohio is the site root, so it shows the home page's.
+ const land=config.landing||{};document.title=land.title||config.name+' Veteran Resource Guide | Veteran Home Guardians';
+ if(land.h1&&$('guide-title')){$('guide-title').innerHTML=land.h1;$('guide-intro').textContent=land.intro;$('guide-eyebrow').textContent='Veteran Home Guardians · '+land.eyebrow}
+ document.querySelectorAll('#who-start [data-states]').forEach(a=>{a.closest('li').hidden=!a.dataset.states.split(' ').includes(state)});
  // Search engines get one address per state: its own page, with Ohio at the root.
  const home=new URL(STATE_PAGES[state]||'./',document.querySelector('link[rel=canonical]')?.href||location.href).href;
  document.querySelector('link[rel=canonical]')?.setAttribute('href',home);document.querySelector('meta[property="og:url"]')?.setAttribute('content',home);
@@ -162,6 +165,9 @@ $('share').onclick=async()=>{try{await navigator.clipboard.writeText(shareURL().
 $('print-results').onclick=()=>{clearPrintMode();window.print()};
 // Phones: the header's extra links open from one button (assets/unified.css keeps them all visible on wider screens).
 const moreGuides=$('jump-toggle');moreGuides.hidden=false;moreGuides.onclick=()=>{const open=moreGuides.getAttribute('aria-expanded')!=='true';moreGuides.setAttribute('aria-expanded',String(open));moreGuides.textContent=open?'Fewer guides':'More guides'};
+// "I'm here as...": open the matching need in place, keeping the county, then bring its results into view.
+document.querySelectorAll('#who-start a[data-view]').forEach(a=>a.onclick=ev=>{const view=a.dataset.view,b=document.querySelector('.quick-links [data-route="'+view+'"]');if(!b||!Object.hasOwn(routeNames,view))return;ev.preventDefault();b.click();if(!['seniors','community','accessibility'].includes(view))document.querySelector('.count-row').scrollIntoView({behavior:'smooth'})});
+document.querySelectorAll('#who-start a[data-help]').forEach(a=>a.onclick=ev=>{ev.preventDefault();openHelper()});
 $('helper-open').onclick=openHelper;$('helper-header').onclick=e=>{e.preventDefault();openHelper()};
 ['helper-person','helper-need'].forEach(id=>$(id).addEventListener('change',()=>{helperShowingResults=false;$('helper-status').textContent='';render()}));
 $('helper-close').onclick=()=>{helperActive=false;helperShowingResults=false;route='priority';render();$('directory').scrollIntoView({behavior:'smooth'})};
