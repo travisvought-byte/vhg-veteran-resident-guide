@@ -18,6 +18,7 @@ Started November 15, 2026, at Travis's direction: one national finder, neighbori
 | Texas bingo halls (halls, phone, licensed days and times) | `data/public/texas-bingo-halls.json`, rebuilt by `scripts/read_texas_locator.py` then `scripts/import_texas_bingo.py` |
 | Virginia bingo sessions (halls, days, doors-open and doors-close times) | `data/public/virginia-bingo-sessions.json`, rebuilt by `scripts/import_virginia_bingo.py` |
 | Missouri bingo games (halls, phone, day, start time, weeks of the month) | `data/public/missouri-bingo-sessions.json`, rebuilt by `scripts/read_missouri_finder.py` then `scripts/import_missouri_bingo.py` |
+| Wisconsin bingo games (place, groups, day, start time, weeks of the month) | `data/public/wisconsin-bingo-sessions.json`, rebuilt by `scripts/import_wisconsin_bingo.py` from the state's occasion search, read in a browser |
 | Indiana groups with a current license that allows bingo | `data/public/indiana-bingo-licenses.json` |
 | Mississippi halls licensed for bingo | `data/public/mississippi-bingo-licenses.json`, rebuilt by `scripts/import_mississippi_bingo.py` |
 | Montana places with a live bingo permit | `data/public/montana-bingo-permits.json`, rebuilt by `scripts/import_montana_bingo.py` |
@@ -355,6 +356,15 @@ which states are thinnest (`docs/BINGO-COVERAGE.md`), and checks a researched ba
    and Chrome), then `python3 scripts/import_texas_bingo.py texas-locator.json --reviewed <today> --geocode`.
    For Missouri, run `python3 scripts/read_missouri_finder.py missouri-finder.json` (needs Python Playwright
    and Chrome), then `python3 scripts/import_missouri_bingo.py missouri-finder.json --reviewed <today>`.
+   For Wisconsin, read the Department of Administration's Active Bingo Occasion Search
+   (https://charitable.wi.gov/bingooccasion/search) in a browser. A blank organization filter is refused, so
+   search by letters of the group name (each vowel, plus "VFW" and "#"), set 200 rows a page, and save every row as
+   `organization,location,address,city,zip,date,time`; check each filter's row count against the site's. The
+   shell proxy refuses the host, so this step is done in a browser. Then run
+   `python3 scripts/import_wisconsin_bingo.py wi-occasions.csv --reviewed <today>`. It groups the dated
+   occasions by street address, weekday and start time: a pattern held on most of those weekdays between its
+   first and last date is weekly, one held on the same weeks of each month gets that label, other repeats are
+   "some weeks", and single dates are left out.
 2. Update the JSON files and each record's `reviewed_on`.
 3. Run `python3 scripts/build_public.py` and `node tests/findbingo.cjs`, then open a pull request.
 

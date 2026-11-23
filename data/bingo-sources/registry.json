@@ -991,15 +991,16 @@
           "note": "Who licenses bingo; used for the state page."
         },
         {
-          "kind": "lookup",
+          "kind": "times_list",
           "label": "Wisconsin Department of Administration: Active Bingo Occasion Search",
           "url": "https://charitable.wi.gov/bingooccasion/search",
-          "status": "to_check",
+          "status": "loaded",
           "checked_on": "2026-11-23",
-          "note": "Lists every licensed occasion with group, place, street address, date and start time. Readable in a browser; the shell proxy refuses the host. Write an importer that turns dated occasions into weekly patterns (Missouri-style labels) and load it as a state_schedule list."
+          "note": "Every licensed occasion with group, place, street address, ZIP, date and start time. Read in a browser (the shell proxy refuses the host), saved as a CSV, then turned into weekly patterns by the importer. Search by organization-name letters; a blank filter is refused. Nov 23 read: 2916 occasions, 11/24/2026 to 12/21/2027.",
+          "script": "scripts/import_wisconsin_bingo.py"
         }
       ],
-      "next": "Load the state's bingo occasion search as a state_schedule list (see its source entry) before any page-by-page work.",
+      "next": "Rerun the importer every 180 days, or sooner once the state posts the next year's occasions. Groups that hold one-off nights are left out by design.",
       "blocked_hosts": [
         "charitable.wi.gov"
       ]

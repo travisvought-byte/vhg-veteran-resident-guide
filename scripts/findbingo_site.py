@@ -23,11 +23,11 @@ STARTER_FILES = {'PA': 'pennsylvania-bingo.json', 'NY': 'new-york-bingo.json', '
                  'KY': 'kentucky-bingo.json', 'WV': 'west-virginia-bingo.json', 'WA': 'washington-bingo.json',
                  'MN': 'minnesota-bingo.json', 'IL': 'illinois-bingo.json', 'IA': 'iowa-bingo.json', 'OR': 'oregon-bingo.json', 'CO': 'colorado-bingo.json', 'AZ': 'arizona-bingo.json', 'NH': 'new-hampshire-bingo.json'}
 # State lists that give each game's day and hours: Michigan's weekly bingo licenses, the Texas hall locator,
-# Virginia's directory of sessions and Missouri's Find Local Bingo Games page.
+# Virginia's directory of sessions, Missouri's Find Local Bingo Games page and Wisconsin's Active Bingo Occasion Search.
 TIMES_FILES = {'MI': 'michigan-weekly-bingo.json', 'TX': 'texas-bingo-halls.json', 'VA': 'virginia-bingo-sessions.json',
-               'MO': 'missouri-bingo-sessions.json'}
+               'MO': 'missouri-bingo-sessions.json', 'WI': 'wisconsin-bingo-sessions.json'}
 # State lists that give a start time but no end time.
-START_ONLY = {'MO'}
+START_ONLY = {'MO', 'WI'}
 # State lists that name licensed groups or permitted places without game days: Indiana's annual bingo licenses,
 # Mississippi's licensed bingo halls, Montana's live bingo permits, and New Mexico's groups licensed for bingo, raffles or
 # pull-tabs.

@@ -1358,17 +1358,25 @@
   {
     "code": "WI",
     "name": "Wisconsin",
-    "coverage": "none",
-    "about": "Wisconsin licenses bingo run by charitable organizations through the state Office of Charitable Gaming. We haven't found a public list of games, so we're building one with help from halls and players.",
-    "reviewed_on": "2026-11-17",
+    "coverage": "times",
+    "about": "Wisconsin licenses bingo run by charitable organizations through the state Office of Charitable Gaming, and the state's Active Bingo Occasion Search lists every licensed bingo date with its place and start time.",
+    "hours_note": "Days and start times are worked out from the dated bingo occasions on the state's Active Bingo Occasion Search. Some games are held only on certain weeks. Call ahead to confirm before you go.",
+    "list_label": "Wisconsin Department of Administration: Active Bingo Occasion Search",
+    "list_url": "https://charitable.wi.gov/bingooccasion/search",
     "regulator_label": "Wisconsin Office of Charitable Gaming: Bingo Licenses",
     "regulator_url": "https://doa.wi.gov/Pages/LicensesHearings/BingoLicense.aspx",
     "regulator_note": "Wisconsin bingo licenses come from the Division of Gaming's Office of Charitable Gaming, 608-270-2530.",
+    "reviewed_on": "2026-11-23",
     "sources": [
       {
         "url": "https://doa.wi.gov/Pages/LicensesHearings/BingoLicense.aspx",
         "scope": "Bingo License: the Division of Gaming's Office of Charitable Gaming licenses and regulates bingo conducted by charitable organizations; bingo line 608-270-2530",
         "reviewed_on": "2026-11-17"
+      },
+      {
+        "url": "https://charitable.wi.gov/bingooccasion/search",
+        "scope": "Active Bingo Occasion Search: each licensed bingo occasion with group, place of play, street address, city, ZIP code, date and start time (no phone)",
+        "reviewed_on": "2026-11-23"
       }
     ]
   },
