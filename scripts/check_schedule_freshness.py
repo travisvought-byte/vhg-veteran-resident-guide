@@ -30,10 +30,18 @@ def last_date(r):
         ends.append(max(r['session_dates']))
     return min(ends) if ends else None
 
+def rechecked_after_end(r, today):
+    """An ended schedule that someone rechecked on or after its last date and found nothing newer.
+
+    `ended_rechecked_on` records that recheck. The listing keeps its past schedule (the page hides it),
+    so it no longer needs action; it drops off the report until a new schedule replaces it."""
+    end = last_date(r)
+    return bool(end and end < today.isoformat() and r.get('ended_rechecked_on') and r['ended_rechecked_on'] >= end)
+
 def classify(records, today, stale_days=30, soon_days=14):
     expired, soon, stale, offers = [], [], [], []
     for r in records:
-        if not r.get('schedule'):
+        if not r.get('schedule') or rechecked_after_end(r, today):
             continue
         end = last_date(r)
         if end and end < today.isoformat():
@@ -45,7 +53,7 @@ def classify(records, today, stale_days=30, soon_days=14):
         if age > stale_days:
             stale.append((r, age))
     for r in records:
-        if r.get('price_valid_until') and r['price_valid_until'] < today.isoformat() and r.get('cost'):
+        if r.get('price_valid_until') and r['price_valid_until'] < today.isoformat() and r.get('cost') and not rechecked_after_end(r, today):
             offers.append((r, r['price_valid_until']))
     return expired, soon, stale, offers
 
@@ -59,6 +67,9 @@ def report(records, today, stale_days=30, soon_days=14):
     lines = [f"Bingo schedule freshness, {today.isoformat()}", '',
              f"{total} listings have a published schedule. {len(expired)} have ended, {len(soon)} end within {soon_days} days, "
              f"{len(stale)} were last reviewed more than {stale_days} days ago.", '']
+    rechecked = sum(1 for r in records if r.get('schedule') and rechecked_after_end(r, today))
+    if rechecked:
+        lines[-1:-1] = [f"{rechecked} more ended and were rechecked afterwards with no newer date found; they are not listed below."]
     for title, items, fmt in [
         ('Ended: the page already hides these; they need a new schedule or removal of the old text', expired, lambda e: f"ended {e}"),
         (f'Ending within {soon_days} days', soon, lambda e: f"ends {e}"),
