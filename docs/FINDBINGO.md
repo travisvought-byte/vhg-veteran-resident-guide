@@ -1,7 +1,7 @@
 # FindBingo.org
 
 FindBingo.org is the multi-state bingo finder. Players type a ZIP code (or pick a state) and see
-bingo near them, closest first. It covers Michigan, Texas, Virginia, Missouri, Indiana, Kansas, Mississippi, Montana
+bingo near them, closest first. It covers Michigan, Texas, Virginia, Missouri, Indiana, Mississippi, Montana
 and New Mexico with state data, serves the Ohio Bingo
 Finder at findbingo.org/ohio/, and lists organizer-published games in Pennsylvania, New York, Florida,
 Utah, Kentucky and West Virginia ("starter" states). States without a list yet say so plainly. Every
@@ -19,7 +19,6 @@ Started November 15, 2026, at Travis's direction: one national finder, neighbori
 | Virginia bingo sessions (halls, days, doors-open and doors-close times) | `data/public/virginia-bingo-sessions.json`, rebuilt by `scripts/import_virginia_bingo.py` |
 | Missouri bingo games (halls, phone, day, start time, weeks of the month) | `data/public/missouri-bingo-sessions.json`, rebuilt by `scripts/read_missouri_finder.py` then `scripts/import_missouri_bingo.py` |
 | Indiana groups with a current license that allows bingo | `data/public/indiana-bingo-licenses.json` |
-| Kansas organizations licensed for bingo | `data/public/kansas-bingo-licenses.json`, rebuilt by `scripts/import_kansas_bingo.py` |
 | Mississippi halls licensed for bingo | `data/public/mississippi-bingo-licenses.json`, rebuilt by `scripts/import_mississippi_bingo.py` |
 | Montana places with a live bingo permit | `data/public/montana-bingo-permits.json`, rebuilt by `scripts/import_montana_bingo.py` |
 | New Mexico groups licensed for bingo, raffles or pull-tabs | `data/public/new-mexico-bingo-licenses.json`, rebuilt by `scripts/import_new_mexico_bingo.py` |
@@ -340,7 +339,7 @@ where one is published. The tests refuse a `pending` state, so coverage cannot s
 | `pending` | Not researched. Only `code`, `name`, `coverage`, `about`, `reviewed_on`. Kept in the build for completeness; no state uses it now. Such a page carries `noindex` and stays out of `sitemap.xml`. |
 | `none` | Researched: regulator named and sourced, no list loaded on this site. If the state publishes a list or finder, `list_url` and `list_label` point to it and the state page and the search card lead with that button. |
 | `starter` | Organizer-published schedules, one file per state (`STARTER_FILES`). |
-| `licenses` | A state list of licensed groups or permitted places without game days (Indiana, Kansas, Mississippi, Montana, New Mexico), one file per state (`LICENSE_FILES`). |
+| `licenses` | A state list of licensed groups or permitted places without game days (Indiana, Mississippi, Montana, New Mexico), one file per state (`LICENSE_FILES`). |
 | `times` | A state list with days and hours (Michigan, Texas, Virginia, Missouri), one file per state (`TIMES_FILES`). |
 
 The home page shows a button for each state with a list on the site (`LISTED` in the generator) and keeps
@@ -423,7 +422,13 @@ the next bingo day, as Texas does.
 - **Counties** come from the state page itself ("St. Louis City" is stored the Census way, "St. Louis city").
   Michigan's pending-county check is per state now, because Missouri also has a Clinton County.
 
-### Kansas (loaded November 23, 2026)
+### Kansas (ready, held out November 23, 2026)
+
+**Not published.** Kansas stays `none` (link to the state's PDF only). An earlier note (November 17) recorded that the
+posted list dates from July 2022, so its licenses would have lapsed, and nothing on November 23 showed it is current. The
+importer and the checks below are kept so Kansas can be loaded once the list is confirmed current: add
+`'KS': 'kansas-bingo-licenses.json'` to `LICENSE_FILES`, run the importer on a fresh download, set the state entry to
+`licenses` with a `license_note` that says the list is undated, and add the Kansas checks back to `tests/findbingo.cjs`.
 
 The Department of Revenue's "Bingo Organizations" PDF (https://www.ksrevenue.gov/pdf/BingoOrganizations.pdf, linked from
 https://www.ksrevenue.gov/bustaxtypesbingo.html) gives one block per licensed organization: license number (BNG...), name,
@@ -433,7 +438,7 @@ reads `pdftotext` output of the PDF. It leaves out a block whose street is only 
 a street (the state's wording stays in `listed_address`), and leaves out a street it cannot read without guessing
 ("3381 326 N Kansas Ave") and a block with a Missouri ZIP code. The county comes from the ZIP code's county in the same
 Midwire/GeoNames file as the site's ZIP points (checksum checked). The addresses are the ones the state lists for each
-organization, which may not be where it plays, so the state note says to call. On November 23 the PDF host refused this
+organization, which may not be where it plays, so the state note must say to call. On November 23 the PDF host refused this
 session's downloader, so the list was read through a page reader, then every one of the 181 blocks was checked against the
 PDF field by field (name, street, city, ZIP, phone) and the first page by eye. Two blocks run to six lines: BNG000219 puts its
 post office box on its own line (kept, box dropped), and BNG000422 gives the same street with two ZIP codes (left out). The
@@ -479,7 +484,7 @@ the collection for several states first, then one build and one pull request.
 | state | what the state publishes | where |
 |---|---|---|
 | Idaho | A search box over charitable gaming licenses, read only in a browser. Each result gives name, game type (Bingo, Raffle or both), street, county, phone, license number and renewal date, but no city or ZIP. **Not loaded (November 23, 2026):** the County, City and Zip boxes match exactly (a partial ZIP finds nothing), so a city and ZIP from the state's own data would take one search per candidate ZIP for each county. | `https://www.idaholottery.com/charitable-gaming/licensed-organizations` |
-| Kansas | **Loaded November 23, 2026** (see Kansas above). Open question for the owner: the November 17 note here said the PDF dated from July 2022, so its licenses would have lapsed. The document itself shows no date, and on November 23 the host refused this session's downloader, so the file's date could not be checked. Confirm the list is current (the state's bingo page or a phone call) before relying on it. | `https://www.ksrevenue.gov/pdf/BingoOrganizations.pdf` |
+| Kansas | Licensed bingo organizations with address and phone. PDF. No days, no date. **Held out (November 23, 2026):** the November 17 check found the file is from July 2022, and Kansas licenses run July to June, so the licenses on it may have lapsed. The document shows no date and the host refused this session's downloader. `scripts/import_kansas_bingo.py` is ready (all 181 blocks were checked against the PDF on November 23); load it once the state's list is confirmed current. | `https://www.ksrevenue.gov/pdf/BingoOrganizations.pdf` |
 | Maine | Charitable gaming organizations (January 16, 2026). PDF. **Not loaded (November 23, 2026):** an NPO on the list is authorized for bingo, raffles and games of chance together, so the list cannot say which groups hold bingo, unlike New Mexico's bingo licenses; many addresses are post office boxes, and the PDF would not load on November 23. | linked from `https://www.maine.gov/dps/gcu/charitable-gaming` |
 | North Dakota | Licensed gaming organizations and gaming sites. PDFs. **Not loaded (checked November 19, 2026):** the sites list (August 2026) is mostly bars and restaurants where organizations sell pull-tabs, with no column for the games played, so it is not a list of places to play bingo. | `https://attorneygeneral.nd.gov/gaming-licensees/` |
 | Minnesota | Licensed organizations and the sites where they operate ("Find Gaming Sites", with a tab-separated download dated November 2026). **Not loaded (read in a browser November 23, 2026):** the site list has site, organization, city, county, license and site numbers and address, but no column for the games played, and most sites are bars selling pull-tabs. Per-site game types are only in the Power BI "Site Financial Data" tool, one site at a time. | `https://mn.gov/gcb/data/` |
