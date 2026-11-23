@@ -5,7 +5,7 @@
 
 The snapshot comes from the monthly mining run (fetch_open_data.py, source va-facilities-api), which pushes it to a
 mining/run-<date> review branch. Fetch that branch and pass the snapshot file. Each chosen state is written to
-data/public/va-facilities/<st>.json, which scripts/build_va_pages.py turns into va/<st>/index.html.
+data/public/va-facilities/<st>.json, which scripts/build_va_pages.py turns into va-locations/<st>/index.html.
 
 What goes in:
   - every VA medical center, clinic, Vet Center, benefits office and cemetery whose street address is in the state
