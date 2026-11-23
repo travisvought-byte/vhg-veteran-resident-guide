@@ -168,6 +168,11 @@
       "url": "https://www.defense.gov/Explore/News/Article/Article/2474125/changing-middle-east-situation-means-changes-for-israel/",
       "title": "Department of Defense: Israel moves to U.S. Central Command",
       "checked_on": "2026-11-22"
+    },
+    "SOUTHCOM": {
+      "url": "https://www.southcom.mil/About/Area-of-Responsibility/",
+      "title": "U.S. Southern Command: Area of Responsibility",
+      "checked_on": "2026-11-23"
     }
   },
   "countries": [
@@ -2888,16 +2893,193 @@
         }
       ],
       "checked_on": "2026-11-23"
+    },
+    {
+      "slug": "japan",
+      "name": "Japan",
+      "vcl_region": "PACOM",
+      "no_agency": {
+        "statement": "We found no national veterans agency in Japan on an official source. Use the emergency and crisis numbers below. U.S. veterans living in Japan can use the VA help further down.",
+        "checked_on": "2026-11-23"
+      },
+      "emergency": {
+        "numbers": [
+          {
+            "display": "110",
+            "tel": "110",
+            "label": "Police"
+          },
+          {
+            "display": "119",
+            "tel": "119",
+            "label": "Ambulance and fire"
+          }
+        ],
+        "source_url": "https://www.gov.uk/foreign-travel-advice/japan/getting-help",
+        "source_title": "GOV.UK travel advice: Japan, getting help",
+        "source_date": "2026-08-28",
+        "checked_on": "2026-11-23"
+      },
+      "lines": [
+        {
+          "kind": "crisis_line",
+          "name": "Yorisoi Hotline (よりそいホットライン)",
+          "about": "A free 24-hour listening and support line, run by the Social Inclusion Support Center and listed by the Ministry of Health, Labour and Welfare. The ministry’s page is in Japanese.",
+          "numbers": [
+            {
+              "display": "0120-279-338",
+              "tel": "0120279338",
+              "label": "Free call"
+            },
+            {
+              "display": "050-3655-0279",
+              "tel": "05036550279",
+              "label": "From an IP phone starting 050"
+            }
+          ],
+          "hours": "24 hours a day",
+          "around_the_clock": true,
+          "partial": null,
+          "website": "https://www.mhlw.go.jp/mamorouyokokoro/soudan/tel/index.html",
+          "source_url": "https://www.mhlw.go.jp/mamorouyokokoro/soudan/tel/index.html",
+          "source_title": "Ministry of Health, Labour and Welfare (Japan): telephone consultation lines (まもろうよ こころ, in Japanese)",
+          "source_date": null,
+          "checked_on": "2026-11-23"
+        },
+        {
+          "kind": "crisis_line",
+          "name": "Kokoro no Kenkō Sōdan Unified Dial (こころの健康相談統一ダイヤル)",
+          "about": "One number that connects you to the public mental health consultation service of the prefecture or designated city you call from, listed by the Ministry of Health, Labour and Welfare. It cannot be reached from IP phones starting 050.",
+          "numbers": [
+            {
+              "display": "0570-064-556",
+              "tel": "0570064556",
+              "label": "Navi Dial (call charges apply)"
+            }
+          ],
+          "hours": "Days and hours differ by prefecture",
+          "around_the_clock": false,
+          "partial": "Days and hours differ by prefecture. It is not a 24-hour line everywhere.",
+          "website": "https://www.mhlw.go.jp/mamorouyokokoro/soudan/tel/index.html",
+          "source_url": "https://www.mhlw.go.jp/mamorouyokokoro/soudan/tel/index.html",
+          "source_title": "Ministry of Health, Labour and Welfare (Japan): telephone consultation lines (まもろうよ こころ, in Japanese)",
+          "source_date": null,
+          "checked_on": "2026-11-23"
+        }
+      ],
+      "checked_on": "2026-11-23"
+    },
+    {
+      "slug": "costa-rica",
+      "name": "Costa Rica",
+      "vcl_region": "SOUTHCOM",
+      "no_agency": {
+        "statement": "We found no national veterans agency in Costa Rica. Costa Rica’s Constitution (Article 12) abolishes the army as a permanent institution.",
+        "source_url": "https://www.tse.go.cr/pdf/normativa/constitucion.pdf",
+        "source_title": "Supreme Electoral Tribunal (TSE): Political Constitution of Costa Rica (PDF)",
+        "source_date": null,
+        "checked_on": "2026-11-23"
+      },
+      "emergency": {
+        "numbers": [
+          {
+            "display": "911",
+            "tel": "911",
+            "label": "Ambulance, fire and police"
+          }
+        ],
+        "source_url": "https://www.gov.uk/foreign-travel-advice/costa-rica/getting-help",
+        "source_title": "GOV.UK travel advice: Costa Rica, getting help",
+        "source_date": "2026-05-19",
+        "checked_on": "2026-11-23"
+      },
+      "lines": [
+        {
+          "kind": "crisis_line",
+          "name": "Línea Aquí Estoy (Colegio de Profesionales en Psicología de Costa Rica)",
+          "about": "A free psychological support line run by Costa Rica’s professional college of psychologists, listed by the Ministry of Public Education. In an emergency, call 911.",
+          "numbers": [
+            {
+              "display": "800-2737869 (800-AQESTOY)",
+              "tel": "8002737869",
+              "label": "Free call"
+            }
+          ],
+          "hours": "Monday to Friday, 2 p.m. to 10 p.m.; Saturday, 9 a.m. to 4 p.m.",
+          "around_the_clock": false,
+          "partial": "Evenings and Saturdays only. It is not a 24-hour line; outside these hours, call 911 in an emergency.",
+          "website": "https://www.mep.go.cr/programas-proyectos/aqui-estoy",
+          "source_url": "https://www.mep.go.cr/programas-proyectos/aqui-estoy",
+          "source_title": "Ministry of Public Education (MEP): Aquí Estoy",
+          "source_date": null,
+          "checked_on": "2026-11-23"
+        }
+      ],
+      "checked_on": "2026-11-23"
+    },
+    {
+      "slug": "panama",
+      "name": "Panama",
+      "vcl_region": "SOUTHCOM",
+      "no_agency": {
+        "statement": "We found no national veterans agency in Panama. A 1994 reform of Panama’s Constitution says expressly that Panama will not have an army.",
+        "source_url": "https://constitucion.te.gob.pa/reformas-a-la-constitucion-de-1972/",
+        "source_title": "Electoral Tribunal of Panama: Reforms to the 1972 Constitution",
+        "source_date": "2024-01-16",
+        "checked_on": "2026-11-23"
+      },
+      "emergency": {
+        "numbers": [
+          {
+            "display": "911",
+            "tel": "911",
+            "label": "Ambulance, fire and police"
+          },
+          {
+            "display": "104",
+            "tel": "104",
+            "label": "Police"
+          }
+        ],
+        "source_url": "https://www.gov.uk/foreign-travel-advice/panama/getting-help",
+        "source_title": "GOV.UK travel advice: Panama, getting help",
+        "source_date": "2026-10-09",
+        "also_source_url": "https://www.smartraveller.gov.au/destinations/americas/panama",
+        "also_source_title": "Smartraveller (Australian Government): Panama",
+        "also_source_date": null,
+        "checked_on": "2026-11-23"
+      },
+      "lines": [
+        {
+          "kind": "crisis_line",
+          "name": "Línea 147 (Ministry of Social Development, MIDES)",
+          "about": "The Ministry of Social Development’s free psychosocial support and mental health line, staffed by psychologists and social workers.",
+          "numbers": [
+            {
+              "display": "147",
+              "tel": "147",
+              "label": "Phone"
+            }
+          ],
+          "hours": "24 hours a day",
+          "around_the_clock": true,
+          "partial": null,
+          "source_url": "https://www.paho.org/es/noticias/11-9-2024-ops-suma-aportes-campana-sensibilizacion-para-salud-mental-panama",
+          "source_title": "PAHO/WHO: PAHO supports Panama’s mental health awareness campaign",
+          "source_date": "2024-09-11",
+          "also_source_url": "https://www.paho.org/sites/default/files/2026/10/sitrep-3-terremoto-panama-octubre-2026.pdf",
+          "also_source_title": "PAHO/WHO: Panama earthquake situation report 3 (PDF), which lists the 147 line and chat still in use",
+          "also_source_date": "2026-10-18",
+          "checked_on": "2026-11-23"
+        }
+      ],
+      "checked_on": "2026-11-23"
     }
   ],
   "not_yet_covered": [
     {
       "name": "Philippines",
       "reason": "The Philippine Veterans Affairs Office’s website still could not be read when we checked again in November 2026, so we have not published a country page. U.S. veterans there can use the VA Manila numbers above."
-    },
-    {
-      "name": "Japan",
-      "reason": "We did not find a national veterans agency on an official source."
     },
     {
       "name": "Mexico",
@@ -2909,7 +3091,7 @@
     },
     {
       "name": "Italy",
-      "reason": "We did not find a national veterans agency on an official source."
+      "reason": "Search results show a Ministry of Defence “Centro Veterani della Difesa”, but its pages could not be read when we checked in November 2026, and we did not find a national crisis line on an official Italian page we could read. U.S. veterans there can use the FMP toll-free line above."
     },
     {
       "name": "Spain",
