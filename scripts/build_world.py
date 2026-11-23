@@ -12,7 +12,6 @@ Foreign Medical Program and the Veterans Crisis Line's overseas numbers, taken f
 veteranscrisisline.net.
 """
 import json
-import adsense
 from datetime import date
 from html import escape
 from pathlib import Path
@@ -377,8 +376,7 @@ def outputs():
         result['world/' + c['slug'] + '.html'] = country_page(data, c)
     for r in data.get('regions', []):
         result['world/' + r['slug'] + '.html'] = region_page(data, r)
-    # Google AdSense on the country and region pages, not the world index (scripts/adsense.py).
-    return {k: (v if k == 'world/index.html' else adsense.place(v)) for k, v in result.items()}
+    return result
 
 
 if __name__ == '__main__':
