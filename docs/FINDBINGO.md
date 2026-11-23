@@ -149,8 +149,8 @@ Leaflet 1.9.4 with Leaflet.markercluster 1.5.3 in `assets/map/`, served from the
 - No list has street-level coordinates, so each card is pinned at the middle of its ZIP code, using the same ZIP code points
   as the distance search (`zips.json`). Each pin's box and the note under the map say so. A card whose ZIP code has no point
   stays in the list without a pin. No coordinates are made up.
-- Find Bingo never states counts: nearby pins gather under a plain dot with no number. (The guide's facilities page shows
-  group numbers, as Nina's Map does.)
+- Nearby pins gather under a group dot that shows how many places it holds, as on the guide's facilities page and Nina's Map
+  (owner direction, November 23, 2026; until then the dots were plain). The page text still never states counts.
 - "Use my location" (beside the ZIP code box) finds the nearest ZIP code on the visitor's device and searches it.
 - Big buttons and text, one-finger page scrolling on phones until the map is tapped, no scroll-wheel zoom until the map is
   clicked, Tab and Enter on pins and groups, dark mode on findbingo.org, and a "Hide the map" button that is remembered
@@ -243,6 +243,46 @@ regular day were kept. Files: `data/public/pennsylvania-bingo.json`, `new-york-b
 
 Travis's rule for these lists (November 16, 2026): use the best information available and make it easy
 for people to send corrections. Listings are not held back for phone confirmation.
+
+**Pennsylvania, more listings (added November 23, 2026).** No county treasurer checked publishes a list of bingo licensees
+(Allegheny, Montgomery, Berks, Westmoreland, Cumberland, Butler and Monroe were read; each gives only applications and the
+law), so Pennsylvania stays a starter state. Added from each organizer's own page, read November 23: Washington Township VFC
+102 (Apollo, Friday), St. Bartholomew Parish in Crabtree (Sunday; the start time changes with the season, so the card gives
+no single time), Marion VFC 8 and Franklin Fire Company in Chambersburg (Tuesday and Wednesday), West Deer Township VFC No. 3
+(Gibsonia, Saturday), West View VFD at the West View Banquet Hall (Sunday), Our Lady of Hope Parish's St. Valentine Frawley
+Hall (Bethel Park, Tuesday) and St. Gabriel Church Hall (Pittsburgh, first and third Thursday), and Our Lady of Perpetual
+Help Parish's St. Ursula Social Hall (Allison Park, Tuesday). ZIP 17202 had no point; its point is the Census Geocoder match
+for the Marion VFC 8 address. Left out: Saint Mark Parish (Cranberry Township; dated registrations, not a weekly game) and
+pages that would not load (Archangel Gabriel Parish, St. John XXIII Parish, Safety First VFC).
+Later the same day, from each organizer's or government's own page: the Borough of Folcroft's bingo at the Ethan Joner
+Community Center (second Tuesday of the month, 11 a.m.), Circleville VFD in North Huntingdon (Friday Night Bingo; the
+street is the one the page gives for the department's hall) and Portland Hook & Ladder Co. #1 at the William Pensyl Social
+Hall (the Borough of Portland's page says every Tuesday night and gives no time, so the card gives none). The Portland page
+gives no ZIP code; the ZIP is the U.S. Census Bureau geocoder's match for the street, and the record cites that match.
+Left out: a family-center bingo that is partly online, and leads seen only on news, event or aggregator sites.
+
+**Florida, New York, Utah, more listings (added November 23, 2026).** From government pages: the City of Palm Bay's page
+for the Greater Palm Bay Senior Activity Center (Wednesday 11:30 a.m. and Friday 6 p.m.), the Town of Saugerties calendar
+for bingo at St. Joseph's Church Hall in Glasco (Thursdays, calling 6:45 p.m.; the calendar names no organizer or phone),
+and Salt Lake County's November 2026 calendars for the Magna Kennecott (Monday, Wednesday, Friday 12:30 p.m.) and Eddie P.
+Mayne Kearns (Wednesday and Friday 1:30 p.m.) senior centers. Left out: Hillsborough County's monthly bingo at the Brandon
+Rec Center (within 25 miles of the St. Petersburg test ZIP, and monthly), the Taylorsville Senior Center calendar (bingo
+days could not be tied to dates), Kentucky's 2023 list of licensed charitable gaming facilities (its licenses ran out in
+2023 and 2024 and it has no ZIP codes), and a New Windsor fire company bingo that turned out to be in Maryland.
+
+**Second organizer pass (November 23, 2026).** Each from the organizer's own page, read November 23:
+Pennsylvania: Cherryhill Township VFC (Penn Run, Wednesday and Saturday), Granville Fire Company Event Center (last Sunday
+of the month), American Legion Post 26 (Dillsburg, Wednesday; members and their signed-in guests), Our Lady of the Valley
+Parish at Holy Family Social Hall (New Brighton, Wednesday), Archangel Gabriel Parish at Weirauch Hall (Coraopolis,
+Monday), Denver Fire Company Social Hall (Thursday) and Fairfield Fire Hall (Thursdays and the first Friday; no start
+time posted). West Virginia: Middleway VFC (Saturday). Kentucky: Kosair Shriners at Charity Hall Bingo (Louisville, Friday
+and Sunday afternoons) and the Lafayette Band Association's Lex Go Bingo (Lexington, Thursday, Friday and Sunday; its page
+gives two Sunday times, so the card gives none). New York: Shawnee VFC (Sanborn, Thursday). Where a page gave a street
+without a ZIP code (Granville, Holy Family, Lex Go Bingo), the ZIP is the U.S. Census Bureau geocoder's match and the
+record cites it. Left out: St. John XXIII Parish (its site shows a bot check), Resurrection Parish (page not found), a
+Butler County Historical Society bingo (one dated night), Duncansville's monthly bingo (event page from 2025 only), the
+American Saddlebred Legacy Foundation (no street), Bushkill Township VFC (no street), and fire companies that turned out to
+be in Maryland or Virginia (Halfway, Glen Burnie, Dunn Loring).
 
 **Kentucky, West Virginia, Pennsylvania (no state list of games).** No public statewide list of games with days
 and times was found: Kentucky's Office of Charitable Gaming (now part of Kentucky Horse Racing & Gaming)
@@ -396,6 +436,28 @@ the next bingo day, as Texas does.
 - **Counties** come from the state page itself ("St. Louis City" is stored the Census way, "St. Louis city").
   Michigan's pending-county check is per state now, because Missouri also has a Clinton County.
 
+### Kansas (ready, held out November 23, 2026)
+
+**Not published.** Kansas stays `none` (link to the state's PDF only). An earlier note (November 17) recorded that the
+posted list dates from July 2022, so its licenses would have lapsed, and nothing on November 23 showed it is current. The
+importer and the checks below are kept so Kansas can be loaded once the list is confirmed current: add
+`'KS': 'kansas-bingo-licenses.json'` to `LICENSE_FILES`, run the importer on a fresh download, set the state entry to
+`licenses` with a `license_note` that says the list is undated, and add the Kansas checks back to `tests/findbingo.cjs`.
+
+The Department of Revenue's "Bingo Organizations" PDF (https://www.ksrevenue.gov/pdf/BingoOrganizations.pdf, linked from
+https://www.ksrevenue.gov/bustaxtypesbingo.html) gives one block per licensed organization: license number (BNG...), name,
+street, city and ZIP, and phone. It carries no date, county, game days or license end date; the bingo page says the license
+year runs July 1 to June 30, but the list does not say which year, so no end date is shown. `scripts/import_kansas_bingo.py`
+reads `pdftotext` output of the PDF. It leaves out a block whose street is only a post office box, drops a box written beside
+a street (the state's wording stays in `listed_address`), and leaves out a street it cannot read without guessing
+("3381 326 N Kansas Ave") and a block with a Missouri ZIP code. The county comes from the ZIP code's county in the same
+Midwire/GeoNames file as the site's ZIP points (checksum checked). The addresses are the ones the state lists for each
+organization, which may not be where it plays, so the state note must say to call. On November 23 the PDF host refused this
+session's downloader, so the list was read through a page reader, then every one of the 181 blocks was checked against the
+PDF field by field (name, street, city, ZIP, phone) and the first page by eye. Two blocks run to six lines: BNG000219 puts its
+post office box on its own line (kept, box dropped), and BNG000422 gives the same street with two ZIP codes (left out). The
+next refresh should run the importer on a fresh download.
+
 ### Montana (loaded November 17, 2026)
 
 Montana's Gambling Control Division publishes "Establishments Offering Live Keno and/or Bingo" by county
@@ -435,11 +497,11 @@ the collection for several states first, then one build and one pull request.
 
 | state | what the state publishes | where |
 |---|---|---|
-| Idaho | A search box over charitable gaming licenses (bingo and raffles together), read only in a browser. Not a list of places to play. | `https://www.idaholottery.com/charitable-gaming/licensed-organizations` |
-| Kansas | Licensed bingo organizations with address and phone. PDF. No days. **Not loaded:** the file is from July 2022 and Kansas licenses run July to June, so every license on it has lapsed. Load it only when the state posts a current list. | `https://www.ksrevenue.gov/pdf/BingoOrganizations.pdf` |
-| Maine | Charitable gaming organizations (January 16, 2026). PDF. Covers raffles and games of chance too, and many addresses are post office boxes, so it is not a list of places to play. | linked from `https://www.maine.gov/dps/gcu/charitable-gaming` |
+| Idaho | A search box over charitable gaming licenses, read only in a browser. Each result gives name, game type (Bingo, Raffle or both), street, county, phone, license number and renewal date, but no city or ZIP. **Not loaded (November 23, 2026):** the County, City and Zip boxes match exactly (a partial ZIP finds nothing), so a city and ZIP from the state's own data would take one search per candidate ZIP for each county. | `https://www.idaholottery.com/charitable-gaming/licensed-organizations` |
+| Kansas | Licensed bingo organizations with address and phone. PDF. No days, no date. **Held out (November 23, 2026):** the November 17 check found the file is from July 2022, and Kansas licenses run July to June, so the licenses on it may have lapsed. The document shows no date and the host refused this session's downloader. `scripts/import_kansas_bingo.py` is ready (all 181 blocks were checked against the PDF on November 23); load it once the state's list is confirmed current. | `https://www.ksrevenue.gov/pdf/BingoOrganizations.pdf` |
+| Maine | Charitable gaming organizations (January 16, 2026). PDF. **Not loaded (November 23, 2026):** an NPO on the list is authorized for bingo, raffles and games of chance together, so the list cannot say which groups hold bingo, unlike New Mexico's bingo licenses; many addresses are post office boxes, and the PDF would not load on November 23. | linked from `https://www.maine.gov/dps/gcu/charitable-gaming` |
 | North Dakota | Licensed gaming organizations and gaming sites. PDFs. **Not loaded (checked November 19, 2026):** the sites list (August 2026) is mostly bars and restaurants where organizations sell pull-tabs, with no column for the games played, so it is not a list of places to play bingo. | `https://attorneygeneral.nd.gov/gaming-licensees/` |
-| Minnesota | Licensed organizations and the sites where they operate ("Find Gaming Sites"). **Not loaded:** the site sends automated readers to a captcha page (November 19, 2026). Read it in an ordinary browser, and check whether it says which sites run bingo before loading it. | `https://mn.gov/gcb/data/` |
+| Minnesota | Licensed organizations and the sites where they operate ("Find Gaming Sites", with a tab-separated download dated November 2026). **Not loaded (read in a browser November 23, 2026):** the site list has site, organization, city, county, license and site numbers and address, but no column for the games played, and most sites are bars selling pull-tabs. Per-site game types are only in the Power BI "Site Financial Data" tool, one site at a time. | `https://mn.gov/gcb/data/` |
 | District of Columbia | Calendar of licensed charitable events. | `https://dclottery.com/events?type=8&month=all&year=all` |
 | Alaska, Louisiana, Washington | Permit or license lookups by name; not lists. | see each entry |
 

@@ -44,10 +44,10 @@ def make_bingo(root):
     nearby=lambda z: 430<=int(z[:3])<=459 or 150<=int(z[:3])<=196 or 247<=int(z[:3])<=268 or 400<=int(z[:3])<=427 or 460<=int(z[:3])<=499
     zip_data=json.dumps({z:c for z,c in all_zips.items() if nearby(z)},separators=(',',':'))
     options=''.join('<option>'+c['county']+'</option>' for c in counties)
-    # The map beside the list (findbingo.org/ohio/ is part of Find Bingo: group dots carry no numbers).
+    # The map beside the list (findbingo.org/ohio/ is part of Find Bingo: group dots show how many places they hold).
     box=place_map.box('listings','assets/map/',title='See them on a map',label='Map of the bingo games and senior centers listed below. Every place on the map is also in the list.',
         legend=(('game','Bingo with game times'),('center','Senior center'),('nodays','Bingo hall, game times not posted yet'),('you','Your ZIP code')),
-        privacy_href='privacy.html',zip_table='ZIP_CENTROIDS',numbers=False)
+        privacy_href='privacy.html',zip_table='ZIP_CENTROIDS',numbers=True)
     locate=place_map.locate_button('bingo-zip','bingo-nearby','nearby-status','ZIP_CENTROIDS','Or use my location')
     return (TEMPLATE.replace('__DATA__',payload).replace('__COUNTIES__',options).replace('__ZIPDATA__',zip_data)
             .replace('__LOCATE__',locate).replace('__MAP_BOX__',box).replace('__MAP_SCRIPT__',place_map.script(root)))

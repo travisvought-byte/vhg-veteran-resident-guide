@@ -53,7 +53,7 @@ assert(static_.querySelector('footer a[href="https://creativecommons.org/license
 assert(!/\b\d+ (halls|venues|locations|counties)\b/i.test(static_.querySelector('header').textContent), 'no headline counts');
 // The map (November 21, 2026): hidden until the list has pins, group dots without numbers, map files from this site, privacy linked.
 const mapBox = static_.getElementById('map-box');
-assert(mapBox && mapBox.hidden && mapBox.dataset.pmList === 'results' && mapBox.dataset.pmBase === 'assets/map/' && mapBox.dataset.pmNumbers === '0', 'home map box');
+assert(mapBox && mapBox.hidden && mapBox.dataset.pmList === 'results' && mapBox.dataset.pmBase === 'assets/map/' && mapBox.dataset.pmNumbers === undefined, 'home map box (group dots show how many places they hold)');
 assert(!/\d/.test(mapBox.textContent), 'no numbers in the map box');
 assert(mapBox.querySelector('a[href="privacy/"]') && /OpenStreetMap/.test(mapBox.textContent), 'the map names its picture source and links Privacy');
 assert(static_.querySelector('#zip-form [data-pm-locate][hidden]'), 'Use my location stays hidden without JavaScript');

@@ -27,11 +27,11 @@ TIMES_FILES = {'MI': 'michigan-weekly-bingo.json', 'TX': 'texas-bingo-halls.json
                'MO': 'missouri-bingo-sessions.json'}
 # State lists that give a start time but no end time.
 START_ONLY = {'MO'}
-# State lists that name licensed groups or permitted places without game days: Indiana's annual bingo licenses and
+# State lists that name licensed groups or permitted places without game days: Indiana's annual bingo licenses,
 # Mississippi's licensed bingo halls, Montana's live bingo permits, and New Mexico's groups licensed for bingo, raffles or
 # pull-tabs.
-LICENSE_FILES = {'IN': 'indiana-bingo-licenses.json', 'MS': 'mississippi-bingo-licenses.json', 'MT': 'montana-bingo-permits.json',
-                 'NM': 'new-mexico-bingo-licenses.json'}
+LICENSE_FILES = {'IN': 'indiana-bingo-licenses.json', 'MS': 'mississippi-bingo-licenses.json',
+                 'MT': 'montana-bingo-permits.json', 'NM': 'new-mexico-bingo-licenses.json'}
 COVERAGE = {'times', 'licenses', 'starter', 'ohio_finder', 'none', 'pending'}
 # States with a list on this site (or, for Ohio, its own finder). Every other state has a researched page that
 # names who licenses bingo there and links the state's own list or finder where one is published.
@@ -479,11 +479,12 @@ def _pin(r, kind, sub):
 
 
 def _map_box(up, what):
-    """The map above a list. Group dots on the map carry no numbers: the site never states counts."""
+    """The map above a list. Group dots on the map show how many places they hold (owner direction, November 23, 2026);
+    the page text still never states counts."""
     return place_map.box('results' if not up else 'listings', up + 'assets/map/', title='See them on a map',
                          label=f'Map of {what}. Every place on the map is also in the list.',
                          legend=(('game', 'Bingo with game days'), ('nodays', 'Licensed, game days not posted')) + ((('you', 'Your ZIP code'),) if not up else ()),
-                         privacy_href=up + 'privacy/', zip_table='ZIPS' if not up else '', numbers=False, dark=True)
+                         privacy_href=up + 'privacy/', zip_table='ZIPS' if not up else '', numbers=True, dark=True)
 
 
 def _license_line(r, s):
