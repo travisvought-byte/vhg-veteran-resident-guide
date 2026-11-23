@@ -202,12 +202,12 @@ assert(p.d.querySelector('#more-note button[data-more="0"]'));
 assert(!/\d/.test(p.d.getElementById('more-note').textContent), 'no counts on the site');
 
 // States without a public list: say so, and invite halls to send game times.
-p = await open('?zip=50309');
-assert.equal(p.count, 'No bingo games listed yet within 25 miles of 50309.');
+p = await open('?zip=68102');
+assert.equal(p.count, 'No bingo games listed yet within 25 miles of 68102.');
 assert(!p.d.getElementById('pending-MI'), 'the Michigan note stays with Michigan searches');
-assert.equal(p.cards[0], 'state-IA');
-assert.match(p.d.getElementById('state-IA').textContent, /Charitable Gambling/);
-assert(p.d.querySelector('#state-IA a[href^="mailto:travis@vethomeguard.org?subject=Bingo%20game%20times%20in%20Iowa"]'));
+assert.equal(p.cards[0], 'state-NE');
+assert.match(p.d.getElementById('state-NE').textContent, /Charitable Gaming/);
+assert(p.d.querySelector('#state-NE a[href^="mailto:travis@vethomeguard.org?subject=Bingo%20game%20times%20in%20Nebraska"]'));
 // Missouri: the Gaming Commission's Find Local Bingo Games page gives start times only, and which weeks of the month.
 const moRows = data.venues.filter(v => v.state === 'MO');
 assert.equal(states.find(s => s.code === 'MO').coverage, 'times');
@@ -415,8 +415,8 @@ assert.equal(p.count, 'Indiana groups licensed for bingo');
 p = await open('?state=OH');
 assert.deepEqual(p.cards, ['state-OH']);
 assert.equal(p.d.querySelector('#state-OH a.solid').href, 'https://www.findbingo.org/ohio/');
-p = await open('?state=IA');
-assert.deepEqual(p.cards, ['state-IA']);
+p = await open('?state=NE');
+assert.deepEqual(p.cards, ['state-NE']);
 p = await open('?state=MO&county=Greene');
 assert.deepEqual(p.cards.sort(), data.venues.filter(v => v.state === 'MO' && v.county === 'Greene').map(v => v.id).sort());
 

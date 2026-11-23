@@ -1,0 +1,1024 @@
+{
+  "about": "Where Find Bingo listings come from, state by state: every statewide source we know, whether it is loaded, and what to do next. Organizer pages already used are counted from the lists themselves (docs/BINGO-COVERAGE.md). Hand-maintained; checked by scripts/bingo_pipeline.py.",
+  "evidence_levels": {
+    "state_schedule": "A state regulator's list that gives each game's day and time.",
+    "organizer_schedule": "The group's own published schedule: its website, lodge or post page, or a city or senior-center calendar.",
+    "state_license": "A state list of licensed groups or permitted places, without game days."
+  },
+  "review_days": {
+    "organizer_schedule": 90,
+    "state_schedule": 180,
+    "state_license": 180
+  },
+  "organizer_networks": [
+    {
+      "name": "Elks lodges",
+      "url": "https://www.elks.org/lodges/events.cfm?State=WA",
+      "how": "Lodge events by state (change State=); it shows each lodge's next few events, so search the page for \"bingo\", then confirm on the lodge's own page. Read in a browser: the host refuses scripted downloads from this environment."
+    },
+    {
+      "name": "Fraternal Order of Eagles aeries",
+      "how": "Aerie pages and state Eagles associations; many games are for members and guests only, which we leave out."
+    },
+    {
+      "name": "Loyal Order of Moose lodges",
+      "how": "Lodge pages and calendars; check whether the game is open to the public."
+    },
+    {
+      "name": "VFW and American Legion posts",
+      "how": "Post websites and department (state) calendars."
+    },
+    {
+      "name": "Catholic parishes and Knights of Columbus councils",
+      "how": "Parish bulletins and council pages; keep only a current, dated schedule."
+    },
+    {
+      "name": "Volunteer fire companies",
+      "how": "Company websites; strong in Pennsylvania, New York and New England."
+    },
+    {
+      "name": "Senior centers and parks departments",
+      "how": "City and county activity calendars (kind \"senior_center\")."
+    }
+  ],
+  "states": [
+    {
+      "code": "AL",
+      "name": "Alabama",
+      "counties": 67,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Alabama Attorney General: court rulings on bingo",
+          "url": "https://www.alabamaag.gov/alabama-supreme-court-reaffirms-electronic-bingo-is-illegal-in-state-of-alabama-in-two-important-decisions/",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        }
+      ],
+      "next": "Research organizer schedules (step 2) and start a starter list."
+    },
+    {
+      "code": "AK",
+      "name": "Alaska",
+      "counties": 30,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Alaska Department of Revenue: Charitable Gaming",
+          "url": "https://tax.alaska.gov/programs/programs/index.aspx?54160",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        },
+        {
+          "kind": "lookup",
+          "label": "Alaska permit and license search (Revenue Online)",
+          "url": "https://online-tax.alaska.gov",
+          "status": "lead_only",
+          "checked_on": "2026-11-17",
+          "note": "Permit and license lookup by name, not a list of games."
+        }
+      ],
+      "next": "Research organizer schedules (step 2) and start a starter list."
+    },
+    {
+      "code": "AZ",
+      "name": "Arizona",
+      "counties": 15,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Arizona Department of Revenue: Bingo in Arizona",
+          "url": "https://azdor.gov/businesses-arizona/bingo-arizona",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        }
+      ],
+      "next": "Add organizer schedules in counties with none yet. Elks lodges whose pages don't say games are open to the public stay out."
+    },
+    {
+      "code": "AR",
+      "name": "Arkansas",
+      "counties": 75,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Arkansas Department of Finance and Administration: Bingo and Raffle",
+          "url": "https://www.dfa.arkansas.gov/excise-tax/miscellaneous-tax/bingo-raffle",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        }
+      ],
+      "next": "Research organizer schedules (step 2) and start a starter list."
+    },
+    {
+      "code": "CA",
+      "name": "California",
+      "counties": 58,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "California bingo law (Penal Code section 326.5)",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=326.5",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        }
+      ],
+      "next": "Research organizer schedules (step 2) and start a starter list.",
+      "blocked_hosts": "California legislative code site turns away automated readers."
+    },
+    {
+      "code": "CO",
+      "name": "Colorado",
+      "counties": 64,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Colorado Secretary of State: Bingo and Raffles",
+          "url": "https://www.coloradosos.gov/pubs/bingo_raffles/bingoHome.html",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        }
+      ],
+      "next": "Add organizer schedules. Leads: the commercial bingo halls in the Denver area (Turn II, Bingo Oasis and others), each from its own site. Skip listings found only on recreation-registration sites."
+    },
+    {
+      "code": "CT",
+      "name": "Connecticut",
+      "counties": 8,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Connecticut Department of Consumer Protection: bingo, bazaar and raffle information",
+          "url": "https://portal.ct.gov/dcp/gaming-division/gaming/bingo-bazaar-and-raffle-information-for-organizations-and-municipal-officials",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        }
+      ],
+      "next": "Research organizer schedules (step 2) and start a starter list."
+    },
+    {
+      "code": "DE",
+      "name": "Delaware",
+      "counties": 3,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Delaware Board of Charitable Gaming",
+          "url": "https://dpr.delaware.gov/boards/gaming/",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        }
+      ],
+      "next": "Research organizer schedules (step 2) and start a starter list."
+    },
+    {
+      "code": "DC",
+      "name": "District of Columbia",
+      "counties": 1,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "DC Lottery: Charitable Games",
+          "url": "https://dclottery.com/charitable-games",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        },
+        {
+          "kind": "calendar",
+          "label": "DC Lottery charitable events calendar",
+          "url": "https://dclottery.com/events?type=8&month=all&year=all",
+          "status": "lead_only",
+          "checked_on": "2026-11-17",
+          "note": "Calendar of licensed charitable events; check it for recurring bingo."
+        }
+      ],
+      "next": "Research organizer schedules (step 2) and start a starter list."
+    },
+    {
+      "code": "FL",
+      "name": "Florida",
+      "counties": 67,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Florida law on bingo (section 849.0931)",
+          "url": "https://www.flsenate.gov/Laws/Statutes/2025/849.0931",
+          "status": "loaded",
+          "checked_on": "2026-11-15",
+          "note": "Who licenses bingo; used for the state page."
+        }
+      ],
+      "next": "Add organizer schedules in counties with none yet."
+    },
+    {
+      "code": "GA",
+      "name": "Georgia",
+      "counties": 159,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Georgia Secretary of State: Charity Bingo",
+          "url": "https://sos.ga.gov/how-to-guide/how-guide-charity-bingo",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        }
+      ],
+      "next": "Research organizer schedules (step 2) and start a starter list.",
+      "blocked_hosts": "Georgia Secretary of State pages turn away automated readers."
+    },
+    {
+      "code": "HI",
+      "name": "Hawaii",
+      "counties": 5,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Hawaii gambling law (Hawaii Revised Statutes 712-1220)",
+          "url": "https://data.capitol.hawaii.gov/hrscurrent/Vol14_Ch0701-0853/HRS0712/HRS_0712-1220.htm",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        }
+      ],
+      "next": "Research organizer schedules (step 2) and start a starter list."
+    },
+    {
+      "code": "ID",
+      "name": "Idaho",
+      "counties": 44,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Idaho Lottery: Charitable Gaming",
+          "url": "https://www.idaholottery.com/charitable-gaming",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        },
+        {
+          "kind": "lookup",
+          "label": "Idaho Lottery list of licensed organizations",
+          "url": "https://www.idaholottery.com/charitable-gaming/licensed-organizations",
+          "status": "not_usable",
+          "checked_on": "2026-11-23",
+          "note": "The search gives street, county and game type but no city or ZIP, and the city and ZIP boxes match exactly, so it would take one search per ZIP."
+        }
+      ],
+      "next": "Research organizer schedules (step 2) and start a starter list."
+    },
+    {
+      "code": "IL",
+      "name": "Illinois",
+      "counties": 102,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Illinois Department of Revenue: Bingo",
+          "url": "https://tax.illinois.gov/research/taxinformation/charitygaming/bingo.html",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        }
+      ],
+      "next": "Add organizer schedules in counties with none yet. Lead: Crestwood (ZIP 60418 is not in zips.json yet; add it before listing Biela Senior Center or Chicago South Elks #1596)."
+    },
+    {
+      "code": "IN",
+      "name": "Indiana",
+      "counties": 92,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Indiana Gaming Commission, Charity Gaming",
+          "url": "https://www.in.gov/igc/charity-gaming/",
+          "status": "loaded",
+          "checked_on": "2026-11-15",
+          "note": "Who licenses bingo; used for the state page."
+        },
+        {
+          "kind": "license_list",
+          "label": "Indiana Gaming Commission: Qualified Organizations with Current Licenses",
+          "url": "https://secure.in.gov/igc/charity-gaming/qualifiedorganizationswithcurrentlicenses",
+          "status": "loaded",
+          "checked_on": "2026-11-15",
+          "script": "manual: Qualified Organizations with Current Licenses page (docs/FINDBINGO.md)"
+        }
+      ],
+      "next": "Refresh from the state list; add organizer schedules for game days."
+    },
+    {
+      "code": "IA",
+      "name": "Iowa",
+      "counties": 99,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Iowa Department of Inspections, Appeals, and Licensing: Charitable Gambling",
+          "url": "https://dial.iowa.gov/licenses/gambling-amusement-devices/charitable-gambling",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        }
+      ],
+      "next": "Add organizer schedules in counties with none yet (Elks, Eagles and Legion posts outside the metro areas)."
+    },
+    {
+      "code": "KS",
+      "name": "Kansas",
+      "counties": 105,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Kansas Department of Revenue: Charitable Gaming",
+          "url": "https://www.ksrevenue.gov/bustaxtypesbingo.html",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        },
+        {
+          "kind": "license_list",
+          "label": "Kansas list of licensed bingo organizations (PDF)",
+          "url": "https://www.ksrevenue.gov/pdf/BingoOrganizations.pdf",
+          "status": "held_out",
+          "checked_on": "2026-11-23",
+          "script": "scripts/import_kansas_bingo.py",
+          "note": "The posted PDF dates from July 2022 and licenses run July to June. scripts/import_kansas_bingo.py is ready; load it once the list is confirmed current."
+        }
+      ],
+      "next": "Load the Kansas list once a current one is posted; meanwhile research organizer schedules."
+    },
+    {
+      "code": "KY",
+      "name": "Kentucky",
+      "counties": 120,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Kentucky Office of Charitable Gaming",
+          "url": "https://dcg.ky.gov/",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        }
+      ],
+      "next": "Add organizer schedules in counties with none yet."
+    },
+    {
+      "code": "LA",
+      "name": "Louisiana",
+      "counties": 64,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Louisiana Office of Charitable Gaming",
+          "url": "https://ocg.louisiana.gov/",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        },
+        {
+          "kind": "lookup",
+          "label": "Louisiana charitable gaming license search",
+          "url": "https://ocg.louisiana.gov/verify-license/",
+          "status": "lead_only",
+          "checked_on": "2026-11-17",
+          "note": "License lookup by name, not a list of games."
+        }
+      ],
+      "next": "Research organizer schedules (step 2) and start a starter list."
+    },
+    {
+      "code": "ME",
+      "name": "Maine",
+      "counties": 16,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Maine Gambling Control Unit: Charitable Gaming",
+          "url": "https://www.maine.gov/dps/gcu/charitable-gaming",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        },
+        {
+          "kind": "license_list",
+          "label": "Maine list of charitable gaming organizations (PDF)",
+          "url": "https://www.maine.gov/dps/sites/maine.gov.dps/files/inline-files/NPO%20-%20NCO%20list%201.16.2026_1.pdf",
+          "status": "not_usable",
+          "checked_on": "2026-11-23",
+          "note": "Organizations are authorized for bingo, raffles and games of chance together, so the list cannot say who holds bingo; many post office boxes."
+        }
+      ],
+      "next": "Research organizer schedules (step 2) and start a starter list."
+    },
+    {
+      "code": "MD",
+      "name": "Maryland",
+      "counties": 24,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Maryland law: local bingo rules (Criminal Law, Title 13)",
+          "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gcr&section=13-2105&enactments=false",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        }
+      ],
+      "next": "Research organizer schedules (step 2) and start a starter list."
+    },
+    {
+      "code": "MA",
+      "name": "Massachusetts",
+      "counties": 14,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Massachusetts: questions about nonprofit gaming events",
+          "url": "https://www.mass.gov/service-details/frequently-asked-questions-about-nonprofit-gaming-events",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        }
+      ],
+      "next": "Research organizer schedules (step 2) and start a starter list."
+    },
+    {
+      "code": "MI",
+      "name": "Michigan",
+      "counties": 83,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Michigan Charitable Gaming Division",
+          "url": "https://www.michigan.gov/cg",
+          "status": "loaded",
+          "checked_on": "2026-11-15",
+          "note": "Who licenses bingo; used for the state page."
+        },
+        {
+          "kind": "times_list",
+          "label": "Michigan Charitable Gaming Division: Find a Weekly Bingo",
+          "url": "https://www.michigan.gov/cg/panel-links-and-change-forms/links/find-a-weekly-bingo",
+          "status": "loaded",
+          "checked_on": "2026-11-15",
+          "script": "manual: read the Find a Weekly Bingo lookup county by county (docs/FINDBINGO.md)"
+        }
+      ],
+      "next": "Refresh from the state list on schedule."
+    },
+    {
+      "code": "MN",
+      "name": "Minnesota",
+      "counties": 87,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Minnesota Gambling Control Board",
+          "url": "https://mn.gov/gcb/",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        }
+      ],
+      "next": "Add organizer schedules in counties with none yet. Leads: Rochester Legion Post 92, Fergus Falls VFW 612. Minnesota's Gambling Control Board publishes licensed sites but not game days.",
+      "blocked_hosts": "mn.gov/gcb turns away automated readers; read it in an ordinary browser."
+    },
+    {
+      "code": "MS",
+      "name": "Mississippi",
+      "counties": 82,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Mississippi Gaming Commission: Charitable Gaming",
+          "url": "https://www.msgamingcommission.com/charitable_gaming",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        },
+        {
+          "kind": "license_list",
+          "label": "Mississippi map of charitable gaming licensees",
+          "url": "https://app.mapline.com/map/map_707213b0/K3l2SldYemdVcnJSYkF4c0RUWWE2YzRubkZmR2IrRnNWYjJqel",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "script": "scripts/import_mississippi_bingo.py"
+        }
+      ],
+      "next": "Refresh from the state list; add organizer schedules for game days."
+    },
+    {
+      "code": "MO",
+      "name": "Missouri",
+      "counties": 115,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Missouri Gaming Commission: Charitable Games Division",
+          "url": "https://www.mgc.dps.mo.gov/FAQ_SiteLinks/div_CharGames.html",
+          "status": "loaded",
+          "checked_on": "2026-11-19",
+          "note": "Who licenses bingo; used for the state page."
+        },
+        {
+          "kind": "times_list",
+          "label": "Missouri Gaming Commission: Find Local Bingo Games",
+          "url": "https://www.mgc.dps.mo.gov/BingoWebLocal/frmWebFindLocalBingoGame.aspx",
+          "status": "loaded",
+          "checked_on": "2026-11-19",
+          "script": "scripts/read_missouri_finder.py + scripts/import_missouri_bingo.py"
+        }
+      ],
+      "next": "Refresh from the state list on schedule."
+    },
+    {
+      "code": "MT",
+      "name": "Montana",
+      "counties": 56,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Montana Department of Justice: Gambling Control Division",
+          "url": "https://dojmt.gov/gaming/",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        },
+        {
+          "kind": "license_list",
+          "label": "Montana list of places offering live keno or bingo (PDF)",
+          "url": "https://dojmt.gov/wp-content/ftp/gambling/mtR35.pdf",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "script": "scripts/import_montana_bingo.py"
+        }
+      ],
+      "next": "Refresh from the state list; add organizer schedules for game days.",
+      "blocked_hosts": "Montana Department of Justice pages turn away automated readers."
+    },
+    {
+      "code": "NE",
+      "name": "Nebraska",
+      "counties": 93,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Nebraska Department of Revenue: Charitable Gaming, Bingo",
+          "url": "https://revenue.nebraska.gov/gaming/charitable-gaming-bingo",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        }
+      ],
+      "next": "Research organizer schedules (step 2) and start a starter list."
+    },
+    {
+      "code": "NV",
+      "name": "Nevada",
+      "counties": 17,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Nevada Gaming Control Board",
+          "url": "https://gaming.nv.gov/",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        }
+      ],
+      "next": "Research organizer schedules (step 2) and start a starter list."
+    },
+    {
+      "code": "NH",
+      "name": "New Hampshire",
+      "counties": 10,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "New Hampshire Lottery: Charitable Gaming",
+          "url": "https://www.nhlottery.com/Charitable-Gaming",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        }
+      ],
+      "next": "Add organizer schedules. Lead: the NH Lottery's bingo hall locator (pick a town from its list) may give halls and days for a state-schedule list; check it before more page-by-page work."
+    },
+    {
+      "code": "NJ",
+      "name": "New Jersey",
+      "counties": 21,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "New Jersey Legalized Games of Chance Control Commission",
+          "url": "https://www.njconsumeraffairs.gov/lgccc/",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        }
+      ],
+      "next": "Research organizer schedules (step 2) and start a starter list.",
+      "blocked_hosts": "New Jersey Consumer Affairs pages turn away automated readers."
+    },
+    {
+      "code": "NM",
+      "name": "New Mexico",
+      "counties": 33,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "New Mexico Gaming Control Board",
+          "url": "https://www.gcb.nm.gov/",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        },
+        {
+          "kind": "license_list",
+          "label": "New Mexico map of bingo, raffle and pull-tab locations",
+          "url": "https://www.gcb.nm.gov/bingo-raffle-pull-tab-map-locations-and-info/",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "script": "scripts/import_new_mexico_bingo.py"
+        }
+      ],
+      "next": "Refresh from the state list; add organizer schedules for game days."
+    },
+    {
+      "code": "NY",
+      "name": "New York",
+      "counties": 62,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "New York State Gaming Commission: Charitable Gaming",
+          "url": "https://gaming.ny.gov/charitable-gaming",
+          "status": "loaded",
+          "checked_on": "2026-11-16",
+          "note": "Who licenses bingo; used for the state page."
+        }
+      ],
+      "next": "Add organizer schedules in counties with none yet."
+    },
+    {
+      "code": "NC",
+      "name": "North Carolina",
+      "counties": 100,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "North Carolina Alcohol Law Enforcement: Bingo",
+          "url": "https://www.ncdps.gov/our-organization/law-enforcement/alcohol-law-enforcement/bingo",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        }
+      ],
+      "next": "Research organizer schedules (step 2) and start a starter list."
+    },
+    {
+      "code": "ND",
+      "name": "North Dakota",
+      "counties": 53,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "North Dakota Attorney General: Gaming",
+          "url": "https://attorneygeneral.nd.gov/licensing-and-gaming/gaming/",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        },
+        {
+          "kind": "license_list",
+          "label": "North Dakota lists of licensed gaming organizations and sites",
+          "url": "https://attorneygeneral.nd.gov/gaming-licensees/",
+          "status": "not_usable",
+          "checked_on": "2026-11-19",
+          "note": "The gaming sites list is mostly bars selling pull-tabs and has no column for the games played."
+        }
+      ],
+      "next": "Research organizer schedules (step 2) and start a starter list."
+    },
+    {
+      "code": "OH",
+      "name": "Ohio",
+      "counties": 88,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Ohio Attorney General, charitable bingo",
+          "url": "https://charitable.ohioago.gov/Charitable-Bingo/View-Authorized-Bingo-Locations",
+          "status": "loaded",
+          "checked_on": "2026-11-15",
+          "note": "Who licenses bingo; used for the state page."
+        },
+        {
+          "kind": "license_list",
+          "label": "Ohio Attorney General: authorized bingo locations",
+          "url": "https://charitable.ohioago.gov/Charitable-Bingo/View-Authorized-Bingo-Locations",
+          "status": "loaded",
+          "checked_on": "2026-11-15",
+          "script": "scripts/extract_bingo_report.py (Ohio AG report) and the Ohio finder (scripts/bingo_site.py)"
+        }
+      ],
+      "next": "Ohio finder: weekly freshness check (scripts/check_schedule_freshness.py)."
+    },
+    {
+      "code": "OK",
+      "name": "Oklahoma",
+      "counties": 77,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Oklahoma ABLE Commission: Charity Games License Guide",
+          "url": "https://oklahoma.gov/able-commission/licensing/license-and-permit-guide/charity-games-license-guide.html",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        }
+      ],
+      "next": "Research organizer schedules (step 2) and start a starter list."
+    },
+    {
+      "code": "OR",
+      "name": "Oregon",
+      "counties": 36,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Oregon Department of Justice: Charitable Gaming",
+          "url": "https://www.doj.state.or.us/charitable-activities/charitable-gaming/",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        }
+      ],
+      "next": "Add organizer schedules in counties with none yet (Elks and Eagles lodges east of the Cascades)."
+    },
+    {
+      "code": "PA",
+      "name": "Pennsylvania",
+      "counties": 67,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "How county bingo licenses work (Cumberland County example)",
+          "url": "https://cumberlandcountypa.gov/4098/Bingo",
+          "status": "loaded",
+          "checked_on": "2026-11-16",
+          "note": "Who licenses bingo; used for the state page."
+        }
+      ],
+      "next": "Add organizer schedules in counties with none yet."
+    },
+    {
+      "code": "RI",
+      "name": "Rhode Island",
+      "counties": 5,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Rhode Island State Police: Charitable Gaming Unit",
+          "url": "https://risp.ri.gov/cgu",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        }
+      ],
+      "next": "Research organizer schedules (step 2) and start a starter list.",
+      "blocked_hosts": "Rhode Island State Police pages turn away automated readers."
+    },
+    {
+      "code": "SC",
+      "name": "South Carolina",
+      "counties": 46,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "South Carolina Department of Revenue: Bingo",
+          "url": "https://dor.sc.gov/tax-index/bingo",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        }
+      ],
+      "next": "Research organizer schedules (step 2) and start a starter list."
+    },
+    {
+      "code": "SD",
+      "name": "South Dakota",
+      "counties": 66,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "South Dakota law on bingo (SDCL 22-25-25)",
+          "url": "https://sdlegislature.gov/Statutes/22-25-25",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        }
+      ],
+      "next": "Research organizer schedules (step 2) and start a starter list."
+    },
+    {
+      "code": "TN",
+      "name": "Tennessee",
+      "counties": 95,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Tennessee Secretary of State: Charitable Gaming Event FAQs",
+          "url": "https://sos.tn.gov/charities/guides/charitable-gaming-event-faqs",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        },
+        {
+          "kind": "license_list",
+          "label": "Tennessee search for gaming events",
+          "url": "https://tncab.tnsos.gov/portal/charity-event-search",
+          "status": "lead_only",
+          "checked_on": "2026-11-17",
+          "note": "Annual nonprofit events only; see the state entry."
+        }
+      ],
+      "next": "Research organizer schedules (step 2) and start a starter list."
+    },
+    {
+      "code": "TX",
+      "name": "Texas",
+      "counties": 254,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Texas charitable bingo (txbingo.org)",
+          "url": "https://www.txbingo.org/",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        },
+        {
+          "kind": "times_list",
+          "label": "Texas Bingo Hall Locator",
+          "url": "https://bsc.txbingo.org/bsp/faces/bspBingoHallLocator.jsf",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "script": "scripts/read_texas_locator.py + scripts/import_texas_bingo.py"
+        }
+      ],
+      "next": "Refresh from the state list on schedule."
+    },
+    {
+      "code": "UT",
+      "name": "Utah",
+      "counties": 29,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Utah Code: gambling (section 76-9-1402)",
+          "url": "https://le.utah.gov/xcode/Title76/Chapter9/C76-9-S1402_2025050720250507.pdf",
+          "status": "loaded",
+          "checked_on": "2026-11-16",
+          "note": "Who licenses bingo; used for the state page."
+        }
+      ],
+      "next": "Add organizer schedules in counties with none yet."
+    },
+    {
+      "code": "VT",
+      "name": "Vermont",
+      "counties": 14,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Vermont law on nonprofit games of chance (13 V.S.A. § 2143)",
+          "url": "https://legislature.vermont.gov/statutes/section/13/051/02143",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        }
+      ],
+      "next": "Research organizer schedules (step 2) and start a starter list."
+    },
+    {
+      "code": "VA",
+      "name": "Virginia",
+      "counties": 133,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Virginia Office of Charitable and Regulatory Programs: Charitable Gaming",
+          "url": "https://www.vdacs.virginia.gov/food-charitable-gaming.shtml",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        },
+        {
+          "kind": "times_list",
+          "label": "Virginia directory of bingo sessions (PDF)",
+          "url": "https://www.vdacs.virginia.gov/pdf/bingo_events.pdf",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "script": "scripts/import_virginia_bingo.py"
+        }
+      ],
+      "next": "Refresh from the state list on schedule."
+    },
+    {
+      "code": "WA",
+      "name": "Washington",
+      "counties": 39,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Washington State Gambling Commission",
+          "url": "https://www.wsgc.wa.gov/",
+          "status": "loaded",
+          "checked_on": "2026-11-23",
+          "note": "Who licenses bingo; used for the state page."
+        },
+        {
+          "kind": "lookup",
+          "label": "Washington licensee lookup",
+          "url": "https://www.wsgc.wa.gov/licensing/look-organizational-or-individual-licensee",
+          "status": "lead_only",
+          "checked_on": "2026-11-23",
+          "note": "Licensee lookup (License Type Bingo, by city or county, CSV export) names licensed groups but not game days: a lead list for organizer pages."
+        }
+      ],
+      "next": "Add organizer schedules in counties with none yet."
+    },
+    {
+      "code": "WV",
+      "name": "West Virginia",
+      "counties": 55,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "West Virginia Tax Division: bingo and raffle licenses",
+          "url": "https://tax.wv.gov/Business/BusinessRegistration/BingoAndRaffle/Pages/BusinessRegistrationBingoAndRaffle.aspx",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        }
+      ],
+      "next": "Add organizer schedules in counties with none yet."
+    },
+    {
+      "code": "WI",
+      "name": "Wisconsin",
+      "counties": 72,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Wisconsin Office of Charitable Gaming: Bingo Licenses",
+          "url": "https://doa.wi.gov/Pages/LicensesHearings/BingoLicense.aspx",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        },
+        {
+          "kind": "lookup",
+          "label": "Wisconsin Department of Administration: Active Bingo Occasion Search",
+          "url": "https://charitable.wi.gov/bingooccasion/search",
+          "status": "to_check",
+          "checked_on": "2026-11-23",
+          "note": "Lists every licensed occasion with group, place, street address, date and start time. Readable in a browser; the shell proxy refuses the host. Write an importer that turns dated occasions into weekly patterns (Missouri-style labels) and load it as a state_schedule list."
+        }
+      ],
+      "next": "Load the state's bingo occasion search as a state_schedule list (see its source entry) before any page-by-page work.",
+      "blocked_hosts": [
+        "charitable.wi.gov"
+      ]
+    },
+    {
+      "code": "WY",
+      "name": "Wyoming",
+      "counties": 23,
+      "sources": [
+        {
+          "kind": "regulator",
+          "label": "Wyoming Gaming Commission: Charitable Gaming",
+          "url": "https://gaming.wyo.gov/charitable-gaming",
+          "status": "loaded",
+          "checked_on": "2026-11-17",
+          "note": "Who licenses bingo; used for the state page."
+        }
+      ],
+      "next": "Research organizer schedules (step 2) and start a starter list."
+    }
+  ]
+}

@@ -20,7 +20,8 @@ STATES = {'AL': 'Alabama', 'AK': 'Alaska', 'AZ': 'Arizona', 'AR': 'Arkansas', 'C
 ORDER = list(STATES)
 # One file of organizer-published schedules per starter state (coverage "starter").
 STARTER_FILES = {'PA': 'pennsylvania-bingo.json', 'NY': 'new-york-bingo.json', 'FL': 'florida-bingo.json', 'UT': 'utah-bingo.json',
-                 'KY': 'kentucky-bingo.json', 'WV': 'west-virginia-bingo.json', 'WA': 'washington-bingo.json'}
+                 'KY': 'kentucky-bingo.json', 'WV': 'west-virginia-bingo.json', 'WA': 'washington-bingo.json',
+                 'MN': 'minnesota-bingo.json', 'IL': 'illinois-bingo.json', 'IA': 'iowa-bingo.json', 'OR': 'oregon-bingo.json', 'CO': 'colorado-bingo.json', 'AZ': 'arizona-bingo.json', 'NH': 'new-hampshire-bingo.json'}
 # State lists that give each game's day and hours: Michigan's weekly bingo licenses, the Texas hall locator,
 # Virginia's directory of sessions and Missouri's Find Local Bingo Games page.
 TIMES_FILES = {'MI': 'michigan-weekly-bingo.json', 'TX': 'texas-bingo-halls.json', 'VA': 'virginia-bingo-sessions.json',
