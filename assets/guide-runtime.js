@@ -47,6 +47,7 @@ function setState(state,initial=false){
  document.querySelectorAll('.footer-links a').forEach(a=>{if(a.textContent==='County contact data')a.href=config.files.offices;if(a.textContent==='Resource data')a.href=config.files.resources});
  document.querySelectorAll('#urgent-help a[href^="?view="],#urgent-help a[data-view]').forEach(a=>{a.dataset.view??=new URL(a.href,location.href).searchParams.get('view');const u=new URL(STATE_PAGES[state]||'./',location.href);u.searchParams.set('view',a.dataset.view);a.href=u.href});
  bindStateControls();
+ document.querySelectorAll('.state-tiles a').forEach(a=>a.dataset.state===state?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'));
  document.documentElement.dataset.edition=state;
  if(!initial){render();renderOfficeList()}
 }

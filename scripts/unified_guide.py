@@ -21,6 +21,31 @@ def state_list(states):
 def count_words(n):
     return ['zero','one','two','three','four','five','six','seven','eight','nine','ten'][n] if n<=10 else str(n)
 
+# Where each state sits on the tile map: (column, row) on an 11 by 8 grid. Equal tiles keep
+# small states (Rhode Island, Delaware, DC) as easy to tap as large ones.
+TILES={'AK':(0,0),'ME':(10,0),'WI':(5,1),'VT':(9,1),'NH':(10,1),
+ 'WA':(0,2),'ID':(1,2),'MT':(2,2),'ND':(3,2),'MN':(4,2),'IL':(5,2),'MI':(6,2),'NY':(8,2),'MA':(9,2),
+ 'OR':(0,3),'NV':(1,3),'WY':(2,3),'SD':(3,3),'IA':(4,3),'IN':(5,3),'OH':(6,3),'PA':(7,3),'NJ':(8,3),'CT':(9,3),'RI':(10,3),
+ 'CA':(0,4),'UT':(1,4),'CO':(2,4),'NE':(3,4),'MO':(4,4),'KY':(5,4),'WV':(6,4),'VA':(7,4),'MD':(8,4),'DE':(9,4),
+ 'AZ':(1,5),'NM':(2,5),'KS':(3,5),'AR':(4,5),'TN':(5,5),'NC':(6,5),'SC':(7,5),'DC':(8,5),
+ 'OK':(3,6),'LA':(4,6),'MS':(5,6),'AL':(6,6),'GA':(7,6),
+ 'HI':(0,7),'TX':(3,7),'FL':(8,7)}
+
+def place_map(states, current, world_count, open_map):
+    """The guide's starting point: every state as a link on a tile map, then the world pages.
+    Plain links, so it works before the page script loads and with the keyboard."""
+    tiles=[]
+    for s in sorted(states,key=lambda s:(TILES[s['code']][1],TILES[s['code']][0])):
+        col,row=TILES[s['code']]
+        href='./' if s['page']=='index.html' else s['page']
+        cur=' aria-current="page"' if s['code']==current else ''
+        tiles.append('<li style="grid-column:'+str(col+1)+';grid-row:'+str(row+1)+'"><a href="'+href+'" data-state="'+s['code']+'"'+cur+'><abbr title="'+escape(s['name'])+'" aria-hidden="true">'+s['code']+'</abbr><span class="sr-only">'+escape(s['name'])+'</span></a></li>')
+    world='<p class="world-start"><a href="world/"><strong>Outside the United States</strong><span>Emergency numbers and veterans contacts in '+str(world_count)+' countries, and VA help for U.S. veterans abroad</span></a></p>'
+    body='<ul class="state-tiles" aria-label="States">'+''.join(tiles)+'</ul>'+world
+    if open_map:
+        return '<section id="place-start" class="place-start" aria-labelledby="place-title"><h2 id="place-title">Where do you need help?</h2><p>Choose a state on the map, or pick it from the list below.</p>'+body+'</section>'
+    return '<details id="place-start" class="place-start"><summary>Show the map of states and countries</summary>'+body+'</details>'
+
 def unified_outputs(root, editions, states):
     names={s['code']:s['name'] for s in states}
     pages={s['code']:s['page'] for s in states}
@@ -112,9 +137,22 @@ def unified_outputs(root, editions, states):
     result['assets/guide.js']=guide
     base=states[0]['code']
     unified=unified.replace('</select></nav>','</select><p id="edition-status" class="small" role="status" aria-live="polite"></p></nav>',1)
+    # A visitor's first screen: crisis numbers, then where they need help (map, list, other countries),
+    # then their county. Everything about sources and coverage comes after.
+    urgent=section(unified,'urgent-help')
+    picker=re.search(r'<nav class="edition-picker".*?</nav>',unified,re.S).group()
+    coverage='<details id="edition-coverage" class="edition-coverage"><summary>Coverage and source checks</summary><div id="coverage-detail"></div></details>'
+    for part in (urgent,picker,coverage):
+        assert unified.count(part)==1,'opening part'
+        unified=unified.replace(part,'')
+    assert unified.count('<main>')==1,'main'
+    unified=unified.replace('<main>','<main>'+urgent+'<!--place-map-->'+picker+coverage,1)
+    world_count=len(json.loads((root/'data/world/countries.json').read_text())['countries'])
+    def with_map(text,state,open_map):
+        return text.replace('<!--place-map-->',place_map(states,state,world_count,open_map),1)
     def scripts(state):
         return '\n<script src="'+files[state]+'"></script><script src="'+versioned('assets/guide.js',guide)+'"></script></body></html>\n'
-    result['index.html']=unified+scripts(base)
+    result['index.html']=with_map(unified,base,True)+scripts(base)
     # Every other state gets the same page at its own address, so search engines can list it on its own:
     # its own title, description and canonical, with that state's records preloaded. Saved ?state= links
     # on the root keep working; the guide moves them to the state's page (assets/guide-runtime.js).
@@ -136,5 +174,5 @@ def unified_outputs(root, editions, states):
         text=meta(text,r'(<meta property="og:url" content=")[^"]*(">)',url)
         for key in ['og:title','twitter:title']:text=meta(text,r'(<meta (?:property|name)="'+key+r'" content=")[^"]*(">)',social)
         for key in ['og:description','twitter:description']:text=meta(text,r'(<meta (?:property|name)="'+key+r'" content=")[^"]*(">)',desc)
-        result[page]=text+scripts(state)
+        result[page]=with_map(text,state,False)+scripts(state)
     return result
