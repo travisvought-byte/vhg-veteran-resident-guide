@@ -33,6 +33,8 @@ jobs:
         run: python3 tests/world.py
       - name: Check the bad paper section
         run: python3 tests/bad_paper.py
+      - name: Check the veterans in the justice system page
+        run: python3 tests/justice.py
       - name: Check the resource-mining pipeline and its generated reports
         run: python3 tests/mining.py
       - name: Bingo pipeline (source registry, normalized CSV, merge checks)

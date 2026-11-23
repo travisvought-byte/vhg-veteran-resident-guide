@@ -104,7 +104,7 @@ assert(/<button type="button" class="jump jump-toggle" id="jump-toggle" aria-exp
 assert.equal(toggle.hidden,false,'the page script shows the button');
 assert.equal(toggle.nextElementSibling,more,'the folded links follow their button');
 assert.deepEqual([...d.querySelectorAll('header .brand-copy > a.jump')].map(a=>a.textContent),['Find a county veterans office','Find resources','Bingo & Senior Centers','I’m helping someone'],'links that stay in view');
-assert.equal(more.querySelectorAll('a.jump').length,8,'folded links');
+assert.equal(more.querySelectorAll('a.jump').length,9,'folded links');
 toggle.click();assert.equal(toggle.getAttribute('aria-expanded'),'true');assert.equal(toggle.textContent,'Fewer guides');
 toggle.click();assert.equal(toggle.getAttribute('aria-expanded'),'false');assert.equal(toggle.textContent,'More guides');
 const css=read('assets/unified.css');

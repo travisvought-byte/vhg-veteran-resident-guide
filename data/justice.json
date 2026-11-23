@@ -1,0 +1,462 @@
+{
+ "note": "Veterans in the justice system (guide.vethomeguard.org/justice.html). Every item names the official page or rule it was read on and the date it was checked. Edit here, then run python3 scripts/build_public.py. Plain text only: the builder escapes everything.",
+ "checked_on": "2026-11-23",
+ "start": [
+  "If a veteran has been arrested, ask the jail, the court or the defense lawyer to contact the VA Veterans Justice Outreach specialist for that area. In Ohio, every jail and prison must now check whether each person booked is a veteran.",
+  "If VA pay is cut because a veteran is in prison, the spouse, children or dependent parents can ask VA for part of the money held back. VA does not send it on its own: the family has to apply.",
+  "If a veteran is coming home, contact the VA re-entry specialist before release, and tell VA the release date as soon as you know it."
+ ],
+ "sections": [
+  {
+   "id": "arrested",
+   "title": "Arrested, in jail or going to court",
+   "items": [
+    {
+     "id": "vjo",
+     "title": "VA Veterans Justice Outreach (VJO)",
+     "text": [
+      "VA has Veterans Justice Outreach specialists across the country, listed by VA medical center. Their job is to find veterans in jails and courts and connect them, as early as possible, to VA health care, especially mental health and substance use treatment.",
+      "They work with police, jails and courts, and they see veterans in jail to assess what VA care they need. They are not lawyers: VA's Legal Services for Veterans page points to free legal help."
+     ],
+     "ask": "Ask the jail, the public defender or the court: \"Has the VA Veterans Justice Outreach specialist been told this person is a veteran?\" Family members can email the VJO specialist for the area directly.",
+     "links": [
+      {
+       "label": "VJO specialists, by state and VA medical center",
+       "url": "https://department.va.gov/homeless/veterans-justice-programs/veterans-justice-outreach/vjo-contacts/"
+      },
+      {
+       "label": "About Veterans Justice Outreach",
+       "url": "https://department.va.gov/homeless/veterans-justice-programs/veterans-justice-outreach/"
+      },
+      {
+       "label": "VA: Legal Services for Veterans",
+       "url": "https://department.va.gov/homeless/legal-services-for-veterans/"
+      }
+     ],
+     "sources": [
+      {
+       "title": "VA Homeless Programs: Veterans Justice Outreach Program",
+       "url": "https://department.va.gov/homeless/veterans-justice-programs/veterans-justice-outreach/"
+      },
+      {
+       "title": "VBA: Benefits for incarcerated veterans",
+       "url": "https://www.benefits.va.gov/persona/veteran-incarcerated.asp"
+      }
+     ]
+    },
+    {
+     "id": "courts",
+     "title": "Veterans treatment courts",
+     "text": [
+      "A veterans treatment court (in Ohio, a certified veterans treatment specialized docket) is a court program that pairs court supervision with treatment, often through VA. VA's Veterans Justice Outreach specialists work with these courts.",
+      "Each court sets its own rules on who can take part and which charges qualify. In Ohio, a certified docket uses a written participation agreement, a treatment team and regular status review hearings. Talk it over with the defense lawyer before agreeing to anything."
+     ],
+     "ask": "Ask the defense lawyer: \"Is there a veterans treatment court or docket in this county, and could this case go there?\"",
+     "links": [
+      {
+       "label": "Ohio's certified specialized dockets: list (Supreme Court of Ohio)",
+       "url": "https://www.supremecourt.ohio.gov/SpecializedDocketsList/"
+      },
+      {
+       "label": "Ohio Specialized Dockets Section, with the map",
+       "url": "https://www.supremecourt.ohio.gov/courts/services-to-courts/specialized-docket-section/"
+      },
+      {
+       "label": "VA fact sheet on veterans treatment courts (December 2025)",
+       "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/04/Veterans-Treatment-Court-Inventory-Update-Fact-Sheet-December-2025.pdf"
+      }
+     ],
+     "sources": [
+      {
+       "title": "Supreme Court of Ohio: Specialized Dockets Section",
+       "url": "https://www.supremecourt.ohio.gov/courts/services-to-courts/specialized-docket-section/"
+      },
+      {
+       "title": "Supreme Court of Ohio: Application for Certification as a Specialized Docket (Sup.R. 36.20 to 36.32)",
+       "url": "https://www.supremecourt.ohio.gov/docs/JCS/specDockets/certification/CertificationSpecializedDocket2025.pdf"
+      },
+      {
+       "title": "VA Homeless Programs: Veterans Justice Outreach Program",
+       "url": "https://department.va.gov/homeless/veterans-justice-programs/veterans-justice-outreach/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "prison",
+   "title": "In prison: plan for coming home",
+   "items": [
+    {
+     "id": "hcrv",
+     "title": "Health Care for Re-entry Veterans (HCRV)",
+     "text": [
+      "HCRV specialists reach veterans in prison before release. They do an assessment before release, make referrals to medical, mental health and social services (including job services), and give short-term case management after release.",
+      "The goal is that nobody leaves prison with nowhere to go. While someone is in prison, VA does not provide medical care that the prison itself provides."
+     ],
+     "ask": "Well before the release date, write to the HCRV specialist for the state, or ask the prison case manager to.",
+     "links": [
+      {
+       "label": "HCRV specialists, by state",
+       "url": "https://department.va.gov/homeless/veterans-justice-programs/hcrv/hcrv-contacts-2/"
+      },
+      {
+       "label": "About Health Care for Re-entry Veterans",
+       "url": "https://department.va.gov/homeless/veterans-justice-programs/hcrv/"
+      }
+     ],
+     "sources": [
+      {
+       "title": "VA Homeless Programs: Health Care for Re-entry Veterans",
+       "url": "https://department.va.gov/homeless/veterans-justice-programs/hcrv/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "va-pay",
+   "title": "What jail or prison does to VA pay",
+   "items": [
+    {
+     "id": "compensation",
+     "title": "Disability compensation",
+     "text": [
+      "After a felony conviction, VA disability compensation is cut starting on the 61st day in prison. A veteran rated 20 percent or more is paid at the 10 percent rate. A veteran rated 10 percent gets half of the 10 percent rate.",
+      "The cut does not apply while the veteran is on work release, in a halfway house (a residential re-entry center) or under community control. A rating increase granted while the veteran is in prison may also be held back.",
+      "If the conviction is overturned on appeal, VA pays back what it held (less anything paid to family). Tell VA about the incarceration: if VA learns of it late, the overpayment is taken back from future payments."
+     ],
+     "sources": [
+      {
+       "title": "38 CFR 3.665, incarcerated beneficiaries: compensation (eCFR)",
+       "url": "https://www.ecfr.gov/current/title-38/section-3.665"
+      },
+      {
+       "title": "VBA: Benefits for incarcerated veterans",
+       "url": "https://www.benefits.va.gov/persona/veteran-incarcerated.asp"
+      }
+     ]
+    },
+    {
+     "id": "pension",
+     "title": "Veterans Pension",
+     "text": [
+      "VA pension stops on the 61st day in prison after a conviction for a felony or a misdemeanor. It can start again after release if the veteran still qualifies. A spouse or child may be able to receive pension while the veteran is in prison, depending on their own income."
+     ],
+     "sources": [
+      {
+       "title": "38 CFR 3.666, incarcerated beneficiaries: pension (eCFR)",
+       "url": "https://www.ecfr.gov/current/title-38/section-3.666"
+      },
+      {
+       "title": "VBA: Benefits for incarcerated veterans",
+       "url": "https://www.benefits.va.gov/persona/veteran-incarcerated.asp"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "family",
+   "title": "For the family: claim the money VA holds back",
+   "items": [
+    {
+     "id": "apportionment",
+     "title": "Apply for an apportionment",
+     "text": [
+      "All or part of the compensation VA does not pay to a veteran in prison can go to the veteran's spouse, children or dependent parents instead. This is called an apportionment. Many families never ask for it, and VA does not start it on its own: the family member must file a claim.",
+      "VA decides how much from each person's need: income, living costs, how much is available and any special needs.",
+      "Apply soon. If VA receives the claim (or an intent to file) within one year after VA notified the veteran of the cut, the apportionment can be paid back to the date the cut began. After that, it starts from the date VA gets the claim.",
+      "The apportionment stops when the veteran is released, including release to a halfway house or work release. It cannot be paid to a family member who is in prison for a felony."
+     ],
+     "ask": "Use VA Form 21-0788, Information Regarding Apportionment of Beneficiary's Award, or apply online from the same page. An accredited Veterans Service Organization representative helps with VA claims for free, and your county veterans service office is a free place to start.",
+     "links": [
+      {
+       "label": "VA Form 21-0788: apply for an apportionment",
+       "url": "https://www.va.gov/find-forms/about-form-21-0788/"
+      },
+      {
+       "label": "Find a free VA-accredited representative",
+       "url": "https://www.va.gov/get-help-from-accredited-representative/"
+      }
+     ],
+     "sources": [
+      {
+       "title": "38 CFR 3.665(e) to (h), apportionment (eCFR)",
+       "url": "https://www.ecfr.gov/current/title-38/section-3.665"
+      },
+      {
+       "title": "VBA: Benefits for incarcerated veterans (\"not granted automatically\")",
+       "url": "https://www.benefits.va.gov/persona/veteran-incarcerated.asp"
+      },
+      {
+       "title": "VA: About VA Form 21-0788",
+       "url": "https://www.va.gov/find-forms/about-form-21-0788/"
+      },
+      {
+       "title": "VA: Accredited representative FAQs (VSO services are always free)",
+       "url": "https://www.va.gov/resources/va-accredited-representative-faqs/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "coming-home",
+   "title": "Coming home",
+   "items": [
+    {
+     "id": "restore",
+     "title": "Get VA pay started again",
+     "text": [
+      "Tell VA the date of release. If VA hears within one year after release, full payments start again from the release date. If VA hears later, they start from the date VA is told.",
+      "Release counts from the day the veteran goes to work release, a halfway house or parole, or finishes the sentence. VA may look at the rating again based on the disability at that time."
+     ],
+     "sources": [
+      {
+       "title": "38 CFR 3.665(b) and (i) (eCFR)",
+       "url": "https://www.ecfr.gov/current/title-38/section-3.665"
+      },
+      {
+       "title": "38 CFR 3.666(c) (eCFR)",
+       "url": "https://www.ecfr.gov/current/title-38/section-3.666"
+      },
+      {
+       "title": "VBA: Benefits for incarcerated veterans",
+       "url": "https://www.benefits.va.gov/persona/veteran-incarcerated.asp"
+      }
+     ]
+    },
+    {
+     "id": "papers",
+     "title": "DD-214 and ID",
+     "text": [
+      "Veterans and next of kin can get a free copy of the DD-214 from the National Archives, online with eVetRecs (it needs an identity-verified ID.me account) or on Standard Form 180 by mail or fax. If the online route will not work, the paper form does the same job.",
+      "If you are applying for VA benefits, you do not need the DD-214 first: VA requests it for you when it gets the application.",
+      "In Ohio, the state prison system must try to verify each person's identity before release and send a state ID card application to the BMV for anyone without a current ID or license."
+     ],
+     "links": [
+      {
+       "label": "Request military service records (National Archives)",
+       "url": "https://www.archives.gov/veterans/military-service-records"
+      },
+      {
+       "label": "VA: how to get your DD-214",
+       "url": "https://www.va.gov/records/get-military-service-records/"
+      }
+     ],
+     "sources": [
+      {
+       "title": "National Archives: Request Military Service Records",
+       "url": "https://www.archives.gov/veterans/military-service-records"
+      },
+      {
+       "title": "VA: Request your military service records",
+       "url": "https://www.va.gov/records/get-military-service-records/"
+      },
+      {
+       "title": "Ohio Revised Code 5120.59",
+       "url": "https://codes.ohio.gov/ohio-revised-code/section-5120.59"
+      }
+     ]
+    },
+    {
+     "id": "housing",
+     "title": "A place to live",
+     "text": [
+      "Supportive Services for Veteran Families (SSVF) helps very low-income veteran families who are homeless or about to be. That includes a veteran leaving a jail or other institution after 90 days or less who was homeless before going in, and any veteran sleeping in a shelter or outside after release.",
+      "HUD-VASH pairs a housing voucher with a VA case manager for homeless veterans. VA decides who qualifies. The local housing agency must accept VA's referral and may not turn the family down for a criminal record, with one exception: lifetime registration on a state sex offender registry.",
+      "Before release, ask the HCRV specialist about both. After release, call the National Call Center for Homeless Veterans, any hour."
+     ],
+     "phone": {
+      "display": "877-424-3838",
+      "tel": "+18774243838",
+      "label": "National Call Center for Homeless Veterans, 24/7"
+     },
+     "links": [
+      {
+       "label": "SSVF (VA)",
+       "url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/"
+      },
+      {
+       "label": "HUD-VASH (VA)",
+       "url": "https://department.va.gov/homeless/hud-vash/"
+      }
+     ],
+     "sources": [
+      {
+       "title": "38 CFR 62.11, SSVF participants (eCFR)",
+       "url": "https://www.ecfr.gov/current/title-38/section-62.11"
+      },
+      {
+       "title": "Federal Register, Aug. 13, 2024: HUD-VASH operating requirements (89 FR 65769)",
+       "url": "https://www.govinfo.gov/content/pkg/FR-2024-08-13/html/2024-17957.htm"
+      },
+      {
+       "title": "VA Homeless Programs: Veterans Justice Outreach (call center number)",
+       "url": "https://department.va.gov/homeless/veterans-justice-programs/veterans-justice-outreach/"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "ohio": {
+  "intro": "Ohio has its own rules and offices on top of the federal ones above.",
+  "items": [
+   {
+    "id": "oh-vrss",
+    "title": "Ohio jails and prisons must check for veterans",
+    "text": [
+     "Since September 23, 2026, every Ohio prison and every county and city jail must register with VA's Veterans Re-entry Search Service, collect what it needs at booking, check within three days whether the person served in the military, and mark veteran status on the person's records. The law tells jails to ask VA's Veterans Justice Outreach program for free training."
+    ],
+    "ask": "If you are family, you can still tell the jail directly that the person is a veteran, and ask whether the VJO specialist was told.",
+    "sources": [
+     {
+      "title": "Ohio Revised Code 341.43 (Senate Bill 179, 136th General Assembly)",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-341.43"
+     }
+    ]
+   },
+   {
+    "id": "oh-vjo",
+    "title": "Veterans Justice Outreach in Ohio",
+    "text": [
+     "VA lists these shared VJO mailboxes for Ohio. Columbus (Chalmers P. Wylie VA) and Dayton VA list their specialists by name on VA's contact page, and northwest Ohio is served from VA Ann Arbor."
+    ],
+    "emails": [
+     {
+      "label": "Chillicothe VA Medical Center",
+      "email": "VHACLLveteransjusticeoutreach@va.gov"
+     },
+     {
+      "label": "Cincinnati VA Medical Center",
+      "email": "VHACINVJO@va.gov"
+     },
+     {
+      "label": "Cleveland, Louis Stokes VA Medical Center",
+      "email": "vhacleveteransjusticeoutreachprogram@va.gov"
+     },
+     {
+      "label": "Toledo and Findlay (VA Ann Arbor Healthcare System)",
+      "email": "VHAANNMHSVJO@va.gov"
+     }
+    ],
+    "links": [
+     {
+      "label": "All Ohio VJO contacts, including Columbus and Dayton",
+      "url": "https://department.va.gov/homeless/veterans-justice-programs/veterans-justice-outreach/vjo-contacts/"
+     }
+    ],
+    "sources": [
+     {
+      "title": "VA: VJO Specialist Contacts (Ohio)",
+      "url": "https://department.va.gov/homeless/veterans-justice-programs/veterans-justice-outreach/vjo-contacts/"
+     }
+    ]
+   },
+   {
+    "id": "oh-dockets",
+    "title": "Veterans treatment dockets in Ohio",
+    "text": [
+     "The Supreme Court of Ohio certifies specialized dockets, including veterans treatment dockets in common pleas, municipal and county courts. Its list and map show which courts run one now. Open the list and look for veterans dockets in the county where the case is."
+    ],
+    "links": [
+     {
+      "label": "Ohio specialized dockets list",
+      "url": "https://www.supremecourt.ohio.gov/SpecializedDocketsList/"
+     },
+     {
+      "label": "Specialized Dockets Section and map",
+      "url": "https://www.supremecourt.ohio.gov/courts/services-to-courts/specialized-docket-section/"
+     }
+    ],
+    "sources": [
+     {
+      "title": "Supreme Court of Ohio: Specialized Dockets Section",
+      "url": "https://www.supremecourt.ohio.gov/courts/services-to-courts/specialized-docket-section/"
+     }
+    ]
+   },
+   {
+    "id": "oh-reentry",
+    "title": "Ohio prison re-entry office",
+    "text": [
+     "The Ohio Department of Rehabilitation and Correction's Office of Reentry covers re-entry coordinators by region, re-entry housing, the Certificate of Qualification for Employment and agency veterans initiatives. Its contact sheet (updated January 13, 2025) lists this main number."
+    ],
+    "phone": {
+     "display": "(614) 752-0627",
+     "tel": "+16147520627",
+     "label": "ODRC Office of Reentry"
+    },
+    "links": [
+     {
+      "label": "ODRC re-entry contact sheet (PDF)",
+      "url": "https://dam.assets.ohio.gov/image/upload/drc.ohio.gov/Forms/Reentry_Phone_List_Handout_1-13-25.pdf"
+     }
+    ],
+    "sources": [
+     {
+      "title": "ODRC Office of Reentry contact sheet, updated 1/13/25",
+      "url": "https://dam.assets.ohio.gov/image/upload/drc.ohio.gov/Forms/Reentry_Phone_List_Handout_1-13-25.pdf"
+     }
+    ]
+   },
+   {
+    "id": "oh-work",
+    "title": "Work, and clearing a record",
+    "text": [
+     "A Certificate of Qualification for Employment (CQE) is a court order that lifts some barriers to jobs and licenses caused by a past felony or misdemeanor conviction. It also protects an employer who knowingly hires a CQE holder from negligent-hiring suits. It does not lift every restriction.",
+     "Sealing or expunging a record is a separate step, done through the court where the case was."
+    ],
+    "links": [
+     {
+      "label": "Certificate of Qualification for Employment (Supreme Court of Ohio)",
+      "url": "https://www.supremecourt.ohio.gov/courts/services-to-courts/specialized-docket-section/certificate-of-qualification-for-employment/"
+     },
+     {
+      "label": "Clear an Ohio criminal record: step by step",
+      "url": "https://the-reefer.com/expungement.html"
+     },
+     {
+      "label": "Ohio Criminal Sentencing Commission: rights restoration and record sealing guide (2023)",
+      "url": "https://www.supremecourt.ohio.gov/docs/Boards/Sentencing/resources/judPractitioner/adultRightsRestoration.pdf"
+     }
+    ],
+    "sources": [
+     {
+      "title": "Supreme Court of Ohio: Certificate of Qualification for Employment",
+      "url": "https://www.supremecourt.ohio.gov/courts/services-to-courts/specialized-docket-section/certificate-of-qualification-for-employment/"
+     },
+     {
+      "title": "Ohio Revised Code 2953.25",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-2953.25"
+     }
+    ]
+   },
+   {
+    "id": "oh-help",
+    "title": "Free help with VA claims and legal problems",
+    "text": [
+     "Every Ohio county has a veterans service office, a free first stop for veterans and their families with VA benefit questions, including an apportionment claim. Choose your county in the main guide to find it. Ohio Legal Help has a tool that points veterans to free legal help."
+    ],
+    "links": [
+     {
+      "label": "Find your county veterans service office",
+      "url": "./"
+     },
+     {
+      "label": "Ohio Legal Help: veteran resources",
+      "url": "https://www.ohiolegalhelp.org/veteran-resources"
+     }
+    ],
+    "sources": [
+     {
+      "title": "Ohio Legal Help: Veteran Resources Tool",
+      "url": "https://www.ohiolegalhelp.org/veteran-resources"
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -2,7 +2,7 @@
 """Request every link the guide publishes and print a Markdown report.
 
 Covers each state's resource records and veterans office contacts (states/registry.json), the
-family guide (data/family-guide.json) and the country pages (data/world/countries.json): the links visitors follow and the source links shown beside them.
+family guide (data/family-guide.json), the country pages (data/world/countries.json) and the justice page (data/justice.json): the links visitors follow and the source links shown beside them.
 Bingo listings have their own weekly report (scripts/check_schedule_freshness.py).
 
 Exit 10 when a person needs to look: a link is broken or now goes to a different website.
@@ -74,6 +74,11 @@ def collect(only_state=None):
         add(world['region_sources'], 'world:regions')
         for country in world['countries']:
             add(country, 'world:' + country['slug'])
+        # Veterans in the justice system (data/justice.json).
+        justice = read('data/justice.json')
+        for section in justice['sections'] + [justice['ohio']]:
+            for item in section['items']:
+                add(item, 'justice:' + item['id'])
     return used
 
 
