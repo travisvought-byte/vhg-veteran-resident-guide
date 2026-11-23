@@ -255,6 +255,12 @@ Hall (Bethel Park, Tuesday) and St. Gabriel Church Hall (Pittsburgh, first and t
 Help Parish's St. Ursula Social Hall (Allison Park, Tuesday). ZIP 17202 had no point; its point is the Census Geocoder match
 for the Marion VFC 8 address. Left out: Saint Mark Parish (Cranberry Township; dated registrations, not a weekly game) and
 pages that would not load (Archangel Gabriel Parish, St. John XXIII Parish, Safety First VFC).
+Later the same day, from each organizer's or government's own page: the Borough of Folcroft's bingo at the Ethan Joner
+Community Center (second Tuesday of the month, 11 a.m.), Circleville VFD in North Huntingdon (Friday Night Bingo; the
+street is the one the page gives for the department's hall) and Portland Hook & Ladder Co. #1 at the William Pensyl Social
+Hall (the Borough of Portland's page says every Tuesday night and gives no time, so the card gives none). The Portland page
+gives no ZIP code; the ZIP is the U.S. Census Bureau geocoder's match for the street, and the record cites that match.
+Left out: a family-center bingo that is partly online, and leads seen only on news, event or aggregator sites.
 
 **Kentucky, West Virginia, Pennsylvania (no state list of games).** No public statewide list of games with days
 and times was found: Kentucky's Office of Charitable Gaming (now part of Kentucky Horse Racing & Gaming)
