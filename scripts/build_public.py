@@ -22,6 +22,7 @@ from build_county_pages import outputs as county_outputs
 from build_va_pages import outputs as va_outputs
 from build_core_care import (outputs as core_care_outputs, pages as core_care_pages,
                              add_cards as core_care_cards, add_facilities_links)
+from build_bad_paper import outputs as bad_paper_outputs, pages as bad_paper_pages
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -130,6 +131,8 @@ def outputs():
     for s in states:
         if s['code'] in va_links:
             result[s['page']] = result[s['page']].replace('<section id="county-start"', va_links[s['code']] + '<section id="county-start"', 1)
+    # Other-than-honorable and bad-conduct discharges (templates/bad-paper/); each page carries the visit counter.
+    result.update(bad_paper_outputs())
     # Track public landing/sharing pages once, including each state's own guide page.
     for page in ['index.html', 'bingo.html', 'facilities.html'] + [s['page'] for s in states[1:]] + [s['share_page'] for s in states]:
         result[page] = re.sub(r'<script[^>]*data-goatcounter=[^>]*></script>', '', result[page])
@@ -151,6 +154,8 @@ def outputs():
     urls += va_urls
     # Pages for veterans in nursing homes and their families.
     urls += [BASE_URL + page for page in core_care_pages()]
+    # Bad paper: VA options, discharge boards, records and free help for other-than-honorable discharges.
+    urls += [BASE_URL + page for page in bad_paper_pages()]
     result['sitemap.xml'] = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join('  <url><loc>' + u.replace('&', '&amp;') + '</loc></url>\n' for u in urls) + '</urlset>\n'
     result['robots.txt'] = 'User-agent: *\nAllow: /\n\nSitemap: ' + BASE_URL + 'sitemap.xml\n'
     return result

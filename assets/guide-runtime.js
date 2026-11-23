@@ -42,6 +42,8 @@ function setState(state,initial=false){
  // (Program records are left out because federal ones are shared by every state and would date them all alike.)
  const reviewed=COUNTIES.map(c=>c.reviewed_on).filter(v=>/^\d{4}-\d{2}-\d{2}$/.test(v||'')).sort().at(-1);
  $('edition-updated').textContent=reviewed?'Most recent review of '+config.name+' veterans office contacts: '+new Date(reviewed+'T12:00:00').toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'})+'.':'';
+ // The bad-paper card opens that guide on this state's veterans agency, named here from the state's own record.
+ document.querySelectorAll('[data-bad-paper]').forEach(a=>{a.href='bad-paper/?state='+state;const r=DATA.find(x=>x.program_id===(state==='OH'?'ohio-dvs-fallback':state.toLowerCase()+'-claims')),s=a.querySelector('[data-bad-paper-agency]');if(s)s.textContent=r&&r.organization?'. In '+config.name+': '+r.organization+'.':''});
  document.querySelectorAll('[data-advocacy-route]').forEach(a=>a.href='disability-advocacy.html?state='+state);document.querySelectorAll('[data-family-route]').forEach(a=>a.href=(state==='OH'?'https://www.ohiomom.org/family-guide.html':'family-guide.html')+'?state='+state);
  document.querySelectorAll('a[href^="share"]').forEach(a=>a.href=config.sharePage);
  document.querySelectorAll('.footer-links a').forEach(a=>{if(a.textContent==='County contact data')a.href=config.files.offices;if(a.textContent==='Resource data')a.href=config.files.resources});

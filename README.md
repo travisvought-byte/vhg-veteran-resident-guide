@@ -62,6 +62,12 @@ Five pages written to the veteran in a facility, the spouse, the adult children 
 
 The data is `data/world/countries.json`; `scripts/build_world.py` (run by `scripts/build_public.py`) writes `world/`. `tests/world.py` checks that every country page has an emergency number and sourced lines. The monthly link check covers these sources too.
 
+## Bad paper: other-than-honorable and bad-conduct discharges
+
+**Bad paper guide:** https://guide.vethomeguard.org/bad-paper/ — for veterans with other-than-honorable, general or bad-conduct discharges and the family members helping them: what VA can still provide (character of discharge determination, emergency mental health care, the bars to benefits), Discharge Review Boards versus Boards for Correction and the DD-293 and DD-149, liberal consideration (Hagel, Carson, Kurta and Wilkie memos) and new evidence, getting records, and free help, Ohio first with every state's veterans agency. Every point cites an official source or the program's own page. A printable one-page checklist is in the flyer system (`flyers/src/bad-paper-checklist-letter.html`).
+
+Page text lives in `templates/bad-paper/`; titles, descriptions and sources are in `scripts/build_bad_paper.py` (run by `scripts/build_public.py`). State agencies come from each state's own `<state>-claims` record (Ohio: `ohio-dvs-fallback`). Every state page carries a card that opens the guide on that state; listings that mention discharge upgrades link to it. `tests/bad_paper.py` checks it.
+
 ## One guide, any supported state
 
 The main guide uses one interface. Changing the state updates county contacts, resources, senior support and accessibility guidance in place. Each state has its own address with its own title, description and canonical: Ohio is the front page and every other state is its two-letter page, such as `ky.html`. These are the addresses in `sitemap.xml`. Changing the state moves the address bar to that state's page, and older `?state=KY` links still open the right state and move to its page, keeping county and view. State data and source-grounded routing remain separate.
