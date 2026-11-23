@@ -6,42 +6,42 @@ Thinnest first. "Local office" counts counties with an office in or for the coun
 
 | Rank | State | Edition | Counties with local office | Regional only | Statewide line only | Records | Strong evidence | Oldest review |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Arkansas | starter | 0 of 75 | 0 | 75 | 7 | 38% | 2026-11-02 |
-| 2 | Arizona | county | 0 of 15 | 0 | 15 | 25 | 65% | 2026-11-02 |
-| 3 | Massachusetts | county | 0 of 14 | 0 | 14 | 25 | 82% | 2026-11-02 |
-| 4 | Wyoming | county | 0 of 23 | 0 | 23 | 35 | 93% | 2026-11-02 |
-| 5 | Montana | county | 9 of 56 | 0 | 47 | 25 | 96% | 2026-11-02 |
-| 6 | Alaska | county | 8 of 30 | 0 | 22 | 19 | 90% | 2026-11-02 |
-| 7 | Idaho | county | 7 of 44 | 0 | 37 | 31 | 99% | 2026-11-02 |
-| 8 | Nevada | county | 7 of 17 | 0 | 10 | 15 | 88% | 2026-11-02 |
-| 9 | New Hampshire | county | 7 of 10 | 0 | 3 | 21 | 61% | 2026-11-02 |
-| 10 | Virginia | county | 0 of 133 | 131 | 2 | 89 | 40% | 2026-10-20 |
-| 11 | Minnesota | county | 87 of 87 | 0 | 0 | 22 | 10% | 2026-11-02 |
-| 12 | Illinois | county | 62 of 102 | 0 | 40 | 67 | 91% | 2026-11-02 |
-| 13 | West Virginia | county | 0 of 55 | 53 | 2 | 28 | 90% | 2026-10-19 |
-| 14 | Rhode Island | county | 5 of 5 | 0 | 0 | 11 | 50% | 2026-11-02 |
-| 15 | Wisconsin | county | 72 of 72 | 0 | 0 | 76 | 8% | 2026-11-02 |
-| 16 | Oklahoma | county | 0 of 77 | 77 | 0 | 25 | 93% | 2026-11-02 |
-| 17 | District of Columbia | county | 1 of 1 | 0 | 0 | 12 | 62% | 2026-11-02 |
-| 18 | Maine | county | 14 of 16 | 0 | 2 | 15 | 90% | 2026-11-02 |
-| 19 | New Mexico | county | 32 of 33 | 0 | 1 | 18 | 71% | 2026-11-02 |
-| 20 | Michigan | county | 80 of 83 | 2 | 1 | 39 | 37% | 2026-10-08 |
-| 21 | Utah | county | 0 of 29 | 29 | 0 | 35 | 100% | 2026-10-14 |
-| 22 | Hawaii | county | 5 of 5 | 0 | 0 | 16 | 71% | 2026-11-02 |
-| 23 | Kentucky | county | 0 of 120 | 120 | 0 | 57 | 100% | 2026-10-08 |
-| 24 | Washington | county | 36 of 39 | 0 | 3 | 30 | 74% | 2026-11-02 |
-| 25 | Delaware | county | 3 of 3 | 0 | 0 | 12 | 93% | 2026-11-02 |
-| 26 | Vermont | county | 14 of 14 | 0 | 0 | 15 | 90% | 2026-11-02 |
-| 27 | North Dakota | county | 53 of 53 | 0 | 0 | 13 | 96% | 2026-11-02 |
-| 28 | Connecticut | county | 8 of 8 | 0 | 0 | 20 | 86% | 2026-11-02 |
-| 29 | Pennsylvania | county | 67 of 67 | 0 | 0 | 109 | 56% | 2026-10-08 |
-| 30 | New York | county | 61 of 62 | 0 | 1 | 132 | 63% | 2026-10-08 |
-| 31 | Oregon | county | 36 of 36 | 0 | 0 | 38 | 64% | 2026-11-02 |
-| 32 | Ohio | base | 88 of 88 | 0 | 0 | 171 | 61% | 2026-09-30 |
-| 33 | Maryland | county | 24 of 24 | 0 | 0 | 59 | 65% | 2026-11-02 |
-| 34 | South Carolina | county | 46 of 46 | 0 | 0 | 23 | 94% | 2026-11-02 |
-| 35 | Nebraska | county | 93 of 93 | 0 | 0 | 23 | 97% | 2026-11-02 |
-| 36 | South Dakota | county | 66 of 66 | 0 | 0 | 23 | 98% | 2026-11-02 |
+| 1 | Arizona | county | 0 of 15 | 0 | 15 | 25 | 65% | 2026-11-02 |
+| 2 | Massachusetts | county | 0 of 14 | 0 | 14 | 25 | 82% | 2026-11-02 |
+| 3 | Wyoming | county | 0 of 23 | 0 | 23 | 35 | 93% | 2026-11-02 |
+| 4 | Montana | county | 9 of 56 | 0 | 47 | 25 | 96% | 2026-11-02 |
+| 5 | Alaska | county | 8 of 30 | 0 | 22 | 19 | 90% | 2026-11-02 |
+| 6 | Idaho | county | 7 of 44 | 0 | 37 | 31 | 99% | 2026-11-02 |
+| 7 | Nevada | county | 7 of 17 | 0 | 10 | 15 | 88% | 2026-11-02 |
+| 8 | New Hampshire | county | 7 of 10 | 0 | 3 | 21 | 61% | 2026-11-02 |
+| 9 | Virginia | county | 0 of 133 | 131 | 2 | 89 | 40% | 2026-10-20 |
+| 10 | Minnesota | county | 87 of 87 | 0 | 0 | 22 | 10% | 2026-11-02 |
+| 11 | Illinois | county | 62 of 102 | 0 | 40 | 67 | 91% | 2026-11-02 |
+| 12 | West Virginia | county | 0 of 55 | 53 | 2 | 28 | 90% | 2026-10-19 |
+| 13 | Rhode Island | county | 5 of 5 | 0 | 0 | 11 | 50% | 2026-11-02 |
+| 14 | Wisconsin | county | 72 of 72 | 0 | 0 | 76 | 8% | 2026-11-02 |
+| 15 | Oklahoma | county | 0 of 77 | 77 | 0 | 25 | 93% | 2026-11-02 |
+| 16 | District of Columbia | county | 1 of 1 | 0 | 0 | 12 | 62% | 2026-11-02 |
+| 17 | Maine | county | 14 of 16 | 0 | 2 | 15 | 90% | 2026-11-02 |
+| 18 | New Mexico | county | 32 of 33 | 0 | 1 | 18 | 71% | 2026-11-02 |
+| 19 | Michigan | county | 80 of 83 | 2 | 1 | 39 | 37% | 2026-10-08 |
+| 20 | Utah | county | 0 of 29 | 29 | 0 | 35 | 100% | 2026-10-14 |
+| 21 | Hawaii | county | 5 of 5 | 0 | 0 | 16 | 71% | 2026-11-02 |
+| 22 | Kentucky | county | 0 of 120 | 120 | 0 | 57 | 100% | 2026-10-08 |
+| 23 | Washington | county | 36 of 39 | 0 | 3 | 30 | 74% | 2026-11-02 |
+| 24 | Delaware | county | 3 of 3 | 0 | 0 | 12 | 93% | 2026-11-02 |
+| 25 | Vermont | county | 14 of 14 | 0 | 0 | 15 | 90% | 2026-11-02 |
+| 26 | North Dakota | county | 53 of 53 | 0 | 0 | 13 | 96% | 2026-11-02 |
+| 27 | Connecticut | county | 8 of 8 | 0 | 0 | 20 | 86% | 2026-11-02 |
+| 28 | Pennsylvania | county | 67 of 67 | 0 | 0 | 109 | 56% | 2026-10-08 |
+| 29 | New York | county | 61 of 62 | 0 | 1 | 132 | 63% | 2026-10-08 |
+| 30 | Oregon | county | 36 of 36 | 0 | 0 | 38 | 64% | 2026-11-02 |
+| 31 | Ohio | base | 88 of 88 | 0 | 0 | 171 | 61% | 2026-09-30 |
+| 32 | Maryland | county | 24 of 24 | 0 | 0 | 59 | 65% | 2026-11-02 |
+| 33 | South Carolina | county | 46 of 46 | 0 | 0 | 23 | 94% | 2026-11-02 |
+| 34 | Nebraska | county | 93 of 93 | 0 | 0 | 23 | 97% | 2026-11-02 |
+| 35 | South Dakota | county | 66 of 66 | 0 | 0 | 23 | 98% | 2026-11-02 |
+| 36 | Arkansas | county | 71 of 75 | 0 | 4 | 32 | 98% | 2026-11-02 |
 | 37 | Iowa | county | 99 of 99 | 0 | 0 | 25 | 96% | 2026-11-02 |
 | 38 | Texas | county | 191 of 254 | 52 | 11 | 108 | 99% | 2026-10-19 |
 | 39 | Mississippi | county | 82 of 82 | 0 | 0 | 26 | 98% | 2026-11-02 |

@@ -1,190 +1,210 @@
 {
- "ops": [
-  {
-   "op": "clear_data"
-  },
-  {
-   "op": "replace",
-   "old": "Ohio",
-   "new": "Arkansas"
-  },
-  {
-   "op": "replace",
-   "old": "All 88",
-   "new": "All"
-  },
-  {
-   "op": "replace",
-   "old": "all 88",
-   "new": "all"
-  },
-  {
-   "op": "replace",
-   "old": "<option value=\"OH\">Arkansas</option>",
-   "new": "<option value=\"OH\">Ohio</option>"
-  },
-  {
-   "op": "replace",
-   "old": "const STATE='OH';",
-   "new": "const STATE='AR';"
-  },
-  {
-   "op": "replace",
-   "old": "county veterans office",
-   "new": "state veterans agency"
-  },
-  {
-   "op": "replace",
-   "old": "county office",
-   "new": "state veterans agency"
-  },
-  {
-   "op": "replace",
-   "old": "Statewide edition · Updated October 8, 2026",
-   "new": "Arkansas starter edition · Updated November 2, 2026"
-  },
-  {
-   "op": "replace",
-   "old": "Arkansas’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
-   "new": "Ask the local aging agency or state Medicaid agency about waiver assessment and written approval; VA and other funders have their own processes."
-  },
-  {
-   "op": "replace",
-   "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
-   "new": "https://eldercare.acl.gov/home"
-  },
-  {
-   "op": "replace",
-   "old": "Arkansas home modification authorization and provider rules",
-   "new": "Find local aging and disability help (Eldercare Locator)"
-  },
-  {
-   "op": "replace",
-   "old": "href=\"share.html\"",
-   "new": "href=\"share-ar.html\""
-  },
-  {
-   "op": "replace",
-   "old": "href=\"prototype-data.json\"",
-   "new": "href=\"data/public/arkansas-resources.json\""
-  },
-  {
-   "op": "replace",
-   "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
-   "new": "href=\"data/public/arkansas-county-veterans-offices.json\""
-  },
-  {
-   "op": "declare",
-   "name": "priority",
-   "value": [
-    "ar-claims",
-    "ar-aging",
-    "ar-ship",
-    "ar-ombudsman",
-    "r02-aid-attendance-housebound",
-    "r02-va-pension",
-    "r02-survivors-pension"
-   ]
-  },
-  {
-   "op": "declare",
-   "name": "routes",
-   "value": {
-    "benefits": [
-     "ar-claims",
-     "ar-ship",
-     "r02-va-pension",
-     "r02-aid-attendance-housebound",
-     "r02-disability-increase",
-     "r02-pension-medicaid-rule",
-     "r02-survivors-pension",
-     "r02-dic",
-     "va-accredited-help"
-    ],
-    "survivors": [
-     "ar-claims",
-     "r02-survivors-pension",
-     "r02-dic",
-     "r02-aid-attendance-housebound",
-     "r02-va-burial",
-     "va-accredited-help",
-     "nara-discharge-records"
-    ],
-    "care": [
-     "ar-aging",
-     "r02-va-health-enrollment",
-     "va-location-finder",
-     "r02-va-cnh",
-     "r02-va-clc",
-     "r02-general-caregiver",
-     "r02-family-caregiver",
-     "r02-hospice",
-     "r02-palliative"
-    ],
-    "rights": [
-     "ar-ombudsman",
-     "ar-aging"
-    ],
-    "local": [
-     "ar-aging",
-     "ar-claims"
-    ],
-    "housing": [
-     "va-housing-help",
-     "ar-ssvf-12-la-038",
-     "ar-ssvf-20-ar-086",
-     "ar-ssvf-26-ar-470",
-     "va-location-finder",
-     "va-accredited-help",
-     "nara-discharge-records"
-    ]
-   }
-  },
-  {
-   "op": "declare",
-   "name": "seniorTopics",
-   "value": {
-    "daily": [
-     "ar-aging"
-    ],
-    "accessibility": [
-     "ar-aging"
-    ],
-    "vision": [
-     "ar-aging"
-    ],
-    "hearing": [
-     "ar-aging"
-    ],
-    "memory": [
-     "alz-dementia-support",
-     "ar-aging"
-    ],
-    "costs": [
-     "ar-ship",
-     "ar-aging"
-    ],
-    "rights": [
-     "ar-ombudsman",
-     "ar-aging"
-    ]
-   }
-  },
-  {
-   "op": "line",
-   "prefix": "routes.accessibility=",
-   "new": "routes.accessibility=['va-hisa','va-sah','va-sha','va-tra','ar-aging','va-location-finder'];"
-  },
-  {
-   "op": "line",
-   "prefix": "routes.seniors=",
-   "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
-  },
-  {
-   "op": "adapter"
-  },
-  {
-   "op": "embed_data"
-  }
- ]
+  "ops": [
+    {
+      "op": "clear_data"
+    },
+    {
+      "op": "replace",
+      "old": "Ohio",
+      "new": "Arkansas"
+    },
+    {
+      "op": "replace",
+      "old": "All 88",
+      "new": "All 75"
+    },
+    {
+      "op": "replace",
+      "old": "all 88",
+      "new": "all 75"
+    },
+    {
+      "op": "replace",
+      "old": "<option value=\"OH\">Arkansas</option>",
+      "new": "<option value=\"OH\">Ohio</option>"
+    },
+    {
+      "op": "replace",
+      "old": "const STATE='OH';",
+      "new": "const STATE='AR';"
+    },
+    {
+      "op": "replace",
+      "old": "Statewide edition · Updated October 8, 2026",
+      "new": "Arkansas edition · Updated November 23, 2026"
+    },
+    {
+      "op": "replace",
+      "old": "Most phones come from Arkansas AMVETS’ 2025–2026 directory.",
+      "new": "County veterans service officer phones and days come from the Arkansas Department of Veterans Affairs’ county directory dated November 9, 2026. Most officers work part of the week, so call before you go."
+    },
+    {
+      "op": "replace",
+      "old": "Arkansas’s waiver rule specifies proposal and approval requirements; VA and other funders have their own processes.",
+      "new": "Ask the local aging agency or state Medicaid agency about waiver assessment and written approval; VA and other funders have their own processes."
+    },
+    {
+      "op": "replace",
+      "old": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-13",
+      "new": "https://eldercare.acl.gov/home"
+    },
+    {
+      "op": "replace",
+      "old": "Arkansas home modification authorization and provider rules",
+      "new": "Find local aging and disability help (Eldercare Locator)"
+    },
+    {
+      "op": "replace",
+      "old": "href=\"share.html\"",
+      "new": "href=\"share-ar.html\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"prototype-data.json\"",
+      "new": "href=\"data/public/arkansas-resources.json\""
+    },
+    {
+      "op": "replace",
+      "old": "href=\"data/public/ohio-county-veterans-offices.json\"",
+      "new": "href=\"data/public/arkansas-county-veterans-offices.json\""
+    },
+    {
+      "op": "declare",
+      "name": "priority",
+      "value": [
+        "ar-claims",
+        "ar-adrc",
+        "ar-ship",
+        "ar-ombudsman",
+        "ar-legal-programs",
+        "r02-aid-attendance-housebound",
+        "r02-va-pension",
+        "r02-survivors-pension",
+        "r02-va-health-enrollment",
+        "va-accredited-help"
+      ]
+    },
+    {
+      "op": "declare",
+      "name": "routes",
+      "value": {
+        "benefits": [
+          "ar-claims",
+          "ar-ship",
+          "r02-va-pension",
+          "r02-aid-attendance-housebound",
+          "r02-disability-increase",
+          "r02-pension-medicaid-rule",
+          "r02-survivors-pension",
+          "r02-dic",
+          "va-accredited-help",
+          "ar-adrc"
+        ],
+        "survivors": [
+          "ar-claims",
+          "r02-survivors-pension",
+          "r02-dic",
+          "r02-aid-attendance-housebound",
+          "r02-va-burial",
+          "va-accredited-help",
+          "nara-discharge-records"
+        ],
+        "care": [
+          "r02-va-health-enrollment",
+          "va-location-finder",
+          "r02-va-cnh",
+          "r02-va-clc",
+          "r02-general-caregiver",
+          "r02-family-caregiver",
+          "r02-hospice",
+          "r02-palliative",
+          "ar-adrc",
+          "ar-cil-mainstream",
+          "ar-cil-sources",
+          "ar-cil-sails-se",
+          "ar-cil-spa",
+          "ar-vahealth-systems"
+        ],
+        "rights": [
+          "ar-ombudsman",
+          "ar-legal-programs"
+        ],
+        "local": [
+          "ar-claims",
+          "ar-adrc",
+          "ar-cil-mainstream",
+          "ar-cil-sources",
+          "ar-cil-sails-se",
+          "ar-cil-spa",
+          "ar-legal-programs",
+          "ar-vahealth-systems"
+        ],
+        "housing": [
+          "va-housing-help",
+          "ar-ssvf-12-la-038",
+          "ar-ssvf-20-ar-086",
+          "ar-ssvf-26-ar-470",
+          "va-location-finder",
+          "va-accredited-help",
+          "nara-discharge-records",
+          "ar-legal-programs"
+        ]
+      }
+    },
+    {
+      "op": "declare",
+      "name": "seniorTopics",
+      "value": {
+        "daily": [
+          "ar-adrc",
+          "ar-cil-mainstream",
+          "ar-cil-sources",
+          "ar-cil-sails-se",
+          "ar-cil-spa"
+        ],
+        "accessibility": [
+          "ar-adrc",
+          "ar-cil-mainstream",
+          "ar-cil-sources",
+          "ar-cil-sails-se",
+          "ar-cil-spa"
+        ],
+        "vision": [
+          "ar-adrc"
+        ],
+        "hearing": [
+          "ar-adrc"
+        ],
+        "memory": [
+          "alz-dementia-support",
+          "ar-adrc"
+        ],
+        "costs": [
+          "ar-ship",
+          "ar-adrc",
+          "ar-legal-programs"
+        ],
+        "rights": [
+          "ar-ombudsman",
+          "ar-legal-programs"
+        ]
+      }
+    },
+    {
+      "op": "line",
+      "prefix": "routes.accessibility=",
+      "new": "routes.accessibility=['va-hisa','va-sah','va-sha','va-tra','ar-adrc','ar-cil-mainstream','ar-cil-sources','ar-cil-sails-se','ar-cil-spa','va-location-finder',...DATA.filter(x=>x.regional_role==='aging_agency').map(x=>x.program_id)];"
+    },
+    {
+      "op": "line",
+      "prefix": "routes.seniors=",
+      "new": "routes.seniors=[...new Set(Object.values(seniorTopics).flat()),...DATA.filter(x=>x.regional_role).map(x=>x.program_id),'cms-care-compare'];"
+    },
+    {
+      "op": "adapter"
+    },
+    {
+      "op": "embed_data"
+    }
+  ]
 }

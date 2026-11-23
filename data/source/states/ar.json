@@ -1,0 +1,1216 @@
+{
+ "about": "Research sheet for the Arkansas county edition. Every contact below was read on the date in reviewed_on from the page named beside it; scripts/make_county_state.py turns it into the edition files. County officers come from the harvest in data/mining/harvest/ar-adva-cvso-directory-2026-11-23.json.",
+ "code": "AR",
+ "name": "Arkansas",
+ "slug": "arkansas",
+ "counties": 75,
+ "reviewed_on": "2026-11-23",
+ "month_label": "November 23, 2026",
+ "template_date": "November 4, 2026",
+ "phones_sentence": "County veterans service officer phones and days come from the Arkansas Department of Veterans Affairs’ county directory dated November 9, 2026. Most officers work part of the week, so call before you go.",
+ "senior_line_id": "ar-adrc",
+ "agency": {
+  "url": "https://www.veterans.arkansas.gov/veteran-services-map"
+ },
+ "offices": {
+  "source_url": "https://www.veterans.arkansas.gov/s/Directory-11-09-2026.pdf",
+  "source_title": "Arkansas Department of Veterans Affairs: VSO, DVSO, CVSO Directory (dated November 9, 2026)",
+  "review_method": "official_pdf_text_extract",
+  "note": "County veterans service officers can help with VA claims, pension and survivor benefits at no charge.",
+  "selection": "Phones and days as printed beside each county in the department’s directory; officers’ names, emails, cell and fax numbers omitted. Office addresses are printed in the directory but are not shown here, because the PDF text does not tie them to their counties. Four counties with no phone tied to them show the department’s main number and say so.",
+  "list": [
+   {
+    "county": "Arkansas",
+    "address": null,
+    "phone": "870-344-2326",
+    "hours": "Mon 0800-1300; Tues-Wed appointment only; Thur: Stuttgart"
+   },
+   {
+    "county": "Ashley",
+    "address": null,
+    "phone": "870-853-2070",
+    "other_phones": [
+     "870-364-4207"
+    ],
+    "hours": "Hamburg: M-Tues 0800-1630 Wed 0800-1100; Crossett: Wed 1200-1630 Thu-Fri 0800-1630"
+   },
+   {
+    "county": "Baxter",
+    "address": null,
+    "phone": "870-425-8155",
+    "hours": "M-F 0800-1600"
+   },
+   {
+    "county": "Benton",
+    "address": null,
+    "phone": "479-464-6123",
+    "hours": "M-F 0800-1630"
+   },
+   {
+    "county": "Boone",
+    "address": null,
+    "phone": "870-741-3640",
+    "hours": "M-Th 0800-1545"
+   },
+   {
+    "county": "Bradley",
+    "address": null,
+    "phone": "870-226-3888",
+    "hours": "M, T 0800-1630"
+   },
+   {
+    "county": "Calhoun",
+    "address": null,
+    "phone": "870-798-2054",
+    "hours": "T, W 0800-1700"
+   },
+   {
+    "county": "Carroll",
+    "address": null,
+    "phone": "870-423-4000",
+    "hours": "T-W 0830-1630, Th 0800-1200"
+   },
+   {
+    "county": "Chicot",
+    "address": null,
+    "phone": "870-265-8035",
+    "hours": "T, W 0800-1600"
+   },
+   {
+    "county": "Clark",
+    "address": null,
+    "phone": "870-246-7321",
+    "hours": "M-T 0830-1630, W 0830-1230"
+   },
+   {
+    "county": "Clay",
+    "address": null,
+    "phone": "870-324-2358",
+    "hours": "M-F appointment only"
+   },
+   {
+    "county": "Cleburne",
+    "address": null,
+    "phone": "501-362-6211",
+    "hours": "M-F 0830-1630"
+   },
+   {
+    "county": "Cleveland",
+    "address": null,
+    "phone": "870-325-7205",
+    "hours": "M-W 0800-1300, Th 0800-1200"
+   },
+   {
+    "county": "Columbia",
+    "address": null,
+    "phone": "870-235-3746",
+    "hours": "T-W 0800-1600"
+   },
+   {
+    "county": "Conway",
+    "address": null,
+    "phone": "501-354-9628",
+    "hours": "M-W 0800-1400"
+   },
+   {
+    "county": "Craighead",
+    "address": null,
+    "phone": "870-933-4598",
+    "hours": "M-F 0800-1600"
+   },
+   {
+    "county": "Crawford",
+    "address": null,
+    "phone": "479-471-3200",
+    "hours": "M-F 0800-1700"
+   },
+   {
+    "county": "Crittenden",
+    "address": null,
+    "phone": "870-739-4148",
+    "hours": "M-F 0800-1630"
+   },
+   {
+    "county": "Cross",
+    "address": null,
+    "phone": "870-768-5457",
+    "hours": "M-Th 0800-1600"
+   },
+   {
+    "county": "Dallas",
+    "address": null,
+    "phone": "870-352-0365",
+    "hours": "M-Th 0800-1300"
+   },
+   {
+    "county": "Desha",
+    "address": null,
+    "phone": "870-222-4314",
+    "hours": "M-T 0800-1600"
+   },
+   {
+    "county": "Drew",
+    "address": null,
+    "phone": "870-460-6290",
+    "hours": "M-T 0800-1530"
+   },
+   {
+    "county": "Faulkner",
+    "address": null,
+    "phone": "501-450-4910",
+    "hours": "M-F 0800-1630"
+   },
+   {
+    "county": "Franklin",
+    "address": null,
+    "phone": "479-667-4677",
+    "hours": "T-Th 0800-1630"
+   },
+   {
+    "county": "Fulton",
+    "address": null,
+    "phone": "501-683-2382",
+    "organization": "Arkansas Department of Veterans Affairs (no county officer phone listed)",
+    "office_type": "statewide",
+    "note": "The department’s November 9, 2026 directory prints no phone we could tie to this county. Call the department at 501-683-2382 and ask for the county veterans service officer who serves it."
+   },
+   {
+    "county": "Garland",
+    "address": null,
+    "phone": "501-622-3795",
+    "hours": "M-F 0800-1600"
+   },
+   {
+    "county": "Grant",
+    "address": null,
+    "phone": "870-484-1299",
+    "hours": "T-W 0800-1600"
+   },
+   {
+    "county": "Greene",
+    "address": null,
+    "phone": "870-565-1794",
+    "hours": "M-F 0800-1630"
+   },
+   {
+    "county": "Hempstead",
+    "address": null,
+    "phone": "870-359-0181",
+    "hours": "M 0800-1500, T 0900-1500, W appointment only"
+   },
+   {
+    "county": "Hot Spring",
+    "address": null,
+    "phone": "501-528-0714",
+    "hours": "T-Th 0800-1600"
+   },
+   {
+    "county": "Howard",
+    "address": null,
+    "phone": "870-845-9703",
+    "hours": "T, Th 0830-1630"
+   },
+   {
+    "county": "Independence",
+    "address": null,
+    "phone": "870-793-8812",
+    "hours": "M, W, Th 0900-1630",
+    "note": "The directory prints the same phone for Independence and Izard counties."
+   },
+   {
+    "county": "Izard",
+    "address": null,
+    "phone": "870-793-8812",
+    "hours": "T 0900-1600",
+    "note": "The directory prints the same phone for Independence and Izard counties."
+   },
+   {
+    "county": "Jackson",
+    "address": null,
+    "phone": "870-523-7426",
+    "hours": "M, T 0800-1600, W 0800-1200"
+   },
+   {
+    "county": "Jefferson",
+    "address": null,
+    "phone": "870-541-5495",
+    "hours": "M-F 0900-1500"
+   },
+   {
+    "county": "Johnson",
+    "address": null,
+    "phone": "479-754-2560",
+    "hours": "M-F 0800-1630"
+   },
+   {
+    "county": "Lafayette",
+    "address": null,
+    "phone": "870-921-4547",
+    "hours": "T-W 0800-1630"
+   },
+   {
+    "county": "Lawrence",
+    "address": null,
+    "phone": "870-886-1115",
+    "hours": "M-T 0800-1600, W 0800-1200"
+   },
+   {
+    "county": "Lee",
+    "address": null,
+    "phone": "870-821-1159",
+    "hours": "M & T 0800-1630"
+   },
+   {
+    "county": "Lincoln",
+    "address": null,
+    "phone": "870-370-2785",
+    "other_phones": [
+     "870-628-4322"
+    ],
+    "hours": "T,W 0800-1600, Th 0900-1100"
+   },
+   {
+    "county": "Little River",
+    "address": null,
+    "phone": "870-898-7261",
+    "hours": "M-T 0800-1600, Th 0800-1200"
+   },
+   {
+    "county": "Logan",
+    "address": null,
+    "phone": "479-963-1303",
+    "hours": "M-T 0800-1630"
+   },
+   {
+    "county": "Lonoke",
+    "address": null,
+    "phone": "501-203-5960",
+    "other_phones": [
+     "870-530-5899"
+    ],
+    "hours": "W 0730-1630 at 501-203-5960; T 0900-1600 at 870-530-5899",
+    "note": "One phone, 870-530-5899, is printed for Lonoke, Monroe and Prairie counties on different days."
+   },
+   {
+    "county": "Madison",
+    "address": null,
+    "phone": "479-738-6537",
+    "hours": "T-W 0800-1630, Th 0800-1200"
+   },
+   {
+    "county": "Marion",
+    "address": null,
+    "phone": "870-449-5401",
+    "hours": "Th-F 0800-1600"
+   },
+   {
+    "county": "Miller",
+    "address": null,
+    "phone": "870-330-9847",
+    "hours": "M-F 0800-1600"
+   },
+   {
+    "county": "Mississippi",
+    "address": null,
+    "phone": "870-278-9295",
+    "hours": "M-F 0800-1600"
+   },
+   {
+    "county": "Monroe",
+    "address": null,
+    "phone": "870-530-5899",
+    "hours": "Th 0900-1600",
+    "note": "One phone, 870-530-5899, is printed for Lonoke, Monroe and Prairie counties on different days."
+   },
+   {
+    "county": "Montgomery",
+    "address": null,
+    "phone": "501-683-2382",
+    "organization": "Arkansas Department of Veterans Affairs (no county officer phone listed)",
+    "office_type": "statewide",
+    "note": "The department’s November 9, 2026 directory prints no phone we could tie to this county. Call the department at 501-683-2382 and ask for the county veterans service officer who serves it."
+   },
+   {
+    "county": "Nevada",
+    "address": null,
+    "phone": "870-887-5776",
+    "hours": "M, T 0800-1600"
+   },
+   {
+    "county": "Newton",
+    "address": null,
+    "phone": "870-446-2030",
+    "hours": "T-Th 0800-1630"
+   },
+   {
+    "county": "Ouachita",
+    "address": null,
+    "phone": "501-683-2382",
+    "organization": "Arkansas Department of Veterans Affairs (no county officer phone listed)",
+    "office_type": "statewide",
+    "note": "The department’s November 9, 2026 directory prints no phone we could tie to this county. Call the department at 501-683-2382 and ask for the county veterans service officer who serves it."
+   },
+   {
+    "county": "Perry",
+    "address": null,
+    "phone": "501-889-2096",
+    "hours": "T-F 0800 1700"
+   },
+   {
+    "county": "Phillips",
+    "address": null,
+    "phone": "501-683-2382",
+    "organization": "Arkansas Department of Veterans Affairs (no county officer phone listed)",
+    "office_type": "statewide",
+    "note": "The department’s November 9, 2026 directory prints no phone we could tie to this county. Call the department at 501-683-2382 and ask for the county veterans service officer who serves it."
+   },
+   {
+    "county": "Pike",
+    "address": null,
+    "phone": "870-285-2249",
+    "hours": "T-Th 0800-1630"
+   },
+   {
+    "county": "Poinsett",
+    "address": null,
+    "phone": "870-578-4438",
+    "hours": "T-Th 0800-1500",
+    "note": "An unlabeled number, 501-408-5579 (Friday, appointment only), follows this entry; it is not assigned until the PDF is read visually."
+   },
+   {
+    "county": "Polk",
+    "address": null,
+    "phone": "479-394-8148",
+    "hours": "M-F 0800-1630"
+   },
+   {
+    "county": "Pope",
+    "address": null,
+    "phone": "479-968-6049",
+    "hours": "T-F 0800-1630"
+   },
+   {
+    "county": "Prairie",
+    "address": null,
+    "phone": "870-530-5899",
+    "hours": "F 0900-1700",
+    "note": "One phone, 870-530-5899, is printed for Lonoke, Monroe and Prairie counties on different days."
+   },
+   {
+    "county": "Pulaski",
+    "address": null,
+    "phone": "501-340-5622",
+    "other_phones": [
+     "501-650-0311"
+    ],
+    "hours": "M, T 0800-1700, W 0800-1600, Th 0800-1500"
+   },
+   {
+    "county": "Randolph",
+    "address": null,
+    "phone": "870-892-3143",
+    "hours": "M-W 0830-1430"
+   },
+   {
+    "county": "St. Francis",
+    "address": null,
+    "phone": "870-261-1702",
+    "hours": "T-Th 0800-1500"
+   },
+   {
+    "county": "Saline",
+    "address": null,
+    "phone": "501-303-5646",
+    "hours": "M-F 0800-1630"
+   },
+   {
+    "county": "Scott",
+    "address": null,
+    "phone": "479-357-4751",
+    "hours": "M-Th 0800-1600"
+   },
+   {
+    "county": "Searcy",
+    "address": null,
+    "phone": "870-448-5783",
+    "hours": "T 0800-1600"
+   },
+   {
+    "county": "Sebastian",
+    "address": null,
+    "phone": "479-782-3421",
+    "hours": "M-F 0800-1700"
+   },
+   {
+    "county": "Sevier",
+    "address": null,
+    "phone": "870-642-6622",
+    "hours": "T, Th 0900-1630"
+   },
+   {
+    "county": "Sharp",
+    "address": null,
+    "phone": "870-994-2408",
+    "hours": "M, T, Th 0800-1600"
+   },
+   {
+    "county": "Stone",
+    "address": null,
+    "phone": "870-269-4277",
+    "hours": "M 1200-1500, T 0900-1530, W 0830-1530, Th 0830-1200"
+   },
+   {
+    "county": "Union",
+    "address": null,
+    "phone": "870-864-1909",
+    "hours": "M-W 0800-1700"
+   },
+   {
+    "county": "Van Buren",
+    "address": null,
+    "phone": "501-745-5114",
+    "hours": "W, Th 0800-1600"
+   },
+   {
+    "county": "Washington",
+    "address": null,
+    "phone": "479-444-1767",
+    "hours": "M-F 0800-1600"
+   },
+   {
+    "county": "White",
+    "address": null,
+    "phone": "501-279-6210",
+    "hours": "M, T 0800-1600"
+   },
+   {
+    "county": "Woodruff",
+    "address": null,
+    "phone": "870-347-5091",
+    "hours": "T-W 0800-1630"
+   },
+   {
+    "county": "Yell",
+    "address": null,
+    "phone": "479-353-9118",
+    "hours": "M-W 0800-1600"
+   }
+  ]
+ },
+ "aging": {
+  "source_url": "https://ltcombudsman.org/wp-content/uploads/2026/05/arkansas-residents-rights-brochure.pdf",
+  "source_title": "National Long-Term Care Ombudsman Resource Center: Arkansas residents’ rights brochure (2026), Contact Your Ombudsman",
+  "source_scope": "The eight Area Agencies on Aging by region, each with its counties and phones, as printed in the brochure’s Contact Your Ombudsman list (the local ombudsman programs are housed in these agencies); read in full. County names printed as “Woodfuff” and “Montogomery” are Woodruff and Montgomery. The brochure is undated; the file was posted in May 2026.",
+  "review": "full",
+  "review_method": "full_official_pdf",
+  "region_word": "",
+  "description": "The Area Agency on Aging for this county: help at home, meals, caregiver support, transportation and benefits counseling for older adults and caregivers. Military service is not required.",
+  "next_step_extra": "The phones shown are the ones the state’s ombudsman brochure prints for each agency; ask for aging services. Arkansas’s Choices in Living Resource Center, 866-801-3435, also helps with long-term services.",
+  "regions": [
+   {
+    "id": "ar-aaa-1",
+    "label": "northwest Arkansas",
+    "name": "Area Agency on Aging of Northwest Arkansas (Harrison)",
+    "phone": "870-743-1623",
+    "counties": [
+     "Benton",
+     "Washington",
+     "Baxter",
+     "Boone",
+     "Carroll",
+     "Madison",
+     "Marion",
+     "Newton",
+     "Searcy"
+    ],
+    "notes": [
+     "Toll-free: 877-286-3621. In Benton and Washington counties the brochure lists 479-273-9424 (toll-free 888-268-3610)."
+    ]
+   },
+   {
+    "id": "ar-aaa-2",
+    "label": "the White River region",
+    "name": "White River Area Agency on Aging (Batesville)",
+    "phone": "870-612-3000",
+    "counties": [
+     "Cleburne",
+     "Fulton",
+     "Independence",
+     "Izard",
+     "Jackson",
+     "Sharp",
+     "Stone",
+     "Van Buren",
+     "White",
+     "Woodruff"
+    ],
+    "notes": [
+     "Toll-free: 800-382-3205."
+    ]
+   },
+   {
+    "id": "ar-aaa-3",
+    "label": "east Arkansas",
+    "name": "East Arkansas Area Agency on Aging (Jonesboro)",
+    "phone": "870-336-2260",
+    "counties": [
+     "Clay",
+     "Craighead",
+     "Crittenden",
+     "Cross",
+     "Greene",
+     "Lawrence",
+     "Lee",
+     "Mississippi",
+     "Phillips",
+     "Poinsett",
+     "Randolph",
+     "St. Francis"
+    ],
+    "notes": [
+     "Toll-free: 888-311-2238."
+    ]
+   },
+   {
+    "id": "ar-aaa-4",
+    "label": "southeast Arkansas",
+    "name": "Area Agency on Aging of Southeast Arkansas (Pine Bluff)",
+    "phone": "870-543-6300",
+    "counties": [
+     "Arkansas",
+     "Ashley",
+     "Bradley",
+     "Chicot",
+     "Cleveland",
+     "Desha",
+     "Drew",
+     "Grant",
+     "Jefferson",
+     "Lincoln"
+    ],
+    "notes": [
+     "Toll-free: 800-264-3260."
+    ]
+   },
+   {
+    "id": "ar-aaa-5",
+    "label": "central Arkansas",
+    "name": "CareLink, Central Arkansas Area Agency on Aging (North Little Rock)",
+    "phone": "501-372-5300",
+    "counties": [
+     "Faulkner",
+     "Lonoke",
+     "Monroe",
+     "Prairie",
+     "Pulaski",
+     "Saline"
+    ],
+    "notes": [
+     "Toll-free: 800-482-6359."
+    ]
+   },
+   {
+    "id": "ar-aaa-6",
+    "label": "west central Arkansas",
+    "name": "Area Agency on Aging of West Central Arkansas (Hot Springs)",
+    "phone": "501-321-2811",
+    "counties": [
+     "Clark",
+     "Garland",
+     "Hot Spring",
+     "Montgomery",
+     "Pike",
+     "Conway",
+     "Johnson",
+     "Perry",
+     "Pope",
+     "Yell"
+    ],
+    "notes": [
+     "Toll-free: 800-467-2170. In Conway, Johnson, Perry, Pope and Yell counties the brochure lists 479-967-9300 (toll-free 800-467-2171)."
+    ]
+   },
+   {
+    "id": "ar-aaa-7",
+    "label": "southwest Arkansas",
+    "name": "Area Agency on Aging of Southwest Arkansas (Magnolia)",
+    "phone": "870-234-7410",
+    "counties": [
+     "Hempstead",
+     "Howard",
+     "Little River",
+     "Miller",
+     "Nevada",
+     "Sevier",
+     "Calhoun",
+     "Columbia",
+     "Dallas",
+     "Lafayette",
+     "Ouachita",
+     "Union"
+    ],
+    "notes": [
+     "Toll-free: 800-272-2127."
+    ]
+   },
+   {
+    "id": "ar-aaa-8",
+    "label": "western Arkansas",
+    "name": "Area Agency on Aging of Western Arkansas (Fort Smith)",
+    "phone": "479-783-4500",
+    "counties": [
+     "Crawford",
+     "Franklin",
+     "Logan",
+     "Polk",
+     "Scott",
+     "Sebastian"
+    ],
+    "notes": [
+     "Phone from the agency’s own website (agingwest.org), read in full."
+    ],
+    "review": "full"
+   }
+  ]
+ },
+ "ombudsman": {
+  "state_phone": "501-682-1001",
+  "regions": [
+   {
+    "id": "ar-omb-1a",
+    "name": "Area Agency on Aging of Northwest Arkansas: long-term care ombudsman (Benton and Washington)",
+    "phone": "479-273-9424",
+    "counties": [
+     "Benton",
+     "Washington"
+    ],
+    "source_url": "https://ltcombudsman.org/wp-content/uploads/2026/05/arkansas-residents-rights-brochure.pdf",
+    "source_title": "National Long-Term Care Ombudsman Resource Center: Arkansas residents’ rights brochure (2026), Contact Your Ombudsman",
+    "source_scope": "Contact Your Ombudsman list: this program’s counties and phones; read in full. The brochure is undated; the file was posted in May 2026.",
+    "review": "full",
+    "review_method": "full_official_pdf",
+    "notes": [
+     "Toll-free: 888-268-3610.",
+     "The state ombudsman program’s number printed on the brochure is 501-682-1001."
+    ]
+   },
+   {
+    "id": "ar-omb-1b",
+    "name": "Area Agency on Aging of Northwest Arkansas: long-term care ombudsman (Harrison area)",
+    "phone": "870-743-1623",
+    "counties": [
+     "Baxter",
+     "Boone",
+     "Carroll",
+     "Madison",
+     "Marion",
+     "Newton",
+     "Searcy"
+    ],
+    "source_url": "https://ltcombudsman.org/wp-content/uploads/2026/05/arkansas-residents-rights-brochure.pdf",
+    "source_title": "National Long-Term Care Ombudsman Resource Center: Arkansas residents’ rights brochure (2026), Contact Your Ombudsman",
+    "source_scope": "Contact Your Ombudsman list: this program’s counties and phones; read in full. The brochure is undated; the file was posted in May 2026.",
+    "review": "full",
+    "review_method": "full_official_pdf",
+    "notes": [
+     "Toll-free: 877-286-3621.",
+     "The state ombudsman program’s number printed on the brochure is 501-682-1001."
+    ]
+   },
+   {
+    "id": "ar-omb-2",
+    "name": "White River Area Agency on Aging: long-term care ombudsman",
+    "phone": "870-612-3000",
+    "counties": [
+     "Cleburne",
+     "Fulton",
+     "Independence",
+     "Izard",
+     "Jackson",
+     "Sharp",
+     "Stone",
+     "Van Buren",
+     "White",
+     "Woodruff"
+    ],
+    "source_url": "https://ltcombudsman.org/wp-content/uploads/2026/05/arkansas-residents-rights-brochure.pdf",
+    "source_title": "National Long-Term Care Ombudsman Resource Center: Arkansas residents’ rights brochure (2026), Contact Your Ombudsman",
+    "source_scope": "Contact Your Ombudsman list: this program’s counties and phones; read in full. The brochure is undated; the file was posted in May 2026.",
+    "review": "full",
+    "review_method": "full_official_pdf",
+    "notes": [
+     "Toll-free: 800-382-3205.",
+     "The state ombudsman program’s number printed on the brochure is 501-682-1001."
+    ]
+   },
+   {
+    "id": "ar-omb-3",
+    "name": "East Arkansas Area Agency on Aging: long-term care ombudsman",
+    "phone": "870-336-2260",
+    "counties": [
+     "Clay",
+     "Craighead",
+     "Crittenden",
+     "Cross",
+     "Greene",
+     "Lawrence",
+     "Lee",
+     "Mississippi",
+     "Phillips",
+     "Poinsett",
+     "Randolph",
+     "St. Francis"
+    ],
+    "source_url": "https://ltcombudsman.org/wp-content/uploads/2026/05/arkansas-residents-rights-brochure.pdf",
+    "source_title": "National Long-Term Care Ombudsman Resource Center: Arkansas residents’ rights brochure (2026), Contact Your Ombudsman",
+    "source_scope": "Contact Your Ombudsman list: this program’s counties and phones; read in full. The brochure is undated; the file was posted in May 2026.",
+    "review": "full",
+    "review_method": "full_official_pdf",
+    "notes": [
+     "Toll-free: 888-311-2238.",
+     "The state ombudsman program’s number printed on the brochure is 501-682-1001."
+    ]
+   },
+   {
+    "id": "ar-omb-4",
+    "name": "Area Agency on Aging of Southeast Arkansas: long-term care ombudsman",
+    "phone": "870-543-6300",
+    "counties": [
+     "Arkansas",
+     "Ashley",
+     "Bradley",
+     "Chicot",
+     "Cleveland",
+     "Desha",
+     "Drew",
+     "Grant",
+     "Jefferson",
+     "Lincoln"
+    ],
+    "source_url": "https://ltcombudsman.org/wp-content/uploads/2026/05/arkansas-residents-rights-brochure.pdf",
+    "source_title": "National Long-Term Care Ombudsman Resource Center: Arkansas residents’ rights brochure (2026), Contact Your Ombudsman",
+    "source_scope": "Contact Your Ombudsman list: this program’s counties and phones; read in full. The brochure is undated; the file was posted in May 2026.",
+    "review": "full",
+    "review_method": "full_official_pdf",
+    "notes": [
+     "Toll-free: 800-264-3260.",
+     "The state ombudsman program’s number printed on the brochure is 501-682-1001."
+    ]
+   },
+   {
+    "id": "ar-omb-5",
+    "name": "CareLink (Central Arkansas Area Agency on Aging): long-term care ombudsman",
+    "phone": "501-372-5300",
+    "counties": [
+     "Faulkner",
+     "Lonoke",
+     "Monroe",
+     "Prairie",
+     "Pulaski",
+     "Saline"
+    ],
+    "source_url": "https://ltcombudsman.org/wp-content/uploads/2026/05/arkansas-residents-rights-brochure.pdf",
+    "source_title": "National Long-Term Care Ombudsman Resource Center: Arkansas residents’ rights brochure (2026), Contact Your Ombudsman",
+    "source_scope": "Contact Your Ombudsman list: this program’s counties and phones; read in full. The brochure is undated; the file was posted in May 2026.",
+    "review": "full",
+    "review_method": "full_official_pdf",
+    "notes": [
+     "Toll-free: 800-482-6359.",
+     "The state ombudsman program’s number printed on the brochure is 501-682-1001."
+    ]
+   },
+   {
+    "id": "ar-omb-6a",
+    "name": "Area Agency on Aging of West Central Arkansas: long-term care ombudsman (Hot Springs area)",
+    "phone": "501-321-2811",
+    "counties": [
+     "Clark",
+     "Garland",
+     "Hot Spring",
+     "Montgomery",
+     "Pike"
+    ],
+    "source_url": "https://ltcombudsman.org/wp-content/uploads/2026/05/arkansas-residents-rights-brochure.pdf",
+    "source_title": "National Long-Term Care Ombudsman Resource Center: Arkansas residents’ rights brochure (2026), Contact Your Ombudsman",
+    "source_scope": "Contact Your Ombudsman list: this program’s counties and phones; read in full. The brochure is undated; the file was posted in May 2026.",
+    "review": "full",
+    "review_method": "full_official_pdf",
+    "notes": [
+     "Toll-free: 800-467-2170.",
+     "The state ombudsman program’s number printed on the brochure is 501-682-1001."
+    ]
+   },
+   {
+    "id": "ar-omb-6b",
+    "name": "Area Agency on Aging of West Central Arkansas: long-term care ombudsman (Russellville area)",
+    "phone": "479-967-9300",
+    "counties": [
+     "Conway",
+     "Johnson",
+     "Perry",
+     "Pope",
+     "Yell"
+    ],
+    "source_url": "https://ltcombudsman.org/wp-content/uploads/2026/05/arkansas-residents-rights-brochure.pdf",
+    "source_title": "National Long-Term Care Ombudsman Resource Center: Arkansas residents’ rights brochure (2026), Contact Your Ombudsman",
+    "source_scope": "Contact Your Ombudsman list: this program’s counties and phones; read in full. The brochure is undated; the file was posted in May 2026.",
+    "review": "full",
+    "review_method": "full_official_pdf",
+    "notes": [
+     "Toll-free: 800-467-2171.",
+     "The state ombudsman program’s number printed on the brochure is 501-682-1001."
+    ]
+   },
+   {
+    "id": "ar-omb-7a",
+    "name": "Area Agency on Aging of Southwest Arkansas: long-term care ombudsman (Hempstead to Sevier)",
+    "phone": "870-904-9152",
+    "counties": [
+     "Hempstead",
+     "Howard",
+     "Little River",
+     "Miller",
+     "Nevada",
+     "Sevier"
+    ],
+    "source_url": "https://ltcombudsman.org/wp-content/uploads/2026/05/arkansas-residents-rights-brochure.pdf",
+    "source_title": "National Long-Term Care Ombudsman Resource Center: Arkansas residents’ rights brochure (2026), Contact Your Ombudsman",
+    "source_scope": "Contact Your Ombudsman list: this program’s counties and phones; read in full. The brochure is undated; the file was posted in May 2026.",
+    "review": "full",
+    "review_method": "full_official_pdf",
+    "notes": [
+     "The agency’s main line is 870-234-7410 (toll-free 800-272-2127).",
+     "The state ombudsman program’s number printed on the brochure is 501-682-1001."
+    ]
+   },
+   {
+    "id": "ar-omb-7b",
+    "name": "Area Agency on Aging of Southwest Arkansas: long-term care ombudsman (Calhoun to Union)",
+    "phone": "870-904-1536",
+    "counties": [
+     "Calhoun",
+     "Columbia",
+     "Dallas",
+     "Lafayette",
+     "Ouachita",
+     "Union"
+    ],
+    "source_url": "https://ltcombudsman.org/wp-content/uploads/2026/05/arkansas-residents-rights-brochure.pdf",
+    "source_title": "National Long-Term Care Ombudsman Resource Center: Arkansas residents’ rights brochure (2026), Contact Your Ombudsman",
+    "source_scope": "Contact Your Ombudsman list: this program’s counties and phones; read in full. The brochure is undated; the file was posted in May 2026.",
+    "review": "full",
+    "review_method": "full_official_pdf",
+    "notes": [
+     "The agency’s main line is 870-234-7410 (toll-free 800-272-2127).",
+     "The state ombudsman program’s number printed on the brochure is 501-682-1001."
+    ]
+   },
+   {
+    "id": "ar-omb-8",
+    "name": "Area Agency on Aging of Western Arkansas: long-term care ombudsman",
+    "phone": "479-783-5550",
+    "counties": [
+     "Crawford",
+     "Franklin",
+     "Logan",
+     "Polk",
+     "Scott",
+     "Sebastian"
+    ],
+    "source_url": "https://ltcombudsman.org/wp-content/uploads/2026/05/arkansas-residents-rights-brochure.pdf",
+    "source_title": "National Long-Term Care Ombudsman Resource Center: Arkansas residents’ rights brochure (2026), Contact Your Ombudsman",
+    "source_scope": "Contact Your Ombudsman list: this program’s counties and phones; read in full. The brochure is undated; the file was posted in May 2026.",
+    "review": "full",
+    "review_method": "full_official_pdf",
+    "notes": [
+     "Toll-free: 800-320-6667.",
+     "Ask for extension 2009.",
+     "The state ombudsman program’s number printed on the brochure is 501-682-1001."
+    ]
+   }
+  ]
+ },
+ "cils": {
+  "source_url": "https://www.ilru.org/cil-directory/ar",
+  "source_title": "ILRU: Arkansas CIL Directory",
+  "scope": "Each center’s office, phone, website and counties served; read in full. The directory is undated.",
+  "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living",
+  "list": [
+   {
+    "id": "ar-cil-mainstream",
+    "name": "Mainstream Independent Living Resource Center (Little Rock)",
+    "organization": "Mainstream Independent Living Resource Center",
+    "url": "https://mainstreamilrc.com/",
+    "phone": "501-280-0012",
+    "counties": [
+     "Faulkner",
+     "Lonoke",
+     "Perry",
+     "Prairie",
+     "Pulaski",
+     "Saline"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": []
+   },
+   {
+    "id": "ar-cil-sources",
+    "name": "Sources for Community Independent Living Services (Fayetteville)",
+    "organization": "Sources for Community Independent Living Services",
+    "url": "https://arsources.org/",
+    "phone": "479-442-5600",
+    "counties": [
+     "Benton",
+     "Carroll",
+     "Madison",
+     "Washington"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": []
+   },
+   {
+    "id": "ar-cil-sails-se",
+    "name": "Southeast Arkansas Independent Living Service Center (White Hall)",
+    "organization": "Southeast Arkansas Independent Living Service Center (SAILS-SE)",
+    "url": "https://www.ilru.org/cil-directory/ar",
+    "phone": "870-247-8600",
+    "counties": [
+     "Arkansas",
+     "Ashley",
+     "Bradley",
+     "Chicot",
+     "Cleveland",
+     "Desha",
+     "Drew",
+     "Grant",
+     "Jefferson",
+     "Lincoln"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "The national directory lists no website for this center."
+    ]
+   },
+   {
+    "id": "ar-cil-spa",
+    "name": "Spa Area Independent Living Services (Hot Springs)",
+    "organization": "Spa Area Independent Living Services (SAILS)",
+    "url": "https://www.ilru.org/cil-directory/ar",
+    "phone": "501-624-7710",
+    "counties": [
+     "Clark",
+     "Garland",
+     "Hot Spring",
+     "Montgomery",
+     "Pike",
+     "Saline"
+    ],
+    "method": "full_official_page_text",
+    "review": "full",
+    "notes": [
+     "The national directory lists its website as ar-sails.org."
+    ]
+   }
+  ]
+ },
+ "programs": [
+  {
+   "id": "ar-claims",
+   "name": "Arkansas veterans: county veterans service officers for claims help",
+   "organization": "County veterans service officers; Arkansas Department of Veterans Affairs",
+   "url": "https://www.veterans.arkansas.gov/veteran-services-map",
+   "needs": [
+    "general_navigation",
+    "benefits_and_funding"
+   ],
+   "description": "Free help with VA claims, pension and survivor benefits from county veterans service officers. The Arkansas Department of Veterans Affairs lists a county veterans service officer for each of the 75 counties; many work only certain days.",
+   "next_step": "Choose your county for its service officer’s phone and days. The Arkansas Department of Veterans Affairs is at 501-683-2382.",
+   "constraints": [
+    "Call before you go; most county officers keep part-time hours, and several share one phone across counties."
+   ],
+   "phone": "501-683-2382",
+   "phone_label": "Arkansas Department of Veterans Affairs (501-683-2382)",
+   "phone_source": "https://www.veterans.arkansas.gov/veteran-services-map",
+   "review": "full",
+   "sources": [
+    {
+     "url": "https://www.veterans.arkansas.gov/veteran-services-map",
+     "title": "Arkansas Department of Veterans Affairs: Veteran Services Map",
+     "scope": "Department phone and the link to the full county directory; read in full."
+    },
+    {
+     "url": "https://www.veterans.arkansas.gov/s/Directory-11-09-2026.pdf",
+     "title": "Arkansas Department of Veterans Affairs: VSO, DVSO, CVSO Directory (dated November 9, 2026)",
+     "scope": "County veterans service officers’ phones and hours for all 75 counties; text extracted from the PDF and read in full."
+    }
+   ]
+  },
+  {
+   "id": "ar-adrc",
+   "name": "Choices in Living Resource Center (Arkansas aging and disability resource center)",
+   "organization": "Arkansas Department of Human Services",
+   "url": "https://humanservices.arkansas.gov/divisions-shared-services/aging-adult-behavioral-health-services/choices-in-living-resource-center/",
+   "needs": [
+    "general_navigation",
+    "help_at_home",
+    "equipment_home_accessibility"
+   ],
+   "description": "Arkansas’s Aging and Disability Resource Center: information about long-term services and supports for older adults, people with disabilities and caregivers. Military service is not required.",
+   "next_step": "Call 866-801-3435, Monday to Friday 8 a.m. to 4 p.m., or choose a county above for its Area Agency on Aging.",
+   "constraints": [
+    "Each program has its own eligibility and waitlist."
+   ],
+   "phone": "866-801-3435",
+   "phone_label": "Choices in Living Resource Center (866-801-3435)",
+   "phone_source": "https://humanservices.arkansas.gov/divisions-shared-services/aging-adult-behavioral-health-services/choices-in-living-resource-center/",
+   "review": "excerpt",
+   "method": "official_page_metadata",
+   "sources": [
+    {
+     "url": "https://humanservices.arkansas.gov/divisions-shared-services/aging-adult-behavioral-health-services/choices-in-living-resource-center/",
+     "title": "Arkansas Department of Human Services: Choices in Living Resource Center",
+     "scope": "Phone 1-866-801-3435, 8:00 to 4:00 Monday to Friday, and the ADRC description; from the page’s own summary (metadata), not its body text."
+    }
+   ]
+  },
+  {
+   "id": "ar-ship",
+   "name": "Medicare counseling (SHIP) for Arkansas",
+   "organization": "SHIP Technical Assistance Center",
+   "url": "https://www.shiphelp.org/",
+   "needs": [
+    "benefits_and_funding"
+   ],
+   "description": "Free, unbiased Medicare counseling from the State Health Insurance Assistance Program: plan choices, enrollment, costs and help paying for Medicare.",
+   "next_step": "Call 877-839-2675 or use the locator to reach Arkansas’s program. For Medicare itself, call 800-MEDICARE (800-633-4227).",
+   "constraints": [
+    "Have your Medicare card and drug list ready."
+   ],
+   "phone": "877-839-2675",
+   "phone_label": "SHIP national locator (877-839-2675)",
+   "phone_source": "https://www.shiphelp.org/?p=317",
+   "review": "excerpt",
+   "sources": [
+    {
+     "url": "https://www.shiphelp.org/?p=317",
+     "title": "SHIP Technical Assistance Center: find your local SHIP",
+     "scope": "National locator and phone 877-839-2675; search excerpt (carried from the starter edition, reviewed November 2, 2026)."
+    }
+   ]
+  },
+  {
+   "id": "ar-ombudsman",
+   "name": "Arkansas Long-Term Care Ombudsman and adult abuse reporting",
+   "organization": "Arkansas Department of Human Services, Office of the State Long-Term Care Ombudsman",
+   "url": "https://arombudsman.dhs.arkansas.gov/",
+   "needs": [
+    "resident_rights",
+    "general_navigation"
+   ],
+   "description": "Independent advocacy for residents of nursing homes and assisted living, through local ombudsmen at the Area Agencies on Aging.",
+   "next_step": "Choose your county for its local ombudsman, or call 501-682-1001, the number the state brochure prints for the program. To report abuse, neglect or exploitation of an adult, call the Adult Maltreatment Hotline, 800-482-8049. In an emergency, call 911.",
+   "constraints": [
+    "The ombudsman acts with the resident’s permission and is not a licensing agency."
+   ],
+   "phone": "501-682-1001",
+   "phone_label": "Arkansas Long-Term Care Ombudsman Program (501-682-1001)",
+   "phone_source": "https://ltcombudsman.org/wp-content/uploads/2026/05/arkansas-residents-rights-brochure.pdf",
+   "review": "full",
+   "method": "full_official_pdf",
+   "sources": [
+    {
+     "url": "https://ltcombudsman.org/wp-content/uploads/2026/05/arkansas-residents-rights-brochure.pdf",
+     "title": "National Long-Term Care Ombudsman Resource Center: Arkansas residents’ rights brochure (2026), Contact Your Ombudsman",
+     "scope": "Program phone 501-682-1001 and website, printed without a label, and every local ombudsman’s counties and phones; read in full."
+    },
+    {
+     "url": "https://arombudsman.dhs.arkansas.gov/",
+     "title": "Arkansas Long-Term Care Ombudsman Program",
+     "scope": "Program website; read in full. It prints no phone."
+    },
+    {
+     "url": "https://humanservices.arkansas.gov/divisions-shared-services/aging-adult-behavioral-health-services/adult-protective-services/",
+     "title": "Arkansas Department of Human Services: Adult Protective Services",
+     "scope": "Adult Maltreatment Hotline 1-800-482-8049; from the page’s own summary (metadata)."
+    }
+   ]
+  },
+  {
+   "id": "ar-legal-programs",
+   "name": "Free legal help for Arkansas veterans and older adults",
+   "organization": "Legal Aid of Arkansas",
+   "url": "https://arlegalaid.org/contact-us/apply-for-legal-aid.html",
+   "role": "legal_aid",
+   "needs": [
+    "resident_rights",
+    "general_navigation",
+    "housing"
+   ],
+   "description": "Free civil legal help for people with low incomes, including housing, benefits and family matters. Legal Aid of Arkansas also runs a statewide fair housing helpline.",
+   "next_step": "Call the helpline, 800-952-9243 (1-800-9 LAW AID), Monday to Thursday 9 to 11 a.m. and 1 to 3 p.m., and Tuesday evenings 5:15 to 7:15, or apply online any time. Fair housing helpline: 870-338-9834.",
+   "constraints": [
+    "Legal aid screens by income and case type; no criminal cases.",
+    "Legal Aid of Arkansas’s application lists 31 counties, so it may refer you to another program; the helpline will say which."
+   ],
+   "phone": "800-952-9243",
+   "phone_label": "Legal Aid of Arkansas helpline (800-952-9243)",
+   "phone_source": "https://arlegalaid.org/contact-us/apply-for-legal-aid.html",
+   "review": "full",
+   "sources": [
+    {
+     "url": "https://arlegalaid.org/contact-us/apply-for-legal-aid.html",
+     "title": "Legal Aid of Arkansas: Apply for Legal Aid",
+     "scope": "Helpline, its hours, the fair housing helpline and the counties on the application; read in full."
+    }
+   ]
+  },
+  {
+   "id": "ar-vahealth-systems",
+   "name": "VA health care systems serving Arkansas",
+   "organization": "U.S. Department of Veterans Affairs",
+   "url": "https://www.va.gov/find-locations/?facilityType=health",
+   "role": "va_health_system",
+   "needs": [
+    "veteran_services",
+    "care_facilities"
+   ],
+   "description": "Arkansas veterans are served mainly by VA Central Arkansas Health Care (John L. McClellan Memorial Veterans’ Hospital, 4300 West 7th Street, Little Rock; 501-257-1000, toll-free 800-224-8387, with clinics including Conway, El Dorado, Mena, Mountain Home, Pine Bluff, Russellville and Searcy) and the Veterans Health Care System of the Ozarks (1100 North College Avenue, Fayetteville; 479-443-4301, toll-free 800-691-8387).",
+   "next_step": "Use VA’s facility locator with your ZIP code to find the closest clinic; border counties may be closer to a system in a neighboring state. Not enrolled yet? Ask your county veterans service officer for help applying.",
+   "constraints": [
+    "Which system serves you depends on where you live; VA’s locator shows the right clinic."
+   ],
+   "phone": "501-257-1000",
+   "phone_label": "John L. McClellan Memorial Veterans’ Hospital (501-257-1000)",
+   "phone_source": "https://www.va.gov/central-arkansas-health-care/contact-us/",
+   "review": "full",
+   "sources": [
+    {
+     "url": "https://www.va.gov/central-arkansas-health-care/contact-us/",
+     "title": "VA Central Arkansas health care: Contact us",
+     "scope": "Medical center address, local and toll-free phones and the clinic phones; read in full. Last updated January 21, 2026."
+    },
+    {
+     "url": "https://www.va.gov/fayetteville-arkansas-health-care/contact-us/",
+     "title": "VA Fayetteville Arkansas health care: Contact us",
+     "scope": "Veterans Health Care System of the Ozarks address and phones; read in full. Last updated August 20, 2026."
+    }
+   ]
+  }
+ ],
+ "adapter": {
+  "badge_county": "County veterans service officer",
+  "badge_state": "State veterans line",
+  "badge_statewide": "Arkansas statewide line",
+  "published_in": "Published in the Arkansas Department of Veterans Affairs’ county directory",
+  "agency_link": "Arkansas Department of Veterans Affairs county directory",
+  "officers_can": "County Veterans Service Officers can",
+  "abuse_phone": "800-482-8049",
+  "abuse_label": "Arkansas Adult Maltreatment Hotline"
+ },
+ "coverage_scope": "Referral edition. All 75 counties have a county veterans service officer route (71 with the officer’s own phone; four use the state department’s line), one of eight Area Agencies on Aging and a local long-term care ombudsman. Four independent living centers cover 25 counties.",
+ "coverage_note": "County veterans service officers come from the Arkansas Department of Veterans Affairs’ county directory dated November 9, 2026. Area Agencies on Aging and local ombudsmen come from the state’s residents’ rights brochure; independent living centers from the ILRU national directory. Reviewed November 23, 2026. Contacts are not telephone-confirmed.",
+ "share_description": "county veterans service officers, Area Agencies on Aging and long-term care ombudsman help across Arkansas"
+}

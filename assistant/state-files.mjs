@@ -50,7 +50,8 @@ export const STATES=Object.freeze({
   "ND": "North Dakota",
   "IA": "Iowa",
   "CT": "Connecticut",
-  "MA": "Massachusetts"
+  "MA": "Massachusetts",
+  "AR": "Arkansas"
 });
 export const STATE_FILES=Object.freeze({
   "OH": [
@@ -252,6 +253,10 @@ export const STATE_FILES=Object.freeze({
   "MA": [
     "data/public/massachusetts-resources.json",
     "data/public/massachusetts-county-veterans-offices.json"
+  ],
+  "AR": [
+    "data/public/arkansas-resources.json",
+    "data/public/arkansas-county-veterans-offices.json"
   ]
 });
 export const localityLabel=row=>row?(["independent_city","statewide","borough","census_area","city_and_county"].includes(row.county_type)?row.county:row.county+(row.county_type==="parish"?" Parish":" County")):"";
