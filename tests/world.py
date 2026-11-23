@@ -78,7 +78,7 @@ for key in ('fmp', 'vcl', 'benefits', 'manila'):
 checked(data['us_abroad']['fmp']['us_canada'], 'FMP U.S. and Canada')
 assert len(data['us_abroad']['vcl']['regions']) == 6
 slugs = [c['slug'] for c in data['countries']]
-assert len(slugs) == len(set(slugs)) and 1 <= len(slugs) <= 40, slugs
+assert len(slugs) == len(set(slugs)) and 1 <= len(slugs) <= 42, slugs
 for c in data['countries']:
     em = c['emergency']
     assert em['numbers'] and all(n['display'] and n['tel'] for n in em['numbers']), (c['slug'], 'emergency number')
@@ -116,7 +116,8 @@ print(f'PASS: {len(slugs)} countries; every number has an official https source 
 built = build_world.outputs()
 for name, text in built.items():
     assert (ROOT / name).read_text(encoding='utf-8') == text, name + ' is out of date: run python3 scripts/build_public.py'
-assert set(built) == {'world/index.html'} | {f'world/{s}.html' for s in slugs}
+region_slugs = [r['slug'] for r in data.get('regions', [])]
+assert set(built) == {'world/index.html'} | {f'world/{s}.html' for s in slugs + region_slugs}
 for c in data['countries']:
     path = f'world/{c["slug"]}.html'
     page = parse(path)
@@ -178,6 +179,63 @@ html = build_world.country_page(fixture, agency_country)
 assert 'data-kind="agency"' in html and 'id="no-agency"' not in html
 print('PASS: the builder renders the no-agency style and the agency style from fixtures.')
 
+# 2c. Regions with their own page (Okinawa, a prefecture of Japan): not counted as countries; each names its
+# parent country and links to it, the parent links back, the index lists it under the parent, and the page carries
+# the emergency numbers, sourced crisis lines (partial where not 24 hours), local offices for U.S. veterans, the
+# regional Veterans Crisis Line number, the parent country's FMP toll-free line and the VA benefits line.
+by_slug = {c['slug']: c for c in data['countries']}
+assert not set(region_slugs) & set(slugs) and len(region_slugs) == len(set(region_slugs)), region_slugs
+for r in data.get('regions', []):
+    assert r['parent'] in by_slug and r.get('kind_label') and r.get('intro'), (r['slug'], 'parent, label and intro')
+    assert 'no_agency' not in r and 'agency' not in [x['kind'] for x in r['lines']], (r['slug'], 'a region page makes no agency statement of its own')
+    assert r['vcl_region'] in {x['code'] for x in data['us_abroad']['vcl']['regions']}, r['slug']
+    em = r['emergency']
+    assert em['numbers'] and all(n['display'] and n['tel'] for n in em['numbers']), (r['slug'], 'emergency number')
+    checked(em, r['slug'] + ' emergency')
+    assert [x['kind'] for x in r['lines']] and set(x['kind'] for x in r['lines']) == {'crisis_line'} or r.get('no_crisis_line'), r['slug']
+    for line in r['lines']:
+        where = r['slug'] + ': ' + line['name']
+        assert line['numbers'] and all(n['display'] and n['tel'] for n in line['numbers']), (where, 'numbers')
+        checked(line, where)
+        assert line.get('hours') and (line['around_the_clock'] or line.get('partial')), (where, 'hours and partial note')
+    assert r['us_local'], (r['slug'], 'local offices for U.S. veterans')
+    for office in r['us_local']:
+        checked(office, r['slug'] + ': ' + office['name'])
+        assert office.get('numbers') or office.get('email'), (office['name'], 'a way to reach the office')
+    path = f'world/{r["slug"]}.html'
+    html = (ROOT / path).read_text(encoding='utf-8')
+    page = parse(path)
+    parent = by_slug[r['parent']]
+    assert e(build_world.lower_first(r['kind_label'])) in html and 'not a separate country' in html, (path, 'labelled as part of its country')
+    assert f'<a href="{parent["slug"]}.html" data-parent-link>' in html, (path, 'link to the parent country')
+    parent_html = (ROOT / f'world/{parent["slug"]}.html').read_text(encoding='utf-8')
+    assert f'<a href="{r["slug"]}.html" data-region-link>' in parent_html, (path, 'parent country links to the region')
+    assert page.sections == ['emergency', 'region', 'crisis-line', 'us-local', 'us-veterans'], (path, page.sections)
+    assert page.no_agency == 0 and 'id="no-agency"' not in html, (path, 'no no-agency statement on a region page')
+    for n in em['numbers']:
+        assert f'href="tel:{n["tel"]}"' in html, (path, n['display'])
+    for line in r['lines']:
+        for n in line['numbers']:
+            assert f'href="tel:{n["tel"]}"' in html, (path, n['display'])
+        assert line['source_url'].replace('&', '&amp;') in html, (path, 'source shown', line['name'])
+    assert page.partials == sum(bool(x.get('partial')) for x in r['lines']) + bool(not r['lines'] and r.get('no_crisis_line')), (path, 'partials')
+    assert html.count('data-office') == len(r['us_local']), (path, 'local offices')
+    for office in r['us_local']:
+        assert f'<a data-source href="{e(office["source_url"])}"' in html, (path, 'office source', office['name'])
+        for n in office.get('numbers', []):
+            assert f'href="tel:{n["tel"]}"' in html, (path, n['display'])
+    us = html[html.index('id="us-veterans"'):]
+    region = next(x for x in data['us_abroad']['vcl']['regions'] if x['code'] == r['vcl_region'])
+    assert region['display'] in us and 'veteranscrisisline.net' in us, (path, 'regional crisis number')
+    fmp_line = next((t for t in data['us_abroad']['fmp']['toll_free'] if t['country'] == parent['name']), None)
+    if fmp_line:
+        assert f'href="tel:{fmp_line["tel"]}"' in us and f'from {e(parent["name"])}, including {e(r["name"])}' in us, (path, 'parent FMP line')
+    assert data['us_abroad']['benefits']['display'] in us, (path, 'VA benefits contact')
+    assert f'<link rel="canonical" href="https://guide.vethomeguard.org/world/{r["slug"]}.html">' in html
+    assert '../assets/analytics.js' in page.scripts, (path, 'visit counter')
+    local_links_resolve(path, page)
+print(f'PASS: {len(region_slugs)} region page(s) labelled as part of their country, linked both ways, with sourced numbers and U.S.-veteran help.')
+
 # 3. The world index lists every country and carries the VA numbers for U.S. veterans abroad.
 index = (ROOT / 'world/index.html').read_text(encoding='utf-8')
 page = parse('world/index.html')
@@ -189,6 +247,11 @@ for c in data['countries']:
     else:
         agency = next(x['name'] for x in c['lines'] if x['kind'] == 'agency')
         assert e(agency) in row and 'data-no-agency' not in row, (c['slug'], 'index names the agency')
+for r in data.get('regions', []):
+    parent = by_slug[r['parent']]
+    row = index[index.index(f'<tr><td><a href="{parent["slug"]}.html">'):]
+    row = row[:row.index('</tbody>')]
+    assert f'<a href="{r["slug"]}.html">{e(r["name"])}</a> <span class="tag">{e(r["kind_label"])}</span>' in row, (r['slug'], 'index lists the region under its country')
 covered = {c['name'] for c in data['countries']}
 assert not covered & {x['name'] for x in data['not_yet_covered']}, 'a covered country is still listed as not yet covered'
 for r in data['us_abroad']['vcl']['regions']:
