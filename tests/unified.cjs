@@ -142,22 +142,9 @@ console.log('state pages: ok');
  for(const file of ['index.html','pa.html','ky.html']){const d=new JSDOM(fs.readFileSync(path.join(root,file),'utf8')).window.document;assert(d.querySelector('footer a[href="privacy.html"]'),file+' footer links the privacy page')}
  const d=new JSDOM(fs.readFileSync(path.join(root,'privacy.html'),'utf8')).window.document,text=d.querySelector('main').textContent;
  assert.equal(d.querySelector('link[rel=canonical]').href,'https://guide.vethomeguard.org/privacy.html');
- for(const words of ['November 23, 2026','GoatCounter does not use cookies','It does not store the IP address','GitHub Pages','This site shows ads. We use Google AdSense and ask Google to show only non-personalized ads','can set its own cookies','Any ad sold directly is labeled “Advertisement”','We do not sell personal information','not directed to children under 13'])assert(text.includes(words),'guide privacy page says: '+words);
+ for(const words of ['November 21, 2026','GoatCounter does not use cookies','It does not store the IP address','GitHub Pages','This site may show ads. Every ad is labeled “Advertisement”','We do not sell personal information','not directed to children under 13'])assert(text.includes(words),'guide privacy page says: '+words);
  for(const href of ['https://adssettings.google.com','https://policies.google.com/technologies/ads','https://optout.aboutads.info','https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement'])assert(d.querySelector(`main a[href="${href}"]`),href);
  assert(d.querySelector('main a[href^="mailto:travis@vethomeguard.org"]'));
  assert(fs.readFileSync(path.join(root,'sitemap.xml'),'utf8').includes('<loc>https://guide.vethomeguard.org/privacy.html</loc>'));
 }
 console.log('privacy page: ok');
-{
- // Google AdSense (November 23, 2026): non-personalized ads only, on the public guide pages and country pages, never on help-only pages.
- const client='ca-pub-9220804879239310',read=f=>fs.readFileSync(path.join(root,f),'utf8');
- assert.equal(read('ads.txt'),'google.com, pub-9220804879239310, DIRECT, f08c47fec0942fa0\n','ads.txt names the publisher');
- const yes=['index.html','facilities.html','ky.html','pa.html','share.html','share-ky.html',...fs.readdirSync(path.join(root,'world')).filter(f=>f.endsWith('.html')&&f!=='index.html').map(f=>'world/'+f)];
- for(const f of yes){const t=read(f),h=t.slice(0,t.indexOf('</head>'));
-  assert.equal((t.match(/adsbygoogle\.js/g)||[]).length,1,f+' loads Google ad code once');
-  assert(h.includes(`<meta name="google-adsense-account" content="${client}">`)&&h.includes(`adsbygoogle.js?client=${client}"`),f+' ad code in the head');
-  assert(h.indexOf('requestNonPersonalizedAds=1')>=0&&h.indexOf('requestNonPersonalizedAds=1')<h.indexOf('adsbygoogle.js'),f+' non-personalized before the code loads');}
- for(const f of ['privacy.html','family-guide.html','flyers.html','bingo.html','world/index.html','disability-advocacy.html','mobility-rights.html','assistant/index.html'])
-  assert(!/adsbygoogle|google-adsense-account/.test(read(f)),f+' never loads Google ad code');
-}
-console.log('ad code: ok');
