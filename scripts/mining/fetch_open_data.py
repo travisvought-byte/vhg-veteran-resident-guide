@@ -71,22 +71,35 @@ def slim_facility(item):
     }
 
 
+def va_hosts(rule):
+    """The base URL to use, then the one to try if it refuses the key.
+
+    The registry's fetch rule sets `url` (now the sandbox, since the owner's key is a sandbox key) and `fallback_url`.
+    The repository variable VA_FACILITIES_API_BASE, when set, overrides `url`, so moving to production is one setting.
+    """
+    first = os.environ.get(rule.get('base_env') or '', '').strip() or rule['url']
+    return [h for h in dict.fromkeys([first, rule.get('fallback_url')]) if h]
+
+
+def va_environment(base):
+    return 'sandbox' if 'sandbox' in (base or '') else 'production'
+
+
 def fetch_va_facilities_api(rule, getter=None, pause=VA_PAUSE_SECONDS):
     key = os.environ.get(rule['key_env'], '').strip()
     if not key:
         raise Skipped(f"{rule['key_env']} is not set")
     getter = getter or get
     headers = {'apikey': key}
-    hosts = [rule['url'], rule.get('sandbox_url')]
+    hosts = va_hosts(rule)
     base, digest, rows = None, hashlib.sha256(), []
     for state in VA_STATES:
         page = 1
         while True:
             query = urllib.parse.urlencode({'state': state, 'per_page': 1000, 'page': page})
             if base is None:
-                # A new developer key is often a sandbox key. Try production, then the sandbox, once, and keep
-                # whichever accepts the key for the rest of the run.
-                for host in [h for h in hosts if h]:
+                # Try the configured host, then the other one, once; keep whichever accepts the key.
+                for host in hosts:
                     try:
                         body = getter(f'{host}?{query}', headers=headers)
                         base = host
@@ -144,10 +157,12 @@ def main():
             'retrieved_on': args.today,
             'sha256': body if isinstance(body, str) else hashlib.sha256(body).hexdigest(),
             'row_count': len(rows) if isinstance(rows, list) else None,
+            'environment': va_environment(rest[0]) if rest and rest[0] else None,
             'rows': rows,
         }
         c.write_json(c.MINING / 'snapshots' / src['id'] / f'{args.today}.json', snap)
-        results.append({'source_id': src['id'], 'ok': True, 'rows': snap['row_count'], 'sha256': snap['sha256']})
+        results.append({'source_id': src['id'], 'ok': True, 'rows': snap['row_count'], 'sha256': snap['sha256'],
+                        'host': snap['download_url'], 'environment': snap['environment']})
     c.write_json(c.MINING / 'snapshots' / 'last-run.json', {'run_on': args.today, 'results': results})
     for r in results:
         label = 'ok     ' if r['ok'] else ('SKIPPED ' if r.get('skipped') else 'FAILED ')

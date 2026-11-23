@@ -31,16 +31,17 @@
    "access": "api_key_required",
    "fetch": {
     "kind": "va_facilities_api",
-    "url": "https://api.va.gov/services/va_facilities/v1/facilities",
-    "sandbox_url": "https://sandbox-api.va.gov/services/va_facilities/v1/facilities",
-    "key_env": "VA_FACILITIES_API_KEY"
+    "url": "https://sandbox-api.va.gov/services/va_facilities/v1/facilities",
+    "fallback_url": "https://api.va.gov/services/va_facilities/v1/facilities",
+    "key_env": "VA_FACILITIES_API_KEY",
+    "base_env": "VA_FACILITIES_API_BASE"
    },
    "yields": "Every VA medical center, clinic, Vet Center, benefits office and cemetery with address, phone and hours.",
    "evidence_level": "B",
    "cadence_days": 30,
    "status": "active",
    "last_checked": "2026-11-23",
-   "notes": "The only complete per-facility source. Travis registers the free developer key himself and stores it as the repository secret VA_FACILITIES_API_KEY; the monthly workflow reads it from there. The key is sent only in a request header and never written anywhere. Until the secret exists, the run records this source as skipped. Snapshots keep name, kind, address, phone, website, hours and location for every VA medical center, clinic, Vet Center, benefits office and cemetery, state by state."
+   "notes": "The only complete per-facility source. Travis registered a free sandbox key and stores it as the repository secret VA_FACILITIES_API_KEY; the monthly workflow reads it from there and calls the sandbox host. To move to production, set the repository variable VA_FACILITIES_API_BASE to the production URL (or swap url and fallback_url here). The key is sent only in a request header and never written anywhere. Without the secret, the run records this source as skipped. Snapshots record which environment answered; sandbox data is a benchmark and is checked against production or the facility's own page before any listing is published."
   },
   {
    "id": "va-find-locations",

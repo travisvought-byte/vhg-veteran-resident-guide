@@ -83,7 +83,7 @@ need({r['status'] for r in table} <= {'new', 'already_published', 'phone_conflic
      'candidate statuses are known')
 
 # The keyed VA fetcher: skipped cleanly with no key, and with a stub in place of the network it pages through each
-# state, falls back to the sandbox host when production refuses the key, and never puts the key in a URL.
+# state, falls back to the other host when the configured one refuses the key, and never puts the key in a URL.
 import io  # noqa: E402
 import json as _json  # noqa: E402
 import os  # noqa: E402
@@ -104,7 +104,7 @@ seen = []
 def stub(url, headers=None):
     seen.append(url)
     need(headers == {'apikey': 'test-key-not-real'} and 'test-key-not-real' not in url, 'key only in the header')
-    if url.startswith(va_rule['url']):
+    if url.startswith(va_rule['url']):  # the configured host refuses the key in this stub
         raise urllib.error.HTTPError(url, 401, 'refused', {}, io.BytesIO(b''))
     page = int(url.rsplit('page=', 1)[1])
     item = {'id': f'vha_{page}', 'attributes': {'name': 'Clinic', 'facilityType': 'va_health_facility',
@@ -119,10 +119,16 @@ finally:
     os.environ.pop(va_rule['key_env'], None)
     if saved_key is not None:
         os.environ[va_rule['key_env']] = saved_key
-need(va_base == va_rule['sandbox_url'], 'VA fetcher falls back to the sandbox host')
+need(va_base == va_rule['fallback_url'], 'VA fetcher falls back to the other host once')
 need(len(va_rows) == 2 * len(fod.VA_STATES), 'VA fetcher reads every page of every state')
 need(va_rows[0]['phone'] == '501-257-1000' and va_rows[0]['city'] == 'Little Rock', 'VA rows are slimmed')
-need(sum(u.startswith(va_rule['url']) for u in seen) == 1, 'production is tried once, not per state')
+need(sum(u.startswith(va_rule['url']) for u in seen) == 1, 'the refused host is tried once, not per state')
+need(fod.va_environment(va_rule['url']) == 'sandbox' and fod.va_environment(va_rule['fallback_url']) == 'production',
+     'VA environment is recorded')
+os.environ[va_rule['base_env']] = 'https://example.invalid/override'
+need(fod.va_hosts(va_rule)[0] == 'https://example.invalid/override', 'VA_FACILITIES_API_BASE overrides the host')
+os.environ.pop(va_rule['base_env'], None)
+need(fod.va_hosts(va_rule)[0] == va_rule['url'], 'the registry url is the default host')
 
 if problems:
     print('\n'.join(problems))
