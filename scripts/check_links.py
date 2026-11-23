@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Request every link the guide publishes and print a Markdown report.
 
-Covers each state's resource records and veterans office contacts (states/registry.json) and the
-family guide (data/family-guide.json): the links visitors follow and the source links shown beside them.
+Covers each state's resource records and veterans office contacts (states/registry.json), the
+family guide (data/family-guide.json) and the country pages (data/world/countries.json): the links visitors follow and the source links shown beside them.
 Bingo listings have their own weekly report (scripts/check_schedule_freshness.py).
 
 Exit 10 when a person needs to look: a link is broken or now goes to a different website.
@@ -68,6 +68,12 @@ def collect(only_state=None):
         for key in ('protection_advocacy', 'early_intervention', 'parent_centers'):
             for code, item in family[key].items():
                 add(item, 'family guide:' + code + ' ' + key.replace('_', ' '))
+        # Country pages for veterans outside the U.S. (data/world/countries.json).
+        world = read('data/world/countries.json')
+        add(world['us_abroad'], 'world:us-abroad')
+        add(world['region_sources'], 'world:regions')
+        for country in world['countries']:
+            add(country, 'world:' + country['slug'])
     return used
 
 

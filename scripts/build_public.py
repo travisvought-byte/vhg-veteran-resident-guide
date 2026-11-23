@@ -15,6 +15,7 @@ from build_disability_advocacy import outputs as disability_advocacy_outputs
 from build_mobility_routes import outputs as mobility_route_outputs
 from build_family_guide import outputs as family_guide_outputs
 from build_guide_privacy import outputs as privacy_outputs
+from build_world import outputs as world_outputs, pages as world_pages
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -96,6 +97,8 @@ def outputs():
     result.update(mobility_route_outputs())
     result.update(family_guide_outputs())
     result.update(privacy_outputs())
+    # Country pages for veterans outside the U.S. (data/world/countries.json); each carries the visit counter.
+    result.update(world_outputs())
     # Track public landing/sharing pages once, including each state's own guide page.
     for page in ['index.html', 'bingo.html', 'facilities.html'] + [s['page'] for s in states[1:]] + [s['share_page'] for s in states]:
         result[page] = re.sub(r'<script[^>]*data-goatcounter=[^>]*></script>', '', result[page])
@@ -109,6 +112,8 @@ def outputs():
     urls += [BASE_URL + s['page'] for s in states[1:]]
     # The per-state share pages are public, each with its own title and description.
     urls += [BASE_URL + s['share_page'] for s in states]
+    # Veterans outside the U.S.: the world index and one page per country.
+    urls += [BASE_URL + page for page in world_pages()]
     result['sitemap.xml'] = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join('  <url><loc>' + u.replace('&', '&amp;') + '</loc></url>\n' for u in urls) + '</urlset>\n'
     result['robots.txt'] = 'User-agent: *\nAllow: /\n\nSitemap: ' + BASE_URL + 'sitemap.xml\n'
     return result

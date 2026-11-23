@@ -149,6 +149,7 @@ assert len(links) > 1000, len(links)
 for state in registry:
     assert any(w.startswith(state['code'] + ':') for w in who), state['code'] + ' has no links to check'
 assert any(w.startswith('family guide:') for w in who) and any(w.startswith('shared:') for w in who)
+assert any(w == 'world:us-abroad' for w in who) and any(w == 'world:canada' for w in who), 'country pages are checked too'
 assert not any(w.endswith(':r02-va-pension') and not w.startswith('shared:') for w in who), 'a shared record is listed once, not once per state'
 assert all(u.startswith('https://') or u.startswith('http://') for u in links)
 texas = check_links.collect('TX')
