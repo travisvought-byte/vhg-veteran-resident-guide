@@ -139,7 +139,7 @@ for path in sorted((c.ROOT / 'data' / 'public' / 'va-facilities').glob('*.json')
     need(len({r['id'] for r in va['rows']}) == len(va['rows']), f'{path.name}: facility ids are unique')
     for r in va['rows']:
         need(r['state'] == va['state'], f'{path.name} {r["id"]}: in its state')
-        main = re.split(r'\s*(?:x|ext)', r['phone'], flags=re.I)[0]
+        main = re.split(r'\s*(?:x|ext|/)', r['phone'], flags=re.I)[0]
         need(len(c.digits(main)) == 10, f'{path.name} {r["id"]}: ten-digit phone, extension allowed')
         need(r['kind'] in ('health', 'vet_center', 'benefits', 'cemetery'), f'{path.name} {r["id"]}: kind')
         need(r['source_url'].startswith('https://') and r['retrieved_on'], f'{path.name} {r["id"]}: cited')
