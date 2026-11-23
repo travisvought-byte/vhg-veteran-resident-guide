@@ -1,0 +1,57 @@
+name: Mine open data sources
+# Monthly run of the resource-mining pipeline (docs/MINING.md). It fetches each open dataset that
+# data/mining/sources.json marks with a fetch rule, saves a dated snapshot, rebuilds the coverage report,
+# source ledger and candidates table, and pushes the result to a dated mining/run-<date> branch for review.
+# It publishes nothing to the guide itself: a person (or assistant) reads the candidates and moves the ones
+# that hold up into a state edition.
+on:
+  schedule:
+    - cron: '41 10 2 * *'   # the 2nd of each month, about 6:41 a.m. Eastern
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: mine-sources
+  cancel-in-progress: false
+jobs:
+  mine:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v6
+      - name: Fetch open datasets
+        run: python3 scripts/mining/fetch_open_data.py
+      - name: Rebuild coverage, ledger and candidates
+        run: |
+          python3 scripts/mining/coverage.py
+          python3 scripts/mining/ledger.py --due > due.txt
+          python3 scripts/mining/candidates.py
+          python3 tests/mining.py
+      - name: Summarize
+        run: |
+          {
+            echo '## Mining run'
+            echo
+            python3 -c "import json;r=json.load(open('data/mining/snapshots/last-run.json'));[print('-', x['source_id'], 'ok' if x['ok'] else 'failed: '+x['error']) for x in r['results']]"
+            echo
+            echo '### Sources due for a recheck'
+            echo '```'
+            head -60 due.txt
+            echo '```'
+            echo
+            sed -n '1,30p' docs/COVERAGE.md
+          } >> "$GITHUB_STEP_SUMMARY"
+      - name: Push results to a review branch
+        run: |
+          if git status --porcelain data/mining docs/COVERAGE.md | grep -q .; then
+            branch="mining/run-$(date -u +%Y-%m-%d)"
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git checkout -b "$branch"
+            git add data/mining docs/COVERAGE.md
+            git commit -m "Mining run $(date -u +%Y-%m-%d): snapshots, coverage, ledger, candidates"
+            git push origin "$branch"
+            echo "Pushed $branch" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo 'Nothing changed.' >> "$GITHUB_STEP_SUMMARY"
+          fi
