@@ -270,6 +270,20 @@ Rec Center (within 25 miles of the St. Petersburg test ZIP, and monthly), the Ta
 days could not be tied to dates), Kentucky's 2023 list of licensed charitable gaming facilities (its licenses ran out in
 2023 and 2024 and it has no ZIP codes), and a New Windsor fire company bingo that turned out to be in Maryland.
 
+**Second organizer pass (November 23, 2026).** Each from the organizer's own page, read November 23:
+Pennsylvania: Cherryhill Township VFC (Penn Run, Wednesday and Saturday), Granville Fire Company Event Center (last Sunday
+of the month), American Legion Post 26 (Dillsburg, Wednesday; members and their signed-in guests), Our Lady of the Valley
+Parish at Holy Family Social Hall (New Brighton, Wednesday), Archangel Gabriel Parish at Weirauch Hall (Coraopolis,
+Monday), Denver Fire Company Social Hall (Thursday) and Fairfield Fire Hall (Thursdays and the first Friday; no start
+time posted). West Virginia: Middleway VFC (Saturday). Kentucky: Kosair Shriners at Charity Hall Bingo (Louisville, Friday
+and Sunday afternoons) and the Lafayette Band Association's Lex Go Bingo (Lexington, Thursday, Friday and Sunday; its page
+gives two Sunday times, so the card gives none). New York: Shawnee VFC (Sanborn, Thursday). Where a page gave a street
+without a ZIP code (Granville, Holy Family, Lex Go Bingo), the ZIP is the U.S. Census Bureau geocoder's match and the
+record cites it. Left out: St. John XXIII Parish (its site shows a bot check), Resurrection Parish (page not found), a
+Butler County Historical Society bingo (one dated night), Duncansville's monthly bingo (event page from 2025 only), the
+American Saddlebred Legacy Foundation (no street), Bushkill Township VFC (no street), and fire companies that turned out to
+be in Maryland or Virginia (Halfway, Glen Burnie, Dunn Loring).
+
 **Kentucky, West Virginia, Pennsylvania (no state list of games).** No public statewide list of games with days
 and times was found: Kentucky's Office of Charitable Gaming (now part of Kentucky Horse Racing & Gaming)
 publishes county totals in its annual report; West Virginia's Tax Division links no licensee list;
