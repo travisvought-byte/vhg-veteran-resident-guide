@@ -9,6 +9,7 @@ Usage: pdftotext BingoOrganizations.pdf kansas.txt
 
 - A post office box is not a place to go: a block whose street is only a box is left out, and a box written beside a street
   ("7500 W 75th St PO Box 370") is dropped from the address used for directions (`listed_address` keeps the state's wording).
+- A block with two different addresses (BNG000422 lists the same street with two ZIP codes) is left out.
 - A street that starts with two numbers ("3381 326 N Kansas Ave": a council number run into the street) is left out rather
   than guessed, as is a block whose ZIP code is not a Kansas ZIP code with a point on the map (one block gives a Missouri ZIP).
 - The county comes from the ZIP code, in the same Midwire/GeoNames file as the site's ZIP points (checksum checked).
@@ -70,13 +71,18 @@ def main():
         if not m:
             left_out.append((number, 'no "City, KS ZIP" line'))
             continue
-        name, listed = ' '.join(body[:-2]), body[-2]
+        name, lines = body[0], body[1:-1]
         city, zip5 = m.group(1).strip(), m.group(2)
-        street = BOX.sub('', listed).strip(' ,')
-        if not street or not re.match(r'\d', street):
+        listed = ', '.join(lines)
+        streets = [s for s in (BOX.sub('', x).strip(' ,') for x in lines) if s]
+        if not streets:
             left_out.append((number, 'post office box only'))
             continue
-        if re.match(r'\d+ \d+ ', street):
+        if len(streets) > 1:
+            left_out.append((number, f'more than one address: {listed}'))
+            continue
+        street = streets[0]
+        if not re.match(r'\d', street) or re.match(r'\d+ \d+ ', street):
             left_out.append((number, f'street unclear: {listed}'))
             continue
         if zip5 not in points or zip5 not in counties:

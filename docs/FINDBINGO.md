@@ -419,8 +419,10 @@ a street (the state's wording stays in `listed_address`), and leaves out a stree
 ("3381 326 N Kansas Ave") and a block with a Missouri ZIP code. The county comes from the ZIP code's county in the same
 Midwire/GeoNames file as the site's ZIP points (checksum checked). The addresses are the ones the state lists for each
 organization, which may not be where it plays, so the state note says to call. On November 23 the PDF host refused this
-session's downloader, so the list was read through a page reader and checked against the PDF's first page by eye; the next
-refresh should run the importer on a fresh download.
+session's downloader, so the list was read through a page reader, then every one of the 181 blocks was checked against the
+PDF field by field (name, street, city, ZIP, phone) and the first page by eye. Two blocks run to six lines: BNG000219 puts its
+post office box on its own line (kept, box dropped), and BNG000422 gives the same street with two ZIP codes (left out). The
+next refresh should run the importer on a fresh download.
 
 ### Montana (loaded November 17, 2026)
 
