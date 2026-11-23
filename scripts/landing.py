@@ -57,7 +57,7 @@ def state(code, name, records, root=ROOT):
     title = f'{name} Veteran Resource Guide: {s["title_hook"]}'
     for key, value, limit in (('title', title, 82), ('intro', s['intro'], 320), ('description', s['description'], 170)):
         _check_text(code + ' ' + key, value, limit)
-    assert name in s['description'] or place in s['description'] or 'Hawai' in s['description'], code + ': description names the state'
+    assert name in s['description'], code + ': description names the state'
     return {'title': title, 'h1': e(name) + ' Veteran<br>Resource Guide',
             'eyebrow': s.get('eyebrow') or f'For {name} veterans and families',
             'intro': s['intro'], 'description': s['description'], 'og_title': f'Help for {place} veterans and their families | VHG'}
