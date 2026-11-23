@@ -119,7 +119,19 @@ def validate(states, venues, licensed, zips):
             # lives on the Ohio finder. Other states that require a gift get the local-partner offer (HALL_PITCH).
             assert s['code'] != 'OH' or h['money'] == 'must_give', s['code']
             assert h['sources'] and all(x['url'].startswith('https://') and x['scope'] and date.fromisoformat(x['reviewed_on']) for x in h['sources']), s['code']
-    pending = {(s['code'], c) for s in states for c in s.get('pending_counties', [])}
+        if 'partner' in s:
+            # A local organization doing work like ours that we ask the state's halls to consider supporting
+            # (owner direction, November 22, 2026). Its ways to help are written to the state's own rule on bingo money,
+            # so a partner needs that rule summarized first. Ohio's partner is Veteran Home Guardians (the Ohio finder).
+            p = s['partner']
+            assert s['code'] != 'OH' and s.get('halls'), s['code']
+            assert set(p) <= {'name', 'the', 'url', 'donate_url', 'about', 'ways', 'note', 'since', 'sources'} and p.get('the', True) in (True, False), s['code']
+            assert p['name'].strip() and p['about'].strip() and date.fromisoformat(p['since']), s['code']
+            assert all(p[k].startswith('https://') for k in ('url', 'donate_url') if k in p) and 'url' in p, s['code']
+            assert p['ways'] and all(isinstance(w, str) and w.strip() for w in p['ways']), s['code']
+            assert 'note' not in p or p['note'].strip(), s['code']
+            assert p['sources'] and all(x['url'].startswith('https://') and x['scope'] and date.fromisoformat(x['reviewed_on']) for x in p['sources']), s['code']
+    pending ={(s['code'], c) for s in states for c in s.get('pending_counties', [])}
     assert not pending & {(v['state'], v['county']) for v in venues}, 'a county with listings is no longer pending'
     with_venues = {s['code'] for s in states if s['coverage'] in ('times', 'starter')}
     assert {s['code'] for s in states if s['coverage'] == 'starter'} == set(STARTER_FILES), 'each starter state has its schedule file'
@@ -517,11 +529,40 @@ def _send_times(s, up='../'):
         if h.get('ad_note'):
             body += f'<h3>Advertising your game in {name}</h3><p id="ad-rule">{escape(h["ad_note"])}</p>'
         body += f'<p class="small">Checked {_date_label(max(x["reviewed_on"] for x in h["sources"]))}. Sources: {_rule_links(h)}. This is a summary, not legal advice; your regulator has the final word.</p>'
+        if s.get('partner'):
+            body += (f'<p>We also ask every {name} hall to consider supporting our local partner, '
+                     + ('the ' if s['partner'].get('the') else '') + f'<a href="#partner">{escape(s["partner"]["name"])}</a>. It is never a condition of being listed.</p>')
         body += f'<p>{escape(HALL_PITCH[h["money"]].format(name=s["name"]))}</p>'
     else:
         body += '<h3>More help for your hall</h3><p>Beyond the free listing:</p>'
     body += _hall_offers(up) + f'<p><a href="{up}halls/">Help for bingo halls, state by state</a></p></section>'
     return body
+
+
+def _partner_panel(s):
+    """The state's local partner and the standing ask to its halls (owner direction, November 22, 2026).
+
+    Outside Ohio, Travis would rather bingo support go to a local group doing work like Veteran Home Guardians than
+    to Ohio. The ask is standing, voluntary and written to the state's own rule on bingo money; it never touches
+    which games are listed or their order."""
+    p = s.get('partner')
+    if not p:
+        return ''
+    name, who = escape(s['name']), escape(p['name'])
+    called = ('the ' if p.get('the') else '') + who  # "the Mobility Independence Foundation" mid-sentence
+    actions = f'<a class="solid" href="{escape(p["url"])}" target="_blank" rel="noopener noreferrer">Visit {who} ↗</a>'
+    if p.get('donate_url'):
+        actions += f'<a href="{escape(p["donate_url"])}" target="_blank" rel="noopener noreferrer">Give to {who} ↗</a>'
+    actions += f'<a href="{escape(_mailto("Supporting " + p["name"] + " in " + s["name"], "Hall or group name:" + chr(10) + "Town:" + chr(10) + "What we did or are planning:" + chr(10)))}">Tell us what your hall did</a>'
+    return (f'<section class="panel" id="partner" aria-labelledby="partner-title"><h2 id="partner-title">Our {name} partner: {who}</h2>'
+            f'<p>{escape(p["about"])}</p>'
+            f'<p>Find Bingo asks every {name} hall and bingo group to consider supporting {called}. It is a standing request, never a '
+            'condition of being listed, and it never changes which games appear here or their order. Ways to help:</p>'
+            '<ul>' + ''.join(f'<li>{escape(w)}</li>' for w in p['ways']) + '</ul>'
+            + (f'<p class="note">{escape(p["note"])}</p>' if p.get('note') else '')
+            + f'<div class="big-actions">{actions}</div>'
+            f'<p class="small">Our partner since {_date_label(p["since"])}. Sources: {_rule_links(p)}. Follow your own license and your state’s rules; '
+            f'<a href="#money-rule">what {name} law says about bingo money</a>.</p></section>')
 
 
 def halls_page(states):
@@ -535,6 +576,18 @@ def halls_page(states):
                  + (f'<p><strong>Ads:</strong> {escape(h["ad_note"])}</p>' if h.get('ad_note') else '')
                  + f'<p class="small">Checked {_date_label(max(x["reviewed_on"] for x in h["sources"]))}. Sources: {_rule_links(h)}</p>')
     rest = ', '.join(f'<a href="../{SLUGS[s["code"]]}/#run-a-game">{escape(s["name"])}</a>' for s in states if not s.get('halls') and s['code'] != 'OH')
+
+    with_partner = [s for s in states if s.get('partner')]
+    partners = ''
+    if with_partner:
+        partners = ('<h2 id="partners">Local partners, state by state</h2>'
+                    '<p>Outside Ohio we would rather bingo support stay close to home, with the groups already doing the work there. '
+                    'In these states we name a local partner and ask halls to consider supporting it, in whatever way their own rules allow. '
+                    'It is never a condition of being listed.</p><ul>'
+                    + ''.join(f'<li id="partner-{s["code"].lower()}"><strong>{escape(s["name"])}:</strong> '
+                              f'<a href="../{SLUGS[s["code"]]}/#partner">{escape(s["partner"]["name"])}</a></li>' for s in with_partner)
+                    + '</ul><p>Know a nonprofit in your state that helps veterans, older adults or people with disabilities stay connected and independent? '
+                    f'<a href="{escape(_mailto("A local partner for Find Bingo", "Organization:" + chr(10) + "State:" + chr(10) + "Website:" + chr(10) + "What they do:" + chr(10)))}">Tell us about them</a>.</p>')
 
     def named(money):
         names = [s['name'] for s in checked if s['halls']['money'] == money]
@@ -552,6 +605,7 @@ def halls_page(states):
             '<a href="../ohio/partners.html#sponsors">How partnership works in Ohio</a> Elsewhere, we help you find a local partner charity first.</li>'
             '<li><strong>The law lets a group give to other causes</strong> (' + named('may_give') + '). If you want a partner cause, we help you find a local one first.</li>'
             '<li><strong>The money stays with your group</strong> (' + named('own') + '). We never ask for a share. We help you reach players instead.</li></ul>'
+            + partners +
             '<h2>State rules we have checked</h2><p>Plain-language summaries with their sources. This is not legal advice; your state regulator has the final word.</p>'
             + rows
             + '<h2>Every other state</h2><p>We have not summarized these states’ rules yet. Each state page names who licenses bingo there and how to send us your game times: '
@@ -628,6 +682,7 @@ def _state_page(s, states, rows, style, analytics, generated_on, ads=(), events=
                  'If you know of one, please tell us about it below.</p></div>')
     # At most one ad place per state page: after the listings, never inside them or above them.
     body += _ad_html(ads, '../')
+    body += _partner_panel(s)
     body += _send_times(s)
     pairs = []
     for u, label in ((s.get('list_url'), s.get('list_label')), (s.get('regulator_url'), s.get('regulator_label'))):
@@ -680,7 +735,7 @@ STATE_CSS = ('header a{color:#fff}.intro{font-size:20px;max-width:860px}'
              '.counties ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}'
              '.counties a{display:inline-flex;align-items:center;min-height:48px;padding:0 14px;border:2px solid var(--accent);border-radius:24px;color:var(--accent);font-weight:700;text-decoration:none}'
              '#listings>section>h2{font-size:28px;margin:28px 0 10px;scroll-margin-top:12px}.top{font-size:17px;margin:10px 0 0}.top a{display:inline-flex;align-items:center;min-height:44px}'
-             '@media print{.counties,.top,#run-a-game{display:none!important}}')
+             '@media print{.counties,.top,#run-a-game,#partner{display:none!important}}')
 
 
 # ---- Ads (owner direction, November 19, 2026: Find Bingo may carry advertising) -----------------------
