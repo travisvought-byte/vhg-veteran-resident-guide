@@ -1,0 +1,21 @@
+{
+ "run_on": "2026-11-23",
+ "results": [
+  {
+   "source_id": "va-ncvas-state-facility-counts",
+   "ok": true,
+   "rows": 5,
+   "sha256": "6b5203580953c9f2eb837de583e0bea2cb6cb38e81e2ffe5687f55baa9d3b4ac",
+   "host": "https://www.data.va.gov/resource/6q9d-it97.json",
+   "environment": null
+  },
+  {
+   "source_id": "va-facilities-api",
+   "ok": true,
+   "rows": 2571,
+   "sha256": "c872ec673bec6fa4f760dc883df5b35c8f12a7a94a8d8f83e2d0e5c1d41b884d",
+   "host": "https://sandbox-api.va.gov/services/va_facilities/v1/facilities",
+   "environment": "sandbox"
+  }
+ ]
+}
