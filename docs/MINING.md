@@ -32,7 +32,8 @@ note it in the source registry and skip it. Never work around a block.
 
 `active` is used in the pipeline. `benchmark` gives counts for the coverage report and no listings. `manual` is read
 by a person or assistant and recorded as a harvest file. `to_verify` is named but not yet opened. `needs_owner` would
-need an account, key or payment, which is the owner's decision. `rejected` is too old or not official.
+need an account, key or payment, which is the owner's decision (a keyed source the owner has set up, like the VA
+Facilities API, is `active` with a `key_env` naming its secret). `rejected` is too old or not official.
 
 ## Rerun from a cold start
 
@@ -81,5 +82,16 @@ with the thinnest states.
 
 ## What is not mined
 
-Paid or keyed data (the VA Facilities API needs a developer key, so it waits on the owner), anything behind a sign-in,
-and sites that block automated reading. No advertising code is added to the guide.
+Paid data, anything behind a sign-in, and sites that block automated reading.
+
+## The VA Facilities API key
+
+The VA Facilities API is the one keyed source. The owner registers the free developer key at developer.va.gov and
+adds it to this repository as the Actions secret `VA_FACILITIES_API_KEY` (Settings, Secrets and variables, Actions,
+New repository secret). No one else handles the key: it is not written in any file, issue, note or message. The
+workflow passes it to `fetch_open_data.py`, which sends it only in the `apikey` request header. The key is a sandbox key,
+so the registry points the source at `sandbox-api.va.gov`. When the VA grants production access, set the repository
+variable `VA_FACILITIES_API_BASE` (Settings, Secrets and variables, Actions, Variables) to
+`https://api.va.gov/services/va_facilities/v1/facilities`; nothing else changes. If the configured host refuses the
+key, the fetcher tries the other host once. Each snapshot records which environment answered. Sandbox data is a
+benchmark: a listing built from it is checked against production or the facility's own page before it is published. Without the secret, the run marks the source as skipped and carries on. No advertising code is added to the guide.

@@ -41,7 +41,9 @@ for s in reg['sources']:
     need(s.get('url') is None or s['url'].startswith('https://'), f"{s['id']}: https url")
     if s.get('fetch'):
         need(s['fetch'].get('url', '').startswith('https://'), f"{s['id']}: fetch url is https")
-        need(s['access'] == 'open_dataset', f"{s['id']}: only open datasets are fetched")
+        keyed = s['access'] == 'api_key_required'
+        need(s['access'] == 'open_dataset' or (keyed and s['fetch'].get('key_env')),
+             f"{s['id']}: only open datasets, or a keyed API whose key comes from the environment, are fetched")
 
 # Harvest files
 for path in sorted((c.MINING / 'harvest').glob('*.json')):
@@ -79,6 +81,54 @@ table = candidates.rows()
 need(len({r['candidate_id'] for r in table}) == len(table), 'candidate ids are unique')
 need({r['status'] for r in table} <= {'new', 'already_published', 'phone_conflict', 'uncertain', 'duplicate'},
      'candidate statuses are known')
+
+# The keyed VA fetcher: skipped cleanly with no key, and with a stub in place of the network it pages through each
+# state, falls back to the other host when the configured one refuses the key, and never puts the key in a URL.
+import io  # noqa: E402
+import json as _json  # noqa: E402
+import os  # noqa: E402
+import urllib.error  # noqa: E402
+import fetch_open_data as fod  # noqa: E402
+
+va_rule = next(s['fetch'] for s in reg['sources'] if s['id'] == 'va-facilities-api')
+saved_key = os.environ.pop(va_rule['key_env'], None)
+try:
+    fod.fetch_va_facilities_api(va_rule, getter=lambda *a, **k: b'{}', pause=0)
+    need(False, 'VA fetcher without a key is skipped')
+except fod.Skipped:
+    pass
+os.environ[va_rule['key_env']] = 'test-key-not-real'
+seen = []
+
+
+def stub(url, headers=None):
+    seen.append(url)
+    need(headers == {'apikey': 'test-key-not-real'} and 'test-key-not-real' not in url, 'key only in the header')
+    if url.startswith(va_rule['url']):  # the configured host refuses the key in this stub
+        raise urllib.error.HTTPError(url, 401, 'refused', {}, io.BytesIO(b''))
+    page = int(url.rsplit('page=', 1)[1])
+    item = {'id': f'vha_{page}', 'attributes': {'name': 'Clinic', 'facilityType': 'va_health_facility',
+                                                'address': {'physical': {'city': 'Little Rock', 'state': 'AR'}},
+                                                'phone': {'main': '501-257-1000'}}}
+    return _json.dumps({'data': [item], 'meta': {'pagination': {'totalPages': 2}}}).encode()
+
+
+try:
+    _, va_rows, va_base = fod.fetch_va_facilities_api(va_rule, getter=stub, pause=0)
+finally:
+    os.environ.pop(va_rule['key_env'], None)
+    if saved_key is not None:
+        os.environ[va_rule['key_env']] = saved_key
+need(va_base == va_rule['fallback_url'], 'VA fetcher falls back to the other host once')
+need(len(va_rows) == 2 * len(fod.VA_STATES), 'VA fetcher reads every page of every state')
+need(va_rows[0]['phone'] == '501-257-1000' and va_rows[0]['city'] == 'Little Rock', 'VA rows are slimmed')
+need(sum(u.startswith(va_rule['url']) for u in seen) == 1, 'the refused host is tried once, not per state')
+need(fod.va_environment(va_rule['url']) == 'sandbox' and fod.va_environment(va_rule['fallback_url']) == 'production',
+     'VA environment is recorded')
+os.environ[va_rule['base_env']] = 'https://example.invalid/override'
+need(fod.va_hosts(va_rule)[0] == 'https://example.invalid/override', 'VA_FACILITIES_API_BASE overrides the host')
+os.environ.pop(va_rule['base_env'], None)
+need(fod.va_hosts(va_rule)[0] == va_rule['url'], 'the registry url is the default host')
 
 if problems:
     print('\n'.join(problems))
