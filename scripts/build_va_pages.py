@@ -5,8 +5,8 @@ Built from data/public/va-facilities/<st>.json, which scripts/mining/va_listings
 A state appears here only once its file exists, so states are added one batch at a time.
 
 Outputs:
-  va/index.html          the states that have a VA locations page
-  va/<st>/index.html     every VA location in one state, grouped by kind and sorted by city
+  va-locations/index.html the states that have a VA locations page
+  va-locations/<st>/index.html     every VA location in one state, grouped by kind and sorted by city
 """
 import json
 from pathlib import Path
@@ -14,7 +14,7 @@ from pathlib import Path
 from build_county_pages import BASE_URL, STYLE, e, tel, urgent, when
 
 ROOT = Path(__file__).resolve().parents[1]
-FOLDER = 'va'
+FOLDER = 'va-locations'
 DATA = ROOT / 'data' / 'public' / 'va-facilities'
 SECTIONS = [
     ('health', 'VA medical centers and clinics', 'Health care for enrolled veterans: primary care, mental health, '

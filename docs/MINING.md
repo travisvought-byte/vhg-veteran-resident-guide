@@ -110,5 +110,5 @@ python3 tests/mining.py
 
 `va_listings.py` writes `data/public/va-facilities/<st>.json`: closed and temporarily closed facilities are left out,
 rows are unique by VA facility id (and by name, address and phone), phones already in the state's guide are marked
-`also_in_guide`, and each row cites its VA page and the retrieval date. `build_public.py` then builds `va/<st>/` and
+`also_in_guide`, and each row cites its VA page and the retrieval date. `build_public.py` then builds `va-locations/<st>/` and
 links it from the state's guide. Rerunning with a newer snapshot replaces a state's file in full.

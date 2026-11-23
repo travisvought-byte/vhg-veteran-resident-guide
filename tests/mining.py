@@ -144,7 +144,7 @@ for path in sorted((c.ROOT / 'data' / 'public' / 'va-facilities').glob('*.json')
         need(r['kind'] in ('health', 'vet_center', 'benefits', 'cemetery'), f'{path.name} {r["id"]}: kind')
         need(r['source_url'].startswith('https://') and r['retrieved_on'], f'{path.name} {r["id"]}: cited')
         need('closed' not in (r.get('notice') or '').lower(), f'{path.name} {r["id"]}: no closed facility')
-    need((c.ROOT / 'va' / path.stem / 'index.html').is_file(), f'{path.name}: its page is built')
+    need((c.ROOT / 'va-locations' / path.stem / 'index.html').is_file(), f'{path.name}: its page is built')
 
 if problems:
     print('\n'.join(problems))

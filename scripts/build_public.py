@@ -126,7 +126,7 @@ def outputs():
                 f' · one page per {unit}, with its phone and next steps.</p>')
         assert result[s['page']].count('<section id="county-start"') == 1, s['page']
         result[s['page']] = result[s['page']].replace('<section id="county-start"', link + '<section id="county-start"', 1)
-    # One page per state listing its VA locations (va/<st>/), from VA facility data, linked from that state's guide.
+    # One page per state listing its VA locations (va-locations/<st>/), from VA facility data, linked from that state's guide.
     va_pages, va_urls, va_links = va_outputs(ROOT)
     result.update(va_pages)
     for s in states:
