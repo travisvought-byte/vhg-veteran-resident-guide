@@ -551,6 +551,22 @@ const gaRun = ga.getElementById('run-a-game');
 assert(!gaRun.querySelector('#money-rule') && !gaRun.textContent.includes('5 to 10') && gaRun.querySelector('a[href="../halls/"]'),
   'a state whose rules are not summarized makes no claim about them');
 assert(advertiseText.includes('Community partner (Ohio)') && advertise.querySelector('main a[href="../halls/"]'), 'the partnership is offered where the law fits it');
+// Local partners (owner direction, November 22, 2026): outside Ohio, a standing, voluntary ask for a local group doing the work.
+const partnered = states.filter(x => x.partner);
+assert(partnered.some(x => x.code === 'NY' && x.partner.name === 'Mobility Independence Foundation')
+  && partnered.some(x => x.code === 'WA' && x.partner.name === 'Light Upon Light'), 'New York and Washington name their partners');
+for (const s of partnered) {
+  const doc = new JSDOM(fs.readFileSync(path.join(site, s.code === 'NY' ? 'new-york' : s.name.toLowerCase().replace(/ /g, '-'), 'index.html'), 'utf8')).window.document;
+  const panel = doc.getElementById('partner');
+  assert(panel && panel.textContent.includes(s.partner.name) && panel.textContent.includes('never a condition of being listed'), s.name + ' shows its partner and the ask');
+  assert(panel.compareDocumentPosition(doc.getElementById('run-a-game')) & 4, s.name + ': the partner sits after the listings, before Run a bingo game');
+  assert(doc.querySelector('#run-a-game a[href="#partner"]') && doc.getElementById('money-rule'), s.name + ': the ask points at the state rule on bingo money');
+  assert(!panel.textContent.includes('Veteran Home Guardians') && !panel.textContent.includes('5 to 10'), s.name + ': the ask is for the local partner, never a VHG share');
+  assert(hallsDoc.querySelector(`#partner-${s.code.toLowerCase()} a[href$="/#partner"]`), 'halls page lists the ' + s.name + ' partner');
+}
+const waPanel = new JSDOM(fs.readFileSync(path.join(site, 'washington/index.html'), 'utf8')).window.document.getElementById('partner').textContent;
+assert(waPanel.includes('not bingo proceeds') && !/bingo night for them/i.test(waPanel), 'Washington keeps bingo proceeds with the group, so no benefit game is asked');
+assert(!ky.getElementById('partner') && !ga.getElementById('partner'), 'states without a partner show no partner panel');
 const allPages = [];
 (function walk(dir) {
   for (const e of fs.readdirSync(dir, {withFileTypes: true})) {

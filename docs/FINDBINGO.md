@@ -109,6 +109,34 @@ pitch has to match each state's own rules on bingo money.
 - The Advertise page now names halls and the groups that run games as the first audience, and labels the
   partnership "Community partner (Ohio)".
 
+## Local partners, state by state (added November 22, 2026)
+
+Travis's direction: outside Ohio, bingo support should go to a local organization doing work like Veteran Home
+Guardians, not into Ohio. Each state can name one partner, and Find Bingo makes a standing, voluntary ask of that
+state's halls to consider supporting it. It is never a condition of being listed and never touches which games appear
+or their order. The partnerships also spread the guide and highlight the groups already doing the work locally.
+
+- **Current partners:** New York, the **Mobility Independence Foundation** (themif.org; Travis is MIF's Finance
+  Officer). Washington, **Light Upon Light** (luul.org, Everett; Travis advises Ronahi Zebari on its programs, and its
+  materials use "differently abled").
+- **Data.** A state entry may carry `partner`: `name`, optional `the` (true to write "the Mobility Independence
+  Foundation" mid-sentence), `url`, optional `donate_url`, `about`, `ways` (the ways to help, written to that state's
+  rule on bingo money), optional `note`, `since` and `sources`. The build requires the state's `halls` rule first, so
+  every ask is written against a checked rule, and refuses a partner for Ohio (its partner is VHG, on the Ohio finder).
+- **Pages.** The state page shows "Our [state] partner" (`#partner`) after the listings and any ad, before "Run a bingo
+  game"; `#run-a-game` points to it; the halls page lists every partner under "Local partners, state by state"
+  (`#partners`) with a "Tell us about them" email for suggested partners. Left off printed lists.
+- **Write the ask to the state's law.** New York (`own`): net proceeds go to the licensee's lawful purposes, so the
+  page asks for a gift or a bingo night for the partner only where the group's license and lawful purposes allow, and
+  says to ask the municipal clerk first. Washington (`own`, added the same day): RCW 9.46.0205 says no part of bingo
+  proceeds may benefit anyone but the group running the game, and WAC 230-07-010 limits net income to the purposes in
+  the license application (games for named recipients need prior approval). So the Washington ask is outside the game:
+  announcements and flyers, gifts from money that is not bingo proceeds, members giving on their own, volunteering.
+  It never asks for bingo money or a game run for the partner.
+- **Adding a partner.** Only with the organization's agreement (Travis's relationship). Check the state's `halls` rule
+  from its law first, then write `ways` to fit it. `tests/findbingo.cjs` checks the panel, its place, the link to the
+  money rule, that no VHG share is asked, and Washington's wording.
+
 ## The map (added November 21, 2026)
 
 Every list on Find Bingo has a map above it, in the style of Nina's Map: the home page after a ZIP code or state search,
