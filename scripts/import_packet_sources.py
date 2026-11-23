@@ -25,6 +25,7 @@ import json
 import re
 import subprocess
 import tempfile
+import time
 import zipfile
 from pathlib import Path
 
@@ -50,8 +51,13 @@ GAZ_COUNTIES = 'https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2024_G
 GAZ_ZCTA = 'https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2024_Gazetteer/2024_Gaz_zcta_national.zip'
 
 
-def fetch(url):
-    return subprocess.run(['curl', '-sSLf', '--retry', '3', url], check=True, capture_output=True).stdout
+def fetch(url, tries=4):
+    for attempt in range(tries):
+        done = subprocess.run(['curl', '-sSLf', '--retry', '3', '--retry-all-errors', url], capture_output=True)
+        if done.returncode == 0:
+            return done.stdout
+        time.sleep(5 * (attempt + 1))
+    done.check_returncode()
 
 
 def pdf_text(data, layout=False):
@@ -100,6 +106,11 @@ def parse_cvso(text, counties):
                 phones.append(phone(line))
             else:
                 address.append(line)
+        # The listing wraps some street numbers onto the line before ("Coliseum 220" / "E. Fairground St.").
+        for i in range(len(address) - 1):
+            m = re.match(r'^(.*\D) (\d+)$', address[i])
+            if m and re.match(r'^[NSEW]\. ', address[i + 1]):
+                address[i], address[i + 1] = m.group(1), m.group(2) + ' ' + address[i + 1]
         joined = ' '.join(phones)
         assert re.search(r'\d{3}-\d{3}-\d{4}', joined), 'CVSO listing: no phone for ' + county
         assert any(re.search(r'OH \d{5}', a) for a in address), 'CVSO listing: no city line for ' + county

@@ -17,6 +17,7 @@ from build_mobility_routes import outputs as mobility_route_outputs
 from build_family_guide import outputs as family_guide_outputs
 from build_guide_privacy import outputs as privacy_outputs
 from build_world import outputs as world_outputs, pages as world_pages
+from build_packets import outputs as packet_outputs
 from build_county_pages import outputs as county_outputs
 from build_va_pages import outputs as va_outputs
 from build_core_care import (outputs as core_care_outputs, pages as core_care_pages,
@@ -111,6 +112,8 @@ def outputs():
     result.update(privacy_outputs())
     # Country pages for veterans outside the U.S. (data/world/countries.json); each carries the visit counter.
     result.update(world_outputs())
+    # Printable resource packets (paper handouts) and their download page; PDFs: node scripts/build_packets.cjs.
+    result.update(packet_outputs())
     # One page per county veterans office (counties/<st>/<county>.html), and a link to the state's list from its guide.
     county_pages, county_urls = county_outputs(ROOT)
     result.update(county_pages)
@@ -134,7 +137,7 @@ def outputs():
         result[page] = result[page].replace('</body>', '<script defer src="assets/analytics.js"></script></body>')
     # The mobility and advocacy pages are canonical at mobilitytalk.org, so they stay out of this sitemap.
     # Search engines: list the public views, including each state's canonical URL.
-    pages = ['', 'facilities.html', 'family-guide.html', 'flyers.html', 'privacy.html']
+    pages = ['', 'facilities.html', 'family-guide.html', 'flyers.html', 'packets.html', 'privacy.html']
     urls = [BASE_URL + page for page in pages if page == '' or (ROOT / page).is_file() or page in result]
     # Each state's own page (ky.html); Ohio is the root. Old ?state= links still work but are not listed.
     urls += [BASE_URL + s['page'] for s in states[1:]]
