@@ -325,6 +325,7 @@ def cmd_merge(a):
     code = codes.pop()
     target = PUBLIC / (fb.STARTER_FILES.get(code) or (_slug(fb.STATES[code]) + '-bingo.json'))
     zips = json.loads((ROOT / 'findbingo-site/zips.json').read_text())
+    fb._load_zip_states(ROOT)
     county_of = zip_counties(a.zip_file) if any(not r.get('county') for r in batch) else {}
     existing = json.loads(target.read_text()) if target.exists() else []
     _, records = load()
@@ -349,6 +350,8 @@ def cmd_merge(a):
             continue
         taken_ids.add(r['id'])
         taken_addr[k] = r['id']
+        # The site lists a place's games Monday first, then by start time.
+        r['sessions'].sort(key=lambda s: ((s['day'] + 6) % 7, s.get('start') or ''))
         added.append(r)
     out = sorted(existing + added, key=lambda r: (r['county'], r['city'], r['name'], r['id']))
     if a.dry_run:
