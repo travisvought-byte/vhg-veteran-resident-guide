@@ -20,7 +20,7 @@ STATES = {'AL': 'Alabama', 'AK': 'Alaska', 'AZ': 'Arizona', 'AR': 'Arkansas', 'C
 ORDER = list(STATES)
 # One file of organizer-published schedules per starter state (coverage "starter").
 STARTER_FILES = {'PA': 'pennsylvania-bingo.json', 'NY': 'new-york-bingo.json', 'FL': 'florida-bingo.json', 'UT': 'utah-bingo.json',
-                 'KY': 'kentucky-bingo.json', 'WV': 'west-virginia-bingo.json'}
+                 'KY': 'kentucky-bingo.json', 'WV': 'west-virginia-bingo.json', 'WA': 'washington-bingo.json'}
 # State lists that give each game's day and hours: Michigan's weekly bingo licenses, the Texas hall locator,
 # Virginia's directory of sessions and Missouri's Find Local Bingo Games page.
 TIMES_FILES = {'MI': 'michigan-weekly-bingo.json', 'TX': 'texas-bingo-halls.json', 'VA': 'virginia-bingo-sessions.json',
@@ -241,10 +241,12 @@ def make_findbingo(root, ads=None, events=None):
     # Each button links to that state's own page (crawlable); with the lists loaded, the finder shows the state in place.
     def button(s):
         return f'<a href="{SLUGS[s["code"]]}/" data-state="{s["code"]}">{escape(s["name"])}</a>'
-    # States with a list come first; every other state sits behind one "more states" control so the
-    # page stays simple for people who struggle with websites.
-    rest = [s for s in states if s['coverage'] not in LISTED]
-    buttons = ''.join(button(s) for s in states if s['coverage'] in LISTED)
+    # States with a list come first, along with states where we name a local partner, so a partner's state
+    # is never hidden (owner direction, November 23, 2026). Every other state sits behind one "more states"
+    # control so the page stays simple for people who struggle with websites.
+    shown = [s for s in states if s['coverage'] in LISTED or s.get('partner')]
+    rest = [s for s in states if s not in shown]
+    buttons = ''.join(button(s) for s in shown)
     if rest:
         buttons += ('<details class="more-states"><summary>More states, A to Z</summary><div>'
                     + ''.join(button(s) for s in rest) + '</div></details>')
