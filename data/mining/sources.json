@@ -10,7 +10,10 @@
    "category": "va_facilities",
    "url": "https://catalog.data.gov/dataset/fy-2021_ncvas-facilities-data-for-state-summaries",
    "access": "open_dataset",
-   "fetch": {"kind": "socrata_json", "url": "https://www.data.va.gov/resource/6q9d-it97.json"},
+   "fetch": {
+    "kind": "socrata_json",
+    "url": "https://www.data.va.gov/resource/6q9d-it97.json"
+   },
    "yields": "Five rows (cemeteries, VBA regional offices, inpatient sites, Vet Centers, outpatient sites), one count column per state. No names, addresses or phones.",
    "evidence_level": "B",
    "cadence_days": 365,
@@ -26,13 +29,18 @@
    "category": "va_facilities",
    "url": "https://developer.va.gov/explore/facilities",
    "access": "api_key_required",
-   "fetch": null,
+   "fetch": {
+    "kind": "va_facilities_api",
+    "url": "https://api.va.gov/services/va_facilities/v1/facilities",
+    "sandbox_url": "https://sandbox-api.va.gov/services/va_facilities/v1/facilities",
+    "key_env": "VA_FACILITIES_API_KEY"
+   },
    "yields": "Every VA medical center, clinic, Vet Center, benefits office and cemetery with address, phone and hours.",
    "evidence_level": "B",
    "cadence_days": 30,
-   "status": "needs_owner",
+   "status": "active",
    "last_checked": "2026-11-23",
-   "notes": "The only complete per-facility source found. It needs a free developer key, which means registering an account in VHG's name; that is the owner's decision. With a key stored as a repository secret, fetch_open_data.py can add a 'va_facilities_api' fetcher and every state gets its VA medical centers, clinics and Vet Centers."
+   "notes": "The only complete per-facility source. Travis registers the free developer key himself and stores it as the repository secret VA_FACILITIES_API_KEY; the monthly workflow reads it from there. The key is sent only in a request header and never written anywhere. Until the secret exists, the run records this source as skipped. Snapshots keep name, kind, address, phone, website, hours and location for every VA medical center, clinic, Vet Center, benefits office and cemetery, state by state."
   },
   {
    "id": "va-find-locations",

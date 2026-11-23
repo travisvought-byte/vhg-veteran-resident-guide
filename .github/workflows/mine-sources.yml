@@ -19,7 +19,11 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v6
-      - name: Fetch open datasets
+      - name: Fetch open datasets and the VA Facilities API
+        env:
+          # Set by the owner under Settings > Secrets and variables > Actions. Empty when not set, and the VA source
+          # is then recorded as skipped. The script never prints or saves it.
+          VA_FACILITIES_API_KEY: ${{ secrets.VA_FACILITIES_API_KEY }}
         run: python3 scripts/mining/fetch_open_data.py
       - name: Rebuild coverage, ledger and candidates
         run: |
@@ -32,7 +36,7 @@ jobs:
           {
             echo '## Mining run'
             echo
-            python3 -c "import json;r=json.load(open('data/mining/snapshots/last-run.json'));[print('-', x['source_id'], 'ok' if x['ok'] else 'failed: '+x['error']) for x in r['results']]"
+            python3 -c "import json;r=json.load(open('data/mining/snapshots/last-run.json'));[print('-', x['source_id'], 'ok' if x['ok'] else (x['error'] if x.get('skipped') else 'failed: '+x['error'])) for x in r['results']]"
             echo
             echo '### Sources due for a recheck'
             echo '```'
