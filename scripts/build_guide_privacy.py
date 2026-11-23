@@ -7,7 +7,7 @@ in the page address, drafts and checklists stay in the browser, and corrections 
 from html import escape
 import place_map
 
-UPDATED = 'November 21, 2026'
+UPDATED = 'November 23, 2026'
 EMAIL = 'travis@vethomeguard.org'
 
 
@@ -20,7 +20,7 @@ def page():
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Privacy | Veteran Resource Guide</title>
-<meta name="description" content="How the free Veteran Resource Guide from Veteran Home Guardians handles information about your visit: no accounts, no cookies for counting visits, nothing you choose or type is sent to us.">
+<meta name="description" content="How the free Veteran Resource Guide from Veteran Home Guardians handles information about your visit: no accounts, no cookies for counting visits, nothing you choose or type is sent to us, and how Google ads work.">
 <link rel="canonical" href="https://guide.vethomeguard.org/privacy.html">
 <link rel="stylesheet" href="assets/family-guide.css">
 <style>
@@ -35,6 +35,7 @@ def page():
 <li>We count visits without cookies and without keeping personal information.</li>
 <li>The state, county and help you choose stay on your own device and in the page address.</li>
 <li>The maps’ pictures come from OpenStreetMap, which sees your internet address and the area on the map.</li>
+<li>Some pages show Google ads. We ask Google for non-personalized ads only, and its ad code can set its own cookies.</li>
 <li>We do not sell personal information.</li></ul>
 <h2>Counting visits</h2>
 <p>We use {_a('https://www.goatcounter.com/help/privacy', 'GoatCounter')} to count page views, so we know which pages people use. GoatCounter does not use cookies and does not store personal information. For each page view it records things like the page visited, the site that sent you here, your browser, your screen size, and an approximate country worked out from your internet (IP) address. It does not store the IP address.</p>
@@ -48,7 +49,10 @@ def page():
 <h2>Who hosts the site</h2>
 <p>The guide is hosted on GitHub Pages. GitHub may keep server logs, including IP addresses, for security. Read {_a('https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement', 'GitHub’s privacy statement')}. A few pages show a logo from a partner’s website, which receives an ordinary request for that picture.</p>
 <h2>Advertising</h2>
-<p>This site may show ads. Every ad is labeled “Advertisement” and kept apart from the resource listings. If we use an ad network such as Google AdSense, it and its partners may use cookies to show ads based on your visits to this and other sites. You can turn off personalized ads at {_a('https://adssettings.google.com', 'adssettings.google.com')} and learn more at {_a('https://policies.google.com/technologies/ads', 'policies.google.com/technologies/ads')}, or opt out of many networks at {_a('https://optout.aboutads.info', 'optout.aboutads.info')}.</p>
+<p>This site shows ads. We use Google AdSense and ask Google to show only non-personalized ads, which are chosen from the page you are on and your general location, not from your visits to other sites.</p>
+<p>Google’s ad code loads only on the guide’s home page, each state’s page and share page, the nursing home and assisted living page and the country pages. It never loads on this privacy page, the family guide, the printable flyers or the guided assistance.</p>
+<p>On those pages Google and its partners may still use cookies or similar storage, for example to limit how often you see an ad, to count ads and to stop fraud. Read {_a('https://policies.google.com/technologies/partner-sites', 'how Google uses information from sites that use its services')} and {_a('https://policies.google.com/technologies/ads', 'policies.google.com/technologies/ads')}. You can manage the ads Google shows you at {_a('https://adssettings.google.com', 'adssettings.google.com')}, or opt out of many networks at {_a('https://optout.aboutads.info', 'optout.aboutads.info')}.</p>
+<p>Any ad sold directly is labeled “Advertisement” and kept apart from the resource listings. Ads never change which resources are listed or their order.</p>
 <h2>Email and corrections</h2>
 <p>If you email us a correction, we get your email address and what you write. We use it to fix the guide and to reply, and we never sell or share it. Please send public resource information only, never a resident’s personal or health details.</p>
 <h2>Children</h2>
