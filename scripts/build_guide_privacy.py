@@ -7,7 +7,7 @@ in the page address, drafts and checklists stay in the browser, and corrections 
 from html import escape
 import place_map
 
-UPDATED = 'November 21, 2026'
+UPDATED = 'November 23, 2026'
 EMAIL = 'travis@vethomeguard.org'
 
 
@@ -48,7 +48,7 @@ def page():
 <h2>Who hosts the site</h2>
 <p>The guide is hosted on GitHub Pages. GitHub may keep server logs, including IP addresses, for security. Read {_a('https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement', 'GitHub’s privacy statement')}. A few pages show a logo from a partner’s website, which receives an ordinary request for that picture.</p>
 <h2>Advertising</h2>
-<p>This site may show ads. Every ad is labeled “Advertisement” and kept apart from the resource listings. If we use an ad network such as Google AdSense, it and its partners may use cookies to show ads based on your visits to this and other sites. You can turn off personalized ads at {_a('https://adssettings.google.com', 'adssettings.google.com')} and learn more at {_a('https://policies.google.com/technologies/ads', 'policies.google.com/technologies/ads')}, or opt out of many networks at {_a('https://optout.aboutads.info', 'optout.aboutads.info')}.</p>
+<p>The guide does not show ads and has no affiliate links. When a business or group sponsors a guide to help keep it free, its spot is labeled “Sponsored”, and sponsorship never changes the free listings or their order.</p>
 <h2>Email and corrections</h2>
 <p>If you email us a correction, we get your email address and what you write. We use it to fix the guide and to reply, and we never sell or share it. Please send public resource information only, never a resident’s personal or health details.</p>
 <h2>Children</h2>
