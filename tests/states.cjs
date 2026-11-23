@@ -95,7 +95,7 @@ for(const s of registry){
  const newest=new Date(dates.at(-1)+'T12:00:00').toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
  assert.equal(d.getElementById('edition-updated').textContent,'Most recent review of '+s.name+' veterans office contacts: '+newest+'.',s.code+' footer review date');
 }
-assert(registry.some(s=>s.starter)&&registry.filter(s=>s.starter).every(s=>s.counties===1),'starter editions have one statewide entry');
+assert(registry.filter(s=>s.starter).every(s=>s.counties===1),'any starter edition has one statewide entry');
 console.log('PASS: single-entry states show their statewide contacts at once, county states wait for a county, and every footer date comes from the records.');
 
 // 5. Phone header: the first four links stay in view and the rest open from one real button.

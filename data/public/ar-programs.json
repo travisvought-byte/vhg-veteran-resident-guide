@@ -1,208 +1,697 @@
 [
- {
-  "program_id": "ar-claims",
-  "name": "Arkansas veterans: accredited claims help",
-  "official_url": "https://www.veterans.arkansas.gov/veteran-services-1",
-  "organization": "Arkansas Department of Veterans Affairs",
-  "service_area": [
-   "All Arkansas counties"
-  ],
-  "state": "AR",
-  "needs_supported": [
-   "general_navigation",
-   "benefits_and_funding"
-  ],
-  "description": "Free help with VA claims, applications and appeals for veterans and families.",
-  "next_step": "Call the state veterans agency; ask for a benefits review and the office that serves your county.",
-  "constraints": [],
-  "public_contact": {
-   "phone": "501-683-2382"
+  {
+    "program_id": "ar-claims",
+    "name": "Arkansas veterans: county veterans service officers for claims help",
+    "official_url": "https://www.veterans.arkansas.gov/veteran-services-map",
+    "organization": "County veterans service officers; Arkansas Department of Veterans Affairs",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "AR",
+    "needs_supported": [
+      "general_navigation",
+      "benefits_and_funding"
+    ],
+    "description": "Free help with VA claims, pension and survivor benefits from county veterans service officers. The Arkansas Department of Veterans Affairs lists a county veterans service officer for each of the 75 counties; many work only certain days.",
+    "next_step": "Choose your county for its service officer’s phone and days. The Arkansas Department of Veterans Affairs is at 501-683-2382.",
+    "constraints": [
+      "Call before you go; most county officers keep part-time hours, and several share one phone across counties."
+    ],
+    "public_contact": {
+      "phone": "501-683-2382",
+      "phone_label": "Arkansas Department of Veterans Affairs (501-683-2382)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-23"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.veterans.arkansas.gov/veteran-services-map"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.veterans.arkansas.gov/veteran-services-map",
+        "title": "Arkansas Department of Veterans Affairs: Veteran Services Map",
+        "reviewed_on": "2026-11-23",
+        "scope": "Department phone and the link to the full county directory; read in full."
+      },
+      {
+        "url": "https://www.veterans.arkansas.gov/s/Directory-11-09-2026.pdf",
+        "title": "Arkansas Department of Veterans Affairs: VSO, DVSO, CVSO Directory (dated November 9, 2026)",
+        "reviewed_on": "2026-11-23",
+        "scope": "County veterans service officers’ phones and hours for all 75 counties; text extracted from the PDF and read in full."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "ar-adrc",
+    "name": "Choices in Living Resource Center (Arkansas aging and disability resource center)",
+    "official_url": "https://humanservices.arkansas.gov/divisions-shared-services/aging-adult-behavioral-health-services/choices-in-living-resource-center/",
+    "organization": "Arkansas Department of Human Services",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "AR",
+    "needs_supported": [
+      "general_navigation",
+      "help_at_home",
+      "equipment_home_accessibility"
+    ],
+    "description": "Arkansas’s Aging and Disability Resource Center: information about long-term services and supports for older adults, people with disabilities and caregivers. Military service is not required.",
+    "next_step": "Call 866-801-3435, Monday to Friday 8 a.m. to 4 p.m., or choose a county above for its Area Agency on Aging.",
+    "constraints": [
+      "Each program has its own eligibility and waitlist."
+    ],
+    "public_contact": {
+      "phone": "866-801-3435",
+      "phone_label": "Choices in Living Resource Center (866-801-3435)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-23"
+    },
+    "evidence": {
+      "review_method": "official_page_metadata",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://humanservices.arkansas.gov/divisions-shared-services/aging-adult-behavioral-health-services/choices-in-living-resource-center/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://humanservices.arkansas.gov/divisions-shared-services/aging-adult-behavioral-health-services/choices-in-living-resource-center/",
+        "title": "Arkansas Department of Human Services: Choices in Living Resource Center",
+        "reviewed_on": "2026-11-23",
+        "scope": "Phone 1-866-801-3435, 8:00 to 4:00 Monday to Friday, and the ADRC description; from the page’s own summary (metadata), not its body text."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.veterans.arkansas.gov/veteran-services-1"
+  {
+    "program_id": "ar-ship",
+    "name": "Medicare counseling (SHIP) for Arkansas",
+    "official_url": "https://www.shiphelp.org/",
+    "organization": "SHIP Technical Assistance Center",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "AR",
+    "needs_supported": [
+      "benefits_and_funding"
+    ],
+    "description": "Free, unbiased Medicare counseling from the State Health Insurance Assistance Program: plan choices, enrollment, costs and help paying for Medicare.",
+    "next_step": "Call 877-839-2675 or use the locator to reach Arkansas’s program. For Medicare itself, call 800-MEDICARE (800-633-4227).",
+    "constraints": [
+      "Have your Medicare card and drug list ready."
+    ],
+    "public_contact": {
+      "phone": "877-839-2675",
+      "phone_label": "SHIP national locator (877-839-2675)"
+    },
+    "verification": {
+      "record_status": "official_search_extract_only",
+      "last_reviewed_on": "2026-11-23"
+    },
+    "evidence": {
+      "review_method": "official_search_excerpt",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.shiphelp.org/?p=317"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.shiphelp.org/?p=317",
+        "title": "SHIP Technical Assistance Center: find your local SHIP",
+        "reviewed_on": "2026-11-23",
+        "scope": "National locator and phone 877-839-2675; search excerpt (carried from the starter edition, reviewed November 2, 2026)."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.veterans.arkansas.gov/veteran-services-1",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ]
- },
- {
-  "program_id": "ar-ship",
-  "name": "Medicare counseling (SHIP) for Arkansas",
-  "official_url": "https://www.shiphelp.org/",
-  "organization": "SHIP Technical Assistance Center",
-  "service_area": [
-   "All Arkansas counties"
-  ],
-  "state": "AR",
-  "needs_supported": [
-   "benefits_and_funding"
-  ],
-  "description": "Free, unbiased Medicare counseling from the State Health Insurance Assistance Program.",
-  "next_step": "Call or use the locator to reach the Arkansas SHIP and ask for a counseling appointment.",
-  "constraints": [],
-  "public_contact": {
-   "phone": "877-839-2675"
+  {
+    "program_id": "ar-ombudsman",
+    "name": "Arkansas Long-Term Care Ombudsman and adult abuse reporting",
+    "official_url": "https://arombudsman.dhs.arkansas.gov/",
+    "organization": "Arkansas Department of Human Services, Office of the State Long-Term Care Ombudsman",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "AR",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation"
+    ],
+    "description": "Independent advocacy for residents of nursing homes and assisted living, through local ombudsmen at the Area Agencies on Aging.",
+    "next_step": "Choose your county for its local ombudsman, or call 501-682-1001, the number the state brochure prints for the program. To report abuse, neglect or exploitation of an adult, call the Adult Maltreatment Hotline, 800-482-8049. In an emergency, call 911.",
+    "constraints": [
+      "The ombudsman acts with the resident’s permission and is not a licensing agency."
+    ],
+    "public_contact": {
+      "phone": "501-682-1001",
+      "phone_label": "Arkansas Long-Term Care Ombudsman Program (501-682-1001)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-23"
+    },
+    "evidence": {
+      "review_method": "full_official_pdf",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://ltcombudsman.org/wp-content/uploads/2026/05/arkansas-residents-rights-brochure.pdf"
+    },
+    "source_evidence": [
+      {
+        "url": "https://ltcombudsman.org/wp-content/uploads/2026/05/arkansas-residents-rights-brochure.pdf",
+        "title": "National Long-Term Care Ombudsman Resource Center: Arkansas residents’ rights brochure (2026), Contact Your Ombudsman",
+        "reviewed_on": "2026-11-23",
+        "scope": "Program phone 501-682-1001 and website, printed without a label, and every local ombudsman’s counties and phones; read in full."
+      },
+      {
+        "url": "https://arombudsman.dhs.arkansas.gov/",
+        "title": "Arkansas Long-Term Care Ombudsman Program",
+        "reviewed_on": "2026-11-23",
+        "scope": "Program website; read in full. It prints no phone."
+      },
+      {
+        "url": "https://humanservices.arkansas.gov/divisions-shared-services/aging-adult-behavioral-health-services/adult-protective-services/",
+        "title": "Arkansas Department of Human Services: Adult Protective Services",
+        "reviewed_on": "2026-11-23",
+        "scope": "Adult Maltreatment Hotline 1-800-482-8049; from the page’s own summary (metadata)."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_search_extract_only",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "ar-legal-programs",
+    "name": "Free legal help for Arkansas veterans and older adults",
+    "official_url": "https://arlegalaid.org/contact-us/apply-for-legal-aid.html",
+    "organization": "Legal Aid of Arkansas",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "AR",
+    "resource_role": "legal_aid",
+    "needs_supported": [
+      "resident_rights",
+      "general_navigation",
+      "housing"
+    ],
+    "description": "Free civil legal help for people with low incomes, including housing, benefits and family matters. Legal Aid of Arkansas also runs a statewide fair housing helpline.",
+    "next_step": "Call the helpline, 800-952-9243 (1-800-9 LAW AID), Monday to Thursday 9 to 11 a.m. and 1 to 3 p.m., and Tuesday evenings 5:15 to 7:15, or apply online any time. Fair housing helpline: 870-338-9834.",
+    "constraints": [
+      "Legal aid screens by income and case type; no criminal cases.",
+      "Legal Aid of Arkansas’s application lists 31 counties, so it may refer you to another program; the helpline will say which."
+    ],
+    "public_contact": {
+      "phone": "800-952-9243",
+      "phone_label": "Legal Aid of Arkansas helpline (800-952-9243)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-23"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://arlegalaid.org/contact-us/apply-for-legal-aid.html"
+    },
+    "source_evidence": [
+      {
+        "url": "https://arlegalaid.org/contact-us/apply-for-legal-aid.html",
+        "title": "Legal Aid of Arkansas: Apply for Legal Aid",
+        "reviewed_on": "2026-11-23",
+        "scope": "Helpline, its hours, the fair housing helpline and the counties on the application; read in full."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "official_search_excerpt",
-   "direct_agency_confirmation": false,
-   "phone_source_url": "https://www.shiphelp.org/?p=317"
+  {
+    "program_id": "ar-vahealth-systems",
+    "name": "VA health care systems serving Arkansas",
+    "official_url": "https://www.va.gov/find-locations/?facilityType=health",
+    "organization": "U.S. Department of Veterans Affairs",
+    "service_area": [
+      "statewide"
+    ],
+    "state": "AR",
+    "resource_role": "va_health_system",
+    "needs_supported": [
+      "veteran_services",
+      "care_facilities"
+    ],
+    "description": "Arkansas veterans are served mainly by VA Central Arkansas Health Care (John L. McClellan Memorial Veterans’ Hospital, 4300 West 7th Street, Little Rock; 501-257-1000, toll-free 800-224-8387, with clinics including Conway, El Dorado, Mena, Mountain Home, Pine Bluff, Russellville and Searcy) and the Veterans Health Care System of the Ozarks (1100 North College Avenue, Fayetteville; 479-443-4301, toll-free 800-691-8387).",
+    "next_step": "Use VA’s facility locator with your ZIP code to find the closest clinic; border counties may be closer to a system in a neighboring state. Not enrolled yet? Ask your county veterans service officer for help applying.",
+    "constraints": [
+      "Which system serves you depends on where you live; VA’s locator shows the right clinic."
+    ],
+    "public_contact": {
+      "phone": "501-257-1000",
+      "phone_label": "John L. McClellan Memorial Veterans’ Hospital (501-257-1000)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-23"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.va.gov/central-arkansas-health-care/contact-us/"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.va.gov/central-arkansas-health-care/contact-us/",
+        "title": "VA Central Arkansas health care: Contact us",
+        "reviewed_on": "2026-11-23",
+        "scope": "Medical center address, local and toll-free phones and the clinic phones; read in full. Last updated January 21, 2026."
+      },
+      {
+        "url": "https://www.va.gov/fayetteville-arkansas-health-care/contact-us/",
+        "title": "VA Fayetteville Arkansas health care: Contact us",
+        "reviewed_on": "2026-11-23",
+        "scope": "Veterans Health Care System of the Ozarks address and phones; read in full. Last updated August 20, 2026."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://www.shiphelp.org/?p=317",
-    "title": "Official published source",
-    "scope": "Name and phone matched to the publisher’s own page on 2026-11-02; not direct intake confirmation."
-   }
-  ]
- },
- {
-  "program_id": "ar-ssvf-12-la-038",
-  "name": "Volunteers of America Southeast Louisiana, Inc.: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Volunteers of America Southeast Louisiana, Inc.",
-  "service_area": [
-   "All Arkansas counties"
-  ],
-  "state": "AR",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 12-LA-038): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Columbia County, Lafayette County, Little River County, Miller County, Sevier County.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "504-483-3558",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "ar-cil-mainstream",
+    "name": "Mainstream Independent Living Resource Center (Little Rock)",
+    "organization": "Mainstream Independent Living Resource Center",
+    "official_url": "https://mainstreamilrc.com/",
+    "service_area": [
+      "Faulkner",
+      "Lonoke",
+      "Perry",
+      "Prairie",
+      "Pulaski",
+      "Saline"
+    ],
+    "state": "AR",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "501-280-0012",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-23"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/ar",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/ar"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/ar",
+        "title": "ILRU: Arkansas CIL Directory",
+        "reviewed_on": "2026-11-23",
+        "scope": "Each center’s office, phone, website and counties served; read in full. The directory is undated."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "ar-cil-sources",
+    "name": "Sources for Community Independent Living Services (Fayetteville)",
+    "organization": "Sources for Community Independent Living Services",
+    "official_url": "https://arsources.org/",
+    "service_area": [
+      "Benton",
+      "Carroll",
+      "Madison",
+      "Washington"
+    ],
+    "state": "AR",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability."
+    ],
+    "public_contact": {
+      "phone": "479-442-5600",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-23"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/ar",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/ar"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/ar",
+        "title": "ILRU: Arkansas CIL Directory",
+        "reviewed_on": "2026-11-23",
+        "scope": "Each center’s office, phone, website and counties served; read in full. The directory is undated."
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "ar-cil-sails-se",
+    "name": "Southeast Arkansas Independent Living Service Center (White Hall)",
+    "organization": "Southeast Arkansas Independent Living Service Center (SAILS-SE)",
+    "official_url": "https://www.ilru.org/cil-directory/ar",
+    "service_area": [
+      "Arkansas",
+      "Ashley",
+      "Bradley",
+      "Chicot",
+      "Cleveland",
+      "Desha",
+      "Drew",
+      "Grant",
+      "Jefferson",
+      "Lincoln"
+    ],
+    "state": "AR",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "The national directory lists no website for this center."
+    ],
+    "public_contact": {
+      "phone": "870-247-8600",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-23"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/ar",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/ar"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/ar",
+        "title": "ILRU: Arkansas CIL Directory",
+        "reviewed_on": "2026-11-23",
+        "scope": "Each center’s office, phone, website and counties served; read in full. The directory is undated."
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 13",
-    "sheet": "Contacts",
-    "row": 13,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "ar-ssvf-20-ar-086",
-  "name": "St. Francis House, Inc.: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "St. Francis House, Inc.",
-  "service_area": [
-   "All Arkansas counties"
-  ],
-  "state": "AR",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-AR-086): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Arkansas County, Ashley County, Baxter County, Benton County, Boone County, Bradley County, Calhoun County, Carroll County, Chicot County, Clark County, Clay County, Cleburne County and 63 more.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 479-249-9872.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "501-916-2514",
-   "phone_label": "VA-listed SSVF intake"
+  {
+    "program_id": "ar-cil-spa",
+    "name": "Spa Area Independent Living Services (Hot Springs)",
+    "organization": "Spa Area Independent Living Services (SAILS)",
+    "official_url": "https://www.ilru.org/cil-directory/ar",
+    "service_area": [
+      "Clark",
+      "Garland",
+      "Hot Spring",
+      "Montgomery",
+      "Pike",
+      "Saline"
+    ],
+    "state": "AR",
+    "resource_role": "independent_living",
+    "needs_supported": [
+      "help_at_home",
+      "general_navigation",
+      "equipment_home_accessibility"
+    ],
+    "description": "A Center for Independent Living: disability-led help with daily living skills, peer support, advocacy, assistive technology referrals and moving from a nursing home back to the community. Any age and any disability; military service is not required.",
+    "next_step": "Call with your county and goals. Ask about intake, home access, independent living skills or help leaving a facility.",
+    "constraints": [
+      "A Center for Independent Living is a community support organization, not a residential care facility. Services depend on assessment and availability.",
+      "The national directory lists its website as ar-sails.org."
+    ],
+    "public_contact": {
+      "phone": "501-624-7710",
+      "phone_label": "Phone listed in the ILRU national directory of Centers for Independent Living"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-23"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.ilru.org/cil-directory/ar",
+      "service_area_source_url": "https://www.ilru.org/cil-directory/ar"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.ilru.org/cil-directory/ar",
+        "title": "ILRU: Arkansas CIL Directory",
+        "reviewed_on": "2026-11-23",
+        "scope": "Each center’s office, phone, website and counties served; read in full. The directory is undated."
+      }
+    ]
   },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
+  {
+    "program_id": "ar-ssvf-12-la-038",
+    "name": "Volunteers of America Southeast Louisiana, Inc.: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Volunteers of America Southeast Louisiana, Inc.",
+    "service_area": [
+      "Columbia",
+      "Lafayette",
+      "Little River",
+      "Miller",
+      "Sevier"
+    ],
+    "state": "AR",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 12-LA-038): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "504-483-3558",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 13",
+        "sheet": "Contacts",
+        "row": 13,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+  {
+    "program_id": "ar-ssvf-20-ar-086",
+    "name": "St. Francis House, Inc.: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "St. Francis House, Inc.",
+    "service_area": [
+      "Arkansas",
+      "Ashley",
+      "Baxter",
+      "Benton",
+      "Boone",
+      "Bradley",
+      "Calhoun",
+      "Carroll",
+      "Chicot",
+      "Clark",
+      "Clay",
+      "Cleburne",
+      "Cleveland",
+      "Columbia",
+      "Conway",
+      "Craighead",
+      "Crawford",
+      "Crittenden",
+      "Cross",
+      "Dallas",
+      "Desha",
+      "Drew",
+      "Faulkner",
+      "Franklin",
+      "Fulton",
+      "Garland",
+      "Grant",
+      "Greene",
+      "Hempstead",
+      "Hot Spring",
+      "Howard",
+      "Independence",
+      "Izard",
+      "Jackson",
+      "Jefferson",
+      "Johnson",
+      "Lafayette",
+      "Lawrence",
+      "Lee",
+      "Lincoln",
+      "Little River",
+      "Logan",
+      "Lonoke",
+      "Madison",
+      "Marion",
+      "Miller",
+      "Mississippi",
+      "Monroe",
+      "Montgomery",
+      "Nevada",
+      "Newton",
+      "Ouachita",
+      "Perry",
+      "Phillips",
+      "Pike",
+      "Poinsett",
+      "Polk",
+      "Pope",
+      "Prairie",
+      "Pulaski",
+      "Randolph",
+      "Saline",
+      "Scott",
+      "Searcy",
+      "Sebastian",
+      "Sevier",
+      "Sharp",
+      "St. Francis",
+      "Stone",
+      "Union",
+      "Van Buren",
+      "Washington",
+      "White",
+      "Woodruff",
+      "Yell"
+    ],
+    "state": "AR",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 20-AR-086): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you. A second intake number is listed: 479-249-9872.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "501-916-2514",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 162",
+        "sheet": "Contacts",
+        "row": 162,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
   },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 162",
-    "sheet": "Contacts",
-    "row": 162,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- },
- {
-  "program_id": "ar-ssvf-26-ar-470",
-  "name": "Volunteers of America of North Louisiana: veteran housing help (SSVF)",
-  "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
-  "organization": "Volunteers of America of North Louisiana",
-  "service_area": [
-   "All Arkansas counties"
-  ],
-  "state": "AR",
-  "resource_role": "housing_provider",
-  "needs_supported": [
-   "housing",
-   "veteran_services"
-  ],
-  "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 26-AR-470): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households. Serves: Arkansas County, Ashley County, Bradley County, Calhoun County, Chicot County, Clark County, Cleveland County, Dallas County, Desha County, Drew County, Hempstead County, Howard County and 7 more.",
-  "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
-  "constraints": [
-   "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
-   "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
-  ],
-  "public_contact": {
-   "phone": "870-275-4066",
-   "phone_label": "VA-listed SSVF intake"
-  },
-  "verification": {
-   "record_status": "official_source_reviewed",
-   "last_reviewed_on": "2026-11-02"
-  },
-  "evidence": {
-   "review_method": "full_official_spreadsheet",
-   "direct_agency_confirmation": false,
-   "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
-  },
-  "source_evidence": [
-   {
-    "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
-    "title": "VA SSVF provider intake list (FY26)",
-    "reviewed_on": "2026-11-02",
-    "scope": "County coverage and SSVF intake; Contacts worksheet row 226",
-    "sheet": "Contacts",
-    "row": 226,
-    "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
-   }
-  ]
- }
+  {
+    "program_id": "ar-ssvf-26-ar-470",
+    "name": "Volunteers of America of North Louisiana: veteran housing help (SSVF)",
+    "official_url": "https://department.va.gov/homeless/supportive-services-for-veteran-families/",
+    "organization": "Volunteers of America of North Louisiana",
+    "service_area": [
+      "Arkansas",
+      "Ashley",
+      "Bradley",
+      "Calhoun",
+      "Chicot",
+      "Clark",
+      "Cleveland",
+      "Dallas",
+      "Desha",
+      "Drew",
+      "Hempstead",
+      "Howard",
+      "Jefferson",
+      "Lincoln",
+      "Nevada",
+      "Ouachita",
+      "Phillips",
+      "Pike",
+      "Union"
+    ],
+    "state": "AR",
+    "resource_role": "housing_provider",
+    "needs_supported": [
+      "housing",
+      "veteran_services"
+    ],
+    "description": "VA-funded Supportive Services for Veteran Families (SSVF, grant 26-AR-470): case management, help keeping a home, rapid rehousing and short-term financial help for low-income veteran households.",
+    "next_step": "Call SSVF intake with your county and housing situation: whether you are homeless now or at risk of losing housing, and who lives with you.",
+    "constraints": [
+      "Serves only the areas listed; check that yours is included. Veteran-household, income and housing-status screening applies.",
+      "County and intake details come from VA’s FY26 SSVF provider intake list; confirm current service when calling."
+    ],
+    "public_contact": {
+      "phone": "870-275-4066",
+      "phone_label": "VA-listed SSVF intake"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-02"
+    },
+    "evidence": {
+      "review_method": "full_official_spreadsheet",
+      "direct_agency_confirmation": false,
+      "service_area_source_url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx"
+    },
+    "source_evidence": [
+      {
+        "url": "https://department.va.gov/homeless/wp-content/uploads/sites/72/2026/03/SSVF_Provider_Intake_List_FY26.xlsx",
+        "title": "VA SSVF provider intake list (FY26)",
+        "reviewed_on": "2026-11-02",
+        "scope": "County coverage and SSVF intake; Contacts worksheet row 226",
+        "sheet": "Contacts",
+        "row": 226,
+        "source_sha256": "311e6c3294e0615ab4feee7541664e3a45854583a21fc4fe1c255e4ed4afd462"
+      }
+    ]
+  }
 ]
