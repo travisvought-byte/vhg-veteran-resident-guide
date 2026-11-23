@@ -72,7 +72,7 @@ for key in ('fmp', 'vcl', 'benefits', 'manila'):
 checked(data['us_abroad']['fmp']['us_canada'], 'FMP U.S. and Canada')
 assert len(data['us_abroad']['vcl']['regions']) == 6
 slugs = [c['slug'] for c in data['countries']]
-assert len(slugs) == len(set(slugs)) and 1 <= len(slugs) <= 12, slugs
+assert len(slugs) == len(set(slugs)) and 1 <= len(slugs) <= 40, slugs
 for c in data['countries']:
     em = c['emergency']
     assert em['numbers'] and all(n['display'] and n['tel'] for n in em['numbers']), (c['slug'], 'emergency number')
@@ -112,7 +112,9 @@ for c in data['countries']:
         assert line['source_url'].replace('&', '&amp;') in html, (path, 'source shown', line['name'])
     expected_partials = sum(bool(x.get('partial')) for x in c['lines']) + bool(c.get('no_veterans_line'))
     assert page.partials == expected_partials, (path, 'partial-coverage notes', page.partials, expected_partials)
-    assert f'Checked {build_world.when(data["checked_on"])}' in html
+    assert f'Checked {build_world.when(c.get("checked_on") or data["checked_on"])}' in html
+    if c.get('checked_on'):
+        assert date.fromisoformat(c['checked_on']) <= today, (path, 'country checked date')
     assert ['emergency', 'agency', 'veterans-line', 'crisis-line', 'us-veterans'] == page.sections, (path, page.sections)
     # U.S. veterans living there: the Foreign Medical Program and the Veterans Crisis Line abroad.
     us = html[html.index('id="us-veterans"'):]

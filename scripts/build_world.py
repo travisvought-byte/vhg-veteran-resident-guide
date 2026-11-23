@@ -142,8 +142,8 @@ def benefits_block(data):
 
 def line_card(line):
     status = (f'<p class="partial" data-partial><strong>Partial coverage:</strong> {e(line["partial"])}</p>' if line.get('partial')
-              else f'<p class="full">Hours: {e(line["hours"])}.</p>')
-    hours = f'<p class="small">Hours: {e(line["hours"])}.</p>' if line.get('partial') else ''
+              else f'<p class="full">Hours: {e(line["hours"].rstrip("."))}.</p>')
+    hours = f'<p class="small">Hours: {e(line["hours"].rstrip("."))}.</p>' if line.get('partial') else ''
     extra = ''
     if line.get('email'):
         extra += f'<p class="small">Email: <a href="mailto:{e(line["email"])}">{e(line["email"])}</a></p>'
@@ -175,10 +175,16 @@ def country_page(data, c):
           f'{vcl_for(data, c)}{fmp_for(data, c)}{benefits_block(data)}'
           '<p><a href="./#us-veterans-abroad">All help for U.S. veterans abroad</a></p></section>')
     hero = (f'<div class="hero"><p class="eyebrow">VETERANS OUTSIDE THE U.S.</p><h1>{e(c["name"])}</h1>'
-            f'<p>Emergency, veterans and crisis contacts in {e(c["name"])}, each from an official source. Checked {when(data["checked_on"])}. '
+            f'<p>Emergency, veterans and crisis contacts in {e(c["name"])}, each from an official source. Checked {when(c.get("checked_on") or data["checked_on"])}. '
             'Published numbers are not telephone-confirmed.</p></div></header>')
     return (head(title, desc, url) + hero + f'<main class="world" id="main" data-country="{e(c["slug"])}">' + emergency + body + us
             + '</main>' + footer())
+
+
+def checked_range(data):
+    """The dates the country pages were checked: one date, or the first and the last."""
+    days = sorted({data['checked_on']} | {c['checked_on'] for c in data['countries'] if c.get('checked_on')})
+    return when(days[0]) if len(days) == 1 else f'{when(days[0])} to {when(days[-1])}'
 
 
 def index_page(data):
@@ -224,7 +230,7 @@ def index_page(data):
              f'<h3>Not yet covered</h3><ul>{later}</ul></section>')
     hero = ('<div class="hero"><p class="eyebrow">VETERANS OUTSIDE THE U.S.</p><h1>Veterans outside the United States</h1>'
             '<p>Emergency numbers, official veterans agencies and crisis lines in other countries, and the VA help U.S. veterans can use while living abroad. '
-            f'Checked {when(data["checked_on"])}.</p></div></header>')
+            f'Checked {checked_range(data)}.</p></div></header>')
     return head(title, desc, url) + hero + '<main class="world" id="main">' + countries + us + rules + '</main>' + footer()
 
 
