@@ -14,16 +14,21 @@ records = [
  dict(id='monthly', name='Monthly', schedule='First Thursday', session_monthly=[{'weekday': 4, 'weeks': [1]}], **base),
  dict(id='none', name='No Schedule', schedule=None, **base),
  dict(id='offer', name='Old Offer', schedule='Mon', session_days=[1], cost='$20', price_valid_until='2026-10-10', **base),
+ dict(id='rechecked', name='Past Event Rechecked', schedule='Oct 10', session_dates=['2026-10-10'], cost='$20', price_valid_until='2026-10-10', ended_rechecked_on='2026-10-20', **base),
+ dict(id='recheck-before-end', name='Rechecked Early', schedule='Oct 12', session_dates=['2026-10-12'], ended_rechecked_on='2026-10-01', **base),
 ]
 expired, soon, stale, offers = m.classify(records, today)
-assert {r['id'] for r, _ in expired} == {'ended', 'valid'}, expired
+assert {r['id'] for r, _ in expired} == {'ended', 'valid', 'recheck-before-end'}, expired
+# A past schedule rechecked after it ended (no newer date found) leaves the report, offer included.
+assert 'rechecked' not in {r['id'] for r, _ in expired + offers}
 assert {r['id'] for r, _ in soon} == {'soon'}
 assert {r['id'] for r, _ in stale} == {'stale'}
 assert {r['id'] for r, _ in offers} == {'offer'}
 # Open-ended weekly and monthly schedules are never "ended", and a record with no schedule is ignored.
 assert 'weekly' not in {r['id'] for r, _ in expired + soon} and 'monthly' not in {r['id'] for r, _ in expired + soon}
 text = m.report(records, today)
-assert '7 listings have a published schedule. 2 have ended, 1 end within 14 days, 1 were last reviewed more than 30 days ago.' in text, text
+assert '9 listings have a published schedule. 3 have ended, 1 end within 14 days, 1 were last reviewed more than 30 days ago.' in text, text
+assert '1 more ended and were rechecked afterwards with no newer date found' in text
 assert '**Stale Hall** (Marion) last reviewed 89 days ago. 740-000-0000' in text
 # The real data loads and produces a report without error.
 real = m.report(m.load(), today)

@@ -111,7 +111,7 @@ assert.equal(vm.runInContext("nextBingoDate(BINGO.find(r=>r.license_number==='04
 assert.equal(vm.runInContext("nextBingoDate(BINGO.find(r=>r.license_number==='0476-45'),'today','2026-10-16')",context),'2026-10-16');
 assert.equal(vm.runInContext("nextBingoDate(BINGO.find(r=>r.license_number==='1048-46'),'today','2026-11-26')",context),null);
 assert.equal(vm.runInContext("nextBingoDate(BINGO.find(r=>r.license_number==='1048-46'),'today','2026-11-12')",context),'2026-11-12');
-assert.equal(vm.runInContext("nextBingoDate(BINGO.find(r=>r.license_number==='0614-27'),'today','2026-10-15')",context),'2026-10-15');
+assert.equal(vm.runInContext("nextBingoDate(BINGO.find(r=>r.license_number==='0614-27'),'today','2026-10-20')",context),'2026-10-20');assert.equal(vm.runInContext("nextBingoDate(BINGO.find(r=>r.license_number==='0614-27'),'today','2026-10-15')",context),null);
 const evidence=JSON.parse(fs.readFileSync(path.join(root,'research/bingo-session-review-2026-10-11.json'),'utf8'));
 assert.equal(evidence.updates.length,17);assert.equal(evidence.updates.filter(r=>!r.before.schedule).length,16);
 assert(evidence.updates.every(r=>authorized.some(a=>a.id===r.id&&a.sources.some(s=>s.url===r.source_url))));
@@ -201,10 +201,13 @@ assert(fs.existsSync(path.join(root,'assets/bingo-qr.svg')));assert(html.include
 assert(vm.runInContext("!!ZIP_CENTROIDS['43334']&&!!ZIP_CENTROIDS['15001']&&!ZIP_CENTROIDS['90210']",context));
 console.log('PASS: published-first default, time-of-day filter, last-checked dates, facility flyer and regional ZIP data.');
 // State enforcement notices are shown, kept factual, and excluded from printed facility flyers.
-const noticed=authorized.filter(r=>r.enforcement);assert.equal(noticed.length,4);
-for(const r of noticed){assert.equal(r.enforcement.status,'notice_of_intent');assert(r.enforcement.url.startsWith('https://charitable.ohioago.gov/'));assert(r.sources.some(s=>s.url===r.enforcement.url));}
+const noticed=authorized.filter(r=>r.enforcement);assert.equal(noticed.length,3);
+for(const r of noticed){assert(['notice_of_intent','settlement'].includes(r.enforcement.status));assert(r.enforcement.url.startsWith('https://charitable.ohioago.gov/'));assert(r.sources.some(s=>s.url===r.enforcement.url));if(r.enforcement.status==='settlement')assert(r.enforcement.settlement_date&&r.enforcement.terms);}
 nodes['bingo-reset'].onclick();nodes['bingo-kind'].value='licensed';nodes['bingo-county'].value='Marion';vm.runInContext('render()',context);
-const mcab=nodes.listings.innerHTML.split('id="oh-license-0113-39-306-3"')[1].split('</article>')[0];assert(mcab.includes('State licensing notice:'));assert(mcab.includes('This is not a final decision.'));assert(mcab.includes('Nov 18, 2026'));
+const mcab=nodes.listings.innerHTML.split('id="oh-license-0113-39-306-3"')[1].split('</article>')[0];assert(mcab.includes('State licensing settlement:'));assert(mcab.includes('Oct 21, 2026'));assert(mcab.includes('Read the agreement'));assert(!mcab.includes('This is not a final decision.'));
+const kocNotice=r=>vm.runInContext('enforcementNote(BINGO.find(r=>r.id==="oh-license-0168-37-271-2"),"'+r+'")',context);
+assert(kocNotice('2026-11-10').includes('A hearing is scheduled for Nov 18, 2026'));assert(kocNotice('2026-11-23').includes('A hearing was set for Nov 18, 2026; no decision had been posted when this was last checked on Nov 23, 2026'));assert(kocNotice('2026-11-23').includes('This is not a final decision.'));
+assert(!authorized.find(r=>r.id==='oh-license-1026-34-238-3').enforcement);
 const koc=nodes.listings.innerHTML.split('id="oh-license-0096-37-272-1"')[1].split('</article>')[0];assert(koc.includes('tel:7403823671'));assert(!koc.includes('State licensing notice'));
 nodes['bingo-reset'].onclick();
 assert(!JSON.parse(vm.runInContext("JSON.stringify(flyerRows('45042',50,'2026-10-09'))",context)).some(r=>r.enforcement));
@@ -236,7 +239,7 @@ console.log('PASS: older-source schedules name their source on the card and neve
 for (const [id,date,expected] of [
  ['sourcepoint-bingo','2026-11-27',null],['sourcepoint-bingo','2026-12-04',null],
  ['port-clinton-senior-center','2026-11-11',null],['port-clinton-senior-center','2026-11-25','2026-11-25'],
- ['oh-license-1056-27-31-2','2026-11-15','2026-11-15'],['oh-license-1056-27-31-2','2026-11-08',null],
+ ['oh-license-1056-27-31-2','2026-12-06','2026-12-06'],['oh-license-1056-27-31-2','2026-11-29',null],
  ['oh-license-0122-34-258-3','2026-12-02','2026-12-02'],['oh-license-0331-48-507-4','2026-11-25',null]
 ]) assert.equal(vm.runInContext(`nextBingoDate(BINGO.find(r=>r.id==='${id}'),'today','${date}')`,context),expected);
 assert(!authorized.find(r=>r.id==='oh-license-0122-34-257-10').schedule);
