@@ -1260,6 +1260,56 @@
     "state": "shared"
   },
   {
+    "program_id": "pa-claims",
+    "name": "Pennsylvania veterans: state veterans benefits and claims help",
+    "official_url": "https://www.pa.gov/agencies/dmva/pennsylvania-veterans",
+    "organization": "Pennsylvania Department of Military and Veterans Affairs",
+    "service_area": [
+      "Pennsylvania"
+    ],
+    "needs_supported": [
+      "general_navigation",
+      "benefits_and_funding"
+    ],
+    "description": "The Department of Military and Veterans Affairs runs Pennsylvania’s state veterans benefits and keeps a registry of accredited Veteran Service Officers. County Directors of Veterans Affairs help with VA claims locally.",
+    "next_step": "Choose your county for its Director of Veterans Affairs, or call DMVA toll free at 800-547-2838 and ask to be connected with an accredited Veteran Service Officer.",
+    "constraints": [],
+    "public_contact": {
+      "phone": "800-547-2838",
+      "phone_label": "Pennsylvania DMVA (toll free)"
+    },
+    "verification": {
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-23"
+    },
+    "evidence": {
+      "review_method": "full_official_page_text",
+      "direct_agency_confirmation": false,
+      "phone_source_url": "https://www.pa.gov/agencies/dmva/contact"
+    },
+    "source_evidence": [
+      {
+        "url": "https://www.pa.gov/agencies/dmva/pennsylvania-veterans",
+        "title": "Pennsylvania DMVA: Veterans Affairs",
+        "reviewed_on": "2026-11-23",
+        "scope": "State-level veterans benefits, County Directors of Veterans Affairs, and the toll-free line 800-547-2838; read in full."
+      },
+      {
+        "url": "https://www.pa.gov/agencies/dmva/contact",
+        "title": "Pennsylvania DMVA: Contact",
+        "reviewed_on": "2026-11-23",
+        "scope": "Toll free 800-547-2838 or 717-861-8910; Building 0-47, Fort Indiantown Gap; read in full."
+      },
+      {
+        "url": "https://www.pa.gov/agencies/dmva/pennsylvania-veterans/pa-vetconnect/find-an-accredited-veteran-service-officer",
+        "title": "Pennsylvania DMVA: Find an Accredited Veteran Service Officer",
+        "reviewed_on": "2026-11-23",
+        "scope": "Registry of accredited Veteran Service Officers (VSO listing); read in full."
+      }
+    ],
+    "state": "PA"
+  },
+  {
     "program_id": "pa-link",
     "name": "PA Link: aging and disability first call",
     "official_url": "https://www.pa.gov/services/aging/request-aging-and-disability-resources-through-pa-link",

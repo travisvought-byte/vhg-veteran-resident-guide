@@ -2,7 +2,7 @@
   {
     "program_id": "nm-claims",
     "name": "New Mexico veterans: state field offices for claims help",
-    "official_url": "https://www.nmdvs.org/?p=3991",
+    "official_url": "https://www.dvs.nm.gov/field-services/",
     "organization": "New Mexico Department of Veterans’ Services",
     "service_area": [
       "statewide"
@@ -23,32 +23,26 @@
       "phone_label": "New Mexico Department of Veterans’ Services (866-433-8387)"
     },
     "verification": {
-      "record_status": "official_search_extract_only",
-      "last_reviewed_on": "2026-11-16"
+      "record_status": "official_source_reviewed",
+      "last_reviewed_on": "2026-11-23"
     },
     "evidence": {
-      "review_method": "official_search_excerpt",
+      "review_method": "full_official_page_text",
       "direct_agency_confirmation": false,
-      "phone_source_url": "https://www.nmdvs.org/?p=3913"
+      "phone_source_url": "https://www.dvs.nm.gov/field-services/"
     },
     "source_evidence": [
       {
-        "url": "https://www.nmdvs.org/?p=3991",
-        "title": "New Mexico Department of Veterans’ Services: Field Offices",
-        "reviewed_on": "2026-11-16",
-        "scope": "Each field office’s address, phones and counties served; read in full. The page is undated."
+        "url": "https://www.dvs.nm.gov/field-services/",
+        "title": "New Mexico Department of Veterans’ Services: Field Services",
+        "reviewed_on": "2026-11-23",
+        "scope": "Field services and the main line 1-866-433-8387; read in full."
       },
       {
-        "url": "https://www.nmdvs.org/?p=3913",
+        "url": "https://www.dvs.nm.gov/benefits/",
         "title": "New Mexico Department of Veterans’ Services: State Benefits",
-        "reviewed_on": "2026-11-16",
-        "scope": "Benefits main office, 407 Galisteo Street, Santa Fe; 1-866-433-8387; search excerpt."
-      },
-      {
-        "url": "https://www.nmlegis.gov/(X(1)S(wad0muqmvxzdjjhkdu1eiys5))/handouts/MVAC%20071525%20Item%204%20NMDVS%20Agency%20Summary.pdf",
-        "title": "New Mexico Department of Veterans’ Services: agency summary to the legislature (July 2025)",
-        "reviewed_on": "2026-11-16",
-        "scope": "Toll-free 1 (866) 433-8387, Albuquerque (505) 383-2400, Santa Fe (505) 827-6300; search excerpt."
+        "reviewed_on": "2026-11-23",
+        "scope": "Main line 1-866-433-8387 and the Santa Fe office on Galisteo Street; read in full."
       }
     ]
   },

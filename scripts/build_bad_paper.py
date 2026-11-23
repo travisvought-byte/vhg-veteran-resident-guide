@@ -163,11 +163,13 @@ def registry():
     return json.loads((ROOT / 'states/registry.json').read_text(encoding='utf-8'))
 
 
-def state_agencies():
-    """Each state's veterans agency as the guide already lists it: the <code>-claims record, or Ohio's statewide record."""
+def state_agencies(generated=None):
+    """Each state's veterans agency as the guide already lists it: the <code>-claims record, or Ohio's statewide record.
+    generated: files the public build has just produced, so a resource file rebuilt in the same run is read fresh."""
     out = []
     for s in registry():
-        data = json.loads((ROOT / s['resources']).read_text(encoding='utf-8'))
+        text = (generated or {}).get(s['resources']) or (ROOT / s['resources']).read_text(encoding='utf-8')
+        data = json.loads(text)
         records = data if isinstance(data, list) else data.get('resources', [])
         wanted = 'ohio-dvs-fallback' if s['code'] == 'OH' else s['code'].lower() + '-claims'
         rec = next((r for r in records if r.get('program_id') == wanted), None)
@@ -300,8 +302,8 @@ def pages():
     return ['bad-paper/'] + ['bad-paper/' + p['slug'] + '.html' for p in PAGES[1:]]
 
 
-def outputs():
-    agencies = state_agencies()
+def outputs(generated=None):
+    agencies = state_agencies(generated)
     result = {}
     for p in PAGES:
         for k in p['sources']:

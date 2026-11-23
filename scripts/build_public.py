@@ -134,7 +134,7 @@ def outputs():
         if s['code'] in va_links:
             result[s['page']] = result[s['page']].replace('<section id="county-start"', va_links[s['code']] + '<section id="county-start"', 1)
     # Other-than-honorable and bad-conduct discharges (templates/bad-paper/); each page carries the visit counter.
-    result.update(bad_paper_outputs())
+    result.update(bad_paper_outputs(result))
     # Each entry page speaks to the person most likely to land on it (data/landing/): the sharing kits to the
     # people passing the guide on, and facilities, flyers and the rest to their own visitors.
     for s in states:
