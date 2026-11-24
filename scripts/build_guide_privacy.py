@@ -2,12 +2,13 @@
 
 Run by scripts/build_public.py. Keep it in plain words and true to what the pages do: page views are
 counted by GoatCounter without cookies (assets/analytics.js drops everything after the "?"), choices stay
-in the page address, drafts and checklists stay in the browser, and corrections go by email.
+in the page address, drafts and checklists stay in the browser, and corrections go by email. Visitors who come
+from one of VHG's Google ads also load Google's ad measurement (assets/ads-measure.js); nobody else does.
 """
 from html import escape
 import place_map
 
-UPDATED = 'November 23, 2026'
+UPDATED = 'November 24, 2026'
 EMAIL = 'travis@vethomeguard.org'
 
 
@@ -33,6 +34,7 @@ def page():
 <h2>The short version</h2>
 <ul><li>There are no accounts and no sign-in. We never ask for your name.</li>
 <li>We count visits without cookies and without keeping personal information.</li>
+<li>If you came here by clicking one of our Google ads, Google’s ad measurement loads for that visit so we know whether the ad helped. Nobody else loads it.</li>
 <li>The state, county and help you choose stay on your own device and in the page address.</li>
 <li>The maps’ pictures come from OpenStreetMap, which sees your internet address and the area on the map.</li>
 <li>We do not sell personal information.</li></ul>
@@ -47,7 +49,9 @@ def page():
 <p>{escape(place_map.LOCATION_PRIVACY)}</p>
 <h2>Who hosts the site</h2>
 <p>The guide is hosted on GitHub Pages. GitHub may keep server logs, including IP addresses, for security. Read {_a('https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement', 'GitHub’s privacy statement')}. A few pages show a logo from a partner’s website, which receives an ordinary request for that picture.</p>
-<h2>Advertising</h2>
+<h2>Our Google ads</h2>
+<p>Veteran Home Guardians runs free Google search ads through Google’s nonprofit program, so more veterans find the guide. If you arrive by clicking one of those ads, Google adds a code to the page address and the guide loads Google’s ad measurement for the rest of that visit, in that browser tab. Google may set a cookie. If you then tap a local office’s phone number, Google Ads counts that an ad led to a call. It is not told the number, your county or anything you chose or typed, and we ask Google not to use it to personalize ads. If you did not come from one of our ads, Google’s code never loads. Read {_a('https://policies.google.com/technologies/ads', 'how Google uses information for ads')}.</p>
+<h2>Advertising on the guide</h2>
 <p>The guide does not show ads and has no affiliate links. When a business or group sponsors a guide to help keep it free, its spot is labeled “Sponsored”, and sponsorship never changes the free listings or their order.</p>
 <h2>Email and corrections</h2>
 <p>If you email us a correction, we get your email address and what you write. We use it to fix the guide and to reply, and we never sell or share it. Please send public resource information only, never a resident’s personal or health details.</p>
