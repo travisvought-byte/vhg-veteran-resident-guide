@@ -12,6 +12,7 @@ import json
 from pathlib import Path
 
 from build_county_pages import BASE_URL, STYLE, e, tel, urgent, when
+from visuals import count_bars, stylesheet
 
 ROOT = Path(__file__).resolve().parents[1]
 FOLDER = 'va-locations'
@@ -26,6 +27,9 @@ SECTIONS = [
     ('cemetery', 'Veterans cemeteries', 'National and state veterans cemeteries: burial eligibility, '
      'pre-need planning and gravesite locations.'),
 ]
+# A symbol for each kind, in the by-kind chart at the top of a state's page (scripts/visuals.py).
+KIND_ICON = {'health': 'medical', 'vet_center': 'chat', 'benefits': 'doc', 'cemetery': 'flag'}
+SHORT = {'health': 'Medical centers and clinics', 'vet_center': 'Vet Centers', 'benefits': 'Benefits offices', 'cemetery': 'Veterans cemeteries'}
 NOUN = {'health': 'medical centers and clinics', 'vet_center': 'Vet Centers', 'benefits': 'benefits offices',
         'cemetery': 'cemeteries'}
 
@@ -66,7 +70,8 @@ def page(title, description, path, crumbs, hero, body, depth):
             f'<meta property="og:type" content="website"><meta property="og:title" content="{e(title)}">'
             f'<meta property="og:description" content="{e(description)}"><meta property="og:url" content="{e(canonical)}">'
             f'<meta property="og:image" content="{BASE_URL}assets/vhg-logo.png">\n'
-            f'<link rel="icon" href="{up}favicon.ico"><style>{STYLE}h3{{color:var(--navy)}}</style></head>\n'
+            f'<link rel="icon" href="{up}favicon.ico"><style>{STYLE}h3{{color:var(--navy)}}</style>'
+            + (stylesheet(up) if 'class="vi"' in body else '') + '</head>\n'
             f'<body><header><nav aria-label="Breadcrumb" class="small">{trail}</nav>{hero}</header>\n'
             f'<main id="main">{body}</main>\n'
             '<footer><p>Free from <a href="https://www.vethomeguard.org/about.html">Veteran Home Guardians</a>, an independent '
@@ -95,6 +100,9 @@ def outputs(root=ROOT):
             counts[r['kind']] = counts.get(r['kind'], 0) + 1
         src = data['source']
         body = [f'<p>{e(summary(counts))}. Grouped by kind, then by city. Facilities VA lists as closed are left out.</p>']
+        # The same counts as a small chart; each row jumps to its section.
+        body.append(count_bars([(SHORT[k], counts[k], '#' + k, KIND_ICON[k]) for k, _, _ in SECTIONS if counts.get(k)],
+                               'kinds', f'VA locations in {sname}, by kind', 'Locations', '../../'))
         for kind, heading, blurb in SECTIONS:
             items = [r for r in data['rows'] if r['kind'] == kind]
             if items:

@@ -20,6 +20,8 @@ from html import escape
 from pathlib import Path
 from urllib.parse import quote
 
+import visuals
+
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://guide.vethomeguard.org/bad-paper/'
 EMAIL = 'travis@vethomeguard.org'
@@ -276,6 +278,7 @@ def page_html(p, body):
 <link rel="canonical" href="{e(url)}">
 <meta property="og:title" content="{e(p["title"])}"><meta property="og:description" content="{e(p["description"])}"><meta property="og:url" content="{e(url)}"><meta property="og:type" content="article">
 <link rel="stylesheet" href="../assets/family-guide.css">
+{visuals.stylesheet("../")}
 {STYLE}
 <script src="../assets/analytics.js" defer></script></head><body>
 <header><nav aria-label="Main"><a href="../">Veteran Resource Guide</a><a href="./">Bad paper discharges</a><a href="free-help.html">Free help</a><a href="{FLYER}">Printable checklist</a></nav>
@@ -293,6 +296,8 @@ def fill(body, agencies):
     body = body.replace('{{YOUR_STATE}}', your_state(agencies))
     body = body.replace('{{STATES_TABLE}}', states_table(agencies))
     body = body.replace('{{FLYER}}', FLYER)
+    # {{ICON:name}}: a line icon from assets/visuals.svg beside the words of a diagram (scripts/visuals.py).
+    body = re.sub(r'\{\{ICON:([a-z-]+)\}\}', lambda m: visuals.icon(m.group(1), '../'), body)
     assert '{{' not in body, 'unfilled placeholder'
     return body
 

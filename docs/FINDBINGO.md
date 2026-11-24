@@ -202,6 +202,11 @@ Travis's direction: give people a reason to come and look around, and a bingo cl
   on a bingo night, the card, the kinds of games and what the words mean, the unwritten rules, help for eyes,
   ears and hands, and what changes from state to state. It speaks in general terms and sends people to their
   state page and the hall for specifics. Linked from every footer (the Ohio finder's too) and in the sitemap.
+- **Pictures** (added November 24, 2026). The home page shows "Find a game in three steps" under the search. Each
+  state page with listed game times has a week chart: a ball where at least one listing begins in that part of the
+  day, a dash where none does. It is a real table and never states a count (`week_chart`). The bingo class has a
+  sample card, the common patterns, and its bingo-night steps numbered as bingo balls (`card_figure`,
+  `patterns_figure`, `LEARN_CSS`). All are original SVG or CSS in the site's colors, and `tests/visuals.cjs` checks them.
 
 ## Sources and how they were read (November 15, 2026)
 
