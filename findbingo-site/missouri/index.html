@@ -512,6 +512,13 @@ article{border-color:#3d4d55;border-top-color:var(--accent);box-shadow:none}.sta
   'use strict';
   if (window.vhgAnalyticsLoaded) return;
   window.vhgAnalyticsLoaded = true;
+  // Ad visits on the guide itself: assets/ads-measure.js loads Google's tag only for people who came from our ad.
+  if (location.hostname === 'guide.vethomeguard.org' && document.currentScript && document.currentScript.src) {
+    var ads = document.createElement('script');
+    ads.defer = true;
+    ads.src = new URL('ads-measure.js', document.currentScript.src).href;
+    document.head.appendChild(ads);
+  }
   window.goatcounter = {no_onload: true, no_events: true};
   var script = document.createElement('script');
   script.async = true;
