@@ -96,7 +96,17 @@ article{border-color:#3d4d55;border-top-color:var(--accent);box-shadow:none}.sta
   'use strict';
   if (window.vhgAnalyticsLoaded) return;
   window.vhgAnalyticsLoaded = true;
-  // Ad visits on the guide itself: assets/ads-measure.js loads Google's tag only for people who came from our ad.
+  // Google Tag Manager for VHG's Google Ads account (container GTM-PGHMBBZK, owner direction Nov 24, 2026), guide only.
+  // Conversions are not sent from here: assets/ads-measure.js sends the one call conversion, so nothing counts twice.
+  if (location.hostname === 'guide.vethomeguard.org') {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+    var gtm = document.createElement('script');
+    gtm.async = true;
+    gtm.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-PGHMBBZK';
+    document.head.appendChild(gtm);
+  }
+  // Ad visits on the guide itself: assets/ads-measure.js loads Google's ad tag only for people who came from our ad.
   if (location.hostname === 'guide.vethomeguard.org' && document.currentScript && document.currentScript.src) {
     var ads = document.createElement('script');
     ads.defer = true;

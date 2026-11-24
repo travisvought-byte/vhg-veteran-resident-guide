@@ -41,4 +41,9 @@ assert.strictEqual(page.conversions()[0][2].send_to, 'AW-18593576535/rqT3CMn14L4
 page = run('', {'vhg-ad-visit': '1'});
 assert.strictEqual(page.appended.length, 1, 'later pages in the same ad visit keep measuring');
 
-console.log('PASS: Google ad measurement loads only for ad visitors and counts one local office call.');
+const analytics = require('fs').readFileSync(require('path').join(__dirname, '..', 'assets', 'analytics.js'), 'utf8');
+const gtmBlock = analytics.slice(analytics.lastIndexOf('GTM-PGHMBBZK') - 600, analytics.lastIndexOf('GTM-PGHMBBZK') + 40);
+assert.ok(/location\.hostname === 'guide\.vethomeguard\.org'/.test(gtmBlock), 'Tag Manager loads on the guide only, not on the bingo sites that share this script');
+assert.ok(!/conversion/.test(analytics.replace(/\/\/.*$/gm, '')), 'analytics.js sends no conversions, so calls are never counted twice');
+
+console.log('PASS: Google ad measurement loads only for ad visitors and counts one local office call; Tag Manager stays on the guide.');
