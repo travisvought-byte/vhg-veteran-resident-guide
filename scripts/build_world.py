@@ -98,7 +98,7 @@ def footer():
     ask = 'mailto:' + EMAIL + '?subject=Veteran%20Resource%20Guide%20country%20page'
     return (f'<footer class="world" style="margin:auto;padding:18px 24px"><p>Free from <a href="https://www.vethomeguard.org/about.html">Veteran Home Guardians</a>, an independent U.S. 501(c)(3) nonprofit (EIN 33-4637180) that visits isolated veterans and publishes free guides. Numbers come from official government pages and are not '
             f'telephone-confirmed. Report a wrong number: <a href="{ask}">{EMAIL}</a>.</p>'
-            '<p><a href="../">Back to the Veteran Resource Guide</a> · <a href="../privacy.html">Privacy</a></p></footer>\n</body></html>\n')
+            '<p><a href="../">Back to the Veteran Resource Guide</a> · <a href="../privacy.html">Privacy</a> · <a href="https://www.zeffy.com/en-US/donation-form/giving-tuesday-no-veteran-left-isolated">Give to Veteran Home Guardians on Giving Tuesday, December 1</a></p></footer>\n</body></html>\n')
 
 
 def vcl_for(data, country):

@@ -775,6 +775,7 @@ def _json_ld(obj):
 def _footer(generated_on, up='../'):
     return ('<footer><p>FindBingo.org is a free community resource from <a href="https://www.vethomeguard.org/">Veteran Home Guardians</a>. '
             'Listings are free. Ads, when shown, are labeled and never decide which games are listed.</p>'
+            '<p class="noprint">Giving Tuesday is December 1: <a href="https://www.zeffy.com/en-US/donation-form/giving-tuesday-no-veteran-left-isolated">give to Veteran Home Guardians</a>.</p>'
             '<p class="noprint">Need help getting to the game? <a href="https://mobilitytalk.org/states/">Mobility Talk</a> lists mobility and disability resources in every state.</p>'
             f'<p class="noprint">Questions or corrections: <a href="mailto:{EMAIL}?subject=FindBingo.org">{EMAIL}</a> · Made by <a href="https://travisvought.com/">Travis Vought</a></p>'
             f'<p class="noprint"><a href="{up}learn/">How bingo works: a free bingo class</a> · <a href="{up}about/">About and contact</a> · <a href="{up}privacy/">Privacy</a> · <a href="{up}terms/">Terms of use</a> · <a href="{up}advertise/">Advertise on Find Bingo</a> · <a href="{up}halls/">For bingo halls</a></p>'
