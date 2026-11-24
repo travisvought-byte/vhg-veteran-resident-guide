@@ -133,7 +133,7 @@ STYLE = '''
 .kinds h2{font-size:21px;margin-top:0}.rules{margin:0 0 24px}
 .filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:end;margin:8px 0 16px}
 .filters label{display:block;font-weight:650;margin-bottom:4px}
-.filters input,.filters select{width:100%;min-height:46px;font:inherit;padding:8px;border:1px solid #abb8b1;border-radius:6px;background:#fff}
+.filters input,.filters select{width:100%;min-height:46px;font:inherit;padding:8px;border:1px solid #6f8078;border-radius:6px;background:#fff}
 .check{display:flex;gap:8px;align-items:center;min-height:46px}.check input{width:22px;height:22px}
 .list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .list article{background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px}

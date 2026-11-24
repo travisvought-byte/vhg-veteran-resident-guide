@@ -671,8 +671,10 @@ if __name__ == '__main__':
     if '--qr' in sys.argv:
         make_qr()
         sys.exit()
+    from a11y_finish import finish_named
     drift = []
     for name, text in outputs().items():
+        text = finish_named(name, text)
         path = ROOT / name
         if not path.is_file() or path.read_text() != text:
             drift.append(name)
