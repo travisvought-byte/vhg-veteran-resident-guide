@@ -20,6 +20,7 @@ jobs:
           python3 tests/mobility_law_map.py
       - name: Check all states, county mappings, referral behavior and feedback links
         run: node tests/feedback.cjs
+      - name: Check Google ad measurement stays limited to ad visitors
         run: node tests/ads-measure.cjs
       - name: Check bingo report extraction regressions
         run: |
