@@ -10,8 +10,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
 from build_bad_paper import PAGES, SOURCES, outputs, pages  # noqa: E402
+from a11y_finish import finish_named  # noqa: E402
 
-built = outputs()
+# build_public.py finishes every page last (skip link, link symbols); compare with that.
+built = {name: finish_named(name, text) for name, text in outputs().items()}
 titles, descs = set(), set()
 for p in PAGES:
     path = 'bad-paper/' + p['slug'] + '.html'

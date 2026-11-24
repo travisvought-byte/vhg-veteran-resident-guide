@@ -7,6 +7,7 @@ from pathlib import Path
 from state_registry import (load_registry, load_counties, state_resources, make_edition,
                             make_share, add_share_links, add_state_options, BASE_URL)
 from bingo_edition import make_bingo
+from a11y_finish import finish_all as a11y_finish_all
 from bingo_site import make_bingo_site, SITE as OHIO_BINGO
 from findbingo_site import make_findbingo
 from bingo_pipeline import outputs as bingo_pipeline_outputs
@@ -174,6 +175,8 @@ def outputs():
     urls += [BASE_URL + page for page in topic_pages()]
     result['sitemap.xml'] = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join('  <url><loc>' + u.replace('&', '&amp;') + '</loc></url>\n' for u in urls) + '</urlset>\n'
     result['robots.txt'] = 'User-agent: *\nAllow: /\n\nSitemap: ' + BASE_URL + 'sitemap.xml\n'
+    # Last step: a skip link, a <main> target, reduced motion and link symbols on every page (scripts/a11y_finish.py).
+    result.update(a11y_finish_all(result))
     return result
 
 
@@ -190,9 +193,9 @@ FINDBINGO_404 = ('<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><
                  '<style>body{font:20px/1.5 system-ui,sans-serif;margin:3rem auto;max-width:34rem;padding:0 1rem;color:#1f2f38}'
                  'a{color:#183449;font-weight:700}footer{margin-top:2.5rem;font-size:17px}'
                  '@media (prefers-color-scheme:dark){:root{color-scheme:dark}body{background:#10181d;color:#e4ecef}a{color:#9fd0ef}}'
-                 '</style></head><body><h1>We could not find that page</h1>'
+                 '</style></head><body><main id="main"><h1>We could not find that page</h1>'
                  '<p>The link may be old or mistyped.</p><p><a href="./">Find bingo near you</a></p>'
-                 '<p><a href="ohio/">Ohio Bingo Finder</a></p>'
+                 '<p><a href="ohio/">Ohio Bingo Finder</a></p></main>'
                  '<footer><p>FindBingo.org is a free community resource from <a href="https://www.vethomeguard.org/">Veteran Home Guardians</a>. '
                  '<a href="about/">About and contact</a> · <a href="privacy/">Privacy</a> · <a href="terms/">Terms of use</a> · <a href="advertise/">Advertise on Find Bingo</a></p></footer>'
                  # Page views on the same counter as every other Find Bingo page (assets/analytics.js, written in).

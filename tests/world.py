@@ -113,9 +113,11 @@ for c in data['countries']:
 print(f'PASS: {len(slugs)} countries; every number has an official https source and a checked date.')
 
 # 2. The built pages are current, and each country page shows an emergency number and a sourced line.
+# build_public.py finishes every page last (skip link, link symbols); compare with that.
+from a11y_finish import finish_named  # noqa: E402
 built = build_world.outputs()
 for name, text in built.items():
-    assert (ROOT / name).read_text(encoding='utf-8') == text, name + ' is out of date: run python3 scripts/build_public.py'
+    assert (ROOT / name).read_text(encoding='utf-8') == finish_named(name, text), name + ' is out of date: run python3 scripts/build_public.py'
 region_slugs = [r['slug'] for r in data.get('regions', [])]
 assert set(built) == {'world/index.html'} | {f'world/{s}.html' for s in slugs + region_slugs}
 for c in data['countries']:

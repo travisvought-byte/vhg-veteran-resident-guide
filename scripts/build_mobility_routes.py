@@ -44,7 +44,7 @@ def outputs():
   for c in data['claims']:
    if c['jurisdiction']!=st['code']:continue
    links=' · '.join(f'<a target="_blank" rel="noopener" href="{escape(sources[s]["url"])}">{escape(sources[s]["title"])}</a>' for s in c['source_ids'])
-   records.append(f'<article><h4>{escape(c["title"])}</h4><p>{escape(c["plain"])}</p><p class="small">Source: {escape(c["citation"])} ({LABELS[c["status"]]}) · {links} · checked {c["reviewed_on"]}</p><details><summary>Fine print</summary><p>{escape(c["statement"])}</p><p><strong>Who it covers:</strong> {escape(c["scope"])}</p><p>{escape(c["limitations"])}</p></details></article>')
+   records.append(f'<article><h3>{escape(c["title"])}</h3><p>{escape(c["plain"])}</p><p class="small">Source: {escape(c["citation"])} ({LABELS[c["status"]]}) · {links} · checked {c["reviewed_on"]}</p><details><summary>Fine print</summary><p>{escape(c["statement"])}</p><p><strong>Who it covers:</strong> {escape(c["scope"])}</p><p>{escape(c["limitations"])}</p></details></article>')
   fallback.append(f'<details><summary>{escape(st["name"])}</summary>'+''.join(records)+'</details>')
  data['state_names']=STATES
  page=(ROOT/'templates/mobility-rights.html').read_text().replace('__STATES__',state_options).replace('__ISSUES__',issue_options).replace('__FALLBACK__','\n'.join(fallback)).replace('__DATA__',json.dumps(data,ensure_ascii=False).replace('<','\\u003c'))

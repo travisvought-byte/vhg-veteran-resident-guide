@@ -592,7 +592,7 @@ def flyers():
 CARD_CSS = '''.care-topics{background:#fff;border:1px solid var(--line,#d9dfda);border-top:4px solid var(--green,#335947);border-radius:9px;padding:20px 22px;margin:22px 0}
 .care-topics h2{margin:0 0 6px}.care-topics>p{margin:6px 0 12px}.care-aps{background:#edf2ef;border-radius:6px;padding:10px 14px}
 .care-aps a[href^="tel:"]{font-weight:700;white-space:nowrap}.care-links{list-style:none;padding:0;margin:12px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-.care-links a{display:block;min-height:44px;padding:10px 12px;border:1px solid #abb8b1;border-radius:6px;text-decoration:none}.care-links a:hover{background:#edf2ef}
+.care-links a{display:block;min-height:44px;padding:10px 12px;border:1px solid #6f8078;border-radius:6px;text-decoration:none}.care-links a:hover{background:#edf2ef}
 .care-links strong{display:block}.care-links span{display:block;font-size:15px;color:#3d4f48}
 @media(max-width:760px){.care-links{grid-template-columns:minmax(0,1fr)}}@media print{.care-topics{display:none}}
 '''

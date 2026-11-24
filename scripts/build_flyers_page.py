@@ -76,7 +76,8 @@ def tailored():
 
 
 if __name__ == '__main__':
-    out = tailored()
+    from a11y_finish import finish_named
+    out = finish_named('flyers.html', tailored())
     target = ROOT / 'flyers.html'
     if '--check' in sys.argv:
         if not target.is_file() or target.read_text() != out:
