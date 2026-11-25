@@ -345,6 +345,9 @@ Lists updated {_date_label(generated_on)}.
         # Google Search Console ownership file for https://www.findbingo.org/ (owner direction, Nov 16, 2026).
         # Keep it: Google rechecks the file, and removing it drops verification.
         'googleae90b5079bda9bbc.html': 'google-site-verification: googleae90b5079bda9bbc.html',
+        # IndexNow key for www.findbingo.org: proves the site is ours when the Ohio-Bingo repository's mirror workflow tells Bing
+        # (and the other IndexNow engines) which pages changed. No account; keep it beside the Google file.
+        'cd2ba11c432756dd60823a42f8614441.txt': 'cd2ba11c432756dd60823a42f8614441\n',
         'index.html': page,
         'data.json': data_json + '\n',
         'zips.json': json.dumps(zips, separators=(',', ':')) + '\n',
