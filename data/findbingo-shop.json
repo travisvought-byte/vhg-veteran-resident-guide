@@ -1,0 +1,73 @@
+{
+  "_about": "Find Bingo's shop page (findbingo.org/shop/), built by scripts/findbingo_site.py. DRAFT, Nov 25, 2026: links are plain store searches with no affiliate ID. Picks were chosen for high star ratings from many buyers, checked Nov 25, 2026 (Amazon search-index copies, Walmart and Etsy listings). The page shows no ratings or prices, since both change and Amazon's affiliate terms limit showing its ratings. Add affiliate tags in AFFILIATE_TAGS in the build script only after Travis signs up for a program. Never list a brand as a partner until it has agreed.",
+  "checked_on": "2026-11-25",
+  "groups": [
+    {
+      "id": "daubers",
+      "icon": "dauber",
+      "title": "Daubers",
+      "intro": "The ink markers you stamp your numbers with. Buy a few colors so you can tell games apart.",
+      "items": [
+        {"name": "Dab-O-Ink bingo daubers, 3 oz, 12-pack of colors", "why": "Made in the USA, long-lasting ink and an easy grip. A favorite of regulars.", "store": "Amazon", "search": "Dab-O-Ink bingo daubers 3 oz 12 pack"},
+        {"name": "Dab-O-Ink bingo daubers, 4 oz, 6-pack", "why": "Bigger bottles that last more nights.", "store": "Amazon", "search": "Dab-O-Ink bingo daubers 4 oz 6 pack"},
+        {"name": "Dab-O-Ink Dazzle glitter daubers", "why": "Sparkly ink, a fun gift for a bingo friend.", "store": "Amazon", "search": "Dab-O-Ink Dazzle glitter bingo dauber"},
+        {"name": "Dabbin’ Fever bingo daubers, 12-pack", "why": "A hall classic, made by a Cleveland, Ohio company.", "store": "Walmart", "search": "Dabbin Fever bingo daubers 12 pack"}
+      ]
+    },
+    {
+      "id": "bags",
+      "icon": "bag",
+      "title": "Bingo bags and dauber holders",
+      "intro": "A tote with pockets keeps your daubers upright and your cards flat.",
+      "items": [
+        {"name": "Six-pocket bingo dauber bag", "why": "Holds six daubers standing up, with room for cards.", "store": "Amazon", "search": "6 pocket bingo dauber bag tote"},
+        {"name": "Ten-pocket waterproof bingo bags, 2-pack", "why": "Room for a full night’s gear. Wipes clean.", "store": "Walmart", "search": "10 pocket waterproof bingo bag"}
+      ]
+    },
+    {
+      "id": "easy",
+      "icon": "hand",
+      "title": "Easy on the hands and eyes",
+      "intro": "Good for anyone with sore hands or tired eyes. No ink to squeeze, and big numbers.",
+      "items": [
+        {"name": "Magnetic bingo wand with chips", "why": "Cover numbers with chips, then sweep them up with the wand. Made in the USA.", "store": "Amazon", "search": "magnetic bingo wand chips made in USA"},
+        {"name": "Large-print fingertip shutter cards", "why": "Slide a window shut over each number. Nothing to mark, easy to read.", "store": "Amazon", "search": "large print easy read fingertip shutter bingo cards"},
+        {"name": "Jumbo easy-read bingo cards", "why": "Big 8 by 9 inch cards with large numbers.", "store": "Amazon", "search": "jumbo easy read bingo cards large print"}
+      ]
+    },
+    {
+      "id": "home",
+      "icon": "cage",
+      "title": "Bingo at home and for parties",
+      "intro": "Everything to call your own game for family, a church social or a senior center.",
+      "items": [
+        {"name": "11-inch steel bingo cage set", "why": "Sturdy cage and balls that are easy to read. Buyers say it holds up.", "store": "Amazon", "search": "11 inch steel bingo cage set masterboard"},
+        {"name": "Deluxe bingo set with a small cage", "why": "A good starter set for family game night.", "store": "Amazon", "search": "deluxe bingo set cage balls cards"},
+        {"name": "Bingo party set with large-print calling cards", "why": "Cards, chips and big calling cards. Popular with senior centers and care homes.", "store": "Amazon", "search": "bingo set 100 cards 1000 chips jumbo calling cards"},
+        {"name": "Five-ply shutter cards, 50-pack", "why": "Thick cards that don’t jam, for groups that play every week.", "store": "Amazon", "search": "5 ply stitched shutter bingo cards 50 pack"},
+        {"name": "Bingo paper, 500 sheets", "why": "Throwaway sheets for a big crowd.", "store": "Amazon", "search": "bingo paper 500 sheets"}
+      ]
+    },
+    {
+      "id": "lucky",
+      "icon": "clover",
+      "title": "Lucky charms and keepsakes",
+      "intro": "Every regular has a lucky something on the table. Handmade picks from small shops.",
+      "items": [
+        {"name": "Troll dauber toppers", "why": "A lucky troll that rides on top of your dauber.", "store": "Etsy", "search": "troll bingo dauber topper"},
+        {"name": "Bingo rubber duckies", "why": "A cheerful table mascot and an easy gift.", "store": "Etsy", "search": "bingo rubber duck"},
+        {"name": "Bingo lucky charms", "why": "Small charms, keychains and table pieces.", "store": "Etsy", "search": "bingo lucky charm"}
+      ]
+    },
+    {
+      "id": "wear",
+      "icon": "shirt",
+      "title": "Bingo sweatshirts and shirts",
+      "intro": "Wear it proud on bingo night. Handmade designs from small shops.",
+      "items": [
+        {"name": "Bingo sweatshirts", "why": "Warm for a chilly hall, with sayings like “Bingo Queen.”", "store": "Etsy", "search": "bingo sweatshirt"},
+        {"name": "Bingo T-shirts", "why": "Matching shirts for your bingo group.", "store": "Etsy", "search": "bingo shirt"}
+      ]
+    }
+  ]
+}

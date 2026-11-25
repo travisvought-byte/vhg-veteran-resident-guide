@@ -649,3 +649,13 @@ Required: `id`, `title` (90 characters at most), `host`, `address`, `city`, `sta
 `date`, `start` (24-hour HH:MM), `details` (200 characters at most) and `paid_on`. Optional: `end`, `phone`
 (555-555-5555 form) and `url` (https). `paid_on` stays in this file and is not published. The event must be run by a
 group allowed to hold bingo where it takes place. `tests/findbingo-events.cjs` checks all of this.
+
+## Shop: bingo gear and gifts (draft, November 25, 2026)
+
+findbingo.org/shop/ lists hand-picked bingo gear and gifts (daubers, bags, large-print and no-ink options, home and
+party sets, lucky charms, sweatshirts), from `data/findbingo-shop.json`, built by `shop_page` in `scripts/findbingo_site.py`.
+Each pick links to a store search with **no affiliate ID** until Travis joins a program and fills in `AFFILIATE_TAGS`
+(a tagged link is then marked `rel="sponsored"`). The page discloses commissions, shows no prices or star ratings
+(they change, and Amazon's terms limit showing its ratings), never ties a purchase to a donation (Amazon's operating
+agreement bars that), and names no brand as a partner until it has agreed. Halls are reminded that paper and cages for
+a licensed game come from a licensed distributor in most states.

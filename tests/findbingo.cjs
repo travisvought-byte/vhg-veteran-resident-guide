@@ -598,7 +598,9 @@ for (const file of allPages) {
   assert(d.querySelector(`footer a[href="${up}privacy/"]`) && d.querySelector(`footer a[href="${up}advertise/"]`), rel + ': footer links Privacy and Advertise');
   assert(d.querySelector(`footer a[href="${up}about/"]`) && d.querySelector(`footer a[href="${up}terms/"]`), rel + ': footer links About and Terms');
   // With the default (empty) ad list there is no ad markup at all.
-  assert(!d.querySelector('.ad-slot, .ad-label, [rel~="sponsored"]') && !text.includes('class="ad-slot'), rel + ': no ad markup when no ad is running');
+  // Shop picks (.picks) are store links, not ads; once an affiliate tag is set they carry rel="sponsored" too.
+  assert(!d.querySelector('.ad-slot, .ad-label') && ![...d.querySelectorAll('[rel~="sponsored"]')].some(a => !a.closest('.picks'))
+    && !text.includes('class="ad-slot'), rel + ': no ad markup when no ad is running');
 }
 assert.deepEqual(JSON.parse(fs.readFileSync(path.join(root, 'data/findbingo-ads.json'), 'utf8')), [], 'no ads by default');
 assert(/Ads, when shown, are labeled and never decide which games are listed\./.test(home.querySelector('footer').textContent));
@@ -675,7 +677,7 @@ assert(buildWith([{...sample[1], slot: 'sidebar'}], []).error, 'only known place
   assert(d.querySelector('header .teaser a[href="#play"]') && d.querySelector('header .chooser a[href="learn/"]'), 'the header invites people to play and to take the class');
   // The home page asks who is there and sends each person to a page that already exists (owner direction, November 23, 2026).
   assert.deepEqual([...d.querySelectorAll('header .chooser a')].map(a => [a.textContent, a.getAttribute('href')]),
-    [['Find a game near me', '#zip-form'], ['I run a bingo hall', 'halls/'], ['I want to learn to play', 'learn/'], ['My charity wants bingo support', 'halls/#partners']]);
+    [['Find a game near me', '#zip-form'], ['I run a bingo hall', 'halls/'], ['I want to learn to play', 'learn/'], ['My charity wants bingo support', 'halls/#partners'], ['I want bingo gear or a gift', 'shop/']]);
   d.getElementById('choose-find').click();
   assert.equal(d.activeElement, d.getElementById('zip'), 'finding a game puts the cursor in the ZIP box');
   let calls = 0;
@@ -775,6 +777,32 @@ assert(buildWith([{...sample[1], slot: 'sidebar'}], []).error, 'only known place
   assert(miToday.length && miToday.every(li => li.dataset.day === '1' && li.closest('ul').hasAttribute('data-weekly') && li.querySelector('.today-tag').textContent === 'Today'));
   assert(!runAt('florida/index.html', [2026, 10, 16, 10, 0]).querySelector('#fl-carvill-senior-center-jacksonville .today-tag'), 'monthly calendars are not marked');
   assert(!mi.querySelector('.today-tag'), 'without JavaScript the page is unchanged');
+}
+
+// Shop: bingo gear and gifts (draft, November 25, 2026). Plain store links, a commission disclosure, no prices,
+// ratings or donation-for-purchase wording, sponsored marking once tagged, and in every footer and the sitemap.
+{
+  const shopHtml = fs.readFileSync(path.join(site, 'shop/index.html'), 'utf8');
+  assert.equal(shopHtml, fs.readFileSync(path.join(root, 'bingo-site/findbingo/shop/index.html'), 'utf8'), 'shop copies match');
+  const shop = new JSDOM(shopHtml).window.document;
+  const text = shop.querySelector('main').textContent;
+  assert.equal(shop.querySelector('link[rel=canonical]').href, 'https://www.findbingo.org/shop/');
+  assert(text.includes('Find Bingo may earn a small commission. It costs you nothing extra.'), 'the shop discloses commissions');
+  assert(!/\$\s?\d|\bstars?\b|\d[\d,]* (ratings|reviews)/i.test(text), 'no prices or star ratings on the shop page');
+  assert(!/donat/i.test(text), 'buying is never tied to a donation');
+  const buy = [...shop.querySelectorAll('.picks a')];
+  assert(buy.length > 0);
+  for (const a of buy) {
+    assert.match(a.href, /^https:\/\/www\.(amazon|walmart|etsy)\.com\//, a.href);
+    // Plain links until an affiliate tag is set; a tagged link is marked sponsored.
+    assert.equal(a.getAttribute('rel'), /[?&]tag=/.test(a.href) ? 'sponsored noopener' : 'noopener', a.href);
+    assert(a.querySelector('.vh') && /opens a new tab/.test(a.textContent), 'new-tab links say so');
+  }
+  for (const svg of shop.querySelectorAll('main svg')) assert.equal(svg.getAttribute('aria-hidden'), 'true', 'shop icons are decoration');
+  assert(shop.querySelectorAll('.shop-group h2').length === shop.querySelectorAll('.shop-jump a').length, 'every section has a jump link');
+  assert(text.includes('must come from a licensed distributor'), 'halls are pointed to their state rules for game supplies');
+  assert(sitemap.includes('<loc>https://www.findbingo.org/shop/</loc>'), 'the shop is in the sitemap');
+  assert(home.querySelector('.chooser a[href="shop/"]') && home.querySelector('footer a[href="shop/"]'), 'the home page links the shop');
 }
 
 console.log('FindBingo.org checks passed.');
