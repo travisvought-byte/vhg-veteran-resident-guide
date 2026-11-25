@@ -29,6 +29,8 @@ import landing
 from build_justice import outputs as justice_outputs
 from build_topic_pages import outputs as topic_outputs, pages as topic_pages, add_language_links
 import visuals
+import state_visuals
+import page_visuals
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -179,6 +181,12 @@ def outputs():
     urls += [BASE_URL + page for page in topic_pages()]
     result['sitemap.xml'] = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join('  <url><loc>' + u.replace('&', '&amp;') + '</loc></url>\n' for u in urls) + '</urlset>\n'
     result['robots.txt'] = 'User-agent: *\nAllow: /\n\nSitemap: ' + BASE_URL + 'sitemap.xml\n'
+    # Each state page's at-a-glance map and counts and its who-to-call-first diagram, and the tile map on the
+    # by-state hub pages (scripts/state_visuals.py).
+    result.update(state_visuals.add(result, editions))
+    result.update(state_visuals.add_hubs(result, states))
+    # Topic, hub and sharing pages: symbols, diagrams and charts from each page's own facts (scripts/page_visuals.py).
+    result.update(page_visuals.add(result))
     # The guide's line icons, drawn once for every page that uses them (scripts/visuals.py).
     result[visuals.SPRITE] = visuals.sprite()
     # Last step: a skip link, a <main> target, reduced motion and link symbols on every page (scripts/a11y_finish.py).

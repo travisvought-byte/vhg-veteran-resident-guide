@@ -21,6 +21,7 @@ from pathlib import Path
 from urllib.parse import quote
 
 import visuals
+import page_visuals
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://guide.vethomeguard.org/bad-paper/'
@@ -316,7 +317,9 @@ def outputs(generated=None):
         body = (ROOT / 'templates/bad-paper' / (p['slug'] + '.html')).read_text(encoding='utf-8')
         # Full Open Graph and Twitter tags for shared links (scripts/landing.py); titles stay as written here.
         import landing
-        result['bad-paper/' + p['slug'] + '.html'] = landing.complete_social(page_html(p, fill(body, agencies)))
+        path = 'bad-paper/' + p['slug'] + '.html'
+        # Symbols on the "In this guide" list (scripts/page_visuals.py).
+        result[path] = page_visuals.bad_paper(landing.complete_social(page_html(p, fill(body, agencies))), path)
     return result
 
 

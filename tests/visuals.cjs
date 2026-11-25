@@ -50,7 +50,9 @@ assert(using > 3000, 'county pages, VA pages and the topic pages use the icons (
 const dom = rel => new JSDOM(read(rel)).window.document;
 const words = el => el.textContent.replace(/\s+/g, ' ').trim();
 const checked = ['bad-paper/index.html', 'bad-paper/boards.html', 'va-pension-aid-attendance.html', 'elder-abuse.html', 'guardianship.html',
-  'end-of-life-burial.html', 'family-guide.html', 'es/index.html', 'va-locations/ky/index.html', 'va-locations/oh/index.html', 'counties/oh/morrow-county.html'];
+  'end-of-life-burial.html', 'family-guide.html', 'es/index.html', 'va-locations/ky/index.html', 'va-locations/oh/index.html', 'counties/oh/morrow-county.html',
+  'index.html', 'ak.html', 'dc.html', 'va.html', 'mst.html', 'survivors.html', 'toxic-exposure.html', 'justice.html', 'mobility-rights.html', 'privacy.html',
+  'counties/index.html', 'va-locations/index.html', 'packets.html', 'bad-paper/records.html', 'share-ak.html'];
 for (const rel of checked) {
   const d = dom(rel);
   const ids = [...d.querySelectorAll('[id]')].map(e => e.id);
@@ -148,4 +150,88 @@ for (const base of ['findbingo-site/', 'bingo-site/findbingo/']) {
   const night = learn.querySelector('ol.night');
   assert(night && night.getAttribute('role') === 'list' && night.children.length === 7, base + 'learn: bingo night keeps its seven numbered steps');
 }
-console.log('PASS: visuals (' + using + ' pages with icons), charts with data tables, diagrams in text, Find Bingo steps, week charts and the bingo class pictures.');
+
+// State pages (scripts/state_visuals.py): "<State> at a glance" (a locator map and counts from the data) and "Who to call first".
+{
+  const registry = JSON.parse(read('states/registry.json'));
+  const aps = JSON.parse(read('data/public/adult-protective-services.json')).states;
+  for (const s of registry) {
+    const rel = s.base ? 'index.html' : s.page;
+    const d = dom(rel), html = read(rel), low = s.code.toLowerCase();
+    const glance = d.querySelector('figure.vz-glance.vz-local'), call = d.querySelector('figure.vz-call.vz-local');
+    assert(glance && call, rel + ': both state figures');
+    assert.equal(words(glance.querySelector('figcaption')), s.name + ' at a glance', rel + ': named for its state');
+    const map = glance.querySelector('svg.vz-loc[role="img"]');
+    assert(map && words(map.querySelector('desc')).includes(s.name + ' is the dark square with a white ring'), rel + ': the map says which square');
+    assert.equal(map.querySelectorAll('rect').length, 51, rel + ': 50 states and D.C.');
+    assert(words(glance).includes(s.name + ' is the dark square with a ring.'), rel + ': the map is explained in text');
+    // VA tiles: the counts are VA's own facility data for this state.
+    const va = fs.existsSync(root + 'data/public/va-facilities/' + low + '.json') ? JSON.parse(read('data/public/va-facilities/' + low + '.json')).rows : [];
+    for (const a of glance.querySelectorAll('a[href^="va-locations/"]')) {
+      const kind = a.getAttribute('href').split('#')[1];
+      assert.equal(Number(a.querySelector('.vz-stat-n').textContent), va.filter(r => r.kind === kind).length, rel + ': VA ' + kind + ' count');
+    }
+    const area = glance.querySelector('a[href="counties/' + low + '/"]');
+    assert(area && fs.existsSync(root + 'counties/' + low + '/index.html'), rel + ': the county tile opens its list');
+    if (s.code !== 'DC') assert.equal(Number(area.querySelector('.vz-stat-n').textContent), s.counties, rel + ': county count');
+    // Who to call first: the state's own APS line, and the rows the page gives elsewhere.
+    const callText = words(call);
+    for (const w of ['988', '911', '877-424-3838', 'Adult Protective Services']) assert(callText.includes(w), rel + ': who to call names ' + w);
+    const phone = (aps[s.code].phones[0] || {}).number;
+    if (phone) assert(callText.includes(phone) && html.includes('id="care-aps"') && words(d.getElementById('care-aps')).includes(phone), rel + ': the APS phone matches the card');
+    for (const a of call.querySelectorAll('a.vz-who')) {
+      const href = a.getAttribute('href');
+      if (href.startsWith('#')) assert(d.getElementById(href.slice(1)), rel + ': ' + href + ' is on the page');
+      else if (!/^(tel:|\?)/.test(href)) assert(fs.existsSync(root + href.split('#')[0] + (href.endsWith('/') ? 'index.html' : '')), rel + ': ' + href);
+    }
+    // The picker can swap the page to another state; these two figures then hide.
+    assert(html.includes(`html[data-edition]:not([data-edition="${s.code}"]) .vz-local{display:none}`), rel + ': hides when another state is shown');
+  }
+}
+// Hub pages: every state on the tile map, each opening its own list.
+for (const rel of ['counties/index.html', 'va-locations/index.html']) {
+  const d = dom(rel);
+  const links = d.querySelectorAll('figure.vz-tilemap .vz-tiles a');
+  assert(links.length >= 50, rel + ': the tile map has the states');
+  for (const a of links) {
+    assert(words(a.querySelector('.vz-vh')), rel + ': each square names its state');
+    assert(fs.existsSync(root + path.dirname(rel) + '/' + a.getAttribute('href') + 'index.html'), rel + ': ' + a.getAttribute('href'));
+  }
+}
+// Agent Orange timeline: each bar's dates are the page's own list, and each bar sits inside the scale.
+{
+  const d = dom('toxic-exposure.html');
+  const fig = d.querySelector('figure.vz-tl');
+  const rows = fig.querySelectorAll('.vz-tl-rows > li');
+  assert.equal(rows.length, fig.querySelectorAll('tbody tr').length, 'one table row per bar');
+  for (const li of rows) {
+    const bar = li.querySelector('.vz-tl-bar').getAttribute('style').match(/left:([\d.]+)%;width:([\d.]+)%/);
+    assert(+bar[1] >= 0 && +bar[1] + +bar[2] <= 100, 'the bar is on the scale');
+    assert(/\d{4} to .*\d{4}/.test(words(li.querySelector('.vz-tl-when'))), 'the dates are written beside the bar');
+  }
+}
+// Burial allowances: to scale, with the amounts the table states.
+{
+  const fig = dom('end-of-life-burial.html').querySelector('figure.vz-money');
+  const widths = [...fig.querySelectorAll('.vz-cb-fill')].map(f => parseFloat(f.style.width));
+  assert.deepEqual(widths, [100, 51.6, 51.6], 'the bars are to scale: $2,000, $1,032 and $1,032');
+  assert(words(fig).includes('Up to $2,000') && words(fig).includes('$1,032'), 'the amounts are written beside the bars');
+}
+// Find Bingo: every state page shows where the state is, as an image with words (and never a count).
+for (const base of ['findbingo-site/', 'bingo-site/findbingo/']) {
+  let maps = 0;
+  for (const e of fs.readdirSync(root + base, { withFileTypes: true })) {
+    const rel = base + e.name + '/index.html';
+    if (!e.isDirectory() || !fs.existsSync(root + rel) || !read(rel).includes('id="states-title"')) continue;
+    const d = new JSDOM(read(rel)).window.document;
+    const fig = d.querySelector('nav.states figure.where');
+    if (!fig) continue;
+    maps++;
+    const svg = fig.querySelector('svg[role="img"]');
+    const name = words(d.querySelector('figcaption')).split(' is the dark square')[0];
+    assert(svg && words(svg.querySelector('desc')).includes(name + ' is the dark square'), rel + ': the map names its state');
+    assert(!COUNT.test(words(fig)), rel + ': no count');
+  }
+  assert(maps >= 50, base + ': every state page has the map (' + maps + ')');
+}
+console.log('PASS: visuals (' + using + ' pages with icons), charts with data tables, diagrams in text, state maps and who-to-call diagrams, hub tile maps, Find Bingo steps, week charts, state maps and the bingo class pictures.');

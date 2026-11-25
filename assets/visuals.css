@@ -118,3 +118,66 @@ ul.vz-ilist{list-style:none;padding-left:0}.vz-ilist>li{position:relative;paddin
  .vz-key-pension,.vz-cb-fill{background:CanvasText}.vz-key-counted{background:repeating-linear-gradient(45deg,CanvasText 0 3px,Canvas 3px 8px)}
  .vz-key{border-color:CanvasText}
 }
+
+/* State pages (November 25, 2026, scripts/state_visuals.py): "<State> at a glance" with a locator map and counts,
+   and "Who to call first". The locator map is the guide's equal-square tile map: the state is a dark square with a
+   white ring (a shape, not only a color), and the words under the map say so. */
+.vz-local a{color:#1f5673}
+.vz-glance-row{display:grid;grid-template-columns:minmax(170px,250px) minmax(0,1fr);gap:18px;align-items:start}
+.vz-loc{display:block;width:100%;height:auto;max-width:250px}
+.vz-loc rect{fill:#e6ebe8;stroke:#6f8078;stroke-width:1}
+.vz-loc .vz-loc-cur{fill:#183449;stroke:#183449;stroke-width:1}
+.vz-loc-ring{fill:none;stroke:#fff;stroke-width:2.5}
+.vz-loc-key{display:flex;gap:8px;align-items:center;margin:8px 0 0;font-size:15px;line-height:1.35;color:#3d4f48}
+.vz-loc-swatch{flex:none;width:18px;height:18px;border-radius:3px;background:#183449;box-shadow:inset 0 0 0 4px #183449,inset 0 0 0 6px #fff}
+.vz-stats{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
+.vz-stats a{display:block;text-decoration:none;min-height:44px}
+.vz-stats a strong{text-decoration:underline;text-underline-offset:3px;font-weight:700}
+.vz-stat-n{display:block;font:700 28px/1.1 Georgia,"Times New Roman",serif;color:#183449}
+@media(max-width:600px){.vz-glance-row{grid-template-columns:minmax(0,1fr)}.vz-loc{max-width:220px}}
+a.vz-who{text-decoration:none}a.vz-who span{text-decoration:underline;text-underline-offset:3px}
+a.vz-who:hover,a.vz-who:focus{background:#eef4f0}
+.vz-call .vz-when{font-weight:600;color:#20313a}
+
+/* Hub pages: every state as a link on the tile map (counties/, va-locations/). */
+.vz-tiles{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(11,minmax(0,1fr));gap:4px;max-width:640px}
+.vz-tiles a{display:flex;flex-direction:column;align-items:center;justify-content:center;aspect-ratio:1;min-height:44px;border:1px solid #6f8078;border-radius:5px;background:#f3f6f8;color:#183449;font-weight:700;font-size:14px;line-height:1.1;text-decoration:none}
+.vz-tiles a:hover,.vz-tiles a:focus{background:#183449;color:#fff}
+.vz-tiles abbr{text-decoration:none}.vz-tiles small{font-weight:600;font-size:11px}
+@media(max-width:560px){.vz-tiles{gap:2px}.vz-tiles a{font-size:11px;min-height:30px;border-radius:3px}.vz-tiles small{font-size:9px}}
+
+@media screen and (prefers-color-scheme:dark){
+ .vz-local{background:#1a242b;border-color:#3d4d55}.vz-local>figcaption{color:#e4ecef}.vz-local>figcaption strong{color:#dce9f2}
+ .vz-local a{color:#9fd0ef}.vz-local .vz-note,.vz-local .vz-loc-key,.vz-local .vz-grid small{color:#b6c4ca}
+ .vz-local .vz-grid>li{background:#10181d;border-color:#3d4d55;color:#e4ecef}.vz-local .vz-grid>li>.vi:first-child,.vz-local .vz-stat-n{color:#dce9f2}
+ .vz-local .vz-routes>li{border-color:#3d4d55}.vz-local .vz-when,.vz-local .vz-when .vi,.vz-local .vz-arrow{color:#dce9f2}
+ .vz-local .vz-who{border-color:#93d6b1;color:#d7eee1}.vz-local .vz-who .vi{color:#93d6b1}.vz-local a.vz-who:hover,.vz-local a.vz-who:focus{background:#1d2e27}
+ .vz-local .vz-loc rect{fill:#26343c;stroke:#8fa39a}.vz-local .vz-loc .vz-loc-cur{fill:#9fd0ef;stroke:#9fd0ef}.vz-local .vz-loc-ring{stroke:#10181d}
+ .vz-local .vz-loc-swatch{background:#9fd0ef;box-shadow:inset 0 0 0 4px #9fd0ef,inset 0 0 0 6px #10181d}
+}
+@media print{.vz-local{display:none}}
+@media (forced-colors:active){
+ .vz-loc{forced-color-adjust:none}.vz-loc rect{fill:Canvas;stroke:CanvasText}.vz-loc .vz-loc-cur{fill:CanvasText;stroke:CanvasText}.vz-loc-ring{stroke:Canvas}
+ .vz-loc-swatch{forced-color-adjust:none;background:CanvasText;box-shadow:inset 0 0 0 4px CanvasText,inset 0 0 0 6px Canvas}
+ .vz-tiles a{border-color:LinkText}
+}
+
+/* Topic pages (November 25, 2026, scripts/page_visuals.py). */
+/* A timeline: one bar per place on one scale of years; the dates are written beside each bar. */
+.vz-tl-axis,.vz-tl-rows>li{display:grid;grid-template-columns:minmax(9em,1.1fr) minmax(0,2fr) minmax(9em,1fr);gap:10px;align-items:center}
+.vz-tl-ticks{position:relative;height:20px;border-bottom:2px solid #6f8078;font-size:13px;font-weight:700;color:#3d4f48}
+.vz-tl-ticks span{position:absolute;bottom:2px;transform:translateX(-50%)}.vz-tl-ticks span:first-child{transform:none}
+.vz-tl-rows{list-style:none;margin:0;padding:0}.vz-tl-rows>li{padding:6px 0;border-top:1px solid #e3e8e5;font-size:16px}
+.vz-tl-label{font-weight:600;color:#20313a;line-height:1.3}.vz-tl-when{font-size:14px;color:#3d4f48;line-height:1.3}
+.vz-tl-track{position:relative;display:block;height:18px;border-left:1px solid #6f8078;border-right:1px solid #6f8078;background:#f3f5f4}
+.vz-tl-bar{position:absolute;top:2px;bottom:2px;min-width:4px;background:#335947;border:1px solid #183449}
+@media(max-width:620px){.vz-tl-axis{display:none}.vz-tl-rows>li{grid-template-columns:minmax(0,1fr);gap:4px}.vz-tl-track{height:14px}}
+/* Amounts side by side (burial allowances). */
+.vz-money .vz-cb>li{grid-template-columns:minmax(10em,1.4fr) minmax(0,2fr) 7.5em}
+.vz-cb-name{display:flex;gap:8px;align-items:center;font-weight:600;line-height:1.3}.vz-cb-name .vi{width:24px;height:24px;color:#183449}
+.vz-cb-money{font-weight:700;font-size:18px;color:#183449;text-align:right;white-space:nowrap}
+@media(max-width:520px){.vz-money .vz-cb>li{grid-template-columns:minmax(0,1fr) 7.5em}}
+.jumps a .vi,.toc a .vi,nav.quick a .vi{width:1.1em;height:1.1em;margin-right:.35em}
+ol.start>li>.vi:first-child{color:#335947;margin-right:.35em}
+@media (forced-colors:active){.vz-tl-bar{forced-color-adjust:none;background:CanvasText;border-color:CanvasText}.vz-tl-track{forced-color-adjust:none;background:Canvas;border-color:CanvasText}}
+@media print{.vz-tl-bar{-webkit-print-color-adjust:exact;print-color-adjust:exact}}

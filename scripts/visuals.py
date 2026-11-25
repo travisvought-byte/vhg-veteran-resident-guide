@@ -132,3 +132,32 @@ def count_bars(rows, chart_id, title, unit_words, up=''):
             f'<details class="vz-data"><summary>Chart data</summary><table><caption>{escape(title)}</caption>'
             f'<thead><tr><th scope="col">Kind</th><th scope="col">{escape(unit_words)}</th></tr></thead>'
             f'<tbody>{rows_html}</tbody></table></details></figure>')
+
+
+TILE, GAP = 22, 3
+COLS, ROWS = 11, 8
+
+
+def locator(code, name, uid):
+    """The 50 states and D.C. as equal squares (the guide's tile map, scripts/unified_guide.py), this state dark with a
+    white ring: a shape, not only a color. An image with a title and a description; the page also says it in words.
+    Fills are written on the shapes so the map still reads without a stylesheet; CSS can restyle them (dark mode,
+    Windows high contrast)."""
+    from unified_guide import TILES
+    w, h = COLS * (TILE + GAP) - GAP, ROWS * (TILE + GAP) - GAP
+    tiles = []
+    for c, (col, row) in sorted(TILES.items(), key=lambda kv: (kv[1][1], kv[1][0])):
+        x, y = col * (TILE + GAP), row * (TILE + GAP)
+        if c == code:
+            continue
+        tiles.append(f'<rect x="{x}" y="{y}" width="{TILE}" height="{TILE}" rx="3" fill="#e6ebe8" stroke="#6f8078"/>')
+    col, row = TILES[code]
+    x, y = col * (TILE + GAP), row * (TILE + GAP)
+    mark = (f'<rect class="vz-loc-cur" x="{x - 1.5}" y="{y - 1.5}" width="{TILE + 3}" height="{TILE + 3}" rx="4" fill="#183449"/>'
+            f'<circle class="vz-loc-ring" cx="{x + TILE / 2}" cy="{y + TILE / 2}" r="6" fill="none" stroke="#fff" stroke-width="2.5"/>')
+    t, d = uid + '-t', uid + '-d'
+    return (f'<svg class="vz-loc" viewBox="-3 -3 {w + 6} {h + 6}" width="{w + 6}" height="{h + 6}" role="img" '
+            f'aria-labelledby="{t} {d}"><title id="{t}">Where {escape(name)} is</title>'
+            f'<desc id="{d}">A map of the 50 states and the District of Columbia drawn as equal squares, '
+            f'roughly where each one sits. {escape(name)} is the dark square with a white ring.</desc>'
+            + ''.join(tiles) + mark + '</svg>')

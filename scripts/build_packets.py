@@ -27,6 +27,8 @@ import re
 import sys
 from pathlib import Path
 
+import page_visuals
+
 ROOT = Path(__file__).resolve().parent.parent
 BASE_URL = 'https://guide.vethomeguard.org/'
 SHORT = 'guide.vethomeguard.org/'
@@ -640,7 +642,8 @@ def outputs():
         result[f'{OUT}cover/{v}.html'] = cover(v, extra, reviewed, records)
     # Open Graph and Twitter tags so a shared link previews properly (scripts/landing.py); the text stays as written.
     import landing
-    result['packets.html'] = landing.complete_social(packets_page(counties, states[1:]))
+    # Symbols beside the section headings (scripts/page_visuals.py).
+    result['packets.html'] = page_visuals.packets(landing.complete_social(packets_page(counties, states[1:])))
     return result
 
 
