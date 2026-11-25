@@ -339,6 +339,7 @@ Lists updated {_date_label(generated_on)}.
     pages['advertise/index.html'] = _info_page('advertise', *ADVERTISE, style, analytics, generated_on)
     pages['learn/index.html'] = _info_page('learn', *LEARN, style.replace('</style>', LEARN_CSS + '</style>'), analytics, generated_on)
     pages['halls/index.html'] = _info_page('halls', *halls_page(states), style, analytics, generated_on)
+    pages['shop/index.html'] = _info_page('shop', *shop_page(load_shop(root)), style.replace('</style>', SHOP_CSS + '</style>'), analytics, generated_on)
     # Ad pictures are served beside the pages, in ads/.
     pages.update({'ads/' + a['image'].rsplit('/', 1)[1]: (root / a['image']).read_bytes() for a in ads if a.get('image')})
     site = {
@@ -823,7 +824,7 @@ def _footer(generated_on, up='../'):
             '<p class="noprint">Giving Tuesday is December 1: <a href="https://www.zeffy.com/en-US/donation-form/giving-tuesday-no-veteran-left-isolated">give to Veteran Home Guardians</a>.</p>'
             '<p class="noprint">Need help getting to the game? <a href="https://mobilitytalk.org/states/">Mobility Talk</a> lists mobility and disability resources in every state.</p>'
             f'<p class="noprint">Questions or corrections: <a href="mailto:{EMAIL}?subject=FindBingo.org">{EMAIL}</a> · Made by <a href="https://travisvought.com/">Travis Vought</a></p>'
-            f'<p class="noprint"><a href="{up}learn/">How bingo works: a free bingo class</a> · <a href="{up}about/">About and contact</a> · <a href="{up}privacy/">Privacy</a> · <a href="{up}terms/">Terms of use</a> · <a href="{up}advertise/">Advertise on Find Bingo</a> · <a href="{up}halls/">For bingo halls</a></p>'
+            f'<p class="noprint"><a href="{up}learn/">How bingo works: a free bingo class</a> · <a href="{up}about/">About and contact</a> · <a href="{up}privacy/">Privacy</a> · <a href="{up}terms/">Terms of use</a> · <a href="{up}advertise/">Advertise on Find Bingo</a> · <a href="{up}halls/">For bingo halls</a> · <a href="{up}shop/">Bingo gear and gifts</a></p>'
             f'<p class="noprint">Lists updated {_date_label(generated_on)}.</p></footer>')
 
 
@@ -935,8 +936,8 @@ def events_html(events, up, heading='Featured bingo events'):
 
 ADS_FILE = 'data/findbingo-ads.json'
 AD_KEYS = {'slot', 'sponsor', 'text', 'url', 'image', 'alt', 'start', 'end'}
-# The bingo class, About, Privacy, Terms, Advertise and halls pages, linked from every footer and listed in the sitemap.
-INFO_PAGES = ('learn/', 'about/', 'privacy/', 'terms/', 'advertise/', 'halls/')
+# The bingo class, About, Privacy, Terms, Advertise, halls and shop pages, linked from every footer and listed in the sitemap.
+INFO_PAGES = ('learn/', 'about/', 'privacy/', 'terms/', 'advertise/', 'halls/', 'shop/')
 # Dated ads are written hidden; this shows the one whose dates include today, so a page built before an ad
 # starts or after it ends never shows it on the wrong day. Without JavaScript a dated ad stays hidden.
 AD_DATES_SCRIPT = ("<script>(function(){var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date()),"
@@ -1376,3 +1377,115 @@ ADVERTISE = (
     + escape(_mailto('Advertising on Find Bingo', 'Business name:\nWhat we would like to advertise:\nStates or towns:\nWebsite:\nBest way to reach us:\n'))
     + f'">Email us about an ad</a></div><p class="small">Or write to {EMAIL}. '
     '<a href="../privacy/">How ads and privacy work on this site</a></p>')
+
+
+# ---- Shop: bingo gear and gifts (DRAFT, owner direction, November 25, 2026) ------------------------------
+# Travis wants a store area for bingo supplies, gifts and apparel that earns for Veteran Home Guardians.
+# data/findbingo-shop.json holds the picks (chosen for high ratings from many buyers; see its _about). Each
+# link goes to a store search for the item. No affiliate ID is set until Travis signs up for a program and
+# fills in AFFILIATE_TAGS. Rules the page keeps:
+# - It says plainly that links may earn a commission, at no extra cost (FTC disclosure).
+# - It never ties a purchase to a donation (Amazon's operating agreement bars offering anything, a charity
+#   gift included, for using its links). A tagged link is marked rel="sponsored"; until then links are plain.
+# - It shows no prices or star ratings: both change, and Amazon's terms limit showing its ratings.
+# - Bingo paper and cages for a licensed game must come from a licensed distributor in most states, so the
+#   home and party picks say they are for home and fun games, and halls are pointed to their state's rules.
+# - No brand is named as a partner or "featured" until it has agreed (Travis, November 25, 2026).
+SHOP_FILE = 'data/findbingo-shop.json'
+SHOP_STORES = {
+    'Amazon': 'https://www.amazon.com/s?k=',
+    'Walmart': 'https://www.walmart.com/search?q=',
+    'Etsy': 'https://www.etsy.com/search?q=',
+}
+# Filled in only after Travis joins a program, for example {'Amazon': ('tag', 'findbingo-20')}. Empty: plain links.
+AFFILIATE_TAGS = {}
+SHOP_ICONS = {
+    'dauber': '<path d="M9 3h6v4H9z"/><path d="M8 7h8l1 3v9a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2v-9z"/><circle cx="12" cy="15" r="2.5"/>',
+    'bag': '<path d="M4 8h16l-1.5 12.5H5.5z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/><path d="M8.5 12v4M12 12v4M15.5 12v4"/>',
+    'hand': '<path d="M8 13V5.5a1.5 1.5 0 0 1 3 0V11M11 10.5V4a1.5 1.5 0 0 1 3 0v7M14 10.5V5.5a1.5 1.5 0 0 1 3 0V14a7 7 0 0 1-7 7h-.5A6 6 0 0 1 5 18.5l-2-3.5a1.5 1.5 0 0 1 2.6-1.5L8 16"/>',
+    'cage': '<circle cx="12" cy="11" r="7"/><path d="M5 11h14M12 4v14M7 5.8l10 10.4M17 5.8 7 16.2"/><path d="M8 18l-2 3h12l-2-3"/>',
+    'clover': '<circle cx="9" cy="9" r="3.2"/><circle cx="15" cy="9" r="3.2"/><circle cx="9" cy="15" r="3.2"/><circle cx="15" cy="15" r="3.2"/><path d="M15 15l5 6"/>',
+    'shirt': '<path d="M8 3 3 6l2 5 2-1v11h10V10l2 1 2-5-5-3a3 3 0 0 1-8 0z"/>',
+}
+SHOP_CSS = ('.shop-note{background:#fff8e6;border:2px solid #d9b45a;border-radius:12px;padding:10px 16px;margin:12px 0}.shop-note p{margin:6px 0}'
+            '.shop-jump{list-style:none;padding:0;margin:10px 0;display:flex;flex-wrap:wrap;gap:8px}'
+            '.shop-jump a{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 14px;border:2px solid var(--accent);border-radius:24px;color:var(--accent);font-weight:700;text-decoration:none}'
+            '.shop-group h2{display:flex;align-items:center;gap:12px;scroll-margin-top:12px}'
+            '.shop-ic{flex:none;width:44px;height:44px;padding:7px;border-radius:50%;background:var(--accent);color:#fff;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}'
+            '.shop-jump .shop-ic{width:30px;height:30px;padding:5px}'
+            '.picks{list-style:none;padding:0;margin:8px 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}'
+            '.picks li{margin:0;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;display:flex;flex-direction:column}'
+            '.picks h3{font-size:20px;margin:2px 0 6px;color:var(--head)}.picks p{margin:0 0 10px;flex:1}'
+            '.picks a{display:flex;align-items:center;justify-content:center;min-height:52px;padding:4px 12px;border-radius:10px;background:var(--green);color:#fff;font-size:18px;font-weight:700;text-decoration:none;text-align:center}'
+            '.picks a:focus-visible,.shop-jump a:focus-visible{outline:3px solid #ffbf47;outline-offset:3px}'
+            '@media (forced-colors:active){.shop-ic{forced-color-adjust:none;background:Canvas;color:CanvasText;border:2px solid CanvasText}.picks a{border:2px solid ButtonText}}'
+            '@media print{.picks a{background:none;color:#000;border:1px solid #000}.shop-jump{display:none}}')
+
+
+def load_shop(root):
+    shop = json.loads((root / SHOP_FILE).read_text())
+    validate_shop(shop)
+    return shop
+
+
+def validate_shop(shop):
+    assert date.fromisoformat(shop['checked_on']).isoformat() == shop['checked_on'], 'checked_on is a date'
+    ids = set()
+    for g in shop['groups']:
+        assert set(g) == {'id', 'icon', 'title', 'intro', 'items'}, g.get('id')
+        assert g['icon'] in SHOP_ICONS and re.fullmatch(r'[a-z]+', g['id']) and g['id'] not in ids, g['id']
+        ids.add(g['id'])
+        assert g['items'], ('a shop group with no picks', g['id'])
+        for it in g['items']:
+            assert set(it) == {'name', 'why', 'store', 'search'}, it
+            assert it['store'] in SHOP_STORES, ('unknown store', it['store'])
+            assert all(it[k].strip() for k in it) and len(it['why']) <= 120, it['name']
+            # No prices or ratings on the page: they change, and Amazon's terms limit showing its ratings.
+            assert not re.search(r'\$\s?\d|\bstars?\b|\d[\d,]* (ratings|reviews)', it['name'] + ' ' + it['why'], re.I), it['name']
+
+
+def _shop_url(item):
+    url = SHOP_STORES[item['store']] + quote(item['search'])
+    if item['store'] in AFFILIATE_TAGS:
+        k, v = AFFILIATE_TAGS[item['store']]
+        url += '&' + quote(k) + '=' + quote(v)
+    return url
+
+
+def _shop_icon(name):
+    return f'<svg class="shop-ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false">{SHOP_ICONS[name]}</svg>'
+
+
+def shop_page(shop):
+    """findbingo.org/shop/: hand-picked bingo gear and gifts, each a plain link to the store."""
+    jump = ''.join(f'<li><a href="#{g["id"]}">{_shop_icon(g["icon"])}{escape(g["title"])}</a></li>' for g in shop['groups'])
+    groups = ''
+    for g in shop['groups']:
+        picks = ''.join(
+            f'<li><h3>{escape(it["name"])}</h3><p>{escape(it["why"])}</p>'
+            f'<a href="{escape(_shop_url(it))}" target="_blank" rel="{"sponsored noopener" if it["store"] in AFFILIATE_TAGS else "noopener"}">See it on {escape(it["store"])}'
+            f'<span class="vh"> (opens a new tab)</span></a></li>' for it in g['items'])
+        groups += (f'<section class="shop-group" aria-labelledby="{g["id"]}"><h2 id="{g["id"]}">{_shop_icon(g["icon"])}{escape(g["title"])}</h2>'
+                   f'<p>{escape(g["intro"])}</p><ul class="picks" role="list">{picks}</ul>'
+                   '<p class="small"><a href="#top">Back to the top</a></p></section>')
+    body = (
+        '<div class="shop-note"><p><strong>How this page works.</strong> We picked these because buyers rate them highly. '
+        'Each button opens the store’s own page in a new tab, where you see today’s price and reviews. '
+        'If you buy through a link here, Find Bingo may earn a small commission. It costs you nothing extra.</p></div>'
+        f'<nav aria-label="Shop sections"><ul class="shop-jump" role="list">{jump}</ul></nav>'
+        + groups +
+        '<h2>Running a licensed game?</h2>'
+        '<p>The home and party picks above are for family games and fun nights. In most states, bingo paper, cards and cages for a licensed charity game '
+        'must come from a licensed distributor. <a href="../halls/">See your state’s rules on our page for halls</a>.</p>'
+        '<h2>Sell bingo gear?</h2>'
+        '<p>Bingo suppliers and makers can ask about a place on this page. Anything paid for is labeled, and it never changes the free game listings.</p>'
+        '<div class="big-actions"><a class="solid" href="'
+        + escape(_mailto('Bingo gear on Find Bingo', 'Business name:\nWhat you make or sell:\nWebsite:\nBest way to reach you:\n'))
+        + '">Email us about your products</a></div>'
+        f'<p class="small">Picks checked {_date_label(shop["checked_on"])}. Something you love that belongs here? <a href="'
+        + escape(_mailto('A bingo gear idea for Find Bingo')) + '">Tell us</a>.</p>')
+    return ('Bingo Supplies, Gifts and Sweatshirts Players Love | FindBingo.org',
+            'Hand-picked bingo daubers, bags, large-print cards, home bingo sets, lucky charms and bingo sweatshirts, chosen because buyers rate them highly.',
+            'Bingo gear and gifts',
+            'Looking for a new dauber, a bag that holds it all, or a gift for the bingo lover in your life? These are the things players rate best.',
+            body)
