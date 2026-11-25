@@ -213,6 +213,12 @@ def fmp_toll_free(data, c):
     return place['slug'] == 'canada' or any(t['country'] == place['name'] for t in fmp['toll_free'])
 
 
+def lite_link(slug):
+    """On a slow connection or a basic phone: the text-only copy of this page (scripts/build_world_lite.py)."""
+    return (f'<p class="small" data-lite-link>On a slow connection or a basic phone? Use the '
+            f'<a href="lite/{e(slug)}">text-only, low-data version</a>.</p>')
+
+
 def jump_links(c, agency=True):
     """The first things a visitor here came for, one tap away; the reference detail follows."""
     links = ['<a href="#emergency">Emergency number</a>']
@@ -258,7 +264,7 @@ def country_page(data, c):
         body += f'<section id="{kind.replace("_", "-")}"><h2>{heading}</h2>{cards}</section>'
     hero = (f'<div class="hero"><p class="eyebrow">VETERANS OUTSIDE THE U.S.</p><h1>Veterans in {e(in_place(c))}</h1>'
             f'{country_opening(data, c)}{jump_links(c)}<p class="small">Every number comes from an official source. Checked {when(c.get("checked_on") or data["checked_on"])}.</p>'
-            f'{region_links(data, c)}</div></header>')
+            f'{region_links(data, c)}{lite_link(c["slug"] + ".html")}</div></header>')
     return (head(title, desc, url, f'Help for veterans living in {in_place(c)}') + hero + f'<main class="world" id="main" data-country="{e(c["slug"])}">' + emergency_block(c) + body
             + us_block(data, c) + '</main>' + footer())
 
@@ -287,7 +293,7 @@ def no_agency_page(data, c):
     crisis = f'<section id="crisis-line"><h2>Crisis and mental health lines</h2>{cards}</section>'
     hero = (f'<div class="hero"><p class="eyebrow">VETERANS OUTSIDE THE U.S.</p><h1>Veterans in {e(in_place(c))}</h1>'
             f'{country_opening(data, c)}{jump_links(c, agency=False)}<p class="small">Every number comes from an official source. '
-            f'Checked {when(c.get("checked_on") or data["checked_on"])}.</p>{region_links(data, c)}</div></header>')
+            f'Checked {when(c.get("checked_on") or data["checked_on"])}.</p>{region_links(data, c)}{lite_link(c["slug"] + ".html")}</div></header>')
     return (head(title, desc, url, f'Help for veterans living in {in_place(c)}') + hero + f'<main class="world" id="main" data-country="{e(c["slug"])}" data-no-agency-page>'
             + emergency_block(c) + no_agency_block(c) + crisis + us_block(data, c) + '</main>' + footer())
 
@@ -330,7 +336,7 @@ def region_page(data, r):
             f'for U.S. veterans and retirees, the Veterans Crisis Line and the VA Foreign Medical Program. {e(r["name"])} is a {e(lower_first(r["kind_label"]))}, not a separate country.</p>'
             '<p class="jumps" data-jumps><a href="#emergency">Emergency numbers</a> · <a href="#us-local">Offices for U.S. veterans and retirees</a> · '
             '<a href="#crisis-line">Crisis lines</a> · <a href="#us-veterans">VA help</a></p>'
-            f'<p class="small">Every number comes from an official source. Checked {when(r.get("checked_on") or data["checked_on"])}.</p><p>Back to {back}.</p></div></header>')
+            f'<p class="small">Every number comes from an official source. Checked {when(r.get("checked_on") or data["checked_on"])}.</p><p>Back to {back}.</p>{lite_link(r["slug"] + ".html")}</div></header>')
     return (head(title, desc, url, f'Help for U.S. veterans living on {r["name"]}') + hero + f'<main class="world" id="main" data-region="{e(r["slug"])}" data-parent="{e(parent["slug"])}">'
             + emergency_block(r) + place + crisis + local + us_block(data, r) + '</main>' + footer())
 
@@ -410,7 +416,7 @@ def index_page(data):
             '<p class="opening">Living abroad, or planning to? Choose the country you live in for its emergency number, veterans agency and crisis line. '
             'If you are a U.S. veteran overseas, the Veterans Crisis Line numbers by region and the VA Foreign Medical Program are on this page.</p>'
             '<p class="jumps" data-jumps><a href="#countries">Choose a country</a> · <a href="#us-veterans-abroad">Help for U.S. veterans abroad</a></p>'
-            f'<p class="small">Checked {checked_range(data)}.</p></div></header>')
+            f'<p class="small">Checked {checked_range(data)}.</p>{lite_link("index.html")}</div></header>')
     return head(title, desc, url, 'Help for veterans living outside the United States') + hero + '<main class="world" id="main">' + countries + us + rules + '</main>' + footer()
 
 

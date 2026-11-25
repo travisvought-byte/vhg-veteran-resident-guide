@@ -33,6 +33,8 @@ jobs:
         run: python3 scripts/validate_public.py
       - name: Check country pages for veterans outside the U.S.
         run: python3 tests/world.py
+      - name: Check the text-only, low-data country pages
+        run: python3 tests/world_lite.py
       - name: Check the bad paper section
         run: python3 tests/bad_paper.py
       - name: Check the veterans in the justice system page
