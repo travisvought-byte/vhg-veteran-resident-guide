@@ -18,6 +18,7 @@ from build_mobility_routes import outputs as mobility_route_outputs
 from build_family_guide import outputs as family_guide_outputs
 from build_guide_privacy import outputs as privacy_outputs
 from build_world import outputs as world_outputs, pages as world_pages
+from build_world_lite import outputs as world_lite_outputs
 from build_packets import outputs as packet_outputs
 from build_county_pages import outputs as county_outputs
 from build_va_pages import outputs as va_outputs
@@ -118,6 +119,8 @@ def outputs():
     result.update(privacy_outputs())
     # Country pages for veterans outside the U.S. (data/world/countries.json); each carries the visit counter.
     result.update(world_outputs())
+    # Their text-only, low-data copies (world/lite/), for slow connections, basic phones and the offline pack; not in the sitemap.
+    result.update(world_lite_outputs())
     # Veterans in the justice system (data/justice.json); linked from every state page.
     result.update(justice_outputs())
     # Printable resource packets (paper handouts) and their download page; PDFs: node scripts/build_packets.cjs.

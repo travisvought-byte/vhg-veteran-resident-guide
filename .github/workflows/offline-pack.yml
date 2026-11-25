@@ -1,0 +1,48 @@
+name: Offline pack for places with little or no internet
+
+# Packs the text-only country pages (world/lite/) into a Kiwix file (.zim) and a plain .zip, and puts both on
+# the "offline" release, replacing the last copy. Kiwix readers on phones and laptops, and offline school and
+# clinic servers such as Internet-in-a-Box, can then carry the guide's country pages with no connection.
+# Download links stay the same on every run:
+#   https://github.com/travisvought-byte/vhg-veteran-resident-guide/releases/download/offline/veteran-guide-world-lite.zim
+#   https://github.com/travisvought-byte/vhg-veteran-resident-guide/releases/download/offline/veteran-guide-world-lite.zip
+# Free: GitHub Actions and release files cost nothing on a public repository.
+
+on:
+  push:
+    branches: [main]
+    paths: ['world/lite/**', 'scripts/build_world_offline_pack.py', '.github/workflows/offline-pack.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: offline-pack
+  cancel-in-progress: true
+
+jobs:
+  pack:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install the openZIM writer
+        run: python -m pip install 'libzim==4.1.0'
+      - name: Build the .zim and .zip
+        run: python scripts/build_world_offline_pack.py
+      - name: Publish on the "offline" release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          notes="Veteran Resource Guide, text-only country pages, for use with no internet connection. Built $(date -u +%Y-%m-%d) from commit ${GITHUB_SHA::7}.
+          veteran-guide-world-lite.zim: open in Kiwix (kiwix.org), free for Android, iPhone, Windows, Mac and Linux.
+          veteran-guide-world-lite.zip: unzip and open index.html in any browser."
+          if gh release view offline >/dev/null 2>&1; then
+            gh release edit offline --notes "$notes"
+          else
+            gh release create offline --title "Offline pack" --notes "$notes" --latest=false
+          fi
+          gh release upload offline dist/veteran-guide-world-lite.zim dist/veteran-guide-world-lite.zip --clobber
