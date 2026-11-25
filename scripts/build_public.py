@@ -27,6 +27,7 @@ from build_bad_paper import outputs as bad_paper_outputs, pages as bad_paper_pag
 import landing
 from build_justice import outputs as justice_outputs
 from build_topic_pages import outputs as topic_outputs, pages as topic_pages, add_language_links
+import visuals
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -175,6 +176,8 @@ def outputs():
     urls += [BASE_URL + page for page in topic_pages()]
     result['sitemap.xml'] = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join('  <url><loc>' + u.replace('&', '&amp;') + '</loc></url>\n' for u in urls) + '</urlset>\n'
     result['robots.txt'] = 'User-agent: *\nAllow: /\n\nSitemap: ' + BASE_URL + 'sitemap.xml\n'
+    # The guide's line icons, drawn once for every page that uses them (scripts/visuals.py).
+    result[visuals.SPRITE] = visuals.sprite()
     # Last step: a skip link, a <main> target, reduced motion and link symbols on every page (scripts/a11y_finish.py).
     result.update(a11y_finish_all(result))
     return result

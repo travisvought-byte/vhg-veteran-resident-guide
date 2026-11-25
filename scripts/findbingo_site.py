@@ -336,7 +336,7 @@ Lists updated {_date_label(generated_on)}.
     pages['about/index.html'] = _info_page('about', *about_page(states), style, analytics, generated_on)
     pages['terms/index.html'] = _info_page('terms', *TERMS, style, analytics, generated_on)
     pages['advertise/index.html'] = _info_page('advertise', *ADVERTISE, style, analytics, generated_on)
-    pages['learn/index.html'] = _info_page('learn', *LEARN, style, analytics, generated_on)
+    pages['learn/index.html'] = _info_page('learn', *LEARN, style.replace('</style>', LEARN_CSS + '</style>'), analytics, generated_on)
     pages['halls/index.html'] = _info_page('halls', *halls_page(states), style, analytics, generated_on)
     # Ad pictures are served beside the pages, in ads/.
     pages.update({'ads/' + a['image'].rsplit('/', 1)[1]: (root / a['image']).read_bytes() for a in ads if a.get('image')})
@@ -692,6 +692,42 @@ def validate_landing(landing, states):
         assert len({e[key] for e in landing.values()}) == len(landing), key + ' differs on every state page'
 
 
+# Parts of the day for the week chart on state pages, by a listing's start time ('HH:MM').
+DAY_PARTS = (('Morning', 'before noon', lambda h: h < 12), ('Afternoon', 'noon to 5 p.m.', lambda h: 12 <= h < 17),
+             ('Evening', '5 p.m. and later', lambda h: h >= 17))
+
+
+def week_chart(name, rows, hours_note=''):
+    """When listed games begin in a state, by weekday and part of the day: a ball where at least one listing's time
+    begins, a dash where none does. It is a real table (its own text version) and never states how many: Travis's rule
+    for Find Bingo is no counts (November 16, 2026). Built only from the state's own listings."""
+    sessions = [x for r in rows for x in r.get('sessions', [])]
+    if not sessions:
+        return ''
+    parts = [(label, span, lambda x, test=test: bool(x.get('start')) and test(int(x['start'][:2]))) for label, span, test in DAY_PARTS]
+    if any(not x.get('start') for x in sessions):
+        parts.append(('Time not posted', '', lambda x: not x.get('start')))
+    head = ''.join(f'<th scope="col"><span aria-hidden="true">{DAY_NAMES[d][:3]}</span><span class="vh">{DAY_NAMES[d]}</span></th>' for d in WEEK)
+    body = ''
+    for label, span, test in parts:
+        cells = ''
+        for d in WEEK:
+            on = any(x['day'] == d and test(x) for x in sessions)
+            cells += ('<td class="on"><span class="ball" aria-hidden="true"></span><span class="vh">Yes</span></td>' if on else
+                      '<td class="off"><span aria-hidden="true">–</span><span class="vh">No</span></td>')
+        body += f'<tr><th scope="row">{label}' + (f'<small>{span}</small>' if span else '') + f'</th>{cells}</tr>'
+    days = _days_phrase({x['day'] for x in sessions})
+    return (f'<section class="week" aria-labelledby="week-title"><h2 id="week-title">{_ic("cal")}Bingo days and times in {escape(name)}</h2>'
+            f'<p>Listed games here run {escape(days)}. The chart shows when listed times begin.</p>'
+            f'<div class="week-wrap"><table><caption class="vh">When listed bingo times begin in {escape(name)}, by day and part of the day. '
+            'Yes means at least one listing begins then.</caption>'
+            f'<thead><tr><td></td>{head}</tr></thead><tbody>{body}</tbody></table></div>'
+            '<p class="small"><span class="ball" aria-hidden="true"></span> at least one listing begins then · – none listed. '
+            # The state's own note often says to call ahead already; say it once.
+            + ' '.join(x for x in (escape(hours_note), '' if 'call ahead' in hours_note.lower() else 'Call ahead before you go.') if x)
+            + '</p></section>')
+
+
 def _state_page(s, states, rows, style, analytics, generated_on, landing, ads=(), events=()):
     code, name, slug = s['code'], s['name'], SLUGS[s['code']]
     words = landing_words(s, rows, landing)
@@ -719,6 +755,7 @@ def _state_page(s, states, rows, style, analytics, generated_on, landing, ads=()
                  f'rel="noopener noreferrer">{escape(s["list_label"])} ↗</a></div>')
     # Paid featured events sit in their own labeled box, above the county list and never inside the listings.
     body += events_html(events, '../')
+    body += week_chart(name, rows, s.get('hours_note', ''))
     if len(counties) > 1:
         body += (f'<nav class="counties" aria-labelledby="counties-title"><h2 id="counties-title">Jump to your county{" or city" if any(c.endswith(" city") for c in counties) else ""}</h2><ul>'
                  + ''.join(f'<li><a href="#county-{_slug(c)}">{escape(_area(c, short=True))}</a></li>' for c in counties) + '</ul></nav>')
@@ -789,7 +826,20 @@ STATE_CSS = ('header a{color:#fff}.intro{font-size:20px;max-width:860px}'
              '.counties ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}'
              '.counties a{display:inline-flex;align-items:center;min-height:48px;padding:0 14px;border:2px solid var(--accent);border-radius:24px;color:var(--accent);font-weight:700;text-decoration:none}'
              '#listings>section>h2{font-size:28px;margin:28px 0 10px;scroll-margin-top:12px}.top{font-size:17px;margin:10px 0 0}.top a{display:inline-flex;align-items:center;min-height:44px}'
-             '@media print{.counties,.top,#run-a-game,#partner{display:none!important}}')
+             '@media print{.counties,.top,#run-a-game,#partner{display:none!important}}'
+             # The week chart (week_chart): a ball where listed games begin, a dash where none do; never a count.
+             '.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}'
+             '.week{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px 20px 12px;margin:18px 0}'
+             '.week h2{font-size:24px;margin:10px 0 6px;display:flex;align-items:center;gap:10px}.week h2 .ic{color:var(--accent)}.week>p{margin:6px 0}'
+             '.week-wrap{overflow-x:auto}.week table{border-collapse:collapse;width:100%;max-width:640px;margin:8px 0;font-size:17px}'
+             '.week th,.week td{text-align:center;padding:6px 2px;border-bottom:1px solid var(--line)}.week thead th{font-weight:700;color:var(--head)}'
+             '.week tbody th{text-align:left;font-weight:700;padding-right:8px;color:var(--head);line-height:1.2}.week tbody th small{display:block;font-weight:400;font-size:14px;color:inherit;opacity:.85}'
+             '.week .off{color:#5b6b64}.ball{display:inline-block;width:22px;height:22px;border-radius:50%;background:var(--accent);border:3px solid var(--accent);'
+             'box-shadow:inset 0 0 0 3px var(--card);vertical-align:middle}.week p.small .ball{width:16px;height:16px;border-width:2px;box-shadow:inset 0 0 0 2px var(--card)}'
+             '@media (prefers-color-scheme:dark){.week .off{color:#a9b8b1}}'
+             '@media (forced-colors:active){.ball{forced-color-adjust:none;background:CanvasText;border-color:CanvasText;box-shadow:inset 0 0 0 3px Canvas}}'
+             '@media(max-width:420px){.week{padding:6px 12px 10px}.week table{font-size:15px}.ball{width:18px;height:18px}}'
+             '@media print{.week{border:1px solid #999}.ball{-webkit-print-color-adjust:exact;print-color-adjust:exact}}')
 
 
 # ---- Ads (owner direction, November 19, 2026: Find Bingo may carry advertising) -----------------------
@@ -964,6 +1014,84 @@ def _ext(url, label):
 # The bingo class page (owner direction, November 19, 2026): how a bingo night works, the kinds of games and
 # what the words mean, and the unwritten rules, for people new to bingo, many of them older. General
 # practice only: state law and each hall's house rules decide the details, and the page says so.
+# Pictures for the bingo class (November 24, 2026): original SVG in the site's own colors. Each one's words are on the page
+# as text too: the card is described in the paragraph above it, and every pattern is named and explained beside its picture.
+BALL_RINGS = ('#2f6fb5', '#c8382c', '#8a8f96', '#2f8a4d', '#e08a1e')  # the header balls' colors
+SAMPLE_CARD = ((7, 22, 34, 52, 68), (12, 18, 41, 47, 71), (3, 29, None, 60, 63), (14, 16, 38, 55, 75), (9, 25, 45, 49, 66))
+
+
+def card_figure():
+    """A sample card: the five letters as balls, each column's numbers, and the free space."""
+    heads = ''.join(f'<circle cx="{38 + 56 * c}" cy="28" r="24" fill="{ring}"/><circle class="bc-in" cx="{38 + 56 * c}" cy="28" r="15"/>'
+                    f'<text class="bc-l" x="{38 + 56 * c}" y="34">{l}</text>' for c, (l, ring) in enumerate(zip('BINGO', BALL_RINGS)))
+    ranges = ''.join(f'<text class="bc-r" x="{38 + 56 * c}" y="80">{15 * c + 1}–{15 * c + 15}</text>' for c in range(5))
+    cells = ''
+    for r, row in enumerate(SAMPLE_CARD):
+        for c, n in enumerate(row):
+            x, y = 10 + 56 * c, 92 + 56 * r
+            cells += (f'<rect class="bc-free" x="{x}" y="{y}" width="56" height="56"/><text class="bc-f" x="{x + 28}" y="{y + 33}">FREE</text>' if n is None
+                      else f'<rect x="{x}" y="{y}" width="56" height="56"/><text x="{x + 28}" y="{y + 36}">{n}</text>')
+    return ('<figure class="bcard" aria-labelledby="bcard-cap">'
+            '<svg viewBox="0 0 300 384" width="300" height="384" role="img" aria-labelledby="bcard-t bcard-d">'
+            '<title id="bcard-t">A sample bingo card</title>'
+            '<desc id="bcard-d">Five columns headed B, I, N, G and O. B holds 1 to 15, I 16 to 30, N 31 to 45, G 46 to 60 and O 61 to 75. '
+            'Each column shows five numbers from its own range, except that the middle square of the N column is the free space.</desc>'
+            f'<g class="bc-head">{heads}</g><g class="bc-ranges">{ranges}</g><g class="bc-grid">{cells}</g></svg>'
+            '<figcaption id="bcard-cap">A sample card. Each letter’s column holds numbers from its own range of 15, '
+            'and the middle square is free.</figcaption></figure>')
+
+
+# Named patterns, as the squares they need (row, column), counted from the top left.
+PATTERNS = (
+    ('Straight line', 'Five in a row. This one runs across the middle, through the free space.', [(2, c) for c in range(5)]),
+    ('Four corners', 'The four corner squares.', [(0, 0), (0, 4), (4, 0), (4, 4)]),
+    ('Postage stamp', 'A block of four squares in a corner.', [(0, 3), (0, 4), (1, 3), (1, 4)]),
+    ('Letter X', 'Both lines from corner to corner.', sorted({(i, i) for i in range(5)} | {(i, 4 - i) for i in range(5)})),
+    ('Coverall, or blackout', 'Every square on the face.', [(r, c) for r in range(5) for c in range(5)]),
+)
+
+
+def _pattern_svg(squares):
+    grid = ''.join(f'<rect x="{5 + 20 * c}" y="{5 + 20 * r}" width="20" height="20"/>' for r in range(5) for c in range(5))
+    daubs = ''.join(f'<circle cx="{15 + 20 * c}" cy="{15 + 20 * r}" r="7.5"/>' for r, c in squares)
+    return (f'<svg viewBox="0 0 110 110" width="110" height="110" aria-hidden="true" focusable="false">'
+            f'<g class="pt-grid">{grid}</g><g class="pt-daub">{daubs}</g></svg>')
+
+
+def patterns_figure():
+    """Common patterns, each a small card with a dot on every square it needs, named and explained in words."""
+    items = ''.join(f'<li>{_pattern_svg(sq)}<strong>{escape(name)}</strong><span>{escape(words)}</span></li>' for name, words, sq in PATTERNS)
+    return ('<figure class="patterns" aria-labelledby="patterns-cap"><figcaption id="patterns-cap">Some common patterns. '
+            'A dot marks each square the pattern needs.</figcaption>'
+            f'<ul>{items}</ul></figure>')
+
+
+LEARN_CSS = (
+    # The sample card (card_figure) and the patterns (patterns_figure) on the bingo class page.
+    '.bcard{margin:14px 0 6px}.bcard svg{display:block;width:100%;max-width:300px;height:auto;aspect-ratio:300/384}'
+    '.bcard figcaption,.patterns figcaption{font-size:17px;max-width:620px}'
+    '.bc-in{fill:#fff}.bc-l{font:800 20px system-ui,sans-serif;fill:#183449;text-anchor:middle}'
+    '.bc-r{font:700 16px system-ui,sans-serif;fill:var(--ink);text-anchor:middle}'
+    '.bc-grid rect{fill:var(--card);stroke:var(--ink);stroke-width:2}.bc-grid rect.bc-free{fill:var(--today)}'
+    '.bc-grid text{font:700 22px system-ui,sans-serif;fill:var(--ink);text-anchor:middle}.bc-grid text.bc-f{font-size:14px;letter-spacing:.06em}'
+    '.patterns{margin:14px 0 6px}.patterns ul{list-style:none;padding:0;margin:8px 0 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}'
+    '.patterns li{margin:0;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;line-height:1.3}'
+    '.patterns svg{display:block;width:96px;height:96px;margin:0 0 6px}.patterns strong{display:block;color:var(--head)}.patterns span{display:block;font-size:16px}'
+    '.pt-grid rect{fill:none;stroke:#6f8078;stroke-width:1.5}.pt-daub circle{fill:var(--accent)}'
+    # Bingo night, step by step: the list keeps its numbers, drawn as bingo balls.
+    '.info ol.night{list-style:none;padding:0;counter-reset:night}.night li{counter-increment:night;position:relative;padding-left:56px;min-height:44px}'
+    '.night li::before{content:counter(night);content:counter(night) / "";position:absolute;left:0;top:-2px;width:40px;height:40px;border-radius:50%;'
+    'display:flex;align-items:center;justify-content:center;font:800 18px/1 system-ui,sans-serif;color:#183449;'
+    'background:radial-gradient(circle,#fff 0 54%,var(--c,#2f6fb5) 56% 100%)}'
+    '.night li:nth-child(5n+2){--c:#c8382c}.night li:nth-child(5n+3){--c:#8a8f96}.night li:nth-child(5n+4){--c:#2f8a4d}.night li:nth-child(5n){--c:#e08a1e}'
+    '.night li:not(:last-child)::after{content:"";position:absolute;left:19px;top:40px;bottom:-10px;width:2px;background:#6f8078}'
+    '@media (prefers-color-scheme:dark){.pt-grid rect{stroke:#8fa39b}.night li:not(:last-child)::after{background:#8fa39b}}'
+    '@media (forced-colors:active){.bcard svg,.patterns svg{forced-color-adjust:none}.bcard circle{fill:Canvas;stroke:CanvasText;stroke-width:2}'
+    '.bcard text{fill:CanvasText}.bc-grid rect,.bc-grid rect.bc-free{fill:Canvas;stroke:CanvasText}.pt-grid rect{stroke:CanvasText}.pt-daub circle{fill:CanvasText}'
+    '.night li::before{background:Canvas;color:CanvasText;border:2px solid CanvasText}.night li:not(:last-child)::after{background:CanvasText}}'
+    '@media print{.bcard,.patterns li{break-inside:avoid}.bcard svg,.patterns svg,.night li::before{-webkit-print-color-adjust:exact;print-color-adjust:exact}}')
+
+
 LEARN = (
     # Written to the first-timer who is nervous about the unwritten rules (owner direction, November 23, 2026).
     'How to Play Bingo: A Friendly Class for First-Timers | FindBingo.org',
@@ -972,7 +1100,7 @@ LEARN = (
     'Nervous about the unwritten rules? Most first-timers are. Here is what happens on a bingo night, what to buy, what the words mean and the manners regulars expect, so you can walk in and enjoy it. Every hall has its own house rules, so ask at the counter too.',
     '<p><a href="../#play">Want to warm up first? Play a free practice card.</a></p>'
     '<h2>What happens on a bingo night</h2>'
-    '<ol><li><strong>Doors open early,</strong> often an hour or two before the first game. People come early to get a seat, buy their cards and have supper from the kitchen.</li>'
+    '<ol class="night" role="list"><li><strong>Doors open early,</strong> often an hour or two before the first game. People come early to get a seat, buy their cards and have supper from the kitchen.</li>'
     '<li><strong>You buy your cards at the counter.</strong> Most halls sell a <em>pack</em> (also called a package or admission) that covers the regular games. Extra sheets and special games cost extra.</li>'
     '<li><strong>Early birds</strong> are a few warm-up games before the main session. They are usually sold separately.</li>'
     '<li><strong>The caller draws numbered balls</strong> and reads each one out, letter first: “B-7.” The number also lights up on a board or TV screens.</li>'
@@ -982,11 +1110,13 @@ LEARN = (
     '<h2>The card</h2>'
     '<p>An American bingo card has five columns, B, I, N, G and O, and 75 numbers in all. B holds 1 to 15, I holds 16 to 30, N holds 31 to 45, G holds 46 to 60, and O holds 61 to 75. '
     'The middle square is a <strong>free space</strong>: it counts as already marked.</p>'
+    + card_figure() +
     '<p>Each card is called a <strong>face</strong>. A paper <strong>sheet</strong> holds several faces, and the number of faces is said with “on”: a <strong>6-on</strong> sheet has six faces, a <strong>12-on</strong> has twelve. '
     'More faces give you more chances, and more to watch. New players do well to start with fewer faces.</p>'
     '<p>Paper cards are marked with a <strong>dauber</strong> (or dabber), a bottle of ink with a sponge tip. Halls sell them, and many players bring their own favorite color. '
     'Some halls still use <strong>hard cards</strong> (reusable cards with sliding windows or chips), and many rent <strong>electronic bingo</strong> handhelds that mark your numbers for you, which helps if your eyes or hands get tired.</p>'
     '<h2>The kinds of games, and what the words mean</h2>'
+    + patterns_figure() +
     '<dl>'
     '<dt><strong>Regular games</strong></dt><dd>The main games of the night, covered by your pack.</dd>'
     '<dt><strong>Pattern</strong></dt><dd>The shape you need to win that game. The caller always says it first, and it is often shown on the board. Listen for it every game.</dd>'
