@@ -333,7 +333,7 @@ Lists updated {_date_label(generated_on)}.
         pages[SLUGS[s['code']] + '/index.html'] = _state_page(s, states, rows, style, analytics, generated_on, landing, _ads_for(ads, SLUGS[s['code']]),
                                                               [e for e in upcoming_events(events, generated_on) if e['state'] == s['code']])
     pages['privacy/index.html'] = _info_page('privacy', *PRIVACY, style, analytics, generated_on)
-    pages['about/index.html'] = _info_page('about', *ABOUT, style, analytics, generated_on)
+    pages['about/index.html'] = _info_page('about', *about_page(states), style, analytics, generated_on)
     pages['terms/index.html'] = _info_page('terms', *TERMS, style, analytics, generated_on)
     pages['advertise/index.html'] = _info_page('advertise', *ADVERTISE, style, analytics, generated_on)
     pages['learn/index.html'] = _info_page('learn', *LEARN, style.replace('</style>', LEARN_CSS + '</style>'), analytics, generated_on)
@@ -1222,7 +1222,7 @@ PRIVACY = (
 # About and contact, and Terms of use (November 22, 2026): the pages an ad network's reviewers look for, and that
 # halls and players use to see who runs the site. Plain words; no counts of halls, places or states.
 CONTACT = _mailto('FindBingo.org')
-ABOUT = (
+ABOUT_PAGE = (
     'About Find Bingo: Who Runs It and How to Reach Us | FindBingo.org',
     'Who runs FindBingo.org: Veteran Home Guardians, an Ohio nonprofit, with a Marine veteran who ran his Legion’s bingo. Where listings come from and how to reach us.',
     'About Find Bingo',
@@ -1241,9 +1241,44 @@ ABOUT = (
     '<h2>Send a correction or your game times</h2>'
     '<p>Every listing has a “Report a change” link. Halls can send their game times free, and we post them. '
     '<a href="../halls/">Help for bingo halls</a></p>'
+    '__OPEN_DATA__'
     '<h2 id="contact">Contact us</h2>'
     f'<p>Email <a href="{escape(CONTACT)}">{EMAIL}</a> for questions, corrections, advertising or partnerships. We read every message.</p>'
     '<p><a href="../privacy/">Privacy</a> · <a href="../terms/">Terms of use</a> · <a href="../advertise/">Advertise on Find Bingo</a></p>')
+
+# Open data and other bingo finders (owner direction, November 24, 2026): the listings are open data under the
+# repository's LICENSE, and the official lists and other finders are named, so nobody has to collect the same
+# games twice. Ohio's and Missouri's links come from bingo-states.json; the Texas open dataset is not in it.
+DATA_ATTRIBUTION = 'Veteran Resident Resource Guide, created by Travis Vought and shared by Veteran Home Guardians.'
+REPO_URL = 'https://github.com/travisvought-byte/vhg-veteran-resident-guide'
+TEXAS_OPEN_DATA = ('https://catalog.data.gov/dataset/bingo-conductor-locations', 'Texas bingo conductor locations')
+
+
+def _open_data(states):
+    by = {s['code']: s for s in states}
+    finders = ((by['OH']['regulator_url'], by['OH']['regulator_label'], 'the official list of licensed bingo locations in Ohio.'),
+               (by['MO']['list_url'], by['MO']['list_label'], 'the state’s own search of licensed games, with days and start times.'),
+               (*TEXAS_OPEN_DATA, 'every licensed Texas bingo conductor by playing location, as open data.'))
+    items = ''.join(f'<li>{_out(url, label)}: {escape(note)}</li>' for url, label, note in finders)
+    return ('<h2 id="open-data">Open data and other bingo finders</h2>'
+            '<p>Find Bingo’s listings are open data under the '
+            + _out('https://creativecommons.org/licenses/by/4.0/', 'Creative Commons Attribution 4.0 license (CC BY 4.0)')
+            + f'. Anyone may copy and reuse them, in their own finder too, with this credit: “{escape(DATA_ATTRIBUTION)}” '
+            'Reuse them with that credit so nobody has to collect the same games twice.</p>'
+            '<p><a href="../data.json" download>Download the listings (data.json)</a>, or get every list and the code that builds this site from '
+            + _out(REPO_URL, 'the Find Bingo data on GitHub') + '.</p>'
+            '<h3>Official sources and other finders</h3>'
+            f'<ul>{items}</ul>'
+            f'<p>Run a bingo finder or keep a list of games? Write to us at <a href="{escape(_mailto("Linking bingo finders"))}">{EMAIL}</a> '
+            'and we’ll link to each other.</p>')
+
+
+def about_page(states):
+    """findbingo.org/about/: who runs the site, where listings come from, open data and other finders."""
+    *head, body = ABOUT_PAGE
+    assert body.count('__OPEN_DATA__') == 1
+    return (*head, body.replace('__OPEN_DATA__', _open_data(states)))
+
 
 TERMS = (
     'Terms of Use: A Free Bingo Directory | FindBingo.org',
