@@ -13,6 +13,7 @@ from datetime import date
 from html import escape
 from urllib.parse import quote
 import place_map
+from visuals import locator
 
 # Every state and DC has an entry in bingo-states.json, in alphabetical order by name. A state we have not
 # researched yet has coverage "pending": a plain "send us your games" card and page, kept out of search
@@ -800,7 +801,11 @@ def _state_page(s, states, rows, style, analytics, generated_on, landing, ads=()
     return (head + f'<body id="top">{ICONS}<a class="skip" href="#listings">Skip to the bingo list</a>'
             f'<header>{BALLS}<p class="brand"><a href="../">FindBingo.org</a> · free from Veteran Home Guardians</p><h1>{escape(heading)}</h1><p class="lead">{escape(lead)}</p></header>'
             f'<main>{zip_form}{body}'
-            f'<nav class="states" aria-labelledby="states-title"><h2 id="states-title">Bingo in other states</h2><div class="state-buttons">{others}</div>'
+            f'<nav class="states" aria-labelledby="states-title"><h2 id="states-title">Bingo in other states</h2>'
+            # Where this state sits, on the guide's equal-square tile map (November 25, 2026); no counts, only a place.
+            f'<figure class="where" aria-labelledby="where-cap">{locator(code, name, "where-map")}'
+            f'<figcaption id="where-cap">{escape(name)} is the dark square with a ring. Choose another state below.</figcaption></figure>'
+            f'<div class="state-buttons">{others}</div>'
             '<p class="small-links"><a href="../">Search every state by ZIP code</a></p></nav></main>'
             f'{_footer(generated_on)}{TODAY_SCRIPT if weekly else ""}{place_map.script() if "pm-box" in body else ""}<script>{analytics}</script></body></html>\n')
 
@@ -822,6 +827,11 @@ def _footer(generated_on, up='../'):
 # Short addresses for posters and word of mouth: findbingo.org/mi and /MI open the Michigan page.
 SHORT_REDIRECTS = ''.join(f'/{c} /{slug}/ 301\n/{c.lower()} /{slug}/ 301\n' for c, slug in SLUGS.items() if c != 'OH')
 STATE_CSS = ('header a{color:#fff}.intro{font-size:20px;max-width:860px}'
+             # The locator map in "Bingo in other states" (visuals.locator): a dark square with a ring marks this state.
+             '.where{margin:4px 0 16px;max-width:300px}.where svg{display:block;width:100%;height:auto}.where figcaption{font-size:17px;margin-top:6px}'
+             '@media (prefers-color-scheme:dark){.vz-loc rect{fill:#26343c;stroke:#8fa39a}.vz-loc .vz-loc-cur{fill:#9fd0ef}.vz-loc-ring{stroke:#10181d}}'
+             '@media (forced-colors:active){.where svg{forced-color-adjust:none}.vz-loc rect{fill:Canvas;stroke:CanvasText}.vz-loc .vz-loc-cur{fill:CanvasText}.vz-loc-ring{stroke:Canvas}}'
+             '@media print{.where{display:none}}'
              '.counties{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px 20px 14px;margin:18px 0}.counties h2{font-size:24px;margin:10px 0 8px}'
              '.counties ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}'
              '.counties a{display:inline-flex;align-items:center;min-height:48px;padding:0 14px;border:2px solid var(--accent);border-radius:24px;color:var(--accent);font-weight:700;text-decoration:none}'
