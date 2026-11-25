@@ -39,7 +39,17 @@
       // A state switch on a page arrives as an event named state/xx, kept under the same site name.
       data.p = vars && vars.event && vars.path ? site + '/' + String(vars.path).replace(/^\//, '')
         : site + location.pathname.replace(/\/index\.html$/, '/');
+      // Only ad and campaign tags survive from the query (utm_source, utm_medium, utm_campaign), so a paid
+      // Facebook visit shows as its campaign instead of blending into ordinary Facebook visits. Nothing typed is kept.
       data.q = '';
+      try {
+        var params = new URLSearchParams(location.search), kept = [];
+        ['utm_source', 'utm_medium', 'utm_campaign'].forEach(function (k) {
+          var v = (params.get(k) || '').replace(/[^\w.-]/g, '').slice(0, 40);
+          if (v) kept.push(k + '=' + v);
+        });
+        if (kept.length) data.q = '?' + kept.join('&');
+      } catch (_) { data.q = ''; }
       // Retain referral attribution without query strings or fragments.
       try {
         var referrer = new URL(document.referrer);
@@ -48,6 +58,12 @@
       return data;
     };
     counter.count();
+    // Donation clicks: one event each time someone taps a link to a donation page, so ads can be judged by gifts started.
+    document.addEventListener('click', function (e) {
+      var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+      if (!a || !/zeffy\.com|\/donate(\.html)?(\b|$)|givebutter|paypal\.com\/donate/i.test(a.href)) return;
+      counter.count({path: 'click/donate', title: 'Donate click', event: true});
+    }, true);
     // Which state's guide people read: the page marks the state it shows on <html data-edition>.
     var root = document.documentElement, shown = root.dataset.edition || '';
     if (window.MutationObserver) new MutationObserver(function () {

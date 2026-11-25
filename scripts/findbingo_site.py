@@ -1199,7 +1199,7 @@ PRIVACY = (
     'GoatCounter does not use cookies and does not store personal information. For each page view it records things like the page visited, '
     'the site that sent you here, your browser, your screen size, and an approximate country worked out from your internet (IP) address. '
     'It does not store the IP address.</p>'
-    '<p>We leave out everything after the question mark in a page address, so the ZIP code you search for is never counted.</p>'
+    '<p>We leave out everything after the question mark in a page address, so the ZIP code you search for is never counted. The one exception is the name of an ad or campaign that sent you here (its utm tags).</p>'
     '<h2>Your ZIP code search</h2>'
     '<p>When you search by ZIP code, the page finds bingo near you on your own device. It downloads the bingo lists and a list '
     'of ZIP code locations, then works out the distances itself. Ohio’s finder works the same way. The ZIP code is not sent to us or to anyone else to look it up, and we do not keep it.</p>'
