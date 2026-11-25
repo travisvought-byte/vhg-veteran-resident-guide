@@ -11,10 +11,13 @@ import re
 from datetime import date
 from pathlib import Path
 from build_mobility_routes import STATES
+from visuals import icon
 
 ROOT = Path(__file__).resolve().parents[1]
 SCOPES = {'US': 'National', 'OH': 'Ohio', 'MIL': 'Military & veteran families'}
 CORRECTIONS = 'travis@vethomeguard.org'
+# A symbol on each stage button (scripts/visuals.py); the button's words carry the meaning.
+STAGE_ICONS = {'concern': 'question', 'early': 'sprout', 'school': 'book', 'transition': 'signpost', 'everyday': 'dollar', 'rights': 'scale'}
 ALL_STAGES = ['concern', 'early', 'school', 'transition', 'everyday', 'rights']
 # First calls. '{state}' is replaced with the state name; a 'pa' entry is the state's rights agency.
 ANCHORS = {
@@ -210,7 +213,7 @@ def outputs():
     stage_buttons = ('<button type="button" class="stage" data-stage="all" aria-pressed="true"><strong id="st-all" data-i18n="stage-all">Show everything</strong>'
                      '<span data-i18n="stage-all-desc">All ages and topics</span></button>') + ''.join(
         f'<button type="button" class="stage" data-stage="{s["id"]}" aria-pressed="false" aria-labelledby="st-{s["id"]}" aria-describedby="sd-{s["id"]}">'
-        f'<strong id="st-{s["id"]}" data-i18n-stage="{s["id"]}:label">{esc(s["label"])}</strong><span class="ages" data-i18n-stage="{s["id"]}:ages">{esc(s["ages"])}</span>'
+        f'{icon(STAGE_ICONS[s["id"]])}<strong id="st-{s["id"]}" data-i18n-stage="{s["id"]}:label">{esc(s["label"])}</strong><span class="ages" data-i18n-stage="{s["id"]}:ages">{esc(s["ages"])}</span>'
         f'<span class="desc" id="sd-{s["id"]}" data-i18n-stage="{s["id"]}:summary">{esc(s["summary"])}</span></button>'
         for s in data['stages'])
     need_boxes = ''.join(

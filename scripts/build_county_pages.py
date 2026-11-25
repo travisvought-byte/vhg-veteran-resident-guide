@@ -21,6 +21,8 @@ import re
 from pathlib import Path
 from urllib.parse import quote
 
+from visuals import icon, stylesheet
+
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = 'https://guide.vethomeguard.org/'
 FOLDER = 'counties'
@@ -128,7 +130,8 @@ def page(title, description, path, crumbs, hero, body, depth, style=''):
             f'<meta property="og:type" content="website"><meta property="og:title" content="{e(title)}">'
             f'<meta property="og:description" content="{e(description)}"><meta property="og:url" content="{e(canonical)}">'
             f'<meta property="og:image" content="{BASE_URL}assets/vhg-logo.png">\n'
-            f'<link rel="icon" href="{up}favicon.ico"><style>{STYLE}{style}</style></head>\n'
+            f'<link rel="icon" href="{up}favicon.ico"><style>{STYLE}{style}</style>'
+            + (stylesheet(up) if 'class="vi"' in body else '') + '</head>\n'
             f'<body><header><nav aria-label="Breadcrumb" class="small">{trail}</nav>{hero}</header>\n'
             f'<main id="main">{body}</main>\n'
             '<footer><p>Free from <a href="https://www.vethomeguard.org/about.html">Veteran Home Guardians</a>, an independent '
@@ -200,12 +203,12 @@ def outputs(root=ROOT):
             featured = partners.get((state['code'].upper(), r['county'].strip().lower()), [])
             body = (office_card(r, name)
                     + (partner_section(featured, name) if featured else '')
-                    + '<h2>What the office can help with</h2><ul>'
-                    '<li>Filing a VA disability compensation claim, or an increase, and gathering the records it needs</li>'
-                    '<li>VA pension, including Aid and Attendance for veterans and survivors who need help with daily care</li>'
-                    '<li>Survivor benefits, burial and memorial benefits</li>'
-                    '<li>Getting military records, including a copy of the DD214</li>'
-                    '<li>Signing up for VA health care and finding local veterans programs</li></ul>'
+                    + '<h2>What the office can help with</h2><ul class="vz-ilist">'
+                    f'<li>{icon("doc-check", "../../")}Filing a VA disability compensation claim, or an increase, and gathering the records it needs</li>'
+                    f'<li>{icon("dollar", "../../")}VA pension, including Aid and Attendance for veterans and survivors who need help with daily care</li>'
+                    f'<li>{icon("flag", "../../")}Survivor benefits, burial and memorial benefits</li>'
+                    f'<li>{icon("folder", "../../")}Getting military records, including a copy of the DD214</li>'
+                    f'<li>{icon("medical", "../../")}Signing up for VA health care and finding local veterans programs</li></ul>'
                     '<p>Call ahead to confirm hours and what to bring. A veterans service office will never charge you to file a VA claim.</p>'
                     + urgent(sname)
                     + f'<h2>More help in {e(sname)}</h2><p>The full guide for {e(sname)} lists state veterans programs, VA health care, '

@@ -25,6 +25,9 @@ import sys
 from html import escape
 from pathlib import Path
 
+import visuals
+from visuals import icon
+
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = 'https://guide.vethomeguard.org/'
 CHECKED = 'November 23, 2026'
@@ -81,10 +84,11 @@ def related(current):
 
 
 def roles(veteran, spouse, child, worker):
-    cells = [('If you are the veteran', veteran), ('If you are the spouse', spouse),
-             ('If you are an adult son or daughter', child), ('If you are a social worker or facility staff', worker)]
+    cells = [('If you are the veteran', veteran, 'user'), ('If you are the spouse', spouse, 'heart'),
+             ('If you are an adult son or daughter', child, 'people'), ('If you are a social worker or facility staff', worker, 'clipboard')]
+    # A small symbol for each reader beside the heading that names them (decoration; the heading says it).
     return ('<h2 id="next-steps">What to do next</h2><div class="roles">'
-            + ''.join(f'<div><h3>{escape(h)}</h3><p>{p}</p></div>' for h, p in cells) + '</div>')
+            + ''.join(f'<div><h3>{icon(ic)} {escape(h)}</h3><p>{p}</p></div>' for h, p, ic in cells) + '</div>')
 
 
 def sources(items):
@@ -117,6 +121,7 @@ def page(t, title, description, h1, intro, body, toc):
 <meta property="og:url" content="{BASE_URL}{slug}">
 <meta property="og:image" content="{BASE_URL}assets/vhg-logo.png">
 <link rel="stylesheet" href="assets/family-guide.css">
+{visuals.stylesheet()}
 <style>{CSS}</style>
 <script src="assets/analytics.js" defer></script></head><body>
 <a class="skip" href="#main">Skip to the page</a>
@@ -137,6 +142,29 @@ def page(t, title, description, h1, intro, body, toc):
 
 
 # ---------------------------------------------------------------- VA pension
+# The worked example on the pension page, drawn to scale (VA's Aid and Attendance maximum for a veteran with no
+# spouse or child, minus an example of the income VA counts). The page's own sentence states the same numbers.
+EXAMPLE_MAX, EXAMPLE_COUNTED = 29093, 20000
+
+
+def payment_chart():
+    return visuals.payment_chart(EXAMPLE_MAX, EXAMPLE_COUNTED, 'pay-chart', 'How the example payment is figured',
+                                 'Yearly maximum with Aid and Attendance (veteran, no spouse or child)',
+                                 'Income VA counts', 'Pension', 'about $757 a month')
+
+
+def forms_grid():
+    """The forms the page says usually go together for a nursing home resident, as a row of documents."""
+    forms = [('VA Form 21P-527EZ or 21P-534EZ', 'The pension application: 21P-527EZ for veterans, 21P-534EZ for surviving spouses', None),
+             ('VA Form 21-2680', 'The exam', ('user', 'A medical examiner completes it')),
+             ('VA Form 21-0779', 'The nursing home form', ('building', 'The nursing home completes it')),
+             ('VA Form 21P-8416', 'The medical expense report', None)]
+    tiles = ''.join(f'<li>{icon("doc")}<strong>{escape(n)}</strong><small>{escape(w)}</small>'
+                    + (f'<span class="vz-by">{icon(b[0])}{escape(b[1])}</span>' if b else '') + '</li>' for n, w, b in forms)
+    return ('<figure class="vz" aria-labelledby="forms-cap"><figcaption id="forms-cap"><strong>The forms that usually go together '
+            'for a nursing home resident</strong></figcaption><ul class="vz-grid">' + tiles + '</ul></figure>')
+
+
 def pension_page():
     t = TOPICS[0]
     body = f'''
@@ -172,6 +200,7 @@ def pension_page():
 <tr><th scope="row">Surviving spouse with 1 child</th><td>$15,311</td><td>$17,902</td><td>$22,304</td></tr></tbody></table></div>
 <p class="small">Two veterans married to each other, and families with more dependents, have their own amounts on VA's rate tables.</p>
 <p><strong>How the payment is figured:</strong> the yearly maximum minus the income VA counts. Example using VA's table: a veteran with no spouse or child who qualifies for Aid and Attendance has a maximum of $29,093. If VA counts $20,000 of yearly income after medical costs are subtracted, the pension is $9,093 a year, paid monthly (about $757 a month).</p>
+{{PAYMENT_CHART}}
 
 <h2 id="care-costs">How nursing home and care costs count</h2>
 <p>VA subtracts <strong>medical expenses you pay yourself and are not paid back for</strong> from the income it counts. Only the part above 5% of the yearly maximum is subtracted: $872 for a veteran with no dependents, $1,141 for a veteran with 1 dependent, $584 for a surviving spouse with no child.</p>
@@ -181,6 +210,7 @@ def pension_page():
 <li><strong>Insurance premiums</strong>, including Medicare Part B and Part D and long-term care insurance, count.</li>
 <li>Whatever Medicaid, insurance or anyone else pays does <strong>not</strong> count. Only out-of-pocket costs do.</li></ul>
 <p><strong>Forms that usually go together for a nursing home resident:</strong> the pension application (VA Form 21P-527EZ for veterans; 21P-534EZ for surviving spouses); VA Form 21-2680, the exam a medical examiner completes; VA Form 21-0779, which the nursing home completes; and VA Form 21P-8416, the medical expense report.</p>
+{{FORMS_GRID}}
 
 <div class="box" id="medicaid"><h3>If Medicaid pays for the nursing home: the $90 rule</h3>
 <p>A veteran with no spouse or dependent child, or a surviving spouse with no child, who is in a <strong>Medicaid-covered nursing home</strong> receives no more than <strong>$90 a month</strong> in VA pension, starting after the month Medicaid payments begin.</p>
@@ -229,6 +259,8 @@ def pension_page():
     toc = [('what', 'What this benefit is'), ('who', 'Who can qualify'), ('limits', 'The limits and rates'),
            ('care-costs', 'How care costs count'), ('medicaid', 'If Medicaid pays: the $90 rule'), ('lookback', 'The 3-year look-back'),
            ('help', 'Free, accredited help'), ('warning', 'Pension “advisors”'), ('next-steps', 'What to do next'), ('sources', 'Sources')]
+    assert '$29,093' in body and '$20,000' in body and '$9,093' in body and EXAMPLE_MAX - EXAMPLE_COUNTED == 9093
+    body = body.replace('{PAYMENT_CHART}', payment_chart()).replace('{FORMS_GRID}', forms_grid())
     return page(t, 'VA Pension, Aid and Attendance and Housebound for Nursing Home Families | VHG',
                 'Wartime veterans and surviving spouses in a nursing home may qualify for VA pension with Aid and Attendance. Current limits, how care costs count, the $90 Medicaid rule and free accredited help.',
                 'VA pension with Aid and Attendance or Housebound',
@@ -237,6 +269,29 @@ def pension_page():
 
 
 # ---------------------------------------------------------------- Elder abuse
+def report_routes():
+    """Where to report, by where the person lives or what happened: the three cases listed under it, in short."""
+    rows = [('home', 'The person lives at home or with family', 'shield', 'Adult Protective Services in that state'),
+            ('building', 'The person lives in a nursing home or assisted living', 'people', 'The administrator and the long-term care ombudsman'),
+            ('dollar', 'Money was stolen or a crime happened', 'siren', 'Also the local police')]
+    items = ''.join(f'<li><span class="vz-when">{icon(a)}<span>{escape(w)}</span></span><span class="vz-arrow">{icon("arrow-right")}<span class="vz-vh">, call: </span></span>'
+                    f'<span class="vz-who">{icon(b)}<span>{escape(who)}</span></span></li>' for a, w, b, who in rows)
+    return ('<figure class="vz" aria-labelledby="routes-cap"><figcaption id="routes-cap"><strong>Who to call, at a glance</strong>'
+            'The details for each case are in the list below.</figcaption><ul class="vz-routes">' + items + '</ul></figure>')
+
+
+def money_signs():
+    """The warning signs the page lists for money or benefits being taken, one tile each."""
+    signs = [('receipt', 'Unpaid nursing home bills', 'when income should cover them'),
+             ('user-plus', 'New “friends” or helpers handling money', ''),
+             ('card', 'Missing checks, cards or valuables', ''),
+             ('pen', 'Sudden changes to a will, deed or bank account', ''),
+             ('wallet', 'A resident with no spending money', '')]
+    tiles = ''.join(f'<li>{icon(i)}<strong>{escape(t)}</strong>' + (f'<small>{escape(x)}</small>' if x else '') + '</li>' for i, t, x in signs)
+    return ('<figure class="vz" aria-labelledby="signs-cap"><figcaption id="signs-cap"><strong>Warning signs</strong></figcaption>'
+            '<ul class="vz-grid">' + tiles + '</ul></figure>')
+
+
 def aps_item(code, name, page, rec):
     phones = ''.join(f'<p><strong>{tel(p["number"])}</strong> · {escape(p["label"])}</p>' for p in rec['phones'])
     how = f'<p>{escape(rec["how"])}</p>' if rec.get('how') else ''
@@ -264,11 +319,12 @@ def abuse_page(states):
     body = f'''
 <h2 id="what">What counts, and who can report</h2>
 <p>Anyone can report. You do not need proof, only a real concern. Many states, including Ohio, let you report without giving your name.</p>
-<ul><li><strong>Abuse:</strong> hitting, rough handling, threats, yelling, sexual contact without consent, or keeping someone locked in or isolated.</li>
-<li><strong>Neglect:</strong> a caregiver not providing food, medicine, hygiene or needed care, or a person no longer able to care for themselves (self-neglect).</li>
-<li><strong>Exploitation:</strong> money, property, a pension or VA benefit taken, misused or signed away under pressure.</li></ul>
+<ul class="vz-ilist"><li>{icon('alert')}<strong>Abuse:</strong> hitting, rough handling, threats, yelling, sexual contact without consent, or keeping someone locked in or isolated.</li>
+<li>{icon('pill')}<strong>Neglect:</strong> a caregiver not providing food, medicine, hygiene or needed care, or a person no longer able to care for themselves (self-neglect).</li>
+<li>{icon('dollar')}<strong>Exploitation:</strong> money, property, a pension or VA benefit taken, misused or signed away under pressure.</li></ul>
 
 <h2 id="where">Where to report</h2>
+{report_routes()}
 <ul><li><strong>The person lives at home or with family:</strong> call Adult Protective Services (APS) in that state. <a href="#states">Find your state below.</a></li>
 <li><strong>The person lives in a nursing home or assisted living:</strong> tell the administrator, and call the long-term care ombudsman, a free advocate for residents. The state health or licensing agency also takes complaints about care, and in some states APS takes reports about care settings too; the state pages below say where to call. This guide lists each state's ombudsman under “Concerns about care or rights”: <a href="./?view=rights">Ohio</a>, or choose your state from the list below.</li>
 <li><strong>Money was stolen or a crime happened:</strong> also call the local police.</li></ul>
@@ -280,6 +336,7 @@ def abuse_page(states):
 <p><strong>Resident rights and care concerns:</strong> see the ombudsman contacts in <a href="./?view=rights">this guide's Ohio section</a>; choose a county there for the local ombudsman.</p></div>
 
 <h2 id="money">When money or benefits are being taken</h2>
+{money_signs()}
 <ul><li>Signs: unpaid nursing home bills when income should cover them; new “friends” or helpers handling money; missing checks, cards or valuables; sudden changes to a will, deed or bank account; a resident with no spending money.</li>
 <li>Call the bank's fraud line, report to APS, and call the police if money was stolen.</li>
 <li>Pressure to move assets so someone “qualifies” for VA pension is a known scheme. See <a href="va-pension-aid-attendance.html#warning">the warning on the pension page</a>.</li></ul>
@@ -317,11 +374,31 @@ def abuse_page(states):
 
 
 # ---------------------------------------------------------------- Guardianship
+def least_restrictive():
+    """The choices on the guardianship page, from the papers a person signs themselves to a court guardian."""
+    cols = [('pen', 'Papers the person signs while they can', ['Financial power of attorney', 'Health care power of attorney and living will',
+                                                               'Supported decision-making: the person decides, with trusted helpers']),
+            ('court', 'Limited guardian, from the probate court', ['Only the powers the person needs', 'The person keeps every right the order does not cover']),
+            ('court', 'Guardian, from the probate court', ['Of the person, the estate (money and property), or both',
+                                                         'After a hearing, on clear and convincing evidence'])]
+    ends = {0: 'Least restrictive', len(cols) - 1: 'Most restrictive'}
+    items = ''.join(f'<li>' + (f'<span class="vz-end-tag" aria-hidden="true">{ends[n]}</span>' if n in ends else '')
+                    + f'{icon(i)}<strong>{escape(t)}</strong><ul>' + ''.join(f'<li>{escape(x)}</li>' for x in xs) + '</ul></li>'
+                    for n, (i, t, xs) in enumerate(cols))
+    return ('<figure class="vz" aria-labelledby="least-cap"><figcaption id="least-cap"><strong>From the least restrictive choice to the most</strong>'
+            'A court guardianship takes decisions away from a person. Many families can handle money and medical choices without going to court.</figcaption>'
+            '<p class="vz-scale-axis" aria-hidden="true"><span>Least restrictive</span><span>Most restrictive</span></p><div class="vz-axis-line" aria-hidden="true"></div>'
+            '<ol class="vz-steps">' + items + '</ol>'
+            f'<p class="vz-aside">{icon("dollar")}<span><strong>Separate: the VA fiduciary.</strong> VA decides on its own whether a person can manage VA payments. '
+            'A fiduciary handles VA benefits only and does not take away the right to manage other money, to vote or to sign legal documents.</span></p></figure>')
+
+
 def guardianship_page():
     t = TOPICS[2]
     body = f'''
 <h2 id="first">Start with the least restrictive choice</h2>
 <p>A court guardianship takes decisions away from a person, often for the rest of their life. Ohio law requires a probate court to consider evidence of a less restrictive alternative before appointing a guardian. Many families can handle money and medical choices without going to court, especially if papers are signed while the person can still understand them.</p>
+{least_restrictive()}
 
 <h2 id="plan">Papers to sign while the person can</h2>
 <h3>Financial power of attorney</h3>
