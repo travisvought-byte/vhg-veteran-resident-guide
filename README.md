@@ -194,6 +194,7 @@ A [monthly link check](.github/workflows/link-check.yml) requests every link the
 | `states/registry.json`, `states/<code>/` | State registry, per-state edition operations and display functions |
 | `scripts/build_public.py`, `scripts/state_registry.py`, `scripts/make_qr.py` | Public data synchronization, state edition generation and sharing QR codes |
 | `scripts/validate_public.py`, `tests/*.cjs` | Data, asset and functional checks |
+| `scripts/visuals.py`, `assets/visuals.svg`, `assets/visuals.css`, `tests/visuals.cjs` | Original icons, diagrams and charts for the topic, county and VA pages (added November 24, 2026). Icons are hidden from screen readers and always sit beside words; every chart has its numbers in a table; every diagram's words are real text. The sprite is written by `build_public.py`. |
 | `docs/` | Scope, maintenance, evidence and research priorities |
 | `research/`, `data/integrated/`, `data/seed/`, `data/batches/` | Historical working material; not the live source of truth |
 

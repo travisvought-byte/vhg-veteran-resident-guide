@@ -13,6 +13,8 @@ Corrections go to the same email as the rest of the guide (the "Report a problem
 from html import escape
 from urllib.parse import quote
 
+from visuals import icon, stylesheet
+
 BASE = 'https://guide.vethomeguard.org/'
 EMAIL = 'travis@vethomeguard.org'
 CHECKED = 'November 23, 2026'
@@ -345,35 +347,35 @@ def spanish_page():
 <div class="hero"><p class="lang-switch">Idioma: <strong>Español</strong> · <a href="../" hreflang="en" lang="en">English</a></p><p class="eyebrow">VETERAN HOME GUARDIANS</p><h1>Guía de recursos para veteranos de Ohio</h1>
 <p>Ayuda gratis para veteranos, cónyuges sobrevivientes, personas mayores y sus familias en Ohio. Aquí está lo esencial en español. Las guías detalladas están en inglés; puede pedir un intérprete gratis en cada llamada.</p></div></header>
 <main class="topic" id="main">
-<section aria-labelledby="ahora"><h2 id="ahora">¿Necesita ayuda ahora?</h2>
+<section aria-labelledby="ahora"><h2 id="ahora">{icon('phone', '../')}¿Necesita ayuda ahora?</h2>
 <div class="card"><p>Crisis: llame al {tel('988')} y oprima 1 (Veterans Crisis Line, línea de crisis para veteranos), o envíe un mensaje de texto al 838255. Peligro inmediato: llame al 911.</p>
 <p>Veteranos sin hogar o a punto de perder su vivienda: {tel('877-424-3838')}, las 24 horas (National Call Center for Homeless Veterans).</p>
 {src([VA_MST, ('https://www.va.gov/homeless/nationalcallcenter.asp', 'VA: National Call Center for Homeless Veterans')], CHECKED_ES, 'Fuente', 'Revisado el')}</div></section>
 
-<section aria-labelledby="interprete"><h2 id="interprete">Pida un intérprete gratis</h2>
+<section aria-labelledby="interprete"><h2 id="interprete">{icon('chat', '../')}Pida un intérprete gratis</h2>
 {es_card('El VA ofrece intérpretes sin costo', '<p>El VA ofrece intérpretes y otra ayuda con el idioma, gratis, a veteranos y familiares. Llame a MyVA411, la línea principal de información del VA, oprima 0 y diga al agente que desea un intérprete de español. En un centro médico del VA, solo dígale a un empleado que desea un intérprete.</p>', f'MyVA411: {tel("800-698-2411")}, las 24 horas, todos los días', [va_lang, va_es])}</section>
 
-<section aria-labelledby="local"><h2 id="local">Su primer contacto local: la oficina de veteranos del condado</h2>
+<section aria-labelledby="local"><h2 id="local">{icon('pin', '../')}Su primer contacto local: la oficina de veteranos del condado</h2>
 {es_card('County Veterans Service Office (oficina de servicios para veteranos del condado)', '<p>Cada condado de Ohio tiene una oficina de servicios para veteranos. Sus representantes acreditados ayudan gratis a veteranos, dependientes y cónyuges sobrevivientes con los reclamos del VA y la ayuda económica temporal de emergencia, y les indican otros recursos locales y del estado.</p><p><a href="../index.html#county-start" hreflang="en">Busque la oficina de su condado</a> (la lista está en inglés).</p>', f'Ohio Department of Veterans Services: {tel("877-644-6838")} (877-OHIO-VET)', [ODVS_GUIDE])}</section>
 
-<section aria-labelledby="necesita"><h2 id="necesita">¿Qué ayuda necesita?</h2>
+<section aria-labelledby="necesita"><h2 id="necesita">{icon('lifebuoy', '../')}¿Qué ayuda necesita?</h2>
 <p>Cada enlace abre esa parte de la guía, en inglés, con los contactos de Ohio.</p>
 <div class="card">{needs}</div></section>
 
-<section aria-labelledby="salud"><h2 id="salud">Atención médica, consejería y veteranas</h2>
+<section aria-labelledby="salud"><h2 id="salud">{icon('medical', '../')}Atención médica, consejería y veteranas</h2>
 {es_card('VA health care (atención médica del VA)', '<p>Para inscribirse en la atención médica del VA o hacer preguntas sobre la inscripción.</p>', tel('877-222-8387'), [('https://www.va.gov/health-care/how-to-apply/', 'VA: How to apply for VA health care')])}
 {es_card('Vet Centers (centros comunitarios de consejería)', '<p>Consejería individual, de grupo, de pareja y familiar, sin costo, para veteranos y miembros del servicio que califican, incluidos la Guardia Nacional y la Reserva, y sus familias.</p>', f'Vet Center Call Center: {tel("877-927-8387")}, a cualquier hora', [('https://www.vetcenter.va.gov/', 'Vet Centers')], '17 de noviembre de 2026')}
 {es_card('Women Veterans Call Center (línea para veteranas)', '<p>Las veteranas pueden llamar, enviar un mensaje de texto o chatear con una mujer capacitada sobre la atención y los beneficios del VA.</p>', tel('855-829-6636'), [('https://www.womenshealth.va.gov/wvcc.asp', 'VA: Women Veterans Call Center')], '17 de noviembre de 2026')}
 {es_card('Después del trauma sexual militar (MST)', '<p>El VA ofrece tratamiento gratis para afecciones relacionadas con el trauma sexual militar. No necesita haberlo reportado en su momento ni tener una calificación de discapacidad. <a href="../mst.html" hreflang="en">Lea la guía completa</a> (en inglés).</p>', None, [VA_MST])}</section>
 
-<section aria-labelledby="mayores"><h2 id="mayores">Personas mayores y cuidado a largo plazo</h2>
+<section aria-labelledby="mayores"><h2 id="mayores">{icon('building', '../')}Personas mayores y cuidado a largo plazo</h2>
 {es_card('Area Agency on Aging (agencia local para personas mayores)', '<p>Ayuda en casa, comidas, transporte, apoyo para cuidadores y preguntas sobre Medicaid. No hace falta ser veterano.</p>', f'Ohio Department of Aging: {tel("866-243-5678")}', [('https://compass.aging.ohio.gov/find-information?category=caregivers', 'Ohio Aging Compass')])}
 {es_card('Long-Term Care Ombudsman (defensor de residentes de hogares de cuidado)', '<p>Si tiene problemas con el cuidado en un hogar de ancianos, una residencia asistida o con servicios en casa, el ombudsman le ayuda gratis y de forma confidencial.</p>', tel('800-282-1206'), [('https://www.cms.gov/about-cms/contact/directory/department-aging-ohio-elder-rights-unit/1553936', 'CMS: Ohio Department of Aging, Elder Rights Unit')])}</section>
 
-<section aria-labelledby="familias"><h2 id="familias">Familias que perdieron a un ser querido</h2>
+<section aria-labelledby="familias"><h2 id="familias">{icon('heart', '../')}Familias que perdieron a un ser querido</h2>
 {es_card('Familias Gold Star y sobrevivientes', '<p>Apoyo a cualquier hora de TAPS (Tragedy Assistance Program for Survivors), pagos del VA para sobrevivientes (DIC y Survivors Pension), becas como la Fry Scholarship y beneficios de Ohio. <a href="../survivors.html" hreflang="en">Lea la guía completa</a> (en inglés).</p>', f'TAPS: {tel("800-959-8277")}, a cualquier hora · Military OneSource en español: {tel("877-888-0727")}', [TAPS, NAVY])}</section>
 
-<section aria-labelledby="mas"><h2 id="mas">Más en español</h2>
+<section aria-labelledby="mas"><h2 id="mas">{icon('book', '../')}Más en español</h2>
 <p><a href="{va_es[0]}" rel="noopener">Asistencia y recursos del VA en español</a>: formularios, beneficios para sobrevivientes y derechos civiles, del propio VA.</p></section>
 
 <p class="fix">¿Ve algo que deba corregirse, en la traducción o en un dato? <a href="{e(fix)}">Escríbanos</a> a {EMAIL} y lo arreglaremos.</p>
@@ -397,7 +399,9 @@ def add_language_links(index_html):
 
 
 def outputs(discharge_page='bad-paper/liberal-consideration.html'):
-    return {'mst.html': mst_page(discharge_page), 'survivors.html': survivors_page(), 'es/index.html': spanish_page()}
+    # The Spanish page's section headings carry a small symbol each (scripts/visuals.py), so it needs their stylesheet.
+    es = spanish_page().replace('</head>', stylesheet('../') + '</head>', 1)
+    return {'mst.html': mst_page(discharge_page), 'survivors.html': survivors_page(), 'es/index.html': es}
 
 
 def pages():

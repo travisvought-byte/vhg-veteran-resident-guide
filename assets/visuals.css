@@ -1,0 +1,120 @@
+/* Visuals for the Veteran Resource Guide (November 24, 2026): icons, step and decision diagrams, icon grids and small
+   charts. Built by scripts/visuals.py and the page builders; words stay in HTML, drawings carry no meaning by color alone.
+   Colors are the guide's own (navy #183449, green #335947). Lines that join a diagram are at least 3:1 against white. */
+.vi{width:1.25em;height:1.25em;flex:none;vertical-align:-.25em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;overflow:visible}
+.vz{background:#fff;border:1px solid #d9dfda;border-radius:10px;padding:16px 18px;margin:16px 0 20px;max-width:100%;box-sizing:border-box}
+.vz>figcaption{margin:0 0 12px;font-size:17px;line-height:1.4;color:#20313a}.vz>figcaption strong{display:block;font:700 19px/1.3 Georgia,"Times New Roman",serif;color:#183449}
+.vz-note{font-size:15px;line-height:1.45;color:#3d4f48;margin:12px 0 0}
+.vz *,.vz *::before,.vz *::after{box-sizing:border-box}
+
+/* A symbol beside a heading: a reader (What to do next) or a section (the Spanish page). */
+h2>.vi:first-child,h3>.vi:first-child{color:#335947;margin-right:.3em}
+
+/* A symbol on each stage button of the family guide. */
+.stage .vi{display:block;width:28px;height:28px;margin-bottom:4px;color:#335947}
+@media print{.stage .vi{display:none}}
+
+/* Icons beside the items of an existing list. */
+ul.vz-ilist{list-style:none;padding-left:0}.vz-ilist>li{position:relative;padding-left:2.1em}
+.vz-ilist>li>.vi:first-child{position:absolute;left:0;top:.12em;color:#335947}
+
+/* Numbered or lettered steps joined by a line, one under the other. */
+.vz-flow{list-style:none;margin:0;padding:0}
+.vz-flow>li{position:relative;padding:0 0 18px 56px;min-height:46px;line-height:1.45}
+.vz-flow>li:last-child{padding-bottom:0}
+.vz-flow>li::before{content:"";position:absolute;left:21px;top:44px;bottom:2px;border-left:3px solid #6f8078}
+.vz-flow>li:last-child::before{display:none}
+.vz-badge{position:absolute;left:0;top:0;width:44px;height:44px;border-radius:50%;border:2px solid #183449;background:#fff;color:#183449;display:flex;align-items:center;justify-content:center}
+.vz-badge .vi{width:24px;height:24px}
+.vz-flow strong{display:block;color:#183449;font-size:17px}.vz-flow span.vz-more{display:block;font-size:15px;color:#3d4f48}
+.vz-flow .vz-end .vz-badge{border-color:#335947;color:#335947;border-width:3px}
+
+/* Two roads side by side (stacked on phones). */
+.vz-lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.vz-lane{border:1px solid #d9dfda;border-top:4px solid #183449;border-radius:8px;padding:12px 14px 14px}
+.vz-lane+.vz-lane{border-top-color:#335947}
+.vz-lane-title{display:flex;gap:8px;align-items:center;margin:0 0 12px;font-weight:700;font-size:17px;color:#183449}
+.vz-lane-title .vi{width:28px;height:28px}
+.vz-both{margin:14px 0 0;text-align:center;font-weight:700;color:#183449}
+@media(max-width:760px){.vz-lanes{grid-template-columns:minmax(0,1fr)}}
+
+/* Decision diagram: a question, then each answer and where it leads. */
+.vz-qs{list-style:none;margin:0;padding:0}.vz-q+.vz-q{margin-top:16px}
+.vz-ask{display:flex;gap:10px;align-items:flex-start;margin:0;padding:10px 12px;border:2px solid #183449;border-radius:8px;font-weight:700;color:#183449;line-height:1.4}
+.vz-ask .vi{width:26px;height:26px;margin-top:-1px}
+.vz-branches{list-style:none;margin:0 0 0 22px;padding:6px 0 0}
+.vz-branch{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;padding:8px 0 4px 26px}
+.vz-branch::before{content:"";position:absolute;left:0;top:calc(50% + 2px);width:18px;border-top:3px solid #6f8078}
+.vz-branch::after{content:"";position:absolute;left:0;top:-6px;bottom:0;border-left:3px solid #6f8078}
+.vz-branch:last-child::after{bottom:calc(50% - 3px)}
+.vz-ans{display:inline-block;min-width:3.2em;text-align:center;padding:2px 10px;border:2px solid #3d4f48;border-radius:999px;font-weight:700;font-size:15px;color:#20313a;background:#fff}
+.vz-vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+.vz-to{color:#3d4f48}.vz-to .vi{width:22px;height:22px}
+.vz-out{display:inline-flex;gap:8px;align-items:center;padding:6px 12px;border:2px solid #183449;border-radius:8px;font-weight:700;color:#183449;background:#f3f6f8;line-height:1.3}
+.vz-out small{display:block;font-weight:600;font-size:14px;color:#3d4f48}
+.vz-out.vz-alt{border-color:#335947;color:#264a39;background:#eef4f0}
+.vz-next{font-style:italic;color:#3d4f48}
+
+/* Where to turn: a situation, then who to call. */
+.vz-routes{list-style:none;margin:0;padding:0}
+.vz-routes>li{display:grid;grid-template-columns:minmax(0,1fr) 34px minmax(0,1fr);gap:8px;align-items:center;padding:10px 0;border-top:1px solid #d9dfda}
+.vz-routes>li:first-child{border-top:0;padding-top:0}
+.vz-when,.vz-who{display:flex;gap:10px;align-items:center;line-height:1.35}
+.vz-when .vi,.vz-who .vi{width:30px;height:30px;color:#183449}
+.vz-who{padding:8px 10px;border:2px solid #335947;border-radius:8px;font-weight:700;color:#264a39}.vz-who .vi{color:#335947}
+.vz-arrow{color:#3d4f48;text-align:center}.vz-arrow .vi{width:26px;height:26px}
+@media(max-width:600px){.vz-routes>li{grid-template-columns:minmax(0,1fr)}.vz-arrow{transform:rotate(90deg);justify-self:start;margin-left:6px}}
+
+/* A grid of tiles, each an icon over a few words. */
+.vz-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.vz-grid>li{border:1px solid #c3ccc7;border-radius:8px;padding:12px;line-height:1.35;font-size:16px;color:#20313a;background:#fbfaf7}
+.vz-grid>li>.vi:first-child{display:block;width:32px;height:32px;margin-bottom:6px;color:#183449}
+.vz-grid strong{display:block;color:#183449}.vz-grid small{display:block;font-size:14px;color:#3d4f48;margin-top:4px}
+.vz-grid .vz-by{display:flex;gap:6px;align-items:center;margin-top:6px;font-size:14px;color:#264a39;font-weight:600}.vz-grid .vz-by .vi{width:18px;height:18px}
+
+/* From fewer decisions taken away to more (guardianship). */
+.vz-scale-axis{display:flex;justify-content:space-between;gap:12px;margin:0 0 8px;font-size:14px;font-weight:700;color:#3d4f48}
+.vz-scale-axis span:last-child{text-align:right}
+.vz-axis-line{position:relative;height:0;border-top:3px solid #6f8078;margin:0 12px 14px 0}
+.vz-axis-line::after{content:"";position:absolute;right:-12px;top:-9px;border:7px solid transparent;border-left:12px solid #6f8078;border-right:0}
+.vz-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.vz-steps>li{border:2px solid #183449;border-radius:8px;padding:10px 12px;line-height:1.4;font-size:16px}
+.vz-steps>li:nth-child(2){border-color:#335947}.vz-steps>li:nth-child(3){border-color:#7a3a28;border-style:double;border-width:4px}
+.vz-steps .vi{width:28px;height:28px;color:#183449;display:block;margin-bottom:4px}
+.vz-steps strong{display:block;color:#183449}.vz-end-tag{display:none;font-size:13px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:#3d4f48}.vz-steps ul{margin:6px 0 0;padding-left:18px;font-size:15px}.vz-steps li li{margin:3px 0}
+.vz-aside{display:flex;gap:10px;align-items:flex-start;margin:12px 0 0;padding:10px 12px;border:2px dashed #3d4f48;border-radius:8px;font-size:15px;line-height:1.45}
+.vz-aside .vi{width:26px;height:26px;color:#335947;margin-top:2px}
+@media(max-width:700px){.vz-steps{grid-template-columns:minmax(0,1fr)}.vz-scale-axis,.vz-axis-line{display:none}.vz-end-tag{display:block;margin-bottom:4px}}
+
+/* Charts. */
+.vz-span{margin:0 0 6px;font-size:16px;padding:0 0 6px;border-bottom:3px solid #183449;position:relative}
+.vz-span::before,.vz-span::after{content:"";position:absolute;bottom:-9px;height:12px;border-left:3px solid #183449}.vz-span::before{left:0}.vz-span::after{right:0}
+.vz-bar-wrap{margin:10px 0 4px}
+.vz-bar{display:block;width:100%;height:auto;aspect-ratio:600/56}
+.vz-seg-pension{fill:#335947}.vz-hatch-bg{fill:#e6ebe8}.vz-hatch{stroke:#6f8078}.vz-bar-frame{fill:none;stroke:#183449;stroke-width:2}
+.vz-bar-labels{display:grid;gap:0;font-size:15px;font-weight:700;color:#20313a;margin-top:4px}.vz-bar-labels span{padding:0 4px;min-width:0;overflow-wrap:anywhere}
+.vz-bar-labels span+span{text-align:right}
+.vz-legend{list-style:none;margin:10px 0 0;padding:0;font-size:16px}.vz-legend li{display:flex;gap:8px;align-items:center;margin:4px 0;flex-wrap:wrap}
+.vz-key{display:inline-block;width:22px;height:16px;border:2px solid #183449;flex:none}
+.vz-key-pension{background:#335947}.vz-key-counted{background:repeating-linear-gradient(45deg,#6f8078 0 3px,#e6ebe8 3px 8px)}
+.vz-data{margin-top:10px;font-size:15px}.vz-data summary{cursor:pointer;color:#215b76;font-weight:600}
+.vz-data table{border-collapse:collapse;margin-top:6px;width:auto;min-width:0;background:#fff}.vz-data caption{text-align:left;font-weight:700;padding:4px 0}
+.vz-data th,.vz-data td{border:1px solid #d9dfda;padding:4px 10px;text-align:left}.vz-data td{text-align:right}
+
+.vz-cb{list-style:none;margin:0;padding:0}
+.vz-cb>li{display:grid;grid-template-columns:minmax(10em,1.2fr) minmax(0,2fr) 3em;gap:10px;align-items:center;padding:6px 0;border-top:1px solid #e3e8e5}
+.vz-cb>li:first-child{border-top:0}
+.vz-cb a{display:flex;gap:8px;align-items:center;min-height:44px;font-weight:600}.vz-cb .vi{width:24px;height:24px;color:#183449}
+.vz-cb-track{display:block;height:18px;border:1px solid #6f8078;border-radius:3px;background:#f3f5f4}
+.vz-cb-fill{display:block;height:100%;background:#335947;min-width:3px}
+.vz-cb-n{font-weight:700;font-size:19px;color:#183449;text-align:right}
+@media(max-width:520px){.vz-cb>li{grid-template-columns:minmax(0,1fr) 3em}.vz-cb-track{grid-column:1/-1;grid-row:2}}
+
+@media print{.vz{break-inside:avoid;border-color:#999}.vz-data{display:none}.vz-badge,.vz-ans,.vz-out,.vz-who{background:#fff}
+ .vz-key-counted{-webkit-print-color-adjust:exact;print-color-adjust:exact}.vz-cb-fill,.vz-key-pension{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+@media (forced-colors:active){
+ .vz-seg-pension{fill:CanvasText}.vz-hatch-bg{fill:Canvas}.vz-hatch{stroke:CanvasText}.vz-bar-frame{stroke:CanvasText}
+ .vz-bar,.vz-key,.vz-cb-fill{forced-color-adjust:none}
+ .vz-key-pension,.vz-cb-fill{background:CanvasText}.vz-key-counted{background:repeating-linear-gradient(45deg,CanvasText 0 3px,Canvas 3px 8px)}
+ .vz-key{border-color:CanvasText}
+}
