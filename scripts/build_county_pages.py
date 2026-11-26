@@ -10,6 +10,10 @@ Outputs:
   counties/index.html                every state, linking to its county list
   counties/<st>/index.html           every county in one state
   counties/<st>/<county>.html        one county's office, with crisis and housing lines and next steps
+
+Featured local partners (data/local-partners.json) show on their county's page only once their status is
+"featured", which means the nonprofit has agreed to it. "proposed" entries never show. Pages with no featured
+partner are byte-for-byte what they were before partners existed.
 """
 import html
 import json
@@ -74,7 +78,49 @@ STYLE = (':root{--navy:#183449;--green:#335947;--paper:#f5f3ed;--line:#d9dfda;--
          ':focus-visible{outline:3px solid #ca9f48;outline-offset:3px}')
 
 
-def page(title, description, path, crumbs, hero, body, depth):
+PARTNER_STYLE = ('.partner{border-top:4px solid var(--green)}.partner h3{font:700 21px/1.3 Georgia,serif;color:var(--navy);margin:0 0 6px}'
+                 '.partner-label{display:flex;align-items:center;gap:10px}.partner-label svg{flex:none;width:34px;height:34px}'
+                 '.partner .button{margin-top:4px}')
+
+# A decorative symbol: a white star in a green circle. The heading beside it carries the meaning, so it is hidden
+# from screen readers and never takes focus.
+PARTNER_ICON = ('<svg aria-hidden="true" focusable="false" viewBox="0 0 34 34"><circle cx="17" cy="17" r="16" fill="#335947"/>'
+                '<polygon fill="#fff" points="17.0,8.1 19.5,14.2 26.0,14.7 21.0,18.9 22.6,25.3 17.0,21.8 11.4,25.3 '
+                '13.0,18.9 8.0,14.7 14.5,14.2"/></svg>')
+
+PARTNER_KEYS = ('id', 'name', 'state', 'counties', 'status', 'blurb', 'website', 'reviewed_on')
+
+
+def load_partners(root=ROOT):
+    """Featured partners by (state code, county name as in the office file). Proposed ones are left out."""
+    path = root / 'data/local-partners.json'
+    if not path.is_file():
+        return {}
+    found = {}
+    for p in json.loads(path.read_text())['partners']:
+        if p['status'] != 'featured':
+            continue
+        for county in p['counties']:
+            found.setdefault((p['state'].upper(), county.lower()), []).append(p)
+    return found
+
+
+def partner_section(partners, name):
+    many = len(partners) > 1
+    parts = [f'<section aria-labelledby="partner-h"><h2 id="partner-h" class="partner-label">{PARTNER_ICON}'
+             f'Featured local partner{"s" if many else ""}</h2>']
+    for p in partners:
+        parts.append(f'<article class="partner"><h3>{e(p["name"])}</h3><p>{e(p["blurb"])}</p>')
+        if p.get('phone'):
+            parts.append(f'<p>Call {tel(p["phone"])}</p>')
+        parts.append(f'<p><a class="button" href="{e(p["website"])}" rel="noopener">Visit {e(p["name"])}</a></p>'
+                     f'<p class="meta">An independent nonprofit serving {e(name)}, featured here with its agreement. '
+                     f'Veteran Home Guardians does not run it. Checked {when(p["reviewed_on"])}.</p></article>')
+    parts.append('</section>')
+    return ''.join(parts)
+
+
+def page(title, description, path, crumbs, hero, body, depth, style=''):
     up = '../' * depth
     canonical = BASE_URL + path
     trail = ' › '.join(f'<a href="{e(href)}">{e(text)}</a>' if href else e(text) for text, href in crumbs)
@@ -84,7 +130,7 @@ def page(title, description, path, crumbs, hero, body, depth):
             f'<meta property="og:type" content="website"><meta property="og:title" content="{e(title)}">'
             f'<meta property="og:description" content="{e(description)}"><meta property="og:url" content="{e(canonical)}">'
             f'<meta property="og:image" content="{BASE_URL}assets/vhg-logo.png">\n'
-            f'<link rel="icon" href="{up}favicon.ico"><style>{STYLE}</style>'
+            f'<link rel="icon" href="{up}favicon.ico"><style>{STYLE}{style}</style>'
             + (stylesheet(up) if 'class="vi"' in body else '') + '</head>\n'
             f'<body><header><nav aria-label="Breadcrumb" class="small">{trail}</nav>{hero}</header>\n'
             f'<main id="main">{body}</main>\n'
@@ -133,6 +179,7 @@ def guide_link(state, county):
 
 def outputs(root=ROOT):
     states = json.loads((root / 'states/registry.json').read_text())
+    partners = load_partners(root)
     out, urls, state_rows = {}, [], []
     for state in sorted(states, key=lambda s: s['name']):
         code, sname = state['code'].lower(), state['name']
@@ -153,7 +200,9 @@ def outputs(root=ROOT):
             hero = (f'<small>Veteran Resource Guide · {e(sname)}</small><h1>Veterans help in {e(place)}</h1>'
                     f'<p>The veterans service office for {e(name)} helps veterans, survivors and families apply for the benefits '
                     'they have earned, at no charge.</p>')
+            featured = partners.get((state['code'].upper(), r['county'].strip().lower()), [])
             body = (office_card(r, name)
+                    + (partner_section(featured, name) if featured else '')
                     + '<h2>What the office can help with</h2><ul class="vz-ilist">'
                     f'<li>{icon("doc-check", "../../")}Filing a VA disability compensation claim, or an increase, and gathering the records it needs</li>'
                     f'<li>{icon("dollar", "../../")}VA pension, including Aid and Attendance for veterans and survivors who need help with daily care</li>'
@@ -167,7 +216,7 @@ def outputs(root=ROOT):
                     f'<p><a class="button" href="../../{e(guide_link(state, r["county"]))}">Open the {e(sname)} guide for {e(name)}</a></p>'
                     f'<p><a href="./">Every county in {e(sname)}</a></p>')
             crumbs = [('Veteran Resource Guide', '../../'), ('All states', '../'), (sname, './'), (name, None)]
-            out[path] = page(title, desc, path, crumbs, hero, body, 2)
+            out[path] = page(title, desc, path, crumbs, hero, body, 2, PARTNER_STYLE if featured else '')
             urls.append(BASE_URL + path)
             rows.append(f'<li><a href="{e(s)}.html">{e(name)}</a></li>')
         kind = 'parishes' if code == 'la' else 'counties and areas' if code in ('ak', 'va') else 'counties'
