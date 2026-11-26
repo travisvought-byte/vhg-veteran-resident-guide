@@ -48,14 +48,35 @@ HTML by county with "Jump to your county" links. Indiana's page lists licenses c
 The home page's state buttons link to these pages (with the lists loaded, the finder still shows the state
 in place), they are in `sitemap.xml`, and short addresses such as findbingo.org/mi or /FL forward to them
 (`_redirects`). The home page carries WebSite markup naming Veteran Home Guardians as publisher; state
-pages carry breadcrumb markup. There is no Event markup, because the lists hold weekly schedules, not
-dated events.
+pages carry breadcrumb markup. Event markup is on the town pages (below), for weekly games only.
 
 **No counts.** Travis's rule (November 16, 2026): never state how many halls, places, groups or counties
 are listed, anywhere on the site. `tests/findbingo.cjs` checks the state pages and the finder's wording.
 
 Ohio data is not copied into the national page. Ohio searches hand off to https://www.findbingo.org/ohio/
 with the same ZIP code and distance, so Ohio has one source of truth.
+
+## Town pages and Event markup (added November 26, 2026)
+
+Travis's direction (November 26, 2026): lean into Find Bingo, his best site on Google. Search Console showed people
+searching "bingo near me", "bingo tonight", a weekday ("bingo tuesday night near me") and a hall plus its town.
+
+- **Town pages.** Every town outside Ohio with at least three listings (`CITY_MIN`) gets a page such as
+  https://www.findbingo.org/texas/san-antonio/: the ZIP box, the week chart for the town, "day by day" (each weekday,
+  the places with a game and their hours, linking to the listing), every listing in the town, links to the state's
+  other town pages and back to the state. Fewer than three would be a thin page, so those towns stay on the state page.
+  State pages have a "Bingo by town" list. Town pages are in `sitemap.xml` (`indexed_city_pages`), carry breadcrumb
+  markup and follow the no-counts rule. Built by `city_groups`, `_city_page` and `_towns_nav` in `scripts/findbingo_site.py`.
+- **Event markup** (`game_events`) is written only for games that run every week: no schedule note on the listing
+  and no label such as "Some Fridays" or "First Saturday of the month" on the session. It holds only what the list
+  says: the place and its address, the group that runs the game, the weekday and hours (`eventSchedule`). No price,
+  because the lists do not give one. The page never holds a fixed date: `EVENT_DATES_LD` fills `startDate` (and
+  `endDate`) in the browser with the next listed weekday, as local time at the hall, so the date is never stale.
+  Games that run only some weeks get no markup.
+- `tests/findbingo.cjs` checks every town page (sitemap, canonical, title and description limits, no counts, at least
+  three listings, day-by-day list, links, visit counter, the state page's link) and every Event (address, organizer,
+  weekday, no fixed date or price, points at a listing on the page), and runs the date script.
+- Ohio's finder is built from its own records (`scripts/bingo_site.py`) and has no town pages yet.
 
 ## Every page speaks to who lands there (added November 23, 2026)
 

@@ -10,7 +10,7 @@ printed posters and QR codes keep working.
 import json
 import re
 from instant_bingo import instant_page
-from findbingo_site import indexed_state_pages, INFO_PAGES, load_landing, load_events, upcoming_events, events_html, EVENT_CSS
+from findbingo_site import indexed_state_pages, indexed_city_pages, INFO_PAGES, load_landing, load_events, upcoming_events, events_html, EVENT_CSS
 from html import escape
 
 SITE = 'https://www.findbingo.org/ohio'
@@ -295,6 +295,8 @@ def make_bingo_site(root, finder_page):
                                              + f'  <url><loc>{national}/</loc></url>\n'
                                              # One page per state, built by findbingo_site.py.
                                              + ''.join(f'  <url><loc>{national}/{p}</loc></url>\n' for p in indexed_state_pages(root))
+                                             # Town pages (findbingo.org/texas/san-antonio/), for towns with enough listings.
+                                             + ''.join(f'  <url><loc>{national}/{p}</loc></url>\n' for p in indexed_city_pages(root))
                                              # The Privacy and Advertise pages, linked from every footer.
                                              + ''.join(f'  <url><loc>{national}/{p}</loc></url>\n' for p in INFO_PAGES)
                                              + ''.join(f'  <url><loc>{SITE}/{p}</loc></url>\n' for p in ('',) + PAGES)
