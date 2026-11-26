@@ -1,4 +1,4 @@
-// assets/ads-measure.js loads Google's tag only for ad visitors and counts one local-office call per visit.
+// assets/ads-measure.js loads Google's tag on every page so Google Ads can confirm it, and counts one local-office call per ad visit.
 const assert = require('assert');
 const fs = require('fs');
 const vm = require('vm');
@@ -22,8 +22,10 @@ function run(search, stored) {
 }
 
 let page = run('?view=housing');
-assert.strictEqual(page.appended.length, 0, 'ordinary visitors never load Google code');
-assert.strictEqual(page.window.dataLayer, undefined);
+assert.strictEqual(page.appended.length, 1, 'every page loads the Google tag so Google Ads can verify it');
+assert.strictEqual(page.store['vhg-ad-visit'], undefined, 'an ordinary visit is not remembered as an ad visit');
+page.click('tel:+17408332010');
+assert.strictEqual(page.conversions().length, 0, 'ordinary visitors are never counted as conversions');
 
 page = run('?gclid=abc123');
 assert.strictEqual(page.appended.length, 1, 'an ad visitor loads the Google tag');
@@ -46,4 +48,4 @@ const gtmBlock = analytics.slice(analytics.lastIndexOf('GTM-PGHMBBZK') - 600, an
 assert.ok(/location\.hostname === 'guide\.vethomeguard\.org'/.test(gtmBlock), 'Tag Manager loads on the guide only, not on the bingo sites that share this script');
 assert.ok(!/conversion/.test(analytics.replace(/\/\/.*$/gm, '')), 'analytics.js sends no conversions, so calls are never counted twice');
 
-console.log('PASS: Google ad measurement loads only for ad visitors and counts one local office call; Tag Manager stays on the guide.');
+console.log('PASS: the Google tag loads on every guide page; only ad visitors count, once, for a local office call; Tag Manager stays on the guide.');
