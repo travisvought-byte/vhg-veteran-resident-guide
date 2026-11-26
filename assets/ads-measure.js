@@ -1,6 +1,8 @@
 // Google Ad Grants measurement for Veteran Home Guardians (Google Ads account 121-655-5178).
-// Only for visitors who arrived by clicking one of our Google ads: Google adds gclid, gbraid or wbraid
-// to the address, and this tab remembers that for the rest of the visit. Everyone else never loads Google code.
+// The Google tag loads on every page that includes this script, so Google Ads can confirm the tag is installed
+// (Ad Grants requires working conversion tracking). Ad personalization signals are turned off.
+// Conversions are counted only for visitors who arrived by clicking one of our Google ads: Google adds gclid,
+// gbraid or wbraid to the address, and this tab remembers that for the rest of the visit.
 // When an ad visitor taps a local office phone link, Google Ads counts one "call a veterans office" conversion.
 // Nothing about the county, the number or anything typed is sent: only that the conversion happened.
 (function () {
@@ -18,8 +20,6 @@
     if (fromAd) sessionStorage.setItem(KEY, '1');
     remembered = sessionStorage.getItem(KEY) === '1';
   } catch (_) { remembered = fromAd; }
-  if (!remembered) return;
-
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
   window.gtag('js', new Date());
@@ -28,6 +28,7 @@
   script.async = true;
   script.src = 'https://www.googletagmanager.com/gtag/js?id=' + TAG;
   document.head.appendChild(script);
+  if (!remembered) return;
 
   var counted = false;
   document.addEventListener('click', function (event) {
