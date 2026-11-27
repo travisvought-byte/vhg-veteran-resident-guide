@@ -22,6 +22,7 @@ from build_world_lite import outputs as world_lite_outputs
 from build_packets import outputs as packet_outputs
 from build_county_pages import outputs as county_outputs
 from build_va_pages import outputs as va_outputs
+from build_opportunities import outputs as opportunity_outputs
 from build_core_care import (outputs as core_care_outputs, pages as core_care_pages,
                              add_cards as core_care_cards, add_facilities_links)
 from build_bad_paper import outputs as bad_paper_outputs, pages as bad_paper_pages
@@ -148,6 +149,19 @@ def outputs():
     for s in states:
         if s['code'] in va_links:
             result[s['page']] = result[s['page']].replace('<section id="county-start"', va_links[s['code']] + '<section id="county-start"', 1)
+    # Programs, grants, scholarships, events and benefits open to veterans (scripts/build_opportunities.py): a page per
+    # state that has data, local ones first, and a nationwide page. Every state guide links to its own page, or to the
+    # nationwide one until its state is added; every Ohio county office page lists the local programs that serve it.
+    opp_pages, opp_urls, opp_links, opp_county = opportunity_outputs(ROOT)
+    result.update(opp_pages)
+    for s in states:
+        link = opp_links.get(s['code'], opp_links.get('*'))
+        if link:
+            result[s['page']] = result[s['page']].replace('<section id="county-start"', link + '<section id="county-start"', 1)
+    for page, block in opp_county.items():
+        marker = '<section class="notice" aria-labelledby="now">'
+        assert result[page].count(marker) == 1, page
+        result[page] = result[page].replace(marker, block + marker, 1)
     # Other-than-honorable and bad-conduct discharges (templates/bad-paper/); each page carries the visit counter.
     result.update(bad_paper_outputs(result))
     # Each entry page speaks to the person most likely to land on it (data/landing/): the sharing kits to the
@@ -178,6 +192,8 @@ def outputs():
     urls += county_urls
     # VA locations: the by-state list and each state's page.
     urls += va_urls
+    # Veteran programs: the by-state list, each state's page, the nationwide page and one page per program.
+    urls += opp_urls
     # Pages for veterans in nursing homes and their families.
     urls += [BASE_URL + page for page in core_care_pages()]
     # Bad paper: VA options, discharge boards, records and free help for other-than-honorable discharges.

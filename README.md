@@ -50,6 +50,12 @@ The guide now covers all 50 states and the District of Columbia, every one with 
 
 To add or update a starter state, edit `data/starter-states.json`, then run `python3 scripts/make_starter_states.py`, `python3 scripts/make_qr.py` and `python3 scripts/build_public.py`. To upgrade a starter state to a full county edition, remove it from that file and follow [Adding a state](docs/ADDING-A-STATE.md).
 
+## Veteran programs, grants and events
+
+**By state:** https://guide.vethomeguard.org/opportunities/ — programs, grants, scholarships, events, discounts, retreats and state benefits open to veterans and families, one page per state with local ones first: [Ohio](https://guide.vethomeguard.org/opportunities/oh/) (73 of its own plus 148 open nationwide or worth the trip), [Pennsylvania](https://guide.vethomeguard.org/opportunities/pa/), [Michigan](https://guide.vethomeguard.org/opportunities/mi/) and [every state](https://guide.vethomeguard.org/opportunities/us/). Pick a county to put its programs first. Every listing says who can apply, how to apply, the deadline, where and what travel is covered, and how many it serves and the odds only where the program publishes them. Every state guide links to its page; every Ohio county office page lists the programs that serve that county. Leads from public Facebook ads (Meta Ad Library) are listed only after the program's own site is read.
+
+`data/opportunities/*.json`, `scripts/build_opportunities.py` (run by `build_public.py`), `tests/opportunities.py`, `tests/opportunities.cjs`; format, odds rules, the ad pass and the next states are in [docs/OPPORTUNITIES.md](docs/OPPORTUNITIES.md).
+
 ## Veterans in nursing homes and their families
 
 Five pages written to the veteran in a facility, the spouse, the adult children and the facility social worker: [VA pension with Aid and Attendance](https://guide.vethomeguard.org/va-pension-aid-attendance.html), [abuse, neglect and exploitation](https://guide.vethomeguard.org/elder-abuse.html) (Adult Protective Services for all 50 states and D.C.), [guardianship and its alternatives](https://guide.vethomeguard.org/guardianship.html), [hospice and burial](https://guide.vethomeguard.org/end-of-life-burial.html) and [Agent Orange and the PACT Act](https://guide.vethomeguard.org/toxic-exposure.html). Each has a one-page print sheet on the flyers page. Every state page carries a card linking them, with that state's APS line; the facilities page links them too.
