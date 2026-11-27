@@ -409,7 +409,31 @@
         "reviewed_on": "2026-11-17"
       }
     ],
-    "hours_note": "Game days come from each place's own published schedule. Call ahead to confirm."
+    "hours_note": "Game days come from each place's own published schedule. Call ahead to confirm.",
+    "age": {
+      "min": null,
+      "rule": "No state minimum age. A hall may post its own age limit for children in its house rules.",
+      "sources": [
+        {
+          "url": "https://www.legis.iowa.gov/docs/iac/chapter/02-18-2026.481.103.pdf",
+          "label": "Iowa Administrative Code 481—103.5(2), bingo rules",
+          "scope": "Rules set by the licensee, posted near the front of the playing area, may include age restrictions for children to play; the bingo rules set no minimum age for players",
+          "reviewed_on": "2026-11-27"
+        },
+        {
+          "url": "https://www.legis.iowa.gov/docs/code/2026/99B.pdf",
+          "label": "Iowa Code chapter 99B (2026)",
+          "scope": "Social and charitable gambling: the bingo sections set no minimum age; the age of 21 applies to card game tournaments, social games where alcohol is sold and amusement devices",
+          "reviewed_on": "2026-11-27"
+        },
+        {
+          "url": "https://www.legis.iowa.gov/docs/code/725.19.pdf",
+          "label": "Iowa Code 725.19",
+          "scope": "The bar on gambling wagers by people under 21 excepts gambling permitted under chapter 99B, which licenses bingo",
+          "reviewed_on": "2026-11-27"
+        }
+      ]
+    }
   },
   {
     "code": "KS",
@@ -1384,7 +1408,25 @@
         "scope": "Example of a county senior center games page listing free bingo; each listing names its own source",
         "reviewed_on": "2026-11-16"
       }
-    ]
+    ],
+    "age": {
+      "min": null,
+      "rule": "No age in state law: Utah bans gambling, so there is no paid charity bingo. The bingo listed here is free, at senior centers.",
+      "sources": [
+        {
+          "url": "https://le.utah.gov/xcode/ArticleVI/UC_AVI_S27_1800010118000101.html",
+          "label": "Utah Constitution, Article VI, Section 27",
+          "scope": "Games of chance not authorized: the Legislature shall not authorize any game of chance, lottery or gift enterprise under any pretense or for any purpose",
+          "reviewed_on": "2026-11-27"
+        },
+        {
+          "url": "https://le.utah.gov/xcode/Title76/Chapter9/C76-9-S1402_2025050720250507.pdf",
+          "label": "Utah Code 76-9-1402",
+          "scope": "Participating in gambling is a misdemeanor; the section acts as the state’s prohibition of gambling",
+          "reviewed_on": "2026-11-27"
+        }
+      ]
+    }
   },
   {
     "code": "VT",

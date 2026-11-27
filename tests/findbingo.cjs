@@ -830,13 +830,16 @@ assert(buildWith([{...sample[1], slot: 'sidebar'}], []).error, 'only known place
     withAge.forEach((s, i) => {
       assert(LISTED.includes(s.coverage), s.name + ' has games on Find Bingo');
       assert.equal(rows[i].querySelector('th').id, SLUGS[s.code], s.name + ': each row has its own address');
-      assert(rows[i].querySelector('td').textContent.startsWith(s.age.rule) && /^(16|18) and older/.test(s.age.rule), s.name + ': the rule, in plain words');
+      assert(rows[i].querySelector('td').textContent.startsWith(s.age.rule) && (s.age.min === null ? /^No /.test(s.age.rule) : new RegExp(`^${s.age.min} and older`).test(s.age.rule)), s.name + ': the rule, in plain words');
       assert.deepEqual([...rows[i].querySelectorAll('.src a')].map(a => a.getAttribute('href')), s.age.sources.map(x => x.url), s.name + ': every source is linked');
       assert(s.age.sources.every(x => x.url.startsWith('https://') && x.reviewed_on === '2026-11-27' && x.label && x.scope), s.name + ': sources are https and checked November 27, 2026');
     });
     const unconfirmed = states.filter(s => LISTED.includes(s.coverage) && !s.age);
     for (const s of unconfirmed) assert(d.getElementById('unconfirmed').nextElementSibling.textContent.includes(s.name), s.name + ' is named as not yet confirmed');
     assert(!states.some(s => s.age && !LISTED.includes(s.coverage)), 'no age for a state without games here');
+    // Where the state's law sets no age (Iowa leaves it to each hall; Utah allows no paid bingo), the row says so and cites the law.
+    assert.deepEqual(withAge.filter(s => s.age.min === null).map(s => s.code), ['IA', 'UT'], 'Iowa and Utah are the states whose law sets no age');
+    assert(/Iowa sets no state minimum/.test(d.getElementById('faq-title').parentElement.textContent), 'the questions say Iowa sets no minimum');
   }
   // Every state page carries a line for first-timers, with the state's own age when it is confirmed.
   for (const s of states) {
