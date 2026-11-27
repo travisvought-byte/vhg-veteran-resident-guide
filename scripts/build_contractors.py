@@ -434,8 +434,7 @@ def join(reg):
          'any city or county registration, and your general liability insurance certificate. Your profile shows each one with the date we checked it.</p>'),
         ('Your rates, in public',
          '<p>Publish your normal hourly rate, your trip or service fee and what it covers, your after-hours rate, and price ranges for three common jobs. '
-         'They should sit within the <a href="fair-prices.html">fair price ranges</a>. If yours run higher, tell us why, such as specialty work or long rural drives, '
-         'and we’ll say so on your profile.</p>'),
+         'You set your prices, not us. Customers just see them before they call.</p>'),
         ('No surprises',
          '<ul><li>Say your trip, service or diagnostic fee on the first call. Ohio law already requires it.</li>'
          '<li>Phone prices are ranges. The firm price comes in writing after you’ve seen the job.</li>'
