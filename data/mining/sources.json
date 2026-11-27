@@ -1,6 +1,6 @@
 {
  "about": "Discovery sources for the veteran resource guide: where new or updated listings can come from, how each is read, and what it has yielded. The sources behind already-published records are tracked separately and automatically in data/mining/source-ledger.json. Status: active (used in the pipeline), benchmark (counts used to measure coverage, no listings), manual (read by a person or assistant, then recorded as a harvest file), to_verify (named here, not yet opened), needs_owner (would need an account, key or payment, which is the owner's decision), rejected (too old or not official). See docs/MINING.md.",
- "updated_on": "2026-11-23",
+ "updated_on": "2026-11-27",
  "sources": [
   {
    "id": "va-ncvas-state-facility-counts",
@@ -234,6 +234,22 @@
    "status": "rejected",
    "last_checked": "2026-11-23",
    "notes": "Its own description dates the records to 2007, and HIFLD Open is no longer live. Not used."
+  },
+  {
+   "id": "meta-ad-library",
+   "name": "Meta Ad Library (public ads on Facebook and Instagram)",
+   "publisher": "Meta Platforms",
+   "scope": "US",
+   "category": "program",
+   "url": "https://www.facebook.com/ads/library/",
+   "access": "official_page",
+   "fetch": null,
+   "yields": "Active ads matching a search term, with advertiser, headline, text, start date and destination. Opens and searches without signing in; results load by script, so it is read in a browser, not fetched. Every ad is a lead only (evidence E): a program is listed after its own website is read.",
+   "evidence_level": "E",
+   "cadence_days": 30,
+   "status": "manual",
+   "last_checked": "2026-11-27",
+   "notes": "First pass 2026-11-27: 466 ads reviewed across 20 search terms, 42 about veteran programs, 15 of them now listed. Outcomes per ad: data/mining/opportunity-leads/meta-ad-library-2026-11-27.json. See docs/OPPORTUNITIES.md."
   }
  ]
 }
