@@ -10,7 +10,8 @@ printed posters and QR codes keep working.
 import json
 import re
 from instant_bingo import instant_page
-from findbingo_site import indexed_state_pages, indexed_city_pages, INFO_PAGES, load_landing, load_events, upcoming_events, events_html, EVENT_CSS, ohio_towns, _slug
+from findbingo_site import (indexed_state_pages, indexed_city_pages, indexed_day_pages, INFO_PAGES, load_landing, load_events, upcoming_events,
+                            events_html, EVENT_CSS, ohio_towns, ohio_days, _slug, DAY_NAMES, DAY_SLUGS)
 from html import escape
 
 SITE = 'https://www.findbingo.org/ohio'
@@ -281,6 +282,20 @@ def towns_nav(towns):
             + ''.join(f'<li><a href="{_slug(t)}/">{escape(t)}</a></li>' for t in towns) + '</ul></nav>')
 
 
+# Links from the Ohio finder to its day pages (findbingo.org/ohio/monday/), built by findbingo_site.py (owner direction,
+# November 27, 2026). The finder's own "Which day?" filter stays as it is; these are plain links to one page per day,
+# for the days that have one. The class is "weekdays" because the submission form already has a fieldset named "days".
+WEEKDAYS_CSS = TOWNS_CSS.replace('.towns', '.weekdays')
+
+
+def days_nav(days):
+    if not days:
+        return ''
+    return ('<nav class="weekdays" aria-labelledby="days-title"><h2 id="days-title">Bingo by day</h2>'
+            '<p>Each day’s page lists that day’s games with posted times, town by town, earliest first.</p><ul>'
+            + ''.join(f'<li><a href="{DAY_SLUGS[d]}/">{DAY_NAMES[d]}</a></li>' for d in days) + '</ul></nav>')
+
+
 def make_bingo_site(root, finder_page):
     stats = finder_stats(finder_page)
     site = {
@@ -296,8 +311,8 @@ def make_bingo_site(root, finder_page):
         'assets/bingo-qr.svg': (root / 'assets/findbingo-ohio-qr.svg').read_text(),
         'assets/bingo-submit-qr.svg': (root / 'assets/findbingo-ohio-submit-qr.svg').read_text(),
     }
-    site['index.html'] = _replace(_replace(site['index.html'], '</style>', TOWNS_CSS + '</style>', 1),
-                                  '<section class="help-box"', towns_nav(ohio_towns(root)) + '<section class="help-box"', 1)
+    site['index.html'] = _replace(_replace(site['index.html'], '</style>', TOWNS_CSS + WEEKDAYS_CSS + '</style>', 1),
+                                  '<section class="help-box"', days_nav(ohio_days(root)) + towns_nav(ohio_towns(root)) + '<section class="help-box"', 1)
     national = 'https://www.findbingo.org'
     # The Ohio finder is part of findbingo.org, so its footers link the site's Privacy and Advertise pages.
     for name in ('index.html', 'partners.html', 'distributions.html', 'instant.html'):
@@ -312,6 +327,8 @@ def make_bingo_site(root, finder_page):
                                              + ''.join(f'  <url><loc>{national}/{p}</loc></url>\n' for p in indexed_state_pages(root))
                                              # Town pages (findbingo.org/texas/san-antonio/), for towns with enough listings.
                                              + ''.join(f'  <url><loc>{national}/{p}</loc></url>\n' for p in indexed_city_pages(root))
+                                             # Day pages (findbingo.org/texas/monday/, /ohio/monday/), for days with enough games.
+                                             + ''.join(f'  <url><loc>{national}/{p}</loc></url>\n' for p in indexed_day_pages(root))
                                              # The Privacy and Advertise pages, linked from every footer.
                                              + ''.join(f'  <url><loc>{national}/{p}</loc></url>\n' for p in INFO_PAGES)
                                              + ''.join(f'  <url><loc>{SITE}/{p}</loc></url>\n' for p in ('',) + PAGES)

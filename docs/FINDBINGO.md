@@ -106,6 +106,38 @@ Console), so Ohio towns get pages like the other states'.
   listings, each card is a finder record and links to it, the finder's town list, Event markup only for listings with
   posted times).
 
+## Day pages (added November 27, 2026)
+
+Older players search "bingo tonight", "monday night bingo near me" and "bingo on sunday in <state>". Each state gets a page
+per weekday, such as https://www.findbingo.org/texas/monday/ and https://www.findbingo.org/ohio/friday/.
+
+- **Which days.** A state gets a day page when at least three of its listings (`DAY_MIN`) have a game that weekday; fewer
+  would be a thin page. Built by `day_groups`, `ohio_day_groups` and `_day_page` in `scripts/findbingo_site.py`. Outside
+  Ohio the listings are the state lists (`load_venues`); Ohio's come from the Ohio finder's records (`ohio_venues`) and
+  only games with a posted schedule count. Halls known only from Ohio's license list have no game times, so they stay on
+  the town pages and the finder, and the Ohio day pages say so with a link to the finder (`../?all=1`).
+- **What a day page shows.** The heading ("Monday bingo in Ohio"), a ZIP box that opens the finder on that day's games
+  (`day=` in the link; Ohio's searches the Ohio finder), "Bingo by day" links with the current day marked, "Jump to your
+  town" when there are more than four towns, the map, then each town A to Z with its listings earliest start first. The
+  cards are the town pages' cards (`_venue_html`, `_ohio_card` with `pick=`), showing only that day's games; national
+  cards add a line naming the hall's other bingo days, and Ohio cards keep the posted schedule text. A town with its own
+  page links to it. Titles read "Monday bingo in Texas: games, times and places | Find Bingo" (shorter forms when that
+  passes 70 characters). No counts.
+- **Event markup** follows the town pages' rules (`game_events(..., only_day=)`): weekly games with a start time, that
+  weekday only, the next date filled in the browser. A game whose town has a town page points its `url` at the town page,
+  so the same game is one event with one address on both pages.
+- **Links.** Every state page and town page has a "Bingo by day in <state>" row (`_days_nav`) listing only the days with
+  a page. The Ohio finder keeps its own "Which day?" filter and adds a plain "Bingo by day" row of links beside "Bingo by
+  town" (`days_nav` in `scripts/bingo_site.py`; class `weekdays`, because the submission form already has a `days`
+  fieldset). Day pages link back to the state page (or the Ohio finder) and to their town pages. They are in
+  `sitemap.xml` (`indexed_day_pages`). National day pages are written to both copies like the town pages; Ohio's only to
+  `bingo-site/findbingo/ohio/`. Google AdSense loads on them on findbingo.org as on every other page there.
+- `tests/findbingo.cjs` checks that each state has a day page exactly for the weekdays with three or more listings, that
+  each page holds exactly those listings (outside Ohio), the card contents, the town order and start-time order, the day
+  links on state, town and day pages, the ZIP box, the sitemap, no counts, and each Event (that weekday only, no fixed
+  date, pointing at a card on the page), and runs the date script. A town can never take a weekday's address: the
+  builder stops if one would.
+
 ## Every page speaks to who lands there (added November 23, 2026)
 
 Travis's direction: "Every landing page should be specific to who's there looking for it, so that we seem tailored to

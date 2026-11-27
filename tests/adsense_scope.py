@@ -81,10 +81,11 @@ for name, content in built.items():
         if want and content.index(f.ADSENSE_HEAD) > content.index('</head>'):
             failures.append(f'{name}: the AdSense code belongs in <head>')
         pages += want
-for name in ('index.html', 'ohio/index.html', 'ohio/columbus/index.html', 'michigan/index.html', 'texas/san-antonio/index.html', 'halls/index.html'):
+for name in ('index.html', 'ohio/index.html', 'ohio/columbus/index.html', 'ohio/monday/index.html', 'michigan/index.html', 'texas/san-antonio/index.html',
+             'texas/friday/index.html', 'halls/index.html'):
     if f.ADSENSE_HEAD not in built.get('bingo-site/findbingo/' + name, ''):
         failures.append(f'findbingo.org/{name} should load the AdSense code')
-for name in ('findbingo-site/index.html', 'findbingo-site/michigan/index.html', 'bingo-site/index.html', 'bingo.html', 'index.html'):
+for name in ('findbingo-site/index.html', 'findbingo-site/michigan/index.html', 'findbingo-site/texas/friday/index.html', 'bingo-site/index.html', 'bingo.html', 'index.html'):
     if name in built and any(m in built[name] for m in MARKERS):
         failures.append(f'{name} must not carry AdSense (served on a vethomeguard.org host)')
 if built.get('bingo-site/findbingo/ads.txt') != ADS_LINE or [n for n in built if n.endswith('ads.txt')] != ['bingo-site/findbingo/ads.txt']:

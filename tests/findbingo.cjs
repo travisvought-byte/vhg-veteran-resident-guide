@@ -845,6 +845,14 @@ assert(buildWith([{...sample[1], slot: 'sidebar'}], []).error, 'only known place
   assert(home.querySelector('.chooser a[href="shop/"]') && home.querySelector('footer a[href="shop/"]'), 'the home page links the shop');
 }
 
+// Day pages (findbingo.org/texas/monday/) share the state folders with the town pages: a folder named for a weekday is a
+// day page, never a town (the builder refuses a town that would take a weekday's address).
+const WEEKDAY_NAMES = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const DAY_SLUGS = WEEKDAY_NAMES.map(n => n.toLowerCase());
+const DAY_ORDER = [1, 2, 3, 4, 5, 6, 0].map(d => DAY_SLUGS[d]);  // Monday first, as the pages list them
+const dayPagesOf = dir => DAY_ORDER.filter(x => fs.existsSync(path.join(dir, x, 'index.html')));
+const townSlug = t => t.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
 // Town pages (owner direction, November 26, 2026): a town with at least three listings gets its own page, linked
 // from its state page and listed in the sitemap, with its games day by day and Event markup for weekly games.
 {
@@ -853,7 +861,7 @@ assert(buildWith([{...sample[1], slot: 'sidebar'}], []).error, 'only known place
   for (const s of states) {
     const dir = path.join(site, SLUGS[s.code]);
     if (!fs.existsSync(dir)) continue;
-    for (const t of fs.readdirSync(dir)) if (fs.existsSync(path.join(dir, t, 'index.html'))) townDirs.push([s, t]);
+    for (const t of fs.readdirSync(dir)) if (!DAY_SLUGS.includes(t) && fs.existsSync(path.join(dir, t, 'index.html'))) townDirs.push([s, t]);
   }
   assert(townDirs.length >= 20, 'town pages are built');
   const COUNT = /\b\d[\d,]* (bingo )?(halls?|venues?|locations?|places?|counties|groups?|games?|listings?|senior centers?)\b/i;
@@ -878,6 +886,8 @@ assert(buildWith([{...sample[1], slot: 'sidebar'}], []).error, 'only known place
     assert(/gc\.zgo\.at|goatcounter/.test(text), 'visit counter on ' + t);
     const statePage = scratch(fs.readFileSync(path.join(site, SLUGS[s.code], 'index.html'), 'utf8'));
     assert(statePage.querySelector(`nav.towns a[href="${t}/"]`), 'the state page links ' + t);
+    assert.deepEqual([...doc.querySelectorAll('nav.weekdays a')].map(a => a.getAttribute('href')), dayPagesOf(path.join(site, SLUGS[s.code])).map(x => `../${x}/`),
+      'a town page links its state\'s day pages, and only those: ' + t);
     const ld = doc.getElementById('games-ld');
     if (!ld) continue;
     const events = JSON.parse(ld.textContent);
@@ -918,11 +928,16 @@ assert(buildWith([{...sample[1], slot: 'sidebar'}], []).error, 'only known place
   const finderHtml = fs.readFileSync(path.join(ohioDir, 'index.html'), 'utf8');
   const finder = scratch(finderHtml);
   const ids = new Set(JSON.parse(/const BINGO=(\[.*?\]);/s.exec(finderHtml)[1]).map(r => r.id));
-  const towns = fs.readdirSync(ohioDir).filter(t => fs.existsSync(path.join(ohioDir, t, 'index.html')));
+  const towns = fs.readdirSync(ohioDir).filter(t => !DAY_SLUGS.includes(t) && fs.existsSync(path.join(ohioDir, t, 'index.html')));
   assert(towns.length >= 20, 'Ohio town pages are built');
+  const ohioDays = dayPagesOf(ohioDir);
   assert.deepEqual([...finder.querySelectorAll('nav.towns a')].map(a => a.getAttribute('href')).sort(), towns.map(t => t + '/').sort(), 'the Ohio finder links every town page');
   assert(!/\d/.test(finder.querySelector('nav.towns').textContent), 'no counts in the town list');
   assert(!fs.readFileSync(path.join(root, 'bingo.html'), 'utf8').includes('class="towns"'), 'the guide copy of the finder has no town list');
+  // "Bingo by day" on the finder: plain links to the day pages; the finder's own "Which day?" filter stays as it was.
+  assert.deepEqual([...finder.querySelectorAll('nav.weekdays a')].map(a => a.getAttribute('href')), ohioDays.map(x => x + '/'), 'the Ohio finder links every day page');
+  assert(finder.querySelector('select#bingo-day') && finder.querySelector('nav.weekdays').compareDocumentPosition(finder.querySelector('nav.towns')) & 4, 'day links sit beside the town list');
+  assert(!fs.readFileSync(path.join(root, 'bingo.html'), 'utf8').includes('class="weekdays"'), 'the guide copy of the finder has no day links');
   const COUNT = /\b\d[\d,]* (bingo )?(halls?|venues?|locations?|places?|counties|groups?|games?|listings?|senior centers?)\b/i;
   let marked = 0;
   for (const t of towns) {
@@ -953,6 +968,7 @@ assert(buildWith([{...sample[1], slot: 'sidebar'}], []).error, 'only known place
     assert(doc.querySelector('#run-a-game a[href="../#submit-details"]') && doc.querySelector('#run-a-game a[href="https://www.ohiobingo.org/claim.html"]'), 'halls can update or claim a listing: ' + t);
     assert(/Every game is listed free, for every hall\./.test(doc.getElementById('run-a-game').textContent), t);
     for (const a of doc.querySelectorAll('nav.towns a')) assert(towns.includes(a.getAttribute('href').replace(/^\.\.\/|\/$/g, '')), 'links another Ohio town page: ' + a.getAttribute('href'));
+    assert.deepEqual([...doc.querySelectorAll('nav.weekdays a')].map(a => a.getAttribute('href')), ohioDays.map(x => `../${x}/`), 'an Ohio town page links the Ohio day pages: ' + t);
     assert(/gc\.zgo\.at|goatcounter/.test(text), 'visit counter on ' + t);
     const ld = doc.getElementById('games-ld');
     if (!ld) continue;
@@ -968,6 +984,115 @@ assert(buildWith([{...sample[1], slot: 'sidebar'}], []).error, 'only known place
   }
   freeScratch(); await new Promise(r => setImmediate(r));
   assert(marked > 10, 'weekly Ohio games with a posted start time carry Event markup');
+}
+
+// Day pages (owner direction, November 27, 2026): findbingo.org/<state>/<weekday>/ lists every game that runs that weekday in
+// the state, town by town (A to Z), earliest start first, for each weekday with at least three listings. Linked from the
+// state page (for Ohio, the Ohio finder), every town page and the other day pages; in the sitemap; no counts; the same cards
+// as the town pages, showing that day's games; Event markup only for that day's weekly games. Ohio's day pages are built
+// from the Ohio finder's records, list games with a posted schedule, and exist only in bingo-site/findbingo/ohio/.
+{
+  const fbDir = path.join(root, 'bingo-site/findbingo');
+  const sitemapText = fs.readFileSync(path.join(fbDir, 'sitemap.xml'), 'utf8');
+  const COUNT = /\b\d[\d,]* (bingo )?(halls?|venues?|locations?|places?|counties|groups?|games?|listings?|senior centers?)\b/i;
+  const byId = new Map(data.venues.map(v => [v.id, v]));
+  const ohioIds = new Set(JSON.parse(/const BINGO=(\[.*?\]);/s.exec(fs.readFileSync(path.join(fbDir, 'ohio/index.html'), 'utf8'))[1]).map(r => r.id));
+  const firstStart = (v, d) => v.sessions.filter(x => x.day === d && x.start).map(x => x.start).sort()[0] || '99:99';
+  let pages = 0, marked = 0;
+  for (const s of states) {
+    const slug = SLUGS[s.code], ohio = s.code === 'OH', have = dayPagesOf(path.join(fbDir, slug));
+    if (!ohio) {
+      const want = DAY_ORDER.filter(x => data.venues.filter(v => v.state === s.code && v.sessions.some(y => y.day === DAY_SLUGS.indexOf(x))).length >= 3);
+      assert.deepEqual(have, want, s.name + ': a day page for each weekday with at least three listings, and no other');
+      assert.deepEqual(dayPagesOf(path.join(site, slug)), have, s.name + ': findbingo-site has the same day pages');
+    } else {
+      assert(!fs.existsSync(path.join(site, 'ohio')), 'Ohio day pages are not copied into findbingo-site');
+    }
+    if (!have.length) continue;
+    freeScratch(); await new Promise(r => setImmediate(r));
+    const statePage = scratch(fs.readFileSync(path.join(fbDir, slug, 'index.html'), 'utf8'));
+    assert.deepEqual([...statePage.querySelectorAll('nav.weekdays a')].map(a => a.getAttribute('href')), have.map(x => x + '/'), s.name + ': the state page links its day pages');
+    assert(!/\d/.test(statePage.querySelector('nav.weekdays').textContent), s.name + ': no counts in the day links');
+    for (const x of have) {
+      freeScratch(); await new Promise(r => setImmediate(r));
+      pages++;
+      const d = DAY_SLUGS.indexOf(x), day = WEEKDAY_NAMES[d], rel = path.join(slug, x, 'index.html');
+      const raw = fs.readFileSync(path.join(fbDir, rel), 'utf8'), text = unAd(raw);  // findbingo.org's copy loads AdSense once
+      if (!ohio) assert.equal(text, fs.readFileSync(path.join(site, rel), 'utf8'), 'mirror copy of ' + rel);
+      const url = `https://www.findbingo.org/${slug}/${x}/`;
+      assert(sitemapText.includes(`<loc>${url}</loc>`), 'day page in the sitemap: ' + url);
+      const doc = scratch(text);
+      assert.equal(doc.querySelector('link[rel=canonical]').href, url);
+      const title = doc.title, h1 = doc.querySelector('h1').textContent, lead = doc.querySelector('header .lead').textContent;
+      const desc = doc.querySelector('meta[name=description]').content;
+      assert.equal(h1, `${day} bingo in ${s.name}`);
+      assert(title.startsWith(h1) && title.endsWith(' | Find Bingo') && title.length <= 70, title);
+      assert(desc.length <= 165 && desc.startsWith(h1), desc);
+      assert(!COUNT.test(title + desc + h1 + lead), 'no counts in the words written for ' + rel);
+      const plain = doc.body.cloneNode(true);
+      for (const e of plain.querySelectorAll(ohio ? 'script, article' : 'script, article h3, .org, .small, .address')) e.remove();
+      assert(!COUNT.test(plain.textContent), 'no counts on ' + rel);
+      // Every card shows this day's games only, and outside Ohio the page holds exactly the listings with a game that day.
+      const cards = [...doc.querySelectorAll('#listings article')];
+      assert(cards.length >= 3, 'a day page has at least three listings: ' + rel);
+      for (const a of cards) {
+        const lis = [...a.querySelectorAll('ul.sessions li')];
+        assert(lis.length && lis.every(li => li.textContent.startsWith(day)), 'the card shows the day\'s games: ' + a.id);
+        if (ohio) {
+          assert(ohioIds.has(a.id) && a.querySelector(`a[href="../#${a.id}"]`), 'an Ohio finder record, linked to its card on the finder: ' + a.id);
+          assert(!a.querySelector('.badge.muted'), 'Ohio day pages list games with a posted schedule only: ' + a.id);
+        }
+      }
+      if (!ohio) {
+        const want = data.venues.filter(v => v.state === s.code && v.sessions.some(y => y.day === d)).map(v => v.id).sort();
+        assert.deepEqual(cards.map(a => a.id).sort(), want, 'every ' + day + ' listing in ' + s.name + ', once');
+      }
+      // Town by town, A to Z, earliest start first; a town with its own page links to it.
+      const sections = [...doc.querySelectorAll('#listings > section')];
+      const towns = sections.map(sec => sec.querySelector('h2').textContent);
+      for (let i = 1; i < towns.length; i++) assert(towns[i - 1].toLowerCase() <= towns[i].toLowerCase(), 'towns A to Z: ' + towns[i - 1] + ', ' + towns[i]);
+      if (towns.length > 4) assert.deepEqual([...doc.querySelectorAll('nav.jump a')].map(a => a.getAttribute('href')), sections.map(sec => '#' + sec.querySelector('h2').id), 'jump to your town: ' + rel);
+      for (const sec of sections) {
+        const t = sec.querySelector('h2').textContent, page = path.join(fbDir, slug, townSlug(t), 'index.html');
+        assert.equal(!!sec.querySelector(`p.top a[href="../${townSlug(t)}/"]`), fs.existsSync(page) && !DAY_SLUGS.includes(townSlug(t)), 'the town links its own page where it has one: ' + t);
+        if (!ohio) {
+          const starts = [...sec.querySelectorAll('article')].map(a => firstStart(byId.get(a.id), d));
+          assert.deepEqual(starts, [...starts].sort(), 'earliest start first in ' + t + ' on ' + rel);
+        }
+      }
+      assert.deepEqual([...doc.querySelectorAll('nav.weekdays a')].map(a => [a.getAttribute('href'), a.getAttribute('aria-current')]),
+        have.map(y => [`../${y}/`, y === x ? 'page' : null]), 'the day links, with this day marked as the current page: ' + rel);
+      assert(doc.querySelector('header a[href="../"]') && doc.querySelector('header a[href="../../"]') && doc.querySelector('main a[href="../"]'), 'links up to the state and Find Bingo: ' + rel);
+      const form = doc.querySelector('form.zip-box');
+      assert(form.getAttribute('action') === (ohio ? '../' : '../../') && form.querySelector('input[type=hidden][name=day]').value === String(d), 'the ZIP box searches this day: ' + rel);
+      assert(/gc\.zgo\.at|goatcounter/.test(text), 'visit counter on ' + rel);
+      const ld = doc.getElementById('games-ld');
+      if (!ld) continue;
+      for (const e of JSON.parse(ld.textContent)) {
+        marked++;
+        assert.equal(e['@type'], 'Event');
+        assert(e.name && e.location.address.addressRegion === s.code && e.organizer.name, e.name);
+        assert(!e.startDate && !e.offers, 'no fixed date or price is written into the page: ' + e.name);
+        assert.equal(e.eventSchedule.byDay, 'https://schema.org/' + day, 'only this day\'s games carry markup: ' + e.name);
+        const [base, id] = e.url.split('#'), card = doc.getElementById(id);
+        assert(card && card.tagName === 'ARTICLE' && !card.querySelector('.badge.muted'), 'event points at a listing on the page: ' + id);
+        // A game whose town has its own page points there, so it is one event with one address on both pages.
+        const town = card.closest('section').querySelector('h2').textContent, townPage = `https://www.findbingo.org/${slug}/${townSlug(town)}/`;
+        assert.equal(base, fs.existsSync(path.join(fbDir, slug, townSlug(town), 'index.html')) ? townPage : url, 'event address: ' + e.name);
+      }
+    }
+  }
+  freeScratch(); await new Promise(r => setImmediate(r));
+  assert(pages >= 40 && fs.existsSync(path.join(fbDir, 'ohio/monday/index.html')) && fs.existsSync(path.join(fbDir, 'texas/friday/index.html')), 'day pages are built');
+  assert(marked > 100, 'weekly games on day pages carry Event markup');
+  // The date script fills each game's next date on the page's own weekday.
+  const dom = new JSDOM(fs.readFileSync(path.join(site, 'michigan/monday/index.html'), 'utf8'), {runScripts: 'dangerously'});
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  for (const e of JSON.parse(dom.window.document.getElementById('games-ld').textContent)) {
+    const when = new Date(e.startDate.slice(0, 10) + 'T00:00:00');
+    assert(when.getDay() === 1 && when >= today && (when - today) / 864e5 < 7, 'the next Monday: ' + e.startDate);
+  }
+  dom.window.close();
 }
 
 console.log('FindBingo.org checks passed.');
