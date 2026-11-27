@@ -1,0 +1,16 @@
+# GitHub Pages (Jekyll) settings for guide.vethomeguard.org.
+#
+# bingo-site/ is the Find Bingo site (findbingo.org), mirrored to the Ohio-Bingo repository and served by
+# Cloudflare. It carries Google AdSense code and ads.txt. The guide runs Google Ad Grants, which forbids AdSense,
+# so bingo-site/ must never be published on the guide's host. tests/adsense_scope.py checks this file.
+#
+# Jekyll's own default exclusions are listed too, because setting exclude replaces them.
+exclude:
+  - bingo-site
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

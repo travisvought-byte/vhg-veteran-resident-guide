@@ -76,7 +76,35 @@ searching "bingo near me", "bingo tonight", a weekday ("bingo tuesday night near
 - `tests/findbingo.cjs` checks every town page (sitemap, canonical, title and description limits, no counts, at least
   three listings, day-by-day list, links, visit counter, the state page's link) and every Event (address, organizer,
   weekday, no fixed date or price, points at a listing on the page), and runs the date script.
-- Ohio's finder is built from its own records (`scripts/bingo_site.py`) and has no town pages yet.
+
+## Ohio town pages (added November 27, 2026)
+
+Travis's direction (November 27, 2026): Ohio is the core market (findbingo.org/ohio/ is the best page in Search
+Console), so Ohio towns get pages like the other states'.
+
+- **Which towns.** Every Ohio town with at least three bingo listings (`CITY_MIN`) gets a page such as
+  https://www.findbingo.org/ohio/columbus/, inside the Ohio finder's folder (`bingo-site/findbingo/ohio/<town>/`; only
+  that copy has `ohio/`, so `findbingo-site/` has no Ohio town pages). Built by `ohio_venues`, `ohio_town_groups` and
+  `_city_page(..., ohio=True)` in `scripts/findbingo_site.py` from the Ohio finder's own records
+  (`bingo_edition.ohio_records`), with the same layout, Event markup rules and sitemap entries as the other town pages.
+- **What counts as a listing.** Researched games and senior centers with bingo, plus halls on the state's authorized
+  bingo list with weekdays on their license. Halls licensed only for set dates (one-off fundraisers) and senior centers
+  without bingo stay on the Ohio finder. The town comes from the address (the state's report has no town field; spellings
+  in capitals or lower case are merged). The build uses the newest review date as "today", so it gives the same pages
+  on any day.
+- **Times.** A start time is shown only where the posted schedule gives exactly one game time for that day (doors,
+  meals, instant sales and ticket sales are left out). Otherwise the day shows "see the listing for times" and the card
+  has the whole posted schedule. Halls with no posted schedule show the days on their state license, never a time.
+  Event markup is written only for a weekly game with one posted start time, no "some weeks" or monthly pattern, no
+  published end date, and a schedule from the hall or its organizer (not a newspaper or listing site) at a hall with no
+  state licensing notice.
+- **Links.** The Ohio finder has a plain "Bingo by town" list (`towns_nav` in `scripts/bingo_site.py`); each town page
+  links back to the finder (its ZIP box searches the finder), its other towns, and each card's place on the finder
+  (`../#id`). Halls update a listing with the finder's form (`../#submit-details`) or claim it at
+  https://www.ohiobingo.org/claim.html, as on the finder.
+- `tests/findbingo.cjs` checks every Ohio town page (sitemap, canonical, title and description, no counts outside the
+  listings, each card is a finder record and links to it, the finder's town list, Event markup only for listings with
+  posted times).
 
 ## Every page speaks to who lands there (added November 23, 2026)
 
@@ -129,6 +157,29 @@ be bought; ads are labeled and never decide which games are listed or their orde
 - Review every ad before it runs and turn down misleading ones (the Advertise page promises this). Remove an
   ad's entry once it ends; an ad picture removed from the list is not deleted from `findbingo-site/ads/` by the build.
 
+## Google AdSense (added November 27, 2026)
+
+Travis's direction (November 27, 2026): get findbingo.org ready for AdSense, publisher `ca-pub-9220804879239310`.
+
+- **Where.** `adsense()` in `scripts/findbingo_site.py`, run by `scripts/build_public.py` after the other Find Bingo
+  steps, puts Google's Auto ads code in the `<head>` of every page in `bingo-site/findbingo/` (the copy Cloudflare
+  serves at findbingo.org) except page not found, the print-only Ohio poster, and the privacy, terms and about pages.
+  It asks for non-personalized ads before the code loads, as Mobility Talk does. No visible ad slot is added; Google
+  places Auto ads. `bingo-site/findbingo/ads.txt` holds the one line
+  `google.com, pub-9220804879239310, DIRECT, f08c47fec0942fa0` and is served at https://findbingo.org/ads.txt and
+  https://www.findbingo.org/ads.txt.
+- **Never on the guide (HARD RULE).** guide.vethomeguard.org runs Google Ad Grants, which forbids AdSense. So the code
+  and ads.txt are never in `findbingo-site/` (served at guide.vethomeguard.org/findbingo-site/) or anywhere else the
+  guide publishes, and `_config.yml` keeps `bingo-site/` out of the guide's GitHub Pages build. `tests/adsense_scope.py`
+  (run in CI) fails if the code or an ads.txt appears anywhere else in the repository or the build, or if `_config.yml`
+  stops excluding `bingo-site`.
+- The Ohio-Bingo repository also serves its own root at the retired bingo.vethomeguard.org (forwarding pages), and
+  GitHub Pages there can serve the mirrored `findbingo/` folder too. AdSense serves ads only on sites approved in the
+  AdSense account, so add only findbingo.org there.
+- The privacy page says Google AdSense may show ads and set cookies, and that we ask for non-personalized ads. In the
+  AdSense account: add findbingo.org, turn on Auto ads with ad labels, and keep ads out of the listings if Auto ads
+  places them there (the Advertise page says ads we sell sit apart from the listings).
+
 ## Help for halls, state by state (added November 20, 2026)
 
 Travis's direction: the people who run bingo are the ones who need information and advertising, and the
@@ -150,7 +201,11 @@ pitch has to match each state's own rules on bingo money.
   has `halls`, shows "What [state] law says about your bingo money" (`#money-rule`), any ad rule (`#ad-rule`),
   the sources and a "not legal advice" line, and the offer that fits the rule. A state without `halls` makes no
   claim about its rules.
-- **https://www.findbingo.org/halls/** (`halls_page` in the generator): what we offer every hall, the three ways
+- **https://www.findbingo.org/halls/** (`halls_page` in the generator): "How Find Bingo works for your hall" first
+  (`HALL_HOW`, owner direction November 27, 2026, in Travis's words: every game is listed free, for every hall; halls can
+  update or claim their listing; a hall can become a community partner by naming Veteran Home Guardians in Ohio, or the
+  local partner on its state's page, as a charitable recipient of part of its bingo proceeds; halls that would rather pay
+  can ask about a game website, a featured event or advertising help; no prices, no partner benefits), then the three ways
   states treat bingo money, every checked state's rules with sources, links to every other state's
   `#run-a-game`, and a line for suppliers and distributors. Linked from every footer (the Ohio finder's too) and
   in the sitemap.

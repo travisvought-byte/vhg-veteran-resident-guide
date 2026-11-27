@@ -350,7 +350,7 @@ Lists updated {_date_label(generated_on)}.
     pages['terms/index.html'] = _info_page('terms', *TERMS, style, analytics, generated_on)
     pages['advertise/index.html'] = _info_page('advertise', *ADVERTISE, style, analytics, generated_on)
     pages['learn/index.html'] = _info_page('learn', *LEARN, style.replace('</style>', LEARN_CSS + '</style>'), analytics, generated_on)
-    pages['halls/index.html'] = _info_page('halls', *halls_page(states), style, analytics, generated_on)
+    pages['halls/index.html'] = _info_page('halls', *halls_page(states), style.replace('</style>', HALL_CSS + '</style>'), analytics, generated_on)
     pages['shop/index.html'] = _info_page('shop', *shop_page(load_shop(root)), style.replace('</style>', SHOP_CSS + '</style>'), analytics, generated_on)
     # Ad pictures are served beside the pages, in ads/.
     pages.update({'ads/' + a['image'].rsplit('/', 1)[1]: (root / a['image']).read_bytes() for a in ads if a.get('image')})
@@ -588,6 +588,41 @@ def _partner_panel(s):
             f'<a href="#money-rule">what {name} law says about bingo money</a>.</p></section>')
 
 
+# How Find Bingo works for halls, in Travis's words of his model (owner direction, November 27, 2026): every game is
+# listed free; halls can update or claim their listing; a hall can become a community partner by naming Veteran Home
+# Guardians (in Ohio) or its state's local partner as a charitable recipient of part of its bingo proceeds; and halls
+# that would rather pay can ask for paid help. No prices here (they live on the Advertise page), no partner benefits,
+# and no partner that is not already named on the site. The icons are decoration beside words.
+def _hall_icon(path):
+    return f'<span class="hall-ic" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">{path}</svg></span>'
+
+
+HALL_HOW = (
+    '<section class="hall-how" aria-labelledby="how-title"><h2 id="how-title">How Find Bingo works for your hall</h2><ul class="hall-steps">'
+    '<li>' + _hall_icon('<path d="M4 12.5 9.5 18 20 6.5"/>')
+    + '<div><h3>Every game is listed free</h3><p>We list every bingo game we know of, for every hall, free. No hall can pay for a better listing.</p></div></li>'
+    '<li>' + _hall_icon('<path d="M4 20h4L19 9l-4-4L4 16z"/><path d="m13.5 6.5 4 4"/>')
+    + '<div><h3>Update or claim your listing</h3><p>Send us new game days, start times or a phone number for players, or claim your listing so players always see your latest details.</p>'
+    '<p class="hall-links"><a href="' + escape(_mailto('Update our bingo listing', 'Hall or group name:\nState and town:\nGame days and first game time:\nPhone for players:\nWebsite or Facebook page:\n'))
+    + '">Email us an update</a> · <a href="../ohio/#submit-details">Update an Ohio listing</a> · '
+    '<a href="https://www.ohiobingo.org/claim.html" target="_blank" rel="noopener noreferrer">Claim an Ohio listing ↗</a></p></div></li>'
+    '<li>' + _hall_icon('<path d="M12 20s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 7.6 4.2 4.2 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/>')
+    + '<div><h3>Become a community partner</h3><p>In Ohio, name Veteran Home Guardians as a charitable recipient of part of your bingo proceeds. '
+    'Outside Ohio, name the local partner shown on your state’s page.</p>'
+    '<p class="hall-links"><a href="../ohio/partners.html#sponsors">Partnering in Ohio</a> · <a href="#partners">Local partners in other states</a></p></div></li>'
+    '<li>' + _hall_icon('<path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/>')
+    + '<div><h3>Paid help, if you prefer</h3><p>Would your hall rather pay for help? Ask us about a game website built for your hall and kept current, '
+    'a featured event in local results, or help with advertising.</p><p class="hall-links"><a href="../advertise/">See the paid options</a></p></div></li></ul>'
+    '<div class="big-actions"><a class="solid" href="'
+    + escape(_mailto('Help for our bingo hall', 'Hall or group name:\nState and town:\nWhat would help most:\nBest way to reach us:\n'))
+    + '">Talk with us about your hall</a></div></section>')
+HALL_CSS = ('.hall-steps{list-style:none;padding:0;margin:14px 0;display:grid;gap:14px}'
+            '.hall-steps li{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px}'
+            '.hall-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:var(--green);color:#fff}'
+            '.hall-ic svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}'
+            '.hall-steps h3{margin:2px 0 4px;font-size:21px;color:var(--head)}.hall-steps p{margin:4px 0}.hall-links{font-size:17px}')
+
+
 def halls_page(states):
     """findbingo.org/halls/: the page for the people who run bingo (owner direction, November 20, 2026)."""
     checked = [s for s in states if s.get('halls')]
@@ -620,10 +655,7 @@ def halls_page(states):
         return escape(', '.join(names[:-1]) + ' and ' + names[-1] if len(names) > 1 else names[0])
     body = ('<p>Players come here to find a game. Halls and the groups that run them come here to be found. Every listing is free, and '
             'the help below is shaped to what your state allows.</p>'
-            '<h2>What we offer every hall</h2>' + _hall_offers('../')
-            + '<div class="big-actions"><a class="solid" href="'
-            + escape(_mailto('Help for our bingo hall', 'Hall or group name:\nState and town:\nWhat would help most:\nBest way to reach us:\n'))
-            + '">Talk with us about your hall</a></div>'
+            + HALL_HOW +
             '<h2>Partnering with a charity, where your state’s rules allow</h2>'
             '<p>States treat bingo money in three different ways, and we only ask for what fits:</p>'
             '<ul><li><strong>The law requires some groups to give to an outside charity</strong> (' + named('must_give') + '). '
@@ -1479,7 +1511,7 @@ def _ad_html(ads, up):
 
 
 # ---- Privacy and Advertise pages ---------------------------------------------------------------------
-POLICY_DATE = 'November 21, 2026'
+POLICY_DATE = 'November 27, 2026'
 TERMS_DATE = 'November 22, 2026'
 
 
@@ -1671,6 +1703,7 @@ PRIVACY = (
     '<li>We count visits without cookies and without keeping personal information.</li>'
     '<li>Your ZIP code search is worked out on your own phone or computer.</li>'
     '<li>The map pictures come from OpenStreetMap, which sees your internet address and the area on the map.</li>'
+    '<li>Google AdSense may show ads here and set cookies.</li>'
     '<li>We do not sell personal information.</li></ul>'
     '<h2>Counting visits</h2>'
     '<p>We use ' + _ext('https://www.goatcounter.com/help/privacy', 'GoatCounter') + ' to count page views, so we know which pages people use. '
@@ -1694,12 +1727,14 @@ PRIVACY = (
     'Read ' + _ext('https://www.cloudflare.com/privacypolicy/', 'Cloudflare’s privacy policy') + ' and '
     + _ext('https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement', 'GitHub’s privacy statement') + '.</p>'
     '<h2>Advertising</h2>'
-    '<p>This site may show ads. Every ad is labeled “Advertisement” and kept apart from the game listings. '
-    'If we use an ad network such as Google AdSense, it and its partners may use cookies to show ads based on your visits to this and other sites. '
-    'You can turn off personalized ads at ' + _ext('https://adssettings.google.com', 'adssettings.google.com')
-    + ' and learn more at ' + _ext('https://policies.google.com/technologies/ads', 'policies.google.com/technologies/ads')
-    + ', or opt out of many networks at ' + _ext('https://optout.aboutads.info', 'optout.aboutads.info') + '.</p>'
-    '<p>Ads never change which games are listed or their order. <a href="../advertise/">About advertising on Find Bingo</a></p>'
+    '<p>Find Bingo uses Google AdSense, so Google may show ads on this site and set cookies. We ask Google for non-personalized ads, '
+    'which are chosen from the page you are on and your general location, not from your visits to other sites. Google’s ad code can still '
+    'set its own cookies, for example to limit how often you see the same ad and to stop fraud.</p>'
+    '<p>You can manage Google’s ad settings at ' + _ext('https://adssettings.google.com', 'adssettings.google.com')
+    + ', read how Google uses information from sites that show its ads at ' + _ext('https://policies.google.com/technologies/ads', 'policies.google.com/technologies/ads')
+    + ', or opt out of many ad networks at ' + _ext('https://optout.aboutads.info', 'optout.aboutads.info') + '.</p>'
+    '<p>Ads are kept apart from the game listings, and they never change which games are listed or their order. '
+    '<a href="../advertise/">About advertising on Find Bingo</a></p>'
     '<h2>Email, calls and directions</h2>'
     '<p>If you email us game times or a correction, we get your email address and what you write. We use it to update the listings and to reply, '
     'and we never sell or share it. The call, phone lookup and directions buttons open your phone or Google Maps, which follow their own privacy rules.</p>'
@@ -1840,11 +1875,11 @@ ADVERTISE = (
     '<li><strong>Advertising.</strong> Free tips on getting the word out, or paid advertising if you want more.</li></ul>'
     '<p>Every hall is different, so let’s talk.</p>'
     '<h2>Ground rules</h2>'
-    '<ul><li>Every ad is labeled “Advertisement.” Every featured event is labeled “Featured event.”</li>'
-    '<li>Ads sit apart from the game listings: on the home page below the search results, and on state pages after the listings. Never inside them. '
+    '<ul><li>Every ad we sell is labeled “Advertisement.” Every featured event is labeled “Featured event.” Ads from Google AdSense carry Google’s own ad label.</li>'
+    '<li>Ads we sell sit apart from the game listings: on the home page below the search results, and on state pages after the listings. Never inside them. '
     'Featured events sit in their own box above the results, never inside them.</li>'
     '<li>Ads never add, remove, change or reorder listings. A hall cannot pay for a better listing, and every listing stays free.</li>'
-    '<li>We review every ad before it runs, and we turn down ads that are misleading.</li></ul>'
+    '<li>We review every ad we sell before it runs, and we turn down ads that are misleading. Google reviews its ads under its own policies.</li></ul>'
     '<h2>Where the money goes</h2>'
     '<p>Ad income supports <a href="https://www.vethomeguard.org/">Veteran Home Guardians</a>, the Ohio nonprofit that runs Find Bingo '
     'and visits veterans in nursing homes.</p>'
@@ -1966,3 +2001,34 @@ def shop_page(shop):
             'Bingo gear and gifts',
             'Looking for a new dauber, a bag that holds it all, or a gift for the bingo lover in your life? These are the things players rate best.',
             body)
+
+
+# ---- Google AdSense, on findbingo.org only (owner direction, November 27, 2026) ------------------------------
+# HARD RULE: guide.vethomeguard.org runs Google Ad Grants, which forbids AdSense, so Google's ad code and ads.txt go
+# only into bingo-site/findbingo/, which the Ohio-Bingo repository mirrors and Cloudflare serves at findbingo.org (and
+# www.findbingo.org). findbingo-site/ is served on the guide's host (guide.vethomeguard.org/findbingo-site/, the
+# finder's data source) and never carries either; _config.yml keeps bingo-site/ out of the guide's GitHub Pages build.
+# tests/adsense_scope.py enforces both. Auto ads: the code sits in <head> and Google places the ads; non-personalized
+# ads are asked for before the code loads, as on Mobility Talk. No visible ad slot is added here.
+ADSENSE_CLIENT = 'ca-pub-9220804879239310'
+ADSENSE_HEAD = (f'<meta name="google-adsense-account" content="{ADSENSE_CLIENT}">'
+                '<script>(window.adsbygoogle=window.adsbygoogle||[]).requestNonPersonalizedAds=1;</script>'
+                f'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={ADSENSE_CLIENT}" crossorigin="anonymous"></script>')
+ADS_TXT = 'google.com, pub-9220804879239310, DIRECT, f08c47fec0942fa0\n'
+ADSENSE_BASE = 'bingo-site/findbingo/'
+# Pages that never load the ad code: page not found, the print-only poster, and the privacy, terms and about pages.
+NO_ADSENSE = ('404.html', 'ohio/poster.html', 'privacy/index.html', 'terms/index.html', 'about/index.html')
+
+
+def adsense(result):
+    """ads.txt at the findbingo.org root and the AdSense code in the head of findbingo.org's pages (bingo-site/findbingo/)."""
+    out = {ADSENSE_BASE + 'ads.txt': ADS_TXT}
+    for name, text in result.items():
+        rel = name[len(ADSENSE_BASE):]
+        if (not name.startswith(ADSENSE_BASE) or not name.endswith('.html') or not isinstance(text, str) or rel in NO_ADSENSE
+                or rel.startswith('google') or '</head>' not in text):
+            continue
+        assert ADSENSE_CLIENT not in text and text.count('</head>') == 1, name
+        out[name] = text.replace('</head>', ADSENSE_HEAD + '</head>', 1)
+    assert not any(n.startswith('findbingo-site/') for n in out)
+    return out

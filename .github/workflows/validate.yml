@@ -31,6 +31,8 @@ jobs:
           node tests/facilities.cjs
       - name: Check public data and sharing files
         run: python3 scripts/validate_public.py
+      - name: Keep Google AdSense on findbingo.org only (never on the guide, which runs Ad Grants)
+        run: python3 tests/adsense_scope.py
       - name: Check country pages for veterans outside the U.S.
         run: python3 tests/world.py
       - name: Check the text-only, low-data country pages

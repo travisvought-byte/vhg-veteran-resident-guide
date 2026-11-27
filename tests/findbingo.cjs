@@ -2,12 +2,22 @@
 const assert = require('assert'), fs = require('fs'), path = require('path');
 const {JSDOM} = require('jsdom');
 const root = path.resolve(__dirname, '..'), site = path.join(root, 'findbingo-site');
+// Google AdSense (owner direction, November 27, 2026) is only in findbingo.org's copy (bingo-site/findbingo/), never in
+// findbingo-site/, which the guide's host serves. Comparing the two copies leaves out that one head snippet.
+const AD_HEAD = '<meta name="google-adsense-account" content="ca-pub-9220804879239310"><script>(window.adsbygoogle=window.adsbygoogle||[]).requestNonPersonalizedAds=1;</script>'
+  + '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9220804879239310" crossorigin="anonymous"></script>';
+function unAd(text, want = true) {
+  assert.equal(text.split(AD_HEAD).length - 1, want ? 1 : 0, want ? 'findbingo.org pages load the AdSense code once' : 'no AdSense code on this page');
+  return text.replace(AD_HEAD, '');
+}
 const html = fs.readFileSync(path.join(site, 'index.html'), 'utf8');
 const data = JSON.parse(fs.readFileSync(path.join(site, 'data.json'), 'utf8'));
 const zips = JSON.parse(fs.readFileSync(path.join(site, 'zips.json'), 'utf8'));
 const states = JSON.parse(fs.readFileSync(path.join(root, 'data/public/bingo-states.json'), 'utf8'));
 for (const f of ['index.html', 'data.json', 'zips.json'])  // the Ohio-Bingo mirror carries the same files for Cloudflare Pages
-  assert.equal(fs.readFileSync(path.join(root, 'bingo-site/findbingo', f), 'utf8'), fs.readFileSync(path.join(site, f), 'utf8'), 'bingo-site/findbingo/' + f);
+  assert.equal(f.endsWith('.html') ? unAd(fs.readFileSync(path.join(root, 'bingo-site/findbingo', f), 'utf8')) : fs.readFileSync(path.join(root, 'bingo-site/findbingo', f), 'utf8'),
+    fs.readFileSync(path.join(site, f), 'utf8'), 'bingo-site/findbingo/' + f);
+assert(!html.includes('adsbygoogle') && !html.includes('google-adsense-account'), 'findbingo-site/ (served on the guide) never carries AdSense');
 // The Ohio finder is the folder ohio/ on the same site; other spellings forward to it.
 assert(fs.existsSync(path.join(root, 'bingo-site/findbingo/ohio/index.html')), 'Ohio finder is served at findbingo.org/ohio/');
 const redirects = fs.readFileSync(path.join(root, 'bingo-site/findbingo/_redirects'), 'utf8').trim().split('\n').map(l => l.split(' '));
@@ -448,7 +458,7 @@ for (const s of states) {
   assert.equal(home.querySelector(`#state-buttons a[data-state="${s.code}"]`).getAttribute('href'), slug + '/', 'state buttons link to the state page');
   assert.equal(sitemap.includes(`<loc>https://www.findbingo.org/${slug}/</loc>`), s.coverage !== 'pending', slug + ' is in the sitemap once it has content');
   if (s.code === 'OH') continue;  // Ohio's page is the Ohio Bingo Finder
-  const file = path.join(root, 'bingo-site/findbingo', slug, 'index.html'), text = fs.readFileSync(file, 'utf8');
+  const file = path.join(root, 'bingo-site/findbingo', slug, 'index.html'), text = unAd(fs.readFileSync(file, 'utf8'));
   assert.equal(text, fs.readFileSync(path.join(site, slug, 'index.html'), 'utf8'), slug + ' copies match');
   const d = scratch(text);
   assert.equal(d.querySelector('link[rel=canonical]').href, `https://www.findbingo.org/${slug}/`);
@@ -506,16 +516,17 @@ assert(ky.querySelector('#about a[href="https://dcg.ky.gov/"]'));
 // Privacy and Advertise pages (November 19, 2026): one each, linked from every footer and in the sitemap.
 const findbingo = path.join(root, 'bingo-site/findbingo');
 for (const f of ['privacy/index.html', 'advertise/index.html'])
-  assert.equal(fs.readFileSync(path.join(findbingo, f), 'utf8'), fs.readFileSync(path.join(site, f), 'utf8'), f + ' copies match');
+  assert.equal(unAd(fs.readFileSync(path.join(findbingo, f), 'utf8'), f === 'advertise/index.html'), fs.readFileSync(path.join(site, f), 'utf8'), f + ' copies match');
 const privacy = new JSDOM(fs.readFileSync(path.join(site, 'privacy/index.html'), 'utf8')).window.document;
 assert.equal(privacy.querySelector('link[rel=canonical]').href, 'https://www.findbingo.org/privacy/');
 assert.equal(privacy.querySelector('h1').textContent, 'Privacy');
 const privacyText = privacy.querySelector('main').textContent;
-for (const words of ['November 21, 2026', 'GoatCounter does not use cookies', 'It does not store the IP address', 'on your own device',
-  'The ZIP code is not sent to us or to anyone else to look it up', 'Cloudflare', 'GitHub', 'This site may show ads. Every ad is labeled “Advertisement” and kept apart from the game listings.',
+for (const words of ['November 27, 2026', 'GoatCounter does not use cookies', 'It does not store the IP address', 'on your own device',
+  'The ZIP code is not sent to us or to anyone else to look it up', 'Cloudflare', 'GitHub', 'Google AdSense may show ads here and set cookies.',
+  'Find Bingo uses Google AdSense, so Google may show ads on this site and set cookies.', 'We ask Google for non-personalized ads',
+  'Ads are kept apart from the game listings, and they never change which games are listed or their order.',
   'We do not sell personal information', 'not directed to children under 13'])
   assert(privacyText.includes(words), 'privacy page says: ' + words);
-assert(!/ads (are|run) (now|on this site)/i.test(privacyText), 'the privacy page does not claim ads are running');
 for (const href of ['https://adssettings.google.com', 'https://policies.google.com/technologies/ads', 'https://optout.aboutads.info',
   'https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement', '../advertise/'])
   assert(privacy.querySelector(`main a[href="${href}"]`), 'privacy page links ' + href);
@@ -528,8 +539,8 @@ assert(privacy.querySelector('main a[href="https://osmfoundation.org/wiki/Privac
 assert(!/fetch\([^)]*zip=/i.test(html) && /getJSON\(/.test(html), 'no ZIP code is sent to a lookup service');
 const advertise = new JSDOM(fs.readFileSync(path.join(site, 'advertise/index.html'), 'utf8')).window.document;
 const advertiseText = advertise.querySelector('main').textContent;
-for (const words of ['Every ad is labeled “Advertisement.”', 'Never inside them', 'Ads never add, remove, change or reorder listings',
-  'We review every ad before it runs', 'misleading', 'Ad income supports Veteran Home Guardians'])
+for (const words of ['Every ad we sell is labeled “Advertisement.”', 'Ads from Google AdSense carry Google’s own ad label.', 'Never inside them', 'Ads never add, remove, change or reorder listings',
+  'We review every ad we sell before it runs', 'misleading', 'Ad income supports Veteran Home Guardians'])
   assert(advertiseText.includes(words), 'advertise page says: ' + words);
 // Prices on the page: the featured event's $100 and the hall game site's $100 a month (owner direction, November 20, 2026); ads have no listed price.
 assert.deepEqual(advertiseText.match(/\$\s?\d[\d,]*/g), ['$100', '$100', '$100', '$100'], 'only the featured event and hall site prices');
@@ -539,7 +550,7 @@ assert(advertise.querySelector('main a[href^="mailto:travis@vethomeguard.org?sub
 assert(sitemap.includes('<loc>https://www.findbingo.org/privacy/</loc>') && sitemap.includes('<loc>https://www.findbingo.org/advertise/</loc>'));
 // About and contact, and Terms of use (November 22, 2026): what an ad network's reviewers look for.
 for (const f of ['about/index.html', 'terms/index.html'])
-  assert.equal(fs.readFileSync(path.join(findbingo, f), 'utf8'), fs.readFileSync(path.join(site, f), 'utf8'), f + ' copies match');
+  assert.equal(unAd(fs.readFileSync(path.join(findbingo, f), 'utf8'), false), fs.readFileSync(path.join(site, f), 'utf8'), f + ' copies match');
 const aboutDoc = new JSDOM(fs.readFileSync(path.join(site, 'about/index.html'), 'utf8')).window.document;
 assert.equal(aboutDoc.querySelector('link[rel=canonical]').href, 'https://www.findbingo.org/about/');
 assert(aboutDoc.getElementById('contact') && aboutDoc.querySelector('main a[href^="mailto:travis@vethomeguard.org"]'), 'About names a contact address');
@@ -556,6 +567,26 @@ const hallsText = hallsDoc.querySelector('main').textContent;
 assert(sitemap.includes('<loc>https://www.findbingo.org/halls/</loc>'), 'halls page is in the sitemap');
 for (const s of states.filter(x => x.halls)) assert(hallsDoc.getElementById('rules-' + s.code.toLowerCase()), 'halls page summarizes ' + s.name);
 assert(hallsText.includes('not legal advice') && hallsText.includes('Bingo suppliers and distributors'));
+// How Find Bingo works for halls, in Travis's words of his model (November 27, 2026): free listings, update or claim,
+// community partner, paid help. Plain words beside decorative icons; no prices and no counts.
+{
+  const how = hallsDoc.querySelector('section.hall-how');
+  assert(how && how === hallsDoc.querySelector('main section'), 'the model comes first on the halls page');
+  assert.deepEqual([...how.querySelectorAll('.hall-steps h3')].map(h => h.textContent),
+    ['Every game is listed free', 'Update or claim your listing', 'Become a community partner', 'Paid help, if you prefer']);
+  const howText = how.textContent;
+  for (const words of ['for every hall, free', 'claim your listing', 'name Veteran Home Guardians as a charitable recipient of part of your bingo proceeds',
+    'name the local partner shown on your state’s page', 'a game website built for your hall and kept current', 'a featured event in local results', 'help with advertising'])
+    assert(howText.includes(words), 'halls page says: ' + words);
+  assert(!/\$|\d/.test(howText), 'no prices or numbers in the model');
+  for (const icon of how.querySelectorAll('.hall-ic')) {
+    assert.equal(icon.getAttribute('aria-hidden'), 'true', 'hall icons are decoration');
+    assert(icon.nextElementSibling.querySelector('h3').textContent.trim(), 'every icon sits beside words');
+  }
+  for (const href of ['../ohio/#submit-details', 'https://www.ohiobingo.org/claim.html', '../ohio/partners.html#sponsors', '#partners', '../advertise/'])
+    assert(how.querySelector(`a[href="${href}"]`), 'the model links ' + href);
+  assert(how.querySelector('a[href^="mailto:travis@vethomeguard.org?subject=Update%20our%20bingo%20listing"]') && how.querySelector('a.solid[href^="mailto:travis@vethomeguard.org"]'), 'halls reach us at the existing address');
+}
 assert(!hallsText.includes('$' + 100) && !kyDocText().includes('$' + 100), 'our prices live on the Advertise page; dollar figures elsewhere are legal limits');
 function kyDocText() { return ky.getElementById('run-a-game').textContent; }
 const kyRun = kyDocText();
@@ -792,7 +823,7 @@ assert(buildWith([{...sample[1], slot: 'sidebar'}], []).error, 'only known place
 // ratings or donation-for-purchase wording, sponsored marking once tagged, and in every footer and the sitemap.
 {
   const shopHtml = fs.readFileSync(path.join(site, 'shop/index.html'), 'utf8');
-  assert.equal(shopHtml, fs.readFileSync(path.join(root, 'bingo-site/findbingo/shop/index.html'), 'utf8'), 'shop copies match');
+  assert.equal(shopHtml, unAd(fs.readFileSync(path.join(root, 'bingo-site/findbingo/shop/index.html'), 'utf8')), 'shop copies match');
   const shop = new JSDOM(shopHtml).window.document;
   const text = shop.querySelector('main').textContent;
   assert.equal(shop.querySelector('link[rel=canonical]').href, 'https://www.findbingo.org/shop/');
@@ -830,7 +861,7 @@ assert(buildWith([{...sample[1], slot: 'sidebar'}], []).error, 'only known place
   for (const [s, t] of townDirs) {
     freeScratch(); await new Promise(r => setImmediate(r));
     const file = path.join(site, SLUGS[s.code], t, 'index.html'), text = fs.readFileSync(file, 'utf8');
-    assert.equal(fs.readFileSync(path.join(root, 'bingo-site/findbingo', SLUGS[s.code], t, 'index.html'), 'utf8'), text, 'mirror copy of ' + t);
+    assert.equal(unAd(fs.readFileSync(path.join(root, 'bingo-site/findbingo', SLUGS[s.code], t, 'index.html'), 'utf8')), text, 'mirror copy of ' + t);
     const url = `https://www.findbingo.org/${SLUGS[s.code]}/${t}/`;
     assert(sitemapText.includes(`<loc>${url}</loc>`), 'town page in the sitemap: ' + url);
     const doc = scratch(text);
