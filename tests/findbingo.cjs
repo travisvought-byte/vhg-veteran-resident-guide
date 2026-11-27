@@ -81,6 +81,10 @@ for (const dir of ['findbingo-site', 'bingo-site/findbingo'])
 // Run the page on Monday, November 16, 2026 at 10 a.m. Data requests are answered from this folder.
 const sources = JSON.parse(html.match(/const DATA_SOURCES=(\[.*?\]);/)[1]);
 assert.deepEqual(sources, ['', 'https://guide.vethomeguard.org/findbingo-site/', 'https://raw.githubusercontent.com/travisvought-byte/vhg-veteran-resident-guide/main/findbingo-site/']);
+// Pages checked in a loop are parsed into scratch windows, closed before the next page, so the run stays within memory.
+const scratchWindows = [];
+function scratch(text) { const w = new JSDOM(text).window; scratchWindows.push(w); return w.document; }
+function freeScratch() { for (const w of scratchWindows.splice(0)) w.close(); }
 // Each open() loads the whole finder with its lists; close the previous one so a long run stays within memory.
 let lastDom = null;
 async function open(query, {served = ['https://www.findbingo.org/'], requests = [], served_data = data} = {}) {
@@ -439,13 +443,14 @@ assert(home.querySelector('footer a[href="https://mobilitytalk.org/states/"]') &
 const countWords = /\b\d[\d,]* (bingo )?(halls?|venues?|locations?|places?|counties|groups?|games?|listings?|senior centers?)\b/i;
 const seen = {h1: new Set(), title: new Set(), description: new Set(), welcome: new Set(), og: new Set()};
 for (const s of states) {
+  freeScratch(); await new Promise(r => setImmediate(r));
   const slug = SLUGS[s.code];
   assert.equal(home.querySelector(`#state-buttons a[data-state="${s.code}"]`).getAttribute('href'), slug + '/', 'state buttons link to the state page');
   assert.equal(sitemap.includes(`<loc>https://www.findbingo.org/${slug}/</loc>`), s.coverage !== 'pending', slug + ' is in the sitemap once it has content');
   if (s.code === 'OH') continue;  // Ohio's page is the Ohio Bingo Finder
   const file = path.join(root, 'bingo-site/findbingo', slug, 'index.html'), text = fs.readFileSync(file, 'utf8');
   assert.equal(text, fs.readFileSync(path.join(site, slug, 'index.html'), 'utf8'), slug + ' copies match');
-  const d = new JSDOM(text).window.document;
+  const d = scratch(text);
   assert.equal(d.querySelector('link[rel=canonical]').href, `https://www.findbingo.org/${slug}/`);
   assert(d.title.startsWith(s.name + ' Bingo') && d.title.endsWith('| FindBingo.org'), d.title);
   assert(d.querySelector('meta[name=description]').content.includes(s.code === 'DC' ? 'DC' : s.name));
@@ -589,12 +594,14 @@ const allPages = [];
 assert(allPages.length > 50);
 const noAdsPromise = /never depends? on (donations or )?advertising|(do not|don['’]t|never) (sell|show|run|carry|accept) (any )?(ads|advertising)|\bno (ads|advertising)\b|ad-free|without (ads|advertising)/i;
 for (const file of allPages) {
+  freeScratch(); await new Promise(r => setImmediate(r));
   const rel = path.relative(findbingo, file), text = fs.readFileSync(file, 'utf8');
   assert(!noAdsPromise.test(text), rel + ': no promise against ads');
   // Every page with a footer links Privacy and Advertise (the poster is a print-only page with no footer).
-  const d = new JSDOM(text).window.document;
+  const d = scratch(text);
   if (!d.querySelector('footer')) { assert.equal(rel, path.join('ohio', 'poster.html'), rel + ' has a footer'); continue; }
-  const up = path.dirname(rel) === '.' ? '' : '../';
+  // Pages sit at the top (''), one folder down (state pages, '../') or two (town pages, '../../').
+  const up = path.dirname(rel) === '.' ? '' : '../'.repeat(path.dirname(rel).split(path.sep).length);
   assert(d.querySelector(`footer a[href="${up}privacy/"]`) && d.querySelector(`footer a[href="${up}advertise/"]`), rel + ': footer links Privacy and Advertise');
   assert(d.querySelector(`footer a[href="${up}about/"]`) && d.querySelector(`footer a[href="${up}terms/"]`), rel + ': footer links About and Terms');
   // With the default (empty) ad list there is no ad markup at all.
@@ -742,11 +749,12 @@ assert(buildWith([{...sample[1], slot: 'sidebar'}], []).error, 'only known place
   // Every Find Bingo page: dark mode, page counter, icons hidden from screen readers and drawn from symbols on the same page,
   // and no counts of halls, games, places or counties in the page's own words.
   for (const file of allPages) {
+    freeScratch(); await new Promise(r => setImmediate(r));
     const rel = path.relative(findbingo, file), text = fs.readFileSync(file, 'utf8');
     assert(/goatcounter|assets\/analytics\.js/.test(text), rel + ': counts page views');
     if (rel.startsWith('ohio' + path.sep)) continue;  // the Ohio finder is built by bingo_site.py with its own styles
     assert(text.includes('prefers-color-scheme:dark'), rel + ': dark mode');
-    const d = new JSDOM(text).window.document;
+    const d = scratch(text);
     for (const svg of d.querySelectorAll('svg.ic')) {
       assert.equal(svg.getAttribute('aria-hidden'), 'true', rel + ': icons are hidden from screen readers');
       const id = svg.querySelector('use').getAttribute('href');
@@ -754,7 +762,8 @@ assert(buildWith([{...sample[1], slot: 'sidebar'}], []).error, 'only known place
       assert(svg.parentElement.textContent.trim(), rel + ': every icon sits beside words');
     }
     const plain = d.body.cloneNode(true);
-    for (const e of plain.querySelectorAll('script, article h3, .org, .small, .address')) e.remove();
+    // Hall names can hold numbers ("777 Bingo Hall"): leave out names on listing cards and in a town's day-by-day list.
+    for (const e of plain.querySelectorAll('script, article h3, .by-day li a, .org, .small, .address')) e.remove();
     assert(!countWords.test(plain.textContent), rel + ': no counts on the site');
   }
   // The finder (Monday 10 a.m.): today's weekly games carry a "Today" tag in words, not color alone; monthly patterns never do.
@@ -803,6 +812,70 @@ assert(buildWith([{...sample[1], slot: 'sidebar'}], []).error, 'only known place
   assert(text.includes('must come from a licensed distributor'), 'halls are pointed to their state rules for game supplies');
   assert(sitemap.includes('<loc>https://www.findbingo.org/shop/</loc>'), 'the shop is in the sitemap');
   assert(home.querySelector('.chooser a[href="shop/"]') && home.querySelector('footer a[href="shop/"]'), 'the home page links the shop');
+}
+
+// Town pages (owner direction, November 26, 2026): a town with at least three listings gets its own page, linked
+// from its state page and listed in the sitemap, with its games day by day and Event markup for weekly games.
+{
+  const sitemapText = fs.readFileSync(path.join(root, 'bingo-site/findbingo/sitemap.xml'), 'utf8');
+  const townDirs = [];
+  for (const s of states) {
+    const dir = path.join(site, SLUGS[s.code]);
+    if (!fs.existsSync(dir)) continue;
+    for (const t of fs.readdirSync(dir)) if (fs.existsSync(path.join(dir, t, 'index.html'))) townDirs.push([s, t]);
+  }
+  assert(townDirs.length >= 20, 'town pages are built');
+  const COUNT = /\b\d[\d,]* (bingo )?(halls?|venues?|locations?|places?|counties|groups?|games?|listings?|senior centers?)\b/i;
+  let marked = 0;
+  for (const [s, t] of townDirs) {
+    freeScratch(); await new Promise(r => setImmediate(r));
+    const file = path.join(site, SLUGS[s.code], t, 'index.html'), text = fs.readFileSync(file, 'utf8');
+    assert.equal(fs.readFileSync(path.join(root, 'bingo-site/findbingo', SLUGS[s.code], t, 'index.html'), 'utf8'), text, 'mirror copy of ' + t);
+    const url = `https://www.findbingo.org/${SLUGS[s.code]}/${t}/`;
+    assert(sitemapText.includes(`<loc>${url}</loc>`), 'town page in the sitemap: ' + url);
+    const doc = scratch(text);
+    assert.equal(doc.querySelector('link[rel=canonical]').href, url);
+    const title = doc.title, h1 = doc.querySelector('h1').textContent, lead = doc.querySelector('header .lead').textContent;
+    const desc = doc.querySelector('meta[name=description]').content;
+    assert(title.startsWith('Bingo in ') && title.endsWith(' | FindBingo.org') && title.length <= 70, title);
+    assert(desc.length <= 165 && h1.startsWith('Bingo in '), t);
+    assert(!COUNT.test(title + desc + h1 + lead), 'no counts in the words written for ' + t);
+    assert(!/\.\./.test(lead), 'no doubled period: ' + t);
+    assert(doc.querySelectorAll('#listings article').length >= 3, 'a town page has at least three listings: ' + t);
+    assert(doc.querySelector('.by-day h3'), 'games day by day: ' + t);
+    assert(doc.querySelector(`header a[href="../"]`) && doc.querySelector('a[href="../../"]'), 'links up to the state and the finder: ' + t);
+    assert(/gc\.zgo\.at|goatcounter/.test(text), 'visit counter on ' + t);
+    const statePage = scratch(fs.readFileSync(path.join(site, SLUGS[s.code], 'index.html'), 'utf8'));
+    assert(statePage.querySelector(`nav.towns a[href="${t}/"]`), 'the state page links ' + t);
+    const ld = doc.getElementById('games-ld');
+    if (!ld) continue;
+    const events = JSON.parse(ld.textContent);
+    assert(Array.isArray(events) && events.length);
+    for (const e of events) {
+      marked++;
+      assert.equal(e['@type'], 'Event');
+      assert(e.name && e.location && e.location.address && e.location.address.postalCode && e.organizer && e.organizer.name, e.name);
+      assert(!e.startDate && !e.offers, 'no fixed date or price is written into the page: ' + e.name);
+      assert(/^https:\/\/schema\.org\/(Sun|Mon|Tues|Wednes|Thurs|Fri|Satur)day$/.test(e.eventSchedule.byDay) && /^\d\d:\d\d:00$/.test(e.eventSchedule.startTime), e.name);
+      const id = e.url.split('#')[1];
+      assert(doc.getElementById(id), 'event points at a listing on the page: ' + id);
+    }
+  }
+  freeScratch(); await new Promise(r => setImmediate(r));
+  assert(marked > 100, 'weekly games carry Event markup');
+  // The date script fills the next date for each weekly game, local to the hall, on or after today.
+  const sa = fs.readFileSync(path.join(site, 'texas/san-antonio/index.html'), 'utf8');
+  const dom = new JSDOM(sa, {runScripts: 'dangerously'});
+  const filled = JSON.parse(dom.window.document.getElementById('games-ld').textContent);
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  const names = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  for (const e of filled) {
+    assert(/^\d{4}-\d\d-\d\dT\d\d:\d\d:00$/.test(e.startDate), e.startDate);
+    const d = new Date(e.startDate.slice(0, 10) + 'T00:00:00');
+    assert(d >= today && (d - today) / 864e5 < 7, 'the next date, within a week: ' + e.startDate);
+    assert.equal(names[d.getDay()], e.eventSchedule.byDay.split('/').pop(), 'the date falls on the listed weekday');
+    if (e.endDate) assert(e.endDate > e.startDate, 'ends after it starts: ' + e.name);
+  }
 }
 
 console.log('FindBingo.org checks passed.');
