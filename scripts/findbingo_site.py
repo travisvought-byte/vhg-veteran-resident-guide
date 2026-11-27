@@ -132,8 +132,9 @@ def validate(states, venues, licensed, zips):
         if 'age' in s:
             # The youngest age to play, read only from the state's own law, rule or bingo regulator (November 27, 2026);
             # shown on /bingo-age-by-state/ and linked from the state page. States without a confirmed age leave it out.
+            # min is null where the state's law sets no age: Iowa leaves it to each hall, and Utah allows no paid bingo.
             a = s['age']
-            assert set(a) == {'min', 'rule', 'sources'} and type(a['min']) is int and a['rule'].strip() and s['coverage'] in LISTED, s['code']
+            assert set(a) == {'min', 'rule', 'sources'} and (a['min'] is None or type(a['min']) is int) and a['rule'].strip() and s['coverage'] in LISTED, s['code']
             assert a['sources'] and all(set(x) == {'url', 'label', 'scope', 'reviewed_on'} and x['url'].startswith('https://') and x['label'].strip()
                                         and x['scope'].strip() and date.fromisoformat(x['reviewed_on']) for x in a['sources']), s['code']
         if 'partner' in s:
@@ -2216,6 +2217,7 @@ AGE_CHECKED = '2026-11-27'
 AGE_FAQ = (
     ('How old do you have to be to play bingo?',
      'It depends on the state. In most states with games on Find Bingo, you must be 18 to play charity bingo on your own, and Missouri allows players from 16. '
+     'Iowa sets no state minimum and leaves it to each hall. Utah allows no paid bingo at all, so its law sets no age. '
      'Find your state on this page for its rule and its source.'),
     ('Can children play bingo with a parent?',
      'In some states, yes, when a parent, guardian or adult relative is with them. Other states allow no one under 18 to play at all. Each state’s entry on this page says which.'),
@@ -2231,10 +2233,11 @@ def age_page(states):
     rows = [s for s in states if s.get('age')]
     for s in rows:
         a = s['age']
-        assert s['coverage'] in LISTED and a['min'] in (16, 18) and a['rule'].startswith(f'{a["min"]} and older'), s['code']
+        assert s['coverage'] in LISTED and a['min'] in (16, 18, None) and a['rule'].startswith(f'{a["min"]} and older' if a['min'] else 'No '), s['code']
         assert a['sources'] and all(x['url'].startswith('https://') and x['label'] and x['scope'] and x['reviewed_on'] == AGE_CHECKED for x in a['sources']), s['code']
-    youngest = min(s['age']['min'] for s in rows)
+    youngest = min(s['age']['min'] for s in rows if s['age']['min'])
     assert [s['code'] for s in rows if s['age']['min'] == youngest] == ['MO'], 'the lead and questions name Missouri as the one state starting at 16'
+    assert [s['code'] for s in rows if s['age']['min'] is None] == ['IA', 'UT'], 'the lead and questions name Iowa and Utah as the states whose law sets no age'
     by = {s['code']: s for s in rows}
     assert all(c in by for c in ('TX', 'MS', 'VA')), 'the questions name Texas, Mississippi and Virginia'
     missing = [s for s in states if s['coverage'] in LISTED and not s.get('age')]
@@ -2261,7 +2264,7 @@ def age_page(states):
             'How old do you have to be to play bingo? The minimum age for charity bingo in each state with games on Find Bingo, from each state’s own law.',
             'How old do you have to be to play bingo?',
             'Bringing a grandchild, or turning 18 soon? In most states with games on Find Bingo, charity bingo is for players 18 and older. '
-            'Missouri starts at 16, and several states let younger players play beside a parent or guardian.',
+            'Missouri starts at 16, Iowa leaves it to each hall, and several states let younger players play beside a parent or guardian.',
             body), (_crumbs(('How to play bingo', 'how-to-play-bingo/'), ('Bingo age by state', 'bingo-age-by-state/')), faq_ld)
 
 
@@ -2280,7 +2283,8 @@ def moved_page(new_slug, label, style, analytics, generated_on):
 def newbie_line(s, up='../', icon=True):
     """A state page's one line for first-timers: how a night works, the words, and the state's age when it is confirmed.
     icon=False for pages without the icon sprite (the Ohio finder)."""
-    age = (f' · <a href="{up}bingo-age-by-state/#{SLUGS[s["code"]]}">How old you must be in {escape(s["name"])}</a>' if s.get('age') else '')
+    words = 'How old you must be in' if (s.get('age') or {}).get('min') else 'Bingo age rules in'  # Iowa and Utah set no age
+    age = (f' · <a href="{up}bingo-age-by-state/#{SLUGS[s["code"]]}">{words} {escape(s["name"])}</a>' if s.get('age') else '')
     return (f'<p class="newbie">{_ic("book") if icon else ""}<span>New to hall bingo? <a href="{up}how-to-play-bingo/">How a bingo night works</a> · '
             f'<a href="{up}bingo-terms/">Bingo words, A to Z</a>{age}</span></p>')
 

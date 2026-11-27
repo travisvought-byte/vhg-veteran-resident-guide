@@ -335,10 +335,14 @@ breadcrumb markup, and with FAQPage markup built from the very same questions an
   rules from the age data.
 - **Bingo age by state** (`/bingo-age-by-state/`): the `age` entry in `data/public/bingo-states.json` (`min`, a plain
   `rule`, and `sources` with `url`, `label`, `scope` and `reviewed_on`). Only for states with listings here, and only
-  from the state's own statute, administrative rule or bingo regulator, fetched and checked November 27, 2026. States
-  without a confirmed age are named on the page as not yet confirmed (Arizona: the rule file would not open; Iowa: the
-  rule lets halls set limits for children but no state minimum was found; New Mexico: no age rule found in the
-  statute, rules or regulator's pages; Utah: only free bingo, no charitable bingo). To add a state, read its own law or
+  from the state's own statute, administrative rule or bingo regulator, fetched and checked November 27, 2026. `min` is
+  null where the state's law sets no age, and the rule then starts "No": Iowa (Iowa Code chapter 99B, 725.19 and
+  481—103.5 IAC: no state minimum, a hall may post its own limit for children) and Utah (Utah Constitution art. VI
+  sec. 27 and Utah Code 76-9-1402, formerly 76-10-1102: no gambling, so no paid bingo; the bingo listed there is free).
+  States without a confirmed age are named on the page as not yet confirmed (Arizona: its bingo age is in the
+  administrative rules, R15-7-223, whose Secretary of State file could not be reached; A.R.S. title 5 chapter 4 has no
+  age. New Mexico: no player age found in the Gaming Control Board's rules (15.4.1, 15.4.4 and 15.4.7 NMAC) or pages,
+  and the current statute, NMSA 60-2F, was not found on an official site). To add a state, read its own law or
   regulator, add the entry and rebuild; `validate` and `age_page` check the shape.
 - **Where they are linked:** the home page's "New to hall bingo?" panel under the practice card and its chooser; every
   footer, the Ohio finder's included (`GUIDE_LINKS`); each guide's "Keep learning" list; and a "New to hall bingo?"
