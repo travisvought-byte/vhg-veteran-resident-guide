@@ -9,7 +9,7 @@ from state_registry import (load_registry, load_counties, state_resources, make_
 from bingo_edition import make_bingo
 from a11y_finish import finish_all as a11y_finish_all
 from bingo_site import make_bingo_site, SITE as OHIO_BINGO
-from findbingo_site import make_findbingo
+from findbingo_site import make_findbingo, adsense as findbingo_adsense
 from bingo_pipeline import outputs as bingo_pipeline_outputs
 from facilities_edition import make_facilities
 from unified_guide import unified_outputs
@@ -102,6 +102,8 @@ def outputs():
     result['bingo.html'] = result['bingo.html'].replace(canonical, forward)
     result.update(make_findbingo(ROOT))
     result.update(findbingo_finishing(result))
+    # Google AdSense on findbingo.org only (bingo-site/findbingo/); never on the guide or findbingo-site/ (Ad Grants).
+    result.update(findbingo_adsense(result))
     # The bingo pipeline's normalized CSV and coverage report (docs/BINGO-PIPELINE.md) follow the lists they read.
     result.update({str(p.relative_to(ROOT)): t for p, t in bingo_pipeline_outputs().items()})
     result['facilities.html'] = make_facilities(ROOT)

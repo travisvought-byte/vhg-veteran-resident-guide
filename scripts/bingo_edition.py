@@ -4,7 +4,9 @@ from datetime import date
 from instant_bingo import add_session_extras, load_partners
 import place_map
 
-def make_bingo(root):
+def ohio_records(root):
+    """Every Ohio record the finder lists (researched games, senior centers and the state's authorized bingo list),
+    merged and checked. The Ohio finder and its town pages (findbingo_site.ohio_venues) both read these."""
     records=json.loads((root/'data/public/ohio-bingo.json').read_text())
     centers=json.loads((root/'data/public/ohio-community-centers.json').read_text())
     for center in centers:
@@ -39,6 +41,10 @@ def make_bingo(root):
         for field in ('session_dates', 'session_excluded_dates'):
             for value in r.get(field, []):
                 assert date.fromisoformat(value).isoformat() == value
+    return records, counties
+
+def make_bingo(root):
+    records, counties = ohio_records(root)
     payload=json.dumps(records,ensure_ascii=True).replace('<','\\u003c')
     all_zips=json.loads((root/'data/public/us-zip-centroids.json').read_text())
     nearby=lambda z: 430<=int(z[:3])<=459 or 150<=int(z[:3])<=196 or 247<=int(z[:3])<=268 or 400<=int(z[:3])<=427 or 460<=int(z[:3])<=499

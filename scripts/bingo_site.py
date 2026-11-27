@@ -10,7 +10,7 @@ printed posters and QR codes keep working.
 import json
 import re
 from instant_bingo import instant_page
-from findbingo_site import indexed_state_pages, indexed_city_pages, INFO_PAGES, load_landing, load_events, upcoming_events, events_html, EVENT_CSS
+from findbingo_site import indexed_state_pages, indexed_city_pages, INFO_PAGES, load_landing, load_events, upcoming_events, events_html, EVENT_CSS, ohio_towns, _slug
 from html import escape
 
 SITE = 'https://www.findbingo.org/ohio'
@@ -268,6 +268,19 @@ def ohio_events(root, page, events=None):
     return _replace(_replace(page, '</style>', EVENT_CSS + '</style>', 1), '<p id="count"', box + '<p id="count"', 1)
 
 
+# Links from the Ohio finder to its town pages (findbingo.org/ohio/columbus/), built by findbingo_site.py
+# (owner direction, November 27, 2026). A plain list of town names: no counts.
+TOWNS_CSS = ('.towns{margin:26px 0}.towns h2{margin:0 0 6px}.towns p{margin:0 0 10px}.towns ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px}'
+             '.towns a{display:inline-flex;align-items:center;min-height:48px;padding:0 16px;border:2px solid var(--green);border-radius:24px;background:#fff;'
+             'color:var(--green);font-weight:650;text-decoration:none}.towns a:hover,.towns a:focus-visible{background:#e8eeea}@media print{.towns{display:none}}')
+
+
+def towns_nav(towns):
+    return ('<nav class="towns" aria-labelledby="towns-title"><h2 id="towns-title">Bingo by town</h2>'
+            '<p>Each town page shows its games day by day, with phone numbers and directions.</p><ul>'
+            + ''.join(f'<li><a href="{_slug(t)}/">{escape(t)}</a></li>' for t in towns) + '</ul></nav>')
+
+
 def make_bingo_site(root, finder_page):
     stats = finder_stats(finder_page)
     site = {
@@ -283,6 +296,8 @@ def make_bingo_site(root, finder_page):
         'assets/bingo-qr.svg': (root / 'assets/findbingo-ohio-qr.svg').read_text(),
         'assets/bingo-submit-qr.svg': (root / 'assets/findbingo-ohio-submit-qr.svg').read_text(),
     }
+    site['index.html'] = _replace(_replace(site['index.html'], '</style>', TOWNS_CSS + '</style>', 1),
+                                  '<section class="help-box"', towns_nav(ohio_towns(root)) + '<section class="help-box"', 1)
     national = 'https://www.findbingo.org'
     # The Ohio finder is part of findbingo.org, so its footers link the site's Privacy and Advertise pages.
     for name in ('index.html', 'partners.html', 'distributions.html', 'instant.html'):

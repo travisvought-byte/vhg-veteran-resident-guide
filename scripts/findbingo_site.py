@@ -14,6 +14,7 @@ from html import escape
 from urllib.parse import quote
 import place_map
 from visuals import locator
+from bingo_edition import ohio_records
 
 # Every state and DC has an entry in bingo-states.json, in alphabetical order by name. A state we have not
 # researched yet has coverage "pending": a plain "send us your games" card and page, kept out of search
@@ -329,6 +330,11 @@ Lists updated {_date_label(generated_on)}.
     for (code, town), rows in sorted(groups.items()):
         towns = sorted(t for c, t in groups if c == code)
         pages[f'{SLUGS[code]}/{_slug(town)}/index.html'] = _city_page(by_code[code], town, rows, towns, style, analytics, generated_on)
+    # Ohio town pages sit inside the Ohio finder's folder (findbingo.org/ohio/columbus/), which only bingo-site/findbingo/ has.
+    ohio_rows, ohio_as_of = ohio_venues(root)
+    ohio_groups = ohio_town_groups(ohio_rows)
+    ohio_pages = {f'ohio/{_slug(t)}/index.html': _city_page(by_code['OH'], t, rows, sorted(ohio_groups), style, analytics, ohio_as_of, ohio=True)
+                  for t, rows in sorted(ohio_groups.items())}
     for s in states:
         if s['code'] == 'OH':
             continue
@@ -344,7 +350,7 @@ Lists updated {_date_label(generated_on)}.
     pages['terms/index.html'] = _info_page('terms', *TERMS, style, analytics, generated_on)
     pages['advertise/index.html'] = _info_page('advertise', *ADVERTISE, style, analytics, generated_on)
     pages['learn/index.html'] = _info_page('learn', *LEARN, style.replace('</style>', LEARN_CSS + '</style>'), analytics, generated_on)
-    pages['halls/index.html'] = _info_page('halls', *halls_page(states), style, analytics, generated_on)
+    pages['halls/index.html'] = _info_page('halls', *halls_page(states), style.replace('</style>', HALL_CSS + '</style>'), analytics, generated_on)
     pages['shop/index.html'] = _info_page('shop', *shop_page(load_shop(root)), style.replace('</style>', SHOP_CSS + '</style>'), analytics, generated_on)
     # Ad pictures are served beside the pages, in ads/.
     pages.update({'ads/' + a['image'].rsplit('/', 1)[1]: (root / a['image']).read_bytes() for a in ads if a.get('image')})
@@ -367,6 +373,7 @@ Lists updated {_date_label(generated_on)}.
     return {
         **{'findbingo-site/' + name: text for name, text in site.items()},
         **{'bingo-site/findbingo/' + name: text for name, text in site.items()},
+        **{'bingo-site/findbingo/' + name: text for name, text in ohio_pages.items()},
         'bingo-site/findbingo/_redirects': REDIRECTS + SHORT_REDIRECTS,
         'findbingo-site/README.md': readme,
     }
@@ -493,12 +500,12 @@ def _pin(r, kind, sub):
     return f' data-pm-lat="{at[0]}" data-pm-lon="{at[1]}" data-pm-at="zip" data-pm-kind="{kind}" data-pm-sub="{escape(sub)}"'
 
 
-def _map_box(up, what):
+def _map_box(up, what, nodays='Licensed, game days not posted'):
     """The map above a list. Group dots on the map show how many places they hold (owner direction, November 23, 2026);
     the page text still never states counts."""
     return place_map.box('results' if not up else 'listings', up + 'assets/map/', title='See them on a map',
                          label=f'Map of {what}. Every place on the map is also in the list.',
-                         legend=(('game', 'Bingo with game days'), ('nodays', 'Licensed, game days not posted')) + ((('you', 'Your ZIP code'),) if not up else ()),
+                         legend=(('game', 'Bingo with game days'), ('nodays', nodays)) + ((('you', 'Your ZIP code'),) if not up else ()),
                          privacy_href=up + 'privacy/', zip_table='ZIPS' if not up else '', numbers=True, dark=True)
 
 
@@ -581,6 +588,41 @@ def _partner_panel(s):
             f'<a href="#money-rule">what {name} law says about bingo money</a>.</p></section>')
 
 
+# How Find Bingo works for halls, in Travis's words of his model (owner direction, November 27, 2026): every game is
+# listed free; halls can update or claim their listing; a hall can become a community partner by naming Veteran Home
+# Guardians (in Ohio) or its state's local partner as a charitable recipient of part of its bingo proceeds; and halls
+# that would rather pay can ask for paid help. No prices here (they live on the Advertise page), no partner benefits,
+# and no partner that is not already named on the site. The icons are decoration beside words.
+def _hall_icon(path):
+    return f'<span class="hall-ic" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">{path}</svg></span>'
+
+
+HALL_HOW = (
+    '<section class="hall-how" aria-labelledby="how-title"><h2 id="how-title">How Find Bingo works for your hall</h2><ul class="hall-steps">'
+    '<li>' + _hall_icon('<path d="M4 12.5 9.5 18 20 6.5"/>')
+    + '<div><h3>Every game is listed free</h3><p>We list every bingo game we know of, for every hall, free. No hall can pay for a better listing.</p></div></li>'
+    '<li>' + _hall_icon('<path d="M4 20h4L19 9l-4-4L4 16z"/><path d="m13.5 6.5 4 4"/>')
+    + '<div><h3>Update or claim your listing</h3><p>Send us new game days, start times or a phone number for players, or claim your listing so players always see your latest details.</p>'
+    '<p class="hall-links"><a href="' + escape(_mailto('Update our bingo listing', 'Hall or group name:\nState and town:\nGame days and first game time:\nPhone for players:\nWebsite or Facebook page:\n'))
+    + '">Email us an update</a> · <a href="../ohio/#submit-details">Update an Ohio listing</a> · '
+    '<a href="https://www.ohiobingo.org/claim.html" target="_blank" rel="noopener noreferrer">Claim an Ohio listing ↗</a></p></div></li>'
+    '<li>' + _hall_icon('<path d="M12 20s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 7.6 4.2 4.2 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/>')
+    + '<div><h3>Become a community partner</h3><p>In Ohio, name Veteran Home Guardians as a charitable recipient of part of your bingo proceeds. '
+    'Outside Ohio, name the local partner shown on your state’s page.</p>'
+    '<p class="hall-links"><a href="../ohio/partners.html#sponsors">Partnering in Ohio</a> · <a href="#partners">Local partners in other states</a></p></div></li>'
+    '<li>' + _hall_icon('<path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/>')
+    + '<div><h3>Paid help, if you prefer</h3><p>Would your hall rather pay for help? Ask us about a game website built for your hall and kept current, '
+    'a featured event in local results, or help with advertising.</p><p class="hall-links"><a href="../advertise/">See the paid options</a></p></div></li></ul>'
+    '<div class="big-actions"><a class="solid" href="'
+    + escape(_mailto('Help for our bingo hall', 'Hall or group name:\nState and town:\nWhat would help most:\nBest way to reach us:\n'))
+    + '">Talk with us about your hall</a></div></section>')
+HALL_CSS = ('.hall-steps{list-style:none;padding:0;margin:14px 0;display:grid;gap:14px}'
+            '.hall-steps li{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px}'
+            '.hall-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:var(--green);color:#fff}'
+            '.hall-ic svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}'
+            '.hall-steps h3{margin:2px 0 4px;font-size:21px;color:var(--head)}.hall-steps p{margin:4px 0}.hall-links{font-size:17px}')
+
+
 def halls_page(states):
     """findbingo.org/halls/: the page for the people who run bingo (owner direction, November 20, 2026)."""
     checked = [s for s in states if s.get('halls')]
@@ -613,10 +655,7 @@ def halls_page(states):
         return escape(', '.join(names[:-1]) + ' and ' + names[-1] if len(names) > 1 else names[0])
     body = ('<p>Players come here to find a game. Halls and the groups that run them come here to be found. Every listing is free, and '
             'the help below is shaped to what your state allows.</p>'
-            '<h2>What we offer every hall</h2>' + _hall_offers('../')
-            + '<div class="big-actions"><a class="solid" href="'
-            + escape(_mailto('Help for our bingo hall', 'Hall or group name:\nState and town:\nWhat would help most:\nBest way to reach us:\n'))
-            + '">Talk with us about your hall</a></div>'
+            + HALL_HOW +
             '<h2>Partnering with a charity, where your state’s rules allow</h2>'
             '<p>States treat bingo money in three different ways, and we only ask for what fits:</p>'
             '<ul><li><strong>The law requires some groups to give to an outside charity</strong> (' + named('must_give') + '). '
@@ -773,8 +812,9 @@ def city_groups(venues):
 
 
 def indexed_city_pages(root):
-    """City pages for the sitemap: 'texas/san-antonio/' and so on."""
-    return tuple(f'{SLUGS[code]}/{_slug(town)}/' for code, town in sorted(city_groups(load_venues(root))))
+    """City pages for the sitemap: 'texas/san-antonio/', 'ohio/columbus/' and so on."""
+    towns = list(city_groups(load_venues(root))) + [('OH', t) for t in ohio_towns(root)]
+    return tuple(f'{SLUGS[code]}/{_slug(town)}/' for code, town in sorted(towns))
 
 
 def _weekly(v, x):
@@ -785,6 +825,8 @@ def _weekly(v, x):
 
 def _street(v):
     """The street part of 'Street, Town, ST 12345', or the whole address if it does not split that way."""
+    if v.get('street'):
+        return v['street']
     tail = f', {v["city"]}, {v["state"]} {v["zip"]}'
     return v['address'][:-len(tail)] if v['address'].endswith(tail) else v['address']
 
@@ -814,7 +856,7 @@ def game_events(rows, page_url):
                 'eventSchedule': schedule,
                 'location': {'@type': 'Place', 'name': v['name'], 'address': {
                     '@type': 'PostalAddress', 'streetAddress': _street(v), 'addressLocality': v['city'],
-                    'addressRegion': v['state'], 'postalCode': v['zip'], 'addressCountry': 'US'}},
+                    'addressRegion': v['state'], **({'postalCode': v['zip']} if v.get('zip') else {}), 'addressCountry': 'US'}},
                 'organizer': {'@type': 'Organization', 'name': x['organization']},
             })
     return out
@@ -848,7 +890,10 @@ def _towns_nav(s, towns, up):
             + ''.join(f'<li><a href="{up}{_slug(t)}/">{escape(t)}</a></li>' for t in towns) + '</ul></nav>')
 
 
-def _city_page(s, town, rows, towns, style, analytics, generated_on):
+def _city_page(s, town, rows, towns, style, analytics, generated_on, ohio=False):
+    """A town's page. ohio=True builds an Ohio town page (findbingo.org/ohio/columbus/) from ohio_venues(): the same
+    layout, with each Ohio card (_ohio_card), the days on a hall's state license where it has posted no times, and the
+    ZIP box opening the Ohio finder."""
     code, name, slug = s['code'], s['name'], SLUGS[s['code']]
     url = f'{SITE}/{slug}/{_slug(town)}/'
     sessions = [x for r in rows for x in r['sessions']]
@@ -857,12 +902,23 @@ def _city_page(s, town, rows, towns, style, analytics, generated_on):
     title = f'Bingo in {town}, {code}: days and times | FindBingo.org'
     if len(title) > 70:
         title = f'Bingo in {town}, {code} | FindBingo.org'
-    description = (f'Bingo in {town}, {name}, {_days_phrase(days)}: halls, game days, start times, phone numbers and directions. '
-                   'Free, with a source for every listing.')
-    if len(description) > 165:
-        description = f'Bingo in {town}, {name}: halls, game days, start times, phone numbers and directions. Free.'
-    lead = (f'Looking for bingo in {town}? Games here run {_days_phrase(days)}. '
-            'Pick your day below to see where and when, then call ahead before you go.')
+    if ohio:
+        # Most Ohio halls are known from the state's license list, which gives days but not times, so the words promise
+        # times only where they are posted.
+        by_day = _ohio_by_day(rows)
+        description = (f'Bingo in {town}, Ohio: game days, start times where posted, phone numbers and directions for halls '
+                       'licensed by the state. Free, with a source for every listing.')
+        if len(description) > 165:
+            description = f'Bingo in {town}, Ohio: game days, phone numbers and directions for every listing. Free.'
+        lead = (f'Looking for bingo in {town}? Here is every place we know of, with game times where they are posted. '
+                + ('Pick your day below, then call ahead before you go.' if by_day else 'Call ahead before you go.'))
+    else:
+        description = (f'Bingo in {town}, {name}, {_days_phrase(days)}: halls, game days, start times, phone numbers and directions. '
+                       'Free, with a source for every listing.')
+        if len(description) > 165:
+            description = f'Bingo in {town}, {name}: halls, game days, start times, phone numbers and directions. Free.'
+        lead = (f'Looking for bingo in {town}? Games here run {_days_phrase(days)}. '
+                'Pick your day below to see where and when, then call ahead before you go.')
     assert len(title) <= 70 and len(description) <= 165 and not COUNT_WORDS.search(title + description + lead), (code, town)
     crumbs = {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
         {'@type': 'ListItem', 'position': 1, 'name': 'Find Bingo', 'item': SITE + '/'},
@@ -870,27 +926,31 @@ def _city_page(s, town, rows, towns, style, analytics, generated_on):
         {'@type': 'ListItem', 'position': 3, 'name': f'Bingo in {town}', 'item': url}]}
     events = game_events(rows, url)
     # Bingo by day: each weekday, the places with a game that day and its listed hours, linking to the listing.
-    by_day = ''
-    for d in WEEK:
-        items = [(r, x) for r in rows for x in r['sessions'] if x['day'] == d]
-        if not items:
-            continue
-        by_day += (f'<h3 id="{DAY_NAMES[d].lower()}">{DAY_NAMES[d]}</h3><ul class="sessions" data-weekly>'
-                   + ''.join(f'<li{f" data-day={chr(34)}{d}{chr(34)}" if _weekly(r, x) else ""}><a href="#{escape(r["id"])}">{escape(r["name"])}</a>, {escape(_time_range(x["start"], x.get("end")))}'
-                             + ('' if _weekly(r, x) else f' <span class="org">· {escape(x.get("label") or "some weeks only, call ahead")}</span>') + '</li>'
-                             for r, x in items) + '</ul>')
+    if not ohio:  # Ohio's day-by-day list is built above (_ohio_by_day)
+        by_day = ''
+        for d in WEEK:
+            items = [(r, x) for r in rows for x in r['sessions'] if x['day'] == d]
+            if not items:
+                continue
+            by_day += (f'<h3 id="{DAY_NAMES[d].lower()}">{DAY_NAMES[d]}</h3><ul class="sessions" data-weekly>'
+                       + ''.join(f'<li{f" data-day={chr(34)}{d}{chr(34)}" if _weekly(r, x) else ""}><a href="#{escape(r["id"])}">{escape(r["name"])}</a>, {escape(_time_range(x["start"], x.get("end")))}'
+                                 + ('' if _weekly(r, x) else f' <span class="org">· {escape(x.get("label") or "some weeks only, call ahead")}</span>') + '</li>'
+                                 for r, x in items) + '</ul>')
+    pick = ('Pick your day. Games that run only some weeks say so, and halls with no posted times show the days on their state '
+            'license. Call ahead before you go.' if ohio else 'Pick your day. Games that run only some weeks say so. Call ahead before you go.')
     body = (f'<p class="intro">{escape(s["regulator_note"])}</p>'
             + week_chart(town, rows, s.get('hours_note', ''))
-            + f'<section class="by-day" aria-labelledby="by-day-title"><h2 id="by-day-title">{_ic("cal")}Bingo in {escape(town)}, day by day</h2>'
-            + f'<p>Pick your day. Games that run only some weeks say so. Call ahead before you go.</p>{by_day}</section>')
+            + (f'<section class="by-day" aria-labelledby="by-day-title"><h2 id="by-day-title">{_ic("cal")}Bingo in {escape(town)}, day by day</h2>'
+               + f'<p>{pick}</p>{by_day}</section>' if by_day else ''))
     if any(r['zip'] in ZIP_POINTS for r in rows):
-        body += _map_box('../../', f'the {town} bingo listed below')
+        body += _map_box('../../', f'the {town} bingo listed below', *(('Licensed, game times not posted',) if ohio else ()))
     body += (f'<div id="listings"><h2 id="list-title">Every bingo listing in {escape(town)}</h2><div class="grid">'
-             + ''.join(_venue_html(r, s) for r in rows) + '</div></div>')
+             + ''.join((_ohio_card if ohio else _venue_html)(r, s) for r in rows) + '</div></div>')
     body += _towns_nav(s, [t for t in towns if t != town], '../')
     body += (f'<p class="small-links"><a href="../">All bingo in {escape(name)}</a> · <a href="../../">Search every state by ZIP code</a></p>'
-             + _send_times(s, '../../'))
-    zip_form = ('<form class="zip-box" action="../../" method="get"><div class="tools">'
+             + (_ohio_send() if ohio else _send_times(s, '../../')))
+    # Ohio's town pages search the Ohio finder (one folder up); the others search the national finder.
+    zip_form = (f'<form class="zip-box" action="{"../" if ohio else "../../"}" method="get"><div class="tools">'
                 '<div><label for="zip">Type your ZIP code</label><input id="zip" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" pattern="[0-9]{5}" placeholder="Your 5-digit ZIP" required></div>'
                 '<div><label for="radius">How far will you go?</label><select id="radius" name="radius"><option value="10">10 miles</option><option value="25" selected>25 miles</option><option value="50">50 miles</option><option value="100">100 miles</option></select></div>'
                 f'<div><button class="primary" type="submit">{_ic("search")}Find bingo near me</button></div></div>'
@@ -907,6 +967,278 @@ def _city_page(s, town, rows, towns, style, analytics, generated_on):
             f'<h1>{escape(heading)}</h1><p class="lead">{escape(lead)}</p></header>'
             f'<main>{zip_form}{body}</main>'
             f'{_footer(generated_on, "../../")}{TODAY_SCRIPT}{EVENT_DATES_LD if events else ""}{place_map.script() if "pm-box" in body else ""}<script>{analytics}</script></body></html>\n')
+
+
+# ---- Ohio town pages (findbingo.org/ohio/columbus/ and so on) ------------------------------------------------
+# Owner direction, November 27, 2026: Ohio is Find Bingo's core market, so its towns get pages like the other states'.
+# They are built from the Ohio finder's own records (bingo_edition.ohio_records), not a state list file. Most Ohio halls
+# are known only from the state's list of authorized bingo days, which gives days but no times, so a town page shows
+# posted game times where a hall or organizer published them and otherwise the days on the hall's license. Halls
+# licensed only for set dates (one-off fundraisers) and senior centers without bingo are left to the Ohio finder.
+OHIO_TOWN = re.compile(r',\s*([^,]+),\s*OH\b')
+OHIO_ZIP = re.compile(r'\bOH\s+(\d{5})\b')
+OHIO_LICENSE_DAY = re.compile(r'\b(Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday)\b')
+# Words in a posted schedule that mean the game does not run every week.
+SOME_WEEKS = re.compile(r'\b(not every|some weeks|some \w+days|most \w+days|every other|alternate|alternating|varies|vary|monthly|of the month|seasonal)\b'
+                        r'|\b(first|second|third|fourth|last|1st|2nd|3rd|4th)(\s*(and|&|,)\s*(first|second|third|fourth|last|1st|2nd|3rd|4th))*\s+'
+                        r'(Sun|Mon|Tues|Wednes|Thurs|Fri|Satur)days?\b', re.I)
+# The state's report sometimes leaves a placeholder after a group's name ('… Church N/A').
+NAME_PLACEHOLDER = re.compile(r'\s+(N/A|n/a|—|–|-|no|none)$')
+# A clock time in a posted schedule, as the finder reads them (gameTimes in bingo_edition.py).
+GAME_TIME = re.compile(r'(\bnoon\b|(\d{1,2})(?::(\d{2}))?\s*(a\.m\.|p\.m\.|am\b|pm\b))', re.I)
+# '6 to 9 p.m.' and '2:30–4:30 p.m.': only the first time is a start.
+RANGE_END = re.compile(r'(\d{1,2}(?::\d\d)?\s*(?:a\.m\.|p\.m\.|am\b|pm\b)?|\bnoon\b)\s*(?:[–-]|\bto\b)\s*(?:\d{1,2}(?::\d\d)?\s*(?:a\.m\.|p\.m\.|am\b|pm\b)|noon\b)', re.I)
+NOT_A_GAME = re.compile(r'doors|instant|dinner|lunch|breakfast|meal|kitchen|concession|packet|sales|ticket|open', re.I)
+OHIO_DEFAULT_ADMISSION = 'Confirm public attendance and age rules with the organizer.'
+OHIO_CLAIM = 'https://www.ohiobingo.org/claim.html'
+
+
+def _game_times(text):
+    """Start times ('HH:MM') of the games in a posted schedule, leaving out doors, meals and ticket sales."""
+    text = text or ''
+    # Keep each range's first time and its a.m. or p.m.: '2:30–4:30 p.m.' becomes '2:30 p.m.'.
+    def first(m):
+        start = m.group(1)
+        if not re.search(r'(a\.m\.|p\.m\.|am|pm|noon)$', start, re.I):
+            start += ' ' + re.search(r'(a\.m\.|p\.m\.|am|pm|noon)\s*$', m.group(0), re.I).group(1)
+        return start
+    text = RANGE_END.sub(first, text)
+    times = []
+    for m in GAME_TIME.finditer(text):
+        before = re.split(r'[;,:.\n]', text[max(0, m.start() - 32):m.start()])[-1]
+        if NOT_A_GAME.search(before):
+            continue
+        if m.group(1).lower() == 'noon':
+            times.append('12:00')
+            continue
+        h, mins = int(m.group(2)) % 12, int(m.group(3) or 0)
+        if m.group(4).lower().startswith('p'):
+            h += 12
+        if h < 24 and mins < 60:
+            times.append(f'{h:02d}:{mins:02d}')
+    return list(dict.fromkeys(times))
+
+
+DAY_GROUP = re.compile(r'((?:Sun|Mon|Tues|Wednes|Thurs|Fri|Satur)days?(?:\s*(?:,|and|&)\s*(?:Sun|Mon|Tues|Wednes|Thurs|Fri|Satur)days?)*)\s*:')
+
+
+def _start_times(schedule, days):
+    """{weekday: start 'HH:MM' or None}. A schedule split by day ('Tuesday and Friday: ... 7 p.m. Sunday: ... 6:30 p.m.')
+    is read part by part. A start is kept only where the text gives exactly one game time, so 'early birds 5:30/6/6:30 p.m.;
+    bingo 7 p.m.' or a game with lightning and series times shows no single time (the card has the whole schedule)."""
+    def one(text):
+        times = _game_times(text)
+        return times[0] if len(times) == 1 else None
+    parts = list(DAY_GROUP.finditer(schedule))
+    if not parts:
+        start = one(schedule)
+        return {d: start for d in days}
+    out = {d: None for d in days}
+    for i, m in enumerate(parts):
+        text = schedule[m.end():parts[i + 1].start() if i + 1 < len(parts) else len(schedule)]
+        for name in OHIO_LICENSE_DAY.findall(re.sub(r'days\b', 'day', m.group(1))):
+            d = DAY_NAMES.index(name)
+            if d in out:
+                out[d] = one(text)
+    return out
+
+
+def _ohio_town(address):
+    m = OHIO_TOWN.search(address)
+    if not m:
+        return ''
+    town = m.group(1).strip()
+    half = len(town) // 2
+    if len(town) % 2 == 0 and town[:half] == town[half:]:  # 'ToledoToledo' in the state's report
+        town = town[:half]
+    return '' if town.upper() == 'OH' else town
+
+
+def _week_order(days):
+    return sorted(set(days), key=WEEK.index)
+
+
+def ohio_venues(root):
+    """(rows, as_of): every Ohio record a town page lists, shaped like the other states' listings (id, name, city, zip,
+    address, county, phone, kind, sessions) with the Ohio record kept under 'oh'. as_of is the newest review date, so
+    the build gives the same pages on any day."""
+    records, _ = ohio_records(root)
+    as_of = max(r['reviewed_on'] for r in records)
+    rows = []
+    for r in records:
+        if r['category'] == 'center' and not r.get('offers_bingo'):
+            continue
+        recurring = bool(r.get('session_days') or r.get('session_monthly')) and not r.get('session_dates')
+        posted = recurring and bool(r.get('schedule')) and (r.get('schedule_valid_until') or as_of) >= as_of
+        license_days = _week_order(DAY_NAMES.index(d) for d in OHIO_LICENSE_DAY.findall(r.get('authorized_days') or ''))
+        if r['category'] == 'licensed' and not posted and not license_days:
+            continue  # licensed only for set dates, or no days at all: the Ohio finder still lists it
+        town = _ohio_town(r['address'])
+        if not town:
+            continue
+        zip_code = OHIO_ZIP.search(r['address'])
+        m = OHIO_TOWN.search(r['address'])
+        sessions = []
+        if posted:
+            days = _week_order(r.get('session_days') or [])
+            starts = _start_times(r['schedule'], days + [x['weekday'] for x in r.get('session_monthly') or []])
+            label = ''
+            if SOME_WEEKS.search(r['schedule']):
+                label = 'some weeks, call ahead'
+            elif r.get('schedule_valid_until'):
+                label = 'through ' + _date_label(r['schedule_valid_until'])
+            for d in days:
+                sessions.append({'day': d, 'start': starts[d], 'organization': r['name'], **({'label': label} if label else {})})
+            for rule in r.get('session_monthly') or []:
+                weeks = _and([('1st', '2nd', '3rd', '4th', '5th')[w - 1] for w in rule['weeks']])
+                sessions.append({'day': rule['weekday'], 'start': starts[rule['weekday']], 'organization': r['name'],
+                                 'label': f'{weeks} {DAY_NAMES[rule["weekday"]]} of the month'})
+            sessions.sort(key=lambda x: WEEK.index(x['day']))
+        phone = r.get('phone') if r.get('phone') and (r.get('phone_valid_until') or as_of) >= as_of else None
+        row = {'id': r['id'], 'state': 'OH', 'name': NAME_PLACEHOLDER.sub('', (r.get('advertised_name') if posted else None) or r['name']), 'city': town,
+               'zip': zip_code.group(1) if zip_code else '', 'address': r['address'], 'street': r['address'][:m.start()].strip(),
+               'county': r['county'], 'phone': phone, 'kind': 'senior_center' if r.get('is_center') or r['category'] == 'senior' else 'hall',
+               'sessions': sessions, 'reviewed_on': r['reviewed_on'], 'posted': posted, 'oh': r}
+        if not posted and license_days:
+            row['license_days'] = license_days
+        if posted and (r.get('schedule_source') or r.get('enforcement')):
+            # A schedule copied from a newspaper or listing site, or a hall with a state licensing notice: no Event markup.
+            row['schedule_note'] = 'Call to confirm before you go.'
+        rows.append(row)
+    # One spelling per town: the state's report writes some towns in capitals or lower case.
+    spellings = {}
+    for row in rows:
+        spellings.setdefault(row['city'].lower(), Counter())[row['city']] += 1
+    names = {}
+    for key, seen in spellings.items():
+        mixed = [t for t, _ in sorted(seen.items(), key=lambda kv: (-kv[1], kv[0])) if not t.isupper() and not t.islower()]
+        names[key] = mixed[0] if mixed else ' '.join(w.capitalize() for w in key.split())
+    for row in rows:
+        row['city'] = names[row['city'].lower()]
+    return rows, as_of
+
+
+def ohio_town_groups(rows):
+    """{town: listings} for every Ohio town with at least CITY_MIN listings."""
+    towns = {}
+    for row in rows:
+        towns.setdefault(row['city'], []).append(row)
+    groups = {t: sorted(rs, key=lambda r: (not r['posted'], r['name'].lower())) for t, rs in towns.items() if len(rs) >= CITY_MIN}
+    slugs = {}
+    for t in groups:
+        assert _slug(t) not in slugs and _slug(t) not in ('assets',), ('two Ohio towns share an address', t, slugs.get(_slug(t)))
+        slugs[_slug(t)] = t
+    return groups
+
+
+def ohio_towns(root):
+    """The Ohio towns with a page, A to Z."""
+    return sorted(ohio_town_groups(ohio_venues(root)[0]))
+
+
+def _day_attr(v, x):
+    """data-day on a game that runs every week, so the page can mark today's games."""
+    return ' data-day="%d"' % x['day'] if _weekly(v, x) else ''
+
+
+def _ohio_by_day(rows):
+    """Each weekday: places with a posted game that day (and its time), then halls whose state license names that day."""
+    seen = Counter(r['name'] for r in rows)
+    def name(r):  # the street too, where one group runs games at more than one place in town
+        return escape(r['name'] + (f' ({r["street"]})' if seen[r['name']] > 1 and r.get('street') else ''))
+    out = ''
+    for d in WEEK:
+        posted = [(r, x) for r in rows for x in r['sessions'] if x['day'] == d]
+        licensed = [r for r in rows if d in r.get('license_days', ())]
+        if not posted and not licensed:
+            continue
+        items = ''.join(
+            f'<li{_day_attr(r, x)}><a href="#{escape(r["id"])}">{name(r)}</a>, '
+            + (escape(_time_range(x['start'])) if x.get('start') else 'see the listing for times')
+            + (f' <span class="org">· {escape(x["label"])}</span>' if x.get('label') else '') + '</li>' for r, x in posted)
+        items += ''.join(f'<li><a href="#{escape(r["id"])}">{name(r)}</a> <span class="org">· on its state license; call for game times</span></li>'
+                         for r in licensed)
+        out += f'<h3 id="{DAY_NAMES[d].lower()}">{DAY_NAMES[d]}</h3><ul class="sessions" data-weekly>{items}</ul>'
+    return out
+
+
+def _ohio_notice(o):
+    """The state licensing notice or settlement on a hall, in brief, as the Ohio finder shows it."""
+    e = o.get('enforcement')
+    if not e:
+        return ''
+    if e['status'] == 'settlement':
+        text = f'On {_date_label(e["settlement_date"])} this organization signed a settlement agreement with the Ohio Attorney General.'
+        label = 'Read the agreement'
+    else:
+        text = f'On {_date_label(e["notice_date"])} the Ohio Attorney General notified this organization that it {e["action"]}. This is not a final decision.'
+        label = 'Read the notice'
+    return (f'<p class="note"><strong>State licensing {"settlement" if e["status"] == "settlement" else "notice"}:</strong> {escape(text)} '
+            f'Confirm games are running before you go. {_out(e["url"], label)}</p>')
+
+
+def _ohio_card(v, s):
+    """One Ohio listing on a town page, from the Ohio finder's record."""
+    o = v['oh']
+    center = v['kind'] == 'senior_center'
+    if v['posted']:
+        badge, pin = f'<span class="badge">{"Senior center bingo" if center else "Bingo"}</span>', 'game'
+    elif center:
+        badge, pin = '<span class="badge">Senior center bingo</span>', 'game'
+    else:
+        badge, pin = '<span class="badge muted">Licensed for bingo · game times not posted</span>', 'nodays'
+    days = ', '.join(dict.fromkeys(DAY_NAMES[x['day']] for x in v['sessions'])) or ', '.join(DAY_NAMES[d] for d in v.get('license_days', ()))
+    sub = ('Senior center bingo' if center else 'Bingo' if v['posted'] else 'Licensed for bingo, game times not posted') + ' · ' + v['city'] + (' · ' + days if days else '')
+    if v['posted']:
+        sessions = ''.join(
+            f'<li{_day_attr(v, x)}><strong>{DAY_NAMES[x["day"]]}</strong>'
+            + (f', {escape(_time_range(x["start"]))}' if x.get('start') else '')
+            + (f' <span class="org">· {escape(x["label"])}</span>' if x.get('label') else '') + '</li>' for x in v['sessions'])
+        if o.get('schedule_source'):
+            note = f'This schedule comes from {o["schedule_source"]}. Please call to confirm before you go.'
+        elif o.get('schedule_valid_until'):
+            note = f'Published dates through {_date_label(o["schedule_valid_until"])}. Call ahead to confirm before you go.'
+        else:
+            note = 'Call ahead to confirm before you go.'
+        when = (f'<div class="when"><p>{_ic("cal")}<strong>Bingo days:</strong></p><ul class="sessions"{"" if v.get("schedule_note") else " data-weekly"}>{sessions}</ul>'
+                f'<p><strong>{"Bingo" if center else "When"}:</strong> {escape(o["schedule"])}</p><p class="note">{escape(note)}</p></div>')
+    elif v.get('license_days'):
+        when = (f'<div class="when"><p>{_ic("cal")}<strong>Days on the state license:</strong> {escape(_and([DAY_NAMES[d] for d in v["license_days"]]))}.</p>'
+                '<p class="note">The state lists the days this group may hold bingo, not its game times. Call to ask when games are played.</p></div>')
+    elif o.get('schedule'):
+        when = f'<div class="when"><p class="note">Bingo dates change here. <a href="../#{escape(v["id"])}">See the dates on the Ohio finder</a> or call ahead.</p></div>'
+    else:
+        when = '<div class="when"><p class="note">Ask the center when bingo is played.</p></div>'
+    price = o.get('cost') if v['posted'] and o.get('cost') and not o.get('price_valid_until') else ''
+    if v.get('phone'):
+        call = f'<a class="solid" href="tel:{re.sub(r"[^0-9]", "", v["phone"])}">{_ic("phone")}Call {escape(v["phone"])}</a>'
+    else:
+        call = f'<a class="solid" href="{escape(_maps(o["name"] + " " + v["address"]))}" target="_blank" rel="noopener noreferrer">{_ic("search")}Look up phone number ↗</a>'
+    sources = ''.join(f'<li>{_out(x["url"], x["scope"])}</li>' for x in o.get('sources', []) if x.get('url', '').startswith('https://'))
+    claim = '' if center else (f' · <a href="{escape(OHIO_CLAIM + "?hall=" + quote(v["name"], safe="") + "&town=" + quote(v["city"], safe=""))}" '
+                               'target="_blank" rel="noopener noreferrer">Run this game? Claim it ↗</a>')
+    return (f'<article id="{escape(v["id"])}"{_pin(v, pin, sub)}><p>{badge}</p>'
+            f'<h3>{escape(v["name"])}</h3><p class="where">{_ic("pin")}{escape(v["city"])}</p>'
+            + _ohio_notice(o) + when
+            + (f'<p><strong>Price:</strong> {escape(price)}</p>' if price else '')
+            + (f'<p class="small"><strong>Who can come:</strong> {escape(o["admission"])}</p>' if o.get('admission') and o['admission'] != OHIO_DEFAULT_ADMISSION else '')
+            + f'<div class="big-actions">{call}<a class="outline" href="{escape(_maps(v["address"]))}" target="_blank" rel="noopener noreferrer">{_ic("route")}Directions ↗</a></div>'
+            f'<p class="address">{escape(v["address"])} · {escape(_area(v["county"]))}</p>'
+            f'<details class="sources"><summary>Where this comes from · checked {_date_label(v["reviewed_on"])}</summary>'
+            + (f'<p>Ohio bingo license {escape(o["license_number"])}' + (f' ({escape(o["license_type"])})' if o.get('license_type') else '') + '</p>' if o.get('license_number') else '')
+            + ''.join(f'<p>{escape(n)}</p>' for n in o.get('notes', []))
+            + (f'<ul>{sources}</ul>' if sources else '') + '</details>'
+            f'<p class="small-links"><a href="../#{escape(v["id"])}">See it on the Ohio finder</a> · <a href="{escape(_report(v))}">Report a change</a>{claim}</p></article>')
+
+
+def _ohio_send():
+    """The last panel on an Ohio town page: every game is listed free, and halls can update or claim their listing."""
+    return ('<section class="panel" id="run-a-game" aria-labelledby="run-title"><h2 id="run-title">Run a bingo game in Ohio? Get it listed free</h2>'
+            '<p>Every game is listed free, for every hall. Send us your game days and the time the first game starts, or claim your '
+            'listing so players always see your latest times.</p>'
+            '<div class="big-actions"><a class="solid" href="../#submit-details">Add or update your game</a>'
+            f'<a class="outline" href="{OHIO_CLAIM}" target="_blank" rel="noopener noreferrer">Claim your listing ↗</a></div>'
+            '<p><a href="../../halls/">How Find Bingo works for bingo halls</a> · <a href="../partners.html">Partner with the Ohio Bingo Finder</a></p></section>')
 
 
 def _state_page(s, states, rows, style, analytics, generated_on, landing, ads=(), events=(), towns=()):
@@ -1179,7 +1511,7 @@ def _ad_html(ads, up):
 
 
 # ---- Privacy and Advertise pages ---------------------------------------------------------------------
-POLICY_DATE = 'November 21, 2026'
+POLICY_DATE = 'November 27, 2026'
 TERMS_DATE = 'November 22, 2026'
 
 
@@ -1371,6 +1703,7 @@ PRIVACY = (
     '<li>We count visits without cookies and without keeping personal information.</li>'
     '<li>Your ZIP code search is worked out on your own phone or computer.</li>'
     '<li>The map pictures come from OpenStreetMap, which sees your internet address and the area on the map.</li>'
+    '<li>Google AdSense may show ads here and set cookies.</li>'
     '<li>We do not sell personal information.</li></ul>'
     '<h2>Counting visits</h2>'
     '<p>We use ' + _ext('https://www.goatcounter.com/help/privacy', 'GoatCounter') + ' to count page views, so we know which pages people use. '
@@ -1394,12 +1727,14 @@ PRIVACY = (
     'Read ' + _ext('https://www.cloudflare.com/privacypolicy/', 'Cloudflare’s privacy policy') + ' and '
     + _ext('https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement', 'GitHub’s privacy statement') + '.</p>'
     '<h2>Advertising</h2>'
-    '<p>This site may show ads. Every ad is labeled “Advertisement” and kept apart from the game listings. '
-    'If we use an ad network such as Google AdSense, it and its partners may use cookies to show ads based on your visits to this and other sites. '
-    'You can turn off personalized ads at ' + _ext('https://adssettings.google.com', 'adssettings.google.com')
-    + ' and learn more at ' + _ext('https://policies.google.com/technologies/ads', 'policies.google.com/technologies/ads')
-    + ', or opt out of many networks at ' + _ext('https://optout.aboutads.info', 'optout.aboutads.info') + '.</p>'
-    '<p>Ads never change which games are listed or their order. <a href="../advertise/">About advertising on Find Bingo</a></p>'
+    '<p>Find Bingo uses Google AdSense, so Google may show ads on this site and set cookies. We ask Google for non-personalized ads, '
+    'which are chosen from the page you are on and your general location, not from your visits to other sites. Google’s ad code can still '
+    'set its own cookies, for example to limit how often you see the same ad and to stop fraud.</p>'
+    '<p>You can manage Google’s ad settings at ' + _ext('https://adssettings.google.com', 'adssettings.google.com')
+    + ', read how Google uses information from sites that show its ads at ' + _ext('https://policies.google.com/technologies/ads', 'policies.google.com/technologies/ads')
+    + ', or opt out of many ad networks at ' + _ext('https://optout.aboutads.info', 'optout.aboutads.info') + '.</p>'
+    '<p>Ads are kept apart from the game listings, and they never change which games are listed or their order. '
+    '<a href="../advertise/">About advertising on Find Bingo</a></p>'
     '<h2>Email, calls and directions</h2>'
     '<p>If you email us game times or a correction, we get your email address and what you write. We use it to update the listings and to reply, '
     'and we never sell or share it. The call, phone lookup and directions buttons open your phone or Google Maps, which follow their own privacy rules.</p>'
@@ -1540,11 +1875,11 @@ ADVERTISE = (
     '<li><strong>Advertising.</strong> Free tips on getting the word out, or paid advertising if you want more.</li></ul>'
     '<p>Every hall is different, so let’s talk.</p>'
     '<h2>Ground rules</h2>'
-    '<ul><li>Every ad is labeled “Advertisement.” Every featured event is labeled “Featured event.”</li>'
-    '<li>Ads sit apart from the game listings: on the home page below the search results, and on state pages after the listings. Never inside them. '
+    '<ul><li>Every ad we sell is labeled “Advertisement.” Every featured event is labeled “Featured event.” Ads from Google AdSense carry Google’s own ad label.</li>'
+    '<li>Ads we sell sit apart from the game listings: on the home page below the search results, and on state pages after the listings. Never inside them. '
     'Featured events sit in their own box above the results, never inside them.</li>'
     '<li>Ads never add, remove, change or reorder listings. A hall cannot pay for a better listing, and every listing stays free.</li>'
-    '<li>We review every ad before it runs, and we turn down ads that are misleading.</li></ul>'
+    '<li>We review every ad we sell before it runs, and we turn down ads that are misleading. Google reviews its ads under its own policies.</li></ul>'
     '<h2>Where the money goes</h2>'
     '<p>Ad income supports <a href="https://www.vethomeguard.org/">Veteran Home Guardians</a>, the Ohio nonprofit that runs Find Bingo '
     'and visits veterans in nursing homes.</p>'
@@ -1666,3 +2001,34 @@ def shop_page(shop):
             'Bingo gear and gifts',
             'Looking for a new dauber, a bag that holds it all, or a gift for the bingo lover in your life? These are the things players rate best.',
             body)
+
+
+# ---- Google AdSense, on findbingo.org only (owner direction, November 27, 2026) ------------------------------
+# HARD RULE: guide.vethomeguard.org runs Google Ad Grants, which forbids AdSense, so Google's ad code and ads.txt go
+# only into bingo-site/findbingo/, which the Ohio-Bingo repository mirrors and Cloudflare serves at findbingo.org (and
+# www.findbingo.org). findbingo-site/ is served on the guide's host (guide.vethomeguard.org/findbingo-site/, the
+# finder's data source) and never carries either; _config.yml keeps bingo-site/ out of the guide's GitHub Pages build.
+# tests/adsense_scope.py enforces both. Auto ads: the code sits in <head> and Google places the ads; non-personalized
+# ads are asked for before the code loads, as on Mobility Talk. No visible ad slot is added here.
+ADSENSE_CLIENT = 'ca-pub-9220804879239310'
+ADSENSE_HEAD = (f'<meta name="google-adsense-account" content="{ADSENSE_CLIENT}">'
+                '<script>(window.adsbygoogle=window.adsbygoogle||[]).requestNonPersonalizedAds=1;</script>'
+                f'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={ADSENSE_CLIENT}" crossorigin="anonymous"></script>')
+ADS_TXT = 'google.com, pub-9220804879239310, DIRECT, f08c47fec0942fa0\n'
+ADSENSE_BASE = 'bingo-site/findbingo/'
+# Pages that never load the ad code: page not found, the print-only poster, and the privacy, terms and about pages.
+NO_ADSENSE = ('404.html', 'ohio/poster.html', 'privacy/index.html', 'terms/index.html', 'about/index.html')
+
+
+def adsense(result):
+    """ads.txt at the findbingo.org root and the AdSense code in the head of findbingo.org's pages (bingo-site/findbingo/)."""
+    out = {ADSENSE_BASE + 'ads.txt': ADS_TXT}
+    for name, text in result.items():
+        rel = name[len(ADSENSE_BASE):]
+        if (not name.startswith(ADSENSE_BASE) or not name.endswith('.html') or not isinstance(text, str) or rel in NO_ADSENSE
+                or rel.startswith('google') or '</head>' not in text):
+            continue
+        assert ADSENSE_CLIENT not in text and text.count('</head>') == 1, name
+        out[name] = text.replace('</head>', ADSENSE_HEAD + '</head>', 1)
+    assert not any(n.startswith('findbingo-site/') for n in out)
+    return out
