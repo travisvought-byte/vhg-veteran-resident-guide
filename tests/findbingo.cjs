@@ -878,5 +878,66 @@ assert(buildWith([{...sample[1], slot: 'sidebar'}], []).error, 'only known place
   }
 }
 
+// Ohio town pages (owner direction, November 27, 2026): built from the Ohio finder's own records into its folder
+// (findbingo.org/ohio/columbus/), linked from the finder's "Bingo by town" list and back, listed in the sitemap, with
+// the same layout and Event markup rules as the other town pages. Only bingo-site/findbingo/ has the ohio/ folder.
+{
+  const ohioDir = path.join(root, 'bingo-site/findbingo/ohio');
+  const sitemapText = fs.readFileSync(path.join(root, 'bingo-site/findbingo/sitemap.xml'), 'utf8');
+  const finderHtml = fs.readFileSync(path.join(ohioDir, 'index.html'), 'utf8');
+  const finder = scratch(finderHtml);
+  const ids = new Set(JSON.parse(/const BINGO=(\[.*?\]);/s.exec(finderHtml)[1]).map(r => r.id));
+  const towns = fs.readdirSync(ohioDir).filter(t => fs.existsSync(path.join(ohioDir, t, 'index.html')));
+  assert(towns.length >= 20, 'Ohio town pages are built');
+  assert.deepEqual([...finder.querySelectorAll('nav.towns a')].map(a => a.getAttribute('href')).sort(), towns.map(t => t + '/').sort(), 'the Ohio finder links every town page');
+  assert(!/\d/.test(finder.querySelector('nav.towns').textContent), 'no counts in the town list');
+  assert(!fs.readFileSync(path.join(root, 'bingo.html'), 'utf8').includes('class="towns"'), 'the guide copy of the finder has no town list');
+  const COUNT = /\b\d[\d,]* (bingo )?(halls?|venues?|locations?|places?|counties|groups?|games?|listings?|senior centers?)\b/i;
+  let marked = 0;
+  for (const t of towns) {
+    freeScratch(); await new Promise(r => setImmediate(r));
+    const text = fs.readFileSync(path.join(ohioDir, t, 'index.html'), 'utf8');
+    assert(!fs.existsSync(path.join(site, 'ohio', t)), 'Ohio town pages are not copied into findbingo-site: ' + t);
+    const url = `https://www.findbingo.org/ohio/${t}/`;
+    assert(sitemapText.includes(`<loc>${url}</loc>`), 'Ohio town page in the sitemap: ' + url);
+    const doc = scratch(text);
+    assert.equal(doc.querySelector('link[rel=canonical]').href, url);
+    const title = doc.title, h1 = doc.querySelector('h1').textContent, lead = doc.querySelector('header .lead').textContent;
+    const desc = doc.querySelector('meta[name=description]').content;
+    assert(title.startsWith('Bingo in ') && title.includes(', OH') && title.endsWith(' | FindBingo.org') && title.length <= 70, title);
+    assert(desc.length <= 165 && h1.startsWith('Bingo in ') && h1.endsWith(', Ohio'), t);
+    assert(!COUNT.test(title + desc + h1 + lead), 'no counts in the words written for ' + t);
+    const plain = doc.body.cloneNode(true);
+    for (const e of plain.querySelectorAll('script, article, .by-day li a')) e.remove();
+    assert(!COUNT.test(plain.textContent), 'no counts on the Ohio town page outside the listings: ' + t);
+    const cards = [...doc.querySelectorAll('#listings article')];
+    assert(cards.length >= 3, 'an Ohio town page has at least three listings: ' + t);
+    for (const a of cards) {
+      assert(ids.has(a.id), 'every listing is an Ohio finder record: ' + a.id);
+      assert(a.querySelector(`a[href="../#${a.id}"]`), 'every listing links to its card on the Ohio finder: ' + a.id);
+    }
+    assert(doc.querySelector('.by-day h3'), 'games day by day: ' + t);
+    assert(doc.querySelector('header a[href="../"]') && doc.querySelector('header a[href="../../"]'), 'links up to the Ohio finder and Find Bingo: ' + t);
+    assert.equal(doc.querySelector('form.zip-box').getAttribute('action'), '../', 'the ZIP box searches the Ohio finder: ' + t);
+    assert(doc.querySelector('#run-a-game a[href="../#submit-details"]') && doc.querySelector('#run-a-game a[href="https://www.ohiobingo.org/claim.html"]'), 'halls can update or claim a listing: ' + t);
+    assert(/Every game is listed free, for every hall\./.test(doc.getElementById('run-a-game').textContent), t);
+    for (const a of doc.querySelectorAll('nav.towns a')) assert(towns.includes(a.getAttribute('href').replace(/^\.\.\/|\/$/g, '')), 'links another Ohio town page: ' + a.getAttribute('href'));
+    assert(/gc\.zgo\.at|goatcounter/.test(text), 'visit counter on ' + t);
+    const ld = doc.getElementById('games-ld');
+    if (!ld) continue;
+    for (const e of JSON.parse(ld.textContent)) {
+      marked++;
+      assert.equal(e['@type'], 'Event');
+      assert(e.name && e.location.address.postalCode && e.location.address.addressRegion === 'OH' && e.organizer.name, e.name);
+      assert(!e.startDate && !e.offers, 'no fixed date or price is written into the page: ' + e.name);
+      assert(/^https:\/\/schema\.org\/(Sun|Mon|Tues|Wednes|Thurs|Fri|Satur)day$/.test(e.eventSchedule.byDay) && /^\d\d:\d\d:00$/.test(e.eventSchedule.startTime), e.name);
+      const card = doc.getElementById(e.url.split('#')[1]);
+      assert(card && !card.querySelector('.badge.muted'), 'Event markup only for a listing with posted times: ' + e.name);
+    }
+  }
+  freeScratch(); await new Promise(r => setImmediate(r));
+  assert(marked > 10, 'weekly Ohio games with a posted start time carry Event markup');
+}
+
 console.log('FindBingo.org checks passed.');
 })().catch(e => { console.error(e); process.exit(1); });
