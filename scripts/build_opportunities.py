@@ -14,6 +14,7 @@ Outputs:
   opportunities/<st>/<slug>.html    one program
   opportunities/us/index.html       open in every state, and worth the trip
   opportunities/us/<slug>.html      one nationwide or travel program
+  opportunities/business/index.html grants and pitch prizes for veteran-owned businesses, open ones first
   assets/opportunities.js           the county and category picker on those pages
 """
 import json
@@ -80,6 +81,12 @@ EXTRA_STYLE = (
     'details.opp-cat summary .vi{vertical-align:-6px;margin-right:6px}'
     '.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}'
     '[hidden]{display:none!important}'
+    '.table-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:9px;background:#fff}'
+    '.table-wrap:focus{outline:3px solid var(--gold);outline-offset:2px}'
+    'table.glance{border-collapse:collapse;width:100%;min-width:640px;font-size:16px}'
+    'table.glance caption{text-align:left;font-weight:650;color:var(--navy);padding:12px 14px}'
+    'table.glance th,table.glance td{text-align:left;vertical-align:top;padding:10px 14px;border-top:1px solid var(--line)}'
+    'table.glance thead th{background:var(--paper);color:var(--navy)}'
 )
 
 
@@ -171,6 +178,11 @@ def deadline_html(r):
     return e(text)
 
 
+def equity_text(r):
+    """Funding listings only: whether the program takes a share of the business, as its own page says."""
+    return {True: 'Yes', False: 'No. The program says it takes no equity.'}.get(r.get('equity'), 'Not stated by the program')
+
+
 def card(r, up, sname='', href=None, regions=None, heading='h3'):
     """One program. data-* attributes let assets/opportunities.js move and filter it; the page reads fine without."""
     cat_heading, cat_short, cat_icon = CAT[r['category']]
@@ -187,9 +199,13 @@ def card(r, up, sname='', href=None, regions=None, heading='h3'):
     parts.append(f'<p class="meta" style="margin:0">{icon(cat_icon, up)}{e(cat_short)} · {e(r["organization"])} · '
                  f'{e(where(r, sname) if r["scope"] != "travel" or not r.get("host") else (r.get("location") or ""))}</p>')
     parts.append(f'<p>{e(r["summary"])}</p><dl>')
-    for k, v in (('Who can apply', e(r.get('eligibility'))), ('How to apply', e(r.get('how_to_apply'))),
+    how = e(r.get('how_to_apply'))
+    if r.get('invite_only') and how:
+        how = '<strong>By invitation only.</strong> ' + how
+    for k, v in (('Who can apply', e(r.get('eligibility'))), ('How to apply', how),
                  ('Deadline or date', deadline_html(r)), ('Where', e(r.get('location'))), ('Travel', e(r.get('travel'))),
-                 ('Cost', e(r.get('cost')))):
+                 ('Cost', e(r.get('cost'))), ('Award', e(r.get('award'))),
+                 ('Takes equity', equity_text(r) if 'equity' in r else ''), ('Not confirmed', e(r.get('unconfirmed')))):
         if v:
             parts.append(f'<dt>{k}</dt><dd>{v}</dd>')
     if r.get('phone'):
@@ -335,7 +351,9 @@ def state_page(state, rows, national, ref, offices):
                             + '. Many are open to any veteran who can get there.',
                             ''.join(card(r, up, sname, href_own(r), regions) for r in local_all)))
     body.append(section('national', 'Open to veterans in every state',
-                        f'Apply from anywhere. Each links to its full listing. <a href="../us/">See them all on one page</a>.',
+                        f'Apply from anywhere. Each links to its full listing. <a href="../us/">See them all on one page</a>.'
+                        + (' Own a business? <a href="../business/">Funding for veteran-owned businesses</a>, open ones first.'
+                           if any(funding(r) for r in national) else ''),
                         national_rows(nat, href_us, 'national')))
     body.append(section('travel', 'Worth the trip',
                         'Retreats, games and programs held in another state. Some pay travel; each listing says what is covered.',
@@ -370,6 +388,8 @@ def detail_page(r, state, siblings, folder):
         body.append(f'<h2>More {e(cat_heading.lower())}</h2><ul class="opp-rows">'
                     + ''.join(f'<li><a href="{e(short_id(x))}.html">{e(x["name"])}</a> <span class="small">· {e(where(x, sname))}</span></li>' for x in like)
                     + '</ul>')
+    if r['category'] == 'business':
+        body.append('<p><a href="../business/">All funding for veteran-owned businesses, open ones first</a></p>')
     if state:
         body.append(f'<p><a class="button" href="./">Every program open to {e(sname)} veterans</a></p>')
     else:
@@ -401,7 +421,9 @@ def us_page(national, ref):
     for k, heading, short, ic in CATS:
         items = [r for r in nat if r['category'] == k]
         if items:
-            body.append(section(f'cat-{k}', e(heading), '', ''.join(card(r, up, '', href(r)) for r in items)))
+            intro = ('Grants and pitch prizes with the award, equity and deadline side by side: '
+                     '<a href="../business/">funding for veteran-owned businesses</a>.' if k == 'business' else '')
+            body.append(section(f'cat-{k}', e(heading), intro, ''.join(card(r, up, '', href(r)) for r in items)))
     body.append(section('travel', 'Worth the trip', 'Held in one place. Each listing says what travel costs are covered, if any.',
                         ''.join(card(r, up, '', href(r)) for r in trav)))
     body.append('</div>')
@@ -417,7 +439,108 @@ def us_page(national, ref):
                      hero, ''.join(body), 2, script=True)
 
 
-def hub(state_rows, n_national, ref):
+FUNDING_GROUPS = [
+    ('open', 'Open now', 'Nearest deadline first.'),
+    ('rolling', 'Open year-round', 'Apply any time; each says how often it picks winners.'),
+    ('invite', 'By invitation only', 'You get in through the program’s own course or boot camp first.'),
+    ('between', 'Between rounds', 'These ran in 2026 and have not announced the next round. Each says when the last one '
+                'closed; check the program’s site for the next.'),
+]
+
+
+def funding(r):
+    """A grant, prize or fund with an award (data field 'award'), as opposed to training and help."""
+    return r['category'] == 'business' and 'award' in r
+
+
+def funding_group(r):
+    if r.get('invite_only'):
+        return 'invite'
+    if r['status'] in ('open', 'rolling'):
+        return r['status']
+    return 'between'
+
+
+def funding_status(r):
+    """One short line for the at-a-glance table. On funding listings deadline_date is the application deadline."""
+    g = funding_group(r)
+    if g == 'invite':
+        return 'Invitation only'
+    if g == 'rolling':
+        return 'Open year-round'
+    if g == 'open':
+        return f'Open. Apply by {when(r["deadline_date"])}' if r.get('deadline_date') else 'Open now. Deadline not published'
+    return f'Next round {when(r["deadline_date"])}' if r.get('deadline_date') else 'Between rounds. Next one not announced'
+
+
+def first_clause(text):
+    """The award's headline for the table: up to the first full stop or semicolon. The card has the rest."""
+    return re.split(r'(?<=[a-z0-9)]\.)\s+(?=[A-Z0-9])|;\s+', text or '', maxsplit=1)[0]
+
+
+def business_page(groups, states, ref):
+    """opportunities/business/: every grant, pitch prize and fund for veteran-owned businesses, open ones first,
+    with award, equity and deadline side by side; then training and help."""
+    up = '../../'
+    rows = [(r, None) for r in groups.get('national', [])]
+    rows += [(r, states[code]) for code in sorted(groups) if code != 'national' for r in groups[code]]
+    fund = [(r, st) for r, st in rows if funding(r)]
+    if not fund:
+        return None
+    order = [g for g, _, _ in FUNDING_GROUPS]
+    fund.sort(key=lambda x: (order.index(funding_group(x[0])), x[0].get('deadline_date') or '9999', x[0]['name'].lower()))
+    href = lambda r, st: f'../{st["code"].lower() if st else "us"}/{short_id(r)}.html'
+    sname = lambda st: st['name'] if st else ''
+    n = {g: sum(1 for r, _ in fund if funding_group(r) == g) for g in order}
+    body = [f'<p>{len(fund)} grants, pitch prizes and funds for businesses owned by veterans and military spouses, each read on '
+            f'the program’s own site: {n["open"]} open now, {n["rolling"]} open year-round, {n["invite"]} by invitation and '
+            f'{n["between"]} between rounds. Each says what it pays, whether it takes a share of your business, who can apply '
+            'and the deadline.</p>']
+    trs = ''.join(f'<tr><th scope="row"><a href="#{e(short_id(r))}">{e(r["name"])}</a><br><span class="small">'
+                  f'{e(where(r, sname(st)) if r["scope"] != "travel" else "In person; you travel")}</span></th>'
+                  f'<td>{e(first_clause(r.get("award")))}</td>'
+                  f'<td>{"Yes" if r.get("equity") is True else "No" if r.get("equity") is False else "Not stated"}</td>'
+                  f'<td>{e(funding_status(r))}</td></tr>' for r, st in fund)
+    body.append('<div class="table-wrap" role="region" aria-labelledby="glance-cap" tabindex="0"><table class="glance">'
+                '<caption id="glance-cap">Business funding at a glance, open ones first</caption>'
+                '<thead><tr><th scope="col">Program</th><th scope="col">Award</th><th scope="col">Takes equity</th>'
+                '<th scope="col">Can you apply now?</th></tr></thead>'
+                f'<tbody>{trs}</tbody></table></div>')
+    for g, heading, intro in FUNDING_GROUPS:
+        items = [(r, st) for r, st in fund if funding_group(r) == g]
+        if items:
+            body.append(section(f'fund-{g}', f'{e(heading)} ({len(items)})', intro,
+                                ''.join(card(r, up, sname(st), href(r, st)) for r, st in items)))
+    unconf = [(r, st) for r, st in fund if r.get('unconfirmed')]
+    if unconf:
+        body.append('<h2 id="unconfirmed">What we could not confirm</h2><p>Funding lists shared online repeat some figures '
+                    'the programs’ own pages don’t show. We list only what each program publishes; these are the gaps.</p>'
+                    '<ul>' + ''.join(f'<li><a href="#{e(short_id(r))}">{e(r["name"])}</a>: {e(r["unconfirmed"])}</li>'
+                                     for r, st in unconf) + '</ul>')
+    helps = [(r, st) for r, st in rows if r['category'] == 'business' and not funding(r)]
+    if helps:
+        helps.sort(key=lambda x: (x[1] is not None, x[0]['scope'] == 'travel', x[0]['name'].lower()))
+        body.append('<h2 id="help">Training, certification and help for veteran business owners</h2>'
+                    '<p>Courses, boot camps and offices that help you plan, certify or grow a business. Several lead '
+                    'into the funding above.</p><ul class="opp-rows">'
+                    + ''.join(row(r, href(r, st), ' · ' + where(r, sname(st))) for r, st in helps) + '</ul>')
+    body.append('<h2>How these are checked</h2><p>Each listing comes from the program’s own page, linked, with the date we '
+                f'read it (last {when(ref)}). Amounts, rules and deadlines change every round, so confirm them on the program’s '
+                'site before you apply. Veteran Home Guardians does not take applications and is not paid by any program here.</p>')
+    body.append('<p><a class="button" href="../">Veteran programs by state</a> <a href="../us/">Open in every state</a></p>')
+    body.append(urgent(''))
+    hero = ('<small>Veteran Resource Guide · Business funding</small><h1>Funding for veteran-owned businesses</h1>'
+            '<p>Grants, pitch prizes and spouse funding for businesses owned by veterans and military spouses, with the award, '
+            'whether it takes equity and the deadline. Open ones first.</p>')
+    rel = f'{FOLDER}/business/index.html'
+    return rel, page('Grants and pitch prizes for veteran-owned businesses | Veteran Resource Guide',
+                     f'{len(fund)} grants, pitch prizes and funds for veteran and military spouse business owners, open ones first, '
+                     'with the award, whether it takes equity, who can apply and the deadline.',
+                     rel, [('Veteran Resource Guide', '../../'), ('Veteran programs', '../'), ('Business funding', None)],
+                     hero, ''.join(body), 2)
+
+
+def hub(state_rows, n_national, ref, n_business=0):
     up = '../'
     lis = ''.join(f'<li><a href="{low}/">{e(name)}</a> <span class="small">({n} programs, {own} of them in {e(name)})</span></li>'
                   for name, low, n, own in state_rows)
@@ -426,6 +549,8 @@ def hub(state_rows, n_national, ref):
             'how far you would travel, and how many it serves when the program publishes that.</p>'
             f'<h2>States with a page</h2><ul class="cols">{lis}</ul>'
             f'<p><a class="button" href="us/">Open to veterans in every state ({n_national})</a></p>'
+            + (f'<p><a href="business/"><strong>Funding for veteran-owned businesses</strong></a> · {n_business} grants and '
+               'pitch prizes, open ones first, with the award, equity and deadline side by side.</p>' if n_business else '') +
             '<p>Your state not listed yet? Everything on the nationwide page is open to you, and your state’s full guide '
             'lists its veterans offices and benefits. More states are being added, starting with those that publish '
             'their programs most completely.</p>'
@@ -512,7 +637,13 @@ def outputs(root=ROOT):
             urls.append(BASE_URL + p)
         links['*'] = (f'<p id="opportunities-link"><a href="{FOLDER}/us/"><strong>Veteran grants, scholarships and programs open in every state</strong></a>'
                       f' · {len(national)} programs, with who can apply, deadlines and published odds.</p>')
-    rel, html = hub(state_rows, len(national), ref)
+    n_business = 0
+    biz = business_page(groups, states, ref)
+    if biz:
+        out[biz[0]] = biz[1]
+        urls.append(BASE_URL + f'{FOLDER}/business/')
+        n_business = sum(1 for rows in groups.values() for r in rows if funding(r))
+    rel, html = hub(state_rows, len(national), ref, n_business)
     out[rel] = html
     urls.insert(0, BASE_URL + f'{FOLDER}/')
     return out, urls, links, county
