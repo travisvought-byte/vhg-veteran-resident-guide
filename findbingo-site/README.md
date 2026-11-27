@@ -17,4 +17,4 @@ centroids. Do not edit these files by hand; run `python3 scripts/build_public.py
   (`bingo-site/findbingo/ohio/`, built by `scripts/bingo_site.py`). Ohio halls that want to work with
   Veteran Home Guardians go to https://www.ohiobingo.org/.
 
-Lists updated November 23, 2026.
+Lists updated November 27, 2026.
