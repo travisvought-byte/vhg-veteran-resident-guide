@@ -488,8 +488,12 @@ for (const s of states) {
   assert(form.querySelector('input[name=zip]') && form.querySelector('select[name=radius]'), 'the ZIP search opens the finder');
   assert.equal(d.querySelectorAll('.state-buttons a').length, states.length - 1, 'links to every other state');
   for (const a of d.querySelectorAll('a[href^="../"]')) {
-    const target = path.join(root, 'bingo-site/findbingo', slug, a.getAttribute('href'));
-    assert(fs.existsSync(target.endsWith('/') ? path.join(target, 'index.html') : target) || fs.existsSync(path.join(target, 'index.html')), a.getAttribute('href'));
+    // A link may open a place on the page (../bingo-age-by-state/#ohio): the page must exist and hold that id.
+    const [href, hash] = a.getAttribute('href').split('#');
+    const target = path.join(root, 'bingo-site/findbingo', slug, href);
+    const file = [target.endsWith('/') ? path.join(target, 'index.html') : target, path.join(target, 'index.html')].find(f => fs.existsSync(f));
+    assert(file, a.getAttribute('href'));
+    if (hash) assert(fs.readFileSync(file, 'utf8').includes(`id="${hash}"`), a.getAttribute('href'));
   }
   const ids = [...d.querySelectorAll('#listings article')].map(a => a.id);
   const today = data.generated_on;
