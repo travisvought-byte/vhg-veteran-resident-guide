@@ -14,6 +14,7 @@ Outputs:
 import html
 import json
 import re
+from collections import Counter
 from pathlib import Path
 from urllib.parse import quote
 
@@ -74,13 +75,15 @@ STYLE = (':root{--navy:#183449;--green:#335947;--paper:#f5f3ed;--line:#d9dfda;--
          ':focus-visible{outline:3px solid #ca9f48;outline-offset:3px}')
 
 
-def page(title, description, path, crumbs, hero, body, depth):
+def page(title, description, path, crumbs, hero, body, depth, robots=''):
     up = '../' * depth
     canonical = BASE_URL + path
     trail = ' › '.join(f'<a href="{e(href)}">{e(text)}</a>' if href else e(text) for text, href in crumbs)
     return ('<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">\n'
             f'<title>{e(title)}</title>\n<meta name="description" content="{e(description)}">\n'
             f'<link rel="canonical" href="{e(canonical)}">\n'
+            + (f'<meta name="robots" content="{e(robots)}">\n' if robots else '')
+            + 
             f'<meta property="og:type" content="website"><meta property="og:title" content="{e(title)}">'
             f'<meta property="og:description" content="{e(description)}"><meta property="og:url" content="{e(canonical)}">'
             f'<meta property="og:image" content="{BASE_URL}assets/vhg-logo.png">\n'
@@ -138,6 +141,9 @@ def outputs(root=ROOT):
         code, sname = state['code'].lower(), state['name']
         records = json.loads((root / state['offices']).read_text())
         rows, used = [], set()
+        # A number several counties share is a regional or statewide office: those pages say the same thing with a
+        # different county name, so they stay up for visitors and ads but are kept out of search (noindex, no sitemap).
+        shared = Counter(r['phone'] for r in records)
         for r in sorted(records, key=lambda r: label(r)):
             name = label(r)
             s = slug(name)
@@ -149,7 +155,7 @@ def outputs(root=ROOT):
             title = f'{place} veterans service office | Veteran Resource Guide'
             desc = (f'Free help for veterans and families in {place}: the local veterans service office phone'
                     + (', address' if r.get('address') else '') + (' and hours' if r.get('hours') else '')
-                    + ', plus help with VA claims, pension, survivor benefits, health care and housing.')
+                    + ', plus help with VA claims, pension and Aid and Attendance for care at home, survivor benefits, health care and housing.')
             hero = (f'<small>Veteran Resource Guide · {e(sname)}</small><h1>Veterans help in {e(place)}</h1>'
                     f'<p>The veterans service office for {e(name)} helps veterans, survivors and families apply for the benefits '
                     'they have earned, at no charge.</p>')
@@ -167,8 +173,10 @@ def outputs(root=ROOT):
                     f'<p><a class="button" href="../../{e(guide_link(state, r["county"]))}">Open the {e(sname)} guide for {e(name)}</a></p>'
                     f'<p><a href="./">Every county in {e(sname)}</a></p>')
             crumbs = [('Veteran Resource Guide', '../../'), ('All states', '../'), (sname, './'), (name, None)]
-            out[path] = page(title, desc, path, crumbs, hero, body, 2)
-            urls.append(BASE_URL + path)
+            own = shared[r['phone']] == 1
+            out[path] = page(title, desc, path, crumbs, hero, body, 2, robots='' if own else 'noindex,follow')
+            if own:
+                urls.append(BASE_URL + path)
             rows.append(f'<li><a href="{e(s)}.html">{e(name)}</a></li>')
         kind = 'parishes' if code == 'la' else 'counties and areas' if code in ('ak', 'va') else 'counties'
         path = f'{FOLDER}/{code}/index.html'
