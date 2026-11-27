@@ -487,6 +487,21 @@ Harman Center (its own brochures disagree on the day), Lake Chelan and Burien Ea
 only), Manson Grange (season ended November 19) and games published only on Facebook. Washington's partner panel
 (Light Upon Light) is unchanged; partner states now sit with the listed states on the home page.
 
+**Washington, second batch (November 27, 2026).** Sixteen more places, each from the organizer's own page read
+November 27 (22 places, 46 weekly sessions, 13 of 39 counties): 220th Street Bingo in Mountlake Terrace (charity
+hall for the Seattle Junior Hockey Association, nine sessions Thursday to Sunday), American Legion Post 176 in
+Vancouver (nine sessions Tuesday to Saturday, open to the public), Elks lodges in Lakewood, Burien, Vancouver, Long
+Beach, Sequim, Ballard (Seattle) and Forks, and senior centers in Spokane Valley, Spokane (Hillyard), Snohomish, Lake
+Stevens, Ellensburg, Wenatchee (Foothills Community Center) and Oroville. Ballard, Forks and Vancouver's Thursday game
+post no start time, so those sessions have none. Left out: Bellingham Elks #194 (current on the Elks calendar, but its
+ZIP 98229 still has no map point), Bingo Boulevard in Kennewick (Columbia Center Rotary; only a news article, no page
+of its own), Mother Aerie #1 in Seattle (third Saturday, no time or who may play), Mount Vernon Senior Center (newest
+newsletter May 2026), Everett's Carl Gipson Center (calendar PDF unreadable), and games found only on Facebook,
+radio-station calendars or directories (VFW 1045 Longview, Fruitland Grange, Roslyn Eagles). Tribal casino bingo
+(Tulalip, Muckleshoot, Spokane Tribe and others) is outside this list. The Gambling Commission's licensee site
+turned the reader away this time; its county and city licence notices on wsgc.wa.gov name current bingo licensees
+and are the next lead list.
+
 **Kentucky and West Virginia (starter states, added November 17, 2026).** Files:
 `data/public/kentucky-bingo.json` and `west-virginia-bingo.json`, in the same shape as Florida's. Every
 listing came from the organizer's own page, read on November 17, 2026; search results and directory
