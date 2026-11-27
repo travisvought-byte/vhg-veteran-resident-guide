@@ -1,0 +1,1316 @@
+{
+ "_about": "Fair-price guide for guide.vethomeguard.org/contractors/fair-prices.html. Ranges are what cost guides published when read on checked_on; they are typical prices, not quotes. Columbus figures where the publisher printed them, U.S. figures otherwise. Left out on purpose: Fixr outlet ($18-$34) and switch ($33-$61) rows, which exclude the service-call minimum; Homeyou Columbus figures (lead-generation estimates); a HomeGuide EV tax-credit claim not checked against IRS.gov.",
+ "checked_on": "2026-11-27",
+ "hourly": [
+  {
+   "trade": "Plumber (Columbus)",
+   "low": 45,
+   "high": 200,
+   "source": "Angi",
+   "url": "https://www.angi.com/articles/plumber-cost/oh/columbus",
+   "after_hours": {
+    "low": 100,
+    "high": 600,
+    "source": "Angi",
+    "url": "https://www.angi.com/articles/emergency-plumber-cost/oh/columbus"
+   }
+  },
+  {
+   "trade": "Electrician",
+   "low": 50,
+   "high": 130,
+   "source": "HomeGuide",
+   "url": "https://homeguide.com/costs/electrician-cost-per-hour",
+   "after_hours": {
+    "low": 150,
+    "high": 200,
+    "source": "HomeGuide",
+    "url": "https://homeguide.com/costs/electrician-cost-per-hour"
+   }
+  },
+  {
+   "trade": "Heating and AC technician",
+   "low": 75,
+   "high": 150,
+   "source": "HomeGuide",
+   "url": "https://homeguide.com/costs/hvac-repair-cost",
+   "after_hours": {
+    "low": 140,
+    "high": 250,
+    "source": "HomeGuide",
+    "url": "https://homeguide.com/costs/hvac-repair-cost"
+   }
+  },
+  {
+   "trade": "Handyman company",
+   "low": 75,
+   "high": 125,
+   "source": "HomeGuide",
+   "url": "https://homeguide.com/costs/handyman-prices"
+  },
+  {
+   "trade": "Roofer",
+   "low": 40,
+   "high": 100,
+   "source": "HomeGuide",
+   "url": "https://homeguide.com/costs/roof-repair-cost"
+  },
+  {
+   "trade": "Drywall patching (Columbus)",
+   "low": 60,
+   "high": 90,
+   "source": "Angi",
+   "url": "https://www.angi.com/articles/how-much-does-drywall-repair-cost-small-holes/oh/columbus"
+  },
+  {
+   "trade": "Appliance repair",
+   "low": 50,
+   "high": 125,
+   "source": "HomeGuide",
+   "url": "https://www.homeguide.com/costs/appliance-repair-costs"
+  },
+  {
+   "trade": "Painter",
+   "low": 20,
+   "high": 50,
+   "source": "HomeGuide",
+   "url": "https://homeguide.com/costs/cost-to-paint-a-room"
+  }
+ ],
+ "trades": [
+  {
+   "key": "plumbing",
+   "label": "Plumbing",
+   "icon": "wrench",
+   "jobs": [
+    {
+     "job": "Plumber, normal hourly rate",
+     "unit": "per hour",
+     "low": 45,
+     "high": 200,
+     "typical": null,
+     "area": "Columbus",
+     "source": {
+      "publisher": "Angi",
+      "title": "How Much Does a Plumber Cost in Columbus, OH?",
+      "url": "https://www.angi.com/articles/plumber-cost/oh/columbus"
+     }
+    },
+    {
+     "job": "Service call or trip fee",
+     "unit": "per visit",
+     "low": 75,
+     "high": 150,
+     "typical": null,
+     "area": "Columbus",
+     "source": {
+      "publisher": "Angi",
+      "title": "How Much Does a Plumber Cost in Columbus, OH?",
+      "url": "https://www.angi.com/articles/plumber-cost/oh/columbus"
+     },
+     "note": "Angi says this fee includes the first hour of work."
+    },
+    {
+     "job": "Travel beyond the service area",
+     "unit": "per mile",
+     "low": 1,
+     "high": 2,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "How much does a plumber cost?",
+      "url": "https://homeguide.com/costs/plumber-cost"
+     },
+     "note": "HomeGuide: charged only past the first 10 miles or so."
+    },
+    {
+     "job": "Emergency plumber, after hours, hourly",
+     "unit": "per hour",
+     "low": 100,
+     "high": 600,
+     "typical": null,
+     "area": "Columbus",
+     "source": {
+      "publisher": "Angi",
+      "title": "How Much Does an Emergency Plumber Cost in Columbus, OH?",
+      "url": "https://www.angi.com/articles/emergency-plumber-cost/oh/columbus"
+     }
+    },
+    {
+     "job": "After-hours rate compared with normal",
+     "unit": "times the normal rate",
+     "low": 1.5,
+     "high": 3,
+     "typical": null,
+     "area": "Columbus",
+     "source": {
+      "publisher": "Angi",
+      "title": "How Much Does a Plumber Cost in Columbus, OH?",
+      "url": "https://www.angi.com/articles/plumber-cost/oh/columbus"
+     }
+    },
+    {
+     "job": "Clear a kitchen sink drain",
+     "unit": "per job",
+     "low": 125,
+     "high": 250,
+     "typical": null,
+     "area": "Columbus",
+     "source": {
+      "publisher": "Angi",
+      "title": "How Much Does Drain Cleaning Cost in Columbus, OH?",
+      "url": "https://www.angi.com/articles/how-much-does-drain-cleaning-cost/oh/columbus"
+     }
+    },
+    {
+     "job": "Clear a clogged toilet",
+     "unit": "per job",
+     "low": 125,
+     "high": 300,
+     "typical": null,
+     "area": "Columbus",
+     "source": {
+      "publisher": "Angi",
+      "title": "How Much Does Drain Cleaning Cost in Columbus, OH?",
+      "url": "https://www.angi.com/articles/how-much-does-drain-cleaning-cost/oh/columbus"
+     }
+    },
+    {
+     "job": "Clear a main sewer line (simple clog)",
+     "unit": "per job",
+     "low": 300,
+     "high": 900,
+     "typical": null,
+     "area": "Columbus",
+     "source": {
+      "publisher": "Angi",
+      "title": "How Much Does Drain Cleaning Cost in Columbus, OH?",
+      "url": "https://www.angi.com/articles/how-much-does-drain-cleaning-cost/oh/columbus"
+     }
+    },
+    {
+     "job": "Install a faucet",
+     "unit": "per job",
+     "low": 150,
+     "high": 350,
+     "typical": null,
+     "area": "Columbus",
+     "source": {
+      "publisher": "Angi",
+      "title": "How Much Does a Plumber Cost in Columbus, OH?",
+      "url": "https://www.angi.com/articles/plumber-cost/oh/columbus"
+     }
+    },
+    {
+     "job": "Replace a toilet",
+     "unit": "per job",
+     "low": 200,
+     "high": 500,
+     "typical": null,
+     "area": "Columbus",
+     "source": {
+      "publisher": "Angi",
+      "title": "How Much Does a Plumber Cost in Columbus, OH?",
+      "url": "https://www.angi.com/articles/plumber-cost/oh/columbus"
+     }
+    },
+    {
+     "job": "Replace a water heater",
+     "unit": "per job",
+     "low": 850,
+     "high": 1800,
+     "typical": null,
+     "area": "Columbus",
+     "source": {
+      "publisher": "Angi",
+      "title": "How Much Does Water Heater Repair Cost in Columbus, OH?",
+      "url": "https://www.angi.com/articles/how-much-does-it-cost-repair-water-heater/oh/columbus"
+     }
+    },
+    {
+     "job": "Replace a sump pump (existing pit)",
+     "unit": "per job",
+     "low": 309,
+     "high": 749,
+     "typical": 525,
+     "area": "U.S.",
+     "source": {
+      "publisher": "Angi",
+      "title": "How Much Does It Cost to Replace a Sump Pump? [2024 Data]",
+      "url": "https://angi.com/articles/how-much-does-sump-pump-replacement-cost.htm"
+     },
+     "note": "Angi page labeled 2024 data."
+    }
+   ]
+  },
+  {
+   "key": "electrical",
+   "label": "Electrical",
+   "icon": "bolt",
+   "jobs": [
+    {
+     "job": "Electrician, normal hourly rate",
+     "unit": "per hour",
+     "low": 50,
+     "high": 130,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "How Much Does An Electrician Cost Per Hour?",
+      "url": "https://homeguide.com/costs/electrician-cost-per-hour"
+     }
+    },
+    {
+     "job": "Service call (usually covers the first hour)",
+     "unit": "per visit",
+     "low": 100,
+     "high": 200,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "How Much Does An Electrician Cost Per Hour?",
+      "url": "https://homeguide.com/costs/electrician-cost-per-hour"
+     },
+     "note": "HomeGuide: some electricians charge a separate $40 to $100 trip fee instead."
+    },
+    {
+     "job": "After hours, hourly",
+     "unit": "per hour",
+     "low": 150,
+     "high": 200,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "How Much Does An Electrician Cost Per Hour?",
+      "url": "https://homeguide.com/costs/electrician-cost-per-hour"
+     }
+    },
+    {
+     "job": "Replace an outlet",
+     "unit": "per job",
+     "low": 80,
+     "high": 200,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "How Much Does An Electrician Cost Per Hour?",
+      "url": "https://homeguide.com/costs/electrician-cost-per-hour"
+     }
+    },
+    {
+     "job": "Swap an outlet for a GFCI outlet",
+     "unit": "per job",
+     "low": 90,
+     "high": 200,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "How Much Does It Cost to Install or Replace a GFCI Outlet?",
+      "url": "https://homeguide.com/costs/gfci-outlet-cost"
+     }
+    },
+    {
+     "job": "Install a ceiling fan",
+     "unit": "per job",
+     "low": 150,
+     "high": 350,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "How Much Does An Electrician Cost Per Hour?",
+      "url": "https://homeguide.com/costs/electrician-cost-per-hour"
+     }
+    },
+    {
+     "job": "Upgrade to a 200-amp panel",
+     "unit": "per job",
+     "low": 1800,
+     "high": 2500,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "How Much Does It Cost To Upgrade Or Replace An Electrical Panel?",
+      "url": "https://homeguide.com/costs/cost-to-replace-electrical-panel"
+     }
+    },
+    {
+     "job": "Install a Level 2 EV charger",
+     "unit": "per job",
+     "low": 670,
+     "high": 1910,
+     "typical": null,
+     "area": "Columbus",
+     "source": {
+      "publisher": "Angi",
+      "title": "How Much Does EV Charging Station Installation Cost in Columbus, OH?",
+      "url": "https://www.angi.com/articles/installing-electric-car-charging-station/oh/columbus"
+     }
+    }
+   ]
+  },
+  {
+   "key": "hvac",
+   "label": "Heating and air conditioning",
+   "icon": "fan",
+   "jobs": [
+    {
+     "job": "Service call or diagnostic fee",
+     "unit": "per visit",
+     "low": 85,
+     "high": 125,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "Housecall Pro",
+      "title": "HVAC Pricing Guide 2026: Service Call, Repair & Install Costs",
+      "url": "https://www.housecallpro.com/resources/how-to-price-hvac-services/"
+     },
+     "note": "From 3.6 million service calls in Housecall Pro software, 12 months to September 2026."
+    },
+    {
+     "job": "HVAC technician, normal hourly rate",
+     "unit": "per hour",
+     "low": 75,
+     "high": 150,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "How much does HVAC repair, service, and maintenance cost?",
+      "url": "https://homeguide.com/costs/hvac-repair-cost"
+     }
+    },
+    {
+     "job": "After hours, hourly",
+     "unit": "per hour",
+     "low": 140,
+     "high": 250,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "How much does HVAC repair, service, and maintenance cost?",
+      "url": "https://homeguide.com/costs/hvac-repair-cost"
+     }
+    },
+    {
+     "job": "Air conditioner tune-up",
+     "unit": "per visit",
+     "low": 89,
+     "high": 159,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "Housecall Pro",
+      "title": "HVAC Pricing Guide 2026: Service Call, Repair & Install Costs",
+      "url": "https://www.housecallpro.com/resources/how-to-price-hvac-services/"
+     }
+    },
+    {
+     "job": "Furnace tune-up",
+     "unit": "per visit",
+     "low": 100,
+     "high": 198,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "Housecall Pro",
+      "title": "HVAC Pricing Guide 2026: Service Call, Repair & Install Costs",
+      "url": "https://www.housecallpro.com/resources/how-to-price-hvac-services/"
+     }
+    },
+    {
+     "job": "New furnace, installed",
+     "unit": "per job",
+     "low": 2441,
+     "high": 6683,
+     "typical": 4456,
+     "area": "Columbus",
+     "source": {
+      "publisher": "Angi",
+      "title": "How Much Does a New Furnace Cost in Columbus, OH?",
+      "url": "https://www.angi.com/articles/how-much-does-it-cost-install-new-furnace/oh/columbus"
+     }
+    },
+    {
+     "job": "Replace central air conditioning",
+     "unit": "per job",
+     "low": 3181,
+     "high": 6640,
+     "typical": 4884,
+     "area": "Columbus",
+     "source": {
+      "publisher": "Angi",
+      "title": "How Much Does AC Replacement Cost in Columbus, OH?",
+      "url": "https://www.angi.com/articles/how-much-does-installing-new-ac-cost/oh/columbus"
+     }
+    }
+   ]
+  },
+  {
+   "key": "roofing",
+   "label": "Roofing",
+   "icon": "home",
+   "jobs": [
+    {
+     "job": "Minimum charge for a repair visit",
+     "unit": "per visit",
+     "low": 150,
+     "high": 300,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "How Much Does Roof Repair Cost?",
+      "url": "https://homeguide.com/costs/roof-repair-cost"
+     }
+    },
+    {
+     "job": "Replace missing shingles (up to 25)",
+     "unit": "per job",
+     "low": 100,
+     "high": 300,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "How Much Does Roof Repair Cost?",
+      "url": "https://homeguide.com/costs/roof-repair-cost"
+     }
+    },
+    {
+     "job": "Fix a roof leak",
+     "unit": "per job",
+     "low": 360,
+     "high": 1550,
+     "typical": null,
+     "area": "Columbus",
+     "source": {
+      "publisher": "Angi",
+      "title": "How Much Does Roof Repair Cost in Columbus, OH?",
+      "url": "https://www.angi.com/articles/how-much-do-roof-repairs-cost/oh/columbus"
+     }
+    },
+    {
+     "job": "Roof repair, most jobs",
+     "unit": "per job",
+     "low": 296,
+     "high": 1591,
+     "typical": 924,
+     "area": "Columbus",
+     "source": {
+      "publisher": "Angi",
+      "title": "How Much Does Roof Repair Cost in Columbus, OH?",
+      "url": "https://www.angi.com/articles/how-much-do-roof-repairs-cost/oh/columbus"
+     }
+    },
+    {
+     "job": "Replace the whole roof, typical house",
+     "unit": "per job",
+     "low": 5688,
+     "high": 12760,
+     "typical": 9068,
+     "area": "Columbus",
+     "source": {
+      "publisher": "Angi",
+      "title": "How Much Does Roof Replacement Cost in Columbus, OH?",
+      "url": "https://www.angi.com/articles/how-much-does-roof-replacement-cost/oh/columbus"
+     }
+    },
+    {
+     "job": "Roof replacement permit (asphalt shingles)",
+     "unit": "per permit",
+     "low": null,
+     "high": null,
+     "typical": 350,
+     "area": "Columbus",
+     "source": {
+      "publisher": "Angi",
+      "title": "How Much Does Roof Replacement Cost in Columbus, OH?",
+      "url": "https://www.angi.com/articles/how-much-does-roof-replacement-cost/oh/columbus"
+     }
+    }
+   ]
+  },
+  {
+   "key": "water",
+   "label": "Water damage cleanup",
+   "icon": "drop",
+   "jobs": [
+    {
+     "job": "Small area, part of one room (Class 1)",
+     "unit": "per job",
+     "low": 150,
+     "high": 400,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeAdvisor",
+      "title": "How Much Does Water Damage Restoration Cost in 2025?",
+      "url": "https://www.homeadvisor.com/cost/disaster-recovery/repair-water-damage/"
+     }
+    },
+    {
+     "job": "Dry out clean-water flooding, per square foot",
+     "unit": "per sq ft",
+     "low": 4,
+     "high": 6,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "How Much Does Water Damage Restoration Cost?",
+      "url": "https://homeguide.com/costs/water-damage-restoration-cost"
+     }
+    },
+    {
+     "job": "Sewage cleanup (black water), per square foot",
+     "unit": "per sq ft",
+     "low": 9,
+     "high": 12,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "How Much Does Water Damage Restoration Cost?",
+      "url": "https://homeguide.com/costs/water-damage-restoration-cost"
+     }
+    },
+    {
+     "job": "Whole room, walls wet up to 12 inches (Class 2)",
+     "unit": "per job",
+     "low": 500,
+     "high": 1000,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeAdvisor",
+      "title": "How Much Does Water Damage Restoration Cost in 2025?",
+      "url": "https://www.homeadvisor.com/cost/disaster-recovery/repair-water-damage/"
+     }
+    },
+    {
+     "job": "Whole room, walls wet up to 12 inches (Class 2)",
+     "unit": "per job",
+     "low": 1500,
+     "high": 5000,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "How Much Does Water Damage Restoration Cost?",
+      "url": "https://homeguide.com/costs/water-damage-restoration-cost"
+     },
+     "note": "HomeGuide and HomeAdvisor disagree on this one."
+    },
+    {
+     "job": "Flooded basement, 500 sq ft, clean water",
+     "unit": "per job",
+     "low": 2000,
+     "high": 3000,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "How Much Does Flooded Basement Cleanup Cost?",
+      "url": "https://homeguide.com/costs/flooded-basement-cleanup-cost"
+     }
+    },
+    {
+     "job": "Water damage restoration, most jobs",
+     "unit": "per job",
+     "low": 1382,
+     "high": 6357,
+     "typical": 3841,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeAdvisor",
+      "title": "How Much Does Water Damage Restoration Cost in 2025?",
+      "url": "https://www.homeadvisor.com/cost/disaster-recovery/repair-water-damage/"
+     },
+     "note": "HomeAdvisor page labeled 2025 data."
+    }
+   ]
+  },
+  {
+   "key": "drywall",
+   "label": "Drywall",
+   "icon": "wall",
+   "jobs": [
+    {
+     "job": "Patch a small hole (under 6 inches)",
+     "unit": "per job",
+     "low": 50,
+     "high": 150,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "How Much Does Drywall Repair Cost?",
+      "url": "https://homeguide.com/costs/drywall-repair-cost"
+     }
+    },
+    {
+     "job": "Drywall contractor minimum trip fee",
+     "unit": "per visit",
+     "low": 125,
+     "high": 200,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "How Much Does Drywall Repair Cost?",
+      "url": "https://homeguide.com/costs/drywall-repair-cost"
+     }
+    },
+    {
+     "job": "Drywall patching, hourly",
+     "unit": "per hour",
+     "low": 60,
+     "high": 90,
+     "typical": null,
+     "area": "Columbus",
+     "source": {
+      "publisher": "Angi",
+      "title": "How Much Does Drywall Repair Cost in Columbus, OH?",
+      "url": "https://www.angi.com/articles/how-much-does-drywall-repair-cost-small-holes/oh/columbus"
+     }
+    },
+    {
+     "job": "Drywall repair, most jobs",
+     "unit": "per job",
+     "low": 268,
+     "high": 790,
+     "typical": 526,
+     "area": "Columbus",
+     "source": {
+      "publisher": "Angi",
+      "title": "How Much Does Drywall Repair Cost in Columbus, OH?",
+      "url": "https://www.angi.com/articles/how-much-does-drywall-repair-cost-small-holes/oh/columbus"
+     }
+    },
+    {
+     "job": "Replace water-damaged drywall",
+     "unit": "per job",
+     "low": 575,
+     "high": 1490,
+     "typical": null,
+     "area": "Columbus",
+     "source": {
+      "publisher": "Angi",
+      "title": "How Much Does Drywall Repair Cost in Columbus, OH?",
+      "url": "https://www.angi.com/articles/how-much-does-drywall-repair-cost-small-holes/oh/columbus"
+     }
+    }
+   ]
+  },
+  {
+   "key": "painting",
+   "label": "Painting",
+   "icon": "brush",
+   "jobs": [
+    {
+     "job": "Painter, hourly rate",
+     "unit": "per hour",
+     "low": 20,
+     "high": 50,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "How Much Does It Cost to Paint a Room?",
+      "url": "https://homeguide.com/costs/cost-to-paint-a-room"
+     }
+    },
+    {
+     "job": "Paint one room, walls only",
+     "unit": "per room",
+     "low": 300,
+     "high": 1000,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "How Much Does It Cost to Paint a Room?",
+      "url": "https://homeguide.com/costs/cost-to-paint-a-room"
+     }
+    },
+    {
+     "job": "Paint one room, walls, trim and ceiling",
+     "unit": "per room",
+     "low": 600,
+     "high": 2000,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "How Much Does It Cost to Paint a Room?",
+      "url": "https://homeguide.com/costs/cost-to-paint-a-room"
+     }
+    }
+   ]
+  },
+  {
+   "key": "handyman",
+   "label": "Handyman",
+   "icon": "tool",
+   "jobs": [
+    {
+     "job": "Handyman, self-employed, hourly",
+     "unit": "per hour",
+     "low": 50,
+     "high": 80,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "2026 Handyman Hourly Rates",
+      "url": "https://homeguide.com/costs/handyman-prices"
+     }
+    },
+    {
+     "job": "Handyman company, hourly",
+     "unit": "per hour",
+     "low": 75,
+     "high": 125,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "2026 Handyman Hourly Rates",
+      "url": "https://homeguide.com/costs/handyman-prices"
+     }
+    },
+    {
+     "job": "Trip charge",
+     "unit": "per visit",
+     "low": 30,
+     "high": 80,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "2026 Handyman Hourly Rates",
+      "url": "https://homeguide.com/costs/handyman-prices"
+     }
+    },
+    {
+     "job": "Minimum charge",
+     "unit": "per visit",
+     "low": 75,
+     "high": 200,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "2026 Handyman Hourly Rates",
+      "url": "https://homeguide.com/costs/handyman-prices"
+     }
+    },
+    {
+     "job": "Handyman job, most jobs",
+     "unit": "per job",
+     "low": 150,
+     "high": 600,
+     "typical": 300,
+     "area": "U.S.",
+     "source": {
+      "publisher": "Fixr",
+      "title": "Handyman Cost | Handyman Hourly Rate",
+      "url": "https://www.fixr.com/costs/handyman"
+     }
+    }
+   ]
+  },
+  {
+   "key": "appliance",
+   "label": "Appliance repair",
+   "icon": "gear",
+   "jobs": [
+    {
+     "job": "Service call or diagnostic visit",
+     "unit": "per visit",
+     "low": 70,
+     "high": 130,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "How Much Does Appliance Repair Cost?",
+      "url": "https://www.homeguide.com/costs/appliance-repair-costs"
+     }
+    },
+    {
+     "job": "Repair labor, hourly",
+     "unit": "per hour",
+     "low": 50,
+     "high": 125,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "How Much Does Appliance Repair Cost?",
+      "url": "https://www.homeguide.com/costs/appliance-repair-costs"
+     }
+    },
+    {
+     "job": "Appliance repair, most jobs",
+     "unit": "per job",
+     "low": 107,
+     "high": 249,
+     "typical": 178,
+     "area": "U.S.",
+     "source": {
+      "publisher": "Housecall Pro",
+      "title": "2026 Appliance Repair Price Guide",
+      "url": "https://www.housecallpro.com/resources/appliance-repair-prices/"
+     }
+    }
+   ]
+  },
+  {
+   "key": "trees",
+   "label": "Tree removal",
+   "icon": "tree",
+   "jobs": [
+    {
+     "job": "Small tree (under 30 ft)",
+     "unit": "per tree",
+     "low": 150,
+     "high": 500,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "How Much Does Tree Removal Cost?",
+      "url": "https://homeguide.com/costs/tree-removal-cost"
+     }
+    },
+    {
+     "job": "Medium tree (30 to 60 ft)",
+     "unit": "per tree",
+     "low": 300,
+     "high": 1000,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "How Much Does Tree Removal Cost?",
+      "url": "https://homeguide.com/costs/tree-removal-cost"
+     }
+    },
+    {
+     "job": "Large tree (60 to 80 ft)",
+     "unit": "per tree",
+     "low": 650,
+     "high": 2000,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "How Much Does Tree Removal Cost?",
+      "url": "https://homeguide.com/costs/tree-removal-cost"
+     }
+    },
+    {
+     "job": "Grind the first stump",
+     "unit": "per stump",
+     "low": 120,
+     "high": 400,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "How Much Does Tree Removal Cost?",
+      "url": "https://homeguide.com/costs/tree-removal-cost"
+     },
+     "note": "HomeGuide: $30 to $60 more for each added stump."
+    }
+   ]
+  }
+ ],
+ "wages": {
+  "release": "May 2025",
+  "source": {
+   "title": "O*NET OnLine Local Wages (U.S. Department of Labor), republishing Bureau of Labor Statistics 2025 wage data",
+   "url": "https://www.onetonline.org/"
+  },
+  "areas": [
+   "All of Ohio",
+   "Columbus",
+   "Cleveland",
+   "Cincinnati",
+   "Dayton",
+   "Toledo",
+   "Akron",
+   "Rural eastern Ohio",
+   "Rural north and northeast Ohio",
+   "Rural southern Ohio",
+   "Rural west and northwest Ohio"
+  ],
+  "occupations": [
+   {
+    "soc": "47-2152",
+    "name": "Plumbers",
+    "url": "https://www.onetonline.org/link/localwages/47-2152.00?st=OH",
+    "median": {
+     "All of Ohio": 30.45,
+     "Columbus": 30.41,
+     "Cleveland": 30.3,
+     "Cincinnati": 31.33,
+     "Dayton": 30.26,
+     "Toledo": 32.18,
+     "Akron": 30.5,
+     "Rural eastern Ohio": 29.06,
+     "Rural north and northeast Ohio": 29.65,
+     "Rural southern Ohio": 34.93,
+     "Rural west and northwest Ohio": 28.88
+    },
+    "p25": {
+     "All of Ohio": 24.06,
+     "Columbus": 23.72,
+     "Cleveland": 24.28,
+     "Cincinnati": 24.18,
+     "Dayton": 24.34,
+     "Toledo": 24.4,
+     "Akron": 23.56,
+     "Rural eastern Ohio": 24.23,
+     "Rural north and northeast Ohio": 23.3,
+     "Rural southern Ohio": 27.0,
+     "Rural west and northwest Ohio": 23.22
+    },
+    "p75": {
+     "All of Ohio": 40.51,
+     "Columbus": 41.05,
+     "Cleveland": 39.94,
+     "Cincinnati": 40.74,
+     "Dayton": 39.16,
+     "Toledo": 47.54,
+     "Akron": 39.73,
+     "Rural eastern Ohio": 36.89,
+     "Rural north and northeast Ohio": 37.57,
+     "Rural southern Ohio": 46.94,
+     "Rural west and northwest Ohio": 37.74
+    }
+   },
+   {
+    "soc": "47-2111",
+    "name": "Electricians",
+    "url": "https://www.onetonline.org/link/localwages/47-2111.00?st=OH",
+    "median": {
+     "All of Ohio": 31.11,
+     "Columbus": 31.11,
+     "Cleveland": 34.07,
+     "Cincinnati": 30.53,
+     "Dayton": 29.75,
+     "Toledo": 35.92,
+     "Akron": 37.19,
+     "Rural eastern Ohio": 32.14,
+     "Rural north and northeast Ohio": 30.33,
+     "Rural southern Ohio": 30.08,
+     "Rural west and northwest Ohio": 31.22
+    },
+    "p25": {
+     "All of Ohio": 24.1,
+     "Columbus": 24.19,
+     "Cleveland": 24.21,
+     "Cincinnati": 23.7,
+     "Dayton": 23.38,
+     "Toledo": 28.33,
+     "Akron": 28.73,
+     "Rural eastern Ohio": 24.11,
+     "Rural north and northeast Ohio": 23.84,
+     "Rural southern Ohio": 23.82,
+     "Rural west and northwest Ohio": 24.34
+    },
+    "p75": {
+     "All of Ohio": 38.7,
+     "Columbus": 38.45,
+     "Cleveland": 41.47,
+     "Cincinnati": 38.23,
+     "Dayton": 37.96,
+     "Toledo": 44.05,
+     "Akron": 48.37,
+     "Rural eastern Ohio": 37.88,
+     "Rural north and northeast Ohio": 37.14,
+     "Rural southern Ohio": 37.58,
+     "Rural west and northwest Ohio": 37.87
+    }
+   },
+   {
+    "soc": "49-9021",
+    "name": "Heating and AC technicians",
+    "url": "https://www.onetonline.org/link/localwages/49-9021.00?st=OH",
+    "median": {
+     "All of Ohio": 30.06,
+     "Columbus": 30.98,
+     "Cleveland": 30.19,
+     "Cincinnati": 29.92,
+     "Dayton": 30.05,
+     "Toledo": 30.03,
+     "Akron": 29.37,
+     "Rural eastern Ohio": 29.28,
+     "Rural north and northeast Ohio": 29.36,
+     "Rural southern Ohio": 29.37,
+     "Rural west and northwest Ohio": 29.17
+    },
+    "p25": {
+     "All of Ohio": 23.27,
+     "Columbus": 23.57,
+     "Cleveland": 24.06,
+     "Cincinnati": 23.45,
+     "Dayton": 23.28,
+     "Toledo": 23.57,
+     "Akron": 23.41,
+     "Rural eastern Ohio": 21.39,
+     "Rural north and northeast Ohio": 22.37,
+     "Rural southern Ohio": 21.68,
+     "Rural west and northwest Ohio": 22.46
+    },
+    "p75": {
+     "All of Ohio": 37.59,
+     "Columbus": 38.88,
+     "Cleveland": 37.67,
+     "Cincinnati": 37.74,
+     "Dayton": 37.59,
+     "Toledo": 37.94,
+     "Akron": 36.78,
+     "Rural eastern Ohio": 36.92,
+     "Rural north and northeast Ohio": 35.68,
+     "Rural southern Ohio": 38.0,
+     "Rural west and northwest Ohio": 35.15
+    }
+   },
+   {
+    "soc": "47-2181",
+    "name": "Roofers",
+    "url": "https://www.onetonline.org/link/localwages/47-2181.00?st=OH",
+    "median": {
+     "All of Ohio": 23.74,
+     "Columbus": 23.76,
+     "Cleveland": 26.77,
+     "Cincinnati": 23.66,
+     "Dayton": 24.72,
+     "Toledo": 27.74,
+     "Akron": 26.28,
+     "Rural eastern Ohio": 23.25,
+     "Rural north and northeast Ohio": 23.66,
+     "Rural southern Ohio": 23.0,
+     "Rural west and northwest Ohio": 23.17
+    },
+    "p25": {
+     "All of Ohio": 22.14,
+     "Columbus": 22.33,
+     "Cleveland": 22.38,
+     "Cincinnati": 22.64,
+     "Dayton": 22.2,
+     "Toledo": 22.32,
+     "Akron": 22.86,
+     "Rural eastern Ohio": 21.65,
+     "Rural north and northeast Ohio": 21.69,
+     "Rural southern Ohio": 21.26,
+     "Rural west and northwest Ohio": 21.81
+    },
+    "p75": {
+     "All of Ohio": 30.4,
+     "Columbus": 30.02,
+     "Cleveland": 35.58,
+     "Cincinnati": 30.74,
+     "Dayton": 29.78,
+     "Toledo": 30.86,
+     "Akron": 36.22,
+     "Rural eastern Ohio": 30.65,
+     "Rural north and northeast Ohio": 30.36,
+     "Rural southern Ohio": 28.73,
+     "Rural west and northwest Ohio": 24.08
+    }
+   },
+   {
+    "soc": "47-2031",
+    "name": "Carpenters",
+    "url": "https://www.onetonline.org/link/localwages/47-2031.00?st=OH",
+    "median": {
+     "All of Ohio": 29.24,
+     "Columbus": 31.96,
+     "Cleveland": 29.16,
+     "Cincinnati": 28.9,
+     "Dayton": 28.04,
+     "Toledo": 29.36,
+     "Akron": 29.36,
+     "Rural eastern Ohio": 26.96,
+     "Rural north and northeast Ohio": 23.69,
+     "Rural southern Ohio": 28.85,
+     "Rural west and northwest Ohio": 27.9
+    },
+    "p25": {
+     "All of Ohio": 23.42,
+     "Columbus": 27.61,
+     "Cleveland": 24.22,
+     "Cincinnati": 23.62,
+     "Dayton": 23.03,
+     "Toledo": 22.83,
+     "Akron": 24.61,
+     "Rural eastern Ohio": 21.49,
+     "Rural north and northeast Ohio": 22.23,
+     "Rural southern Ohio": 22.96,
+     "Rural west and northwest Ohio": 22.94
+    },
+    "p75": {
+     "All of Ohio": 36.47,
+     "Columbus": 37.69,
+     "Cleveland": 38.03,
+     "Cincinnati": 35.0,
+     "Dayton": 31.6,
+     "Toledo": 36.05,
+     "Akron": 37.1,
+     "Rural eastern Ohio": 31.95,
+     "Rural north and northeast Ohio": 30.01,
+     "Rural southern Ohio": 35.8,
+     "Rural west and northwest Ohio": 33.56
+    }
+   },
+   {
+    "soc": "47-2141",
+    "name": "Painters",
+    "url": "https://www.onetonline.org/link/localwages/47-2141.00?st=OH",
+    "median": {
+     "All of Ohio": 23.77,
+     "Columbus": 24.91,
+     "Cleveland": 23.84,
+     "Cincinnati": 24.12,
+     "Dayton": 22.75,
+     "Toledo": 23.47,
+     "Akron": 27.67,
+     "Rural eastern Ohio": 22.56,
+     "Rural north and northeast Ohio": 22.56,
+     "Rural southern Ohio": 22.56,
+     "Rural west and northwest Ohio": 22.04
+    },
+    "p25": {
+     "All of Ohio": 21.17,
+     "Columbus": 22.52,
+     "Cleveland": 21.21,
+     "Cincinnati": 22.5,
+     "Dayton": 19.0,
+     "Toledo": 20.2,
+     "Akron": 22.02,
+     "Rural eastern Ohio": 18.55,
+     "Rural north and northeast Ohio": 18.29,
+     "Rural southern Ohio": 18.98,
+     "Rural west and northwest Ohio": 18.24
+    },
+    "p75": {
+     "All of Ohio": 29.71,
+     "Columbus": 31.45,
+     "Cleveland": 31.68,
+     "Cincinnati": 29.0,
+     "Dayton": 28.0,
+     "Toledo": 29.93,
+     "Akron": 34.84,
+     "Rural eastern Ohio": 26.7,
+     "Rural north and northeast Ohio": 28.18,
+     "Rural southern Ohio": 28.09,
+     "Rural west and northwest Ohio": 24.35
+    }
+   },
+   {
+    "soc": "47-2081",
+    "name": "Drywall installers",
+    "url": "https://www.onetonline.org/link/localwages/47-2081.00?st=OH",
+    "median": {
+     "All of Ohio": 29.53,
+     "Columbus": 31.47,
+     "Cleveland": 30.36,
+     "Cincinnati": 26.67,
+     "Dayton": 29.53,
+     "Toledo": 30.25,
+     "Akron": 31.95,
+     "Rural north and northeast Ohio": 27.22
+    },
+    "p25": {
+     "All of Ohio": 23.65,
+     "Columbus": 27.12,
+     "Cleveland": 23.34,
+     "Cincinnati": 23.12,
+     "Dayton": 23.18,
+     "Toledo": 23.26,
+     "Akron": 22.92,
+     "Rural north and northeast Ohio": 24.34
+    },
+    "p75": {
+     "All of Ohio": 34.11,
+     "Columbus": 34.41,
+     "Cleveland": 34.5,
+     "Cincinnati": 30.37,
+     "Dayton": 34.0,
+     "Toledo": 34.52,
+     "Akron": 34.51,
+     "Rural north and northeast Ohio": 35.43
+    }
+   },
+   {
+    "soc": "49-9071",
+    "name": "Maintenance and repair workers",
+    "url": "https://www.onetonline.org/link/localwages/49-9071.00?st=OH",
+    "median": {
+     "All of Ohio": 25.68,
+     "Columbus": 25.38,
+     "Cleveland": 24.97,
+     "Cincinnati": 27.32,
+     "Dayton": 24.38,
+     "Toledo": 27.49,
+     "Akron": 25.2,
+     "Rural eastern Ohio": 25.83,
+     "Rural north and northeast Ohio": 25.99,
+     "Rural southern Ohio": 23.51,
+     "Rural west and northwest Ohio": 28.29
+    },
+    "p25": {
+     "All of Ohio": 21.17,
+     "Columbus": 22.06,
+     "Cleveland": 21.16,
+     "Cincinnati": 22.0,
+     "Dayton": 20.32,
+     "Toledo": 21.97,
+     "Akron": 21.46,
+     "Rural eastern Ohio": 19.12,
+     "Rural north and northeast Ohio": 21.46,
+     "Rural southern Ohio": 18.01,
+     "Rural west and northwest Ohio": 22.26
+    },
+    "p75": {
+     "All of Ohio": 30.65,
+     "Columbus": 30.49,
+     "Cleveland": 30.9,
+     "Cincinnati": 30.9,
+     "Dayton": 30.89,
+     "Toledo": 31.26,
+     "Akron": 30.39,
+     "Rural eastern Ohio": 30.76,
+     "Rural north and northeast Ohio": 30.48,
+     "Rural southern Ohio": 29.08,
+     "Rural west and northwest Ohio": 33.75
+    }
+   }
+  ]
+ },
+ "law": {
+  "cite": "OAC 109:4-3-05",
+  "title": "Repairs or services",
+  "url": "https://codes.ohio.gov/ohio-administrative-code/rule-109:4-3-05"
+ },
+ "complaint": {
+  "agency": "Ohio Attorney General, Consumer Protection Section",
+  "url": "https://www.ohioattorneygeneral.gov/SpecialPages/File-Complaints",
+  "form_url": "https://filecomplaint.ohioattorneygeneral.gov/",
+  "phone": "1-800-282-0515"
+ }
+}
