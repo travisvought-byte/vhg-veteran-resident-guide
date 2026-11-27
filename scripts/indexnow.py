@@ -23,6 +23,10 @@ import urllib.request
 from pathlib import Path
 
 ENDPOINT = 'https://api.indexnow.org/IndexNow'
+# Bing checks the key itself with its own crawler. Sites behind Cloudflare bot
+# protection can refuse the shared endpoint's check (403) yet pass Bing's, and
+# Bing shares what it gets with the other IndexNow search engines.
+FALLBACK = 'https://www.bing.com/indexnow'
 LIMIT = 10000
 
 
@@ -83,10 +87,10 @@ def wait_for_key(host: str, key: str, minutes: int = 15):
         time.sleep(20)
 
 
-def submit(host: str, key: str, urls):
+def submit(host: str, key: str, urls, endpoint: str = ENDPOINT):
     body = json.dumps({'host': host, 'key': key, 'keyLocation': f'https://{host}/{key}.txt',
                        'urlList': urls}).encode('utf-8')
-    req = urllib.request.Request(ENDPOINT, data=body, method='POST',
+    req = urllib.request.Request(endpoint, data=body, method='POST',
                                  headers={'Content-Type': 'application/json; charset=utf-8'})
     try:
         with urllib.request.urlopen(req, timeout=60) as r:
@@ -131,6 +135,9 @@ def main():
     if args.wait and wait_for_key(args.host, args.key) is False:
         return 0
     status = submit(args.host, args.key, urls)
+    if status == 403:
+        print(f'IndexNow answered 403 at {ENDPOINT}; trying {FALLBACK}')
+        status = submit(args.host, args.key, urls, FALLBACK)
     meaning = {200: 'accepted', 202: 'received, key check pending', 400: 'bad request',
                403: 'key not valid for this site', 422: 'addresses do not match the site',
                429: 'too many requests'}.get(status, 'unexpected answer')
