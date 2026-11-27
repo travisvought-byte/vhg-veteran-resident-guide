@@ -52,15 +52,29 @@ def changed_between(old: Path, new: Path):
     return out
 
 
+# Python's default User-Agent is refused by some CDNs (Cloudflare answers 403), which made a live key file
+# look missing. A plain identifying one gets the file like any visitor.
+USER_AGENT = 'Mozilla/5.0 (compatible; IndexNow key check)'
+
+
 def wait_for_key(host: str, key: str, minutes: int = 15):
+    """True once the key file is live. False if it is still missing (404 and the like) after `minutes`.
+    None if the site refuses this check (401, 403, 429, 503: a CDN shielding it from scripts), since
+    waiting will not change that and the search engines fetch the key themselves."""
     url = f'https://{host}/{key}.txt'
     deadline = time.time() + minutes * 60
     while True:
         try:
-            with urllib.request.urlopen(urllib.request.Request(url, headers={'Cache-Control': 'no-cache'}), timeout=20) as r:
+            req = urllib.request.Request(url, headers={'Cache-Control': 'no-cache', 'User-Agent': USER_AGENT})
+            with urllib.request.urlopen(req, timeout=20) as r:
                 if r.read().decode('utf-8', 'replace').strip() == key:
                     print(f'key file is live at {url}')
                     return True
+        except urllib.error.HTTPError as e:
+            if e.code in (401, 403, 429, 503):
+                print(f'::warning::{host} answered {e.code} to the key file check; sending anyway, '
+                      'IndexNow fetches the key itself')
+                return None
         except (urllib.error.URLError, OSError):
             pass
         if time.time() > deadline:
@@ -114,7 +128,7 @@ def main():
         print(f'  ... and {len(urls) - 50} more')
     if args.dry_run:
         return 0
-    if args.wait and not wait_for_key(args.host, args.key):
+    if args.wait and wait_for_key(args.host, args.key) is False:
         return 0
     status = submit(args.host, args.key, urls)
     meaning = {200: 'accepted', 202: 'received, key check pending', 400: 'bad request',
