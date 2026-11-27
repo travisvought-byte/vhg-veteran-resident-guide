@@ -573,6 +573,19 @@ article{border-color:#3d4d55;border-top-color:var(--accent);box-shadow:none}.sta
       if (!a || !/zeffy\.com|\/donate(\.html)?(\b|$)|givebutter|paypal\.com\/donate/i.test(a.href)) return;
       counter.count({path: 'click/donate', title: 'Donate click', event: true});
     }, true);
+    // Weekly win count: a hall or reader starting a listing claim or a correction email to us.
+    // Only the kind of action is sent, never the listing, the address or anything typed.
+    document.addEventListener('click', function (e) {
+      var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+      if (!a) return;
+      var href = a.getAttribute('href') || '', kind = '';
+      if (/^mailto:(travis@vethomeguard\.org|veteranhomeguardians@gmail\.com)/i.test(href)) {
+        kind = /subject=[^&]*correction/i.test(href) ? 'email-correction' : 'email-us';
+      } else if (/ohiobingo\.org\/claim(\.html)?|[?&#\/]claim\b/i.test(a.href)) {
+        kind = 'claim';
+      }
+      if (kind) counter.count({path: 'click/' + kind, title: 'Win: ' + kind, event: true});
+    }, true);
     // Which state's guide people read: the page marks the state it shows on <html data-edition>.
     var root = document.documentElement, shown = root.dataset.edition || '';
     if (window.MutationObserver) new MutationObserver(function () {
