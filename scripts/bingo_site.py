@@ -11,7 +11,7 @@ import json
 import re
 from instant_bingo import instant_page
 from findbingo_site import (indexed_state_pages, indexed_city_pages, indexed_day_pages, INFO_PAGES, load_landing, load_events, upcoming_events,
-                            events_html, EVENT_CSS, ohio_towns, ohio_days, _slug, DAY_NAMES, DAY_SLUGS)
+                            events_html, EVENT_CSS, ohio_towns, ohio_days, _slug, DAY_NAMES, DAY_SLUGS, GUIDE_LINKS, newbie_line)
 from html import escape
 
 SITE = 'https://www.findbingo.org/ohio'
@@ -313,10 +313,14 @@ def make_bingo_site(root, finder_page):
     }
     site['index.html'] = _replace(_replace(site['index.html'], '</style>', TOWNS_CSS + WEEKDAYS_CSS + '</style>', 1),
                                   '<section class="help-box"', days_nav(ohio_days(root)) + towns_nav(ohio_towns(root)) + '<section class="help-box"', 1)
+    # The line for first-timers that every state page carries (findbingo_site.newbie_line), here under "Good to know".
+    ohio = next(x for x in json.loads((root / 'data/public/bingo-states.json').read_text()) if x['code'] == 'OH')
+    site['index.html'] = _replace(site['index.html'], '<h2 id="good-to-know">Good to know</h2>',
+                                  '<h2 id="good-to-know">Good to know</h2>' + newbie_line(ohio, icon=False), 1)
     national = 'https://www.findbingo.org'
     # The Ohio finder is part of findbingo.org, so its footers link the site's Privacy and Advertise pages.
     for name in ('index.html', 'partners.html', 'distributions.html', 'instant.html'):
-        site[name] = _replace(site[name], '</footer>', '<p><a href="../learn/">How bingo works: a free bingo class</a> · <a href="../about/">About and contact</a> · <a href="../privacy/">Privacy</a> · <a href="../terms/">Terms of use</a> · <a href="../advertise/">Advertise on Find Bingo</a> · <a href="../halls/">For bingo halls</a> · <a href="../shop/">Bingo gear and gifts</a></p><p class="noprint">Giving Tuesday is December 1: <a href="https://www.zeffy.com/en-US/donation-form/giving-tuesday-no-veteran-left-isolated">give to Veteran Home Guardians</a>.</p></footer>', 1)
+        site[name] = _replace(site[name], '</footer>', '<p>' + GUIDE_LINKS.format(up='../') + '</p><p><a href="../about/">About and contact</a> · <a href="../privacy/">Privacy</a> · <a href="../terms/">Terms of use</a> · <a href="../advertise/">Advertise on Find Bingo</a> · <a href="../halls/">For bingo halls</a> · <a href="../shop/">Bingo gear and gifts</a></p><p class="noprint">Giving Tuesday is December 1: <a href="https://www.zeffy.com/en-US/donation-form/giving-tuesday-no-veteran-left-isolated">give to Veteran Home Guardians</a>.</p></footer>', 1)
     files = {OUT + name: content for name, content in site.items()}
     files.update({
         # Served by Cloudflare at www.findbingo.org: one sitemap for the national page and the Ohio finder.
