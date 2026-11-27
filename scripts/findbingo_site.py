@@ -327,14 +327,30 @@ Lists updated {_date_label(generated_on)}.
     pages = {}
     groups = city_groups(venues)
     by_code = {s['code']: s for s in states}
+    # Day pages (findbingo.org/texas/monday/): each state's weekdays with enough games, Monday first.
+    dgroups = day_groups(venues)
+    state_days = {code: [d for d in WEEK if (code, d) in dgroups] for code in {c for c, _ in dgroups}}
     for (code, town), rows in sorted(groups.items()):
         towns = sorted(t for c, t in groups if c == code)
-        pages[f'{SLUGS[code]}/{_slug(town)}/index.html'] = _city_page(by_code[code], town, rows, towns, style, analytics, generated_on)
-    # Ohio town pages sit inside the Ohio finder's folder (findbingo.org/ohio/columbus/), which only bingo-site/findbingo/ has.
+        pages[f'{SLUGS[code]}/{_slug(town)}/index.html'] = _city_page(by_code[code], town, rows, towns, style, analytics, generated_on,
+                                                                       day_pages=state_days.get(code, ()))
+    for (code, d), rows in sorted(dgroups.items()):
+        key = f'{SLUGS[code]}/{DAY_SLUGS[d]}/index.html'
+        assert key not in pages, ('a day page would replace another page', key)
+        pages[key] = _day_page(by_code[code], d, rows, {t for c, t in groups if c == code}, state_days[code], style, analytics, generated_on)
+    # Ohio town and day pages sit inside the Ohio finder's folder (findbingo.org/ohio/columbus/, /ohio/monday/), which only
+    # bingo-site/findbingo/ has.
     ohio_rows, ohio_as_of = ohio_venues(root)
     ohio_groups = ohio_town_groups(ohio_rows)
-    ohio_pages = {f'ohio/{_slug(t)}/index.html': _city_page(by_code['OH'], t, rows, sorted(ohio_groups), style, analytics, ohio_as_of, ohio=True)
+    ohio_dgroups = ohio_day_groups(ohio_rows)
+    ohio_days_list = [d for d in WEEK if d in ohio_dgroups]
+    ohio_pages = {f'ohio/{_slug(t)}/index.html': _city_page(by_code['OH'], t, rows, sorted(ohio_groups), style, analytics, ohio_as_of, ohio=True,
+                                                            day_pages=ohio_days_list)
                   for t, rows in sorted(ohio_groups.items())}
+    for d, rows in sorted(ohio_dgroups.items()):
+        key = f'ohio/{DAY_SLUGS[d]}/index.html'
+        assert key not in ohio_pages, ('an Ohio day page would replace a town page', key)
+        ohio_pages[key] = _day_page(by_code['OH'], d, rows, set(ohio_groups), ohio_days_list, style, analytics, ohio_as_of, ohio=True)
     for s in states:
         if s['code'] == 'OH':
             continue
@@ -344,7 +360,7 @@ Lists updated {_date_label(generated_on)}.
             rows = [v for v in venues if v['state'] == s['code']]
         pages[SLUGS[s['code']] + '/index.html'] = _state_page(s, states, rows, style, analytics, generated_on, landing, _ads_for(ads, SLUGS[s['code']]),
                                                               [e for e in upcoming_events(events, generated_on) if e['state'] == s['code']],
-                                                              sorted(t for c, t in groups if c == s['code']))
+                                                              sorted(t for c, t in groups if c == s['code']), state_days.get(s['code'], ()))
     pages['privacy/index.html'] = _info_page('privacy', *PRIVACY, style, analytics, generated_on)
     pages['about/index.html'] = _info_page('about', *about_page(states), style, analytics, generated_on)
     pages['terms/index.html'] = _info_page('terms', *TERMS, style, analytics, generated_on)
@@ -449,12 +465,15 @@ def _out(url, label):
     return f'<a href="{escape(url)}" target="_blank" rel="noopener noreferrer">{escape(label)} ↗</a>'
 
 
-def _venue_html(v, s):
+def _venue_html(v, s, pick=None):
+    """One listing's card. pick is a day page's weekday: the card shows that day's games and names the hall's other
+    bingo days in a line, so a long week of sessions does not bury the day the visitor asked for."""
     many = len(v['organizations']) > 1
     sessions = ''.join(
         f'<li data-day="{x["day"]}"><strong>{DAY_NAMES[x["day"]]}</strong>, {escape(_time_range(x["start"], x.get("end")))}'
         + (f' <span class="org">· {escape(x["label"])}</span>' if x.get('label') else '')
-        + (f' <span class="org">· {escape(x["organization"])}</span>' if many else '') + '</li>' for x in v['sessions'])
+        + (f' <span class="org">· {escape(x["organization"])}</span>' if many else '') + '</li>' for x in _on_day(v, pick))
+    others = [DAY_NAMES[d] for d in WEEK if pick is not None and d != pick and any(x['day'] == d for x in v['sessions'])]
     if v.get('phone'):
         call = f'<a class="solid" href="tel:{re.sub(r"[^0-9]", "", v["phone"])}">{_ic("phone")}Call {escape(v["phone"])}</a>'
     else:
@@ -466,7 +485,8 @@ def _venue_html(v, s):
             f'<h3>{escape(v["name"])}</h3><p class="where">{_ic("pin")}{escape(v["city"])}</p>'
             + (f'<p class="small">{escape(v["audience"])}</p>' if v.get('audience') else '')
             + f'<div class="when"><p>{_ic("cal")}<strong>Bingo days:</strong></p><ul class="sessions"{"" if v.get("schedule_note") else " data-weekly"}>{sessions}</ul>'
-            f'<p class="note">{escape(v.get("schedule_note") or s.get("hours_note") or "Call ahead to confirm before you go.")}</p></div>'
+            + ('<p>Bingo runs here every day of the week.</p>' if len(others) == 6 else f'<p>Other bingo days here: {escape(_and(others))}.</p>' if others else '')
+            + f'<p class="note">{escape(v.get("schedule_note") or s.get("hours_note") or "Call ahead to confirm before you go.")}</p></div>'
             f'<div class="big-actions">{call}<a class="outline" href="{escape(_maps(v["address"]))}" target="_blank" rel="noopener noreferrer">{_ic("route")}Directions ↗</a></div>'
             f'<p class="address">{escape(v["address"])} · {escape(_area(v["county"]))}</p>'
             + (f'<p class="small">{escape(v["hours"])}</p>' if v.get('hours') else '')
@@ -474,6 +494,11 @@ def _venue_html(v, s):
             + f'<details class="sources"><summary>Where this comes from · checked {_date_label(v["reviewed_on"])}</summary><p>{source}</p>'
             + ''.join(f'<p>{escape(n)}</p>' for n in v.get('notes', [])) + '</details>'
             f'<p class="small-links"><a href="{escape(_report(v))}">Report a change</a></p></article>')
+
+
+def _on_day(v, pick):
+    """A listing's sessions, or only those on weekday pick (day pages)."""
+    return [x for x in v['sessions'] if pick is None or x['day'] == pick]
 
 
 def _licensed_html(r, s):
@@ -807,6 +832,7 @@ def city_groups(venues):
     for code, town in groups:
         key = (code, _slug(town))
         assert key not in slugs, ('two towns share an address', code, town, slugs.get(key))
+        assert key[1] not in DAY_SLUGS, ('a town page would take a day page\'s address', code, town)
         slugs[key] = town
     return groups
 
@@ -831,15 +857,17 @@ def _street(v):
     return v['address'][:-len(tail)] if v['address'].endswith(tail) else v['address']
 
 
-def game_events(rows, page_url):
+def game_events(rows, page_url, only_day=None, town_urls=None):
     """schema.org Event markup for games that run every week, built only from the listing: the place, its address,
     the group that runs the game, the weekday and the listed hours. No price (the lists do not give one) and no
     invented dates: eventSchedule says 'every Monday, 4 to 11 p.m.', and EVENT_DATES_LD fills in the next date in the
-    visitor's browser, so the date is never stale. Games that run only some weeks get no markup."""
+    visitor's browser, so the date is never stale. Games that run only some weeks get no markup. only_day limits the markup to
+    that weekday's games, and town_urls ({town: its page}) points each game at its town page where the town has one, so a
+    game listed on a day page and on its town page is one event with one address (day pages)."""
     out = []
     for v in rows:
         for x in v['sessions']:
-            if not _weekly(v, x) or not x.get('start'):
+            if not _weekly(v, x) or not x.get('start') or (only_day is not None and x['day'] != only_day):
                 continue
             day = DAY_NAMES[x['day']]
             when = f'every {day}, {_time_range(x["start"], x.get("end"))}'
@@ -850,7 +878,7 @@ def game_events(rows, page_url):
                 '@context': 'https://schema.org', '@type': 'Event',
                 'name': f'Bingo at {v["name"]}',
                 'description': f'Weekly bingo at {v["name"]} in {v["city"]}, {when}, run by {x["organization"]}. Call ahead before you go.',
-                'url': f'{page_url}#{v["id"]}',
+                'url': f'{(town_urls or {}).get(v["city"], page_url)}#{v["id"]}',
                 'eventAttendanceMode': 'https://schema.org/OfflineEventAttendanceMode',
                 'eventStatus': 'https://schema.org/EventScheduled',
                 'eventSchedule': schedule,
@@ -879,7 +907,24 @@ CITY_CSS = ('.by-day{background:var(--card);border:1px solid var(--line);border-
             '.towns{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px 20px 14px;margin:18px 0}.towns h2{font-size:24px;margin:10px 0 8px}'
             '.towns ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}'
             '.towns a{display:inline-flex;align-items:center;min-height:48px;padding:0 14px;border:2px solid var(--accent);border-radius:24px;color:var(--accent);font-weight:700;text-decoration:none}'
-            '@media print{.towns{display:none!important}}')
+            '@media print{.towns{display:none!important}}'
+            # "Bingo by day" (_days_nav): the same round links as the town list; the page's own day is filled in.
+            '.weekdays{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px 20px 14px;margin:18px 0}.weekdays h2{font-size:24px;margin:10px 0 8px}'
+            '.weekdays ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}'
+            '.weekdays a{display:inline-flex;align-items:center;min-height:48px;padding:0 16px;border:2px solid var(--accent);border-radius:24px;color:var(--accent);font-weight:700;text-decoration:none}'
+            '.weekdays a[aria-current]{background:var(--accent);color:var(--card)}'
+            '@media (forced-colors:active){.weekdays a[aria-current]{forced-color-adjust:none;background:Highlight;color:HighlightText;border-color:Highlight}}'
+            '@media print{.weekdays,.jump{display:none!important}}')
+
+
+def _days_nav(s, days, up, current=None):
+    """'Bingo by day': links to a state's day pages (findbingo.org/texas/monday/), only the days that have one, from its
+    state page (up=''), its town pages and its day pages (up='../'). On a day page its own day is marked as the current page."""
+    if not days:
+        return ''
+    return (f'<nav class="weekdays" aria-labelledby="days-title"><h2 id="days-title">Bingo by day in {escape(s["name"])}</h2><ul>'
+            + ''.join(f'<li><a href="{up}{DAY_SLUGS[d]}/"' + (' aria-current="page"' if d == current else '') + f'>{DAY_NAMES[d]}</a></li>'
+                      for d in days) + '</ul></nav>')
 
 
 def _towns_nav(s, towns, up):
@@ -890,10 +935,10 @@ def _towns_nav(s, towns, up):
             + ''.join(f'<li><a href="{up}{_slug(t)}/">{escape(t)}</a></li>' for t in towns) + '</ul></nav>')
 
 
-def _city_page(s, town, rows, towns, style, analytics, generated_on, ohio=False):
+def _city_page(s, town, rows, towns, style, analytics, generated_on, ohio=False, day_pages=()):
     """A town's page. ohio=True builds an Ohio town page (findbingo.org/ohio/columbus/) from ohio_venues(): the same
     layout, with each Ohio card (_ohio_card), the days on a hall's state license where it has posted no times, and the
-    ZIP box opening the Ohio finder."""
+    ZIP box opening the Ohio finder. day_pages: the weekdays with a day page in the state, linked under "Bingo by day"."""
     code, name, slug = s['code'], s['name'], SLUGS[s['code']]
     url = f'{SITE}/{slug}/{_slug(town)}/'
     sessions = [x for r in rows for x in r['sessions']]
@@ -946,6 +991,7 @@ def _city_page(s, town, rows, towns, style, analytics, generated_on, ohio=False)
         body += _map_box('../../', f'the {town} bingo listed below', *(('Licensed, game times not posted',) if ohio else ()))
     body += (f'<div id="listings"><h2 id="list-title">Every bingo listing in {escape(town)}</h2><div class="grid">'
              + ''.join((_ohio_card if ohio else _venue_html)(r, s) for r in rows) + '</div></div>')
+    body += _days_nav(s, day_pages, '../')
     body += _towns_nav(s, [t for t in towns if t != town], '../')
     body += (f'<p class="small-links"><a href="../">All bingo in {escape(name)}</a> · <a href="../../">Search every state by ZIP code</a></p>'
              + (_ohio_send() if ohio else _send_times(s, '../../')))
@@ -1126,7 +1172,7 @@ def ohio_town_groups(rows):
     groups = {t: sorted(rs, key=lambda r: (not r['posted'], r['name'].lower())) for t, rs in towns.items() if len(rs) >= CITY_MIN}
     slugs = {}
     for t in groups:
-        assert _slug(t) not in slugs and _slug(t) not in ('assets',), ('two Ohio towns share an address', t, slugs.get(_slug(t)))
+        assert _slug(t) not in slugs and _slug(t) not in ('assets',) + DAY_SLUGS, ('two Ohio towns share an address', t, slugs.get(_slug(t)))
         slugs[_slug(t)] = t
     return groups
 
@@ -1177,8 +1223,9 @@ def _ohio_notice(o):
             f'Confirm games are running before you go. {_out(e["url"], label)}</p>')
 
 
-def _ohio_card(v, s):
-    """One Ohio listing on a town page, from the Ohio finder's record."""
+def _ohio_card(v, s, pick=None):
+    """One Ohio listing on a town or day page, from the Ohio finder's record. pick is a day page's weekday: the list of
+    bingo days shows that day only (the posted schedule below it still gives the whole week)."""
     o = v['oh']
     center = v['kind'] == 'senior_center'
     if v['posted']:
@@ -1193,7 +1240,7 @@ def _ohio_card(v, s):
         sessions = ''.join(
             f'<li{_day_attr(v, x)}><strong>{DAY_NAMES[x["day"]]}</strong>'
             + (f', {escape(_time_range(x["start"]))}' if x.get('start') else '')
-            + (f' <span class="org">· {escape(x["label"])}</span>' if x.get('label') else '') + '</li>' for x in v['sessions'])
+            + (f' <span class="org">· {escape(x["label"])}</span>' if x.get('label') else '') + '</li>' for x in _on_day(v, pick))
         if o.get('schedule_source'):
             note = f'This schedule comes from {o["schedule_source"]}. Please call to confirm before you go.'
         elif o.get('schedule_valid_until'):
@@ -1241,7 +1288,127 @@ def _ohio_send():
             '<p><a href="../../halls/">How Find Bingo works for bingo halls</a> · <a href="../partners.html">Partner with the Ohio Bingo Finder</a></p></section>')
 
 
-def _state_page(s, states, rows, style, analytics, generated_on, landing, ads=(), events=(), towns=()):
+# ---- Day pages (findbingo.org/texas/monday/, findbingo.org/ohio/friday/ and so on) -----------------------------------
+# Owner direction, November 27, 2026: older players search "bingo tonight", "monday night bingo near me" and "bingo on
+# sunday in <state>". A state gets a page for a weekday when at least DAY_MIN of its listings have a game that day. The
+# page lists every such game, town by town (A to Z), earliest start first, with the town pages' cards and the same Event
+# markup rules (weekly games only, built from the listing, next date filled in the browser). Ohio's day pages are built
+# from the Ohio finder's records and list games with a posted schedule; halls known only from the state's license list
+# have no game times, so they stay on the town pages and the finder. No counts anywhere (Travis's rule).
+DAY_MIN = 3
+DAY_SLUGS = tuple(n.lower() for n in DAY_NAMES)
+
+
+def _first_start(v, d):
+    """A listing's earliest start time on weekday d, for sorting; games with no posted time sort last."""
+    return min((x['start'] for x in v['sessions'] if x['day'] == d and x.get('start')), default='99:99')
+
+
+def _by_weekday(rows):
+    out = {}
+    for r in rows:
+        for d in {x['day'] for x in r['sessions']}:
+            out.setdefault(d, []).append(r)
+    return {d: rs for d, rs in out.items() if len(rs) >= DAY_MIN}
+
+
+def day_groups(venues):
+    """{(state code, weekday): listings with a game that weekday}, outside Ohio, where at least DAY_MIN listings have one."""
+    states = {}
+    for v in venues:
+        if v['state'] != 'OH':
+            states.setdefault(v['state'], []).append(v)
+    return {(code, d): rs for code, rows in states.items() for d, rs in _by_weekday(rows).items()}
+
+
+def ohio_day_groups(rows):
+    """{weekday: Ohio listings with a posted game that weekday} (ohio_venues rows), where at least DAY_MIN have one."""
+    return _by_weekday(rows)
+
+
+def ohio_days(root):
+    """The weekdays with an Ohio day page, Monday first."""
+    groups = ohio_day_groups(ohio_venues(root)[0])
+    return [d for d in WEEK if d in groups]
+
+
+def indexed_day_pages(root):
+    """Day pages for the sitemap: 'texas/monday/', 'ohio/friday/' and so on."""
+    pages = [(SLUGS[code], d) for code, d in day_groups(load_venues(root))] + [(SLUGS['OH'], d) for d in ohio_days(root)]
+    return tuple(f'{slug}/{DAY_SLUGS[d]}/' for slug, d in sorted(pages, key=lambda p: (p[0], WEEK.index(p[1]))))
+
+
+def _day_page(s, d, rows, town_pages, day_pages, style, analytics, generated_on, ohio=False):
+    """A state's page for one weekday: every listing with a game that day, by town, earliest first. town_pages: the
+    state's towns with their own page (each town links to it); day_pages: the weekdays with a day page, for "Bingo by day"."""
+    code, name, slug = s['code'], s['name'], SLUGS[s['code']]
+    day = DAY_NAMES[d]
+    url = f'{SITE}/{slug}/{DAY_SLUGS[d]}/'
+    heading = f'{day} bingo in {name}'
+    title = next(t for t in (f'{heading}: games, times and places | Find Bingo', f'{heading}: games and times | Find Bingo',
+                             f'{heading} | Find Bingo') if len(t) <= 70)
+    if ohio:
+        # Many Ohio schedules give days without a single start time, so the words promise times only where posted.
+        description = f'{day} bingo in Ohio, town by town: game times where posted, phone numbers and directions. Free, with a source for every listing.'
+        lead = f'Looking for {day} bingo in Ohio? Here is every {day} game with a posted schedule, town by town, earliest first. Call ahead before you go.'
+    else:
+        description = (f'{day} bingo in {name}, town by town: start times, phone numbers and directions for every game we list. '
+                       'Free, with a source for every listing.')
+        if len(description) > 165:
+            description = f'{day} bingo in {name}, town by town: start times, phone numbers and directions. Free.'
+        lead = f'Looking for {day} bingo in {name}? Here is every {day} game we list, town by town, earliest first. Call ahead before you go.'
+    assert len(title) <= 70 and len(description) <= 165 and not COUNT_WORDS.search(title + description + lead), (code, day)
+    crumbs = {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
+        {'@type': 'ListItem', 'position': 1, 'name': 'Find Bingo', 'item': SITE + '/'},
+        {'@type': 'ListItem', 'position': 2, 'name': f'Bingo in {name}', 'item': f'{SITE}/{slug}/'},
+        {'@type': 'ListItem', 'position': 3, 'name': heading, 'item': url}]}
+    towns = {}
+    for r in rows:
+        towns.setdefault(r['city'], []).append(r)
+    order = sorted(towns, key=lambda t: (t.lower(), t))
+    for t in order:
+        towns[t].sort(key=lambda r: (_first_start(r, d), r['name'].lower(), r['id']))
+    rows = [r for t in order for r in towns[t]]
+    events = game_events(rows, url, only_day=d, town_urls={t: f'{SITE}/{slug}/{_slug(t)}/' for t in order if t in town_pages})
+    card = _ohio_card if ohio else _venue_html
+    body = f'<p class="intro">{escape(s["regulator_note"])}</p>'
+    if ohio:
+        body += ('<p class="note">Many other Ohio halls are licensed by the state for bingo but have not posted game times. '
+                 'The <a href="../?all=1">Ohio Bingo Finder</a> and the town pages list them too.</p>')
+    body += _days_nav(s, day_pages, '../', current=d)
+    if len(order) > 4:
+        body += (f'<nav class="counties jump" aria-labelledby="jump-title"><h2 id="jump-title">Jump to your town</h2><ul>'
+                 + ''.join(f'<li><a href="#town-{_slug(t)}">{escape(t)}</a></li>' for t in order) + '</ul></nav>')
+    if any(r['zip'] in ZIP_POINTS for r in rows):
+        body += _map_box('../../', f'the {day} bingo listed below')
+    body += ('<div id="listings">' + ''.join(
+        f'<section aria-labelledby="town-{_slug(t)}"><h2 id="town-{_slug(t)}">{escape(t)}</h2><div class="grid">'
+        + ''.join(card(r, s, pick=d) for r in towns[t]) + '</div><p class="top">'
+        + (f'<a href="../{_slug(t)}/">All bingo in {escape(t)}, day by day</a> · ' if t in town_pages else '')
+        + '<a href="#top">Back to the top</a></p></section>' for t in order) + '</div>')
+    body += (f'<p class="small-links"><a href="../">All bingo in {escape(name)}</a> · <a href="../../">Search every state by ZIP code</a></p>'
+             + (_ohio_send() if ohio else _send_times(s, '../../')))
+    # The ZIP box carries the day, so the finder opens on this day's games near the ZIP code (Ohio's on the Ohio finder).
+    zip_form = (f'<form class="zip-box" action="{"../" if ohio else "../../"}" method="get"><input type="hidden" name="day" value="{d}"><div class="tools">'
+                '<div><label for="zip">Type your ZIP code</label><input id="zip" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" pattern="[0-9]{5}" placeholder="Your 5-digit ZIP" required></div>'
+                '<div><label for="radius">How far will you go?</label><select id="radius" name="radius"><option value="10">10 miles</option><option value="25" selected>25 miles</option><option value="50">50 miles</option><option value="100">100 miles</option></select></div>'
+                f'<div><button class="primary" type="submit">{_ic("search")}Find {day} bingo near me</button></div></div>'
+                f'<p class="small">Shows {day} bingo near you, closest first.</p></form>')
+    head = (f'<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">\n'
+            f'<title>{escape(title)}</title>\n<meta name="description" content="{escape(description)}">\n<link rel="canonical" href="{url}">\n'
+            f'<meta property="og:type" content="website"><meta property="og:site_name" content="Find Bingo"><meta property="og:title" content="{escape(heading)}">'
+            f'<meta property="og:description" content="{escape(description)}"><meta property="og:url" content="{url}"><meta property="og:image" content="{SITE}/ohio/assets/vhg-logo.png">\n'
+            + style + '\n' + _json_ld(crumbs)
+            + ('\n<script type="application/ld+json" id="games-ld">' + json.dumps(events, ensure_ascii=False).replace('</', '<\\/') + '</script>' if events else '')
+            + '\n</head>')
+    return (head + f'<body id="top">{ICONS}<a class="skip" href="#listings">Skip to the bingo list</a>'
+            f'<header>{BALLS}<p class="brand"><a href="../../">FindBingo.org</a> · <a href="../">{escape(name)}</a> · free from Veteran Home Guardians</p>'
+            f'<h1>{escape(heading)}</h1><p class="lead">{escape(lead)}</p></header>'
+            f'<main>{zip_form}{body}</main>'
+            f'{_footer(generated_on, "../../")}{TODAY_SCRIPT}{EVENT_DATES_LD if events else ""}{place_map.script() if "pm-box" in body else ""}<script>{analytics}</script></body></html>\n')
+
+
+def _state_page(s, states, rows, style, analytics, generated_on, landing, ads=(), events=(), towns=(), day_pages=()):
     code, name, slug = s['code'], s['name'], SLUGS[s['code']]
     words = landing_words(s, rows, landing)
     title, description, lead, heading = words['title'], words['description'], words['welcome'], words['h1']
@@ -1269,6 +1436,7 @@ def _state_page(s, states, rows, style, analytics, generated_on, landing, ads=()
     # Paid featured events sit in their own labeled box, above the county list and never inside the listings.
     body += events_html(events, '../')
     body += week_chart(name, rows, s.get('hours_note', ''))
+    body += _days_nav(s, day_pages, '')
     body += _towns_nav(s, towns, '')
     if len(counties) > 1:
         body += (f'<nav class="counties" aria-labelledby="counties-title"><h2 id="counties-title">Jump to your county{" or city" if any(c.endswith(" city") for c in counties) else ""}</h2><ul>'
