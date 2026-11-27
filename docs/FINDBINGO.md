@@ -160,7 +160,7 @@ and a sentence or two written to that visitor.
 - **Ohio** (findbingo.org/ohio/) takes its title, description, heading and welcome from the same file's `OH` entry
   (`scripts/bingo_site.py`); the guide's own `bingo.html` keeps its wording.
 - **Home page:** after the heading, "What brings you here?" offers four big choices that go only to pages that exist:
-  Find a game near me (puts the cursor in the ZIP box), I run a bingo hall (`halls/`), I want to learn to play (`learn/`)
+  Find a game near me (puts the cursor in the ZIP box), I run a bingo hall (`halls/`), I want to learn to play (`how-to-play-bingo/`)
   and My charity wants bingo support (`halls/#partners`, which opens with a paragraph for charities). Two across on phones.
 - **Other pages:** the bingo class speaks to a first-timer nervous about the unwritten rules; the halls and advertise pages
   to a hall volunteer or manager trying to fill seats (suppliers and distributors have `halls/#suppliers`); about, privacy
@@ -306,15 +306,47 @@ Travis's direction: give people a reason to come and look around, and a bingo cl
   and marks the card unless "Mark my card for me" is turned off. A new card shows a clean bingo joke. Five in a
   row ends the game and points to the ZIP search. Nothing is stored or sent, it is left off printed lists,
   and it sits below the search so the search stays first. The header links to it and to the class.
-- **Bingo class** at https://www.findbingo.org/learn/ (`LEARN` in `scripts/findbingo_site.py`): what happens
-  on a bingo night, the card, the kinds of games and what the words mean, the unwritten rules, help for eyes,
-  ears and hands, and what changes from state to state. It speaks in general terms and sends people to their
-  state page and the hall for specifics. Linked from every footer (the Ohio finder's too) and in the sitemap.
+- **Bingo class**, now at https://www.findbingo.org/how-to-play-bingo/ (see "Guides for new players" below; it
+  was at `/learn/` until November 27, 2026): what happens on a bingo night, the card, the games, the unwritten rules,
+  help for eyes, ears and hands, and what changes from state to state. It speaks in general terms and sends people to
+  their state page and the hall for specifics.
 - **Pictures** (added November 24, 2026). The home page shows "Find a game in three steps" under the search. Each
   state page with listed game times has a week chart: a ball where at least one listing begins in that part of the
   day, a dash where none does. It is a real table and never states a count (`week_chart`). The bingo class has a
   sample card, the common patterns, and its bingo-night steps numbered as bingo balls (`card_figure`,
   `patterns_figure`, `LEARN_CSS`). All are original SVG or CSS in the site's colors, and `tests/visuals.cjs` checks them.
+
+## Guides for new players (added November 27, 2026)
+
+Travis's direction for the search push: evergreen pages for what people search before their first hall night. Built in
+`scripts/findbingo_site.py` (`learn_page`, `glossary_page`, `pull_tabs_page`, `age_page`), written to both copies, with
+AdSense only in `bingo-site/findbingo/` like the other findbingo.org pages, in the sitemap (`INFO_PAGES`), with
+breadcrumb markup, and with FAQPage markup built from the very same questions and answers shown on the page.
+
+- **How to play bingo** (`/how-to-play-bingo/`): the bingo class, moved from `/learn/` so the address matches what people
+  search, and grown to cover buying in (packs, paper, electronics, hard cards), early birds, regular games, specials,
+  progressives, calling, claiming, splitting, what to bring and etiquette. `/learn` and `/learn/` answer with a 301 in
+  `_redirects` (`MOVED`), and `learn/index.html` is a small forwarding page (noindex, canonical to the new address, no
+  AdSense, out of the sitemap) for any copy served without `_redirects`.
+- **Bingo terms** (`/bingo-terms/`, `GLOSSARY`): A to Z, each word with its own address (`#term-dauber`); the build
+  checks the order and that every "see" points to a defined word. The words that used to sit on the class page live here.
+- **Pull tabs** (`/pull-tabs/`): what they are, how to read one against the flare, other kinds, and that whether a hall
+  sells them depends on the state's law and the hall's license. Its under-18 examples cite Virginia's and Minnesota's
+  rules from the age data.
+- **Bingo age by state** (`/bingo-age-by-state/`): the `age` entry in `data/public/bingo-states.json` (`min`, a plain
+  `rule`, and `sources` with `url`, `label`, `scope` and `reviewed_on`). Only for states with listings here, and only
+  from the state's own statute, administrative rule or bingo regulator, fetched and checked November 27, 2026. States
+  without a confirmed age are named on the page as not yet confirmed (Arizona: the rule file would not open; Iowa: the
+  rule lets halls set limits for children but no state minimum was found; New Mexico: no age rule found in the
+  statute, rules or regulator's pages; Utah: only free bingo, no charitable bingo). To add a state, read its own law or
+  regulator, add the entry and rebuild; `validate` and `age_page` check the shape.
+- **Where they are linked:** the home page's "New to hall bingo?" panel under the practice card and its chooser; every
+  footer, the Ohio finder's included (`GUIDE_LINKS`); each guide's "Keep learning" list; and a "New to hall bingo?"
+  line under the intro on every state page (`newbie_line`), with a link to that state's age row when it is confirmed.
+  The Ohio finder carries the same line under "Good to know".
+- `tests/findbingo.cjs` checks titles, headings, canonicals, the sitemap, breadcrumbs, that question markup matches the
+  page, the links, the age rows and their sources, the state-page lines and the forwarding page; `tests/visuals.cjs`
+  checks the class's pictures at the new address.
 
 ## Sources and how they were read (November 15, 2026)
 

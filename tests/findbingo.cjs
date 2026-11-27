@@ -28,7 +28,10 @@ const SLUGS = Object.fromEntries(states.map(s => [s.code, s.name.toLowerCase().r
 assert.equal(states.length, 51);
 assert.deepEqual(states.map(s => s.name), states.map(s => s.name).sort(), 'states are in alphabetical order');
 assert(SLUGS.DC === 'district-of-columbia' && SLUGS.WV === 'west-virginia');
-for (const r of redirects) assert(r.length === 3 && r[0].startsWith('/') && Object.values(SLUGS).some(s => r[1] === '/' + s + '/') && r[2] === '301' && r[0].toLowerCase() !== r[1], r.join(' '));
+// Pages that moved forward to their new address: the bingo class went from /learn/ to /how-to-play-bingo/ (November 27, 2026).
+const MOVED = {'/learn': '/how-to-play-bingo/', '/learn/': '/how-to-play-bingo/'};
+for (const r of redirects) assert(r.length === 3 && r[0].startsWith('/') && (Object.values(SLUGS).some(s => r[1] === '/' + s + '/') || MOVED[r[0]] === r[1]) && r[2] === '301' && r[0].toLowerCase() !== r[1], r.join(' '));
+for (const [from, to] of Object.entries(MOVED)) assert(redirects.some(r => r[0] === from && r[1] === to), from + ' forwards to ' + to);
 assert(redirects.some(r => r[0] === '/mi' && r[1] === '/michigan/') && redirects.some(r => r[0] === '/FL' && r[1] === '/florida/'));
 assert.equal(data.generated_on, [...states.map(s => s.reviewed_on), ...data.venues.map(v => v.reviewed_on), ...data.licensed.map(r => r.reviewed_on)].sort().pop());
 assert(data.venues.length > 150 && data.licensed.length > 300, 'Michigan venues and Indiana licenses are loaded');
@@ -712,10 +715,10 @@ assert(buildWith([{...sample[1], slot: 'sidebar'}], []).error, 'only known place
   const nums = cells.filter((_, i) => i !== 12).map(b => +b.textContent);
   assert.equal(new Set(nums).size, 24, 'no number twice on a card');
   cells.forEach((b, i) => { if (i !== 12) { const col = i % 5, n = +b.textContent; assert(n > col * 15 && n <= col * 15 + 15, 'each column holds its own fifteen numbers') } });
-  assert(d.querySelector('header .teaser a[href="#play"]') && d.querySelector('header .chooser a[href="learn/"]'), 'the header invites people to play and to take the class');
+  assert(d.querySelector('header .teaser a[href="#play"]') && d.querySelector('header .chooser a[href="how-to-play-bingo/"]'), 'the header invites people to play and to take the class');
   // The home page asks who is there and sends each person to a page that already exists (owner direction, November 23, 2026).
   assert.deepEqual([...d.querySelectorAll('header .chooser a')].map(a => [a.textContent, a.getAttribute('href')]),
-    [['Find a game near me', '#zip-form'], ['I run a bingo hall', 'halls/'], ['I want to learn to play', 'learn/'], ['My charity wants bingo support', 'halls/#partners'], ['I want bingo gear or a gift', 'shop/']]);
+    [['Find a game near me', '#zip-form'], ['I run a bingo hall', 'halls/'], ['I want to learn to play', 'how-to-play-bingo/'], ['My charity wants bingo support', 'halls/#partners'], ['I want bingo gear or a gift', 'shop/']]);
   d.getElementById('choose-find').click();
   assert.equal(d.activeElement, d.getElementById('zip'), 'finding a game puts the cursor in the ZIP box');
   let calls = 0;
@@ -732,11 +735,112 @@ assert(buildWith([{...sample[1], slot: 'sidebar'}], []).error, 'only known place
   assert.match(d.getElementById('play-msg').textContent, /hasn.t been called yet/, 'you can only mark numbers that were called');
   assert(fs.readFileSync(path.join(site, 'index.html'), 'utf8').includes('@media print{#play,'), 'the practice card stays off printed lists');
 }
-// The bingo class page: linked from every footer, in the sitemap.
+// The guides for new players (November 27, 2026): how to play (the bingo class, moved from /learn/), bingo terms, pull tabs
+// and bingo age by state. Each is on findbingo.org with AdSense, in the sitemap, linked from the home page, every footer and
+// the other guides, with breadcrumbs, and with question markup only for questions written on the page in the same words.
 {
-  const learn = fs.readFileSync(path.join(site, 'learn/index.html'), 'utf8');
-  assert.match(learn, /<title>How to Play Bingo: A Friendly Class for First-Timers \| FindBingo\.org<\/title>/);
+  const GUIDES = {
+    'how-to-play-bingo/': ['How to Play Bingo: A Friendly Class for First-Timers | FindBingo.org', 'How to play bingo at a hall'],
+    'bingo-terms/': ['Bingo Terms and Slang: A Glossary of Hall Bingo Words | FindBingo.org', 'Bingo terms, A to Z'],
+    'pull-tabs/': ['Pull Tabs and Instant Bingo Tickets: How They Work | FindBingo.org', 'Pull tabs, explained'],
+    'bingo-age-by-state/': ['Bingo Age by State: How Old to Play Charity Bingo | FindBingo.org', 'How old do you have to be to play bingo?'],
+  };
+  const guide = {};
+  assert(home.querySelector('#new-to-bingo h2').textContent === 'New to hall bingo?', 'the home page has a panel for first-timers');
+  assert(home.getElementById('play').compareDocumentPosition(home.getElementById('new-to-bingo')) & 4, 'the guides follow the practice card');
+  for (const [p, [title, h1]] of Object.entries(GUIDES)) {
+    freeScratch(); await new Promise(r => setImmediate(r));
+    const text = unAd(fs.readFileSync(path.join(root, 'bingo-site/findbingo', p, 'index.html'), 'utf8'));
+    assert.equal(text, fs.readFileSync(path.join(site, p, 'index.html'), 'utf8'), p + ' copies match, apart from AdSense on findbingo.org');
+    guide[p] = text;
+    const d = scratch(text);
+    assert.equal(d.title, title);
+    assert.equal(d.querySelector('h1').textContent, h1);
+    assert.equal(d.querySelectorAll('h1').length, 1, p + ': one main heading');
+    assert.equal(d.querySelector('link[rel=canonical]').href, 'https://www.findbingo.org/' + p);
+    assert(d.querySelector('meta[name=description]').content.length > 80, p + ': a real description');
+    assert(sitemap.includes(`<loc>https://www.findbingo.org/${p}</loc>`), p + ' is in the sitemap');
+    // Headings never skip a level, so screen reader users can move through the page by heading.
+    let level = 1;
+    for (const h of d.querySelectorAll('h1, h2, h3, h4')) { const n = +h.tagName[1]; assert(n <= level + 1, p + ': heading order at ' + h.textContent); level = n; }
+    const ids = [...d.querySelectorAll('[id]')].map(e => e.id);
+    assert.equal(new Set(ids).size, ids.length, p + ': ids are unique');
+    for (const a of d.querySelectorAll('a[href^="#"]')) assert(a.getAttribute('href') === '#' + 'top' || d.getElementById(a.getAttribute('href').slice(1)), p + ': in-page link ' + a.getAttribute('href'));
+    const lds = [...d.querySelectorAll('script[type="application/ld+json"]')].map(x => JSON.parse(x.textContent));
+    const crumbs = lds.find(x => x['@type'] === 'BreadcrumbList');
+    assert.equal(crumbs.itemListElement[0].item, 'https://www.findbingo.org/');
+    assert.equal(crumbs.itemListElement.at(-1).item, 'https://www.findbingo.org/' + p, p + ': breadcrumbs end at the page');
+    const faq = lds.find(x => x['@type'] === 'FAQPage');
+    if (p === 'bingo-terms/') assert(!faq && !d.querySelector('section.faq'), 'no question markup where no questions are written');
+    else {
+      const shown = [...d.querySelectorAll('section.faq h3')].map(h => [h.textContent, h.nextElementSibling.textContent]);
+      assert(shown.length >= 3, p + ': common questions on the page');
+      assert.deepEqual(faq.mainEntity.map(q => [q.name, q.acceptedAnswer.text]), shown, p + ': question markup matches the page word for word');
+    }
+    // Linked from the home page, every footer and the other guides.
+    assert(home.querySelector(`#new-to-bingo .guide-links a[href="${p}"]`), p + ' is linked from the home page');
+    assert(home.querySelector(`footer a[href="${p}"]`), p + ' is in the home page footer');
+    for (const other of Object.keys(GUIDES)) {
+      assert(d.querySelector(`footer a[href="../${other}"]`), p + ': footer links ' + other);
+      if (other !== p) assert(d.querySelector(`main a[href^="../${other}"]`), p + ' links ' + other);
+    }
+    assert(d.querySelector('header .brand a[href="../"]') && d.querySelector('main a[href="../"]'), p + ': a way back to the finder');
+  }
+  // How to play: the bingo class, written to a nervous first-timer, covering a whole night.
+  const learn = guide['how-to-play-bingo/'];
   assert(learn.includes('Nervous about the unwritten rules?'), 'the class speaks to a nervous first-timer');
+  for (const term of ['Buying in', 'Paper', 'Electronic bingo', 'Early birds', 'Regular games', 'Specials', 'Progressive jackpot', 'Coverall, or blackout',
+    'How the numbers are called', 'How to claim a win', 'When prizes are split', 'What to bring', 'The unwritten rules', 'Shout “Bingo!”', 'What changes from state to state', 'how pull tabs work'])
+    assert(learn.includes(term) || learn.toLowerCase().includes(term.toLowerCase()), term);
+  // The old address forwards: a 301 on findbingo.org and a small page that points to the new one, out of search and without ads.
+  const moved = fs.readFileSync(path.join(root, 'bingo-site/findbingo/learn/index.html'), 'utf8');
+  assert.equal(moved, fs.readFileSync(path.join(site, 'learn/index.html'), 'utf8'), 'the forwarding page has no AdSense on either copy');
+  assert(moved.includes('<meta name="robots" content="noindex,follow">') && moved.includes('<link rel="canonical" href="https://www.findbingo.org/how-to-play-bingo/">')
+    && moved.includes('url=../how-to-play-bingo/') && moved.includes('href="../how-to-play-bingo/"'), 'learn/ forwards to how-to-play-bingo/');
+  assert(!sitemap.includes('/learn/'), 'the old address leaves the sitemap');
+  // Bingo terms: A to Z, each word with its own address, every "see" pointing to a word on the page.
+  {
+    const d = scratch(guide['bingo-terms/']);
+    const words = [...d.querySelectorAll('.info dl dt')].map(dt => dt.textContent);
+    assert.deepEqual(words, [...words].sort((a, b) => a.toLowerCase() < b.toLowerCase() ? -1 : 1), 'the glossary is A to Z');
+    for (const w of ['Coverall', 'Dauber', 'Early birds', 'Flashboard', 'Pack', 'Progressive jackpot', 'Pull tab', 'Sleeper', 'Split']) assert(words.includes(w), 'glossary: ' + w);
+    for (const dt of d.querySelectorAll('.info dl dt')) assert(dt.id.startsWith('term-'), dt.textContent + ' has its own address');
+    for (const a of d.querySelectorAll('.alpha a')) assert(d.getElementById(a.getAttribute('href').slice(1)).tagName === 'H2', 'letter links open their letter');
+  }
+  // Pull tabs: what they are, and that whether a hall sells them depends on the state; age examples are sourced.
+  {
+    const d = scratch(guide['pull-tabs/']);
+    assert.match(d.getElementById('where').textContent, /depends on the state/);
+    const age = d.getElementById('age').nextElementSibling;
+    for (const c of ['VA', 'MN']) assert(age.querySelector(`a[href="${states.find(s => s.code === c).age.sources[0].url}"]`), 'pull tab age example cites ' + c);
+    assert(age.textContent.includes('checked November 27, 2026'));
+    assert(d.querySelector('figure.ptab svg[role="img"] title') && d.querySelector('figure.ptab svg desc').textContent.length > 40, 'the ticket picture is named and described');
+  }
+  // Bingo age by state: only states with listings here, each age from the state's own law, rule or regulator, with the source.
+  {
+    const d = scratch(guide['bingo-age-by-state/']);
+    const withAge = states.filter(s => s.age);
+    const rows = [...d.querySelectorAll('table.ages tbody tr')];
+    assert.deepEqual(rows.map(r => r.querySelector('th').textContent), withAge.map(s => s.name), 'one row for each state with a confirmed age, A to Z');
+    assert(d.querySelector('table.ages caption').textContent.endsWith('checked November 27, 2026'));
+    withAge.forEach((s, i) => {
+      assert(LISTED.includes(s.coverage), s.name + ' has games on Find Bingo');
+      assert.equal(rows[i].querySelector('th').id, SLUGS[s.code], s.name + ': each row has its own address');
+      assert(rows[i].querySelector('td').textContent.startsWith(s.age.rule) && /^(16|18) and older/.test(s.age.rule), s.name + ': the rule, in plain words');
+      assert.deepEqual([...rows[i].querySelectorAll('.src a')].map(a => a.getAttribute('href')), s.age.sources.map(x => x.url), s.name + ': every source is linked');
+      assert(s.age.sources.every(x => x.url.startsWith('https://') && x.reviewed_on === '2026-11-27' && x.label && x.scope), s.name + ': sources are https and checked November 27, 2026');
+    });
+    const unconfirmed = states.filter(s => LISTED.includes(s.coverage) && !s.age);
+    for (const s of unconfirmed) assert(d.getElementById('unconfirmed').nextElementSibling.textContent.includes(s.name), s.name + ' is named as not yet confirmed');
+    assert(!states.some(s => s.age && !LISTED.includes(s.coverage)), 'no age for a state without games here');
+  }
+  // Every state page carries a line for first-timers, with the state's own age when it is confirmed.
+  for (const s of states) {
+    const t = s.code === 'OH' ? fs.readFileSync(path.join(root, 'bingo-site/findbingo/ohio/index.html'), 'utf8') : fs.readFileSync(path.join(site, SLUGS[s.code], 'index.html'), 'utf8');
+    const line = (t.match(/<p class="newbie">.*?<\/p>/) || [''])[0];
+    assert(line.includes('New to hall bingo?') && line.includes('href="../how-to-play-bingo/"') && line.includes('href="../bingo-terms/"'), s.name + ': a line for first-timers');
+    assert.equal(line.includes(`href="../bingo-age-by-state/#${SLUGS[s.code]}"`), Boolean(s.age), s.name + ': links its age when it is confirmed');
+  }
   // The other entry pages speak to who lands there too: halls trying to fill seats, a charity, suppliers, the Ohio player.
   const lead = f => new JSDOM(fs.readFileSync(path.join(root, f), 'utf8')).window.document;
   const halls = lead('findbingo-site/halls/index.html'), adv = lead('findbingo-site/advertise/index.html');
@@ -749,12 +853,10 @@ assert(buildWith([{...sample[1], slot: 'sidebar'}], []).error, 'only known place
   assert.equal(ohio.title, landing.OH.title);
   assert.equal(ohio.querySelector('header .lead').textContent, landing.OH.welcome);
   assert.equal(ohio.querySelector('meta[name=description]').content, landing.OH.description);
-  const titles = ['', 'learn/', 'about/', 'privacy/', 'terms/', 'advertise/', 'halls/'].map(p => lead('findbingo-site/' + p + 'index.html').title);
+  const titles = ['', ...Object.keys(GUIDES), 'about/', 'privacy/', 'terms/', 'advertise/', 'halls/'].map(p => lead('findbingo-site/' + p + 'index.html').title);
   assert.equal(new Set([...titles, ...Object.values(landing).map(e => e.title)]).size, titles.length + 51, 'every entry page has its own title');
-  assert(learn.includes('<link rel="canonical" href="https://www.findbingo.org/learn/">'));
-  for (const term of ['Early birds', 'Coverall, or blackout', 'Progressive jackpot', 'Pull-tabs', 'Shout “Bingo!”', 'What changes from state to state']) assert(learn.includes(term) || learn.toLowerCase().includes(term.toLowerCase()), term);
-  assert(sitemap.includes('<loc>https://www.findbingo.org/learn/</loc>'));
-  for (const f of ['findbingo-site/index.html', 'findbingo-site/michigan/index.html', 'findbingo-site/privacy/index.html', 'bingo-site/findbingo/ohio/index.html']) assert(fs.readFileSync(path.join(root, f), 'utf8').includes('learn/">How bingo works'), f + ' links the bingo class');
+  for (const f of ['findbingo-site/index.html', 'findbingo-site/michigan/index.html', 'findbingo-site/texas/houston/index.html', 'findbingo-site/privacy/index.html', 'bingo-site/findbingo/ohio/index.html'])
+    assert(fs.readFileSync(path.join(root, f), 'utf8').includes('how-to-play-bingo/">How to play bingo</a>'), f + ' links the guides');
 }
 
 // Visual pass (November 20, 2026): dark mode, small icons beside words, a "Today" tag on weekly games. No counts anywhere.

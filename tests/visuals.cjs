@@ -134,8 +134,9 @@ for (const base of ['findbingo-site/', 'bingo-site/findbingo/']) {
     assert(week.compareDocumentPosition(d.querySelector('form.zip-box')) & 2, base + e.name + ': the finder still comes first');
   }
   assert(weeks >= 15, base + ': states with listed game times have the week chart (' + weeks + ')');
-  // The bingo class: a sample card, the patterns and bingo night's steps, each with its words in text.
-  const learn = new JSDOM(read(base + 'learn/index.html')).window.document;
+  // The bingo class (how-to-play-bingo/, moved from learn/ on November 27, 2026): a sample card, the patterns and bingo
+  // night's steps, each with its words in text.
+  const learn = new JSDOM(read(base + 'how-to-play-bingo/index.html')).window.document;
   const lids = [...learn.querySelectorAll('[id]')].map(e => e.id);
   assert.equal(new Set(lids).size, lids.length, base + 'learn: ids are unique');
   const card = learn.querySelector('figure.bcard');

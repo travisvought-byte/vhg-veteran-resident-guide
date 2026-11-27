@@ -50,6 +50,9 @@ DATA_SOURCES = ['', 'https://guide.vethomeguard.org/findbingo-site/', REPO_RAW +
 # The Ohio finder is the folder /ohio/; these catch the other ways people type it. No rule may
 # match /ohio/ itself in any letter case, or the forward would loop.
 REDIRECTS = ''.join(f'{src} /ohio/ 301\n' for src in ('/Ohio', '/OHIO', '/oh', '/oh/', '/OH', '/OH/'))
+# The bingo class moved from /learn/ to /how-to-play-bingo/ (November 27, 2026), the words people search for.
+MOVED = {'/learn': '/how-to-play-bingo/', '/learn/': '/how-to-play-bingo/'}
+REDIRECTS += ''.join(f'{src} {dst} 301\n' for src, dst in MOVED.items())
 # Small line icons (calendar, map pin, phone, directions, search), written once per page and drawn with <use>.
 # They always sit beside words that say the same thing, and screen readers skip them.
 ICONS = ('<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>'
@@ -58,6 +61,11 @@ ICONS = ('<svg width="0" height="0" style="position:absolute" aria-hidden="true"
          '<symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3.5h3.5l2 5-2.6 1.6a12 12 0 0 0 6 6l1.6-2.6 5 2V19a2 2 0 0 1-2 2A17 17 0 0 1 3 5.5a2 2 0 0 1 2-2z"/></symbol>'
          '<symbol id="i-route" viewBox="0 0 24 24"><path d="M12 2.5 21.5 12 12 21.5 2.5 12z"/><path d="M9 15v-2.5a2 2 0 0 1 2-2h4.5M13.5 8.5l2 2-2 2"/></symbol>'
          '<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.4-4.4"/></symbol>'
+         # The guides for new players (November 27, 2026): how to play, bingo words, pull tabs, and age by state.
+         '<symbol id="i-book" viewBox="0 0 24 24"><path d="M3 5.5c3-1.5 6-1.5 9 .5 3-2 6-2 9-.5V19c-3-1.5-6-1.5-9 .5-3-2-6-2-9-.5z"/><path d="M12 6v13.5"/></symbol>'
+         '<symbol id="i-words" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></symbol>'
+         '<symbol id="i-ticket" viewBox="0 0 24 24"><path d="M3 7h18v3a2 2 0 0 0 0 4v3H3v-3a2 2 0 0 0 0-4z"/><path d="M14 8v2M14 12v0M14 14v2"/></symbol>'
+         '<symbol id="i-id" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2.2"/><path d="M5.8 16c.6-1.6 1.8-2.4 3.2-2.4s2.6.8 3.2 2.4M14 10h4M14 13h3"/></symbol>'
          '</defs></svg>')
 # Five bingo balls above each page's heading: decoration only, hidden from screen readers.
 BALLS = '<div class="balls" aria-hidden="true"><i>B</i><i>I</i><i>N</i><i>G</i><i>O</i></div>'
@@ -121,6 +129,13 @@ def validate(states, venues, licensed, zips):
             # lives on the Ohio finder. Other states that require a gift get the local-partner offer (HALL_PITCH).
             assert s['code'] != 'OH' or h['money'] == 'must_give', s['code']
             assert h['sources'] and all(x['url'].startswith('https://') and x['scope'] and date.fromisoformat(x['reviewed_on']) for x in h['sources']), s['code']
+        if 'age' in s:
+            # The youngest age to play, read only from the state's own law, rule or bingo regulator (November 27, 2026);
+            # shown on /bingo-age-by-state/ and linked from the state page. States without a confirmed age leave it out.
+            a = s['age']
+            assert set(a) == {'min', 'rule', 'sources'} and type(a['min']) is int and a['rule'].strip() and s['coverage'] in LISTED, s['code']
+            assert a['sources'] and all(set(x) == {'url', 'label', 'scope', 'reviewed_on'} and x['url'].startswith('https://') and x['label'].strip()
+                                        and x['scope'].strip() and date.fromisoformat(x['reviewed_on']) for x in a['sources']), s['code']
         if 'partner' in s:
             # A local organization doing work like ours that we ask the state's halls to consider supporting
             # (owner direction, November 22, 2026). Its ways to help are written to the state's own rule on bingo money,
@@ -284,7 +299,8 @@ def make_findbingo(root, ads=None, events=None):
     for key, value in (('__MAP_BOX__', _map_box('', 'the bingo games listed below')),
                        ('__LOCATE__', place_map.locate_button('zip', 'zip-form', 'zip-status', 'ZIPS', 'Or use my location')),
                        ('__SOURCES__', json.dumps(DATA_SOURCES)), ('__STATE_BUTTONS__', buttons), ('__ABOUT__', about), ('__ICONS__', ICONS), ('__BALLS__', BALLS),
-                       ('__UPDATED__', _date_label(generated_on)), ('__AD_HOME__', _ad_html(_ads_for(ads, 'home'), ''))):
+                       ('__UPDATED__', _date_label(generated_on)), ('__AD_HOME__', _ad_html(_ads_for(ads, 'home'), '')),
+                       ('__GUIDES__', guides_panel()), ('__GUIDE_LINKS__', GUIDE_LINKS.format(up=''))):
         assert page.count(key) == 1, key
         page = page.replace(key, value)
     readme = f'''# FindBingo.org
@@ -323,6 +339,8 @@ Lists updated {_date_label(generated_on)}.
     # Featured events have their own styles on the home page and every state page.
     page = page.replace('</style>', EVENT_CSS + '</style>', 1)
     style = re.search(r'<style>.*?</style>', page, re.S).group(0).replace('</style>', STATE_CSS + CITY_CSS + '</style>')
+    # The home page's guide links (guides_panel); the guide pages get the same rules through guide_style.
+    page = page.replace('</style>', GUIDE_LINKS_CSS + '</style>', 1)
     today = generated_on
     pages = {}
     groups = city_groups(venues)
@@ -365,7 +383,15 @@ Lists updated {_date_label(generated_on)}.
     pages['about/index.html'] = _info_page('about', *about_page(states), style, analytics, generated_on)
     pages['terms/index.html'] = _info_page('terms', *TERMS, style, analytics, generated_on)
     pages['advertise/index.html'] = _info_page('advertise', *ADVERTISE, style, analytics, generated_on)
-    pages['learn/index.html'] = _info_page('learn', *LEARN, style.replace('</style>', LEARN_CSS + '</style>'), analytics, generated_on)
+    # The guides for new players, each linked from the home page and every footer (owner direction, November 27, 2026).
+    guide_style = style.replace('</style>', GUIDE_LINKS_CSS + GUIDE_CSS + '</style>')
+    learn, learn_ld = learn_page()
+    pages['how-to-play-bingo/index.html'] = _info_page('how-to-play-bingo', *learn, guide_style.replace('</style>', LEARN_CSS + '</style>'),
+                                                       analytics, generated_on, ld=learn_ld, icons=True)
+    for slug, (words, ld) in (('bingo-terms', glossary_page()), ('pull-tabs', pull_tabs_page(states)), ('bingo-age-by-state', age_page(states))):
+        pages[f'{slug}/index.html'] = _info_page(slug, *words, guide_style, analytics, generated_on, ld=ld, trail=GUIDE_TRAIL, icons=True)
+    # The bingo class's old address forwards to its new one (findbingo.org answers it with a 301 too).
+    pages['learn/index.html'] = moved_page('how-to-play-bingo', 'The bingo class', style, analytics, generated_on)
     pages['halls/index.html'] = _info_page('halls', *halls_page(states), style.replace('</style>', HALL_CSS + '</style>'), analytics, generated_on)
     pages['shop/index.html'] = _info_page('shop', *shop_page(load_shop(root)), style.replace('</style>', SHOP_CSS + '</style>'), analytics, generated_on)
     # Ad pictures are served beside the pages, in ads/.
@@ -1421,7 +1447,7 @@ def _state_page(s, states, rows, style, analytics, generated_on, landing, ads=()
     pending = s['coverage'] == 'pending'
     # The welcome in the header already tells this state's story (data/findbingo-landing.json), so the intro under the
     # finder names who oversees bingo there rather than repeating it.
-    body = f'<p class="intro">{escape(s["about"] if pending else s["regulator_note"])}</p>'
+    body = f'<p class="intro">{escape(s["about"] if pending else s["regulator_note"])}</p>' + newbie_line(s)
     if s.get('pending_counties'):
         c = s['pending_counties']
         listed = ', '.join(c[:-1]) + ' and ' + c[-1] if len(c) > 1 else c[0]
@@ -1501,13 +1527,17 @@ def _footer(generated_on, up='../'):
             '<p class="noprint">Giving Tuesday is December 1: <a href="https://www.zeffy.com/en-US/donation-form/giving-tuesday-no-veteran-left-isolated">give to Veteran Home Guardians</a>.</p>'
             '<p class="noprint">Need help getting to the game? <a href="https://mobilitytalk.org/states/">Mobility Talk</a> lists mobility and disability resources in every state.</p>'
             f'<p class="noprint">Questions or corrections: <a href="mailto:{EMAIL}?subject=FindBingo.org">{EMAIL}</a> · Made by <a href="https://travisvought.com/">Travis Vought</a></p>'
-            f'<p class="noprint"><a href="{up}learn/">How bingo works: a free bingo class</a> · <a href="{up}about/">About and contact</a> · <a href="{up}privacy/">Privacy</a> · <a href="{up}terms/">Terms of use</a> · <a href="{up}advertise/">Advertise on Find Bingo</a> · <a href="{up}halls/">For bingo halls</a> · <a href="{up}shop/">Bingo gear and gifts</a></p>'
+            f'<p class="noprint">{GUIDE_LINKS.format(up=up)}</p>'
+            f'<p class="noprint"><a href="{up}about/">About and contact</a> · <a href="{up}privacy/">Privacy</a> · <a href="{up}terms/">Terms of use</a> · <a href="{up}advertise/">Advertise on Find Bingo</a> · <a href="{up}halls/">For bingo halls</a> · <a href="{up}shop/">Bingo gear and gifts</a></p>'
             f'<p class="noprint">Lists updated {_date_label(generated_on)}.</p></footer>')
 
 
 # Short addresses for posters and word of mouth: findbingo.org/mi and /MI open the Michigan page.
 SHORT_REDIRECTS = ''.join(f'/{c} /{slug}/ 301\n/{c.lower()} /{slug}/ 301\n' for c, slug in SLUGS.items() if c != 'OH')
 STATE_CSS = ('header a{color:#fff}.intro{font-size:20px;max-width:860px}'
+             # The newcomer line under the intro (newbie_line): links to how to play, the words and the state's age.
+             '.newbie{display:flex;gap:10px;align-items:flex-start;font-size:18px;max-width:860px;margin:0 0 14px}.newbie .ic{color:var(--accent);margin-top:.15em}'
+             '@media print{.newbie{display:none}}'
              # The locator map in "Bingo in other states" (visuals.locator): a dark square with a ring marks this state.
              '.where{margin:4px 0 16px;max-width:300px}.where svg{display:block;width:100%;height:auto}.where figcaption{font-size:17px;margin-top:6px}'
              '@media (prefers-color-scheme:dark){.vz-loc rect{fill:#26343c;stroke:#8fa39a}.vz-loc .vz-loc-cur{fill:#9fd0ef}.vz-loc-ring{stroke:#10181d}}'
@@ -1614,7 +1644,7 @@ def events_html(events, up, heading='Featured bingo events'):
 ADS_FILE = 'data/findbingo-ads.json'
 AD_KEYS = {'slot', 'sponsor', 'text', 'url', 'image', 'alt', 'start', 'end'}
 # The bingo class, About, Privacy, Terms, Advertise, halls and shop pages, linked from every footer and listed in the sitemap.
-INFO_PAGES = ('learn/', 'about/', 'privacy/', 'terms/', 'advertise/', 'halls/', 'shop/')
+INFO_PAGES = ('how-to-play-bingo/', 'bingo-terms/', 'pull-tabs/', 'bingo-age-by-state/', 'about/', 'privacy/', 'terms/', 'advertise/', 'halls/', 'shop/')
 # Dated ads are written hidden; this shows the one whose dates include today, so a page built before an ad
 # starts or after it ends never shows it on the wrong day. Without JavaScript a dated ad stays hidden.
 AD_DATES_SCRIPT = ("<script>(function(){var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date()),"
@@ -1683,15 +1713,18 @@ POLICY_DATE = 'November 27, 2026'
 TERMS_DATE = 'November 22, 2026'
 
 
-def _info_page(slug, title, description, heading, lead, body, style, analytics, generated_on):
+def _info_page(slug, title, description, heading, lead, body, style, analytics, generated_on, ld=(), trail=(), icons=False):
+    """An information page at findbingo.org/<slug>/. ld: extra JSON-LD objects for the head (breadcrumbs, questions);
+    trail: (label, address) pairs shown between FindBingo.org and the publisher in the header's brand line."""
     url = f'{SITE}/{slug}/'
     head = (f'<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">\n'
             f'<title>{escape(title)}</title>\n<meta name="description" content="{escape(description)}">\n<link rel="canonical" href="{url}">\n'
             f'<meta property="og:type" content="website"><meta property="og:site_name" content="Find Bingo"><meta property="og:title" content="{escape(heading)}">'
             f'<meta property="og:description" content="{escape(description)}"><meta property="og:url" content="{url}"><meta property="og:image" content="{SITE}/ohio/assets/vhg-logo.png">\n'
-            + style + '\n</head>')
-    return (head + '<body id="top"><a class="skip" href="#main">Skip to the page</a>'
-            f'<header>{BALLS}<p class="brand"><a href="../">FindBingo.org</a> · free from Veteran Home Guardians</p><h1>{escape(heading)}</h1><p class="lead">{escape(lead)}</p></header>'
+            + style + ''.join('\n' + _json_ld(x) for x in ld) + '\n</head>')
+    brand = '<a href="../">FindBingo.org</a> · ' + ''.join(f'<a href="{escape(href)}">{escape(label)}</a> · ' for label, href in trail)
+    return (head + f'<body id="top">{ICONS if icons else ""}<a class="skip" href="#main">Skip to the page</a>'
+            f'<header>{BALLS}<p class="brand">{brand}free from Veteran Home Guardians</p><h1>{escape(heading)}</h1><p class="lead">{escape(lead)}</p></header>'
             f'<main id="main"><div class="info">{body}</div>'
             '<p class="small-links"><a href="../">Find bingo near you</a></p></main>'
             f'{_footer(generated_on)}<script>{analytics}</script></body></html>\n')
@@ -1783,82 +1816,474 @@ LEARN_CSS = (
     '@media print{.bcard,.patterns li{break-inside:avoid}.bcard svg,.patterns svg,.night li::before{-webkit-print-color-adjust:exact;print-color-adjust:exact}}')
 
 
-LEARN = (
-    # Written to the first-timer who is nervous about the unwritten rules (owner direction, November 23, 2026).
-    'How to Play Bingo: A Friendly Class for First-Timers | FindBingo.org',
-    'Nervous about your first bingo night? A plain-English class: buying cards, early birds, coverall, what the words mean, and the unwritten rules regulars expect.',
-    'Your first bingo night, made easy',
-    'Nervous about the unwritten rules? Most first-timers are. Here is what happens on a bingo night, what to buy, what the words mean and the manners regulars expect, so you can walk in and enjoy it. Every hall has its own house rules, so ask at the counter too.',
-    '<p><a href="../#play">Want to warm up first? Play a free practice card.</a></p>'
-    '<h2>What happens on a bingo night</h2>'
-    '<ol class="night" role="list"><li><strong>Doors open early,</strong> often an hour or two before the first game. People come early to get a seat, buy their cards and have supper from the kitchen.</li>'
-    '<li><strong>You buy your cards at the counter.</strong> Most halls sell a <em>pack</em> (also called a package or admission) that covers the regular games. Extra sheets and special games cost extra.</li>'
-    '<li><strong>Early birds</strong> are a few warm-up games before the main session. They are usually sold separately.</li>'
-    '<li><strong>The caller draws numbered balls</strong> and reads each one out, letter first: “B-7.” The number also lights up on a board or TV screens.</li>'
-    '<li><strong>When you have the pattern, you shout “Bingo!”</strong> A worker comes to your seat, reads your numbers back to the caller, and pays you if it checks out.</li>'
-    '<li><strong>There is usually a break</strong> halfway through, with the kitchen and other games for sale.</li>'
-    '<li><strong>The night ends with the big one,</strong> often a coverall or a jackpot game.</li></ol>'
-    '<h2>The card</h2>'
-    '<p>An American bingo card has five columns, B, I, N, G and O, and 75 numbers in all. B holds 1 to 15, I holds 16 to 30, N holds 31 to 45, G holds 46 to 60, and O holds 61 to 75. '
-    'The middle square is a <strong>free space</strong>: it counts as already marked.</p>'
-    + card_figure() +
-    '<p>Each card is called a <strong>face</strong>. A paper <strong>sheet</strong> holds several faces, and the number of faces is said with “on”: a <strong>6-on</strong> sheet has six faces, a <strong>12-on</strong> has twelve. '
-    'More faces give you more chances, and more to watch. New players do well to start with fewer faces.</p>'
-    '<p>Paper cards are marked with a <strong>dauber</strong> (or dabber), a bottle of ink with a sponge tip. Halls sell them, and many players bring their own favorite color. '
-    'Some halls still use <strong>hard cards</strong> (reusable cards with sliding windows or chips), and many rent <strong>electronic bingo</strong> handhelds that mark your numbers for you, which helps if your eyes or hands get tired.</p>'
-    '<h2>The kinds of games, and what the words mean</h2>'
-    + patterns_figure() +
-    '<dl>'
-    '<dt><strong>Regular games</strong></dt><dd>The main games of the night, covered by your pack.</dd>'
-    '<dt><strong>Pattern</strong></dt><dd>The shape you need to win that game. The caller always says it first, and it is often shown on the board. Listen for it every game.</dd>'
-    '<dt><strong>Straight line, or “any line”</strong></dt><dd>Five in a row: across, down, or corner to corner. The free space counts.</dd>'
-    '<dt><strong>Four corners, postage stamp, diamond, X, letter patterns</strong></dt><dd>Named shapes. Four corners is the four corner squares. Postage stamp is a block of four squares in a corner. A letter game like “Letter T” asks you to fill that letter on the card.</dd>'
-    '<dt><strong>“Crazy” games</strong></dt><dd>The pattern can sit any way around: a crazy T may be upside down or on its side.</dd>'
-    '<dt><strong>Two-part or double bingo</strong></dt><dd>You must make two patterns, or the same pattern twice, on one face.</dd>'
-    '<dt><strong>Coverall, or blackout</strong></dt><dd>Every square on the face must be marked. It usually pays the most.</dd>'
-    '<dt><strong>Jackpot and progressive jackpot</strong></dt><dd>A big prize game. A progressive jackpot must be won within a set number of balls; when nobody does, the prize grows for next time, and a smaller consolation prize is often paid instead.</dd>'
-    '<dt><strong>Specials</strong></dt><dd>Extra games sold separately during the night, often on their own colored paper.</dd>'
-    '<dt><strong>Quickies</strong></dt><dd>Fast, cheap games, sometimes played between the regular ones.</dd>'
-    '<dt><strong>Wild number, or magic number</strong></dt><dd>A number drawn at the start that counts as marked, or that pays extra if someone wins on it. Each hall runs it its own way.</dd>'
-    '<dt><strong>Bonanza</strong></dt><dd>Some numbers are drawn ahead of time and posted. You buy a card, mark what is already out, and the rest are called later in the night.</dd>'
-    '<dt><strong>U-Pick-’Em</strong></dt><dd>You choose your own numbers on a blank card, a bit like a lottery ticket.</dd>'
-    '<dt><strong>Pull-tabs, instant bingo, break-opens, tip boards and seal cards</strong></dt><dd>Paper tickets you open to see whether you won right away. Many halls sell them alongside bingo. They are a separate game from the called numbers.</dd>'
-    '<dt><strong>Session</strong></dt><dd>One full set of games on one day. Some halls run an afternoon session and an evening session.</dd>'
-    '<dt><strong>90-ball bingo</strong></dt><dd>The British game, with a different card of three rows. American halls almost always play 75-ball bingo.</dd>'
-    '</dl>'
-    '<h2>The unwritten rules every regular expects</h2>'
-    '<ul>'
-    '<li><strong>Ask before you sit.</strong> Regulars often sit in the same seats every week, and some halls let people hold seats while others forbid it. A friendly “Is this seat taken?” goes a long way.</li>'
-    '<li><strong>Bring cash, and small bills.</strong> Many halls take cash only, for cards, the kitchen and pull-tabs.</li>'
-    '<li><strong>Keep it quiet while numbers are called.</strong> Talk between games. Put your phone on silent. People are listening closely, and a missed number can cost someone a win.</li>'
-    '<li><strong>Shout “Bingo!” loud and clear, and right away.</strong> At most halls you must call it before the next ball is drawn. If you sit quietly on a win (players call that a “sleeper”), you usually lose it.</li>'
-    '<li><strong>Don’t touch your card after you call.</strong> Hold it still until the worker has read it back. If you called by mistake, just say so; it happens to everyone.</li>'
-    '<li><strong>Stay quiet while a card is checked.</strong> The caller may ask, “Any other bingos?” If you have one too, speak up then.</li>'
-    '<li><strong>Prizes are split.</strong> When two or more people win on the same ball, the prize is usually shared. That is normal, not bad luck.</li>'
-    '<li><strong>Be a good sport.</strong> A groan when someone else wins is common, but say congratulations. Never grumble at the caller about the numbers.</li>'
-    '<li><strong>Leave other people’s things alone.</strong> Don’t touch another player’s cards, daubers, or lucky charms. Many players take their charms very seriously.</li>'
-    '<li><strong>Ask before you tip.</strong> Many charity games are run by volunteers, and some states do not allow workers to take tips. A thank-you is always welcome.</li>'
-    '<li><strong>Buy from the kitchen if you can.</strong> At charity bingo, the food and drink help pay for the cause. Ask before bringing your own.</li>'
-    '<li><strong>Bring a photo ID.</strong> Halls may check age, and big prizes can need ID and a tax form.</li>'
-    '</ul>'
-    '<h2>Help for eyes, ears and hands</h2>'
-    '<ul><li>Sit where you can see the board or a screen and hear the caller well. Tell a worker if you have trouble hearing; they want you to enjoy the game.</li>'
-    '<li>Start with fewer faces. You can always buy more next time.</li>'
-    '<li>Ask about electronic handhelds that mark numbers for you, and about large-print cards.</li>'
-    '<li>Ask about parking, steps, ramps and restrooms before you go. Our <a href="https://mobilitytalk.org/states/">Mobility Talk</a> site lists help with getting around in every state.</li></ul>'
-    '<h2>What changes from state to state</h2>'
-    '<p>Each state writes its own bingo law, and each hall adds its own house rules. The things that most often differ:</p>'
-    '<ul><li><strong>Age.</strong> Many states require players to be 18. Some let younger people play with a parent or set another age, and a hall can set a higher one.</li>'
-    '<li><strong>Who may run games.</strong> Usually charities, churches, veterans’ posts, fire companies and similar groups, and sometimes only for their members and guests.</li>'
-    '<li><strong>Prize limits and how often games may run,</strong> such as a top prize per game or a number of sessions a week.</li>'
-    '<li><strong>Smoking, alcohol and payment.</strong> Some halls are smoke-free, some serve alcohol, and some states do not let halls take cards for certain games.</li>'
-    '<li><strong>Free bingo.</strong> Some places, such as senior centers, play just for fun or small prizes. A few states allow only free bingo.</li></ul>'
-    '<p>Every state has its own page on Find Bingo that names who oversees bingo there. <a href="../">Pick your state or type your ZIP code</a> to find it, along with the games near you.</p>'
-    '<h2>Ready to play?</h2>'
-    '<p>Call the hall before your first visit. Ask what time doors open, how much a pack costs, whether they take cards, and whether there is anything a new player should know. '
-    'Most halls are glad to see a new face.</p>'
-    '<div class="big-actions"><a class="solid" href="../">Find bingo near you</a></div>'
+# ---- Guides for new players (owner direction for the search push, November 27, 2026) -------------------------------
+# What people search before their first hall night: how to play (the bingo class, moved here from /learn/ so its address
+# matches the search), the words, pull tabs, and how old you have to be in each state. General how-to needs no source;
+# every rule or legal fact names its source. Each page links the others, and every footer and the home page link them all.
+GUIDE_LINKS = ('New to bingo? <a href="{up}how-to-play-bingo/">How to play bingo</a> · <a href="{up}bingo-terms/">Bingo terms, A to Z</a> · '
+               '<a href="{up}pull-tabs/">Pull tabs explained</a> · <a href="{up}bingo-age-by-state/">Bingo age by state</a>')
+GUIDE_TRAIL = (('How to play bingo', '../how-to-play-bingo/'),)
+
+
+def _crumbs(*pairs):
+    """BreadcrumbList for an information page: Find Bingo first, then (name, path) pairs."""
+    items = [('Find Bingo', SITE + '/')] + [(name, f'{SITE}/{path}') for name, path in pairs]
+    return {'@context': 'https://schema.org', '@type': 'BreadcrumbList',
+            'itemListElement': [{'@type': 'ListItem', 'position': i, 'name': n, 'item': u} for i, (n, u) in enumerate(items, 1)]}
+
+
+def _questions(faq):
+    """Common questions, written on the page and given to search engines as FAQPage markup with the very same words."""
+    html = ('<section class="faq" aria-labelledby="faq-title"><h2 id="faq-title">Common questions</h2>'
+            + ''.join(f'<h3>{escape(q)}</h3><p>{escape(a)}</p>' for q, a in faq) + '</section>')
+    ld = {'@context': 'https://schema.org', '@type': 'FAQPage',
+          'mainEntity': [{'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in faq]}
+    return html, ld
+
+
+def _toc(items):
+    return ('<nav class="toc" aria-labelledby="toc-title"><h2 id="toc-title">On this page</h2><ul>'
+            + ''.join(f'<li><a href="#{i}">{escape(label)}</a></li>' for i, label in items) + '</ul></nav>')
+
+
+GUIDES = (('how-to-play-bingo', 'book', 'How to play bingo', 'A bingo night, step by step'),
+          ('bingo-terms', 'words', 'Bingo terms, A to Z', 'What the words mean'),
+          ('pull-tabs', 'ticket', 'Pull tabs explained', 'The paper tickets sold beside bingo'),
+          ('bingo-age-by-state', 'id', 'Bingo age by state', 'How old you have to be to play'))
+
+
+def _guide_list(up, skip=(), practice=''):
+    """The guides as large links with an icon and a line each; practice: an extra link to the free practice card."""
+    return ('<ul class="guide-links">'
+            + ''.join(f'<li><a href="{up}{slug}/">{_ic(icon)}<strong>{escape(label)}</strong><span>{escape(sub)}</span></a></li>'
+                      for slug, icon, label, sub in GUIDES if slug not in skip)
+            + (f'<li><a href="{practice}">{_ic("search")}<strong>Practice card</strong><span>Play a free card just for fun</span></a></li>' if practice else '')
+            + '</ul>')
+
+
+def _more(*skip):
+    """The other guides, at the foot of each guide page."""
+    return '<h2 id="keep-learning">Keep learning</h2>' + _guide_list('../', skip, practice='../#play')
+
+
+def guides_panel():
+    """The home page's panel for first-timers, under the practice card."""
+    return ('<section class="panel" id="new-to-bingo" aria-labelledby="new-title"><h2 id="new-title">New to hall bingo?</h2>'
+            '<p>What to expect on your first night, what the words mean, and how old you have to be, in plain words.</p>'
+            + _guide_list('') + '</section>')
+
+
+# The guide links (on the home page and at the foot of each guide) and the newcomer line on state pages.
+GUIDE_LINKS_CSS = (
+    '.guide-links{list-style:none;padding:0;margin:10px 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}'
+    '.guide-links li{margin:0}.guide-links a{display:grid;grid-template-columns:auto 1fr;gap:2px 10px;align-items:center;min-height:64px;padding:10px 14px;'
+    'background:var(--card);border:2px solid var(--line);border-radius:12px;text-decoration:none;color:var(--ink)}'
+    '.guide-links a:hover,.guide-links a:focus-visible{border-color:var(--accent)}.guide-links .ic{grid-row:span 2;width:30px;height:30px;margin:0;color:var(--accent)}'
+    '.guide-links strong{color:var(--link);font-size:19px;text-decoration:underline}.guide-links span{font-size:16px}'
+    '@media (forced-colors:active){.guide-links a{border-color:CanvasText}}@media print{.guide-links{display:none}}')
+GUIDE_CSS = (
+    '.toc{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:4px 18px 10px;margin:14px 0}.toc h2{font-size:20px;margin:10px 0 4px}'
+    '.toc ul{columns:2 230px;margin:0;padding-left:20px}.toc li{margin:4px 0;break-inside:avoid}.toc a{display:inline-block;min-height:32px;padding:4px 0}'
+    '.faq h3{font-size:20px;color:var(--head);margin:18px 0 4px}'
+    '.info ol.steps li{margin:8px 0}'
+    '.alpha{margin:12px 0}.alpha ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}'
+    '.alpha a{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;border:3px solid var(--accent);'
+    'color:var(--head);font-weight:800;text-decoration:none;background:var(--card)}.alpha a:hover,.alpha a:focus-visible{background:var(--today)}'
+    '.letter{font-size:30px;margin:26px 0 0;border-bottom:2px solid var(--line);scroll-margin-top:12px}.info dt{scroll-margin-top:12px}'
+    '.see{font-size:16px}'
+    'table.ages{border-collapse:collapse;width:100%;margin:10px 0;font-size:18px}.ages caption{text-align:left;font-weight:700;color:var(--head);padding:4px 0 8px}'
+    '.ages th,.ages td{text-align:left;vertical-align:top;padding:10px 8px;border-bottom:1px solid var(--line)}.ages thead th{color:var(--head)}'
+    '.ages tbody th{width:28%;scroll-margin-top:12px}.ages tbody th:target,.ages tbody th:target+td{background:var(--today)}.ages .src{display:block;font-size:15px;margin-top:4px}'
+    '.ptab{margin:14px 0}.ptab svg{display:block;width:100%;max-width:360px;height:auto}.ptab figcaption{font-size:17px;max-width:620px}'
+    '.pt-paper{fill:#f3e3b3;stroke:#7a5712;stroke-width:2}.pt-tab{fill:#d9b45a;stroke:#7a5712;stroke-width:1.5}.pt-open{fill:#fff;stroke:#7a5712;stroke-width:1.5}'
+    '.pt-perf{fill:none;stroke:#7a5712;stroke-width:1.5;stroke-dasharray:4 3}.pt-word{font:700 14px system-ui,sans-serif;fill:#3b2f12;text-anchor:middle}'
+    '.pt-sym{font:800 24px system-ui,sans-serif;fill:#c8382c;text-anchor:middle}.pt-head{font:800 16px system-ui,sans-serif;fill:#3b2f12;text-anchor:middle}'
+    '@media (forced-colors:active){.ptab svg{forced-color-adjust:none}.pt-paper,.pt-tab,.pt-open{fill:Canvas;stroke:CanvasText}.pt-perf{stroke:CanvasText}'
+    '.pt-word,.pt-sym,.pt-head{fill:CanvasText}.alpha a{border-color:CanvasText}}'
+    '@media print{.toc,.alpha{display:none}.ptab svg{-webkit-print-color-adjust:exact;print-color-adjust:exact}}')
+
+
+# The bingo class (owner direction, November 19, 2026; written to the first-timer nervous about the unwritten rules,
+# November 23): how a bingo night works, from buying in to claiming a win, what to bring and the manners regulars expect.
+# General practice only: state law and each hall's house rules decide the details, and the page says so.
+LEARN_FAQ = (
+    ('How much does it cost to play bingo at a hall?',
+     'It depends on the hall. Most start you with a pack that covers the regular games, and extras such as early birds and specials cost more. '
+     'Call ahead or check the hall’s flyer for prices, and bring cash.'),
+    ('What happens if two people get bingo at the same time?',
+     'When two or more players bingo on the same ball, the prize is split evenly between them. Each hall’s house rules say exactly how a split works.'),
+    ('Do I have to shout “Bingo!” out loud?',
+     'Yes. At most halls you must call it out before the next ball is drawn. Even with an electronic unit that tells you that you have won, '
+     'plan to call out unless the hall tells you otherwise.'),
+    ('Can I bring my own dauber?',
+     'Yes, at almost every hall. Halls sell them at the counter too, and many regulars bring a favorite color.'),
 )
+
+
+def learn_page():
+    faq_html, faq_ld = _questions(LEARN_FAQ)
+    body = (
+        '<p><a href="../#play">Want to warm up first? Play a free practice card.</a></p>'
+        + _toc((('night', 'What happens on a bingo night'), ('buying-in', 'Buying in: packs, paper and electronics'), ('card', 'The card'),
+                ('games', 'The games in a night'), ('calling', 'How the numbers are called'), ('claiming', 'How to claim a win'),
+                ('splitting', 'When prizes are split'), ('bring', 'What to bring'), ('rules', 'The unwritten rules'),
+                ('help', 'Help for eyes, ears and hands'), ('age', 'How old you have to be'), ('states', 'What changes from state to state'),
+                ('faq-title', 'Common questions')))
+        + '<h2 id="night">What happens on a bingo night</h2>'
+        '<ol class="night" role="list"><li><strong>Doors open early,</strong> often an hour or more before the first game. Regulars come early to get a seat, buy their paper and have supper from the kitchen.</li>'
+        '<li><strong>You buy in at the counter.</strong> Most halls start you with a <em>pack</em> (also called a package or admission) that covers the regular games. Extra sheets and special games cost extra.</li>'
+        '<li><strong>Early birds</strong> are a few warm-up games before the main session. They are usually sold separately.</li>'
+        '<li><strong>The caller draws numbered balls</strong> and reads each one out, letter first: “B-7.” The number also lights up on a board or TV screens.</li>'
+        '<li><strong>When you have the pattern, you shout “Bingo!”</strong> A worker comes to your seat, reads your numbers back to the caller, and you are paid if it checks out.</li>'
+        '<li><strong>There is usually a break</strong> halfway through, with the kitchen open and other games, such as pull tabs, for sale.</li>'
+        '<li><strong>The night ends with the big one,</strong> often a coverall or a jackpot game.</li></ol>'
+        '<h2 id="buying-in">Buying in: packs, paper and electronics</h2>'
+        '<p>At most halls you start by buying a <strong>pack</strong>. It is the least you can buy to play that night, and it covers the regular games. '
+        'The hall’s price board or flyer lists what each pack holds and what it costs.</p>'
+        '<p>After the pack, the rest is up to you: extra sheets to play more faces, early birds, specials, a bonanza or a jackpot game. '
+        'Many halls sell these together as a bundle, and some ask you to buy the pack before anything else. Bring cash, in small bills: many halls take nothing else.</p>'
+        '<h3>Paper</h3><p>Paper bingo comes in <strong>sheets</strong> of several faces, often a different color for each game, so the caller can say “game six is on the green paper.” '
+        'A set of sheets for the whole night is sometimes sold as a <strong>packet</strong>. You mark paper with a <strong>dauber</strong> (or dabber), a bottle of ink with a sponge tip. '
+        'Halls sell them, and many players bring their own favorite color.</p>'
+        '<h3>Electronic bingo</h3><p>Many halls rent <strong>electronic bingo</strong> units for the session. The unit holds your cards, marks every number as it is called, '
+        'and shows when you are one number away or have a bingo. It makes playing many faces easy, and it helps if your eyes or hands get tired. '
+        'Ask the counter how the hall wants you to call a win from one.</p>'
+        '<h3>Hard cards</h3><p>Some halls and senior centers still use <strong>hard cards</strong>: reusable cards with sliding windows or chips to mark the numbers.</p>'
+        '<h2 id="card">The card</h2>'
+        '<p>An American bingo card has five columns, B, I, N, G and O, and 75 numbers in all. B holds 1 to 15, I holds 16 to 30, N holds 31 to 45, G holds 46 to 60, and O holds 61 to 75. '
+        'The middle square is a <strong>free space</strong>: it counts as already marked.</p>'
+        + card_figure() +
+        '<p>Each card is called a <strong>face</strong>. A paper <strong>sheet</strong> holds several faces, and the number of faces is said with “on”: a <strong>6-on</strong> sheet has six faces, a <strong>12-on</strong> has twelve. '
+        'More faces give you more chances, and more to watch. New players do well to start with fewer faces.</p>'
+        '<h2 id="games">The games in a night</h2>'
+        '<p>Every game has a <strong>pattern</strong>, the shape you need to win. The caller says it before the first ball, and it is often shown on the board. '
+        'Listen for it every game: four corners does not win a game that needs a coverall.</p>'
+        + patterns_figure() +
+        '<dl>'
+        '<dt><strong>Early birds</strong></dt><dd>Short games before the main session, usually sold separately. A good way to settle in.</dd>'
+        '<dt><strong>Regular games</strong></dt><dd>The main games of the night, covered by your pack. Each pays a set prize.</dd>'
+        '<dt><strong>Specials</strong></dt><dd>Extra games sold separately, often on their own colored paper, usually for bigger prizes.</dd>'
+        '<dt><strong>Progressive jackpot</strong></dt><dd>A big prize that must be won within a set number of balls. When nobody wins in time, a smaller consolation prize is usually paid, '
+        'and the jackpot grows for next time, often with one more ball allowed.</dd>'
+        '<dt><strong>Coverall, or blackout</strong></dt><dd>Every square on the face must be marked. It usually pays the most and often ends the night.</dd>'
+        '</dl>'
+        '<p>More words you will hear, from bonanza to sleeper, are in <a href="../bingo-terms/">our bingo terms glossary</a>. '
+        'The paper tickets many halls sell between games are a separate game: <a href="../pull-tabs/">how pull tabs work</a>.</p>'
+        '<h2 id="calling">How the numbers are called</h2>'
+        '<p>The caller draws balls from a machine that mixes them with air, called a <strong>blower</strong>, or from a random number generator at halls that use one. '
+        'Each number is read out letter first, “N-34,” and lit up on the <strong>flashboard</strong>, a big board with every number from 1 to 75. '
+        'Many halls also show the last number called, and the pattern, on TV screens around the room.</p>'
+        '<p>Callers keep a steady pace, a few seconds between balls. If you miss one, look at the board: it shows every number called so far in that game. '
+        'When someone calls bingo, the caller stops until the card is checked.</p>'
+        '<h2 id="claiming">How to claim a win</h2>'
+        '<ol class="steps"><li><strong>Call out “Bingo!”</strong> loud and clear as soon as the last number you need is called, before the next ball is drawn.</li>'
+        '<li><strong>Hold up your card</strong> or raise your hand so a floor worker can find you.</li>'
+        '<li><strong>Leave your card as it is.</strong> The worker reads the number printed on your face and the numbers in your pattern back to the caller, who checks them against the balls drawn.</li>'
+        '<li><strong>If it is good,</strong> the caller says so and closes the game. You are paid at your seat or at the counter, often in cash.</li>'
+        '<li><strong>If it was a mistake,</strong> just say so. It happens to everyone, and the game goes on.</li></ol>'
+        '<p>If you have a bingo and say nothing until the next ball is drawn, players call that a <strong>sleeper</strong>, and at most halls it is lost. '
+        'Big prizes can need a photo ID and a tax form, so bring your ID.</p>'
+        '<h2 id="splitting">When prizes are split</h2>'
+        '<p>When two or more players bingo on the same ball, the prize is <strong>split</strong> evenly. If two players win a $100 prize on the same ball, each gets $50. '
+        'That is normal, not bad luck. Each hall’s house rules say how a split works, including how it rounds the money. A bingo called late, after the next ball, usually does not share in the prize.</p>'
+        '<h2 id="bring">What to bring</h2>'
+        '<ul><li><strong>Cash, in small bills,</strong> for your pack, extras, the kitchen and pull tabs.</li>'
+        '<li><strong>A photo ID.</strong> Halls may check age, and big prizes can need ID.</li>'
+        '<li><strong>Daubers,</strong> if you have a favorite color. Halls sell them too.</li>'
+        '<li><strong>Reading glasses,</strong> if you use them.</li>'
+        '<li><strong>A sweater.</strong> Big halls can be cool, even in summer.</li>'
+        '<li><strong>A seat cushion</strong> for a long night on folding chairs.</li>'
+        '<li><strong>Your lucky charm.</strong> Plenty of regulars have one.</li></ul>'
+        '<h2 id="rules">The unwritten rules every regular expects</h2>'
+        '<ul>'
+        '<li><strong>Ask before you sit.</strong> Regulars often sit in the same seats every week, and some halls let people hold seats while others forbid it. A friendly “Is this seat taken?” goes a long way.</li>'
+        '<li><strong>Keep it quiet while numbers are called.</strong> Talk between games. Put your phone on silent. People are listening closely, and a missed number can cost someone a win.</li>'
+        '<li><strong>Shout “Bingo!” loud and clear, and right away.</strong> At most halls you must call it before the next ball is drawn.</li>'
+        '<li><strong>Don’t touch your card after you call.</strong> Hold it still until the worker has read it back.</li>'
+        '<li><strong>Stay quiet while a card is checked.</strong> The caller may ask, “Any other bingos?” If you have one too, speak up then.</li>'
+        '<li><strong>Be a good sport.</strong> A groan when someone else wins is common, but say congratulations. Never grumble at the caller about the numbers.</li>'
+        '<li><strong>Leave other people’s things alone.</strong> Don’t touch another player’s cards, daubers, or lucky charms. Many players take their charms very seriously.</li>'
+        '<li><strong>Ask before you tip.</strong> Many charity games are run by volunteers, and some states do not allow workers to take tips. A thank-you is always welcome.</li>'
+        '<li><strong>Buy from the kitchen if you can.</strong> At charity bingo, the food and drink help pay for the cause. Ask before bringing your own.</li>'
+        '</ul>'
+        '<h2 id="help">Help for eyes, ears and hands</h2>'
+        '<ul><li>Sit where you can see the board or a screen and hear the caller well. Tell a worker if you have trouble hearing; they want you to enjoy the game.</li>'
+        '<li>Start with fewer faces. You can always buy more next time.</li>'
+        '<li>Ask about electronic handhelds that mark numbers for you, and about large-print cards.</li>'
+        '<li>Ask about parking, steps, ramps and restrooms before you go. Our <a href="https://mobilitytalk.org/states/">Mobility Talk</a> site lists help with getting around in every state.</li></ul>'
+        '<h2 id="age">How old you have to be</h2>'
+        '<p>It depends on the state. In most states where Find Bingo lists games, charity bingo is for players 18 and older. Missouri lets players start at 16, '
+        'and several states let younger players play beside a parent or guardian. Some halls keep children out even where the law allows them. '
+        '<a href="../bingo-age-by-state/">See the age for each state, with the law it comes from</a>.</p>'
+        '<h2 id="states">What changes from state to state</h2>'
+        '<p>Each state writes its own bingo law, and each hall adds its own house rules. The things that most often differ:</p>'
+        '<ul><li><strong>Age.</strong> See <a href="../bingo-age-by-state/">bingo age by state</a>.</li>'
+        '<li><strong>Who may run games.</strong> Usually charities, churches, veterans’ posts, fire companies and similar groups, and sometimes only for their members and guests.</li>'
+        '<li><strong>Prize limits and how often games may run,</strong> such as a top prize per game or a number of sessions a week.</li>'
+        '<li><strong>Pull tabs and instant tickets.</strong> Whether halls may sell them, and to whom. See <a href="../pull-tabs/">pull tabs explained</a>.</li>'
+        '<li><strong>Smoking, alcohol and payment.</strong> Some halls are smoke-free, some serve alcohol, and some states do not let halls take cards for certain games.</li>'
+        '<li><strong>Free bingo.</strong> Some places, such as senior centers, play just for fun or small prizes. A few states allow only free bingo.</li></ul>'
+        '<p>Every state has its own page on Find Bingo that names who oversees bingo there. <a href="../">Pick your state or type your ZIP code</a> to find it, along with the games near you.</p>'
+        + faq_html +
+        '<h2 id="ready">Ready to play?</h2>'
+        '<p>Call the hall before your first visit. Ask what time doors open, how much a pack costs, whether they take cards, and whether there is anything a new player should know. '
+        'Most halls are glad to see a new face.</p>'
+        '<div class="big-actions"><a class="solid" href="../">Find bingo near you</a></div>'
+        + _more('how-to-play-bingo'))
+    return (
+        'How to Play Bingo: A Friendly Class for First-Timers | FindBingo.org',
+        'How to play bingo at a hall: buying in, packs and electronics, early birds, specials, claiming a win, splitting prizes and the unwritten rules regulars expect.',
+        'How to play bingo at a hall',
+        'Nervous about the unwritten rules? Most first-timers are. Here is how a bingo night works, from buying in to calling your win, plus what to bring and the manners regulars expect. Every hall has its own house rules, so ask at the counter too.',
+        body), (_crumbs(('How to play bingo', 'how-to-play-bingo/')), faq_ld)
+
+
+# Bingo words, A to Z: one entry per word, each with its own address (#term-dauber), grouped under letter headings.
+# A "see" entry points to the word that explains it.
+GLOSSARY = (
+    ('Admission', 'Another word for the pack you buy to play the regular games. Some halls call it a package.', None),
+    ('Any line', None, 'Straight line'),
+    ('Ball', 'Each of the 75 numbered balls the caller draws. Balls also count the draws: a progressive jackpot “in 50 balls” must be won by the 50th number called.', None),
+    ('Blackout', None, 'Coverall'),
+    ('Blower', 'The machine that mixes the balls with air and pushes one up at a time for the caller.', None),
+    ('Bonanza', 'A game where some numbers are drawn ahead of time and posted. You mark what is already out, and the rest are called later in the night.', None),
+    ('Break-open', 'Another name for a pull tab ticket.', None),
+    ('Caller', 'The person who draws the balls and reads out each number, letter first.', None),
+    ('Card', 'The grid of numbers you play, with five columns under the letters B, I, N, G and O. One card on a paper sheet is called a face.', None),
+    ('Consolation prize', 'The smaller prize paid when nobody wins a progressive jackpot within its set number of balls.', None),
+    ('Coverall', 'Every square on the face marked. Also called a blackout. It usually pays the most of any game in the night.', None),
+    ('Crazy', 'A pattern that may sit any way around. A crazy T can be upside down or on its side; a crazy kite can point into any corner.', None),
+    ('Dauber', 'A bottle of ink with a sponge tip, for marking paper. Also spelled dabber.', None),
+    ('Double bingo', 'Two patterns, or the same pattern twice, on one face. Also called a two-part game.', None),
+    ('Early birds', 'Warm-up games before the main session, usually sold separately.', None),
+    ('Electronic bingo', 'A handheld or tabletop unit, rented for the session, that holds your cards and marks each number as it is called.', None),
+    ('Face', 'One card’s grid of numbers. A paper sheet holds several faces.', None),
+    ('Flare', 'The display card for a box of pull tab tickets. It shows the winning symbols and the prize for each.', None),
+    ('Flashboard', 'The big board that lights up each number as it is called. Also called the board.', None),
+    ('Floor worker', 'A worker who checks winning cards, pays prizes and sells extras on the floor. Some halls say runner.', None),
+    ('Free space', 'The middle square of the card. It counts as already marked.', None),
+    ('Good bingo', 'What the caller says when a winning card checks out. The game is then closed.', None),
+    ('Hard card', 'A reusable card with sliding windows or chips, used instead of paper.', None),
+    ('Hard way', 'A bingo made without using the free space. Some games pay more for a win made the hard way.', None),
+    ('House rules', 'The hall’s own rules, on things like saving seats, splitting prizes and calling a win. Look for them posted near the counter, or ask.', None),
+    ('Instant bingo', 'Another name for pull tab tickets in some states.', None),
+    ('Jackpot', 'A big prize game, often near the end of the night.', None),
+    ('Letter games', 'Patterns shaped like a letter, such as a T, an L or an X.', None),
+    ('Magic number', 'A number drawn at the start of a game that counts as marked on every card, or that pays extra if a win comes on it. Also called a wild number. Each hall runs it its own way.', None),
+    ('Ninety-ball bingo', 'The British game, with a card of three rows. American halls almost always play 75-ball bingo.', None),
+    ('On', 'How the faces on a sheet are counted. A 6-on sheet has six faces; a 12-on has twelve.', None),
+    ('Pack', 'What you buy to play the regular games, and at most halls the least you can buy. Also called a package or admission.', None),
+    ('Packet', 'A set of paper with the sheets for each game of the night.', None),
+    ('Pattern', 'The shape you need to win a game. The caller announces it before the first ball.', None),
+    ('Perm', 'The number printed on a paper face, which the floor worker reads to check a win. Also called the card number.', None),
+    ('Postage stamp', 'A block of four squares in a corner of the card.', None),
+    ('Progressive jackpot', 'A prize that must be won within a set number of balls. When nobody does, it grows for next time.', None),
+    ('Pull tab', 'A paper ticket with tabs you pull open to see right away whether you won. A separate game from the called numbers.', None),
+    ('Quickie', 'A fast, cheap game, sometimes played between the regular games. Also called a speed game.', None),
+    ('Regular games', 'The main games of the night, covered by your pack.', None),
+    ('Runner', None, 'Floor worker'),
+    ('Seal card', 'A pull tab game where some winners are decided later, when a seal on the display card is opened.', None),
+    ('Session', 'One full set of games. Some halls run an afternoon session and an evening session.', None),
+    ('Sheet', 'One piece of bingo paper, holding several faces.', None),
+    ('Sleeper', 'A winning card nobody called. At most halls it is lost once the next ball is drawn.', None),
+    ('Specials', 'Extra games sold separately, often on their own colored paper.', None),
+    ('Split', 'When two or more players win on the same ball, they share the prize evenly.', None),
+    ('Straight line', 'Five in a row across, down or corner to corner. The free space counts. Also called any line.', None),
+    ('Tip board', 'A board of pull tab tickets with a sealed winning name or number, opened once the board sells out.', None),
+    ('Two-part game', None, 'Double bingo'),
+    ('U-Pick-’Em', 'You choose your own numbers on a blank card, a bit like a lottery ticket.', None),
+    ('Wild number', None, 'Magic number'),
+)
+GLOSSARY_LINKS = {'Pull tab': ('../pull-tabs/', 'How pull tabs work'), 'Seal card': ('../pull-tabs/#kinds', 'Pull tab games'),
+                  'Tip board': ('../pull-tabs/#kinds', 'Pull tab games'), 'Break-open': ('../pull-tabs/', 'How pull tabs work'),
+                  'Instant bingo': ('../pull-tabs/', 'How pull tabs work'), 'Flare': ('../pull-tabs/#how', 'Reading a pull tab'),
+                  'Pattern': ('../how-to-play-bingo/#games', 'Common patterns, with pictures'),
+                  'Card': ('../how-to-play-bingo/#card', 'A sample card'), 'Split': ('../how-to-play-bingo/#splitting', 'When prizes are split'),
+                  'Sleeper': ('../how-to-play-bingo/#claiming', 'How to claim a win'), 'Pack': ('../how-to-play-bingo/#buying-in', 'Buying in')}
+
+
+def _term_id(word):
+    return 'term-' + _slug(word.replace('’', ''))
+
+
+def glossary_page():
+    words = [w for w, _, _ in GLOSSARY]
+    assert words == sorted(words, key=str.lower) and len(set(words)) == len(words), 'glossary is A to Z, each word once'
+    assert all(see in words and dict((w, d) for w, d, _ in GLOSSARY)[see] for _, _, see in GLOSSARY if see), 'every see points to a defined word'
+    letters = sorted({w[0].upper() for w in words})
+    nav = ('<nav class="alpha" aria-labelledby="alpha-title"><h2 id="alpha-title" class="vh">Jump to a letter</h2><ul>'
+           + ''.join(f'<li><a href="#letter-{l.lower()}"><span class="vh">Words starting with </span>{l}</a></li>' for l in letters) + '</ul></nav>')
+    body = ''
+    for l in letters:
+        body += f'<h2 class="letter" id="letter-{l.lower()}">{l}</h2><dl>'
+        for word, meaning, see in GLOSSARY:
+            if word[0].upper() != l:
+                continue
+            if see:
+                body += f'<dt id="{_term_id(word)}"><strong>{escape(word)}</strong></dt><dd>See <a href="#{_term_id(see)}">{escape(see.lower() if see != "Pack" else see)}</a>.</dd>'
+            else:
+                extra = GLOSSARY_LINKS.get(word)
+                body += (f'<dt id="{_term_id(word)}"><strong>{escape(word)}</strong></dt><dd>{escape(meaning)}'
+                         + (f' <a class="see" href="{extra[0]}">{escape(extra[1])}</a>' if extra else '') + '</dd>')
+        body += '</dl>'
+    body = ('<p>Here is what the words mean, A to Z. For how they fit together on a bingo night, read <a href="../how-to-play-bingo/">how to play bingo</a>.</p>'
+            + nav + body + '<p class="top"><a href="#top">Back to the top</a></p>' + _more('bingo-terms'))
+    return ('Bingo Terms and Slang: A Glossary of Hall Bingo Words | FindBingo.org',
+            'What do coverall, early birds, dauber, sleeper and 6-on mean? A plain A to Z glossary of the words you will hear at a bingo hall, for first-timers.',
+            'Bingo terms, A to Z',
+            'Hearing words like coverall, sleeper and early birds and nodding along? You are not alone. Here is what every word you are likely to hear at a bingo hall means, in plain English.',
+            body), (_crumbs(('How to play bingo', 'how-to-play-bingo/'), ('Bingo terms', 'bingo-terms/')),)
+
+
+def pull_tab_figure():
+    """The back of a pull tab ticket: three tabs, the top one pulled open to show three sevens. Words on the page say the same."""
+    rows = ''
+    for i, sym in enumerate(('7', None, None)):
+        y = 52 + 46 * i
+        if sym:
+            rows += (f'<rect class="pt-open" x="34" y="{y}" width="190" height="36" rx="4"/>'
+                     + ''.join(f'<text class="pt-sym" x="{74 + 55 * k}" y="{y + 27}">7</text>' for k in range(3))
+                     + f'<path class="pt-tab" d="M224 {y}h70v36h-70z"/><text class="pt-word" x="259" y="{y + 23}">OPEN</text>')
+        else:
+            rows += (f'<rect class="pt-tab" x="34" y="{y}" width="190" height="36" rx="4"/><path class="pt-perf" d="M34 {y + 18}h190"/>'
+                     f'<text class="pt-word" x="129" y="{y + 23}">PULL</text>')
+    return ('<figure class="ptab" aria-labelledby="ptab-cap"><svg viewBox="0 0 320 200" width="320" height="200" role="img" aria-labelledby="ptab-t ptab-d">'
+            '<title id="ptab-t">The back of a pull tab ticket</title>'
+            '<desc id="ptab-d">A paper ticket with three tabs in a row. The top tab has been pulled open and shows three sevens. The other two tabs are still closed and say pull.</desc>'
+            '<rect class="pt-paper" x="14" y="12" width="292" height="178" rx="10"/><text class="pt-head" x="160" y="38">PULL ALL TABS</text>'
+            + rows + '</svg><figcaption id="ptab-cap">The back of a pull tab ticket. Pull each tab to see the symbols underneath. '
+            'A line that matches a winning line on the flare, like these three sevens might, is a winner.</figcaption></figure>')
+
+
+PULL_TAB_FAQ = (
+    ('Are pull tabs the same as bingo?',
+     'No. Pull tabs are paper tickets you open to see right away whether you won. Bingo is played on cards while a caller draws numbers. Many halls sell both.'),
+    ('How do I know if my pull tab won?',
+     'Pull every tab and compare the symbols to the winning lines printed on the flare, the display card for that box of tickets. '
+     'If a line matches, take the ticket to the counter or a floor worker to be paid.'),
+    ('Can I buy pull tabs at every bingo hall?',
+     'No. Whether a hall may sell them depends on the state’s law and the hall’s license, so call ahead and ask.'),
+)
+
+
+def pull_tabs_page(states):
+    by = {s['code']: s for s in states}
+    va, mn = by['VA']['age']['sources'][0], by['MN']['age']['sources'][0]
+    faq_html, faq_ld = _questions(PULL_TAB_FAQ)
+    body = (
+        '<h2 id="what">What is a pull tab?</h2>'
+        '<p>A pull tab is a small paper ticket sold for a set price. The back has a row of tabs, each sealed over a line of symbols. '
+        'Pull the tabs open, and if a line matches a winning line, you win right away. No numbers are called: it is a separate game from bingo, '
+        'and many halls sell tickets before the games, at the break and between games.</p>'
+        + pull_tab_figure() +
+        '<p>They go by many names, depending on where you are: pull tabs, instant bingo, break-opens, jar tickets, tip boards and charity game tickets, among others.</p>'
+        '<h2 id="how">How to play one</h2>'
+        '<ol class="steps"><li><strong>Buy tickets</strong> at the counter, from a floor worker, or from a ticket machine where the hall has one.</li>'
+        '<li><strong>Look at the flare,</strong> the display card for that box of tickets. It shows each winning line and its prize.</li>'
+        '<li><strong>Pull every tab</strong> on the back of each ticket. A winner can be on the last line.</li>'
+        '<li><strong>Compare each line to the flare</strong> for the box you bought from. Prizes differ from box to box.</li>'
+        '<li><strong>Take a winner to the counter</strong> or a floor worker to be paid. Keep it whole: a torn or marked ticket can be hard to check.</li></ol>'
+        '<h2 id="kinds">Other kinds you may see</h2>'
+        '<dl><dt><strong>Seal cards</strong></dt><dd>Some tickets win the right to a seal prize. Hold on to them: the winner is found when the seal on the display card is opened, '
+        'usually once the box sells out.</dd>'
+        '<dt><strong>Tip boards</strong></dt><dd>A board of tickets with a sealed winning name or number, opened once the board sells out.</dd>'
+        '<dt><strong>Event tickets</strong></dt><dd>Tickets whose winner depends on a number called in the bingo game. Keep them until that game ends.</dd>'
+        '<dt><strong>Electronic pull tabs</strong></dt><dd>In some places you will see versions played on a screen instead of paper.</dd></dl>'
+        '<h2 id="where">Do bingo halls sell them? It depends on the state</h2>'
+        '<p>Each state’s law decides whether charities may sell pull tabs at all, where and when, and who may buy them. '
+        'Some halls sell them all session, some only at certain times, and some not at all. To know what a hall near you offers, call ahead, '
+        'or open <a href="../">your state’s page on Find Bingo</a>, which names the office that oversees bingo there.</p>'
+        '<h2 id="age">How old you have to be</h2>'
+        '<p>Even where children may play bingo beside a parent, pull tabs are often for adults only. Virginia, for example, lets younger players play bingo '
+        f'with a parent or legal guardian, but no one under 18 may play paper instant bingo, pull tabs or seal cards ({_ext(va["url"], "Virginia Administrative Code, 11VAC20-20-60")}). '
+        f'Minnesota bars anyone under 18 from playing pull tabs and tipboards ({_ext(mn["url"], "Minnesota Statutes, section 349.181")}). '
+        'Both checked November 27, 2026. <a href="../bingo-age-by-state/">See the bingo age for each state</a>.</p>'
+        '<h2 id="tips">Tips for new players</h2>'
+        '<ul><li>Pull every tab before you decide a ticket lost.</li>'
+        '<li>Check each ticket against the flare for its own box.</li>'
+        '<li>Hold on to seal card and event tickets until the seal is opened or the game ends.</li>'
+        '<li>Set a spending limit before you start, as you would for any night out.</li>'
+        '<li>Ask a floor worker if you are not sure whether a ticket won. They check tickets all night.</li></ul>'
+        + faq_html + _more('pull-tabs'))
+    return ('Pull Tabs and Instant Bingo Tickets: How They Work | FindBingo.org',
+            'What pull tabs are, how to read one, how to tell if you won, and why whether a bingo hall sells them depends on the state. A plain guide for new players.',
+            'Pull tabs, explained',
+            'Seen people at the bingo hall tearing open little paper tickets? Those are pull tabs. Here is how they work, how to tell if you won, and why not every hall sells them.',
+            body), (_crumbs(('How to play bingo', 'how-to-play-bingo/'), ('Pull tabs', 'pull-tabs/')), faq_ld)
+
+
+AGE_CHECKED = '2026-11-27'
+AGE_FAQ = (
+    ('How old do you have to be to play bingo?',
+     'It depends on the state. In most states with games on Find Bingo, you must be 18 to play charity bingo on your own, and Missouri allows players from 16. '
+     'Find your state on this page for its rule and its source.'),
+    ('Can children play bingo with a parent?',
+     'In some states, yes, when a parent, guardian or adult relative is with them. Other states allow no one under 18 to play at all. Each state’s entry on this page says which.'),
+    ('Can a bingo hall set a higher age than the law?',
+     'Yes, in many places. Texas and Mississippi law, for example, let a hall post a notice keeping everyone under 18 out. Call ahead before you bring a child.'),
+    ('Is the age different for pull tabs?',
+     'Often, yes. Virginia lets younger players play bingo with a parent or legal guardian, but allows instant bingo, pull tabs and seal cards only for players 18 and older.'),
+)
+
+
+def age_page(states):
+    """Bingo age by state: only states with listings on Find Bingo whose age was read from the state's own law, rule or regulator."""
+    rows = [s for s in states if s.get('age')]
+    for s in rows:
+        a = s['age']
+        assert s['coverage'] in LISTED and a['min'] in (16, 18) and a['rule'].startswith(f'{a["min"]} and older'), s['code']
+        assert a['sources'] and all(x['url'].startswith('https://') and x['label'] and x['scope'] and x['reviewed_on'] == AGE_CHECKED for x in a['sources']), s['code']
+    youngest = min(s['age']['min'] for s in rows)
+    assert [s['code'] for s in rows if s['age']['min'] == youngest] == ['MO'], 'the lead and questions name Missouri as the one state starting at 16'
+    by = {s['code']: s for s in rows}
+    assert all(c in by for c in ('TX', 'MS', 'VA')), 'the questions name Texas, Mississippi and Virginia'
+    missing = [s for s in states if s['coverage'] in LISTED and not s.get('age')]
+    faq_html, faq_ld = _questions(AGE_FAQ)
+    table = ('<table class="ages"><caption>Minimum age to play charity bingo, by state, checked November 27, 2026</caption>'
+             '<thead><tr><th scope="col">State</th><th scope="col">Who may play</th></tr></thead><tbody>'
+             + ''.join(f'<tr><th scope="row" id="{SLUGS[s["code"]]}"><a href="../{SLUGS[s["code"]]}/">{escape(s["name"])}</a></th>'
+                       f'<td>{escape(s["age"]["rule"])}<span class="src">Source: '
+                       + ' and '.join(_ext(x['url'], x['label']) for x in s['age']['sources']) + '</span></td></tr>' for s in rows)
+             + '</tbody></table>')
+    names = [s['name'] for s in missing]
+    unconfirmed = ('<h2 id="unconfirmed">States we have not confirmed yet</h2>'
+                   f'<p>We also list games in {_and(names)}, but have not yet confirmed a minimum age from {"each state’s" if len(names) > 1 else "the state’s"} own law. '
+                   'Ask the hall before you bring a child.</p>') if missing else ''
+    body = ('<p class="note">Checked November 27, 2026, from each state’s own law, rules or bingo regulator. A hall may set a higher age, and some keep children out entirely. '
+            'This is a plain summary, not legal advice: the linked source has the full wording.</p>'
+            + table + unconfirmed
+            + '<h2 id="before">Before you bring a younger player</h2>'
+            '<ul><li>Call the hall and ask whether children may play, and at what age. House rules can be stricter than the law.</li>'
+            '<li>Bring a photo ID for yourself. Some halls check.</li>'
+            '<li>Expect pull tabs and other instant games to be for adults only in many states. See <a href="../pull-tabs/">pull tabs explained</a>.</li></ul>'
+            + faq_html + _more('bingo-age-by-state'))
+    return ('Bingo Age by State: How Old to Play Charity Bingo | FindBingo.org',
+            'How old do you have to be to play bingo? The minimum age for charity bingo in each state with games on Find Bingo, from each state’s own law.',
+            'How old do you have to be to play bingo?',
+            'Bringing a grandchild, or turning 18 soon? In most states with games on Find Bingo, charity bingo is for players 18 and older. '
+            'Missouri starts at 16, and several states let younger players play beside a parent or guardian.',
+            body), (_crumbs(('How to play bingo', 'how-to-play-bingo/'), ('Bingo age by state', 'bingo-age-by-state/')), faq_ld)
+
+
+def moved_page(new_slug, label, style, analytics, generated_on):
+    """A forwarding page left at an old address (findbingo.org also answers it with a 301 in _redirects)."""
+    url = f'{SITE}/{new_slug}/'
+    return ('<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">\n'
+            f'<title>{escape(label)} has moved | FindBingo.org</title>\n<link rel="canonical" href="{url}">\n<meta name="robots" content="noindex,follow">\n'
+            f'<meta http-equiv="refresh" content="0; url=../{new_slug}/">\n' + style + '\n</head>'
+            f'<body id="top"><a class="skip" href="#main">Skip to the page</a><header>{BALLS}<p class="brand"><a href="../">FindBingo.org</a> · free from Veteran Home Guardians</p>'
+            f'<h1>{escape(label)} has a new address</h1></header>'
+            f'<main id="main"><div class="info"><p><a href="../{new_slug}/">Go to {escape(label.lower())}</a>.</p></div></main>'
+            f'{_footer(generated_on)}<script>{analytics}</script></body></html>\n')
+
+
+def newbie_line(s, up='../', icon=True):
+    """A state page's one line for first-timers: how a night works, the words, and the state's age when it is confirmed.
+    icon=False for pages without the icon sprite (the Ohio finder)."""
+    age = (f' · <a href="{up}bingo-age-by-state/#{SLUGS[s["code"]]}">How old you must be in {escape(s["name"])}</a>' if s.get('age') else '')
+    return (f'<p class="newbie">{_ic("book") if icon else ""}<span>New to hall bingo? <a href="{up}how-to-play-bingo/">How a bingo night works</a> · '
+            f'<a href="{up}bingo-terms/">Bingo words, A to Z</a>{age}</span></p>')
+
 
 ASK = _mailto('Find Bingo privacy')
 PRIVACY = (
@@ -2184,8 +2609,10 @@ ADSENSE_HEAD = (f'<meta name="google-adsense-account" content="{ADSENSE_CLIENT}"
                 f'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={ADSENSE_CLIENT}" crossorigin="anonymous"></script>')
 ADS_TXT = 'google.com, pub-9220804879239310, DIRECT, f08c47fec0942fa0\n'
 ADSENSE_BASE = 'bingo-site/findbingo/'
-# Pages that never load the ad code: page not found, the print-only poster, and the privacy, terms and about pages.
-NO_ADSENSE = ('404.html', 'ohio/poster.html', 'privacy/index.html', 'terms/index.html', 'about/index.html')
+# Pages that never load the ad code: page not found, the print-only poster, the privacy, terms and about pages, and the
+# forwarding page left at the bingo class's old address.
+# learn/ is only a forwarding page now: the bingo class moved to how-to-play-bingo/ (November 27, 2026).
+NO_ADSENSE = ('404.html', 'ohio/poster.html', 'privacy/index.html', 'terms/index.html', 'about/index.html', 'learn/index.html')
 
 
 def adsense(result):
