@@ -47,6 +47,8 @@ assert 'Not checked by us yet' in page
 all_ids = re.findall(r'\sid="([^"]+)"', page)
 assert len(all_ids) == len(set(all_ids)), 'ids are unique on the directory page'
 assert page.count('class="trade-group"') == len({r['main_trade'] for r in listed})
+join_page = (ROOT / 'contractors/join.html').read_text(encoding='utf-8')
+assert 'You set your prices, not us.' in join_page and 'should sit within' not in join_page, 'we never set a business’s prices'
 for rel in ('contractors/fair-prices.html', 'contractors/join.html'):
     other = re.findall(r'\sid="([^"]+)"', (ROOT / rel).read_text(encoding='utf-8'))
     assert len(other) == len(set(other)), 'ids are unique on ' + rel
