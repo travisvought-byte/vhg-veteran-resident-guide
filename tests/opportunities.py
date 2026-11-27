@@ -6,7 +6,10 @@ places, waitlists and odds appear only with the program's own figure and its sou
 published numbers. Search excerpts (evidence C), ad leads (E) and closed programs never get a page.
 The pages: one per published listing, each with its source and checked date; the state pages, the nationwide page and
 the hub are in the sitemap; every state guide links to its state's page or the nationwide one; every Ohio county
-office page lists its local programs; Ohio's regions cover its 88 counties once; and no ad code."""
+office page lists its local programs; Ohio's regions cover its 88 counties once; and no ad code.
+Business funding (listings with an award): equity is true, false or null (not stated); the business funding page
+lists every published one, open ones first, in a captioned table and as cards, and the hub, the nationwide page and
+every state page link to it."""
 import json
 import re
 import sys
@@ -49,6 +52,13 @@ for path in sorted(bo.DATA.glob('*.json')):
             assert r['counties'] or r.get('regions'), (r['id'], 'a local program names its counties or region')
             known = {x['county'] for x in json.loads((ROOT / registry[data['state']]['offices']).read_text())}
             assert set(r['counties']) <= known, (r['id'], set(r['counties']) - known)
+        if 'award' in r or 'equity' in r:
+            assert r['category'] == 'business' and 'award' in r and 'equity' in r, (r['id'], 'funding needs award and equity')
+            assert isinstance(r['award'], str) and r['award'].strip(), r['id']
+            assert r['equity'] in (True, False, None), (r['id'], 'equity is true, false or null when not stated')
+        assert r.get('invite_only', True) is True, (r['id'], 'invite_only is true or left out')
+        for text in [r.get('award'), r.get('unconfirmed')]:
+            assert text is None or ('<' not in text and text.strip()), (r['id'], 'plain text')
         for text in (r['name'], r['summary'], r['eligibility'], r['how_to_apply']):
             assert '<' not in text and text.strip(), (r['id'], 'plain text')
         c = r['capacity']
@@ -75,7 +85,7 @@ for path in sorted(bo.DATA.glob('*.json')):
             assert r['id'] not in (ROOT / bo.FOLDER / folder / 'index.html').read_text() if (ROOT / bo.FOLDER / folder / 'index.html').exists() else True
 
 assert len(published) > 200, len(published)
-for rel in ['', 'us/', 'oh/', 'pa/', 'mi/']:
+for rel in ['', 'us/', 'business/'] + [p.stem + '/' for p in bo.DATA.glob('*.json') if p.stem != 'national']:
     assert f'<loc>{bo.BASE_URL}{bo.FOLDER}/{rel}</loc>' in sitemap, rel
 
 # Ohio's regions: every county once.
@@ -104,4 +114,26 @@ assert 'assets/opportunities.js' in oh and 'id="opp-county"' in oh and oh.count(
 for r in published:
     if r['state'] == 'OH' or r['scope'] in ('national', 'travel'):
         assert f'{bo.short_id(r)}.html' in oh, (r['id'], 'listed on the Ohio page')
-print('opportunities:', len(published), 'published listings: ok')
+# Business funding: every published grant or prize on one page, open ones first, award and equity side by side.
+fund = [r for r in published if bo.funding(r)]
+biz = (ROOT / bo.FOLDER / 'business/index.html').read_text()
+assert len(fund) >= 12, len(fund)
+assert '<caption' in biz and biz.count('<th scope="col">') == 4 and 'tabindex="0"' in biz
+table = biz.split('<tbody>')[1].split('</tbody>')[0]
+order = [g for g, _, _ in bo.FUNDING_GROUPS]
+seen = [r for r in sorted(fund, key=lambda r: table.index(f'href="#{bo.short_id(r)}"'))]
+assert [order.index(bo.funding_group(r)) for r in seen] == sorted(order.index(bo.funding_group(r)) for r in seen), 'open ones first'
+dated = [r['deadline_date'] for r in seen if bo.funding_group(r) == 'open' and r.get('deadline_date')]
+assert dated == sorted(dated), 'nearest deadline first'
+for r in fund:
+    assert f'id="{bo.short_id(r)}"' in biz and f'href="#{bo.short_id(r)}"' in biz, (r['id'], 'on the business page')
+    want = {True: 'Yes', False: 'No. The program says it takes no equity.', None: 'Not stated by the program'}[r['equity']]
+    assert want in biz, (r['id'], 'equity line')
+    if r.get('invite_only'):
+        assert 'By invitation only.' in biz.split(f'id="{bo.short_id(r)}"')[1].split('</article>')[0], r['id']
+assert 'href="business/"' in (ROOT / bo.FOLDER / 'index.html').read_text()
+assert 'href="../business/"' in (ROOT / bo.FOLDER / 'us/index.html').read_text()
+for path in bo.DATA.glob('*.json'):
+    if path.stem != 'national':
+        assert 'href="../business/"' in (ROOT / bo.FOLDER / path.stem / 'index.html').read_text(), path.stem
+print('opportunities:', len(published), 'published listings,', len(fund), 'business funding: ok')
