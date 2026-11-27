@@ -27,6 +27,7 @@ from build_core_care import (outputs as core_care_outputs, pages as core_care_pa
 from build_bad_paper import outputs as bad_paper_outputs, pages as bad_paper_pages
 import landing
 from build_justice import outputs as justice_outputs
+from build_contractors import outputs as contractor_outputs, pages as contractor_pages
 from build_topic_pages import outputs as topic_outputs, pages as topic_pages, add_language_links
 import visuals
 import state_visuals
@@ -127,6 +128,8 @@ def outputs():
     result.update(world_lite_outputs())
     # Veterans in the justice system (data/justice.json); linked from every state page.
     result.update(justice_outputs())
+    # Veteran-owned Ohio contractors, fair prices and free profiles (data/contractors/); linked from the Ohio front page.
+    result.update(contractor_outputs())
     # Printable resource packets (paper handouts) and their download page; PDFs: node scripts/build_packets.cjs.
     result.update(packet_outputs())
     # One page per county veterans office (counties/<st>/<county>.html), and a link to the state's list from its guide.
@@ -181,6 +184,8 @@ def outputs():
     urls += [BASE_URL + page for page in bad_paper_pages()]
     # Help after MST, Gold Star and surviving families, and the guide in Spanish.
     urls += [BASE_URL + page for page in topic_pages()]
+    # Veteran-owned Ohio contractors: the directory, fair prices and the free-profile page.
+    urls += [BASE_URL + page for page in contractor_pages()]
     result['sitemap.xml'] = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join('  <url><loc>' + u.replace('&', '&amp;') + '</loc></url>\n' for u in urls) + '</urlset>\n'
     result['robots.txt'] = 'User-agent: *\nAllow: /\n\nSitemap: ' + BASE_URL + 'sitemap.xml\n'
     # Each state page's at-a-glance map and counts and its who-to-call-first diagram, and the tile map on the
