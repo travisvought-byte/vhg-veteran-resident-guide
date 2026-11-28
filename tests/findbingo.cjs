@@ -710,35 +710,117 @@ assert(buildWith([{...sample[1], url: 'http://example.org/'}], []).error, 'ad li
 assert(buildWith([{...sample[0], alt: ''}], []).error, 'a picture needs alt text');
 assert(buildWith([{...sample[1], slot: 'sidebar'}], []).error, 'only known places');
 
-// Practice card (November 19, 2026): a just-for-fun card on the home page, nothing sent or stored.
+// Practice card (November 19, 2026), rebuilt as hall bingo (November 28, 2026, owner direction): faces three across like hall
+// paper, 3 to 18 of them, and a pattern picked at random each game that the game shows when a face completes. Nothing sent or stored.
 {
   const p = await open('');
-  const d = p.d, cells = [...d.querySelectorAll('#card-body button')];
-  assert.equal(cells.length, 25);
-  assert.equal(cells[12].textContent, 'FREE');
-  const nums = cells.filter((_, i) => i !== 12).map(b => +b.textContent);
-  assert.equal(new Set(nums).size, 24, 'no number twice on a card');
-  cells.forEach((b, i) => { if (i !== 12) { const col = i % 5, n = +b.textContent; assert(n > col * 15 && n <= col * 15 + 15, 'each column holds its own fifteen numbers') } });
+  const d = p.d, w = p.w, g = id => d.getElementById(id);
+  const faces = () => [...d.querySelectorAll('#sheet .face')];
+  const cellsOf = f => [...f.querySelectorAll('button')];
+  const checkFace = (f, k) => {
+    const cells = cellsOf(f);
+    assert.equal(cells.length, 25);
+    assert.equal(cells[12].textContent, 'FREE');
+    assert.equal(cells[12].getAttribute('aria-pressed'), 'true', 'the free space counts as daubed');
+    assert.equal(f.querySelector('caption').textContent.trim().split(' ').slice(0, 2).join(' '), 'Face ' + (k + 1));
+    assert.deepEqual([...f.querySelectorAll('th')].map(t => t.textContent), ['B', 'I', 'N', 'G', 'O']);
+    const nums = cells.filter((_, i) => i !== 12).map(b => +b.textContent);
+    assert.equal(new Set(nums).size, 24, 'no number twice on a face');
+    cells.forEach((b, i) => { if (i !== 12) { const col = i % 5, n = +b.textContent; assert(n > col * 15 && n <= col * 15 + 15, 'each column holds its own fifteen numbers') } });
+  };
+  // A sheet starts with 6 faces; the choices run 3 to 18, in strips of three.
+  assert.deepEqual([...g('faces').options].map(o => +o.value), [3, 6, 9, 12, 15, 18]);
+  assert.equal(faces().length, 6);
+  faces().forEach(checkFace);
+  g('faces').value = '18'; g('faces').dispatchEvent(new w.Event('change'));
+  assert.equal(faces().length, 18, 'up to 18 faces');
+  faces().forEach(checkFace);
+  assert.match(g('play-msg').textContent, /fresh sheet of 18 faces/);
+  // The pattern is named, explained and pictured before the first ball, and changes from game to game.
+  const KNOWN = ['Letter T', 'Letter X', 'Letter L', 'Letter H', 'Letter U', 'Letter C', 'Letter E', 'Letter Z', 'Letter N', 'Plus sign', 'Four corners',
+    'Postage stamp', 'Small picture frame', 'Large picture frame', 'Kite', 'Crazy T', 'Diamond', 'Coverall'];
+  const seen = new Set();
+  let before = g('pattern-name').textContent;
+  for (let i = 0; i < 40; i++) {
+    const name = g('pattern-name').textContent;
+    assert(KNOWN.includes(name), 'a known hall pattern: ' + name);
+    assert(g('pattern-text').textContent.length > 15 && g('pattern-pic').querySelectorAll('circle').length >= 4, name + ' is explained and pictured');
+    seen.add(name);
+    g('new-card').click();
+    assert.notEqual(g('pattern-name').textContent, name, 'a new game brings a new pattern');
+  }
+  assert(seen.size > 8, 'patterns are picked at random');
+  assert(!seen.has('Straight line'), 'no plain five-in-a-row');
+  before = g('pattern-name').textContent;
+  assert.match(g('play-msg').textContent, /^New game\. This game.s pattern: /);
+  // The sheet is one stop for the Tab key; the arrow keys move across it as it looks, from face to face.
+  const all = () => [...d.querySelectorAll('#sheet button')];
+  assert.equal(all().filter(b => b.tabIndex === 0).length, 1, 'one tab stop for the whole sheet');
+  const press = (key) => d.activeElement.dispatchEvent(new w.KeyboardEvent('keydown', {key, bubbles: true}));
+  all()[0].focus();
+  press('ArrowRight'); assert.equal(d.activeElement, all()[1]);
+  press('End'); assert.equal(d.activeElement, all()[4]);
+  press('ArrowRight'); assert.equal(d.activeElement, all()[25], 'right from the O column goes to the next face');
+  press('ArrowDown'); press('ArrowDown'); press('ArrowDown'); press('ArrowDown'); press('ArrowDown');
+  assert.equal(d.activeElement, all()[4 * 25], 'down from the bottom row goes to the face below');
+  assert.equal(all().filter(b => b.tabIndex === 0).length, 1);
+  assert.match(all()[0].getAttribute('aria-label'), /^[BINGO] \d+.*, face 1$/, 'each square says its letter, number and face');
+  // Daubing for you, the balls run until a face has the pattern; the game names the face and the pattern.
+  let calls = 0;
+  while (!g('play').classList.contains('win') && calls < 75) { g('call-ball').click(); calls++; }
+  assert(g('play').classList.contains('win'), 'daubing for you reaches the pattern by the last ball');
+  assert.equal(g('pattern-name').textContent, before, 'the pattern holds through the game');
+  assert(g('call-ball').disabled, 'no more calls after a bingo');
+  const winners = d.querySelectorAll('#sheet .face.won');
+  assert(winners.length >= 1, 'the winning face is shown');
+  assert.equal(winners[0].querySelector('.face-need').textContent, 'BINGO!');
+  assert(winners[0].querySelectorAll('button.win-sq').length >= 4, 'the squares that made the pattern are marked');
+  assert.match(g('win-line').textContent, new RegExp('^BINGO on faces? [0-9, and]+: ' + before.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ', in \\d+ balls\\.$'));
+  assert.match(g('play-msg').textContent, /BINGO on face/);
+  assert.equal(d.querySelectorAll('#board span.lit').length, calls, 'the board lights every number called');
+  assert.equal(g('called-list').textContent.split(', ').length, calls);
+  assert.equal(g('play-find').getAttribute('href'), '#zip-form', 'a win points to the real search');
+  g('next-game').click();
+  assert(!g('play').classList.contains('win') && !g('call-ball').disabled && !d.querySelector('#sheet .face.won'), 'the next game starts fresh');
+  assert.equal(faces().length, 18, 'the next game keeps the number of faces');
+  // Daubing by hand: only called numbers, and hints count down on each face.
+  g('auto-mark').checked = false;
+  const first = d.querySelector('#sheet button:not(.free)');
+  first.click();
+  assert.match(g('play-msg').textContent, /hasn.t been called yet/, 'you can only daub numbers that were called');
+  assert.match(faces()[0].querySelector('.face-need').textContent, /^(needs \d+|1 away)$/, 'hints count down on each face');
+  assert(d.querySelectorAll('#sheet button.in-pat').length >= 18 * 4, 'hints outline the pattern on every face');
+  g('call-ball').click();
+  const n = +g('ball').querySelector('.bn').textContent, spot = all().find(b => b.textContent === String(n));
+  if (spot) {
+    assert(spot.classList.contains('cl') && spot.getAttribute('aria-pressed') === 'false', 'a called number waits for your daub');
+    spot.click();
+    assert.equal(spot.getAttribute('aria-pressed'), 'true');
+    assert.match(g('play-msg').textContent, /^Daubed [BINGO]-\d+ on face \d+\./);
+  }
+  g('hints').checked = false; g('hints').dispatchEvent(new w.Event('change'));
+  assert.equal(d.querySelectorAll('#sheet button.in-pat').length, 0, 'hints can be turned off');
+  g('big').checked = true; g('big').dispatchEvent(new w.Event('change'));
+  assert(g('sheet').classList.contains('big'), 'big squares, one face across');
+  const html_ = fs.readFileSync(path.join(site, 'index.html'), 'utf8');
+  assert(html_.includes('@media print{#play,'), 'the practice game stays off printed lists');
+  assert(html_.includes('grid-template-columns:repeat(3,minmax(0,1fr))'), 'faces sit three across, like hall paper');
   assert(d.querySelector('header .teaser a[href="#play"]') && d.querySelector('header .chooser a[href="how-to-play-bingo/"]'), 'the header invites people to play and to take the class');
   // The home page asks who is there and sends each person to a page that already exists (owner direction, November 23, 2026).
   assert.deepEqual([...d.querySelectorAll('header .chooser a')].map(a => [a.textContent, a.getAttribute('href')]),
     [['Find a game near me', '#zip-form'], ['I run a bingo hall', 'halls/'], ['I want to learn to play', 'how-to-play-bingo/'], ['My charity wants bingo support', 'halls/#partners'], ['I want bingo gear or a gift', 'shop/']]);
   d.getElementById('choose-find').click();
   assert.equal(d.activeElement, d.getElementById('zip'), 'finding a game puts the cursor in the ZIP box');
-  let calls = 0;
-  while (!d.getElementById('play').classList.contains('win') && calls < 75) { d.getElementById('call-ball').click(); calls++; }
-  assert(d.getElementById('play').classList.contains('win'), 'marking for you reaches a bingo by the last ball');
-  assert.match(d.getElementById('call-line').textContent, /^[BINGO]-\d+/);
-  assert(d.getElementById('call-ball').disabled, 'no more calls after a bingo');
-  assert.equal(d.getElementById('play-find').getAttribute('href'), '#zip-form', 'a win points to the real search');
-  d.getElementById('new-card').click();
-  assert(!d.getElementById('play').classList.contains('win') && !d.getElementById('call-ball').disabled, 'a new card starts fresh');
-  d.getElementById('auto-mark').checked = false;
-  const first = d.querySelector('#card-body button:not(.free)');
-  first.click();
-  assert.match(d.getElementById('play-msg').textContent, /hasn.t been called yet/, 'you can only mark numbers that were called');
-  assert(fs.readFileSync(path.join(site, 'index.html'), 'utf8').includes('@media print{#play,'), 'the practice card stays off printed lists');
 }
+// The Veteran Home Guardians logo leads every page (owner direction, November 28, 2026), from the site root so it loads at any depth.
+for (const f of ['index.html', 'michigan/index.html', 'how-to-play-bingo/index.html', 'terms/index.html', 'texas/houston/index.html']) {
+  const head = new JSDOM(fs.readFileSync(path.join(site, f), 'utf8')).window.document.querySelector('header');
+  const logo = head.querySelector('.htop a.vhg-logo img');
+  assert(logo && logo.getAttribute('src') === '/assets/vhg-logo.png' && logo.alt === 'Veteran Home Guardians', f + ': the logo is at the top');
+  assert.equal(logo.closest('a').getAttribute('href'), 'https://www.vethomeguard.org/');
+}
+for (const dir of [site, path.join(root, 'bingo-site/findbingo'), root])
+  assert(fs.readFileSync(path.join(dir, 'assets/vhg-logo.png')).equals(fs.readFileSync(path.join(root, 'assets/vhg-logo.png'))), dir + ': the logo file is served');
 // The guides for new players (November 27, 2026): how to play (the bingo class, moved from /learn/), bingo terms, pull tabs
 // and bingo age by state. Each is on findbingo.org with AdSense, in the sitemap, linked from the home page, every footer and
 // the other guides, with breadcrumbs, and with question markup only for questions written on the page in the same words.

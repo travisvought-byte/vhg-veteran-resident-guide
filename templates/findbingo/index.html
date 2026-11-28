@@ -53,22 +53,54 @@ footer{max-width:1120px;margin:0 auto;padding:10px 18px 40px;font-size:16px}foot
 .ad-body{display:block;color:var(--ink);text-decoration:none;font-size:19px;overflow-wrap:anywhere}.ad-body img{display:block;max-width:100%;height:auto;max-height:220px;margin:0 0 10px;border-radius:8px}
 .ad-sponsor{display:block;font-size:21px;color:var(--link);text-decoration:underline;text-underline-offset:3px}.ad-text{display:block;margin-top:4px}
 .info{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px 22px 18px;margin:18px 0 0;max-width:860px}.info h2{font-size:26px;margin:22px 0 6px}.info p,.info li{max-width:760px}.info li{margin:6px 0}.info dt{font-size:20px;color:var(--head);margin:18px 0 2px}.info dd{margin:0;max-width:760px}.info ol{padding-left:28px}
-#play{background:#fffdf6;border:2px solid #e3d6b4}#play h2{margin-bottom:4px}.play-wrap{display:grid;grid-template-columns:minmax(260px,420px) 1fr;gap:24px;align-items:start}
-.ball-box{display:flex;align-items:center;gap:18px;margin:10px 0 6px}.ball{--c:#f3c74f;flex:0 0 auto;width:112px;height:112px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle,#fff 0 54%,var(--c) 55% 100%);border:3px solid rgba(0,0,0,.25);color:var(--navy);font-weight:800;box-shadow:inset -8px -10px 0 rgba(0,0,0,.12),0 4px 10px rgba(0,0,0,.18)}.ball.b-B{--c:#2f6fb5}.ball.b-I{--c:#c8382c}.ball.b-N{--c:#8a8f96}.ball.b-G{--c:#2f8a4d}.ball.b-O{--c:#e08a1e}
-.ball .bl{font-size:22px;line-height:1}.ball .bn{font-size:42px;line-height:1}.ball.idle{--c:#ccc;color:#888}.ball.pop{animation:pop .45s ease-out}@keyframes pop{0%{transform:scale(.5) rotate(-40deg)}70%{transform:scale(1.12)}100%{transform:scale(1)}}
-#call-line{font-size:24px;font-weight:700;color:var(--head);margin:0}#call-joke{font-size:19px;margin:4px 0 0}
-.play-buttons{display:flex;flex-wrap:wrap;gap:12px;margin:14px 0}.play-buttons button{min-height:58px;padding:0 22px;font-size:21px;font-weight:700;border-radius:10px;cursor:pointer;border:2px solid var(--accent);background:var(--card);color:var(--accent)}.play-buttons button.go{border-color:var(--green)}.play-buttons button.go{background:var(--green);color:#fff}
-.play-check{display:flex;gap:10px;align-items:center;font-size:19px;margin:6px 0}.play-check input{width:26px;height:26px}
-table.card{border-collapse:separate;border-spacing:5px;width:100%;max-width:420px;table-layout:fixed}table.card th{background:var(--navy);color:#fff;font-size:28px;padding:6px 0;border-radius:8px}
-table.card td{padding:0}table.card td button{width:100%;aspect-ratio:1;font-size:26px;font-weight:700;border:2px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;cursor:pointer;position:relative}
-table.card td button[aria-pressed=true]{background:#d8392b;border-color:#a32518;color:#fff}table.card td button.free{font-size:16px}
-table.card td button.called{border-color:var(--gold);border-width:3px}
-#play-msg{font-size:20px;min-height:1.4em;margin:10px 0 0}#play.win table.card{animation:winpulse 1s ease-in-out 2}@keyframes winpulse{50%{transform:scale(1.03)}}
-#play-win{display:none;margin-top:12px;padding:16px;border-radius:12px;background:#e7f2ea;border:2px solid var(--accent)}#play.win #play-win{display:block}#play-win p{font-size:22px;font-weight:700;margin:0 0 10px;color:var(--accent)}
 /* Find a game in three steps (November 24, 2026): numbered steps joined by an arrow, stacked on phones. */.how{margin:14px 0 4px}.how h2{font-size:22px;margin:0 0 8px}.how ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;counter-reset:how}.how li{position:relative;counter-increment:how;display:grid;grid-template-columns:52px minmax(0,1fr);column-gap:12px;align-items:start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;line-height:1.35}.how li:not(:last-child)::after{content:"";position:absolute;right:-12px;top:50%;margin-top:-8px;border:8px solid transparent;border-left:10px solid #5d7068;border-right:0;z-index:1}.how li>.ic{grid-row:1/3;width:52px;height:52px;padding:10px;border:3px solid var(--accent);border-radius:50%;color:var(--accent);box-sizing:border-box;vertical-align:top}.how li::before{content:counter(how);content:counter(how) / "";position:absolute;left:6px;top:4px;width:24px;height:24px;border-radius:50%;background:var(--navy);color:#fff;font-size:15px;font-weight:700;line-height:24px;text-align:center}.how strong{font-size:19px;color:var(--head)}.how li>span:last-child{font-size:16px}@media(max-width:760px){.how ol{grid-template-columns:minmax(0,1fr);gap:14px}.how li:not(:last-child)::after{right:auto;left:38px;top:auto;bottom:-14px;margin:0;border:8px solid transparent;border-top:10px solid #5d7068;border-bottom:0}}@media (prefers-color-scheme:dark){.how li:not(:last-child)::after{border-left-color:#a9b8b1}}@media (prefers-color-scheme:dark) and (max-width:760px){.how li:not(:last-child)::after{border-left-color:transparent;border-top-color:#a9b8b1}}@media (forced-colors:active){.how li::before{forced-color-adjust:none;background:CanvasText;color:Canvas}}@media print{.how{display:none}}.chooser{margin:16px 0 0;max-width:900px}.chooser p{margin:0 0 8px;font-size:19px;font-weight:700}.chooser ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}.chooser a{display:flex;align-items:center;justify-content:center;text-align:center;min-height:60px;height:100%;padding:6px 12px;border:2px solid #fff;border-radius:12px;color:#fff;font-size:19px;font-weight:700;line-height:1.25;text-decoration:none}.chooser li:first-child a{background:#fff;color:#183449}.chooser a:hover{text-decoration:underline}@media(max-width:760px){.chooser ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.chooser a{min-height:56px;font-size:17px;padding:6px 8px}}
-.called{margin:8px 0 0;font-size:17px;color:#454c57}.called summary{cursor:pointer;min-height:40px;display:flex;align-items:center}.called-list{margin:4px 0 0;overflow-wrap:anywhere}.teaser{font-size:19px;margin:10px 0 0}.teaser a{font-weight:700;color:#fff}
-@media(max-width:760px){.play-wrap{grid-template-columns:1fr}.play-wrap>div:last-child{order:-1}.ball{width:92px;height:92px}.ball .bn{font-size:34px}table.card td button{font-size:22px}}
-@media(prefers-reduced-motion:reduce){.ball.pop,#play.win table.card{animation:none}}
+/* Practice bingo, hall style (November 28, 2026): faces three across like hall paper, this game's pattern on top, and a caller bar that stays in view while you scroll the sheet. Daubs are round, called-but-not-daubed squares get a thick ring, hint squares a dashed outline: shapes, never color alone. */
+#play{background:#fffdf6;border:2px solid #e3d6b4}#play h2{margin-bottom:4px}
+.pattern-box{display:flex;gap:16px;align-items:center;background:var(--card);border:2px solid var(--navy);border-radius:12px;padding:12px 16px;margin:12px 0;max-width:860px}
+.pattern-box svg{flex:none;width:96px;height:96px}.pt-grid rect{fill:var(--card);stroke:#5b6b64;stroke-width:1.5}.pt-daub circle{fill:#b52a1f}
+.pattern-kicker{margin:0;font-size:15px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#5a4410}
+.pattern-name{margin:0;font:700 clamp(26px,5vw,34px)/1.15 Georgia,"Times New Roman",serif;color:var(--head)}.pattern-words{margin:2px 0 0;font-size:18px}.pattern-words a{display:inline-flex;align-items:center;min-height:44px}
+.play-set{display:flex;flex-wrap:wrap;gap:6px 22px;align-items:end;margin:4px 0 12px}.play-set>div{min-width:200px}.play-set label[for=faces]{font-size:18px}.play-set select{min-height:52px;font-size:19px}
+.play-check{display:flex;gap:10px;align-items:center;font-size:19px;font-weight:400;color:var(--ink);min-height:48px;margin:0}.play-check input{width:26px;height:26px;flex:none}
+#new-card{min-height:52px;padding:0 20px;font-size:19px;font-weight:700;border:2px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
+.caller{z-index:3;display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;background:var(--navy);color:#fff;border-radius:12px;padding:8px 12px;margin:0 0 8px;max-width:860px;box-shadow:0 3px 10px rgba(0,0,0,.2)}
+@media(min-height:560px){.caller{position:sticky;top:0}}
+.caller-text{flex:1 1 150px;min-width:0}#call-line{margin:0;font-size:22px;font-weight:700;line-height:1.2}#call-count{margin:2px 0 0;font-size:16px}
+.caller .mini{flex:none;width:52px;height:52px}.caller-buttons{display:flex;gap:10px}
+.caller button{min-height:52px;padding:0 16px;font-size:19px;font-weight:700;border-radius:10px;cursor:pointer;border:2px solid #fff;background:transparent;color:#fff;white-space:nowrap}
+.caller button.go{background:#f3c74f;border-color:#f3c74f;color:#1d1606}.caller button:disabled{opacity:.5;cursor:default}
+#pace::before{content:"\25B6\FE0E";display:inline-block;width:1.1em}#pace[aria-pressed=true]{background:#fff;color:var(--navy)}#pace[aria-pressed=true]::before{content:"\25A0"}
+#next-game{display:none}#play.win #next-game{display:inline-block}#play.win #call-ball,#play.win #pace{display:none}
+.ball{--c:#f3c74f;flex:0 0 auto;width:64px;height:64px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle,#fff 0 54%,var(--c) 55% 100%);border:2px solid rgba(0,0,0,.25);color:#183449;font-weight:800;box-shadow:inset -5px -6px 0 rgba(0,0,0,.12)}.ball.b-B{--c:#2f6fb5}.ball.b-I{--c:#c8382c}.ball.b-N{--c:#8a8f96}.ball.b-G{--c:#2f8a4d}.ball.b-O{--c:#e08a1e}
+.ball .bl{font-size:14px;line-height:1}.ball .bn{font-size:24px;line-height:1}.ball.idle{--c:#ccc;color:#555}.ball.pop{animation:pop .45s ease-out}@keyframes pop{0%{transform:scale(.5) rotate(-40deg)}70%{transform:scale(1.12)}100%{transform:scale(1)}}
+#play-msg{font-size:19px;min-height:1.4em;margin:6px 0 0;max-width:860px}
+#play-win{display:none;margin:10px 0;padding:14px 16px;border-radius:12px;background:#e7f2ea;border:2px solid var(--accent);max-width:860px}#play.win #play-win{display:block}#play-win p{font-size:22px;font-weight:700;margin:0 0 10px;color:var(--accent)}
+.sheet-help{font-size:17px;margin:10px 0 8px;max-width:860px}
+.sheet{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 10px;max-width:860px}.sheet.big{grid-template-columns:minmax(0,420px)}
+.face{background:var(--card);border:2px solid #8b9891;border-radius:8px;padding:3px}
+.face table{width:100%;border-collapse:separate;border-spacing:2px;table-layout:fixed}
+.face caption{caption-side:top;text-align:left;font-size:clamp(12px,2.4vw,16px);font-weight:700;padding:0 3px 2px;color:var(--head);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.face-need{font-weight:600;color:var(--ink)}.face.near{border:3px dashed #8a5d00}.face.near .face-need{font-weight:800}
+.face.won{border:4px solid #2f6a3f;box-shadow:0 0 0 3px #bfe0c9}.face.won .face-need{background:#2f6a3f;color:#fff;padding:0 6px;border-radius:4px}.face.won .face-need::after{content:" \2713"}
+.face th{background:var(--navy);color:#fff;font:800 clamp(11px,2.5vw,19px)/1.5 system-ui,sans-serif;border-radius:4px;padding:0}
+.face td{padding:0}
+.face button{display:block;width:100%;aspect-ratio:1;padding:0;margin:0;font:700 clamp(12px,2.7vw,21px)/1 system-ui,-apple-system,"Segoe UI",sans-serif;border:1px solid #8b9891;background:var(--card);color:var(--ink);border-radius:4px;cursor:pointer}
+.face button.free{font-size:clamp(8px,1.6vw,13px);letter-spacing:.02em;background:#e8edf4;color:#183449;cursor:default}
+.face button[aria-pressed=true]:not(.free){background:radial-gradient(circle closest-side,#b52a1f 0 88%,transparent 92%);color:#fff}
+.face button.cl{box-shadow:inset 0 0 0 3px #b8862b;font-weight:900}
+.face button.in-pat{border:2px dashed #8a5d00}
+.face.won button.win-sq:not(.free){background:radial-gradient(circle closest-side,#226b3a 0 88%,transparent 92%);border:2px solid #226b3a}.face.won button.win-sq.free{border:2px solid #226b3a}
+.sheet.big .face button{font-size:22px}.sheet.big .face th{font-size:20px}.sheet.big .face button.free{font-size:14px}.sheet.big .face caption{font-size:17px}
+.called{margin:12px 0 0;font-size:17px;color:#454c57;max-width:860px}.called summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:700}.called-list{margin:4px 0 0;overflow-wrap:anywhere}
+.board{display:grid;gap:3px;margin:6px 0 8px}.brow{display:grid;grid-template-columns:2em repeat(15,minmax(0,1fr));gap:2px}.brow b{background:var(--navy);color:#fff;text-align:center;border-radius:4px}
+.brow span{text-align:center;font-size:clamp(10px,2.1vw,15px);border:1px solid var(--line);border-radius:4px;color:#56636b;background:var(--card)}.brow span.lit{background:var(--navy);border-color:var(--navy);color:#fff;font-weight:800}
+.teaser{font-size:19px;margin:10px 0 0}.teaser a{font-weight:700;color:#fff}
+@media(max-width:600px){#play{margin-left:-12px;margin-right:-12px;padding:6px 8px 14px}.pattern-box{padding:10px;gap:12px}.pattern-box svg{width:72px;height:72px}.caller{padding:6px 8px;gap:6px 10px}.caller .mini{display:none}
+ .ball{width:50px;height:50px}.ball .bl{font-size:12px}.ball .bn{font-size:19px}#call-line{font-size:18px}#call-count{font-size:15px}.caller-buttons{flex:1 1 100%}.caller-buttons button{flex:1;min-height:48px;padding:0 10px;font-size:18px}
+ .sheet{gap:8px 4px}.face{padding:1px;border-width:1px}.face table{border-spacing:1px}.face button{border-radius:3px}}
+@media(max-width:339px){.sheet{grid-template-columns:minmax(0,1fr)}.face button{font-size:20px}.face th{font-size:18px}.face button.free{font-size:12px}.face caption{font-size:15px}}
+@media(prefers-reduced-motion:reduce){.ball.pop{animation:none}}
+@media(forced-colors:active){.face button,.pattern-box svg,.caller .mini,.ball,.brow span{forced-color-adjust:none}}
 @media(max-width:760px){.tools,.narrow .tools,.grid{grid-template-columns:1fr}header{padding-top:16px}.zip-box{padding:16px}.big-actions a{flex-basis:100%}}
 /* Small line icons beside words (never instead of them), a gentle mark on today's games, and five bingo balls in the header. */
 .ic{width:1.15em;height:1.15em;flex:none;vertical-align:-.2em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
@@ -77,6 +109,7 @@ table.card td button.called{border-color:var(--gold);border-width:3px}
 .today-tag{display:inline-block;margin-left:8px;padding:1px 10px;border-radius:999px;background:var(--navy);color:#fff;font-size:15px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;vertical-align:1px}
 .balls{display:flex;gap:6px;margin:0 0 8px}.balls i{--c:#2f6fb5;width:34px;height:34px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font:800 15px/1 system-ui,sans-serif;font-style:normal;color:#183449;background:radial-gradient(circle,#fff 0 50%,var(--c) 52% 100%);box-shadow:inset -3px -4px 0 rgba(0,0,0,.15)}
 .balls i:nth-child(2){--c:#c8382c}.balls i:nth-child(3){--c:#8a8f96}.balls i:nth-child(4){--c:#2f8a4d}.balls i:nth-child(5){--c:#e08a1e}
+/* The Veteran Home Guardians logo leads every page (November 28, 2026): a white tile, since the logo is drawn on white. */.htop{display:flex;align-items:center;gap:14px;margin:0 0 10px}.htop .balls{margin:0}.vhg-logo{display:inline-flex;flex:none;background:#fff;border-radius:12px;padding:3px;line-height:0}.vhg-logo img{display:block;width:64px;height:64px}@media(max-width:600px){.vhg-logo img{width:54px;height:54px}.htop{gap:10px}}
 /* Dark mode follows the visitor's device setting. Printing always uses the light colors. */
 @media screen and (prefers-color-scheme:dark){
 :root{color-scheme:dark;--paper:#10181d;--card:#1a242b;--ink:#e4ecef;--line:#3d4d55;--head:#dce9f2;--accent:#93d6b1;--green:#2e6a51;--link:#9fd0ef;--gold:#e3b75e;--navy:#0d2333;--today:#3a3116}
@@ -86,7 +119,7 @@ article{border-color:#3d4d55;border-top-color:var(--accent);box-shadow:none}.sta
 .when,#play-win{background:#1d2e27}.sessions li{border-bottom-color:#3d5047}.sessions .org,.address,.called{color:#c3d0d6}
 .note{color:#f4e6bf;background:#2c2614;border-color:#7d6630}.today-tag{background:var(--gold);color:#1d1606}
 .ad-slot{background:#1f242b;border-color:#8b94a1}.ad-label{color:#c9d0da}
-#play{background:#1d1b14;border-color:#5c5032}table.card th{background:#2a4a63}
+#play{background:#1d1b14;border-color:#5c5032}.pattern-kicker{color:#ecd28c}.pt-grid rect{stroke:#9fb1aa}.face,.face button{border-color:#6f8279}.face button.free{background:#22313f;color:#dce9f2}.face button.in-pat,.face.near{border-color:#e3b75e}.brow span{color:#b9c7cc}.face.won{box-shadow:0 0 0 3px #2f6a3f}
 /* The featured-events styles come later in the page, so these carry :root to win. */
 :root .featured-events{background:#2a2414;border-color:#a88a3f}:root .featured-events .ad-label{color:#ecd28c}:root .featured-events article{background:var(--card);border-color:#6b5a2c}
 }
@@ -102,7 +135,7 @@ __ICONS__<a class="skip" href="#count">Skip to the bingo list</a>
 <li><a href="how-to-play-bingo/">I want to learn to play</a></li>
 <li><a href="halls/#partners">My charity wants bingo support</a></li>
 <li><a href="shop/">I want bingo gear or a gift</a></li></ul></nav>
-<p class="teaser">Just for fun: <a href="#play">play a free practice card</a>.</p></header>
+<p class="teaser">Just for fun: <a href="#play">practice hall bingo, with a new pattern every game</a>.</p></header>
 <main>
 <form id="zip-form" class="zip-box" action="./" method="get"><div class="tools">
 <div><label for="zip">Type your ZIP code</label><input id="zip" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" pattern="[0-9]{5}" placeholder="Example: 48161" aria-describedby="zip-status"></div>
@@ -121,19 +154,25 @@ __LOCATE__<p id="zip-status" role="status" aria-live="polite">Miles are approxim
 <div id="featured"></div>
 __MAP_BOX__<div id="results"></div>
 <noscript><p class="empty">The ZIP code search needs JavaScript. You can still pick your state above to see its whole bingo list, by county.</p></noscript>
-<section class="panel" id="play" aria-labelledby="play-title"><h2 id="play-title">Warm up: play a free practice card</h2>
-<p>Just for fun, no money and nothing to sign up for. Press <strong>Call a ball</strong> and watch your card. Five in a row, across, down or corner to corner, is a bingo.</p>
-<div class="play-wrap"><div>
-<table class="card" id="card" aria-label="Your practice bingo card"><thead><tr><th scope="col">B</th><th scope="col">I</th><th scope="col">N</th><th scope="col">G</th><th scope="col">O</th></tr></thead><tbody id="card-body"></tbody></table>
-<label class="play-check"><input type="checkbox" id="auto-mark" checked> Mark my card for me</label>
-</div><div>
-<div class="ball-box"><div class="ball idle" id="ball" aria-hidden="true"><span class="bl">?</span><span class="bn"></span></div>
-<div><p id="call-line" aria-live="polite">Ready when you are.</p><p id="call-joke"></p></div></div>
-<div class="play-buttons"><button type="button" class="go" id="call-ball">Call a ball</button><button type="button" id="new-card">New card</button></div>
+<section class="panel" id="play" aria-labelledby="play-title"><h2 id="play-title">Warm up: practice hall bingo, free</h2>
+<p>This plays like the paper at a hall: faces printed three across, and a different pattern every game. Pick how many faces you want, press <strong>Call a ball</strong>, and watch for the pattern. No money, nothing to sign up for, and nothing is saved.</p>
+<div class="pattern-box"><svg id="pattern-pic" viewBox="0 0 110 110" width="96" height="96" aria-hidden="true" focusable="false"></svg>
+<div><p class="pattern-kicker">This game&rsquo;s pattern</p><p class="pattern-name" id="pattern-name"></p><p class="pattern-words"><span id="pattern-text"></span><a href="how-to-play-bingo/#games">More patterns, with pictures</a></p></div></div>
+<div class="play-set"><div><label for="faces">Faces on your sheet</label><select id="faces"><option value="3">3 faces (1 strip)</option><option value="6" selected>6 faces (2 strips)</option><option value="9">9 faces (3 strips)</option><option value="12">12 faces (4 strips)</option><option value="15">15 faces (5 strips)</option><option value="18">18 faces (6 strips)</option></select></div>
+<label class="play-check"><input type="checkbox" id="auto-mark" checked> Daub my faces for me</label>
+<label class="play-check"><input type="checkbox" id="hints" checked> Show hints</label>
+<label class="play-check"><input type="checkbox" id="big"> Big squares, one face across</label>
+<button type="button" id="new-card">New game</button></div>
+<div class="caller" id="caller"><div class="ball idle" id="ball" aria-hidden="true"><span class="bl">?</span><span class="bn"></span></div>
+<div class="caller-text"><p id="call-line">Ready when you are.</p><p id="call-count"></p></div>
+<svg class="mini" id="pattern-mini" viewBox="0 0 110 110" width="52" height="52" aria-hidden="true" focusable="false"></svg>
+<div class="caller-buttons"><button type="button" id="pace" aria-pressed="false" aria-label="Auto call" aria-describedby="pace-note">Auto call</button><button type="button" class="go" id="call-ball">Call a ball</button><button type="button" class="go" id="next-game">Next game</button></div></div>
 <p id="play-msg" role="status" aria-live="polite"></p>
-<details class="called"><summary>Numbers called so far</summary><p class="called-list" id="called-list">None yet.</p></details>
-<div id="play-win"><p>BINGO! You&rsquo;d have won that one.</p><a class="primary" href="#zip-form" id="play-find">Now find a real game near you</a></div>
-</div></div></section>
+<div id="play-win"><p id="win-line">BINGO!</p><a class="primary" href="#zip-form" id="play-find">Now find a real game near you</a></div>
+<p class="sheet-help" id="sheet-help">Hints outline the squares the pattern needs and count down on each face. <span id="pace-note">Auto call draws a ball every 6 seconds, about the pace of a hall.</span> On a keyboard, Tab to your sheet, move with the arrow keys and press Space to daub.</p>
+<div class="sheet" id="sheet" role="group" aria-label="Your bingo sheet" aria-describedby="sheet-help"></div>
+<details class="called"><summary>The board: every number called so far</summary><div class="board" id="board" aria-hidden="true"></div><p class="called-list" id="called-list">None yet.</p></details>
+</section>
 __GUIDES__
 __AD_HOME__<section class="panel" id="run-a-game" aria-labelledby="run-title"><h2 id="run-title">Run a bingo game? Get it listed free</h2>
 <p>Send us the name of your hall, the address, the days and the time the first game starts. A phone number for players helps too. Listing is free, and we never sell or share your information.</p>
@@ -272,64 +311,186 @@ window.fbReady=(typeof fetch==='function'?loadData():Promise.resolve(false)).the
  $('count').textContent='Sorry, the bingo list did not load.';$('results').innerHTML='<p class="empty">Please check your internet connection, then <a href="">reload this page</a>. If it keeps happening, email <a href="mailto:travis@vethomeguard.org?subject=FindBingo.org%20did%20not%20load">travis@vethomeguard.org</a>.</p>';return false});
 </script>
 <script>
-// Practice bingo card: just for fun, nothing is stored or sent.
+// Practice bingo, hall style (rebuilt November 28, 2026, at Travis's direction): a sheet of faces three across, the way hall
+// paper is printed (3, 6, 9, 12, 15 or 18 faces), and a new pattern each game, like the caller announces. Just for fun:
+// nothing is stored or sent.
 (function(){
 const g=id=>document.getElementById(id);if(!g('play'))return;
-const LETTERS='BINGO';
+const LETTERS='BINGO',PACE=6000;
 const NAMES={1:"Kelly's eye",2:'One little duck',3:'Cup of tea',4:'Knock at the door',5:'Man alive',6:'Half a dozen',7:'Lucky seven',8:'Garden gate',9:"Doctor's orders",11:'Legs eleven',12:'One dozen',13:'Unlucky for some',14:"Valentine's Day",15:'Young and keen',16:'Sweet sixteen',18:'Coming of age',19:'Goodbye teens',20:'One score',21:'Key of the door',22:'Two little ducks',24:'Two dozen',25:'Duck and dive',31:'Get up and run',32:'Buckle my shoe',33:'All the threes',39:'Thirty-nine steps',44:'All the fours',45:'Halfway there',50:'Half a century',52:'Deck of cards',55:'Snakes alive',60:'Five dozen',66:'Clickety-click',71:'Bang on the drum',72:'Six dozen',75:'Last one in the cage'};
-const CHEERS=['Eyes down!','Dab it if you have it.','Who has it?','Keep those daubers ready.','Here comes another one.','Steady now.','Somebody is getting close.'];
-const JOKES=['Why was the bingo card so calm? It always has a free space.','What is a bingo caller’s favorite vitamin? B-12.','How do bingo players stay in shape? Plenty of dabbing.','Why did the dauber get a raise? It always hits the mark.','Why don’t bingo players get lost? They follow the numbers.','What did one bingo ball say to the other? Let’s roll.','Why did the bingo player bring a pencil? In case they needed to draw a winner.'];
-let card,marked,called,pool,won;
-const pick=a=>a[Math.floor(Math.random()*a.length)];
+// Squares are numbered 0 to 24, left to right and top to bottom; 12 is the free space.
+const R=r=>[0,1,2,3,4].map(c=>r*5+c),C=c=>[0,1,2,3,4].map(r=>r*5+c),D=[0,6,12,18,24],A=[4,8,12,16,20];
+const U=(...l)=>[...new Set(l.flat())].sort((a,b)=>a-b);
+// Each pattern: its name, what it needs in words, and every way it may sit on a face (any one of them wins).
+const PATTERNS=[
+ ['Letter T','The whole top row and the N column straight down the middle.',[U(R(0),C(2))]],
+ ['Letter X','Both lines from corner to corner, crossing at the free space.',[U(D,A)]],
+ ['Letter L','The B column down the left side and the whole bottom row.',[U(C(0),R(4))]],
+ ['Letter H','The B column, the O column and the middle row across.',[U(C(0),C(4),R(2))]],
+ ['Letter U','The B column, the O column and the whole bottom row.',[U(C(0),C(4),R(4))]],
+ ['Letter C','The B column with the whole top and bottom rows.',[U(C(0),R(0),R(4))]],
+ ['Letter E','The B column with the top, middle and bottom rows.',[U(C(0),R(0),R(2),R(4))]],
+ ['Letter Z','The top row, the bottom row and the line from the top right corner down to the bottom left.',[U(R(0),R(4),A)]],
+ ['Letter N','The B column, the O column and the line from the top left corner down to the bottom right.',[U(C(0),C(4),D)]],
+ ['Plus sign','The middle row across and the N column down, crossing at the free space.',[U(R(2),C(2))]],
+ ['Four corners','Just the four corner squares.',[[0,4,20,24]]],
+ ['Postage stamp','A block of four squares in any corner.',[[3,4,8,9],[0,1,5,6],[15,16,20,21],[18,19,23,24]]],
+ ['Small picture frame','The eight squares around the free space.',[[6,7,8,11,13,16,17,18]]],
+ ['Large picture frame','Every square around the outside edge.',[U(R(0),R(4),C(0),C(4))]],
+ ['Kite','A postage stamp in any corner, with a tail running to the opposite corner.',[[3,4,8,9,12,16,20],[0,1,5,6,12,18,24],[15,16,20,21,12,8,4],[18,19,23,24,12,6,0]].map(v=>U(v))],
+ ['Crazy T','A T that may sit any way around: upright, upside down or on its side.',[U(R(0),C(2)),U(R(4),C(2)),U(C(0),R(2)),U(C(4),R(2))]],
+ ['Diamond','A diamond around the free space, touching the middle of each side.',[[2,6,8,10,14,16,18,22]]],
+ ['Coverall','Every square on the face. Also called a blackout, it takes the most balls.',[Array.from({length:25},(_,i)=>i)]]
+];
+let faces=[],marked=[],called=new Set(),order=[],pool=[],pat=PATTERNS[0],last=-1,won=false,timer=null,focusAt=0,near=new Set();
 const shuffle=a=>{for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
-const label=n=>LETTERS[Math.floor((n-1)/15)]+'-'+n;
-function lines(){const L=[];for(let i=0;i<5;i++){L.push([0,1,2,3,4].map(c=>i*5+c));L.push([0,1,2,3,4].map(r=>r*5+i))}L.push([0,6,12,18,24],[4,8,12,16,20]);return L}
-const LINES=lines();
-function newCard(){
-  const cols=[0,1,2,3,4].map(c=>shuffle(Array.from({length:15},(_,i)=>c*15+i+1)).slice(0,5));
-  card=[];for(let r=0;r<5;r++)for(let c=0;c<5;c++)card.push(r===2&&c===2?0:cols[c][r]);
-  marked=card.map(n=>n===0);called=new Set();pool=shuffle(Array.from({length:75},(_,i)=>i+1));won=false;
-  g('play').classList.remove('win');g('ball').className='ball idle';g('ball').querySelector('.bl').textContent='?';g('ball').querySelector('.bn').textContent='';
-  g('call-line').textContent='Ready when you are.';g('call-joke').textContent=pick(JOKES);g('play-msg').textContent='';g('called-list').textContent='None yet.';g('call-ball').disabled=false;
-  draw();
+const letter=n=>LETTERS[Math.floor((n-1)/15)];
+const label=n=>letter(n)+'-'+n,say=n=>letter(n)+' '+n;
+const list=a=>a.length<2?String(a[0]):a.slice(0,-1).join(', ')+' and '+a[a.length-1];
+const facesWord=ks=>(ks.length>1?'faces ':'face ')+list(ks.map(k=>k+1));
+const up=s=>s.charAt(0).toUpperCase()+s.slice(1);
+const all=()=>faces.map((_,k)=>k);
+const cells=()=>g('sheet').querySelectorAll('button');
+// Faces per row on screen: three, like the paper, or one when the squares are made big or the screen is very narrow.
+const perRow=()=>g('sheet').classList.contains('big')||(window.matchMedia&&window.matchMedia('(max-width:339px)').matches)?1:3;
+function newFace(){
+  const cols=[0,1,2,3,4].map(c=>shuffle(Array.from({length:15},(_,i)=>c*15+i+1)).slice(0,5)),f=[];
+  for(let r=0;r<5;r++)for(let c=0;c<5;c++)f.push(r===2&&c===2?0:cols[c][r]);
+  return f;
 }
-function draw(){
-  const body=g('card-body');body.innerHTML='';
-  for(let r=0;r<5;r++){const tr=document.createElement('tr');
-    for(let c=0;c<5;c++){const i=r*5+c,n=card[i],td=document.createElement('td'),b=document.createElement('button');
-      b.type='button';b.dataset.i=i;
-      if(n===0){b.textContent='FREE';b.className='free';b.setAttribute('aria-label','Free space');b.disabled=true}
-      else{b.textContent=n;b.setAttribute('aria-label',label(n));if(called.has(n))b.classList.add('called')}
-      b.setAttribute('aria-pressed',marked[i]?'true':'false');td.appendChild(b);tr.appendChild(td)}
-    body.appendChild(tr)}
+// The way the pattern sits closest to done on face k: [squares still to daub, the squares].
+function best(k){let out=null;for(const v of pat[2]){const need=v.filter(i=>!marked[k][i]).length;if(!out||need<out[0])out=[need,v]}return out}
+function picture(v){
+  let s='<g class="pt-grid">';for(let r=0;r<5;r++)for(let c=0;c<5;c++)s+='<rect x="'+(5+20*c)+'" y="'+(5+20*r)+'" width="20" height="20"/>';
+  return s+'</g><g class="pt-daub">'+v.map(i=>'<circle cx="'+(15+20*(i%5))+'" cy="'+(15+20*Math.floor(i/5))+'" r="7"/>').join('')+'</g>';
 }
-function check(){
-  if(won)return;
-  if(LINES.some(l=>l.every(i=>marked[i]))){won=true;g('play').classList.add('win');g('play-msg').textContent='Bingo! Five in a row.';g('call-ball').disabled=true}
+function build(){
+  const sheet=g('sheet');sheet.textContent='';
+  faces.forEach((f,k)=>{
+    const box=document.createElement('div'),t=document.createElement('table'),cap=document.createElement('caption'),head=document.createElement('thead'),body=document.createElement('tbody');
+    box.className='face';box.id='face-'+(k+1);
+    cap.innerHTML='Face '+(k+1)+' <span class="face-need"></span>';
+    head.innerHTML='<tr>'+[...LETTERS].map(l=>'<th scope="col">'+l+'</th>').join('')+'</tr>';
+    for(let r=0;r<5;r++){const tr=document.createElement('tr');
+      for(let c=0;c<5;c++){const i=r*5+c,n=f[i],td=document.createElement('td'),b=document.createElement('button');
+        b.type='button';b.dataset.f=k;b.dataset.i=i;b.tabIndex=-1;
+        if(n===0){b.className='free';b.textContent='FREE';b.setAttribute('aria-disabled','true')}else b.textContent=n;
+        td.appendChild(b);tr.appendChild(td)}
+      body.appendChild(tr)}
+    t.append(cap,head,body);box.appendChild(t);sheet.appendChild(box);
+  });
+}
+function paint(){
+  const hints=g('hints').checked,bs=cells();
+  g('sheet').querySelectorAll('.face').forEach((box,k)=>{
+    const [need,v]=best(k),set=new Set(v);
+    box.classList.toggle('won',need===0);box.classList.toggle('near',hints&&need===1);
+    box.querySelector('.face-need').textContent=need===0?'BINGO!':hints?(need===1?'1 away':'needs '+need):'';
+    for(let i=0;i<25;i++){
+      const b=bs[k*25+i],n=faces[k][i],on=marked[k][i],waiting=n!==0&&!on&&called.has(n);
+      b.setAttribute('aria-pressed',on?'true':'false');
+      b.classList.toggle('cl',waiting);b.classList.toggle('in-pat',hints&&set.has(i));b.classList.toggle('win-sq',need===0&&set.has(i));
+      b.tabIndex=k*25+i===focusAt?0:-1;
+      b.setAttribute('aria-label',(n===0?'Free space':say(n)+(waiting?', called':''))+(hints&&set.has(i)?', in the pattern':'')+', face '+(k+1));
+    }
+  });
+  g('board').querySelectorAll('span').forEach(s=>s.classList.toggle('lit',called.has(+s.dataset.n)));
+  g('called-list').textContent=order.length?order.map(label).join(', '):'None yet.';
+}
+// After every call or daub: a win ends the game; otherwise say which faces just came one away.
+function after(said){
+  paint();
+  const wins=all().filter(k=>best(k)[0]===0);
+  if(wins.length){
+    won=true;stopPace();g('play').classList.add('win');g('call-ball').disabled=true;g('pace').disabled=true;
+    const line='BINGO on '+facesWord(wins)+': '+pat[0]+', in '+order.length+' balls.';
+    g('call-line').textContent=line;g('win-line').textContent=line;
+    g('play-msg').textContent=said+' '+line;
+    if(document.activeElement===g('call-ball')||document.activeElement===g('pace'))g('next-game').focus();
+    const face=g('face-'+(wins[0]+1));if(face.scrollIntoView)face.scrollIntoView({block:'center',behavior:window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});
+    return;
+  }
+  let more='';
+  if(g('hints').checked){
+    const now=all().filter(k=>best(k)[0]===1),fresh=now.filter(k=>!near.has(k));near=new Set(now);
+    if(fresh.length)more+=' '+up(facesWord(fresh))+(fresh.length>1?' are':' is')+' one away.';
+    if(!g('auto-mark').checked){
+      const asleep=all().filter(k=>pat[2].some(v=>v.every(i=>faces[k][i]===0||called.has(faces[k][i]))));
+      if(asleep.length)more+=' '+up(facesWord(asleep))+(asleep.length>1?' have':' has')+' the pattern. Daub its called numbers to win.';
+    }
+  }
+  if(!pool.length)more+=' That was the last ball.';
+  g('play-msg').textContent=said+more;
+}
+function showPattern(){
+  g('pattern-name').textContent=pat[0];g('pattern-text').textContent=pat[1]+' ';
+  g('pattern-pic').innerHTML=picture(pat[2][0]);g('pattern-mini').innerHTML=picture(pat[2][0]);
+}
+function stopPace(){clearInterval(timer);timer=null;g('pace').setAttribute('aria-pressed','false')}
+function deal(keep){
+  stopPace();
+  const n=Math.min(18,Math.max(3,+g('faces').value||6));
+  if(!keep){let p;do{p=Math.floor(Math.random()*PATTERNS.length)}while(p===last);last=p;pat=PATTERNS[p]}
+  faces=Array.from({length:n},newFace);marked=faces.map(f=>f.map(x=>x===0));
+  called=new Set();order=[];pool=shuffle(Array.from({length:75},(_,i)=>i+1));won=false;near=new Set();focusAt=0;
+  g('play').classList.remove('win');g('call-ball').disabled=false;g('pace').disabled=false;
+  const ball=g('ball');ball.className='ball idle';ball.querySelector('.bl').textContent='?';ball.querySelector('.bn').textContent='';
+  g('call-line').textContent='Ready when you are.';g('call-count').textContent=pat[0]+' · no balls yet';
+  build();showPattern();paint();
 }
 function callBall(){
   if(won||!pool.length)return;
-  const n=pool.pop();called.add(n);
-  const ball=g('ball');ball.className='ball';void ball.offsetWidth;ball.className='ball pop';
-  ball.className='ball pop b-'+LETTERS[Math.floor((n-1)/15)];ball.querySelector('.bl').textContent=LETTERS[Math.floor((n-1)/15)];ball.querySelector('.bn').textContent=n;
+  const n=pool.pop(),L=letter(n),ball=g('ball'),auto=g('auto-mark').checked,on=[];
+  called.add(n);order.push(n);
+  ball.className='ball';void ball.offsetWidth;ball.className='ball pop b-'+L;
+  ball.querySelector('.bl').textContent=L;ball.querySelector('.bn').textContent=n;
   g('call-line').textContent=label(n)+(NAMES[n]?' — '+NAMES[n]:'');
-  g('call-joke').textContent=NAMES[n]?'':pick(CHEERS);
-  const i=card.indexOf(n);
-  if(i>=0&&g('auto-mark').checked)marked[i]=true;
-  g('play-msg').textContent=i>=0?(marked[i]?'It’s on your card. Marked!':'It’s on your card. Tap it to mark it.'):'Not on your card this time.';
-  g('called-list').textContent=[...called].map(label).join(', ');
-  draw();check();
+  g('call-count').textContent=pat[0]+' · ball '+order.length+' of 75';
+  faces.forEach((f,k)=>{const i=f.indexOf(n);if(i>=0){on.push(k);if(auto)marked[k][i]=true}});
+  if(!pool.length)stopPace();
+  after(say(n)+'. '+(on.length?(auto?'Daubed on ':'It’s on ')+facesWord(on)+(auto?'.':'. Tap it to daub it.'):'Not on your sheet.'));
 }
-g('card-body').addEventListener('click',e=>{
-  const b=e.target.closest('button');if(!b||b.disabled||won)return;const i=+b.dataset.i,n=card[i];
-  if(!called.has(n)){g('play-msg').textContent=label(n)+' hasn’t been called yet.';return}
-  marked[i]=!marked[i];draw();check();
-  const again=g('card-body').querySelector('button[data-i="'+i+'"]');if(again)again.focus();
+g('sheet').addEventListener('click',e=>{
+  const b=e.target.closest('button');if(!b)return;
+  const k=+b.dataset.f,i=+b.dataset.i,n=faces[k][i];focusAt=k*25+i;
+  if(n===0||won){paint();return}
+  if(!called.has(n)){paint();g('play-msg').textContent=label(n)+' hasn’t been called yet.';return}
+  marked[k][i]=!marked[k][i];
+  after((marked[k][i]?'Daubed ':'Took the daub off ')+label(n)+' on face '+(k+1)+'.');
+});
+// One stop on the Tab key for the whole sheet; the arrow keys move across it as it looks, face to face.
+g('sheet').addEventListener('keydown',e=>{
+  const b=e.target.closest('button');if(!b)return;
+  const k=+b.dataset.f,i=+b.dataset.i,per=perRow(),r=Math.floor(i/5),c=i%5,step={ArrowRight:[1,0],ArrowLeft:[-1,0],ArrowDown:[0,1],ArrowUp:[0,-1]}[e.key];
+  let to;
+  if(step){
+    const x=(k%per)*5+c+step[0],y=Math.floor(k/per)*5+r+step[1],nk=Math.floor(y/5)*per+Math.floor(x/5);
+    if(x<0||y<0||x>=per*5||nk>=faces.length)return;
+    to=nk*25+(y%5)*5+x%5;
+  }else if(e.key==='Home')to=k*25+r*5;else if(e.key==='End')to=k*25+r*5+4;else return;
+  e.preventDefault();
+  const bs=cells();bs[focusAt].tabIndex=-1;focusAt=to;bs[to].tabIndex=0;bs[to].focus();
 });
 g('call-ball').addEventListener('click',callBall);
-g('new-card').addEventListener('click',newCard);
+g('pace').addEventListener('click',()=>{
+  if(timer){stopPace();g('play-msg').textContent='Auto call is paused.';return}
+  if(won||!pool.length)return;
+  g('pace').setAttribute('aria-pressed','true');callBall();
+  if(!won&&pool.length)timer=setInterval(()=>{if(!document.hidden)callBall()},PACE);
+});
+g('new-card').addEventListener('click',()=>{deal(false);g('play-msg').textContent='New game. This game’s pattern: '+pat[0]+'. '+pat[1]});
+g('next-game').addEventListener('click',()=>{deal(false);g('play-msg').textContent='New game. This game’s pattern: '+pat[0]+'. '+pat[1];g('call-ball').focus()});
+g('faces').addEventListener('change',()=>{deal(true);g('play-msg').textContent='A fresh sheet of '+faces.length+' faces. The pattern is still '+pat[0]+'.'});
+g('auto-mark').addEventListener('change',()=>{
+  if(!g('auto-mark').checked||won){paint();return}
+  faces.forEach((f,k)=>f.forEach((n,i)=>{if(n&&called.has(n))marked[k][i]=true}));
+  after('Daubing for you.');
+});
+g('hints').addEventListener('change',()=>{near=new Set();paint()});
+g('big').addEventListener('change',()=>g('sheet').classList.toggle('big',g('big').checked));
 g('play-find').addEventListener('click',()=>setTimeout(()=>g('zip')&&g('zip').focus(),300));
-newCard();
+g('board').innerHTML=[...LETTERS].map((L,r)=>'<div class="brow"><b>'+L+'</b>'+Array.from({length:15},(_,i)=>'<span data-n="'+(r*15+i+1)+'">'+(r*15+i+1)+'</span>').join('')+'</div>').join('');
+deal(false);
 })();
 </script>
 </body></html>
