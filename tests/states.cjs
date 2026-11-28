@@ -110,7 +110,8 @@ toggle.click();assert.equal(toggle.getAttribute('aria-expanded'),'false');assert
 const css=read('assets/unified.css');
 assert(css.includes('header .jump-toggle:not([hidden])[aria-expanded=false]+.jump-more{display:none}'),'links fold only when the button is available');
 assert(css.includes('.jump-more{display:contents}.jump-toggle{display:none}'),'without the page script every link shows and no button');
-assert(css.includes('header .jump-toggle:not([hidden]){display:inline-flex'),'with the script, every screen shows four links and More guides (November 28, 2026)');
+assert(css.includes('@media(max-width:760px){header .jump-toggle:not([hidden]){display:inline-flex'),'phones show four links and More guides');
+assert(css.includes('@media(min-width:761px){header .brand-copy .jump-toggle{display:none}header .jump-more{display:contents}}'),'desktop keeps every header link showing, as Travis asked on November 23, 2026');
 // Visual pass (November 20, 2026): an icon beside every need button's words, phone icons, and dark mode.
 {
   const page=read('index.html');

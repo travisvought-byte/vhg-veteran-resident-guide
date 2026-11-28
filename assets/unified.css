@@ -9,14 +9,14 @@
 .quick-links .need-group{grid-column:1/-1;margin:14px 0 0;font-size:19px;color:var(--navy);border-bottom:1px solid var(--line);padding-bottom:4px}
 .quick-links .need-group:first-of-type{margin-top:4px}
 /* Readability pass (November 28, 2026). Travis: "some of the font is illegible" and the page "looking pretty crazy".
-   1. Header links: the same tidy row of buttons on every screen. The first four stay in view and the rest fold behind
-      "More guides" (the page script shows that button; without the script every link shows, as before).
+   1. Header links: the same tidy pill buttons on every screen. Phones fold all but four behind "More guides"; desktop
+      keeps every link showing, as Travis asked on November 23, 2026.
    2. No text below 14px, and focus that shows on the light paper and on the navy header alike.
    3. Dark mode: the nursing-home card kept a white background while the text turned light, so it read white on white. */
 header .brand-copy .jump{display:inline-flex;align-items:center;min-height:44px;margin:8px 6px 0 0;padding:0 14px;border:1px solid rgba(255,255,255,.55);border-radius:999px;font-size:15px;color:#fff;text-decoration:none}
 header .brand-copy .jump:hover{background:rgba(255,255,255,.12)}
-header .jump-toggle:not([hidden]){display:inline-flex;background:transparent;color:#fff;font-weight:700;cursor:pointer}
-header .jump-toggle:not([hidden])[aria-expanded=false]+.jump-more{display:none}
+@media(max-width:760px){header .jump-toggle:not([hidden]){display:inline-flex;background:transparent;color:#fff;font-weight:700;cursor:pointer}header .jump-toggle:not([hidden])[aria-expanded=false]+.jump-more{display:none}}
+@media(min-width:761px){header .brand-copy .jump-toggle{display:none}header .jump-more{display:contents}}
 header>p .jump{display:inline-flex;align-items:center;min-height:44px;margin:4px 0 0}
 .badge,.office-row p,.recommended-label,.source-details{font-size:14px}
 .edition-coverage summary{color:#3d4f48}
