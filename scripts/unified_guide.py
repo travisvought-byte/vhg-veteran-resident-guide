@@ -141,10 +141,10 @@ def unified_outputs(root, editions, states):
     unified=unified.replace('<p>Choose a need to see practical starting points. Your county selection stays in place.</p>','')
     unified=unified.replace('<p id="county-intro">County veterans offices can help you explore benefits and the right referral route. If the resident recently moved into a facility, ask which county should handle the referral.</p>','<p id="county-intro">Choose a county to find local contacts.</p>')
     unified=unified.replace('</head>','<link rel="stylesheet" href="assets/unified.css"></head>')
-    unified=re.sub(r'<section id="urgent-help".*?</section>', '<section id="urgent-help" class="notice" aria-labelledby="urgent-title"><h2 id="urgent-title">Need help now?</h2><p>Crisis: <a href="tel:988">988</a> (veterans: press 1). Immediate danger: <a href="tel:911">911</a>.<br>Veteran housing help: <a href="tel:8774243838">877-424-3838</a> · 24/7.</p><p><a href="?view=crisis">Mental health support</a> · <a href="?view=housing">Housing resources</a></p><p id="world-link">Outside the United States? <a href="world/">Emergency and crisis numbers in other countries</a>, and VA help for U.S. veterans abroad.</p></section>', unified, flags=re.S)
+    unified=re.sub(r'<section id="urgent-help".*?</section>', '<section id="urgent-help" class="help-lines" aria-labelledby="urgent-title"><h2 id="urgent-title">Crisis and urgent lines</h2><p>Crisis: <a href="tel:988">988</a> (veterans: press 1). Immediate danger: <a href="tel:911">911</a>.<br>Veteran housing help: <a href="tel:8774243838">877-424-3838</a> · 24/7.</p><p><a href="?view=crisis">Mental health support</a> · <a href="?view=housing">Housing resources</a></p><p id="world-link">Outside the United States? <a href="world/">Emergency and crisis numbers in other countries</a>, and VA help for U.S. veterans abroad.</p></section>', unified, flags=re.S)
     unified=unified.replace('<a class="jump" href="#support-vhg">Support VHG</a>', '<a class="jump" data-advocacy-route href="disability-advocacy.html">Disability rights &amp; advocacy</a><a class="jump" data-family-route href="family-guide.html">Families: autism, ADHD &amp; disabilities</a><a class="jump" href="flyers.html">Printable flyers</a><a class="jump" href="packets.html">Printable packets</a><a class="jump" href="world/">Veterans outside the U.S.</a><a class="jump" href="justice.html">Veterans in the justice system</a><a class="jump" href="https://mobilitytalk.org/states/" rel="noopener">Mobility &amp; disability resources in every state</a><a class="jump" href="#support-vhg">Support VHG</a>',1)
     # On a phone the header keeps its first four links and folds the rest behind "More guides",
-    # so the state picker and the crisis numbers fit on the first screen. Wider screens show every link.
+    # so the chooser and the state picker fit on the first screen. Wider screens show every link.
     first='<a class="jump" href="assistant/">Guided assistance (beta)</a>'
     last='<a class="jump" href="#support-vhg">Support VHG</a>'
     assert unified.count(first)==1 and unified.count(last)==1,'header links to fold'
@@ -163,8 +163,10 @@ def unified_outputs(root, editions, states):
     result['assets/guide.js']=guide
     base=states[0]['code']
     unified=unified.replace('</select></nav>','</select><p id="edition-status" class="small" role="status" aria-live="polite"></p></nav>',1)
-    # A visitor's first screen: crisis numbers, then where they need help (map, list, other countries),
-    # then their county. Everything about sources and coverage comes after.
+    # A visitor's first screen: who they are, where they need help (map, list, other countries), then their
+    # county. Everything about sources and coverage comes after. The crisis and urgent lines are ordinary resource
+    # content near the end of the page (before "Support VHG"), not a box at the top: Travis asked on November 28,
+    # 2026 that the guide read as a normal resource guide anyone can use. A footer link points to them.
     urgent=section(unified,'urgent-help')
     picker=re.search(r'<nav class="edition-picker".*?</nav>',unified,re.S).group()
     coverage='<details id="edition-coverage" class="edition-coverage"><summary>Coverage and source checks</summary><div id="coverage-detail"></div></details>'
@@ -172,10 +174,16 @@ def unified_outputs(root, editions, states):
         assert unified.count(part)==1,'opening part'
         unified=unified.replace(part,'')
     assert unified.count('<main>')==1,'main'
-    unified=unified.replace('<main>','<main>'+urgent+'<!--who-start--><!--place-map-->'+picker+coverage,1)
+    unified=unified.replace('<main>','<main><!--who-start--><!--place-map-->'+picker+coverage,1)
+    support='<section id="support-vhg"'
+    assert unified.count(support)==1,'support section'
+    unified=unified.replace(support,urgent+support,1)
+    footer_links='<div class="footer-links">'
+    assert unified.count(footer_links)==1,'footer links'
+    unified=unified.replace(footer_links,footer_links+'<a href="#urgent-help">Crisis and urgent lines</a>',1)
     world_count=len(json.loads((root/'data/world/countries.json').read_text())['countries'])
     def with_map(text,state,open_map):
-        # Right after the crisis numbers: "I'm here as..." routes each visitor to the parts of the guide that fit them.
+        # At the top of the page: "I'm here as..." routes each visitor to the parts of the guide that fit them.
         land=landings[state]
         text=text.replace('<!--who-start-->',landing.chooser(state,root),1)
         for key,value in (('eyebrow','Veteran Home Guardians · '+escape(land['eyebrow'],quote=False)),('h1',land['h1']),('intro',escape(land['intro'],quote=False))):

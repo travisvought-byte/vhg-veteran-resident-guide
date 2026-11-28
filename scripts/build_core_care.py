@@ -62,7 +62,7 @@ TOPICS = [
 
 CSS = '''
 .topic{max-width:900px;margin:auto;padding:22px 24px}.topic h2{margin:34px 0 8px}.topic h3{margin:22px 0 6px}
-.topic li{margin:6px 0}.checked{font-size:15px;color:#e2eaed;margin-top:-4px}.crisis-line{font-size:15px;color:#3d4f48;margin:0 0 14px}
+.topic li{margin:6px 0}.checked{font-size:15px;color:#e2eaed;margin-top:-4px}
 .toc{background:#eef3f0;border-radius:6px;padding:12px 20px;margin:6px 0 10px}.toc ul{margin:6px 0;padding-left:20px}.toc li{margin:6px 0}
 .box{background:#fff;border:1px solid var(--line);border-left:5px solid var(--green);border-radius:6px;padding:14px 18px;margin:14px 0}
 .box.warn{border-left-color:#a3412c}.box h3{margin-top:2px}
@@ -110,6 +110,12 @@ def page(t, title, description, h1, intro, body, toc):
     slug = t['slug']
     toc_html = '<nav class="toc" aria-label="On this page"><strong>On this page</strong><ul>' + ''.join(
         f'<li><a href="#{i}">{escape(label)}</a></li>' for i, label in toc) + '</ul></nav>'
+    # The crisis and urgent lines are part of the page's resources, just before its sources, not a line at the top
+    # (Travis, November 28, 2026: the guide should read as a normal resource guide anyone can use).
+    urgent = (f'<h2 id="urgent-lines">Crisis and urgent lines</h2><p>Veterans Crisis Line: call {tel("988")} and press 1, '
+              f'or text <a href="sms:838255">838255</a>. If someone is in danger right now, call {tel("911")}.</p>\n')
+    marker = '<h2 id="sources">'
+    body = body.replace(marker, urgent + marker, 1) if marker in body else body + urgent
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{escape(title)}</title>
@@ -128,7 +134,6 @@ def page(t, title, description, h1, intro, body, toc):
 <header><nav aria-label="Main"><a href="./">Veteran Resource Guide</a><a href="#related">Other topics for families</a><a href="flyers.html">Printable flyers</a></nav>
 <div class="hero"><p class="eyebrow">FOR VETERANS IN CARE AND THEIR FAMILIES</p><h1>{escape(h1)}</h1><p>{intro}</p><p class="checked">Facts checked against official sources on {CHECKED}.</p></div></header>
 <main class="topic" id="main">
-<p class="crisis-line">Danger right now: call {tel('911')}. Veterans Crisis Line: {tel('988')}, then press 1.</p>
 {toc_html}
 <p><a class="sheet" href="flyers/{t["flyer"]}.pdf">Print the one-page sheet (PDF)</a></p>
 {body}

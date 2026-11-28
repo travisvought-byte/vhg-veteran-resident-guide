@@ -133,8 +133,6 @@ STYLE = '''<style>
 .keypoint{background:#fff8e6;border-left:5px solid var(--gold);border-radius:5px;padding:10px 18px;margin:14px 0}
 table{border-collapse:collapse;width:100%;background:#fff;font-size:16px}th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}th{background:#eef3f0}
 .table-wrap{overflow-x:auto}
-.crisis-aside{font-size:14px;line-height:1.45;color:#3d4f48;border-left:3px solid #a3412c;padding:4px 0 4px 12px;margin:0 0 18px;max-width:640px}.crisis-aside p{margin:0}
-@media(min-width:900px){.crisis-aside{float:right;width:250px;margin:4px 0 16px 28px}}
 .section-menu{background:#fff;border:1px solid var(--line);border-radius:8px;padding:12px 18px;margin:0 0 22px}.section-menu h2{font:700 15px/1.3 system-ui,sans-serif;letter-spacing:.8px;text-transform:uppercase;color:var(--green);margin:2px 0 6px}
 .section-menu ol{margin:0;padding-left:22px;columns:2;column-gap:28px}.section-menu li{margin:4px 0;break-inside:avoid}.section-menu [aria-current]{font-weight:700;color:var(--ink);text-decoration:none}
 .next{display:flex;flex-wrap:wrap;gap:10px 18px;justify-content:space-between;border-top:1px solid var(--line);padding-top:14px;margin-top:10px}
@@ -144,7 +142,7 @@ table{border-collapse:collapse;width:100%;background:#fff;font-size:16px}th,td{t
 .sources ol{padding-left:22px;font-size:15px}.sources li{margin:6px 0}
 .report{font-size:15px}
 @media(max-width:700px){.section-menu ol{columns:1}.bp{padding:16px}th,td{padding:6px}.steps>li{padding-left:56px}}
-@media print{header nav,.section-menu,.next,.crisis-aside,#your-state select{display:none}body{background:#fff}}
+@media print{header nav,.section-menu,.next,#your-state select{display:none}body{background:#fff}}
 </style>'''
 
 
@@ -266,8 +264,11 @@ def sources_block(keys):
             '<ol>' + ''.join(items) + '</ol></section>')
 
 
-CRISIS = ('<aside class="crisis-aside" aria-label="Crisis support"><p><strong>Rough night?</strong> Call <a href="tel:988">988</a> and press 1, '
-          'or text <a href="sms:838255">838255</a>. A VA medical center will see you in an emergency whatever your discharge.</p></aside>')
+# Crisis and urgent lines sit with the page's other resources, after its content and before the next-page links,
+# not as a box at the top (Travis, November 28, 2026: the guide should read as a normal resource guide).
+CRISIS = ('<section id="urgent-lines" aria-labelledby="urgent-lines-title"><h2 id="urgent-lines-title">Crisis and urgent lines</h2>'
+          '<p>Veterans Crisis Line: call <a href="tel:988">988</a> and press 1, or text <a href="sms:838255">838255</a>, any time. '
+          'A VA medical center will see you in an emergency whatever your discharge.</p></section>')
 
 
 def page_html(p, body):
@@ -284,8 +285,8 @@ def page_html(p, body):
 <script src="../assets/analytics.js" defer></script></head><body>
 <header><nav aria-label="Main"><a href="../">Veteran Resource Guide</a><a href="./">Bad paper discharges</a><a href="free-help.html">Free help</a><a href="{FLYER}">Printable checklist</a></nav>
 <div class="hero"><p class="eyebrow">OTHER-THAN-HONORABLE, GENERAL AND BAD-CONDUCT DISCHARGES</p><h1>{e(p["h1"])}</h1><p>{e(p["lede"])}</p></div></header>
-<main class="bp" id="main">{CRISIS}'''
-    foot = (f'{next_links(p["slug"])}{sources_block(p["sources"])}</main>'
+<main class="bp" id="main">'''
+    foot = (f'{CRISIS}{next_links(p["slug"])}{sources_block(p["sources"])}</main>'
             '<footer class="bp" style="margin:auto;padding:18px 24px"><p>Free from <a href="https://www.vethomeguard.org/about.html">Veteran Home Guardians</a>, '
             'an Ohio 501(c)(3) nonprofit (EIN 33-4637180) that visits veterans in long-term care and publishes free guides. This guide explains public rules and points to official '
             'sources and free help. It is not legal advice and does not decide eligibility; the board or agency decides.</p>'

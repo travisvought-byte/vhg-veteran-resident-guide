@@ -1,4 +1,5 @@
-// The guide opens with crisis numbers, then a map of every state and a way into the world pages.
+// The guide opens with a map of every state and a way into the world pages. The crisis and urgent lines are
+// listed with the guide's other resources near the end of the page (before Support VHG), not in a box at the top.
 const assert=require('node:assert/strict'),fs=require('fs'),path=require('path');
 const root=path.join(__dirname,'..'),read=f=>fs.readFileSync(path.join(root,f),'utf8');
 const registry=JSON.parse(read('states/registry.json'));
@@ -17,10 +18,15 @@ for(const s of registry){
  assert.deepEqual(n.filter(x=>x[3]).map(x=>x[2]),[s.code],page+' list marks only its own state');
  assert(html.includes('in '+world+' countries'),page+' world count comes from the data');
  const main=html.indexOf('<main>'),urgent=html.indexOf('id="urgent-help"'),map=html.indexOf('id="place-start"'),picker=html.indexOf('class="edition-picker"'),county=html.indexOf('id="county-start"'),coverage=html.indexOf('id="edition-coverage"');
- assert(main<urgent&&urgent<map&&map<picker&&picker<coverage&&coverage<county,page+' order: crisis, map, list, coverage, county');
+ assert(main<map&&map<picker&&picker<coverage&&coverage<county,page+' order: map, list, coverage, county');
+ const support=html.indexOf('id="support-vhg"'),results=html.indexOf('id="results"');
+ assert(results<urgent&&urgent<support,page+' crisis and urgent lines sit near the end, after the resource list');
+ assert.equal((html.match(/id="urgent-help"/g)||[]).length,1,page+' lists the crisis lines once');
+ assert(/<section id="urgent-help" class="help-lines" aria-labelledby="urgent-title"><h2 id="urgent-title">Crisis and urgent lines<\/h2><p>Crisis: <a href="tel:988">988<\/a> \(veterans: press 1\)/.test(html),page+' crisis lines are a plain section');
+ assert(html.includes('<div class="footer-links"><a href="#urgent-help">Crisis and urgent lines</a>'),page+' footer points to the crisis lines');
  if(page==='index.html')assert(/<section id="place-start"[^>]*aria-labelledby="place-title"><h2 id="place-title">Where do you need help\?<\/h2>/.test(html),'home page opens the map');
  else assert(/<details id="place-start" class="place-start"><summary>/.test(html),page+' keeps the map one tap away');
 }
 const runtime=read('assets/guide-runtime.js');
 assert(runtime.includes(".state-tiles a,.usmap a').forEach(a=>a.dataset.state===state?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'))"),'switching state moves the highlight');
-console.log('PASS: every page opens with crisis numbers, then a map of all 51 states (real shapes, each its own named link), the same states by name, and the '+world+'-country world pages.');
+console.log('PASS: every page opens with a map of all 51 states (real shapes, each its own named link), the same states by name, and the '+world+'-country world pages; crisis lines sit near the end.');

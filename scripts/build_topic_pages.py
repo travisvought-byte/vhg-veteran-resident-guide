@@ -43,7 +43,6 @@ STYLE = '''<style>
 .card h3{margin-top:0}.card ul{padding-left:22px}.card li{margin:6px 0}
 .phone-line{font-size:20px;margin:8px 0}.phone-line a[href^="tel:"]{display:inline-block;min-height:44px;line-height:44px}
 .calm{background:#e8eeea;border-radius:8px;padding:14px 20px}.calm p{margin:6px 0}
-.crisis-note{font-size:15px;color:#3d4f48}
 table{border-collapse:collapse;width:100%;background:#fff}th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
 .jumps{display:flex;flex-wrap:wrap;gap:8px 18px;padding:0;list-style:none}.jumps a{display:inline-block;min-height:44px;line-height:44px}
 .lang-switch{margin:0 0 6px;font-size:15px}.lang-switch a{color:#fff}
@@ -120,7 +119,6 @@ def mst_page(discharge_page=None):
 <div class="hero"><p class="eyebrow">MILITARY SEXUAL TRAUMA</p><h1>Help after military sexual trauma</h1>
 <p>If something happened to you while you served, you are not alone, and it is not too late to get help. This page lays out your options in plain words. You choose what to do, and when.</p></div></header>
 <main class="topic" id="main">
-<p class="crisis-note">If you are in crisis right now: call {tel('988')} and press 1, or text 838255. In danger: call 911.</p>
 <ul class="jumps" aria-label="On this page"><li><a href="#care">Free VA care</a></li><li><a href="#coordinator">MST coordinators</a></li><li><a href="#vet-center">Vet Centers</a></li><li><a href="#claims">Disability claims</a></li><li><a href="#discharge">Your discharge</a></li><li><a href="#men">For men</a></li><li><a href="#serving">Still serving</a></li></ul>
 
 <section id="care"><h2>Free care from VA, even without a rating or a report</h2>
@@ -183,6 +181,9 @@ def mst_page(discharge_page=None):
 {src([SAFE_HELPLINE])}</div>
 <div class="card"><p><strong>Women Veterans Call Center</strong>: {tel('855-829-6636')}. Women veterans can call, text or chat with a trained woman about VA care and benefits.</p>
 {src([('https://www.womenshealth.va.gov/wvcc.asp', 'VA: Women Veterans Call Center')], 'November 17, 2026')}</div></section>
+
+<section id="urgent-lines"><h2>Crisis and urgent lines</h2>
+<div class="card"><p><strong>Veterans Crisis Line</strong>: call {tel('988')} and press 1, or text <a href="sms:838255">838255</a>, any time. If you are in danger right now, call 911.</p></div></section>
 
 <div class="calm"><p>You can go at your own pace. It is okay to start with one phone call, or just to bookmark this page for later.</p></div>
 </main>
@@ -347,11 +348,6 @@ def spanish_page():
 <div class="hero"><p class="lang-switch">Idioma: <strong>Español</strong> · <a href="../" hreflang="en" lang="en">English</a></p><p class="eyebrow">VETERAN HOME GUARDIANS</p><h1>Guía de recursos para veteranos de Ohio</h1>
 <p>Ayuda gratis para veteranos, cónyuges sobrevivientes, personas mayores y sus familias en Ohio. Aquí está lo esencial en español. Las guías detalladas están en inglés; puede pedir un intérprete gratis en cada llamada.</p></div></header>
 <main class="topic" id="main">
-<section aria-labelledby="ahora"><h2 id="ahora">{icon('phone', '../')}¿Necesita ayuda ahora?</h2>
-<div class="card"><p>Crisis: llame al {tel('988')} y oprima 1 (Veterans Crisis Line, línea de crisis para veteranos), o envíe un mensaje de texto al 838255. Peligro inmediato: llame al 911.</p>
-<p>Veteranos sin hogar o a punto de perder su vivienda: {tel('877-424-3838')}, las 24 horas (National Call Center for Homeless Veterans).</p>
-{src([VA_MST, ('https://www.va.gov/homeless/nationalcallcenter.asp', 'VA: National Call Center for Homeless Veterans')], CHECKED_ES, 'Fuente', 'Revisado el')}</div></section>
-
 <section aria-labelledby="interprete"><h2 id="interprete">{icon('chat', '../')}Pida un intérprete gratis</h2>
 {es_card('El VA ofrece intérpretes sin costo', '<p>El VA ofrece intérpretes y otra ayuda con el idioma, gratis, a veteranos y familiares. Llame a MyVA411, la línea principal de información del VA, oprima 0 y diga al agente que desea un intérprete de español. En un centro médico del VA, solo dígale a un empleado que desea un intérprete.</p>', f'MyVA411: {tel("800-698-2411")}, las 24 horas, todos los días', [va_lang, va_es])}</section>
 
@@ -374,6 +370,11 @@ def spanish_page():
 
 <section aria-labelledby="familias"><h2 id="familias">{icon('heart', '../')}Familias que perdieron a un ser querido</h2>
 {es_card('Familias Gold Star y sobrevivientes', '<p>Apoyo a cualquier hora de TAPS (Tragedy Assistance Program for Survivors), pagos del VA para sobrevivientes (DIC y Survivors Pension), becas como la Fry Scholarship y beneficios de Ohio. <a href="../survivors.html" hreflang="en">Lea la guía completa</a> (en inglés).</p>', f'TAPS: {tel("800-959-8277")}, a cualquier hora · Military OneSource en español: {tel("877-888-0727")}', [TAPS, NAVY])}</section>
+
+<section aria-labelledby="ahora"><h2 id="ahora">{icon('phone', '../')}Líneas de crisis y ayuda urgente</h2>
+<div class="card"><p>Crisis: llame al {tel('988')} y oprima 1 (Veterans Crisis Line, línea de crisis para veteranos), o envíe un mensaje de texto al 838255. Peligro inmediato: llame al 911.</p>
+<p>Veteranos sin hogar o a punto de perder su vivienda: {tel('877-424-3838')}, las 24 horas (National Call Center for Homeless Veterans).</p>
+{src([VA_MST, ('https://www.va.gov/homeless/nationalcallcenter.asp', 'VA: National Call Center for Homeless Veterans')], CHECKED_ES, 'Fuente', 'Revisado el')}</div></section>
 
 <section aria-labelledby="mas"><h2 id="mas">{icon('book', '../')}Más en español</h2>
 <p><a href="{va_es[0]}" rel="noopener">Asistencia y recursos del VA en español</a>: formularios, beneficios para sobrevivientes y derechos civiles, del propio VA.</p></section>
