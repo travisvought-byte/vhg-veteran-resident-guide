@@ -131,6 +131,8 @@ assert(css.includes('@media(min-width:761px){header .brand-copy .jump-toggle{dis
   for(const [fg,bg] of [['#d7eee1','#25372e'],['#f2dfb2','#382d17'],['#ecd28c','#1a242b'],['#ffffff','#2a4a63'],['#ffffff','#0d2333']])assert(ratio(fg,bg)>=4.5,`${fg} on ${bg}`);
   // The focus ring in dark mode (November 28, 2026): at least 3:1 on every dark surface.
   for(const bg of ['#10181d','#1a242b','#1d2e27','#2c2614','#0f171c'])assert(ratio('#f2c94c',bg)>=3,`focus ring on ${bg}`);
-  for(const hex of dark[1].match(/#[0-9a-f]{6}/gi))assert(['#10181d','#0d2333','#dce9f2','#e4ecef','#9fd0ef','#0f171c','#83988f','#1a242b','#b6c4ca','#1d2e27','#93d6b1','#25372e','#d7eee1','#382d17','#f2dfb2','#ecd28c','#2c2614','#2a4a63','#3d4d55','#f2c94c'].includes(hex.toLowerCase()),'dark color '+hex+' is one of the checked set');
+  // The state map's shapes (November 28, 2026): each fill stands out at least 3:1 from the page and from the current state.
+  for(const [fill,bg] of [['#7f948b','#ffffff'],['#7f948b','#183449'],['#5b707b','#1a242b'],['#5b707b','#9fd0ef']])assert(ratio(fill,bg)>=3,`map fill ${fill} against ${bg}`);
+  for(const hex of dark[1].match(/#[0-9a-f]{6}/gi))assert(['#10181d','#0d2333','#dce9f2','#e4ecef','#9fd0ef','#0f171c','#83988f','#1a242b','#b6c4ca','#1d2e27','#93d6b1','#25372e','#d7eee1','#382d17','#f2dfb2','#ecd28c','#2c2614','#2a4a63','#3d4d55','#f2c94c','#5b707b'].includes(hex.toLowerCase()),'dark color '+hex+' is one of the checked set');
 }
 console.log('PASS: phone header keeps four links in view and opens the rest from one button.');

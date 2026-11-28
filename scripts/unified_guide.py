@@ -22,8 +22,8 @@ def state_list(states):
 def count_words(n):
     return ['zero','one','two','three','four','five','six','seven','eight','nine','ten'][n] if n<=10 else str(n)
 
-# Where each state sits on the tile map: (column, row) on an 11 by 8 grid. Equal tiles keep
-# small states (Rhode Island, Delaware, DC) as easy to tap as large ones.
+# Where each state sits on the square tile maps used elsewhere (the county and VA location hubs): (column, row)
+# on an 11 by 8 grid.
 TILES={'AK':(0,0),'ME':(10,0),'WI':(5,1),'VT':(9,1),'NH':(10,1),
  'WA':(0,2),'ID':(1,2),'MT':(2,2),'ND':(3,2),'MN':(4,2),'IL':(5,2),'MI':(6,2),'NY':(8,2),'MA':(9,2),
  'OR':(0,3),'NV':(1,3),'WY':(2,3),'SD':(3,3),'IA':(4,3),'IN':(5,3),'OH':(6,3),'PA':(7,3),'NJ':(8,3),'CT':(9,3),'RI':(10,3),
@@ -32,19 +32,29 @@ TILES={'AK':(0,0),'ME':(10,0),'WI':(5,1),'VT':(9,1),'NH':(10,1),
  'OK':(3,6),'LA':(4,6),'MS':(5,6),'AL':(6,6),'GA':(7,6),
  'HI':(0,7),'TX':(3,7),'FL':(8,7)}
 
+# The state map: real state shapes, the same map Nina's Map uses (data/map/us-states.json, from U.S. Census
+# Bureau shapes). Travis asked for it on November 28, 2026 in place of the square tile map. Every state is a plain
+# link, so it works before the page script loads and with the keyboard; the same links follow as a list by name,
+# which is also the easier way to reach the smallest states on a phone.
+from pathlib import Path
+US_MAP=json.loads((Path(__file__).resolve().parent.parent/'data/map/us-states.json').read_text())
+
 def place_map(states, current, world_count, open_map):
-    """The guide's starting point: every state as a link on a tile map, then the world pages.
-    Plain links, so it works before the page script loads and with the keyboard."""
-    tiles=[]
-    for s in sorted(states,key=lambda s:(TILES[s['code']][1],TILES[s['code']][0])):
-        col,row=TILES[s['code']]
-        href='./' if s['page']=='index.html' else s['page']
-        cur=' aria-current="page"' if s['code']==current else ''
-        tiles.append('<li style="grid-column:'+str(col+1)+';grid-row:'+str(row+1)+'"><a href="'+href+'" data-state="'+s['code']+'"'+cur+'><abbr title="'+escape(s['name'])+'" aria-hidden="true">'+s['code']+'</abbr><span class="sr-only">'+escape(s['name'])+'</span></a></li>')
+    """The guide's starting point: a map of every state, a list of the same states by name, then the world pages."""
+    by_code={s['code']:s for s in states}
+    assert set(by_code)=={m['code'] for m in US_MAP['states']},'the map and the guide cover the same states'
+    def href(s):return './' if s['page']=='index.html' else s['page']
+    def cur(code):return ' aria-current="page"' if code==current else ''
+    shapes=''.join('<a href="'+href(by_code[m['code']])+'" data-state="'+m['code']+'"'+cur(m['code'])+' aria-label="'+escape(by_code[m['code']]['name'])+'"><title>'+escape(by_code[m['code']]['name'])+'</title><path d="'+m['d']+'"/></a>' for m in US_MAP['states'])
+    svg=('<svg class="usmap" viewBox="0 0 '+str(US_MAP['width'])+' '+str(US_MAP['height'])+'" role="group" aria-labelledby="usmap-t usmap-d">'
+         '<title id="usmap-t">Map of the United States</title><desc id="usmap-d">Each state is a link to its page in this guide. The same links are in the list of states after the map.</desc>'
+         '<g>'+shapes+'</g></svg>')
+    names=''.join('<li><a href="'+href(s)+'" data-state="'+s['code']+'"'+cur(s['code'])+'>'+escape(s['name'])+'</a></li>' for s in sorted(states,key=lambda s:s['name']))
+    listing='<details class="state-list"><summary>All states by name</summary><ul class="state-tiles" aria-label="States">'+names+'</ul></details>'
     world='<p class="world-start"><a href="world/"><strong>Outside the United States</strong><span>Emergency numbers and veterans contacts in '+str(world_count)+' countries, and VA help for U.S. veterans abroad</span></a></p>'
-    body='<ul class="state-tiles" aria-label="States">'+''.join(tiles)+'</ul>'+world
+    body=svg+listing+world
     if open_map:
-        return '<section id="place-start" class="place-start" aria-labelledby="place-title"><h2 id="place-title">Where do you need help?</h2><p>Choose a state on the map, or pick it from the list below.</p>'+body+'</section>'
+        return '<section id="place-start" class="place-start" aria-labelledby="place-title"><h2 id="place-title">Where do you need help?</h2><p>Choose your state on the map, or open the list of states by name.</p>'+body+'</section>'
     return '<details id="place-start" class="place-start"><summary>Show the map of states and countries</summary>'+body+'</details>'
 
 def unified_outputs(root, editions, states):
