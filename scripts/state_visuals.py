@@ -3,15 +3,15 @@
 Travis asked for "reasonable visuals everywhere, at least for the US side". Each state page (Ohio is index.html)
 gets, from data the guide already has:
 
-- "<State> at a glance": a small locator map (the guide's own equal-square tile map, so no map pictures are
-  fetched) with the state marked by a dark square and a ring, and tiles with counts the guide already shows:
-  its counties (one page each) and its VA locations by kind (data/public/va-facilities/<st>.json).
+- "<State> at a glance": tiles with counts the guide already shows: its counties (one page each) and its VA
+  locations by kind (data/public/va-facilities/<st>.json). Until November 28, 2026 this figure also drew a small
+  locator map; Travis asked for one map in one place, so the page keeps only the clickable state map under
+  "Where do you need help?", which already marks the current state.
 - "Who to call first": each common situation, an arrow, and the first contact the page already gives for it
   (988, 911, the VA housing line, the state's Adult Protective Services line, the local veterans office, VA
   locations and senior and disability support).
 
-Both are figures with captions; every word is real text, the symbols are hidden from screen readers, and the
-map is an image with a title and a description. The state picker can swap the page to another state in place,
+Both are figures with captions; every word is real text and the symbols are hidden from screen readers. The state picker can swap the page to another state in place,
 so both carry the class vz-local and a one-line rule hides them once the page shows a different state.
 
 The hub pages that list every state (counties/ and va-locations/) get the same tile map as a set of links.
@@ -20,7 +20,7 @@ import json
 from html import escape
 from pathlib import Path
 
-from visuals import icon, stylesheet, locator
+from visuals import icon, stylesheet
 from unified_guide import TILES
 from build_core_care import aps_data, tel
 
@@ -82,9 +82,7 @@ def glance(state, contacts):
             if counts else 'The county tile opens the list of local veterans offices.')
     return (f'<figure class="vz vz-glance vz-local" aria-labelledby="glance-cap">'
             f'<figcaption id="glance-cap"><strong>{escape(name)} at a glance</strong></figcaption>'
-            f'<div class="vz-glance-row"><div class="vz-loc-wrap">{locator(code, name, "glance-map")}'
-            f'<p class="vz-loc-key"><span class="vz-loc-swatch" aria-hidden="true"></span>{escape(name)} is the dark square with a ring.</p></div>'
-            f'<ul class="vz-grid vz-stats">{"".join(tiles)}</ul></div><p class="vz-note">{note}</p></figure>')
+            f'<ul class="vz-grid vz-stats">{"".join(tiles)}</ul><p class="vz-note">{note}</p></figure>')
 
 
 def route(when_icon, when, who_icon, who_html, href=None):

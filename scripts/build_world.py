@@ -73,7 +73,7 @@ STYLE = '''<style>
 .us-block{background:#e8eeea;border-radius:8px;padding:18px 22px}.us-block h3{margin-top:14px}
 table{border-collapse:collapse;width:100%;background:#fff}th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
 .no-agency{background:#fff;border:1px solid var(--line);border-left:6px solid #5b6770;border-radius:8px;padding:16px 20px}
-.tag{display:inline-block;background:#eef0f2;color:#3a444c;border-radius:4px;padding:1px 7px;font-size:13px;white-space:nowrap}
+.tag{display:inline-block;background:#eef0f2;color:#3a444c;border-radius:4px;padding:1px 7px;font-size:14px;white-space:nowrap}
 .country-list{columns:2;padding-left:20px}.country-list li{margin:6px 0;break-inside:avoid}
 @media(max-width:700px){.country-list{columns:1}th,td{padding:6px}.world{padding:16px 16px}}
 </style>'''
