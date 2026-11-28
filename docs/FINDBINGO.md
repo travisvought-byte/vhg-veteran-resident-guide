@@ -301,11 +301,25 @@ Leaflet 1.9.4 with Leaflet.markercluster 1.5.3 in `assets/map/`, served from the
 
 Travis's direction: give people a reason to come and look around, and a bingo class for new and older players.
 
-- **Practice card** (home page, `#play`, in `templates/findbingo/index.html`). A just-for-fun 75-ball card:
-  "Call a ball" draws a ball, shows its traditional nickname when it has one ("Legs eleven") or a short cheer,
-  and marks the card unless "Mark my card for me" is turned off. A new card shows a clean bingo joke. Five in a
-  row ends the game and points to the ZIP search. Nothing is stored or sent, it is left off printed lists,
+- **Practice game** (home page, `#play`, in `templates/findbingo/index.html`). Rebuilt November 28, 2026, at Travis's
+  direction ("5 across is not how bingo works"): it plays like hall paper. A sheet holds 3 to 18 faces (6 to start), printed
+  three across in strips. Each game picks a pattern at random (letters T, X, L, H, U, C, E, Z and N, crazy T, plus sign,
+  four corners, postage stamp, kite, small and large picture frames, diamond, coverall), names it, explains it in words and
+  pictures it before the first ball; a new game never repeats the last pattern. "Call a ball" draws a ball (with its
+  traditional nickname when it has one); "Auto call" draws one every 6 seconds, about a hall's pace, and pauses on a
+  second press. "Daub my faces for me" is on to start; turned off, players daub by hand and only called numbers take a
+  daub. "Show hints" outlines the squares the pattern needs and counts down on each face ("needs 4", "1 away"). The
+  first face to finish ends the game: it is ringed and labeled BINGO, its winning squares turn green, the caller bar
+  names the face, the pattern and the number of balls, and the win points to the ZIP search. A board in "The board"
+  lights every number called. Accessibility: the sheet is one Tab stop and the arrow keys move across it face to face;
+  each square reads its letter, number, whether it was called, whether it is in the pattern and its face; calls and wins
+  are announced; daubs are round, called-but-not-daubed squares get a thick ring and hint squares a dashed outline, so
+  nothing depends on color alone. "Big squares" shows one face across, and very narrow screens do the same. The caller
+  bar stays at the top of the screen while you scroll the sheet. Nothing is stored or sent, it is left off printed lists,
   and it sits below the search so the search stays first. The header links to it and to the class.
+- **Logo** (November 28, 2026, owner direction): every Find Bingo page leads with the Veteran Home Guardians logo,
+  linked to vethomeguard.org. It loads from `/assets/vhg-logo.png`, which the build writes beside the pages; on the
+  guide's copy the same address is the guide's own logo.
 - **Bingo class**, now at https://www.findbingo.org/how-to-play-bingo/ (see "Guides for new players" below; it
   was at `/learn/` until November 27, 2026): what happens on a bingo night, the card, the games, the unwritten rules,
   help for eyes, ears and hands, and what changes from state to state. It speaks in general terms and sends people to

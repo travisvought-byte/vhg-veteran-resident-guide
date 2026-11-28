@@ -67,8 +67,13 @@ ICONS = ('<svg width="0" height="0" style="position:absolute" aria-hidden="true"
          '<symbol id="i-ticket" viewBox="0 0 24 24"><path d="M3 7h18v3a2 2 0 0 0 0 4v3H3v-3a2 2 0 0 0 0-4z"/><path d="M14 8v2M14 12v0M14 14v2"/></symbol>'
          '<symbol id="i-id" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2.2"/><path d="M5.8 16c.6-1.6 1.8-2.4 3.2-2.4s2.6.8 3.2 2.4M14 10h4M14 13h3"/></symbol>'
          '</defs></svg>')
-# Five bingo balls above each page's heading: decoration only, hidden from screen readers.
-BALLS = '<div class="balls" aria-hidden="true"><i>B</i><i>I</i><i>N</i><i>G</i><i>O</i></div>'
+# The Veteran Home Guardians logo at the top of every page (owner direction, November 28, 2026), then five bingo balls
+# (decoration only, hidden from screen readers). The logo's address starts at the site root so it works at any depth:
+# findbingo.org/assets/ (written below) and, for the guide's copy, the guide's own assets/vhg-logo.png.
+LOGO = ('<a class="vhg-logo" href="https://www.vethomeguard.org/"><img src="/assets/vhg-logo.png" alt="Veteran Home Guardians" '
+        'width="64" height="64"></a>')
+BALLS = ('<div class="htop">' + LOGO
+         + '<div class="balls" aria-hidden="true"><i>B</i><i>I</i><i>N</i><i>G</i><i>O</i></div></div>')
 # State pages are plain HTML: this marks weekly games on the visitor's own weekday with a "Today" tag.
 # Lists with monthly patterns are not marked (their games may not fall this week). Without JavaScript nothing changes.
 TODAY_SCRIPT = ("<script>(function(){var d=new Date().getDay();document.querySelectorAll('ul.sessions[data-weekly] li[data-day=\"'+d+'\"]').forEach(function(li){"
@@ -407,6 +412,8 @@ Lists updated {_date_label(generated_on)}.
         'index.html': page,
         'data.json': data_json + '\n',
         'zips.json': json.dumps(zips, separators=(',', ':')) + '\n',
+        # The logo in every page's header (LOGO).
+        'assets/vhg-logo.png': (root / 'assets/vhg-logo.png').read_bytes(),
         **pages,
         # The map files (Leaflet), served from the site itself; place-map.js loads them only when a list has pins.
         **place_map.vendor_files(root, 'assets/map/'),
@@ -1854,11 +1861,11 @@ GUIDES = (('how-to-play-bingo', 'book', 'How to play bingo', 'A bingo night, ste
 
 
 def _guide_list(up, skip=(), practice=''):
-    """The guides as large links with an icon and a line each; practice: an extra link to the free practice card."""
+    """The guides as large links with an icon and a line each; practice: an extra link to the free practice game."""
     return ('<ul class="guide-links">'
             + ''.join(f'<li><a href="{up}{slug}/">{_ic(icon)}<strong>{escape(label)}</strong><span>{escape(sub)}</span></a></li>'
                       for slug, icon, label, sub in GUIDES if slug not in skip)
-            + (f'<li><a href="{practice}">{_ic("search")}<strong>Practice card</strong><span>Play a free card just for fun</span></a></li>' if practice else '')
+            + (f'<li><a href="{practice}">{_ic("search")}<strong>Practice hall bingo</strong><span>Free faces and a new pattern every game</span></a></li>' if practice else '')
             + '</ul>')
 
 
@@ -1868,7 +1875,7 @@ def _more(*skip):
 
 
 def guides_panel():
-    """The home page's panel for first-timers, under the practice card."""
+    """The home page's panel for first-timers, under the practice game."""
     return ('<section class="panel" id="new-to-bingo" aria-labelledby="new-title"><h2 id="new-title">New to hall bingo?</h2>'
             '<p>What to expect on your first night, what the words mean, and how old you have to be, in plain words.</p>'
             + _guide_list('') + '</section>')
@@ -1924,7 +1931,7 @@ LEARN_FAQ = (
 def learn_page():
     faq_html, faq_ld = _questions(LEARN_FAQ)
     body = (
-        '<p><a href="../#play">Want to warm up first? Play a free practice card.</a></p>'
+        '<p><a href="../#play">Want to warm up first? Practice free, with hall-style faces and a new pattern every game.</a></p>'
         + _toc((('night', 'What happens on a bingo night'), ('buying-in', 'Buying in: packs, paper and electronics'), ('card', 'The card'),
                 ('games', 'The games in a night'), ('calling', 'How the numbers are called'), ('claiming', 'How to claim a win'),
                 ('splitting', 'When prizes are split'), ('bring', 'What to bring'), ('rules', 'The unwritten rules'),
@@ -2411,7 +2418,7 @@ TERMS = (
     '<h2>What this site is</h2>'
     '<p>FindBingo.org is a free directory of bingo games, run by Veteran Home Guardians. Using the site means you accept these terms.</p>'
     '<h2>No gambling on this site</h2>'
-    '<p>Find Bingo does not run games, sell cards, take bets or pay prizes. The practice card is free, just for fun, and wins nothing. '
+    '<p>Find Bingo does not run games, sell cards, take bets or pay prizes. The practice game is free, just for fun, and wins nothing. '
     'Real games are run by the halls and groups listed, under their state’s law and their own house rules. '
     'Follow the age and other rules where you play.</p>'
     '<h2>Check before you go</h2>'
