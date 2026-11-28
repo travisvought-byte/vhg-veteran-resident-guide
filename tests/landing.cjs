@@ -20,12 +20,12 @@ for(const s of registry){
  for(const key of ['og:title','og:description','og:image','og:site_name','twitter:card','twitter:title'])assert(meta(d,key),s.code+' '+key);
  assert.equal(meta(d,'og:description'),d.querySelector('meta[name=description]').content);
  for(const [k,v] of [['title',d.title],['description',meta(d,'description')],['h1',h1],['intro',intro]]){assert(!seen[k].has(v),s.code+' '+k+' is unique: '+v);seen[k].add(v)}
- // The chooser sits right after the crisis numbers and before the map.
- const who=html.indexOf('id="who-start"');assert(html.indexOf('id="urgent-help"')<who&&who<html.indexOf('id="place-start"'),s.code+' chooser placement');
+ // The chooser opens the page, before the map; the crisis and urgent lines come later, with the other resources.
+ const who=html.indexOf('id="who-start"');assert(html.indexOf('<main>')<who&&who<html.indexOf('id="place-start"')&&who<html.indexOf('id="urgent-help"'),s.code+' chooser placement');
  assert.equal(d.querySelectorAll('#who-start a').length,chooser.options.length);
  for(const a of d.querySelectorAll('#who-start a[data-states]'))assert.equal(a.closest('li').hidden,!a.dataset.states.split(' ').includes(s.code),s.code+' '+a.dataset.who+' shown only where it applies');
 }
-console.log('PASS landing: home and '+(registry.length-1)+' state pages each have their own title, description, heading, opening and Open Graph tags, with the chooser after the crisis numbers.');
+console.log('PASS landing: home and '+(registry.length-1)+' state pages each have their own title, description, heading, opening and Open Graph tags, with the chooser first.');
 
 // Every chooser view exists in every state, and switching state in place swaps the heading and opening.
 {

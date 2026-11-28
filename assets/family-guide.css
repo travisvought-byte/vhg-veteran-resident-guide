@@ -13,7 +13,7 @@ main{max-width:1160px;margin:auto;padding:22px 24px}section{margin-bottom:40px;s
 .secondary{background:var(--navy)}.actions{display:flex;gap:10px;flex-wrap:wrap}.small,footer{font-size:15px}.small{color:#4b5d56}
 label{display:block;font-weight:650;margin-top:8px}
 select{font:inherit;width:100%;min-height:48px;border:1px solid #6f8078;border-radius:5px;padding:10px 12px;background:#fff;color:var(--ink);margin:6px 0}
-.urgent{background:#fff;border-left:5px solid #a3412c;padding:10px 20px;border-radius:5px}.urgent h2{font-size:20px;margin:4px 0}.urgent p{margin:4px 0}
+.help-lines p{margin:6px 0}
 #finder{background:#fff;border:1px solid var(--line);border-top:5px solid var(--gold);border-radius:8px;padding:24px}
 .place{display:grid;grid-template-columns:repeat(2,minmax(0,360px));gap:6px 24px}
 .stage-title{margin-top:20px}
@@ -54,7 +54,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,summary:focus-visible,
  .stages{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.stage{padding:10px 12px}.stage strong{font-size:16px}.stage .desc{display:none}nav{padding:8px 18px;gap:0 18px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 @media print{
- header,.skip,.urgent,.quick,#letter,.actions,#share-status,.stages,.stage-title,.needs-box,.place,#finder>p.small,#finder>h2,noscript,#words,#changes,#rights-list,.good-to-know,.more,#empty,.visit .sr,#military-details>summary,#military>p,footer p:last-child{display:none!important}
+ header,.skip,.help-lines,.quick,#letter,.actions,#share-status,.stages,.stage-title,.needs-box,.place,#finder>p.small,#finder>h2,noscript,#words,#changes,#rights-list,.good-to-know,.more,#empty,.visit .sr,#military-details>summary,#military>p,footer p:last-child{display:none!important}
  .print-only{display:block}.print-title{font:700 13pt/1.4 Georgia,serif;border-bottom:2px solid #000;padding-bottom:6px}
  body{background:#fff;font-size:11pt;line-height:1.4}main{padding:0;max-width:none}section{margin-bottom:8px}#finder{border:0;padding:0}
  .anchors{background:none;border:1px solid #999;padding:6px 10px}.anchors li{margin:2px 0}

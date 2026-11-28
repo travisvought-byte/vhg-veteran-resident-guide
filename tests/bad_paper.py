@@ -29,7 +29,10 @@ for p in PAGES:
     assert html.count('<h1>') == 1, path + ' has one heading'
     assert '../assets/analytics.js' in html, path + ' counts visits'
     assert 'Report a problem with this page' in html and 'mailto:travis@vethomeguard.org' in html, path + ' report path'
-    assert 'class="crisis-aside"' in html and 'tel:988' in html, path + ' small crisis line'
+    # The crisis line is listed with the page's resources near the end, not at the top of the page.
+    main = html[html.index('<main'):html.index('</main>')]
+    assert 'id="urgent-lines"' in main and 'tel:988' in main, path + ' lists the crisis line'
+    assert main.index('id="urgent-lines"') > len(main) // 2 and 'crisis-aside' not in html, path + ' crisis line sits lower on the page'
     assert 'id="sources-title"' in html, path + ' lists sources'
     for key in p['sources']:
         assert SOURCES[key][1].replace('&', '&amp;') in html, path + ' cites ' + key
