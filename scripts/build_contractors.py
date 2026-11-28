@@ -31,7 +31,8 @@ TRADE_ICON = {'plumbing-hvac': 'wrench', 'electrical': 'bolt', 'roofing': 'home'
               'drywall': 'building', 'painting': 'brush', 'flooring': 'home', 'remediation': 'drop', 'general': 'building',
               'specialty': 'wrench'}
 PRICE_ICON = {'wrench': 'wrench', 'bolt': 'bolt', 'fan': 'thermo', 'home': 'home', 'drop': 'drop', 'wall': 'building',
-              'brush': 'brush', 'tool': 'wrench', 'gear': 'bolt', 'tree': 'tree'}
+              'brush': 'brush', 'tool': 'wrench', 'gear': 'bolt', 'tree': 'tree', 'access': 'home', 'heart': 'heart',
+              'snow': 'snow'}
 
 
 def load(name):
@@ -58,7 +59,8 @@ def money(n):
 
 
 UNIT = {'per hour': ' an hour', 'per visit': ' a visit', 'per job': '', 'per sq ft': ' a square foot', 'per room': ' a room',
-        'per tree': ' a tree', 'per stump': '', 'per permit': '', 'per mile': ' a mile'}
+        'per tree': ' a tree', 'per stump': '', 'per permit': '', 'per mile': ' a mile', 'per linear foot': ' a foot',
+        'each': ' each', 'per bar': ' a bar', 'per season': ' a season'}
 
 
 def price(job):
@@ -132,7 +134,7 @@ def head(title, desc, path, extra=''):
 def nav(eyebrow, h1, intro):
     return ('<header><nav aria-label="Main"><a href="../">Veteran Resource Guide</a><a href="./">Find a contractor</a>'
             '<a href="fair-prices.html">Fair prices</a><a href="join.html">List your business</a>'
-            '<a href="../family-guide.html">Family Guide</a></nav>'
+            '<a href="../help-at-home/">Help at home</a><a href="../family-guide.html">Family Guide</a></nav>'
             f'<div class="hero"><p class="eyebrow">{e(eyebrow)}</p><h1>{e(h1)}</h1><p>{intro}</p></div></header>\n')
 
 
@@ -257,7 +259,9 @@ def programs_section(programs, labels, local):
     return ('<section id="pays" aria-labelledby="pays-h"><h2 id="pays-h">Who pays for it: VA programs for work in the home</h2>'
             '<p>Some home work and in-home help can be paid by VA. Check these before you pay out of pocket. '
             'Your <a href="https://dvs.ohio.gov/cvsos" rel="noopener">county veterans service office</a> can help you apply, free.</p>'
-            f'<div class="prog-grid">{"".join(tiles)}</div></section>')
+            f'<div class="prog-grid">{"".join(tiles)}</div>'
+            '<p>More programs, including respite care, Aid and Attendance and USDA home repair loans, are on '
+            '<a href="../help-at-home/who-pays.html">Who pays for help at home</a>.</p></section>')
 
 
 SCRIPT_DIR = '''<script>
@@ -381,10 +385,11 @@ def price_section(t):
         where = 'Columbus' if j['area'] == 'Columbus' else ('Ohio' if j['area'] == 'Ohio' else 'U.S. average')
         rows += (f'<tr><th scope="row">{e(j["job"])}</th><td>{e(price(j))}{note}</td><td>{where}</td>'
                  f'<td><a href="{e(j["source"]["url"])}" rel="noopener">{e(j["source"]["publisher"])}</a></td></tr>')
+    read = f'<p class="small">Read {when(t["checked_on"])}.</p>' if t.get('checked_on') else ''
     return (f'<section id="price-{e(t["key"])}" aria-labelledby="price-{e(t["key"])}-h"><h2 class="trade-h" id="price-{e(t["key"])}-h">{icon(PRICE_ICON[t["icon"]], UP)}{e(t["label"])}</h2>'
             f'<div class="scroll" role="region" aria-labelledby="price-{e(t["key"])}-h" tabindex="0"><table class="price-table"><caption>{e(t["label"])}: published price ranges</caption>'
             '<thead><tr><th scope="col">Job</th><th scope="col">Typical range</th><th scope="col">Where</th><th scope="col">Source</th></tr></thead>'
-            f'<tbody>{rows}</tbody></table></div></section>')
+            f'<tbody>{rows}</tbody></table></div>{read}</section>')
 
 
 def wages_table(w):
@@ -472,7 +477,8 @@ def fair_prices(prices, reg):
             f'<p>If the business is in <a href="./">our directory</a>, tell us too: <a href="{e(mailto("Contractor complaint"))}">email us</a>. '
             'Profiles that break our rules come down.</p></section>'
             '<section id="method" aria-labelledby="method-h"><h2 id="method-h">How these ranges were put together</h2>'
-            f'<p class="small">Read {when(checked)} from the cost-guide pages linked in each row (Angi, HomeGuide, HomeAdvisor, Housecall Pro, Fixr). '
+            f'<p class="small">Read {when(checked)} from the cost-guide pages linked in each row (Angi, HomeGuide, HomeAdvisor, Housecall Pro, Fixr, '
+            'and CareScout’s cost of care survey for home care); a table with its own date was read on that date. '
             'Columbus figures are used where the publisher printed them, and U.S. averages otherwise; no publisher printed figures for other Ohio cities. '
             'Each row is one publisher’s range as printed, not a blend. We left out a few figures that looked wrong, such as an $18 outlet replacement '
             'that leaves out the service-call minimum. Prices change, and your job may differ: use these to spot a quote that is far out of line, not as a quote.</p></section>'
