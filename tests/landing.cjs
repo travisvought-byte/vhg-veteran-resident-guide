@@ -22,8 +22,12 @@ for(const s of registry){
  for(const [k,v] of [['title',d.title],['description',meta(d,'description')],['h1',h1],['intro',intro]]){assert(!seen[k].has(v),s.code+' '+k+' is unique: '+v);seen[k].add(v)}
  // The chooser opens the page, before the map; the crisis and urgent lines come later, with the other resources.
  const who=html.indexOf('id="who-start"');assert(html.indexOf('<main>')<who&&who<html.indexOf('id="place-start"')&&who<html.indexOf('id="urgent-help"'),s.code+' chooser placement');
- assert.equal(d.querySelectorAll('#who-start a').length,chooser.options.length);
- for(const a of d.querySelectorAll('#who-start a[data-states]'))assert.equal(a.closest('li').hidden,!a.dataset.states.split(' ').includes(s.code),s.code+' '+a.dataset.who+' shown only where it applies');
+ assert.equal(d.querySelectorAll('#who-start a[data-who]').length,chooser.options.length);
+ // "More help made for you": each of the other free guides, named with who it is built for, on its own site (November 28, 2026).
+ assert.equal(d.querySelector('#who-start h3').textContent,chooser.more_help.title,s.code+' more help heading');
+ assert.deepEqual([...d.querySelectorAll('#who-start a[data-guide]')].map(a=>a.getAttribute('href')),chooser.more_help.options.map(o=>o.href),s.code+' more help links');
+ for(const a of d.querySelectorAll('#who-start a[data-guide]'))assert(a.querySelector('strong').textContent.includes(': '),s.code+' '+a.dataset.guide+' names who it is for and the guide');
+ for(const a of d.querySelectorAll('#who-start a[data-states]'))assert.equal(a.closest('li').hidden,!a.dataset.states.split(' ').includes(s.code),s.code+' '+(a.dataset.who||a.dataset.guide)+' shown only where it applies');
 }
 console.log('PASS landing: home and '+(registry.length-1)+' state pages each have their own title, description, heading, opening and Open Graph tags, with the chooser first.');
 

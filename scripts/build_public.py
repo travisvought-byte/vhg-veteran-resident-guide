@@ -35,6 +35,8 @@ import state_visuals
 import page_visuals
 
 ROOT = Path(__file__).resolve().parents[1]
+# Hand-written pages, finished with the rest so their footers name the other free guides too.
+COMMITTED_PAGES = ['404.html', 'assistant/index.html']
 
 def outputs():
     resources = json.loads((ROOT / 'prototype-data.json').read_text())
@@ -212,7 +214,12 @@ def outputs():
     result.update(page_visuals.add(result))
     # The guide's line icons, drawn once for every page that uses them (scripts/visuals.py).
     result[visuals.SPRITE] = visuals.sprite()
-    # Last step: a skip link, a <main> target, reduced motion and link symbols on every page (scripts/a11y_finish.py).
+    # Committed pages that no script builds (the page for bad links, the assistance tool) are read from disk, so the
+    # finishing step below gives them the same "More free guides" footer line as every other page.
+    for page in COMMITTED_PAGES:
+        result.setdefault(page, (ROOT / page).read_text())
+    # Last step: a skip link, a <main> target, reduced motion and link symbols on every page, and the line naming the
+    # other free guides at the end of each footer (scripts/a11y_finish.py, scripts/related_guides.py).
     result.update(a11y_finish_all(result))
     return result
 

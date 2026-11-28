@@ -790,6 +790,14 @@ ohiobingo.org is the Ohio front door where Veteran Home Guardians operates.
 - Other states are plain directories. Partnerships there are meant for local organizations in each
   state, not Veteran Home Guardians.
 
+## The other free guides (added November 28, 2026)
+
+Every Find Bingo page, the Ohio finder's included, ends its footer with a "More free guides" line naming the
+Veteran Resource Guide, Mobility Talk, Yoga Mom Talk, Nina's Map, Abuse of Office, The Reefer and Earth Rules, each
+with who it is for (owner direction: the guides promote each other). It is added by `scripts/related_guides.py`
+through the build's finishing step, so `bingo-site/findbingo/` and `findbingo-site/` stay identical, and it is kept
+off paper like the footer's other lines. The print-only poster has no footer and no line.
+
 ## Related work
 
 Open draft PR #116 (`codex/bingo-multistate`) adds starter pages for Pennsylvania, New York,

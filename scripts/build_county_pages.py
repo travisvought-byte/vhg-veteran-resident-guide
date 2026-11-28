@@ -27,6 +27,8 @@ FOLDER = 'counties'
 # Yoga Mom Talk builds a page for (nearly) every county with the same slug; Mobility Talk and Find Bingo have state pages.
 YMT_ROOT = 'https://www.yogamomtalk.com/states/'
 MOBILITY_ROOT = 'https://mobilitytalk.org/states/'
+# Nina's Map has a page for every state and D.C., with the same slug as Mobility Talk's.
+NINA_ROOT = 'https://ninas-map.com/states/'
 FINDBINGO_ROOT = 'https://www.findbingo.org/'
 BINGO_LISTED = {'times', 'licenses', 'starter', 'ohio_finder'}
 
@@ -157,13 +159,16 @@ YMT_SLUG = {('tx', 'lasalle-county'): 'la-salle-county', ('il', 'dewitt-county')
 
 
 def nearby(code, sname, s, name, bingo):
-    """Links to the same county or state on the sister guides: family help, disability help, bingo nights."""
+    """Links to the same county or state on the sister guides: family help, disability help, Native help, bingo nights."""
     family = (f'{YMT_ROOT}{code}.html' if code == 'ct' else f'{YMT_ROOT}{code}/{YMT_SLUG.get((code, s), YMT_SLUG.get(s, s))}.html')
     where = e(sname) if code == 'ct' else e(name)
     items = [f'<li><a href="{family}">Help for moms and families in {where}</a> '
              '<span class="small">(Yoga Mom Talk: food, child care, health and baby supplies)</span></li>',
              f'<li><a href="{MOBILITY_ROOT}{state_slug(sname)}.html">Disability and mobility help in {e(sname)}</a> '
-             '<span class="small">(Mobility Talk: equipment, home changes, rides and benefits)</span></li>']
+             '<span class="small">(Mobility Talk: equipment, home changes, rides and benefits)</span></li>',
+             # Owner direction, November 28, 2026: guides link to each other by how visitors identify.
+             f'<li><a href="{NINA_ROOT}{state_slug(sname)}.html">Native American, Alaska Native and Indigenous help in {e(sname)}</a> '
+             '<span class="small">(Nina\'s Map: Native centers, health care, Nations and community)</span></li>']
     if bingo:
         items.append(f'<li><a href="{FINDBINGO_ROOT}{state_slug(sname)}/">Bingo nights in {e(sname)}</a> '
                      '<span class="small">(Find Bingo: many games are run by veterans posts)</span></li>')
