@@ -1,5 +1,5 @@
 {
- "_about": "Help at home for guide.vethomeguard.org/help-at-home/ (scripts/build_help_at_home.py). services: the four kinds of help Travis named (November 28, 2026). counties: where providers are listed, Morrow and Knox first; add a county with its call-first offices and the provider list grows to it. programs: who may pay, each with the official page it was read on and the date; amounts are what the page printed. providers: people and businesses who have accepted a listing. Never add one before they have accepted (accepted_on), and never from a registry or a search. A provider row: id, name, services (keys below), counties (keys below), phone, town, veteran (true if veteran-owned), vouched_by (who recommended them, in words the provider approved), accepted_on (YYYY-MM-DD), rates (their own words), license, insurance, va_work (programs whose jobs they take, by key).",
+ "_about": "Help at home for guide.vethomeguard.org/help-at-home/ (scripts/build_help_at_home.py). services: the four kinds of help Travis named (November 28, 2026). counties: where providers are listed, Morrow and Knox first; add a county with its call-first offices and the provider list grows to it. programs: who may pay, each with the official page it was read on and the date; amounts are what the page printed. providers: people and businesses who have accepted a listing. Never add one before they have accepted (accepted_on), and never from a registry or a search. A provider row: id, name, trade (shown after the kind of help), contact (who to ask for), services (keys below), counties (keys below), phone, town, veteran (true if veteran-owned), vouched_by (who recommended them, in words the provider approved), accepted_on (YYYY-MM-DD), rates (their own words), license, insurance, va_work (programs whose jobs they take, by key), source (how we got their details and their OK; not shown).",
  "checked_on": "2026-11-28",
  "services": [
   {
@@ -345,5 +345,28 @@
    }
   }
  ],
- "providers": []
+ "providers": [
+  {
+   "id": "usa-electric",
+   "name": "USA Electric",
+   "trade": "electrical work",
+   "contact": "Jeff King, electrician",
+   "services": [
+    "repairs"
+   ],
+   "counties": [
+    "morrow"
+   ],
+   "phone": "614-394-6443",
+   "town": "Marengo",
+   "veteran": null,
+   "vouched_by": "Travis Vought, a Marine Corps veteran and his neighbor",
+   "accepted_on": "2026-11-28",
+   "rates": null,
+   "license": "29746, as printed on his business card",
+   "insurance": "Bonded and insured, as stated on his business card",
+   "va_work": null,
+   "source": "Business card Jeff King gave Veteran Home Guardians (also in data/contractors/local.json); Travis confirmed November 28, 2026 that Jeff is his neighbor and vouched for him."
+  }
+ ]
 }

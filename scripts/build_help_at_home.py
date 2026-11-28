@@ -122,7 +122,10 @@ def provider_card(p, services, counties):
     if p.get('veteran'):
         out.append(f'<p><span class="mark">{icon("flag", UP)}Veteran-owned</span></p>')
     out.append('<dl>')
-    out.append(f'<dt>Does</dt><dd>{e(", ".join(label[k] for k in p["services"]))}</dd>')
+    does = ", ".join(label[k] for k in p["services"]) + (f' ({p["trade"]})' if p.get('trade') else '')
+    out.append(f'<dt>Does</dt><dd>{e(does)}</dd>')
+    if p.get('contact'):
+        out.append(f'<dt>Ask for</dt><dd>{e(p["contact"])}</dd>')
     out.append(f'<dt>Works in</dt><dd>{e(", ".join(where[k] for k in p["counties"]))}</dd>')
     if p.get('phone'):
         out.append(f'<dt>Phone</dt><dd><a href="tel:{e(p["phone"].replace("-", ""))}">{e(p["phone"])}</a></dd>')
