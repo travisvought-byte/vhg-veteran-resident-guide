@@ -16,13 +16,19 @@ import json
 import re
 from collections import Counter
 from pathlib import Path
-from urllib.parse import quote
+from urllib.parse import quote, urljoin
 
 from visuals import icon, stylesheet
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = 'https://guide.vethomeguard.org/'
 FOLDER = 'counties'
+# Sister guides, linked from every county page so each county's help sits one click apart across the family of sites.
+# Yoga Mom Talk builds a page for (nearly) every county with the same slug; Mobility Talk and Find Bingo have state pages.
+YMT_ROOT = 'https://www.yogamomtalk.com/states/'
+MOBILITY_ROOT = 'https://mobilitytalk.org/states/'
+FINDBINGO_ROOT = 'https://www.findbingo.org/'
+BINGO_LISTED = {'times', 'licenses', 'starter', 'ohio_finder'}
 
 
 def e(text):
@@ -75,7 +81,7 @@ STYLE = (':root{--navy:#183449;--green:#335947;--paper:#f5f3ed;--line:#d9dfda;--
          ':focus-visible{outline:3px solid #ca9f48;outline-offset:3px}')
 
 
-def page(title, description, path, crumbs, hero, body, depth, robots=''):
+def page(title, description, path, crumbs, hero, body, depth, robots='', head=''):
     up = '../' * depth
     canonical = BASE_URL + path
     trail = ' › '.join(f'<a href="{e(href)}">{e(text)}</a>' if href else e(text) for text, href in crumbs)
@@ -87,7 +93,7 @@ def page(title, description, path, crumbs, hero, body, depth, robots=''):
             f'<meta property="og:type" content="website"><meta property="og:title" content="{e(title)}">'
             f'<meta property="og:description" content="{e(description)}"><meta property="og:url" content="{e(canonical)}">'
             f'<meta property="og:image" content="{BASE_URL}assets/vhg-logo.png">\n'
-            f'<link rel="icon" href="{up}favicon.ico"><style>{STYLE}</style>'
+            f'<link rel="icon" href="{up}favicon.ico"><style>{STYLE}</style>{head}'
             + (stylesheet(up) if 'class="vi"' in body else '') + '</head>\n'
             f'<body><header><nav aria-label="Breadcrumb" class="small">{trail}</nav>{hero}</header>\n'
             f'<main id="main">{body}</main>\n'
@@ -129,6 +135,54 @@ def office_card(r, name):
     return ''.join(parts)
 
 
+def county_title(place, r):
+    """A title that fits in a search result (60 characters), naming what people look for on the page."""
+    base = f'{place} veterans service office'
+    extras = ([': phone and hours', ': phone, hours'] if r.get('hours') else []) + (
+        [': phone and address'] if r.get('address') else []) + [': phone number', '']
+    return next((base + x for x in extras if len(base + x) <= 60), base)
+
+
+def state_slug(name):
+    return slug(name.replace('U.S.', 'U S'))
+
+
+YMT_SLUG = {('tx', 'lasalle-county'): 'la-salle-county', ('il', 'dewitt-county'): 'de-witt-county', 'obrien-county': 'o-brien-county',
+            'do-a-ana-county': 'dona-ana-county', 'charles-city': 'charles-city-county', 'james-city': 'james-city-county',
+            'prince-georges-county': 'prince-george-s-county', 'queen-annes-county': 'queen-anne-s-county',
+            'st-marys-county': 'st-mary-s-county'}
+
+
+def nearby(code, sname, s, name, bingo):
+    """Links to the same county or state on the sister guides: family help, disability help, bingo nights."""
+    family = (f'{YMT_ROOT}{code}.html' if code == 'ct' else f'{YMT_ROOT}{code}/{YMT_SLUG.get((code, s), YMT_SLUG.get(s, s))}.html')
+    where = e(sname) if code == 'ct' else e(name)
+    items = [f'<li><a href="{family}">Help for moms and families in {where}</a> '
+             '<span class="small">(Yoga Mom Talk: food, child care, health and baby supplies)</span></li>',
+             f'<li><a href="{MOBILITY_ROOT}{state_slug(sname)}.html">Disability and mobility help in {e(sname)}</a> '
+             '<span class="small">(Mobility Talk: equipment, home changes, rides and benefits)</span></li>']
+    if bingo:
+        items.append(f'<li><a href="{FINDBINGO_ROOT}{state_slug(sname)}/">Bingo nights in {e(sname)}</a> '
+                     '<span class="small">(Find Bingo: many games are run by veterans posts)</span></li>')
+    return f'<h2>More free help near {e(name)}</h2><ul>{"".join(items)}</ul>'
+
+
+def structured(crumbs, path, org, r, place):
+    """Breadcrumb and office details for search engines, from the same record the page shows."""
+    here = BASE_URL + path
+    trail = [{'@type': 'ListItem', 'position': i + 1, 'name': text, 'item': urljoin(here, href) if href else here}
+             for i, (text, href) in enumerate(crumbs)]
+    office = {'@context': 'https://schema.org', '@type': 'GovernmentOffice', 'name': org, 'telephone': r['phone'],
+              'areaServed': place, 'url': here}
+    if r.get('address'):
+        office['address'] = r['address']
+    if r.get('website'):
+        office['sameAs'] = r['website']
+    data = [{'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': trail}, office]
+    return ''.join('<script type="application/ld+json">' + json.dumps(d, ensure_ascii=False).replace('</', '<\\/') + '</script>'
+                   for d in data)
+
+
 def guide_link(state, county):
     target = '' if state.get('base') else state['page']
     return f'{target}?county={quote(county)}'
@@ -136,6 +190,7 @@ def guide_link(state, county):
 
 def outputs(root=ROOT):
     states = json.loads((root / 'states/registry.json').read_text())
+    bingo = {s['code'] for s in json.loads((root / 'data/public/bingo-states.json').read_text()) if s['coverage'] in BINGO_LISTED}
     out, urls, state_rows = {}, [], []
     for state in sorted(states, key=lambda s: s['name']):
         code, sname = state['code'].lower(), state['name']
@@ -152,7 +207,7 @@ def outputs(root=ROOT):
             used.add(s)
             path = f'{FOLDER}/{code}/{s}.html'
             place = name if r.get('county_type') == 'statewide' else f'{name}, {sname}'
-            title = f'{place} veterans service office | Veteran Resource Guide'
+            title = county_title(place, r)
             desc = (f'Free help for veterans and families in {place}: the local veterans service office phone'
                     + (', address' if r.get('address') else '') + (' and hours' if r.get('hours') else '')
                     + ', plus help with VA claims, pension and Aid and Attendance for care at home, survivor benefits, health care and housing.')
@@ -171,10 +226,13 @@ def outputs(root=ROOT):
                     + f'<h2>More help in {e(sname)}</h2><p>The full guide for {e(sname)} lists state veterans programs, VA health care, '
                     'aging and caregiver support, long-term care and housing help, with this county already chosen.</p>'
                     f'<p><a class="button" href="../../{e(guide_link(state, r["county"]))}">Open the {e(sname)} guide for {e(name)}</a></p>'
-                    f'<p><a href="./">Every county in {e(sname)}</a></p>')
+                    + nearby(code, sname, s, name, state['code'] in bingo)
+                    + f'<p><a href="./">Every county in {e(sname)}</a></p>')
             crumbs = [('Veteran Resource Guide', '../../'), ('All states', '../'), (sname, './'), (name, None)]
             own = shared[r['phone']] == 1
-            out[path] = page(title, desc, path, crumbs, hero, body, 2, robots='' if own else 'noindex,follow')
+            org = r.get('organization') or f'{name} veterans service office'
+            out[path] = page(title, desc, path, crumbs, hero, body, 2, robots='' if own else 'noindex,follow',
+                             head=structured(crumbs, path, org, r, place))
             if own:
                 urls.append(BASE_URL + path)
             rows.append(f'<li><a href="{e(s)}.html">{e(name)}</a></li>')
