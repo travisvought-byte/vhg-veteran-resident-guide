@@ -3,13 +3,18 @@ const assert=require('node:assert/strict'),fs=require('fs'),path=require('path')
 const root=path.join(__dirname,'..'),read=f=>fs.readFileSync(path.join(root,f),'utf8');
 const registry=JSON.parse(read('states/registry.json'));
 const world=JSON.parse(read('data/world/countries.json')).countries.length;
-const tiles=html=>[...html.matchAll(/<li style="grid-column:(\d+);grid-row:(\d+)"><a href="([^"]+)" data-state="([A-Z]{2})"( aria-current="page")?>/g)];
+// The map: real state shapes (Nina's Map), each a link named for screen readers; then the same states by name.
+const shapes=html=>[...html.matchAll(/<a href="([^"]+)" data-state="([A-Z]{2})"( aria-current="page")? aria-label="([^"]+)"><title>[^<]+<\/title><path d="M[^"]+"\/><\/a>/g)];
+const named=html=>[...html.matchAll(/<li><a href="([^"]+)" data-state="([A-Z]{2})"( aria-current="page")?>([^<]+)<\/a><\/li>/g)];
 for(const s of registry){
- const page=s.page,html=read(page),t=tiles(html);
- assert.equal(t.length,51,page+' shows every state');
- assert.equal(new Set(t.map(m=>m[1]+','+m[2])).size,51,page+' no two tiles share a cell');
- for(const m of t){const target=registry.find(r=>r.code===m[4]);assert.equal(m[3],target.page==='index.html'?'./':target.page,m[4]+' links to its own page');assert(html.includes('<span class="sr-only">'+target.name.replace('&','&amp;')+'</span>'),m[4]+' has its full name for screen readers')}
- assert.deepEqual(t.filter(m=>m[5]).map(m=>m[4]),[s.code],page+' marks only its own state');
+ const page=s.page,html=read(page),m=shapes(html),n=named(html);
+ assert.equal((html.match(/<svg class="usmap"/g)||[]).length,1,page+' has one state map');
+ assert(/<svg class="usmap" viewBox="0 0 \d+ \d+" role="group" aria-labelledby="usmap-t usmap-d"><title id="usmap-t">/.test(html),page+' map is named for screen readers');
+ assert.equal(m.length,51,page+' map shows every state');
+ assert.equal(n.length,51,page+' list names every state');
+ for(const [list,what] of [[m,'map'],[n,'list']])for(const x of list){const target=registry.find(r=>r.code===x[2]);assert.equal(x[1],target.page==='index.html'?'./':target.page,x[2]+' '+what+' links to its own page');assert.equal(x[4],target.name.replace('&','&amp;'),x[2]+' '+what+' carries its full name')}
+ assert.deepEqual(m.filter(x=>x[3]).map(x=>x[2]),[s.code],page+' map marks only its own state');
+ assert.deepEqual(n.filter(x=>x[3]).map(x=>x[2]),[s.code],page+' list marks only its own state');
  assert(html.includes('in '+world+' countries'),page+' world count comes from the data');
  const main=html.indexOf('<main>'),urgent=html.indexOf('id="urgent-help"'),map=html.indexOf('id="place-start"'),picker=html.indexOf('class="edition-picker"'),county=html.indexOf('id="county-start"'),coverage=html.indexOf('id="edition-coverage"');
  assert(main<urgent&&urgent<map&&map<picker&&picker<coverage&&coverage<county,page+' order: crisis, map, list, coverage, county');
@@ -17,5 +22,5 @@ for(const s of registry){
  else assert(/<details id="place-start" class="place-start"><summary>/.test(html),page+' keeps the map one tap away');
 }
 const runtime=read('assets/guide-runtime.js');
-assert(runtime.includes(".state-tiles a').forEach(a=>a.dataset.state===state?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'))"),'switching state moves the highlight');
-console.log('PASS: every page opens with crisis numbers, then a map of all 51 states (each its own link, full names for screen readers) and the '+world+'-country world pages.');
+assert(runtime.includes(".state-tiles a,.usmap a').forEach(a=>a.dataset.state===state?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'))"),'switching state moves the highlight');
+console.log('PASS: every page opens with crisis numbers, then a map of all 51 states (real shapes, each its own named link), the same states by name, and the '+world+'-country world pages.');
