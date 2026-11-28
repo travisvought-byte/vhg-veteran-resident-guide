@@ -43,6 +43,8 @@ jobs:
         run: python3 tests/justice.py
       - name: Check the veteran-owned contractor directory, fair prices and signup
         run: python3 tests/contractors.py
+      - name: Check the help-at-home section (accepted providers only, sourced programs, signup, county links)
+        run: python3 tests/help_at_home.py
       - name: Check the resource-mining pipeline and its generated reports
         run: python3 tests/mining.py
       - name: Check the veteran programs pages (sources, published-only figures, local-first links, sitemap)

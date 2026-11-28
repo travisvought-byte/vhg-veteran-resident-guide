@@ -1,5 +1,5 @@
 {
- "_about": "Fair-price guide for guide.vethomeguard.org/contractors/fair-prices.html. Ranges are what cost guides published when read on checked_on; they are typical prices, not quotes. Columbus figures where the publisher printed them, U.S. figures otherwise. Left out on purpose: Fixr outlet ($18-$34) and switch ($33-$61) rows, which exclude the service-call minimum; Homeyou Columbus figures (lead-generation estimates); a HomeGuide EV tax-credit claim not checked against IRS.gov.",
+ "_about": "Fair-price guide for guide.vethomeguard.org/contractors/fair-prices.html. Ranges are what cost guides published when read on checked_on; they are typical prices, not quotes. Columbus figures where the publisher printed them, U.S. figures otherwise. Left out on purpose: Fixr outlet ($18-$34) and switch ($33-$61) rows, which exclude the service-call minimum; Homeyou Columbus figures (lead-generation estimates); a HomeGuide EV tax-credit claim not checked against IRS.gov. Trades with their own checked_on (accessibility, home care, lawn and snow) were read on that date; they serve guide.vethomeguard.org/help-at-home/ too.",
  "checked_on": "2026-11-27",
  "hourly": [
   {
@@ -933,6 +933,149 @@
       "url": "https://homeguide.com/costs/tree-removal-cost"
      },
      "note": "HomeGuide: $30 to $60 more for each added stump."
+    }
+   ]
+  },
+  {
+   "key": "accessibility",
+   "label": "Accessibility changes",
+   "icon": "access",
+   "checked_on": "2026-11-28",
+   "jobs": [
+    {
+     "job": "Wheelchair ramp, installed",
+     "unit": "per linear foot",
+     "low": 100,
+     "high": 250,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "How much does a wheelchair ramp cost?",
+      "url": "https://homeguide.com/costs/wheelchair-ramp-cost"
+     },
+     "note": "HomeGuide: depends on the material. A permanent ramp runs $1,000 to $6,000 or more in all."
+    },
+    {
+     "job": "Threshold ramp for a doorway",
+     "unit": "each",
+     "low": 50,
+     "high": 450,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "How much does a wheelchair ramp cost?",
+      "url": "https://homeguide.com/costs/wheelchair-ramp-cost"
+     }
+    },
+    {
+     "job": "Modular ramp (semi-permanent)",
+     "unit": "per job",
+     "low": 350,
+     "high": 3000,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "How much does a wheelchair ramp cost?",
+      "url": "https://homeguide.com/costs/wheelchair-ramp-cost"
+     }
+    },
+    {
+     "job": "Grab bar, installed",
+     "unit": "per bar",
+     "low": 200,
+     "high": 350,
+     "typical": 300,
+     "area": "U.S.",
+     "source": {
+      "publisher": "Angi",
+      "title": "How Much Does Grab Bar Installation Cost?",
+      "url": "https://www.angi.com/articles/grab-bar-installation-cost.htm"
+     }
+    }
+   ]
+  },
+  {
+   "key": "home-care",
+   "label": "Home care",
+   "icon": "heart",
+   "checked_on": "2026-11-28",
+   "jobs": [
+    {
+     "job": "Home care aide (non-medical)",
+     "unit": "per hour",
+     "low": null,
+     "high": null,
+     "typical": 35,
+     "area": "U.S.",
+     "source": {
+      "publisher": "CareScout",
+      "title": "CareScout Releases 2025 Cost of Care Survey Results",
+      "url": "https://www.businesswire.com/news/home/20260302283881/en"
+     },
+     "note": "CareScout’s 2025 survey. Its Ohio figures put a year of care at 44 hours a week at $77,792, which works out to about $34 an hour."
+    }
+   ]
+  },
+  {
+   "key": "yard",
+   "label": "Lawn and snow",
+   "icon": "snow",
+   "checked_on": "2026-11-28",
+   "jobs": [
+    {
+     "job": "Lawn mowing, one visit",
+     "unit": "per visit",
+     "low": 41,
+     "high": 170,
+     "typical": 100,
+     "area": "Columbus",
+     "source": {
+      "publisher": "Angi",
+      "title": "How Much Does Lawn Mowing Cost in Columbus, OH?",
+      "url": "https://www.angi.com/articles/how-much-does-lawn-mowing-cost/oh/columbus"
+     }
+    },
+    {
+     "job": "Snow plowing a driveway, one visit",
+     "unit": "per visit",
+     "low": 30,
+     "high": 70,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "How much does snow removal cost?",
+      "url": "https://homeguide.com/costs/snow-removal-cost"
+     }
+    },
+    {
+     "job": "Snow shoveling, blowing or plowing by the hour",
+     "unit": "per hour",
+     "low": 25,
+     "high": 75,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "How much does snow removal cost?",
+      "url": "https://homeguide.com/costs/snow-removal-cost"
+     }
+    },
+    {
+     "job": "Snow removal for the whole season",
+     "unit": "per season",
+     "low": 200,
+     "high": 600,
+     "typical": null,
+     "area": "U.S.",
+     "source": {
+      "publisher": "HomeGuide",
+      "title": "How much does snow removal cost?",
+      "url": "https://homeguide.com/costs/snow-removal-cost"
+     }
     }
    ]
   }

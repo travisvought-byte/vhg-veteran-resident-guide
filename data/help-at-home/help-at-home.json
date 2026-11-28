@@ -1,0 +1,349 @@
+{
+ "_about": "Help at home for guide.vethomeguard.org/help-at-home/ (scripts/build_help_at_home.py). services: the four kinds of help Travis named (November 28, 2026). counties: where providers are listed, Morrow and Knox first; add a county with its call-first offices and the provider list grows to it. programs: who may pay, each with the official page it was read on and the date; amounts are what the page printed. providers: people and businesses who have accepted a listing. Never add one before they have accepted (accepted_on), and never from a registry or a search. A provider row: id, name, services (keys below), counties (keys below), phone, town, veteran (true if veteran-owned), vouched_by (who recommended them, in words the provider approved), accepted_on (YYYY-MM-DD), rates (their own words), license, insurance, va_work (programs whose jobs they take, by key).",
+ "checked_on": "2026-11-28",
+ "services": [
+  {
+   "key": "repairs",
+   "label": "Home repairs",
+   "icon": "wrench",
+   "short": "Plumbing, electrical, heating, roofs, gutters, steps and the small jobs that pile up.",
+   "examples": [
+    "A leak or a running toilet",
+    "No heat or no hot water",
+    "A loose railing or a broken step",
+    "Gutters, siding and roof leaks"
+   ],
+   "price_key": "hourly:Handyman company",
+   "prices_href": "../contractors/fair-prices.html#hourly",
+   "also": [
+    {
+     "text": "Veteran-owned Ohio contractors from the SBA registry",
+     "href": "../contractors/"
+    }
+   ]
+  },
+  {
+   "key": "accessibility",
+   "label": "Accessibility changes",
+   "icon": "home",
+   "short": "Ramps, grab bars, roll-in showers, wider doors and lower counters, so you can stay in your home.",
+   "examples": [
+    "A ramp to the front or back door",
+    "Grab bars by the toilet and tub",
+    "A roll-in or walk-in shower",
+    "Lower sinks and counters"
+   ],
+   "price_key": "accessibility",
+   "prices_href": "../contractors/fair-prices.html#price-accessibility",
+   "also": [
+    {
+     "text": "Home changes and VA grants, explained on Mobility Talk",
+     "href": "https://mobilitytalk.org/home-modifications.html"
+    },
+    {
+     "text": "Ramps and getting in and out of the house (Mobility Talk)",
+     "href": "https://mobilitytalk.org/ramps-home-access.html"
+    }
+   ]
+  },
+  {
+   "key": "caregiving",
+   "label": "Caregiving at home",
+   "icon": "heart",
+   "short": "Help with bathing, dressing, meals and errands, and a break for the family member who does it every day.",
+   "examples": [
+    "Help with bathing and dressing",
+    "Meals, laundry and light housework",
+    "A few hours so the caregiver can rest",
+    "Rides to appointments"
+   ],
+   "price_key": "home-care",
+   "prices_href": "../contractors/fair-prices.html#price-home-care",
+   "also": [
+    {
+     "text": "Paying a family caregiver (Mobility Talk)",
+     "href": "https://mobilitytalk.org/paid-family-caregiver.html"
+    },
+    {
+     "text": "A break for the caregiver (Mobility Talk)",
+     "href": "https://mobilitytalk.org/caregiver-respite.html"
+    }
+   ]
+  },
+  {
+   "key": "yard",
+   "label": "Yard and snow",
+   "icon": "snow",
+   "short": "Mowing, leaves, and clearing snow and ice from the walk and driveway.",
+   "examples": [
+    "Mowing through the summer",
+    "Raking leaves in the fall",
+    "Clearing the driveway and walk after a snow",
+    "Salting steps so nobody falls"
+   ],
+   "price_key": "yard",
+   "prices_href": "../contractors/fair-prices.html#price-yard",
+   "also": []
+  }
+ ],
+ "counties": [
+  {
+   "key": "morrow",
+   "name": "Morrow County",
+   "page": "counties/oh/morrow-county.html",
+   "call_first": [
+    {
+     "name": "Morrow County Veterans Service Office",
+     "phone": "419-946-1914",
+     "url": "https://morrowcountyveterans.com/",
+     "for": "Free help with VA benefits, including the pension that can pay for help at home. Ask what county help there is for veterans."
+    },
+    {
+     "name": "Area Agency on Aging District 5",
+     "phone": "800-860-5799",
+     "url": "https://www.aaa5ohio.org/services/veteran-directed-care-vdc/",
+     "for": "Runs Veteran-Directed Care for this area, and is the starting point for meals, rides, caregiver support and help at home for older adults."
+    },
+    {
+     "name": "Seniors on Center (Mount Gilead)",
+     "phone": "419-946-4191",
+     "url": "https://seniorsoncenter.org/",
+     "for": "Meals, home-delivered meals and rides for Morrow residents 60 and older. When we last checked, in October 2026, its homemaker help was paused for lack of staff."
+    },
+    {
+     "name": "HelpLine 211",
+     "phone": "211",
+     "url": "https://helplinedelmor.org/211-2/",
+     "for": "Ask for local help with repairs, utilities and other needs."
+    }
+   ]
+  },
+  {
+   "key": "knox",
+   "name": "Knox County",
+   "page": "counties/oh/knox-county.html",
+   "call_first": [
+    {
+     "name": "Knox County Veterans Services Office",
+     "phone": "740-393-6742",
+     "url": "https://kcvso.com/",
+     "for": "Free help with VA benefits, including the pension that can pay for help at home. Ask what county help there is for veterans."
+    },
+    {
+     "name": "Area Agency on Aging District 5",
+     "phone": "800-860-5799",
+     "url": "https://www.aaa5ohio.org/services/veteran-directed-care-vdc/",
+     "for": "Runs Veteran-Directed Care for this area, and is the starting point for meals, rides, caregiver support and help at home for older adults."
+    },
+    {
+     "name": "The Station Break (Mount Vernon)",
+     "phone": "740-397-2417",
+     "url": "https://stationbreak.org/",
+     "for": "Meals, rides and activities for Knox residents 60 and older."
+    },
+    {
+     "name": "Pathways 211",
+     "phone": "211",
+     "url": "https://pathwaysofcentralohio.com/211-crisis-hotline-information-center/",
+     "for": "Ask for local help with repairs, utilities and other needs."
+    }
+   ]
+  }
+ ],
+ "caregiver_line": {
+  "name": "VA Caregiver Support Line",
+  "phone": "855-260-3274",
+  "url": "https://www.caregiver.va.gov/support/support_benefits.asp"
+ },
+ "programs": [
+  {
+   "key": "hisa",
+   "name": "HISA grant (Home Improvements and Structural Alterations)",
+   "short": "HISA grant",
+   "from": "VA health care",
+   "icon": "home",
+   "pays": {
+    "accessibility": "yes"
+   },
+   "what": "Changes your VA doctor says you need for your health or to get around your home: ramps, roll-in showers, lower sinks and counters, a way in and out of the house, and electrical or plumbing work for medical equipment.",
+   "not": "Not routine upkeep such as a new roof, furnace or air conditioner, and not portable ramps, porch lifts, stair glides, hot tubs, decks or new construction.",
+   "who": "Veterans in VA health care. Up to $6,800 over your lifetime if the change is for a service-connected disability, or you are rated 50 percent or more; up to $2,000 for everyone else.",
+   "start": "Ask your VA doctor for a HISA prescription. The application is VA Form 10-0103, with an itemized estimate and a color photo of the area to change. VA can pay part up front if you ask on the form.",
+   "source": {
+    "title": "VA Prosthetic and Sensory Aids Service: HISA",
+    "url": "https://www.prosthetics.va.gov/psas/hisa2.asp"
+   }
+  },
+  {
+   "key": "sah",
+   "name": "Adapted housing grants (SAH and SHA)",
+   "short": "SAH and SHA grants",
+   "from": "VA benefits",
+   "icon": "building",
+   "pays": {
+    "accessibility": "yes"
+   },
+   "what": "Bigger changes, or building or buying a home that works with a serious disability. You can use the grant up to 6 times over your lifetime.",
+   "not": "",
+   "who": "Veterans and service members with certain severe service-connected disabilities, such as the loss or loss of use of limbs, blindness, or severe burns. VA’s page lists them all.",
+   "amounts": [
+    {
+     "label": "Specially Adapted Housing (SAH) grant",
+     "amount": 133042
+    },
+    {
+     "label": "Special Housing Adaptation (SHA) grant",
+     "amount": 26654
+    },
+    {
+     "label": "Temporary Residence Adaptation (TRA), if you qualify for SAH",
+     "amount": 53585
+    },
+    {
+     "label": "Temporary Residence Adaptation (TRA), if you qualify for SHA",
+     "amount": 9568
+    }
+   ],
+   "start": "Apply on VA.gov. A county veterans service officer can help, free. You can get a HISA grant too.",
+   "source": {
+    "title": "VA.gov: Disability housing grants for Veterans",
+    "url": "https://www.va.gov/housing-assistance/disability-housing-grants/"
+   },
+   "amounts_caption": "The most VA will pay in fiscal year 2027. VA can change it each year with building costs."
+  },
+  {
+   "key": "hha",
+   "name": "Homemaker and home health aide care",
+   "short": "Home health aide",
+   "from": "VA health care",
+   "icon": "medical",
+   "pays": {
+    "caregiving": "yes"
+   },
+   "what": "A trained aide comes to your home to help with bathing, dressing, eating, and errands such as grocery shopping. Aides are supervised by a registered nurse; they are not nurses.",
+   "not": "VA sets up the aide through an agency it approves. To choose your own helpers, ask about Veteran-Directed Care.",
+   "who": "Veterans in VA health care who meet the clinical need for it, where it is available. A copay may apply, depending on your service-connected status.",
+   "start": "Talk with a VA social worker. They look at what you need and set it up.",
+   "source": {
+    "title": "VA Geriatrics and Extended Care: Homemaker and Home Health Aide Care",
+    "url": "https://www.va.gov/geriatrics/pages/Homemaker_and_Home_Health_Aide_Care.asp"
+   }
+  },
+  {
+   "key": "vdc",
+   "name": "Veteran-Directed Care",
+   "short": "Veteran-Directed Care",
+   "from": "VA health care",
+   "icon": "user-plus",
+   "pays": {
+    "caregiving": "yes"
+   },
+   "what": "You get a budget for care and hire your own helpers, who can include a family member or a neighbor. A counselor helps with the hiring and paperwork.",
+   "not": "The budget pays for approved care, not cash to spend on anything.",
+   "who": "Veterans in VA health care who need help with daily activities such as bathing, dressing or fixing meals, who are isolated, or whose caregiver is worn down, where the program is offered.",
+   "start": "Ask your VA social worker whether it is offered where you live. In Morrow and Knox counties, the Area Agency on Aging District 5 runs it: 800-860-5799.",
+   "source": {
+    "title": "VA Geriatrics and Extended Care: Veteran-Directed Care",
+    "url": "https://www.va.gov/geriatrics/pages/Veteran-Directed_Care.asp"
+   }
+  },
+  {
+   "key": "respite",
+   "name": "Respite care",
+   "short": "Respite care",
+   "from": "VA health care",
+   "icon": "calendar",
+   "pays": {
+    "caregiving": "yes"
+   },
+   "what": "VA pays for care for a short time so the family caregiver can rest, run errands or travel for a few days. It can be an aide at home, adult day care or a short nursing home stay.",
+   "not": "",
+   "who": "Veterans in VA health care who meet the clinical need for it, where it is available. A copay may apply.",
+   "start": "Ask your VA social worker or case manager. The form is VA Form 10-10EC, the application for extended care benefits.",
+   "source": {
+    "title": "VA Geriatrics and Extended Care: Respite Care",
+    "url": "https://www.va.gov/geriatrics/pages/Respite_Care.asp"
+   }
+  },
+  {
+   "key": "pcafc",
+   "name": "Family caregiver program (PCAFC)",
+   "short": "Family caregiver stipend",
+   "from": "VA Caregiver Support Program",
+   "icon": "people",
+   "pays": {
+    "caregiving": "yes"
+   },
+   "what": "A monthly payment to the family caregiver, health insurance through CHAMPVA if they have none, counseling, and at least 30 days of respite care a year.",
+   "not": "",
+   "who": "Veterans with a service-connected disability rating of 70 percent or more who need in-person care for at least six months in a row.",
+   "start": "Apply with VA Form 10-10CG. The VA Caregiver Support Line (855-260-3274) can help with the form or check on it.",
+   "source": {
+    "title": "VA Caregiver Support Program: Program of Comprehensive Assistance for Family Caregivers",
+    "url": "https://www.caregiver.va.gov/support/support_benefits.asp"
+   }
+  },
+  {
+   "key": "pension",
+   "name": "VA pension with Aid and Attendance or Housebound",
+   "short": "Aid and Attendance",
+   "from": "VA benefits",
+   "icon": "wallet",
+   "pays": {
+    "repairs": "any",
+    "accessibility": "any",
+    "caregiving": "yes",
+    "yard": "any"
+   },
+   "what": "Extra monthly pension for wartime veterans and survivors who need help with daily activities or are mostly stuck at home. It is money you spend as you choose, so it can pay a caregiver, a handyman or someone to clear the snow. VA disability compensation is yours to spend the same way.",
+   "not": "",
+   "who": "Wartime veterans and surviving spouses with limited income and savings who need the help.",
+   "start": "A county veterans service officer can file it with you, free.",
+   "guide_href": "../va-pension-aid-attendance.html",
+   "source": {
+    "title": "VA.gov: Aid and Attendance benefits and Housebound allowance",
+    "url": "https://www.va.gov/pension/aid-attendance-housebound/"
+   },
+   "guide_text": "Our pension page explains who qualifies and how to apply."
+  },
+  {
+   "key": "usda504",
+   "name": "USDA home repair loans and grants (Section 504)",
+   "short": "USDA repair loan or grant",
+   "from": "U.S. Department of Agriculture",
+   "icon": "sprout",
+   "pays": {
+    "repairs": "yes",
+    "accessibility": "yes"
+   },
+   "what": "Loans to repair, improve or modernize a home, and grants to fix health and safety hazards or make a home accessible. Loans go up to $40,000 at a fixed 1 percent over 20 years; grants go up to $10,000. You can combine them for up to $50,000.",
+   "not": "Grants must be paid back if you sell the home within three years.",
+   "who": "Homeowners in rural areas with household income under the limit USDA sets for their county; grants are for people 62 or older. Military service isn’t needed. Much of Morrow and Knox counties counts as rural; USDA’s map checks your address.",
+   "start": "Call the USDA Rural Development office for Ohio, listed on the program page.",
+   "source": {
+    "title": "USDA Rural Development: Single Family Housing Repair Loans and Grants in Ohio",
+    "url": "https://www.rd.usda.gov/programs-services/single-family-housing-programs/single-family-housing-repair-loans-grants-26"
+   }
+  },
+  {
+   "key": "chore",
+   "name": "Ohio Medicaid home maintenance and chore",
+   "short": "Ohio Medicaid chore help",
+   "from": "Ohio Medicaid",
+   "icon": "clipboard",
+   "pays": {
+    "repairs": "some",
+    "yard": "some"
+   },
+   "what": "Minor home repairs, including inspecting and repairing furnaces, pest control, and yard work that isn’t routine, including snow removal, when it keeps you safe at home. Up to $10,000 a year in all.",
+   "not": "Not routine yard work such as weekly mowing. The work must be done by a provider Ohio has approved for it.",
+   "who": "People on one of Ohio Medicaid’s home care programs for those who need a nursing-home level of care. Military service isn’t needed.",
+   "start": "Ask the Area Agency on Aging District 5 (800-860-5799) whether you qualify for a Medicaid home care program, or your case manager if you already have one.",
+   "source": {
+    "title": "Ohio Administrative Code 5160-44-12: home maintenance and chore services",
+    "url": "https://codes.ohio.gov/ohio-administrative-code/rule-5160-44-12"
+   }
+  }
+ ],
+ "providers": []
+}
