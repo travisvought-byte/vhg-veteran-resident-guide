@@ -3,7 +3,8 @@
 data/landing/states.json holds the home page and one entry per state: a short title hook, an intro of a
 sentence or two written to that state's veterans and families, a search description and the programs the
 intro names (mentions). data/landing/pages.json holds the other entry pages (facilities, flyers, sharing
-kits and so on). data/landing/chooser.json is the "I'm here as..." chooser on the home and state pages.
+kits and so on). data/landing/chooser.json is the "I'm here as..." chooser on the home and state pages, with the
+"More help made for you" list under it: who each of the other free guides is built for (November 28, 2026).
 
 Every program an intro names must be one of that state's own records, and intros carry no numbers, so they
 cannot drift into counts of listings. Run by scripts/build_public.py through unified_guide.py and apply_pages().
@@ -12,6 +13,9 @@ import json
 import re
 from html import escape
 from pathlib import Path
+from urllib.parse import urlsplit
+
+import related_guides
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = 'https://guide.vethomeguard.org/'
@@ -94,7 +98,29 @@ def chooser(code, root=ROOT):
         items.append(f'<li{hidden}><a href="{e(href)}" data-who="{e(o["id"])}"{attrs}><strong>{text_html(o["label"])}</strong>'
                      f'<span>{text_html(o["hint"])}</span></a></li>')
     return ('<section id="who-start" class="who-start" aria-labelledby="who-title"><h2 id="who-title">' + text_html(c['title']) + '</h2>'
-            '<ul class="who-options">' + ''.join(items) + '</ul></section>')
+            '<ul class="who-options">' + ''.join(items) + '</ul>' + more_help(code, c) + '</section>')
+
+
+def more_help(code, c):
+    """The "More help made for you" list under the chooser (owner direction, November 28, 2026: guides link to each other by
+    how visitors identify). Each option names who it is for and the free guide built for them, on that guide's own
+    site (scripts/related_guides.py). Options for one state stay in the page, hidden elsewhere, like the chooser's."""
+    more = c.get('more_help')
+    if not more:
+        return ''
+    items = []
+    for o in more['options']:
+        host = urlsplit(o['href']).netloc
+        assert o['href'].startswith('https://') and host in related_guides.HOSTS, o['id'] + ': not one of the free guides ' + o['href']
+        attrs, hidden = '', ''
+        if o.get('states'):
+            attrs = ' data-states="' + e(' '.join(o['states'])) + '"'
+            hidden = '' if code in o['states'] else ' hidden'
+        items.append(f'<li{hidden}><a href="{e(o["href"])}" data-guide="{e(o["id"])}"{attrs}><strong>{text_html(o["label"])}</strong>'
+                     f'<span>{text_html(o["hint"])}</span></a></li>')
+    intro = f'<p class="more-help-intro">{text_html(more["intro"])}</p>' if more.get('intro') else ''
+    return (f'<h3 id="more-help-title" class="more-help-title">{text_html(more["title"])}</h3>{intro}'
+            '<ul class="who-options more-help">' + ''.join(items) + '</ul>')
 
 
 def set_meta(html, key, value, attr='property'):

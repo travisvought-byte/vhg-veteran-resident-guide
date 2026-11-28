@@ -90,8 +90,10 @@ def page(data):
         body += f'<section id="{e(s["id"])}" aria-labelledby="{e(s["id"])}-title"><h2 id="{e(s["id"])}-title">{e(s["title"])}</h2>'
         body += ''.join(card(i, checked) for i in s['items']) + '</section>'
     oh = data['ohio']
+    # Other free guides where they help an Ohio reader (owner direction, November 28, 2026: guides link to each other).
+    see_also = ''.join(f'<p>{e(s["before"])}<a href="{e(s["url"])}">{e(s["label"])}</a>{e(s["after"])}</p>' for s in oh.get('see_also', []))
     body += ('<section id="ohio" class="ohio" aria-labelledby="ohio-title"><h2 id="ohio-title">In Ohio</h2>'
-             f'<p>{e(oh["intro"])}</p>' + ''.join(card(i, checked) for i in oh['items']) + '</section>')
+             f'<p>{e(oh["intro"])}</p>{see_also}' + ''.join(card(i, checked) for i in oh['items']) + '</section>')
     ld = json.dumps({'@context': 'https://schema.org', '@type': 'WebPage', 'name': TITLE, 'description': DESC,
                      'url': URL, 'inLanguage': 'en', 'dateModified': checked,
                      'isPartOf': {'@type': 'WebSite', 'name': 'Veteran Resource Guide', 'url': 'https://guide.vethomeguard.org/'}},

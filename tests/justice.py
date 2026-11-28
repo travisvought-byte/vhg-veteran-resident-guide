@@ -2,7 +2,8 @@
 """Veterans in the justice system (guide.vethomeguard.org/justice.html): every item names at least one official
 https source and a "Report a problem" link; the page carries the 38 CFR 3.665 and 3.666 rules, the apportionment
 form, VJO, HCRV, SSVF and HUD-VASH, an Ohio section, the visit counter and one checked date; it is in the sitemap;
-every state page links to it; and record clearing points to the cannabis site's Ohio walkthrough."""
+every state page links to it; record clearing points to the cannabis site's Ohio walkthrough; and the Ohio section
+points to Abuse of Office's Ohio rights page."""
 import json
 import re
 import sys
@@ -30,6 +31,9 @@ for item in items:
         digits = re.sub(r'\D', '', item['phone']['display'])
         assert item['phone']['tel'].endswith(digits), (item['id'], 'phone link matches the printed number')
 
+# Other free guides an Ohio reader is pointed to (November 28, 2026): plain text around one https link.
+for s in data['ohio'].get('see_also', []):
+    assert urlsplit(s['url']).scheme == 'https' and '<' not in s['before'] + s['label'] + s['after'], s
 page = (ROOT / 'justice.html').read_text(encoding='utf-8')
 landing = json.loads((ROOT / 'data/landing/pages.json').read_text(encoding='utf-8'))['pages']['justice.html']
 assert f'<title>{build_justice.e(landing["title"])}</title>' in page, 'justice.html is out of date: run python3 scripts/build_public.py'
@@ -37,7 +41,7 @@ chooser = json.loads((ROOT / 'data/landing/chooser.json').read_text(encoding='ut
 assert any(o.get('href') == 'justice.html' for o in chooser['options']), 'the home chooser offers the justice page'
 for needed in ['section-3.665', 'section-3.666', 'about-form-21-0788', 'veterans-justice-outreach/vjo-contacts',
                'hcrv/hcrv-contacts-2', 'section-62.11', '2024-17957', 'section-341.43', 'SpecializedDocketsList',
-               'https://the-reefer.com/expungement.html', 'assets/analytics.js', 'id="ohio"', '<link rel="canonical" href="https://guide.vethomeguard.org/justice.html">']:
+               'https://the-reefer.com/expungement.html', 'https://abuseofoffice.org/rights.html', 'assets/analytics.js', 'id="ohio"', '<link rel="canonical" href="https://guide.vethomeguard.org/justice.html">']:
     assert needed in page, needed
 assert page.count('Report a problem') >= len(items), 'every listing has Report a problem'
 assert '<meta name="description" content="' in page and '<title>' in page

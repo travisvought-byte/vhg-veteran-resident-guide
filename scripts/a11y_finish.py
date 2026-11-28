@@ -16,6 +16,8 @@ They are decoration only: the words beside them carry the meaning, and screen re
 import re
 from urllib.parse import quote
 
+import related_guides
+
 # Lucide icon drawings (24x24, 2px round strokes), ISC license.
 ICONS = {
     'phone': '<path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/>',
@@ -103,9 +105,10 @@ def finish_named(name, text):
     """Finish one generated file by its published path. Test fixtures stay exactly as their tests expect,
     and the printable flyer and packet views stay as they are, so their PDFs are not all rebuilt for no
     visible change. Scripts that also write pages on their own (build_flyers_page.py, build_packets.py)
-    call this too, so their --check agrees with build_public.py."""
+    call this too, so their --check agrees with build_public.py. Every finished page also gets the
+    "More free guides" line in its footer (scripts/related_guides.py; November 28, 2026)."""
     if name.endswith('.html') and isinstance(text, str) and not name.startswith(('tests/', 'flyers/')):
-        return finish(text)
+        return finish(related_guides.add(name, text))
     return text
 
 

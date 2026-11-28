@@ -108,5 +108,66 @@
     "OH"
    ]
   }
- ]
+ ],
+ "more_help": {
+  "_about": "Owner direction, November 28, 2026: guides link to each other by how visitors identify. Shown under the chooser on the home page and every state page: each option names who it is for and the free guide built for them. Every href is one of the guides in scripts/related_guides.py (or a page on one). An option with states shows only in those states.",
+  "title": "More help made for you",
+  "intro": "Free guides from the same team, each built for the people it names.",
+  "options": [
+   {
+    "id": "nina",
+    "label": "Native American, Alaska Native or Indigenous: Nina's Map",
+    "hint": "Indian Health Service, Native veterans' help, housing and legal aid",
+    "href": "https://ninas-map.com/"
+   },
+   {
+    "id": "mob",
+    "label": "A veteran with a disability, or a caregiver: Mobility Talk",
+    "hint": "Equipment, home changes, rides, benefits and rights in every state",
+    "href": "https://mobilitytalk.org/"
+   },
+   {
+    "id": "ymt",
+    "label": "A military mom, parent or family: Yoga Mom Talk",
+    "hint": "Food, child care, health and baby supplies near you",
+    "href": "https://www.yogamomtalk.com/"
+   },
+   {
+    "id": "aoo",
+    "label": "Arrested, jailed or in court in Ohio: your rights (Abuse of Office)",
+    "hint": "Plain-language rights, with the Ohio and federal law behind each",
+    "href": "https://abuseofoffice.org/rights.html",
+    "states": [
+     "OH"
+    ]
+   },
+   {
+    "id": "reefer",
+    "label": "A veteran asking about medical cannabis: The Reefer",
+    "hint": "Cannabis laws and medical patient rules in every state",
+    "href": "https://the-reefer.com/"
+   },
+   {
+    "id": "ohioweed",
+    "label": "An Ohio veteran who grows at home: OhioWeed",
+    "hint": "Classes and a growers group, veterans teaching veterans",
+    "href": "https://ohioweed.org/veteran-grow.html",
+    "states": [
+     "OH"
+    ]
+   },
+   {
+    "id": "bingo",
+    "label": "An older veteran looking for bingo or a senior center: Find Bingo",
+    "hint": "Games, senior centers and activities near you",
+    "href": "https://www.findbingo.org/"
+   },
+   {
+    "id": "earth",
+    "label": "Figuring out everyday adult life: Earth Rules",
+    "hint": "Taxes, credit, moving, checkups and other adult know-how",
+    "href": "https://earthrules.org/"
+   }
+  ]
+ }
 }

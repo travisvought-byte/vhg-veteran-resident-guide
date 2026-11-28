@@ -77,9 +77,18 @@ table{width:100%;border-collapse:collapse;margin:12px 0;background:#fff;font-siz
 '''
 
 
+# Other free guides from the same team that help a veteran in care and the family (owner direction, November 28, 2026:
+# guides link to each other by how visitors identify).
+SISTER_GUIDES = [
+    ('https://mobilitytalk.org/', 'Mobility Talk', 'Wheelchairs and equipment, home changes, rides and in-home help for people with disabilities, in every state'),
+    ('https://www.findbingo.org/', 'Find Bingo', 'Bingo games and senior centers near you, for a reason to get out and see people'),
+]
+
+
 def related(current):
     items = ''.join(f'<li><a href="{t["slug"]}"><strong>{escape(t["short"])}</strong></a> · {escape(t["line"])}</li>'
                     for t in TOPICS if t['slug'] != current)
+    items += ''.join(f'<li><a href="{url}"><strong>{escape(name)}</strong></a> · {escape(line)}</li>' for url, name, line in SISTER_GUIDES)
     return f'<h2 id="related">More for veterans in care and their families</h2><ul class="related">{items}</ul>'
 
 
