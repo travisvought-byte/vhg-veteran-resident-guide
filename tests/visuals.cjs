@@ -29,12 +29,13 @@ function walk(dir, out = []) {
 }
 const pages = walk('');
 let using = 0;
-const icon = /<svg class="vi" width="24" height="24" aria-hidden="true" focusable="false"><use href="((?:\.\.\/)*)assets\/visuals\.svg#(v-[a-z-]+)"\/><\/svg>/g;
+const icon = /<svg class="vi" width="24" height="24" aria-hidden="true" focusable="false"><use href="((?:\.\.\/)*|\/)assets\/visuals\.svg#(v-[a-z-]+)"\/><\/svg>/g;
 for (const rel of pages) {
   const text = read(rel);
   if (!text.includes('class="vi"')) continue;
   using++;
-  const up = '../'.repeat(rel.split('/').length - 1);
+  // 404.html is served at whatever address was not found, at any depth, so it points at the site root (/).
+  const up = rel === '404.html' ? '/' : '../'.repeat(rel.split('/').length - 1);
   const raw = (text.match(/<svg class="vi"/g) || []).length;
   const ok = [...text.matchAll(icon)];
   assert.equal(ok.length, raw, rel + ': every guide icon is hidden from screen readers and cannot take focus');
@@ -45,6 +46,21 @@ for (const rel of pages) {
   assert(text.includes(`<link rel="stylesheet" href="${up}assets/visuals.css">`), rel + ': links assets/visuals.css');
 }
 assert(using > 3000, 'county pages, VA pages and the topic pages use the icons (' + using + ')');
+
+// The page for bad links (404.html): GitHub Pages serves it at whatever address was not found, at any depth, so every
+// file and link on it starts at the site root; it has the guide's look, a skip link, and stays out of search results.
+{
+  const text = read('404.html');
+  const d = new JSDOM(text).window.document;
+  assert(d.querySelector('meta[name="robots"][content="noindex"]'), '404.html: kept out of search results');
+  assert(d.querySelector('a.a11y-skip[href="#main"]') && d.querySelector('main#main') && d.querySelector('header nav[aria-label="Main"]') && d.querySelector('footer'), '404.html: skip link, landmarks and the guide header');
+  for (const el of d.querySelectorAll('[href],[src]')) {
+    const ref = el.getAttribute('href') || el.getAttribute('src');
+    assert(/^(\/|#|https:|mailto:)/.test(ref), '404.html: ' + ref + ' starts at the site root, so it works at any depth');
+  }
+  for (const want of ['/', '/#place-start', '/counties/', '/family-guide.html', '/#urgent-help']) assert(d.querySelector(`main a[href="${want}"]`), '404.html: links to ' + want);
+  assert(!read('sitemap.xml').includes('404.html'), '404.html: not in the sitemap');
+}
 
 // Pages with diagrams and charts, read whole.
 const dom = rel => new JSDOM(read(rel)).window.document;
