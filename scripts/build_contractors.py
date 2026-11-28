@@ -89,7 +89,7 @@ STYLE = '''<style>
 .biz h3{margin:0 0 4px;font-size:19px}.biz p{margin:6px 0}.biz dl{margin:8px 0;display:grid;grid-template-columns:max-content 1fr;gap:2px 10px}
 .biz dt{font-weight:650}.biz dd{margin:0}.dba{color:#3d4f48;font-size:15px}
 .mark{display:inline-flex;gap:6px;align-items:center;background:#e9f1eb;color:#20402f;border:1px solid #7f9c8b;border-radius:14px;padding:2px 10px;font-size:14px;font-weight:650}
-.mark .vi{width:18px;height:18px}.biz .more{font-size:15px}.biz .more a{display:inline-block;min-height:32px}
+.mark .vi{width:18px;height:18px}.marks{display:flex;flex-wrap:wrap;gap:6px}.mark-local{background:#eef1f8;color:#1f2f52;border-color:#7d8db0}.mark-rates{background:#fff4d8;color:#4d3a08;border-color:#a8862e}.mark-prog{background:#f1ecf7;color:#3a2754;border-color:#8f7bab}.biz.local{border-top:4px solid var(--gold)}.prog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}.prog p{margin:6px 0}.biz .more{font-size:15px}.biz .more a{display:inline-block;min-height:32px}
 .trade-h{display:flex;gap:10px;align-items:center}.trade-h .vi{width:30px;height:30px;color:var(--navy)}
 .price-table{border-collapse:collapse;width:100%;background:#fff;font-size:16px}
 .price-table th,.price-table td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
@@ -186,9 +186,87 @@ def card(r, labels, checked):
     return ''.join(out)
 
 
+def local_card(p, labels, progs):
+    """A business that gave VHG its details directly. Marks show only what it told us: veteran-owned (confirmed
+    privately), rates on file, and VA programs it says it has done paid work through."""
+    trades = ' '.join([p['main_trade']] + p['other_trades'])
+    name_key = ' '.join([p['name'], p.get('contact', ''), p['city'], p.get('county', '')]).lower()
+    out = [f'<article class="biz local" id="biz-{e(p["id"])}" data-trade="{e(trades)}" data-area="{e(p["area"] or "none")}" data-name="{e(name_key)}">',
+           f'<h3>{e(p["name"])}</h3>']
+    if p.get('contact'):
+        out.append(f'<p class="dba">{e(p["contact"])}</p>')
+    marks = [f'<span class="mark mark-local">{icon("user", UP)}Gave us their details</span>']
+    if p['veteran'] is True:
+        marks.append(f'<span class="mark">{icon("shield", UP)}Veteran-owned</span>')
+    if p['rates']:
+        marks.append(f'<span class="mark mark-rates">{icon("dollar", UP)}Rates on file</span>')
+    for k in p['programs_done']:
+        marks.append(f'<span class="mark mark-prog">{icon("check", UP)}Has done {e(progs[k]["short"])} work</span>')
+    out.append('<p class="marks">' + ' '.join(marks) + '</p><dl>')
+    out.append(f'<dt>Main trade</dt><dd>{e(labels[p["main_trade"]])}</dd>')
+    if p['other_trades']:
+        out.append(f'<dt>Also does</dt><dd>{e(", ".join(labels[k] for k in p["other_trades"]))}</dd>')
+    place = p['city'] + (f' ({p["county"]} County)' if p.get('county') else '')
+    out.append(f'<dt>Based in</dt><dd>{e(place)}. Ask whether they work in your town.</dd>')
+    if p['phone']:
+        out.append(f'<dt>Phone</dt><dd><a href="tel:{p["phone"].replace("-", "")}">{e(p["phone"])}</a></dd>')
+    if p.get('website'):
+        shown = p['website'].split('://', 1)[1].rstrip('/')
+        out.append(f'<dt>Website</dt><dd><a href="{e(p["website"])}" rel="noopener nofollow">{e(shown)}</a></dd>')
+    if p['rates']:
+        r = p['rates']
+        bits = [f'{label}: {e(r[key])}' for key, label in (('hourly', 'Hourly'), ('trip', 'Trip or service fee'),
+                                                           ('house_call', 'Veteran or senior house call'), ('after_hours', 'After hours')) if r.get(key)]
+        out.append(f'<dt>Rates they gave us</dt><dd>{"; ".join(bits)}. Compare with the <a href="fair-prices.html">fair price ranges</a>.</dd>')
+    else:
+        out.append('<dt>Rates</dt><dd>Not shared with us yet. Ask on the call, and ask about the trip fee.</dd>')
+    lic = []
+    if p.get('license_shown'):
+        lic.append(f'Ohio license {e(p["license_shown"])} as printed on their card; not yet checked against the '
+                   f'<a href="{LICENSE_LOOKUP}" rel="noopener">state lookup</a>')
+    if p.get('bonded_insured_stated'):
+        lic.append('says bonded and insured' if lic else 'Says bonded and insured')
+    out.append(f'<dt>License and insurance</dt><dd>{"; ".join(lic) + "." if lic else "Not shared with us yet."}</dd></dl>')
+    out.append(f'<p class="small">{e(p["source"])}, {when(p["added_on"])}. Listed at the owner’s request. Not a VHG partner.</p>')
+    out.append(f'<p class="more"><a href="{e(mailto("Remove contractor listing: " + p["name"], "Please remove this listing from the Veteran Resource Guide contractor directory: " + p["name"] + " (" + p["id"] + ")."))}">Ask us to remove it</a> · '
+               f'<a href="{e(mailto("Contractor listing problem: " + p["name"], "Listing: " + p["name"] + " (" + p["id"] + ")" + chr(10) + "What happened or what is wrong:" + chr(10)))}">Report a problem</a> · '
+               f'<a href="{e(mailto("Contractor review: " + p["name"], "Listing: " + p["name"] + " (" + p["id"] + ")" + chr(10) + "What work they did, roughly when, and how it went:" + chr(10)))}">Tell us how a job went</a></p>')
+    out.append('</article>')
+    return ''.join(out)
+
+
+def programs_section(programs, labels, local):
+    tiles = []
+    for p in programs['programs']:
+        done = [x for x in local if p['key'] in x['programs_done']]
+        if p['trades']:
+            trade_links = ', '.join(f'<a href="?trade={e(k)}#find">{e(labels[k])}</a>' for k in p['trades'])
+            trades = f'<p><strong>Trades that do this work:</strong> {trade_links}</p>'
+        else:
+            trades = '<p><strong>Who does the work:</strong> caregivers you choose or a VA-contracted agency, not a contractor.</p>'
+        if done:
+            who = ', '.join(f'<a href="#biz-{e(x["id"])}">{e(x["name"])}</a>' for x in done)
+            done_html = f'<p><strong>Local providers who have done this work:</strong> {who}</p>'
+        elif p['trades']:
+            done_html = ('<p class="small">No local provider has told us they have done this work yet. '
+                         'When you call for bids, ask whether they have worked a job paid through this program.</p>')
+        else:
+            done_html = ''
+        tiles.append(f'<div class="box prog" id="prog-{e(p["key"])}"><h3 class="trade-h">{icon(p["icon"], UP)}{e(p["label"])}</h3>'
+                     f'<p><strong>Pays for:</strong> {e(p["pays_for"])}</p><p><strong>Who can get it:</strong> {e(p["who"])}</p>'
+                     f'<p><strong>How to start:</strong> {e(p["how"])}</p>{trades}{done_html}'
+                     f'<p class="small"><a href="{e(p["url"])}" rel="noopener">{e(p["source"])}</a>, read {when(programs["checked_on"])}.</p></div>')
+    return ('<section id="pays" aria-labelledby="pays-h"><h2 id="pays-h">Who pays for it: VA programs for work in the home</h2>'
+            '<p>Some home work and in-home help can be paid by VA. Check these before you pay out of pocket. '
+            'Your <a href="https://dvs.ohio.gov/cvsos" rel="noopener">county veterans service office</a> can help you apply, free.</p>'
+            f'<div class="prog-grid">{"".join(tiles)}</div>'
+            '<p>More programs, including respite care, Aid and Attendance and USDA home repair loans, are on '
+            '<a href="../help-at-home/who-pays.html">Who pays for help at home</a>.</p></section>')
+
+
 SCRIPT_DIR = '''<script>
 (function(){var t=document.getElementById('f-trade'),a=document.getElementById('f-area'),q=document.getElementById('f-q'),n=document.getElementById('shown');
-if(!t)return;var cards=[].slice.call(document.querySelectorAll('.biz')),groups=[].slice.call(document.querySelectorAll('.trade-group'));
+if(!t)return;var cards=[].slice.call(document.querySelectorAll('.biz')),groups=[].slice.call(document.querySelectorAll('.trade-group,.local-group'));
 var p=new URLSearchParams(location.search);if(p.get('trade'))t.value=p.get('trade');if(p.get('area'))a.value=p.get('area');
 function run(){var tv=t.value,av=a.value,qv=q.value.trim().toLowerCase(),c=0;
 cards.forEach(function(el){var ok=(!tv||el.dataset.trade.split(' ').indexOf(tv)>-1)&&(!av||el.dataset.area===av)&&(!qv||el.dataset.name.indexOf(qv)>-1);el.hidden=!ok;if(ok)c++});
@@ -199,21 +277,27 @@ var u=new URL(location.href);u.search='';if(tv)u.searchParams.set('trade',tv);if
 </script>'''
 
 
-def directory(reg):
+def directory(reg, local, programs):
     checked = reg['checked_on']
     labels = {t['key']: t['label'] for t in reg['trades']}
     listed = reg['listed']
+    progs = {p['key']: p for p in programs['programs']}
+    everyone = listed + local
     by_main = {k: [r for r in listed if r['main_trade'] == k] for k in labels}
     # Businesses with no phone or town go last in their trade.
     for k in by_main:
         by_main[k].sort(key=lambda r: (not (r['phone'] or r['city']), r['name'].lower()))
-    areas = sorted({r['area'] for r in listed if r['area']})
-    no_place = sum(1 for r in listed if not r['area'])
+    areas = sorted({r['area'] for r in everyone if r['area']})
+    no_place = sum(1 for r in everyone if not r['area'])
     rows = [(labels[k], len(v), '#trade-' + k, TRADE_ICON[k]) for k, v in by_main.items() if v]
-    chart = count_bars(rows, 'by-trade', 'Veteran-owned businesses listed, by main trade', 'Businesses', UP)
-    trade_opts = ''.join(f'<option value="{e(k)}">{e(labels[k])}</option>' for k in labels if any(k == r['main_trade'] or k in r['other_trades'] for r in listed))
+    chart = count_bars(rows, 'by-trade', 'SBA-certified veteran-owned businesses listed, by main trade', 'Businesses', UP)
+    trade_opts = ''.join(f'<option value="{e(k)}">{e(labels[k])}</option>' for k in labels if any(k == r['main_trade'] or k in r['other_trades'] for r in everyone))
     area_opts = ''.join(f'<option value="{e(a)}">{e(a)} area</option>' for a in areas) + (f'<option value="none">No town shared</option>' if no_place else '')
-    groups = ''
+    local_sorted = sorted(local, key=lambda p: (not p['rates'], not p['programs_done'], p['name'].lower()))
+    groups = ('<section class="local-group" id="local" aria-labelledby="local-h"><h2 class="trade-h" id="local-h">'
+              f'{icon("pin", UP)}Local providers who signed up <span class="small">({len(local)})</span></h2>'
+              '<p class="small">These businesses gave us their details themselves. Ones that share their rates, including house calls for veterans and seniors, come first.</p>'
+              f'<div class="biz-grid">{"".join(local_card(p, labels, progs) for p in local_sorted)}</div></section>') if local else ''
     for k, items in by_main.items():
         if not items:
             continue
@@ -222,20 +306,23 @@ def directory(reg):
                    f'<div class="biz-grid">{"".join(card(r, labels, checked) for r in items)}</div></section>')
     side = reg['side_trade_only']['count']
     src = reg['source']
-    title = 'Veteran-owned contractors in Ohio: plumbers, electricians, roofers and more | Veteran Resource Guide'
-    desc = (f'{len(listed)} veteran-owned Ohio businesses in home-repair trades, from the SBA VetCert registry, '
-            'with fair price ranges and your rights under Ohio law. Free.')
-    intro = (f'{len(listed)} veteran-owned businesses in Ohio that do plumbing, heating, electrical, roofing, remodeling and other home work. '
-             'Each one is certified veteran-owned by the U.S. Small Business Administration. Free to use, free to be listed.')
-    return (head(title, desc, 'contractors/index.html') + nav('Home repair help', 'Find a veteran-owned contractor in Ohio', e(intro)) +
+    title = 'Find Ohio contractors and get several bids: plumbers, electricians, roofers | Veteran Resource Guide'
+    desc = ('Ohio contractors for home repairs, with veteran-owned businesses marked, rates where businesses share them, '
+            'VA programs that can pay for the work, fair price ranges and your rights under Ohio law. Free.')
+    intro = ('Find two or three businesses near you, call them, and compare written bids. Veteran-owned businesses are marked, '
+             'and so are businesses that share their rates and the ones that have done work paid by VA programs. Free to use, free to be listed.')
+    return (head(title, desc, 'contractors/index.html') + nav('Home repair help', 'Find a contractor and get several bids', e(intro)) +
             '<main class="con" id="main">'
             '<section id="start" aria-labelledby="start-h"><h2 id="start-h">Start here</h2><ol class="steps">'
-            '<li>Pick your trade and area below, then call two or three businesses.</li>'
+            '<li>Pick your trade and area below, then call two or three businesses. Getting more than one bid is the best protection on price.</li>'
             '<li>On the call, ask what the trip or service fee is and what it covers. Ohio law says they must tell you at the first contact.</li>'
             '<li>Before work starts, ask for a written estimate. Under Ohio law the bill can’t go more than 10 percent over it (or $5, whichever is more) without your OK.</li>'
-            '<li>Check the quote against the <a href="fair-prices.html">fair price ranges</a>.</li></ol>'
-            '<p class="notice"><strong>What the listing does and doesn’t tell you.</strong> These are public registry listings, not VHG partners or endorsements. '
-            'SBA has certified that each business is veteran-owned. We have not checked their work, prices, licenses or insurance yet, '
+            '<li>Check the quotes against the <a href="fair-prices.html">fair price ranges</a>, and look at <a href="#pays">who pays for it</a> in case a VA program covers the job.</li></ol>'
+            '<ul class="jumps" aria-label="On this page"><li><a href="#find">Find a contractor</a></li><li><a href="#local">Local providers</a></li>'
+            '<li><a href="#pays">VA programs that pay</a></li><li><a href="join.html">List your business</a></li></ul>'
+            '<p class="notice"><strong>What the listing does and doesn’t tell you.</strong> No listing is a VHG partner or endorsement. '
+            'Local providers gave us their details themselves; registry listings come from the SBA, which has certified each one as veteran-owned. '
+            'We have not checked their work, and we have checked licenses and insurance only where a card says so. '
             'and many mostly do commercial or government jobs. Some “electrical” firms do data and phone wiring, not house wiring. '
             'Ask whether they take home jobs in your area. Ohio licenses only commercial electrical, HVAC, plumbing, hydronics and refrigeration contractors; '
             f'for home work, your city or county building department can tell you what registration and permits apply (<a href="{STATE_TIPS[0]}" rel="noopener">Ohio Department of Commerce</a>).</p>'
@@ -245,13 +332,14 @@ def directory(reg):
             f'<div><label for="f-trade">Trade</label><select id="f-trade"><option value="">All trades</option>{trade_opts}</select></div>'
             f'<div><label for="f-area">Area (by ZIP code)</label><select id="f-area"><option value="">All of Ohio</option>{area_opts}</select></div>'
             '<div><label for="f-q">Business name or town</label><input id="f-q" type="search" autocomplete="off"></div></div>'
-            f'<p class="count" id="shown" role="status" aria-live="polite">Showing {len(listed)} businesses</p>'
+            f'<p class="count" id="shown" role="status" aria-live="polite">Showing {len(everyone)} businesses</p>'
             '<p class="small">A trade filter also shows businesses that list it as a second trade. Areas follow ZIP codes, so a town near a line may sit in the next area.</p></section>'
             f'{groups}'
+            + programs_section(programs, labels, local) +
             '<section id="more" aria-labelledby="more-h"><h2 id="more-h">More veteran-owned businesses</h2>'
             f'<p>Another {side} veteran-owned Ohio businesses list a home trade as a side line; their main work is something else. '
             f'You can search all of them on the <a href="{SBA_SEARCH}" rel="noopener">SBA Small Business Search</a>: choose Ohio, then VOSB or SDVOSB.</p>'
-            '<p>Own a veteran-owned business that does home work in Ohio? <a href="join.html">List it free</a>. Profiles that join show rates, license and insurance, and follow our no-surprise pricing rules.</p></section>'
+            '<p>Do home work in Ohio? <a href="join.html">List your business free</a>, veteran-owned or not. Businesses that share their rates, including house calls for veterans and seniors, are marked and shown first.</p></section>'
             '<section id="how" aria-labelledby="how-h"><h2 id="how-h">Where this list comes from</h2>'
             f'<p class="small">Source: <a href="{e(src["url"])}" rel="noopener">{e(src["title"])}</a>, read {when(checked)}. '
             f'Filters: {e(src["filters"])}. The main trade is the one each business lists first; “also registered for” comes from the other industry codes it lists, '
@@ -408,37 +496,39 @@ f.addEventListener('submit',function(ev){ev.preventDefault();var el=f.elements,l
 function add(label,v){lines.push(label+': '+(v||'').trim())}
 add('Business name',el.business.value);if(el.claim.value)add('Claiming listing',el.claim.value);add('Owner name',el.owner.value);add('Phone',el.phone.value);
 add('Email',el.email.value);add('Website',el.site.value);add('Town and ZIP',el.town.value);add('Trades',t.join(', '));add('Towns or counties served',el.serve.value);
-add('How to confirm veteran ownership',(f.querySelector('input[name=proof]:checked')||{}).value);add('SBA VetCert profile link',el.vetcert.value);
+add('Veteran-owned',(f.querySelector('input[name=proof]:checked')||{}).value);add('SBA VetCert profile link',el.vetcert.value);
 add('License or registration numbers',el.license.value);add('Insurance company',el.insurer.value);add('Normal hourly rate',el.rate.value);
-add('Trip or service fee and what it covers',el.trip.value);add('After-hours rate',el.after.value);lines.push('Three common jobs and price ranges:');lines.push(el.jobs.value.trim());
+add('Trip or service fee and what it covers',el.trip.value);add('House-call rate for veterans and seniors',el.house_call.value);add('After-hours rate',el.after.value);var pg=[];[].forEach.call(f.querySelectorAll('input[name=programs]:checked'),function(c){pg.push(c.value)});add('VA programs done paid work through',pg.join(', '));lines.push('Three common jobs and price ranges:');lines.push(el.jobs.value.trim());
 add('Agrees to the rules',el.agree.checked?'Yes':'No');
 var body=lines.join('\\n');location.href='mailto:'+f.dataset.to+'?subject='+encodeURIComponent('Contractor profile request: '+el.business.value.trim())+'&body='+encodeURIComponent(body);
 document.getElementById('sent').hidden=false})})();
 </script>'''
 
 
-def join(reg):
+def join(reg, programs):
     names = {r['id']: r['name'] for r in reg['listed']}
     labels = [t for t in reg['trades'] if t['key'] not in ('specialty',)]
     trade_boxes = ''.join(f'<label class="check"><input type="checkbox" name="trade" value="{e(t["label"])}"> {e(t["label"])}</label>' for t in labels)
     trade_boxes += '<label class="check"><input type="checkbox" name="trade" value="Handyman"> Handyman</label>'
     trade_boxes += '<label class="check"><input type="checkbox" name="trade" value="Other"> Other (say which in the jobs box)</label>'
     names_json = json.dumps(names, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
-    title = 'List your veteran-owned business free: Ohio contractor directory | Veteran Resource Guide'
-    desc = ('Free profiles for veteran-owned Ohio contractors who publish their rates, show their license and insurance, '
-            'and follow no-surprise pricing rules.')
-    intro = ('Free profiles for veteran-owned Ohio businesses that do home work. In return you publish your rates and follow a few plain rules, '
-             'so people can call you without bracing for the bill.')
+    prog_boxes = ''.join(f'<label class="check"><input type="checkbox" name="programs" value="{e(x["label"])}"> {e(x["label"])}</label>' for x in programs['programs'])
+    title = 'List your business free: Ohio contractor directory | Veteran Resource Guide'
+    desc = ('Free listings for Ohio contractors and home-service businesses. Veteran-owned businesses are marked, and so are businesses '
+            'that share their rates, including house calls for veterans and seniors.')
+    intro = ('Free listings for any Ohio business that does home work. Veteran-owned businesses get a mark. Share your rates and follow a few plain rules, '
+             'and your listing is marked and shown first, so people can call you without bracing for the bill.')
     rules = [
-        ('Veteran-owned, checked privately',
-         '<p>At least half the business is owned and run by a veteran. Show us your SBA VetCert profile, or show us your DD-214 in a way we agree on together. '
-         'We write down only that we checked it and when. We never publish your DD-214 or keep a copy.</p>'),
+        ('Any business can list. Veteran-owned gets a mark',
+         '<p>You don’t have to be a veteran to be listed. If at least half the business is owned and run by a veteran, we mark it: show us your SBA VetCert profile, '
+         'or show us your DD-214 in a way we agree on together. We write down only that we checked it and when. We never publish your DD-214 or keep a copy.</p>'),
         ('Licensed and insured, and we show it',
          '<p>Give us your state license number if your trade needs one (Ohio licenses commercial electrical, HVAC, plumbing, hydronics and refrigeration work), '
          'any city or county registration, and your general liability insurance certificate. Your profile shows each one with the date we checked it.</p>'),
         ('Your rates, in public',
-         '<p>Publish your normal hourly rate, your trip or service fee and what it covers, your after-hours rate, and price ranges for three common jobs. '
-         'You set your prices, not us. Customers just see them before they call.</p>'),
+         '<p>Publish your normal hourly rate, your trip or service fee and what it covers, your house-call rate for veterans and seniors, your after-hours rate, and price ranges for three common jobs. '
+         'You set your prices, not us. Customers just see them before they call, next to the <a href="fair-prices.html">published fair-price ranges</a>. '
+         'Rates far above those ranges aren’t shown, and listings that share fair rates are marked and shown first.</p>'),
         ('No surprises',
          '<ul><li>Say your trip, service or diagnostic fee on the first call. Ohio law already requires it.</li>'
          '<li>Phone prices are ranges. The firm price comes in writing after you’ve seen the job.</li>'
@@ -464,15 +554,18 @@ def join(reg):
             '<label for="j-town">Town and ZIP code you work from</label><input id="j-town" name="town" type="text">'
             f'<fieldset><legend>Trades</legend>{trade_boxes}</fieldset>'
             '<label for="j-serve">Towns or counties you serve</label><input id="j-serve" name="serve" type="text">'
-            '<fieldset><legend>How we can confirm veteran ownership</legend>'
+            '<fieldset><legend>Veteran-owned? (optional)</legend>'
             '<label class="check"><input type="radio" name="proof" value="SBA VetCert profile"> My business is SBA VetCert certified</label>'
-            '<label class="check"><input type="radio" name="proof" value="DD-214, arrange privately"> I’ll show my DD-214 privately (don’t send it in this form)</label></fieldset>'
+            '<label class="check"><input type="radio" name="proof" value="DD-214, arrange privately"> I’ll show my DD-214 privately (don’t send it in this form)</label>'
+            '<label class="check"><input type="radio" name="proof" value="Not veteran-owned"> Not veteran-owned</label></fieldset>'
             '<label for="j-vetcert">SBA VetCert profile link (if certified)</label><input id="j-vetcert" name="vetcert" type="url">'
             '<label for="j-license">License or registration numbers (state, city or county)</label><input id="j-license" name="license" type="text">'
             '<label for="j-insurer">Insurance company</label><input id="j-insurer" name="insurer" type="text">'
             '<label for="j-rate">Normal hourly rate</label><input id="j-rate" name="rate" type="text">'
             '<label for="j-trip">Trip or service fee, and what it covers</label><input id="j-trip" name="trip" type="text">'
+            '<label for="j-house">House-call rate for veterans and seniors (if different)</label><input id="j-house" name="house_call" type="text">'
             '<label for="j-after">After-hours rate</label><input id="j-after" name="after" type="text">'
+            f'<fieldset><legend>VA programs you have done paid work through (if any)</legend>{prog_boxes}</fieldset>'
             '<label for="j-jobs">Three common jobs and your price range for each</label><p class="hint" id="j-jobs-hint">For example: replace a toilet, $250 to $450.</p>'
             '<textarea id="j-jobs" name="jobs" aria-describedby="j-jobs-hint"></textarea>'
             '<label class="check"><input type="checkbox" name="agree" required> I’ve read the rules above and my business will follow them.</label>'
@@ -481,10 +574,10 @@ def join(reg):
             f'until we’ve checked it and you’ve approved your profile. No email app? Send the same details to <a href="{e(mailto("Contractor profile request"))}">{EMAIL}</a>.</p>'
             '<p id="sent" class="notice" role="status" hidden>Your email app should open now. Press Send there to reach us.</p></form>'
             f'<script type="application/json" id="claim-names">{names_json}</script>')
-    return (head(title, desc, 'contractors/join.html') + nav('For veteran-owned businesses', 'List your veteran-owned business free', e(intro)) +
+    return (head(title, desc, 'contractors/join.html') + nav('For contractors and home-service businesses', 'List your business free', e(intro)) +
             '<main class="con" id="main">'
             '<section id="how" aria-labelledby="how-h"><h2 id="how-h">How it works</h2><ol class="steps">'
-            '<li>Send us the form below.</li><li>We confirm veteran ownership privately, and check your license and insurance.</li>'
+            '<li>Send us the form below.</li><li>We check your license and insurance, and if you’re veteran-owned, we confirm it privately.</li>'
             '<li>We send you your profile to approve.</li><li>It goes live in the <a href="./">directory</a>, ahead of registry-only listings.</li></ol></section>'
             f'<section id="rules" aria-labelledby="rules-h"><h2 id="rules-h">The rules</h2><ol class="rules">{rules_html}</ol></section>'
             f'<section id="apply" aria-labelledby="apply-h"><h2 id="apply-h">Ask for a free profile</h2>{form}</section>'
@@ -493,8 +586,9 @@ def join(reg):
 
 def outputs():
     reg, prices = load('registry.json'), load('prices.json')
-    return {'contractors/index.html': directory(reg), 'contractors/fair-prices.html': fair_prices(prices, reg),
-            'contractors/join.html': join(reg)}
+    local, programs = load('local.json')['providers'], load('programs.json')
+    return {'contractors/index.html': directory(reg, local, programs), 'contractors/fair-prices.html': fair_prices(prices, reg),
+            'contractors/join.html': join(reg, programs)}
 
 
 def pages():

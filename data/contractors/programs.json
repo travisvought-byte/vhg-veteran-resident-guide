@@ -1,0 +1,66 @@
+{
+ "_about": "VA programs that pay for work done in a veteran's home, for the 'Who pays for it' section of guide.vethomeguard.org/contractors/. Each names the official page it was read on. trades are directory trade keys whose businesses can do the work; caregiving programs have none because the directory does not list caregivers yet.",
+ "checked_on": "2026-11-28",
+ "programs": [
+  {
+   "key": "hisa",
+   "label": "HISA grant (Home Improvements and Structural Alterations)",
+   "short": "HISA grant",
+   "icon": "home",
+   "pays_for": "Medically needed changes to the home a veteran lives in: permanent ramps, roll-in showers, wider doorways, railings, and the electrical or plumbing work needed for home medical equipment. Not routine repairs, stair glides or new construction.",
+   "who": "Veterans enrolled in VA health care whose VA clinician writes up the need. The amount depends on service-connected status.",
+   "how": "Ask the Prosthetic and Sensory Aids Service at your VA medical center. VA wants a written estimate that separates labor, materials, permits and inspections, and approves it before work starts, so get your bids first.",
+   "trades": [
+    "carpentry",
+    "remodeling",
+    "plumbing-hvac",
+    "electrical",
+    "general"
+   ],
+   "url": "https://www.prosthetics.va.gov/psas/HISA2.asp",
+   "source": "VA Prosthetic and Sensory Aids Service: HISA"
+  },
+  {
+   "key": "sah",
+   "label": "Adapted housing grants (SAH and SHA)",
+   "short": "adapted housing grant",
+   "icon": "building",
+   "pays_for": "Building, buying or changing a home so a veteran with certain service-connected disabilities can live there more independently. Bigger projects than HISA.",
+   "who": "Veterans and service members with qualifying service-connected disabilities, such as loss of use of limbs, blindness or severe burns.",
+   "how": "Apply through VA. Your builder or contractor’s plans and costs are part of the review, so line up bids early.",
+   "trades": [
+    "general",
+    "remodeling",
+    "carpentry",
+    "plumbing-hvac",
+    "electrical"
+   ],
+   "url": "https://www.va.gov/housing-assistance/disability-housing-grants/",
+   "source": "VA.gov: Disability housing grants for veterans"
+  },
+  {
+   "key": "vdc",
+   "label": "Veteran-Directed Care",
+   "short": "Veteran-Directed Care",
+   "icon": "heart",
+   "pays_for": "A monthly budget the veteran or family manages to hire their own in-home help, often a spouse, adult child, friend or neighbor, and to buy approved goods and services.",
+   "who": "Veterans enrolled in VA health care who need help with daily activities and would otherwise be at risk of a nursing home. Not offered at every VA.",
+   "how": "Ask your VA social worker or care team whether it is offered where you live.",
+   "trades": [],
+   "url": "https://www.va.gov/geriatrics/pages/Veteran-Directed_Care.asp",
+   "source": "VA Geriatrics and Extended Care: Veteran-Directed Care"
+  },
+  {
+   "key": "hhha",
+   "label": "Homemaker and Home Health Aide care",
+   "short": "VA home health aide",
+   "icon": "heart",
+   "pays_for": "A trained aide who comes to the home to help with bathing, dressing, meals, errands and other daily tasks. Aides work for agencies under contract with VA.",
+   "who": "Veterans enrolled in VA health care with a clinical need. A copay may apply depending on service-connected status.",
+   "how": "Ask your VA primary care team or social worker for a referral.",
+   "trades": [],
+   "url": "https://www.va.gov/geriatrics/pages/Homemaker_and_Home_Health_Aide_Care.asp",
+   "source": "VA Geriatrics and Extended Care: Homemaker and Home Health Aide Care"
+  }
+ ]
+}
