@@ -70,15 +70,18 @@ STYLE = (':root{--navy:#183449;--green:#335947;--paper:#f5f3ed;--line:#d9dfda;--
          'body{margin:0;background:var(--paper);color:#20313a;font:17px/1.55 system-ui,sans-serif}'
          'header{background:var(--navy);color:#fff;padding:32px max(24px,calc((100vw - 960px)/2))}'
          'header a{color:#fff}header small{color:#e7cc88;letter-spacing:2px;text-transform:uppercase}'
+         # The breadcrumb sits on the navy header: light text there, not the grey meant for the paper below.
+         'header .small{color:#e3eaed}'
          'h1{font:700 clamp(28px,5vw,42px)/1.15 Georgia,serif;margin:10px 0}header p{color:#e3eaed;max-width:760px}'
          'main{max-width:1008px;margin:auto;padding:24px}h2{font:700 24px/1.25 Georgia,serif;color:var(--navy);margin:26px 0 10px}'
          'a{color:#215b76;text-underline-offset:3px}article{background:#fff;border:1px solid var(--line);border-radius:9px;padding:22px;margin:14px 0}'
-         '.office{border-top:4px solid var(--gold)}.phone{font-size:22px;font-weight:700;margin:6px 0}.meta,.small{font-size:14px;color:#52665c}'
+         '.office{border-top:4px solid var(--gold)}.phone{font-size:22px;font-weight:700;margin:6px 0}.meta,.small{font-size:15px;color:#52665c}'
          '.notice{background:#fff4dc;border:1px solid #e8cf93;border-radius:9px;padding:16px 20px}'
          '.button{display:inline-block;background:var(--green);color:#fff;padding:11px 18px;border-radius:6px;text-decoration:none;font-weight:650}'
          'ul.cols{columns:3 220px;padding-left:18px}ul.cols li{margin:4px 0;break-inside:avoid}'
-         'footer{max-width:1008px;margin:auto;padding:12px 24px 40px;font-size:14px;color:#52665c}'
-         ':focus-visible{outline:3px solid #ca9f48;outline-offset:3px}')
+         'footer{max-width:1008px;margin:auto;padding:12px 24px 40px;font-size:15px;color:#52665c}'
+         # A navy ring with a gold halo, so focus shows on the light paper and on the navy header alike.
+         ':focus-visible{outline:3px solid #183449;outline-offset:2px;box-shadow:0 0 0 6px #f2c94c}')
 
 
 def page(title, description, path, crumbs, hero, body, depth, robots='', head=''):

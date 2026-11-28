@@ -143,8 +143,9 @@ a.vz-who:hover,a.vz-who:focus{background:#eef4f0}
 .vz-tiles{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(11,minmax(0,1fr));gap:4px;max-width:640px}
 .vz-tiles a{display:flex;flex-direction:column;align-items:center;justify-content:center;aspect-ratio:1;min-height:44px;border:1px solid #6f8078;border-radius:5px;background:#f3f6f8;color:#183449;font-weight:700;font-size:14px;line-height:1.1;text-decoration:none}
 .vz-tiles a:hover,.vz-tiles a:focus{background:#183449;color:#fff}
-.vz-tiles abbr{text-decoration:none}.vz-tiles small{font-weight:600;font-size:11px}
-@media(max-width:560px){.vz-tiles{gap:2px}.vz-tiles a{font-size:11px;min-height:30px;border-radius:3px}.vz-tiles small{font-size:9px}}
+.vz-tiles abbr{text-decoration:none}.vz-tiles small{font-weight:600;font-size:14px}
+/* Phones (November 28, 2026): no tile text below 14px; two short lines still fit a 30px square. */
+@media(max-width:560px){.vz-tiles{gap:2px}.vz-tiles a{font-size:14px;line-height:1;min-height:32px;border-radius:3px;padding:0}.vz-tiles small{font-size:14px;font-weight:500}}
 
 @media screen and (prefers-color-scheme:dark){
  .vz-local{background:#1a242b;border-color:#3d4d55}.vz-local>figcaption{color:#e4ecef}.vz-local>figcaption strong{color:#dce9f2}
@@ -165,7 +166,7 @@ a.vz-who:hover,a.vz-who:focus{background:#eef4f0}
 /* Topic pages (November 25, 2026, scripts/page_visuals.py). */
 /* A timeline: one bar per place on one scale of years; the dates are written beside each bar. */
 .vz-tl-axis,.vz-tl-rows>li{display:grid;grid-template-columns:minmax(9em,1.1fr) minmax(0,2fr) minmax(9em,1fr);gap:10px;align-items:center}
-.vz-tl-ticks{position:relative;height:20px;border-bottom:2px solid #6f8078;font-size:13px;font-weight:700;color:#3d4f48}
+.vz-tl-ticks{position:relative;height:20px;border-bottom:2px solid #6f8078;font-size:14px;font-weight:700;color:#3d4f48}
 .vz-tl-ticks span{position:absolute;bottom:2px;transform:translateX(-50%)}.vz-tl-ticks span:first-child{transform:none}
 .vz-tl-rows{list-style:none;margin:0;padding:0}.vz-tl-rows>li{padding:6px 0;border-top:1px solid #e3e8e5;font-size:16px}
 .vz-tl-label{font-weight:600;color:#20313a;line-height:1.3}.vz-tl-when{font-size:14px;color:#3d4f48;line-height:1.3}

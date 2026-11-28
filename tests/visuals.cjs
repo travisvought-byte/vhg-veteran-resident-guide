@@ -152,7 +152,7 @@ for (const base of ['findbingo-site/', 'bingo-site/findbingo/']) {
   assert(night && night.getAttribute('role') === 'list' && night.children.length === 7, base + 'learn: bingo night keeps its seven numbered steps');
 }
 
-// State pages (scripts/state_visuals.py): "<State> at a glance" (a locator map and counts from the data) and "Who to call first".
+// State pages (scripts/state_visuals.py): "<State> at a glance" (counts from the data) and "Who to call first".
 {
   const registry = JSON.parse(read('states/registry.json'));
   const aps = JSON.parse(read('data/public/adult-protective-services.json')).states;
@@ -162,10 +162,10 @@ for (const base of ['findbingo-site/', 'bingo-site/findbingo/']) {
     const glance = d.querySelector('figure.vz-glance.vz-local'), call = d.querySelector('figure.vz-call.vz-local');
     assert(glance && call, rel + ': both state figures');
     assert.equal(words(glance.querySelector('figcaption')), s.name + ' at a glance', rel + ': named for its state');
-    const map = glance.querySelector('svg.vz-loc[role="img"]');
-    assert(map && words(map.querySelector('desc')).includes(s.name + ' is the dark square with a white ring'), rel + ': the map says which square');
-    assert.equal(map.querySelectorAll('rect').length, 51, rel + ': 50 states and D.C.');
-    assert(words(glance).includes(s.name + ' is the dark square with a ring.'), rel + ': the map is explained in text');
+    // One map per page (Travis, November 28, 2026): the clickable state map under "Where do you need help?".
+    assert(!glance.querySelector('svg.vz-loc, .vz-loc-key'), rel + ': no second map in the at-a-glance figure');
+    assert.equal(d.querySelectorAll('svg.vz-loc').length, 0, rel + ': no locator map anywhere on the page');
+    assert.equal(d.querySelectorAll('ul.state-tiles').length, 1, rel + ': exactly one state map');
     // VA tiles: the counts are VA's own facility data for this state.
     const va = fs.existsSync(root + 'data/public/va-facilities/' + low + '.json') ? JSON.parse(read('data/public/va-facilities/' + low + '.json')).rows : [];
     for (const a of glance.querySelectorAll('a[href^="va-locations/"]')) {

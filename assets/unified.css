@@ -8,6 +8,19 @@
 .jump-more{display:contents}.jump-toggle{display:none}@media(max-width:760px){header .jump-toggle{background:transparent;color:#fff;font-weight:700;cursor:pointer}header .jump-toggle[hidden]{display:none}header .jump-toggle:not([hidden])[aria-expanded=false]+.jump-more{display:none}}
 .quick-links .need-group{grid-column:1/-1;margin:14px 0 0;font-size:19px;color:var(--navy);border-bottom:1px solid var(--line);padding-bottom:4px}
 .quick-links .need-group:first-of-type{margin-top:4px}
+/* Readability pass (November 28, 2026). Travis: "some of the font is illegible" and the page "looking pretty crazy".
+   1. Header links: the same tidy row of buttons on every screen. The first four stay in view and the rest fold behind
+      "More guides" (the page script shows that button; without the script every link shows, as before).
+   2. No text below 14px, and focus that shows on the light paper and on the navy header alike.
+   3. Dark mode: the nursing-home card kept a white background while the text turned light, so it read white on white. */
+header .brand-copy .jump{display:inline-flex;align-items:center;min-height:44px;margin:8px 6px 0 0;padding:0 14px;border:1px solid rgba(255,255,255,.55);border-radius:999px;font-size:15px;color:#fff;text-decoration:none}
+header .brand-copy .jump:hover{background:rgba(255,255,255,.12)}
+header .jump-toggle:not([hidden]){display:inline-flex;background:transparent;color:#fff;font-weight:700;cursor:pointer}
+header .jump-toggle:not([hidden])[aria-expanded=false]+.jump-more{display:none}
+header>p .jump{display:inline-flex;align-items:center;min-height:44px;margin:4px 0 0}
+.badge,.office-row p,.recommended-label,.source-details{font-size:14px}
+.edition-coverage summary{color:#3d4f48}
+:focus-visible{outline:3px solid #183449;outline-offset:2px;box-shadow:0 0 0 6px #f2c94c}
 
 /* Need icons and phone icons (November 20, 2026): small line drawings beside the words, drawn with CSS masks in the text color. Decoration only. */
 .quick-links [data-route=claims] strong::before, .quick-links [data-route=health] strong::before, .quick-links [data-route=crisis] strong::before, .quick-links [data-route=education] strong::before, .quick-links [data-route=jobs] strong::before, .quick-links [data-route=housing] strong::before, .quick-links [data-route=records] strong::before, .quick-links [data-route=newvet] strong::before, .quick-links [data-route=community] strong::before, .quick-links [data-route=benefits] strong::before, .quick-links [data-route=care] strong::before, .quick-links [data-route=survivors] strong::before, .quick-links [data-route=rights] strong::before, .quick-links [data-route=local] strong::before, .quick-links [data-route=accessibility] strong::before, .quick-links [data-route=seniors] strong::before, .quick-links [data-route=aid] strong::before, .quick-links #helper-open strong::before, .quick-links .bingo-card[href="bingo.html"] strong::before, .quick-links .bingo-card[data-family-route] strong::before, .quick-links .bingo-card[data-justice-route] strong::before, a.phone::before{content:"";display:inline-block;width:1.25em;height:1.25em;margin-right:.45em;vertical-align:-.25em;background:currentColor;-webkit-mask:var(--icon) center/contain no-repeat;mask:var(--icon) center/contain no-repeat}
@@ -100,3 +113,11 @@ article,.empty,.handoff,.office-directory,.skip,.edition-picker,.quick-links but
 .quick-links .bingo-card[href="facilities.html"] strong::before{--icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 21V4.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5V21M15 9.5h4.5a.5.5 0 0 1 .5.5v11M2 21h20M8 8h3M8 12h3M8 16h3'/%3E%3C/svg%3E")}
 @media print{.quick-links .bingo-card[data-bad-paper] strong::before,.quick-links .bingo-card[href="mst.html"] strong::before,.quick-links .bingo-card[href="survivors.html"] strong::before,.quick-links .bingo-card[href="facilities.html"] strong::before{display:none}}
 @media (forced-colors:active){.quick-links .bingo-card[data-bad-paper] strong::before,.quick-links .bingo-card[href="mst.html"] strong::before,.quick-links .bingo-card[href="survivors.html"] strong::before,.quick-links .bingo-card[href="facilities.html"] strong::before{background:CanvasText;forced-color-adjust:none}}
+/* Readability pass, dark mode (November 28, 2026): see the note above the light rules. */
+@media screen and (prefers-color-scheme:dark){
+ .care-topics{background:#1a242b;border-color:#3d4d55;border-top-color:#93d6b1}.care-topics h2{color:#dce9f2}
+ .care-aps{background:#1d2e27}.care-links a{border-color:#83988f}.care-links a:hover,.care-links a:focus{background:#1d2e27}
+ .care-links span{color:#b6c4ca}.contact-action{background:transparent;color:inherit}
+ :focus-visible{outline-color:#f2c94c;box-shadow:none}
+ .edition-coverage summary{color:#b6c4ca}
+}
